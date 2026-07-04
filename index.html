@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Что изобрели русские первыми в мире — 30 января</title>
+<!--
+  ДИЗАЙН-ЭТАЛОН проекта. Стиль: современный светлый, благородно-патриотичный.
+  ЦВЕТ-КОД ПО БЛОКАМ (акцент меняется по теме музея):
+    Наука и техника — сталь-синий #1f6f8b  (этот пример)
+    История/государство — глубокий красный #b31b2c
+    Искусство — золото #b8892b
+    Культура/сцена — сливовый #6d3b6e
+  Каркас, шапка, типографика, «Читать дальше», hero — общие для всех.
+-->
+<style>
+  :root{
+    --accent:#1f6f8b; --accent2:#154b60; --gold:#c8a24a;
+    --ink:#1a1c22; --muted:#5c6672; --paper:#f5f7f9; --paper2:#ffffff; --line:#e4e8ec;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Segoe UI',Roboto,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}
+  h1,h2,h3{font-family:Georgia,'Times New Roman',serif;line-height:1.18;margin:0}
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px}
+  a{color:var(--accent)}
+
+  /* Шапка с логотипом */
+  header.top{background:#0f1e33;color:#fff;position:sticky;top:0;z-index:30}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff}
+  .logo svg{display:block}
+  .logo .lt{font-family:Georgia,serif;font-weight:700;font-size:16px;letter-spacing:.3px}
+  .logo .lt small{display:block;font-size:9.5px;font-weight:400;letter-spacing:2.5px;color:var(--gold);text-transform:uppercase}
+  .score{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);border-radius:20px;padding:5px 13px;font-size:13px}
+
+  /* HERO — две раздельные зоны: сверху картинка, снизу текст (не накладываются) */
+  .hero{display:flex;flex-direction:column}
+  .hero-visual{position:relative;height:46vh;min-height:260px;max-height:520px;overflow:hidden;background:#0a1626}
+  .hero-visual img.scene{width:100%;height:100%;object-fit:cover;display:block;animation:kb 18s ease-in-out infinite alternate}
+  @keyframes kb{0%{transform:scale(1)}100%{transform:scale(1.07)}}
+  .hero-visual .pbadge{position:absolute;right:16px;bottom:16px;display:flex;align-items:center;gap:9px;background:rgba(15,30,51,.72);border:1px solid var(--gold);border-radius:40px;padding:5px 14px 5px 5px;backdrop-filter:blur(3px)}
+  .hero-visual .pbadge img{width:42px;height:42px;border-radius:50%;object-fit:cover;border:1px solid var(--gold)}
+  .hero-visual .pbadge span{color:#fff;font-family:Georgia,serif;font-size:13px}
+  .hero-text{background:linear-gradient(180deg,#14243d,#0f1e33);color:#fff;padding:26px 0 34px}
+  .hero .museum{color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:700;margin-bottom:10px}
+  .hero h1{color:#fff;font-size:40px;margin-bottom:14px}
+  .hero .hook{color:#eef2f7;font-size:19px;max-width:640px;margin-bottom:22px}
+  @media(max-width:640px){ .hero h1{font-size:30px} .hero-visual .pbadge span{display:none} }
+  /* появление секций */
+  .reveal{opacity:0;transform:translateY(22px);transition:.7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.on{opacity:1;transform:none}
+  .date-chip{display:inline-block;background:var(--gold);color:#3a2c07;font-weight:700;padding:5px 13px;border-radius:6px;font-size:14px;margin-bottom:16px}
+  .btn{cursor:pointer;border:none;border-radius:10px;padding:13px 22px;font-size:16px;font-weight:600;background:var(--accent);color:#fff;transition:.15s}
+  .btn:hover{background:var(--accent2)}
+  .btn.ghost{background:#fff;color:var(--accent);border:1.5px solid var(--accent)}
+  .btn.gold{background:var(--gold);color:#3a2c07}
+
+  section.block{padding:34px 0;border-bottom:1px solid var(--line)}
+  .kicker{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:var(--gold);font-weight:700;margin-bottom:4px}
+  section.block h2{font-size:26px;color:var(--accent2);margin-bottom:6px}
+  p{margin:12px 0}
+  .pull{background:#eef5f8;border-left:4px solid var(--accent);padding:12px 16px;border-radius:0 8px 8px 0;font-style:italic;color:#33414f}
+
+  /* Читать дальше */
+  .article{position:relative}
+  .article.collapsed .body{max-height:230px;overflow:hidden}
+  .article.collapsed .body:after{content:"";position:absolute;left:0;right:0;bottom:44px;height:90px;background:linear-gradient(transparent,var(--paper))}
+  .more{text-align:center;margin-top:14px}
+
+  .card{background:var(--paper2);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:14px 0;box-shadow:0 1px 3px rgba(0,0,0,.03)}
+  .opt{display:block;width:100%;text-align:left;background:var(--paper);border:1.5px solid var(--line);border-radius:9px;padding:11px 14px;margin:7px 0;cursor:pointer;font-size:15px}
+  .opt:hover{border-color:var(--accent)}
+  .opt.correct{background:#e7f5e9;border-color:#3f9b52;color:#1f5b2c;font-weight:600}
+  .opt.wrong{background:#fbe9e9;border-color:#c0453f}
+  .exp{margin-top:10px;font-size:14px;background:#eef5f8;border-radius:8px;padding:10px 12px;display:none}
+  .exp.show{display:block}
+  .chip{cursor:pointer;background:#e9eff3;border:1px solid var(--line);border-radius:16px;padding:7px 13px;margin:4px 5px 4px 0;font-size:14px;display:inline-block}
+  .chip:hover{border-color:var(--gold)}
+  .msg{margin:8px 0;padding:10px 13px;border-radius:12px;max-width:88%}
+  .msg.you{background:#dce7f0;margin-left:auto;text-align:right}
+  .msg.k{background:#fff;border:1px solid var(--line)}
+  .msg.k b{color:var(--accent2)}
+  footer{padding:28px 0 60px;color:var(--muted);font-size:13px;text-align:center}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#">
+      <!-- Логотип (рабочий, вариант D — ладья под парусом; финальный выберем позже) -->
+      <svg width="34" height="34" viewBox="0 0 48 48" aria-label="логотип">
+        <circle cx="24" cy="24" r="23" fill="#0f1e33" stroke="#c8a24a" stroke-width="2"/>
+        <path d="M24 10 L24 30 L12 30 Z" fill="#c8a24a"/>
+        <path d="M26 14 L36 30 L26 30 Z" fill="#c8a24a" opacity=".7"/>
+        <path d="M10 33 q14 6 28 0" fill="none" stroke="#c8a24a" stroke-width="2"/>
+      </svg>
+      <span class="lt">Русская цивилизация<small>первые в мире</small></span>
+    </a>
+    <div class="score">⭐ <span id="score">0</span></div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-visual">
+    <img class="scene" src="portrait-real.jpg" alt="Глеб Евгеньевич Котельников" style="object-position:center 22%">
+    <div class="pbadge"><img src="kotelnikov.jpg" alt="Котельников"><span>Г. Е. Котельников</span></div>
+  </div>
+  <div class="hero-text">
+    <div class="wrap">
+      <span class="date-chip">30 января</span>
+      <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
+      <h1>Первый в мире ранцевый парашют</h1>
+      <p class="hook">Парашют, которым пользуется весь мир, придумал не инженер и не военный, а актёр драматического театра.</p>
+      <button class="btn gold" id="readBtn">Читать историю ↓</button>
+      <button class="btn" id="videoBtn" style="margin-left:8px">▶ Смотреть видео</button>
+    </div>
+  </div>
+</div>
+
+<section class="block" id="video">
+  <div class="wrap">
+    <div class="kicker">Не любишь читать? Смотри</div>
+    <h2>🎬 Видео дня</h2>
+    <p style="color:var(--muted);margin-top:0">Та же история за 1 минуту — коротким роликом. Выбирай, как тебе удобнее: прочитать или посмотреть.</p>
+    <div style="position:relative;width:100%;aspect-ratio:16/9;background:#0f1e33;border-radius:14px;display:flex;align-items:center;justify-content:center;overflow:hidden">
+      <div style="text-align:center;color:#cdd9e6">
+        <div style="width:74px;height:74px;border-radius:50%;background:var(--gold);color:#3a2c07;display:flex;align-items:center;justify-content:center;font-size:30px;margin:0 auto 12px">▶</div>
+        Короткое видео об изобретении<br><span style="font-size:13px;opacity:.75">готовим — появится здесь</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="story">
+  <div class="wrap">
+    <div class="kicker">История изобретения</div>
+    <h2>Актёр, который спас лётчиков</h2>
+    <div class="article collapsed" id="article">
+      <div class="body">
+        <p><b>24 сентября 1910 года, петербургский аэродром.</b> На празднике воздухоплавания тысячи зрителей смотрят в небо. Один из лучших авиаторов, капитан Лев Мациевич, поднимается на 400 метров — и его аэроплан разваливается прямо в воздухе. Спастись нечем: парашютов в авиации тогда не было.</p>
+        <p class="pull">На праздник пришёл актёр, а ушёл — изобретатель.</p>
+        <p>В толпе стоит актёр Народного дома Глеб Котельников. Эта смерть его не отпускает. Он решает: у лётчика должно быть спасение, которое всегда при нём.</p>
+        <p><b>Идея из платка.</b> Рассказывают, что подсказку дал дамский шёлковый платок — маленький, а разворачивается в целое полотно. Историки спорят, было ли так, но шёлк стал ключом: вместо тяжёлого брезента — лёгкая ткань, что прячется в компактный ранец.</p>
+        <p><b>РК-1.</b> Купол из шёлка в ранце за спиной, пружины, вытяжное кольцо. Дёрнул — купол выброшен в поток и раскрылся. Первый в мире ранцевый парашют свободного действия: раскрытие зависит от человека, а не от самолёта.</p>
+        <figure style="margin:18px 0">
+          <img src="rk1-scheme.jpg" alt="Схема ранцевого парашюта РК-1: лётчик с ранцем, раскрытый купол и укладка" style="width:100%;background:#fff;border:1px solid var(--line);border-radius:12px;display:block;padding:14px">
+          <figcaption style="font-size:13px;color:var(--muted);margin-top:6px">Устройство РК-1: ранец за спиной, раскрытый шёлковый купол и схема укладки строп.</figcaption>
+        </figure>
+        <p><b>Иван Иванович.</b> Манекен для испытаний Котельников с юмором звал Иваном Ивановичем — 80-килограммовую куклу роняли с крыши, с воздушного змея и с аэростата. 6 (19) июня 1912 года под Петербургом РК-1 сработал безупречно.</p>
+        <p><b>Горькая часть.</b> Дома изобретение отвергли: великий князь счёл, что с парашютом лётчики будут прыгать, бросая дорогие аэропланы. Патент пришлось брать во Франции, и первый прыжок человека в 1913-м сделали тоже за границей — в Руане.</p>
+        <figure style="margin:18px 0">
+          <img src="test1912.jpg" alt="Испытания парашюта Котельникова" style="width:100%;border-radius:12px;display:block">
+          <figcaption style="font-size:13px;color:var(--muted);margin-top:6px">Подлинное фото: Котельников (в экипировке) на испытаниях парашюта, начало 1910-х.</figcaption>
+        </figure>
+        <p style="color:var(--accent2);font-weight:600">А ещё парашют — не единственное, что он придумал. После РК-1 Котельников создал целое семейство парашютов и подарил их все своей стране.</p>
+        <div style="text-align:center;margin:12px 0 4px">
+          <button class="btn gold" id="toMore">Хочешь узнать о других изобретениях? →</button>
+        </div>
+      </div>
+      <div class="more"><button class="btn ghost" id="moreBtn">Читать дальше ↓</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="more">
+  <div class="wrap">
+    <div class="kicker">После парашюта</div>
+    <h2>Другие изобретения Котельникова</h2>
+    <p style="color:var(--muted);margin-top:0">РК-1 прославил его на весь мир — но актёр-изобретатель на этом не остановился. Вот что он придумал потом. С честной пометкой: где твёрдый факт, а где красивая легенда.</p>
+    <div style="text-align:center;margin:10px 0 2px">
+      <button class="btn gold" id="moreInv2">🔎 Хочешь узнать о других изобретениях?</button>
+    </div>
+
+    <div id="moreInvBody" style="display:none;margin-top:18px">
+
+      <div class="card">
+        <h3 style="font-size:20px;color:var(--accent2);margin-bottom:6px">Тормозной парашют
+          <span style="display:inline-block;background:#fff6e5;color:#8a5a10;border:1px solid #d8a640;border-radius:20px;padding:1px 9px;font-size:12px;font-weight:600;vertical-align:middle">≈ факт + легенда</span></h3>
+        <p>Котельников заметил: купол гасит не только падение, но и разгон. По рассказам, он прицепил парашют к мчащемуся автомобилю — и машину осадило так резко, что заглох двигатель. <b>Этой сцене нет документального подтверждения — это красивая легенда.</b> А вот сама идея достоверна: среди его патентов есть «устройство для регулирования скорости спуска». Сегодня тормозной парашют выбрасывают за собой истребители на посадке и спускаемые аппараты — чтобы быстрее погасить скорость.</p>
+      </div>
+
+      <div class="card">
+        <h3 style="font-size:20px;color:var(--accent2);margin-bottom:6px">Семейство РК-2 и РК-3
+          <span style="display:inline-block;background:#e7f5e9;color:#1f5b2c;border:1px solid #3f9b52;border-radius:20px;padding:1px 9px;font-size:12px;font-weight:600;vertical-align:middle">✓ факт</span></h3>
+        <p>Первый парашют был жёстким — купол лежал в металлическом ранце за спиной. Котельников сделал его удобнее: <b>РК-2</b> (1923) с полумягким ранцем, а затем <b>РК-3</b> — уже полностью мягкий ранец, патент №1607 от 4 июля 1924 года. В РК-3 впервые появились соты-ячейки для укладки строп.</p>
+        <p class="pull">Мягкий ранец с сотами, придуманный в 1924-м, используется в парашютах и сегодня.</p>
+      </div>
+
+      <div class="card">
+        <h3 style="font-size:20px;color:var(--accent2);margin-bottom:6px">Грузовой РК-4
+          <span style="display:inline-block;background:#e7f5e9;color:#1f5b2c;border:1px solid #3f9b52;border-radius:20px;padding:1px 9px;font-size:12px;font-weight:600;vertical-align:middle">✓ факт</span></h3>
+        <p><b>РК-4</b> (1924) — огромный купол 12 метров в поперечнике, чтобы мягко опускать на землю груз до 300 кг. Его испытали, но в дело он так и не пошёл. Зато сама идея грузового парашюта позже стала обычным делом в авиации.</p>
+      </div>
+
+      <div class="card">
+        <h3 style="font-size:20px;color:var(--accent2);margin-bottom:6px">Коллективный спасательный парашют
+          <span style="display:inline-block;background:#e7f5e9;color:#1f5b2c;border:1px solid #3f9b52;border-radius:20px;padding:1px 9px;font-size:12px;font-weight:600;vertical-align:middle">✓ факт</span></h3>
+        <p>Котельников думал не только о лётчике-одиночке. Он разработал коллективный парашют — для спасения пассажиров при авариях гражданских самолётов. Идея опередила своё время: спасать не одного человека, а целый борт.</p>
+      </div>
+
+      <div class="card" style="background:#eef5f8;border-color:var(--accent)">
+        <h3 style="font-size:20px;color:var(--accent2);margin-bottom:6px">Он подарил всё это стране
+          <span style="display:inline-block;background:#e7f5e9;color:#1f5b2c;border:1px solid #3f9b52;border-radius:20px;padding:1px 9px;font-size:12px;font-weight:600;vertical-align:middle">✓ факт</span></h3>
+        <p>В 1926 году Котельников безвозмездно передал все права на свои изобретения советскому государству. Не продал — отдал, чтобы парашют служил всем.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="kicker">Проверь себя</div>
+    <h2>❓ Викторина</h2>
+    <div id="quiz"></div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="kicker">Живой разговор</div>
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:8px">
+      <img src="kotelnikov.jpg" alt="Котельников" style="width:60px;height:60px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);box-shadow:0 2px 8px rgba(0,0,0,.15)">
+      <h2 style="margin:0">Спроси Глеба Котельникова</h2>
+    </div>
+    <div id="chat" class="card" style="min-height:120px"></div>
+    <div id="suggest" style="margin:8px 0"></div>
+    <div style="display:flex;gap:8px">
+      <input id="cin" placeholder="Спроси изобретателя…" style="flex:1;padding:11px 14px;border:1.5px solid var(--line);border-radius:9px;font-size:15px">
+      <button class="btn" id="csend">Спросить</button>
+    </div>
+  </div>
+</section>
+
+<section class="block" style="background:#eef5f8">
+  <div class="wrap">
+    <div class="kicker">Мини-игра</div>
+    <h2>🪂 Сбрось «Ивана Ивановича»</h2>
+    <p style="color:var(--muted);margin-top:0">Манекен падает с аэростата — лови момент и жми «Дёрнуть кольцо». Дёрнешь рано — купол не наполнится, поздно — жёстко приземлится. Поймать нужный миг получится за несколько попыток, как и у самого Котельникова.</p>
+    <div style="text-align:center">
+      <canvas id="game" width="800" height="330" style="width:100%;max-width:800px;background:linear-gradient(#cfe6f7,#eaf4fb);border-radius:14px;border:1px solid var(--line);touch-action:manipulation"></canvas>
+      <div style="margin:12px 0">
+        <button class="btn gold" id="startG">▶ Начать игру</button>
+        <button class="btn" id="drop" style="display:none">Дёрнуть кольцо!</button>
+        <button class="btn ghost" id="rs" style="display:none">Заново</button>
+      </div>
+      <div id="gm" style="font-weight:600;min-height:24px;color:var(--accent2)"></div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">Русская цивилизация · «Что изобрели русские первыми в мире» · дизайн-эталон · весь код и графику делает ИИ</div></footer>
+
+<script>
+  let score=0; const sc=document.getElementById('score');
+  function addScore(n){score+=n;sc.textContent=score;}
+  // читать дальше
+  document.getElementById('readBtn').onclick=()=>document.getElementById('story').scrollIntoView({behavior:'smooth'});
+  document.getElementById('videoBtn').onclick=()=>document.getElementById('video').scrollIntoView({behavior:'smooth'});
+  document.getElementById('moreBtn').onclick=()=>{document.getElementById('article').classList.remove('collapsed');document.getElementById('moreBtn').style.display='none';};
+  // раздел «Другие изобретения»
+  function openMore(){document.getElementById('moreInvBody').style.display='block';document.getElementById('moreInv2').textContent='▲ Свернуть';}
+  document.getElementById('moreInv2').onclick=function(){const b=document.getElementById('moreInvBody');const open=b.style.display==='none';b.style.display=open?'block':'none';this.textContent=open?'▲ Свернуть':'🔎 Хочешь узнать о других изобретениях?';};
+  document.getElementById('toMore').onclick=()=>{openMore();document.getElementById('more').scrollIntoView({behavior:'smooth'});};
+  // викторина
+  const quiz=[
+    {q:"Кем был Котельников до изобретения парашюта?",o:["Лётчиком","Актёром","Профессором","Моряком"],c:1,e:"Парашют, которым пользуется весь мир, придумал актёр драмтеатра."},
+    {q:"Из чего сделан купол РК-1?",o:["Брезент","Кожа","Шёлк","Хлопок"],c:2,e:"Лёгкий шёлк вместо тяжёлого брезента — он прячется в компактный ранец."},
+    {q:"Где Котельников получил патент?",o:["Россия","Германия","Франция","Англия"],c:2,e:"Дома отвергли — патент №438612 он получил во Франции, 1912."}
+  ];
+  const qe=document.getElementById('quiz');
+  quiz.forEach((it,qi)=>{const c=document.createElement('div');c.className='card';
+    const t=document.createElement('div');t.style.fontWeight='600';t.style.marginBottom='8px';t.textContent=(qi+1)+". "+it.q;c.appendChild(t);
+    const ex=document.createElement('div');ex.className='exp';ex.textContent="💡 "+it.e;
+    it.o.forEach((o,oi)=>{const b=document.createElement('button');b.className='opt';b.textContent=o;
+      b.onclick=()=>{c.querySelectorAll('.opt').forEach(x=>x.disabled=true);if(oi===it.c){b.classList.add('correct');addScore(10);}else{b.classList.add('wrong');c.querySelectorAll('.opt')[it.c].classList.add('correct');}ex.classList.add('show');};c.appendChild(b);});
+    c.appendChild(ex);qe.appendChild(c);});
+  // AI
+  const kb=[
+    {k:['платок','идея','шёлк','шелк'],a:"Рассказывают, что надоумил меня дамский платок — маленький, а разворачивается в целое полотно. Спорить не стану, было ли так, но шёлк я взял не зря."},
+    {k:['военн','отказ','князь','родин','приняли'],a:"Один великий князь рассудил чудно: дай лётчику парашют — он выпрыгнет, а машину бросит. Оттого и патент мне пришлось брать во Франции."},
+    {k:['испыт','манекен','иван'],a:"Манекен звал Иваном Ивановичем. Ронял его с крыши, с воздушного змея, а после и с аэростата — покуда не убедился, что купол держит."},
+    {k:['тормоз','автомобил','машин'],a:"Забавно вышло: прицепил купол к автомобилю — тот встал так резко, что заглох мотор. Так родился тормозной парашют."},
+    {k:['актёр','актер','театр','кто'],a:"Да, я актёр Народного дома, играл под именем Глебов-Котельников. Инженерии учился сам — гибель лётчика Мациевича не давала покоя."}
+  ];
+  function ans(q){q=q.toLowerCase();for(const i of kb){if(i.k.some(w=>q.includes(w)))return i.a;}return "Об этом судить не берусь — расскажу лишь про свой парашют да испытания. Спроси о них.";}
+  const chat=document.getElementById('chat');
+  function push(cl,h){const d=document.createElement('div');d.className='msg '+cl;d.innerHTML=h;chat.appendChild(d);chat.scrollTop=chat.scrollHeight;}
+  function ask(q){if(!q.trim())return;push('you',q);setTimeout(()=>push('k','<b>Котельников:</b> '+ans(q)),240);}
+  ['Правда, что идею подсказал платок?','Почему военные вам отказали?','Как вы испытывали парашют?','Что ещё вы изобрели?'].forEach(s=>{const c=document.createElement('span');c.className='chip';c.textContent=s;c.onclick=()=>ask(s);document.getElementById('suggest').appendChild(c);});
+  document.getElementById('csend').onclick=()=>{const i=document.getElementById('cin');ask(i.value);i.value='';};
+  document.getElementById('cin').addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('csend').click();});
+  push('k','<b>Котельников:</b> Здравствуйте! Спрашивайте — расскажу про парашют без утайки.');
+  // мини-игра
+  const cv=document.getElementById('game'),ctx=cv.getContext('2d');const gy=300;let y,vy,st,openY,rew,raf;
+  function rg(){y=40;vy=0;st='ready';openY=null;rew=false;document.getElementById('gm').textContent='Нажми «Начать игру» ▶';cancelAnimationFrame(raf);sc2();
+    ctx.fillStyle='rgba(15,30,51,.55)';ctx.fillRect(0,0,cv.width,cv.height);ctx.fillStyle='#fff';ctx.font='bold 22px Georgia';ctx.textAlign='center';ctx.fillText('Иван Иванович готов к прыжку',cv.width/2,cv.height/2);ctx.textAlign='left';}
+  function startGame(){st='fall';rew=false;document.getElementById('gm').textContent='';document.getElementById('startG').style.display='none';document.getElementById('drop').style.display='';document.getElementById('rs').style.display='';cancelAnimationFrame(raf);lp();}
+  let tries=0;
+  function sc2(){ctx.clearRect(0,0,cv.width,cv.height);
+    ctx.fillStyle='#c8e0a0';ctx.fillRect(0,gy,cv.width,30);
+    ctx.fillStyle='#b31b2c';ctx.beginPath();ctx.ellipse(400,34,40,28,0,0,7);ctx.fill(); // аэростат
+    if(openY!==null){ctx.strokeStyle='#c8a24a';ctx.lineWidth=4;ctx.beginPath();ctx.arc(400,y-30,34,Math.PI,0);ctx.stroke();ctx.beginPath();ctx.moveTo(366,y-30);ctx.lineTo(400,y);ctx.moveTo(434,y-30);ctx.lineTo(400,y);ctx.stroke();}
+    ctx.fillStyle='#1a1c22';ctx.beginPath();ctx.arc(400,y,10,0,7);ctx.fill();ctx.fillRect(392,y+8,16,24);}
+  function lp(){
+    if(st==='fall'){ y+=1.4; }          // медленное свободное падение (~2.8 сек)
+    else if(st==='desc'){ y+=0.6; }     // под куполом опускается мягко
+    if(y>=gy){y=gy;st='land';if(!rew){rew=true;
+      if(openY!==null && openY>=150 && openY<=240){msg('✅ Мягкая посадка! Ты поймал момент. +20',1);addScore(20);}
+      else if(openY!==null && openY<150){msg('⚠️ Рановато — купол не успел наполниться. В следующий раз дёрни чуть позже.',0);}
+      else if(openY!==null){msg('⚠️ Поздновато — земля уже близко. В следующий раз дёрни чуть раньше.',0);}
+      else{msg('💥 Ты не дёрнул кольцо! Жми его на лету.',0);}
+    }}
+    sc2();if(st!=='land')raf=requestAnimationFrame(lp);}
+  function msg(t,w){const e=document.getElementById('gm');e.textContent=t;e.style.color=w?'#1f5b2c':'#8e1420';}
+  document.getElementById('drop').onclick=()=>{if(st==='fall'){openY=y;st='desc';}};
+  document.getElementById('startG').onclick=startGame;
+  document.getElementById('rs').onclick=()=>{document.getElementById('startG').style.display='';document.getElementById('drop').style.display='none';document.getElementById('rs').style.display='none';rg();};
+  rg();
+
+  // плавное появление секций
+  document.querySelectorAll('section.block').forEach(s=>s.classList.add('reveal'));
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on');}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
