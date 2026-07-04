@@ -120,8 +120,7 @@
 
 <section class="block" id="video">
   <div class="wrap">
-    <div class="kicker">Не любишь читать? Смотри</div>
-    <h2>🎬 Видео дня</h2>
+    <h2>Видео дня</h2>
     <p style="color:var(--muted);margin-top:0">Та же история за 1 минуту — коротким роликом. Выбирай, как тебе удобнее: прочитать или посмотреть.</p>
     <div style="position:relative;width:100%;aspect-ratio:16/9;background:#0f1e33;border-radius:14px;display:flex;align-items:center;justify-content:center;overflow:hidden">
       <div style="text-align:center;color:#cdd9e6">
@@ -209,21 +208,33 @@
   </div>
 </section>
 
+<section class="block" id="fork" style="background:#eef5f8">
+  <div class="wrap">
+    <h2 style="margin-bottom:8px">А как поступил бы ты?</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">1911 год. Парашют готов и работает. Но военное начальство отказало: великий князь решил, что с парашютом лётчики будут прыгать, бросая дорогие аэропланы. Изобретение кладут под сукно. Ты на месте Котельникова — что делаешь?</p>
+    <div id="forkBox" style="margin-top:14px"></div>
+    <div id="forkReal" class="exp" style="margin-top:12px">
+      <b>Как было на самом деле.</b> Котельников не сдался. Чтобы спасти изобретение, он взял патент во Франции в 1912 году — и одновременно продолжал пробивать парашют дома. Признание пришло позже: РК-1 приняли на вооружение уже при советской власти, парашют спас тысячи жизней, а в 1926 году Котельников безвозмездно передал все свои изобретения государству.
+    </div>
+  </div>
+</section>
+
 <section class="block">
   <div class="wrap">
     <div class="kicker">Проверь себя</div>
-    <h2>❓ Викторина</h2>
+    <h2>Викторина</h2>
     <div id="quiz"></div>
   </div>
 </section>
 
 <section class="block">
   <div class="wrap">
-    <div class="kicker">Живой разговор</div>
-    <div style="display:flex;align-items:center;gap:14px;margin-bottom:8px">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:6px;flex-wrap:wrap">
       <img src="kotelnikov.jpg" alt="Котельников" style="width:60px;height:60px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);box-shadow:0 2px 8px rgba(0,0,0,.15)">
       <h2 style="margin:0">Спроси Глеба Котельникова</h2>
+      <span style="background:#fff3d6;color:#8a5a10;border:1px solid #d8a640;border-radius:20px;padding:3px 12px;font-size:13px;font-weight:600">🛠 в разработке</span>
     </div>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Здесь Котельников будет отвечать на любой твой вопрос своими словами — как живой собеседник. Эту часть мы ещё собираем, поэтому пока это ранняя проба: он знает лишь несколько тем. Полноценным разговор станет позже.</p>
     <div id="chat" class="card" style="min-height:120px"></div>
     <div id="suggest" style="margin:8px 0"></div>
     <div style="display:flex;gap:8px">
@@ -235,8 +246,7 @@
 
 <section class="block" style="background:#eef5f8">
   <div class="wrap">
-    <div class="kicker">Мини-игра</div>
-    <h2>🪂 Сбрось «Ивана Ивановича»</h2>
+    <h2>Сбрось «Ивана Ивановича»</h2>
     <p style="color:var(--muted);margin-top:0">Манекен падает с аэростата — лови момент и жми «Дёрнуть кольцо». Дёрнешь рано — купол не наполнится, поздно — жёстко приземлится. Поймать нужный миг получится за несколько попыток, как и у самого Котельникова.</p>
     <div style="text-align:center">
       <canvas id="game" width="800" height="330" style="width:100%;max-width:800px;background:linear-gradient(#cfe6f7,#eaf4fb);border-radius:14px;border:1px solid var(--line);touch-action:manipulation"></canvas>
@@ -318,6 +328,21 @@
   document.getElementById('startG').onclick=startGame;
   document.getElementById('rs').onclick=()=>{document.getElementById('startG').style.display='';document.getElementById('drop').style.display='none';document.getElementById('rs').style.display='none';rg();};
   rg();
+
+  // развилка судьбы
+  const fork=[
+    {t:'Смириться — раз отказали, значит не судьба',e:'Тогда мир получил бы ранцевый парашют позже — и, может, не из России. Котельников выбрал не сдаваться.'},
+    {t:'Добиваться признания дома, чего бы это ни стоило',e:'Так он и делал годами: писал, показывал, доказывал. Путь долгий и тяжёлый — но парашют в итоге признали.'},
+    {t:'Спасти изобретение — запатентовать за границей',e:'Разумный ход: так он закрепил авторство. Патент Котельников взял во Франции в 1912 году.'}
+  ];
+  const fb=document.getElementById('forkBox');let forkDone=false;
+  fork.forEach(f=>{const b=document.createElement('button');b.className='opt';b.textContent=f.t;
+    b.onclick=()=>{if(forkDone)return;forkDone=true;
+      fb.querySelectorAll('.opt').forEach(x=>x.disabled=true);
+      b.style.borderColor='var(--accent)';b.style.background='#e2edf3';b.style.fontWeight='600';
+      const ex=document.createElement('div');ex.className='exp show';ex.style.marginTop='6px';ex.textContent='💡 '+f.e;b.after(ex);
+      document.getElementById('forkReal').classList.add('show');addScore(10);
+    };fb.appendChild(b);});
 
   // плавное появление секций
   document.querySelectorAll('section.block').forEach(s=>s.classList.add('reveal'));
