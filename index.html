@@ -89,6 +89,15 @@
   .cal-item.now{background:var(--accent);border-color:var(--accent)}
   .cal-item.now .d,.cal-item.now .t{color:#fff}
   .cal-item.now .s{color:#dbe9ef}
+  /* игра-сборка РК-1 */
+  .asm-slot{flex:0 0 auto;min-width:112px;min-height:56px;border:2px dashed var(--line);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:20px;padding:6px 10px;text-align:center}
+  .asm-slot.filled{border-style:solid;border-color:var(--accent);background:#e7f0f5;color:var(--ink);font-size:14px;font-weight:600}
+  .asm-part{cursor:pointer;text-align:left;background:var(--paper2);border:1.5px solid var(--line);border-radius:10px;padding:10px 13px;min-width:150px;max-width:230px;display:flex;flex-direction:column;gap:3px}
+  .asm-part b{font-size:15px}.asm-part span{font-size:12px;color:var(--muted);font-weight:400}
+  .asm-part:hover{border-color:var(--accent)}
+  .asm-part.used{opacity:.35;pointer-events:none}
+  .asm-part.shake{animation:shk .4s}
+  @keyframes shk{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
   footer{padding:28px 0 60px;color:var(--muted);font-size:13px;text-align:center}
 </style>
 </head>
@@ -255,17 +264,32 @@
 
 <section class="block" style="background:#eef5f8">
   <div class="wrap">
-    <h2>Сбрось «Ивана Ивановича»</h2>
-    <p style="color:var(--muted);margin-top:0">Манекен падает с аэростата — лови момент и жми «Дёрнуть кольцо». Дёрнешь рано — купол не наполнится, поздно — жёстко приземлится. Поймать нужный миг получится за несколько попыток, как и у самого Котельникова.</p>
+    <h2>Игра 1 · Приземли парашютиста в мишень</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:64ch">Раскрой купол в нужный миг: рано — не наполнится, поздно — жёсткая посадка. А под куполом дует ветер — рули влево-вправо и целься в красную мишень.</p>
     <div style="text-align:center">
+      <div id="windLbl" style="font-size:13px;color:var(--accent2);font-weight:600;min-height:18px;margin-bottom:6px"></div>
       <canvas id="game" width="800" height="330" style="width:100%;max-width:800px;background:linear-gradient(#cfe6f7,#eaf4fb);border-radius:14px;border:1px solid var(--line);touch-action:manipulation"></canvas>
-      <div style="margin:12px 0">
-        <button class="btn gold" id="startG">▶ Начать игру</button>
-        <button class="btn" id="drop" style="display:none">Дёрнуть кольцо!</button>
+      <div style="margin:12px 0;display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
+        <button class="btn gold" id="startG">▶ Прыжок</button>
+        <button class="btn ghost" id="steerL" style="display:none">◀</button>
+        <button class="btn" id="drop" style="display:none">Раскрыть купол</button>
+        <button class="btn ghost" id="steerR" style="display:none">▶</button>
         <button class="btn ghost" id="rs" style="display:none">Заново</button>
       </div>
       <div id="gm" style="font-weight:600;min-height:24px;color:var(--accent2)"></div>
     </div>
+  </div>
+</section>
+
+<section class="block" id="assemble">
+  <div class="wrap">
+    <h2>Игра 2 · Собери парашют РК-1</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:64ch">Нажимай части в правильном порядке укладки — так собирал свой парашют сам Котельников. Ошибёшься — подскажу.</p>
+    <div id="asmSlots" style="display:flex;gap:10px;flex-wrap:wrap;margin:14px 0"></div>
+    <div style="font-size:13px;color:var(--muted);margin-bottom:6px">Детали — нажимай по порядку:</div>
+    <div id="asmParts" style="display:flex;gap:10px;flex-wrap:wrap"></div>
+    <div id="asmMsg" style="font-weight:600;min-height:24px;color:var(--accent2);margin-top:12px"></div>
+    <button class="btn ghost" id="asmReset" style="display:none;margin-top:6px">Собрать заново</button>
   </div>
 </section>
 
@@ -327,32 +351,78 @@
   document.getElementById('csend').onclick=()=>{const i=document.getElementById('cin');ask(i.value);i.value='';};
   document.getElementById('cin').addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('csend').click();});
   push('k','<b>Котельников:</b> Здравствуйте! Спрашивайте — расскажу про парашют без утайки.');
-  // мини-игра
-  const cv=document.getElementById('game'),ctx=cv.getContext('2d');const gy=300;let y,vy,st,openY,rew,raf;
-  function rg(){y=40;vy=0;st='ready';openY=null;rew=false;document.getElementById('gm').textContent='Нажми «Начать игру» ▶';cancelAnimationFrame(raf);sc2();
-    ctx.fillStyle='rgba(15,30,51,.55)';ctx.fillRect(0,0,cv.width,cv.height);ctx.fillStyle='#fff';ctx.font='bold 22px Georgia';ctx.textAlign='center';ctx.fillText('Иван Иванович готов к прыжку',cv.width/2,cv.height/2);ctx.textAlign='left';}
-  function startGame(){st='fall';rew=false;document.getElementById('gm').textContent='';document.getElementById('startG').style.display='none';document.getElementById('drop').style.display='';document.getElementById('rs').style.display='';cancelAnimationFrame(raf);lp();}
-  let tries=0;
-  function sc2(){ctx.clearRect(0,0,cv.width,cv.height);
-    ctx.fillStyle='#c8e0a0';ctx.fillRect(0,gy,cv.width,30);
-    ctx.fillStyle='#b31b2c';ctx.beginPath();ctx.ellipse(400,34,40,28,0,0,7);ctx.fill(); // аэростат
-    if(openY!==null){ctx.strokeStyle='#c8a24a';ctx.lineWidth=4;ctx.beginPath();ctx.arc(400,y-30,34,Math.PI,0);ctx.stroke();ctx.beginPath();ctx.moveTo(366,y-30);ctx.lineTo(400,y);ctx.moveTo(434,y-30);ctx.lineTo(400,y);ctx.stroke();}
-    ctx.fillStyle='#1a1c22';ctx.beginPath();ctx.arc(400,y,10,0,7);ctx.fill();ctx.fillRect(392,y+8,16,24);}
-  function lp(){
-    if(st==='fall'){ y+=1.4; }          // медленное свободное падение (~2.8 сек)
-    else if(st==='desc'){ y+=0.6; }     // под куполом опускается мягко
-    if(y>=gy){y=gy;st='land';if(!rew){rew=true;
-      if(openY!==null && openY>=150 && openY<=240){msg('✅ Мягкая посадка! Ты поймал момент. +20',1);addScore(20);}
-      else if(openY!==null && openY<150){msg('⚠️ Рановато — купол не успел наполниться. В следующий раз дёрни чуть позже.',0);}
-      else if(openY!==null){msg('⚠️ Поздновато — земля уже близко. В следующий раз дёрни чуть раньше.',0);}
-      else{msg('💥 Ты не дёрнул кольцо! Жми его на лету.',0);}
-    }}
-    sc2();if(st!=='land')raf=requestAnimationFrame(lp);}
+  // === Игра 1: приземление с ветром и мишенью ===
+  const cv=document.getElementById('game'),ctx=cv.getContext('2d');const gy=300;
+  let y,x,st,openY,rew,raf,wind,tx,steer;
+  function windText(){return 'Ветер '+(wind<0?'◀ влево':'вправо ▶')+' · '+(Math.abs(wind)>0.6?'сильный':'слабый');}
+  function newRound(){y=42;x=400;st='ready';openY=null;rew=false;steer=0;
+    wind=(Math.random()<.5?-1:1)*(0.35+Math.random()*0.5);tx=180+Math.random()*440;
+    document.getElementById('gm').textContent='';document.getElementById('windLbl').textContent=windText();
+    cancelAnimationFrame(raf);draw();
+    ctx.fillStyle='rgba(15,30,51,.5)';ctx.fillRect(0,0,cv.width,gy);
+    ctx.fillStyle='#fff';ctx.textAlign='center';ctx.font='bold 20px Georgia';ctx.fillText('Иван Иванович готов к прыжку',cv.width/2,138);
+    ctx.font='14px Segoe UI';ctx.fillText('Наведись на мишень и раскрой купол вовремя',cv.width/2,166);ctx.textAlign='left';}
+  function draw(){ctx.clearRect(0,0,cv.width,cv.height);
+    ctx.fillStyle='#c8e0a0';ctx.fillRect(0,gy,cv.width,cv.height-gy);
+    [[46,'#b31b2c'],[30,'#fff'],[15,'#b31b2c']].forEach(b=>{ctx.fillStyle=b[1];ctx.beginPath();ctx.ellipse(tx,gy+15,b[0],8,0,0,7);ctx.fill();});
+    ctx.fillStyle='#b31b2c';ctx.beginPath();ctx.ellipse(400,34,40,28,0,0,7);ctx.fill();ctx.fillStyle='#7a1420';ctx.fillRect(388,58,24,9);
+    if(openY!==null){ctx.strokeStyle='#c8a24a';ctx.lineWidth=4;ctx.beginPath();ctx.arc(x,y-32,36,Math.PI,0);ctx.stroke();
+      ctx.beginPath();ctx.moveTo(x-36,y-32);ctx.lineTo(x,y);ctx.moveTo(x+36,y-32);ctx.lineTo(x,y);ctx.stroke();}
+    ctx.fillStyle='#1a1c22';ctx.beginPath();ctx.arc(x,y,9,0,7);ctx.fill();ctx.fillRect(x-8,y+8,16,22);
+    ctx.fillStyle='rgba(31,111,139,.9)';ctx.font='13px Segoe UI';ctx.fillText((wind<0?'←':'→')+' ветер',14,22);}
+  function loop(){
+    if(st==='fall'){y+=1.7;x+=wind*0.4;}
+    else if(st==='desc'){y+=0.6;x+=wind*1.1+steer*1.8;}
+    x=Math.max(20,Math.min(cv.width-20,x));
+    if(y>=gy){y=gy;st='land';if(!rew){rew=true;land();}}
+    draw();if(st!=='land')raf=requestAnimationFrame(loop);}
+  function land(){const dx=Math.abs(x-tx);
+    if(openY===null)msg('💥 Ты не раскрыл купол! Жми «Раскрыть» на лету.',0);
+    else if(openY<140)msg('⚠️ Рано — купол не наполнился. Раскрывай чуть ниже.',0);
+    else if(openY>252)msg('⚠️ Поздно — земля близко, жёсткая посадка. Раскрывай раньше.',0);
+    else if(dx<=46){msg('🎯 В яблочко! Мягко и точно в мишень. +30',1);addScore(30);}
+    else if(dx<=95){msg('✅ Почти в центр — хорошая посадка. +15',1);addScore(15);}
+    else{msg('🪂 Купол раскрыт вовремя, но ветер снёс мимо мишени. Целься активнее. +5',1);addScore(5);}
+    gBtns('end');}
   function msg(t,w){const e=document.getElementById('gm');e.textContent=t;e.style.color=w?'#1f5b2c':'#8e1420';}
+  function gBtns(m){document.getElementById('startG').style.display=m==='ready'?'':'none';
+    document.getElementById('drop').style.display=m==='play'?'':'none';
+    document.getElementById('steerL').style.display=m==='play'?'':'none';
+    document.getElementById('steerR').style.display=m==='play'?'':'none';
+    document.getElementById('rs').style.display=m==='ready'?'none':'';}
+  document.getElementById('startG').onclick=()=>{st='fall';rew=false;gBtns('play');cancelAnimationFrame(raf);loop();};
   document.getElementById('drop').onclick=()=>{if(st==='fall'){openY=y;st='desc';}};
-  document.getElementById('startG').onclick=startGame;
-  document.getElementById('rs').onclick=()=>{document.getElementById('startG').style.display='';document.getElementById('drop').style.display='none';document.getElementById('rs').style.display='none';rg();};
-  rg();
+  document.getElementById('rs').onclick=()=>{gBtns('ready');newRound();};
+  function steerBind(id,dir){const b=document.getElementById(id);
+    b.addEventListener('pointerdown',e=>{e.preventDefault();steer=dir;});
+    ['pointerup','pointerleave','pointercancel'].forEach(ev=>b.addEventListener(ev,()=>steer=0));}
+  steerBind('steerL',-1);steerBind('steerR',1);
+  document.addEventListener('keydown',e=>{if(e.key==='ArrowLeft')steer=-1;if(e.key==='ArrowRight')steer=1;});
+  document.addEventListener('keyup',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight')steer=0;});
+  gBtns('ready');newRound();
+
+  // === Игра 2: собери РК-1 ===
+  const asmData=[
+    {n:'Купол',d:'Шёлковое полотно — держит парашютиста в воздухе'},
+    {n:'Стропы',d:'Шнуры от купола к человеку'},
+    {n:'Ранец',d:'Металлический короб на спину — сюда всё укладывается'},
+    {n:'Вытяжное кольцо',d:'Дёрнул — купол выброшен в поток'}
+  ];
+  const asmSlots=document.getElementById('asmSlots'),asmParts=document.getElementById('asmParts'),asmMsg=document.getElementById('asmMsg'),asmReset=document.getElementById('asmReset');
+  let asmStep=0;
+  function asmInit(){asmStep=0;asmSlots.innerHTML='';asmParts.innerHTML='';asmMsg.textContent='';asmReset.style.display='none';
+    asmData.forEach((_,i)=>{const s=document.createElement('div');s.className='asm-slot';s.id='slot'+i;s.textContent=(i+1);asmSlots.appendChild(s);});
+    asmData.map((p,i)=>({p,i})).sort(()=>Math.random()-0.5).forEach(o=>{const b=document.createElement('button');b.className='asm-part';
+      b.innerHTML='<b>'+o.p.n+'</b><span>'+o.p.d+'</span>';
+      b.onclick=()=>{
+        if(o.i===asmStep){const s=document.getElementById('slot'+asmStep);s.className='asm-slot filled';s.innerHTML='<b>'+o.p.n+'</b>';
+          b.disabled=true;b.classList.add('used');asmStep++;
+          if(asmStep===asmData.length){asmMsg.textContent='✅ Готово! Ты собрал РК-1 в правильном порядке — именно так делал Котельников. +20';asmMsg.style.color='#1f5b2c';addScore(20);asmReset.style.display='';}
+          else{asmMsg.textContent='Верно! Что идёт '+(asmStep+1)+'-м?';asmMsg.style.color='#1f5b2c';}
+        }else{asmMsg.textContent='Не сейчас. Сначала то, что идёт '+(asmStep+1)+'-м по порядку укладки.';asmMsg.style.color='#8e1420';
+          b.classList.add('shake');setTimeout(()=>b.classList.remove('shake'),400);}
+      };asmParts.appendChild(b);});}
+  asmReset.onclick=asmInit;asmInit();
 
   // развилка судьбы
   const fork=[
