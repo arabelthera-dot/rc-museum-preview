@@ -35,8 +35,10 @@
 
   /* HERO — две раздельные зоны: сверху картинка, снизу текст (не накладываются) */
   .hero{display:flex;flex-direction:column}
-  .hero-visual{position:relative;height:46vh;min-height:260px;max-height:520px;overflow:hidden;background:#0a1626}
+  .hero-visual{position:relative;height:46vh;min-height:260px;max-height:520px;overflow:hidden;background:linear-gradient(180deg,#b8d6ee 0%,#d8e8f4 45%,#f3ead6 100%)}
   .hero-visual img.scene{width:100%;height:100%;object-fit:cover;display:block}
+  .hero-visual canvas.scene{width:100%;height:100%;display:block}
+  .scene3d-tag{position:absolute;left:16px;top:14px;background:rgba(15,30,51,.66);color:#fff;border:1px solid var(--gold);border-radius:20px;padding:4px 12px;font-size:12px;letter-spacing:.4px;backdrop-filter:blur(3px)}
   @keyframes kb{0%{transform:scale(1)}100%{transform:scale(1.07)}}
   .hero-visual .pbadge{position:absolute;right:16px;bottom:16px;display:flex;align-items:center;gap:9px;background:rgba(15,30,51,.72);border:1px solid var(--gold);border-radius:40px;padding:5px 14px 5px 5px;backdrop-filter:blur(3px)}
   .hero-visual .pbadge img{width:42px;height:42px;border-radius:50%;object-fit:cover;border:1px solid var(--gold)}
@@ -142,7 +144,8 @@
 
 <div class="hero">
   <div class="hero-visual">
-    <img class="scene" src="portrait-real.jpg" alt="Глеб Евгеньевич Котельников" style="object-position:center 22%">
+    <canvas id="hero3d" class="scene" aria-label="3D-визуализация парашюта РК-1"></canvas>
+    <div class="scene3d-tag">3D-прототип · парашют РК-1</div>
     <div class="pbadge"><img src="kotelnikov.jpg" alt="Котельников"><span>Г. Е. Котельников</span></div>
   </div>
   <div class="hero-text">
@@ -177,6 +180,10 @@
       <div class="body">
         <p><b>24 сентября 1910 года, петербургский аэродром.</b> На празднике воздухоплавания тысячи зрителей смотрят в небо. Один из лучших авиаторов, капитан Лев Мациевич, поднимается на 400 метров — и его аэроплан разваливается прямо в воздухе. Спастись нечем: парашютов в авиации тогда не было.</p>
         <p class="pull">На праздник пришёл актёр, а ушёл — изобретатель.</p>
+        <figure style="margin:18px 0">
+          <img src="portrait-real.jpg" alt="Глеб Евгеньевич Котельников" style="width:100%;max-width:320px;border-radius:14px;display:block;margin:0 auto">
+          <figcaption style="font-size:13px;color:var(--muted);margin-top:6px;text-align:center">Глеб Котельников — актёр, ставший изобретателем.</figcaption>
+        </figure>
         <p>В толпе стоит актёр Народного дома Глеб Котельников. Эта смерть его не отпускает. Он решает: у лётчика должно быть спасение, которое всегда при нём.</p>
         <p><b>Идея из платка.</b> Рассказывают, что подсказку дал дамский шёлковый платок — маленький, а разворачивается в целое полотно. Историки спорят, было ли так, но шёлк стал ключом: вместо тяжёлого брезента — лёгкая ткань, что прячется в компактный ранец.</p>
         <p><b>РК-1.</b> Купол из шёлка в ранце за спиной, пружины, вытяжное кольцо. Дёрнул — купол выброшен в поток и раскрылся. Первый в мире ранцевый парашют свободного действия: раскрытие зависит от человека, а не от самолёта.</p>
@@ -269,9 +276,8 @@
     <div style="display:flex;align-items:center;gap:14px;margin-bottom:6px;flex-wrap:wrap">
       <img src="kotelnikov.jpg" alt="Котельников" style="width:60px;height:60px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);box-shadow:0 2px 8px rgba(0,0,0,.15)">
       <h2 style="margin:0">Спроси Глеба Котельникова</h2>
-      <span style="background:#fff3d6;color:#8a5a10;border:1px solid #d8a640;border-radius:20px;padding:3px 12px;font-size:13px;font-weight:600">🛠 в разработке</span>
     </div>
-    <p style="color:var(--muted);margin-top:0;max-width:62ch">Здесь Котельников будет отвечать на любой твой вопрос своими словами — как живой собеседник. Эту часть мы ещё собираем, поэтому пока это ранняя проба: он знает лишь несколько тем. Полноценным разговор станет позже.</p>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Задай Котельникову вопрос — он ответит своими словами. Он помнит свою жизнь, парашют, испытания, борьбу за изобретение и другие свои работы. Спрашивай о чём угодно.</p>
     <div id="chat" class="card" style="min-height:120px"></div>
     <div id="suggest" style="margin:8px 0"></div>
     <div style="display:flex;gap:8px">
@@ -363,20 +369,33 @@
     c.appendChild(ex);qe.appendChild(c);});
   // AI
   const kb=[
-    {k:['платок','идея','шёлк','шелк'],a:"Рассказывают, что надоумил меня дамский платок — маленький, а разворачивается в целое полотно. Спорить не стану, было ли так, но шёлк я взял не зря."},
-    {k:['военн','отказ','князь','родин','приняли'],a:"Один великий князь рассудил чудно: дай лётчику парашют — он выпрыгнет, а машину бросит. Оттого и патент мне пришлось брать во Франции."},
-    {k:['испыт','манекен','иван'],a:"Манекен звал Иваном Ивановичем. Ронял его с крыши, с воздушного змея, а после и с аэростата — покуда не убедился, что купол держит."},
-    {k:['тормоз','автомобил','машин'],a:"Забавно вышло: прицепил купол к автомобилю — тот встал так резко, что заглох мотор. Так родился тормозной парашют."},
-    {k:['актёр','актер','театр','кто'],a:"Да, я актёр Народного дома, играл под именем Глебов-Котельников. Инженерии учился сам — гибель лётчика Мациевича не давала покоя."}
+    {k:['кто вы','кто ты','актер','театр','о себе','расскажи о','биограф','глеб','лицед','profession','чем занима'],a:"Глеб Евгеньевич Котельников, к вашим услугам. По ремеслу — актёр драматического театра, играл в Народном доме под именем Глебов-Котельников. Инженерному делу нигде не обучался, до всего доходил своим умом. Судьба сделала из лицедея изобретателя."},
+    {k:['платок','как придума','откуда взял','надоумил','шелк','ткань','материал','из чего купол','почему шелк'],a:"Рассказывают, будто надоумил меня дамский шёлковый платок — крохотный, а встряхнёшь, и разворачивается в целое полотно. Спорить, было ли ровно так, не стану. Но шёлк я выбрал не зря: лёгок, прочен и прячется в малый ранец, где тяжёлому брезенту не бывать."},
+    {k:['мациевич','погиб','гибель','катастроф','почему занял','что подтолкну','трагед','разбил','натолкну','смерть летчик'],a:"Двадцать четвёртого сентября десятого года на моих глазах разбился капитан Мациевич — аэроплан развалился прямо в небе, а спастись лётчику было нечем. Я пришёл на праздник зрителем, а ушёл человеком, который не мог с этим смириться. С того дня искал спасение, что всегда при лётчике."},
+    {k:['как устро','ранец','кольцо','раскрыт','свободн','принцип','как работа','конструкц','устройств','рк-1','рк1','что такое рк'],a:"РК-1 — «Русский, Котельникова, первый». Шёлковый купол уложен в ранце за спиной, при нём пружины и вытяжное кольцо. Дёрнул кольцо — купол выброшен в поток и раскрылся сам. Главное: раскрытие в руках человека, а не привязано к машине. Оттого и «свободного действия» — первый такой в мире."},
+    {k:['испыт','манекен','иван','кукл','проверя','как испыта','аэростат','сработа'],a:"Манекен для испытаний я с усмешкой звал Иваном Ивановичем — тяжёлую куклу в мой рост. Ронял его с крыши, с воздушного змея, после и с аэростата. Шестого июня двенадцатого года под Петербургом купол сработал безупречно — вот тогда я и выдохнул."},
+    {k:['военн','отказ','князь','не приня','отверг','почему не','начальств','власт','чиновн'],a:"Дома встретили холодно. Один великий князь рассудил чудно: дай, говорит, лётчику парашют — он выпрыгнет, а дорогой аэроплан бросит. Будто машина дороже человека. Оттого признание моё и запоздало на годы."},
+    {k:['франц','патент','заграниц','руан','за границей','париж'],a:"Раз дома ходу не давали, патент пришлось брать во Франции, в двенадцатом году. Обидно, что своё, русское, довелось закреплять на чужбине. Но иначе изобретение попросту положили бы под сукно."},
+    {k:['тормоз','автомобил','машин','затормоз'],a:"Забавно вышло: прицепил я купол к мчащему автомобилю — и его осадило так резко, что заглох мотор. Из этой шалости и вырос тормозной парашют. Ныне таким гасят разбег самолётов при посадке."},
+    {k:['рк-2','рк2','рк-3','рк3','мягк','улучш','что дальше','соты','следующ','другие парашют','еще изобре','ещё изобре'],a:"На РК-1 я не остановился. Сделал РК-2, а после РК-3 — с мягким ранцем, где для строп завёл особые соты. Ту укладку, что я придумал в двадцать четвёртом, парашютисты используют и поныне."},
+    {k:['рк-4','рк4','груз','двенадцать метр','300','триста'],a:"Был у меня и грузовой — РК-4, с огромным куполом в двенадцать метров, чтобы мягко опускать до трёхсот килограммов груза. В дело он не пошёл, но мысль оказалась верной."},
+    {k:['коллектив','пассажир','спасательн','многих','целый борт','эвакуац'],a:"Думал я не об одном лётчике. Разрабатывал и коллективный парашют — спасать пассажиров с целого борта разом. Мысль моя опередила своё время."},
+    {k:['государ','подарил','передал','1926','бескорыст','деньги','продал','права','отдал'],a:"В двадцать шестом году я передал все свои изобретения советскому государству. Не продал — отдал. Такое дело должно служить всем, а не лежать в чьём-то кармане."},
+    {k:['памят','умер','смерт','могил','новодевич','лент','после вас','что стало','что потом','наслед','конец жизн'],a:"Схоронили меня на Новодевичьем. Сказывают, парашютисты приходят и повязывают на дерево у могилы ленты — будто стропы. Выше награды для меня и не придумать."},
+    {k:['горд','росс','первый в мире','достижен','что чувств','родин'],a:"Горжусь тем, что ранцевый парашют, которым ныне пользуется весь свет, придуман у нас, в России. Пусть помнят: спасение лётчику дал русский человек."},
+    {k:['совет','молод','изобретател','как стать','пожелан','напутств','начинающ'],a:"Молодым скажу одно: не ждите милости от чинов и не робейте, что вы «не по образованию». Я был актёром — и ничего. Была бы нужда людям да упорство, остальное приложится."},
+    {k:['первый прыжок','человек прыгну','живой','страшно','волнова','первое спасен'],a:"Когда с моим куполом впервые прыгнул живой человек и встал на ноги — вот это была награда. Ради такого мига и стоило биться столько лет."},
+    {k:['шути','характер','весел','смешн','увлеч','юмор'],a:"Актёрская закваска не выветривается: и в деле люблю живое слово да добрую шутку. Оттого и манекен у меня был с именем-отчеством — Иван Иванович."},
+    {k:['семья','жена','дети','личн','влюб','дом','родител'],a:"О домашнем позвольте умолчать — не о том нынче речь. Спросите лучше о парашюте, об испытаниях или о том, отчего своё пришлось патентовать в Париже."}
   ];
-  function ans(q){q=q.toLowerCase();for(const i of kb){if(i.k.some(w=>q.includes(w)))return i.a;}return "Об этом судить не берусь — расскажу лишь про свой парашют да испытания. Спроси о них.";}
+  function ans(q){q=q.toLowerCase().replace(/ё/g,'е');for(const i of kb){if(i.k.some(w=>q.includes(w)))return i.a;}return "Об этом я толком не поведаю — не мой предмет. Зато охотно расскажу про парашют, про испытания с Иваном Ивановичем, про отказ военных или про то, что я придумал после РК-1. О чём из этого?";}
   const chat=document.getElementById('chat');
   function push(cl,h){const d=document.createElement('div');d.className='msg '+cl;d.innerHTML=h;chat.appendChild(d);chat.scrollTop=chat.scrollHeight;}
   function ask(q){if(!q.trim())return;push('you',q);setTimeout(()=>push('k','<b>Котельников:</b> '+ans(q)),240);}
-  ['Правда, что идею подсказал платок?','Почему военные вам отказали?','Как вы испытывали парашют?','Что ещё вы изобрели?'].forEach(s=>{const c=document.createElement('span');c.className='chip';c.textContent=s;c.onclick=()=>ask(s);document.getElementById('suggest').appendChild(c);});
+  ['Кто вы?','Правда, что идею подсказал платок?','Почему военные отказали?','Как вы испытывали парашют?','Что ещё вы изобрели?','Что стало с вами потом?','Ваш совет молодым?'].forEach(s=>{const c=document.createElement('span');c.className='chip';c.textContent=s;c.onclick=()=>ask(s);document.getElementById('suggest').appendChild(c);});
   document.getElementById('csend').onclick=()=>{const i=document.getElementById('cin');ask(i.value);i.value='';};
   document.getElementById('cin').addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('csend').click();});
-  push('k','<b>Котельников:</b> Здравствуйте! Спрашивайте — расскажу про парашют без утайки.');
+  push('k','<b>Котельников:</b> Здравствуйте. Я Глеб Котельников — актёр, что придумал ранцевый парашют. Спрашивайте о чём угодно: о деле, об испытаниях, о жизни.');
   // === Игра 1: приземление с ветром и мишенью ===
   const cv=document.getElementById('game'),ctx=cv.getContext('2d');const gy=300;
   let y,x,st,openY,rew,raf,wind,tx,steer;
@@ -500,6 +519,57 @@
   document.querySelectorAll('section.block').forEach(s=>s.classList.add('reveal'));
   const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on');}),{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+
+<script type="module">
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js';
+const cv=document.getElementById('hero3d');
+if(cv){ try{
+  const renderer=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true});
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+  const scene=new THREE.Scene();
+  const camera=new THREE.PerspectiveCamera(45,1,0.1,100);
+  camera.position.set(0,0.4,7);
+  scene.add(new THREE.HemisphereLight(0xffffff,0x8ea3b8,0.95));
+  const sun=new THREE.DirectionalLight(0xfff2d8,1.15); sun.position.set(3,6,4); scene.add(sun);
+  const para=new THREE.Group(); scene.add(para);
+  const R=2.11, TH=Math.PI*0.52, N=16, FLAT=0.72, TOP=1.2;
+  // купол
+  const canopy=new THREE.Mesh(
+    new THREE.SphereGeometry(2.1,48,24,0,Math.PI*2,0,TH),
+    new THREE.MeshStandardMaterial({color:0xf3efe4,roughness:0.92,metalness:0,side:THREE.DoubleSide}));
+  canopy.scale.y=FLAT; canopy.position.y=TOP; para.add(canopy);
+  // меридианы-панели
+  const merMat=new THREE.LineBasicMaterial({color:0xc8a24a,transparent:true,opacity:0.5});
+  const hem=[];
+  for(let i=0;i<N;i++){const a=i/N*Math.PI*2,pts=[];
+    for(let t=0;t<=1.0001;t+=0.1){const th=t*TH;
+      pts.push(new THREE.Vector3(Math.sin(th)*Math.cos(a)*R, Math.cos(th)*R*FLAT+TOP, Math.sin(th)*Math.sin(a)*R));}
+    para.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts),merMat));
+    hem.push(new THREE.Vector3(Math.sin(TH)*Math.cos(a)*R, Math.cos(TH)*R*FLAT+TOP, Math.sin(TH)*Math.sin(a)*R));
+  }
+  // стропы к точке сбора
+  const knot=new THREE.Vector3(0,-2.4,0);
+  const lineMat=new THREE.LineBasicMaterial({color:0x9aa6b0,transparent:true,opacity:0.7});
+  hem.forEach(h=>para.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints([h,knot]),lineMat)));
+  // фигурка парашютиста
+  const mat=new THREE.MeshStandardMaterial({color:0x2b3038,roughness:0.85});
+  const body=new THREE.Mesh(new THREE.CapsuleGeometry(0.16,0.5,4,8),mat); body.position.set(0,knot.y+0.15,0); para.add(body);
+  const head=new THREE.Mesh(new THREE.SphereGeometry(0.16,16,16),mat); head.position.set(0,knot.y+0.55,0); para.add(head);
+  // параллакс
+  let tx=0,ty=0;
+  window.addEventListener('pointermove',e=>{tx=e.clientX/window.innerWidth-0.5;ty=e.clientY/window.innerHeight-0.5;});
+  function resize(){const w=cv.clientWidth,h=cv.clientHeight;if(w&&h){renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();}}
+  new ResizeObserver(resize).observe(cv); resize();
+  const t0=performance.now();
+  (function loop(){const t=(performance.now()-t0)/1000;
+    para.rotation.y=t*0.22+tx*0.6;
+    para.rotation.z=Math.sin(t*0.6)*0.04-tx*0.15;
+    para.position.y=Math.sin(t*0.8)*0.12;
+    camera.position.x=tx*0.9; camera.position.y=0.4-ty*0.4; camera.lookAt(0,0.3,0);
+    renderer.render(scene,camera); requestAnimationFrame(loop);
+  })();
+}catch(e){ console.warn('3D hero недоступен:',e); } }
 </script>
 </body>
 </html>
