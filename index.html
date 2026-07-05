@@ -36,7 +36,7 @@
   /* HERO — две раздельные зоны: сверху картинка, снизу текст (не накладываются) */
   .hero{display:flex;flex-direction:column}
   .hero-visual{position:relative;height:46vh;min-height:260px;max-height:520px;overflow:hidden;background:#0a1626}
-  .hero-visual img.scene{width:100%;height:100%;object-fit:cover;display:block;animation:kb 18s ease-in-out infinite alternate}
+  .hero-visual img.scene{width:100%;height:100%;object-fit:cover;display:block}
   @keyframes kb{0%{transform:scale(1)}100%{transform:scale(1.07)}}
   .hero-visual .pbadge{position:absolute;right:16px;bottom:16px;display:flex;align-items:center;gap:9px;background:rgba(15,30,51,.72);border:1px solid var(--gold);border-radius:40px;padding:5px 14px 5px 5px;backdrop-filter:blur(3px)}
   .hero-visual .pbadge img{width:42px;height:42px;border-radius:50%;object-fit:cover;border:1px solid var(--gold)}
@@ -54,12 +54,15 @@
   .btn:hover{background:var(--accent2)}
   .btn.ghost{background:#fff;color:var(--accent);border:1.5px solid var(--accent)}
   .btn.gold{background:var(--gold);color:#3a2c07}
+  .btn:active{transform:translateY(1px)}
+  input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(31,111,139,.12)}
+  #article .body p{max-width:66ch}
 
-  section.block{padding:34px 0;border-bottom:1px solid var(--line)}
+  section.block{padding:42px 0;border-bottom:1px solid var(--line)}
   .kicker{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:var(--gold);font-weight:700;margin-bottom:4px}
   section.block h2{font-size:26px;color:var(--accent2);margin-bottom:6px}
   p{margin:12px 0}
-  .pull{background:#eef5f8;border-left:4px solid var(--accent);padding:12px 16px;border-radius:0 8px 8px 0;font-style:italic;color:#33414f}
+  .pull{background:#eef5f8;border-left:4px solid var(--accent);padding:12px 16px;border-radius:0 10px 10px 0;font-style:italic;color:#33414f}
 
   /* Читать дальше */
   .article{position:relative}
@@ -68,7 +71,7 @@
   .more{text-align:center;margin-top:14px}
 
   .card{background:var(--paper2);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:14px 0;box-shadow:0 1px 3px rgba(0,0,0,.03)}
-  .opt{display:block;width:100%;text-align:left;background:var(--paper);border:1.5px solid var(--line);border-radius:9px;padding:11px 14px;margin:7px 0;cursor:pointer;font-size:15px}
+  .opt{display:block;width:100%;text-align:left;background:var(--paper);border:1.5px solid var(--line);border-radius:10px;padding:11px 14px;margin:7px 0;cursor:pointer;font-size:15px}
   .opt:hover{border-color:var(--accent)}
   .opt.correct{background:#e7f5e9;border-color:#3f9b52;color:#1f5b2c;font-weight:600}
   .opt.wrong{background:#fbe9e9;border-color:#c0453f}
@@ -82,7 +85,7 @@
   .msg.k b{color:var(--accent2)}
   /* лента-календарь (тизер «1 из 365») */
   .cal-strip{display:flex;gap:12px;overflow-x:auto;padding:8px 2px 14px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
-  .cal-item{flex:0 0 auto;width:190px;scroll-snap-align:start;background:var(--paper2);border:1px solid var(--line);border-radius:12px;padding:14px}
+  .cal-item{flex:0 0 auto;width:190px;scroll-snap-align:start;background:var(--paper2);border:1px solid var(--line);border-radius:14px;padding:14px}
   .cal-item .d{font-size:12px;font-weight:700;color:var(--accent);letter-spacing:.5px}
   .cal-item .t{font-size:15px;margin-top:6px;line-height:1.35}
   .cal-item .s{font-size:11px;color:var(--muted);margin-top:9px;display:block}
@@ -138,7 +141,7 @@
 
 <section class="block" id="video">
   <div class="wrap">
-    <h2>Видео дня</h2>
+    <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap"><h2 style="margin:0">Видео дня</h2><span style="background:#fff3d6;color:#8a5a10;border:1px solid #d8a640;border-radius:20px;padding:3px 12px;font-size:13px;font-weight:600">🛠 в разработке</span></div>
     <p style="color:var(--muted);margin-top:0">Та же история за 1 минуту — коротким роликом. Выбирай, как тебе удобнее: прочитать или посмотреть.</p>
     <div style="position:relative;width:100%;aspect-ratio:16/9;background:#0f1e33;border-radius:14px;display:flex;align-items:center;justify-content:center;overflow:hidden">
       <div style="text-align:center;color:#cdd9e6">
@@ -161,13 +164,13 @@
         <p><b>Идея из платка.</b> Рассказывают, что подсказку дал дамский шёлковый платок — маленький, а разворачивается в целое полотно. Историки спорят, было ли так, но шёлк стал ключом: вместо тяжёлого брезента — лёгкая ткань, что прячется в компактный ранец.</p>
         <p><b>РК-1.</b> Купол из шёлка в ранце за спиной, пружины, вытяжное кольцо. Дёрнул — купол выброшен в поток и раскрылся. Первый в мире ранцевый парашют свободного действия: раскрытие зависит от человека, а не от самолёта.</p>
         <figure style="margin:18px 0">
-          <img src="rk1-scheme.jpg" alt="Схема ранцевого парашюта РК-1: лётчик с ранцем, раскрытый купол и укладка" style="width:100%;background:#fff;border:1px solid var(--line);border-radius:12px;display:block;padding:14px">
+          <img src="rk1-scheme.jpg" alt="Схема ранцевого парашюта РК-1: лётчик с ранцем, раскрытый купол и укладка" style="width:100%;background:#fff;border:1px solid var(--line);border-radius:14px;display:block;padding:14px">
           <figcaption style="font-size:13px;color:var(--muted);margin-top:6px">Устройство РК-1: ранец за спиной, раскрытый шёлковый купол и схема укладки строп.</figcaption>
         </figure>
         <p><b>Иван Иванович.</b> Манекен для испытаний Котельников с юмором звал Иваном Ивановичем — 80-килограммовую куклу роняли с крыши, с воздушного змея и с аэростата. 6 (19) июня 1912 года под Петербургом РК-1 сработал безупречно.</p>
         <p><b>Горькая часть.</b> Дома изобретение отвергли: великий князь счёл, что с парашютом лётчики будут прыгать, бросая дорогие аэропланы. Патент пришлось брать во Франции, и первый прыжок человека в 1913-м сделали тоже за границей — в Руане.</p>
         <figure style="margin:18px 0">
-          <img src="test1912.jpg" alt="Испытания парашюта Котельникова" style="width:100%;border-radius:12px;display:block">
+          <img src="test1912.jpg" alt="Испытания парашюта Котельникова" style="width:100%;border-radius:14px;display:block">
           <figcaption style="font-size:13px;color:var(--muted);margin-top:6px">Подлинное фото: Котельников (в экипировке) на испытаниях парашюта, начало 1910-х.</figcaption>
         </figure>
         <p style="color:var(--accent2);font-weight:600">А ещё парашют — не единственное, что он придумал. После РК-1 Котельников создал целое семейство парашютов и подарил их все своей стране.</p>
@@ -239,7 +242,6 @@
 
 <section class="block">
   <div class="wrap">
-    <div class="kicker">Проверь себя</div>
     <h2>Викторина</h2>
     <div id="quiz"></div>
   </div>
@@ -256,7 +258,7 @@
     <div id="chat" class="card" style="min-height:120px"></div>
     <div id="suggest" style="margin:8px 0"></div>
     <div style="display:flex;gap:8px">
-      <input id="cin" placeholder="Спроси изобретателя…" style="flex:1;padding:11px 14px;border:1.5px solid var(--line);border-radius:9px;font-size:15px">
+      <input id="cin" placeholder="Спроси изобретателя…" style="flex:1;padding:11px 14px;border:1.5px solid var(--line);border-radius:10px;font-size:15px">
       <button class="btn" id="csend">Спросить</button>
     </div>
   </div>
