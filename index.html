@@ -80,6 +80,15 @@
   .msg.you{background:#dce7f0;margin-left:auto;text-align:right}
   .msg.k{background:#fff;border:1px solid var(--line)}
   .msg.k b{color:var(--accent2)}
+  /* лента-календарь (тизер «1 из 365») */
+  .cal-strip{display:flex;gap:12px;overflow-x:auto;padding:8px 2px 14px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+  .cal-item{flex:0 0 auto;width:190px;scroll-snap-align:start;background:var(--paper2);border:1px solid var(--line);border-radius:12px;padding:14px}
+  .cal-item .d{font-size:12px;font-weight:700;color:var(--accent);letter-spacing:.5px}
+  .cal-item .t{font-size:15px;margin-top:6px;line-height:1.35}
+  .cal-item .s{font-size:11px;color:var(--muted);margin-top:9px;display:block}
+  .cal-item.now{background:var(--accent);border-color:var(--accent)}
+  .cal-item.now .d,.cal-item.now .t{color:#fff}
+  .cal-item.now .s{color:#dbe9ef}
   footer{padding:28px 0 60px;color:var(--muted);font-size:13px;text-align:center}
 </style>
 </head>
@@ -257,6 +266,22 @@
       </div>
       <div id="gm" style="font-weight:600;min-height:24px;color:var(--accent2)"></div>
     </div>
+  </div>
+</section>
+
+<section class="block" id="calendar">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Это 1 день из 365</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Каждый день года — новое изобретение, которое русские сделали первыми в мире. Сегодня ты открыл 30 января. Вот другие дни этого же месяца — а всего их 365.</p>
+    <div class="cal-strip">
+      <div class="cal-item"><div class="d">2 января</div><div class="t">«Луна-1» — первая межпланетная станция</div><span class="s">скоро</span></div>
+      <div class="cal-item"><div class="d">8 января</div><div class="t">«Ермак» — первый в мире арктический ледокол</div><span class="s">скоро</span></div>
+      <div class="cal-item"><div class="d">12 января</div><div class="t">«Спутник-1» — первый спутник Земли</div><span class="s">скоро</span></div>
+      <div class="cal-item"><div class="d">16 января</div><div class="t">Первый выход человека в открытый космос</div><span class="s">скоро</span></div>
+      <div class="cal-item"><div class="d">21 января</div><div class="t">Первая в мире атомная электростанция</div><span class="s">скоро</span></div>
+      <div class="cal-item now"><div class="d">30 января</div><div class="t">Ранцевый парашют РК-1 — Котельников</div><span class="s">ты здесь</span></div>
+    </div>
+    <p style="font-size:13px;color:var(--muted);margin-top:10px">Январь — 1 из 12 месяцев музея «Что изобрели русские первыми в мире». Дальше — весь год.</p>
   </div>
 </section>
 

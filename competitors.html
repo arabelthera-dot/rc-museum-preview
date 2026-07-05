@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Конкуренты и референсы — Русская цивилизация</title>
+<style>
+  :root{--accent:#1f6f8b;--accent2:#154b60;--gold:#c8a24a;--ink:#1a1c22;--muted:#5c6672;--paper:#f5f7f9;--paper2:#fff;--line:#e4e8ec;--plus:#1f7a3d;--minus:#b03a34}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Segoe UI',Roboto,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+  h1,h2,h3{font-family:Georgia,'Times New Roman',serif;line-height:1.2;margin:0}
+  .wrap{max-width:780px;margin:0 auto;padding:0 20px}
+  a{color:var(--accent)}
+  header.top{background:#0f1e33;color:#fff;padding:22px 0}
+  header.top .k{color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:700}
+  header.top h1{color:#fff;font-size:28px;margin-top:8px}
+  header.top p{color:#cdd9e6;margin:10px 0 0;font-size:15px}
+  .group{padding:26px 0 4px}
+  .group h2{font-size:20px;color:var(--accent2);border-bottom:2px solid var(--gold);display:inline-block;padding-bottom:4px;margin-bottom:8px}
+  .card{background:var(--paper2);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:12px 0;box-shadow:0 1px 3px rgba(0,0,0,.03)}
+  .card .name{font-size:17px;font-weight:600}
+  .card .name a{text-decoration:none}
+  .card .name a:after{content:" ↗";font-size:13px;color:var(--muted)}
+  .card .url{font-size:13px;color:var(--muted);margin:2px 0 10px;word-break:break-all}
+  .row{display:flex;gap:9px;margin:6px 0;font-size:15px}
+  .mark{flex:0 0 auto;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;color:#fff}
+  .mark.p{background:var(--plus)}.mark.m{background:var(--minus)}
+  .concl{background:#eef5f8;border-left:4px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 18px;margin:22px 0 40px}
+  footer{padding:20px 0 50px;color:var(--muted);font-size:13px;text-align:center}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="k">Русская цивилизация · разбор рынка</div>
+  <h1>Конкуренты и референсы</h1>
+  <p>По каждому: ссылка на живой сайт, что берём (+) и чего избегаем (–). Нажми на название — откроется их сайт.</p>
+</div></header>
+
+<div class="wrap">
+
+  <div class="group"><h2>Зарубежные</h2>
+
+    <div class="card">
+      <div class="name"><a href="https://www.getdailyart.com" target="_blank" rel="noopener">DailyArt</a></div>
+      <div class="url">getdailyart.com</div>
+      <div class="row"><span class="mark p">+</span><span>Эталон формата «на каждый день», 24 языка, тёплая искренняя подача.</span></div>
+      <div class="row"><span class="mark m">–</span><span>Только искусство, нет игр и глубокого интерактива, нет «пространства».</span></div>
+    </div>
+
+    <div class="card">
+      <div class="name"><a href="https://artsandculture.google.com" target="_blank" rel="noopener">Google Arts &amp; Culture</a></div>
+      <div class="url">artsandculture.google.com</div>
+      <div class="row"><span class="mark p">+</span><span>Планка интерактива: 3D-туры, зум, AI-игрушки, «истории».</span></div>
+      <div class="row"><span class="mark m">–</span><span>Огромный и обезличенный, легко потеряться, нет единого нарратива и удержания.</span></div>
+    </div>
+
+    <div class="card">
+      <div class="name"><a href="https://www.europeana.eu" target="_blank" rel="noopener">Europeana</a></div>
+      <div class="url">europeana.eu</div>
+      <div class="row"><span class="mark p">+</span><span>Модель единого мультиязычного пространства-агрегатора наследия.</span></div>
+      <div class="row"><span class="mark m">–</span><span>Суховато, «каталог для исследователей», слабое вовлечение обычного человека.</span></div>
+    </div>
+
+    <div class="card">
+      <div class="name"><a href="https://www.si.edu/openaccess" target="_blank" rel="noopener">Smithsonian Open Access</a></div>
+      <div class="url">si.edu/openaccess</div>
+      <div class="row"><span class="mark p">+</span><span>Открытый бесплатный фонд hi-res и 3D.</span></div>
+      <div class="row"><span class="mark m">–</span><span>Это база ресурсов, не продукт для широкой публики.</span></div>
+    </div>
+
+    <div class="card">
+      <div class="name"><a href="https://www.duolingo.com" target="_blank" rel="noopener">Duolingo</a></div>
+      <div class="url">duolingo.com</div>
+      <div class="row"><span class="mark p">+</span><span>Эталон удержания: стрики, значки, уровни.</span></div>
+      <div class="row"><span class="mark m">–</span><span>Геймификация может раздражать и упрощать; берём механику, но не «казуальность».</span></div>
+    </div>
+
+    <div class="card">
+      <div class="name"><a href="https://www.ubisoft.com/en-us/game/assassins-creed/discovery-tour" target="_blank" rel="noopener">Assassin's Creed Discovery Tour</a></div>
+      <div class="url">ubisoft.com</div>
+      <div class="row"><span class="mark p">+</span><span>Обучение через свободную 3D-прогулку по эпохе.</span></div>
+      <div class="row"><span class="mark m">–</span><span>Дорого в производстве, требует игрового движка — для нас дальняя перспектива.</span></div>
+    </div>
+
+    <div class="card">
+      <div class="name"><a href="https://www.teamlab.art/e/borderless-azabudai/" target="_blank" rel="noopener">teamLab Borderless</a></div>
+      <div class="url">teamlab.art</div>
+      <div class="row"><span class="mark p">+</span><span>Планка иммерсивного визуала.</span></div>
+      <div class="row"><span class="mark m">–</span><span>Физическое пространство и искусство ради впечатления, не знание; для нас — вдохновение.</span></div>
+    </div>
+
+  </div>
+
+  <div class="group"><h2>Российские</h2>
+
+    <div class="card">
+      <div class="name"><a href="https://myhistorypark.ru" target="_blank" rel="noopener">Россия — Моя история</a></div>
+      <div class="url">myhistorypark.ru</div>
+      <div class="row"><span class="mark p">+</span><span>Доказанный в РФ патриотический мультимедиа-формат, 20+ млн посетителей, потенциальный партнёр.</span></div>
+      <div class="row"><span class="mark m">–</span><span>В основе офлайн-парки; онлайн-часть слабее; риск восприятия «казённо».</span></div>
+    </div>
+
+    <div class="card">
+      <div class="name"><a href="https://ar.culture.ru" target="_blank" rel="noopener">Артефакт (Культура.РФ)</a></div>
+      <div class="url">ar.culture.ru</div>
+      <div class="row"><span class="mark p">+</span><span>AR-гид, гос-модель, путь к гранту нацпроекта «Культура».</span></div>
+      <div class="row"><span class="mark m">–</span><span>Привязан к реальным экспонатам, нет ежедневного формата и геймификации.</span></div>
+    </div>
+
+    <div class="card">
+      <div class="name"><a href="https://www.culture.ru" target="_blank" rel="noopener">Культура.РФ</a></div>
+      <div class="url">culture.ru</div>
+      <div class="row"><span class="mark p">+</span><span>Крупный агрегатор культуры РФ, виртуальные туры.</span></div>
+      <div class="row"><span class="mark m">–</span><span>Портал-витрина, нет игрового вовлечения и «возвращения каждый день».</span></div>
+    </div>
+
+    <div class="card">
+      <div class="name"><a href="https://arzamas.academy" target="_blank" rel="noopener">Arzamas</a></div>
+      <div class="url">arzamas.academy</div>
+      <div class="row"><span class="mark p">+</span><span>Эталон «знание = модно», связка лекция+тест+игра, детский трек, платная модель.</span></div>
+      <div class="row"><span class="mark m">–</span><span>Нишевая интеллектуальная аудитория, не для широких масс и не патриотический фокус.</span></div>
+    </div>
+
+  </div>
+
+  <div class="concl">
+    <b>Вывод.</b> Каждый силён в одном: DailyArt — ежедневность, Google — интерактив, Europeana — единое пространство, Duolingo — удержание, «Моя история» — патриотика, Arzamas — подача. Целиком — да про Россию, да на языках мира — не собрал никто. Наша задача и одновременно риск: собрать лучшее из всех, не надорвавшись.
+  </div>
+
+</div>
+
+<footer><div class="wrap">Русская цивилизация · разбор рынка · весь контент делает ИИ</div></footer>
+</body>
+</html>
