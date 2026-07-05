@@ -101,6 +101,24 @@
   .asm-part.used{opacity:.35;pointer-events:none}
   .asm-part.shake{animation:shk .4s}
   @keyframes shk{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+  /* календарь-месяц */
+  .cal2{background:var(--paper2);border:1px solid var(--line);border-radius:14px;padding:16px;max-width:520px}
+  .cal2-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+  .cal2-title{font-family:Georgia,serif;font-size:20px;color:var(--accent2);font-weight:700}
+  .cal2-nav{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--paper);color:var(--accent2);font-size:15px;cursor:pointer;touch-action:manipulation}
+  .cal2-nav:hover{border-color:var(--accent);background:#fff}
+  .cal2-dow{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:6px}
+  .cal2-dow span{text-align:center;font-size:12px;color:var(--muted);font-weight:600}
+  .cal2-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+  .cal2-cell{aspect-ratio:1;display:flex;align-items:center;justify-content:center;border-radius:10px;font-size:15px;color:var(--muted);background:var(--paper);border:1px solid transparent}
+  .cal2-cell.empty{background:transparent}
+  .cal2-cell.has{background:#e7f0f5;color:var(--accent2);font-weight:700;cursor:pointer;border-color:#cfe0e8;position:relative}
+  .cal2-cell.has:hover{border-color:var(--accent);background:#dcebf2}
+  .cal2-cell.has::after{content:"";position:absolute;bottom:5px;width:5px;height:5px;border-radius:50%;background:var(--accent)}
+  .cal2-cell.sel{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .cal2-cell.sel::after{background:#fff}
+  .cal2-detail{margin-top:14px;background:#eef5f8;border-left:4px solid var(--accent);border-radius:0 10px 10px 0;padding:14px 16px;font-size:15px;color:#33414f;max-width:560px}
+  .cal2-detail b{color:var(--accent2)}
   footer{padding:28px 0 60px;color:var(--muted);font-size:13px;text-align:center}
 </style>
 </head>
@@ -302,17 +320,18 @@
 
 <section class="block" id="calendar">
   <div class="wrap">
-    <h2 style="margin-bottom:6px">Это 1 день из 365</h2>
-    <p style="color:var(--muted);margin-top:0;max-width:62ch">Каждый день года — новое изобретение, которое русские сделали первыми в мире. Сегодня ты открыл 30 января. Вот другие дни этого же месяца — а всего их 365.</p>
-    <div class="cal-strip">
-      <div class="cal-item"><div class="d">2 января</div><div class="t">«Луна-1» — первая межпланетная станция</div><span class="s">скоро</span></div>
-      <div class="cal-item"><div class="d">8 января</div><div class="t">«Ермак» — первый в мире арктический ледокол</div><span class="s">скоро</span></div>
-      <div class="cal-item"><div class="d">12 января</div><div class="t">«Спутник-1» — первый спутник Земли</div><span class="s">скоро</span></div>
-      <div class="cal-item"><div class="d">16 января</div><div class="t">Первый выход человека в открытый космос</div><span class="s">скоро</span></div>
-      <div class="cal-item"><div class="d">21 января</div><div class="t">Первая в мире атомная электростанция</div><span class="s">скоро</span></div>
-      <div class="cal-item now"><div class="d">30 января</div><div class="t">Ранцевый парашют РК-1 — Котельников</div><span class="s">ты здесь</span></div>
+    <h2 style="margin-bottom:6px">Календарь изобретений</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Выбери любой день года — узнаешь, что в этот день русские сделали первыми в мире. Листай месяцы стрелками.</p>
+    <div class="cal2">
+      <div class="cal2-head">
+        <button class="cal2-nav" id="calPrev" aria-label="Предыдущий месяц">◀</button>
+        <div class="cal2-title" id="calTitle">Январь</div>
+        <button class="cal2-nav" id="calNext" aria-label="Следующий месяц">▶</button>
+      </div>
+      <div class="cal2-dow"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
+      <div class="cal2-grid" id="calGrid"></div>
     </div>
-    <p style="font-size:13px;color:var(--muted);margin-top:10px">Январь — 1 из 12 месяцев музея «Что изобрели русские первыми в мире». Дальше — весь год.</p>
+    <div class="cal2-detail" id="calDetail">Выбери подсвеченный день — покажу, что в этот день изобрели русские первыми в мире.</div>
   </div>
 </section>
 
@@ -445,6 +464,37 @@
       const ex=document.createElement('div');ex.className='exp show';ex.style.marginTop='6px';ex.textContent='💡 '+f.e;b.after(ex);
       document.getElementById('forkReal').classList.add('show');addScore(10);
     };fb.appendChild(b);});
+
+  // календарь изобретений
+  const INV={
+    '1-2':{t:'Первая в мире межпланетная станция «Луна-1»',p:'КБ Королёва',y:1959},
+    '1-8':{t:'Первый в мире арктический ледокол «Ермак»',p:'С. О. Макаров',y:1899},
+    '1-12':{t:'Первый в мире искусственный спутник Земли «Спутник-1»',p:'С. П. Королёв',y:1957},
+    '1-16':{t:'Первый в мире выход человека в открытый космос',p:'«Союз-4» и «Союз-5»',y:1969},
+    '1-21':{t:'Первая в мире атомная электростанция (Обнинск)',p:'И. В. Курчатов',y:1954},
+    '1-30':{t:'Первый в мире ранцевый парашют РК-1',p:'Г. Е. Котельников',y:1912,url:'index.html'}
+  };
+  const MON=['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'];
+  let calM=1;
+  const calGrid=document.getElementById('calGrid'),calTitle=document.getElementById('calTitle'),calDetail=document.getElementById('calDetail');
+  function renderCal(){
+    calTitle.textContent=MON[calM-1];calGrid.innerHTML='';
+    const off=(new Date(2026,calM-1,1).getDay()+6)%7, days=new Date(2026,calM,0).getDate();
+    for(let i=0;i<off;i++){const e=document.createElement('div');e.className='cal2-cell empty';calGrid.appendChild(e);}
+    for(let d=1;d<=days;d++){const c=document.createElement('div');c.className='cal2-cell';c.textContent=d;
+      const key=calM+'-'+d;if(INV[key]){c.classList.add('has');c.onclick=()=>selDay(key,c);}
+      calGrid.appendChild(c);}
+  }
+  function selDay(key,cell){
+    calGrid.querySelectorAll('.cal2-cell').forEach(x=>x.classList.remove('sel'));cell.classList.add('sel');
+    const it=INV[key],p=key.split('-');
+    let h='<b>'+p[1]+' '+MON[p[0]-1].toLowerCase()+' · '+it.y+'</b><br>'+it.t+'<br><span style="color:var(--muted);font-size:14px">'+it.p+'</span>';
+    if(it.url)h+='<br><a href="'+it.url+'" style="font-weight:600">Открыть день →</a>';
+    calDetail.innerHTML=h;
+  }
+  document.getElementById('calPrev').onclick=()=>{calM=calM===1?12:calM-1;renderCal();};
+  document.getElementById('calNext').onclick=()=>{calM=calM===12?1:calM+1;renderCal();};
+  renderCal();
 
   // плавное появление секций
   document.querySelectorAll('section.block').forEach(s=>s.classList.add('reveal'));
