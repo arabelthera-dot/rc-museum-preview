@@ -300,17 +300,19 @@
 <section class="block" style="background:#eef5f8">
   <div class="wrap">
     <h2>Игра 1 · Приземли парашютиста в мишень</h2>
-    <p style="color:var(--muted);margin-top:0;max-width:64ch">Парашютист медленно снижается под куполом, а ветер сносит его в сторону. Веди его к красной мишени и приземли точно в цель.</p>
+    <p style="color:var(--muted);margin-top:0;max-width:64ch">Парашютист падает. Поймай высоту и раскрой парашют в нужный момент, а потом веди его к красной мишени против ветра.</p>
     <div style="background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:0 10px 10px 0;padding:12px 16px;margin:12px 0;font-size:14px;line-height:1.6">
       <b>Как играть</b><br>
-      1. Нажми <b>«Прыжок»</b>.<br>
-      2. <b>Веди пальцем</b> по полю влево-вправо (или держи <b>◀</b> / <b>▶</b>, на компьютере — стрелки ← →), чтобы побороть ветер и попасть в мишень.
+      1. Нажми <b>«Прыжок»</b> — парашютист полетит вниз.<br>
+      2. В синей зоне жми <b>«Раскрыть парашют»</b> — не слишком рано и не слишком поздно.<br>
+      3. Под куполом <b>веди пальцем</b> по полю (или ◀ / ▶, на компьютере — стрелки), чтобы попасть в мишень против ветра.
     </div>
     <div style="text-align:center">
       <div id="windLbl" style="font-size:13px;color:var(--accent2);font-weight:600;min-height:18px;margin-bottom:6px"></div>
       <canvas id="game" width="800" height="330" style="width:100%;max-width:800px;background:linear-gradient(#cfe6f7,#eaf4fb);border-radius:14px;border:1px solid var(--line);touch-action:none"></canvas>
       <div style="margin:12px 0;display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
         <button class="btn gold" id="startG">▶ Прыжок</button>
+        <button class="btn" id="drop" style="display:none">🪂 Раскрыть парашют</button>
         <button class="btn ghost" id="steerL" style="display:none;touch-action:none;user-select:none;-webkit-user-select:none;font-size:20px;min-width:66px">◀</button>
         <button class="btn ghost" id="steerR" style="display:none;touch-action:none;user-select:none;-webkit-user-select:none;font-size:20px;min-width:66px">▶</button>
         <button class="btn ghost" id="rs" style="display:none">Заново</button>
@@ -419,47 +421,59 @@
   document.getElementById('csend').onclick=()=>{const i=document.getElementById('cin');ask(i.value);i.value='';};
   document.getElementById('cin').addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('csend').click();});
   push('k','<b>Котельников:</b> Здравствуйте. Я Глеб Котельников — актёр, что придумал ранцевый парашют. Спрашивайте о чём угодно: о деле, об испытаниях, о жизни.');
-  // === Игра 1: приведи парашютиста в мишень ===
+  // === Игра 1: раскрой парашют и приведи в мишень ===
   const cv=document.getElementById('game'),ctx=cv.getContext('2d');const GR=300;
-  let px,py,gst,wind,zone,guide,steer,drag,raf,scored;
+  const OPEN_LO=110,OPEN_HI=205; // зона хорошего раскрытия
+  let px,py,gst,wind,zone,guide,steer,drag,raf,scored,openY;
   function windText(){return 'Ветер '+(wind<0?'◀ влево':'вправо ▶')+' · '+(Math.abs(wind)>0.95?'сильный':'слабый');}
-  function ng(){px=400;py=42;gst='ready';steer=0;drag=false;guide=null;scored=false;
+  function ng(){px=400;py=22;gst='ready';steer=0;drag=false;guide=null;scored=false;openY=null;
     wind=(Math.random()<.5?-1:1)*(0.5+Math.random()*0.6);zone=150+Math.random()*500;
     document.getElementById('windLbl').textContent=windText();document.getElementById('gm').textContent='';
     cancelAnimationFrame(raf);draw();
     ctx.fillStyle='rgba(15,30,51,.5)';ctx.fillRect(0,0,cv.width,GR);
-    ctx.fillStyle='#fff';ctx.textAlign='center';ctx.font='bold 20px Georgia';ctx.fillText('Нажми «Прыжок»',cv.width/2,150);
-    ctx.font='14px Segoe UI';ctx.fillText('Веди пальцем к мишени — ветер сносит',cv.width/2,176);ctx.textAlign='left';
+    ctx.fillStyle='#fff';ctx.textAlign='center';ctx.font='bold 20px Georgia';ctx.fillText('Нажми «Прыжок»',cv.width/2,148);
+    ctx.font='14px Segoe UI';ctx.fillText('Поймай высоту, раскрой парашют, веди к мишени',cv.width/2,174);ctx.textAlign='left';
     gBtns('ready');}
   function draw(){ctx.clearRect(0,0,cv.width,cv.height);
     ctx.fillStyle='#c8e0a0';ctx.fillRect(0,GR,cv.width,cv.height-GR);
     [[46,'#b31b2c'],[30,'#fff'],[15,'#b31b2c']].forEach(b=>{ctx.fillStyle=b[1];ctx.beginPath();ctx.ellipse(zone,GR+15,b[0],8,0,0,7);ctx.fill();});
-    ctx.strokeStyle='#c8a24a';ctx.lineWidth=4;ctx.beginPath();ctx.arc(px,py-34,36,Math.PI,0);ctx.stroke();
-    ctx.beginPath();ctx.moveTo(px-36,py-34);ctx.lineTo(px,py);ctx.moveTo(px+36,py-34);ctx.lineTo(px,py);ctx.stroke();
+    if(gst==='fall'){ctx.save();ctx.setLineDash([9,7]);ctx.strokeStyle='rgba(31,111,139,.55)';ctx.lineWidth=1.5;ctx.strokeRect(8,OPEN_LO,cv.width-16,OPEN_HI-OPEN_LO);ctx.fillStyle='rgba(31,111,139,.8)';ctx.font='12px Segoe UI';ctx.fillText('раскрывай парашют в этой зоне',14,OPEN_LO-7);ctx.restore();}
+    if(openY!==null){ctx.strokeStyle='#c8a24a';ctx.lineWidth=4;ctx.beginPath();ctx.arc(px,py-34,36,Math.PI,0);ctx.stroke();
+      ctx.beginPath();ctx.moveTo(px-36,py-34);ctx.lineTo(px,py);ctx.moveTo(px+36,py-34);ctx.lineTo(px,py);ctx.stroke();}
     ctx.fillStyle='#1a1c22';ctx.beginPath();ctx.arc(px,py,9,0,7);ctx.fill();ctx.fillRect(px-8,py+8,16,22);
     ctx.fillStyle='rgba(31,111,139,.9)';ctx.font='13px Segoe UI';ctx.fillText((wind<0?'←':'→')+' ветер',14,22);}
-  function step(){py+=0.9;px+=wind*0.9+steer*3;if(guide!==null)px+=(guide-px)*0.12;
+  function step(){
+    if(gst==='fall'){py+=1.25;px+=wind*0.35;}
+    else if(gst==='canopy'){py+=0.6;px+=wind*0.9+steer*3;if(guide!==null)px+=(guide-px)*0.12;}
     px=Math.max(16,Math.min(cv.width-16,px));
     if(py>=GR){py=GR;gst='land';if(!scored){scored=true;land();}}
     draw();if(gst!=='land')raf=requestAnimationFrame(step);}
-  function land(){const dx=Math.abs(px-zone);
-    if(dx<=46){msg('🎯 В яблочко! Точно в мишень.',1);award('game1',20);}
+  function openChute(){if(gst!=='fall')return;openY=py;gst='canopy';guide=px;gBtns('canopy');
+    if(py<OPEN_LO)msg('Рановато, но купол раскрылся. Веди к мишени.',1);
+    else if(py>OPEN_HI)msg('Поздновато! Быстрее целься.',0);
+    else msg('Отличный момент! Теперь веди к мишени.',1);}
+  function land(){
+    if(openY===null){msg('💥 Ты не раскрыл парашют! Жми «Раскрыть» на лету.',0);gBtns('end');return;}
+    const dx=Math.abs(px-zone),good=openY>=OPEN_LO&&openY<=OPEN_HI;
+    if(dx<=46){msg(good?'🎯 Идеально! Точный момент и в яблочко.':'🎯 В яблочко!',1);award('game1',20);}
     else if(dx<=95){msg('✅ Хорошая посадка рядом с центром.',1);award('game1',20);}
     else{msg('🪂 Ветер снёс мимо. Жми «Заново» и тяни к мишени активнее.',0);}
     gBtns('end');}
   function msg(t,w){const e=document.getElementById('gm');e.textContent=t;e.style.color=w?'#1f5b2c':'#8e1420';}
   function gBtns(m){document.getElementById('startG').style.display=m==='ready'?'':'none';
-    document.getElementById('steerL').style.display=m==='play'?'':'none';
-    document.getElementById('steerR').style.display=m==='play'?'':'none';
+    document.getElementById('drop').style.display=m==='fall'?'':'none';
+    document.getElementById('steerL').style.display=m==='canopy'?'':'none';
+    document.getElementById('steerR').style.display=m==='canopy'?'':'none';
     document.getElementById('rs').style.display=m==='ready'?'none':'';}
-  document.getElementById('startG').onclick=()=>{if(gst!=='ready')return;gst='fly';gBtns('play');cancelAnimationFrame(raf);step();};
+  document.getElementById('startG').onclick=()=>{if(gst!=='ready')return;gst='fall';gBtns('fall');cancelAnimationFrame(raf);step();};
+  document.getElementById('drop').onclick=openChute;
   document.getElementById('rs').onclick=ng;
   function steerBind(id,d){const b=document.getElementById(id);
     b.addEventListener('pointerdown',e=>{e.preventDefault();steer=d;});
     ['pointerup','pointerleave','pointercancel'].forEach(ev=>b.addEventListener(ev,e=>{if(e&&e.cancelable)e.preventDefault();steer=0;}));}
   steerBind('steerL',-1);steerBind('steerR',1);
   function toX(e){const r=cv.getBoundingClientRect();return Math.max(16,Math.min(cv.width-16,(e.clientX-r.left)/r.width*cv.width));}
-  cv.addEventListener('pointerdown',e=>{if(gst==='fly'){e.preventDefault();drag=true;guide=toX(e);}});
+  cv.addEventListener('pointerdown',e=>{if(gst==='canopy'){e.preventDefault();drag=true;guide=toX(e);}});
   window.addEventListener('pointermove',e=>{if(drag)guide=toX(e);});
   window.addEventListener('pointerup',()=>{drag=false;});
   document.addEventListener('keydown',e=>{if(e.key==='ArrowLeft')steer=-1;if(e.key==='ArrowRight')steer=1;});
