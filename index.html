@@ -295,11 +295,11 @@
       <b>Как играть</b><br>
       1. Нажми <b>«Прыжок»</b> — Иван Иванович полетит вниз.<br>
       2. В нужный миг жми <b>«Раскрыть купол»</b> — не слишком рано и не слишком поздно.<br>
-      3. Под куполом <b>держи</b> кнопку <b>◀</b> или <b>▶</b> (на компьютере — стрелки ← →), чтобы побороть ветер и попасть в мишень. На телефоне можно и быстрыми нажатиями.
+      3. Под куполом <b>веди пальцем</b> по полю влево-вправо (или держи <b>◀</b> / <b>▶</b>, на компьютере — стрелки ← →), чтобы попасть в мишень против ветра.
     </div>
     <div style="text-align:center">
       <div id="windLbl" style="font-size:13px;color:var(--accent2);font-weight:600;min-height:18px;margin-bottom:6px"></div>
-      <canvas id="game" width="800" height="330" style="width:100%;max-width:800px;background:linear-gradient(#cfe6f7,#eaf4fb);border-radius:14px;border:1px solid var(--line);touch-action:manipulation"></canvas>
+      <canvas id="game" width="800" height="330" style="width:100%;max-width:800px;background:linear-gradient(#cfe6f7,#eaf4fb);border-radius:14px;border:1px solid var(--line);touch-action:none"></canvas>
       <div style="margin:12px 0;display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
         <button class="btn gold" id="startG">▶ Прыжок</button>
         <button class="btn ghost" id="steerL" style="display:none;touch-action:none;user-select:none;-webkit-user-select:none;font-size:20px;min-width:66px">◀</button>
@@ -398,9 +398,9 @@
   push('k','<b>Котельников:</b> Здравствуйте. Я Глеб Котельников — актёр, что придумал ранцевый парашют. Спрашивайте о чём угодно: о деле, об испытаниях, о жизни.');
   // === Игра 1: приземление с ветром и мишенью ===
   const cv=document.getElementById('game'),ctx=cv.getContext('2d');const gy=300;
-  let y,x,st,openY,rew,raf,wind,tx,steer;
+  let y,x,st,openY,rew,raf,wind,tx,steer,targetX=null,dragging=false;
   function windText(){return 'Ветер '+(wind<0?'◀ влево':'вправо ▶')+' · '+(Math.abs(wind)>0.6?'сильный':'слабый');}
-  function newRound(){y=42;x=400;st='ready';openY=null;rew=false;steer=0;
+  function newRound(){y=42;x=400;st='ready';openY=null;rew=false;steer=0;targetX=null;
     wind=(Math.random()<.5?-1:1)*(0.35+Math.random()*0.5);tx=180+Math.random()*440;
     document.getElementById('gm').textContent='';document.getElementById('windLbl').textContent=windText();
     cancelAnimationFrame(raf);draw();
@@ -417,7 +417,7 @@
     ctx.fillStyle='rgba(31,111,139,.9)';ctx.font='13px Segoe UI';ctx.fillText((wind<0?'←':'→')+' ветер',14,22);}
   function loop(){
     if(st==='fall'){y+=1.7;x+=wind*0.4;}
-    else if(st==='desc'){y+=0.6;x+=wind*1.1+steer*2.6;}
+    else if(st==='desc'){y+=0.45;if(targetX!==null)x+=(targetX-x)*0.10;x+=wind*0.7+steer*2.2;}
     x=Math.max(20,Math.min(cv.width-20,x));
     if(y>=gy){y=gy;st='land';if(!rew){rew=true;land();}}
     draw();if(st!=='land')raf=requestAnimationFrame(loop);}
@@ -436,12 +436,16 @@
     document.getElementById('steerR').style.display=m==='play'?'':'none';
     document.getElementById('rs').style.display=m==='ready'?'none':'';}
   document.getElementById('startG').onclick=()=>{st='fall';rew=false;gBtns('play');cancelAnimationFrame(raf);loop();};
-  document.getElementById('drop').onclick=()=>{if(st==='fall'){openY=y;st='desc';}};
+  document.getElementById('drop').onclick=()=>{if(st==='fall'){openY=y;st='desc';targetX=x;}};
   document.getElementById('rs').onclick=()=>{gBtns('ready');newRound();};
   function steerBind(id,dir){const b=document.getElementById(id);
     b.addEventListener('pointerdown',e=>{e.preventDefault();steer=dir;if(st==='desc')x+=dir*12;});
     ['pointerup','pointerleave','pointercancel'].forEach(ev=>b.addEventListener(ev,e=>{if(e&&e.preventDefault)e.preventDefault();steer=0;}));}
   steerBind('steerL',-1);steerBind('steerR',1);
+  function toX(e){const r=cv.getBoundingClientRect();return Math.max(20,Math.min(cv.width-20,(e.clientX-r.left)/r.width*cv.width));}
+  cv.addEventListener('pointerdown',e=>{if(st==='desc'||st==='fall'){e.preventDefault();dragging=true;targetX=toX(e);}});
+  window.addEventListener('pointermove',e=>{if(dragging)targetX=toX(e);});
+  window.addEventListener('pointerup',()=>{dragging=false;});
   document.addEventListener('keydown',e=>{if(e.key==='ArrowLeft')steer=-1;if(e.key==='ArrowRight')steer=1;});
   document.addEventListener('keyup',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight')steer=0;});
   gBtns('ready');newRound();
