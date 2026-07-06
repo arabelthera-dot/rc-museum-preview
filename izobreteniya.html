@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Изобретения по алфавиту — Русская цивилизация</title>
+<style>
+  :root{--accent:#1f6f8b;--accent2:#154b60;--gold:#c8a24a;--ink:#1a1c22;--muted:#5c6672;--paper:#f5f7f9;--paper2:#fff;--line:#e4e8ec;--ok:#1f7a3d;--chk:#8a5a10}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Segoe UI',Roboto,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+  h1,h2,h3{font-family:Georgia,'Times New Roman',serif;line-height:1.2;margin:0}
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px}
+  a{color:var(--accent)}
+  header.top{background:#0f1e33;color:#fff;padding:22px 0}
+  header.top .k{color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:700}
+  header.top h1{color:#fff;font-size:28px;margin-top:8px}
+  header.top p{color:#cdd9e6;margin:8px 0 0;font-size:15px}
+  .banner{background:#fff6e5;border:1px solid #e6cf95;border-radius:12px;padding:12px 16px;margin:18px 0;font-size:14px;color:#6b5316}
+  .search{display:flex;align-items:center;gap:10px;padding:12px 16px;background:var(--paper2);border:1px solid var(--line);border-radius:12px;margin-bottom:8px}
+  .search input{flex:1;border:none;outline:none;background:transparent;font-size:16px;color:var(--ink)}
+  .count{font-size:13px;color:var(--muted);margin:0 0 14px 2px}
+  .grp-h{font-family:Georgia,serif;font-size:26px;color:var(--gold);font-weight:700;margin:18px 0 6px;border-bottom:1px solid var(--line);padding-bottom:4px}
+  .card{background:var(--paper2);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:10px 0;box-shadow:0 1px 3px rgba(0,0,0,.03)}
+  .card .n{font-size:17px;font-weight:600}
+  .card .full{font-size:14px;color:var(--muted);margin:4px 0 8px}
+  .card .meta{font-size:14px}
+  .badge{display:inline-block;border-radius:20px;padding:2px 10px;font-size:12px;font-weight:600;vertical-align:middle;margin-left:6px}
+  .badge.ok{background:#e7f5e9;color:var(--ok);border:1px solid #3f9b52}
+  .badge.chk{background:#fff3d6;color:var(--chk);border:1px solid #d8a640}
+  .open{display:inline-block;margin-top:8px;font-weight:600}
+  .empty{padding:26px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:12px}
+  footer{padding:22px 0 50px;color:var(--muted);font-size:13px;text-align:center}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="k">Русская цивилизация</div>
+  <h1>Изобретения по алфавиту</h1>
+  <p>Что русские сделали первыми в мире — по буквам. Выбери, что интересно, и открой.</p>
+</div></header>
+
+<div class="wrap">
+  <div class="banner">База пополняется и проверяется. Сейчас в ней <b id="total">0</b> изобретений — постепенно доводим до всех 365, и каждое первенство сверяем по источникам.</div>
+  <div class="search">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9c9a92" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <input id="q" type="text" placeholder="Поиск изобретения…">
+  </div>
+  <div class="count" id="count"></div>
+  <div id="list"></div>
+</div>
+
+<footer><div class="wrap"><a href="index.html">← к дню музея</a> · Русская цивилизация · весь контент делает ИИ</div></footer>
+
+<script>
+  const DB=[
+    {n:'Атомная электростанция',full:'Первая в мире атомная электростанция (Обнинск)',y:1954,p:'И. В. Курчатов',s:'ok'},
+    {n:'Выход в открытый космос и стыковка кораблей',full:'Первая стыковка пилотируемых кораблей и переход через открытый космос («Союз-4» и «Союз-5»)',y:1969,p:'КБ Королёва',s:'ok'},
+    {n:'Кабельное телевидение',full:'Первая в мире сеть кабельного телевидения (Москва)',y:1939,p:'—',s:'chk'},
+    {n:'Ледокол арктический «Ермак»',full:'Первый в мире арктический ледокол',y:1899,p:'С. О. Макаров',s:'ok'},
+    {n:'Луна-1',full:'Первая в мире межпланетная станция',y:1959,p:'КБ Королёва',s:'ok'},
+    {n:'Мобильный телефон ЛК-1',full:'Первый мобильный телефон',y:1957,p:'Л. И. Куприянович',s:'chk'},
+    {n:'Парашют ранцевый РК-1',full:'Первый в мире ранцевый парашют свободного действия',y:1912,p:'Г. Е. Котельников',s:'ok',url:'index.html'},
+    {n:'Спутник Земли «Спутник-1»',full:'Первый в мире искусственный спутник Земли',y:1957,p:'С. П. Королёв',s:'ok'},
+    {n:'Экраноплан',full:'Первый практически применимый экраноплан (СМ-1, «Каспийский монстр»)',y:1961,p:'Р. Е. Алексеев',s:'chk'}
+  ];
+  document.getElementById('total').textContent=DB.length;
+  const list=document.getElementById('list'),count=document.getElementById('count'),q=document.getElementById('q');
+  function render(){
+    const term=q.value.trim().toLowerCase();
+    const items=DB.filter(d=>!term||(d.n+' '+d.full+' '+d.p).toLowerCase().includes(term))
+                  .sort((a,b)=>a.n.localeCompare(b.n,'ru'));
+    count.textContent=items.length+' '+(items.length%10===1&&items.length%100!==11?'изобретение':'изобретений');
+    list.innerHTML='';
+    if(!items.length){list.innerHTML='<div class="empty">Ничего не найдено. Очисти поиск.</div>';return;}
+    let letter='';
+    items.forEach(d=>{const L=d.n[0].toUpperCase();
+      if(L!==letter){letter=L;const h=document.createElement('div');h.className='grp-h';h.textContent=L;list.appendChild(h);}
+      const c=document.createElement('div');c.className='card';
+      const badge=d.s==='ok'?'<span class="badge ok">✓ проверено</span>':'<span class="badge chk">🔎 проверяется</span>';
+      c.innerHTML='<div class="n">'+d.n+badge+'</div><div class="full">'+d.full+'</div><div class="meta">'+d.y+' · '+d.p+'</div>'+(d.url?'<a class="open" href="'+d.url+'">Открыть день →</a>':'');
+      list.appendChild(c);});
+  }
+  q.addEventListener('input',render); render();
+</script>
+</body>
+</html>
