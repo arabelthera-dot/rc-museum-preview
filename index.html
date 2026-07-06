@@ -35,21 +35,23 @@
   .score-info{position:absolute;right:12px;top:58px;max-width:250px;background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:11px 13px;font-size:13px;line-height:1.5;box-shadow:0 8px 22px rgba(0,0,0,.18);display:none;z-index:40}
   .score-info.show{display:block}
 
-  /* HERO — две раздельные зоны: сверху картинка, снизу текст (не накладываются) */
-  .hero{display:flex;flex-direction:column}
-  .hero-visual{position:relative;height:46vh;min-height:260px;max-height:520px;overflow:hidden;background:linear-gradient(180deg,#b8d6ee 0%,#d8e8f4 45%,#f3ead6 100%)}
-  .hero-visual img.scene{width:100%;height:100%;object-fit:cover;display:block}
-  .hero-visual canvas.scene{width:100%;height:100%;display:block}
-  .scene3d-tag{position:absolute;left:16px;top:14px;background:rgba(15,30,51,.66);color:#fff;border:1px solid var(--gold);border-radius:20px;padding:4px 12px;font-size:12px;letter-spacing:.4px;backdrop-filter:blur(3px)}
-  @keyframes kb{0%{transform:scale(1)}100%{transform:scale(1.07)}}
-  .hero-visual .pbadge{position:absolute;right:16px;bottom:16px;display:flex;align-items:center;gap:9px;background:rgba(15,30,51,.72);border:1px solid var(--gold);border-radius:40px;padding:5px 14px 5px 5px;backdrop-filter:blur(3px)}
-  .hero-visual .pbadge img{width:42px;height:42px;border-radius:50%;object-fit:cover;border:1px solid var(--gold)}
-  .hero-visual .pbadge span{color:#fff;font-family:Georgia,serif;font-size:13px}
-  .hero-text{background:linear-gradient(180deg,#14243d,#0f1e33);color:#fff;padding:26px 0 34px}
+  /* HERO — единый киношный кадр: 3D на весь экран, текст поверх с затемнением */
+  html{scroll-behavior:smooth}
+  .hero{position:relative;min-height:82vh;overflow:hidden;background:linear-gradient(180deg,#b8d6ee 0%,#d8e8f4 45%,#f3ead6 100%)}
+  .hero-visual{position:absolute;inset:0}
+  .hero-visual img.scene,.hero-visual canvas.scene{width:100%;height:100%;display:block;object-fit:cover}
+  .scene3d-tag{position:absolute;left:14px;top:14px;z-index:2;background:rgba(15,30,51,.6);color:#fff;border:1px solid var(--gold);border-radius:20px;padding:4px 12px;font-size:12px;letter-spacing:.4px;backdrop-filter:blur(3px)}
+  .hero-overlay{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:120px 0 32px;background:linear-gradient(to top,rgba(11,22,40,.96) 0%,rgba(11,22,40,.82) 42%,rgba(11,22,40,0) 100%)}
   .hero .museum{color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:700;margin-bottom:10px}
-  .hero h1{color:#fff;font-size:40px;margin-bottom:14px}
+  .hero h1{color:#fff;font-size:40px;margin-bottom:14px;text-shadow:0 2px 22px rgba(0,0,0,.4)}
   .hero .hook{color:#eef2f7;font-size:19px;max-width:640px;margin-bottom:22px}
-  @media(max-width:640px){ .hero h1{font-size:30px} .hero-visual .pbadge span{display:none} }
+  @media(max-width:640px){ .hero h1{font-size:30px} .hero{min-height:88vh} .hero-overlay{padding:90px 0 26px} }
+  /* липкое оглавление дня */
+  .daynav{position:sticky;top:60px;z-index:25;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+  .daynav .wrap{display:flex;gap:2px;overflow-x:auto}
+  .daynav a{flex:0 0 auto;padding:12px 14px;font-size:14px;color:var(--accent2);text-decoration:none;font-weight:600;white-space:nowrap;border-bottom:2px solid transparent}
+  .daynav a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+  section.block{scroll-margin-top:118px}
   /* появление секций */
   .reveal{opacity:0;transform:translateY(22px);transition:.7s cubic-bezier(.2,.7,.2,1)}
   .reveal.on{opacity:1;transform:none}
@@ -157,10 +159,9 @@
 <div class="hero">
   <div class="hero-visual">
     <canvas id="hero3d" class="scene" aria-label="3D-визуализация парашюта РК-1"></canvas>
-    <div class="scene3d-tag">3D-прототип · парашют РК-1</div>
-    <div class="pbadge"><img src="kotelnikov.jpg" alt="Котельников"><span>Г. Е. Котельников</span></div>
+    <div class="scene3d-tag">3D · парашют РК-1</div>
   </div>
-  <div class="hero-text">
+  <div class="hero-overlay">
     <div class="wrap">
       <span class="date-chip">30 января</span>
       <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
@@ -171,6 +172,17 @@
     </div>
   </div>
 </div>
+
+<nav class="daynav">
+  <div class="wrap">
+    <a href="#story">Читать</a>
+    <a href="#video">Видео</a>
+    <a href="#games">Игры</a>
+    <a href="#chat-sec">Спросить</a>
+    <a href="#calendar">Календарь</a>
+    <a href="#catalog">База</a>
+  </div>
+</nav>
 
 <section class="block" id="video">
   <div class="wrap">
@@ -283,7 +295,7 @@
   </div>
 </section>
 
-<section class="block">
+<section class="block" id="chat-sec">
   <div class="wrap">
     <div style="display:flex;align-items:center;gap:14px;margin-bottom:6px;flex-wrap:wrap">
       <img src="kotelnikov.jpg" alt="Котельников" style="width:60px;height:60px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);box-shadow:0 2px 8px rgba(0,0,0,.15)">
@@ -299,7 +311,7 @@
   </div>
 </section>
 
-<section class="block" style="background:#eef5f8">
+<section class="block" id="games" style="background:#eef5f8">
   <div class="wrap">
     <h2>Игра 1 · Приземли парашютиста в мишень</h2>
     <p style="color:var(--muted);margin-top:0;max-width:64ch">Парашютист падает. Поймай высоту и раскрой парашют в нужный момент, а потом веди его к красной мишени против ветра.</p>
@@ -361,10 +373,10 @@
   </div>
 </section>
 
-<section class="block" id="catalog">
+<section class="block" id="catalog" style="background:linear-gradient(135deg,#16294a,#0f1e33);border-bottom:none">
   <div class="wrap" style="text-align:center">
-    <h2 style="margin-bottom:6px">У нас много изобретений</h2>
-    <p style="color:var(--muted);margin:0 auto 14px;max-width:60ch">Русские сделали первыми в мире сотни вещей. Открой полную базу и выбери по алфавиту то, что интересно именно тебе.</p>
+    <h2 style="margin-bottom:6px;color:#fff">У нас много изобретений</h2>
+    <p style="color:#cdd9e6;margin:0 auto 16px;max-width:60ch">Русские сделали первыми в мире сотни вещей. Открой полную базу и выбери по алфавиту то, что интересно именно тебе.</p>
     <a class="btn gold" href="izobreteniya.html" style="display:inline-block;text-decoration:none">Посмотреть изобретения по алфавиту →</a>
   </div>
 </section>
