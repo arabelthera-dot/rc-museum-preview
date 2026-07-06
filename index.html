@@ -32,6 +32,8 @@
   .logo .lt{font-family:Georgia,serif;font-weight:700;font-size:16px;letter-spacing:.3px}
   .logo .lt small{display:block;font-size:9.5px;font-weight:400;letter-spacing:2.5px;color:var(--gold);text-transform:uppercase}
   .score{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);border-radius:20px;padding:5px 13px;font-size:13px}
+  .score-info{position:absolute;right:12px;top:58px;max-width:250px;background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:11px 13px;font-size:13px;line-height:1.5;box-shadow:0 8px 22px rgba(0,0,0,.18);display:none;z-index:40}
+  .score-info.show{display:block}
 
   /* HERO — две раздельные зоны: сверху картинка, снизу текст (не накладываются) */
   .hero{display:flex;flex-direction:column}
@@ -145,8 +147,9 @@
       </svg>
       <span class="lt">Русская цивилизация<small>первые в мире</small></span>
     </a>
-    <div class="score" title="Баллы знаний за этот день. Отвечай в викторине, проходи развилку и обе игры — собери все 80.">⭐ <span id="score">0</span> / 80</div>
+    <div class="score" id="scoreBox" style="cursor:pointer" title="Баллы знаний за этот день">⭐ <span id="score">0</span> / 80 <span style="opacity:.7">ⓘ</span></div>
   </div>
+  <div class="score-info" id="scoreInfo">Баллы знаний за этот день. Отвечай в викторине, проходи развилку и обе игры — собери все 80 и получи звание. Итог — внизу страницы.</div>
 </header>
 
 <div class="hero">
@@ -297,12 +300,11 @@
 <section class="block" style="background:#eef5f8">
   <div class="wrap">
     <h2>Игра 1 · Приземли парашютиста в мишень</h2>
-    <p style="color:var(--muted);margin-top:0;max-width:64ch">Раскрой купол в нужный миг: рано — не наполнится, поздно — жёсткая посадка. А под куполом дует ветер — рули влево-вправо и целься в красную мишень.</p>
+    <p style="color:var(--muted);margin-top:0;max-width:64ch">Парашютист медленно снижается под куполом, а ветер сносит его в сторону. Веди его к красной мишени и приземли точно в цель.</p>
     <div style="background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:0 10px 10px 0;padding:12px 16px;margin:12px 0;font-size:14px;line-height:1.6">
       <b>Как играть</b><br>
-      1. Нажми <b>«Прыжок»</b> — Иван Иванович полетит вниз.<br>
-      2. В нужный миг жми <b>«Раскрыть купол»</b> — не слишком рано и не слишком поздно.<br>
-      3. Под куполом <b>веди пальцем</b> по полю влево-вправо (или держи <b>◀</b> / <b>▶</b>, на компьютере — стрелки ← →), чтобы попасть в мишень против ветра.
+      1. Нажми <b>«Прыжок»</b>.<br>
+      2. <b>Веди пальцем</b> по полю влево-вправо (или держи <b>◀</b> / <b>▶</b>, на компьютере — стрелки ← →), чтобы побороть ветер и попасть в мишень.
     </div>
     <div style="text-align:center">
       <div id="windLbl" style="font-size:13px;color:var(--accent2);font-weight:600;min-height:18px;margin-bottom:6px"></div>
@@ -310,7 +312,6 @@
       <div style="margin:12px 0;display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
         <button class="btn gold" id="startG">▶ Прыжок</button>
         <button class="btn ghost" id="steerL" style="display:none;touch-action:none;user-select:none;-webkit-user-select:none;font-size:20px;min-width:66px">◀</button>
-        <button class="btn" id="drop" style="display:none">Раскрыть купол</button>
         <button class="btn ghost" id="steerR" style="display:none;touch-action:none;user-select:none;-webkit-user-select:none;font-size:20px;min-width:66px">▶</button>
         <button class="btn ghost" id="rs" style="display:none">Заново</button>
       </div>
@@ -418,59 +419,52 @@
   document.getElementById('csend').onclick=()=>{const i=document.getElementById('cin');ask(i.value);i.value='';};
   document.getElementById('cin').addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('csend').click();});
   push('k','<b>Котельников:</b> Здравствуйте. Я Глеб Котельников — актёр, что придумал ранцевый парашют. Спрашивайте о чём угодно: о деле, об испытаниях, о жизни.');
-  // === Игра 1: приземление с ветром и мишенью ===
-  const cv=document.getElementById('game'),ctx=cv.getContext('2d');const gy=300;
-  let y,x,st,openY,rew,raf,wind,tx,steer,targetX=null,dragging=false;
-  function windText(){return 'Ветер '+(wind<0?'◀ влево':'вправо ▶')+' · '+(Math.abs(wind)>0.6?'сильный':'слабый');}
-  function newRound(){y=42;x=400;st='ready';openY=null;rew=false;steer=0;targetX=null;
-    wind=(Math.random()<.5?-1:1)*(0.35+Math.random()*0.5);tx=180+Math.random()*440;
-    document.getElementById('gm').textContent='';document.getElementById('windLbl').textContent=windText();
+  // === Игра 1: приведи парашютиста в мишень ===
+  const cv=document.getElementById('game'),ctx=cv.getContext('2d');const GR=300;
+  let px,py,gst,wind,zone,guide,steer,drag,raf,scored;
+  function windText(){return 'Ветер '+(wind<0?'◀ влево':'вправо ▶')+' · '+(Math.abs(wind)>0.95?'сильный':'слабый');}
+  function ng(){px=400;py=42;gst='ready';steer=0;drag=false;guide=null;scored=false;
+    wind=(Math.random()<.5?-1:1)*(0.5+Math.random()*0.6);zone=150+Math.random()*500;
+    document.getElementById('windLbl').textContent=windText();document.getElementById('gm').textContent='';
     cancelAnimationFrame(raf);draw();
-    ctx.fillStyle='rgba(15,30,51,.5)';ctx.fillRect(0,0,cv.width,gy);
-    ctx.fillStyle='#fff';ctx.textAlign='center';ctx.font='bold 20px Georgia';ctx.fillText('Иван Иванович готов к прыжку',cv.width/2,138);
-    ctx.font='14px Segoe UI';ctx.fillText('Наведись на мишень и раскрой купол вовремя',cv.width/2,166);ctx.textAlign='left';}
+    ctx.fillStyle='rgba(15,30,51,.5)';ctx.fillRect(0,0,cv.width,GR);
+    ctx.fillStyle='#fff';ctx.textAlign='center';ctx.font='bold 20px Georgia';ctx.fillText('Нажми «Прыжок»',cv.width/2,150);
+    ctx.font='14px Segoe UI';ctx.fillText('Веди пальцем к мишени — ветер сносит',cv.width/2,176);ctx.textAlign='left';
+    gBtns('ready');}
   function draw(){ctx.clearRect(0,0,cv.width,cv.height);
-    ctx.fillStyle='#c8e0a0';ctx.fillRect(0,gy,cv.width,cv.height-gy);
-    [[46,'#b31b2c'],[30,'#fff'],[15,'#b31b2c']].forEach(b=>{ctx.fillStyle=b[1];ctx.beginPath();ctx.ellipse(tx,gy+15,b[0],8,0,0,7);ctx.fill();});
-    ctx.fillStyle='#b31b2c';ctx.beginPath();ctx.ellipse(400,34,40,28,0,0,7);ctx.fill();ctx.fillStyle='#7a1420';ctx.fillRect(388,58,24,9);
-    if(openY!==null){ctx.strokeStyle='#c8a24a';ctx.lineWidth=4;ctx.beginPath();ctx.arc(x,y-32,36,Math.PI,0);ctx.stroke();
-      ctx.beginPath();ctx.moveTo(x-36,y-32);ctx.lineTo(x,y);ctx.moveTo(x+36,y-32);ctx.lineTo(x,y);ctx.stroke();}
-    ctx.fillStyle='#1a1c22';ctx.beginPath();ctx.arc(x,y,9,0,7);ctx.fill();ctx.fillRect(x-8,y+8,16,22);
+    ctx.fillStyle='#c8e0a0';ctx.fillRect(0,GR,cv.width,cv.height-GR);
+    [[46,'#b31b2c'],[30,'#fff'],[15,'#b31b2c']].forEach(b=>{ctx.fillStyle=b[1];ctx.beginPath();ctx.ellipse(zone,GR+15,b[0],8,0,0,7);ctx.fill();});
+    ctx.strokeStyle='#c8a24a';ctx.lineWidth=4;ctx.beginPath();ctx.arc(px,py-34,36,Math.PI,0);ctx.stroke();
+    ctx.beginPath();ctx.moveTo(px-36,py-34);ctx.lineTo(px,py);ctx.moveTo(px+36,py-34);ctx.lineTo(px,py);ctx.stroke();
+    ctx.fillStyle='#1a1c22';ctx.beginPath();ctx.arc(px,py,9,0,7);ctx.fill();ctx.fillRect(px-8,py+8,16,22);
     ctx.fillStyle='rgba(31,111,139,.9)';ctx.font='13px Segoe UI';ctx.fillText((wind<0?'←':'→')+' ветер',14,22);}
-  function loop(){
-    if(st==='fall'){y+=1.7;x+=wind*0.4;}
-    else if(st==='desc'){y+=0.45;if(targetX!==null)x+=(targetX-x)*0.10;x+=wind*0.7+steer*2.2;}
-    x=Math.max(20,Math.min(cv.width-20,x));
-    if(y>=gy){y=gy;st='land';if(!rew){rew=true;land();}}
-    draw();if(st!=='land')raf=requestAnimationFrame(loop);}
-  function land(){const dx=Math.abs(x-tx);
-    if(openY===null)msg('💥 Ты не раскрыл купол! Жми «Раскрыть» на лету.',0);
-    else if(openY<140)msg('⚠️ Рано — купол не наполнился. Раскрывай чуть ниже.',0);
-    else if(openY>252)msg('⚠️ Поздно — земля близко, жёсткая посадка. Раскрывай раньше.',0);
-    else if(dx<=46){msg('🎯 В яблочко! Мягко и точно в мишень.',1);award('game1',20);}
+  function step(){py+=0.9;px+=wind*0.9+steer*3;if(guide!==null)px+=(guide-px)*0.12;
+    px=Math.max(16,Math.min(cv.width-16,px));
+    if(py>=GR){py=GR;gst='land';if(!scored){scored=true;land();}}
+    draw();if(gst!=='land')raf=requestAnimationFrame(step);}
+  function land(){const dx=Math.abs(px-zone);
+    if(dx<=46){msg('🎯 В яблочко! Точно в мишень.',1);award('game1',20);}
     else if(dx<=95){msg('✅ Хорошая посадка рядом с центром.',1);award('game1',20);}
-    else{msg('🪂 Купол раскрыт вовремя, но ветер снёс мимо. Целься активнее.',1);}
+    else{msg('🪂 Ветер снёс мимо. Жми «Заново» и тяни к мишени активнее.',0);}
     gBtns('end');}
   function msg(t,w){const e=document.getElementById('gm');e.textContent=t;e.style.color=w?'#1f5b2c':'#8e1420';}
   function gBtns(m){document.getElementById('startG').style.display=m==='ready'?'':'none';
-    document.getElementById('drop').style.display=m==='play'?'':'none';
     document.getElementById('steerL').style.display=m==='play'?'':'none';
     document.getElementById('steerR').style.display=m==='play'?'':'none';
     document.getElementById('rs').style.display=m==='ready'?'none':'';}
-  document.getElementById('startG').onclick=()=>{st='fall';rew=false;gBtns('play');cancelAnimationFrame(raf);loop();};
-  document.getElementById('drop').onclick=()=>{if(st==='fall'){openY=y;st='desc';targetX=x;}};
-  document.getElementById('rs').onclick=()=>{gBtns('ready');newRound();};
-  function steerBind(id,dir){const b=document.getElementById(id);
-    b.addEventListener('pointerdown',e=>{e.preventDefault();steer=dir;if(st==='desc')x+=dir*12;});
-    ['pointerup','pointerleave','pointercancel'].forEach(ev=>b.addEventListener(ev,e=>{if(e&&e.preventDefault)e.preventDefault();steer=0;}));}
+  document.getElementById('startG').onclick=()=>{if(gst!=='ready')return;gst='fly';gBtns('play');cancelAnimationFrame(raf);step();};
+  document.getElementById('rs').onclick=ng;
+  function steerBind(id,d){const b=document.getElementById(id);
+    b.addEventListener('pointerdown',e=>{e.preventDefault();steer=d;});
+    ['pointerup','pointerleave','pointercancel'].forEach(ev=>b.addEventListener(ev,e=>{if(e&&e.cancelable)e.preventDefault();steer=0;}));}
   steerBind('steerL',-1);steerBind('steerR',1);
-  function toX(e){const r=cv.getBoundingClientRect();return Math.max(20,Math.min(cv.width-20,(e.clientX-r.left)/r.width*cv.width));}
-  cv.addEventListener('pointerdown',e=>{if(st==='desc'||st==='fall'){e.preventDefault();dragging=true;targetX=toX(e);}});
-  window.addEventListener('pointermove',e=>{if(dragging)targetX=toX(e);});
-  window.addEventListener('pointerup',()=>{dragging=false;});
+  function toX(e){const r=cv.getBoundingClientRect();return Math.max(16,Math.min(cv.width-16,(e.clientX-r.left)/r.width*cv.width));}
+  cv.addEventListener('pointerdown',e=>{if(gst==='fly'){e.preventDefault();drag=true;guide=toX(e);}});
+  window.addEventListener('pointermove',e=>{if(drag)guide=toX(e);});
+  window.addEventListener('pointerup',()=>{drag=false;});
   document.addEventListener('keydown',e=>{if(e.key==='ArrowLeft')steer=-1;if(e.key==='ArrowRight')steer=1;});
   document.addEventListener('keyup',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight')steer=0;});
-  gBtns('ready');newRound();
+  ng();
 
   // === Игра 2: собери РК-1 ===
   const asmData=[
@@ -541,6 +535,10 @@
   document.getElementById('calNext').onclick=()=>{calM=calM===12?1:calM+1;renderCal();};
   renderCal();
   renderResult();
+  // подсказка по баллам (тап)
+  (function(){const sb=document.getElementById('scoreBox'),si=document.getElementById('scoreInfo');
+    if(sb&&si){sb.addEventListener('click',()=>si.classList.toggle('show'));
+      document.addEventListener('click',e=>{if(!sb.contains(e.target)&&!si.contains(e.target))si.classList.remove('show');});}})();
 
   // плавное появление секций
   document.querySelectorAll('section.block').forEach(s=>s.classList.add('reveal'));
