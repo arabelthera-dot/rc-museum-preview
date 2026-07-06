@@ -121,6 +121,13 @@
   .cal2-cell.sel::after{background:#fff}
   .cal2-detail{margin-top:14px;background:#eef5f8;border-left:4px solid var(--accent);border-radius:0 10px 10px 0;padding:14px 16px;font-size:15px;color:#33414f;max-width:560px}
   .cal2-detail b{color:var(--accent2)}
+  /* итог дня */
+  .day-result{background:var(--paper2);border:1px solid var(--line);border-radius:14px;padding:18px 20px;max-width:460px}
+  .dr-rank{font-family:Georgia,serif;font-size:22px;color:var(--accent2);font-weight:700}
+  .dr-score{font-size:16px;margin:4px 0 10px}.dr-score span{color:var(--muted);font-size:14px}
+  .dr-bar{height:10px;background:#e4ecf1;border-radius:6px;overflow:hidden}
+  .dr-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--gold));transition:width .5s}
+  .dr-note{margin-top:10px;font-size:14px;color:#33414f}
   footer{padding:28px 0 60px;color:var(--muted);font-size:13px;text-align:center}
 </style>
 </head>
@@ -138,7 +145,7 @@
       </svg>
       <span class="lt">Русская цивилизация<small>первые в мире</small></span>
     </a>
-    <div class="score">⭐ <span id="score">0</span></div>
+    <div class="score" title="Баллы знаний за этот день. Отвечай в викторине, проходи развилку и обе игры — собери все 80.">⭐ <span id="score">0</span> / 80</div>
   </div>
 </header>
 
@@ -324,6 +331,14 @@
   </div>
 </section>
 
+<section class="block" id="result">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Итог дня</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Баллы знаний показывают, насколько полно ты прошёл этот день: викторина, развилка и обе игры. Собери все 80 и получи звание.</p>
+    <div class="day-result" id="dayResult"></div>
+  </div>
+</section>
+
 <section class="block" id="calendar">
   <div class="wrap">
     <h2 style="margin-bottom:6px">Календарь изобретений</h2>
@@ -344,8 +359,15 @@
 <footer><div class="wrap">Русская цивилизация · «Что изобрели русские первыми в мире» · дизайн-эталон · весь код и графику делает ИИ</div></footer>
 
 <script>
-  let score=0; const sc=document.getElementById('score');
-  function addScore(n){score+=n;sc.textContent=score;}
+  let score=0; const sc=document.getElementById('score'); const MAXP=80; const earned={};
+  function renderResult(){const el=document.getElementById('dayResult');if(!el)return;
+    const pct=Math.round(score/MAXP*100);
+    let rank='Гость дня',note='Начни проходить день — отвечай в викторине, выбирай в развилке, играй.';
+    if(score>=70){rank='Испытатель';note='Ты прошёл день как настоящий испытатель. Браво!';}
+    else if(score>=45){rank='Знаток';note='Ты хорошо знаешь этот день. Ещё немного до вершины.';}
+    else if(score>=20){rank='Любопытный';note='Любопытство — начало всех открытий. Двигайся дальше.';}
+    el.innerHTML='<div class="dr-rank">'+rank+'</div><div class="dr-score">'+score+' <span>из '+MAXP+' баллов</span></div><div class="dr-bar"><i style="width:'+pct+'%"></i></div><div class="dr-note">'+note+(score>=MAXP?' День пройден полностью.':'')+'</div>';}
+  function award(k,n){if(earned[k])return;earned[k]=true;score+=n;sc.textContent=score;renderResult();}
   // читать дальше
   document.getElementById('readBtn').onclick=()=>document.getElementById('story').scrollIntoView({behavior:'smooth'});
   document.getElementById('videoBtn').onclick=()=>document.getElementById('video').scrollIntoView({behavior:'smooth'});
@@ -365,7 +387,7 @@
     const t=document.createElement('div');t.style.fontWeight='600';t.style.marginBottom='8px';t.textContent=(qi+1)+". "+it.q;c.appendChild(t);
     const ex=document.createElement('div');ex.className='exp';ex.textContent="💡 "+it.e;
     it.o.forEach((o,oi)=>{const b=document.createElement('button');b.className='opt';b.textContent=o;
-      b.onclick=()=>{c.querySelectorAll('.opt').forEach(x=>x.disabled=true);if(oi===it.c){b.classList.add('correct');addScore(10);}else{b.classList.add('wrong');c.querySelectorAll('.opt')[it.c].classList.add('correct');}ex.classList.add('show');};c.appendChild(b);});
+      b.onclick=()=>{c.querySelectorAll('.opt').forEach(x=>x.disabled=true);if(oi===it.c){b.classList.add('correct');award('q'+qi,10);}else{b.classList.add('wrong');c.querySelectorAll('.opt')[it.c].classList.add('correct');}ex.classList.add('show');};c.appendChild(b);});
     c.appendChild(ex);qe.appendChild(c);});
   // AI
   const kb=[
@@ -425,9 +447,9 @@
     if(openY===null)msg('💥 Ты не раскрыл купол! Жми «Раскрыть» на лету.',0);
     else if(openY<140)msg('⚠️ Рано — купол не наполнился. Раскрывай чуть ниже.',0);
     else if(openY>252)msg('⚠️ Поздно — земля близко, жёсткая посадка. Раскрывай раньше.',0);
-    else if(dx<=46){msg('🎯 В яблочко! Мягко и точно в мишень. +30',1);addScore(30);}
-    else if(dx<=95){msg('✅ Почти в центр — хорошая посадка. +15',1);addScore(15);}
-    else{msg('🪂 Купол раскрыт вовремя, но ветер снёс мимо мишени. Целься активнее. +5',1);addScore(5);}
+    else if(dx<=46){msg('🎯 В яблочко! Мягко и точно в мишень.',1);award('game1',20);}
+    else if(dx<=95){msg('✅ Хорошая посадка рядом с центром.',1);award('game1',20);}
+    else{msg('🪂 Купол раскрыт вовремя, но ветер снёс мимо. Целься активнее.',1);}
     gBtns('end');}
   function msg(t,w){const e=document.getElementById('gm');e.textContent=t;e.style.color=w?'#1f5b2c':'#8e1420';}
   function gBtns(m){document.getElementById('startG').style.display=m==='ready'?'':'none';
@@ -466,7 +488,7 @@
       b.onclick=()=>{
         if(o.i===asmStep){const s=document.getElementById('slot'+asmStep);s.className='asm-slot filled';s.innerHTML='<b>'+o.p.n+'</b>';
           b.disabled=true;b.classList.add('used');asmStep++;
-          if(asmStep===asmData.length){asmMsg.textContent='✅ Готово! Ты собрал РК-1 в правильном порядке — именно так делал Котельников. +20';asmMsg.style.color='#1f5b2c';addScore(20);asmReset.style.display='';}
+          if(asmStep===asmData.length){asmMsg.textContent='✅ Готово! Ты собрал РК-1 в правильном порядке — именно так делал Котельников.';asmMsg.style.color='#1f5b2c';award('assemble',20);asmReset.style.display='';}
           else{asmMsg.textContent='Верно! Что идёт '+(asmStep+1)+'-м?';asmMsg.style.color='#1f5b2c';}
         }else{asmMsg.textContent='Не сейчас. Сначала то, что идёт '+(asmStep+1)+'-м по порядку укладки.';asmMsg.style.color='#8e1420';
           b.classList.add('shake');setTimeout(()=>b.classList.remove('shake'),400);}
@@ -485,7 +507,7 @@
       fb.querySelectorAll('.opt').forEach(x=>x.disabled=true);
       b.style.borderColor='var(--accent)';b.style.background='#e2edf3';b.style.fontWeight='600';
       const ex=document.createElement('div');ex.className='exp show';ex.style.marginTop='6px';ex.textContent='💡 '+f.e;b.after(ex);
-      document.getElementById('forkReal').classList.add('show');addScore(10);
+      document.getElementById('forkReal').classList.add('show');award('fork',10);
     };fb.appendChild(b);});
 
   // календарь изобретений
@@ -518,6 +540,7 @@
   document.getElementById('calPrev').onclick=()=>{calM=calM===1?12:calM-1;renderCal();};
   document.getElementById('calNext').onclick=()=>{calM=calM===12?1:calM+1;renderCal();};
   renderCal();
+  renderResult();
 
   // плавное появление секций
   document.querySelectorAll('section.block').forEach(s=>s.classList.add('reveal'));
