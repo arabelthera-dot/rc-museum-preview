@@ -59,6 +59,8 @@
   .btn.ghost{background:#fff;color:var(--accent);border:1.5px solid var(--accent)}
   .btn.gold{background:var(--gold);color:#3a2c07}
   .btn:active{transform:translateY(1px)}
+  .pulse{animation:pulse .9s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
   input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(31,111,139,.12)}
   #article .body p{max-width:66ch}
 
@@ -304,7 +306,7 @@
     <div style="background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:0 10px 10px 0;padding:12px 16px;margin:12px 0;font-size:14px;line-height:1.6">
       <b>Как играть</b><br>
       1. Нажми <b>«Прыжок»</b> — парашютист полетит вниз.<br>
-      2. В синей зоне жми <b>«Раскрыть парашют»</b> — не слишком рано и не слишком поздно.<br>
+      2. <b>Тапни по полю</b> (или жми кнопку «Раскрыть парашют»), чтобы раскрыть купол — лучше в синей зоне.<br>
       3. Под куполом <b>веди пальцем</b> по полю (или ◀ / ▶, на компьютере — стрелки), чтобы попасть в мишень против ветра.
     </div>
     <div style="text-align:center">
@@ -312,7 +314,7 @@
       <canvas id="game" width="800" height="330" style="width:100%;max-width:800px;background:linear-gradient(#cfe6f7,#eaf4fb);border-radius:14px;border:1px solid var(--line);touch-action:none"></canvas>
       <div style="margin:12px 0;display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
         <button class="btn gold" id="startG">▶ Прыжок</button>
-        <button class="btn" id="drop" style="display:none">🪂 Раскрыть парашют</button>
+        <button class="btn gold pulse" id="drop" style="display:none;font-size:17px">🪂 Раскрыть парашют</button>
         <button class="btn ghost" id="steerL" style="display:none;touch-action:none;user-select:none;-webkit-user-select:none;font-size:20px;min-width:66px">◀</button>
         <button class="btn ghost" id="steerR" style="display:none;touch-action:none;user-select:none;-webkit-user-select:none;font-size:20px;min-width:66px">▶</button>
         <button class="btn ghost" id="rs" style="display:none">Заново</button>
@@ -431,7 +433,7 @@
   push('k','<b>Котельников:</b> Здравствуйте. Я Глеб Котельников — актёр, что придумал ранцевый парашют. Спрашивайте о чём угодно: о деле, об испытаниях, о жизни.');
   // === Игра 1: раскрой парашют и приведи в мишень ===
   const cv=document.getElementById('game'),ctx=cv.getContext('2d');const GR=300;
-  const OPEN_LO=110,OPEN_HI=205; // зона хорошего раскрытия
+  const OPEN_LO=90,OPEN_HI=240; // зона хорошего раскрытия
   let px,py,gst,wind,zone,guide,steer,drag,raf,scored,openY;
   function windText(){return 'Ветер '+(wind<0?'◀ влево':'вправо ▶')+' · '+(Math.abs(wind)>0.95?'сильный':'слабый');}
   function ng(){px=400;py=22;gst='ready';steer=0;drag=false;guide=null;scored=false;openY=null;
@@ -445,13 +447,13 @@
   function draw(){ctx.clearRect(0,0,cv.width,cv.height);
     ctx.fillStyle='#c8e0a0';ctx.fillRect(0,GR,cv.width,cv.height-GR);
     [[46,'#b31b2c'],[30,'#fff'],[15,'#b31b2c']].forEach(b=>{ctx.fillStyle=b[1];ctx.beginPath();ctx.ellipse(zone,GR+15,b[0],8,0,0,7);ctx.fill();});
-    if(gst==='fall'){ctx.save();ctx.setLineDash([9,7]);ctx.strokeStyle='rgba(31,111,139,.55)';ctx.lineWidth=1.5;ctx.strokeRect(8,OPEN_LO,cv.width-16,OPEN_HI-OPEN_LO);ctx.fillStyle='rgba(31,111,139,.8)';ctx.font='12px Segoe UI';ctx.fillText('раскрывай парашют в этой зоне',14,OPEN_LO-7);ctx.restore();}
+    if(gst==='fall'){ctx.save();ctx.setLineDash([9,7]);ctx.strokeStyle='rgba(31,111,139,.5)';ctx.lineWidth=1.5;ctx.strokeRect(8,OPEN_LO,cv.width-16,OPEN_HI-OPEN_LO);ctx.setLineDash([]);ctx.fillStyle='rgba(31,111,139,.85)';ctx.font='13px Segoe UI';ctx.fillText('зона раскрытия',14,OPEN_LO-8);ctx.textAlign='center';ctx.fillStyle='#0f1e33';ctx.font='bold 23px Georgia';ctx.fillText('Нажми, чтобы раскрыть парашют!',cv.width/2,46);ctx.textAlign='left';ctx.restore();}
     if(openY!==null){ctx.strokeStyle='#c8a24a';ctx.lineWidth=4;ctx.beginPath();ctx.arc(px,py-34,36,Math.PI,0);ctx.stroke();
       ctx.beginPath();ctx.moveTo(px-36,py-34);ctx.lineTo(px,py);ctx.moveTo(px+36,py-34);ctx.lineTo(px,py);ctx.stroke();}
     ctx.fillStyle='#1a1c22';ctx.beginPath();ctx.arc(px,py,9,0,7);ctx.fill();ctx.fillRect(px-8,py+8,16,22);
     ctx.fillStyle='rgba(31,111,139,.9)';ctx.font='13px Segoe UI';ctx.fillText((wind<0?'←':'→')+' ветер',14,22);}
   function step(){
-    if(gst==='fall'){py+=1.25;px+=wind*0.35;}
+    if(gst==='fall'){py+=0.75;px+=wind*0.3;}
     else if(gst==='canopy'){py+=0.6;px+=wind*0.9+steer*3;if(guide!==null)px+=(guide-px)*0.12;}
     px=Math.max(16,Math.min(cv.width-16,px));
     if(py>=GR){py=GR;gst='land';if(!scored){scored=true;land();}}
@@ -481,7 +483,7 @@
     ['pointerup','pointerleave','pointercancel'].forEach(ev=>b.addEventListener(ev,e=>{if(e&&e.cancelable)e.preventDefault();steer=0;}));}
   steerBind('steerL',-1);steerBind('steerR',1);
   function toX(e){const r=cv.getBoundingClientRect();return Math.max(16,Math.min(cv.width-16,(e.clientX-r.left)/r.width*cv.width));}
-  cv.addEventListener('pointerdown',e=>{if(gst==='canopy'){e.preventDefault();drag=true;guide=toX(e);}});
+  cv.addEventListener('pointerdown',e=>{if(gst==='fall'){e.preventDefault();openChute();}else if(gst==='canopy'){e.preventDefault();drag=true;guide=toX(e);}});
   window.addEventListener('pointermove',e=>{if(drag)guide=toX(e);});
   window.addEventListener('pointerup',()=>{drag=false;});
   document.addEventListener('keydown',e=>{if(e.key==='ArrowLeft')steer=-1;if(e.key==='ArrowRight')steer=1;});
