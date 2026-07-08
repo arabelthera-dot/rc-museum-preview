@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>30 января — Первый в мире ранцевый парашют | Русские первыми</title>
+<style>
+  :root{
+    --red:#b31b2c; --red2:#8e1420; --ink:#1e1a17; --paper:#f7f2e9;
+    --paper2:#fffdf8; --gold:#c8a24a; --muted:#6b625a; --blue:#123a6b;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Segoe UI',Roboto,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}
+  h1,h2,h3{font-family:Georgia,'Times New Roman',serif;line-height:1.2}
+  .wrap{max-width:860px;margin:0 auto;padding:0 18px}
+  header.top{background:linear-gradient(135deg,var(--red),var(--red2));color:#fff;padding:14px 0;position:sticky;top:0;z-index:20;box-shadow:0 2px 12px rgba(0,0,0,.2)}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .brand{font-family:Georgia,serif;font-weight:700;font-size:18px;letter-spacing:.3px}
+  .brand small{display:block;font-size:11px;font-weight:400;opacity:.85;letter-spacing:2px;text-transform:uppercase}
+  .score{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);border-radius:20px;padding:6px 14px;font-size:14px;white-space:nowrap}
+  .hero{background:var(--paper2);border-bottom:3px solid var(--gold)}
+  .hero .wrap{padding:34px 18px}
+  .date-badge{display:inline-block;background:var(--red);color:#fff;font-weight:700;padding:6px 14px;border-radius:6px;font-size:15px;letter-spacing:.5px}
+  .hero h1{font-size:34px;margin:16px 0 8px}
+  .hero .lead{font-size:19px;color:var(--muted);margin:0}
+  .illus{margin:22px 0;border-radius:12px;overflow:hidden;border:1px solid #e4dccb;background:#eef3f8}
+  .illus svg{display:block;width:100%;height:auto}
+  .illus .cap{font-size:13px;color:var(--muted);padding:8px 12px;background:#f3eee2;border-top:1px solid #e4dccb}
+  section.block{padding:30px 0;border-bottom:1px solid #e7ded0}
+  section.block h2{font-size:25px;color:var(--red2);margin:0 0 6px;display:flex;align-items:center;gap:10px}
+  .kicker{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:var(--gold);font-weight:700;margin-bottom:2px}
+  p{margin:12px 0}
+  .pull{background:#fbf6ec;border-left:4px solid var(--gold);padding:12px 16px;border-radius:0 8px 8px 0;font-style:italic;color:#4a423a}
+  .tag{display:inline-block;background:#efe7d6;color:#7a6a44;border-radius:14px;padding:2px 10px;font-size:12px;margin:2px 4px 2px 0}
+  footer{padding:30px 0 60px;color:var(--muted);font-size:13px;text-align:center}
+  .btn{cursor:pointer;border:none;border-radius:8px;padding:11px 16px;font-size:15px;font-weight:600;background:var(--red);color:#fff;transition:.15s}
+  .btn:hover{background:var(--red2)}
+  .btn.ghost{background:#fff;color:var(--red);border:1.5px solid var(--red)}
+  .note{font-size:12px;color:var(--muted);background:#f3eee2;border:1px dashed #d8ccb0;padding:8px 12px;border-radius:8px;margin-top:10px}
+  figure.ph{margin:20px 0;border-radius:12px;overflow:hidden;border:1px solid #e4dccb;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+  figure.ph img{display:block;width:100%;height:auto}
+  figure.ph figcaption{font-size:13px;color:var(--muted);padding:9px 13px;background:#f3eee2;border-top:1px solid #e4dccb}
+  figure.ph.side{max-width:300px;float:right;margin:6px 0 14px 20px}
+  @media(max-width:600px){figure.ph.side{float:none;max-width:100%;margin:20px 0}}
+  .videowrap{margin:18px 0;border-radius:12px;overflow:hidden;border:1px solid #e4dccb;background:#000;box-shadow:0 2px 10px rgba(0,0,0,.10)}
+  .videowrap video{display:block;width:100%;height:auto}
+  .social{background:var(--paper2);border:1px solid #e7ded0;border-radius:14px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.05);max-width:520px}
+  .social .sh{display:flex;align-items:center;gap:10px;padding:12px 15px;border-bottom:1px solid #eee2cf}
+  .social .av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--red),var(--gold));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:Georgia,serif}
+  .social .nm b{display:block;font-size:14px}
+  .social .nm span{font-size:12px;color:var(--muted)}
+  .social .txt{padding:14px 15px;font-size:15px;white-space:pre-line}
+  .social .txt b{color:var(--red2)}
+  .social .cta{display:flex;gap:8px;padding:0 15px 14px;flex-wrap:wrap}
+  .ad-slot{position:relative;margin:24px 0;background:repeating-linear-gradient(135deg,#f4efe4,#f4efe4 12px,#f0e9da 12px,#f0e9da 24px);border:1px dashed #cdbf9f;border-radius:10px;min-height:96px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#9a8a63}
+  .ad-slot .lbl{position:absolute;top:6px;right:10px;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#b3a37a}
+  .ad-slot .ph-txt{font-size:13px;max-width:80%}
+  .ad-slot.billboard{min-height:120px}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">Русские — первыми<small>Виртуальный музей изобретений</small></div>
+    <div class="score">⭐ Очки: <span id="score">0</span> · 🏅 <span id="badges">0</span></div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="date-badge">30 января</span>
+    <h1>Первый в мире ранцевый парашют</h1>
+    <p class="lead">Его придумал актёр. После одной страшной катастрофы он сделал так, чтобы лётчик мог выжить, даже когда самолёт уже не спасти.</p>
+
+    <figure class="ph">
+      <img src="test1912.jpg" alt="Испытания парашюта Котельникова, 1912 год">
+      <figcaption>Историческое фото: испытания системы Котельникова, 1912 год. Манекен «Иван Иванович» в снаряжении перед сбросом.</figcaption>
+    </figure>
+
+    <span class="tag">#РусскиеПервыми</span><span class="tag">#изобретения</span><span class="tag">#парашют</span><span class="tag">#Котельников</span>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="ad-slot billboard">
+    <span class="lbl">Реклама</span>
+    <span class="ph-txt">Рекламное место 970×120 — баннер-шапка страницы.<br>Продаётся напрямую или через рекламную сеть (РСЯ / AdSense).</span>
+  </div>
+</div>
+
+<section class="block">
+  <div class="wrap">
+    <div class="kicker">Экскурсия · зал «Небо и спасение»</div>
+    <h2>🎧 Как это было</h2>
+    <figure class="ph side">
+      <img src="portrait-real.jpg" alt="Глеб Евгеньевич Котельников">
+      <figcaption>Глеб Евгеньевич Котельников (1872–1944), изобретатель РК-1.</figcaption>
+    </figure>
+    <p>1910 год. Люди уже поднимаются в небо на аэропланах — но ещё не умеют возвращаться живыми, если машина ломается. На петербургском аэродроме на глазах у тысяч зрителей разбивается один из лучших лётчиков, капитан Лев Мациевич: его самолёт разваливается прямо в воздухе. Спастись нечем — парашютов в авиации тогда просто нет.</p>
+    <p class="pull">На праздник воздухоплавания пришёл актёр — а ушёл изобретатель.</p>
+    <p>В толпе стоит актёр Народного дома Глеб Котельников. Эта смерть не отпускает его. Он ставит себе задачу, которую до него никто не решил: сделать так, чтобы спасение было не на самолёте, а на самом лётчике.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="kicker">База знаний</div>
+    <h2>📖 Актёр, который спас лётчиков</h2>
+    <p>Парашюты к тому времени существовали, но для авиации не годились: тяжёлые, громоздкие, они складывались длинной «колбасой» и часто крепились к самому самолёту. Ломался самолёт — гиб и парашют.</p>
+    <p>По красивой версии, подсказку Котельникову дал дамский шёлковый платок: маленький, а разворачивается в целое полотно. Историки спорят, был ли платок, но шёлк действительно стал ключом. Котельников уложил лёгкий шёлковый купол в компактный ранец на спине. Внутри — пружины. Дёрнул кольцо — пружины выбрасывают купол в поток, и он раскрывается. Так появился <b>РК-1</b> — «русский, Котельникова, первый», первый в мире ранцевый парашют свободного действия.</p>
+    <figure class="ph">
+      <img src="rk1-scheme.jpg" alt="Схема парашюта РК-1: ранец, раскрытый купол, укладка">
+      <figcaption>Устройство РК-1: лётчик с ранцем за спиной, раскрытый купол и укладка купола «солнцем» (историческая схема).</figcaption>
+    </figure>
+    <p>Манекен для испытаний он звал «Иван Иванович» и ронял его с крыши, с воздушного змея и с аэростата. 6 (19) июня 1912 года под Петербургом, у деревни Сализи, «Иван Иванович» прыгнул с аэростата — и мягко приземлился.</p>
+    <p><b>Горькая часть.</b> Дома изобретение отвергли: один из великих князей решил, что с парашютом лётчики будут прыгать, бросая дорогие аэропланы. Патент Котельников получил во Франции, и первый прыжок человека с его парашютом в 1913 году сделали тоже за границей — в Руане.</p>
+    <p><b>Неожиданный поворот.</b> Тот же купол Котельников прицепил к автомобилю — машину затормозило так резко, что заглох двигатель. Так родился тормозной парашют. Сегодня такой гасит скорость истребителей на посадке.</p>
+    <div class="ad-slot">
+      <span class="lbl">Реклама</span>
+      <span class="ph-txt">Встроенный рекламный блок в статье — самый дорогой формат: читатель уже вовлечён.</span>
+    </div>
+  </div>
+</section>
+
+<section class="block" style="background:#fffdf8">
+  <div class="wrap">
+    <div class="kicker">Видео дня · 30 секунд</div>
+    <h2>🎬 Смотри за минуту</h2>
+    <p style="color:var(--muted);margin-top:0">Короткий ролик для тех, кто воспринимает глазами. Он же идёт в соцсети.</p>
+    <div class="videowrap">
+      <video controls preload="metadata" playsinline poster="test1912.jpg">
+        <source src="kotelnikov-16x9.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<section class="block" style="background:#fffdf8">
+  <div class="wrap">
+    <div class="kicker">Интерактив</div>
+    <h2>❓ Викторина</h2>
+    <p style="color:var(--muted);margin-top:0">Отвечай — и за каждый верный ответ получай очки. В пояснении всегда новый факт.</p>
+    <div id="quiz"></div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="kicker">Интерактив · разоблачаем легенды</div>
+    <h2>⚖️ Правда или миф</h2>
+    <div id="truthmyth"></div>
+  </div>
+</section>
+
+<style>
+  .q{background:#fff;border:1px solid #e7ded0;border-radius:12px;padding:16px 18px;margin:14px 0;box-shadow:0 1px 4px rgba(0,0,0,.04)}
+  .q .qt{font-weight:600;margin-bottom:10px;font-size:17px}
+  .opt{display:block;width:100%;text-align:left;background:#f7f2e9;border:1.5px solid #e2d8c4;border-radius:8px;padding:11px 14px;margin:7px 0;cursor:pointer;font-size:15px;transition:.12s}
+  .opt:hover{border-color:var(--gold);background:#fbf6ec}
+  .opt.correct{background:#e7f5e9;border-color:#3f9b52;color:#1f5b2c;font-weight:600}
+  .opt.wrong{background:#fbe9e9;border-color:#c0453f;color:#8a2820}
+  .opt:disabled{cursor:default}
+  .exp{margin-top:10px;font-size:14px;color:#4a423a;background:#f3eee2;border-radius:8px;padding:10px 12px;display:none}
+  .exp.show{display:block}
+  .tm-btns{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0}
+</style>
+
+<section class="block" style="background:#eef3f8">
+  <div class="wrap">
+    <div class="kicker">Мини-игра · флагман</div>
+    <h2>🪂 Сбрось «Ивана Ивановича»</h2>
+    <p style="color:var(--muted);margin-top:0">Манекен падает с аэростата. Дёрни кольцо вовремя: рано — купол погаснет от рывка, поздно — жёсткая посадка, вовремя — мягкое приземление.</p>
+    <div style="text-align:center">
+      <canvas id="game" width="800" height="360" style="width:100%;max-width:800px;background:linear-gradient(#bfe0f5,#e9f4fb);border-radius:12px;border:1px solid #cdd9e6;touch-action:manipulation"></canvas>
+      <div style="margin:12px 0">
+        <button class="btn" id="dropBtn">Дёрнуть кольцо!</button>
+        <button class="btn ghost" id="resetBtn">Заново</button>
+      </div>
+      <div id="gameMsg" style="font-size:16px;font-weight:600;min-height:24px;color:var(--red2)"></div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="kicker">AI-собеседник · работает без интернета</div>
+    <h2>💬 Поговори с Глебом Котельниковым</h2>
+    <p style="color:var(--muted);margin-top:0">Спроси изобретателя. В этом прототипе ответы берутся из локальной базы — <b>бесплатно, без платного AI</b> (как это устроено — в ответе ниже страницы).</p>
+    <div id="chat" style="background:#fff;border:1px solid #e7ded0;border-radius:12px;padding:14px;min-height:120px;margin-bottom:10px"></div>
+    <div id="chatSuggest"></div>
+  </div>
+</section>
+
+<style>
+  .chip{cursor:pointer;background:#efe7d6;border:1px solid #d8ccb0;border-radius:16px;padding:7px 13px;margin:4px 5px 4px 0;font-size:14px;display:inline-block}
+  .chip:hover{background:#fbf6ec;border-color:var(--gold)}
+  .msg{margin:8px 0;padding:10px 13px;border-radius:12px;max-width:85%}
+  .msg.you{background:#e7eef7;margin-left:auto;text-align:right}
+  .msg.k{background:#fbf6ec;border:1px solid #eaddc0}
+  .msg.k b{color:var(--red2)}
+</style>
+
+<section class="block">
+  <div class="wrap">
+    <div class="kicker">Соцсети · готовый пост дня</div>
+    <h2>📣 Как это уходит в ленту</h2>
+    <p style="color:var(--muted);margin-top:0">Из каждого дня музея автоматически собирается пост для VK, Telegram и Дзен. Вот сегодняшний.</p>
+    <div class="social">
+      <div class="sh">
+        <div class="av">Р</div>
+        <div class="nm"><b>Русские — первыми</b><span>Виртуальный музей изобретений</span></div>
+      </div>
+      <div class="txt"><b>30 января 1912 — родился первый в мире ранцевый парашют.</b>
+
+Его придумал не инженер, а актёр. Глеб Котельников увидел, как на его глазах разбился лётчик, — и сделал так, чтобы спасение было на самом человеке, а не на самолёте.
+
+Дома изобретение отвергли. Патент пришлось брать во Франции. А сегодня парашютом РК-1 «дышит» вся мировая авиация.
+
+👉 Полная история, видео и викторина — по ссылке в профиле.
+#РусскиеПервыми #изобретения #Котельников #парашют</div>
+      <div class="cta">
+        <button class="btn" onclick="navigator.clipboard&&navigator.clipboard.writeText(document.querySelector('.social .txt').innerText)">Скопировать текст</button>
+        <button class="btn ghost">Открыть картинку</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="ad-slot">
+    <span class="lbl">Реклама</span>
+    <span class="ph-txt">Партнёрский блок в подвале — доступен на каждой из 365 страниц музея.</span>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">Эталон страницы одного дня музея · «Виртуальное пространство русской цивилизации» · весь код и графику делает ИИ-агент</div>
+</footer>
+
+<script>
+  let score = 0, badges = 0;
+  function addScore(n){ score += n; document.getElementById('score').textContent = score; }
+  function addBadge(){ badges += 1; document.getElementById('badges').textContent = badges; }
+
+  // ---------- ВИКТОРИНА ----------
+  const quiz = [
+    {q:"Кем был Глеб Котельников до того, как изобрёл парашют?",
+     opts:["Лётчиком","Актёром","Профессором физики","Морским офицером"], correct:1,
+     exp:"Парашют, которым пользуется весь мир, придумал актёр драмтеатра. Толчком стала гибель лётчика Мациевича у него на глазах."},
+    {q:"Из чего Котельников сделал купол РК-1?",
+     opts:["Из брезента","Из кожи","Из шёлка","Из хлопка"], correct:2,
+     exp:"Тяжёлый брезент он заменил лёгким прочным шёлком — тот прячется в маленький ранец за спиной."},
+    {q:"Куда убирался парашют РК-1?",
+     opts:["В ящик на самолёте","В ранец на спине лётчика","В карман","В шлем"], correct:1,
+     exp:"Главное новшество: парашют всегда на человеке, а не привязан к самолёту."},
+    {q:"В какой стране Котельников получил патент на парашют?",
+     opts:["Россия","Германия","Франция","Англия"], correct:2,
+     exp:"Дома изобретение отвергли. Патент №438612 он получил во Франции в марте 1912 года."},
+    {q:"Какое ещё изобретение создал Котельников на основе купола?",
+     opts:["Тормозной парашют","Паровоз","Телефон","Фотоаппарат"], correct:0,
+     exp:"Его купол так затормозил автомобиль, что заглох двигатель. Сегодня такой тормозит истребители на посадке."}
+  ];
+  const quizEl = document.getElementById('quiz');
+  quiz.forEach((item, qi)=>{
+    const card = document.createElement('div'); card.className='q';
+    const t = document.createElement('div'); t.className='qt'; t.textContent=(qi+1)+". "+item.q; card.appendChild(t);
+    const exp = document.createElement('div'); exp.className='exp'; exp.textContent="💡 "+item.exp;
+    item.opts.forEach((o, oi)=>{
+      const b=document.createElement('button'); b.className='opt'; b.textContent=o;
+      b.onclick=()=>{
+        Array.from(card.querySelectorAll('.opt')).forEach(x=>x.disabled=true);
+        if(oi===item.correct){ b.classList.add('correct'); addScore(10); }
+        else{ b.classList.add('wrong'); card.querySelectorAll('.opt')[item.correct].classList.add('correct'); }
+        exp.classList.add('show');
+      };
+      card.appendChild(b);
+    });
+    card.appendChild(exp); quizEl.appendChild(card);
+  });
+
+  // ---------- ПРАВДА ИЛИ МИФ ----------
+  const tm = [
+    {s:"Идею компактного парашюта Котельникову подсказал дамский шёлковый платок.",
+     verdict:"Спорно / красивая версия", exp:"Историки спорят, был ли платок. Но шёлк действительно стал ключом к компактности — вместо тяжёлого брезента."},
+    {s:"Военные сразу с восторгом приняли изобретение.",
+     verdict:"Миф", exp:"Наоборот: один из великих князей назвал парашют вредным — мол, лётчики будут прыгать, бросая аэропланы."},
+    {s:"Первый прыжок человека с парашютом Котельникова сделали за границей.",
+     verdict:"Правда", exp:"В 1913 году студент Оссовский прыгнул с моста в Руане, во Франции."}
+  ];
+  const tmEl = document.getElementById('truthmyth');
+  tm.forEach((item, i)=>{
+    const card=document.createElement('div'); card.className='q';
+    const t=document.createElement('div'); t.className='qt'; t.textContent=(i+1)+". "+item.s; card.appendChild(t);
+    const btns=document.createElement('div'); btns.className='tm-btns';
+    const exp=document.createElement('div'); exp.className='exp'; exp.innerHTML="<b>Вердикт: "+item.verdict+".</b> "+item.exp;
+    ["Правда","Миф"].forEach(label=>{
+      const b=document.createElement('button'); b.className='btn ghost'; b.textContent=label;
+      b.onclick=()=>{ btns.querySelectorAll('button').forEach(x=>x.disabled=true); exp.classList.add('show'); addScore(5); };
+      btns.appendChild(b);
+    });
+    card.appendChild(btns); card.appendChild(exp); tmEl.appendChild(card);
+  });
+
+  // ---------- МИНИ-ИГРА «Сбрось Ивана Ивановича» ----------
+  const cv = document.getElementById('game'), ctx = cv.getContext('2d');
+  const groundY = 330;
+  let y, vy, state, chuteOpenY, msg, rafId, rewarded;
+  function resetGame(){
+    y=40; vy=0; state='falling'; chuteOpenY=null; rewarded=false;
+    msg=''; document.getElementById('gameMsg').textContent='';
+    cancelAnimationFrame(rafId); loop();
+  }
+  function drawScene(){
+    ctx.clearRect(0,0,cv.width,cv.height);
+    // земля
+    ctx.fillStyle='#c8d9a8'; ctx.fillRect(0,groundY,cv.width,cv.height-groundY);
+    // аэростат
+    ctx.fillStyle='#b31b2c'; ctx.beginPath(); ctx.ellipse(400,34,42,30,0,0,7); ctx.fill();
+    ctx.fillStyle='#8e1420'; ctx.fillRect(388,60,24,12);
+    // зоны-подсказки
+    ctx.fillStyle='rgba(63,155,82,.18)'; ctx.fillRect(0,150,cv.width,120);
+    ctx.fillStyle='#3f9b52'; ctx.font='13px Segoe UI'; ctx.fillText('◀ зелёная зона — дёргай здесь, будет мягко',20,168);
+    // купол
+    if(chuteOpenY!==null){
+      ctx.strokeStyle='#b31b2c'; ctx.lineWidth=4; ctx.beginPath();
+      ctx.arc(400,y-30,34,Math.PI,0); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(366,y-30); ctx.lineTo(400,y); ctx.moveTo(434,y-30); ctx.lineTo(400,y); ctx.stroke();
+    }
+    // манекен
+    ctx.fillStyle='#1e1a17'; ctx.beginPath(); ctx.arc(400,y,10,0,7); ctx.fill();
+    ctx.fillRect(392,y+8,16,26);
+  }
+  function loop(){
+    if(state==='falling'){ vy += 0.35; y += vy; }
+    else if(state==='descending'){ y += 1.4; }
+    if(y>=groundY){
+      y=groundY; state='landed';
+      const hard = (vy>6 && chuteOpenY===null) || (chuteOpenY!==null && chuteOpenY>250);
+      const early = chuteOpenY!==null && chuteOpenY<150;
+      if(!rewarded){
+        rewarded=true;
+        if(chuteOpenY!==null && chuteOpenY>=150 && chuteOpenY<=250){
+          setMsg('✅ Мягкая посадка! Точно как у Котельникова. +20 очков','win'); addScore(20); addBadge();
+        } else if(early){ setMsg('⚠️ Рано! От рывка купол смялся — жёстко. Попробуй в зелёной зоне.','lose'); }
+        else { setMsg('💥 Поздно! Иван Иванович приземлился жёстко. Дёрни раньше.','lose'); }
+      }
+    }
+    drawScene();
+    if(state!=='landed') rafId=requestAnimationFrame(loop);
+  }
+  function setMsg(t,type){ const el=document.getElementById('gameMsg'); el.textContent=t; el.style.color=(type==='win'?'#1f5b2c':'#8e1420'); }
+  document.getElementById('dropBtn').onclick=()=>{
+    if(state==='falling'){ chuteOpenY=y; state='descending'; vy=0; }
+  };
+  document.getElementById('resetBtn').onclick=resetGame;
+  resetGame();
+
+  // ---------- AI-КОТЕЛЬНИКОВ (локальная база, без платного AI) ----------
+  const kb = [
+    {k:['военн','отказ','князь','приняли','родин'],
+     a:"Один из великих князей рассудил чудно: дай, говорит, лётчику парашют — он при первой поломке выпрыгнет, а дорогую машину бросит. Оттого патент мне и пришлось взять во Франции."},
+    {k:['платок','идея','придума','шёлк','шелк'],
+     a:"Говорят, надоумил меня дамский платок — маленький, а разворачивается в целое полотно. Спорить не стану, было ли так, но шёлк я взял не зря: он лёгок и прячется в ранец."},
+    {k:['испыт','манекен','иван','сализ'],
+     a:"Проверял упорно. Манекен звал Иваном Ивановичем — ронял его с крыши, с воздушного змея, а после и с аэростата под Сализи. Восемьдесят кило, а приземлялся мягко."},
+    {k:['тормоз','автомобил','машин'],
+     a:"Забавно вышло: прицепил купол к автомобилю — и тот встал так резко, что заглох мотор. Так и родился тормозной парашют, что ныне гасит бег аэропланов на посадке."},
+    {k:['актёр','актер','театр','кем'],
+     a:"Да, я актёр Народного дома. Сын профессора, а к сцене прикипел. Инженерии учился сам — беда с Мациевичем не отпускала."}
+  ];
+  function answer(q){
+    q=q.toLowerCase();
+    for(const item of kb){ if(item.k.some(w=>q.includes(w))) return item.a; }
+    return "Об этом я судить не берусь — рассказываю лишь то, что знаю сам: о парашюте, испытаниях и о том, как трудно было пробить его на родине.";
+  }
+  const chat=document.getElementById('chat');
+  function push(cls,html){ const d=document.createElement('div'); d.className='msg '+cls; d.innerHTML=html; chat.appendChild(d); chat.scrollTop=chat.scrollHeight; }
+  function ask(q){ push('you',q); setTimeout(()=>push('k','<b>Котельников:</b> '+answer(q)),250); }
+  ['Почему военные вам отказали?','Правда, что идею подсказал платок?','Как вы испытывали парашют?','Расскажите про тормозной парашют']
+    .forEach(s=>{ const c=document.createElement('span'); c.className='chip'; c.textContent=s; c.onclick=()=>ask(s); document.getElementById('chatSuggest').appendChild(c); });
+  push('k','<b>Котельников:</b> Здравствуйте, друг мой. Спрашивайте — расскажу про свой парашют без утайки.');
+</script>
+</body>
+</html>
