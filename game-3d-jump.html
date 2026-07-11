@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>РК-1 · 3D-прыжок · Котельников</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#060c17;overflow:hidden;font-family:'Inter','Segoe UI',sans-serif;touch-action:none}
+  canvas{display:block;width:100vw;height:100vh}
+
+  /* HUD */
+  #hud{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:10}
+  #alt{position:absolute;top:16px;left:50%;transform:translateX(-50%);background:rgba(6,12,23,.82);border:1px solid rgba(201,168,76,.4);border-radius:24px;padding:8px 24px;color:#fff;font-size:22px;font-weight:700;text-align:center;min-width:180px}
+  #alt span{color:#c9a84c;font-size:14px;display:block;font-weight:500;letter-spacing:1px}
+  #wind{position:absolute;top:16px;right:16px;background:rgba(6,12,23,.75);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:10px 14px;color:#7a9ab8;font-size:13px;text-align:right}
+  #wind b{color:#e8eef5;display:block;font-size:16px}
+  #zone{position:absolute;bottom:120px;left:50%;transform:translateX(-50%);color:#c9a84c;font-size:15px;font-weight:700;letter-spacing:.5px;text-align:center;opacity:0;transition:opacity .3s;text-shadow:0 2px 10px rgba(0,0,0,.8)}
+  #msg{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;font-size:26px;font-weight:900;text-align:center;text-shadow:0 4px 20px rgba(0,0,0,.9);pointer-events:none;opacity:0;transition:opacity .5s}
+
+  /* Кнопки управления */
+  #ctrl{position:fixed;bottom:0;left:0;width:100%;padding:12px 16px 20px;display:flex;justify-content:space-between;align-items:flex-end;z-index:20;pointer-events:none}
+  #openBtn{pointer-events:all;background:linear-gradient(135deg,#c9a84c,#b88a2a);color:#1a0f00;border:none;border-radius:18px;padding:18px 36px;font-size:20px;font-weight:800;cursor:pointer;box-shadow:0 0 30px rgba(201,168,76,.5);letter-spacing:.3px;display:none;animation:glow 1s ease-in-out infinite;touch-action:manipulation}
+  @keyframes glow{0%,100%{box-shadow:0 0 20px rgba(201,168,76,.4)}50%{box-shadow:0 0 40px rgba(201,168,76,.8),0 0 60px rgba(201,168,76,.3)}}
+  .steer{pointer-events:all;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);color:#fff;border-radius:14px;padding:14px 20px;font-size:28px;cursor:pointer;touch-action:manipulation;display:none;min-width:60px;text-align:center;-webkit-tap-highlight-color:transparent}
+  #steerRow{display:flex;gap:8px}
+
+  /* Экран старта */
+  #startScreen{position:fixed;inset:0;background:linear-gradient(180deg,#060c17 0%,#0a1a30 60%,#060c17 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:30;padding:24px;text-align:center}
+  #startScreen h1{color:#fff;font-size:38px;font-weight:900;line-height:1.1;margin-bottom:10px}
+  #startScreen h1 span{color:#c9a84c}
+  #startScreen p{color:#7a9ab8;font-size:16px;max-width:340px;margin:0 auto 28px;line-height:1.6}
+  .badge{display:inline-block;background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.3);color:#c9a84c;border-radius:24px;padding:5px 16px;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px}
+  .bigBtn{background:linear-gradient(135deg,#c9a84c,#b88a2a);color:#1a0f00;border:none;border-radius:16px;padding:18px 48px;font-size:20px;font-weight:800;cursor:pointer;box-shadow:0 8px 30px rgba(201,168,76,.4);letter-spacing:.3px;touch-action:manipulation}
+  .tip{color:#3d5570;font-size:13px;margin-top:16px;line-height:1.5}
+
+  /* Экран финала */
+  #endScreen{position:fixed;inset:0;background:rgba(6,12,23,.96);display:none;flex-direction:column;align-items:center;justify-content:center;z-index:30;padding:24px;text-align:center}
+  #endTitle{color:#fff;font-size:36px;font-weight:900;margin-bottom:8px}
+  #endScore{color:#c9a84c;font-size:52px;font-weight:900;margin-bottom:6px}
+  #endDesc{color:#7a9ab8;font-size:16px;max-width:320px;margin:0 auto 28px;line-height:1.6}
+  #retryBtn{background:linear-gradient(135deg,#c9a84c,#b88a2a);color:#1a0f00;border:none;border-radius:14px;padding:15px 40px;font-size:18px;font-weight:800;cursor:pointer;touch-action:manipulation}
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+
+<!-- HUD -->
+<div id="hud">
+  <div id="alt"><span>ВЫСОТА</span><span id="altVal">800 м</span></div>
+  <div id="wind"><span>ВЕТЕР</span><b id="windVal">→ 12 км/ч</b></div>
+  <div id="zone">🪂 ЗОНА РАСКРЫТИЯ — ЖМИТЕ!</div>
+  <div id="msg"></div>
+</div>
+
+<!-- Кнопки -->
+<div id="ctrl">
+  <div id="steerRow">
+    <button class="steer" id="sL">◀</button>
+    <button class="steer" id="sB">▼</button>
+    <button class="steer" id="sF">▲</button>
+    <button class="steer" id="sR">▶</button>
+  </div>
+  <button id="openBtn">🪂 РАСКРЫТЬ!</button>
+</div>
+
+<!-- Стартовый экран -->
+<div id="startScreen">
+  <div class="badge">Three.js · 3D игра</div>
+  <h1>Прыжок<br><span>с РК-1</span></h1>
+  <p>Ты прыгаешь с 800 метров. Раскрой купол в правильный момент — и попади в мишень. Ветер сделает своё дело.</p>
+  <button class="bigBtn" id="startBtn">▶ Прыжок!</button>
+  <div class="tip">На телефоне: кнопки ◀▶▼▲ для руления<br>На компьютере: стрелки, Пробел — раскрыть</div>
+</div>
+
+<!-- Финальный экран -->
+<div id="endScreen">
+  <div id="endTitle">Приземление</div>
+  <div id="endScore">—</div>
+  <div id="endDesc"></div>
+  <button id="retryBtn">Прыгнуть ещё раз</button>
+</div>
+
+<script>
+const canvas = document.getElementById('c');
+const W = () => window.innerWidth, H = () => window.innerHeight;
+
+// ─── Three.js setup ───────────────────────────────────────────────────────────
+const renderer = new THREE.WebGLRenderer({canvas, antialias: true});
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.setSize(W(), H());
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+const scene = new THREE.Scene();
+scene.fog = new THREE.FogExp2(0x9fc8e8, 0.0006);
+
+const camera = new THREE.PerspectiveCamera(65, W()/H(), 0.5, 3000);
+camera.position.set(0, 820, 30);
+
+// Lights
+const sun = new THREE.DirectionalLight(0xfff5e0, 1.3);
+sun.position.set(200, 400, 100);
+sun.castShadow = true;
+sun.shadow.camera.far = 1500;
+sun.shadow.camera.left = sun.shadow.camera.bottom = -500;
+sun.shadow.camera.right = sun.shadow.camera.top = 500;
+scene.add(sun);
+scene.add(new THREE.AmbientLight(0x5080b0, 0.7));
+scene.add(new THREE.HemisphereLight(0x87ceeb, 0x4a7c3f, 0.4));
+
+// ─── Небо ────────────────────────────────────────────────────────────────────
+const skyGeo = new THREE.SphereGeometry(1400, 16, 8);
+const skyMat = new THREE.ShaderMaterial({
+  side: THREE.BackSide,
+  uniforms: {topColor:{value:new THREE.Color(0x1e5fa0)}, botColor:{value:new THREE.Color(0x9fc8e8)}},
+  vertexShader:`varying float h;void main(){h=normalize(position).y;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,
+  fragmentShader:`uniform vec3 topColor,botColor;varying float h;void main(){gl_FragColor=vec4(mix(botColor,topColor,max(h,0.)),1.);}`
+});
+scene.add(new THREE.Mesh(skyGeo, skyMat));
+
+// ─── Земля ────────────────────────────────────────────────────────────────────
+const groundMat = new THREE.MeshLambertMaterial({color:0x3d7a35});
+const ground = new THREE.Mesh(new THREE.PlaneGeometry(2000,2000,40,40), groundMat);
+ground.rotation.x = -Math.PI/2;
+ground.receiveShadow = true;
+scene.add(ground);
+
+// Полосы на земле (ориентиры)
+for(let i=-4;i<=4;i++){
+  const line = new THREE.Mesh(
+    new THREE.PlaneGeometry(2,2000),
+    new THREE.MeshBasicMaterial({color:0x2d5e26,transparent:true,opacity:.5})
+  );
+  line.rotation.x = -Math.PI/2; line.position.set(i*100,.05,0);
+  scene.add(line);
+}
+
+// ─── Мишень ───────────────────────────────────────────────────────────────────
+const TX = (Math.random()-.5)*200, TZ = (Math.random()-.5)*200;
+const targetGroup = new THREE.Group();
+targetGroup.position.set(TX, 0.05, TZ);
+[[60,0xff2222],[40,0xffffff],[25,0xff2222],[12,0xffffff],[5,0xff2222]].forEach(([r,c])=>{
+  const m = new THREE.Mesh(
+    new THREE.CircleGeometry(r,48),
+    new THREE.MeshBasicMaterial({color:c,side:THREE.DoubleSide})
+  );
+  m.rotation.x = -Math.PI/2; m.position.y = .01*(r);
+  targetGroup.add(m);
+});
+scene.add(targetGroup);
+
+// Стрела-указатель к мишени (на земле)
+const arrowMat = new THREE.MeshBasicMaterial({color:0xffdd44,transparent:true,opacity:.7});
+const arrow = new THREE.Mesh(new THREE.ConeGeometry(3,12,4), arrowMat);
+arrow.position.set(TX,.2,TZ); arrow.rotation.x = -Math.PI/2;
+scene.add(arrow);
+
+// ─── Облака ───────────────────────────────────────────────────────────────────
+function cloud(x,y,z){
+  const g = new THREE.Group();
+  const m = new THREE.MeshLambertMaterial({color:0xffffff,transparent:true,opacity:.88});
+  [[0,0,0,28,12,22],[22,3,0,22,10,18],[-18,2,8,20,9,16],[8,-4,14,18,8,14]].forEach(([cx,cy,cz,sx,sy,sz])=>{
+    const mesh = new THREE.Mesh(new THREE.SphereGeometry(1,8,6),m);
+    mesh.scale.set(sx,sy,sz); mesh.position.set(cx,cy,cz);
+    g.add(mesh);
+  });
+  g.position.set(x,y,z);
+  return g;
+}
+[[-80,620,60],[120,550,-40],[-200,480,100],[300,590,50],[-60,700,-120],[200,650,80],[0,520,200],[-150,580,-80]].forEach(([x,y,z])=>scene.add(cloud(x,y,z)));
+
+// ─── Прыгун ───────────────────────────────────────────────────────────────────
+const jumper = new THREE.Group();
+// Тело
+const bodyM = new THREE.Mesh(new THREE.CylinderGeometry(.45,.45,1.9,10),new THREE.MeshLambertMaterial({color:0x1a3a7a}));
+// Голова
+const headM = new THREE.Mesh(new THREE.SphereGeometry(.55,10,8),new THREE.MeshLambertMaterial({color:0xffcc99}));
+headM.position.y = 1.45;
+// Шлем
+const helmM = new THREE.Mesh(new THREE.SphereGeometry(.62,10,6,0,Math.PI*2,0,Math.PI/2),new THREE.MeshLambertMaterial({color:0x223366}));
+helmM.position.y = 1.5;
+// Ранец
+const packM = new THREE.Mesh(new THREE.BoxGeometry(.8,1.1,.35),new THREE.MeshLambertMaterial({color:0x8b2200}));
+packM.position.set(0,.3,-.5);
+// Руки
+[-1,1].forEach(s=>{
+  const arm = new THREE.Mesh(new THREE.CylinderGeometry(.18,.18,1.2,8),new THREE.MeshLambertMaterial({color:0x1a3a7a}));
+  arm.rotation.z = s*.7; arm.position.set(s*.8,.3,0);
+  jumper.add(arm);
+});
+jumper.add(bodyM,headM,helmM,packM);
+
+// Купол
+const chuteGrp = new THREE.Group();
+const pts = [];
+for(let i=0;i<=12;i++){
+  const t = i/12*Math.PI*.5;
+  pts.push(new THREE.Vector2(Math.sin(t)*12, Math.cos(t)*8));
+}
+const cupola = new THREE.Mesh(
+  new THREE.LatheGeometry(pts,18),
+  new THREE.MeshLambertMaterial({color:0xc9a84c,side:THREE.DoubleSide,transparent:true,opacity:.88})
+);
+// Стропы
+for(let i=0;i<12;i++){
+  const a = i/12*Math.PI*2;
+  const pts2 = [new THREE.Vector3(Math.cos(a)*11,7,Math.sin(a)*11), new THREE.Vector3(0,-2,0)];
+  chuteGrp.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts2), new THREE.LineBasicMaterial({color:0xddddbb})));
+}
+chuteGrp.add(cupola);
+chuteGrp.position.y = 3;
+chuteGrp.visible = false;
+chuteGrp.scale.setScalar(0);
+jumper.add(chuteGrp);
+jumper.castShadow = true;
+scene.add(jumper);
+
+// ─── Состояние игры ───────────────────────────────────────────────────────────
+let state='ready'; // ready | falling | canopy | landed | crashed
+let pos = new THREE.Vector3(0, 800, 0);
+let vel = new THREE.Vector3(0, 0, 0);
+let chuteOpen = false;
+let chuteScale = 0;
+const WIND_X = (Math.random()-.5)*6;
+const WIND_Z = (Math.random()-.5)*6;
+const OPEN_LO = 200, OPEN_HI = 420;
+const GRAVITY = 28;
+const CANOPY_DRAG = 4.5;
+const steer = {x:0,z:0};
+const clock = new THREE.Clock(false);
+let flashTimer = 0;
+let landed = false;
+
+// ─── HUD ─────────────────────────────────────────────────────────────────────
+const altEl = document.getElementById('altVal');
+const windEl = document.getElementById('windVal');
+const zoneEl = document.getElementById('zone');
+const msgEl  = document.getElementById('msg');
+
+const wSpd = Math.round(Math.sqrt(WIND_X*WIND_X+WIND_Z*WIND_Z)*10);
+const wDir = Math.abs(WIND_X) > Math.abs(WIND_Z)
+  ? (WIND_X > 0 ? '→ восток' : '← запад')
+  : (WIND_Z > 0 ? '↓ юг' : '↑ север');
+windEl.textContent = wDir + ' ' + wSpd + ' км/ч';
+
+function showMsg(text, dur=2000){
+  msgEl.textContent=text; msgEl.style.opacity=1;
+  setTimeout(()=>msgEl.style.opacity=0, dur);
+}
+
+// ─── Старт ────────────────────────────────────────────────────────────────────
+document.getElementById('startBtn').onclick = startGame;
+document.getElementById('retryBtn').onclick = () => { location.reload(); };
+
+function startGame(){
+  document.getElementById('startScreen').style.display='none';
+  state='falling';
+  clock.start();
+  document.getElementById('openBtn').style.display='block';
+  showMsg('Прыжок!', 1500);
+}
+
+// ─── Управление ───────────────────────────────────────────────────────────────
+document.getElementById('openBtn').addEventListener('click', openChute);
+document.getElementById('openBtn').addEventListener('touchstart', e=>{e.preventDefault();openChute();},{passive:false});
+
+function steerBind(id, dx, dz){
+  const b = document.getElementById(id);
+  b.addEventListener('pointerdown', e=>{e.preventDefault();steer.x+=dx;steer.z+=dz;});
+  ['pointerup','pointerleave','pointercancel'].forEach(ev=>b.addEventListener(ev,()=>{steer.x-=dx;steer.z-=dz;}));
+}
+steerBind('sL',-1,0); steerBind('sR',1,0); steerBind('sF',0,-1); steerBind('sB',0,1);
+
+document.addEventListener('keydown', e=>{
+  if(e.code==='Space'){e.preventDefault();openChute();}
+  if(e.code==='ArrowLeft')steer.x=-1;
+  if(e.code==='ArrowRight')steer.x=1;
+  if(e.code==='ArrowUp')steer.z=-1;
+  if(e.code==='ArrowDown')steer.z=1;
+});
+document.addEventListener('keyup', e=>{
+  if(['ArrowLeft','ArrowRight'].includes(e.code))steer.x=0;
+  if(['ArrowUp','ArrowDown'].includes(e.code))steer.z=0;
+});
+
+// ─── Открыть купол ────────────────────────────────────────────────────────────
+function openChute(){
+  if(state!=='falling')return;
+  if(pos.y < 50){ crashed(); return; }
+  chuteOpen=true; state='canopy';
+  chuteGrp.visible=true;
+  document.getElementById('openBtn').style.display='none';
+  document.getElementById('ctrl').querySelectorAll('.steer').forEach(b=>b.style.display='block');
+  zoneEl.style.opacity=0;
+  const quality = pos.y>=OPEN_LO&&pos.y<=OPEN_HI ? '✅ Отличный момент!' : pos.y>OPEN_HI ? '⬆ Рановато — много сносит' : '⬇ Поздновато';
+  showMsg(quality, 2000);
+  // Замедлить
+  vel.set(0,0,0);
+}
+
+function crashed(){
+  state='crashed';
+  document.getElementById('openBtn').style.display='none';
+  document.getElementById('endScreen').style.display='flex';
+  document.getElementById('endTitle').textContent='💥 Не раскрыл вовремя';
+  document.getElementById('endScore').textContent='0 очков';
+  document.getElementById('endDesc').textContent='Раскрывай купол между 200 и 420 метрами — не позже!';
+}
+
+function land(){
+  if(landed)return; landed=true; state='landed';
+  document.getElementById('ctrl').querySelectorAll('.steer').forEach(b=>b.style.display='none');
+  const dx = pos.x - TX, dz = pos.z - TZ;
+  const dist = Math.round(Math.sqrt(dx*dx+dz*dz));
+  let score, desc;
+  if(dist<=12){score=100;desc='Мастер! Точно в центр!';}
+  else if(dist<=30){score=80;desc='Отлично — в пределах мишени!';}
+  else if(dist<=60){score=55;desc='Хорошо — рядом с мишенью.';}
+  else if(dist<=120){score=25;desc='Ветер снёс. Пробуй ещё раз!';}
+  else{score=0;desc='Далеко. Компенсируй ветер активнее!';}
+  setTimeout(()=>{
+    document.getElementById('endScreen').style.display='flex';
+    document.getElementById('endTitle').textContent='Приземление';
+    document.getElementById('endScore').textContent=score+' очков';
+    document.getElementById('endDesc').textContent=desc+'\n\nРасстояние от центра: '+dist+' м';
+  }, 1200);
+}
+
+// ─── Физика и рендер ─────────────────────────────────────────────────────────
+let camTargetOffset = new THREE.Vector3();
+let camLerpPos = new THREE.Vector3(0, 820, 30);
+
+renderer.setAnimationLoop(()=>{
+  if(state==='ready'){
+    renderer.render(scene,camera);
+    return;
+  }
+
+  const dt = Math.min(clock.getDelta(), .05);
+  flashTimer += dt;
+
+  if(state==='falling'){
+    // Гравитация
+    vel.y -= GRAVITY * dt;
+    pos.y += vel.y * dt;
+    // Снос ветром (слабый в свободном падении)
+    pos.x += WIND_X * .3 * dt;
+    pos.z += WIND_Z * .3 * dt;
+
+    altEl.textContent = Math.max(0,Math.round(pos.y)) + ' м';
+
+    // Зона раскрытия
+    if(pos.y <= OPEN_HI && pos.y >= OPEN_LO){
+      zoneEl.style.opacity = 1;
+    } else {
+      zoneEl.style.opacity = 0;
+    }
+
+    // Авто-краш
+    if(pos.y <= 30){ crashed(); }
+
+    // Камера: сзади-сверху, смотрит вперёд-вниз
+    const tgtOffset = new THREE.Vector3(0, 18, 28);
+    camTargetOffset.lerp(tgtOffset, .08);
+    camLerpPos.lerp(pos.clone().add(camTargetOffset), .08);
+    camera.position.copy(camLerpPos);
+    camera.lookAt(pos.x, pos.y-30, pos.z-20);
+
+    // Анимация тела (падение — раскинуть руки)
+    jumper.rotation.x = .25;
+  }
+
+  else if(state==='canopy'){
+    // Купол надувается
+    if(chuteScale < 1){ chuteScale = Math.min(1, chuteScale + dt*3); chuteGrp.scale.setScalar(chuteScale); }
+
+    // Торможение
+    vel.y = Math.max(vel.y, -CANOPY_DRAG);
+    vel.y = THREE.MathUtils.lerp(vel.y, -CANOPY_DRAG, dt*4);
+    pos.y += vel.y * dt;
+
+    // Управление + ветер
+    const steerPower = 22;
+    pos.x += (steer.x * steerPower + WIND_X) * dt;
+    pos.z += (steer.z * steerPower + WIND_Z) * dt;
+
+    altEl.textContent = Math.max(0,Math.round(pos.y)) + ' м';
+
+    // Наклон купола от управления
+    chuteGrp.rotation.z = THREE.MathUtils.lerp(chuteGrp.rotation.z, -steer.x*.18, .12);
+    chuteGrp.rotation.x = THREE.MathUtils.lerp(chuteGrp.rotation.x, steer.z*.12, .12);
+
+    // Камера: чуть выше и сзади, смотрит вперёд к мишени
+    const tgtOffset = new THREE.Vector3(steer.x*-5, 22, 35);
+    camTargetOffset.lerp(tgtOffset, .06);
+    camLerpPos.lerp(pos.clone().add(camTargetOffset), .06);
+    camera.position.copy(camLerpPos);
+    camera.lookAt(pos.x + (TX-pos.x)*.1, pos.y-50, pos.z + (TZ-pos.z)*.1);
+
+    // Посадка
+    if(pos.y <= 0){ pos.y=0; land(); }
+
+    // Тело ровное под куполом
+    jumper.rotation.x = 0;
+  }
+
+  else if(state==='landed'||state==='crashed'){
+    // Камера приземлилась, смотрит на прыгуна
+    camLerpPos.lerp(pos.clone().add(new THREE.Vector3(0,8,20)), .06);
+    camera.position.copy(camLerpPos);
+    camera.lookAt(pos);
+  }
+
+  // Стрелка мишени вращается
+  arrow.rotation.y += dt;
+
+  // Позиция прыгуна
+  jumper.position.copy(pos);
+
+  // Подсветка зоны раскрытия (мигание кнопки обеспечено CSS)
+  renderer.render(scene, camera);
+});
+
+// ─── Resize ──────────────────────────────────────────────────────────────────
+window.addEventListener('resize',()=>{
+  renderer.setSize(W(),H());
+  camera.aspect=W()/H();
+  camera.updateProjectionMatrix();
+});
+</script>
+</body>
+</html>
