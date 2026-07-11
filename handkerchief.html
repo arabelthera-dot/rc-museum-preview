@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<style>*{margin:0;padding:0}html,body{background:#000;overflow:hidden;width:1280px;height:720px}</style>
+</head><body>
+<canvas id="c" width="1280" height="720"></canvas>
+<script>
+const cv=document.getElementById('c');
+const W=1280,H=720;
+const ctx=cv.getContext('2d');
+
+// ─── физика ткани ───
+const COLS=20, ROWS=20;
+const SIZE=340; // пикселей
+const CX=W/2, CY=H/2-30;
+
+const pts=[];
+for(let r=0;r<=ROWS;r++) for(let c=0;c<=COLS;c++){
+  pts.push({
+    x:CX+(c/COLS-0.5)*SIZE,
+    y:CY-SIZE*0.5+(r/ROWS)*SIZE,
+    ox:c/COLS, oy:r/ROWS,
+    vx:(Math.random()-0.5)*0.3,
+    vy:(Math.random()-0.5)*0.3,
+    pinned:false
+  });
+}
+
+// стартовое положение — всё собрано в точку
+const HOLD_X=CX+40, HOLD_Y=CY-SIZE*0.55;
+function idx(r,c){return r*(COLS+1)+c;}
+for(let i=0;i<pts.length;i++){
+  pts[i].x=HOLD_X+(Math.random()-0.5)*8;
+  pts[i].y=HOLD_Y+(Math.random()-0.5)*8;
+}
+
+// пружины
+const springs=[];
+function addS(a,b){
+  const dx=a.ox-b.ox, dy=a.oy-b.oy;
+  springs.push({a,b,rest:Math.sqrt(dx*dx+dy*dy)*SIZE});
+}
+for(let r=0;r<=ROWS;r++) for(let c=0;c<=COLS;c++){
+  const p=pts[idx(r,c)];
+  if(c<COLS) addS(p,pts[idx(r,c+1)]);
+  if(r<ROWS) addS(p,pts[idx(r+1,c)]);
+  if(r<ROWS&&c<COLS) addS(p,pts[idx(r+1,c+1)]);
+  if(r<ROWS&&c>0) addS(p,pts[idx(r+1,c-1)]);
+}
+
+const KS=0.22, KD=0.06, GRAV=0.28;
+let phase=0; // 0=держим, 1=падаем
+
+function step(pinned){
+  // силы
+  for(const p of pts){p.fx=0;p.fy=GRAV;}
+  for(const {a,b,rest} of springs){
+    const dx=b.x-a.x, dy=b.y-a.y;
+    const len=Math.sqrt(dx*dx+dy*dy)||0.001;
+    const f=KS*(len-rest);
+    const nx=dx/len, ny=dy/len;
+    const rv=(b.vx-a.vx)*nx+(b.vy-a.vy)*ny;
+    const ft=f+KD*rv;
+    a.fx+=ft*nx; a.fy+=ft*ny;
+    b.fx-=ft*nx; b.fy-=ft*ny;
+  }
+  for(const p of pts){
+    if(pinned&&p===pts[0]){p.x=HOLD_X;p.y=HOLD_Y;p.vx=0;p.vy=0;continue;}
+    p.vx=(p.vx+p.fx)*0.985;
+    p.vy=(p.vy+p.fy)*0.985;
+    p.x+=p.vx; p.y+=p.vy;
+    if(p.y>H-60){p.y=H-60;p.vy*=-0.08;p.vx*=0.82;}
+    if(p.x<80)  {p.x=80;p.vx*=-0.1;}
+    if(p.x>W-80){p.x=W-80;p.vx*=-0.1;}
+  }
+}
+
+function drawCloth(){
+  // рисуем как сетку четырёхугольников
+  for(let r=0;r<ROWS;r++) for(let c=0;c<COLS;c++){
+    const a=pts[idx(r,c)], b=pts[idx(r,c+1)],
+          cc=pts[idx(r+1,c)], d=pts[idx(r+1,c+1)];
+    // нормаль для освещения (cross product в 2D → интенсивность)
+    const ex=b.x-a.x,ey=b.y-a.y;
+    const fx=cc.x-a.x,fy=cc.y-a.y;
+    const nz=ex*fy-ey*fx;
+    const light=Math.max(0,Math.min(1, nz/6000+0.6));
+
+    // цвет шёлка с переливом по позиции
+    const cu=c/COLS, cv2=r/ROWS;
+    const r1=Math.round(240+light*15);
+    const g1=Math.round(226+light*10);
+    const b1=Math.round(210+light*8);
+    ctx.fillStyle=`rgba(${r1},${g1},${b1},0.92)`;
+
+    ctx.beginPath();
+    ctx.moveTo(a.x,a.y);
+    ctx.lineTo(b.x,b.y);
+    ctx.lineTo(d.x,d.y);
+    ctx.lineTo(cc.x,cc.y);
+    ctx.closePath();
+    ctx.fill();
+
+    // тонкая граница ячейки
+    ctx.strokeStyle=`rgba(190,175,155,${0.12*light})`;
+    ctx.lineWidth=0.5;
+    ctx.stroke();
+  }
+
+  // кайма — рёбра платка более тёмные
+  ctx.strokeStyle='rgba(160,140,110,0.55)';
+  ctx.lineWidth=1.5;
+  ctx.beginPath();
+  for(let c=0;c<=COLS;c++){
+    const p=pts[idx(0,c)];
+    c===0?ctx.moveTo(p.x,p.y):ctx.lineTo(p.x,p.y);
+  }
+  for(let r=0;r<=ROWS;r++){
+    const p=pts[idx(r,COLS)];
+    ctx.lineTo(p.x,p.y);
+  }
+  for(let c=COLS;c>=0;c--){
+    const p=pts[idx(ROWS,c)];
+    ctx.lineTo(p.x,p.y);
+  }
+  for(let r=ROWS;r>=0;r--){
+    const p=pts[idx(r,0)];
+    ctx.lineTo(p.x,p.y);
+  }
+  ctx.closePath();
+  ctx.stroke();
+}
+
+// ─── лёгкие пылинки ───
+const dust=Array.from({length:18},()=>({
+  x:Math.random()*W,y:Math.random()*H,
+  r:Math.random()*1.2+0.3,
+  vx:(Math.random()-0.5)*0.4,
+  vy:-Math.random()*0.6-0.2,
+  a:Math.random()*0.25+0.05
+}));
+
+let t0=Date.now(), dropAt=1400; // мс
+
+function frame(){
+  requestAnimationFrame(frame);
+  const t=Date.now()-t0;
+  const pinned=t<dropAt;
+
+  // несколько шагов физики
+  const steps=pinned?3:5;
+  for(let s=0;s<steps;s++) step(pinned);
+
+  // рендер
+  ctx.clearRect(0,0,W,H);
+
+  // тёмный фон с едва заметным градиентом
+  const bg=ctx.createRadialGradient(CX,CY*0.7,60,CX,CY*0.7,700);
+  bg.addColorStop(0,'#0e0e10');
+  bg.addColorStop(1,'#020203');
+  ctx.fillStyle=bg; ctx.fillRect(0,0,W,H);
+
+  // лёгкий свет сверху
+  const gl=ctx.createRadialGradient(CX-80,80,0,CX-80,80,500);
+  gl.addColorStop(0,'rgba(255,235,180,0.045)');
+  gl.addColorStop(1,'rgba(0,0,0,0)');
+  ctx.fillStyle=gl; ctx.fillRect(0,0,W,H);
+
+  // пылинки
+  for(const d of dust){
+    d.x+=d.vx; d.y+=d.vy;
+    if(d.y<-5){d.y=H+5;d.x=Math.random()*W;}
+    ctx.beginPath();
+    ctx.arc(d.x,d.y,d.r,0,Math.PI*2);
+    ctx.fillStyle=`rgba(255,240,200,${d.a})`;
+    ctx.fill();
+  }
+
+  // тень платка
+  ctx.save();
+  ctx.filter='blur(18px)';
+  ctx.globalAlpha=0.22;
+  drawCloth();
+  ctx.restore();
+  ctx.filter='none'; ctx.globalAlpha=1;
+
+  // платок
+  drawCloth();
+
+  // лёгкий виньет
+  const vg=ctx.createRadialGradient(CX,H/2,H*0.28,CX,H/2,H*0.75);
+  vg.addColorStop(0,'rgba(0,0,0,0)');
+  vg.addColorStop(1,'rgba(0,0,0,0.55)');
+  ctx.fillStyle=vg; ctx.fillRect(0,0,W,H);
+}
+
+frame();
+</script>
+</body></html>
