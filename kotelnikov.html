@@ -519,25 +519,24 @@
   function draw(){ctx.clearRect(0,0,cv.width,cv.height);
     ctx.fillStyle='#c8e0a0';ctx.fillRect(0,GR,cv.width,cv.height-GR);
     [[46,'#b31b2c'],[30,'#fff'],[15,'#b31b2c']].forEach(b=>{ctx.fillStyle=b[1];ctx.beginPath();ctx.ellipse(zone,GR+15,b[0],8,0,0,7);ctx.fill();});
-    if(gst==='fall'){ctx.save();ctx.setLineDash([9,7]);ctx.strokeStyle='rgba(31,111,139,.5)';ctx.lineWidth=1.5;ctx.strokeRect(8,OPEN_LO,cv.width-16,OPEN_HI-OPEN_LO);ctx.setLineDash([]);ctx.fillStyle='rgba(31,111,139,.85)';ctx.font='13px Segoe UI';ctx.fillText('зона раскрытия',14,OPEN_LO-8);ctx.textAlign='center';ctx.fillStyle='#0f1e33';ctx.font='bold 23px Georgia';ctx.fillText('Нажми, чтобы раскрыть парашют!',cv.width/2,46);ctx.textAlign='left';ctx.restore();}
+    if(gst==='fall'){ctx.save();ctx.textAlign='center';ctx.fillStyle='rgba(15,30,51,.88)';ctx.font='bold 18px Georgia';ctx.fillText('Нажми 🪂 чтобы раскрыть парашют',cv.width/2,42);ctx.textAlign='left';ctx.restore();}
     if(openY!==null){ctx.strokeStyle='#c8a24a';ctx.lineWidth=4;ctx.beginPath();ctx.arc(px,py-34,36,Math.PI,0);ctx.stroke();
       ctx.beginPath();ctx.moveTo(px-36,py-34);ctx.lineTo(px,py);ctx.moveTo(px+36,py-34);ctx.lineTo(px,py);ctx.stroke();}
     ctx.fillStyle='#1a1c22';ctx.beginPath();ctx.arc(px,py,9,0,7);ctx.fill();ctx.fillRect(px-8,py+8,16,22);
     ctx.fillStyle='rgba(31,111,139,.9)';ctx.font='13px Segoe UI';ctx.fillText((wind<0?'←':'→')+' ветер',14,22);}
   let last=0;
   function step(ts){if(!last)last=ts;const dt=Math.min((ts-last)/1000,0.05);last=ts;
-    if(gst==='fall'){py+=52*dt;px+=wind*20*dt;if(openY===null&&py>=OPEN_HI){gst='crash';gBtns('end');msg('💥 Не раскрыл вовремя! Жми «Заново» и нажимай 🪂 в зоне.',0);}}
+    if(gst==='fall'){py+=52*dt;px+=wind*20*dt;if(openY===null&&py>=OPEN_HI){gst='crash';gBtns('end');msg('💥 Не раскрыл вовремя! Жми «Заново» и раскрывай 🪂 пораньше.',0);}}
     else if(gst==='canopy'){py+=30*dt;px+=(wind*54+steer*180)*dt;if(guide!==null)px+=(guide-px)*Math.min(8*dt,0.5);}
     px=Math.max(16,Math.min(cv.width-16,px));
     if(py>=GR&&gst!=='crash'){py=GR;gst='land';if(!scored){scored=true;land();}}
     draw();if(gst!=='land'&&gst!=='crash')raf=requestAnimationFrame(step);}
   function openChute(auto){if(gst!=='fall')return;openY=py;gst='canopy';guide=px;gBtns('canopy');
-    if(py<OPEN_LO)msg('Рановато — купол раскрылся. Веди к мишени!',1);
-    else msg('✅ Точный момент! Веди к мишени.',1);}
+    msg('🪂 Купол раскрылся! Веди к мишени против ветра.',1);}
   function land(){
     if(openY===null){msg('💥 Ты не раскрыл парашют! Жми «Раскрыть» на лету.',0);gBtns('end');return;}
-    const dx=Math.abs(px-zone),good=openY>=OPEN_LO&&openY<=OPEN_HI;
-    if(dx<=46){msg(good?'🎯 Идеально! Точный момент и в яблочко.':'🎯 В яблочко!',1);award('game1',20);}
+    const dx=Math.abs(px-zone);
+    if(dx<=46){msg('🎯 В яблочко!',1);award('game1',20);}
     else if(dx<=95){msg('✅ Хорошая посадка рядом с центром.',1);award('game1',20);}
     else{msg('🪂 Ветер снёс мимо. Жми «Заново» и тяни к мишени активнее.',0);}
     gBtns('end');}
