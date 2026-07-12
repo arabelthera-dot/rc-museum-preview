@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Что изобрели русские первыми в мире — 1 декабря · Лобачевский</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --dark:#07090f; --dark2:#0d1120; --surface:#131825;
+    --card:rgba(255,255,255,.05); --card-b:rgba(255,255,255,.09);
+    --gold:#c9a84c; --gold-l:#e4c97a; --gold-g:rgba(201,168,76,.13);
+    --ink:#e8eef5; --muted:#7a8fb8; --line:rgba(255,255,255,.07);
+    --accent:#6a5acd; --accent2:#4b3fa0;
+    --paper:#0d1120; --paper2:#131825;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Inter','Segoe UI',sans-serif;color:var(--ink);background:var(--dark);line-height:1.72}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.13;margin:0}
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent)}
+
+  /* ── ШАПКА ── */
+  header.top{background:rgba(7,9,15,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--card-b);color:#fff;position:sticky;top:0;z-index:30}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+  .logo svg{display:block;filter:drop-shadow(0 0 8px rgba(201,168,76,.4))}
+  .logo .lt{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:16px}
+  .logo .lt small{display:block;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-family:'Inter',sans-serif}
+  .score{background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:6px 16px;font-size:13px;color:var(--gold-l);cursor:pointer;font-family:'Inter',sans-serif}
+
+  /* ── HERO ── */
+  .hero{display:flex;flex-direction:column}
+  .hero-visual{position:relative;height:56vh;min-height:320px;max-height:580px;overflow:hidden;background:linear-gradient(160deg,#080c1e 0%,#1a1560 55%,#0a0d2c 100%)}
+  .hero-visual canvas.scene{width:100%;height:100%;display:block}
+  .scene3d-tag{position:absolute;left:14px;top:14px;z-index:2;background:rgba(7,9,15,.72);color:var(--gold);border:1px solid rgba(201,168,76,.35);border-radius:24px;padding:5px 16px;font-size:11px;letter-spacing:.6px;backdrop-filter:blur(10px);font-family:'Inter',sans-serif;font-weight:600}
+  .hero-text{background:linear-gradient(180deg,#0d1120 0%,#07090f 100%);color:#fff;padding:28px 0 38px}
+  .hero .museum{color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:12px;opacity:.9}
+  .hero h1{color:#fff;font-size:56px;font-weight:900;line-height:1.04;margin-bottom:16px}
+  .hero .hook{color:#b0bcd8;font-size:19px;max-width:580px;margin-bottom:28px;line-height:1.65;font-weight:400}
+  @media(max-width:680px){.hero h1{font-size:34px}.hero .hook{font-size:16px}.hero-visual{height:44vh;min-height:240px}}
+  .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:16px;font-family:'Inter',sans-serif;letter-spacing:.5px}
+
+  /* ── НАВИГАЦИЯ ── */
+  .daynav{position:sticky;top:64px;z-index:25;background:rgba(7,9,15,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-b)}
+  .daynav .wrap{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+  .daynav a{flex:0 0 auto;padding:14px 20px;font-size:11px;font-weight:700;font-family:'Inter',sans-serif;color:var(--muted);text-decoration:none;white-space:nowrap;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:.18s}
+  .daynav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+  /* ── СЕКЦИИ ── */
+  section.block{padding:64px 0;border-bottom:1px solid var(--line);scroll-margin-top:130px}
+  .kicker{font-size:10px;text-transform:uppercase;letter-spacing:3.5px;color:var(--gold);font-weight:700;font-family:'Inter',sans-serif;margin-bottom:8px}
+  section.block h2{font-size:34px;color:#fff;margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink)}
+  .pull{background:var(--gold-g);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 14px 14px 0;font-style:italic;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-size:20px;line-height:1.5;margin:26px 0}
+
+  /* ── ЧИТАТЬ ДАЛЬШЕ ── */
+  .article{position:relative}
+  .article.collapsed .body{max-height:260px;overflow:hidden}
+  .article.collapsed .body:after{content:'';position:absolute;left:0;right:0;bottom:44px;height:110px;background:linear-gradient(transparent,var(--dark))}
+  .more{text-align:center;margin-top:16px}
+
+  /* ── КНОПКИ ── */
+  .btn{cursor:pointer;border:none;border-radius:12px;padding:14px 26px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;background:var(--accent2);color:#fff;transition:.18s;letter-spacing:.2px}
+  .btn:hover{filter:brightness(1.18)}
+  .btn.ghost{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid var(--card-b)}
+  .btn.ghost:hover{background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.2)}
+  .btn.gold{background:linear-gradient(135deg,var(--gold),#b8882b);color:#1a0f00;box-shadow:0 4px 20px rgba(201,168,76,.25)}
+  .btn.gold:hover{filter:brightness(1.1)}
+  .btn:active{transform:translateY(1px)}
+
+  /* ── КАРТОЧКИ ── */
+  .card{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:20px 22px;margin:16px 0;backdrop-filter:blur(6px)}
+
+  /* ── КВИЗ ── */
+  .opt{display:block;width:100%;text-align:left;background:rgba(255,255,255,.04);border:1px solid var(--card-b);border-radius:12px;padding:13px 16px;margin:8px 0;cursor:pointer;font-size:15px;color:var(--ink);font-family:'Inter',sans-serif;transition:.16s}
+  .opt:hover{border-color:var(--accent);background:rgba(106,90,205,.08)}
+  .opt.correct{background:rgba(40,120,60,.18);border-color:#3f9b52;color:#7ed4a0;font-weight:600}
+  .opt.wrong{background:rgba(180,40,40,.13);border-color:#c0453f;color:#f08080}
+  .exp{margin-top:10px;font-size:14px;background:var(--gold-g);border-radius:10px;padding:12px 14px;display:none;color:var(--gold-l)}
+  .exp.show{display:block}
+
+  /* ── ЧАТ ── */
+  .chip{cursor:pointer;background:rgba(255,255,255,.05);border:1px solid var(--card-b);border-radius:20px;padding:7px 16px;margin:4px 5px 4px 0;font-size:13px;display:inline-block;color:var(--muted);font-family:'Inter',sans-serif;transition:.16s}
+  .chip:hover{border-color:var(--gold);color:var(--gold)}
+  .msg{margin:8px 0;padding:12px 16px;border-radius:14px;max-width:88%;font-size:15px}
+  .msg.you{background:rgba(106,90,205,.18);border:1px solid rgba(106,90,205,.28);margin-left:auto;text-align:right;color:#c0b8f0}
+  .msg.k{background:rgba(255,255,255,.05);border:1px solid var(--card-b);color:var(--ink)}
+  .msg.k b{color:var(--gold)}
+  input{background:rgba(255,255,255,.06);border:1px solid var(--card-b);color:var(--ink);border-radius:12px}
+  input::placeholder{color:var(--muted)}
+  input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(106,90,205,.15)}
+
+  /* ── ИТОГ ── */
+  .day-result{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:22px 24px;max-width:460px}
+  .dr-rank{font-family:'Playfair Display',Georgia,serif;font-size:28px;color:var(--gold-l);font-weight:700}
+  .dr-score{font-size:16px;margin:4px 0 12px;color:var(--ink)}.dr-score span{color:var(--muted);font-size:14px}
+  .dr-bar{height:8px;background:rgba(255,255,255,.08);border-radius:6px;overflow:hidden}
+  .dr-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),var(--gold));transition:width .6s cubic-bezier(.2,.7,.2,1)}
+  .dr-note{margin-top:12px;font-size:14px;color:var(--muted)}
+
+  /* ── РЕКЛАМНЫЕ СЛОТЫ ── */
+  .ad-slot{position:relative;margin:26px 0;background:rgba(255,255,255,.02);border:1px dashed rgba(255,255,255,.1);border-radius:14px;min-height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px}
+  .ad-slot .lbl{position:absolute;top:7px;right:12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.15);font-family:'Inter',sans-serif}
+  .ad-slot .ph-txt{font-size:12px;max-width:80%;color:rgba(255,255,255,.18)}
+  .ad-slot.billboard{min-height:108px}
+
+  /* ── ИГРА — ПРАВДА ИЛИ МИФ ── */
+  .myth-card{background:rgba(255,255,255,.04);border:1px solid var(--card-b);border-radius:16px;padding:22px;margin:14px 0;transition:.2s}
+  .myth-card.revealed-true{background:rgba(40,120,60,.12);border-color:#3f9b52}
+  .myth-card.revealed-false{background:rgba(180,40,40,.1);border-color:#c0453f}
+  .myth-q{font-size:17px;color:var(--ink);line-height:1.55;margin-bottom:16px}
+  .myth-btns{display:flex;gap:10px;flex-wrap:wrap}
+  .myth-result{margin-top:14px;font-size:14px;display:none;line-height:1.65;color:var(--gold-l);background:var(--gold-g);border-radius:10px;padding:12px 14px}
+  .myth-result.show{display:block}
+
+  /* ── ГЕОМЕТРИЯ-ИГРА ── */
+  #geomCanvas{border-radius:14px;border:1px solid var(--line);display:block;margin:0 auto;width:100%;max-width:640px;background:#0a0d1e}
+
+  /* ── REVEAL ── */
+  .reveal{opacity:0;transform:translateY(24px);transition:.8s cubic-bezier(.2,.7,.2,1)}
+  .reveal.on{opacity:1;transform:none}
+
+  footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#">
+      <svg width="34" height="34" viewBox="0 0 48 48" aria-label="логотип">
+        <circle cx="24" cy="24" r="23" fill="#0f1020" stroke="#c8a24a" stroke-width="2"/>
+        <path d="M24 10 L24 30 L12 30 Z" fill="#c8a24a"/>
+        <path d="M26 14 L36 30 L26 30 Z" fill="#c8a24a" opacity=".7"/>
+        <path d="M10 33 q14 6 28 0" fill="none" stroke="#c8a24a" stroke-width="2"/>
+      </svg>
+      <span class="lt">Русская цивилизация<small>первые в мире</small></span>
+    </a>
+    <div class="score" id="scoreBox">⭐ <span id="score">0</span> / 60</div>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-visual">
+    <canvas id="hero3d" class="scene" aria-label="Анимация: параллельные в двух геометриях"></canvas>
+    <div class="scene3d-tag">Анимация · два мира геометрии</div>
+  </div>
+  <div class="hero-text">
+    <div class="wrap">
+      <div class="date-chip">1 декабря · 1792</div>
+      <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
+      <h1>Он сломал<br>аксиому Евклида</h1>
+      <p class="hook">Две тысячи лет никто не смел трогать постулат о параллельных. Профессор из Казани усомнился — и оказался прав.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <button class="btn gold" id="readBtn">Читать историю ↓</button>
+        <button class="btn ghost" onclick="document.getElementById('chat-sec').scrollIntoView({behavior:'smooth'})">Спросить Лобачевского</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="ad-slot billboard">
+    <span class="lbl">Реклама</span>
+    <span class="ph-txt">Баннер-шапка 970×120 — на каждой из 365 страниц музея</span>
+  </div>
+</div>
+
+<nav class="daynav">
+  <div class="wrap">
+    <a href="#story">Читать</a>
+    <a href="#quiz-sec">Викторина</a>
+    <a href="#fork">Развилка</a>
+    <a href="#myth-sec">Правда/миф</a>
+    <a href="#geom-sec">Игра</a>
+    <a href="#chat-sec">Спросить</a>
+    <a href="#result">Итог</a>
+  </div>
+</nav>
+
+<!-- СТАТЬЯ -->
+<section class="block" id="story">
+  <div class="wrap">
+    <div class="kicker">История открытия</div>
+    <h2>Человек, который сломал Евклида</h2>
+    <div class="article collapsed" id="article">
+      <div class="body" id="articleBody">
+        <p><b>Казань, 23 февраля 1826 года.</b> Профессор математики выходит перед коллегами с докладом о параллельных прямых. Две тысячи лет математики знали: через точку вне прямой можно провести только одну параллельную. Аксиома Евклида, незыблемая как сама природа.</p>
+        <p>Лобачевский говорит: а что если их бесконечно много?</p>
+        <p>Коллеги молчат. Потом смеются. Рецензент пишет, что доклад «не соответствует духу науки». Рукопись теряется.</p>
+        <p class="pull">Он бросил вызов аксиоме — и аксиома оказалась неправой.</p>
+        <p>Николай Иванович Лобачевский к этому времени — ректор Казанского университета. Он строит его буквально с нуля: добывает финансирование, нанимает профессоров из Европы, основывает библиотеку, метеостанцию, клинику. Математику пишет в свободные часы — она не кормит, но не отпускает.</p>
+        <p><b>Суть открытия.</b> Евклид 2000 лет назад принял как данность: параллельные прямые не пересекаются. Лобачевский построил математически непротиворечивую систему, в которой через одну точку мимо прямой проходит не одна параллельная, а бесконечно много. Сумма углов треугольника там меньше 180 градусов. Это не ошибка. Это другая вселенная.</p>
+        <p><b>Проверка временем.</b> В 1829–1830 годах «О началах геометрии» выходит в «Казанском вестнике». Тираж крошечный. В 1840 году — немецкая публикация. Карл Гаусс, величайший математик эпохи, читает и пишет другу: «Считаю это подлинным шедевром». Лобачевскому — ни слова.</p>
+        <p><b>Горькая часть.</b> В 1856 году Лобачевский умирает — слепой, отстранённый от ректорства, без признания. В 1868 году Бельтрами доказывает: геометрия непротиворечива. В 1915 году Эйнштейн строит общую теорию относительности — и выясняется: пространство нашей Вселенной описывается именно геометрией Лобачевского. Прошло 89 лет с первого доклада.</p>
+        <p><b>Человек.</b> Николай Иванович Лобачевский (1792–1856) родился в Нижнем Новгороде, в 15 лет поступил в Казанский университет, в 23 — профессор. Тридцать лет ректор. Характер упрямый, независимый: раз поверив в идею, не отступал. Лучшая черта — терпение: публиковал свою геометрию 30 лет, не дождавшись признания.</p>
+        <p style="color:var(--gold-l);font-weight:600">Сегодня геометрия Лобачевского — в основе теории относительности, навигации GPS и компьютерной графики.</p>
+      </div>
+      <div class="more"><button class="btn ghost" id="moreBtn">Читать дальше ↓</button></div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="ad-slot">
+    <span class="lbl">Реклама</span>
+    <span class="ph-txt">Встроенный блок в теле статьи</span>
+  </div>
+</div>
+
+<!-- РАЗВИЛКА -->
+<section class="block" id="fork" style="background:rgba(106,90,205,.04)">
+  <div class="wrap">
+    <h2 style="margin-bottom:8px">А как поступил бы ты?</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">1826 год. Ты — Лобачевский. Только что представил новую геометрию. Рецензент назвал доклад «не соответствующим духу науки». Рукопись потеряли. Коллеги смотрят как на чудака. Ты ректор — репутация дороже. Что делаешь?</p>
+    <div id="forkBox" style="margin-top:14px"></div>
+    <div id="forkReal" class="exp" style="margin-top:12px;border-left:3px solid var(--gold)">
+      <b>Как было на самом деле.</b> Лобачевский выбрал всё сразу — продолжал публиковать в России и выпустил немецкую работу в 1840-м. Гаусс оценил. До признания на родине он не дожил — но своей настойчивостью сохранил открытие для человечества. Без него не было бы теории относительности.
+    </div>
+  </div>
+</section>
+
+<!-- ВИКТОРИНА -->
+<section class="block" id="quiz-sec">
+  <div class="wrap">
+    <h2>Викторина</h2>
+    <div id="quiz"></div>
+  </div>
+</section>
+
+<!-- ПРАВДА ИЛИ МИФ -->
+<section class="block" id="myth-sec" style="background:rgba(7,9,15,.6)">
+  <div class="wrap">
+    <div class="kicker">Игра · Правда или миф</div>
+    <h2>Проверь, что ты знаешь</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Правда это или миф? Нажми свой ответ — узнаешь, как было на самом деле. За каждый верный — 5 баллов.</p>
+    <div id="mythBox"></div>
+  </div>
+</section>
+
+<!-- ИГРА — ГЕОМЕТРИЯ -->
+<section class="block" id="geom-sec">
+  <div class="wrap">
+    <div class="kicker">Игра · Две геометрии</div>
+    <h2>Нажми на параллельные Лобачевского</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:64ch">На экране — три пары прямых. Одна пара — по Евклиду (одна параллельная). Другие — по Лобачевскому (много параллельных через одну точку). Кликни на пару, которая описывает геометрию Лобачевского.</p>
+    <canvas id="geomCanvas" width="640" height="260" aria-label="Игра на различение геометрий"></canvas>
+    <div id="geomMsg" style="text-align:center;font-weight:600;min-height:28px;margin-top:12px;font-size:16px;color:var(--gold-l)"></div>
+    <div style="text-align:center;margin-top:8px">
+      <button class="btn ghost" id="geomReset" style="display:none">Сыграть ещё раз</button>
+    </div>
+  </div>
+</section>
+
+<!-- ЧАТ -->
+<section class="block" id="chat-sec">
+  <div class="wrap">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:6px;flex-wrap:wrap">
+      <div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--accent2),#2a1860);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0">🧮</div>
+      <h2 style="margin:0">Спроси Николая Лобачевского</h2>
+    </div>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Задай Лобачевскому вопрос — он ответит своими словами. Он помнит свою жизнь, открытие, борьбу за признание и работу ректором. Спрашивай о чём угодно.</p>
+    <div id="chat" class="card" style="min-height:120px;max-height:340px;overflow-y:auto"></div>
+    <div id="suggest" style="margin:8px 0"></div>
+    <div style="display:flex;gap:8px">
+      <input id="cin" placeholder="Спроси математика…" style="flex:1;padding:11px 14px;border:1.5px solid var(--line);border-radius:10px;font-size:15px">
+      <button class="btn" id="csend">Спросить</button>
+    </div>
+  </div>
+</section>
+
+<!-- ИТОГ -->
+<section class="block" id="result">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Итог дня</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Баллы за викторину, развилку, игру «Правда или миф» и геометрическую игру. Собери все 60.</p>
+    <div class="day-result" id="dayResult"></div>
+  </div>
+</section>
+
+<section class="block" style="background:linear-gradient(135deg,#12183a,#0d1120);border-bottom:none">
+  <div class="wrap" style="text-align:center">
+    <h2 style="margin-bottom:6px;color:#fff">У нас много изобретений</h2>
+    <p style="color:var(--muted);margin:0 auto 16px;max-width:60ch">Русские сделали первыми в мире сотни вещей. Открой полную базу.</p>
+    <a class="btn gold" href="izobreteniya.html" style="display:inline-block;text-decoration:none">Посмотреть изобретения по алфавиту →</a>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="ad-slot">
+    <span class="lbl">Реклама</span>
+    <span class="ph-txt">Партнёрский блок в подвале</span>
+  </div>
+</div>
+
+<footer><div class="wrap">Русская цивилизация · «Что изобрели русские первыми в мире» · весь код и графику делает ИИ</div></footer>
+
+<script>
+/* ── СЧЁТ ── */
+let score=0; const sc=document.getElementById('score'); const MAXP=60; const earned={};
+function renderResult(){const el=document.getElementById('dayResult');if(!el)return;
+  const pct=Math.round(score/MAXP*100);
+  let rank='Гость дня',note='Начни проходить день — отвечай в викторине, выбирай в развилке, играй.';
+  if(score>=52){rank='Знаток геометрии';note='Ты прошёл день как настоящий математик. Лобачевский бы оценил!';}
+  else if(score>=35){rank='Любопытный';note='Хорошо. Возвращайся и пройди то, что ещё не тронул.';}
+  else if(score>=15){rank='Начинающий';note='Попробуй викторину, игру и чат — баллы сложатся.';}
+  el.innerHTML='<div class="dr-rank">'+rank+'</div><div class="dr-score">'+score+' <span>из '+MAXP+' баллов</span></div><div class="dr-bar"><i style="width:'+pct+'%"></i></div><div class="dr-note">'+note+'</div>';}
+function award(k,n){if(earned[k])return;earned[k]=true;score+=n;sc.textContent=score;renderResult();}
+
+/* ── ЧИТАТЬ ДАЛЬШЕ ── */
+document.getElementById('readBtn').onclick=()=>document.getElementById('story').scrollIntoView({behavior:'smooth'});
+document.getElementById('moreBtn').onclick=()=>{document.getElementById('article').classList.remove('collapsed');document.getElementById('moreBtn').style.display='none';};
+
+/* ── РАЗВИЛКА ── */
+const forkOpts=[
+  {t:'Оставить в столе',d:'Ты ректор, репутация дороже. Университет и так — главное дело жизни.'},
+  {t:'Биться дома',d:'Добиваться признания в России: писать в Академию, собирать сторонников, переубеждать рецензентов.'},
+  {t:'Обойти через Запад',d:'Публиковать на немецком и французском — пусть европейские математики решают, кто прав.'}
+];
+const fb=document.getElementById('forkBox');
+forkOpts.forEach((o,i)=>{
+  const b=document.createElement('button');
+  b.className='opt';b.style.marginBottom='8px';b.style.textAlign='left';
+  b.innerHTML='<b>'+o.t+'</b><br><span style="font-size:13px;color:var(--muted)">'+o.d+'</span>';
+  b.onclick=()=>{fb.querySelectorAll('button').forEach(x=>x.disabled=true);b.style.borderColor='var(--gold)';b.style.background='var(--gold-g)';document.getElementById('forkReal').classList.add('show');award('fork',10);};
+  fb.appendChild(b);});
+
+/* ── ВИКТОРИНА ── */
+const quiz=[
+  {q:'Когда Лобачевский впервые представил новую геометрию коллегам?',
+   o:['В 1830 году, в публикации','В 1826 году, на заседании в Казани','В 1840 году, по-немецки','В 1856 году, перед смертью'],
+   c:1,e:'Первый доклад — 23 февраля 1826 года. Публикация в «Казанском вестнике» вышла позже, в 1829–1830.'},
+  {q:'Что означает «неевклидова» в названии геометрии Лобачевского?',
+   o:['В ней нет формул','Через точку мимо прямой можно провести бесконечно много параллельных','Треугольники в ней не существуют','Прямые всегда пересекаются'],
+   c:1,e:'Главное отличие: через одну точку проходит не одна параллельная, а бесконечно много. Это математически непротиворечиво.'},
+  {q:'Какой великий математик высоко оценил Лобачевского — но публично промолчал?',
+   o:['Риман','Пуанкаре','Гаусс','Эйлер'],
+   c:2,e:'Карл Гаусс прочитал немецкую публикацию 1840 года и написал другу: «Считаю это подлинным шедевром». Лобачевскому — ни слова.'}
+];
+const qe=document.getElementById('quiz');
+quiz.forEach((it,qi)=>{
+  const c=document.createElement('div');c.className='card';
+  const t=document.createElement('div');t.style.fontWeight='600';t.style.marginBottom='8px';t.textContent=(qi+1)+'. '+it.q;c.appendChild(t);
+  const ex=document.createElement('div');ex.className='exp';ex.textContent='💡 '+it.e;
+  it.o.forEach((o,oi)=>{
+    const b=document.createElement('button');b.className='opt';b.textContent=o;
+    b.onclick=()=>{c.querySelectorAll('.opt').forEach(x=>x.disabled=true);if(oi===it.c){b.classList.add('correct');award('q'+qi,10);}else{b.classList.add('wrong');c.querySelectorAll('.opt')[it.c].classList.add('correct');}ex.classList.add('show');};
+    c.appendChild(b);});
+  c.appendChild(ex);qe.appendChild(c);});
+
+/* ── ПРАВДА ИЛИ МИФ ── */
+const myths=[
+  {q:'«Геометрия Лобачевского — просто теоретическая игра, в реальной жизни не применяется».',
+   ans:false,e:'Миф. Общая теория относительности Эйнштейна, навигация GPS и компьютерная 3D-графика работают на неевклидовой геометрии.'},
+  {q:'«Лобачевский был единственным математиком, кто открыл неевклидову геометрию».',
+   ans:false,e:'Миф. Венгерский математик Янош Бояи опубликовал ту же геометрию в 1832 году независимо. Приоритет Лобачевского — из-за более ранней публикации 1829–1830 гг.'},
+  {q:'«Гаусс высоко ценил работу Лобачевского, но при его жизни не написал ему об этом».',
+   ans:true,e:'Правда. Гаусс назвал работу шедевром в письме другу. Лобачевскому — ни слова. Гаусс сам думал о том же 30 лет, но не решался опубликовать.'},
+  {q:'«Лобачевский умер, получив признание и государственные награды за свою геометрию».',
+   ans:false,e:'Миф. Лобачевский умер в 1856 году слепым и непризнанным. Признание пришло через 12 лет после его смерти, когда Бельтрами доказал непротиворечивость его геометрии.'}
+];
+const mb=document.getElementById('mythBox');
+myths.forEach((m,mi)=>{
+  const div=document.createElement('div');div.className='myth-card';
+  div.innerHTML='<div class="myth-q">'+m.q+'</div><div class="myth-btns"><button class="btn ghost myth-t">✓ Правда</button><button class="btn ghost myth-f">✕ Миф</button></div><div class="myth-result">'+m.e+'</div>';
+  const res=div.querySelector('.myth-result');
+  div.querySelector('.myth-t').onclick=function(){
+    div.querySelectorAll('button').forEach(b=>b.disabled=true);
+    if(m.ans){div.classList.add('revealed-true');this.style.borderColor='#3f9b52';this.style.color='#7ed4a0';award('m'+mi,5);}
+    else{div.classList.add('revealed-false');this.style.borderColor='#c0453f';this.style.color='#f08080';}
+    res.classList.add('show');};
+  div.querySelector('.myth-f').onclick=function(){
+    div.querySelectorAll('button').forEach(b=>b.disabled=true);
+    if(!m.ans){div.classList.add('revealed-true');this.style.borderColor='#3f9b52';this.style.color='#7ed4a0';award('m'+mi,5);}
+    else{div.classList.add('revealed-false');this.style.borderColor='#c0453f';this.style.color='#f08080';}
+    res.classList.add('show');};
+  mb.appendChild(div);});
+
+/* ── ИГРА — ГЕОМЕТРИЯ ── */
+const gc=document.getElementById('geomCanvas'),gx=gc.getContext('2d');
+const W=640,H=260;
+// Три пары линий на трёх зонах:
+// 0: Евклид — одна параллельная (прямые не пересекаются, строго параллельны)
+// 1: Лобачевский — много «параллельных» веером (все проходят через точку и не пересекают прямую L)
+// 2: Риман (сфера) — нет параллельных (все пересекаются)
+let correct=1; // Лобачевский — вторая зона
+let answered=false;
+function drawGeom(highlight){
+  gx.clearRect(0,0,W,H);
+  const zones=[{x:0,w:Math.floor(W/3)},{x:Math.floor(W/3),w:Math.floor(W/3)},{x:2*Math.floor(W/3),w:W-2*Math.floor(W/3)}];
+  const labels=['Евклид','Лобачевский','Риман'];
+  zones.forEach((z,i)=>{
+    // фон зоны
+    if(highlight===i){gx.fillStyle=i===correct?'rgba(40,120,60,.25)':'rgba(180,40,40,.18)';}
+    else{gx.fillStyle=i===1?'rgba(106,90,205,.08)':'rgba(255,255,255,.02)';}
+    gx.fillRect(z.x,0,z.w,H);
+    // разделитель
+    if(i>0){gx.strokeStyle='rgba(255,255,255,.1)';gx.lineWidth=1;gx.beginPath();gx.moveTo(z.x,0);gx.lineTo(z.x,H);gx.stroke();}
+    // метка
+    gx.fillStyle=answered?(i===correct?'#7ed4a0':(i===highlight?'#f08080':'rgba(255,255,255,.3)')):'rgba(255,255,255,.3)';
+    gx.font='bold 13px Inter,sans-serif';gx.textAlign='center';
+    gx.fillText(labels[i],z.x+z.w/2,H-14);
+    // прямые
+    const mx=z.x+z.w/2;
+    if(i===0){
+      // Евклид: прямая L и одна параллельная + точка P
+      gx.strokeStyle='#c9a84c';gx.lineWidth=2;
+      gx.beginPath();gx.moveTo(z.x+10,H*0.62);gx.lineTo(z.x+z.w-10,H*0.62);gx.stroke();
+      gx.strokeStyle='rgba(150,200,255,.7)';gx.lineWidth=1.5;
+      gx.beginPath();gx.moveTo(z.x+10,H*0.32);gx.lineTo(z.x+z.w-10,H*0.32);gx.stroke();
+      // точка P
+      gx.fillStyle='#fff';gx.beginPath();gx.arc(mx,H*0.32,4,0,Math.PI*2);gx.fill();
+      gx.fillStyle='rgba(255,255,255,.5)';gx.font='12px Inter,sans-serif';gx.textAlign='center';
+      gx.fillText('P',mx,H*0.32-10);
+      gx.fillStyle='rgba(255,255,255,.35)';gx.fillText('L',z.x+z.w-18,H*0.62-8);
+    } else if(i===1){
+      // Лобачевский: прямая L и веер параллельных через P
+      gx.strokeStyle='#c9a84c';gx.lineWidth=2;
+      gx.beginPath();gx.moveTo(z.x+10,H*0.72);gx.lineTo(z.x+z.w-10,H*0.72);gx.stroke();
+      const px2=mx, py2=H*0.32;
+      const angles=[-28,-14,0,14,28];
+      angles.forEach(a=>{
+        const rad=a*Math.PI/180;
+        gx.strokeStyle='rgba(180,160,255,'+(a===0?'.9':'.5')+')';gx.lineWidth=a===0?2:1.2;
+        const len=100;
+        gx.beginPath();gx.moveTo(px2-Math.cos(rad)*len,py2-Math.sin(rad)*len);gx.lineTo(px2+Math.cos(rad)*len,py2+Math.sin(rad)*len);gx.stroke();
+      });
+      gx.fillStyle='#fff';gx.beginPath();gx.arc(px2,py2,4,0,Math.PI*2);gx.fill();
+      gx.fillStyle='rgba(255,255,255,.5)';gx.font='12px Inter,sans-serif';gx.textAlign='center';
+      gx.fillText('P',px2,py2-10);
+      gx.fillStyle='rgba(255,255,255,.35)';gx.fillText('L',z.x+z.w-18,H*0.72-8);
+    } else {
+      // Риман (сфера): все линии пересекаются — нет параллельных
+      gx.strokeStyle='rgba(255,130,100,.7)';gx.lineWidth=1.5;
+      const cx2=mx,cy2=H*0.48,r=55;
+      for(let a=0;a<180;a+=36){
+        const rad=a*Math.PI/180;
+        gx.beginPath();
+        gx.moveTo(cx2-Math.cos(rad)*r,cy2-Math.sin(rad)*r);
+        gx.lineTo(cx2+Math.cos(rad)*r,cy2+Math.sin(rad)*r);
+        gx.stroke();
+      }
+      gx.strokeStyle='rgba(255,130,100,.3)';gx.lineWidth=1;
+      gx.beginPath();gx.arc(cx2,cy2,r,0,Math.PI*2);gx.stroke();
+    }
+  });
+}
+drawGeom(-1);
+gc.addEventListener('click',function(e){
+  if(answered)return;
+  const rect=gc.getBoundingClientRect();
+  const cx=(e.clientX-rect.left)*(W/rect.width);
+  const zone=cx<W/3?0:cx<2*W/3?1:2;
+  answered=true;
+  const msg=document.getElementById('geomMsg');
+  if(zone===correct){msg.style.color='#7ed4a0';msg.textContent='✓ Верно! В геометрии Лобачевского через точку P проходит бесконечно много прямых, не пересекающих L. +10 баллов!';award('geom',10);}
+  else{msg.style.color='#f08080';msg.textContent='Не то. Геометрия Лобачевского — средняя колонка: веер прямых через одну точку, и все они не пересекают L.';}
+  drawGeom(zone);
+  document.getElementById('geomReset').style.display='inline-block';});
+document.getElementById('geomReset').onclick=()=>{answered=false;document.getElementById('geomMsg').textContent='';document.getElementById('geomReset').style.display='none';drawGeom(-1);};
+
+/* ── ЧАТ ── */
+const kb=[
+  {k:['кто вы','кто ты','о себе','биограф','лобачевск','математик','профессор','ректор'],
+   a:'Николай Иванович Лобачевский, профессор и ректор Казанского университета. По ремеслу — математик. По призванию — человек, который не мог смириться с тем, что аксиому две тысячи лет принимали как истину, ни разу не проверив.'},
+  {k:['пятый постулат','евклид','параллельные','аксиома','постулат','суть открытия','что вы доказали','геометрия'],
+   a:'Евклид говорил: через точку вне прямой можно провести лишь одну параллельную. Две тысячи лет никто не усомнился. Я задал себе вопрос: а если это неверно? Построил геометрию, где параллельных бесконечно много — и она не содержала противоречий. Значит, Евклид описал лишь частный случай.'},
+  {k:['смеялись','отвергли','реакция','коллеги','рецензия','почему не признали','критика'],
+   a:'Рецензент написал, что мой доклад «не соответствует духу науки». Петербургская Академия отозвалась насмешкой. Люди, привыкшие к тому что математика — незыблемое знание, не могли допустить иного. Их понять можно. Труднее — простить.'},
+  {k:['гаусс','знал','молчал','почему молчал','великий математик','шедевр'],
+   a:'Гаусс прочитал мою немецкую работу и написал другу: считает её шедевром. Мне — ни слова. Сам он думал о том же тридцать лет, но так и не решился опубликовать. Боялся скандала. Одно слово от Гаусса при жизни изменило бы многое.'},
+  {k:['ректор','университет','казань','строил','административ','что ещё'],
+   a:'Тридцать лет я был ректором Казанского университета. Строил здания, выбивал финансирование, нанимал профессоров из Европы, основал библиотеку, метеостанцию, клинику. Провинциальный университет стал одним из лучших в России. Математику писал в промежутках.'},
+  {k:['когда признали','после смерти','бельтрами','риман','эйнштейн','когда поняли'],
+   a:'При жизни — не признали. Через двенадцать лет после смерти итальянец Бельтрами доказал, что моя геометрия непротиворечива. Эйнштейн через 89 лет после моего доклада построил на ней теорию относительности. Вот вам и «курьёз».'},
+  {k:['эйнштейн','теория относительности','пространство','вселенная','физика','гпс','навигация'],
+   a:'Я не знал об Эйнштейне — родился он через шестнадцать лет после моей смерти. Но геометрия, которую я разработал, оказалась именно той, что описывает искривлённое пространство-время. Математика иногда опережает физику на полвека.'},
+  {k:['слепой','болезнь','конец жизни','последние годы'],
+   a:'Последние годы были тяжелы. Зрение угасло — диктовал. Отстранили от ректорства. Умер в 1856 году, так и не услышав слов признания за главный труд жизни. Но работы я не бросил до последнего.'},
+  {k:['бояи','венгр','конкурент','другой','первый ли вы','приоритет'],
+   a:'Янош Бояи — венгерский математик — пришёл к тому же независимо от меня, в 1832 году. Мы оба открыли, каждый своим путём. Это честно. Моя публикация вышла раньше — в 1829–1830. Наука от этого только выиграла.'},
+  {k:['что такое геометрия','зачем нужна','применение','где применяется','практика'],
+   a:'Геометрия — язык, которым мы описываем пространство. Думали, что язык один. Оказалось — их много. Моя геометрия сейчас используется в теории относительности, в навигации спутников, в компьютерной графике. Тогда я этого не знал. Просто был убеждён, что истина дороже признания.'},
+  {k:['параллельные пересекаются','на сфере','плоскость','кривое пространство','объяснить','как объяснить'],
+   a:'Возьмите глобус. Два меридиана на экваторе параллельны — на полюсе пересекаются. Это геометрия Римана, на сфере. Моя — для пространства с отрицательной кривизной, как форма седла. Там параллельных через одну точку — бесконечно много.'},
+  {k:['совет','молодым','напутствие','как не сдаться','пожелание'],
+   a:'Не ждите одобрения прежде чем думать. Если ваша идея непротиворечива — она верна, сколько бы над ней ни смеялись. Тысяча несогласных не делает неверным то, что верно математически.'},
+  {k:['цитата','ваши слова','что говорили','афоризм'],
+   a:'Я говорил: «Нет ветви математики, сколь бы отвлечённой она ни казалась, которая когда-нибудь не окажется применимой к явлениям действительного мира». Жизнь подтвердила это через шесть десятилетий.'},
+  {k:['нобелев','премия','награда','признание дома','академия'],
+   a:'При жизни я не получил никакой значимой премии за главный труд. Петербургская Академия наук поставила мне в вину саму эту работу. Признание пришло посмертно. Но дело не в наградах — дело в истине.'}
+];
+function ans(q){q=q.toLowerCase().replace(/ё/g,'е');for(const i of kb){if(i.k.some(w=>q.includes(w)))return i.a;}return 'Об этом я толком не поведаю. Спросите меня о геометрии, о постулате Евклида, о Гауссе или о жизни ректором — расскажу охотно.';}
+const chat=document.getElementById('chat');
+function push(cl,h){const d=document.createElement('div');d.className='msg '+cl;d.innerHTML=h;chat.appendChild(d);chat.scrollTop=chat.scrollHeight;}
+function ask(q){if(!q.trim())return;push('you',q);setTimeout(()=>push('k','<b>Лобачевский:</b> '+ans(q)),260);}
+['Правда ли, что над вами смеялись?','Почему Гаусс промолчал?','В чём суть вашей геометрии?','Где это применяется сегодня?','Ваш совет молодым?'].forEach(s=>{const c=document.createElement('span');c.className='chip';c.textContent=s;c.onclick=()=>ask(s);document.getElementById('suggest').appendChild(c);});
+document.getElementById('csend').onclick=()=>{const i=document.getElementById('cin');ask(i.value);i.value='';};
+document.getElementById('cin').addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('csend').click();});
+push('k','<b>Лобачевский:</b> Здравствуйте. Николай Лобачевский — профессор математики, ректор Казанского университета. Спрашивайте о геометрии, об открытии, о борьбе за признание — отвечу откровенно.');
+
+/* ── HERO ANIMATION — два мира геометрий ── */
+const hc=document.getElementById('hero3d'),hx=hc.getContext('2d');
+function resizeHero(){hc.width=hc.offsetWidth;hc.height=hc.offsetHeight;}
+resizeHero();window.addEventListener('resize',resizeHero);
+let t=0;
+function drawHero(){
+  const W2=hc.width,H2=hc.height;
+  hx.clearRect(0,0,W2,H2);
+  // фон-градиент
+  const grad=hx.createLinearGradient(0,0,W2,H2);
+  grad.addColorStop(0,'#08091e');grad.addColorStop(1,'#15124a');
+  hx.fillStyle=grad;hx.fillRect(0,0,W2,H2);
+
+  // левая половина — Евклид (прямые параллельные)
+  const mid=W2*0.5;
+  hx.strokeStyle='rgba(255,255,255,.06)';hx.lineWidth=1;
+  hx.beginPath();hx.moveTo(mid,0);hx.lineTo(mid,H2);hx.stroke();
+
+  hx.fillStyle='rgba(201,168,76,.6)';hx.font='bold 11px Inter,sans-serif';hx.textAlign='center';
+  hx.fillText('ЕВКЛИД',mid*0.5,22);hx.fillText('ЛОБАЧЕВСКИЙ',mid*1.5,22);
+
+  // золотая прямая L (Евклид)
+  const ly=H2*0.68;
+  hx.strokeStyle='rgba(201,168,76,.8)';hx.lineWidth=2;
+  hx.beginPath();hx.moveTo(20,ly);hx.lineTo(mid-20,ly);hx.stroke();
+  hx.fillStyle='rgba(201,168,76,.6)';hx.font='13px Inter,sans-serif';hx.fillText('L',mid-30,ly-8);
+
+  // одна параллельная (Евклид) — дышит
+  const offset=Math.sin(t*0.5)*6;
+  hx.strokeStyle='rgba(150,180,255,.7)';hx.lineWidth=1.5;
+  hx.beginPath();hx.moveTo(20,H2*0.32+offset);hx.lineTo(mid-20,H2*0.32+offset);hx.stroke();
+  // точка P
+  const px=mid*0.48,py=H2*0.32+offset;
+  hx.fillStyle='#fff';hx.beginPath();hx.arc(px,py,4,0,Math.PI*2);hx.fill();
+  hx.fillStyle='rgba(255,255,255,.7)';hx.font='12px Inter,sans-serif';hx.fillText('P',px,py-10);
+
+  // подпись
+  hx.fillStyle='rgba(150,180,255,.5)';hx.font='11px Inter,sans-serif';hx.textAlign='center';
+  hx.fillText('1 параллельная',mid*0.5,H2-18);
+
+  // правая половина — Лобачевский (веер)
+  const lx2=mid+40,ly2=H2*0.68;
+  hx.strokeStyle='rgba(201,168,76,.8)';hx.lineWidth=2;
+  hx.beginPath();hx.moveTo(mid+20,ly2);hx.lineTo(W2-20,ly2);hx.stroke();
+  hx.fillStyle='rgba(201,168,76,.6)';hx.font='13px Inter,sans-serif';hx.textAlign='left';
+  hx.fillText('L',W2-32,ly2-8);
+
+  const px2=mid+(W2-mid)*0.42,py2=H2*0.3;
+  const fanAngles=[-30,-15,0,15,30];
+  fanAngles.forEach((a,ai)=>{
+    const phase=t*0.4+ai*0.4;
+    const alpha=0.3+0.4*Math.abs(Math.sin(phase));
+    const rad=a*Math.PI/180;
+    hx.strokeStyle=`rgba(180,160,255,${alpha})`;hx.lineWidth=a===0?2:1.2;
+    const len=110;
+    hx.beginPath();hx.moveTo(px2-Math.cos(rad)*len,py2-Math.sin(rad)*len);hx.lineTo(px2+Math.cos(rad)*len,py2+Math.sin(rad)*len);hx.stroke();
+  });
+  hx.fillStyle='#fff';hx.beginPath();hx.arc(px2,py2,4,0,Math.PI*2);hx.fill();
+  hx.fillStyle='rgba(255,255,255,.7)';hx.font='12px Inter,sans-serif';hx.textAlign='center';
+  hx.fillText('P',px2,py2-10);
+
+  hx.fillStyle='rgba(180,160,255,.5)';hx.font='11px Inter,sans-serif';hx.textAlign='center';
+  hx.fillText('∞ параллельных',mid+(W2-mid)*0.5,H2-18);
+
+  t+=0.025;requestAnimationFrame(drawHero);}
+drawHero();
+
+// reveal on scroll
+const obs=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on');});},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+renderResult();
+</script>
+</body>
+</html>
