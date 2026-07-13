@@ -201,7 +201,7 @@
       <div class="date-chip">30 января · 1912</div>
       <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
       <h1>Первый в мире<br>ранцевый парашют</h1>
-      <p class="hook">Парашют, которым пользуется весь мир, придумал не инженер и не военный — а актёр драматического театра.</p>
+      <p class="hook">Парашют, которым пользуется весь мир, придумал не инженер — а актёр драматического театра. Его изобретение спасло десятки тысяч лётчиков по всему миру.</p>
       <div style="display:flex;gap:12px;flex-wrap:wrap">
         <button class="btn gold" id="readBtn">Читать историю ↓</button>
         <button class="btn ghost" id="videoBtn">▶ Смотреть видео</button>
@@ -234,7 +234,7 @@
   <div class="wrap">
     <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap"><h2 style="margin:0">Видео дня</h2><span style="background:var(--gold-g);color:var(--gold);border:1px solid rgba(201,168,76,.3);border-radius:20px;padding:3px 14px;font-size:12px;font-weight:600;font-family:'Inter',sans-serif">🎬 нейроголос · 101 сек</span></div>
     <p style="color:var(--muted);margin-top:0">Та же история за полторы минуты — кинематографическим роликом с закадровым нейроголосом и атмосферной музыкой.</p>
-    <video controls playsinline preload="metadata" poster="portrait-real.jpg" style="width:100%;aspect-ratio:16/9;background:#050c18;border-radius:14px;display:block;box-shadow:0 8px 40px rgba(0,0,0,.5)">
+    <video controls playsinline preload="metadata" poster="kotelnikov-poster.jpg" style="width:100%;aspect-ratio:16/9;background:#050c18;border-radius:14px;display:block;box-shadow:0 8px 40px rgba(0,0,0,.5)">
       <source src="kotelnikov-v3.mp4?v=3" type="video/mp4">
       Ваш браузер не поддерживает видео.
     </video>
@@ -561,6 +561,7 @@
     if(gst==='fall'){py+=46*dt;px+=wind*22*dt;
       if(openY===null&&py>=AUTO_HI){autoOpened=true;openChute(true);}}
     else if(gst==='canopy'){py+=28*dt;px+=(wind*50+steer*170)*dt;if(guide!==null)px+=(guide-px)*Math.min(8*dt,0.5);}
+    if(!isFinite(px))px=cv.width/2; if(!isFinite(py))py=26; if(guide!==null&&!isFinite(guide))guide=null; // парашютист не может исчезнуть
     px=Math.max(16,Math.min(cv.width-16,px));
     if(py>=GR){py=GR;gst='land';if(!scored){scored=true;land();}}
     draw();if(gst!=='land')raf=requestAnimationFrame(step);}
@@ -586,12 +587,22 @@
     b.addEventListener('pointerdown',e=>{e.preventDefault();steer=d;});
     ['pointerup','pointerleave','pointercancel'].forEach(ev=>b.addEventListener(ev,e=>{if(e&&e.cancelable)e.preventDefault();steer=0;}));}
   steerBind('steerL',-1);steerBind('steerR',1);
-  function toX(e){const r=cv.getBoundingClientRect();return Math.max(16,Math.min(cv.width-16,(e.clientX-r.left)/r.width*cv.width));}
-  function cvTap(e){e.preventDefault();if(gst==='fall')openChute();else if(gst==='canopy'){drag=true;guide=toX(e);}}
-  cv.addEventListener('pointerdown',cvTap);
-  cv.addEventListener('touchstart',cvTap,{passive:false});
-  window.addEventListener('pointermove',e=>{if(drag)guide=toX(e);});
+  function evX(e){ // координата и для мыши, и для пальца (touch)
+    if(e.touches&&e.touches.length)return e.touches[0].clientX;
+    if(e.changedTouches&&e.changedTouches.length)return e.changedTouches[0].clientX;
+    return e.clientX;}
+  function toX(e){const r=cv.getBoundingClientRect();const x=(evX(e)-r.left)/r.width*cv.width;
+    if(!isFinite(x))return null; // защита: никогда не отдаём NaN
+    return Math.max(16,Math.min(cv.width-16,x));}
+  function cvTap(e){e.preventDefault();
+    if(gst==='fall')openChute();
+    else if(gst==='canopy'){const x=toX(e);if(x!==null){drag=true;guide=x;}}}
+  if(window.PointerEvent){cv.addEventListener('pointerdown',cvTap);}
+  else{cv.addEventListener('mousedown',cvTap);cv.addEventListener('touchstart',cvTap,{passive:false});}
+  cv.addEventListener('touchmove',e=>{if(gst==='canopy'){e.preventDefault();const x=toX(e);if(x!==null){drag=true;guide=x;}}},{passive:false});
+  window.addEventListener('pointermove',e=>{if(drag){const x=toX(e);if(x!==null)guide=x;}});
   window.addEventListener('pointerup',()=>{drag=false;});
+  window.addEventListener('touchend',()=>{drag=false;});
   document.addEventListener('keydown',e=>{if(e.key==='ArrowLeft')steer=-1;if(e.key==='ArrowRight')steer=1;});
   document.addEventListener('keyup',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight')steer=0;});
   ng();
