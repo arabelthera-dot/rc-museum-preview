@@ -505,9 +505,8 @@
   push('k','<b>Котельников:</b> Здравствуйте. Я Глеб Котельников — актёр, что придумал ранцевый парашют. Спрашивайте о чём угодно: о деле, об испытаниях, о жизни.');
   // === Игра 1: раскрой парашют и приведи в мишень ===
   const cv=document.getElementById('game'),ctx=cv.getContext('2d');
-  const GR=286;                 // линия земли
-  const OPEN_LO=96,OPEN_HI=210; // идеальная зона раскрытия (широкая и честная)
-  const AUTO_HI=228;            // ниже этого купол раскрывается сам — парашютист НИКОГДА не зависает
+  const GR=286;      // линия земли
+  const AUTO_HI=228; // ниже этого купол раскрывается сам — парашютист НИКОГДА не зависает
   let px,py,gst,wind,zone,guide,steer,drag,raf,scored,openY,autoOpened;
   function windText(){return 'Ветер '+(wind<0?'◀ влево':'вправо ▶')+' · '+(Math.abs(wind)>0.95?'сильный':'слабый');}
   function ng(){px=400;py=26;gst='ready';steer=0;drag=false;guide=null;scored=false;openY=null;autoOpened=false;
@@ -517,7 +516,7 @@
     ctx.save();ctx.textAlign='center';
     ctx.fillStyle='rgba(10,22,40,.35)';ctx.fillRect(0,0,cv.width,GR);
     ctx.fillStyle='#fff';ctx.font='bold 22px Georgia';ctx.fillText('Нажми «▶ Прыжок»',cv.width/2,150);
-    ctx.font='14px Segoe UI';ctx.fillText('Раскрой парашют в золотой зоне и веди к мишени',cv.width/2,176);
+    ctx.font='14px Segoe UI';ctx.fillText('Раскрой парашют и приведи его к мишени против ветра',cv.width/2,176);
     ctx.restore();
     gBtns('ready');}
   // фон: небо + облака + земля — рисуем в canvas, чтобы не было прозрачных «дыр»
@@ -526,11 +525,6 @@
     ctx.fillStyle=sky;ctx.fillRect(0,0,cv.width,GR);
     ctx.fillStyle='rgba(255,255,255,.75)';
     [[130,60,26],[135,70,20],[175,66,22],[640,54,24],[648,66,18],[690,60,22]].forEach(c=>{ctx.beginPath();ctx.ellipse(c[0],c[1],c[2],c[2]*0.62,0,0,7);ctx.fill();});
-    // идеальная зона раскрытия
-    ctx.fillStyle='rgba(201,162,74,.14)';ctx.fillRect(0,OPEN_LO,cv.width,OPEN_HI-OPEN_LO);
-    ctx.strokeStyle='rgba(201,162,74,.5)';ctx.setLineDash([7,6]);ctx.lineWidth=1.5;
-    ctx.beginPath();ctx.moveTo(0,OPEN_LO);ctx.lineTo(cv.width,OPEN_LO);ctx.moveTo(0,OPEN_HI);ctx.lineTo(cv.width,OPEN_HI);ctx.stroke();ctx.setLineDash([]);
-    if(gst==='ready'||gst==='fall'){ctx.fillStyle='rgba(140,110,20,.85)';ctx.font='12px Segoe UI';ctx.textAlign='left';ctx.fillText('↳ зона раскрытия',10,OPEN_LO-6);ctx.textAlign='start';}
     // земля
     const gr=ctx.createLinearGradient(0,GR,0,cv.height);gr.addColorStop(0,'#a9d17a');gr.addColorStop(1,'#7fb04e');
     ctx.fillStyle=gr;ctx.fillRect(0,GR,cv.width,cv.height-GR);
@@ -571,9 +565,8 @@
     if(py>=GR){py=GR;gst='land';if(!scored){scored=true;land();}}
     draw();if(gst!=='land')raf=requestAnimationFrame(step);}
   function openChute(auto){if(gst!=='fall')return;openY=py;gst='canopy';guide=px;gBtns('canopy');
-    if(auto)msg('⚠️ Раскрылся сам у самой земли — времени на манёвр почти нет!',0);
-    else if(py<OPEN_LO)msg('🪂 Рановато, но купол держит. Веди к мишени против ветра.',1);
-    else msg('🪂 Отличный момент! Веди к мишени против ветра.',1);}
+    if(auto)msg('⚠️ Купол раскрылся сам у самой земли — времени на манёвр почти нет!',0);
+    else msg('🪂 Купол раскрылся! Веди к мишени против ветра.',1);}
   function land(){
     const dx=Math.abs(px-zone);
     if(dx<=44){msg('🎯 В яблочко! Точно в центр мишени.',1);award('game1',20);}
