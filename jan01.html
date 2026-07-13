@@ -269,7 +269,7 @@
   <div class="wrap">
     <div class="kicker">Подробности</div>
     <h2>Как это было устроено</h2>
-    <p style="color:var(--muted);margin-top:0">Первая кабельная сеть мира в деталях — с честной пометкой: всё ниже подтверждено русскими источниками.</p>
+    <p style="color:var(--muted);margin-top:0">Первая кабельная сеть мира — в деталях.</p>
     <div style="text-align:center;margin:10px 0 2px">
       <button class="btn gold" id="moreInv2">🔎 Раскрыть подробности</button>
     </div>
@@ -305,6 +305,17 @@
         <h3 style="font-size:20px;color:var(--gold-l);margin-bottom:6px">Почему первенство осталось в тени
           <span style="display:inline-block;background:#e7f5e9;color:#1f5b2c;border:1px solid #3f9b52;border-radius:20px;padding:1px 9px;font-size:12px;font-weight:600;vertical-align:middle">✓ факт</span></h3>
         <p>Дом на Петровском бульваре был закрытым — о его «телевизионном чуде» не написала ни одна газета. Сделали первыми, рассказали последними: типичная судьба многих наших первенств, и одна из причин, почему существует этот музей.</p>
+      </div>
+
+      <div class="card" style="border-color:var(--gold);background:var(--gold-g)">
+        <h3 style="font-size:20px;color:var(--gold-l);margin-bottom:10px">А что ещё русские изобрели в телевидении?</h3>
+        <ol style="margin:0;padding-left:20px;line-height:2;color:var(--ink)">
+          <li><b>Электронное телевидение</b> — Борис Розинг запатентовал принцип передачи изображения с помощью электронно-лучевой трубки в 1907 году — за 20 лет до западных патентов.</li>
+          <li><b>Первый телевизионный фильм</b> — в 1931 году СССР снял первый в мире телевизионный игровой фильм «Глаза, которые видят».</li>
+          <li><b>Спутниковое телевидение</b> — советский спутник «Молния-1» (1965) стал первым в мире спутником для трансляции телевидения на всю страну. Система «Орбита» охватила самые отдалённые районы планеты.</li>
+          <li><b>Цветное телевидение через спутник</b> — первая в мире трансляция цветного ТВ через спутник состоялась в СССР в 1967 году.</li>
+          <li><b>Негорючая плёнка</b> — советские инженеры первыми разработали безопасную негорючую киноплёнку для телевизионного вещания, заменив опасный целлулоид.</li>
+        </ol>
       </div>
 
     </div>
@@ -503,49 +514,76 @@
     ctx.font='14px Segoe UI';ctx.fillText('Усиль сигнал и наведи его в нужную квартиру против помех',cv.width/2,176);
     ctx.restore();
     gBtns('ready');}
-  // фон: небо + облака + земля — рисуем в canvas, чтобы не было прозрачных «дыр»
+  // фон: ночное небо + силуэт дома с окнами
   function drawBg(){
-    const sky=ctx.createLinearGradient(0,0,0,GR);sky.addColorStop(0,'#bfe0f5');sky.addColorStop(1,'#eaf5fc');
+    // небо
+    const sky=ctx.createLinearGradient(0,0,0,GR);sky.addColorStop(0,'#0a1428');sky.addColorStop(1,'#1a2e50');
     ctx.fillStyle=sky;ctx.fillRect(0,0,cv.width,GR);
-    ctx.fillStyle='rgba(255,255,255,.75)';
-    [[130,60,26],[135,70,20],[175,66,22],[640,54,24],[648,66,18],[690,60,22]].forEach(c=>{ctx.beginPath();ctx.ellipse(c[0],c[1],c[2],c[2]*0.62,0,0,7);ctx.fill();});
-    // земля
-    const gr=ctx.createLinearGradient(0,GR,0,cv.height);gr.addColorStop(0,'#a9d17a');gr.addColorStop(1,'#7fb04e');
-    ctx.fillStyle=gr;ctx.fillRect(0,GR,cv.width,cv.height-GR);
-    ctx.strokeStyle='rgba(60,110,40,.5)';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(0,GR);ctx.lineTo(cv.width,GR);ctx.stroke();
-    // мишень
-    [[44,'#b31b2c'],[28,'#fff'],[13,'#b31b2c']].forEach(b=>{ctx.fillStyle=b[1];ctx.beginPath();ctx.ellipse(zone,GR+16,b[0],9,0,0,7);ctx.fill();});
-    ctx.fillStyle='rgba(179,27,44,.9)';ctx.font='bold 12px Segoe UI';ctx.textAlign='center';ctx.fillText('мишень',zone,GR+40);ctx.textAlign='start';
-    // указатель ветра
-    ctx.fillStyle='rgba(31,111,139,.95)';ctx.font='bold 14px Segoe UI';ctx.fillText((wind<0?'◀':'▶')+' ветер',14,24);
-  }
-  function drawJumper(x,y,open){
-    if(open){ // купол
-      ctx.fillStyle='rgba(201,162,74,.28)';ctx.strokeStyle='#c9a24a';ctx.lineWidth=4;
-      ctx.beginPath();ctx.arc(x,y-46,40,Math.PI,0);ctx.lineTo(x+40,y-46);ctx.arc(x,y-46,40,0,Math.PI,true);ctx.closePath();ctx.fill();
-      ctx.beginPath();ctx.arc(x,y-46,40,Math.PI,0);ctx.stroke();
-      ctx.lineWidth=2;ctx.strokeStyle='rgba(120,90,30,.8)';
-      [-40,-13,13,40].forEach(sx=>{ctx.beginPath();ctx.moveTo(x+sx,y-46);ctx.lineTo(x,y-8);ctx.stroke();});
+    // звёзды
+    [[80,30],[200,55],[350,20],[500,45],[650,18],[770,60],[900,35],[1050,48],[1150,22],[1220,55]].forEach(s=>{
+      ctx.fillStyle='rgba(255,255,255,0.7)';ctx.beginPath();ctx.arc(s[0],s[1],1.2,0,7);ctx.fill();});
+    // антенна вверху — источник сигнала
+    ctx.strokeStyle='rgba(100,180,255,0.9)';ctx.lineWidth=3;
+    ctx.beginPath();ctx.moveTo(cv.width/2,10);ctx.lineTo(cv.width/2,36);ctx.stroke();
+    ctx.beginPath();ctx.moveTo(cv.width/2-18,18);ctx.lineTo(cv.width/2,10);ctx.lineTo(cv.width/2+18,18);ctx.stroke();
+    ctx.fillStyle='rgba(100,180,255,0.9)';ctx.font='11px Segoe UI';ctx.textAlign='center';
+    ctx.fillText('АНТЕННА',cv.width/2,50);ctx.textAlign='start';
+    // силуэт дома внизу
+    ctx.fillStyle='#111b2e';
+    ctx.fillRect(0,GR,cv.width,cv.height-GR);
+    // окна дома — несколько рядов
+    for(let row=0;row<3;row++){
+      for(let col=0;col<12;col++){
+        const wx=60+col*96, wy=GR+10+row*32;
+        const isTarget=Math.abs(wx+8-zone)<20&&row===1;
+        if(isTarget){
+          // мигающее окно-мишень
+          ctx.fillStyle=`rgba(201,168,76,${0.6+0.4*Math.sin(Date.now()/200)})`;
+          ctx.fillRect(wx,wy,26,20); ctx.strokeStyle='#c9a24a';ctx.lineWidth=2;ctx.strokeRect(wx,wy,26,20);
+        } else {
+          ctx.fillStyle='rgba(255,200,80,0.22)';ctx.fillRect(wx,wy,26,20);
+        }
+      }
     }
-    // тело парашютиста — крупное и яркое
-    ctx.fillStyle='#e8552a';                                   // оранжевый комбинезон
-    ctx.beginPath();ctx.roundRect(x-9,y-6,18,26,6);ctx.fill();
-    ctx.fillStyle='#c9411d';ctx.fillRect(x-9,y+14,7,10);ctx.fillRect(x+2,y+14,7,10); // ноги
-    ctx.fillStyle='#f0b9a0';ctx.beginPath();ctx.arc(x,y-14,9,0,7);ctx.fill();        // голова
-    ctx.fillStyle='#2b3a55';ctx.beginPath();ctx.arc(x,y-16,9,Math.PI,0);ctx.fill();  // шлем
-    ctx.strokeStyle='#c9411d';ctx.lineWidth=4;ctx.lineCap='round';                    // руки к стропам
-    ctx.beginPath();ctx.moveTo(x-7,y);ctx.lineTo(x-13,y-8);ctx.moveTo(x+7,y);ctx.lineTo(x+13,y-8);ctx.stroke();ctx.lineCap='butt';
+    // метка мишени
+    ctx.fillStyle='#c9a24a';ctx.font='bold 11px Segoe UI';ctx.textAlign='center';
+    ctx.fillText('📺 квартира',zone,GR+110);ctx.textAlign='start';
+    // указатель помех (вместо ветра)
+    ctx.fillStyle='rgba(100,180,255,0.9)';ctx.font='bold 13px Segoe UI';
+    ctx.fillText((wind<0?'◀':'▶')+' помехи',14,24);
+  }
+  function drawSignal(x,y,amplified){
+    if(amplified){
+      // усиленный сигнал: яркий «конус» расходящихся волн
+      for(let r=10;r<=52;r+=14){
+        const a=Math.max(0,0.55-r/100);
+        ctx.strokeStyle=`rgba(100,200,255,${a})`;ctx.lineWidth=3;
+        ctx.beginPath();ctx.arc(x,y,r,Math.PI*0.85,Math.PI*2.15);ctx.stroke();
+        ctx.beginPath();ctx.arc(x,y+8,r,Math.PI*0.85,Math.PI*2.15);ctx.stroke();
+      }
+      // кабель-луч вниз
+      ctx.strokeStyle='rgba(201,168,76,0.7)';ctx.lineWidth=2;ctx.setLineDash([6,4]);
+      ctx.beginPath();ctx.moveTo(x,y+10);ctx.lineTo(x,GR);ctx.stroke();ctx.setLineDash([]);
+    }
+    // сам сигнал — яркий синий круг с волнами
+    ctx.fillStyle='#1e90ff';ctx.beginPath();ctx.arc(x,y,14,0,7);ctx.fill();
+    ctx.strokeStyle='rgba(100,200,255,0.6)';ctx.lineWidth=2;
+    ctx.beginPath();ctx.arc(x,y,22,0,7);ctx.stroke();
+    ctx.beginPath();ctx.arc(x,y,32,0,7);ctx.stroke();
+    // иконка-молния внутри
+    ctx.fillStyle='#fff';ctx.font='bold 16px serif';ctx.textAlign='center';
+    ctx.fillText('⚡',x,y+6);ctx.textAlign='start';
   }
   function draw(){ctx.clearRect(0,0,cv.width,cv.height);drawBg();
-    if(gst==='fall'){ctx.save();ctx.textAlign='center';ctx.fillStyle='#0e2233';ctx.font='bold 17px Georgia';
-      ctx.fillText('🪂 Тапни по полю, чтобы раскрыть купол',cv.width/2,GR-14);ctx.textAlign='start';ctx.restore();}
-    drawJumper(px,py,openY!==null);}
+    if(gst==='fall'){ctx.save();ctx.textAlign='center';ctx.fillStyle='rgba(200,230,255,0.9)';ctx.font='bold 16px Georgia';
+      ctx.fillText('📡 Тапни по полю, чтобы усилить сигнал',cv.width/2,GR-14);ctx.textAlign='start';ctx.restore();}
+    drawSignal(px,py,openY!==null);}
   let last=0;
   function step(ts){if(!last)last=ts;const dt=Math.min((ts-last)/1000,0.05);last=ts;
     if(gst==='fall'){py+=46*dt;px+=wind*22*dt;
       if(openY===null&&py>=AUTO_HI){autoOpened=true;openChute(true);}}
     else if(gst==='canopy'){py+=28*dt;px+=(wind*50+steer*170)*dt;if(guide!==null)px+=(guide-px)*Math.min(8*dt,0.5);}
-    if(!isFinite(px))px=cv.width/2; if(!isFinite(py))py=26; if(guide!==null&&!isFinite(guide))guide=null; // парашютист не может исчезнуть
+    if(!isFinite(px))px=cv.width/2; if(!isFinite(py))py=26; if(guide!==null&&!isFinite(guide))guide=null; // сигнал не может исчезнуть
     px=Math.max(16,Math.min(cv.width-16,px));
     if(py>=GR){py=GR;gst='land';if(!scored){scored=true;land();}}
     draw();if(gst!=='land')raf=requestAnimationFrame(step);}
