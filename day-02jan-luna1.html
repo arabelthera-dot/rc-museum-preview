@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>первая в мире межпланетная станция «Луна-1» — Русские первые в мире</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --dark:#060c17;--dark2:#0c1826;--surface:#111f33;
+    --card:rgba(255,255,255,.05);--card-b:rgba(255,255,255,.09);
+    --gold:#c9a84c;--gold-l:#e4c97a;--gold-g:rgba(201,168,76,.13);
+    --ink:#e8eef5;--muted:#7a9ab8;--line:rgba(255,255,255,.07);
+    --accent:#2d8cbf;--accent2:#1f6f8b;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Inter','Segoe UI',sans-serif;color:var(--ink);background:var(--dark);line-height:1.72}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.13;margin:0}
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent)}
+  header.top{background:rgba(6,12,23,.88);backdrop-filter:blur(24px);border-bottom:1px solid var(--card-b);color:#fff;position:sticky;top:0;z-index:30}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+  .logo .lt{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:16px}
+  .logo .lt small{display:block;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-family:'Inter',sans-serif}
+  .score{background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:6px 16px;font-size:13px;color:var(--gold-l);cursor:pointer;font-family:'Inter',sans-serif}
+  .hero{display:flex;flex-direction:column}
+  .hero-visual{position:relative;height:52vh;min-height:280px;max-height:520px;overflow:hidden;background:linear-gradient(160deg,#0a1e3a 0%,rgb(18,56,96) 55%,#0d2240 100%);display:flex;align-items:center;justify-content:center}
+  .hero-visual .hero-year{font-family:'Playfair Display',Georgia,serif;font-size:clamp(80px,20vw,180px);font-weight:900;color:rgba(255,255,255,.06);user-select:none;line-height:1}
+  .hero-text{background:linear-gradient(180deg,#0c1826 0%,#060c17 100%);color:#fff;padding:28px 0 38px}
+  .hero .museum{color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:12px;opacity:.9}
+  .hero h1{color:#fff;font-size:clamp(28px,6vw,52px);font-weight:900;line-height:1.06;margin-bottom:14px}
+  .hero .hook{color:#b8ccde;font-size:18px;max-width:580px;margin-bottom:26px;line-height:1.65}
+  .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:14px;font-family:'Inter',sans-serif;letter-spacing:.5px}
+  .daynav{position:sticky;top:64px;z-index:25;background:rgba(6,12,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-b)}
+  .daynav .wrap{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+  .daynav a{flex:0 0 auto;padding:14px 20px;font-size:11px;font-weight:700;font-family:'Inter',sans-serif;color:var(--muted);text-decoration:none;white-space:nowrap;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:.18s}
+  .daynav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+  section.block{padding:60px 0;border-bottom:1px solid var(--line);scroll-margin-top:130px}
+  .kicker{font-size:10px;text-transform:uppercase;letter-spacing:3.5px;color:var(--gold);font-weight:700;font-family:'Inter',sans-serif;margin-bottom:8px}
+  section.block h2{font-size:32px;color:#fff;margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink)}
+  .pull{background:var(--gold-g);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 14px 14px 0;font-style:italic;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-size:19px;line-height:1.5;margin:24px 0}
+  .article{position:relative}
+  .article.collapsed .body{max-height:260px;overflow:hidden}
+  .article.collapsed .body:after{content:'';position:absolute;left:0;right:0;bottom:44px;height:110px;background:linear-gradient(transparent,var(--dark))}
+  .more{text-align:center;margin-top:16px}
+  .btn{cursor:pointer;border:none;border-radius:12px;padding:13px 24px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;background:var(--accent2);color:#fff;transition:.18s}
+  .btn:hover{filter:brightness(1.18)}
+  .btn.ghost{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid var(--card-b)}
+  .btn.gold{background:linear-gradient(135deg,var(--gold),#b8882b);color:#1a0f00;box-shadow:0 4px 20px rgba(201,168,76,.25)}
+  .btn.gold:hover{filter:brightness(1.1)}
+  .card{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:20px 22px;margin:14px 0}
+  .opt{display:block;width:100%;text-align:left;background:rgba(255,255,255,.04);border:1px solid var(--card-b);border-radius:12px;padding:12px 16px;margin:8px 0;cursor:pointer;font-size:15px;color:var(--ink);font-family:'Inter',sans-serif;transition:.16s}
+  .opt:hover{border-color:var(--accent);background:rgba(45,140,191,.08)}
+  .opt.correct{background:rgba(40,120,60,.18);border-color:#3f9b52;color:#7ed4a0;font-weight:600}
+  .opt.wrong{background:rgba(180,40,40,.13);border-color:#c0453f;color:#f08080}
+  .exp{margin-top:10px;font-size:14px;background:var(--gold-g);border-radius:10px;padding:12px 14px;display:none;color:var(--gold-l)}
+  .exp.show{display:block}
+  .chip{cursor:pointer;background:rgba(255,255,255,.05);border:1px solid var(--card-b);border-radius:20px;padding:7px 16px;margin:4px 5px 4px 0;font-size:13px;display:inline-block;color:var(--muted);font-family:'Inter',sans-serif;transition:.16s}
+  .chip:hover{border-color:var(--gold);color:var(--gold)}
+  .msg{margin:8px 0;padding:12px 16px;border-radius:14px;max-width:88%;font-size:15px}
+  .msg.you{background:rgba(45,140,191,.18);border:1px solid rgba(45,140,191,.28);margin-left:auto;text-align:right;color:#a8d4f0}
+  .msg.inv{background:rgba(255,255,255,.05);border:1px solid var(--card-b);color:var(--ink)}
+  .fork-opt{background:var(--card);border:1px solid var(--card-b);border-radius:14px;padding:16px 18px;margin:10px 0;cursor:pointer;transition:.18s;font-size:15px}
+  .fork-opt:hover{border-color:var(--accent);background:rgba(45,140,191,.08)}
+  .fork-opt.chosen{border-color:var(--gold);background:var(--gold-g)}
+  .reveal{opacity:1;transform:translateY(16px);transition:.65s cubic-bezier(.2,.7,.2,1)}
+  .reveal.on{transform:none}
+  .ad-slot{position:relative;margin:24px 0;background:rgba(255,255,255,.02);border:1px dashed rgba(255,255,255,.1);border-radius:14px;min-height:80px;display:flex;align-items:center;justify-content:center;text-align:center;padding:16px}
+  .ad-slot .lbl{position:absolute;top:7px;right:12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.15);font-family:'Inter',sans-serif}
+  .ad-slot .ph-txt{font-size:12px;max-width:80%;color:rgba(255,255,255,.18)}
+  footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
+  @media(max-width:600px){.hero h1{font-size:26px}.hero .hook{font-size:15px}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="/">
+      <svg width="34" height="34" viewBox="0 0 48 48" aria-label="логотип">
+        <circle cx="24" cy="24" r="23" fill="#0f1e33" stroke="#c8a24a" stroke-width="2"/>
+        <path d="M24 10 L24 30 L12 30 Z" fill="#c8a24a"/>
+        <path d="M26 14 L36 30 L26 30 Z" fill="#c8a24a" opacity=".7"/>
+        <path d="M10 33 q14 6 28 0" fill="none" stroke="#c8a24a" stroke-width="2"/>
+      </svg>
+      <span class="lt">Русская цивилизация<small>первые в мире</small></span>
+    </a>
+    <div class="score" id="scoreBox">⭐ <span id="score">0</span> / 60</div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-visual">
+    <div class="hero-year">1959</div>
+  </div>
+  <div class="hero-text">
+    <div class="wrap">
+      <div class="date-chip">2 января</div>
+      <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
+      <h1>первая в мире межпланетная станция «Луна-1»</h1>
+      <p class="hook">Она должна была упасть на Луну — но промахнулась. И стала кое-чем большим: первым рукотворным объектом, который покинул притяжение Земли навсегда. «Луна-1» прошла мимо Луны на расстоянии шести тысяч километров, открыла солнечный ветер, которого никто раньше не измерял, и улетела на орбиту вокруг Солнца — где находится по сей день. Промах, который оказался открытием.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <button class="btn gold" onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">Читать историю ↓</button>
+        <button class="btn ghost" onclick="document.getElementById('video').scrollIntoView({behavior:'smooth'})">▶ Смотреть видео</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap"><div class="ad-slot"><span class="lbl">Реклама</span><span class="ph-txt">Баннер-шапка — размещается здесь.</span></div></div>
+
+<nav class="daynav">
+  <div class="wrap">
+    <a href="#story">Читать</a>
+    <a href="#video">Видео</a>
+    <a href="#quiz">Викторина</a>
+    <a href="#fork">Развилка</a>
+    <a href="#chat-sec">Спросить</a>
+    <a href="#excursion">Экскурсия</a>
+  </div>
+</nav>
+
+<!-- ── ВИДЕО ── -->
+<section class="block" id="video">
+  <div class="wrap">
+    <div class="kicker">Видео дня</div>
+    <h2>История в 90 секундах</h2>
+    <div style="aspect-ratio:16/9;background:rgba(255,255,255,.03);border-radius:14px;display:flex;align-items:center;justify-content:center;color:var(--muted)">Видео создаётся — скоро появится</div>
+  </div>
+</section>
+
+<!-- ── СТАТЬЯ ── -->
+<section class="block" id="story">
+  <div class="wrap">
+    <div class="kicker">История изобретения</div>
+    <h2>первая в мире межпланетная станция «Луна-1»</h2>
+    <div class="article collapsed" id="article">
+      <div class="body" id="articleBody">
+        <p>СТАТЬЯ БАЗЫ ЗНАНИЙ</p>
+<p><i>(позиция на сайте: Блок 4)</i></p>
+
+
+<p><b>2 января 1959 года, 16:41 по московскому времени.</b> С Байконура стартует ракета. На борту — металлический шар массой 361 килограмм, набитый приборами и маленьким вымпелом с советским гербом. Цель — Луна. Впервые в истории человечества рукотворный объект должен достичь другого небесного тела.</p>
+
+<p>Он не достиг. Прошёл мимо — на расстоянии примерно шести тысяч километров.</p>
+
+<p><b>Что это была за машина.</b> «Луна-1» — первый в мире космический аппарат, отправленный к другой планете. До неё всё, что запускали в космос, оставалось на орбите Земли или падало обратно. «Луна-1» впервые разогналась до второй космической скорости — 11,2 км/с — и вырвалась из земного притяжения навсегда. Это само по себе было мировым рекордом, даже без попадания в Луну.</p>
+
+<p><b>Что нашли по дороге.</b> Учёные ожидали обнаружить у Луны магнитное поле — как у Земли. Магнитометр «Луны-1» не нашёл ничего. Зато нашли кое-что неожиданное: непрерывный поток заряженных частиц, летящих от Солнца. Это и был солнечный ветер — явление, о существовании которого физики спорили. «Луна-1» измерила его впервые и поставила точку в споре.</p>
+
+<p><b>Промах или план?</b> До сих пор нет точного ответа: была ли траектория рассчитана на попадание, или запас топлива для коррекции намеренно не предусматривался. Часть историков считает, что «Луна-1» изначально могла лишь облететь Луну — технически попасть в неё тогда было почти невозможно. Так или иначе, она прошла мимо.</p>
+
+<p><b>Что стало с «Луной-1».</b> Пролетев мимо, аппарат вышел на орбиту вокруг Солнца — и стал первым в истории искусственным спутником Солнца. Именно так его и назвали: «Мечта» — неофициальное имя, которое дали станции в советских газетах. Формальное обозначение — «Луна-1», но за ней закрепилось и это романтическое прозвище. Сегодня она продолжает летать вокруг Солнца где-то между орбитами Земли и Марса.</p>
+
+<p><b>США не успели.</b> Американцы запустили Pioneer 4 в марте того же 1959 года — тоже прошёл мимо Луны. На два месяца позже. К тому времени СССР уже отправил «Луну-2», которая в сентябре 1959-го всё-таки упала на Луну — первая в мире жёсткая посадка на другое небесное тело.</p>
+
+<p><b>Человек.</b> Сергей Павлович Королёв (12 января 1907 — 14 января 1966) — главный конструктор, чьё имя при жизни было государственной тайной. «Луна-1», как и всё советское космическое, делалась в его ОКБ-1. Подробнее о Королёве — в дне 4 октября: первый спутник Земли.</p>
+
+
+
+
+
+<hr>
+      </div>
+      <div class="more"><button class="btn ghost" id="moreBtn">Читать дальше ↓</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ВИКТОРИНА ── -->
+<section class="block" id="quiz">
+  <div class="wrap">
+    <div class="kicker">Проверь себя</div>
+    <h2>Викторина</h2>
+    <div id="quizBox"></div>
+  </div>
+</section>
+
+<!-- ── РАЗВИЛКА ── -->
+<section class="block" id="fork" style="background:rgba(45,140,191,.04)">
+  <div class="wrap">
+    <div class="kicker">Твой выбор</div>
+    <h2>А как поступил бы ты?</h2>
+    <p style="color:var(--muted)">Скоро появится.</p><div id="forkReal" style="display:none"></div>
+  </div>
+</section>
+
+<!-- ── ЧАТ ── -->
+<section class="block" id="chat-sec">
+  <div class="wrap">
+    <div class="kicker">Поговори с изобретателем</div>
+    <h2>Спроси ✓ Сергей Павлович Королёв</h2>
+    <p style="color:var(--muted)">Задай вопрос — ответит сам изобретатель.</p>
+    <div id="starters"></div>
+    <div id="chatBox" style="margin:16px 0;min-height:80px"></div>
+    <div style="display:flex;gap:10px;margin-top:12px">
+      <input id="chatInput" type="text" placeholder="Написать вопрос..." style="flex:1;padding:12px 16px;font-size:15px">
+      <button class="btn gold" onclick="sendChat()">Отправить</button>
+    </div>
+    <p style="font-size:12px;color:var(--muted);margin-top:8px">Ответы сформированы на основе документальных источников.</p>
+  </div>
+</section>
+
+<!-- ── ЭКСКУРСИЯ ── -->
+<section class="block" id="excursion">
+  <div class="wrap">
+    <div class="kicker">Аудиогид</div>
+    <h2>Фрагмент экскурсии</h2>
+    <div class="card" style="border-left:3px solid var(--gold);border-radius:0 16px 16px 0">
+      <p>ФРАГМЕНТ ЭКСКУРСИИ</p>
+<p>«Вот карта — посмотрите на траекторию: Земля слева, Луна справа, и тонкая дуга проходит мимо неё — уходит дальше, в пространство между планетами. Это путь "Луны-1".</p>
+<p>2 января 1959 года она стартовала с Байконура и сделала то, чего не делал ни один рукотворный объект: разогналась до второй космической скорости и вырвалась из притяжения Земли навсегда.</p>
+<p>Цель была — Луна. Не долетела: прошла мимо на шесть тысяч километров. Но по дороге успела кое-что важное: измерила то, что до неё никто не измерял. Вот этот прибор — магнитометр — искал магнитное поле Луны и не нашёл его. Зато нашёл солнечный ветер. Поток заряженных частиц от Солнца, который физики-теоретики предсказывали, но никто ещё не щупал руками.</p>
+<p>А "Луна-1" прощупала. И улетела дальше — на орбиту вокруг Солнца. Где и летит до сих пор. Первый искусственный спутник Солнца, имя ему — "Мечта". Переходим дальше».</p>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="ad-slot"><span class="lbl">Реклама</span><span class="ph-txt">Партнёрский блок в середине страницы.</span></div></div>
+
+<section class="block" id="catalog" style="background:linear-gradient(135deg,#16294a,#0f1e33);border-bottom:none">
+  <div class="wrap" style="text-align:center">
+    <h2 style="margin-bottom:6px;color:#fff">Открой все изобретения</h2>
+    <p style="color:var(--muted);margin:0 auto 16px;max-width:60ch">365 дней — 365 первенств. Выбери любой день года.</p>
+    <a class="btn gold" href="/izobreteniya.html" style="display:inline-block;text-decoration:none">Полная база изобретений →</a>
+  </div>
+</section>
+
+<footer><div class="wrap">Русская цивилизация · «Что изобрели русские первыми в мире» · 2026</div></footer>
+
+<script>
+// ── СЧЁТ ──────────────────────────────────────────────────────────────────────
+let score=0; const earned={};
+function award(k,n){if(earned[k])return;earned[k]=true;score+=n;document.getElementById('score').textContent=score;}
+
+// ── СТАТЬЯ ────────────────────────────────────────────────────────────────────
+document.getElementById('moreBtn').onclick=function(){
+  document.getElementById('article').classList.remove('collapsed');
+  this.style.display='none';
+  award('read',5);
+};
+
+// ── ВИКТОРИНА ─────────────────────────────────────────────────────────────────
+const quiz=[{"q": "Чем стала «Луна-1» после того, как прошла мимо Луны?", "o": ["Упала на Землю", "Вышла на орбиту Луны", "Стала первым искусственным спутником Солнца", "Была уничтожена в атмосфере"], "c": 2, "e": "«Луна-1» набрала вторую космическую скорость и вырвалась из притяжения Земли. Пройдя мимо Луны, она вышла на гелиоцентрическую орбиту и стала первым в истории искусственным спутником Солнца."}, {"q": "Что «Луна-1» открыла впервые в истории по пути к Луне?", "o": ["Кратеры на обратной стороне Луны", "Солнечный ветер — поток заряженных частиц от Солнца", "Радиационные пояса Земли", "Воду на Луне"], "c": 1, "e": "Магнитометры «Луны-1» не нашли магнитного поля Луны, зато впервые в истории измерили солнечный ветер — непрерывный поток заряженных частиц от Солнца. До этого его существование было лишь теорией."}];
+const qBox=document.getElementById('quizBox');
+let qIdx=0, answered=[];
+
+function renderQ(){
+  if(qIdx>=quiz.length){
+    qBox.innerHTML='<p style="color:var(--gold-l);font-weight:600">Все вопросы пройдены. Молодец!</p>';
+    return;
+  }
+  const q=quiz[qIdx];
+  qBox.innerHTML=`<p style="font-weight:600;font-size:17px;margin-bottom:8px">${qIdx+1} / ${quiz.length}. ${q.q}</p>
+    ${q.o.map((o,i)=>`<button class="opt" data-i="${i}" onclick="answerQ(${i})">${'АБВГ'[i]}) ${o}</button>`).join('')}
+    <div class="exp" id="exp${qIdx}">${q.e}</div>`;
+}
+
+function answerQ(i){
+  const q=quiz[qIdx];
+  document.querySelectorAll('.opt').forEach((b,j)=>{
+    b.disabled=true;
+    if(j===q.c)b.classList.add('correct');
+    else if(j===i&&i!==q.c)b.classList.add('wrong');
+  });
+  document.getElementById('exp'+qIdx).classList.add('show');
+  if(i===q.c)award('q'+qIdx,10);
+  setTimeout(()=>{qIdx++;renderQ();},2200);
+}
+renderQ();
+
+// ── РАЗВИЛКА ──────────────────────────────────────────────────────────────────
+document.querySelectorAll('.fork-opt').forEach((el,i)=>{
+  el.onclick=function(){
+    document.querySelectorAll('.fork-opt').forEach(b=>b.classList.remove('chosen'));
+    this.classList.add('chosen');
+    document.getElementById('forkReal').style.display='block';
+    award('fork',10);
+  };
+});
+
+// ── ЧАТ ───────────────────────────────────────────────────────────────────────
+const kb=[];
+
+function addMsg(text,who){
+  const d=document.createElement('div');
+  d.className='msg '+who;
+  d.textContent=text;
+  document.getElementById('chatBox').appendChild(d);
+  d.scrollIntoView({behavior:'smooth'});
+}
+
+function findAnswer(q){
+  q=q.toLowerCase();
+  for(const item of kb){
+    if(item.k.some(k=>q.includes(k.toLowerCase())))return item.a;
+  }
+  return 'Об этом я могу рассказать подробнее, если уточните вопрос.';
+}
+
+function sendChat(){
+  const inp=document.getElementById('chatInput');
+  const q=inp.value.trim();
+  if(!q)return;
+  addMsg(q,'you');
+  inp.value='';
+  setTimeout(()=>{addMsg(findAnswer(q),'inv');award('chat',5);},600);
+}
+document.getElementById('chatInput').addEventListener('keydown',e=>{if(e.key==='Enter')sendChat();});
+
+document.querySelectorAll('.starter-btn').forEach(b=>{
+  b.onclick=function(){
+    document.getElementById('chatInput').value=this.dataset.q;
+    sendChat();
+  };
+});
+
+// ── REVEAL ────────────────────────────────────────────────────────────────────
+document.querySelectorAll('section.block').forEach(s=>s.classList.add('reveal'));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on');}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
+</script>
+</body>
+</html>
