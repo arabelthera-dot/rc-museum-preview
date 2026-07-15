@@ -676,12 +676,14 @@ document.querySelectorAll('.starter-btn').forEach(b=>{
 (function(){
   const cv=document.getElementById('heroCvs');if(!cv)return;
   const ctx=cv.getContext('2d');
-  let W,H,t=0,probeY=0,landed=false,landedTimer=0;
+  let W,H,t=0,probeY=0,probeVY=0.3,landed=false,landedTimer=0;
   const stars=[];
   function init(){
     const p=cv.parentElement;
-    W=cv.width=p?p.offsetWidth||window.innerWidth:window.innerWidth;
-    H=cv.height=p?p.offsetHeight||Math.round(window.innerHeight*.52):Math.round(window.innerHeight*.52);
+    const pw=p?p.offsetWidth:0;const ph=p?p.offsetHeight:0;
+    W=cv.width=pw>0?pw:window.innerWidth;
+    // Минимальная высота 260px чтобы GROUND не был 0
+    H=cv.height=ph>100?ph:Math.max(260,Math.round(window.innerHeight*.52));
     stars.length=0;
     for(let i=0;i<160;i++)stars.push({x:Math.random()*W,y:Math.random()*H*.65,r:Math.random()*1.5+.2,a:.25+Math.random()*.65});
     probeY=H*.05;landed=false;landedTimer=0;
@@ -768,25 +770,33 @@ document.querySelectorAll('.starter-btn').forEach(b=>{
 
     // Зонд
     const probeX=W/2;
+    const LAND_Y=GROUND-18; // зонд останавливается чуть выше поверхности
     if(!landed){
-      probeY+=0.55;
-      if(probeY>=GROUND-22){landed=true;probeY=GROUND-20;}
+      // Замедление при приближении к поверхности
+      const distToGround=LAND_Y-probeY;
+      if(distToGround>80){probeVY=Math.min(probeVY+0.012,1.2);}
+      else{probeVY=Math.max(0.08,distToGround/80*0.8);}
+      probeY+=probeVY;
+      if(probeY>=LAND_Y){landed=true;probeY=LAND_Y;probeVY=0.3;}
     } else {
       landedTimer++;
-      if(landedTimer>120){landed=false;probeY=H*.05;landedTimer=0;}
+      if(landedTimer>300){// долго сидим — красиво
+        landed=false;probeY=H*.04;probeVY=0.3;landedTimer=0;}
     }
-    // Луч радиосвязи
+    // Луч радиосвязи (только в полёте)
     if(!landed){
       for(let i=0;i<3;i++){
-        const age=(t*.02+i/3)%1;const lineA=Math.pow(1-age,.8)*.4;
+        const age=(t*.018+i/3)%1;const lineA=Math.pow(1-age,.9)*.45;
         ctx.beginPath();ctx.moveTo(probeX,probeY);ctx.lineTo(W*.12,H*.18);
         ctx.strokeStyle=`rgba(45,140,191,${lineA})`;ctx.lineWidth=1;ctx.setLineDash([4,6]);ctx.stroke();ctx.setLineDash([]);}
     }
-    // Вспышка при посадке
-    if(landed&&landedTimer<20){
-      const flash=1-landedTimer/20;
-      ctx.beginPath();ctx.arc(probeX,GROUND,40*flash,0,Math.PI*2);
-      ctx.fillStyle=`rgba(201,168,76,${.4*flash})`;ctx.fill();}
+    // Пыль при посадке
+    if(landed&&landedTimer<40){
+      const flash=1-landedTimer/40;
+      ctx.beginPath();ctx.arc(probeX,GROUND,50*flash,0,Math.PI*2);
+      ctx.fillStyle=`rgba(180,180,190,${.25*flash})`;ctx.fill();
+      ctx.beginPath();ctx.arc(probeX,GROUND,25*flash,0,Math.PI*2);
+      ctx.fillStyle=`rgba(201,168,76,${.35*flash})`;ctx.fill();}
 
     drawProbe(probeX,probeY,landed);
     t++;requestAnimationFrame(draw);

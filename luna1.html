@@ -674,16 +674,32 @@ document.querySelectorAll('.starter-btn').forEach(b=>{
     ctx.beginPath();
     for(let i=0;i<=100;i++){const pp=probePath(i/100);i===0?ctx.moveTo(pp.x,pp.y):ctx.lineTo(pp.x,pp.y);}
     ctx.stroke();ctx.restore();
-    // Зонд
-    const frac=(t*.008)%1.2;
-    if(frac<=1){
-      const probe=probePath(Math.min(frac,1));
+    // Зонд — фаза: перелёт (frac 0→1) затем орбита вокруг Солнца
+    const CYCLE=600; // кадров на полный цикл
+    const phase=t%CYCLE;
+    const TRANSIT=300; // кадров на перелёт
+    let probe;
+    if(phase<TRANSIT){
+      const frac=phase/TRANSIT;
+      probe=probePath(frac);
       // След зонда
       ctx.beginPath();
-      for(let i=0;i<=60;i++){const ff=Math.max(0,frac-i*.012);const pp=probePath(Math.max(0,ff));i===0?ctx.moveTo(pp.x,pp.y):ctx.lineTo(pp.x,pp.y);}
-      const trailGrad=ctx.createLinearGradient(probe.x,probe.y,probePath(Math.max(0,frac-.7)).x,probePath(Math.max(0,frac-.7)).y);
+      for(let i=0;i<=60;i++){const ff=Math.max(0,frac-i/TRANSIT*0.7);const pp=probePath(ff);i===0?ctx.moveTo(pp.x,pp.y):ctx.lineTo(pp.x,pp.y);}
+      const trailEnd=probePath(Math.max(0,(phase-40)/TRANSIT));
+      const trailGrad=ctx.createLinearGradient(probe.x,probe.y,trailEnd.x,trailEnd.y);
       trailGrad.addColorStop(0,'rgba(201,168,76,.7)');trailGrad.addColorStop(1,'rgba(201,168,76,0)');
       ctx.strokeStyle=trailGrad;ctx.lineWidth=2;ctx.stroke();
+    } else {
+      // Орбита вокруг Солнца
+      const orbitAngle=(phase-TRANSIT)/(CYCLE-TRANSIT)*Math.PI*2;
+      const orbitR=pos.sun.r*2.8;
+      probe={x:pos.sun.x+Math.cos(orbitAngle)*orbitR,y:pos.sun.y+Math.sin(orbitAngle)*orbitR*0.55};
+      // Орбитальный след
+      ctx.beginPath();
+      for(let i=0;i<=30;i++){const a=orbitAngle-i*.08;ctx.lineTo(pos.sun.x+Math.cos(a)*orbitR,pos.sun.y+Math.sin(a)*orbitR*0.55);}
+      ctx.strokeStyle='rgba(201,168,76,.35)';ctx.lineWidth=1.5;ctx.stroke();
+    }
+    if(probe){
       // Зонд (сфера с антеннами)
       ctx.beginPath();ctx.arc(probe.x,probe.y,5,0,Math.PI*2);ctx.fillStyle='#e4c97a';ctx.fill();
       ctx.beginPath();ctx.arc(probe.x,probe.y,8,0,Math.PI*2);
