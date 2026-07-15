@@ -193,6 +193,114 @@
   </div>
 </section>
 
+<!-- ── УНИКАЛЬНАЯ ИГРА: МЯГКАЯ ПОСАДКА ── -->
+<section class="block" id="game-landing">
+  <div class="wrap">
+    <div class="kicker">Игра · Уникальная механика</div>
+    <h2>Посади «Луну-9» мягко</h2>
+    <p style="color:var(--muted);max-width:64ch;margin-top:0">До «Луны-9» никто не знал, выдержит ли лунная поверхность посадку. Ты — оператор. Включи тормозной двигатель в нужный момент — не слишком рано и не слишком поздно.</p>
+    <canvas id="luna9game" width="680" height="320" style="width:100%;max-width:680px;border-radius:14px;border:1px solid rgba(255,255,255,.1);display:block;touch-action:none"></canvas>
+    <div id="l9msg" style="min-height:32px;font-weight:600;font-size:17px;color:var(--gold-l);margin:12px 0;text-align:center"></div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:4px">
+      <button class="btn gold" id="l9brake" style="font-size:17px;padding:14px 32px;letter-spacing:.5px">🔥 ВКЛЮЧИТЬ ТОРМОЗА</button>
+      <button class="btn ghost" id="l9reset" style="display:none">Попробовать снова</button>
+    </div>
+    <p style="font-size:13px;color:var(--muted);text-align:center;margin-top:8px">Зонд падает — альтиметр показывает высоту. Нажимай в нужный момент.</p>
+  </div>
+</section>
+<script>
+(function(){
+  const cv=document.getElementById('luna9game');
+  if(!cv)return;
+  const ctx=cv.getContext('2d');
+  const W=cv.offsetWidth||680,H=320;
+  cv.width=W;cv.height=H;
+  const btn=document.getElementById('l9brake');
+  const rst=document.getElementById('l9reset');
+  const msg=document.getElementById('l9msg');
+  let y=30,vy=1.2,fuel=100,braking=false,done=false,landed=false,crashed=false;
+  let stars=Array.from({length:60},()=>({x:Math.random()*W,y:Math.random()*H*.8,r:Math.random()*1.2+.3}));
+  const GROUND=H-40,PROBE_H=28,SAFE_TOP=H-120,SAFE_BOT=H-80;
+
+  function drawScene(){
+    // Фон
+    ctx.fillStyle='#040c1a';ctx.fillRect(0,0,W,H);
+    // Звёзды
+    stars.forEach(s=>{ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fillStyle='rgba(255,255,255,.7)';ctx.fill();});
+    // Луна поверхность
+    ctx.fillStyle='#3a3a4a';ctx.fillRect(0,GROUND,W,H-GROUND);
+    // Кратеры
+    [[W*.15,GROUND+8,18],[W*.5,GROUND+6,12],[W*.78,GROUND+9,22]].forEach(([cx,cy,r])=>{
+      ctx.beginPath();ctx.ellipse(cx,cy,r,r*.4,0,0,Math.PI*2);ctx.fillStyle='#2a2a38';ctx.fill();});
+    // Зона безопасного торможения (зелёная полоса)
+    ctx.fillStyle='rgba(63,155,82,.08)';ctx.fillRect(0,SAFE_TOP,W,SAFE_BOT-SAFE_TOP);
+    ctx.strokeStyle='rgba(63,155,82,.35)';ctx.lineWidth=1;ctx.setLineDash([4,4]);
+    ctx.beginPath();ctx.moveTo(0,SAFE_TOP);ctx.lineTo(W,SAFE_TOP);ctx.stroke();
+    ctx.beginPath();ctx.moveTo(0,SAFE_BOT);ctx.lineTo(W,SAFE_BOT);ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle='rgba(63,155,82,.6)';ctx.font='11px Inter,sans-serif';
+    ctx.fillText('← зона включения тормозов',8,SAFE_TOP-5);
+    // Альтиметр
+    const altPct=Math.max(0,Math.min(1,(GROUND-y-PROBE_H)/(GROUND-30)));
+    const bh=(H-80)*altPct;
+    ctx.fillStyle='rgba(255,255,255,.06)';ctx.fillRect(W-38,30,22,H-80);
+    ctx.fillStyle=altPct>.35?'#c9a84c':'#3f9b52';ctx.fillRect(W-38,30+(H-80)-bh,22,bh);
+    ctx.strokeStyle='rgba(255,255,255,.2)';ctx.lineWidth=1;ctx.strokeRect(W-38,30,22,H-80);
+    ctx.fillStyle='#e8eef5';ctx.font='11px Inter,sans-serif';ctx.fillText('ALT',W-37,24);
+    const altKm=Math.round(altPct*100);
+    ctx.fillStyle='#c9a84c';ctx.font='bold 13px Inter,sans-serif';ctx.fillText(altKm+'%',W-40,H-42);
+    // Зонд
+    const px=W/2,py=y;
+    if(landed){
+      // Лепестки
+      ctx.fillStyle='#c9a84c';
+      [-22,-12,0,12,22].forEach(dx=>{ctx.fillRect(px+dx-3,GROUND-10,6,10);});
+      ctx.fillStyle='#e4c97a';ctx.fillRect(px-10,GROUND-PROBE_H-5,20,PROBE_H+5);
+    } else {
+      ctx.fillStyle='#2d8cbf';ctx.fillRect(px-10,py,20,PROBE_H);
+      ctx.fillStyle='#e4c97a';ctx.fillRect(px-4,py-8,8,8);
+      if(braking){
+        ctx.fillStyle='rgba(255,140,0,.8)';
+        ctx.beginPath();ctx.moveTo(px-6,py+PROBE_H);ctx.lineTo(px+6,py+PROBE_H);ctx.lineTo(px,py+PROBE_H+18);ctx.closePath();ctx.fill();
+      }
+    }
+    // Топливо
+    ctx.fillStyle='rgba(255,255,255,.06)';ctx.fillRect(8,30,14,H-80);
+    ctx.fillStyle='#2d8cbf';ctx.fillRect(8,30+(H-80)*(1-fuel/100),14,(H-80)*(fuel/100));
+    ctx.strokeStyle='rgba(255,255,255,.2)';ctx.lineWidth=1;ctx.strokeRect(8,30,14,H-80);
+    ctx.fillStyle='#e8eef5';ctx.font='11px Inter,sans-serif';ctx.fillText('FUEL',4,24);
+  }
+
+  function tick(){
+    if(done)return;
+    if(braking){
+      vy=Math.max(vy-.18,0);fuel=Math.max(fuel-1.2,0);
+      if(fuel<=0){braking=false;}
+    } else {vy=Math.min(vy+.04,3.5);}
+    y+=vy;
+    if(y+PROBE_H>=GROUND){
+      done=true;
+      if(vy<1.2){landed=true;y=GROUND-PROBE_H;msg.textContent='✅ Мягкая посадка! Именно так 3 февраля 1966 года «Луна-9» впервые в истории мягко села на другое небесное тело.';msg.style.color='#7ed4a0';}
+      else{crashed=true;msg.textContent='💥 Удар о поверхность — скорость была слишком высокой. Попробуй включить тормоза чуть раньше.';msg.style.color='#f08080';}
+      rst.style.display='inline-block';btn.style.display='none';
+    }
+    if(braking&&fuel<=0&&y+PROBE_H<GROUND&&vy>1){
+      done=true;crashed=true;msg.textContent='⚠️ Топливо кончилось слишком рано, скорость не погашена — зонд разбился. Включай тормоза ниже.';msg.style.color='#f08080';
+      rst.style.display='inline-block';btn.style.display='none';}
+    drawScene();
+    if(!done)requestAnimationFrame(tick);
+  }
+
+  btn.addEventListener('click',()=>{if(!done&&!braking){braking=true;btn.textContent='🔥 Тормоза включены…';btn.disabled=true;}});
+  btn.addEventListener('touchstart',e=>{e.preventDefault();btn.click();},{passive:false});
+  rst.addEventListener('click',()=>{
+    y=30;vy=1.2;fuel=100;braking=false;done=false;landed=false;crashed=false;
+    msg.textContent='';btn.textContent='🔥 ВКЛЮЧИТЬ ТОРМОЗА';btn.disabled=false;btn.style.display='inline-block';rst.style.display='none';
+    requestAnimationFrame(tick);});
+  drawScene();requestAnimationFrame(tick);
+})();
+</script>
+
 <!-- ── ИГРЫ ── -->
 
 <style>
