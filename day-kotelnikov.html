@@ -422,6 +422,47 @@
   </div>
 </section>
 
+<section class="block" id="theme-inventions" style="background:rgba(201,168,76,.03);border-top:1px solid rgba(201,168,76,.15)">
+  <div class="wrap">
+    <div class="kicker">Авиация и транспорт · Русские первенства</div>
+    <h2 style="margin-bottom:6px">Что ещё русские изобрели первыми в теме «Авиация и транспорт»</h2>
+    <p style="color:var(--muted);margin-top:0;margin-bottom:16px;max-width:62ch">Котельников — не единственный. Вот другие первенства русских в этой теме.</p>
+    <div style="text-align:center;margin:14px 0 4px">
+      <button class="btn gold" id="themeInvBtn" data-label="Показать 10 изобретений →">Показать 10 изобретений →</button>
+    </div>
+    <div id="themeInvBody" style="display:none;margin-top:20px">
+      <div class="card" style="padding:0;overflow:hidden">
+        <div style="padding:14px 20px;background:rgba(201,168,76,.08);border-bottom:1px solid rgba(201,168,76,.15)">
+          <span style="color:var(--gold-l);font-weight:600;font-size:14px;letter-spacing:.5px">10 ИЗОБРЕТЕНИЙ · АВИАЦИЯ И ТРАНСПОРТ</span>
+        </div>
+        <div style="padding:4px 20px 12px">
+          <div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px"><span style="color:var(--gold);font-weight:700">8 января</span><span>Ледокол «Ермак» — первый в мире арктический ледокол · С. О. Макаров, 1899</span></div>
+          <div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px"><span style="color:var(--gold);font-weight:700">10 февраля</span><span>Аэросани — первые в мире · нач. XX в.</span></div>
+          <div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px"><span style="color:var(--gold);font-weight:700">11 февраля</span><span>Первый в мире морской гидросамолёт М-5 · Д. П. Григорович, 1883</span></div>
+          <div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px"><span style="color:var(--gold);font-weight:700">17 февраля</span><span>Первый в мире электрический трамвай · Ф. А. Пироцкий, 1845</span></div>
+          <div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px"><span style="color:var(--gold);font-weight:700">21 марта</span><span>Самолёт Можайского — один из первых в мире · А. Ф. Можайский, 1825</span></div>
+          <div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px"><span style="color:var(--gold);font-weight:700">30 марта</span><span>Штурмовик Ил-2 и самолёты Ильюшина · С. В. Ильюшин, 1894</span></div>
+          <div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px"><span style="color:var(--gold);font-weight:700">7 апреля</span><span>Первая подводная лодка с двигателем внутреннего сгорания «Дельфин» · 1903</span></div>
+          <div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px"><span style="color:var(--gold);font-weight:700">26 января</span><span>Первый в мире серийный реактивный пассажирский самолёт Ту-104 · А. Н. Туполев</span></div>
+          <div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px"><span style="color:var(--gold);font-weight:700">5 декабря</span><span>Первый в мире атомный ледокол «Ленин» · 1957</span></div>
+          <div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;font-size:14px"><span style="color:var(--gold);font-weight:700">29 января</span><span>Первый в мире серийный атомный подводный ракетоносец К-19 · 1959</span></div>
+        </div>
+      </div>
+      <p style="text-align:center;color:var(--muted);font-size:14px;margin-top:12px">Каждое — отдельный день музея. <a href="/izobreteniya.html">Полная база →</a></p>
+    </div>
+  </div>
+</section>
+
+<script>
+const themeBtn=document.getElementById('themeInvBtn');
+if(themeBtn)themeBtn.onclick=function(){
+  const b=document.getElementById('themeInvBody');
+  const open=b.style.display==='none';
+  b.style.display=open?'block':'none';
+  this.textContent=open?'▲ Свернуть':this.dataset.label||'Показать →';
+};
+</script>
+
 <section class="block" id="calendar">
   <div class="wrap">
     <h2 style="margin-bottom:6px">Календарь изобретений</h2>
