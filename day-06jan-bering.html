@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> — Русские первые в мире</title>
+<title>Берингов пролив — открытие разделения Азии и Америки — Русские первые в мире</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/three@0.160/build/three.min.js"></script>
@@ -119,8 +119,8 @@
     <div class="wrap">
       <div class="date-chip">6 января</div>
       <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
-      <h1></h1>
-      <p class="hook">6 января 1725 года, умирающий Пётр I вызвал к себе офицеров и вручил им инструкцию: найти, соединяется ли Азия с Америкой. Через три недели он умер. Витус Беринг выполнил приказ: прошёл через пролив между двумя континентами и доказал — они разделены. Россия открыла то, о чём Европа только догадывалась. Этот пролив теперь носит имя Беринга.</p>
+      <h1>Берингов пролив — открытие разделения Азии и Америки</h1>
+      <p class="hook">Витус Беринг прошёл через пролив в 1728 году и доказал: два континента разделены морем. Это открытие перерисовало карты мира и открыло России путь в Северную Америку — туда, где теперь Аляска. Пролив назвали в его честь. Ширина — 86 километров. На одном берегу Россия. На другом — Америка.</p>
       <div style="display:flex;gap:12px;flex-wrap:wrap">
         <button class="btn gold" onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">Читать историю ↓</button>
         <button class="btn ghost" onclick="document.getElementById('video').scrollIntoView({behavior:'smooth'})">▶ Смотреть видео</button>
@@ -155,7 +155,7 @@
 <section class="block" id="story">
   <div class="wrap">
     <div class="kicker">История изобретения</div>
-    <h2></h2>
+    <h2>Берингов пролив — открытие разделения Азии и Америки</h2>
     <div class="article collapsed" id="article">
       <div class="body" id="articleBody">
         <p>СТАТЬЯ БАЗЫ ЗНАНИЙ</p>
@@ -218,12 +218,12 @@
 .gm-drop.filled{border-style:solid;border-color:#c9a84c;color:#e4c97a;font-weight:600}
 </style>
 
-<div class="gm" id="gm_timer">
+<div class="gm" id="gm_fallback">
   <h3>⏱ Быстрый ответ</h3>
-  <div class="gm-score">Чем быстрее ответишь — тем больше очков. Осталось: <b id="gm_timer_t">15</b> сек</div>
+  <div class="gm-score">Чем быстрее ответишь — тем больше очков. Осталось: <b id="gm_fallback_t">15</b> сек</div>
   <p style="font-weight:600;font-size:16px;margin:0 0 12px">Вопрос скоро появится.</p>
-  <div id="gm_timer_opts"><button class="gm-btn" onclick="gm_timer_ans(0)">А) —</button></div>
-  <div class="gm-exp" id="gm_timer_exp"></div>
+  <div id="gm_fallback_opts"><button class="gm-btn" onclick="gm_fallback_ans(0)">А) —</button></div>
+  <div class="gm-exp" id="gm_fallback_exp"></div>
 </div>
 <script>
 (function(){
@@ -231,19 +231,19 @@
   const correct=0;
   ti=setInterval(()=>{
     if(done)return;
-    t--;document.getElementById('gm_timer_t').textContent=t;
-    if(t<=0){clearInterval(ti);gm_timer_ans(-1);}
+    t--;document.getElementById('gm_fallback_t').textContent=t;
+    if(t<=0){clearInterval(ti);gm_fallback_ans(-1);}
   },1000);
-  window['gm_timer_ans']=function(i){
+  window['gm_fallback_ans']=function(i){
     if(done)return;done=true;clearInterval(ti);
-    const btns=document.querySelectorAll('#gm_timer_opts .gm-btn');
+    const btns=document.querySelectorAll('#gm_fallback_opts .gm-btn');
     btns.forEach((b,j)=>{b.disabled=true;
       if(j===correct)b.classList.add('ok');
       else if(j===i)b.classList.add('no');
       else b.classList.add('neutral');
     });
-    document.getElementById('gm_timer_exp').classList.add('show');
-    if(i===correct){const pts=Math.max(5,Math.round(t/15*15));if(typeof award==='function')award('gm_timer',pts);}
+    document.getElementById('gm_fallback_exp').classList.add('show');
+    if(i===correct){const pts=Math.max(5,Math.round(t/15*15));if(typeof award==='function')award('gm_fallback',pts);}
   };
 })();
 </script>
@@ -303,7 +303,106 @@
 
 <div class="wrap"><div class="ad-slot"><span class="lbl">Реклама</span><span class="ph-txt">Партнёрский блок в середине страницы.</span></div></div>
 
-
+<section class="block" id="theme-inventions" style="background:rgba(201,168,76,.03);border-top:1px solid rgba(201,168,76,.15)">
+  <div class="wrap">
+    <div class="kicker">Транспорт · Русские первенства</div>
+    <h2 style="margin-bottom:6px">Что ещё русские изобрели первыми в теме «транспорт»</h2>
+    <p style="color:var(--muted);margin-top:0;margin-bottom:16px;max-width:62ch">Этот день — не единственный. Вот другие изобретения русских в этой теме.</p>
+    <div style="text-align:center;margin:14px 0 4px">
+      <button class="btn gold" id="themeInvBtn">Показать 20 изобретений →</button>
+    </div>
+    <div id="themeInvBody" style="display:none;margin-top:20px">
+      <div class="card" style="padding:0;overflow:hidden">
+        <div style="padding:14px 20px;background:rgba(201,168,76,.08);border-bottom:1px solid rgba(201,168,76,.15)">
+          <span style="color:var(--gold-l);font-weight:600;font-size:14px;letter-spacing:.5px">20 ИЗОБРЕТЕНИЙ · ТРАНСПОРТ</span>
+        </div>
+        <div style="padding:4px 20px 12px">
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">3 янв</span>
+          <span><a href="day-03jan-luna9.html" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,.3);transition:.15s" onmouseover="this.style.color='var(--gold-l)'" onmouseout="this.style.color='inherit'">Первый в мире атомный ледокол-речник «Обь» и атомный флот →</a></span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">5 янв</span>
+          <span><a href="day-05jan-shukhov.html" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,.3);transition:.15s" onmouseover="this.style.color='var(--gold-l)'" onmouseout="this.style.color='inherit'">Первый в мире промышленный нефтепровод Балаханы–Черный город →</a></span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">8 янв 1849</span>
+          <span><a href="day-08jan-icebreaker.html" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,.3);transition:.15s" onmouseover="this.style.color='var(--gold-l)'" onmouseout="this.style.color='inherit'">«Ермак», первый в мире арктический ледокол →</a></span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">10 янв</span>
+          <span>Первый в мире ледокол «Пайлот»</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">16 янв</span>
+          <span>Первая стыковка кораблей и переход через открытый космос («Союз-4/5»)</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">26 янв</span>
+          <span>Первый в мире серийный реактивный пассажирский самолёт Ту-104</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">28 янв</span>
+          <span>Открытие Антарктиды</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">29 янв</span>
+          <span>Первый в мире серийный атомный подводный ракетоносец К-19</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">10 фев</span>
+          <span>Аэросани (первые в мире)</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">11 фев</span>
+          <span>Первый в мире морской гидросамолёт (летающая лодка М-5)</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">13 фев</span>
+          <span>Гидросамолёты и амфибии «Бе»</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">17 фев</span>
+          <span>Первый в мире электрический трамвай</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">10 мар</span>
+          <span>Открытие пролива между Азией и Америкой</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">19 мар</span>
+          <span>Первый в мире военный ледокол «Вайгач» — исследование Арктики</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">20 мар</span>
+          <span>Первый в мире магистральный тепловоз</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">21 мар</span>
+          <span>Самолёт Можайского, один из первых в мире</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">30 мар</span>
+          <span>Штурмовик Ил-2 и самолёты Ильюшина</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">1 апр</span>
+          <span>Самолёты «Як»</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">2 апр</span>
+          <span>Первый в мире бензиновый двигатель (для дирижабля)</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">7 апр</span>
+          <span>Первая в мире подводная лодка «Дельфин» с двигателем внутреннего сгорания</span>
+        </div>
+        </div>
+      </div>
+      <p style="text-align:center;color:var(--muted);font-size:14px;margin-top:12px">Каждое — отдельный день музея. <a href="/izobreteniya.html">Полная база →</a></p>
+    </div>
+  </div>
+</section>
 
 <section class="block" id="calendar">
   <div class="wrap">
@@ -325,9 +424,9 @@
 
 <section class="block" id="catalog" style="background:linear-gradient(135deg,#16294a,#0f1e33);border-bottom:none">
   <div class="wrap" style="text-align:center">
-    <h2 style="margin-bottom:6px;color:#fff">Открой все изобретения</h2>
+    <h2 style="margin-bottom:6px;color:#fff">Все изобретения — в одном месте</h2>
     <p style="color:var(--muted);margin:0 auto 16px;max-width:60ch">365 дней — 365 первенств. Выбери любой день года.</p>
-    <a class="btn gold" href="/izobreteniya.html" style="display:inline-block;text-decoration:none">Полная база изобретений →</a>
+    <a class="btn gold" href="day-01jan-cabletv.html" style="display:inline-block;text-decoration:none">Смотреть другие дни →</a>
   </div>
 </section>
 
@@ -422,18 +521,33 @@ document.querySelectorAll('.starter-btn').forEach(b=>{
 
 // ── HERO SCENE ────────────────────────────────────────────────────────────────
 (function(){
-  const cv=document.getElementById('heroCvs');if(!cv)return;
-  const ctx=cv.getContext('2d');let W,H,pts=[];
-  function resize(){W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight;
-    pts=Array.from({length:60},()=>({x:Math.random()*W,y:Math.random()*H,
-      vx:(Math.random()-.5)*.5,vy:(Math.random()-.5)*.5,r:Math.random()*2+.5}));}
-  resize();window.addEventListener('resize',resize);
-  function draw(){ctx.clearRect(0,0,W,H);
-    pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;
-      if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
-      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-      ctx.fillStyle='rgba(201,168,76,.38)';ctx.fill();});
-    requestAnimationFrame(draw);}draw();
+  const cv=document.getElementById('heroCvs');
+  if(!cv||typeof THREE==='undefined'){const ctx=cv.getContext('2d');let W,H,t=0,x=0;function r2(){W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight;x=W*.1;}r2();function dr(){ctx.clearRect(0,0,W,H);t+=.012;x+=.8;if(x>W*1.2)x=-W*.2;const y=H*.6+Math.sin(t*.8)*4;ctx.fillStyle='rgba(45,90,138,.8)';ctx.fillRect(x-60,y-14,120,22);ctx.beginPath();ctx.moveTo(x-60,y-14);ctx.lineTo(x+60,y-14);ctx.bezierCurveTo(x+80,y-14,x+80,y-28,x+40,y-28);ctx.lineTo(x-20,y-28);ctx.closePath();ctx.fill();for(let i=0;i<6;i++){const a=(1-i/6)*.4;ctx.beginPath();ctx.arc(x-50-i*14,y,2-i*.2,0,Math.PI*2);ctx.fillStyle=`rgba(201,168,76,${a})`;ctx.fill();}requestAnimationFrame(dr);}dr();return;}
+  const _p=cv.parentElement,W=(_p&&_p.offsetWidth)||window.innerWidth,H=(_p&&_p.offsetHeight)||Math.round(window.innerHeight*.52);cv.width=W;cv.height=H;
+  const rnd=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true});
+  rnd.setSize(W,H);rnd.setPixelRatio(Math.min(devicePixelRatio,2));
+  const scene=new THREE.Scene(),cam=new THREE.PerspectiveCamera(60,W/H,.1,100);
+  cam.position.set(0,1.8,6.5);cam.lookAt(0,0,0);
+  // Сетка (вода/земля)
+  scene.add(Object.assign(new THREE.GridHelper(30,22,0x1a3a5c,0x1a3a5c),{position:{y:-1,set:()=>{}}}));
+  const gh=new THREE.GridHelper(30,22,0x1a3a5c,0x1a3a5c);gh.position.y=-1;scene.add(gh);
+  // Корпус судна
+  const body=new THREE.Group();
+  const hull=new THREE.Mesh(new THREE.BoxGeometry(3.2,.55,1),new THREE.MeshPhongMaterial({color:0x2d5a8a,emissive:0x0a1a2a}));
+  body.add(hull);
+  const nose=new THREE.Mesh(new THREE.ConeGeometry(.5,.95,6),new THREE.MeshPhongMaterial({color:0x2d5a8a,emissive:0x0a1a2a}));
+  nose.rotation.z=-Math.PI/2;nose.position.x=2.05;body.add(nose);
+  const deck=new THREE.Mesh(new THREE.BoxGeometry(.7,.55,.65),new THREE.MeshPhongMaterial({color:0x3a7aaa,emissive:0x112233}));
+  deck.position.set(-.2,.5,0);body.add(deck);
+  body.position.set(.5,-.42,0);scene.add(body);
+  // След (частицы)
+  const trailN=18,trailG=new THREE.BufferGeometry(),trailP=new Float32Array(trailN*3);
+  for(let i=0;i<trailN;i++){trailP[i*3]=-1.6-i*.2;trailP[i*3+1]=-.42;trailP[i*3+2]=0;}
+  trailG.setAttribute('position',new THREE.BufferAttribute(trailP,3));
+  scene.add(new THREE.Points(trailG,new THREE.PointsMaterial({color:0xc9a84c,size:.07,opacity:.55,transparent:true})));
+  scene.add(new THREE.AmbientLight(0x223355,.85));const dl=new THREE.DirectionalLight(0xffffff,1.1);dl.position.set(3,5,5);scene.add(dl);
+  let t=0;(function loop(){t+=.01;body.position.y=-.42+Math.sin(t*.75)*.055;body.rotation.z=Math.sin(t*.75)*.018;
+    rnd.render(scene,cam);requestAnimationFrame(loop);})();
 })();
 
 // ── ТЕМАТИЧЕСКИЕ ИЗОБРЕТЕНИЯ ─────────────────────────────────────────────────

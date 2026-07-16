@@ -120,7 +120,7 @@
       <div class="date-chip">4 января</div>
       <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
       <h1>первая в мире беспроводная передача управляющего сигнала на расстояние</h1>
-      <p class="hook">Провода тогда казались обязательными — не провод, значит нет связи. Николай Пильчиков думал иначе. В 1898 году он провёл публичный опыт: встал в стороне, нажал на прибор — и на другом конце зала без единого провода взорвался заряд. Зрители ахнули. Это был первый в мире управляющий сигнал переданный по радио — за 120 лет до беспроводной эпохи.</p>
+      <p class="hook">Без провода. Без пульта. Без объяснений — публика просто ахнула. 1898 год. Николай Пильчиков только что показал миру то, что через сто лет станет основой всего: wi-fi, дроны, пульты, беспилотники. Он назвал это просто — «управление на расстоянии». Слова «радиоуправление» тогда ещё не существовало.</p>
       <div style="display:flex;gap:12px;flex-wrap:wrap">
         <button class="btn gold" onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">Читать историю ↓</button>
         <button class="btn ghost" onclick="document.getElementById('video').scrollIntoView({behavior:'smooth'})">▶ Смотреть видео</button>
@@ -216,12 +216,12 @@
 .gm-drop.filled{border-style:solid;border-color:#c9a84c;color:#e4c97a;font-weight:600}
 </style>
 
-<div class="gm" id="gm_timer">
+<div class="gm" id="gm_fallback">
   <h3>⏱ Быстрый ответ</h3>
-  <div class="gm-score">Чем быстрее ответишь — тем больше очков. Осталось: <b id="gm_timer_t">15</b> сек</div>
+  <div class="gm-score">Чем быстрее ответишь — тем больше очков. Осталось: <b id="gm_fallback_t">15</b> сек</div>
   <p style="font-weight:600;font-size:16px;margin:0 0 12px">Вопрос скоро появится.</p>
-  <div id="gm_timer_opts"><button class="gm-btn" onclick="gm_timer_ans(0)">А) —</button></div>
-  <div class="gm-exp" id="gm_timer_exp"></div>
+  <div id="gm_fallback_opts"><button class="gm-btn" onclick="gm_fallback_ans(0)">А) —</button></div>
+  <div class="gm-exp" id="gm_fallback_exp"></div>
 </div>
 <script>
 (function(){
@@ -229,19 +229,19 @@
   const correct=0;
   ti=setInterval(()=>{
     if(done)return;
-    t--;document.getElementById('gm_timer_t').textContent=t;
-    if(t<=0){clearInterval(ti);gm_timer_ans(-1);}
+    t--;document.getElementById('gm_fallback_t').textContent=t;
+    if(t<=0){clearInterval(ti);gm_fallback_ans(-1);}
   },1000);
-  window['gm_timer_ans']=function(i){
+  window['gm_fallback_ans']=function(i){
     if(done)return;done=true;clearInterval(ti);
-    const btns=document.querySelectorAll('#gm_timer_opts .gm-btn');
+    const btns=document.querySelectorAll('#gm_fallback_opts .gm-btn');
     btns.forEach((b,j)=>{b.disabled=true;
       if(j===correct)b.classList.add('ok');
       else if(j===i)b.classList.add('no');
       else b.classList.add('neutral');
     });
-    document.getElementById('gm_timer_exp').classList.add('show');
-    if(i===correct){const pts=Math.max(5,Math.round(t/15*15));if(typeof award==='function')award('gm_timer',pts);}
+    document.getElementById('gm_fallback_exp').classList.add('show');
+    if(i===correct){const pts=Math.max(5,Math.round(t/15*15));if(typeof award==='function')award('gm_fallback',pts);}
   };
 })();
 </script>
@@ -302,7 +302,106 @@
 
 <div class="wrap"><div class="ad-slot"><span class="lbl">Реклама</span><span class="ph-txt">Партнёрский блок в середине страницы.</span></div></div>
 
-
+<section class="block" id="theme-inventions" style="background:rgba(201,168,76,.03);border-top:1px solid rgba(201,168,76,.15)">
+  <div class="wrap">
+    <div class="kicker">Связь · Русские первенства</div>
+    <h2 style="margin-bottom:6px">Что ещё русские изобрели первыми в теме «связь»</h2>
+    <p style="color:var(--muted);margin-top:0;margin-bottom:16px;max-width:62ch">Этот день — не единственный. Вот другие изобретения русских в этой теме.</p>
+    <div style="text-align:center;margin:14px 0 4px">
+      <button class="btn gold" id="themeInvBtn">Показать 20 изобретений →</button>
+    </div>
+    <div id="themeInvBody" style="display:none;margin-top:20px">
+      <div class="card" style="padding:0;overflow:hidden">
+        <div style="padding:14px 20px;background:rgba(201,168,76,.08);border-bottom:1px solid rgba(201,168,76,.15)">
+          <span style="color:var(--gold-l);font-weight:600;font-size:14px;letter-spacing:.5px">20 ИЗОБРЕТЕНИЙ · СВЯЗЬ</span>
+        </div>
+        <div style="padding:4px 20px 12px">
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">1 янв</span>
+          <span><a href="day-01jan-cabletv.html" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,.3);transition:.15s" onmouseover="this.style.color='var(--gold-l)'" onmouseout="this.style.color='inherit'">Первая в мире сеть кабельного телевидения (Москва, 30 абонентов) →</a></span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">16 фев 1893</span>
+          <span>Первый в мире радиозонд</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">24 фев 1922</span>
+          <span>Первая в мире мощная радиовещательная станция (Коминтерн, 1922)</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">6 мар</span>
+          <span>Первый в мире обезболивающий наркоз на поле боя (эфирный)</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">16 мар</span>
+          <span>Радио</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">25 мар</span>
+          <span>Радиоуправление, первые в мире опыты</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">26 мар</span>
+          <span>Первые в мире опыты по радиолокации (РЛС)</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">28 мар</span>
+          <span>Первые в мире опыты по передаче электроэнергии на расстояние</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">3 апр</span>
+          <span>Первый в мире переносной радиоприёмник</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">21 апр</span>
+          <span>Первый в России самодвижущийся экипаж («самокатка») с трёхколёсным шасси и короб</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">23 апр</span>
+          <span>Первая в мире система спутникового телевещания</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">7 мая</span>
+          <span>Первая демонстрация радиоприёмника (День радио)</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">9 мая</span>
+          <span>Первая в мире передача изображения на ЭЛТ (электронное ТВ)</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">12 мая 1880</span>
+          <span>Телефонная трубка (микрофон+телефон вместе) и АТС</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">23 мая</span>
+          <span>Первая в мире передача речи по радио (Попов)</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">26 июл</span>
+          <span>Первая в мире передача движущегося изображения (электронное ТВ)</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">30 июл</span>
+          <span>Электронное телевидение и иконоскоп</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">7 сен</span>
+          <span>Первый в мире телеграф в Зимнем дворце (между дворцами Петербурга)</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">21 сен</span>
+          <span>Электродвигатель, гальванопластика, телеграф</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">5 окт</span>
+          <span>Первый в мире Центральный телеграф и Киевский вокзал (ж/б конструкции)</span>
+        </div>
+        </div>
+      </div>
+      <p style="text-align:center;color:var(--muted);font-size:14px;margin-top:12px">Каждое — отдельный день музея. <a href="/izobreteniya.html">Полная база →</a></p>
+    </div>
+  </div>
+</section>
 
 <section class="block" id="calendar">
   <div class="wrap">
@@ -324,9 +423,9 @@
 
 <section class="block" id="catalog" style="background:linear-gradient(135deg,#16294a,#0f1e33);border-bottom:none">
   <div class="wrap" style="text-align:center">
-    <h2 style="margin-bottom:6px;color:#fff">Открой все изобретения</h2>
+    <h2 style="margin-bottom:6px;color:#fff">Все изобретения — в одном месте</h2>
     <p style="color:var(--muted);margin:0 auto 16px;max-width:60ch">365 дней — 365 первенств. Выбери любой день года.</p>
-    <a class="btn gold" href="/izobreteniya.html" style="display:inline-block;text-decoration:none">Полная база изобретений →</a>
+    <a class="btn gold" href="day-01jan-cabletv.html" style="display:inline-block;text-decoration:none">Смотреть другие дни →</a>
   </div>
 </section>
 
@@ -422,16 +521,27 @@ document.querySelectorAll('.starter-btn').forEach(b=>{
 // ── HERO SCENE ────────────────────────────────────────────────────────────────
 (function(){
   const cv=document.getElementById('heroCvs');if(!cv)return;
-  const ctx=cv.getContext('2d');let W,H,pts=[];
-  function resize(){W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight;
-    pts=Array.from({length:60},()=>({x:Math.random()*W,y:Math.random()*H,
-      vx:(Math.random()-.5)*.5,vy:(Math.random()-.5)*.5,r:Math.random()*2+.5}));}
+  const ctx=cv.getContext('2d');let W,H,t=0;
+  function resize(){const _p=cv.parentElement;W=cv.width=(_p&&_p.offsetWidth)||window.innerWidth;H=cv.height=(_p&&_p.offsetHeight)||Math.round(window.innerHeight*.52);}
   resize();window.addEventListener('resize',resize);
-  function draw(){ctx.clearRect(0,0,W,H);
-    pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;
-      if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
-      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-      ctx.fillStyle='rgba(201,168,76,.38)';ctx.fill();});
+  function draw(){ctx.clearRect(0,0,W,H);t+=.022;
+    // Звёздное поле
+    for(let i=0;i<35;i++){const x=((i*137.5)%W),y=((i*79.3)%(H*.55));
+      ctx.beginPath();ctx.arc(x,y,1,0,Math.PI*2);
+      ctx.fillStyle=`rgba(255,255,255,${.15+.12*Math.sin(t+i)})`;ctx.fill();}
+    // Антенна
+    const ax=W/2,ay=H*.78;
+    ctx.strokeStyle='rgba(201,168,76,.85)';ctx.lineWidth=2.5;
+    ctx.beginPath();ctx.moveTo(ax,ay);ctx.lineTo(ax,ay-H*.32);ctx.stroke();
+    ctx.beginPath();ctx.moveTo(ax-22,ay-H*.18);ctx.lineTo(ax,ay-H*.32);ctx.lineTo(ax+22,ay-H*.18);ctx.stroke();
+    // Радиоволны расходятся вверх
+    for(let i=0;i<7;i++){
+      const age=((t*.38+i/7)%1);
+      const r=age*W*.68;const alpha=Math.pow(1-age,1.6)*.55;
+      ctx.beginPath();ctx.arc(ax,ay-H*.32,r,Math.PI*1.08,Math.PI*1.92);
+      ctx.strokeStyle=`rgba(201,168,76,${alpha})`;ctx.lineWidth=1.5;ctx.stroke();
+      ctx.beginPath();ctx.arc(ax,ay-H*.32,r,Math.PI*.08,Math.PI*.92);
+      ctx.strokeStyle=`rgba(45,140,191,${alpha*.45})`;ctx.lineWidth=1;ctx.stroke();}
     requestAnimationFrame(draw);}draw();
 })();
 
