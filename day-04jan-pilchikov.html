@@ -114,7 +114,8 @@
   <div class="hero-visual">
     <canvas id="heroCvs" class="hero-particles"></canvas>
     <div class="hero-year">1898</div>
-    <div style="position:absolute;left:50%;bottom:14px;transform:translateX(-50%);background:rgba(6,12,23,.55);border:1px solid rgba(201,168,76,.3);border-radius:20px;padding:5px 16px;font-size:11px;letter-spacing:1.5px;color:var(--gold-l);font-family:'Inter',sans-serif;white-space:nowrap">▶ нажми кнопку слева — отправь сигнал</div>
+    <div id="heroHint" style="position:absolute;left:50%;bottom:14px;transform:translateX(-50%);background:rgba(6,12,23,.6);border:1px solid rgba(201,168,76,.35);border-radius:20px;padding:6px 18px;font-size:11px;letter-spacing:1.5px;color:var(--gold-l);font-family:'Inter',sans-serif;white-space:nowrap;transition:opacity .8s">⚡ тапни по сцене — отправь сигнал</div>
+    <div style="position:absolute;left:14px;top:12px;background:rgba(6,12,23,.5);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:4px 12px;font-size:10px;letter-spacing:1.2px;color:var(--muted);font-family:'Inter',sans-serif">Одесса · 1898 · публичный опыт</div>
   </div>
   <div class="hero-text">
     <div class="wrap">
@@ -383,7 +384,12 @@
 .gm-tag.wrong{background:rgba(180,40,40,.15);border-color:#c0453f;color:#f08080}
 .gm-slot{display:inline-block;min-width:90px;border-bottom:2px solid rgba(201,168,76,.4);padding:4px 10px;
   margin:0 4px;color:#e4c97a;font-weight:600;text-align:center}
-.gm-slider{width:100%;accent-color:#c9a84c}
+.gm-slider{width:100%;-webkit-appearance:none;appearance:none;height:6px;border-radius:6px;
+  background:linear-gradient(90deg,rgba(45,140,191,.45),rgba(201,168,76,.55));outline:none}
+.gm-slider::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,#e4c97a,#b8882b);border:2px solid #1a0f00;
+  box-shadow:0 2px 10px rgba(201,168,76,.5);cursor:pointer}
+.gm-slider::-moz-range-thumb{width:26px;height:26px;border-radius:50%;background:#c9a84c;border:2px solid #1a0f00}
 .gm-result{font-size:18px;font-weight:700;color:#e4c97a;margin:10px 0}
 .gm-bar{height:6px;background:rgba(255,255,255,.08);border-radius:6px;overflow:hidden;margin:8px 0}
 .gm-bar i{display:block;height:100%;background:linear-gradient(90deg,#1f6f8b,#c9a84c);transition:width .5s}
@@ -407,20 +413,38 @@
 <script>(function(){
 const cv=document.getElementById('tnCvs');if(!cv)return;
 const ctx=cv.getContext('2d');const sl=document.getElementById('tnSlider');
-let W,H,t=0,target=rnd(),fired=0,flash=0;
+let W,H,t=0,target=rnd(),fired=0,flash=0,burst=[];
 function rnd(){return 20+Math.random()*60;}
 function resize(){W=cv.width=cv.offsetWidth||300;H=cv.height=cv.offsetHeight||110;}resize();window.addEventListener('resize',resize);
 function freq(v){return .02+v/100*.13;}
 function match(){return Math.abs(+sl.value-target)<4;}
-function wave(f,ph,color,lw){ctx.beginPath();for(let x=0;x<W;x++){const y=H/2+Math.sin(x*f+ph)*H*.3;x?ctx.lineTo(x,y):ctx.moveTo(x,y);}ctx.strokeStyle=color;ctx.lineWidth=lw;ctx.stroke();}
+function wave(f,ph,color,lw,glow){ctx.save();if(glow){ctx.shadowColor=glow;ctx.shadowBlur=10;}
+  ctx.beginPath();for(let x=0;x<W;x++){const y=H/2+Math.sin(x*f+ph)*H*.3;x?ctx.lineTo(x,y):ctx.moveTo(x,y);}
+  ctx.strokeStyle=color;ctx.lineWidth=lw;ctx.stroke();ctx.restore();}
 function draw(){ctx.clearRect(0,0,W,H);t+=.06;
+  // сетка осциллографа
+  ctx.strokeStyle='rgba(255,255,255,.04)';ctx.lineWidth=1;
+  for(let x=0;x<W;x+=24){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke();}
+  for(let y=0;y<H;y+=22){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke();}
+  ctx.strokeStyle='rgba(255,255,255,.08)';
+  ctx.beginPath();ctx.moveTo(0,H/2);ctx.lineTo(W,H/2);ctx.stroke();
   const ok=match();
-  wave(freq(target),t,ok?'rgba(126,212,160,.95)':'rgba(201,168,76,.5)',ok?2.5:1.5);
-  if(!ok)wave(freq(+sl.value),t,'rgba(45,140,191,.9)',2);
+  wave(freq(target),t,ok?'rgba(126,212,160,.95)':'rgba(201,168,76,.5)',ok?2.5:1.5,ok?'#7ed4a0':null);
+  if(!ok)wave(freq(+sl.value),t,'rgba(96,178,224,.95)',2,'#2d8cbf');
+  // лампа-индикатор приёмника
+  ctx.save();if(ok){ctx.shadowColor='#7ed4a0';ctx.shadowBlur=12;}
+  ctx.beginPath();ctx.arc(W-16,14,6,0,7);
+  ctx.fillStyle=ok?'#7ed4a0':'rgba(192,69,63,.55)';ctx.fill();ctx.restore();
   const btn=document.getElementById('tnBtn');if(btn)btn.disabled=!ok||fired>=3;
-  if(flash>0){ctx.beginPath();ctx.arc(W-34,H/2,(1-flash)*60,0,Math.PI*2);ctx.strokeStyle='rgba(201,168,76,'+flash.toFixed(2)+')';ctx.lineWidth=3;ctx.stroke();flash-=.03;}
+  if(flash>0){ctx.save();ctx.shadowColor='#e4c97a';ctx.shadowBlur=14;
+    ctx.beginPath();ctx.arc(W-34,H/2,(1-flash)*60,0,Math.PI*2);
+    ctx.strokeStyle='rgba(228,201,122,'+flash.toFixed(2)+')';ctx.lineWidth=3;ctx.stroke();ctx.restore();flash-=.03;}
+  burst=burst.filter(p=>p.life>0);
+  burst.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=.1;p.life-=.04;
+    ctx.beginPath();ctx.arc(p.x,p.y,1.6,0,7);ctx.fillStyle='rgba(228,201,122,'+p.life.toFixed(2)+')';ctx.fill();});
   requestAnimationFrame(draw);}draw();
 window.tnFire=function(){if(!match()||fired>=3)return;fired++;flash=1;
+  for(let i=0;i<14;i++)burst.push({x:W-34,y:H/2,vx:(Math.random()-.5)*5,vy:(Math.random()-.8)*4,life:1});
   document.getElementById('tnScore').textContent=fired;
   const r=document.getElementById('tnResult');
   if(fired>=3){r.textContent='🏆 Протектор освоен: приёмник слушал только тебя!';if(typeof award==='function')award('gm_tune',15);}
@@ -443,6 +467,9 @@ const cv=document.getElementById('pgCvs');if(!cv)return;
 const ctx=cv.getContext('2d');let W,H,t=0,wave=0,score=0,tries=0,sent=false,sentT=0;
 function resize(){W=cv.width=cv.offsetWidth||300;H=cv.height=cv.offsetHeight||90;}resize();
 function draw(){ctx.clearRect(0,0,W,H);t+=.04;
+  ctx.strokeStyle='rgba(255,255,255,.04)';ctx.lineWidth=1;
+  for(let gx=0;gx<W;gx+=24){ctx.beginPath();ctx.moveTo(gx,0);ctx.lineTo(gx,H);ctx.stroke();}
+  for(let gy=0;gy<H;gy+=22){ctx.beginPath();ctx.moveTo(0,gy);ctx.lineTo(W,gy);ctx.stroke();}
   // Антенна-передатчик
   ctx.strokeStyle='rgba(201,168,76,.8)';ctx.lineWidth=2;
   ctx.beginPath();ctx.moveTo(30,H*.9);ctx.lineTo(30,H*.15);ctx.stroke();
@@ -457,8 +484,9 @@ function draw(){ctx.clearRect(0,0,W,H);t+=.04;
   // Волна
   if(sent){wave+=(W-60)/38;
     const inZone=wave>W-60;
+    ctx.save();ctx.shadowColor=inZone?'#7ed4a0':'#e4c97a';ctx.shadowBlur=12;
     ctx.beginPath();ctx.arc(30+wave,H*.45,8,0,Math.PI*2);
-    ctx.fillStyle=inZone?'rgba(63,155,82,.9)':'rgba(201,168,76,.85)';ctx.fill();
+    ctx.fillStyle=inZone?'rgba(63,155,82,.9)':'rgba(201,168,76,.85)';ctx.fill();ctx.restore();
     if(wave>W+20){
       if(!inZone){document.getElementById('pgResult').textContent='❌ Промах — волна не дошла до приёмника';document.getElementById('pgResult').style.color='#f08080';}
       sent=false;wave=0;
@@ -679,50 +707,172 @@ document.querySelectorAll('.starter-btn').forEach(b=>{
   };
 });
 
-// ── HERO SCENE ────────────────────────────────────────────────────────────────
+// ── HERO SCENE: «Одесский опыт, 1898» ────────────────────────────────────────
 (function(){
   const cv=document.getElementById('heroCvs');if(!cv)return;
-  const ctx=cv.getContext('2d');let W,H,t=0,sparks=[],triggered=false,trigT=0;
-  function resize(){const p=cv.parentElement;W=cv.width=p?p.offsetWidth:window.innerWidth;H=cv.height=p?p.offsetHeight:Math.round(window.innerHeight*.52);}
-  resize();window.addEventListener('resize',resize);
-  function spark(x,y,n){for(let i=0;i<n;i++)sparks.push({x,y,vx:(Math.random()-.5)*5,vy:(Math.random()-1)*5,life:1,c:Math.random()>.5?'201,168,76':'45,140,191'});}
-  function draw(){ctx.clearRect(0,0,W,H);t+=.022;
-    // Звёздное поле
-    for(let i=0;i<50;i++){const x=((i*137.5+t*2)%W),y=((i*79.3)%(H*.7));
-      ctx.beginPath();ctx.arc(x,y,.8+Math.sin(t+i)*.4,0,Math.PI*2);ctx.fillStyle=`rgba(255,255,255,${.07+.06*Math.sin(t+i)})`;ctx.fill();}
-    // Передатчик (левая антенна)
-    const lx=W*.22,ly=H*.75,rx=W*.78,ry=H*.75;
-    [lx,rx].forEach((ax,ai)=>{
-      ctx.strokeStyle='rgba(201,168,76,.85)';ctx.lineWidth=2.5;
-      ctx.beginPath();ctx.moveTo(ax,ay=H*.78);ctx.lineTo(ax,ay-H*.3);ctx.stroke();
-      ctx.beginPath();ctx.moveTo(ax-18,ay-H*.16);ctx.lineTo(ax,ay-H*.3);ctx.lineTo(ax+18,ay-H*.16);ctx.stroke();
-    });var ay=H*.78;
-    // Радиоволны от передатчика к приёмнику
-    for(let i=0;i<6;i++){const age=((t*.5+i/6)%1);const prog=age;
-      const wx=lx+(rx-lx)*prog,wy=(ly+ry)/2+Math.sin(prog*Math.PI*4)*H*.04;
-      const alpha=Math.pow(Math.sin(prog*Math.PI),1.2)*.7;
-      ctx.beginPath();ctx.arc(wx,wy,3,0,Math.PI*2);ctx.fillStyle=`rgba(201,168,76,${alpha})`;ctx.fill();}
-    // Кнопка
-    const bx=lx,by=H*.88,br=18;
-    const pulse=.5+.5*Math.sin(t*3);
-    ctx.beginPath();ctx.arc(bx,by,br+pulse*4,0,Math.PI*2);ctx.fillStyle=`rgba(201,168,76,${.1+pulse*.08})`;ctx.fill();
-    ctx.beginPath();ctx.arc(bx,by,br,0,Math.PI*2);ctx.fillStyle='rgba(201,168,76,.9)';ctx.fill();
-    ctx.font=`bold ${Math.round(br*.9)}px Inter,sans-serif`;ctx.fillStyle='#1a0f00';ctx.textAlign='center';ctx.textBaseline='middle';
-    ctx.fillText('▶',bx,by);
-    // Взрыв на приёмнике если triggered
-    if(triggered){const dt=t-trigT;if(dt<1.5){
-      const r=dt*H*.22;const a=Math.max(0,.8-dt*.6);
-      ctx.beginPath();ctx.arc(rx,H*.75,r,0,Math.PI*2);ctx.strokeStyle=`rgba(201,168,76,${a})`;ctx.lineWidth=3;ctx.stroke();
-      ctx.beginPath();ctx.arc(rx,H*.75,r*.6,0,Math.PI*2);ctx.strokeStyle=`rgba(45,140,191,${a*.7})`;ctx.lineWidth=2;ctx.stroke();}
-      else triggered=false;}
-    // Искры
-    sparks=sparks.filter(s=>s.life>0);
-    sparks.forEach(s=>{s.x+=s.vx;s.y+=s.vy;s.vy+=.12;s.life-=.04;
-      ctx.beginPath();ctx.arc(s.x,s.y,2,0,Math.PI*2);ctx.fillStyle=`rgba(${s.c},${s.life})`;ctx.fill();});
-    requestAnimationFrame(draw);}
-  draw();
-  cv.addEventListener('click',e=>{const r=cv.getBoundingClientRect();const mx=e.clientX-r.left,my=e.clientY-r.top;
-    if(Math.hypot(mx-W*.22,my-H*.88)<25){triggered=true;trigT=t;spark(W*.78,H*.75,20);}});
+  const ctx=cv.getContext('2d');
+  const reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const dpr=Math.min(window.devicePixelRatio||1,2);
+  let W,H,t=0,last=0;
+  function resize(){const p=cv.parentElement;W=(p?p.offsetWidth:innerWidth);H=(p?p.offsetHeight:Math.round(innerHeight*.52));
+    cv.width=W*dpr;cv.height=H*dpr;cv.style.width=W+'px';cv.style.height=H+'px';
+    ctx.setTransform(dpr,0,0,dpr,0,0);}
+  resize();addEventListener('resize',resize);
+
+  // состояние сцены
+  let target=0;                 // 0 лампа · 1 семафор · 2 заряд
+  let pulseR=-1;                // радиус летящего импульса (-1 = не летит)
+  let sparkT=0;                 // кадры большой искры разрядника
+  let lampGlow=0;               // 0..1 лампа горит
+  let semA=-0.06;               // угол крыла семафора
+  let semUp=false;
+  let boomT=-9, boomFlash=0;    // взрыв заряда
+  let keyT=0;                   // анимация ключа
+  let sparks=[];                // искры взрыва
+  let hinted=false;
+
+  const TX=()=>W*.20, RX=()=>W*.80, GY=()=>H*.82, SY=()=>H*.82-95;
+
+  function zig(x1,y1,x2,y2,seg,jit,branch){ // ломаная-молния
+    ctx.beginPath();ctx.moveTo(x1,y1);
+    let px=x1,py=y1;
+    for(let i=1;i<=seg;i++){const q=i/seg;
+      const nx=x1+(x2-x1)*q+(i<seg?(Math.random()-.5)*2*jit:0);
+      const ny=y1+(y2-y1)*q+(i<seg?(Math.random()-.5)*2*jit:0);
+      ctx.lineTo(nx,ny);
+      if(branch&&Math.random()<.3){ctx.moveTo(nx,ny);
+        ctx.lineTo(nx+(Math.random()-.5)*16,ny+Math.random()*12);ctx.moveTo(nx,ny);}
+      px=nx;py=ny;}
+    ctx.stroke();
+  }
+
+  function scene(){
+    ctx.clearRect(0,0,W,H);
+    const tx=TX(),rx=RX(),gy=GY(),sy=SY();
+    // фон: звёзды + пыль в луче
+    for(let i=0;i<46;i++){const x=(i*137.5)%W,y=(i*61.7)%(H*.55);
+      ctx.beginPath();ctx.arc(x,y,.8,0,7);ctx.fillStyle=`rgba(255,255,255,${.05+.05*Math.sin(t+i)})`;ctx.fill();}
+    // тёплый свет рампы на сцену
+    let g=ctx.createRadialGradient(W*.5,gy,20,W*.5,gy,W*.62);
+    g.addColorStop(0,'rgba(201,168,76,.10)');g.addColorStop(1,'rgba(201,168,76,0)');
+    ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
+    for(let i=0;i<12;i++){const x=W*.25+((i*83.7+t*6)%(W*.5)),y=H*.25+(i*37.3)%(H*.45);
+      ctx.beginPath();ctx.arc(x,y,1,0,7);ctx.fillStyle=`rgba(228,201,122,${.06+.04*Math.sin(t*2+i)})`;ctx.fill();}
+    // пол сцены
+    ctx.fillStyle='rgba(4,8,16,.75)';ctx.fillRect(0,gy,W,H-gy);
+    ctx.strokeStyle='rgba(201,168,76,.25)';ctx.lineWidth=1;
+    ctx.beginPath();ctx.moveTo(0,gy);ctx.lineTo(W,gy);ctx.stroke();
+
+    // ── ПЕРЕДАТЧИК ──
+    // стол
+    ctx.fillStyle='#140f08';ctx.strokeStyle='rgba(201,168,76,.45)';ctx.lineWidth=1.5;
+    ctx.beginPath();ctx.roundRect(tx-48,gy-38,96,38,4);ctx.fill();ctx.stroke();
+    // катушка (медная обмотка)
+    ctx.fillStyle='#1c1207';ctx.beginPath();ctx.roundRect(tx-17,gy-72,34,34,3);ctx.fill();
+    for(let i=0;i<7;i++){ctx.strokeStyle=i%2?'rgba(184,115,51,.8)':'rgba(228,160,90,.55)';
+      ctx.beginPath();ctx.moveTo(tx-15,gy-68+i*4.6);ctx.lineTo(tx+15,gy-68+i*4.6);ctx.stroke();}
+    ctx.strokeStyle='rgba(201,168,76,.5)';ctx.strokeRect(tx-17,gy-72,34,34);
+    // стойки + шары разрядника
+    ctx.strokeStyle='rgba(228,201,122,.9)';ctx.lineWidth=2;
+    ctx.beginPath();ctx.moveTo(tx-9,gy-72);ctx.lineTo(tx-9,sy+4);ctx.stroke();
+    ctx.beginPath();ctx.moveTo(tx+9,gy-72);ctx.lineTo(tx+9,sy+4);ctx.stroke();
+    for(const dx of[-9,9]){const gg=ctx.createRadialGradient(tx+dx-1.5,sy-1.5,1,tx+dx,sy,6);
+      gg.addColorStop(0,'#f4e3ae');gg.addColorStop(1,'#8a6a25');
+      ctx.beginPath();ctx.arc(tx+dx,sy,5.5,0,7);ctx.fillStyle=gg;ctx.fill();}
+    // телеграфный ключ на столе
+    const ka=keyT>0?.35:0; keyT=Math.max(0,keyT-1);
+    ctx.save();ctx.translate(tx+30,gy-42);ctx.rotate(-.15+ka);
+    ctx.strokeStyle='rgba(228,201,122,.9)';ctx.lineWidth=2.5;
+    ctx.beginPath();ctx.moveTo(-12,0);ctx.lineTo(10,0);ctx.stroke();
+    ctx.beginPath();ctx.arc(10,0,4,0,7);ctx.fillStyle='#c9a84c';ctx.fill();ctx.restore();
+
+    // искра разрядника: фоновая раз в ~2.5с + большая при отправке
+    const flick=(Math.floor(t*10)%25===0);
+    if(sparkT>0||flick){
+      ctx.save();ctx.strokeStyle='rgba(215,235,255,.95)';ctx.lineWidth=sparkT>0?1.8:1;
+      ctx.shadowColor='#9fd0ff';ctx.shadowBlur=sparkT>0?14:7;
+      zig(tx-9,sy,tx+9,sy,6,sparkT>0?5:3,sparkT>0);
+      ctx.restore();sparkT=Math.max(0,sparkT-1);}
+
+    // фоновые волны от разрядника (сектор к цели)
+    for(let i=0;i<3;i++){const q=((t*.35+i/3)%1);const r=q*(rx-tx)*.8;
+      const a=(1-q)*.16;
+      ctx.beginPath();ctx.arc(tx,sy,Math.max(r,1),-.9,.9);
+      ctx.strokeStyle=`rgba(201,168,76,${a})`;ctx.lineWidth=1;ctx.stroke();}
+
+    // ── ЛЕТЯЩИЙ ИМПУЛЬС ──
+    if(pulseR>=0){pulseR+=(rx-tx)/34;
+      for(let k=0;k<3;k++){const r=pulseR-k*14;if(r<=0)continue;
+        ctx.save();ctx.shadowColor='#e4c97a';ctx.shadowBlur=k?0:12;
+        ctx.beginPath();ctx.arc(tx,sy,r,-.65,.65);
+        ctx.strokeStyle=`rgba(228,201,122,${[.9,.4,.18][k]})`;ctx.lineWidth=k?1.2:2.4;ctx.stroke();ctx.restore();}
+      if(pulseR>=rx-tx){pulseR=-1;hit();}}
+
+    // ── ЦЕЛИ ──
+    const oy=sy;
+    // подставка-столб
+    ctx.strokeStyle='rgba(228,201,122,.75)';ctx.lineWidth=2;
+    ctx.beginPath();ctx.moveTo(rx,gy);ctx.lineTo(rx,oy+18);ctx.stroke();
+    // пульс-подсветка активной цели
+    ctx.beginPath();ctx.arc(rx,oy,26+3*Math.sin(t*2.4),0,7);
+    ctx.strokeStyle='rgba(201,168,76,.14)';ctx.lineWidth=1.2;ctx.stroke();
+
+    if(target===0){ // лампа
+      lampGlow=Math.max(0,lampGlow-.004);
+      const on=lampGlow>0, fl=on?(.8+.2*Math.sin(t*9)):0;
+      if(on){const gl=ctx.createRadialGradient(rx,oy,2,rx,oy,44);
+        gl.addColorStop(0,`rgba(255,224,140,${.5*lampGlow*fl})`);gl.addColorStop(1,'rgba(255,224,140,0)');
+        ctx.fillStyle=gl;ctx.beginPath();ctx.arc(rx,oy,44,0,7);ctx.fill();}
+      ctx.save();if(on){ctx.shadowColor='#ffe08c';ctx.shadowBlur=18*lampGlow;}
+      ctx.beginPath();ctx.arc(rx,oy,12,0,7);
+      ctx.fillStyle=on?`rgba(255,228,150,${.35+.45*lampGlow*fl})`:'rgba(255,255,255,.06)';
+      ctx.fill();ctx.strokeStyle='rgba(228,231,240,.75)';ctx.lineWidth=1.4;ctx.stroke();ctx.restore();
+      ctx.strokeStyle=on?'#ffdf9e':'rgba(228,201,122,.6)';ctx.lineWidth=1.2;
+      ctx.beginPath();ctx.moveTo(rx-5,oy+3);ctx.lineTo(rx-2,oy-4);ctx.lineTo(rx+2,oy+2);ctx.lineTo(rx+5,oy-4);ctx.stroke();
+      ctx.beginPath();ctx.moveTo(rx-4,oy+11);ctx.lineTo(rx+4,oy+11);ctx.lineTo(rx+3,oy+17);ctx.lineTo(rx-3,oy+17);ctx.closePath();
+      ctx.fillStyle='rgba(150,160,175,.5)';ctx.fill();
+    }else if(target===1){ // семафор
+      const want=semUp?-1.15:-0.06; semA+=(want-semA)*.08;
+      ctx.save();ctx.translate(rx,oy+6);ctx.rotate(semA);
+      ctx.fillStyle='rgba(228,201,122,.9)';ctx.beginPath();ctx.roundRect(0,-3.5,36,7,3);ctx.fill();
+      ctx.fillStyle='#c0453f';ctx.beginPath();ctx.roundRect(28,-3.5,8,7,3);ctx.fill();ctx.restore();
+      ctx.beginPath();ctx.arc(rx,oy+6,4,0,7);ctx.fillStyle='#8a6a25';ctx.fill();
+    }else{ // заряд
+      const since=t-boomT;
+      if(since>1.6){ctx.fillStyle='#161006';ctx.strokeStyle='rgba(201,168,76,.6)';ctx.lineWidth=1.4;
+        ctx.beginPath();ctx.roundRect(rx-14,oy-2,28,20,3);ctx.fill();ctx.stroke();
+        ctx.strokeStyle='rgba(192,69,63,.8)';ctx.beginPath();ctx.moveTo(rx,oy-2);ctx.lineTo(rx,oy-10);ctx.stroke();
+        ctx.beginPath();ctx.arc(rx,oy-11,1.6,0,7);ctx.fillStyle='#ffb26b';ctx.fill();}
+      if(since<1.4){const r=since*H*.3,a=Math.max(0,.85-since*.65);
+        ctx.beginPath();ctx.arc(rx,oy,r,0,7);ctx.strokeStyle=`rgba(228,201,122,${a})`;ctx.lineWidth=3;ctx.stroke();
+        ctx.beginPath();ctx.arc(rx,oy,r*.62,0,7);ctx.strokeStyle=`rgba(159,208,255,${a*.6})`;ctx.lineWidth=1.6;ctx.stroke();}
+      if(boomFlash>0){ctx.beginPath();ctx.arc(rx,oy,24,0,7);
+        ctx.fillStyle=`rgba(255,240,200,${boomFlash})`;ctx.fill();boomFlash-=.08;}}
+
+    // искры
+    sparks=sparks.filter(p=>p.life>0);
+    sparks.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=.14;p.life-=.03;
+      ctx.beginPath();ctx.arc(p.x,p.y,1.8,0,7);ctx.fillStyle=`rgba(${p.c},${p.life})`;ctx.fill();});
+  }
+
+  function hit(){sparkT=0;
+    if(target===0){lampGlow=1;}
+    else if(target===1){semUp=!semUp;}
+    else{boomT=t;boomFlash=.9;
+      for(let i=0;i<26;i++)sparks.push({x:RX(),y:SY(),vx:(Math.random()-.5)*6,
+        vy:-Math.random()*5-1,life:1,c:Math.random()>.4?'228,201,122':'159,208,255'});}
+    setTimeout(()=>{target=(target+1)%3;},900);
+  }
+
+  function fire(){if(pulseR>=0)return;keyT=6;sparkT=8;pulseR=6;
+    if(!hinted){hinted=true;const h=document.getElementById('heroHint');
+      if(h)setTimeout(()=>{h.style.opacity='0';},1400);}}
+
+  cv.style.cursor='pointer';cv.style.pointerEvents='auto';
+  cv.addEventListener('click',fire);
+
+  if(reduce){t=1;scene();return;} // статичный кадр без анимации
+  (function loop(){t+=.022;scene();requestAnimationFrame(loop);})();
 })();
 
 // ── ТЕМАТИЧЕСКИЕ ИЗОБРЕТЕНИЯ ─────────────────────────────────────────────────
