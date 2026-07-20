@@ -30,6 +30,12 @@
   .open{display:inline-block;margin-top:8px;font-weight:600}
   .empty{padding:26px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:12px}
   footer{padding:22px 0 50px;color:var(--muted);font-size:13px;text-align:center}
+  .stickybar{position:sticky;top:0;z-index:50;background:var(--paper);padding:10px 0 8px;margin:0 -20px;box-shadow:0 4px 14px rgba(15,30,51,.08)}
+  .stickybar .row{display:flex;align-items:center;gap:10px;padding:0 20px}
+  .backbtn{flex-shrink:0;display:inline-flex;align-items:center;gap:6px;background:#0f1e33;color:#fff;text-decoration:none;font-size:14px;font-weight:600;border-radius:10px;padding:10px 14px;white-space:nowrap}
+  .stickybar .search{flex:1;margin:0;padding:10px 14px}
+  .upbtn{position:fixed;right:16px;bottom:18px;width:46px;height:46px;border-radius:50%;background:#0f1e33;color:var(--gold);border:1px solid rgba(200,162,74,.5);font-size:20px;line-height:1;display:none;align-items:center;justify-content:center;z-index:60;box-shadow:0 6px 18px rgba(15,30,51,.35);cursor:pointer}
+  .upbtn.show{display:flex}
 </style>
 </head>
 <body>
@@ -41,15 +47,20 @@
 
 <div class="wrap">
   <div class="banner">База пополняется и проверяется. Сейчас в ней <b id="total">0</b> изобретений — постепенно доводим до всех 365, и каждое первенство сверяем по источникам.</div>
-  <div class="search">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9c9a92" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-    <input id="q" type="text" placeholder="Поиск изобретения…">
-  </div>
+  <div class="stickybar"><div class="row">
+    <a class="backbtn" href="calendar.html">← Календарь</a>
+    <div class="search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9c9a92" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input id="q" type="text" placeholder="Поиск изобретения…">
+    </div>
+  </div></div>
   <div class="count" id="count"></div>
   <div id="list"></div>
 </div>
 
-<footer><div class="wrap"><a href="index.html">← к дню музея</a> · Русская цивилизация · весь контент делает ИИ</div></footer>
+<button class="upbtn" id="upBtn" title="Наверх" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<footer><div class="wrap"><a href="calendar.html">← в календарь</a> · <a href="index.html">к дню музея</a> · Русская цивилизация · весь контент делает ИИ</div></footer>
 
 <script>
   const DB=[
@@ -166,8 +177,8 @@
     "s": "ok"
   },
   {
-    "n": "Артиллерийские орудия нового поколения",
-    "full": "Артиллерийские орудия нового поколения",
+    "n": "Первый в мире гусеничный ход (патент Блинова)",
+    "full": "Первый в мире гусеничный ход (патент Блинова)",
     "date": "9 января",
     "y": 1900,
     "p": "В. Г. Грабин",
@@ -2994,6 +3005,9 @@
   }
   document.getElementById('total').textContent=DB.length;
   q.addEventListener('input',render); render();
+  const upBtn=document.getElementById('upBtn');
+  window.addEventListener('scroll',()=>upBtn.classList.toggle('show',window.scrollY>600),{passive:true});
+  window.addEventListener('pageshow',e=>{if(e.persisted)location.reload()});
 </script>
 </body>
 </html>

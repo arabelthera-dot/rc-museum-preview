@@ -801,6 +801,9 @@ document.getElementById('calNext').onclick=()=>{calM=(calM+1)%12;renderCal();};
 document.querySelectorAll('section.block').forEach(s=>s.classList.add('reveal'));
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on');}),{threshold:.1});
 document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
+// Сброс состояния при повторном входе: браузер Telegram держит страницу в памяти,
+// без этого квиз и игры остаются «пройденными» при следующем визите
+window.addEventListener('pageshow',e=>{if(e.persisted)location.reload()});
 </script>
 </body>
 </html>
