@@ -27,9 +27,15 @@
   .logo .lt{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:16px}
   .logo .lt small{display:block;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-family:'Inter',sans-serif}
   .score{background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:6px 16px;font-size:13px;color:var(--gold-l);cursor:pointer;font-family:'Inter',sans-serif}
+  .crumbs{background:rgba(6,12,23,.6);border-bottom:1px solid var(--card-b);font-family:'Inter',sans-serif;font-size:12.5px}
+  .crumbs .wrap{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  .crumbs a{color:var(--gold-l);text-decoration:none;white-space:nowrap}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--muted);opacity:.6}
+  .crumbs .here{color:var(--muted);white-space:nowrap}
   .hero{display:flex;flex-direction:column}
   .hero-visual{position:relative;height:52vh;min-height:280px;max-height:520px;overflow:hidden;background:linear-gradient(160deg,#0a1e3a 0%,rgb(18,56,96) 55%,#0d2240 100%);display:flex;align-items:center;justify-content:center}
-  .hero-visual .hero-year{font-family:'Playfair Display',Georgia,serif;font-size:clamp(60px,14vw,130px);font-weight:900;color:rgba(255,255,255,.04);user-select:none;line-height:1;animation:yearFade 1.4s ease both}
+  .hero-visual .hero-year{font-family:'Playfair Display',Georgia,serif;font-size:clamp(60px,14vw,130px);font-weight:900;color:rgba(255,255,255,.04);user-select:none;line-height:1;animation:yearFade 1.4s ease both;pointer-events:none}
   @keyframes yearFade{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
   .hero-particles{position:absolute;inset:0;pointer-events:none}
   /* ── КАЛЕНДАРЬ ── */
@@ -110,11 +116,19 @@
   </div>
 </header>
 
+<nav class="crumbs"><div class="wrap">
+  <a href="/">Русская цивилизация</a>
+  <span class="sep">›</span>
+  <a href="izobreteniya.html">Музей изобретений</a>
+  <span class="sep">›</span>
+  <span class="here">5 января · Шухов</span>
+</div></nav>
+
 <div class="hero">
   <div class="hero-visual">
     <canvas id="heroCvs" class="hero-particles"></canvas>
     <div class="hero-year">1878</div>
-    <div id="heroHint" style="position:absolute;left:50%;bottom:14px;transform:translateX(-50%);background:rgba(6,12,23,.6);border:1px solid rgba(201,168,76,.35);border-radius:20px;padding:6px 18px;font-size:11px;letter-spacing:1.5px;color:var(--gold-l);font-family:'Inter',sans-serif;white-space:nowrap;transition:opacity .8s">⚡ тапни — запусти насос Шухова</div>
+    <div id="heroHint" style="position:absolute;left:50%;bottom:14px;transform:translateX(-50%);background:rgba(6,12,23,.6);border:1px solid rgba(201,168,76,.35);border-radius:20px;padding:6px 18px;font-size:11px;letter-spacing:1.5px;color:var(--gold-l);font-family:'Inter',sans-serif;white-space:nowrap;transition:opacity .8s;pointer-events:none">⚡ тапни — запусти насос Шухова</div>
     <div style="position:absolute;left:14px;top:12px;background:rgba(6,12,23,.5);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:4px 12px;font-size:10px;letter-spacing:1.2px;color:var(--muted);font-family:'Inter',sans-serif">Баку · 1878 · Балаханы → Чёрный город</div>
   </div>
   <div class="hero-text">
@@ -701,18 +715,20 @@ document.querySelectorAll('.starter-btn').forEach(b=>{
     ctx.beginPath();ctx.moveTo(nx,ny-34);ctx.lineTo(nx,ty2);ctx.stroke();
     ctx.beginPath();ctx.moveTo(W*.86,gy-H*.16);ctx.lineTo(W*.86,ty2);ctx.stroke();
 
-    // нефть в трубе
-    drops.forEach(d=>{if(on)d.q+=(.006+(surge>=0?.006:0));if(d.q>1)d.q-=1;
+    // нефть в трубе: после пуска — яркий сплошной поток со свечением
+    if(on){ctx.save();ctx.shadowColor='rgba(240,180,60,.9)';ctx.shadowBlur=10;}
+    drops.forEach(d=>{if(on)d.q+=(.010+(surge>=0?.008:0));if(d.q>1)d.q-=1;
       const y=(d.lane?ty2:ty1), x=tx0+8+(tx1-tx0-16)*d.q;
-      ctx.beginPath();ctx.ellipse(x,y,4,2.6,0,0,7);
-      ctx.fillStyle=on?'rgba(214,150,40,.85)':'rgba(120,90,30,.35)';ctx.fill();});
-    // импульс давления после тапа
-    if(surge>=0){surge+=(tx1-tx0)/40;
-      ctx.save();ctx.shadowColor='#e4c97a';ctx.shadowBlur=12;
-      ctx.beginPath();ctx.arc(tx0+surge,(ty1+ty2)/2,9,0,7);
-      ctx.fillStyle='rgba(228,201,122,.9)';ctx.fill();ctx.restore();
+      ctx.beginPath();ctx.ellipse(x,y,on?6:4,on?3.4:2.6,0,0,7);
+      ctx.fillStyle=on?'rgba(245,180,55,.95)':'rgba(120,90,30,.35)';ctx.fill();});
+    if(on)ctx.restore();
+    // импульс давления после тапа — крупный светящийся фронт
+    if(surge>=0){surge+=(tx1-tx0)/34;
+      ctx.save();ctx.shadowColor='#ffcf6a';ctx.shadowBlur=22;
+      ctx.beginPath();ctx.arc(tx0+surge,(ty1+ty2)/2,13,0,7);
+      ctx.fillStyle='rgba(255,206,106,.95)';ctx.fill();ctx.restore();
       if(tx0+surge>tx1){surge=-1;
-        for(let i=0;i<10;i++)smoke.push({x:W*.86,y:gy-H*.16,r:3,a:.5,vx:(Math.random()-.3)*.5,vy:-.7-Math.random()*.5});}}
+        for(let i=0;i<14;i++)smoke.push({x:W*.86,y:gy-H*.16,r:3,a:.55,vx:(Math.random()-.3)*.5,vy:-.7-Math.random()*.6});}}
 
     // завод справа (Чёрный город)
     [[W*.84,gy,22,H*.16],[W*.90,gy,16,H*.12],[W*.95,gy,13,H*.14]].forEach(([x,y,w,h])=>{
@@ -740,14 +756,18 @@ document.querySelectorAll('.starter-btn').forEach(b=>{
         ctx.fillText('двести подвод в день…',W*.55,gy+H*.03);}}
   }
 
-  function fire(){keyHint();if(!on){on=true;}surge=0;}
+  function fire(){keyHint();on=true;surge=0;
+    // мгновенный видимый впрыск: волна капель + толчок дыма над заводом
+    for(let i=0;i<3;i++)smoke.push({x:W*.86,y:gy-H*.16,r:3,a:.55,vx:(Math.random()-.3)*.5,vy:-.7-Math.random()*.5});
+    if(reduce){scene();}}  // без анимации всё равно перерисуем кадр
   function keyHint(){if(hinted)return;hinted=true;
-    const h=document.getElementById('heroHint');if(h)setTimeout(()=>{h.style.opacity='0';},1200);}
+    const h=document.getElementById('heroHint');if(h){h.textContent='нефть пошла — двести подвод больше не нужны';setTimeout(()=>{h.style.opacity='0';},2200);}}
 
   cv.style.cursor='pointer';cv.style.pointerEvents='auto';
   cv.addEventListener('click',fire);
+  cv.addEventListener('touchstart',e=>{e.preventDefault();fire();},{passive:false});
 
-  if(reduce){on=true;t=1;scene();return;}
+  if(reduce){t=1;scene();return;}   // ждём тап; fire() перерисует кадр
   (function loop(){t+=.022;scene();requestAnimationFrame(loop);})();
 })();
 
