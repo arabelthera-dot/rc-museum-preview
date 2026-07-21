@@ -170,6 +170,12 @@
   .cal-item.now .s{color:rgba(255,255,255,.6)}
 
   footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
+  .crumbs{background:rgba(6,12,23,.6);border-bottom:1px solid var(--card-b);font-family:'Inter',sans-serif;font-size:12.5px}
+  .crumbs .wrap{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  .crumbs a{color:var(--gold-l);text-decoration:none;white-space:nowrap}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--muted);opacity:.6}
+  .crumbs .here{color:var(--muted);white-space:nowrap}
 </style>
 </head>
 <body>
@@ -190,6 +196,14 @@
   </div>
   <div class="score-info" id="scoreInfo">Баллы знаний за этот день. Отвечай в викторине, проходи развилку и обе игры — собери все 80 и получи звание. Итог — внизу страницы.</div>
 </header>
+<nav class="crumbs"><div class="wrap">
+  <a href="/">Русская цивилизация</a>
+  <span class="sep">›</span>
+  <a href="izobreteniya.html">Музей изобретений</a>
+  <span class="sep">›</span>
+  <span class="here">1 января · Кабельное ТВ</span>
+</div></nav>
+
 
 <div class="hero">
   <div class="hero-visual">
@@ -836,5 +850,6 @@ if(cv){ try{
   })();
 }catch(e){ console.warn('3D hero недоступен:',e); } }
 </script>
+<script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
 </body>
 </html>
