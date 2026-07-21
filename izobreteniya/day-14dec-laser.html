@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>первая в мире мягкая посадка на Луну — «Луна-9» — Русские первые в мире</title>
+<title>мазер и принципы лазера — Русские первые в мире</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/three@0.160/build/three.min.js"></script>
 <style>
   :root{
     --dark:#060c17;--dark2:#0c1826;--surface:#111f33;
@@ -102,7 +103,7 @@
 
 <header class="top">
   <div class="wrap">
-    <a class="logo" href="/">
+    <a class="logo" href="../index.html">
       <svg width="34" height="34" viewBox="0 0 48 48" aria-label="логотип">
         <circle cx="24" cy="24" r="23" fill="#0f1e33" stroke="#c8a24a" stroke-width="2"/>
         <path d="M24 10 L24 30 L12 30 Z" fill="#c8a24a"/>
@@ -115,25 +116,25 @@
   </div>
 </header>
 <nav class="crumbs"><div class="wrap">
-  <a href="/">Русская цивилизация</a>
+  <a href="../index.html">Русская цивилизация</a>
   <span class="sep">›</span>
-  <a href="izobreteniya.html">Музей изобретений</a>
+  <a href="index.html">Музей изобретений</a>
   <span class="sep">›</span>
-  <span class="here">3 января · Луна-9</span>
+  <span class="here">14 декабря · Лазер</span>
 </div></nav>
 
 
 <div class="hero">
   <div class="hero-visual">
     <canvas id="heroCvs" class="hero-particles"></canvas>
-    <div class="hero-year">1966</div>
+    <div class="hero-year">1922</div>
   </div>
   <div class="hero-text">
     <div class="wrap">
-      <div class="date-chip">3 февраля</div>
+      <div class="date-chip">14 декабря</div>
       <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
-      <h1>первая в мире мягкая посадка на Луну — «Луна-9»</h1>
-      <p class="hook">Главный конструктор умер за двадцать дней до триумфа. Королёв не увидел как «Луна-9» плавно опускается на лунный грунт и присылает первые в истории снимки лунной поверхности сделанные прямо на месте. До этого никто не знал: а можно ли вообще там сесть? Одни учёные считали — поверхность покрыта многометровым слоем пыли и любой аппарат в ней утонет. «Луна-9» ответила: нет, твёрдая. И прислала доказательства.</p>
+      <h1>мазер и принципы лазера</h1>
+      <p class="hook">Два советских физика в начале 1950-х поняли: можно заставить атомы излучать свет строго согласованно — один за другим, в одном направлении, с одной длиной волны. Это и есть лазер — по сути, «усилитель» фотонов. Николай Басов и Александр Прохоров разработали принципы мазера — предшественника лазера — одновременно с американцем Таунсом, независимо, в Москве. В 1964 году все трое получили Нобелевскую премию. Сегодня лазер режет сталь, восстанавливает зрение, читает штрихкоды и передаёт данные через стекловолокно. Всё это — из одного уравнения, написанного в московском физическом институте.</p>
       <div style="display:flex;gap:12px;flex-wrap:wrap">
         <button class="btn gold" onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">Читать историю ↓</button>
         <button class="btn ghost" onclick="document.getElementById('video').scrollIntoView({behavior:'smooth'})">▶ Смотреть видео</button>
@@ -160,12 +161,7 @@
   <div class="wrap">
     <div class="kicker">Видео дня</div>
     <h2>История в 90 секундах</h2>
-    <video controls playsinline preload="metadata"
-  poster="day-03jan-luna9-poster.jpg"
-  style="width:100%;aspect-ratio:16/9;background:#050c18;border-radius:14px;display:block;box-shadow:0 8px 40px rgba(0,0,0,.5)">
-  <source src="day-03jan-luna9.mp4" type="video/mp4">
-  Ваш браузер не поддерживает видео.
-</video>
+    <div style="aspect-ratio:16/9;background:rgba(255,255,255,.03);border-radius:14px;display:flex;align-items:center;justify-content:center;color:var(--muted)">Видео создаётся — скоро появится</div>
   </div>
 </section>
 
@@ -173,28 +169,28 @@
 <section class="block" id="story">
   <div class="wrap">
     <div class="kicker">История изобретения</div>
-    <h2>первая в мире мягкая посадка на Луну — «Луна-9»</h2>
+    <h2>мазер и принципы лазера</h2>
     <div class="article collapsed" id="article">
       <div class="body" id="articleBody">
         <p>СТАТЬЯ БАЗЫ ЗНАНИЙ</p>
 <p><i>(позиция на сайте: Блок 4)</i></p>
 
 
-<p><b>3 февраля 1966 года, 18:45 по московскому времени.</b> Советская автоматическая станция «Луна-9» касается поверхности Луны. Впервые в истории — мягко, без крушения. Капсула с аппаратурой отстёгивается, надувные амортизаторы гасят удар, шарообразный контейнер раскрывает четыре лепестка-антенны и ждёт. Через несколько минут на Землю идёт сигнал. Потом — первый снимок лунного горизонта.</p>
+<p><b>Откуда идея.</b> Теоретически вынужденное (стимулированное) излучение описал ещё Эйнштейн в 1917 году: если фотон определённой энергии попадает на возбуждённый атом, атом тоже испускает фотон — точно с той же длиной волны и в том же направлении. Два становятся одним, потом двух становится четыре — цепная реакция. Но от теории до работающего прибора прошло почти сорок лет.</p>
 
-<p><b>Главный вопрос перед посадкой.</b> Учёные спорили: что под ногами на Луне? Миллиарды лет метеоритная пыль падала на поверхность и не уходила никуда — нет ветра, нет воды. Одни считали, что слой пыли — десятки метров, и любой аппарат в ней утонет. Другие возражали: гравитация уплотняет пыль, поверхность твёрдая. Без прямого ответа невозможно планировать посадку человека. «Луна-9» дала ответ: твёрдая.</p>
+<p><b>Басов и Прохоров.</b> В начале 1950-х в Физическом институте имени Лебедева (ФИАН) в Москве молодой Николай Басов и его научный руководитель Александр Прохоров работали над тем, как реализовать стимулированное излучение в реальном устройстве. Задача: взять вещество, накачать его энергией так, чтобы атомы оказались в возбуждённом состоянии — и затем «запустить» цепную реакцию одновременного излучения. Для первого прибора выбрали молекулы аммиака и микроволновый диапазон.</p>
 
-<p><b>Как она работала.</b> Станция весила 1583 килограмма при запуске. До Луны долетела меньшая часть — посадочная капсула весом около 100 килограммов. Специальная система тормозных двигателей гасила скорость, надувные мешки смягчали удар, а потом аппарат раскрылся как цветок: четыре лепестка-стабилизатора разложились и удержали его в вертикальном положении. Три часа передавала снимки.</p>
+<p><b>Первый мазер — 1954.</b> Мазер (Microwave Amplification by Stimulated Emission of Radiation — усиление микроволн стимулированным излучением) — это прибор, работающий в радиодиапазоне. В 1954 году Басов и Прохоров создали первый действующий аммиачный мазер. Параллельно, независимо и почти одновременно, мазер создавал американец Чарльз Таунс со своей командой. Историки науки по сей день обсуждают, кто именно был «первее» на несколько месяцев. Нобелевский комитет решил: открытие сделано одновременно, премия — совместная.</p>
 
-<p><b>Девять снимков.</b> За время работы «Луна-9» сделала 9 фотографий лунной поверхности и передала их на Землю. Качество было достаточным чтобы увидеть камни, кратеры и горизонт. Это первые фотографии сделанные прямо на Луне — не с орбиты, а с поверхности. Их немедленно растиражировали все мировые газеты.</p>
+<p><b>От мазера к лазеру.</b> Следующий шаг — перенести принцип из радиодиапазона в видимый свет. Слово «лазер» (LASER — Light Amplification by Stimulated Emission of Radiation) — тот же принцип, но фотоны, а не микроволны. Теоретические основы перехода разрабатывали Басов и Прохоров; в 1960 году американец Теодор Мейман создал первый действующий оптический лазер на рубиновом кристалле. Советские физики независимо разработали полупроводниковые лазеры — направление, которое стало основой компакт-дисков, оптоволокна и лазерных принтеров.</p>
 
-<p><b>Исторический курьёз.</b> Британские радиоастрономы из Джодрелл-Бэнка перехватили сигнал «Луны-9» и обнаружили, что он в точности совпадает с форматом репортёрских фотоаппаратов — стандартным телефаксным кодом. Они одолжили аппарат у информационного агентства и расшифровали снимки самостоятельно — раньше официального советского объявления. СССР был вынужден срочно публиковать.</p>
+<p><b>Нобелевская премия 1964 года.</b> Нобелевский комитет присудил премию по физике Николаю Басову, Александру Прохорову и Чарльзу Таунсу — «за фундаментальные работы в области квантовой электроники, которые привели к созданию осцилляторов и усилителей на основе принципа мазера–лазера». Для советской физики это был один из самых весомых сигналов признания.</p>
 
-<p><b>Горькая часть.</b> Королёв умер 14 января 1966 года — за двадцать дней до посадки. Он знал, что «Луна-9» запущена и летит, но не увидел финала. На следующей неделе после его смерти в Советском Союзе не было публичного имени — только «Главный конструктор». Мир узнал о Королёве только тогда, когда его уже не стало.</p>
+<p><b>Что из этого вышло.</b> Лазер сегодня — это и скальпель хирурга (лазерная коррекция зрения), и инструмент строителя (нивелир), и элемент каждого компакт-диска и стримингового сервиса (чтение данных), и основа интернета (передача данных через оптоволокно), и промышленный резак (режет металл до 20 мм толщиной). Без мазера–лазера не было бы GPS — атомные часы спутников работают на мазерном принципе. Не было бы МРТ в нынешнем виде. Не было бы точечной хирургии.</p>
 
-<p><b>Что дальше.</b> США запустили свой аппарат Surveyor-1 в мае 1966 — через три месяца после «Луны-9». Тоже сел мягко. Гонка продолжалась. Но первыми снова были советские.</p>
+<p><b>Николай Басов.</b> 14 декабря 1922 года — 1 июля 2001 года. Родился в г. Усмань Воронежской области. Воевал в Великой Отечественной. Окончил МИФИ. Работал в ФИАН всю жизнь, стал его директором. Автор более 300 научных работ. Занимался также лазерным управляемым термоядерным синтезом.</p>
 
-<p><b>Человек.</b> Королёв (1907–1966) создал советскую космическую программу из ничего. Лагерь, шарашка, реабилитация, ракеты, Спутник, Гагарин, «Луна». Он умер прямо накануне главного технического триумфа своего бюро.</p>
+<p><b>Александр Прохоров.</b> 11 июля 1916 — 8 января 2002. Родился в Австралии (куда эмигрировали родители), вернулся в СССР. Воевал, был ранен. Доктор физико-математических наук. Нобелевская лауреат. Работал в ФИАН, стал академиком.</p>
 
 
 
@@ -205,218 +201,7 @@
       <div class="more"><button class="btn ghost" id="moreBtn">Читать дальше ↓</button></div>
     </div>
   </div>
-</section
-
-<section class="block" id="theme-inventions" style="background:rgba(201,168,76,.03);border-top:1px solid rgba(201,168,76,.15)">
-  <div class="wrap">
-    <div class="kicker">Космос · Русские первенства</div>
-    <h2 style="margin-bottom:6px">Что ещё русские изобрели первыми в теме «космос»</h2>
-    <p style="color:var(--muted);margin-top:0;margin-bottom:16px;max-width:62ch">Этот день — не единственный. Вот другие изобретения русских в этой теме.</p>
-    <div style="text-align:center;margin:14px 0 4px">
-      <button class="btn gold" id="themeInvBtn">Показать 20 изобретений →</button>
-    </div>
-    <div id="themeInvBody" style="display:none;margin-top:20px">
-      <div class="card" style="padding:0;overflow:hidden">
-        <div style="padding:14px 20px;background:rgba(201,168,76,.08);border-bottom:1px solid rgba(201,168,76,.15)">
-          <span style="color:var(--gold-l);font-weight:600;font-size:14px;letter-spacing:.5px">20 ИЗОБРЕТЕНИЙ · КОСМОС</span>
-        </div>
-        <div style="padding:4px 20px 12px">
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">2 янв 1959</span>
-          <span>«Луна-1», первая межпланетная станция и 2-я космическая скорость</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">12 янв 1907</span>
-          <span>Первая в мире межконтинентальная баллистическая ракета Р-7</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">16 янв</span>
-          <span>Первая стыковка кораблей и переход через открытый космос («Союз-4/5»)</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">29 янв</span>
-          <span>Первый в мире серийный атомный подводный ракетоносец К-19</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">20 фев</span>
-          <span>Первая в мире модульная орбитальная станция «Мир»</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">17 мар</span>
-          <span>Стартовые (пусковые) ракетные комплексы</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">18 мар</span>
-          <span>Первый выход человека в открытый космос (Леонов, «Восход-2»)</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">12 апр</span>
-          <span>Первый полёт человека в космос (Ю. Гагарин, «Восток-1»)</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">17 апр</span>
-          <span>Первый в мире буксируемый ракетный снаряд</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">19 апр</span>
-          <span>Первая в мире орбитальная станция «Салют-1»</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">23 апр</span>
-          <span>Первая в мире система спутникового телевещания</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">2 июн</span>
-          <span>Первый в мире ракетный двигатель на гиперголическом топливе</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">16 июн</span>
-          <span>Первая женщина в космосе (В. Терешкова)</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">23 июн</span>
-          <span>Авиационные и ракетные двигатели (НК)</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">30 июн</span>
-          <span>Ракетно-космическая техника, крылатые ракеты</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">20 июл</span>
-          <span>Первая в мире ракета на жидком кислороде и керосине (испытания ГДЛ)</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">24 июл</span>
-          <span>Первая в мире женщина в открытом космосе (С. Савицкая)</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">6 авг</span>
-          <span>Первый в мире суточный полёт человека в космос («Восток-2», Г. Титов)</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">11 авг</span>
-          <span>Первый в мире групповой космический полёт («Восток-3/4»)</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">19 авг</span>
-          <span>Белка и Стрелка: первое в мире возвращение живых существ с орбиты («Спутник-5»)</span>
-        </div>
-        </div>
-      </div>
-      <p style="text-align:center;color:var(--muted);font-size:14px;margin-top:12px">Каждое — отдельный день музея. <a href="/izobreteniya.html">Полная база →</a></p>
-    </div>
-  </div>
-</section
-
->
-
-<!-- ── УНИКАЛЬНАЯ ИГРА: МЯГКАЯ ПОСАДКА ── -->
-<section class="block" id="game-landing">
-  <div class="wrap">
-    <div class="kicker">Игра · Уникальная механика</div>
-    <h2>Посади «Луну-9» мягко</h2>
-    <p style="color:var(--muted);max-width:64ch;margin-top:0">До «Луны-9» никто не знал, выдержит ли лунная поверхность посадку. Ты — оператор. Включи тормозной двигатель в нужный момент — не слишком рано и не слишком поздно.</p>
-    <canvas id="luna9game" width="680" height="320" style="width:100%;max-width:680px;border-radius:14px;border:1px solid rgba(255,255,255,.1);display:block;touch-action:none"></canvas>
-    <div id="l9msg" style="min-height:32px;font-weight:600;font-size:17px;color:var(--gold-l);margin:12px 0;text-align:center"></div>
-    <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:4px">
-      <button class="btn gold" id="l9brake" style="font-size:17px;padding:14px 32px;letter-spacing:.5px">🔥 ВКЛЮЧИТЬ ТОРМОЗА</button>
-      <button class="btn ghost" id="l9reset" style="display:none">Попробовать снова</button>
-    </div>
-    <p style="font-size:13px;color:var(--muted);text-align:center;margin-top:8px">Зонд падает — альтиметр показывает высоту. Нажимай в нужный момент.</p>
-  </div>
 </section>
-<script>
-(function(){
-  const cv=document.getElementById('luna9game');
-  if(!cv)return;
-  const ctx=cv.getContext('2d');
-  const W=cv.offsetWidth||680,H=320;
-  cv.width=W;cv.height=H;
-  const btn=document.getElementById('l9brake');
-  const rst=document.getElementById('l9reset');
-  const msg=document.getElementById('l9msg');
-  let y=30,vy=1.2,fuel=100,braking=false,done=false,landed=false,crashed=false;
-  let stars=Array.from({length:60},()=>({x:Math.random()*W,y:Math.random()*H*.8,r:Math.random()*1.2+.3}));
-  const GROUND=H-40,PROBE_H=28,SAFE_TOP=H-120,SAFE_BOT=H-80;
-
-  function drawScene(){
-    // Фон
-    ctx.fillStyle='#040c1a';ctx.fillRect(0,0,W,H);
-    // Звёзды
-    stars.forEach(s=>{ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fillStyle='rgba(255,255,255,.7)';ctx.fill();});
-    // Луна поверхность
-    ctx.fillStyle='#3a3a4a';ctx.fillRect(0,GROUND,W,H-GROUND);
-    // Кратеры
-    [[W*.15,GROUND+8,18],[W*.5,GROUND+6,12],[W*.78,GROUND+9,22]].forEach(([cx,cy,r])=>{
-      ctx.beginPath();ctx.ellipse(cx,cy,r,r*.4,0,0,Math.PI*2);ctx.fillStyle='#2a2a38';ctx.fill();});
-    // Зона безопасного торможения (зелёная полоса)
-    ctx.fillStyle='rgba(63,155,82,.08)';ctx.fillRect(0,SAFE_TOP,W,SAFE_BOT-SAFE_TOP);
-    ctx.strokeStyle='rgba(63,155,82,.35)';ctx.lineWidth=1;ctx.setLineDash([4,4]);
-    ctx.beginPath();ctx.moveTo(0,SAFE_TOP);ctx.lineTo(W,SAFE_TOP);ctx.stroke();
-    ctx.beginPath();ctx.moveTo(0,SAFE_BOT);ctx.lineTo(W,SAFE_BOT);ctx.stroke();
-    ctx.setLineDash([]);
-    ctx.fillStyle='rgba(63,155,82,.6)';ctx.font='11px Inter,sans-serif';
-    ctx.fillText('← зона включения тормозов',8,SAFE_TOP-5);
-    // Альтиметр
-    const altPct=Math.max(0,Math.min(1,(GROUND-y-PROBE_H)/(GROUND-30)));
-    const bh=(H-80)*altPct;
-    ctx.fillStyle='rgba(255,255,255,.06)';ctx.fillRect(W-38,30,22,H-80);
-    ctx.fillStyle=altPct>.35?'#c9a84c':'#3f9b52';ctx.fillRect(W-38,30+(H-80)-bh,22,bh);
-    ctx.strokeStyle='rgba(255,255,255,.2)';ctx.lineWidth=1;ctx.strokeRect(W-38,30,22,H-80);
-    ctx.fillStyle='#e8eef5';ctx.font='11px Inter,sans-serif';ctx.fillText('ALT',W-37,24);
-    const altKm=Math.round(altPct*100);
-    ctx.fillStyle='#c9a84c';ctx.font='bold 13px Inter,sans-serif';ctx.fillText(altKm+'%',W-40,H-42);
-    // Зонд
-    const px=W/2,py=y;
-    if(landed){
-      // Лепестки
-      ctx.fillStyle='#c9a84c';
-      [-22,-12,0,12,22].forEach(dx=>{ctx.fillRect(px+dx-3,GROUND-10,6,10);});
-      ctx.fillStyle='#e4c97a';ctx.fillRect(px-10,GROUND-PROBE_H-5,20,PROBE_H+5);
-    } else {
-      ctx.fillStyle='#2d8cbf';ctx.fillRect(px-10,py,20,PROBE_H);
-      ctx.fillStyle='#e4c97a';ctx.fillRect(px-4,py-8,8,8);
-      if(braking){
-        ctx.fillStyle='rgba(255,140,0,.8)';
-        ctx.beginPath();ctx.moveTo(px-6,py+PROBE_H);ctx.lineTo(px+6,py+PROBE_H);ctx.lineTo(px,py+PROBE_H+18);ctx.closePath();ctx.fill();
-      }
-    }
-    // Топливо
-    ctx.fillStyle='rgba(255,255,255,.06)';ctx.fillRect(8,30,14,H-80);
-    ctx.fillStyle='#2d8cbf';ctx.fillRect(8,30+(H-80)*(1-fuel/100),14,(H-80)*(fuel/100));
-    ctx.strokeStyle='rgba(255,255,255,.2)';ctx.lineWidth=1;ctx.strokeRect(8,30,14,H-80);
-    ctx.fillStyle='#e8eef5';ctx.font='11px Inter,sans-serif';ctx.fillText('FUEL',4,24);
-  }
-
-  function tick(){
-    if(done)return;
-    if(braking){
-      vy=Math.max(vy-.18,0);fuel=Math.max(fuel-1.2,0);
-      if(fuel<=0){braking=false;}
-    } else {vy=Math.min(vy+.04,3.5);}
-    y+=vy;
-    if(y+PROBE_H>=GROUND){
-      done=true;
-      if(vy<1.2){landed=true;y=GROUND-PROBE_H;msg.textContent='✅ Мягкая посадка! Именно так 3 февраля 1966 года «Луна-9» впервые в истории мягко села на другое небесное тело.';msg.style.color='#7ed4a0';}
-      else{crashed=true;msg.textContent='💥 Удар о поверхность — скорость была слишком высокой. Попробуй включить тормоза чуть раньше.';msg.style.color='#f08080';}
-      rst.style.display='inline-block';btn.style.display='none';
-    }
-    if(braking&&fuel<=0&&y+PROBE_H<GROUND&&vy>1){
-      done=true;crashed=true;msg.textContent='⚠️ Топливо кончилось слишком рано, скорость не погашена — зонд разбился. Включай тормоза ниже.';msg.style.color='#f08080';
-      rst.style.display='inline-block';btn.style.display='none';}
-    drawScene();
-    if(!done)requestAnimationFrame(tick);
-  }
-
-  btn.addEventListener('click',()=>{if(!done&&!braking){braking=true;btn.textContent='🔥 Тормоза включены…';btn.disabled=true;}});
-  btn.addEventListener('touchstart',e=>{e.preventDefault();btn.click();},{passive:false});
-  rst.addEventListener('click',()=>{
-    y=30;vy=1.2;fuel=100;braking=false;done=false;landed=false;crashed=false;
-    msg.textContent='';btn.textContent='🔥 ВКЛЮЧИТЬ ТОРМОЗА';btn.disabled=false;btn.style.display='inline-block';rst.style.display='none';
-    requestAnimationFrame(tick);});
-  drawScene();requestAnimationFrame(tick);
-})();
-</script>
 
 <!-- ── ИГРЫ ── -->
 
@@ -453,32 +238,30 @@
 .gm-drop.filled{border-style:solid;border-color:#c9a84c;color:#e4c97a;font-weight:600}
 </style>
 
-<div class="gm" id="gm_fallback">
-  <h3>⏱ Быстрый ответ</h3>
-  <div class="gm-score">Чем быстрее ответишь — тем больше очков. Осталось: <b id="gm_fallback_t">15</b> сек</div>
-  <p style="font-weight:600;font-size:16px;margin:0 0 12px">Что доказала «Луна-9» своей посадкой?</p>
-  <div id="gm_fallback_opts"><button class="gm-btn" onclick="gm_fallback_ans(0)">А) Что на Луне есть вода</button><button class="gm-btn" onclick="gm_fallback_ans(1)">Б) Что лунная поверхность твёрдая, а не покрыта глубоким слоем пыли</button><button class="gm-btn" onclick="gm_fallback_ans(2)">В) Что Луна имеет магнитное поле</button><button class="gm-btn" onclick="gm_fallback_ans(3)">Г) Что на Луне есть атмосфера</button></div>
-  <div class="gm-exp" id="gm_fallback_exp">до «Луны-9» учёные спорили: не утонет ли посадочный аппарат в многометровом слое пыли. «Луна-9» доказала — поверхность твёрдая и выдержит посадку людей.</div>
+<div class="gm" id="gm_year">
+  <h3>📆 Угадай год</h3>
+  <p style="font-size:16px;font-weight:600;margin:0 0 14px">В каком году произошло это событие?</p>
+  <div style="display:flex;align-items:center;gap:14px;margin-bottom:8px">
+    <input type="range" class="gm-slider" id="gm_year_sl" min="1820" max="1980" value="1900"
+      oninput="document.getElementById('gm_year_val').textContent=this.value">
+    <span id="gm_year_val" style="font-size:22px;font-weight:700;color:#c9a84c;min-width:55px">1900</span>
+  </div>
+  <div class="gm-bar"><i id="gm_year_bar" style="width:50%"></i></div>
+  <button class="gm-btn" style="max-width:180px;margin-top:10px" onclick="gm_year_check()">Ответить</button>
+  <div class="gm-exp" id="gm_year_exp"></div>
 </div>
 <script>
 (function(){
-  let t=15,ti=null,done=false;
-  const correct=1;
-  ti=setInterval(()=>{
-    if(done)return;
-    t--;document.getElementById('gm_fallback_t').textContent=t;
-    if(t<=0){clearInterval(ti);gm_fallback_ans(-1);}
-  },1000);
-  window['gm_fallback_ans']=function(i){
-    if(done)return;done=true;clearInterval(ti);
-    const btns=document.querySelectorAll('#gm_fallback_opts .gm-btn');
-    btns.forEach((b,j)=>{b.disabled=true;
-      if(j===correct)b.classList.add('ok');
-      else if(j===i)b.classList.add('no');
-      else b.classList.add('neutral');
-    });
-    document.getElementById('gm_fallback_exp').classList.add('show');
-    if(i===correct){const pts=Math.max(5,Math.round(t/15*15));if(typeof award==='function')award('gm_fallback',pts);}
+  window['gm_year_check']=function(){
+    const val=+document.getElementById('gm_year_sl').value;
+    const diff=Math.abs(val-1900);
+    const pts=diff===0?20:diff<=2?15:diff<=5?10:diff<=10?5:0;
+    const exp=document.getElementById('gm_year_exp');
+    exp.textContent='Правильный год: 1900. '+(pts>0?'Отлично! +'+pts+' очков.':'Попробуй в следующий раз.');
+    exp.classList.add('show');
+    document.getElementById('gm_year_bar').style.width=Math.min(100,pts/20*100)+'%';
+    document.getElementById('gm_year_sl').disabled=true;
+    if(pts>0){if(typeof award==='function')award('gm_year',pts);}
   };
 })();
 </script>
@@ -494,7 +277,7 @@
 </div>
 <script>
 (function(){
-  const data=[{"text": "Королёв увидел первые снимки с поверхности Луны».\n→ Миф. Королёв умер 14 января 1966 года — за 20 дней до посадки «Луны-9». Он знал что станция в пути, но триумфа не увидел.\n\n**Верю — не верю:** «США первыми совершили мягкую посадку на Луну", "answer": false, "exp": "Первыми были советские — «Луна-9», 3 февраля 1966. Американский Surveyor-1 сел в мае того же года — через три месяца."}];
+  const data=[{"text": "Первый лазер создали советские физики».\n→ Уточнение: первый мазер (на микроволнах) — советские физики и Таунс независимо, примерно одновременно. Первый оптический лазер (видимый свет, 1960) — американец Теодор Мейман. Но теоретические принципы лазера разработали Басов и Прохоров одновременно с американцами.\n\n**Верю — не верю:** «Без лазера не было бы GPS", "answer": true, "exp": "Атомные часы в спутниках GPS используют мазерный принцип (водородный мазер). Именно их точность обеспечивает навигацию с точностью до метров."}];
   let idx=0,score=0,waiting=false;
   function show(){
     if(idx>=data.length){
@@ -541,7 +324,7 @@
 <section class="block" id="chat-sec">
   <div class="wrap">
     <div class="kicker">Поговори с изобретателем</div>
-    <h2>Спроси ✓ Сергей Павлович Королёв</h2>
+    <h2>Спроси ✓ Николай Геннадьевич Басов</h2>
     <p style="color:var(--muted)">Задай вопрос — ответит сам изобретатель.</p>
     <div id="starters"></div>
     <div id="chatBox" style="margin:16px 0;min-height:80px"></div>
@@ -560,16 +343,116 @@
     <h2>Фрагмент экскурсии</h2>
     <div class="card" style="border-left:3px solid var(--gold);border-radius:0 16px 16px 0">
       <p>ФРАГМЕНТ ЭКСКУРСИИ</p>
-<p>«Следующая витрина — один снимок. Просто снимок: камни, пыль, горизонт. Чёрно-белый. Сделан 3 февраля 1966 года на расстоянии почти четыреста тысяч километров от нас — прямо на поверхности Луны.</p>
-<p>До этого фотографии Луны делали только с орбиты или с пролётных траекторий. Здесь — с места. Станция "Луна-9" первой в истории мягко села на другое небесное тело и прислала снимки как репортёр с места событий.</p>
-<p>Теперь смотрите на эту витрину рядом — газетная вырезка. Это британская газета с теми же снимками. Дата — тоже 3 февраля. Советский Союз ещё официально не объявил результаты, а британцы из Джодрелл-Бэнка уже расшифровали сигнал с помощью газетного телефакса. Потому что формат передачи совпадал. Так что первыми снимки опубликовали не советские СМИ — британские. И советской стороне пришлось срочно устраивать пресс-конференцию.</p>
-<p>Переходим дальше».</p>
+<p>«Посмотрите на этот луч. Простой лазерный указатель — красная точка. Теперь представьте, что это та же физика, что режет сталь на заводе. Та же физика, что восстанавливает зрение за 15 минут. Та же физика, по которой идут данные в интернете — через стекловолокно. Та же физика в GPS-приёмнике у вас в телефоне.</p>
+<p>Это — лазер. И в основе лежит одна идея, которую в 1950-х разработали двое советских физиков: Николай Басов и Александр Прохоров. Идея проста: заставить атомы излучать фотоны не хаотично, а все разом, в одном направлении, с одной длиной волны. Один фотон попадает на возбуждённый атом — и тот испускает такой же. Цепная реакция.</p>
+<p>В 1964 году их наградили Нобелевской премией по физике — вместе с американцем Чарльзом Таунсом, который придумал то же самое независимо и почти одновременно. Бывает. Когда физика созрела — она рождается сама, на двух континентах.</p>
+<p>А мы каждый день пользуемся результатом. Переходим дальше».</p>
     </div>
   </div>
 </section>
 
 <div class="wrap"><div class="ad-slot"><span class="lbl">Реклама</span><span class="ph-txt">Партнёрский блок в середине страницы.</span></div></div>
->
+
+<section class="block" id="theme-inventions" style="background:rgba(201,168,76,.03);border-top:1px solid rgba(201,168,76,.15)">
+  <div class="wrap">
+    <div class="kicker">Физика · Русские первенства</div>
+    <h2 style="margin-bottom:6px">Что ещё русские изобрели первыми в теме «физика»</h2>
+    <p style="color:var(--muted);margin-top:0;margin-bottom:16px;max-width:62ch">Этот день — не единственный. Вот другие изобретения русских в этой теме.</p>
+    <div style="text-align:center;margin:14px 0 4px">
+      <button class="btn gold" id="themeInvBtn">Показать 20 изобретений →</button>
+    </div>
+    <div id="themeInvBody" style="display:none;margin-top:20px">
+      <div class="card" style="padding:0;overflow:hidden">
+        <div style="padding:14px 20px;background:rgba(201,168,76,.08);border-bottom:1px solid rgba(201,168,76,.15)">
+          <span style="color:var(--gold-l);font-weight:600;font-size:14px;letter-spacing:.5px">20 ИЗОБРЕТЕНИЙ · ФИЗИКА</span>
+        </div>
+        <div style="padding:4px 20px 12px">
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">3 янв</span>
+          <span><a href="day-03jan-luna9.html" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,.3);transition:.15s" onmouseover="this.style.color='var(--gold-l)'" onmouseout="this.style.color='inherit'">Первый в мире атомный ледокол-речник «Обь» и атомный флот →</a></span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">11 янв</span>
+          <span>Первый в мире ядерный реактор в Евразии Ф-1 (Курчатов)</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">22 янв</span>
+          <span>Теория сверхтекучести (Нобель)</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">29 янв</span>
+          <span>Первый в мире серийный атомный подводный ракетоносец К-19</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">12 фев</span>
+          <span>Закон Ленца (электромагнитная индукция)</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">25 фев</span>
+          <span>Первый в мире практический токамак Т-1 для термоядерного синтеза</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">2 мар</span>
+          <span>Спонтанное деление ядер урана (открытие)</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">15 мар</span>
+          <span>Первые в мире полупроводниковые гетероструктуры — основа лазерных диодов, солнеч</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">16 апр</span>
+          <span>Первый в мире серийный атомный ледокол «Ленин» (закладка)</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">20 апр</span>
+          <span>Первый в мире рейс атомного ледокола «Ленин» по Северному морскому пути</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">1 мая</span>
+          <span>Первый в мире одноместный вертолёт с автоматом перекоса в испытаниях</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">10 мая</span>
+          <span>Светодиод («свечение Лосева»), первое полупроводниковое свечение</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">14 мая</span>
+          <span>Первый в мире геликоптер с автоматом перекоса (ЦАГИ 1-ЭА)</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">21 мая</span>
+          <span>Управляемый термоядерный синтез, идея токамака</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">30 мая</span>
+          <span>Первый в мире рейс самолёта с ядерным двигателем в испытательном полёте</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">8 июн</span>
+          <span>Полёт первого в мире самолёта с ядерной силовой установкой</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">9 июн</span>
+          <span>Первый в мире токамак (Т-1), управляемый термоядерный синтез</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">26 июн</span>
+          <span>Излучение Вавилова-Черенкова, теоретическая физика (Нобель)</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">28 июн</span>
+          <span>Первый в мире промышленный ядерный реактор «Аннушка» (первый в Евразии после Ф-1</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">9 июл</span>
+          <span>Сверхтекучесть жидкого гелия (Нобель)</span>
+        </div>
+        </div>
+      </div>
+      <p style="text-align:center;color:var(--muted);font-size:14px;margin-top:12px">Каждое — отдельный день музея. <a href="../index.html">Полная база →</a></p>
+    </div>
+  </div>
+</section>
 
 <section class="block" id="calendar">
   <div class="wrap">
@@ -593,7 +476,7 @@
   <div class="wrap" style="text-align:center">
     <h2 style="margin-bottom:6px;color:#fff">Открой все изобретения</h2>
     <p style="color:var(--muted);margin:0 auto 16px;max-width:60ch">365 дней — 365 первенств. Выбери любой день года.</p>
-    <a class="btn gold" href="/izobreteniya.html" style="display:inline-block;text-decoration:none">Полная база изобретений →</a>
+    <a class="btn gold" href="../index.html" style="display:inline-block;text-decoration:none">Полная база изобретений →</a>
   </div>
 </section>
 
@@ -612,7 +495,7 @@ document.getElementById('moreBtn').onclick=function(){
 };
 
 // ── ВИКТОРИНА ─────────────────────────────────────────────────────────────────
-const quiz=[{"q": "Что доказала «Луна-9» своей посадкой?", "o": ["Что на Луне есть вода", "Что лунная поверхность твёрдая, а не покрыта глубоким слоем пыли", "Что Луна имеет магнитное поле", "Что на Луне есть атмосфера"], "c": 1, "e": "до «Луны-9» учёные спорили: не утонет ли посадочный аппарат в многометровом слое пыли. «Луна-9» доказала — поверхность твёрдая и выдержит посадку людей."}, {"q": "Кто первым расшифровал снимки «Луны-9» — ещё до официального советского объявления?", "o": ["NASA в Хьюстоне", "Британские радиоастрономы из Джодрелл-Бэнка", "Японские учёные", "Французское космическое агентство"], "c": 1, "e": "британцы перехватили сигнал «Луны-9» и обнаружили, что он совпадает с форматом репортёрских телефаксов. Одолжив аппарат у агентства, они расшифровали снимки и опубликовали их раньше советской стороны."}];
+const quiz=[{"q": "Как называется принцип, лежащий в основе лазера?", "o": ["Термоядерный синтез", "Стимулированное (вынужденное) излучение", "Фотоэлектрический эффект", "Ядерный распад"], "c": 1, "e": "Лазер основан на принципе стимулированного излучения: возбуждённый атом под воздействием фотона испускает ещё один точно такой же фотон — в том же направлении и с той же длиной волны. Теоретически это описал Эйнштейн ещё в 1917 году; Басов и Прохоров первыми создали работающий прибор на этом принципе."}, {"q": "Кому была присуждена Нобелевская премия по физике 1964 года за создание мазера и лазера?", "o": ["Только Басову и Прохорову", "Только Чарльзу Таунсу", "Басову, Прохорову и Таунсу — всем троим", "Басову и Эйнштейну посмертно"], "c": 2, "e": "Нобелевский комитет признал, что открытие было сделано независимо и одновременно советскими физиками (Басов и Прохоров) и американским физиком Чарльзом Таунсом. Премию разделили на троих."}];
 const qBox=document.getElementById('quizBox');
 let qIdx=0, answered=[];
 
@@ -686,136 +569,27 @@ document.querySelectorAll('.starter-btn').forEach(b=>{
   };
 });
 
-// ── HERO: ЛУНА-9 — МЯГКАЯ ПОСАДКА ──────────────────────────────────────────
+// ── HERO SCENE ────────────────────────────────────────────────────────────────
 (function(){
-  const cv=document.getElementById('heroCvs');if(!cv)return;
-  const ctx=cv.getContext('2d');
-  let W,H,t=0,probeY=0,probeVY=0.3,landed=false,landedTimer=0;
-  const stars=[];
-  function init(){
-    const p=cv.parentElement;
-    const pw=p?p.offsetWidth:0;const ph=p?p.offsetHeight:0;
-    W=cv.width=pw>0?pw:window.innerWidth;
-    // Минимальная высота 260px чтобы GROUND не был 0
-    H=cv.height=ph>100?ph:Math.max(260,Math.round(window.innerHeight*.52));
-    stars.length=0;
-    for(let i=0;i<160;i++)stars.push({x:Math.random()*W,y:Math.random()*H*.65,r:Math.random()*1.5+.2,a:.25+Math.random()*.65});
-    probeY=H*.05;landed=false;landedTimer=0;
-  }
-  init();window.addEventListener('resize',init);
-
-  // Кратеры лунной поверхности
-  const craters=[{rx:.15,ry:0,r:.06},{rx:.38,ry:.02,r:.04},{rx:.62,ry:.01,r:.08},{rx:.8,ry:.03,r:.05},{rx:.92,ry:.01,r:.03}];
-
-  function drawLunarSurface(){
-    const GROUND=H*.72;
-    // Горизонт лунного грунта (волнистый)
-    ctx.beginPath();ctx.moveTo(0,GROUND);
-    const pts2=[];for(let x=0;x<=W;x+=W/20){pts2.push({x,y:GROUND+Math.sin(x*.008)*8+Math.cos(x*.014)*5});}
-    pts2.forEach((p,i)=>{i===0?ctx.moveTo(p.x,p.y):ctx.lineTo(p.x,p.y);});
-    ctx.lineTo(W,H);ctx.lineTo(0,H);ctx.closePath();
-    const lg=ctx.createLinearGradient(0,GROUND,0,H);
-    lg.addColorStop(0,'#4a4a56');lg.addColorStop(.3,'#35353f');lg.addColorStop(1,'#1a1a22');
-    ctx.fillStyle=lg;ctx.fill();
-    // Граница поверхности
-    ctx.beginPath();
-    pts2.forEach((p,i)=>{i===0?ctx.moveTo(p.x,p.y):ctx.lineTo(p.x,p.y);});
-    ctx.strokeStyle='rgba(160,160,180,.4)';ctx.lineWidth=1.5;ctx.stroke();
-    // Кратеры
-    craters.forEach(c=>{
-      const cx=c.rx*W,cy=GROUND+c.ry*H*.1,cr=c.r*Math.min(W,H)*.5;
-      const grad=ctx.createRadialGradient(cx,cy,0,cx,cy,cr);
-      grad.addColorStop(0,'rgba(20,20,28,.9)');grad.addColorStop(.7,'rgba(40,40,50,.5)');grad.addColorStop(1,'rgba(60,60,70,0)');
-      ctx.beginPath();ctx.ellipse(cx,cy,cr,cr*.38,0,0,Math.PI*2);ctx.fillStyle=grad;ctx.fill();
-      // Кольцо кратера
-      ctx.beginPath();ctx.ellipse(cx,cy,cr,cr*.38,0,0,Math.PI*2);
-      ctx.strokeStyle='rgba(100,100,120,.35)';ctx.lineWidth=1;ctx.stroke();});
-    return GROUND;
-  }
-
-  function drawProbe(px,py,isLanded){
-    if(isLanded){
-      // Зонд сел — раскрытые лепестки
-      const petalColors=['#c9a84c','#2d8cbf','#c9a84c','#2d8cbf'];
-      [-28,-14,14,28].forEach((dx,i)=>{
-        ctx.beginPath();ctx.ellipse(px+dx,py,10,6,0,0,Math.PI*2);
-        ctx.fillStyle=petalColors[i];ctx.globalAlpha=.85;ctx.fill();ctx.globalAlpha=1;});
-      ctx.fillStyle='#e4c97a';ctx.beginPath();ctx.arc(px,py,9,0,Math.PI*2);ctx.fill();
-      ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(px,py,4,0,Math.PI*2);ctx.fill();
-    } else {
-      // Зонд летит — сфера с антеннами
-      const bodyGrad=ctx.createRadialGradient(px-4,py-4,1,px,py,14);
-      bodyGrad.addColorStop(0,'#e4c97a');bodyGrad.addColorStop(.6,'#c9a84c');bodyGrad.addColorStop(1,'#7a6220');
-      ctx.beginPath();ctx.arc(px,py,14,0,Math.PI*2);ctx.fillStyle=bodyGrad;ctx.fill();
-      ctx.beginPath();ctx.arc(px,py,14,0,Math.PI*2);ctx.strokeStyle='rgba(255,210,100,.4)';ctx.lineWidth=2;ctx.stroke();
-      // Антенны
-      [[-16,-16],[-20,-2],[-16,16],[16,-16],[20,-2],[16,16]].forEach(([dx,dy])=>{
-        ctx.beginPath();ctx.moveTo(px,py);ctx.lineTo(px+dx,py+dy);
-        ctx.strokeStyle='rgba(228,201,122,.7)';ctx.lineWidth=1.5;ctx.stroke();
-        ctx.beginPath();ctx.arc(px+dx,py+dy,2.5,0,Math.PI*2);ctx.fillStyle='#e4c97a';ctx.fill();});
-      // Тормозной двигатель (огонь снизу)
-      const flameH=10+6*Math.sin(t*.3);
-      const fg=ctx.createLinearGradient(px,py+14,px,py+14+flameH);
-      fg.addColorStop(0,'rgba(255,140,0,.8)');fg.addColorStop(1,'rgba(255,60,0,0)');
-      ctx.beginPath();ctx.moveTo(px-8,py+14);ctx.lineTo(px+8,py+14);ctx.lineTo(px,py+14+flameH);
-      ctx.fillStyle=fg;ctx.fill();
-    }
-  }
-
-  function draw(){
-    ctx.clearRect(0,0,W,H);
-    // Звёздный фон
-    const bg=ctx.createLinearGradient(0,0,0,H*.7);
-    bg.addColorStop(0,'#020810');bg.addColorStop(1,'#0a1828');
-    ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
-    stars.forEach(s=>{
-      ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
-      ctx.fillStyle=`rgba(255,255,255,${s.a+.1*Math.sin(t*.04+s.x*.1)})`;ctx.fill();});
-    // Земля вдали (маленькая, вверху)
-    const earthR=Math.min(W,H)*.055;
-    const eg=ctx.createRadialGradient(W*.12-earthR*.2,H*.18-earthR*.2,earthR*.05,W*.12,H*.18,earthR);
-    eg.addColorStop(0,'#3a8ac4');eg.addColorStop(.6,'#1a4a8a');eg.addColorStop(1,'#0d2a50');
-    ctx.beginPath();ctx.arc(W*.12,H*.18,earthR,0,Math.PI*2);ctx.fillStyle=eg;ctx.fill();
-    const eAtm=ctx.createRadialGradient(W*.12,H*.18,earthR,W*.12,H*.18,earthR*1.35);
-    eAtm.addColorStop(0,'rgba(80,160,255,.22)');eAtm.addColorStop(1,'rgba(80,160,255,0)');
-    ctx.beginPath();ctx.arc(W*.12,H*.18,earthR*1.35,0,Math.PI*2);ctx.fillStyle=eAtm;ctx.fill();
-
-    const GROUND=drawLunarSurface();
-
-    // Зонд
-    const probeX=W/2;
-    const LAND_Y=GROUND-18; // зонд останавливается чуть выше поверхности
-    if(!landed){
-      // Замедление при приближении к поверхности
-      const distToGround=LAND_Y-probeY;
-      if(distToGround>80){probeVY=Math.min(probeVY+0.012,1.2);}
-      else{probeVY=Math.max(0.08,distToGround/80*0.8);}
-      probeY+=probeVY;
-      if(probeY>=LAND_Y){landed=true;probeY=LAND_Y;probeVY=0.3;}
-    } else {
-      landedTimer++;
-      if(landedTimer>300){// долго сидим — красиво
-        landed=false;probeY=H*.04;probeVY=0.3;landedTimer=0;}
-    }
-    // Луч радиосвязи (только в полёте)
-    if(!landed){
-      for(let i=0;i<3;i++){
-        const age=(t*.018+i/3)%1;const lineA=Math.pow(1-age,.9)*.45;
-        ctx.beginPath();ctx.moveTo(probeX,probeY);ctx.lineTo(W*.12,H*.18);
-        ctx.strokeStyle=`rgba(45,140,191,${lineA})`;ctx.lineWidth=1;ctx.setLineDash([4,6]);ctx.stroke();ctx.setLineDash([]);}
-    }
-    // Пыль при посадке
-    if(landed&&landedTimer<40){
-      const flash=1-landedTimer/40;
-      ctx.beginPath();ctx.arc(probeX,GROUND,50*flash,0,Math.PI*2);
-      ctx.fillStyle=`rgba(180,180,190,${.25*flash})`;ctx.fill();
-      ctx.beginPath();ctx.arc(probeX,GROUND,25*flash,0,Math.PI*2);
-      ctx.fillStyle=`rgba(201,168,76,${.35*flash})`;ctx.fill();}
-
-    drawProbe(probeX,probeY,landed);
-    t++;requestAnimationFrame(draw);
-  }
-  draw();
+  const cv=document.getElementById('heroCvs');
+  if(!cv||typeof THREE==='undefined'){const ctx=cv.getContext('2d');let W,H,pts=[],t=0;function r2(){W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight;pts=Array.from({length:80},()=>({x:Math.random()*W,y:Math.random()*H,vx:.3+Math.random()*.5,vy:(Math.random()-.5)*.2,c:Math.random()>.5?'45,140,191':'201,168,76'}));}r2();function dr(){ctx.clearRect(0,0,W,H);t+=.016;pts.forEach(p=>{p.x+=p.vx;if(p.x>W)p.x=0;ctx.beginPath();ctx.arc(p.x,p.y,2,0,Math.PI*2);ctx.fillStyle=`rgba(${p.c},.6)`;ctx.fill();});ctx.beginPath();ctx.moveTo(0,H/2+Math.sin(t*2)*4);ctx.lineTo(W,H/2+Math.sin(t*2+1)*4);ctx.strokeStyle='rgba(255,34,68,.5)';ctx.lineWidth=1.5;ctx.stroke();requestAnimationFrame(dr);}dr();return;}
+  const _p=cv.parentElement,W=(_p&&_p.offsetWidth)||window.innerWidth,H=(_p&&_p.offsetHeight)||Math.round(window.innerHeight*.52);cv.width=W;cv.height=H;
+  const rnd=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true});
+  rnd.setSize(W,H);rnd.setPixelRatio(Math.min(devicePixelRatio,2));
+  const scene=new THREE.Scene(),cam=new THREE.PerspectiveCamera(70,W/H,.1,100);cam.position.set(0,0,5);
+  // Частицы-фотоны
+  const N=200,geo=new THREE.BufferGeometry(),pos=new Float32Array(N*3),vel=new Float32Array(N),col=new Float32Array(N*3);
+  for(let i=0;i<N;i++){pos[i*3]=(Math.random()-.5)*18;pos[i*3+1]=(Math.random()-.5)*7;pos[i*3+2]=(Math.random()-.5)*6;vel[i]=.04+Math.random()*.09;const h=Math.random();col[i*3]=h>.6?.9:.15+h*.7;col[i*3+1]=h>.4?.5:.15;col[i*3+2]=h<.4?.9:.1;}
+  geo.setAttribute('position',new THREE.BufferAttribute(pos,3));geo.setAttribute('color',new THREE.BufferAttribute(col,3));
+  const pts=new THREE.Points(geo,new THREE.PointsMaterial({size:.09,vertexColors:true,opacity:.85,transparent:true}));scene.add(pts);
+  // Лазерный луч (три нити)
+  [[0,0xff2244,.65],[.06,0xff6688,.3],[-.06,0xff1133,.25]].forEach(([dy,c,op])=>{
+    const g=new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(-9,dy,0),new THREE.Vector3(9,dy,0)]);
+    scene.add(new THREE.Line(g,new THREE.LineBasicMaterial({color:c,opacity:op,transparent:true})));});
+  let t=0;(function loop(){t+=.008;const p=geo.attributes.position.array;
+    for(let i=0;i<N;i++){p[i*3]+=vel[i];if(p[i*3]>9)p[i*3]=-9;}
+    geo.attributes.position.needsUpdate=true;pts.rotation.z=Math.sin(t*.25)*.04;
+    rnd.render(scene,cam);requestAnimationFrame(loop);})();
 })();
 
 // ── ТЕМАТИЧЕСКИЕ ИЗОБРЕТЕНИЯ ─────────────────────────────────────────────────

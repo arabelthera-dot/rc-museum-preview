@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Первый в мире промышленный нефтепровод — Шухов — Русские первые в мире</title>
+<title>военно-полевая хирургия, наркоз на поле боя, гипсовая повязка — Русские первые в мире</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/three@0.160/build/three.min.js"></script>
@@ -27,15 +27,9 @@
   .logo .lt{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:16px}
   .logo .lt small{display:block;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-family:'Inter',sans-serif}
   .score{background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:6px 16px;font-size:13px;color:var(--gold-l);cursor:pointer;font-family:'Inter',sans-serif}
-  .crumbs{background:rgba(6,12,23,.6);border-bottom:1px solid var(--card-b);font-family:'Inter',sans-serif;font-size:12.5px}
-  .crumbs .wrap{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
-  .crumbs a{color:var(--gold-l);text-decoration:none;white-space:nowrap}
-  .crumbs a:hover{text-decoration:underline}
-  .crumbs .sep{color:var(--muted);opacity:.6}
-  .crumbs .here{color:var(--muted);white-space:nowrap}
   .hero{display:flex;flex-direction:column}
   .hero-visual{position:relative;height:52vh;min-height:280px;max-height:520px;overflow:hidden;background:linear-gradient(160deg,#0a1e3a 0%,rgb(18,56,96) 55%,#0d2240 100%);display:flex;align-items:center;justify-content:center}
-  .hero-visual .hero-year{font-family:'Playfair Display',Georgia,serif;font-size:clamp(60px,14vw,130px);font-weight:900;color:rgba(255,255,255,.04);user-select:none;line-height:1;animation:yearFade 1.4s ease both;pointer-events:none}
+  .hero-visual .hero-year{font-family:'Playfair Display',Georgia,serif;font-size:clamp(80px,20vw,180px);font-weight:900;color:rgba(255,255,255,.07);user-select:none;line-height:1;animation:yearFade 1.4s ease both}
   @keyframes yearFade{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
   .hero-particles{position:absolute;inset:0;pointer-events:none}
   /* ── КАЛЕНДАРЬ ── */
@@ -97,13 +91,19 @@
   .ad-slot .ph-txt{font-size:12px;max-width:80%;color:rgba(255,255,255,.18)}
   footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
   @media(max-width:600px){.hero h1{font-size:26px}.hero .hook{font-size:15px}}
+  .crumbs{background:rgba(6,12,23,.6);border-bottom:1px solid var(--card-b);font-family:'Inter',sans-serif;font-size:12.5px}
+  .crumbs .wrap{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  .crumbs a{color:var(--gold-l);text-decoration:none;white-space:nowrap}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--muted);opacity:.6}
+  .crumbs .here{color:var(--muted);white-space:nowrap}
 </style>
 </head>
 <body>
 
 <header class="top">
   <div class="wrap">
-    <a class="logo" href="/">
+    <a class="logo" href="../index.html">
       <svg width="34" height="34" viewBox="0 0 48 48" aria-label="логотип">
         <circle cx="24" cy="24" r="23" fill="#0f1e33" stroke="#c8a24a" stroke-width="2"/>
         <path d="M24 10 L24 30 L12 30 Z" fill="#c8a24a"/>
@@ -112,31 +112,29 @@
       </svg>
       <span class="lt">Русская цивилизация<small>первые в мире</small></span>
     </a>
-    <div class="score" id="scoreBox">⭐ <span id="score">0</span> / 100</div>
+    <div class="score" id="scoreBox">⭐ <span id="score">0</span> / 60</div>
   </div>
 </header>
-
 <nav class="crumbs"><div class="wrap">
-  <a href="/">Русская цивилизация</a>
+  <a href="../index.html">Русская цивилизация</a>
   <span class="sep">›</span>
-  <a href="izobreteniya.html">Музей изобретений</a>
+  <a href="index.html">Музей изобретений</a>
   <span class="sep">›</span>
-  <span class="here">5 января · Шухов</span>
+  <span class="here">25 ноября · Пирогов</span>
 </div></nav>
+
 
 <div class="hero">
   <div class="hero-visual">
     <canvas id="heroCvs" class="hero-particles"></canvas>
-    <div class="hero-year">1878</div>
-    <div id="heroHint" style="position:absolute;left:50%;bottom:14px;transform:translateX(-50%);background:rgba(6,12,23,.6);border:1px solid rgba(201,168,76,.35);border-radius:20px;padding:6px 18px;font-size:11px;letter-spacing:1.5px;color:var(--gold-l);font-family:'Inter',sans-serif;white-space:nowrap;transition:opacity .8s;pointer-events:none">⚡ тапни — запусти насос Шухова</div>
-    <div style="position:absolute;left:14px;top:12px;background:rgba(6,12,23,.5);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:4px 12px;font-size:10px;letter-spacing:1.2px;color:var(--muted);font-family:'Inter',sans-serif">Баку · 1878 · Балаханы → Чёрный город</div>
+    <div class="hero-year">1810</div>
   </div>
   <div class="hero-text">
     <div class="wrap">
-      <div class="date-chip">5 января · 1878</div>
+      <div class="date-chip">25 ноября</div>
       <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
-      <h1>Первый в мире промышленный нефтепровод</h1>
-      <p class="hook">Перевозка бочки нефти стоила дороже самой нефти — пока 24-летний инженер не посчитал, что нефть может течь сама. Двести подвод заменила одна труба.</p>
+      <h1>военно-полевая хирургия, наркоз на поле боя, гипсовая повязка</h1>
+      <p class="hook">До него раненых оперировали без наркоза — прямо так, живых. Николай Пирогов это изменил: первым в мире применил эфирный наркоз на поле сражения и сделал под ним около десяти тысяч операций. Он же первым ввёл гипсовую повязку в армии — чтобы солдатам не ампутировали руки и ноги без необходимости. Он же придумал сортировать раненых, чтобы помочь сначала тем, кому это важнее всего. До Пирогова хирург на войне был почти что мясником. После него — врачом.</p>
       <div style="display:flex;gap:12px;flex-wrap:wrap">
         <button class="btn gold" onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">Читать историю ↓</button>
         <button class="btn ghost" onclick="document.getElementById('video').scrollIntoView({behavior:'smooth'})">▶ Смотреть видео</button>
@@ -154,9 +152,7 @@
     <a href="#quiz">Викторина</a>
     <a href="#fork">Развилка</a>
     <a href="#chat-sec">Спросить</a>
-    <a href="#games">Игры</a>
     <a href="#excursion">Экскурсия</a>
-    <a href="#result">Итог</a>
   </div>
 </nav>
 
@@ -164,13 +160,8 @@
 <section class="block" id="video">
   <div class="wrap">
     <div class="kicker">Видео дня</div>
-    <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap"><h2 style="margin:0">История в 76 секунд</h2><span style="background:var(--gold-g);color:var(--gold);border:1px solid rgba(201,168,76,.3);border-radius:20px;padding:3px 14px;font-size:12px;font-weight:600;font-family:'Inter',sans-serif">🎬 нейроголос · 76 сек</span></div>
-    <p style="color:var(--muted);margin-top:0">Та же история кинематографическим роликом — закадровый нейроголос и атмосферная музыка.</p>
-    <video controls playsinline preload="metadata" poster="day-05jan-shukhov-poster.jpg" style="width:100%;aspect-ratio:16/9;background:#050c18;border-radius:14px;display:block;box-shadow:0 8px 40px rgba(0,0,0,.5)">
-      <source src="day-05jan-shukhov.mp4?v=1" type="video/mp4">
-      Ваш браузер не поддерживает видео.
-    </video>
-    <p style="font-size:13px;color:var(--muted);margin-top:10px">Закадровый голос — нейросеть Microsoft Azure Neural (ru-RU-DmitryNeural). Музыка — атмосферный дрон, генерация. Визуальный ряд — архивные фото Балахан 1880-х и дизайн-анимация: счётчик подвод, линия первого нефтепровода, решётка гиперболоида.</p>
+    <h2>История в 90 секундах</h2>
+    <div style="aspect-ratio:16/9;background:rgba(255,255,255,.03);border-radius:14px;display:flex;align-items:center;justify-content:center;color:var(--muted)">Видео создаётся — скоро появится</div>
   </div>
 </section>
 
@@ -178,218 +169,40 @@
 <section class="block" id="story">
   <div class="wrap">
     <div class="kicker">История изобретения</div>
-    <h2>Труба, по которой потёк XX век</h2>
+    <h2>военно-полевая хирургия, наркоз на поле боя, гипсовая повязка</h2>
     <div class="article collapsed" id="article">
       <div class="body" id="articleBody">
-        
-
-<p><b>5 января 1878 года, Баку.</b> На нефтепромысле Балаханы запускают паровой насос. Нефть уходит в трёхдюймовую стальную трубу и — впервые в истории промышленности — сама течёт десять километров до нефтеперегонных заводов Чёрного города. Ни бочек. Ни подвод. Ни возчиков. У трубы стоит автор проекта — инженеру Владимиру Шухову двадцать четыре года.</p>
-
-<p><b>Кто этот человек.</b> Выпускник Императорского технического училища, Шухов отказался от кафедры у самого Пафнутия Чебышёва — не хотел чистой математики, хотел строить. Про него потом скажут: «первый инженер Российской империи» и «русский Леонардо». Он брал любую задачу — нефть, вода, мосты, башни, котлы — и решал её расчётом там, где другие действовали на глазок.</p>
-
-<p><b>В чём была загвоздка.</b> Баку 1870-х — нефтяная столица мира, задыхавшаяся от собственной нефти. Добыть её научились, а вот доставить с промыслов на заводы — нет. Нефть заливали в деревянные бочки, грузили на арбы, и сотни возчиков днём и ночью тянулись через город. Перевозка бочки стоила дороже самой нефти в ней. Возчики держали монополию и цены — и промышленники им платили, потому что выхода не было.</p>
-
-<p><b>Как родилась идея.</b> Молодой Шухов, приехавший в Баку от конторы инженера Бари, увидел в этом хаосе задачу по гидравлике. В Америке уже пробовали качать нефть по коротким трубам — но без строгой теории, методом проб и ошибок. Шухов первым вывел точные формулы: какой диаметр трубы нужен под заданный поток, какое давление создавать насосами, где ставить перекачечные станции, как меняется вязкость нефти с температурой. Это была не прикидка — это была наука о трубопроводах, создаваемая с нуля.</p>
-
-<p><b>Что он построил.</b> Нефтепровод Балаханы–Чёрный город: около десяти километров, диаметр три дюйма, паровые насосы, пропускная способность — до 80 тысяч пудов нефти в сутки. Заказ оплатило «Товарищество братьев Нобель» — та самая семья, чьё имя носит знаменитая премия. Себестоимость перекачки оказалась в разы ниже бочечной. Формулы Шухова опубликованы — по ним до сих пор проектируют трубопроводы по всему миру.</p>
-
-<p><b>Испытания.</b> Возчики, терявшие заработок, грозили разрушить трубу — её пришлось охранять. Но экономика убедила всех быстрее любых слов: уже через несколько лет Шухов строил в Баку новые нитки, а через десятилетие трубопроводы стали отраслевым стандартом. В 1907 году по проекту Шухова заработал крупнейший в мире на тот момент керосинопровод Баку–Батум длиной 835 километров.</p>
-
-<p><b>Горькая часть.</b> Второе великое нефтяное изобретение Шухова украли — вежливо, по-патентному. В 1891 году он запатентовал крекинг: разложение тяжёлой нефти на лёгкие фракции нагревом под давлением — основу производства бензина. Россия патент не использовала: бензин был никому не нужен, автомобилей ещё не было. А в 1913 году американец Уильям Бартон запатентовал в США почти то же самое — и Америка стала бензиновой державой. Когда в 1923 году делегация фирмы «Синклер» приехала в Москву разбираться в патентном споре, Шухов показал им свой патент 1891 года. Американцы признали: русский был первым. Но промышленность и деньги остались за океаном.</p>
-
-<p><b>Финал.</b> Всё, что течёт сегодня по миллионам километров труб — нефть, газ, бензин, — течёт по формулам Шухова 1878 года. А сам он оставил после себя ещё и гиперболоидные башни (та самая Шуховская на Шаболовке), сетчатые перекрытия ГУМа и Пушкинского музея, нефтеналивные баржи, крекинг и около двухсот изобретений.</p>
-
-<p><b>Человек.</b> Владимир Григорьевич Шухов (1853–1939) — родился в Грайвороне Курской губернии в небогатой дворянской семье. Работал до 85 лет. От гонораров за многие проекты отказывался, повторяя, что инженер обязан стране. Погиб нелепо и трагически: опрокинул на себя свечу, получил ожоги и умер через пять дней — в 1939 году, всемирно признанным классиком инженерии.</p>
+        <p>СТАТЬЯ БАЗЫ ЗНАНИЙ</p>
+<p><i>(позиция на сайте: Блок 4)</i></p>
 
 
+<p><b>До Пирогова — ужас.</b> В первой половине XIX века хирург на войне работал в нечеловеческих условиях: раненых ему подносили живых, без обезболивания, один за другим. Операция — это боль, крик, конвульсии. Ампутацию руки делали за полторы минуты, иначе пациент умирал от шока. На исход раненого влияло всё: скорость хирурга, удача, заражение. О системе и речи не было.</p>
+
+<p><b>Эфир — и первый выход на поле.</b> В октябре 1846 года американский дантист Уильям Мортон провёл в Бостоне первую операцию под эфирным наркозом — в больничных условиях. Пирогов узнал об этом и действовал немедленно: провёл собственные опыты, убедился в надёжности метода, а в 1847 году отправился на Кавказскую войну — и применил эфир в боевых условиях. У аула Салты он провёл под наркозом первые операции прямо на поле. Раненые больше не кричали под ножом.</p>
+
+<p><b>Масштаб.</b> Это была не демонстрация — это была система. За годы своей военной практики, прежде всего в Крымскую войну 1854–1856 годов, Пирогов провёл под наркозом около десяти тысяч операций. Ни один хирург в мире до него не применял обезболивание с таким размахом. Он же первым в мире описал травматический шок и понял: смерть часто наступает не от раны, а от боли и потери крови.</p>
+
+<p><b>Гипс вместо ампутации.</b> В Крыму Пирогов ввёл гипсовую повязку — первым в военной хирургии. До него переломы фиксировали лубками и тряпками: неудобно, ненадёжно, кость смещалась, начиналось воспаление — и хирург отрезал конечность. Гипс держал перелом жёстко и чисто, рана заживала правильно. Тысячи солдат сохранили руки и ноги только потому, что Пирогов решил: ампутация — это последнее средство, а не первое.</p>
+
+<p><b>Сортировка раненых.</b> При обороне Севастополя Пирогов впервые в истории ввёл медицинскую сортировку — то, что сегодня называется «триажем». Раненых делили на четыре группы: безнадёжные (не трогать), тяжёлые — нужна немедленная операция, средние — могут подождать, лёгкие — обработать и отправить дальше. Это звучит жёстко, но именно это позволяло спасти наибольшее число людей. До Пирогова помогали тем, кто попался под руку. После — тем, кому это важнее всего.</p>
+
+<p><b>Женщины в медицине войны.</b> В Крыму Пирогов привлёк к уходу за ранеными женщин — сестёр Крестовоздвиженской общины. Это первый в истории организованный опыт военных медсестёр. Чуть позже, в 1859 году, британка Флоренс Найтингейл опишет свой опыт в Крыму — и получит всемирное признание. Пирогов работал там же, параллельно.</p>
+
+<p><b>«Ледяная анатомия».</b> Ещё до войны Пирогов создал уникальный атлас, которого не существовало нигде в мире. Он замораживал трупы и делал тонкие распилы — как колбасу — в трёх плоскостях, а потом зарисовывал то, что видел. Это был первый в истории атлас реального взаимного расположения органов: не схемы из головы, а точный срез живой реальности. Хирурги впервые увидели, где что находится на самом деле. Принцип, который Пирогов придумал, — основа современной МРТ и КТ: те же послойные срезы, только электронные.</p>
+
+<p><b>Человек.</b> Николай Иванович Пирогов (25 ноября 1810 — 5 декабря 1881) родился в Москве, в семье военного чиновника. В 14 лет поступил в Московский университет, скрыв возраст. В 26 — профессор. Человек жёсткий к делу и к себе: в своих «Дневниках» описывал собственные ошибки с такой же беспощадностью, с какой мог бы описывать чужие. Умер в Виннице в 1881 году. Его тело по сей день покоится в имении Вишня (ныне — Пирогово под Винницей) в забальзамированном виде — по его же собственной воле, как свидетельство медицины.</p>
 
 
 
-<p style="font-size:13px;color:var(--muted);margin-top:26px">Источники: rg.ru · histrf.ru · culture.ru · tass.ru</p>
+
+
+<hr>
       </div>
       <div class="more"><button class="btn ghost" id="moreBtn">Читать дальше ↓</button></div>
     </div>
   </div>
 </section>
 
-<section class="block" id="more">
-  <div class="wrap">
-    <div class="kicker">Не только нефтепровод</div>
-    <h2>Другие работы Шухова</h2>
-    <p style="color:var(--muted);max-width:62ch">Около двухсот изобретений — «первый инженер Российской империи» строил всё: от котлов до башен.</p>
-    <div class="card"><b style="color:var(--gold-l)">Крекинг нефти (1891)</b><p style="margin:6px 0 0">Разложение тяжёлой нефти на лёгкие фракции — основа производства бензина. Американцы запатентовали то же через 22 года и в 1923-м официально признали первенство Шухова.</p></div>
-    <div class="card"><b style="color:var(--gold-l)">Гиперболоидные башни</b><p style="margin:6px 0 0">Ажурные сетки из прямых стержней — лёгкие и прочные. Та самая Шуховская башня на Шаболовке; задумывалась выше Эйфелевой, в 350 метров.</p></div>
-    <div class="card"><b style="color:var(--gold-l)">Сетчатые перекрытия</b><p style="margin:6px 0 0">Стеклянные небеса ГУМа и Пушкинского музея держатся на шуховских конструкциях.</p></div>
-    <div class="card"><b style="color:var(--gold-l)">Керосинопровод Баку — Батум</b><p style="margin:6px 0 0">835 километров — крупнейший в мире на момент пуска (1907). Плюс нефтеналивные баржи, водотрубные котлы, форсунка для мазута.</p></div>
-  </div>
-</section>
-<section class="block" id="theme-inventions" style="background:rgba(201,168,76,.03);border-top:1px solid rgba(201,168,76,.15)">
-  <div class="wrap">
-    <div class="kicker">Транспорт · Русские первенства</div>
-    <h2 style="margin-bottom:6px">Что ещё русские изобрели первыми в теме «транспорт»</h2>
-    <p style="color:var(--muted);margin-top:0;margin-bottom:16px;max-width:62ch">Этот день — не единственный. Вот другие изобретения русских в этой теме.</p>
-    <div style="text-align:center;margin:14px 0 4px">
-      <button class="btn gold" id="themeInvBtn">Показать 20 изобретений →</button>
-    </div>
-    <div id="themeInvBody" style="display:none;margin-top:20px">
-      <div class="card" style="padding:0;overflow:hidden">
-        <div style="padding:14px 20px;background:rgba(201,168,76,.08);border-bottom:1px solid rgba(201,168,76,.15)">
-          <span style="color:var(--gold-l);font-weight:600;font-size:14px;letter-spacing:.5px">20 ИЗОБРЕТЕНИЙ · ТРАНСПОРТ</span>
-        </div>
-        <div style="padding:4px 20px 12px">
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">3 янв</span>
-          <span><a href="day-03jan-luna9.html" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,.3);transition:.15s" onmouseover="this.style.color='var(--gold-l)'" onmouseout="this.style.color='inherit'">Первый в мире атомный ледокол-речник «Обь» и атомный флот →</a></span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">8 янв 1849</span>
-          <span><a href="day-08jan-icebreaker.html" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,.3);transition:.15s" onmouseover="this.style.color='var(--gold-l)'" onmouseout="this.style.color='inherit'">«Ермак», первый в мире арктический ледокол →</a></span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">10 янв</span>
-          <span>Первый в мире ледокол «Пайлот»</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">16 янв</span>
-          <span>Первая стыковка кораблей и переход через открытый космос («Союз-4/5»)</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">26 янв</span>
-          <span>Первый в мире серийный реактивный пассажирский самолёт Ту-104</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">28 янв</span>
-          <span>Открытие Антарктиды</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">29 янв</span>
-          <span>Первый в мире серийный атомный подводный ракетоносец К-19</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">10 фев</span>
-          <span>Аэросани (первые в мире)</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">11 фев</span>
-          <span>Первый в мире морской гидросамолёт (летающая лодка М-5)</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">13 фев</span>
-          <span>Гидросамолёты и амфибии «Бе»</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">17 фев</span>
-          <span>Первый в мире электрический трамвай</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">10 мар</span>
-          <span>Открытие пролива между Азией и Америкой</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">19 мар</span>
-          <span>Первый в мире военный ледокол «Вайгач» — исследование Арктики</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">20 мар</span>
-          <span>Первый в мире магистральный тепловоз</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">21 мар</span>
-          <span>Самолёт Можайского, один из первых в мире</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">30 мар</span>
-          <span>Штурмовик Ил-2 и самолёты Ильюшина</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">1 апр</span>
-          <span>Самолёты «Як»</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">2 апр</span>
-          <span>Первый в мире бензиновый двигатель (для дирижабля)</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">7 апр</span>
-          <span>Первая в мире подводная лодка «Дельфин» с двигателем внутреннего сгорания</span>
-        </div>
-<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
-          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">9 апр</span>
-          <span>Первый в мире дизельный теплоход «Вандал»</span>
-        </div>
-        </div>
-      </div>
-      <p style="text-align:center;color:var(--muted);font-size:14px;margin-top:12px">Каждое — отдельный день музея. <a href="izobreteniya.html">Полная база →</a></p>
-    </div>
-  </div>
-</section>
-
-
-<!-- ── ВИКТОРИНА ── -->
-<section class="block" id="quiz">
-  <div class="wrap">
-    <div class="kicker">Проверь себя</div>
-    <h2>Викторина</h2>
-    <div id="quizBox"></div>
-    <div class="gm" id="gm_tm">
-      <h3>⚖️ Правда или миф</h3>
-      <p style="font-weight:600;margin:0 0 12px">«Возчики нефти угрожали разрушить первый нефтепровод»</p>
-      <div><button class="gm-btn" style="width:auto;display:inline-block;margin-right:8px" onclick="tmAns(this,true)">Правда</button><button class="gm-btn" style="width:auto;display:inline-block" onclick="tmAns(this,false)">Миф</button></div>
-      <div class="gm-exp" id="tmExp">Правда. Сотни возчиков теряли заработок — трубу пришлось охранять казакам. Но экономика победила быстро: перекачка оказалась в разы дешевле бочек.</div>
-    </div>
-    <div class="gm" id="gm_vb">
-      <h3>🤔 Верю — не верю</h3>
-      <p style="font-weight:600;margin:0 0 12px">«Формулы Шухова 1878 года используются до сих пор»</p>
-      <div><button class="gm-btn" style="width:auto;display:inline-block;margin-right:8px" onclick="vbAns(this,true)">Верю</button><button class="gm-btn" style="width:auto;display:inline-block" onclick="vbAns(this,false)">Не верю</button></div>
-      <div class="gm-exp" id="vbExp">Верю — и правильно. Основы гидравлического расчёта трубопроводов, выведенные Шуховым, лежат в проектировании нефте- и газопроводов по сей день.</div>
-    </div>
-    <div class="gm" id="gm_char">
-      <h3>🧩 Шарада</h3>
-      <p style="font-style:italic;line-height:1.8;margin:0 0 12px">«Я бочки с арбами прогнал,<br>трудом лошадиным не мучаясь:<br>я нефти дорогу стальную создал —<br>считал, а не пробовал наудачу».</p>
-      <button class="gm-btn" style="width:auto" id="charBtn" onclick="charShow()">Показать ответ</button>
-      <div class="gm-exp" id="charExp">Владимир Шухов и его нефтепровод.</div>
-    </div>
-    <script>
-    function tmAns(b,ok){document.querySelectorAll('#gm_tm .gm-btn').forEach(x=>x.disabled=true);b.classList.add(ok?'ok':'no');document.getElementById('tmExp').classList.add('show');if(ok&&typeof award==='function')award('tm',5);}
-    function vbAns(b,ok){document.querySelectorAll('#gm_vb .gm-btn').forEach(x=>x.disabled=true);b.classList.add(ok?'ok':'no');document.getElementById('vbExp').classList.add('show');if(ok&&typeof award==='function')award('vb',5);}
-    function charShow(){document.getElementById('charExp').classList.add('show');document.getElementById('charBtn').disabled=true;if(typeof award==='function')award('char',10);}
-    </script>
-  </div>
-</section>
-
-<!-- ── РАЗВИЛКА ── -->
-<section class="block" id="fork" style="background:rgba(45,140,191,.04)">
-  <div class="wrap">
-    <div class="kicker">Твой выбор</div>
-    <h2>А как поступил бы ты?</h2>
-    <p style="color:var(--muted);margin-top:0;max-width:62ch">1891 год. Ты запатентовал крекинг — способ получать бензин из тяжёлой нефти. Но в России бензин никому не нужен: автомобилей ещё нет. Ты на месте Шухова — что делаешь с патентом?</p>
-    <div class="fork-opt">🌍 Продаю патент за границу — там оценят</div>
-    <div class="fork-opt">📁 Оставляю в столе и строю дальше: время покажет</div>
-    <div class="fork-opt">🏭 Строю крекинг-завод на свои деньги — рынок появится</div>
-    <div id="forkReal" style="display:none;margin-top:14px" class="exp"><b>Как было на самом деле.</b> Патент остался в столе: Шухов строил башни, котлы и трубопроводы. В 1913-м американец Бартон запатентовал почти тот же процесс — и Америка стала бензиновой державой. А в 1923-м делегация «Синклер» в Москве сверила патенты и признала первенство Шухова. Приоритет остался за Россией, индустрия — за океаном.</div>
-  </div>
-</section>
-
-<!-- ── ЧАТ ── -->
-<section class="block" id="chat-sec">
-  <div class="wrap">
-    <div class="kicker">Поговори с изобретателем</div>
-    <h2>Спроси Владимира Шухова</h2>
-    <p style="color:var(--muted)">Задай вопрос — ответит сам изобретатель.</p>
-    <div id="starters"></div>
-    <div id="chatBox" style="margin:16px 0;min-height:80px"></div>
-    <div style="display:flex;gap:10px;margin-top:12px">
-      <input id="chatInput" type="text" placeholder="Написать вопрос..." style="flex:1;padding:12px 16px;font-size:15px">
-      <button class="btn gold" onclick="sendChat()">Отправить</button>
-    </div>
-    <p style="font-size:12px;color:var(--muted);margin-top:8px">Ответы сформированы на основе документальных источников.</p>
-  </div>
-</section>
-
-<section class="block" id="games" style="background:rgba(6,12,23,.6)">
-  <div class="wrap">
-    <div class="kicker">Играй</div>
-    <h2>Игры дня</h2>
 <!-- ── ИГРЫ ── -->
 
 <style>
@@ -424,66 +237,106 @@
 .gm-drop.over{border-color:#c9a84c;background:rgba(201,168,76,.08)}
 .gm-drop.filled{border-style:solid;border-color:#c9a84c;color:#e4c97a;font-weight:600}
 </style>
-<div class="gm" id="gm_shukhov">
-<h3>🛢 Игра 1 · Проложи нефтепровод Шухова</h3>
-<p style="color:var(--muted);font-size:14px;margin-bottom:14px">Выбери оптимальный маршрут трубы от промысла до завода — как выбирал Шухов в 1877 году</p>
-<div style="display:flex;flex-direction:column;gap:10px;margin-bottom:14px">
-<div id="shRoute" style="display:flex;gap:8px;flex-wrap:wrap">
-  <div class="sh-node" onclick="shPick(this,'start')" style="padding:10px 14px;border:2px solid rgba(201,168,76,.4);border-radius:10px;cursor:pointer;font-size:13px;background:rgba(201,168,76,.08)">🛢️ Балаханы (промысел)</div>
-  <div style="color:var(--muted);align-self:center;font-size:20px">→</div>
-  <div id="shMid" style="display:flex;gap:6px;flex-wrap:wrap">
-    <div class="sh-node" onclick="shPick(this,'mid')" data-cost="2" data-label="через горы" style="padding:8px 12px;border:1px solid rgba(255,255,255,.12);border-radius:10px;cursor:pointer;font-size:12px;color:var(--muted)">⛰️ Через горы <b style="color:#f08080">+40%</b></div>
-    <div class="sh-node" onclick="shPick(this,'mid')" data-cost="1" data-label="прямо" style="padding:8px 12px;border:1px solid rgba(255,255,255,.12);border-radius:10px;cursor:pointer;font-size:12px;color:var(--muted)">📐 Прямо по расчёту <b style="color:#7ed4a0">оптим.</b></div>
-    <div class="sh-node" onclick="shPick(this,'mid')" data-cost="3" data-label="в обход" style="padding:8px 12px;border:1px solid rgba(255,255,255,.12);border-radius:10px;cursor:pointer;font-size:12px;color:var(--muted)">🔄 В обход +60%</div>
-  </div>
-  <div style="color:var(--muted);align-self:center;font-size:20px">→</div>
-  <div class="sh-node" style="padding:10px 14px;border:2px solid rgba(45,140,191,.4);border-radius:10px;font-size:13px;background:rgba(45,140,191,.08)">🏭 Чёрный город (завод)</div>
-</div>
-</div>
-<button class="btn gold" onclick="shCheck()" id="shBtn" style="width:100%;opacity:.4" disabled>Проложить трубу →</button>
-<div id="shResult" style="margin-top:10px;font-size:14px;min-height:20px"></div>
-<script>let shSel=null;
-document.querySelectorAll('#shMid .sh-node').forEach(n=>n.addEventListener('click',function(){
-  shSel=this;document.querySelectorAll('#shMid .sh-node').forEach(x=>x.style.borderColor='rgba(255,255,255,.12)');
-  this.style.borderColor='#c9a84c';document.getElementById('shBtn').disabled=false;document.getElementById('shBtn').style.opacity='1';}));
-window.shCheck=function(){if(!shSel)return;const cost=shSel.dataset.cost;
-  const r=document.getElementById('shResult');
-  if(cost==='1'){r.innerHTML='✅ <b>Правильно!</b> Шухов сделал именно так — рассчитал прямой оптимальный маршрут. Себестоимость транспортировки упала в разы, 200 подвод стали не нужны.';r.style.color='#7ed4a0';if(typeof award==='function')award('gm_shukhov',20);}
-  else if(cost==='2')r.innerHTML='❌ Через горы — давление в трубе не выдержит перепада высот. Шухов выбрал прямой маршрут по расчёту.',r.style.color='#f08080';
-  else r.innerHTML='❌ В обход — трубы втрое длиннее, потери давления огромные. Шухов умел считать лучше.',r.style.color='#f08080';};</script></div>
-<div class="gm" id="gm_quiz2">
-  <h3>⏱ Игра 2 · Быстрый ответ</h3>
-  <div class="gm-score">Чем быстрее ответишь — тем больше очков. Осталось: <b id="gm_quiz2_t">15</b> сек</div>
-  <p style="font-weight:600;font-size:16px;margin:0 0 12px">Сколько нефти качала труба Шухова в сутки?</p>
-  <div id="gm_quiz2_opts"><button class="gm-btn" onclick="gm_quiz2_ans(0)">А) До 800 пудов</button><button class="gm-btn" onclick="gm_quiz2_ans(1)">Б) До 80 000 пудов</button><button class="gm-btn" onclick="gm_quiz2_ans(2)">В) До 8 000 пудов</button><button class="gm-btn" onclick="gm_quiz2_ans(3)">Г) До миллиона пудов</button></div>
-  <div class="gm-exp" id="gm_quiz2_exp">До 80 000 пудов (примерно 1300 тонн) в сутки — при диаметре трубы всего три дюйма, 76 мм. Вот что значит рассчитать, а не пробовать.</div>
+
+<div class="gm" id="gm_fallback">
+  <h3>⏱ Быстрый ответ</h3>
+  <div class="gm-score">Чем быстрее ответишь — тем больше очков. Осталось: <b id="gm_fallback_t">15</b> сек</div>
+  <p style="font-weight:600;font-size:16px;margin:0 0 12px">Что Пирогов впервые применил на поле боя в 1847 году?</p>
+  <div id="gm_fallback_opts"><button class="gm-btn" onclick="gm_fallback_ans(0)">А) Пенициллин</button><button class="gm-btn" onclick="gm_fallback_ans(1)">Б) Гипсовую повязку</button><button class="gm-btn" onclick="gm_fallback_ans(2)">В) Эфирный наркоз</button><button class="gm-btn" onclick="gm_fallback_ans(3)">Г) Переливание крови</button></div>
+  <div class="gm-exp" id="gm_fallback_exp">В 1847 году, во время Кавказской войны, Пирогов первым в мире провёл операции под эфирным наркозом в боевых условиях. До него раненых оперировали без обезболивания.</div>
 </div>
 <script>
 (function(){
   let t=15,ti=null,done=false;
-  const correct=1;
+  const correct=2;
   ti=setInterval(()=>{
     if(done)return;
-    t--;document.getElementById('gm_quiz2_t').textContent=t;
-    if(t<=0){clearInterval(ti);gm_quiz2_ans(-1);}
+    t--;document.getElementById('gm_fallback_t').textContent=t;
+    if(t<=0){clearInterval(ti);gm_fallback_ans(-1);}
   },1000);
-  window['gm_quiz2_ans']=function(i){
+  window['gm_fallback_ans']=function(i){
     if(done)return;done=true;clearInterval(ti);
-    const btns=document.querySelectorAll('#gm_quiz2_opts .gm-btn');
+    const btns=document.querySelectorAll('#gm_fallback_opts .gm-btn');
     btns.forEach((b,j)=>{b.disabled=true;
       if(j===correct)b.classList.add('ok');
       else if(j===i)b.classList.add('no');
       else b.classList.add('neutral');
     });
-    document.getElementById('gm_quiz2_exp').classList.add('show');
-    if(i===correct){const pts=Math.max(5,Math.round(t/15*15));if(typeof award==='function')award('gm_quiz2',pts);}
+    document.getElementById('gm_fallback_exp').classList.add('show');
+    if(i===correct){const pts=Math.max(5,Math.round(t/15*15));if(typeof award==='function')award('gm_fallback',pts);}
   };
 })();
 </script>
+<div class="gm" id="gm_tf2">
+  <h3>✅ Правда или миф?</h3>
+  <div class="gm-score">Результат: <b id="gm_tf2_score">0</b> / 2</div>
+  <div id="gm_tf2_card"></div>
+  <div style="display:flex;gap:10px;margin-top:12px">
+    <button class="gm-btn" style="flex:1;text-align:center;font-weight:600" onclick="gm_tf2_answer(true)">✓ Правда</button>
+    <button class="gm-btn" style="flex:1;text-align:center;font-weight:600" onclick="gm_tf2_answer(false)">✗ Миф</button>
+  </div>
+  <div class="gm-exp" id="gm_tf2_exp"></div>
+</div>
+<script>
+(function(){
+  const data=[{"text": "Пирогов первым в мире ввёл гипсовую повязку в военную хирургию", "answer": true, "exp": "В Крымскую войну 1854–1856 годов Пирогов массово применял гипс для иммобилизации переломов, что резко сократило число ненужных ампутаций."}, {"text": "Пирогов придумал наркоз", "answer": false, "exp": "Эфирный наркоз впервые применил в клинике американский дантист Уильям Мортон в 1846 году. Пирогов же первым сделал это в боевых условиях — на следующий год."}];
+  let idx=0,score=0,waiting=false;
+  function show(){
+    if(idx>=data.length){
+      document.getElementById('gm_tf2_card').innerHTML='<p style="color:#e4c97a;font-weight:600">Всё пройдено! Результат: '+score+'/'+data.length+'</p>';
+      document.querySelector('#gm_tf2 div[style]').style.display='none';
+      if(typeof award==='function')award('gm_tf2',10);return;
+    }
+    document.getElementById('gm_tf2_card').innerHTML='<p style="font-size:16px;font-weight:600;margin:0">'+data[idx].text+'</p>';
+    document.getElementById('gm_tf2_exp').classList.remove('show');
+    waiting=false;
+  }
+  window['gm_tf2_answer']=function(ans){
+    if(waiting||idx>=data.length)return;waiting=true;
+    const correct=data[idx].answer;
+    const exp=document.getElementById('gm_tf2_exp');
+    exp.textContent=(correct===ans?'✓ Верно! ':'✗ Неверно! ')+data[idx].exp;
+    exp.classList.add('show');
+    if(correct===ans){score++;document.getElementById('gm_tf2_score').textContent=score;}
+    idx++;setTimeout(show,2000);
+  };
+  show();
+})();
+</script>
 
+<!-- ── ВИКТОРИНА ── -->
+<section class="block" id="quiz">
+  <div class="wrap">
+    <div class="kicker">Проверь себя</div>
+    <h2>Викторина</h2>
+    <div id="quizBox"></div>
   </div>
 </section>
 
+<!-- ── РАЗВИЛКА ── -->
+<section class="block" id="fork" style="background:rgba(45,140,191,.04)">
+  <div class="wrap">
+    <div class="kicker">Твой выбор</div>
+    <h2>А как поступил бы ты?</h2>
+    <p style="color:var(--muted)">Скоро появится.</p><div id="forkReal" style="display:none"></div>
+  </div>
+</section>
+
+<!-- ── ЧАТ ── -->
+<section class="block" id="chat-sec">
+  <div class="wrap">
+    <div class="kicker">Поговори с изобретателем</div>
+    <h2>Спроси ✓ Николай Иванович Пирогов</h2>
+    <p style="color:var(--muted)">Задай вопрос — ответит сам изобретатель.</p>
+    <div id="starters"></div>
+    <div id="chatBox" style="margin:16px 0;min-height:80px"></div>
+    <div style="display:flex;gap:10px;margin-top:12px">
+      <input id="chatInput" type="text" placeholder="Написать вопрос..." style="flex:1;padding:12px 16px;font-size:15px">
+      <button class="btn gold" onclick="sendChat()">Отправить</button>
+    </div>
+    <p style="font-size:12px;color:var(--muted);margin-top:8px">Ответы сформированы на основе документальных источников.</p>
+  </div>
+</section>
 
 <!-- ── ЭКСКУРСИЯ ── -->
 <section class="block" id="excursion">
@@ -491,23 +344,106 @@ window.shCheck=function(){if(!shSel)return;const cost=shSel.dataset.cost;
     <div class="kicker">Аудиогид</div>
     <h2>Фрагмент экскурсии</h2>
     <div class="card" style="border-left:3px solid var(--gold);border-radius:0 16px 16px 0">
-      <p>«Мы входим в зал чёрного золота. Чувствуете, как изменился свет? Это Баку, 1877 год. Посмотрите на эту фотографию: арбы, бочки, верблюды и лошади — караван нефти ползёт с промыслов на заводы. Так возили нефть везде в мире. Перевозка бочки стоила дороже её содержимого.</p>
-<p>А теперь взгляните на этого молодого человека на портрете. Ему двадцать четыре. Он смотрит на тот же караван — и видит не хаос, а задачу. Владимир Шухов первым в мире вывел формулы движения нефти по трубе: диаметр, давление, температура, вязкость. До него трубы прокладывали на авось. После него — по науке.</p>
-<p>Вот макет: десять километров трубы, паровой насос, и — смотрите — нефть течёт сама. Восемьдесят тысяч пудов в сутки. Возчики грозились разрушить трубу, её охраняли казаки. Не помогло — economics, как говорят англичане: труба оказалась в разы дешевле.</p>
-<p>И обратите внимание на документ в дальней витрине — патент 1891 года на крекинг нефти. Запомните эту дату. Через двадцать два года то же самое запатентуют в Америке, и когда спор дойдёт до разбирательства — американцы сами признают: русский был первым. Переходим к следующему экспонату».</p>
+      <p>ФРАГМЕНТ ЭКСКУРСИИ</p>
+<p>«В этом зале другие ощущения — здесь пахнет не изобретениями, а медициной. Смотрите на эти иллюстрации: срезы человеческого тела, слой за слоем, как будто кто-то распилил его поперёк. Это "Ледяная анатомия" Пирогова — первый в мире атлас, составленный из реальных срезов замороженных трупов. Принцип — тот же, что в МРТ сегодня. Только вместо магнита — пила.</p>
+<p>Но Пирогов — это прежде всего война. 1847 год, Кавказ. На поле боя раненых раньше оперировали живыми — без наркоза. Кричали. Умирали от шока. Пирогов первым применил эфирный наркоз прямо в полевых условиях. Потом — в Крыму — сделал это системой: десять тысяч операций под обезболиванием.</p>
+<p>И ещё: видите гипсовую повязку на этом макете? До Пирогова переломы фиксировали тряпками, кости смещались, и хирург отрезал конечность. Пирогов ввёл гипс — и тысячи солдат сохранили руки и ноги. Переходим дальше».</p>
     </div>
   </div>
 </section>
 
 <div class="wrap"><div class="ad-slot"><span class="lbl">Реклама</span><span class="ph-txt">Партнёрский блок в середине страницы.</span></div></div>
 
-
-<section class="block" id="result">
+<section class="block" id="theme-inventions" style="background:rgba(201,168,76,.03);border-top:1px solid rgba(201,168,76,.15)">
   <div class="wrap">
-    <div class="kicker">Итог дня</div>
-    <h2 style="margin-bottom:6px">Сколько баллов ты собрал?</h2>
-    <p style="color:var(--muted);margin-top:0;max-width:62ch">Читай статью, играй, отвечай в викторине и спрашивай изобретателя — за всё начисляются баллы. Собери все 100 и стань Первым инженером империи.</p>
-    <div class="card"><div class="gm-bar" style="height:10px"><i id="dayBar" style="width:0%"></i></div><div id="dayTxt" style="margin-top:10px;color:var(--gold-l);font-weight:600">0 / 100 · звание: Гость музея</div></div>
+    <div class="kicker">Медицина · Русские первенства</div>
+    <h2 style="margin-bottom:6px">Что ещё русские изобрели первыми в теме «медицина»</h2>
+    <p style="color:var(--muted);margin-top:0;margin-bottom:16px;max-width:62ch">Этот день — не единственный. Вот другие изобретения русских в этой теме.</p>
+    <div style="text-align:center;margin:14px 0 4px">
+      <button class="btn gold" id="themeInvBtn">Показать 18 изобретений →</button>
+    </div>
+    <div id="themeInvBody" style="display:none;margin-top:20px">
+      <div class="card" style="padding:0;overflow:hidden">
+        <div style="padding:14px 20px;background:rgba(201,168,76,.08);border-bottom:1px solid rgba(201,168,76,.15)">
+          <span style="color:var(--gold-l);font-weight:600;font-size:14px;letter-spacing:.5px">18 ИЗОБРЕТЕНИЙ · МЕДИЦИНА</span>
+        </div>
+        <div style="padding:4px 20px 12px">
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">6 янв</span>
+          <span>Первый в мире пенициллин советского производства (победа над бактериями)</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">21 фев</span>
+          <span>Медицинская микробиология, первая в России станция прививок от бешенства</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">27 фев</span>
+          <span>Пересадка роговицы и тканевая терапия</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">6 мар</span>
+          <span>Первый в мире обезболивающий наркоз на поле боя (эфирный)</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">4 апр</span>
+          <span>Первая в мире пересадка почки (опыты)</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">6 апр</span>
+          <span>Антисептическая и полостная хирургия</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">27 апр</span>
+          <span>Гнойная хирургия — фундаментальный труд мировой медицины</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">30 апр</span>
+          <span>Первый в мире аппарат искусственного кровообращения (автожектор) — прообраз АИК </span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">15 мая</span>
+          <span><a href="day-15may-mechnikov.html" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,.3);transition:.15s" onmouseover="this.style.color='var(--gold-l)'" onmouseout="this.style.color='inherit'">Учение об иммунитете, фагоцитоз (Нобель) →</a></span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">4 июн</span>
+          <span>Основоположник нейрохирургии</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">18 июл</span>
+          <span>Основоположник трансплантологии органов</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">8 авг</span>
+          <span>Микрохирургия глаза, первый в мире поток-метод операций</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">14 авг</span>
+          <span>Первая в мире успешная пересадка сердца от собаки к собаке</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">4 сен</span>
+          <span>Местная анестезия и мазь Вишневского</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">5 сен</span>
+          <span>Научная клиническая медицина, первая бесплатная больничная лаборатория</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">1 ноя 1909</span>
+          <span>Первое в мире массовое применение живой вакцины от полиомиелита</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">5 ноя</span>
+          <span>Первая в мире массовая операция под эфирным наркозом в военных условиях</span>
+        </div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px 12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;align-items:baseline">
+          <span style="color:var(--gold);font-weight:700;font-size:13px;white-space:nowrap">10 дек</span>
+          <span>Кардиохирургия, аппарат искусственного сердца, биокибернетика</span>
+        </div>
+        </div>
+      </div>
+      <p style="text-align:center;color:var(--muted);font-size:14px;margin-top:12px">Каждое — отдельный день музея. <a href="../index.html">Полная база →</a></p>
+    </div>
   </div>
 </section>
 
@@ -531,9 +467,9 @@ window.shCheck=function(){if(!shSel)return;const cost=shSel.dataset.cost;
 
 <section class="block" id="catalog" style="background:linear-gradient(135deg,#16294a,#0f1e33);border-bottom:none">
   <div class="wrap" style="text-align:center">
-    <h2 style="margin-bottom:6px;color:#fff">У нас много изобретений</h2>
-    <p style="color:var(--muted);margin:0 auto 16px;max-width:60ch">Русские сделали первыми в мире сотни вещей. Открой полную базу и выбери по алфавиту то, что интересно именно тебе.</p>
-    <a class="btn gold" href="izobreteniya.html" style="display:inline-block;text-decoration:none">Посмотреть изобретения по алфавиту →</a>
+    <h2 style="margin-bottom:6px;color:#fff">Открой все изобретения</h2>
+    <p style="color:var(--muted);margin:0 auto 16px;max-width:60ch">365 дней — 365 первенств. Выбери любой день года.</p>
+    <a class="btn gold" href="../index.html" style="display:inline-block;text-decoration:none">Полная база изобретений →</a>
   </div>
 </section>
 
@@ -542,9 +478,7 @@ window.shCheck=function(){if(!shSel)return;const cost=shSel.dataset.cost;
 <script>
 // ── СЧЁТ ──────────────────────────────────────────────────────────────────────
 let score=0; const earned={};
-function award(k,n){if(earned[k])return;earned[k]=true;score+=n;document.getElementById('score').textContent=score;updateResult();}
-function rank(v){return v>=100?'Первый инженер империи':v>=70?'Знаток трубопроводов':v>=40?'Экскурсант':'Гость музея';}
-function updateResult(){const b=document.getElementById('dayBar'),x=document.getElementById('dayTxt');if(!b)return;b.style.width=Math.min(100,score)+'%';x.textContent=score+' / 100 · звание: '+rank(score);}
+function award(k,n){if(earned[k])return;earned[k]=true;score+=n;document.getElementById('score').textContent=score;}
 
 // ── СТАТЬЯ ────────────────────────────────────────────────────────────────────
 document.getElementById('moreBtn').onclick=function(){
@@ -554,7 +488,7 @@ document.getElementById('moreBtn').onclick=function(){
 };
 
 // ── ВИКТОРИНА ─────────────────────────────────────────────────────────────────
-const quiz=[{"q": "Кто оплатил строительство первого в мире нефтепровода?", "o": ["Царское правительство", "Братья Нобель", "Ротшильды", "Сам Шухов"], "c": 1, "e": "«Товарищество братьев Нобель» — крупнейший нефтепромышленник Баку. Да, это та самая семья, чьё имя носит Нобелевская премия."}, {"q": "Что случилось с патентом Шухова на крекинг нефти 1891 года?", "o": ["Он был продан американцам за миллион", "Россия не использовала его — бензин был не нужен, а в 1913-м похожий процесс запатентовали в США", "Патент сгорел при пожаре в конторе Бари", "Его аннулировали как «не имеющий применения»"], "c": 1, "e": "В 1891 году бензин был почти отходом — автомобилей не существовало. Патент пролежал без дела, а в 1913 году американец Бартон запатентовал крекинг в США. В 1923-м американская делегация в Москве официально признала первенство Шухова."}];
+const quiz=[{"q": "Что Пирогов впервые применил на поле боя в 1847 году?", "o": ["Пенициллин", "Гипсовую повязку", "Эфирный наркоз", "Переливание крови"], "c": 2, "e": "В 1847 году, во время Кавказской войны, Пирогов первым в мире провёл операции под эфирным наркозом в боевых условиях. До него раненых оперировали без обезболивания."}, {"q": "Что такое «Ледяная анатомия» Пирогова?", "o": ["Метод лечения обморожений", "Атлас распилов замороженных трупов — первый в мире", "Методика охлаждения ран при операции", "Учебник о зимней медицине"], "c": 1, "e": "Пирогов замораживал трупы и делал поперечные, продольные и косые срезы, зарисовывая расположение органов. Это первый в истории анатомический атлас, основанный на реальном взаимном расположении органов — предок современной МРТ."}];
 const qBox=document.getElementById('quizBox');
 let qIdx=0, answered=[];
 
@@ -593,23 +527,7 @@ document.querySelectorAll('.fork-opt').forEach((el,i)=>{
 });
 
 // ── ЧАТ ───────────────────────────────────────────────────────────────────────
-const kb=[
- {k:['нефтепровод','труба','балахан','чёрный город','как работает','пуск','80 тыс','80 000'],a:'Десять километров стальной трубы в три дюйма, паровой насос — и нефть сама течёт с промысла на завод. До 80 тысяч пудов в сутки. Главное — не труба, а расчёт: диаметр, давление, вязкость. Надо считать, а не пробовать.'},
- {k:['нобел','деньги','заказ','оплат','убедил'],a:'Заказ оплатило «Товарищество братьев Нобель» — им бочки с арбами стоили дороже самой нефти. Я показал им числа: себестоимость перекачки в разы ниже. Числа убеждают лучше слов.'},
- {k:['возчик','арба','бочк','подвод','угроз','охран','казак'],a:'Возчики грозили разломать трубу — сотни людей теряли заработок. Трубу охраняли казаки. Но экономика победила быстрее ружей: против числа не поспоришь.'},
- {k:['крекинг','бензин','бартон','американ','патент','синклер','обидно'],a:'Крекинг я запатентовал в 1891 году — разложение нефти нагревом под давлением. России бензин был тогда не нужен: автомобилей не существовало. Через двадцать два года то же запатентовали в Америке. В 1923-м их делегация сверила патенты и признала: русский был первым. Обиды не держу — жаль лишь, что дело ушло за океан.'},
- {k:['башн','шаболовк','гиперболоид','радио','эйфелев'],a:'Башня на Шаболовке — сетка из прямых стержней: гиперболоид. Лёгкая, прочная, красивая — и собрана без лесов, телескопом. Задумывал я её выше Эйфелевой, в 350 метров, да металла в стране не хватило.'},
- {k:['чебышёв','чебышев','кафедра','математик','учёб','образован','училище'],a:'Пафнутий Львович Чебышёв звал меня на кафедру, к чистой математике. Я отказался: хотел строить. Математика для меня — инструмент, а не келья.'},
- {k:['детств','родил','грайворон','семь','курск'],a:'Родился я в Грайвороне, в Курской губернии, в 1853 году. Дворяне мы небогатые — всё, что имею, взято трудом и расчётом.'},
- {k:['гонорар','скромн','богат','характер'],a:'От многих гонораров я отказывался. Инженер обязан стране — а не наоборот. Мне хватает работы и чертёжной доски.'},
- {k:['изобрет','котл','форсунк','барж','двести','200','перекрыти','гум'],a:'Изобретений у меня около двухсот: водотрубные котлы, форсунка для мазута, нефтеналивные баржи, сетчатые перекрытия — ГУМ и Пушкинский музей накрыты моими конструкциями.'},
- {k:['баку','промыс','1877','приехал'],a:'Баку семидесятых — нефтяная столица мира, задыхавшаяся от собственной нефти. Добывать умели, возить — нет. Я приехал туда в 1877-м от конторы Бари — и увидел не хаос, а задачу по гидравлике.'},
- {k:['формул','расчёт','наук','гидравлик','считал','проектир'],a:'Я вывел формулы: какой диаметр под заданный поток, какое давление, где ставить станции перекачки, как вязкость зависит от температуры. Опубликовал открыто. По ним и сегодня проектируют трубопроводы.'},
- {k:['смерть','умер','свеч','1939'],a:'Февраль 1939 года... нелепо вышло: опрокинул свечу, ожоги. Мне было восемьдесят пять, и я работал до последнего дня.'},
- {k:['батум','керосинопровод','835'],a:'Керосинопровод Баку — Батум: восемьсот тридцать пять километров, крупнейший в мире на тот момент. 1907 год. Труба дотянулась до Чёрного моря.'},
- {k:['леонардо','первый инженер','слав','звани'],a:'«Русским Леонардо» меня назвали журналисты. Я инженер. Этого звания достаточно.'},
- {k:['привет','здравств','добрый','кто вы','кто ты'],a:'Здравствуйте. Владимир Григорьевич Шухов, инженер. Спрашивайте — только условимся: спорить будем числами.'}
-];
+const kb=[];
 
 function addMsg(text,who){
   const d=document.createElement('div');
@@ -624,7 +542,7 @@ function findAnswer(q){
   for(const item of kb){
     if(item.k.some(k=>q.includes(k.toLowerCase())))return item.a;
   }
-  return 'Задачу надо ставить точно — тогда и решение найдётся. Спросите о трубе, о крекинге или о башне — расскажу с числами в руках.';
+  return 'Об этом я могу рассказать подробнее, если уточните вопрос.';
 }
 
 function sendChat(){
@@ -637,17 +555,6 @@ function sendChat(){
 }
 document.getElementById('chatInput').addEventListener('keydown',e=>{if(e.key==='Enter')sendChat();});
 
-// стартовые вопросы + приветствие (без прокрутки при загрузке)
-(function(){
-  const qs=['Как вы убедили Нобелей дать деньги на трубу?','Обидно, что крекинг прославил Америку?','Как устроена ваша башня на Шаболовке?'];
-  const box=document.getElementById('starters');
-  qs.forEach(q=>{const c=document.createElement('span');c.className='chip';c.textContent=q;
-    c.onclick=()=>{document.getElementById('chatInput').value=q;sendChat();};box.appendChild(c);});
-  const w=document.createElement('div');w.className='msg inv';
-  w.textContent='Здравствуйте. Владимир Григорьевич Шухов, инженер. Спрашивайте — только условимся: спорить будем числами.';
-  document.getElementById('chatBox').appendChild(w);
-})();
-
 document.querySelectorAll('.starter-btn').forEach(b=>{
   b.onclick=function(){
     document.getElementById('chatInput').value=this.dataset.q;
@@ -655,120 +562,28 @@ document.querySelectorAll('.starter-btn').forEach(b=>{
   };
 });
 
-// ── HERO SCENE: «Баку, 1878 — пуск нефтепровода» ─────────────────────────────
+// ── HERO SCENE ────────────────────────────────────────────────────────────────
 (function(){
-  const cv=document.getElementById('heroCvs');if(!cv)return;
-  const ctx=cv.getContext('2d');
-  const reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const dpr=Math.min(window.devicePixelRatio||1,2);
-  let W,H,t=0;
-  function resize(){const p=cv.parentElement;W=(p?p.offsetWidth:innerWidth);H=(p?p.offsetHeight:Math.round(innerHeight*.52));
-    cv.width=W*dpr;cv.height=H*dpr;cv.style.width=W+'px';cv.style.height=H+'px';
-    ctx.setTransform(dpr,0,0,dpr,0,0);}
-  resize();addEventListener('resize',resize);
-
-  let on=false, wheelA=0, carts=1, surge=-1, smoke=[], drops=[], hinted=false;
-  for(let i=0;i<14;i++)drops.push({q:Math.random(),lane:Math.random()>.5?0:1});
-
-  function scene(){
-    ctx.clearRect(0,0,W,H);
-    const gy=H*.82, ty1=H*.40, ty2=H*.46, tx0=W*.12, tx1=W*.88;
-    // звёзды + зарево над промыслом
-    for(let i=0;i<40;i++){const x=(i*137.5)%W,y=(i*61.7)%(H*.3);
-      ctx.beginPath();ctx.arc(x,y,.8,0,7);ctx.fillStyle=`rgba(255,255,255,${.05+.05*Math.sin(t+i)})`;ctx.fill();}
-    let g=ctx.createRadialGradient(W*.14,gy,10,W*.14,gy,W*.5);
-    g.addColorStop(0,'rgba(201,140,60,.10)');g.addColorStop(1,'rgba(201,140,60,0)');
-    ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
-    // земля
-    ctx.fillStyle='rgba(4,8,16,.75)';ctx.fillRect(0,gy,W,H-gy);
-    ctx.strokeStyle='rgba(201,168,76,.25)';ctx.lineWidth=1;
-    ctx.beginPath();ctx.moveTo(0,gy);ctx.lineTo(W,gy);ctx.stroke();
-
-    // буровая вышка слева
-    const vx=W*.13,vy=gy;
-    ctx.strokeStyle='rgba(201,168,76,.7)';ctx.lineWidth=2;
-    ctx.beginPath();ctx.moveTo(vx-22,vy);ctx.lineTo(vx,vy-H*.30);ctx.lineTo(vx+22,vy);ctx.stroke();
-    for(const q of[.35,.6,.82]){const w=22*(1-q);
-      ctx.beginPath();ctx.moveTo(vx-w,vy-H*.30*q);ctx.lineTo(vx+w,vy-H*.30*q);ctx.stroke();}
-
-    // насосная станция с маховиком
-    const nx=W*.24,ny=gy;
-    ctx.fillStyle='#151009';ctx.strokeStyle='rgba(201,168,76,.5)';ctx.lineWidth=1.4;
-    ctx.beginPath();ctx.roundRect(nx-24,ny-34,48,34,3);ctx.fill();ctx.stroke();
-    if(on)wheelA+=.09+(surge>=0?.12:0);
-    ctx.save();ctx.translate(nx,ny-40);ctx.rotate(wheelA);
-    ctx.strokeStyle=on?'#e4c97a':'rgba(228,201,122,.45)';ctx.lineWidth=2;
-    ctx.beginPath();ctx.arc(0,0,13,0,7);ctx.stroke();
-    for(let i=0;i<4;i++){ctx.rotate(Math.PI/2);ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(0,-13);ctx.stroke();}
-    ctx.restore();
-
-    // труба (две нитки)
-    [[ty1,7],[ty2,7]].forEach(([y,r])=>{
-      const pg=ctx.createLinearGradient(tx0,y-r,tx0,y+r);
-      pg.addColorStop(0,'rgba(120,150,190,.85)');pg.addColorStop(.45,'rgba(55,85,125,.9)');pg.addColorStop(1,'rgba(18,32,55,.9)');
-      ctx.beginPath();ctx.roundRect(tx0,y-r,tx1-tx0,r*2,r);ctx.fillStyle=pg;ctx.fill();
-      ctx.strokeStyle='rgba(140,170,210,.3)';ctx.lineWidth=1;ctx.stroke();});
-    for(let x=tx0+40;x<tx1-20;x+=Math.round((tx1-tx0)/6)){
-      ctx.fillStyle='rgba(80,110,160,.7)';ctx.fillRect(x-4,ty1-10,8,ty2-ty1+20);}
-    // стояки к насосу и заводу
-    ctx.strokeStyle='rgba(80,110,160,.8)';ctx.lineWidth=5;
-    ctx.beginPath();ctx.moveTo(nx,ny-34);ctx.lineTo(nx,ty2);ctx.stroke();
-    ctx.beginPath();ctx.moveTo(W*.86,gy-H*.16);ctx.lineTo(W*.86,ty2);ctx.stroke();
-
-    // нефть в трубе: после пуска — яркий сплошной поток со свечением
-    if(on){ctx.save();ctx.shadowColor='rgba(240,180,60,.9)';ctx.shadowBlur=10;}
-    drops.forEach(d=>{if(on)d.q+=(.010+(surge>=0?.008:0));if(d.q>1)d.q-=1;
-      const y=(d.lane?ty2:ty1), x=tx0+8+(tx1-tx0-16)*d.q;
-      ctx.beginPath();ctx.ellipse(x,y,on?6:4,on?3.4:2.6,0,0,7);
-      ctx.fillStyle=on?'rgba(245,180,55,.95)':'rgba(120,90,30,.35)';ctx.fill();});
-    if(on)ctx.restore();
-    // импульс давления после тапа — крупный светящийся фронт
-    if(surge>=0){surge+=(tx1-tx0)/34;
-      ctx.save();ctx.shadowColor='#ffcf6a';ctx.shadowBlur=22;
-      ctx.beginPath();ctx.arc(tx0+surge,(ty1+ty2)/2,13,0,7);
-      ctx.fillStyle='rgba(255,206,106,.95)';ctx.fill();ctx.restore();
-      if(tx0+surge>tx1){surge=-1;
-        for(let i=0;i<14;i++)smoke.push({x:W*.86,y:gy-H*.16,r:3,a:.55,vx:(Math.random()-.3)*.5,vy:-.7-Math.random()*.6});}}
-
-    // завод справа (Чёрный город)
-    [[W*.84,gy,22,H*.16],[W*.90,gy,16,H*.12],[W*.95,gy,13,H*.14]].forEach(([x,y,w,h])=>{
-      ctx.fillStyle='rgba(35,58,92,.85)';ctx.fillRect(x-w/2,y-h,w,h);
-      ctx.strokeStyle='rgba(140,170,210,.25)';ctx.strokeRect(x-w/2,y-h,w,h);});
-    // дым завода (после пуска)
-    if(on&&Math.random()<.25)smoke.push({x:W*.90,y:gy-H*.12,r:2.5,a:.35,vx:(Math.random()-.3)*.4,vy:-.5-Math.random()*.4});
-    smoke=smoke.filter(p=>p.a>0);
-    smoke.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.r+=.12;p.a-=.004;
-      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,7);ctx.fillStyle=`rgba(180,190,205,${p.a})`;ctx.fill();});
-
-    // караван подвод (уходит после пуска)
-    if(carts>0){if(on)carts=Math.max(0,carts-.004);
-      ctx.save();ctx.globalAlpha=carts;
-      for(let i=0;i<4;i++){const cx=W*.35+i*W*.14+Math.sin(t*.7+i)*2, cy=gy+H*.07;
-        ctx.fillStyle='#1a1208';ctx.strokeStyle='rgba(160,130,70,.7)';ctx.lineWidth=1.2;
-        ctx.beginPath();ctx.roundRect(cx-13,cy-9,26,8,2);ctx.fill();ctx.stroke();
-        ctx.beginPath();ctx.ellipse(cx,cy-12,7,4.5,0,0,7);ctx.fillStyle='#241809';ctx.fill();ctx.stroke();
-        for(const dx of[-8,8]){ctx.beginPath();ctx.arc(cx+dx,cy+1,4.5,0,7);
-          ctx.strokeStyle='rgba(160,130,70,.8)';ctx.lineWidth=1.4;ctx.stroke();
-          ctx.beginPath();ctx.moveTo(cx+dx-3,cy+1);ctx.lineTo(cx+dx+3,cy+1);ctx.stroke();}}
-      ctx.restore();
-      if(carts>0&&!on){ctx.fillStyle='rgba(122,154,184,.55)';
-        ctx.font='10px Inter,sans-serif';ctx.textAlign='center';
-        ctx.fillText('двести подвод в день…',W*.55,gy+H*.03);}}
-  }
-
-  function fire(){keyHint();on=true;surge=0;
-    // мгновенный видимый впрыск: волна капель + толчок дыма над заводом
-    for(let i=0;i<3;i++)smoke.push({x:W*.86,y:gy-H*.16,r:3,a:.55,vx:(Math.random()-.3)*.5,vy:-.7-Math.random()*.5});
-    if(reduce){scene();}}  // без анимации всё равно перерисуем кадр
-  function keyHint(){if(hinted)return;hinted=true;
-    const h=document.getElementById('heroHint');if(h){h.textContent='нефть пошла — двести подвод больше не нужны';setTimeout(()=>{h.style.opacity='0';},2200);}}
-
-  cv.style.cursor='pointer';cv.style.pointerEvents='auto';
-  cv.addEventListener('click',fire);
-  cv.addEventListener('touchstart',e=>{e.preventDefault();fire();},{passive:false});
-
-  if(reduce){t=1;scene();return;}   // ждём тап; fire() перерисует кадр
-  (function loop(){t+=.022;scene();requestAnimationFrame(loop);})();
+  const cv=document.getElementById('heroCvs');
+  if(!cv||typeof THREE==='undefined'){const ctx=cv.getContext('2d');let W,H,t=0;function r2(){W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight;}r2();function dr(){ctx.clearRect(0,0,W,H);t+=.018;const cx=W/2,by=H*.12,step=16,N=Math.floor((H*.76)/step);for(let n=0;n<N;n++){const y=by+n*step,ph=n/N*Math.PI*6+t,x1=cx+Math.cos(ph)*W*.16,x2=cx+Math.cos(ph+Math.PI)*W*.16,z1=Math.sin(ph),z2=Math.sin(ph+Math.PI);ctx.beginPath();ctx.arc(x1,y,4,0,Math.PI*2);ctx.fillStyle=`rgba(45,140,191,${.3+.5*(z1+1)/2})`;ctx.fill();ctx.beginPath();ctx.arc(x2,y,4,0,Math.PI*2);ctx.fillStyle=`rgba(201,168,76,${.3+.5*(z2+1)/2})`;ctx.fill();if(n%2===0){ctx.beginPath();ctx.moveTo(x1,y);ctx.lineTo(x2,y);ctx.strokeStyle='rgba(255,255,255,.07)';ctx.lineWidth=1;ctx.stroke();}}requestAnimationFrame(dr);}dr();return;}
+  const _p=cv.parentElement,W=(_p&&_p.offsetWidth)||window.innerWidth,H=(_p&&_p.offsetHeight)||Math.round(window.innerHeight*.52);cv.width=W;cv.height=H;
+  const rnd=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true});
+  rnd.setSize(W,H);rnd.setPixelRatio(Math.min(devicePixelRatio,2));
+  const scene=new THREE.Scene(),cam=new THREE.PerspectiveCamera(60,W/H,.1,50);cam.position.set(0,0,6);
+  // Ядро
+  const core=new THREE.Mesh(new THREE.SphereGeometry(.55,32,32),new THREE.MeshPhongMaterial({color:0x2d8cbf,emissive:0x0a2d4a,shininess:90}));scene.add(core);
+  // Орбиты + атомы
+  const cols=[0xc9a84c,0x5599cc,0x3f9b52,0xcc4466];
+  const atoms=cols.map((col,i)=>{
+    const r=1.4+i*.38,ring=new THREE.Mesh(new THREE.TorusGeometry(r,.013,8,80),new THREE.MeshBasicMaterial({color:col,opacity:.42,transparent:true}));
+    ring.rotation.x=Math.PI/2*Math.sin(i*1.1);ring.rotation.y=i*.9;scene.add(ring);
+    const el=new THREE.Mesh(new THREE.SphereGeometry(.13,16,16),new THREE.MeshBasicMaterial({color:col}));scene.add(el);
+    return{el,ring,r,speed:.55+i*.2,angle:Math.random()*Math.PI*2};});
+  scene.add(new THREE.AmbientLight(0x112233,.9));const dl=new THREE.DirectionalLight(0xffffff,1);dl.position.set(5,5,5);scene.add(dl);
+  let t=0;(function loop(){t+=.008;core.rotation.y=t*.5;core.rotation.x=t*.3;
+    atoms.forEach(a=>{a.angle+=a.speed*.011;const rx=a.ring.rotation.x,ry=a.ring.rotation.y;
+      a.el.position.set(Math.cos(a.angle)*a.r*Math.cos(ry)+Math.sin(a.angle)*a.r*Math.sin(rx)*Math.sin(ry),Math.sin(a.angle)*a.r*Math.cos(rx),-Math.cos(a.angle)*a.r*Math.sin(ry)+Math.sin(a.angle)*a.r*Math.sin(rx)*Math.cos(ry));});
+    rnd.render(scene,cam);requestAnimationFrame(loop);})();
 })();
 
 // ── ТЕМАТИЧЕСКИЕ ИЗОБРЕТЕНИЯ ─────────────────────────────────────────────────
@@ -783,7 +598,6 @@ if(themeBtn)themeBtn.onclick=function(){
 
 // ── КАЛЕНДАРЬ ─────────────────────────────────────────────────────────────────
 const calData={"1": {"18": {"t": "Первый в мире боевой многозарядный миномёт обр. 1904 г.", "y": "1904"}, "27": {"t": "Первый в мире военный миноносец «Сокол» с паровой турбиной", "y": ""}, "29": {"t": "Первый в мире серийный атомный подводный ракетоносец К-19", "y": ""}, "31": {"t": "Первая в мире женщина-пилот (Зинаида Кокорина, аэроклуб)", "y": ""}, "5": {"t": "Первый в мире промышленный нефтепровод Балаханы–Черный город", "y": ""}, "6": {"t": "Первый в мире пенициллин советского производства (победа над", "y": ""}, "11": {"t": "Первый в мире ядерный реактор в Евразии Ф-1 (Курчатов)", "y": ""}, "3": {"t": "Первый в мире атомный ледокол-речник «Обь» и атомный флот", "y": ""}, "4": {"t": "Первая в мире беспроводная передача данных на расстояние (ра", "y": ""}, "1": {"t": "Первая в мире сеть кабельного телевидения (Москва, 30 абонен", "y": ""}, "2": {"t": "«Луна-1», первая межпланетная станция и 2-я космическая скор", "y": "1959"}, "17": {"t": "Аэродинамика как наука", "y": ""}, "7": {"t": "Геологическая карта и наука о недрах России", "y": ""}, "8": {"t": "«Ермак», первый в мире арктический ледокол", "y": "1849"}, "9": {"t": "Первый в мире гусеничный ход (патент Блинова)", "y": ""}, "10": {"t": "Первый в мире ледокол «Пайлот»", "y": ""}, "25": {"t": "Самая быстроходная в мире подлодка К-162 (титан)", "y": ""}, "12": {"t": "Первая в мире межконтинентальная баллистическая ракета Р-7", "y": "1907"}, "13": {"t": "Алюминотермия (получение металлов)", "y": ""}, "14": {"t": "Исследование Тянь-Шаня и Центральной Азии", "y": ""}, "15": {"t": "Первая в мире женщина-профессор математики", "y": ""}, "22": {"t": "Теория сверхтекучести (Нобель)", "y": ""}, "16": {"t": "Первая стыковка кораблей и переход через открытый космос («С", "y": ""}, "19": {"t": "Линейное программирование (Нобель по экономике)", "y": ""}, "21": {"t": "Первая в мире АЭС (Обнинск)", "y": "1903"}, "28": {"t": "Открытие Антарктиды", "y": ""}, "30": {"t": "Ранцевый парашют РК-1", "y": "1872"}, "24": {"t": "Первый русский электромобиль («кукушка», 60 км хода)", "y": "1864"}, "23": {"t": "Учение о движении энергии, вектор Умова (первым в мире ввёл ", "y": ""}, "20": {"t": "Открытие витаминов, основы витаминологии (первым в мире)", "y": "1853"}, "26": {"t": "Первый в мире серийный реактивный пассажирский самолёт Ту-10", "y": ""}}, "2": {"28": {"t": "Первые в мире серийные реактивные снаряды залпового огня (ис", "y": ""}, "19": {"t": "Первая в мире широкоформатная панорамная фотография", "y": ""}, "23": {"t": "Первые в мире реактивные снаряды залпового огня «Катюша» (по", "y": ""}, "26": {"t": "Первый в мире промышленный синтез синтетического каучука", "y": ""}, "24": {"t": "Первая в мире мощная радиовещательная станция (Коминтерн, 19", "y": "1922"}, "25": {"t": "Первый в мире практический токамак Т-1 для термоядерного син", "y": ""}, "1": {"t": "Основы неврологии и психоневрологии", "y": ""}, "2": {"t": "Гаубица «единорог»", "y": ""}, "3": {"t": "Первая в мире мягкая посадка на Луну («Луна-9»)", "y": ""}, "4": {"t": "Самовар", "y": ""}, "5": {"t": "Гибкая (рулонная) фотоплёнка (раньше Kodak)", "y": ""}, "20": {"t": "Первая в мире модульная орбитальная станция «Мир»", "y": ""}, "8": {"t": "Периодическая система элементов", "y": ""}, "10": {"t": "Аэросани (первые в мире)", "y": ""}, "12": {"t": "Закон Ленца (электромагнитная индукция)", "y": ""}, "13": {"t": "Гидросамолёты и амфибии «Бе»", "y": ""}, "14": {"t": "Первый в мире монорельс", "y": ""}, "17": {"t": "Первый в мире электрический трамвай", "y": ""}, "6": {"t": "Угольный противогаз", "y": "1861"}, "7": {"t": "Первая в мире троичная ЭВМ «Сетунь»", "y": ""}, "27": {"t": "Пересадка роговицы и тканевая терапия", "y": ""}, "9": {"t": "Гелиобиология и аэроионификация («люстра Чижевского»)", "y": ""}, "18": {"t": "Почвоведение как наука, первое в мире", "y": ""}, "11": {"t": "Первый в мире морской гидросамолёт (летающая лодка М-5)", "y": ""}, "16": {"t": "Первый в мире радиозонд", "y": "1893"}, "15": {"t": "Первая в мире «мёртвая петля», рождение высшего пилотажа", "y": ""}, "21": {"t": "Медицинская микробиология, первая в России станция прививок ", "y": ""}, "22": {"t": "Первый в мире промышленный индукционный нагрев токами высоко", "y": ""}}, "3": {"19": {"t": "Первый в мире военный ледокол «Вайгач» — исследование Арктик", "y": ""}, "27": {"t": "Первая в мире научная классификация почвенных зон", "y": ""}, "28": {"t": "Первые в мире опыты по передаче электроэнергии на расстояние", "y": ""}, "29": {"t": "Первый в мире пенетрометр для измерения твёрдости грунта", "y": ""}, "6": {"t": "Первый в мире обезболивающий наркоз на поле боя (эфирный)", "y": ""}, "13": {"t": "Теория функциональных систем (физиология поведения)", "y": ""}, "26": {"t": "Первые в мире опыты по радиолокации (РЛС)", "y": ""}, "22": {"t": "Первая в мире сварка под водой", "y": ""}, "1": {"t": "Первая русская печатная книга «Апостол»", "y": ""}, "2": {"t": "Спонтанное деление ядер урана (открытие)", "y": ""}, "3": {"t": "Органическая химия, реакции Фаворского", "y": ""}, "4": {"t": "Принцип автофазировки, синхрофазотрон", "y": ""}, "5": {"t": "Автоматическая дуговая сварка под флюсом", "y": ""}, "8": {"t": "Давление света (экспериментально доказано впервые)", "y": ""}, "9": {"t": "Турбобур (турбинное бурение скважин)", "y": ""}, "10": {"t": "Открытие пролива между Азией и Америкой", "y": ""}, "12": {"t": "Учение о биосфере и ноосфере", "y": ""}, "14": {"t": "Первая в мире паровая машина (двухцилиндровая)", "y": ""}, "15": {"t": "Первые в мире полупроводниковые гетероструктуры — основа лаз", "y": ""}, "16": {"t": "Радио", "y": ""}, "17": {"t": "Стартовые (пусковые) ракетные комплексы", "y": ""}, "18": {"t": "Первый выход человека в открытый космос (Леонов, «Восход-2»)", "y": ""}, "20": {"t": "Первый в мире магистральный тепловоз", "y": ""}, "21": {"t": "Самолёт Можайского, один из первых в мире", "y": ""}, "23": {"t": "Первый отечественный турбореактивный двигатель", "y": ""}, "24": {"t": "Люминесценция, физическая оптика", "y": ""}, "25": {"t": "Радиоуправление, первые в мире опыты", "y": ""}, "30": {"t": "Штурмовик Ил-2 и самолёты Ильюшина", "y": ""}, "31": {"t": "Дешифровка письменности майя", "y": ""}, "11": {"t": "Открытие мембранного (пристеночного) пищеварения, мировой пр", "y": ""}, "7": {"t": "Первый в мире токарный станок с механическим суппортом", "y": ""}}, "4": {"18": {"t": "Первые в мире алмазы на Урале: открытие месторождения", "y": ""}, "20": {"t": "Первый в мире рейс атомного ледокола «Ленин» по Северному мо", "y": ""}, "22": {"t": "Первая в мире демонстрация электродуговой сварки публике", "y": ""}, "24": {"t": "Открытие первого в мире угольного синтеза (метод Бергиуса-На", "y": ""}, "3": {"t": "Первый в мире переносной радиоприёмник", "y": ""}, "4": {"t": "Первая в мире пересадка почки (опыты)", "y": ""}, "7": {"t": "Первая в мире подводная лодка «Дельфин» с двигателем внутрен", "y": ""}, "10": {"t": "Первый в мире оптический прицел для артиллерии", "y": ""}, "13": {"t": "Первая в мире глубоководная морская мина", "y": ""}, "16": {"t": "Первый в мире серийный атомный ледокол «Ленин» (закладка)", "y": ""}, "17": {"t": "Первый в мире буксируемый ракетный снаряд", "y": ""}, "27": {"t": "Гнойная хирургия — фундаментальный труд мировой медицины", "y": ""}, "26": {"t": "Первый в мире противочумной прокол (прошивание швами) — пред", "y": ""}, "28": {"t": "Первый в мире рентгеновский аппарат на основе трубки Попова", "y": ""}, "1": {"t": "Самолёты «Як»", "y": ""}, "9": {"t": "Первый в мире дизельный теплоход «Вандал»", "y": ""}, "11": {"t": "Первый в мире ранцевый лётный тренажёр", "y": ""}, "2": {"t": "Первый в мире бензиновый двигатель (для дирижабля)", "y": ""}, "5": {"t": "Аэродинамика, теорема Чаплыгина", "y": ""}, "6": {"t": "Антисептическая и полостная хирургия", "y": ""}, "8": {"t": "Гусеничный вездеход/танк «Вездеход»", "y": ""}, "12": {"t": "Первый полёт человека в космос (Ю. Гагарин, «Восток-1»)", "y": ""}, "14": {"t": "Трёхлинейная винтовка Мосина", "y": ""}, "15": {"t": "Теория цепных химических реакций (Нобель)", "y": ""}, "19": {"t": "Первая в мире орбитальная станция «Салют-1»", "y": ""}, "21": {"t": "Первый в России самодвижущийся экипаж («самокатка») с трёхко", "y": ""}, "23": {"t": "Первая в мире система спутникового телевещания", "y": ""}, "25": {"t": "Теория вероятностей (аксиоматика)", "y": ""}, "29": {"t": "Пистолет-пулемёт ППШ", "y": ""}, "30": {"t": "Первый в мире аппарат искусственного кровообращения (автожек", "y": ""}}, "5": {"24": {"t": "Первая в мире регулярная почтовая служба на дирижаблях", "y": ""}, "26": {"t": "Исследование Уссурийского края, «Дерсу Узала»", "y": ""}, "27": {"t": "Первый в мире безэкипажный танк (телетанк Т-26)", "y": ""}, "28": {"t": "Первая в мире ночная бомбардировка авиацией (Галиция)", "y": ""}, "29": {"t": "Первая в мире мощная лучевая пушка на основе магнетрона", "y": ""}, "30": {"t": "Первый в мире рейс самолёта с ядерным двигателем в испытател", "y": ""}, "31": {"t": "Первый в мире прыжок с парашютом из стратосферы (рекорд СССР", "y": ""}, "6": {"t": "Первые в мире полёты аэростата с людьми в России", "y": ""}, "11": {"t": "Первый в мире двигатель на водороде в блокадном Ленинграде", "y": ""}, "23": {"t": "Первая в мире передача речи по радио (Попов)", "y": ""}, "14": {"t": "Первый в мире геликоптер с автоматом перекоса (ЦАГИ 1-ЭА)", "y": ""}, "17": {"t": "Первая в мире высадка на дрейфующую льдину в Арктике", "y": ""}, "19": {"t": "Первый в мире вертикальный взлёт самолёта-штурмовика (Як-36)", "y": ""}, "1": {"t": "Первый в мире одноместный вертолёт с автоматом перекоса в ис", "y": ""}, "2": {"t": "Первая в мире дрейфующая полярная станция «СП-1» (полюс)", "y": ""}, "8": {"t": "Первый в мире буер на воздушной подушке (аэросани Туполева)", "y": ""}, "3": {"t": "Первый в мире турбовинтовой межконтинентальный лайнер Ту-114", "y": ""}, "4": {"t": "Комбинационное рассеяние света", "y": ""}, "5": {"t": "Электродуговая сварка металлическим электродом", "y": ""}, "7": {"t": "Первая демонстрация радиоприёмника (День радио)", "y": ""}, "10": {"t": "Светодиод («свечение Лосева»), первое полупроводниковое свеч", "y": ""}, "12": {"t": "Телефонная трубка (микрофон+телефон вместе) и АТС", "y": "1880"}, "13": {"t": "Древнейшее в мире колесо со спицами и боевая колесница (Синт", "y": "2000"}, "15": {"t": "Учение об иммунитете, фагоцитоз (Нобель)", "y": ""}, "16": {"t": "Математика, теория механизмов и приближений", "y": ""}, "18": {"t": "Прототип персонального компьютера и первый плоттер", "y": ""}, "20": {"t": "Первый в мире коммерческий видеомагнитофон", "y": ""}, "21": {"t": "Управляемый термоядерный синтез, идея токамака", "y": ""}, "22": {"t": "«Хождение за три моря» — первый европейский рассказ о путеше", "y": ""}, "25": {"t": "Первый в мире четырёхмоторный самолёт «Русский витязь» и сер", "y": ""}, "9": {"t": "Первая в мире передача изображения на ЭЛТ (электронное ТВ)", "y": ""}}, "6": {"2": {"t": "Первый в мире ракетный двигатель на гиперголическом топливе", "y": ""}, "7": {"t": "Исследования Центральной Азии, первый европеец в Тянь-Шане", "y": ""}, "10": {"t": "Первый в мире противоминный трал на военных кораблях", "y": ""}, "12": {"t": "Первый в мире арктический дрейф на пароходе «Ермак»", "y": ""}, "18": {"t": "Первая в мире геомагнитная обсерватория", "y": ""}, "22": {"t": "Первый в мире самодвижущийся минный катер", "y": ""}, "27": {"t": "Первый в мире скафандр для глубоководных работ", "y": ""}, "8": {"t": "Полёт первого в мире самолёта с ядерной силовой установкой", "y": ""}, "11": {"t": "Первый в мире серийный магистральный газотурбинный тепловоз ", "y": ""}, "28": {"t": "Первый в мире промышленный ядерный реактор «Аннушка» (первый", "y": ""}, "3": {"t": "Раскрытие механизма фотосинтеза", "y": ""}, "1": {"t": "Первый в мире дрейфующий научный лагерь «СП-1» на полюсе", "y": ""}, "5": {"t": "Аппарат для механического сшивания кровеносных сосудов", "y": ""}, "6": {"t": "«Тетрис», первая всемирно культовая видеоигра", "y": "1984"}, "9": {"t": "Первый в мире токамак (Т-1), управляемый термоядерный синтез", "y": ""}, "14": {"t": "Самозарядные пистолет ТТ и винтовка СВТ", "y": ""}, "15": {"t": "Аппарат Илизарова, чрескостный остеосинтез", "y": ""}, "16": {"t": "Первая женщина в космосе (В. Терешкова)", "y": ""}, "17": {"t": "Первый в мире серийный реактивный пассажирский самолёт Ту-10", "y": ""}, "23": {"t": "Авиационные и ракетные двигатели (НК)", "y": ""}, "25": {"t": "Теория сверхпроводников второго рода (Нобель)", "y": ""}, "20": {"t": "Электрошлаковая сварка", "y": ""}, "21": {"t": "Реактивный миномёт «Катюша»", "y": ""}, "29": {"t": "Возрождение секрета булатной стали", "y": ""}, "30": {"t": "Ракетно-космическая техника, крылатые ракеты", "y": ""}, "19": {"t": "Модель расширяющейся Вселенной, основа современной космологи", "y": ""}, "4": {"t": "Основоположник нейрохирургии", "y": ""}, "13": {"t": "Учение о доминанте, основы физиологии поведения (первое в ми", "y": ""}, "26": {"t": "Излучение Вавилова-Черенкова, теоретическая физика (Нобель)", "y": ""}}, "7": {"6": {"t": "Первый в мире промышленный синтез аммиака по российскому мет", "y": ""}, "7": {"t": "Первое в мире водолазное спасательное устройство", "y": ""}, "14": {"t": "Первый в мире гиперзвуковой аэродинамический расчёт крыла", "y": ""}, "20": {"t": "Первая в мире ракета на жидком кислороде и керосине (испытан", "y": ""}, "31": {"t": "Первый в мире высотный скафандр для лётчиков", "y": ""}, "1": {"t": "Первый в мире официальный патент на ранцевый парашют", "y": ""}, "2": {"t": "Первая в мире электрическая лампа (опыты)", "y": ""}, "3": {"t": "Первый в мире вертолёт Черёмухина ЦАГИ 1-ЭА (мировой рекорд ", "y": ""}, "4": {"t": "Первый в мире переносной сварочный аппарат", "y": ""}, "5": {"t": "Первая в мире сельскохозяйственная академия (Петровская)", "y": ""}, "16": {"t": "Основатель мировой нейропсихологии", "y": ""}, "8": {"t": "Электродуговая сварка (угольный электрод)", "y": ""}, "10": {"t": "Самый большой в мире вертолёт В-12 (первый полёт)", "y": ""}, "11": {"t": "Лазер и мазер (Нобель)", "y": ""}, "12": {"t": "Синхрофазотрон (Дубна)", "y": ""}, "15": {"t": "Матричный принцип наследственности", "y": ""}, "17": {"t": "Научная этнография и география Океании", "y": ""}, "19": {"t": "Электрическая дуга и её применение", "y": ""}, "22": {"t": "Самолёты «Су»", "y": ""}, "23": {"t": "Авиационные двигатели «ВК»", "y": ""}, "25": {"t": "Промышленный синтетический каучук, первый в мире", "y": ""}, "26": {"t": "Первая в мире передача движущегося изображения (электронное ", "y": ""}, "18": {"t": "Основоположник трансплантологии органов", "y": ""}, "27": {"t": "Объёмная (глубинная) голография", "y": ""}, "28": {"t": "Излучение Черенкова (Нобель)", "y": ""}, "29": {"t": "Протон-нейтронная модель атомного ядра", "y": ""}, "30": {"t": "Электронное телевидение и иконоскоп", "y": ""}, "24": {"t": "Первая в мире женщина в открытом космосе (С. Савицкая)", "y": ""}, "9": {"t": "Сверхтекучесть жидкого гелия (Нобель)", "y": ""}, "21": {"t": "Первый в мире полёт живых существ в стратосферу с возвратом ", "y": ""}, "13": {"t": "Первая в мире государственная система здравоохранения (модел", "y": ""}}, "8": {"1": {"t": "Первый в мире арктический метеорологический прогноз (Визе)", "y": ""}, "2": {"t": "Первые в мире воздушно-десантные войска (учения РККА)", "y": ""}, "4": {"t": "Геология Сибири, открытие Байкальского разлома", "y": ""}, "9": {"t": "Первый в мире парашют-«крыло» (испытания)", "y": ""}, "14": {"t": "Первая в мире успешная пересадка сердца от собаки к собаке", "y": ""}, "18": {"t": "Первый в мире полностью закрытый водолазный аппарат (регенер", "y": ""}, "21": {"t": "Первая в мире атомная мина для морского дна", "y": ""}, "22": {"t": "Первый в мире реактивный самолёт с крылом изменяемой стрелов", "y": ""}, "30": {"t": "Первый в мире пассажирский авиационный рейс на вертолёте", "y": ""}, "3": {"t": "Первый в мире гусеничный (паровой) трактор", "y": ""}, "5": {"t": "Истребители «МиГ»", "y": ""}, "6": {"t": "Первый в мире суточный полёт человека в космос («Восток-2», ", "y": ""}, "7": {"t": "Первая русская кругосветная экспедиция", "y": ""}, "12": {"t": "Самолёт схемы «летающее крыло»", "y": "1920"}, "13": {"t": "Рефлексы головного мозга, основы физиологии", "y": ""}, "25": {"t": "Синтез анилина, начало промышленной оргхимии", "y": ""}, "15": {"t": "Терменвокс — первый электромузыкальный инструмент", "y": ""}, "17": {"t": "Первый надводный корабль, достигший Северного полюса (атомох", "y": ""}, "20": {"t": "Стереокино без очков", "y": ""}, "23": {"t": "Жидкостный ракетный двигатель (ОР-1)", "y": ""}, "27": {"t": "Киноаппарат (раньше Люмьеров)", "y": ""}, "28": {"t": "Первый в мире промышленный крекинг нефти — получение бензина", "y": "1891"}, "26": {"t": "Первые в мире гиперболоидные сетчатые башни и конструкции", "y": ""}, "31": {"t": "Цветная фотография (метод трёх кадров)", "y": ""}, "8": {"t": "Микрохирургия глаза, первый в мире поток-метод операций", "y": ""}, "10": {"t": "Законы фотоэффекта, первый фотоэлемент", "y": ""}, "16": {"t": "Теория корабля и качки, первый интегратор дифуравнений", "y": ""}, "24": {"t": "Кибернетика, проект ОГАС (прообраз интернета), ЭВМ «МИР»", "y": ""}, "19": {"t": "Белка и Стрелка: первое в мире возвращение живых существ с о", "y": ""}, "29": {"t": "Первый русский паровоз и рельсовая дорога", "y": ""}, "11": {"t": "Первый в мире групповой космический полёт («Восток-3/4»)", "y": ""}}, "9": {"7": {"t": "Первый в мире телеграф в Зимнем дворце (между дворцами Петер", "y": ""}, "16": {"t": "Первый в мире самолёт-биплан с закрытой кабиной экипажа", "y": ""}, "22": {"t": "Первый в мире оперативный метеопрогноз на несколько суток", "y": ""}, "23": {"t": "Первая в мире ЭВМ для экономических расчётов «БЭСМ-6»", "y": ""}, "25": {"t": "Первое в мире систематическое картографирование Арктики", "y": ""}, "27": {"t": "Первая в мире подводная электрическая мина (Якоби)", "y": ""}, "29": {"t": "Открытие Берингова пролива (первый в мире проход)", "y": ""}, "1": {"t": "Хемосинтез (открытие)", "y": ""}, "2": {"t": "Электрический ракетный двигатель (ЭРД)", "y": ""}, "3": {"t": "Математическая теория оптимального управления", "y": ""}, "4": {"t": "Местная анестезия и мазь Вишневского", "y": ""}, "8": {"t": "Водородный двигатель (практическое применение, блокадный Лен", "y": ""}, "9": {"t": "Химия элементоорганических соединений", "y": ""}, "10": {"t": "Дефибриллятор (электрический запуск сердца)", "y": ""}, "11": {"t": "Истребители «Ла»", "y": ""}, "13": {"t": "Гидроинтегратор — первая в мире аналоговая ЭВМ", "y": ""}, "14": {"t": "Первые в мире дуговые электрические лампы («свеча Яблочкова»", "y": ""}, "6": {"t": "Первый в мире метод непрерывной разливки стали", "y": "1950"}, "15": {"t": "Теория химического строения веществ", "y": ""}, "17": {"t": "Теория космонавтики и ракетодинамики", "y": ""}, "19": {"t": "Первый в мире автомат (автоматическая винтовка)", "y": ""}, "20": {"t": "Аэрофотоаппарат (аэрофотосъёмка)", "y": ""}, "21": {"t": "Электродвигатель, гальванопластика, телеграф", "y": ""}, "24": {"t": "Математика, дивергенция и уравнения физики", "y": ""}, "26": {"t": "Учение об условных рефлексах (Нобель)", "y": ""}, "28": {"t": "Первый в Европе и Азии ядерный реактор Ф-1 (атомная промышле", "y": ""}, "30": {"t": "Стратостат «СССР-1», мировой рекорд высоты", "y": ""}, "12": {"t": "«Луна-2», первый в мире аппарат, достигший другого небесного", "y": "1959"}, "18": {"t": "Космогония, теория происхождения планет; освоение Севморпути", "y": ""}, "5": {"t": "Научная клиническая медицина, первая бесплатная больничная л", "y": ""}}, "10": {"1": {"t": "Первый в мире беспилотный вертолёт (советские испытания)", "y": ""}, "2": {"t": "Первый в мире газотурбинный локомотив", "y": ""}, "6": {"t": "Геология и геохимия Сибири, «Земля Санникова»", "y": ""}, "13": {"t": "Первый в мире реактивный бомбардировщик Ту-16", "y": ""}, "14": {"t": "Первое в мире хождение с живым сердцем донора (Демихов)", "y": ""}, "26": {"t": "Первый в мире искусственный рубин (промышленное производство", "y": ""}, "8": {"t": "Первый в мире управляемый реактивный снаряд С-75 (сбил U-2)", "y": ""}, "11": {"t": "Первый в мире сеанс радиосвязи через Луну как отражатель", "y": ""}, "17": {"t": "Первый в мире орбитальный полёт длительностью более суток (Т", "y": ""}, "4": {"t": "«Спутник-1», первый в мире искусственный спутник Земли", "y": "1957"}, "7": {"t": "Первые в мире снимки обратной стороны Луны («Луна-3»)", "y": ""}, "9": {"t": "Метод хранения и переливания крови (в т.ч. трупной)", "y": ""}, "10": {"t": "Геология Сибири и Азии", "y": ""}, "15": {"t": "Электронный парамагнитный резонанс (ЭПР)", "y": ""}, "16": {"t": "Первая в мире сварка в открытом космосе", "y": ""}, "18": {"t": "Лампа накаливания (нить, спираль)", "y": ""}, "20": {"t": "Пенный огнетушитель", "y": ""}, "21": {"t": "Электромагнитный телеграф, первый в истории", "y": ""}, "23": {"t": "Теория излучения Вавилова-Черенкова (Нобель)", "y": ""}, "24": {"t": "Первый советский пенициллин, антибиотики", "y": ""}, "25": {"t": "Баллистические ракеты подводных лодок", "y": ""}, "27": {"t": "Научная селекция растений, новые сорта", "y": ""}, "28": {"t": "Открытие вирусов (основы вирусологии)", "y": ""}, "29": {"t": "Физика полупроводников (научная школа)", "y": ""}, "30": {"t": "Первая в мире автоматическая стыковка на орбите («Космос-186", "y": ""}, "31": {"t": "Проект реактивного летательного аппарата", "y": ""}, "12": {"t": "«Восход-1», первый в мире многоместный космический корабль", "y": "1964"}, "19": {"t": "Металловедение, точки Чернова (первое в мире учение о структ", "y": ""}, "22": {"t": "«Венера-9»: первые в мире снимки поверхности другой планеты", "y": "1975"}, "3": {"t": "Теория сверхпроводимости и сверхтекучести (Нобель)", "y": ""}, "5": {"t": "Первый в мире Центральный телеграф и Киевский вокзал (ж/б ко", "y": ""}}, "11": {"16": {"t": "Первый в мире серийный зенитный ракетный комплекс С-25", "y": ""}, "23": {"t": "Первый в мире сверхтекучий гелий (открытие свойства)", "y": ""}, "24": {"t": "Первый в мире реактивный истребитель МиГ-19 со сверхзвуковой", "y": ""}, "26": {"t": "Первый в мире двуствольный пулемёт (шкас)", "y": ""}, "28": {"t": "Первый в мире ядерный взрыв под землёй (мирный)", "y": ""}, "29": {"t": "Первая в мире трёхфазная электростанция (Лауфен–Франкфурт, р", "y": ""}, "30": {"t": "Первый в мире реактивный пассажирский лайнер Ту-144 (первый ", "y": ""}, "5": {"t": "Первая в мире массовая операция под эфирным наркозом в военн", "y": ""}, "12": {"t": "Первый в мире атомный ледокол «Ленин» (ввод в эксплуатацию)", "y": ""}, "20": {"t": "Эволюционная сравнительная эмбриология — основа дарвинизма", "y": ""}, "18": {"t": "Первая в России прокладка кабелей под водой и телефонизация", "y": ""}, "11": {"t": "Первая серийная подводная лодка", "y": ""}, "14": {"t": "Первый в мире миномёт", "y": ""}, "17": {"t": "«Луноход-1», первый в мире планетоход", "y": "1970"}, "2": {"t": "Первая ЭВМ в континентальной Европе (МЭСМ)", "y": ""}, "3": {"t": "Первый в мире электромагнитный сейсмограф", "y": ""}, "6": {"t": "Агрохимия и научное применение удобрений", "y": ""}, "7": {"t": "Стратегические ракеты (Р-12, Р-36)", "y": ""}, "8": {"t": "Геохимия и минералогия", "y": ""}, "10": {"t": "Автомат Калашникова (АК-47), самое массовое стрелковое оружи", "y": ""}, "4": {"t": "Первый в мире многомоторный тяжёлый самолёт «Илья Муромец»", "y": ""}, "19": {"t": "Основоположник русской науки; мозаика, наука о стекле, закон", "y": ""}, "21": {"t": "Катализ под высоким давлением", "y": ""}, "22": {"t": "Вертолёты «Ми»", "y": ""}, "25": {"t": "Военно-полевая хирургия и наркоз в полевых условиях", "y": ""}, "27": {"t": "Трёхфазная система переменного тока", "y": ""}, "9": {"t": "Автомат перекоса — «сердце» вертолёта", "y": ""}, "13": {"t": "Закон гомологических рядов, первый в мире банк семян", "y": ""}, "15": {"t": "«Буран», первый в мире беспилотный полёт и посадка космоплан", "y": "1988"}, "1": {"t": "Первое в мире массовое применение живой вакцины от полиомиел", "y": "1909"}}, "12": {"24": {"t": "Первый в мире алмаз в Якутии (промышленное месторождение «Ми", "y": ""}, "26": {"t": "Первый в мире сверхзвуковой стратегический бомбардировщик Ту", "y": ""}, "27": {"t": "Первый в мире чертёж механизма гусеницы (Блинов)", "y": ""}, "30": {"t": "Первая в мире гиперзвуковая крылатая ракета (прототип «Метео", "y": ""}, "11": {"t": "Первый в мире телеуправляемый торпедный катер", "y": ""}, "17": {"t": "Первая в мире централизованная система теплоснабжения", "y": ""}, "19": {"t": "Первый советский персональный ЭВМ «МИР» для инженеров", "y": ""}, "25": {"t": "Первый в мире ядерный реактор на европейском континенте Ф-1", "y": ""}, "13": {"t": "Первый в мире серийный МиГ-15 — реактивный истребитель новог", "y": ""}, "23": {"t": "Первый в мире врач, предложивший противочумные прививки", "y": ""}, "29": {"t": "Первый в мире массовый серийный трактор «Фордзон-Путиловец» ", "y": ""}, "1": {"t": "Неевклидова геометрия", "y": ""}, "2": {"t": "Первая в мире посадка на Марс («Марс-3»)", "y": ""}, "3": {"t": "Токарный станок с суппортом", "y": ""}, "4": {"t": "Артиллерийский оптический прицел", "y": ""}, "5": {"t": "«Ленин», первый в мире атомный надводный корабль (ледокол)", "y": "1957"}, "6": {"t": "Физико-химический анализ", "y": ""}, "7": {"t": "Внеосевой (зеркальный) телескоп", "y": ""}, "8": {"t": "БЭСМ — одна из самых быстрых ЭВМ в мире (1953)", "y": "1953"}, "9": {"t": "Соосный несущий винт (прототип вертолёта)", "y": ""}, "14": {"t": "Мазер и лазер (принцип квантовых генераторов, Нобель)", "y": ""}, "15": {"t": "Первая в мире посадка на другую планету, Венеру («Венера-7»)", "y": ""}, "16": {"t": "Первая внутриконтинентальная станция в Антарктиде «Восток» (", "y": ""}, "18": {"t": "Экраноплан и суда на подводных крыльях", "y": ""}, "20": {"t": "Первая в мире дрейфующая полярная станция «СП-1»", "y": ""}, "22": {"t": "Инерционный аккумулятор и первая ветроэлектростанция", "y": ""}, "31": {"t": "Первый в мире полёт сверхзвукового пассажирского самолёта (Т", "y": ""}, "10": {"t": "Кардиохирургия, аппарат искусственного сердца, биокибернетик", "y": ""}, "21": {"t": "Кристаллография: вывод всех 230 пространственных групп (перв", "y": ""}, "12": {"t": "Правило Марковникова, взаимное влияние атомов в молекуле", "y": ""}, "28": {"t": "Учение о природной очаговости чумы (мировой приоритет)", "y": ""}}};
-const pageUrls={"5-15": "day-13-15may-mechnikov.html", "1-3": "day-03jan-luna9.html", "3-18": "day-09-18mar-leonov.html", "1-8": "day-08jan-icebreaker.html", "1-9": "day-09jan-blinov.html", "1-7": "day-07jan-buran.html", "11-25": "day-08-25nov-pirogov.html", "12-1": "lobachevsky.html", "1-6": "day-06jan-bering.html", "1-30": "day-kotelnikov.html", "1-4": "day-04jan-pilchikov.html", "6-16": "day-14-16jun-tereshkova.html", "11-10": "day-10-10nov-kalashnikov.html", "1-1": "jan01-v2.html", "1-5": "day-05jan-shukhov.html", "12-14": "day-11-14dec-laser.html", "9-26": "day-12-26sep-pavlov.html", "1-2": "day-02jan-luna1.html"};
 const MONTH_NAMES=['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'];
 let calM=0;
 function renderCal(){
@@ -792,6 +606,7 @@ function renderCal(){
   document.getElementById('calTitle').textContent=MONTH_NAMES[calM];
   const grid=document.getElementById('calGrid');
   grid.innerHTML='';
+  // Первый день месяца — день недели (Пн=0)
   const firstDay=new Date(2024,calM,1).getDay();
   const startOffset=(firstDay===0)?6:firstDay-1;
   const daysInMonth=new Date(2024,calM+1,0).getDate();
@@ -803,12 +618,9 @@ function renderCal(){
     if(mData[d]){const inv=mData[d];e.onclick=function(){
       document.querySelectorAll('.cal2-cell.sel').forEach(c=>c.classList.remove('sel'));
       this.classList.add('sel');
-      const key=m+'-'+d;
-      const url=pageUrls[key]||'';
-      const linkHtml=url?`<br><a href="${url}" style="display:inline-block;margin-top:8px;padding:6px 14px;background:rgba(201,168,76,.18);border:1px solid rgba(201,168,76,.4);border-radius:8px;color:#e4c97a;text-decoration:none;font-size:13px;font-weight:600">Открыть страницу →</a>`:'';
       document.getElementById('calDetail').innerHTML=
-        `<b>${d} ${MONTH_NAMES[calM]}${inv.y?' · '+inv.y:''}</b><br>${inv.t}`+linkHtml;
-      
+        `<b>${d} ${MONTH_NAMES[calM]}${inv.y?' · '+inv.y:''}</b><br>${inv.t}`;
+      award('cal',3);
     };}
     grid.appendChild(e);
   }
@@ -821,9 +633,7 @@ document.getElementById('calNext').onclick=()=>{calM=(calM+1)%12;renderCal();};
 document.querySelectorAll('section.block').forEach(s=>s.classList.add('reveal'));
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on');}),{threshold:.1});
 document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
-// Сброс состояния при повторном входе: браузер Telegram держит страницу в памяти,
-// без этого квиз и игры остаются «пройденными» при следующем визите
-window.addEventListener('pageshow',e=>{if(e.persisted)location.reload()});
 </script>
+<script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
 </body>
 </html>
