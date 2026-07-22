@@ -9,6 +9,7 @@
   *{margin:0;padding:0;box-sizing:border-box}
   html,body{height:100%;overflow:hidden;background:#07101f;font-family:'Segoe UI',Roboto,sans-serif;color:var(--ink);-webkit-tap-highlight-color:transparent}
   #scene{position:fixed;inset:0;display:block;touch-action:none}
+  #vig{position:fixed;inset:0;z-index:12;pointer-events:none;background:radial-gradient(ellipse 72% 62% at 50% 47%,transparent 42%,rgba(4,8,14,.6) 100%)}
   /* --- загрузка --- */
   #load{position:fixed;inset:0;background:radial-gradient(circle at 50% 40%,#12294a,#07101f 70%);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:40;transition:opacity .8s}
   #load.gone{opacity:0;pointer-events:none}
@@ -24,11 +25,11 @@
   /* --- метки павильонов --- */
   .lbl{position:fixed;transform:translate(-50%,-100%);z-index:15;pointer-events:none;transition:opacity .3s;will-change:transform,left,top}
   .lbl .pin{display:flex;flex-direction:column;align-items:center;gap:4px}
-  .lbl .tag{background:rgba(11,26,48,.82);border:1px solid rgba(201,168,76,.45);backdrop-filter:blur(6px);border-radius:20px;padding:5px 13px;font-size:12px;font-weight:600;white-space:nowrap;color:#fff;box-shadow:0 4px 18px rgba(0,0,0,.4)}
-  .lbl.open .tag{border-color:var(--gold);color:var(--gold-l);box-shadow:0 0 22px rgba(201,168,76,.5)}
-  .lbl .sub{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;opacity:.7}
-  .lbl .dot{width:7px;height:7px;border-radius:50%;background:#8a97a8}
-  .lbl.open .dot{background:var(--gold);box-shadow:0 0 12px var(--gold)}
+  .lbl .tag{background:rgba(9,14,22,.86);border:1px solid rgba(200,190,170,.2);backdrop-filter:blur(5px);border-radius:3px;padding:5px 12px;font-size:12px;font-weight:500;letter-spacing:.4px;white-space:nowrap;color:#e6ebf2;box-shadow:0 3px 14px rgba(0,0,0,.45)}
+  .lbl.open .tag{color:#ece0c6;border-color:rgba(168,138,72,.55);border-bottom:2px solid var(--gold)}
+  .lbl .sub{font-size:8.5px;letter-spacing:2px;text-transform:uppercase;opacity:.55}
+  .lbl .dot{display:none}
+  .lbl.open .dot{display:none}
   /* --- нижняя подсказка / статус --- */
   #hint{position:fixed;bottom:22px;left:0;right:0;z-index:20;text-align:center;font-size:12.5px;color:#aeb9c9;pointer-events:none;transition:opacity .5s}
   #hint b{color:var(--gold-l)}
@@ -37,6 +38,7 @@
 </head>
 <body>
 <canvas id="scene"></canvas>
+<div id="vig"></div>
 
 <div id="brand">
   <div class="name">Русская цивилизация</div>
@@ -55,33 +57,34 @@
 <script type="module">
 import * as THREE from 'three';
 
-const GOLD=0xc8a24a, GOLDL=0xe7c877;
+const GOLD=0xa88a48, GOLDL=0xc0a25c;
 const cv=document.getElementById('scene');
 const renderer=new THREE.WebGLRenderer({canvas:cv,antialias:true});
 renderer.setPixelRatio(Math.min(devicePixelRatio,2));
 renderer.shadowMap.enabled=true; renderer.shadowMap.type=THREE.PCFSoftShadowMap;
 
 const scene=new THREE.Scene();
-scene.fog=new THREE.FogExp2(0x152238,0.019);
+scene.fog=new THREE.FogExp2(0x121a26,0.02);
 
 const camera=new THREE.PerspectiveCamera(52,innerWidth/innerHeight,0.1,200);
 
 // ——— освещение: закатный тёплый свет ———
-scene.add(new THREE.HemisphereLight(0x9fbfe6,0x24304a,0.75));
-const sun=new THREE.DirectionalLight(0xffd9a0,1.15);
+scene.add(new THREE.HemisphereLight(0x9ab2ce,0x1c2632,0.72));
+const sun=new THREE.DirectionalLight(0xf0ead8,1.35);
 sun.position.set(-14,20,10); sun.castShadow=true;
+const rim=new THREE.DirectionalLight(0x9ab4d6,0.7); rim.position.set(12,9,-16); scene.add(rim);
 sun.shadow.mapSize.set(1024,1024); sun.shadow.camera.near=1; sun.shadow.camera.far=70;
 sun.shadow.camera.left=-30;sun.shadow.camera.right=30;sun.shadow.camera.top=30;sun.shadow.camera.bottom=-30;
 scene.add(sun);
-const warm=new THREE.PointLight(0xffb060,0.6,60); warm.position.set(8,6,8); scene.add(warm);
+const warm=new THREE.PointLight(0xf3cd88,0.8,55); warm.position.set(0,5,-1); scene.add(warm);
 
 const city=new THREE.Group(); scene.add(city);
 
 // ——— небо (градиентный купол) ———
 const skyGeo=new THREE.SphereGeometry(120,32,16);
-const skyMat=new THREE.ShaderMaterial({side:THREE.BackSide,uniforms:{top:{value:new THREE.Color(0x0a1730)},bot:{value:new THREE.Color(0x3a2c4a)}},
+const skyMat=new THREE.ShaderMaterial({side:THREE.BackSide,uniforms:{top:{value:new THREE.Color(0x0a1320)},bot:{value:new THREE.Color(0x1e2a38)}},
   vertexShader:`varying vec3 p;void main(){p=position;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,
-  fragmentShader:`varying vec3 p;uniform vec3 top;uniform vec3 bot;void main(){float h=normalize(p).y*.5+.5;gl_FragColor=vec4(mix(bot,top,smoothstep(.15,.7,h)),1.);}`});
+  fragmentShader:`varying vec3 p;uniform vec3 top;uniform vec3 bot;void main(){float h=normalize(p).y*.5+.5;gl_FragColor=vec4(mix(bot,top,smoothstep(.1,.75,h)),1.);}`});
 scene.add(new THREE.Mesh(skyGeo,skyMat));
 
 // ——— земля: холмистая ———
@@ -93,14 +96,14 @@ for(let i=0;i<pos.count;i++){const x=pos.getX(i),z=pos.getZ(i);const d=Math.sqrt
   if(d<9)y*=0.15; // ровная площадка под город
   pos.setY(i,y);}
 gGeo.computeVertexNormals();
-const ground=new THREE.Mesh(gGeo,new THREE.MeshStandardMaterial({color:0x2d5c42,roughness:1,flatShading:true}));
+const ground=new THREE.Mesh(gGeo,new THREE.MeshStandardMaterial({color:0x323d38,roughness:1,flatShading:true}));
 ground.receiveShadow=true; city.add(ground);
 
 // ——— река ———
 const rGeo=new THREE.PlaneGeometry(90,10,90,1); rGeo.rotateX(-Math.PI/2);
 const rp=rGeo.attributes.position;
 for(let i=0;i<rp.count;i++){const x=rp.getX(i);rp.setZ(i,rp.getZ(i)+Math.sin(x*0.14)*7);}
-const river=new THREE.Mesh(rGeo,new THREE.MeshStandardMaterial({color:0x3a7fb5,roughness:0.15,metalness:0.75,emissive:0x123a5a,emissiveIntensity:0.9}));
+const river=new THREE.Mesh(rGeo,new THREE.MeshStandardMaterial({color:0x33556c,roughness:0.2,metalness:0.85,emissive:0x0e2130,emissiveIntensity:0.55}));
 river.position.set(0,0.08,9); city.add(river);
 
 // ——— строитель зданий ———
@@ -108,18 +111,18 @@ function palata(w,h,d,color){
   const g=new THREE.Group();
   const body=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),new THREE.MeshStandardMaterial({color,roughness:.85,flatShading:true}));
   body.position.y=h/2; body.castShadow=true; body.receiveShadow=true; g.add(body);
-  const roof=new THREE.Mesh(new THREE.ConeGeometry(w*0.82,h*0.7,4),new THREE.MeshStandardMaterial({color:0x7a2e2e,roughness:.7,flatShading:true}));
+  const roof=new THREE.Mesh(new THREE.ConeGeometry(w*0.82,h*0.7,4),new THREE.MeshStandardMaterial({color:0x374039,roughness:.9,flatShading:true}));
   roof.position.y=h+h*0.33; roof.rotation.y=Math.PI/4; roof.castShadow=true; g.add(roof);
   return g;
 }
 // ——— кремль в сердце ———
 const kremlin=new THREE.Group();
-for(let i=0;i<5;i++){const a=i/5*Math.PI*2;const t=palata(1.5,3.2+Math.random(),1.5,0xe8ddc8);
+for(let i=0;i<5;i++){const a=i/5*Math.PI*2;const t=palata(1.5,3.5,1.5,0xd8d2c4);
   t.position.set(Math.cos(a)*3.2,0,Math.sin(a)*3.2);
-  const dome=new THREE.Mesh(new THREE.SphereGeometry(0.62,16,16),new THREE.MeshStandardMaterial({color:GOLD,metalness:.9,roughness:.25,emissive:0x3a2c08}));
-  dome.position.y=4.5+Math.random(); t.add(dome); kremlin.add(t);}
-const center=palata(2.4,4.4,2.4,0xf0e8d6);
-const bigDome=new THREE.Mesh(new THREE.SphereGeometry(1,20,20),new THREE.MeshStandardMaterial({color:GOLDL,metalness:.95,roughness:.2,emissive:0x4a3808,emissiveIntensity:.6}));
+  const dome=new THREE.Mesh(new THREE.SphereGeometry(0.6,16,16),new THREE.MeshStandardMaterial({color:GOLD,metalness:.6,roughness:.5,emissive:0x241a06}));
+  dome.position.y=4.8; t.add(dome); kremlin.add(t);}
+const center=palata(2.4,4.6,2.4,0xe0dacc);
+const bigDome=new THREE.Mesh(new THREE.SphereGeometry(1,20,20),new THREE.MeshStandardMaterial({color:GOLDL,metalness:.65,roughness:.45,emissive:0x2a2008,emissiveIntensity:.3}));
 bigDome.position.y=6.2; center.add(bigDome); kremlin.add(center);
 kremlin.position.set(0,0,-1); city.add(kremlin);
 
@@ -139,22 +142,22 @@ const glowTex=(()=>{const c=document.createElement('canvas');c.width=c.height=12
   x.fillStyle=g;x.fillRect(0,0,128,128);return new THREE.CanvasTexture(c);})();
 
 // сияние над кремлём
-const kglow=new THREE.Sprite(new THREE.SpriteMaterial({map:glowTex,color:0xffe6b0,transparent:true,blending:THREE.AdditiveBlending,depthWrite:false}));
-kglow.scale.set(20,20,1); kglow.position.set(0,6,-1); city.add(kglow);
+const kglow=new THREE.Sprite(new THREE.SpriteMaterial({map:glowTex,color:0xbfa877,transparent:true,opacity:0.7,blending:THREE.AdditiveBlending,depthWrite:false}));
+kglow.scale.set(11,11,1); kglow.position.set(0,6.5,-1); city.add(kglow);
 
 const pavilions=[];
 MUSEUMS.forEach((m,i)=>{
   const R=m.r*0.72;
   const x=Math.cos(m.a)*R, z=Math.sin(m.a)*R;
-  const col=m.open?0xf3e9d2:0x5a6270;
+  const col=m.open?0xd7d1c3:0x434852;
   const b=palata(2+Math.random()*.6,2.4+Math.random()*1.2,2+Math.random()*.6,col);
   b.position.set(x,0,z);
   // улица-луч от кремля к павильону
-  const road=new THREE.Mesh(new THREE.BoxGeometry(R,0.05,0.85),new THREE.MeshBasicMaterial({color:m.open?0xd8b96a:0x6b5f42,transparent:true,opacity:m.open?0.55:0.22}));
+  const road=new THREE.Mesh(new THREE.BoxGeometry(R,0.05,0.7),new THREE.MeshBasicMaterial({color:m.open?0x93824e:0x59554a,transparent:true,opacity:m.open?0.4:0.16}));
   road.position.set(x/2,0.07,z/2); road.rotation.y=-m.a; city.add(road);
   if(m.open){
-    const glow=new THREE.Sprite(new THREE.SpriteMaterial({map:glowTex,color:0xffcf80,transparent:true,blending:THREE.AdditiveBlending,depthWrite:false}));
-    glow.scale.set(9,9,1); glow.position.set(x,2.5,z); city.add(glow); b.userData.glow=glow;
+    const glow=new THREE.Sprite(new THREE.SpriteMaterial({map:glowTex,color:0xc9b184,transparent:true,blending:THREE.AdditiveBlending,depthWrite:false}));
+    glow.scale.set(6,6,1); glow.position.set(x,2.6,z); city.add(glow); b.userData.glow=glow;
   } else {
     // «леса» — тонкий каркас у закрытого
     const edges=new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(3,4,3)),new THREE.LineBasicMaterial({color:0x8a7a55,transparent:true,opacity:.5}));
@@ -169,10 +172,10 @@ MUSEUMS.forEach((m,i)=>{
 });
 
 // ——— светлячки/искры над городом ———
-const N=260, pg=new THREE.BufferGeometry(), pa=new Float32Array(N*3);
+const N=130, pg=new THREE.BufferGeometry(), pa=new Float32Array(N*3);
 for(let i=0;i<N;i++){pa[i*3]=(Math.random()-.5)*44;pa[i*3+1]=Math.random()*16;pa[i*3+2]=(Math.random()-.5)*44;}
 pg.setAttribute('position',new THREE.BufferAttribute(pa,3));
-const spark=new THREE.Points(pg,new THREE.PointsMaterial({color:0xffe0a0,size:0.14,transparent:true,opacity:.8,blending:THREE.AdditiveBlending,depthWrite:false}));
+const spark=new THREE.Points(pg,new THREE.PointsMaterial({color:0xa8b6c8,size:0.075,transparent:true,opacity:.3,blending:THREE.AdditiveBlending,depthWrite:false}));
 scene.add(spark);
 
 // ——— камера: интро-облёт + параллакс ———
@@ -216,11 +219,11 @@ function loop(){requestAnimationFrame(loop);t+=0.016;
   // река/искры дышат
   city.children.forEach(()=>{});
   const sp=spark.geometry.attributes.position;
-  for(let i=0;i<N;i++){let y=sp.getY(i)+0.008;if(y>16)y=0;sp.setY(i,y);}
+  for(let i=0;i<N;i++){let y=sp.getY(i)+0.004;if(y>16)y=0;sp.setY(i,y);}
   sp.needsUpdate=true;
-  spark.rotation.y=t*0.02;
-  // свечение открытого пульсирует
-  pavilions.forEach(p=>{if(p.userData.glow)p.userData.glow.material.opacity=0.75+Math.sin(t*2)*0.2;});
+  spark.rotation.y=t*0.015;
+  // свечение открытого — сдержанная пульсация
+  pavilions.forEach(p=>{if(p.userData.glow)p.userData.glow.material.opacity=0.36+Math.sin(t*1.3)*0.1;});
   bigDome.rotation.y=t*0.3;
   projectLabels();
   renderer.render(scene,camera);
