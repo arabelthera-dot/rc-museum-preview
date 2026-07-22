@@ -551,7 +551,7 @@ function findAnswer(q){
   for(const item of kb){
     if(item.k.some(k=>q.includes(k.toLowerCase())))return item.a;
   }
-  return 'Об этом я могу рассказать подробнее, если уточните вопрос.';
+  return 'Про это не берусь. А вот про «Чайку», про трое суток одной на орбите или про то, как ткачиха стала космонавтом, — спрашивайте, расскажу как было.';
 }
 
 function sendChat(){

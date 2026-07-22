@@ -551,7 +551,7 @@ function findAnswer(q){
   for(const item of kb){
     if(item.k.some(k=>q.includes(k.toLowerCase())))return item.a;
   }
-  return 'Об этом я могу рассказать подробнее, если уточните вопрос.';
+  return 'Тут мне сказать нечего — чужое поле. Спросите про первый выход в открытый космос, про раздувшийся скафандр или про то, как я рисовал на орбите.';
 }
 
 function sendChat(){

@@ -542,7 +542,7 @@ function findAnswer(q){
   for(const item of kb){
     if(item.k.some(k=>q.includes(k.toLowerCase())))return item.a;
   }
-  return 'Об этом я могу рассказать подробнее, если уточните вопрос.';
+  return 'Точность важна и в слове, и в разрезе — а тут я не сведущ. Спросите об эфирном наркозе на войне, о гипсовой повязке или о военно-полевой хирургии.';
 }
 
 function sendChat(){

@@ -543,7 +543,7 @@ function findAnswer(q){
   for(const item of kb){
     if(item.k.some(k=>q.includes(k.toLowerCase())))return item.a;
   }
-  return 'Об этом я могу рассказать подробнее, если уточните вопрос.';
+  return 'Об этом умолчу — не моя область. Зато про фагоциты, про клетки, что пожирают заразу, или про то, отчего мы стареем, — спрашивайте.';
 }
 
 function sendChat(){

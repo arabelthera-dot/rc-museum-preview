@@ -593,7 +593,7 @@ function findAnswer(q){
   for(const item of kb){
     if(item.k.some(k=>q.includes(k.toLowerCase())))return item.a;
   }
-  return 'Об этом я могу рассказать подробнее, если уточните вопрос.';
+  return 'Не всё мне ведомо — я про своё дело. Спросите лучше о первом рывке к Луне, о «Мечте», что обогнала планету, или о том, как мы прокладывали дорогу в космос.';
 }
 
 function sendChat(){

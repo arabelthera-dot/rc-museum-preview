@@ -666,7 +666,7 @@ function findAnswer(q){
   for(const item of kb){
     if(item.k.some(k=>q.includes(k.toLowerCase())))return item.a;
   }
-  return 'Об этом я могу рассказать подробнее, если уточните вопрос.';
+  return 'Об этом судить не возьмусь. А вот о первой в мире мягкой посадке на Луну, о первых снимках с её поверхности или о том, чего это стоило, — расспросите, отвечу.';
 }
 
 function sendChat(){

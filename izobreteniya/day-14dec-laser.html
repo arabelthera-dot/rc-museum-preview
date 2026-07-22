@@ -549,7 +549,7 @@ function findAnswer(q){
   for(const item of kb){
     if(item.k.some(k=>q.includes(k.toLowerCase())))return item.a;
   }
-  return 'Об этом я могу рассказать подробнее, если уточните вопрос.';
+  return 'Строго говоря, это вне моего предмета. А про квантовый генератор, про то, как свет заставили идти одним лучом, или про мазер — извольте, расскажу.';
 }
 
 function sendChat(){

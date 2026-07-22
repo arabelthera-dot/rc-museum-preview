@@ -551,7 +551,7 @@ function findAnswer(q){
   for(const item of kb){
     if(item.k.some(k=>q.includes(k.toLowerCase())))return item.a;
   }
-  return 'Об этом я могу рассказать подробнее, если уточните вопрос.';
+  return 'Про то не скажу, не моё. Спросите лучше про автомат, про надёжность в грязи и морозе или про то, как простой сержант дошёл до своего дела.';
 }
 
 function sendChat(){

@@ -495,7 +495,7 @@ function findAnswer(q){
   for(const item of kb){
     if(item.k.some(k=>q.includes(k.toLowerCase())))return item.a;
   }
-  return 'Об этом я могу рассказать подробнее, если уточните вопрос.';
+  return 'Об этом достоверного сказать не могу — не проверено опытом. А про условные рефлексы, про собаку со свищом или про работу пищеварения — извольте.';
 }
 
 function sendChat(){
