@@ -37,7 +37,7 @@ p.mb{margin-bottom:14px}
 /* ZOOM */
 #zoomwrap{position:relative;height:74vh;min-height:420px;background:#000;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 #viewer{position:absolute;inset:0}
-.spark{width:26px;height:26px;margin:-13px 0 0 -13px;border-radius:50%;cursor:pointer;background:radial-gradient(circle,rgba(212,175,55,.95) 0 28%,rgba(212,175,55,.35) 60%,transparent 70%);box-shadow:0 0 12px 3px rgba(212,175,55,.55);animation:pulse 2.2s infinite}
+.spark{width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;cursor:pointer;background:radial-gradient(circle,#ffdf70 0 60%,#c9a227 100%);border:2px solid rgba(11,13,17,.9);box-shadow:0 0 0 2px rgba(255,246,214,.95),0 0 16px 5px rgba(212,175,55,.8);display:flex;align-items:center;justify-content:center;color:#1a1508;font-size:14px;font-weight:bold;font-family:Georgia,serif;animation:pulse 2.2s infinite}
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.35)}}
 @media (prefers-reduced-motion:reduce){.spark{animation:none}}
 #zcard{position:absolute;left:10px;right:10px;bottom:12px;z-index:30;display:none;background:rgba(18,21,28,.97);border:1px solid var(--line);border-radius:14px;padding:13px 15px;box-shadow:0 8px 30px rgba(0,0,0,.6)}
@@ -112,7 +112,7 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 <div id="zoomwrap">
   <div id="viewer"></div>
   <div id="gamebar"><span id="gtask">Найдите: …</span><span class="tm" id="gtime">60</span></div>
-  <div id="zhint">Щипок — приблизить · золотые точки — детали</div>
+  <div id="zhint">Щипок — приблизить · точки 1·2·3 — детали</div>
   <div id="zcard"><span class="x">✕</span><h3 id="zct"></h3><p id="zcx"></p></div>
 </div>
 
@@ -222,7 +222,7 @@ var sparks=[
  {x:.60,y:.30,t:"Солнце уже встало",d:"Главный секрет: шторм ПОЗАДИ. Ночь пережита, сквозь тучи бьёт рассвет. Полотно не про гибель — про надежду."},
  {x:.30,y:.44,t:"Прозрачная волна",d:"Свет проходит СКВОЗЬ толщу воды. Фирменный приём Айвазовского, который не повторил никто из современников."}];
 var sparkEls=[];
-viewer.addHandler('open',function(){sparks.forEach(function(s,i){var el=document.createElement('div');el.className='spark';new OpenSeadragon.MouseTracker({element:el,clickHandler:function(){showCard(s);}}).setTracking(true);viewer.addOverlay({element:el,location:new OpenSeadragon.Point(s.x,s.y*AR)});sparkEls.push(el);});});
+viewer.addHandler('open',function(){sparks.forEach(function(s,i){var el=document.createElement('div');el.className='spark';el.textContent=i+1;new OpenSeadragon.MouseTracker({element:el,clickHandler:function(){showCard(s);}}).setTracking(true);viewer.addOverlay({element:el,location:new OpenSeadragon.Point(s.x,s.y*AR)});sparkEls.push(el);});});
 var zcard=document.getElementById('zcard');
 function showCard(s){document.getElementById('zct').textContent='✦ '+s.t;document.getElementById('zcx').textContent=s.d;zcard.style.display='block';document.getElementById('zhint').style.opacity='0';viewer.viewport.panTo(new OpenSeadragon.Point(s.x,s.y*AR),false);if(viewer.viewport.getZoom()<2.2)viewer.viewport.zoomTo(2.6);}
 zcard.querySelector('.x').addEventListener('click',function(){zcard.style.display='none';});
