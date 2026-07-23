@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Девятый вал — проба глубокого зума · Русское искусство</title>
+<style>
+  :root{ --gold:#d4af37; --ink:#0c0e12; }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%;background:var(--ink);color:#e8e2d0;font-family:Georgia,'Times New Roman',serif;overflow:hidden}
+  #bar{position:fixed;top:0;left:0;right:0;z-index:20;padding:10px 14px;
+       background:linear-gradient(180deg,rgba(12,14,18,.92),rgba(12,14,18,0));pointer-events:none}
+  #bar h1{font-size:17px;font-weight:normal;letter-spacing:.4px}
+  #bar h1 b{color:var(--gold)}
+  #bar p{font-size:12px;opacity:.75;margin-top:2px}
+  #viewer{position:absolute;inset:0}
+  .spark{width:26px;height:26px;margin:-13px 0 0 -13px;border-radius:50%;cursor:pointer;
+         background:radial-gradient(circle,rgba(212,175,55,.95) 0 28%,rgba(212,175,55,.35) 60%,transparent 70%);
+         box-shadow:0 0 12px 3px rgba(212,175,55,.55);animation:pulse 2.2s infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.35)}}
+  @media (prefers-reduced-motion: reduce){.spark{animation:none}}
+  #card{position:fixed;left:10px;right:10px;bottom:12px;z-index:30;display:none;
+        background:rgba(18,20,26,.96);border:1px solid rgba(212,175,55,.45);border-radius:14px;
+        padding:14px 16px;box-shadow:0 8px 30px rgba(0,0,0,.6)}
+  #card h2{font-size:14px;color:var(--gold);margin-bottom:6px;letter-spacing:.3px}
+  #card p{font-size:14px;line-height:1.5}
+  #card .close{position:absolute;top:8px;right:12px;font-size:18px;opacity:.6;cursor:pointer}
+  #hint{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);z-index:15;
+        background:rgba(18,20,26,.85);border:1px solid rgba(212,175,55,.35);border-radius:20px;
+        padding:7px 16px;font-size:12.5px;white-space:nowrap;transition:opacity .6s}
+  #wip{position:fixed;top:8px;right:10px;z-index:25;font-size:10px;letter-spacing:1px;
+       color:rgba(232,226,208,.5);border:1px solid rgba(232,226,208,.25);border-radius:4px;padding:2px 6px}
+</style>
+</head>
+<body>
+<div id="bar">
+  <h1>Айвазовский · <b>«Девятый вал»</b>, 1850</h1>
+  <p>Русский музей · холст, масло · 221 × 332 см</p>
+</div>
+<div id="wip">ПРОТОТИП ЗУМА</div>
+<div id="viewer"></div>
+<div id="hint">Щипок — приблизить · золотые точки — детали</div>
+<div id="card"><span class="close">✕</span><h2 id="cardTitle"></h2><p id="cardText"></p></div>
+
+<script src="../vendor/openseadragon/openseadragon.min.js"></script>
+<script>
+var W=5815, H=3840, AR=H/W;
+var viewer = OpenSeadragon({
+  id:"viewer",
+  prefixUrl:"../vendor/openseadragon/images/",
+  tileSources:"../media/tiles/devyatyi-val.dzi",
+  showNavigationControl:true,
+  navigationControlAnchor:OpenSeadragon.ControlAnchor.BOTTOM_RIGHT,
+  gestureSettingsTouch:{pinchToZoom:true,flickEnabled:true},
+  maxZoomPixelRatio:2.2,
+  visibilityRatio:1,
+  minZoomLevel:0.9,
+  defaultZoomLevel:0,
+  animationTime:1.1,
+  springStiffness:7
+});
+
+var sparks=[
+ {x:.40,y:.84,t:"Обломок мачты — крест",
+  d:"В самом центре катастрофы Айвазовский спрятал символ спасения: обломок, за который держатся люди, имеет форму креста. Один из моряков машет красным — он верит, что их увидят."},
+ {x:.60,y:.30,t:"Солнце уже встало",
+  d:"Главный секрет картины: шторм ПОЗАДИ. Ночь с девятым валом пережита, сквозь тучи бьёт рассвет. Это полотно не про гибель — про надежду."},
+ {x:.30,y:.44,t:"Прозрачная волна",
+  d:"Приблизь гребень: свет проходит СКВОЗЬ толщу воды. Прозрачная волна — фирменный приём Айвазовского, который не смог повторить никто из современников."}
+];
+
+var card=document.getElementById('card'),
+    cardTitle=document.getElementById('cardTitle'),
+    cardText=document.getElementById('cardText'),
+    hint=document.getElementById('hint');
+
+viewer.addHandler('open',function(){
+  sparks.forEach(function(s,i){
+    var el=document.createElement('div');
+    el.className='spark';
+    el.addEventListener('click',function(ev){ev.stopPropagation();showCard(s,i);});
+    new OpenSeadragon.MouseTracker({element:el,clickHandler:function(){showCard(s,i);}}).setTracking(true);
+    viewer.addOverlay({element:el,location:new OpenSeadragon.Point(s.x,s.y*AR)});
+  });
+});
+
+function showCard(s,i){
+  cardTitle.textContent='✦ '+s.t;
+  cardText.textContent=s.d;
+  card.style.display='block';
+  hint.style.opacity='0';
+  viewer.viewport.panTo(new OpenSeadragon.Point(s.x,s.y*AR),false);
+  if(viewer.viewport.getZoom()<2.2) viewer.viewport.zoomTo(2.6);
+}
+card.querySelector('.close').addEventListener('click',function(){card.style.display='none';});
+viewer.addHandler('canvas-press',function(){card.style.display='none';});
+setTimeout(function(){hint.style.opacity='0';},6000);
+window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});
+</script>
+</body>
+</html>
