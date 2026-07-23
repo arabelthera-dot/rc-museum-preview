@@ -16,7 +16,7 @@ header.site .b2{font-size:11px;opacity:.6;margin-top:2px}
 nav.crumbs{font-size:12.5px;padding:6px 16px 10px;text-align:center;opacity:.9}
 nav.crumbs span{opacity:.55}
 /* HERO */
-.hero{position:relative;height:72vh;min-height:420px;overflow:hidden}
+.hero{position:relative;height:72vh;min-height:420px;overflow:hidden;cursor:pointer}
 .hero .bg{position:absolute;inset:-4%;background:url('media/devyatyi-val-hero.jpg') center/cover no-repeat;animation:breath 14s ease-in-out infinite alternate}
 @keyframes breath{from{transform:scale(1)}to{transform:scale(1.045)}}
 @media (prefers-reduced-motion:reduce){.hero .bg{animation:none}}
@@ -101,7 +101,7 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
     <h1>«<b>Девятый вал</b>»</h1>
     <div class="hook">Художник пережил такой шторм сам — газеты успели напечатать его некролог.</div>
   </div>
-  <div class="down">▾</div>
+  <div class="down">тапните по полотну — рассмотреть вблизи ▾</div>
 </div>
 
 <section>
@@ -124,8 +124,9 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 </section>
 
 <section>
-  <h2 class="t"><small>Ролик картины</small>60 секунд о «Девятом вале»</h2>
-  <div class="videoph">🎬 Ролик создаётся: медленное погружение в полотно с голосом рассказчика.<br>Появится здесь после утверждения страницы.</div>
+  <h2 class="t"><small>Ролик картины</small>61 секунда о «Девятом вале»</h2>
+  <video controls playsinline preload="none" poster="pic-aivazovsky-devyatyi-val-poster.jpg" src="pic-aivazovsky-devyatyi-val.mp4" style="width:100%;border-radius:14px;border:1px solid var(--line);background:#000"></video>
+  <p class="mb" style="font-size:13px;opacity:.7;margin-top:8px">Хук → история → надежда: погружение в полотно с голосом рассказчика. 61 сек.</p>
 </section>
 
 <section>
@@ -308,6 +309,7 @@ document.getElementById('chatgo').addEventListener('click',function(){var v=docu
 document.getElementById('chatin').addEventListener('keydown',function(e){if(e.key==='Enter'){document.getElementById('chatgo').click();}});
 
 document.getElementById('heart').addEventListener('click',function(){document.querySelector('.support').scrollIntoView({behavior:'smooth'});});
+document.querySelector('.hero').addEventListener('click',function(){document.getElementById('zoomwrap').scrollIntoView({behavior:'smooth'});});
 window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});
 </script>
 </body>
