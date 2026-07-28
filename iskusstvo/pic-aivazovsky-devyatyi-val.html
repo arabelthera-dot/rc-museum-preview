@@ -133,6 +133,10 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 .audio button{flex-shrink:0;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:linear-gradient(180deg,#e3c04d,#b8912a);color:#1a1508;font-size:17px;cursor:pointer}
 .audio .meta{font-size:13px;line-height:1.45}
 .audio .meta b{color:var(--gold);font-weight:normal;display:block;font-size:14px}
+.agnav{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin-bottom:16px}
+.agnav .lbl{font-size:12px;opacity:.6;width:100%;margin-bottom:2px}
+.agnav button{background:none;border:1px solid rgba(212,175,55,.3);color:var(--txt);border-radius:15px;padding:5px 11px;font-family:inherit;font-size:12.5px;cursor:pointer}
+.agnav button:hover,.agnav button.on{border-color:var(--gold);color:var(--gold)}
 /* переключатель языка */
 .lang{position:absolute;top:12px;right:14px;font-size:12px;letter-spacing:1px}
 .lang a{opacity:.6}.lang a.on{opacity:1;border-bottom:1px solid var(--gold)}
@@ -163,8 +167,19 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
   <p class="mb">В учебниках эта картина — маленькая репродукция. Здесь — скан, в который можно провалиться: щипком приблизьте людей на обломке мачты, красный платок, прозрачную волну. Золотые точки — подсказки.</p>
   <div class="audio">
     <button id="agbtn" aria-label="Включить аудиогид">▶</button>
-    <div class="meta"><b>Аудиогид · 1 минута</b>Слушайте голос экскурсовода, пока рассматриваете полотно.</div>
-    <audio id="agaudio" src="audio-guide-ru.mp3" preload="none"></audio>
+    <div class="meta"><b>Полный аудиогид · <span id="agdur">7 минут</span></b>Экскурсия по всей картине: детали полотна, история, разбор, мировой контекст. Слушайте и рассматривайте одновременно.</div>
+  </div>
+  <audio id="agaudio" src="audio-guide-ru.mp3" preload="metadata" controls style="width:100%;margin:-6px 0 14px;border-radius:10px"></audio>
+  <div class="agnav">
+    <span class="lbl">Перейти к главе:</span>
+    <button data-t="24">Что на полотне</button>
+    <button data-t="88">Как написано</button>
+    <button data-t="123">Кто художник</button>
+    <button data-t="175">Некролог 1844</button>
+    <button data-t="207">Почему девятый</button>
+    <button data-t="255">Хронология ночи</button>
+    <button data-t="326">Судьба картины</button>
+    <button data-t="357">Мировая живопись</button>
   </div>
   <div class="scale">
     <svg viewBox="0 0 430 250" role="img" aria-label="Сравнение размера картины 221 на 332 сантиметра с ростом человека 170 сантиметров">
@@ -438,7 +453,25 @@ document.getElementById('heart').addEventListener('click',function(){document.qu
 (function(){var b=document.getElementById('agbtn'),a=document.getElementById('agaudio');
  if(!b||!a)return;
  b.addEventListener('click',function(){if(a.paused){a.play();b.textContent='❚❚';}else{a.pause();b.textContent='▶';}});
- a.addEventListener('ended',function(){b.textContent='▶';});})();
+ a.addEventListener('play',function(){b.textContent='❚❚';});
+ a.addEventListener('pause',function(){b.textContent='▶';});
+ a.addEventListener('ended',function(){b.textContent='▶';});
+ /* длительность в подписи — из самого файла, чтобы не разъезжалась при перезаписи */
+ a.addEventListener('loadedmetadata',function(){
+   var d=a.duration; if(!isFinite(d))return;
+   var m=Math.floor(d/60),s=Math.round(d%60); if(s===60){m++;s=0;}
+   document.getElementById('agdur').textContent=m+' мин '+(s<10?'0':'')+s+' сек';
+ });
+ /* переход к главе */
+ document.querySelectorAll('.agnav button').forEach(function(btn){
+   btn.addEventListener('click',function(){
+     a.currentTime=parseInt(btn.dataset.t,10);
+     a.play();
+     document.querySelectorAll('.agnav button').forEach(function(x){x.classList.remove('on');});
+     btn.classList.add('on');
+     a.scrollIntoView({behavior:'smooth',block:'center'});
+   });
+ });})();
 /* кнопка не должна перекрывать текст: уезжает при скролле вниз, возвращается на паузе,
    у блока поддержки разворачивается в полную надпись */
 (function(){var h=document.getElementById('heart'),last=window.scrollY,t=null;
