@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Aivazovsky's Ninth Wave: deep zoom to the brushstroke, the story of the painting, a game and an interview with the artist. The first digital museum of Russia's achievements.">
+<link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/iskusstvo/pic-aivazovsky-devyatyi-val-en.html">
+<link rel="alternate" hreflang="ru" href="https://arabelthera-dot.github.io/rc-museum-preview/iskusstvo/pic-aivazovsky-devyatyi-val.html">
+<link rel="alternate" hreflang="en" href="https://arabelthera-dot.github.io/rc-museum-preview/iskusstvo/pic-aivazovsky-devyatyi-val-en.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Russian Civilisation · Russian Art">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:title" content="Aivazovsky's Ninth Wave — examine every brushstroke">
+<meta property="og:description" content="The painter lived through such a storm himself — the newspapers had already printed his obituary. Deep zoom, a game, a quiz and a conversation with the artist.">
+<meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/iskusstvo/pic-aivazovsky-devyatyi-val-poster.jpg">
+<meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/iskusstvo/pic-aivazovsky-devyatyi-val-en.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Aivazovsky's Ninth Wave — examine every brushstroke">
+<meta name="twitter:image" content="https://arabelthera-dot.github.io/rc-museum-preview/iskusstvo/pic-aivazovsky-devyatyi-val-poster.jpg">
+<title>The Ninth Wave · Aivazovsky · Russian Art</title>
+<style>
+:root{--gold:#d4af37;--ink:#0b0d11;--panel:#12151c;--line:rgba(212,175,55,.35);--txt:#e9e3d3}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--ink);color:var(--txt);font-family:Georgia,'Times New Roman',serif;line-height:1.6}
+a{color:var(--gold);text-decoration:none}
+header.site{padding:14px 16px 8px;text-align:center}
+header.site .b1{font-size:13px;letter-spacing:2.5px;color:var(--gold);text-transform:uppercase}
+header.site .b2{font-size:11px;opacity:.6;margin-top:2px}
+nav.crumbs{font-size:12.5px;padding:6px 16px 10px;text-align:center;opacity:.9}
+nav.crumbs span{opacity:.55}
+/* HERO */
+.hero{position:relative;height:72vh;min-height:420px;overflow:hidden;cursor:pointer}
+.hero .bg{position:absolute;inset:-4%;background:url('media/devyatyi-val-hero.jpg') center/cover no-repeat;animation:breath 14s ease-in-out infinite alternate}
+@keyframes breath{from{transform:scale(1)}to{transform:scale(1.045)}}
+@media (prefers-reduced-motion:reduce){.hero .bg{animation:none}}
+.hero .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,13,17,.55),transparent 30%,transparent 55%,rgba(11,13,17,.92));pointer-events:none}
+.hero .inner{position:absolute;left:0;right:0;bottom:26px;text-align:center;padding:0 18px;pointer-events:none}
+.hero .chip{display:inline-block;font-size:12px;border:1px solid var(--line);border-radius:16px;padding:3px 12px;background:rgba(11,13,17,.55);margin-bottom:10px}
+.hero h1{font-size:clamp(30px,7vw,54px);font-weight:normal;letter-spacing:1px}
+.hero h1 b{color:var(--gold);font-weight:normal}
+.hero .hook{font-size:clamp(14px,3.4vw,18px);font-style:italic;opacity:.92;margin-top:6px}
+.hero .down{margin-top:10px;font-size:12.5px;opacity:.7;animation:bob 1.8s infinite;pointer-events:none;white-space:nowrap}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+/* SECTIONS */
+section{max-width:760px;margin:0 auto;padding:34px 18px 6px}
+h2.t{font-size:22px;font-weight:normal;color:var(--gold);letter-spacing:.5px;margin-bottom:14px}
+h2.t small{display:block;font-size:12px;color:var(--txt);opacity:.6;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px}
+p.mb{margin-bottom:14px}
+.lead:first-letter{initial-letter:2;-webkit-initial-letter:2;color:var(--gold);padding-right:8px}
+/* ZOOM */
+/* высота под пропорции полотна (3:2) — без чёрных полей сверху и снизу на телефоне */
+#zoomwrap{position:relative;height:min(74vh,calc(100vw * .68));min-height:300px;background:#000;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+@media (min-width:900px){#zoomwrap{height:74vh}}
+#viewer{position:absolute;inset:0}
+.spark{width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;cursor:pointer;background:radial-gradient(circle,#ffdf70 0 60%,#c9a227 100%);border:2px solid rgba(11,13,17,.9);box-shadow:0 0 0 2px rgba(255,246,214,.95),0 0 16px 5px rgba(212,175,55,.8);display:flex;align-items:center;justify-content:center;color:#1a1508;font-size:14px;font-weight:bold;font-family:Georgia,serif;animation:pulse 2.2s infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.35)}}
+@media (prefers-reduced-motion:reduce){.spark{animation:none}}
+#zcard{position:absolute;left:10px;right:10px;bottom:12px;z-index:30;display:none;background:rgba(18,21,28,.97);border:1px solid var(--line);border-radius:14px;padding:13px 15px;box-shadow:0 8px 30px rgba(0,0,0,.6)}
+#zcard h3{font-size:14px;color:var(--gold);margin-bottom:5px}
+#zcard p{font-size:13.5px;line-height:1.5}
+#zcard .x{position:absolute;top:7px;right:12px;font-size:17px;opacity:.6;cursor:pointer}
+#zhint{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);z-index:15;background:rgba(18,21,28,.85);border:1px solid var(--line);border-radius:20px;padding:6px 15px;font-size:12px;white-space:nowrap;transition:opacity .6s;pointer-events:none}
+/* GAME */
+#gamebar{position:absolute;top:10px;left:10px;right:10px;z-index:25;display:none;justify-content:space-between;align-items:center;background:rgba(18,21,28,.92);border:1px solid var(--line);border-radius:12px;padding:8px 12px;font-size:13px}
+#gamebar .tm{color:var(--gold);font-size:16px;min-width:44px;text-align:right}
+.gbtn{display:inline-block;background:linear-gradient(180deg,#e3c04d,#b8912a);color:#1a1508;border:none;border-radius:22px;padding:11px 24px;font-family:inherit;font-size:15px;cursor:pointer;box-shadow:0 4px 14px rgba(212,175,55,.35)}
+.gbtn.sec{background:none;color:var(--gold);border:1px solid var(--line);box-shadow:none}
+.ring{width:56px;height:56px;margin:-28px 0 0 -28px;border:3px solid var(--gold);border-radius:50%;box-shadow:0 0 18px 4px rgba(212,175,55,.7);animation:ringpop .5s ease-out}
+@keyframes ringpop{from{transform:scale(.3);opacity:0}to{transform:scale(1);opacity:1}}
+/* QUIZ */
+.q{background:var(--panel);border:1px solid rgba(212,175,55,.2);border-radius:14px;padding:16px;margin-bottom:14px}
+.q h3{font-size:15px;margin-bottom:10px;font-weight:normal}
+.q h3 em{color:var(--gold);font-style:normal;font-size:12px;letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:4px}
+.opt{display:block;width:100%;text-align:left;background:rgba(233,227,211,.06);color:var(--txt);border:1px solid rgba(233,227,211,.15);border-radius:10px;padding:10px 13px;margin-bottom:8px;font-family:inherit;font-size:14px;cursor:pointer}
+.opt.ok{border-color:#69c07a;background:rgba(105,192,122,.15)}
+.opt.no{border-color:#c06a5f;background:rgba(192,106,95,.13);opacity:.8}
+.expl{display:none;font-size:13.5px;opacity:.85;border-left:2px solid var(--gold);padding-left:10px;margin-top:6px}
+#total{font-size:15px}
+#total b{color:var(--gold)}
+/* CHAT */
+#chat .chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+#chat .chip{background:none;border:1px solid var(--line);color:var(--txt);border-radius:16px;padding:6px 12px;font-family:inherit;font-size:12.5px;cursor:pointer}
+#chatlog{background:var(--panel);border:1px solid rgba(212,175,55,.2);border-radius:14px;padding:14px;min-height:90px;max-height:300px;overflow-y:auto;font-size:14px}
+#chatlog .u{color:var(--gold);margin-top:10px}
+#chatlog .a{margin-top:4px}
+#chatrow{display:flex;gap:8px;margin-top:10px}
+#chatin{flex:1;background:var(--panel);border:1px solid rgba(233,227,211,.2);border-radius:22px;padding:10px 15px;color:var(--txt);font-family:inherit;font-size:14px}
+/* MISC */
+.videoph{background:var(--panel);border:1px dashed var(--line);border-radius:14px;padding:26px 16px;text-align:center;font-size:14px;opacity:.85}
+.next{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
+.ncard{background:var(--panel);border:1px solid rgba(212,175,55,.25);border-radius:14px;padding:14px;font-size:13.5px}
+.ncard.main{grid-column:1/3;border-color:var(--line)}
+.ncard .lbl{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);opacity:.9;display:block;margin-bottom:5px}
+.ncard.soon{opacity:.65}
+.support{background:linear-gradient(160deg,#181206,#12151c);border:1px solid var(--line);border-radius:16px;padding:18px;text-align:center;margin-top:22px}
+.support p{font-size:14px;margin-bottom:10px}
+/* компактная кнопка: кружок, разворачивается у футера, прячется при скролле вниз (не перекрывает текст) */
+#heart{position:fixed;right:12px;bottom:14px;z-index:60;background:rgba(18,21,28,.92);border:1px solid var(--line);border-radius:26px;width:46px;height:46px;display:flex;align-items:center;justify-content:center;font-size:17px;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.5);transition:transform .35s ease,width .3s ease,opacity .3s ease;overflow:hidden}
+#heart .lbl{display:none;white-space:nowrap;margin-left:7px;font-size:14px}
+#heart.wide{width:auto;padding:0 17px}
+#heart.wide .lbl{display:inline}
+#heart.tuck{transform:translateY(96px);opacity:0;pointer-events:none}
+footer{margin-top:44px;padding:26px 18px 90px;border-top:1px solid rgba(212,175,55,.2);text-align:center;font-size:12.5px;opacity:.85}
+footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
+.src{font-size:12px;opacity:.7;margin-top:10px;word-break:break-all}
+/* сравнение масstaffа */
+.scale{background:var(--panel);border:1px solid rgba(212,175,55,.2);border-radius:14px;padding:14px;margin-top:6px}
+.scale svg{width:100%;height:auto;display:block}
+.scale p{font-size:13.5px;opacity:.9;margin-top:10px}
+/* разбор для внимательных */
+.deep h3{font-size:15px;color:var(--gold);font-weight:normal;margin:16px 0 6px}
+.deep p{font-size:14.5px;margin-bottom:10px}
+/* аудиогид */
+.audio{display:flex;align-items:center;gap:12px;background:var(--panel);border:1px solid rgba(212,175,55,.25);border-radius:14px;padding:13px 15px;margin-bottom:14px}
+.audio button{flex-shrink:0;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:linear-gradient(180deg,#e3c04d,#b8912a);color:#1a1508;font-size:17px;cursor:pointer}
+.audio .meta{font-size:13px;line-height:1.45}
+.audio .meta b{color:var(--gold);font-weight:normal;display:block;font-size:14px}
+/* переключатель языка */
+.lang{position:absolute;top:12px;right:14px;font-size:12px;letter-spacing:1px}
+.lang a{opacity:.6}.lang a.on{opacity:1;border-bottom:1px solid var(--gold)}
+</style>
+</head>
+<body>
+
+<header class="site" style="position:relative">
+  <div class="lang"><a href="pic-aivazovsky-devyatyi-val.html">RU</a> · <a class="on" href="pic-aivazovsky-devyatyi-val-en.html">EN</a></div>
+  <div class="b1">Russian Art</div>
+  <div class="b2">The first digital museum of Russia's achievements · A civilisation of firsts — what Russia gave the world before anyone else</div>
+</header>
+<nav class="crumbs"><a href="../index.html">Russian Civilisation</a> › <a href="index.html">Russian Art</a> › <a href="index.html#aivazovsky">Aivazovsky Hall</a> › <span>The Ninth Wave</span></nav>
+
+<div class="hero">
+  <div class="bg"></div>
+  <div class="scrim"></div>
+  <div class="inner">
+    <span class="chip">1850 · Russian Museum · 221 × 332 cm</span>
+    <h1>«<b>The Ninth Wave</b>»</h1>
+    <div class="hook">The painter lived through such a storm himself — the newspapers had already printed his obituary.</div>
+    <div class="down">tap the canvas to look closer ▾</div>
+  </div>
+</div>
+
+<section>
+  <h2 class="t"><small>Deep zoom</small>Examine every brushstroke</h2>
+  <p class="mb">In textbooks this painting is a small reproduction. Here it is a scan you can fall into: pinch to zoom in on the people clinging to the broken mast, the red cloth, the translucent wave. The golden dots are hints.</p>
+  <div class="audio">
+    <button id="agbtn" aria-label="Play the audio guide">▶</button>
+    <div class="meta"><b>Audio guide · 1 minute</b>Listen to the guide while you explore the canvas.</div>
+    <audio id="agaudio" src="audio-guide-en.mp3" preload="none"></audio>
+  </div>
+  <div class="scale">
+    <svg viewBox="0 0 430 250" role="img" aria-label="Size comparison: the painting is 221 by 332 centimetres, a person is 170 centimetres tall">
+      <rect x="4" y="14" width="332" height="221" rx="3" fill="rgba(212,175,55,.10)" stroke="#d4af37" stroke-width="1.5"/>
+      <text x="170" y="8" text-anchor="middle" fill="#d4af37" font-size="11">332 cm</text>
+      <text x="326" y="128" text-anchor="end" fill="#d4af37" font-size="11">221 cm</text>
+      <g fill="rgba(233,227,211,.75)">
+        <circle cx="392" cy="78" r="10"/>
+        <rect x="384" y="90" width="16" height="60" rx="6"/>
+        <rect x="386" y="150" width="5" height="85" rx="2.5"/>
+        <rect x="393" y="150" width="5" height="85" rx="2.5"/>
+      </g>
+      <text x="392" y="248" text-anchor="middle" fill="#e9e3d3" font-size="10" opacity=".8">170 cm</text>
+    </svg>
+    <p>The canvas stands half a metre taller than an adult and over three metres wide. In the gallery you do not look at it — you stand inside the storm.</p>
+  </div>
+</section>
+
+<div id="zoomwrap">
+  <div id="viewer"></div>
+  <div id="gamebar"><span id="gtask">Find: …</span><span class="tm" id="gtime">60</span></div>
+  <div id="zhint">Pinch to zoom · dots 1·2·3 for details</div>
+  <div id="zcard"><span class="x">✕</span><h3 id="zct"></h3><p id="zcx"></p></div>
+</div>
+
+<section id="game">
+  <h2 class="t"><small>Canvas game</small>Find the detail</h2>
+  <p class="mb">Aivazovsky hid things only the attentive will see. Three details, 60 seconds — tap directly on the painting above.</p>
+  <button class="gbtn" id="gstart">Start the hunt · 3 details</button>
+  <p id="gres" class="mb" style="display:none;margin-top:12px"></p>
+</section>
+
+<section>
+  <h2 class="t"><small>Film</small>61 seconds on The Ninth Wave</h2>
+  <video controls playsinline preload="none" poster="pic-aivazovsky-devyatyi-val-poster.jpg" src="pic-aivazovsky-devyatyi-val.mp4" style="width:100%;border-radius:14px;border:1px solid var(--line);background:#000"></video>
+  <p class="mb" style="font-size:13px;opacity:.7;margin-top:8px">Hook → story → hope: a narrated dive into the canvas. 61 sec.</p>
+</section>
+
+<section>
+  <h2 class="t"><small>The painting and the painter</small>Hard to believe</h2>
+  <div class="q"><h3><em>Fact 1</em>Why the ninth wave, exactly</h3><p style="font-size:14px">An old sailors' belief: in a storm the waves come in groups, and the ninth is the tallest and deadliest. Every nation counted differently — the Greeks feared the third wave, the Romans the tenth; Russian sailors settled on the ninth. Oceanographers confirm half of it: waves really do travel in groups with one rising above the rest, but that one carries no fixed number.</p></div>
+  <div class="q"><h3><em>Fact 2</em>He read his own obituary</h3><p style="font-size:14px">In the autumn of 1844 Aivazovsky's ship was caught in a storm in the Bay of Biscay. The vessel was presumed lost and St Petersburg newspapers printed the artist's obituary. He survived and painted the sea for another 56 years. The Ninth Wave came six years after that night.</p></div>
+  <div class="q"><h3><em>Fact 3</em>He would not sell to the Pope. He gave it away</h3><p style="font-size:14px">Gregory XVI wanted to buy his painting Chaos for the Vatican. Aivazovsky refused to sell — and presented it as a gift. He received a gold medal, and Gogol joked: 'You have raised Chaos in the Vatican.'</p></div>
+  <div class="q"><h3><em>Fact 4</em>A painting every four days — for 60 years</h3><p style="font-size:14px">Around 6,000 canvases in one lifetime. Do the maths: a new painting every three or four days, six decades without a pause. The last one he never finished — he died at his easel.</p></div>
+  <div class="q"><h3><em>Fact 5</em>Russia's most decorated artist</h3><p style="font-size:14px">Twenty-four orders from Russia, France, Greece and Turkey. He threw the Turkish ones into the sea after the Armenian massacres of the 1890s, saying he regretted not one of them.</p></div>
+</section>
+
+<section>
+  <h2 class="t"><small>History</small>The night they survived</h2>
+  <p class="mb lead">Dawn. The night in which hell broke a ship apart is over. A handful of people cling to a broken mast: they survived the storm, but ahead of them rises the ninth wave — by sailors' belief the deadliest of all. And yet the first thing a viewer sees on this three-metre canvas is not the wave. It is the sun.</p>
+  <p class="mb">The author of this sea was Hovhannes, son of a ruined Armenian merchant from Feodosia. As a boy he drew with charcoal on the town fences — and instead of a whipping he was sent to school: the story goes that the governor himself noticed the drawings. Then came the gymnasium, the Academy of Arts in St Petersburg, and by thirty-three European fame under the name Ivan Aivazovsky.</p>
+  <p class="mb">The strangest thing about the world's foremost marine painter: he <i>never painted the sea from life</i>. 'The movements of the living elements are elusive for the brush,' he said. He would watch a storm for hours, commit it to memory, then retreat to a studio whose windows faced a blank wall — so that memory would work, not the eyes. The Ninth Wave, two metres by three, was painted this way in eleven days. This is not a legend but a documented fact.</p>
+  <p class="mb">Above all, he knew that night first-hand. Six years before the painting, in 1844, his ship was caught in a storm in the Bay of Biscay. The vessel was presumed lost and the newspapers printed his obituary. 'Fear did not suppress in me the ability to keep the impression of the storm in my memory, like a marvellous living picture,' the artist recalled. The Ninth Wave is that very night, seen from within and defeated.</p>
+  <p class="mb">Emperor Nicholas I bought the painting for the Hermitage gallery. In 1897 it was transferred to the newly founded Russian Museum and became one of its first exhibits when it opened in 1898. It lives there still; in 2018 it travelled to Japan and became the centrepiece of the exhibition.</p>
+  <p class="mb">There is a bitter note in this story. By the end of the century younger painters and critics dismissed Aivazovsky's manner as outdated showmanship. He died in 1900 at his easel — and ten years later Russian art turned to the avant-garde, filing his seas away as 'salon' work for half a century. Time judged otherwise: today The Ninth Wave is one of the most recognisable Russian paintings in the world, and in Russian the phrase itself has come to mean the highest point of an ordeal.</p>
+  <p class="mb"><b style="color:var(--gold)">The artist in one paragraph.</b> Ivan Konstantinovich Aivazovsky (1817–1900). First painter to the Russian Naval Staff, with the right to wear naval uniform. Honorary citizen of Feodosia, to which he gave a picture gallery that now bears his name. Around six thousand works. He died at his easel with his last painting unfinished.</p>
+  <div class="src">Sources: rusmuseum.ru/collections/…/devyatyy-val · ar.culture.ru/ru/subject/devyatyy-val · tass.ru/kultura/4446686 · culture.ru/persons/8258</div>
+</section>
+
+<section class="deep">
+  <h2 class="t"><small>Close reading</small>For those who look closely</h2>
+
+  <h3>Why the water glows from within</h3>
+  <p>The secret is not white paint but patience. Aivazovsky worked in glazes, laying the thinnest transparent layers one over another, each almost like glass. Light passes through them, reflects off the pale ground and returns to the viewer from inside the canvas. That is why his wave crest is not 'painted white' but genuinely glows: the paint works like stained glass. Zoom into the crest and you will find almost no pure white there.</p>
+
+  <h3>Composition: everything rests on a single point</h3>
+  <p>The painting looks like chaos but is built by academic rule. The crest of the ninth wave sits exactly where the canvas's structural lines cross, while the sun and the mast with its survivors lie on one diagonal — the eye travels from the dying to the light and back, unable to stop. Hence the sense of motion: the wave is not painted moving, it is composed that way.</p>
+
+  <h3>A Russian marine painter in the European league</h3>
+  <p>In Rome in 1842 Aivazovsky met J. M. W. Turner, Europe's leading marine painter. The Englishman admired the precision with which the Russian rendered transparent water. Both followed the same road: a bright palette, light as the protagonist, the elements instead of a plot. The difference is that Turner dissolved form in light, while Aivazovsky never let light loose from form — his storm stays a recognisable storm and his people stay people. The Ninth Wave was painted in 1850, when its author was thirty-three.</p>
+
+  <h3>The journey of the canvas</h3>
+  <p>Nicholas I bought the painting at once, for the Hermitage. In 1897 it became one of the first acquisitions of the newly created Russian Museum of Emperor Alexander III, where it hangs to this day. In a century and a half the canvas has never left St Petersburg for long: too large and too fragile for distant journeys.</p>
+
+  <div class="src">Sources: rusmuseumvrm.ru (Virtual Russian Museum) · artchive.ru · kulturologia.ru · veryimportantlot.com</div>
+</section>
+
+<section id="quiz">
+  <h2 class="t"><small>Test yourself</small>Four questions from the hall</h2>
+  <p class="mb" style="font-size:13.5px;opacity:.8">A hint: the first two questions cannot be answered without studying the painting. The zoom above will help.</p>
+  <div class="q"><h3><em>Sharp eye · 10 points</em>One of the sailors raises a signal above his head. What is it?</h3>
+    <button class="opt" data-q="0">A white shirt</button>
+    <button class="opt" data-q="0" data-ok="1">A red cloth</button>
+    <button class="opt" data-q="0">A broken oar</button>
+    <button class="opt" data-q="0">A lit lantern</button>
+    <p class="expl">Red carries furthest. Zoom in on the group at the mast: the cloth is flung up like a cry for help to a ship we cannot see.</p></div>
+  <div class="q"><h3><em>For connoisseurs · 10 points</em>Aivazovsky left his signature in an unusual place. Where?</h3>
+    <button class="opt" data-q="1">In the lower right corner, as convention demands</button>
+    <button class="opt" data-q="1">On the crest of the wave</button>
+    <button class="opt" data-q="1" data-ok="1">Right on the broken mast</button>
+    <button class="opt" data-q="1">The painting is unsigned</button>
+    <p class="expl">The signature is on the beam the people cling to: zoom into the left edge of the wreckage. The artist literally wrote himself into their rescue.</p></div>
+  <div class="q"><h3><em>True or myth · 5 points</em>'The Pope bought an Aivazovsky painting for the Vatican'</h3>
+    <button class="opt" data-q="2">True</button>
+    <button class="opt" data-q="2" data-ok="1">Myth</button>
+    <p class="expl">A myth with a twist. Gregory XVI wanted to buy Chaos, but the artist refused to sell — and gave it away instead. Gogol joked: 'You have raised Chaos in the Vatican.'</p></div>
+  <div class="q"><h3><em>Believe it or not · 5 points</em>Aivazovsky's obituary appeared in the newspapers 56 years before he died</h3>
+    <button class="opt" data-q="3" data-ok="1">Believe</button>
+    <button class="opt" data-q="3">Don't believe</button>
+    <p class="expl">1844, a storm in the Bay of Biscay: the ship was presumed lost and the papers printed an obituary. The artist lived until 1900 and painted thousands more canvases.</p></div>
+  <p id="total" class="mb">Your score: <b id="pts">0</b> out of 60 (game 30, questions 30). <span id="rank"></span></p>
+</section>
+
+<section>
+  <h2 class="t"><small>Riddle</small>Guess from a single line</h2>
+  <div class="q"><h3>'I never once painted a storm while looking at one. I remembered it — and it stayed on the canvas forever. Who am I?'</h3>
+  <button class="opt" id="riddleBtn">Show the answer</button>
+  <p class="expl" id="riddleA">Ivan Aivazovsky — the man who learned the sea by heart.</p></div>
+</section>
+
+<section id="chat">
+  <h2 class="t"><small>Interview</small>Ask Aivazovsky</h2>
+  <div id="chatlog"><div class="a">— I am Ivan Aivazovsky, painter of the sea. Ask me about The Ninth Wave, about Feodosia, about how a storm is painted from memory.</div></div>
+  <div class="chips">
+    <button class="chip">Why did you never paint the sea from life?</button>
+    <button class="chip">What is the ninth wave?</button>
+    <button class="chip">Three metres in 11 days — how?</button>
+    <button class="chip">Your favourite painting?</button>
+    <button class="chip">What did you give Feodosia?</button>
+    <button class="chip">Why does your water glow?</button>
+    <button class="chip">What is the naval uniform about?</button>
+  </div>
+  <div id="chatrow"><input id="chatin" placeholder="Ваш вопрос художнику…"><button class="gbtn" id="chatgo">→</button></div>
+</section>
+
+<section>
+  <h2 class="t"><small>Where next</small>The hall continues</h2>
+  <div class="next">
+    <div class="ncard main soon"><span class="lbl">Next on the thread 'Taming the elements'</span>The Rainbow (1873) — a shipwreck where instead of horror there is… a rainbow. <i>Page in preparation.</i></div>
+    <div class="ncard"><span class="lbl">The whole hall</span><a href="index.html#aivazovsky">Aivazovsky: hall plan →</a></div>
+    <div class="ncard"><span class="lbl">The museum city</span><a href="../index.html">Russian Civilisation →</a></div>
+  </div>
+  <div class="support"><p>This museum is built by a tiny team and kept free for everyone. If The Ninth Wave is clearer from here than from a textbook, please support the project.</p><a class="gbtn sec" href="../index.html">❤ How to support</a></div>
+</section>
+
+<footer>
+  <div class="slog">A civilisation of firsts — what Russia gave the world before anyone else</div>
+  Russian Art Museum · Aivazovsky Hall · reference page<br>
+  Spotted an error? <a href="mailto:arabelthera@gmail.com?subject=Ошибка на странице The Ninth Wave">Tell us</a> — we will check it against the sources.
+</footer>
+<div id="heart">❤<span class="lbl">Support</span></div>
+
+<script src="vendor/openseadragon/openseadragon.min.js"></script>
+<script>
+var W=5815,H=3840,AR=H/W;
+var viewer=OpenSeadragon({id:"viewer",prefixUrl:"vendor/openseadragon/images/",tileSources:"media/tiles/devyatyi-val.dzi",showNavigationControl:true,navigationControlAnchor:OpenSeadragon.ControlAnchor.BOTTOM_RIGHT,gestureSettingsTouch:{pinchToZoom:true,flickEnabled:true},maxZoomPixelRatio:2.2,visibilityRatio:1,minZoomLevel:.9,animationTime:1.1,springStiffness:7});
+var sparks=[
+ {x:.40,y:.84,t:"The broken mast is a cross",d:"At the centre of the catastrophe Aivazovsky hid a symbol of salvation: the wreckage the people cling to is shaped like a cross."},
+ {x:.60,y:.30,t:"The sun has already risen",d:"The key secret: the storm is BEHIND them. The night has been survived and dawn breaks through the clouds. This canvas is not about death but about hope."},
+ {x:.30,y:.44,t:"The transparent wave",d:"Light passes THROUGH the body of the water. Aivazovsky's signature device, which none of his contemporaries could repeat."}];
+var sparkEls=[];
+viewer.addHandler('open',function(){sparks.forEach(function(s,i){var el=document.createElement('div');el.className='spark';el.textContent=i+1;new OpenSeadragon.MouseTracker({element:el,clickHandler:function(){showCard(s);}}).setTracking(true);viewer.addOverlay({element:el,location:new OpenSeadragon.Point(s.x,s.y*AR)});sparkEls.push(el);});});
+var zcard=document.getElementById('zcard');
+function showCard(s){document.getElementById('zct').textContent='✦ '+s.t;document.getElementById('zcx').textContent=s.d;zcard.style.display='block';document.getElementById('zhint').style.opacity='0';viewer.viewport.panTo(new OpenSeadragon.Point(s.x,s.y*AR),false);if(viewer.viewport.getZoom()<2.2)viewer.viewport.zoomTo(2.6);}
+zcard.querySelector('.x').addEventListener('click',function(){zcard.style.display='none';});
+viewer.addHandler('canvas-press',function(){zcard.style.display='none';});
+setTimeout(function(){document.getElementById('zhint').style.opacity='0';},6000);
+
+/* ─ Итог дня ─ */
+var pts=0;function addPts(n){pts+=n;document.getElementById('pts').textContent=pts;var r=document.getElementById('rank');r.textContent=pts>=50?'Title earned: Keeper of the Sea 🌊':pts>=30?'Title earned: Connoisseur of the Hall':'';}
+
+/* ─ Find-the-detail game ─ */
+var targets=[{x:.415,y:.80,n:"the red cloth"},{x:.60,y:.30,n:"the sun through the clouds"},{x:.30,y:.44,n:"the transparent wave"}];
+var g={on:false,found:[],t:60,timer:null};
+var gbar=document.getElementById('gamebar'),gtask=document.getElementById('gtask'),gtime=document.getElementById('gtime'),gres=document.getElementById('gres');
+document.getElementById('gstart').addEventListener('click',function(){
+  g.on=true;g.found=[];g.t=60;pts-=0;gres.style.display='none';
+  sparkEls.forEach(function(e){e.style.display='none';});
+  gbar.style.display='flex';task();
+  document.getElementById('zoomwrap').scrollIntoView({behavior:'smooth'});
+  viewer.viewport.goHome();
+  g.timer=setInterval(function(){g.t--;gtime.textContent=g.t;if(g.t<=0)endGame(false);},1000);
+});
+function task(){var left=targets.filter(function(t,i){return g.found.indexOf(i)<0;});gtask.textContent='Tap to find: '+left.map(function(t){return t.n;}).join(', ');}
+viewer.addHandler('canvas-click',function(ev){
+  if(!g.on||!ev.quick)return;
+  var vp=viewer.viewport.pointFromPixel(ev.position),fx=vp.x,fy=vp.y/AR;
+  targets.forEach(function(t,i){
+    if(g.found.indexOf(i)>=0)return;
+    if(Math.abs(fx-t.x)<.055&&Math.abs(fy-t.y)<.055){
+      g.found.push(i);
+      var r=document.createElement('div');r.className='ring';viewer.addOverlay({element:r,location:new OpenSeadragon.Point(t.x,t.y*AR)});
+      addPts(10);task();
+      if(g.found.length===targets.length)endGame(true);
+    }
+  });
+});
+function endGame(win){
+  g.on=false;clearInterval(g.timer);gbar.style.display='none';
+  sparkEls.forEach(function(e){e.style.display='block';});
+  gres.style.display='block';
+  gres.innerHTML=win?'<b style="color:var(--gold)">All three details found — +30 points!</b> Now you see the painting as its author intended.':'Time is up. Found: '+g.found.length+' of 3 (+'+(g.found.length*10)+' points). The golden dots will show you the rest.';
+}
+
+/* ─ Quiz ─ */
+document.querySelectorAll('.opt[data-q]').forEach(function(b){
+  b.addEventListener('click',function(){
+    var q=b.getAttribute('data-q');if(b.parentNode.dataset.done)return;b.parentNode.dataset.done=1;
+    b.parentNode.querySelectorAll('.opt').forEach(function(o){if(o.dataset.ok)o.classList.add('ok');});
+    if(b.dataset.ok){addPts(q<2?10:5);}else{b.classList.add('no');}
+    b.parentNode.querySelector('.expl').style.display='block';
+  });
+});
+document.getElementById('riddleBtn').addEventListener('click',function(){document.getElementById('riddleA').style.display='block';this.style.display='none';});
+
+/* ─ Interview ─ */
+var kb=[
+ {k:['натур','from life','why did you not pain'],a:'The movements of the living elements are elusive for the brush. Lightning, a gust of wind, the burst of a wave cannot be copied from life. I watched, I remembered — and I painted from memory.'},
+ {k:['ninth wave','what is the ninth','belief'],a:'A sailors' belief: waves travel in succession and the ninth is the most terrible. I painted the people awaiting it — and the sun, which is stronger.'},
+ {k:['11 days','eleven','how long','so fast'],a:'A painting ripens in the memory for months and reaches the canvas all at once. Eleven days were only the last step of a long road.'},
+ {k:['favourite painting','favourite'],a:'Ask a father which of his children he loves. But the public loved The Ninth Wave so much that it became my name.'},
+ {k:['feodosia','gave','gallery'],a:'To my home town I gave a picture gallery, and I campaigned for its water supply and railway. An artist is in debt to the place that bore him.'},
+ {k:['glow','transparen','water','glaze'],a:'Light must pass through a wave as through glass. That is years of work with glazes — thin transparent layers of paint.'},
+ {k:['uniform','staff','navy'],a:'I am the first painter to the Russian Naval Staff, with the right to wear the uniform of the Naval Ministry. I painted the fleet all my life and I am proud of the title.'},
+ {k:['begin','fence','childhood','charcoal'],a:'As a boy I drew with charcoal on the fences of Feodosia. Instead of a whipping I was sent to school — I was lucky in the people who noticed those drawings.'},
+ {k:['how many painting','6000','six thousand'],a:'About six thousand. I worked every day; by the sea there are no idle days.'},
+ {k:['teacher','academy'],a:'The Academy of Arts in St Petersburg, and Italy. But my first teacher was the shore at Feodosia.'},
+ {k:['storm','did you see','death'],a:'I saw a storm so close that the newspapers once managed to print news of my death. The sea jokes darkly.'},
+ {k:['antarctic','lazarev'],a:'I painted the ice from Admiral Lazarev's words — he discovered it and described it to me. Memory can see through another's eyes.'},
+ {k:['critic','outdated','stasov'],a:'In my old age they called me outdated. I went on painting: the sea does not grow old.'},
+ {k:['rich','money'],a:'The brush fed me generously, I will not deny it. But a gallery, water and a school for the town — that is what money is good for.'},
+ {k:['regret','dream'],a:'I regret that the day is short. Six thousand paintings — and there is sea enough in me for six thousand more.'},
+ {k:['sun','hope','meaning','about what'],a:'Take the sun off this canvas and a shipwreck report remains. With the light it becomes hope. That is what the painting is about.'},
+ {k:['died','death','today','future','now','internet'],a:'That I cannot know, my friend: I died in 1900, at my easel. Ask me about the sea — of that I know everything.'}];
+var log=document.getElementById('chatlog');
+function ask(q){
+  var d=document.createElement('div');d.className='u';d.textContent='— '+q;log.appendChild(d);
+  var ql=q.toLowerCase(),ans=null;
+  for(var i=0;i<kb.length;i++){if(kb[i].k.some(function(k){return ql.indexOf(k)>=0;})){ans=kb[i].a;break;}}
+  if(!ans)ans='That I cannot tell you — I do not know. But about the sea, about Feodosia, or how a storm is painted from memory — ask freely.';
+  var a=document.createElement('div');a.className='a';a.textContent='— '+ans;log.appendChild(a);log.scrollTop=log.scrollHeight;
+}
+document.querySelectorAll('#chat .chip').forEach(function(c){c.addEventListener('click',function(){ask(c.textContent);});});
+document.getElementById('chatgo').addEventListener('click',function(){var v=document.getElementById('chatin').value.trim();if(v){ask(v);document.getElementById('chatin').value='';}});
+document.getElementById('chatin').addEventListener('keydown',function(e){if(e.key==='Enter'){document.getElementById('chatgo').click();}});
+
+document.getElementById('heart').addEventListener('click',function(){document.querySelector('.support').scrollIntoView({behavior:'smooth'});});
+/* аудиогид */
+(function(){var b=document.getElementById('agbtn'),a=document.getElementById('agaudio');
+ if(!b||!a)return;
+ b.addEventListener('click',function(){if(a.paused){a.play();b.textContent='❚❚';}else{a.pause();b.textContent='▶';}});
+ a.addEventListener('ended',function(){b.textContent='▶';});})();
+/* кнопка не должна перекрывать текст: уезжает при скролле вниз, возвращается на паузе,
+   у блока поддержки разворачивается в полную надпись */
+(function(){var h=document.getElementById('heart'),last=window.scrollY,t=null;
+ window.addEventListener('scroll',function(){var y=window.scrollY;
+   if(y>last+6){h.classList.add('tuck');}else if(y<last-6){h.classList.remove('tuck');}
+   last=y;clearTimeout(t);t=setTimeout(function(){h.classList.remove('tuck');},700);
+   var sup=document.querySelector('.support');
+   if(sup){var r=sup.getBoundingClientRect();h.classList.toggle('wide',r.top<window.innerHeight&&r.bottom>0);}
+ },{passive:true});})();
+document.querySelector('.hero').addEventListener('click',function(){document.getElementById('zoomwrap').scrollIntoView({behavior:'smooth'});});
+window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});
+</script>
+</body>
+</html>
