@@ -4,6 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="«Девятый вал» Айвазовского: глубокий зум до мазка, история картины, игра и интервью с художником. Первый цифровой музей достижений России.">
+<link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/iskusstvo/pic-aivazovsky-devyatyi-val.html">
+<link rel="alternate" hreflang="ru" href="https://arabelthera-dot.github.io/rc-museum-preview/iskusstvo/pic-aivazovsky-devyatyi-val.html">
+<link rel="alternate" hreflang="en" href="https://arabelthera-dot.github.io/rc-museum-preview/iskusstvo/pic-aivazovsky-devyatyi-val-en.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Русская цивилизация · Русское искусство">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:title" content="«Девятый вал» Айвазовского — рассмотрите каждый мазок">
+<meta property="og:description" content="Художник пережил такой шторм сам — газеты успели напечатать его некролог. Глубокий зум по полотну, игра, викторина и разговор с художником.">
+<meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/iskusstvo/pic-aivazovsky-devyatyi-val-poster.jpg">
+<meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/iskusstvo/pic-aivazovsky-devyatyi-val.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="«Девятый вал» Айвазовского — рассмотрите каждый мазок">
+<meta name="twitter:image" content="https://arabelthera-dot.github.io/rc-museum-preview/iskusstvo/pic-aivazovsky-devyatyi-val-poster.jpg">
 <title>«Девятый вал» · Айвазовский · Русское искусство</title>
 <style>
 :root{--gold:#d4af37;--ink:#0b0d11;--panel:#12151c;--line:rgba(212,175,55,.35);--txt:#e9e3d3}
@@ -35,7 +49,9 @@ h2.t small{display:block;font-size:12px;color:var(--txt);opacity:.6;letter-spaci
 p.mb{margin-bottom:14px}
 .lead:first-letter{initial-letter:2;-webkit-initial-letter:2;color:var(--gold);padding-right:8px}
 /* ZOOM */
-#zoomwrap{position:relative;height:74vh;min-height:420px;background:#000;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+/* высота под пропорции полотна (3:2) — без чёрных полей сверху и снизу на телефоне */
+#zoomwrap{position:relative;height:min(74vh,calc(100vw * .68));min-height:300px;background:#000;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+@media (min-width:900px){#zoomwrap{height:74vh}}
 #viewer{position:absolute;inset:0}
 .spark{width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;cursor:pointer;background:radial-gradient(circle,#ffdf70 0 60%,#c9a227 100%);border:2px solid rgba(11,13,17,.9);box-shadow:0 0 0 2px rgba(255,246,214,.95),0 0 16px 5px rgba(212,175,55,.8);display:flex;align-items:center;justify-content:center;color:#1a1508;font-size:14px;font-weight:bold;font-family:Georgia,serif;animation:pulse 2.2s infinite}
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.35)}}
@@ -79,15 +95,36 @@ p.mb{margin-bottom:14px}
 .ncard.soon{opacity:.65}
 .support{background:linear-gradient(160deg,#181206,#12151c);border:1px solid var(--line);border-radius:16px;padding:18px;text-align:center;margin-top:22px}
 .support p{font-size:14px;margin-bottom:10px}
-#heart{position:fixed;right:12px;bottom:14px;z-index:60;background:rgba(18,21,28,.92);border:1px solid var(--line);border-radius:26px;padding:10px 14px;font-size:14px;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.5)}
+/* компактная кнопка: кружок, разворачивается у футера, прячется при скролле вниз (не перекрывает текст) */
+#heart{position:fixed;right:12px;bottom:14px;z-index:60;background:rgba(18,21,28,.92);border:1px solid var(--line);border-radius:26px;width:46px;height:46px;display:flex;align-items:center;justify-content:center;font-size:17px;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.5);transition:transform .35s ease,width .3s ease,opacity .3s ease;overflow:hidden}
+#heart .lbl{display:none;white-space:nowrap;margin-left:7px;font-size:14px}
+#heart.wide{width:auto;padding:0 17px}
+#heart.wide .lbl{display:inline}
+#heart.tuck{transform:translateY(96px);opacity:0;pointer-events:none}
 footer{margin-top:44px;padding:26px 18px 90px;border-top:1px solid rgba(212,175,55,.2);text-align:center;font-size:12.5px;opacity:.85}
 footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 .src{font-size:12px;opacity:.7;margin-top:10px;word-break:break-all}
+/* сравнение масштаба */
+.scale{background:var(--panel);border:1px solid rgba(212,175,55,.2);border-radius:14px;padding:14px;margin-top:6px}
+.scale svg{width:100%;height:auto;display:block}
+.scale p{font-size:13.5px;opacity:.9;margin-top:10px}
+/* разбор для внимательных */
+.deep h3{font-size:15px;color:var(--gold);font-weight:normal;margin:16px 0 6px}
+.deep p{font-size:14.5px;margin-bottom:10px}
+/* аудиогид */
+.audio{display:flex;align-items:center;gap:12px;background:var(--panel);border:1px solid rgba(212,175,55,.25);border-radius:14px;padding:13px 15px;margin-bottom:14px}
+.audio button{flex-shrink:0;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:linear-gradient(180deg,#e3c04d,#b8912a);color:#1a1508;font-size:17px;cursor:pointer}
+.audio .meta{font-size:13px;line-height:1.45}
+.audio .meta b{color:var(--gold);font-weight:normal;display:block;font-size:14px}
+/* переключатель языка */
+.lang{position:absolute;top:12px;right:14px;font-size:12px;letter-spacing:1px}
+.lang a{opacity:.6}.lang a.on{opacity:1;border-bottom:1px solid var(--gold)}
 </style>
 </head>
 <body>
 
-<header class="site">
+<header class="site" style="position:relative">
+  <div class="lang"><a class="on" href="pic-aivazovsky-devyatyi-val.html">RU</a> · <a href="pic-aivazovsky-devyatyi-val-en.html">EN</a></div>
   <div class="b1">Русское искусство</div>
   <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
 </header>
@@ -107,6 +144,26 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 <section>
   <h2 class="t"><small>Глубокий зум</small>Рассмотрите каждый мазок</h2>
   <p class="mb">В учебниках эта картина — маленькая репродукция. Здесь — скан, в который можно провалиться: щипком приблизьте людей на обломке мачты, красный платок, прозрачную волну. Золотые точки — подсказки.</p>
+  <div class="audio">
+    <button id="agbtn" aria-label="Включить аудиогид">▶</button>
+    <div class="meta"><b>Аудиогид · 1 минута</b>Слушайте голос экскурсовода, пока рассматриваете полотно.</div>
+    <audio id="agaudio" src="audio-guide-ru.mp3" preload="none"></audio>
+  </div>
+  <div class="scale">
+    <svg viewBox="0 0 430 250" role="img" aria-label="Сравнение размера картины 221 на 332 сантиметра с ростом человека 170 сантиметров">
+      <rect x="4" y="14" width="332" height="221" rx="3" fill="rgba(212,175,55,.10)" stroke="#d4af37" stroke-width="1.5"/>
+      <text x="170" y="8" text-anchor="middle" fill="#d4af37" font-size="11">332 см</text>
+      <text x="344" y="128" fill="#d4af37" font-size="11">221 см</text>
+      <g fill="rgba(233,227,211,.75)">
+        <circle cx="392" cy="78" r="10"/>
+        <rect x="384" y="90" width="16" height="60" rx="6"/>
+        <rect x="386" y="150" width="5" height="85" rx="2.5"/>
+        <rect x="393" y="150" width="5" height="85" rx="2.5"/>
+      </g>
+      <text x="392" y="248" text-anchor="middle" fill="#e9e3d3" font-size="10" opacity=".8">170 см</text>
+    </svg>
+    <p>Полотно выше взрослого человека на полметра и больше трёх метров в ширину. В зале вы не разглядываете его — вы стоите внутри шторма.</p>
+  </div>
 </section>
 
 <div id="zoomwrap">
@@ -148,6 +205,24 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
   <p class="mb">Есть в этой истории и горькая нота. К концу века молодые художники и критики считали манеру Айвазовского устаревшей «эффектностью». Он умер в 1900-м за мольбертом — а через десять лет русское искусство ушло в авангард, и его моря на полвека записали в «салон». Время рассудило иначе: сегодня «Девятый вал» — одна из самых узнаваемых русских картин в мире, а выражение «девятый вал» стало в русском языке синонимом высшей точки испытания.</p>
   <p class="mb"><b style="color:var(--gold)">Художник одним абзацем.</b> Иван Константинович Айвазовский (1817–1900). Первый живописец Главного морского штаба России — с правом ношения морского мундира. Почётный гражданин Феодосии; городу подарил картинную галерею, ныне носящую его имя. Около шести тысяч работ. Умер у мольберта, не дописав последнюю картину.</p>
   <div class="src">Источники: rusmuseum.ru/collections/…/devyatyy-val · ar.culture.ru/ru/subject/devyatyy-val · tass.ru/kultura/4446686 · culture.ru/persons/8258</div>
+</section>
+
+<section class="deep">
+  <h2 class="t"><small>Разбор</small>Для тех, кто смотрит внимательно</h2>
+
+  <h3>Почему вода светится изнутри</h3>
+  <p>Секрет не в белилах, а в терпении. Айвазовский писал лессировками — клал друг на друга тончайшие прозрачные слои краски, каждый почти как стекло. Свет проходит сквозь них, отражается от светлого грунта и возвращается к зрителю уже изнутри полотна. Поэтому гребень волны у него не «нарисован белым», а действительно светится: краска работает как витраж. Приблизьте зумом гребень — увидите, что чистого белого там почти нет.</p>
+
+  <h3>Композиция: всё держится на одной точке</h3>
+  <p>Картина кажется хаосом, но собрана по академической линейке. Вершина девятого вала стоит ровно в точке пересечения силовых линий холста, а солнце и обломок мачты с людьми лежат на одной диагонали — глаз идёт от гибнущих к свету и обратно, и не может остановиться. Отсюда ощущение, что волна движется: она не нарисована в движении, она так поставлена.</p>
+
+  <h3>Русский маринист в европейской лиге</h3>
+  <p>В 1842 году в Риме Айвазовский познакомился с Уильямом Тёрнером — главным маринистом Европы. Англичанин восхитился точностью, с которой русский художник пишет прозрачную воду. Оба шли одной дорогой: яркая палитра, свет как главный герой, стихия вместо сюжета. Разница в том, что Тёрнер растворял форму в свете, а Айвазовский свет в форму не отпускал — у него шторм остаётся узнаваемым штормом, а люди — людьми. «Девятый вал» написан в 1850-м, когда автору было тридцать три.</p>
+
+  <h3>Путь полотна</h3>
+  <p>Картину сразу купил Николай I — для Эрмитажа. В 1897 году она стала одним из первых поступлений в только что созданный Русский музей императора Александра III, где висит и сегодня. За полтора века полотно ни разу не покидало Петербург надолго: слишком велико и слишком хрупко для дальних поездок.</p>
+
+  <div class="src">Источники: rusmuseumvrm.ru (Виртуальный Русский музей) · artchive.ru · kulturologia.ru · veryimportantlot.com</div>
 </section>
 
 <section id="quiz">
@@ -213,7 +288,7 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
   Музей «Русское искусство» · зал Айвазовского · страница-эталон<br>
   Нашли неточность? <a href="mailto:arabelthera@gmail.com?subject=Ошибка на странице Девятый вал">Сообщите нам</a> — проверим по источникам.
 </footer>
-<div id="heart">❤ Поддержать</div>
+<div id="heart">❤<span class="lbl">Поддержать</span></div>
 
 <script src="vendor/openseadragon/openseadragon.min.js"></script>
 <script>
@@ -310,6 +385,20 @@ document.getElementById('chatgo').addEventListener('click',function(){var v=docu
 document.getElementById('chatin').addEventListener('keydown',function(e){if(e.key==='Enter'){document.getElementById('chatgo').click();}});
 
 document.getElementById('heart').addEventListener('click',function(){document.querySelector('.support').scrollIntoView({behavior:'smooth'});});
+/* аудиогид */
+(function(){var b=document.getElementById('agbtn'),a=document.getElementById('agaudio');
+ if(!b||!a)return;
+ b.addEventListener('click',function(){if(a.paused){a.play();b.textContent='❚❚';}else{a.pause();b.textContent='▶';}});
+ a.addEventListener('ended',function(){b.textContent='▶';});})();
+/* кнопка не должна перекрывать текст: уезжает при скролле вниз, возвращается на паузе,
+   у блока поддержки разворачивается в полную надпись */
+(function(){var h=document.getElementById('heart'),last=window.scrollY,t=null;
+ window.addEventListener('scroll',function(){var y=window.scrollY;
+   if(y>last+6){h.classList.add('tuck');}else if(y<last-6){h.classList.remove('tuck');}
+   last=y;clearTimeout(t);t=setTimeout(function(){h.classList.remove('tuck');},700);
+   var sup=document.querySelector('.support');
+   if(sup){var r=sup.getBoundingClientRect();h.classList.toggle('wide',r.top<window.innerHeight&&r.bottom>0);}
+ },{passive:true});})();
 document.querySelector('.hero').addEventListener('click',function(){document.getElementById('zoomwrap').scrollIntoView({behavior:'smooth'});});
 window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});
 </script>
