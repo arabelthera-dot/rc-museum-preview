@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="«Радуга» Айвазовского (1873): зум по полотну, история картины, которую лично купил Третьяков, игра и интервью с художником. Первый цифровой музей достижений России.">
+<link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/iskusstvo/pic-aivazovsky-raduga.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Русская цивилизация · Русское искусство">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="«Радуга» Айвазовского — найдите радугу на этой картине">
+<meta property="og:description" content="Третьяков годами обходил самого модного мариниста империи. Эту картину купил лично. Зум по полотну, игра, викторина и разговор с художником.">
+<meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/iskusstvo/media/raduga-hero.jpg">
+<meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/iskusstvo/pic-aivazovsky-raduga.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="«Радуга» Айвазовского — найдите радугу на этой картине">
+<meta name="twitter:image" content="https://arabelthera-dot.github.io/rc-museum-preview/iskusstvo/media/raduga-hero.jpg">
+<title>«Радуга» · Айвазовский · Русское искусство</title>
+<style>
+:root{--gold:#d4af37;--ink:#0b0d11;--panel:#12151c;--line:rgba(212,175,55,.35);--txt:#e9e3d3}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--ink);color:var(--txt);font-family:Georgia,'Times New Roman',serif;line-height:1.6}
+a{color:var(--gold);text-decoration:none}
+header.site{padding:14px 16px 8px;text-align:center}
+header.site .b1{font-size:13px;letter-spacing:2.5px;color:var(--gold);text-transform:uppercase}
+header.site .b2{font-size:11px;opacity:.6;margin-top:2px}
+nav.crumbs{font-size:12.5px;padding:6px 16px 10px;text-align:center;opacity:.9}
+nav.crumbs span{opacity:.55}
+/* HERO */
+.hero{position:relative;height:72vh;min-height:420px;overflow:hidden;cursor:pointer}
+.hero .bg{position:absolute;inset:-4%;background:url('media/raduga-hero.jpg') center/cover no-repeat;animation:breath 14s ease-in-out infinite alternate}
+@keyframes breath{from{transform:scale(1)}to{transform:scale(1.045)}}
+@media (prefers-reduced-motion:reduce){.hero .bg{animation:none}}
+.hero .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,13,17,.5),transparent 28%,transparent 52%,rgba(11,13,17,.93));pointer-events:none}
+.hero .inner{position:absolute;left:0;right:0;bottom:26px;text-align:center;padding:0 18px;pointer-events:none}
+.hero .chip{display:inline-block;font-size:12px;border:1px solid var(--line);border-radius:16px;padding:3px 12px;background:rgba(11,13,17,.55);margin-bottom:10px}
+.hero h1{font-size:clamp(30px,7vw,54px);font-weight:normal;letter-spacing:1px}
+.hero h1 b{color:var(--gold);font-weight:normal}
+.hero .hook{font-size:clamp(14px,3.4vw,18px);font-style:italic;opacity:.92;margin-top:6px}
+.hero .down{margin-top:10px;font-size:12.5px;opacity:.7;animation:bob 1.8s infinite;pointer-events:none;white-space:nowrap}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+/* SECTIONS */
+section{max-width:760px;margin:0 auto;padding:34px 18px 6px}
+h2.t{font-size:22px;font-weight:normal;color:var(--gold);letter-spacing:.5px;margin-bottom:14px}
+h2.t small{display:block;font-size:12px;color:var(--txt);opacity:.6;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px}
+p.mb{margin-bottom:14px}
+.lead:first-letter{initial-letter:2;-webkit-initial-letter:2;color:var(--gold);padding-right:8px}
+/* ZOOM */
+#zoomwrap{position:relative;height:min(74vh,calc(100vw * .74));min-height:300px;background:#000;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+@media (min-width:900px){#zoomwrap{height:74vh}}
+#viewer{position:absolute;inset:0}
+.spark{width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;cursor:pointer;background:radial-gradient(circle,#ffdf70 0 60%,#c9a227 100%);border:2px solid rgba(11,13,17,.9);box-shadow:0 0 0 2px rgba(255,246,214,.95),0 0 16px 5px rgba(212,175,55,.8);display:flex;align-items:center;justify-content:center;color:#1a1508;font-size:14px;font-weight:bold;font-family:Georgia,serif;animation:pulse 2.2s infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.35)}}
+@media (prefers-reduced-motion:reduce){.spark{animation:none}}
+#zcard{position:absolute;left:10px;right:10px;bottom:12px;z-index:30;display:none;background:rgba(18,21,28,.97);border:1px solid var(--line);border-radius:14px;padding:13px 15px;box-shadow:0 8px 30px rgba(0,0,0,.6)}
+#zcard h3{font-size:14px;color:var(--gold);margin-bottom:5px}
+#zcard p{font-size:13.5px;line-height:1.5}
+#zcard .x{position:absolute;top:7px;right:12px;font-size:17px;opacity:.6;cursor:pointer}
+#zhint{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);z-index:15;background:rgba(18,21,28,.85);border:1px solid var(--line);border-radius:20px;padding:6px 15px;font-size:12px;white-space:nowrap;transition:opacity .6s;pointer-events:none}
+/* GAME */
+#gamebar{position:absolute;top:10px;left:10px;right:10px;z-index:25;display:none;justify-content:space-between;align-items:center;background:rgba(18,21,28,.92);border:1px solid var(--line);border-radius:12px;padding:8px 12px;font-size:13px}
+#gamebar .tm{color:var(--gold);font-size:16px;min-width:44px;text-align:right}
+.gbtn{display:inline-block;background:linear-gradient(180deg,#e3c04d,#b8912a);color:#1a1508;border:none;border-radius:22px;padding:11px 24px;font-family:inherit;font-size:15px;cursor:pointer;box-shadow:0 4px 14px rgba(212,175,55,.35)}
+.gbtn.sec{background:none;color:var(--gold);border:1px solid var(--line);box-shadow:none}
+.ring{width:56px;height:56px;margin:-28px 0 0 -28px;border:3px solid var(--gold);border-radius:50%;box-shadow:0 0 18px 4px rgba(212,175,55,.7);animation:ringpop .5s ease-out}
+@keyframes ringpop{from{transform:scale(.3);opacity:0}to{transform:scale(1);opacity:1}}
+/* QUIZ */
+.q{background:var(--panel);border:1px solid rgba(212,175,55,.2);border-radius:14px;padding:16px;margin-bottom:14px}
+.q h3{font-size:15px;margin-bottom:10px;font-weight:normal}
+.q h3 em{color:var(--gold);font-style:normal;font-size:12px;letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:4px}
+.opt{display:block;width:100%;text-align:left;background:rgba(233,227,211,.06);color:var(--txt);border:1px solid rgba(233,227,211,.15);border-radius:10px;padding:10px 13px;margin-bottom:8px;font-family:inherit;font-size:14px;cursor:pointer}
+.opt.ok{border-color:#69c07a;background:rgba(105,192,122,.15)}
+.opt.no{border-color:#c06a5f;background:rgba(192,106,95,.13);opacity:.8}
+.expl{display:none;font-size:13.5px;opacity:.85;border-left:2px solid var(--gold);padding-left:10px;margin-top:6px}
+#total{font-size:15px}
+#total b{color:var(--gold)}
+/* CHAT */
+#chat .chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+#chat .chip{background:none;border:1px solid var(--line);color:var(--txt);border-radius:16px;padding:6px 12px;font-family:inherit;font-size:12.5px;cursor:pointer}
+#chatlog{background:var(--panel);border:1px solid rgba(212,175,55,.2);border-radius:14px;padding:14px;min-height:90px;max-height:300px;overflow-y:auto;font-size:14px}
+#chatlog .u{color:var(--gold);margin-top:10px}
+#chatlog .a{margin-top:4px}
+#chatrow{display:flex;gap:8px;margin-top:10px}
+#chatin{flex:1;background:var(--panel);border:1px solid rgba(233,227,211,.2);border-radius:22px;padding:10px 15px;color:var(--txt);font-family:inherit;font-size:14px}
+/* MISC */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
+.ncard{background:var(--panel);border:1px solid rgba(212,175,55,.25);border-radius:14px;padding:14px;font-size:13.5px}
+.ncard.main{grid-column:1/3;border-color:var(--line)}
+.ncard .lbl{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);opacity:.9;display:block;margin-bottom:5px}
+.ncard.soon{opacity:.65}
+.support{background:linear-gradient(160deg,#181206,#12151c);border:1px solid var(--line);border-radius:16px;padding:18px;text-align:center;margin-top:22px}
+.support p{font-size:14px;margin-bottom:10px}
+#heart{position:fixed;right:12px;bottom:14px;z-index:60;background:rgba(18,21,28,.92);border:1px solid var(--line);border-radius:26px;width:46px;height:46px;display:flex;align-items:center;justify-content:center;font-size:17px;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.5);transition:transform .35s ease,width .3s ease,opacity .3s ease;overflow:hidden}
+#heart .lbl{display:none;white-space:nowrap;margin-left:7px;font-size:14px}
+#heart.wide{width:auto;padding:0 17px}
+#heart.wide .lbl{display:inline}
+#heart.tuck{transform:translateY(96px);opacity:0;pointer-events:none}
+footer{margin-top:44px;padding:26px 18px 90px;border-top:1px solid rgba(212,175,55,.2);text-align:center;font-size:12.5px;opacity:.85}
+footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
+.src{font-size:12px;opacity:.7;margin-top:10px;word-break:break-all}
+.scale{background:var(--panel);border:1px solid rgba(212,175,55,.2);border-radius:14px;padding:14px;margin-top:6px}
+.scale svg{width:100%;height:auto;display:block}
+.scale p{font-size:13.5px;opacity:.9;margin-top:10px}
+.deep h3{font-size:15px;color:var(--gold);font-weight:normal;margin:16px 0 6px}
+.deep p{font-size:14.5px;margin-bottom:10px}
+.note{background:rgba(212,175,55,.07);border:1px dashed var(--line);border-radius:12px;padding:12px 14px;font-size:13px;opacity:.9;margin-top:12px}
+/* сравнение двух картин */
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}
+.cmp figure{background:var(--panel);border:1px solid rgba(212,175,55,.2);border-radius:12px;padding:9px}
+.cmp img{width:100%;border-radius:8px;display:block}
+.cmp figcaption{font-size:12px;opacity:.85;margin-top:7px;line-height:1.45}
+.cmp figcaption b{color:var(--gold);font-weight:normal;display:block;font-size:13px}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="b1">Русское искусство</div>
+  <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
+</header>
+<nav class="crumbs"><a href="../index.html">Русская цивилизация</a> › <a href="index.html">Русское искусство</a> › <a href="index.html#aivazovsky">Зал Айвазовского</a> › <span>«Радуга»</span></nav>
+
+<div class="hero">
+  <div class="bg"></div>
+  <div class="scrim"></div>
+  <div class="inner">
+    <span class="chip">1873 · Третьяковская галерея · 105 × 136 см</span>
+    <h1>«<b>Радуга</b>»</h1>
+    <div class="hook">Найдите на этой картине радугу. С первого раза почти никто не находит.</div>
+    <div class="down">тапните по полотну — рассмотреть вблизи ▾</div>
+  </div>
+</div>
+
+<section>
+  <h2 class="t"><small>Зум по полотну</small>Радуга, которую нужно искать</h2>
+  <p class="mb">Айвазовский написал радугу так, как она выглядит в настоящий шторм: не аркой из учебника, а еле различимым свечением в водяной пыли. Приблизьте левый край полотна — цвет проступает прямо из брызг. Золотые точки — подсказки.</p>
+  <div class="scale">
+    <svg viewBox="0 0 430 250" role="img" aria-label="Сравнение размера картины 105 на 136 сантиметров с ростом человека 170 сантиметров">
+      <rect x="60" y="60" width="136" height="105" rx="3" fill="rgba(212,175,55,.10)" stroke="#d4af37" stroke-width="1.5"/>
+      <text x="128" y="53" text-anchor="middle" fill="#d4af37" font-size="11">136 см</text>
+      <text x="204" y="115" text-anchor="start" fill="#d4af37" font-size="11">105 см</text>
+      <g fill="rgba(233,227,211,.75)">
+        <circle cx="300" cy="78" r="10"/>
+        <rect x="292" y="90" width="16" height="60" rx="6"/>
+        <rect x="294" y="150" width="5" height="85" rx="2.5"/>
+        <rect x="301" y="150" width="5" height="85" rx="2.5"/>
+      </g>
+      <text x="300" y="248" text-anchor="middle" fill="#e9e3d3" font-size="10" opacity=".8">170 см</text>
+    </svg>
+    <p>Полотно небольшое — метр на полтора, вчетверо меньше «Девятого вала». Айвазовский здесь берёт не размахом, а тем, что заставляет подойти вплотную.</p>
+  </div>
+</section>
+
+<div id="zoomwrap">
+  <div id="viewer"></div>
+  <div id="gamebar"><span id="gtask">Найдите: …</span><span class="tm" id="gtime">60</span></div>
+  <div id="zhint">Щипок — приблизить · точки 1·2·3·4 — детали</div>
+  <div id="zcard"><span class="x">✕</span><h3 id="zct"></h3><p id="zcx"></p></div>
+</div>
+
+<section id="game">
+  <h2 class="t"><small>Игра картины</small>Найди деталь</h2>
+  <p class="mb">Три детали, которые видит не каждый. 60 секунд, искать — тапом прямо по картине наверху.</p>
+  <button class="gbtn" id="gstart">Начать поиск · 3 детали</button>
+  <p id="gres" class="mb" style="display:none;margin-top:12px"></p>
+</section>
+
+<section>
+  <h2 class="t"><small>Картина и художник</small>В это трудно поверить</h2>
+  <div class="q"><h3><em>Факт 1</em>Третьяков его не покупал. А эту — купил</h3><p style="font-size:14px">Павел Третьяков собирал передвижников — тех, кто спорил с миром, а не любовался им. Самого известного и самого дорогого мариниста империи он почти не брал: в его собрании оказались считаные вещи Айвазовского. «Радуга» — одна из них, куплена прямо у художника.</p></div>
+  <div class="q"><h3><em>Факт 2</em>У картины было другое имя</h3><p style="font-size:14px">Сначала полотно называлось «Восход солнца на Чёрном море». Айвазовский думал о рассвете, который заканчивает бурю. Но зритель запоминал не восход, а бледную дугу над лодкой — и название пришлось признать за картиной.</p></div>
+  <div class="q"><h3><em>Факт 3</em>Радуга здесь — не украшение, а расчёт</h3><p style="font-size:14px">Поставьте радугу в центр, сделайте её яркой — получится открытка. Айвазовский увёл её к краю и почти растворил: чтобы зритель искал её сам. Найденная своими глазами надежда работает сильнее, чем показанная.</p></div>
+  <div class="q"><h3><em>Факт 4</em>Ту же задачу он решал 23 года подряд</h3><p style="font-size:14px">«Девятый вал» (1850) и «Радуга» (1873) — про одно: свет, который сильнее шторма. В первом случае это солнце, бьющее в упор. Во втором — то, что исчезнет через минуту. Между картинами двадцать три года и целая смена манеры.</p></div>
+</section>
+
+<section>
+  <h2 class="t"><small>История</small>Шторм, у которого есть цвет</h2>
+  <p class="mb lead">Корабль уже проиграл. Он лежит на боку у скалистого берега, мачты завалены, и всё, что осталось экипажу, — шлюпка, спущенная на воду. Гребцы налегают на вёсла, один стоит в полный рост с багром, спиной к нам. И вот здесь, если отвести взгляд от лодки влево, в водяной пыли проступает цвет — радуга.</p>
+  <p class="mb">К 1873 году Айвазовский пишет море уже сорок лет, он знаменит по всей Европе и невероятно плодовит. У такой славы есть цена: зритель приходит за узнаваемым — бурей, штилем, лунной дорожкой. «Радуга» — картина, где мастер меняет не сюжет, а инструмент. Сюжет прежний: кораблекрушение, спасательная шлюпка, стихия. Инструмент новый — цвет.</p>
+  <p class="mb">Посмотрите на воду: чистого синего здесь нет, как нет и чёрного. Гребни идут от прозрачно-бирюзового к пепельно-розовому и белому, скалы уходят в лиловую дымку, а небо и море сходятся так, что горизонта не найти. Это уже не романтический шторм с контрастом света и тьмы — это шторм, увиденный как единая световая среда. Через несколько лет к похожему придут французские импрессионисты, но Айвазовский шёл своей дорогой и от романтизма не отрекался.</p>
+  <p class="mb">Первоначальное название полотна — «Восход солнца на Чёрном море»: художник имел в виду рассвет, который прекращает бурю. Но главным для зрителя оказалась радуга — она и дала картине имя.</p>
+  <p class="mb">У картины есть ещё одно отличие от соседки по залу. «Девятый вал» купил император. «Радугу» — Павел Третьяков, человек, который Айвазовского в свою коллекцию почти не пускал: он собирал передвижников, живопись мысли и укора, а не любования. Тем ценнее исключение — «Радуга» вошла в число немногих работ мариниста в его собрании и с тех пор висит в Третьяковской галерее.</p>
+  <p class="mb"><b style="color:var(--gold)">Художник одним абзацем.</b> Иван Константинович Айвазовский (1817–1900), уроженец Феодосии. К моменту «Радуги» — академик, первый живописец Главного морского штаба, автор уже нескольких тысяч полотен. Подробное досье — на странице зала.</p>
+  <div class="src">Источники: my.tretyakov.ru/app/masterpiece/8397 · tretyakovgallery.ru/collection/raduga/</div>
+</section>
+
+<section class="deep">
+  <h2 class="t"><small>Разбор</small>Для тех, кто смотрит внимательно</h2>
+
+  <h3>Почему радугу так трудно найти</h3>
+  <p>Настоящая радуга в штормовых брызгах не имеет чёткой границы: она рождается в водяной взвеси и живёт секунды. Айвазовский пишет её не линией, а сменой температуры цвета — тёплое желтоватое свечение переходит в холодное зеленоватое прямо в толще пены. Отсюда эффект: если смотреть на картину бегло, радуги нет вовсе; если задержаться — она проступает и уже не исчезает. Это ровно тот опыт, который бывает у человека в море.</p>
+
+  <h3>Композиция: диагональ, работающая против паники</h3>
+  <p>Шлюпка идёт по диагонали снизу слева вверх направо — прямо к гибнущему кораблю, то есть от нас к беде. Радуга лежит на встречной диагонали, слева. Глаз мечется между ними, и в этом движении и есть сюжет: спасение не показано, оно только возможно. Айвазовский не даёт зрителю успокоиться.</p>
+
+  <h3>Что изменилось за 23 года</h3>
+  <p>Сравните с «Девятым валом» 1850 года: там — тёмный низ, пылающий верх, чёткий контраст, романтический эффект в чистом виде. Здесь — общий светлый ключ, полутона, размытые границы. Драма никуда не делась, но она больше не кричит. Так работает мастер, которому нечего доказывать в технике эффекта и который занялся другим — светом как средой.</p>
+
+  <div class="cmp">
+    <figure><img src="media/devyatyi-val-hero.jpg" alt="Девятый вал, 1850"><figcaption><b>1850 · «Девятый вал»</b>Контраст: тьма внизу, солнце вверху. Надежда показана в упор.</figcaption></figure>
+    <figure><img src="media/raduga-hero.jpg" alt="Радуга, 1873"><figcaption><b>1873 · «Радуга»</b>Всё в одном светлом ключе. Надежду нужно найти самому.</figcaption></figure>
+  </div>
+
+  <div class="note"><b>Честно о качестве изображения.</b> Полотно небольшое, а музейного скана «Радуги» в высоком разрешении в открытом доступе нет: лучшее, что удалось найти, — 1539 × 1200 пикселей. Поэтому зум здесь не такой глубокий, как на «Девятом вале»: мазок вблизи виден мягко. Мы продолжаем искать скан лучшего качества и заменим его, как только он появится.</div>
+</section>
+
+<section id="quiz">
+  <h2 class="t"><small>Проверь себя</small>Четыре вопроса зала</h2>
+  <p class="mb" style="font-size:13.5px;opacity:.8">Подсказка: на два первых вопроса невозможно ответить, не разглядев картину. Зум наверху — в помощь.</p>
+  <div class="q"><h3><em>Глаз-алмаз · 10 баллов</em>Кроме людей в шлюпке, на картине есть ещё одно живое существо. Кто?</h3>
+    <button class="opt" data-q="0">Собака в лодке</button>
+    <button class="opt" data-q="0" data-ok="1">Чайка над волнами</button>
+    <button class="opt" data-q="0">Лошадь на берегу</button>
+    <button class="opt" data-q="0">Никого больше нет</button>
+    <p class="expl">Белая чайка — слева, над гребнями, у самых скал. Единственное существо, которому этот шторм не страшен.</p></div>
+  <div class="q"><h3><em>Для знатоков · 10 баллов</em>Один человек в шлюпке стоит в полный рост. Что у него в руках?</h3>
+    <button class="opt" data-q="1">Верёвка</button>
+    <button class="opt" data-q="1">Фонарь</button>
+    <button class="opt" data-q="1" data-ok="1">Длинный багор</button>
+    <button class="opt" data-q="1">Он держится за мачту</button>
+    <p class="expl">Багор поднят почти вертикально — им отталкиваются от скал и подцепляют людей из воды. Приблизьте нос шлюпки.</p></div>
+  <div class="q"><h3><em>Правда или миф · 5 баллов</em>«Третьяков скупал картины Айвазовского одну за другой — он был его любимым художником»</h3>
+    <button class="opt" data-q="2">Правда</button>
+    <button class="opt" data-q="2" data-ok="1">Миф</button>
+    <p class="expl">Миф. Третьяков собирал передвижников и Айвазовского почти не брал — «Радуга» вошла в число тех немногих работ, которые он купил лично у художника.</p></div>
+  <div class="q"><h3><em>Верю — не верю · 5 баллов</em>Когда-то у этой картины было совсем другое название</h3>
+    <button class="opt" data-q="3" data-ok="1">Верю</button>
+    <button class="opt" data-q="3">Не верю</button>
+    <p class="expl">Верно: «Восход солнца на Чёрном море». Имя сменилось, когда стало ясно, что зритель запоминает радугу, а не рассвет.</p></div>
+  <p id="total" class="mb">Итог дня: <b id="pts">0</b> из 60 (игра — 30, вопросы — 30). <span id="rank"></span></p>
+</section>
+
+<section>
+  <h2 class="t"><small>Шарада</small>Угадай по строчке</h2>
+  <div class="q"><h3>«Меня видно только тому, кто не отвернулся от бури. Я держусь минуту и исчезаю. Что я?»</h3>
+  <button class="opt" id="riddleBtn">Показать ответ</button>
+  <p class="expl" id="riddleA">Радуга — та самая, ради которой картина сменила название.</p></div>
+</section>
+
+<section id="chat">
+  <h2 class="t"><small>Интервью</small>Спросите Айвазовского</h2>
+  <div id="chatlog"><div class="a">— Я Иван Айвазовский. Эту картину я писал в семьдесят третьем году. Спрашивайте — о радуге, о цвете, о том, почему картину купил именно Третьяков.</div></div>
+  <div class="chips">
+    <button class="chip">Почему радугу почти не видно?</button>
+    <button class="chip">Почему сменили название?</button>
+    <button class="chip">Почему Третьяков купил её?</button>
+    <button class="chip">Чем этот шторм отличается от «Девятого вала»?</button>
+    <button class="chip">Спасутся ли они?</button>
+    <button class="chip">Как вы писали воду?</button>
+  </div>
+  <div id="chatrow"><input id="chatin" placeholder="Ваш вопрос художнику…"><button class="gbtn" id="chatgo">→</button></div>
+</section>
+
+<section>
+  <h2 class="t"><small>Куда дальше</small>Зал продолжается</h2>
+  <div class="next">
+    <div class="ncard main"><span class="lbl">Предыдущая по нити «Свет после шторма»</span><a href="pic-aivazovsky-devyatyi-val.html">«Девятый вал» (1850) — та же задача, решённая в упор →</a></div>
+    <div class="ncard"><span class="lbl">Весь зал</span><a href="index.html#aivazovsky">Айвазовский: план зала →</a></div>
+    <div class="ncard"><span class="lbl">Город-музей</span><a href="../index.html">Русская цивилизация →</a></div>
+  </div>
+  <div class="support"><p>Музей делает крошечная команда — и делает бесплатным для всех. Если вы нашли на этом полотне радугу, — поддержите проект.</p><a class="gbtn sec" href="../index.html">❤ Как поддержать</a></div>
+</section>
+
+<footer>
+  <div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>
+  Музей «Русское искусство» · зал Айвазовского<br>
+  Нашли неточность? <a href="mailto:arabelthera@gmail.com?subject=Ошибка на странице Радуга">Сообщите нам</a> — проверим по источникам.
+</footer>
+<div id="heart">❤<span class="lbl">Поддержать</span></div>
+
+<script src="vendor/openseadragon/openseadragon.min.js"></script>
+<script>
+var W=1539,H=1200,AR=H/W;
+var viewer=OpenSeadragon({id:"viewer",prefixUrl:"vendor/openseadragon/images/",
+  tileSources:{type:'image',url:'media/raduga.jpg',buildPyramid:false},
+  showNavigationControl:true,navigationControlAnchor:OpenSeadragon.ControlAnchor.BOTTOM_RIGHT,
+  gestureSettingsTouch:{pinchToZoom:true,flickEnabled:true},
+  maxZoomPixelRatio:2.6,visibilityRatio:1,minZoomLevel:.9,animationTime:1.1,springStiffness:7});
+var sparks=[
+ {x:.06,y:.55,t:"Вот она — радуга",d:"Не арка из учебника, а свечение прямо в водяной пыли: тёплый жёлтый переходит в холодный зелёный. Так радуга и выглядит в настоящий шторм — потому её и трудно найти."},
+ {x:.42,y:.74,t:"Шлюпка: восемь человек и багор",d:"Гребцы налегают на вёсла, один стоит в полный рост с багром. Лодка идёт от нас — к тонущему кораблю, а не от него."},
+ {x:.62,y:.43,t:"Корабль уже проиграл",d:"Мачты завалены, судно легло на борт у скал. Айвазовский не показывает момент удара — только его последствие."},
+ {x:.20,y:.33,t:"Чайка",d:"Единственное существо на полотне, которому шторм не страшен. Белая точка у скал — проверьте себя, заметили ли вы её сразу."}];
+var sparkEls=[];
+viewer.addHandler('open',function(){sparks.forEach(function(s,i){var el=document.createElement('div');el.className='spark';el.textContent=i+1;new OpenSeadragon.MouseTracker({element:el,clickHandler:function(){showCard(s);}}).setTracking(true);viewer.addOverlay({element:el,location:new OpenSeadragon.Point(s.x,s.y*AR)});sparkEls.push(el);});});
+var zcard=document.getElementById('zcard');
+function showCard(s){document.getElementById('zct').textContent='✦ '+s.t;document.getElementById('zcx').textContent=s.d;zcard.style.display='block';document.getElementById('zhint').style.opacity='0';viewer.viewport.panTo(new OpenSeadragon.Point(s.x,s.y*AR),false);if(viewer.viewport.getZoom()<2.2)viewer.viewport.zoomTo(2.6);}
+zcard.querySelector('.x').addEventListener('click',function(){zcard.style.display='none';});
+viewer.addHandler('canvas-press',function(){zcard.style.display='none';});
+setTimeout(function(){document.getElementById('zhint').style.opacity='0';},6000);
+
+/* ─ Итог ─ */
+var pts=0;function addPts(n){pts+=n;document.getElementById('pts').textContent=pts;var r=document.getElementById('rank');r.textContent=pts>=50?'Звание: Хранитель моря 🌊':pts>=30?'Звание: Знаток зала':'';}
+
+/* ─ Игра «Найди деталь» ─ */
+var targets=[{x:.06,y:.55,n:"радугу"},{x:.62,y:.43,n:"гибнущий корабль"},{x:.20,y:.33,n:"чайку"}];
+var g={on:false,found:[],t:60,timer:null};
+var gbar=document.getElementById('gamebar'),gtask=document.getElementById('gtask'),gtime=document.getElementById('gtime'),gres=document.getElementById('gres');
+document.getElementById('gstart').addEventListener('click',function(){
+  g.on=true;g.found=[];g.t=60;gres.style.display='none';
+  sparkEls.forEach(function(e){e.style.display='none';});
+  gbar.style.display='flex';task();
+  document.getElementById('zoomwrap').scrollIntoView({behavior:'smooth'});
+  viewer.viewport.goHome();
+  clearInterval(g.timer);
+  g.timer=setInterval(function(){g.t--;gtime.textContent=g.t;if(g.t<=0)endGame(false);},1000);
+});
+function task(){var left=targets.filter(function(t,i){return g.found.indexOf(i)<0;});gtask.textContent='Найдите тапом: '+left.map(function(t){return t.n;}).join(', ');}
+viewer.addHandler('canvas-click',function(ev){
+  if(!g.on||!ev.quick)return;
+  var vp=viewer.viewport.pointFromPixel(ev.position),fx=vp.x,fy=vp.y/AR;
+  targets.forEach(function(t,i){
+    if(g.found.indexOf(i)>=0)return;
+    if(Math.abs(fx-t.x)<.075&&Math.abs(fy-t.y)<.075){
+      g.found.push(i);
+      var r=document.createElement('div');r.className='ring';viewer.addOverlay({element:r,location:new OpenSeadragon.Point(t.x,t.y*AR)});
+      addPts(10);task();
+      if(g.found.length===targets.length)endGame(true);
+    }
+  });
+});
+function endGame(win){
+  g.on=false;clearInterval(g.timer);gbar.style.display='none';
+  sparkEls.forEach(function(e){e.style.display='block';});
+  gres.style.display='block';
+  gres.innerHTML=win?'<b style="color:var(--gold)">Все три детали найдены — +30 баллов!</b> Радугу вы теперь не потеряете.':'Время вышло. Найдено: '+g.found.length+' из 3 (+'+(g.found.length*10)+' баллов). Золотые точки подскажут остальное.';
+}
+
+/* ─ Викторина ─ */
+document.querySelectorAll('.opt[data-q]').forEach(function(b){
+  b.addEventListener('click',function(){
+    var q=b.getAttribute('data-q');if(b.parentNode.dataset.done)return;b.parentNode.dataset.done=1;
+    b.parentNode.querySelectorAll('.opt').forEach(function(o){if(o.dataset.ok)o.classList.add('ok');});
+    if(b.dataset.ok){addPts(q<2?10:5);}else{b.classList.add('no');}
+    b.parentNode.querySelector('.expl').style.display='block';
+  });
+});
+document.getElementById('riddleBtn').addEventListener('click',function(){document.getElementById('riddleA').style.display='block';this.style.display='none';});
+
+/* ─ Интервью ─ */
+var kb=[
+ {k:['радуг','не видно','найти','искать'],a:'В море радуга не висит аркой — она живёт в брызгах и гаснет через минуту. Я написал её так, как видел: её нужно застать. Кто ищет — тот и находит.'},
+ {k:['назван','восход','переимен','имя'],a:'Я звал её «Восход солнца на Чёрном море» — думал о рассвете, что кончает бурю. Но люди уходили с выставки, помня радугу. Спорить со зрителем бесполезно.'},
+ {k:['третьяков','купил','покуп','коллекц'],a:'Павел Михайлович собирал не море, а мысль — тех, кто спорит с веком. Меня он почти не брал. Тем дороже мне, что эту лодку под радугой он взял себе.'},
+ {k:['девятый вал','отлича','сравн','1850'],a:'Там я спасал светом, бьющим в упор, — солнцем. Здесь спасение висит на волоске и вот-вот погаснет. Двадцать три года между ними: юность кричит, зрелость говорит вполголоса.'},
+ {k:['спасут','выжив','конец','что дальше'],a:'Я не знаю. Художник не обязан отвечать за судьбу тех, кого написал, — я довёл их до шлюпки, дальше решает море.'},
+ {k:['вода','цвет','как писа','краск','техник'],a:'Ни чистого синего, ни чёрного здесь нет. Бирюза уходит в пепельно-розовое, розовое — в белое. Шторм — это не тьма, это свет, которого слишком много.'},
+ {k:['импрессион','франц','моне'],a:'О французах я слышал. Мы шли к одному с разных сторон: они разбирали свет на части, я держал его целым. Море не терпит разъятия.'},
+ {k:['корабл','крушен','судно'],a:'Судно уже легло. Я пишу не удар, а то, что после него, — минуту, когда ещё можно спастись.'},
+ {k:['чайк','птиц'],a:'Чайка над скалами. Ей эта буря — обычный день. Иногда полезно вспомнить, что стихия страшна только нам.'},
+ {k:['багор','весл','лодк','шлюпк'],a:'Багром отталкиваются от камня и подцепляют упавшего за борт. Тот, кто стоит, — самый нужный человек в лодке и самый уязвимый.'},
+ {k:['размер','маленьк','небольш'],a:'Метр на полтора. Не всякая мысль требует трёх метров холста; эту надо разглядывать вблизи.'},
+ {k:['1873','год','когда'],a:'Семьдесят третий год. Мне было пятьдесят шесть, и я уже знал, что эффектом никого не удивишь — а вот тишиной в буре можно.'}];
+var flb='Этого я вам не скажу — не знаю. А вот о море, о цвете и о том, как пишется шторм по памяти, — спрашивайте смело.';
+function ask(q){
+  var log=document.getElementById('chatlog');
+  var lq=q.toLowerCase();
+  var found=flb;
+  for(var i=0;i<kb.length;i++){for(var j=0;j<kb[i].k.length;j++){if(lq.indexOf(kb[i].k[j])>=0){found=kb[i].a;i=kb.length;break;}}}
+  log.insertAdjacentHTML('beforeend','<div class="u">— '+q.replace(/[<>]/g,'')+'</div><div class="a">— '+found+'</div>');
+  log.scrollTop=log.scrollHeight;
+}
+document.querySelectorAll('#chat .chip').forEach(function(c){c.addEventListener('click',function(){ask(c.textContent);});});
+document.getElementById('chatgo').addEventListener('click',function(){var i=document.getElementById('chatin');if(i.value.trim()){ask(i.value.trim());i.value='';}});
+document.getElementById('chatin').addEventListener('keydown',function(e){if(e.key==='Enter'){document.getElementById('chatgo').click();}});
+
+/* ─ Кнопка поддержки ─ */
+var heart=document.getElementById('heart'),lastY=0;
+window.addEventListener('scroll',function(){
+  var y=window.scrollY,atEnd=(window.innerHeight+y)>=(document.body.scrollHeight-140);
+  if(atEnd){heart.classList.add('wide');heart.classList.remove('tuck');}
+  else{heart.classList.remove('wide');if(y>lastY&&y>260){heart.classList.add('tuck');}else{heart.classList.remove('tuck');}}
+  lastY=y;
+},{passive:true});
+heart.addEventListener('click',function(){document.querySelector('.support').scrollIntoView({behavior:'smooth'});});
+
+/* ─ Hero: тап ведёт к зуму ─ */
+document.querySelector('.hero').addEventListener('click',function(){document.getElementById('zoomwrap').scrollIntoView({behavior:'smooth'});});
+</script>
+</body>
+</html>
