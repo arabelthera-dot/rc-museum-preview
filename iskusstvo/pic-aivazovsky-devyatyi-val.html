@@ -111,6 +111,23 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 /* разбор для внимательных */
 .deep h3{font-size:15px;color:var(--gold);font-weight:normal;margin:16px 0 6px}
 .deep p{font-size:14.5px;margin-bottom:10px}
+/* хронология шторма */
+.tl{margin-top:12px;padding-left:6px}
+.tli{position:relative;padding:0 0 16px 26px;border-left:1px solid rgba(212,175,55,.3)}
+.tli:last-child{border-left-color:transparent;padding-bottom:2px}
+.tli .dot{position:absolute;left:-6px;top:4px;width:11px;height:11px;border-radius:50%;background:var(--panel);border:2px solid var(--gold)}
+.tli.now .dot{background:var(--gold);box-shadow:0 0 12px 3px rgba(212,175,55,.55)}
+.tli b{font-size:14px;color:var(--txt);font-weight:normal;display:block}
+.tli.now b{color:var(--gold)}
+.tli p{font-size:13.5px;opacity:.85;margin-top:3px}
+/* сравнение с мировой живописью */
+.world{display:grid;gap:12px}
+@media (min-width:760px){.world{grid-template-columns:1fr 1fr 1fr;align-items:start}}
+.world figure{background:var(--panel);border:1px solid rgba(212,175,55,.2);border-radius:14px;padding:10px}
+.world figure.ours{border-color:var(--line);box-shadow:0 0 0 1px rgba(212,175,55,.18)}
+.world img{width:100%;border-radius:9px;display:block}
+.world figcaption{font-size:12.5px;opacity:.88;margin-top:8px;line-height:1.5}
+.world figcaption b{color:var(--gold);font-weight:normal;display:block;font-size:13.5px;margin-bottom:3px}
 /* аудиогид */
 .audio{display:flex;align-items:center;gap:12px;background:var(--panel);border:1px solid rgba(212,175,55,.25);border-radius:14px;padding:13px 15px;margin-bottom:14px}
 .audio button{flex-shrink:0;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:linear-gradient(180deg,#e3c04d,#b8912a);color:#1a1508;font-size:17px;cursor:pointer}
@@ -222,7 +239,39 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
   <h3>Путь полотна</h3>
   <p>Картину сразу купил Николай I — для Эрмитажа. В 1897 году она стала одним из первых поступлений в только что созданный Русский музей императора Александра III, где висит и сегодня. За полтора века полотно ни разу не покидало Петербург надолго: слишком велико и слишком хрупко для дальних поездок.</p>
 
+  <h3>Хронология одной ночи</h3>
+  <p style="opacity:.8;font-size:13.5px">Главное, что нужно понять про эту картину: на ней изображён <b>не пик шторма</b>. Самое страшное уже случилось — ночью, и этого на холсте нет. Разверните хронологию, и станет видно, почему солнце здесь важнее волны.</p>
+  <div class="tl">
+    <div class="tli"><span class="dot"></span><b>Ночью · чего мы не видим</b><p>Шторм ломает корабль. Всё, что было до рассвета, Айвазовский оставил за кадром — самое эффектное он писать не стал.</p></div>
+    <div class="tli"><span class="dot"></span><b>К утру · обломок мачты</b><p>От судна остался кусок мачты. За него держатся люди — шестеро. Они уже пережили то, что убило корабль.</p></div>
+    <div class="tli now"><span class="dot"></span><b>Момент картины · рассвет</b><p>Солнце пробило тучи. Это и есть кадр, который выбрал художник: не гибель, а первую минуту после неё.</p></div>
+    <div class="tli"><span class="dot"></span><b>Через минуту · девятый вал</b><p>Волна, поднимающаяся справа, ещё впереди. По морскому поверью девятая — самая страшная в череде.</p></div>
+    <div class="tli"><span class="dot"></span><b>Дальше · художник не говорит</b><p>Спасутся ли они, картина не отвечает. Но свет уже на их стороне — и в этом весь ответ Айвазовского.</p></div>
+  </div>
+  <p style="font-size:12.5px;opacity:.65;margin-top:10px">Хронология — реконструкция по самому полотну и морскому поверью о девятом вале, а не документ.</p>
+
   <div class="src">Источники: rusmuseumvrm.ru (Виртуальный Русский музей) · artchive.ru · kulturologia.ru · veryimportantlot.com</div>
+</section>
+
+<section>
+  <h2 class="t"><small>Контекст</small>Девятый вал в мировой живописи</h2>
+  <p class="mb">Кораблекрушение писали все — это главный сюжет романтизма о человеке против стихии. Поставьте три знаменитых полотна рядом, и разница станет очевидной: у каждого художника море делает с человеком что-то своё.</p>
+  <div class="world">
+    <figure>
+      <img src="media/cmp-gericault.jpg" alt="Теодор Жерико. Плот «Медузы», 1819. Лувр" loading="lazy">
+      <figcaption><b>Жерико · «Плот „Медузы“» · 1819</b>Реальная трагедия: в 1816 году у берегов Африки разбился фрегат «Медуза», 147 человек бросили на плоту. У Жерико — предел человеческого отчаяния: тела, безумие, никакой надежды. Море здесь свидетель, а не герой.</figcaption>
+    </figure>
+    <figure>
+      <img src="media/cmp-hokusai.jpg" alt="Кацусика Хокусай. Большая волна в Канагаве, около 1831" loading="lazy">
+      <figcaption><b>Хокусай · «Большая волна в Канагаве» · ок. 1831</b>Самая узнаваемая волна планеты. Лодки с гребцами — крошечные, они и не борются: волна огромна и безразлична. Единственное, что неподвижно, — Фудзи вдали. Человек здесь не главный.</figcaption>
+    </figure>
+    <figure class="ours">
+      <img src="media/cmp-devyatyi-val.jpg" alt="Иван Айвазовский. Девятый вал, 1850. Русский музей" loading="lazy">
+      <figcaption><b>Айвазовский · «Девятый вал» · 1850</b>Та же катастрофа — и единственный из трёх, кто поставил в центр полотна <b>свет</b>. Люди живы, солнце встало, ночь позади. Не «человек погиб в стихии», а «человек пережил стихию».</figcaption>
+    </figure>
+  </div>
+  <p class="mb" style="margin-top:14px">Был и четвёртый — англичанин Уильям Тёрнер, с которым Айвазовский познакомился в Риме в 1842-м и который восхитился его прозрачной водой. Тёрнер шёл дальше всех: у него шторм растворял и корабль, и человека в чистом свете. Айвазовский на это не пошёл — у него люди остаются людьми, и им можно сопереживать.</p>
+  <div class="src">Источники по мировой живописи: culture.ru (Хокусай, «Большая волна в Канагаве») · culture.ru, tass.ru (Жерико, «Плот „Медузы“»). Все три полотна — общественное достояние.</div>
 </section>
 
 <section id="quiz">

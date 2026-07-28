@@ -103,6 +103,10 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 .scale p{font-size:13.5px;opacity:.9;margin-top:10px}
 .deep h3{font-size:15px;color:var(--gold);font-weight:normal;margin:16px 0 6px}
 .deep p{font-size:14.5px;margin-bottom:10px}
+.audio{display:flex;align-items:center;gap:12px;background:var(--panel);border:1px solid rgba(212,175,55,.25);border-radius:14px;padding:13px 15px;margin-bottom:14px}
+.audio button{flex-shrink:0;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:linear-gradient(180deg,#e3c04d,#b8912a);color:#1a1508;font-size:17px;cursor:pointer}
+.audio .meta{font-size:13px;line-height:1.45}
+.audio .meta b{color:var(--gold);font-weight:normal;display:block;font-size:14px}
 .note{background:rgba(212,175,55,.07);border:1px dashed var(--line);border-radius:12px;padding:12px 14px;font-size:13px;opacity:.9;margin-top:12px}
 /* сравнение двух картин */
 .cmp{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}
@@ -134,6 +138,11 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 <section>
   <h2 class="t"><small>Зум по полотну</small>Радуга, которую нужно искать</h2>
   <p class="mb">Айвазовский написал радугу так, как она выглядит в настоящий шторм: не аркой из учебника, а еле различимым свечением в водяной пыли. Приблизьте левый край полотна — цвет проступает прямо из брызг. Золотые точки — подсказки.</p>
+  <div class="audio">
+    <button id="agbtn" aria-label="Включить аудиогид">▶</button>
+    <div class="meta"><b>Аудиогид · 52 секунды</b>Слушайте голос экскурсовода, пока рассматриваете полотно.</div>
+    <audio id="agaudio" src="audio-guide-raduga-ru.mp3" preload="none"></audio>
+  </div>
   <div class="scale">
     <svg viewBox="0 0 430 250" role="img" aria-label="Сравнение размера картины 105 на 136 сантиметров с ростом человека 170 сантиметров">
       <rect x="60" y="60" width="136" height="105" rx="3" fill="rgba(212,175,55,.10)" stroke="#d4af37" stroke-width="1.5"/>
@@ -277,10 +286,10 @@ var viewer=OpenSeadragon({id:"viewer",prefixUrl:"vendor/openseadragon/images/",
   gestureSettingsTouch:{pinchToZoom:true,flickEnabled:true},
   maxZoomPixelRatio:2.6,visibilityRatio:1,minZoomLevel:.9,animationTime:1.1,springStiffness:7});
 var sparks=[
- {x:.06,y:.55,t:"Вот она — радуга",d:"Не арка из учебника, а свечение прямо в водяной пыли: тёплый жёлтый переходит в холодный зелёный. Так радуга и выглядит в настоящий шторм — потому её и трудно найти."},
- {x:.42,y:.74,t:"Шлюпка: восемь человек и багор",d:"Гребцы налегают на вёсла, один стоит в полный рост с багром. Лодка идёт от нас — к тонущему кораблю, а не от него."},
- {x:.62,y:.43,t:"Корабль уже проиграл",d:"Мачты завалены, судно легло на борт у скал. Айвазовский не показывает момент удара — только его последствие."},
- {x:.20,y:.33,t:"Чайка",d:"Единственное существо на полотне, которому шторм не страшен. Белая точка у скал — проверьте себя, заметили ли вы её сразу."}];
+ {x:.085,y:.56,t:"Вот она — радуга",d:"Не арка из учебника, а свечение прямо в водяной пыли: тёплый жёлтый переходит в холодный зелёный. Так радуга и выглядит в настоящий шторм — потому её и трудно найти."},
+ {x:.44,y:.78,t:"Шлюпка: люди и багор",d:"Гребцы налегают на вёсла, один стоит в полный рост с багром. Лодка идёт по диагонали — к тонущему кораблю, а не прочь от него."},
+ {x:.63,y:.52,t:"Корабль уже проиграл",d:"Мачты завалены, судно легло на борт. Айвазовский не показывает момент удара — только то, что осталось после."},
+ {x:.195,y:.335,t:"Чайка",d:"Единственное существо на полотне, которому шторм не страшен. Белая точка у скал — проверьте себя, заметили ли вы её сразу."}];
 var sparkEls=[];
 viewer.addHandler('open',function(){sparks.forEach(function(s,i){var el=document.createElement('div');el.className='spark';el.textContent=i+1;new OpenSeadragon.MouseTracker({element:el,clickHandler:function(){showCard(s);}}).setTracking(true);viewer.addOverlay({element:el,location:new OpenSeadragon.Point(s.x,s.y*AR)});sparkEls.push(el);});});
 var zcard=document.getElementById('zcard');
@@ -293,7 +302,7 @@ setTimeout(function(){document.getElementById('zhint').style.opacity='0';},6000)
 var pts=0;function addPts(n){pts+=n;document.getElementById('pts').textContent=pts;var r=document.getElementById('rank');r.textContent=pts>=50?'Звание: Хранитель моря 🌊':pts>=30?'Звание: Знаток зала':'';}
 
 /* ─ Игра «Найди деталь» ─ */
-var targets=[{x:.06,y:.55,n:"радугу"},{x:.62,y:.43,n:"гибнущий корабль"},{x:.20,y:.33,n:"чайку"}];
+var targets=[{x:.085,y:.56,n:"радугу"},{x:.63,y:.52,n:"гибнущий корабль"},{x:.195,y:.335,n:"чайку"}];
 var g={on:false,found:[],t:60,timer:null};
 var gbar=document.getElementById('gamebar'),gtask=document.getElementById('gtask'),gtime=document.getElementById('gtime'),gres=document.getElementById('gres');
 document.getElementById('gstart').addEventListener('click',function(){
@@ -373,6 +382,11 @@ window.addEventListener('scroll',function(){
   lastY=y;
 },{passive:true});
 heart.addEventListener('click',function(){document.querySelector('.support').scrollIntoView({behavior:'smooth'});});
+
+/* ─ Аудиогид ─ */
+var agb=document.getElementById('agbtn'),aga=document.getElementById('agaudio');
+agb.addEventListener('click',function(){if(aga.paused){aga.play();agb.textContent='❚❚';}else{aga.pause();agb.textContent='▶';}});
+aga.addEventListener('ended',function(){agb.textContent='▶';});
 
 /* ─ Hero: тап ведёт к зуму ─ */
 document.querySelector('.hero').addEventListener('click',function(){document.getElementById('zoomwrap').scrollIntoView({behavior:'smooth'});});
