@@ -136,6 +136,10 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 .calcard .caly{opacity:.55;font-size:13px;color:var(--txt)}
 .calcard p{font-size:14px;line-height:1.6}
 .calcard a{display:inline-block;margin-top:10px;font-size:13.5px}
+.agnav{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin-bottom:16px}
+.agnav .lbl{font-size:12px;opacity:.6;width:100%;margin-bottom:2px}
+.agnav button{background:none;border:1px solid rgba(212,175,55,.3);color:var(--txt);border-radius:15px;padding:5px 11px;font-family:inherit;font-size:12.5px;cursor:pointer}
+.agnav button:hover,.agnav button.on{border-color:var(--gold);color:var(--gold)}
 </style>
 </head>
 <body>
@@ -162,8 +166,18 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
   <p class="mb">Айвазовский написал радугу так, как она выглядит в настоящий шторм: не аркой из учебника, а еле различимым свечением в водяной пыли. Приблизьте левый край полотна — цвет проступает прямо из брызг. Золотые точки — подсказки.</p>
   <div class="audio">
     <button id="agbtn" aria-label="Включить аудиогид">▶</button>
-    <div class="meta"><b>Аудиогид · 52 секунды</b>Слушайте голос экскурсовода, пока рассматриваете полотно.</div>
-    <audio id="agaudio" src="audio-guide-raduga-ru.mp3" preload="none"></audio>
+    <div class="meta"><b>Полный аудиогид · <span id="agdur">5 минут</span></b>Экскурсия по всей картине: что на полотне, где искать радугу, почему её так трудно найти, композиция, два названия, покупка Третьякова и путь от «Девятого вала».</div>
+    <audio id="agaudio" src="audio-guide-raduga-ru.mp3" preload="metadata" controls style="width:100%;margin:10px 0 0;border-radius:10px"></audio>
+  </div>
+  <div class="agnav">
+    <span class="lbl">Перейти к главе:</span>
+    <button data-t="0">Что на полотне</button>
+    <button data-t="52">Найдите радугу</button>
+    <button data-t="98">Почему её трудно найти</button>
+    <button data-t="141">Композиция</button>
+    <button data-t="192">Два названия</button>
+    <button data-t="223">Покупка Третьякова</button>
+    <button data-t="262">Что изменилось за 23 года</button>
   </div>
   <div class="scale">
     <svg viewBox="0 0 430 250" role="img" aria-label="Сравнение размера картины 105 на 136 сантиметров с ростом человека 170 сантиметров">
@@ -197,6 +211,12 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
   <p class="mb">Три детали, которые видит не каждый. 60 секунд, искать — тапом прямо по картине наверху.</p>
   <button class="gbtn" id="gstart">Начать поиск · 3 детали</button>
   <p id="gres" class="mb" style="display:none;margin-top:12px"></p>
+</section>
+
+<section id="rolik-kartiny">
+  <h2 class="t"><small>Ролик картины</small>Минута о «Радуге»</h2>
+  <video controls playsinline preload="none" poster="pic-aivazovsky-raduga-poster.jpg" src="pic-aivazovsky-raduga.mp4" style="width:100%;border-radius:14px;border:1px solid var(--line);background:#000"></video>
+  <p class="mb" style="font-size:13px;opacity:.7;margin-top:8px">От вопроса «где здесь радуга» до найденного свечения над шлюпкой. 57 сек.</p>
 </section>
 
 <section id="kartina-i-hudozhnik">
@@ -437,7 +457,23 @@ heart.addEventListener('click',function(){document.querySelector('.support').scr
 /* ─ Аудиогид ─ */
 var agb=document.getElementById('agbtn'),aga=document.getElementById('agaudio');
 agb.addEventListener('click',function(){if(aga.paused){aga.play();agb.textContent='❚❚';}else{aga.pause();agb.textContent='▶';}});
+aga.addEventListener('play',function(){agb.textContent='❚❚';});
+aga.addEventListener('pause',function(){agb.textContent='▶';});
 aga.addEventListener('ended',function(){agb.textContent='▶';});
+/* длительность берём из самого файла, чтобы подпись не разъезжалась при перезаписи */
+aga.addEventListener('loadedmetadata',function(){
+  var d=aga.duration; if(!isFinite(d))return;
+  var m=Math.floor(d/60),sec=Math.round(d%60); if(sec===60){m++;sec=0;}
+  var el=document.getElementById('agdur'); if(el)el.textContent=m+' мин '+(sec<10?'0':'')+sec+' сек';
+});
+document.querySelectorAll('.agnav button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    aga.currentTime=parseInt(btn.dataset.t,10); aga.play();
+    document.querySelectorAll('.agnav button').forEach(function(x){x.classList.remove('on');});
+    btn.classList.add('on');
+    aga.scrollIntoView({behavior:'smooth',block:'center'});
+  });
+});
 
 /* ─ Hero: тап ведёт к зуму ─ */
 document.querySelector('.hero').addEventListener('click',function(){document.getElementById('zoomwrap').scrollIntoView({behavior:'smooth'});});
