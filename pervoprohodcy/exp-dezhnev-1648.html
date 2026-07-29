@@ -186,6 +186,7 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 .ordi{background:rgba(233,227,211,.06);border:1px solid rgba(233,227,211,.16);border-radius:10px;padding:10px 13px;font-size:13.5px;cursor:pointer;text-align:left;color:var(--txt);font-family:inherit}
 .ordi.ok{border-color:#69c07a;background:rgba(105,192,122,.14);cursor:default}
 .ordi .num{color:var(--gold);font-weight:bold;margin-right:8px}
+.calnext{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);opacity:.75;margin-bottom:7px}
 </style>
 </head>
 <body>
@@ -211,6 +212,21 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 <section id="put">
   <h2 class="t"><small>Маршрут</small>Путь, которого не должно было получиться</h2>
   <p class="mb">Летом 1648 года из устья Колымы вышли семь кочей — деревянных судов, сшитых без единого гвоздя. Девяносто человек шли искать реку Погычу, богатую «рыбьим зубом» — моржовой костью, которая стоила дороже соболя. Никакого пролива они не искали: о том, что Азия и Америка разделены, в мире тогда не знал никто. Нажмите на точку — и путь пойдёт дальше.</p>
+  <div class="audio">
+    <button id="agbtn" aria-label="Включить аудиогид">▶</button>
+    <div class="meta"><b>Полный аудиогид · <span id="agdur">6 минут</span></b>Экскурсия по всему походу: кто и зачем пошёл, что случилось 20 сентября 1648 года, двенадцать лет на Анадыре, восемьдесят восемь лет молчания и атлас Ремезова.</div>
+  </div>
+  <audio id="agaudio" src="audio-guide-dezhnev-ru.mp3" preload="metadata" controls style="width:100%;margin:-6px 0 14px;border-radius:10px"></audio>
+  <div class="agnav">
+    <span class="lbl">Перейти к главе:</span>
+    <button data-t="0">Что это за поход</button>
+    <button data-t="43">За чем шли на самом деле</button>
+    <button data-t="80">20 сентября 1648</button>
+    <button data-t="124">Крушение и 12 лет</button>
+    <button data-t="180">88 лет молчания</button>
+    <button data-t="244">Атлас Ремезова</button>
+    <button data-t="302">Что мы из этого берём</button>
+  </div>
 </section>
 
 <div id="routewrap">
@@ -297,6 +313,13 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
   <p class="mb">Пять событий похода перепутаны. Нажимайте их в правильном порядке — за каждое верное десять баллов, за ошибку порядок сбрасывается.</p>
   <div class="ord" id="ord"></div>
   <p id="ordres" class="mb" style="display:none;margin-top:10px"></p>
+</section>
+
+
+<section id="rolik">
+  <h2 class="t"><small>Ролик</small>Минута о походе Дежнёва</h2>
+  <video controls playsinline preload="none" poster="media/dezhnev-poster.jpg" src="exp-dezhnev-1648.mp4" style="width:100%;border-radius:14px;border:1px solid var(--line);background:#000"></video>
+  <p class="mb" style="font-size:13px;opacity:.7;margin-top:8px">Как открыть край света и не заметить этого. Голос рассказчика поверх подлинной карты 1701 года.</p>
 </section>
 
 <section id="quiz">
@@ -522,6 +545,28 @@ document.getElementById('heart').addEventListener('click',function(){document.qu
    var sup=document.querySelector('.support');
    if(sup){var r=sup.getBoundingClientRect();h.classList.toggle('wide',r.top<window.innerHeight&&r.bottom>0);}
  },{passive:true});})();
+
+/* ─ Аудиогид ─ */
+(function(){var b=document.getElementById('agbtn'),a=document.getElementById('agaudio');
+ if(!b||!a)return;
+ b.addEventListener('click',function(){if(a.paused){a.play();}else{a.pause();}});
+ a.addEventListener('play',function(){b.textContent='❚❚';});
+ a.addEventListener('pause',function(){b.textContent='▶';});
+ a.addEventListener('ended',function(){b.textContent='▶';});
+ a.addEventListener('loadedmetadata',function(){
+   var d=a.duration; if(!isFinite(d))return;
+   var m=Math.floor(d/60),sec=Math.round(d%60); if(sec===60){m++;sec=0;}
+   var el=document.getElementById('agdur'); if(el)el.textContent=m+' мин '+(sec<10?'0':'')+sec+' сек';
+ });
+ document.querySelectorAll('.agnav button').forEach(function(btn){
+   btn.addEventListener('click',function(){
+     a.currentTime=parseInt(btn.dataset.t,10); a.play();
+     document.querySelectorAll('.agnav button').forEach(function(x){x.classList.remove('on');});
+     btn.classList.add('on');
+     a.scrollIntoView({behavior:'smooth',block:'center'});
+   });
+ });})();
+
 document.querySelector('.hero').addEventListener('click',function(){document.getElementById('routewrap').scrollIntoView({behavior:'smooth'});});
 window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});
 </script>
