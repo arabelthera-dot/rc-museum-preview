@@ -56,10 +56,6 @@ p.mb{margin-bottom:14px}
 .spark{width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;cursor:pointer;background:radial-gradient(circle,#ffdf70 0 60%,#c9a227 100%);border:2px solid rgba(11,13,17,.9);box-shadow:0 0 0 2px rgba(255,246,214,.95),0 0 16px 5px rgba(212,175,55,.8);display:flex;align-items:center;justify-content:center;color:#1a1508;font-size:14px;font-weight:bold;font-family:Georgia,serif;animation:pulse 2.2s infinite}
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.35)}}
 @media (prefers-reduced-motion:reduce){.spark{animation:none}}
-#zcard{position:absolute;left:10px;right:10px;bottom:12px;z-index:30;display:none;background:rgba(18,21,28,.97);border:1px solid var(--line);border-radius:14px;padding:13px 15px;box-shadow:0 8px 30px rgba(0,0,0,.6)}
-#zcard h3{font-size:14px;color:var(--gold);margin-bottom:5px}
-#zcard p{font-size:13.5px;line-height:1.5}
-#zcard .x{position:absolute;top:7px;right:12px;font-size:17px;opacity:.6;cursor:pointer}
 #zhint{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);z-index:15;background:rgba(18,21,28,.85);border:1px solid var(--line);border-radius:20px;padding:6px 15px;font-size:12px;white-space:nowrap;transition:opacity .6s;pointer-events:none}
 /* GAME */
 #gamebar{position:absolute;top:10px;left:10px;right:10px;z-index:25;display:none;justify-content:space-between;align-items:center;background:rgba(18,21,28,.92);border:1px solid var(--line);border-radius:12px;padding:8px 12px;font-size:13px}
@@ -141,6 +137,32 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 /* переключатель языка */
 .lang{position:absolute;top:12px;right:14px;font-size:12px;letter-spacing:1px}
 .lang a{opacity:.6}.lang a.on{opacity:1;border-bottom:1px solid var(--gold)}
+
+/* ── панель деталей под картиной (вместо карточки поверх полотна) ── */
+#zpanel{background:var(--panel);border-bottom:1px solid var(--line);padding:13px 16px 17px}
+.zbtns{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.zb{background:none;border:1px solid rgba(212,175,55,.32);color:var(--txt);border-radius:18px;padding:7px 13px;font-family:inherit;font-size:13px;cursor:pointer;display:inline-flex;align-items:center;gap:7px;transition:border-color .2s,background .2s}
+.zb em{font-style:normal;font-weight:bold;color:var(--gold);font-family:Georgia,serif;font-size:14px}
+.zb:hover{border-color:var(--gold)}
+.zb.on{border-color:var(--gold);background:rgba(212,175,55,.13);color:var(--gold)}
+.zb.all{margin-left:auto;opacity:.7;font-size:12.5px}
+#zbody h3{font-family:Georgia,serif;font-size:15.5px;color:var(--gold);margin-bottom:6px}
+#zbody p{font-size:14px;line-height:1.55}
+.ring.live{animation:pulse 2s infinite}
+.openseadragon-container .navigator{border-radius:6px!important}
+
+/* ── календарь музея (стандарт для всех музеев) ── */
+#calendar .calnav{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+.calarrow{background:none;border:1px solid var(--line);color:var(--gold);border-radius:50%;width:34px;height:34px;font-size:19px;line-height:1;cursor:pointer;font-family:Georgia,serif;flex:none}
+.calarrow:hover{border-color:var(--gold);background:rgba(212,175,55,.1)}
+.caldate{font-family:Georgia,serif;font-size:16px;letter-spacing:.5px;text-align:center;flex:1}
+.caldate b{color:var(--gold);font-weight:normal;font-size:13px}
+.calcard{background:var(--panel);border:1px solid rgba(212,175,55,.25);border-radius:14px;padding:16px}
+.calcard.empty{border-style:dashed;opacity:.85}
+.calcard h3{font-family:Georgia,serif;font-size:16px;font-weight:normal;color:var(--gold);margin-bottom:8px}
+.calcard .caly{opacity:.55;font-size:13px;color:var(--txt)}
+.calcard p{font-size:14px;line-height:1.6}
+.calcard a{display:inline-block;margin-top:10px;font-size:13.5px}
 </style>
 </head>
 <body>
@@ -203,7 +225,10 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
   <div id="viewer"></div>
   <div id="gamebar"><span id="gtask">Найдите: …</span><span class="tm" id="gtime">60</span></div>
   <div id="zhint">Щипок — приблизить · точки 1·2·3 — детали</div>
-  <div id="zcard"><span class="x">✕</span><h3 id="zct"></h3><p id="zcx"></p></div>
+</div>
+<div id="zpanel">
+  <div class="zbtns" id="zbtns"></div>
+  <div id="zbody"><h3 id="zct"></h3><p id="zcx"></p></div>
 </div>
 
 <section id="game">
@@ -348,6 +373,12 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
   <div class="support"><p>Музей делает крошечная команда — и делает бесплатным для всех. Если «Девятый вал» отсюда виден лучше, чем из учебника, — поддержите проект.</p><a class="gbtn sec" href="../index.html">❤ Как поддержать</a></div>
 </section>
 
+<section id="calendar">
+  <h2 class="t"><small>Календарь музея</small>Этот день в русском искусстве</h2>
+  <p class="mb" style="font-size:13.5px;opacity:.75">У каждого дня года свой повод — день рождения художника, дата картины, событие. Листайте стрелками.</p>
+  <div id="calbox"></div>
+</section>
+
 <footer>
   <div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>
   Музей «Русское искусство» · зал Айвазовского · страница-эталон<br>
@@ -358,17 +389,36 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 <script src="vendor/openseadragon/openseadragon.min.js"></script>
 <script>
 var W=5815,H=3840,AR=H/W;
-var viewer=OpenSeadragon({id:"viewer",prefixUrl:"vendor/openseadragon/images/",tileSources:"media/tiles/devyatyi-val.dzi",showNavigationControl:true,navigationControlAnchor:OpenSeadragon.ControlAnchor.BOTTOM_RIGHT,gestureSettingsTouch:{pinchToZoom:true,flickEnabled:true},maxZoomPixelRatio:2.2,visibilityRatio:1,minZoomLevel:.9,animationTime:1.1,springStiffness:7});
+var viewer=OpenSeadragon({id:"viewer",prefixUrl:"vendor/openseadragon/images/",tileSources:"media/tiles/devyatyi-val.dzi",showNavigationControl:true,showNavigator:true,navigatorPosition:"TOP_RIGHT",navigatorSizeRatio:.15,navigatorBackground:"rgba(0,0,0,.55)",navigatorBorderColor:"rgba(212,175,55,.75)",navigatorDisplayRegionColor:"#d4af37",navigationControlAnchor:OpenSeadragon.ControlAnchor.BOTTOM_RIGHT,gestureSettingsTouch:{pinchToZoom:true,flickEnabled:true},maxZoomPixelRatio:2.2,visibilityRatio:1,minZoomLevel:.9,animationTime:1.1,springStiffness:7});
 var sparks=[
- {x:.40,y:.84,t:"Обломок мачты — крест",d:"В центре катастрофы Айвазовский спрятал символ спасения: обломок, за который держатся люди, имеет форму креста."},
- {x:.60,y:.30,t:"Солнце уже встало",d:"Главный секрет: шторм ПОЗАДИ. Ночь пережита, сквозь тучи бьёт рассвет. Полотно не про гибель — про надежду."},
- {x:.30,y:.44,t:"Прозрачная волна",d:"Свет проходит СКВОЗЬ толщу воды. Фирменный приём Айвазовского, который не повторил никто из современников."}];
+ {x:.40,y:.84,n:"Обломок мачты",z:4.0,t:"Обломок мачты — крест",d:"В центре катастрофы Айвазовский спрятал символ спасения: обломок, за который держатся люди, имеет форму креста."},
+ {x:.60,y:.30,n:"Солнце",z:2.9,t:"Солнце уже встало",d:"Главный секрет: шторм ПОЗАДИ. Ночь пережита, сквозь тучи бьёт рассвет. Полотно не про гибель — про надежду."},
+ {x:.30,y:.44,n:"Прозрачная волна",z:3.4,t:"Прозрачная волна",d:"Свет проходит СКВОЗЬ толщу воды. Фирменный приём Айвазовского, который не повторил никто из современников."}];
 var sparkEls=[];
 viewer.addHandler('open',function(){sparks.forEach(function(s,i){var el=document.createElement('div');el.className='spark';el.textContent=i+1;new OpenSeadragon.MouseTracker({element:el,clickHandler:function(){showCard(s);}}).setTracking(true);viewer.addOverlay({element:el,location:new OpenSeadragon.Point(s.x,s.y*AR)});sparkEls.push(el);});});
-var zcard=document.getElementById('zcard');
-function showCard(s){document.getElementById('zct').textContent='✦ '+s.t;document.getElementById('zcx').textContent=s.d;zcard.style.display='block';document.getElementById('zhint').style.opacity='0';viewer.viewport.panTo(new OpenSeadragon.Point(s.x,s.y*AR),false);if(viewer.viewport.getZoom()<2.2)viewer.viewport.zoomTo(2.6);}
-zcard.querySelector('.x').addEventListener('click',function(){zcard.style.display='none';});
-viewer.addHandler('canvas-press',function(){zcard.style.display='none';});
+/* ── детали картины: объяснение ПОД полотном, наезд у каждой свой ── */
+var zbtns=document.getElementById('zbtns'),zct=document.getElementById('zct'),zcx=document.getElementById('zcx');
+var DEF_T='Три детали, которые легко пропустить',DEF_D='Нажмите номер — картина сама подъедет к нужному месту, вокруг детали загорится кольцо, а объяснение появится здесь. Мини-карта в углу показывает, какую часть полотна вы сейчас видите.';
+var ringEl=null;
+function clearRing(){if(ringEl){try{viewer.removeOverlay(ringEl);}catch(e){}ringEl=null;}}
+function resetZoom(){clearRing();if(typeof g==='undefined'||!g.on){sparkEls.forEach(function(e){e.style.visibility='visible';});}document.querySelectorAll('.zb').forEach(function(b){b.classList.remove('on');});zct.textContent=DEF_T;zcx.textContent=DEF_D;viewer.viewport.goHome();}
+function showCard(s){
+  var i=sparks.indexOf(s);
+  zct.textContent='✦ '+s.t; zcx.textContent=s.d;
+  document.querySelectorAll('.zb').forEach(function(b,j){b.classList.toggle('on',j===i);});
+  clearRing();
+  ringEl=document.createElement('div');ringEl.className='ring live';
+  var pt=new OpenSeadragon.Point(s.x,s.y*AR);
+  viewer.addOverlay({element:ringEl,location:pt});
+  viewer.viewport.zoomTo(s.z,null,false);
+  viewer.viewport.panTo(pt,false);
+  sparkEls.forEach(function(e,j){e.style.visibility=(j===i?'hidden':'visible');});
+  document.getElementById('zhint').style.opacity='0';
+  document.getElementById('zpanel').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+sparks.forEach(function(s,i){var b=document.createElement('button');b.className='zb';b.innerHTML='<em>'+(i+1)+'</em>'+s.n;b.addEventListener('click',function(){showCard(s);});zbtns.appendChild(b);});
+(function(){var b=document.createElement('button');b.className='zb all';b.textContent='↺ Всё полотно';b.addEventListener('click',resetZoom);zbtns.appendChild(b);})();
+zct.textContent=DEF_T; zcx.textContent=DEF_D;
 setTimeout(function(){document.getElementById('zhint').style.opacity='0';},6000);
 
 /* ─ Итог дня ─ */
@@ -380,7 +430,7 @@ var g={on:false,found:[],t:60,timer:null};
 var gbar=document.getElementById('gamebar'),gtask=document.getElementById('gtask'),gtime=document.getElementById('gtime'),gres=document.getElementById('gres');
 document.getElementById('gstart').addEventListener('click',function(){
   g.on=true;g.found=[];g.t=60;pts-=0;gres.style.display='none';
-  sparkEls.forEach(function(e){e.style.display='none';});
+  sparkEls.forEach(function(e){e.style.visibility='hidden';});clearRing();document.querySelectorAll('.zb').forEach(function(b){b.classList.remove('on');});
   gbar.style.display='flex';task();
   document.getElementById('zoomwrap').scrollIntoView({behavior:'smooth'});
   viewer.viewport.goHome();
@@ -402,7 +452,7 @@ viewer.addHandler('canvas-click',function(ev){
 });
 function endGame(win){
   g.on=false;clearInterval(g.timer);gbar.style.display='none';
-  sparkEls.forEach(function(e){e.style.display='block';});
+  sparkEls.forEach(function(e){e.style.visibility='visible';});
   gres.style.display='block';
   gres.innerHTML=win?'<b style="color:var(--gold)">Все три детали найдены — +30 баллов!</b> Теперь вы видите картину так, как её задумал автор.':'Время вышло. Найдено: '+g.found.length+' из 3 (+'+(g.found.length*10)+' баллов). Золотые точки подскажут остальное.';
 }
@@ -485,5 +535,7 @@ document.getElementById('heart').addEventListener('click',function(){document.qu
 document.querySelector('.hero').addEventListener('click',function(){document.getElementById('zoomwrap').scrollIntoView({behavior:'smooth'});});
 window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});
 </script>
+<script src="../assets/museum-calendar.js"></script>
+<script src="calendar-art.js"></script>
 </body>
 </html>
