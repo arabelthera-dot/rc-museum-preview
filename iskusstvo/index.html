@@ -35,6 +35,18 @@ h2{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);
 .council,.support{background:var(--panel);border:1px solid rgba(212,175,55,.2);border-radius:14px;padding:15px;font-size:13.5px;margin-top:14px}
 footer{padding:22px 16px 60px;border-top:1px solid rgba(212,175,55,.2);text-align:center;font-size:12.5px;opacity:.85;margin-top:30px}
 footer .slog{font-style:italic;color:var(--gold);margin-bottom:6px}
+
+/* календарь музея (стандарт: свой календарь у каждого музея — свой ежедневный ролик) */
+#calendar .calnav{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:10px 0 12px}
+.calarrow{background:none;border:1px solid var(--line);color:var(--gold);border-radius:50%;width:32px;height:32px;font-size:18px;line-height:1;cursor:pointer;font-family:Georgia,serif;flex:none}
+.calarrow:hover{border-color:var(--gold);background:rgba(212,175,55,.1)}
+.caldate{font-family:Georgia,serif;font-size:15px;text-align:center;flex:1}
+.caldate b{color:var(--gold);font-weight:normal;font-size:12.5px}
+.calcard h3{font-family:Georgia,serif;font-size:15.5px;font-weight:normal;color:var(--gold);margin-bottom:7px}
+.calcard .caly{opacity:.55;font-size:13px;color:var(--txt)}
+.calcard p{font-size:13.5px;line-height:1.6}
+.calcard.empty{opacity:.85}
+.calcard a{display:inline-block;margin-top:9px;font-size:13px}
 </style>
 </head>
 <body>
@@ -45,8 +57,8 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:6px}
 </header>
 <nav class="crumbs"><a href="../index.html">Русская цивилизация</a> › <span>Русское искусство</span></nav>
 <main>
-  <div class="today"><span class="lbl">Сегодня в русском искусстве</span>
-    <p>29 июля 1817 года родился Иван Айвазовский — человек, запомнивший море наизусть. Его зал уже открывается: <a href="pic-aivazovsky-devyatyi-val.html">«Девятый вал» — рассмотрите каждый мазок →</a></p>
+  <div class="today" id="calendar"><span class="lbl">Сегодня в русском искусстве</span>
+    <div id="calbox"></div>
   </div>
 
   <h2>Анфилада залов</h2>
@@ -72,5 +84,7 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:6px}
 </main>
 <footer><div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>Музей «Русское искусство» · пилотный зал Айвазовского · <a href="../index.html">в город-музей →</a></footer>
 <script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
+<script src="../assets/museum-calendar.js"></script>
+<script src="calendar-art.js"></script>
 </body>
 </html>
