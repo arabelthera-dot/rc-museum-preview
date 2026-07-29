@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Поход Семёна Дежнёва 1648 года: он первым прошёл пролив между Азией и Америкой — и об этом не знали 88 лет. Карта маршрута, зум по атласу Ремезова, игра и разговор с первопроходцем.">
+<link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/pervoprohodcy/exp-dezhnev-1648.html">
+<link rel="alternate" hreflang="ru" href="https://arabelthera-dot.github.io/rc-museum-preview/pervoprohodcy/exp-dezhnev-1648.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Русская цивилизация · Русские первопроходцы">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Дежнёв, 1648 — он открыл край света и не узнал об этом">
+<meta property="og:description" content="Он шёл за моржовым клыком, а прошёл пролив между двумя материками. Об этом узнали через 88 лет. Карта похода, атлас 1701 года, игра и викторина.">
+<meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/pervoprohodcy/exp-dezhnev-1648-poster.jpg">
+<meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/pervoprohodcy/exp-dezhnev-1648.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Дежнёв, 1648 — он открыл край света и не узнал об этом">
+<meta name="twitter:image" content="https://arabelthera-dot.github.io/rc-museum-preview/pervoprohodcy/exp-dezhnev-1648-poster.jpg">
+<title>Поход Дежнёва, 1648 · Русские первопроходцы</title>
+<style>
+:root{--gold:#d4af37;--ink:#0b0d11;--panel:#12151c;--line:rgba(212,175,55,.35);--txt:#e9e3d3}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--ink);color:var(--txt);font-family:Georgia,'Times New Roman',serif;line-height:1.6}
+a{color:var(--gold);text-decoration:none}
+header.site{padding:14px 16px 8px;text-align:center}
+header.site .b1{font-size:13px;letter-spacing:2.5px;color:var(--gold);text-transform:uppercase}
+header.site .b2{font-size:11px;opacity:.6;margin-top:2px}
+nav.crumbs{font-size:12.5px;padding:6px 16px 10px;text-align:center;opacity:.9}
+nav.crumbs span{opacity:.55}
+/* HERO */
+.hero{position:relative;height:72vh;min-height:420px;overflow:hidden;cursor:pointer}
+.hero .bg{position:absolute;inset:-4%;background:url('media/remezov-hero.jpg') center/cover no-repeat;animation:breath 14s ease-in-out infinite alternate}
+@keyframes breath{from{transform:scale(1)}to{transform:scale(1.045)}}
+@media (prefers-reduced-motion:reduce){.hero .bg{animation:none}}
+.hero .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,13,17,.55),transparent 30%,transparent 55%,rgba(11,13,17,.92));pointer-events:none}
+.hero .inner{position:absolute;left:0;right:0;bottom:26px;text-align:center;padding:0 18px;pointer-events:none}
+.hero .chip{display:inline-block;font-size:12px;border:1px solid var(--line);border-radius:16px;padding:3px 12px;background:rgba(11,13,17,.55);margin-bottom:10px}
+.hero h1{font-size:clamp(30px,7vw,54px);font-weight:normal;letter-spacing:1px}
+.hero h1 b{color:var(--gold);font-weight:normal}
+.hero .hook{font-size:clamp(14px,3.4vw,18px);font-style:italic;opacity:.92;margin-top:6px}
+.hero .down{margin-top:10px;font-size:12.5px;opacity:.7;animation:bob 1.8s infinite;pointer-events:none;white-space:nowrap}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+/* SECTIONS */
+section{max-width:760px;margin:0 auto;padding:34px 18px 6px}
+h2.t{font-size:22px;font-weight:normal;color:var(--gold);letter-spacing:.5px;margin-bottom:14px}
+h2.t small{display:block;font-size:12px;color:var(--txt);opacity:.6;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px}
+p.mb{margin-bottom:14px}
+.lead:first-letter{initial-letter:2;-webkit-initial-letter:2;color:var(--gold);padding-right:8px}
+/* ZOOM */
+/* высота под пропорции полотна (3:2) — без чёрных полей сверху и снизу на телефоне */
+#zoomwrap{position:relative;height:min(74vh,calc(100vw * .68));min-height:300px;background:#000;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+@media (min-width:900px){#zoomwrap{height:74vh}}
+#viewer{position:absolute;inset:0}
+.spark{width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;cursor:pointer;background:radial-gradient(circle,#ffdf70 0 60%,#c9a227 100%);border:2px solid rgba(11,13,17,.9);box-shadow:0 0 0 2px rgba(255,246,214,.95),0 0 16px 5px rgba(212,175,55,.8);display:flex;align-items:center;justify-content:center;color:#1a1508;font-size:14px;font-weight:bold;font-family:Georgia,serif;animation:pulse 2.2s infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.35)}}
+@media (prefers-reduced-motion:reduce){.spark{animation:none}}
+#zhint{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);z-index:15;background:rgba(18,21,28,.85);border:1px solid var(--line);border-radius:20px;padding:6px 15px;font-size:12px;white-space:nowrap;transition:opacity .6s;pointer-events:none}
+/* GAME */
+#gamebar{position:absolute;top:10px;left:10px;right:10px;z-index:25;display:none;justify-content:space-between;align-items:center;background:rgba(18,21,28,.92);border:1px solid var(--line);border-radius:12px;padding:8px 12px;font-size:13px}
+#gamebar .tm{color:var(--gold);font-size:16px;min-width:44px;text-align:right}
+.gbtn{display:inline-block;background:linear-gradient(180deg,#e3c04d,#b8912a);color:#1a1508;border:none;border-radius:22px;padding:11px 24px;font-family:inherit;font-size:15px;cursor:pointer;box-shadow:0 4px 14px rgba(212,175,55,.35)}
+.gbtn.sec{background:none;color:var(--gold);border:1px solid var(--line);box-shadow:none}
+.ring{width:56px;height:56px;margin:-28px 0 0 -28px;border:3px solid var(--gold);border-radius:50%;box-shadow:0 0 18px 4px rgba(212,175,55,.7);animation:ringpop .5s ease-out}
+@keyframes ringpop{from{transform:scale(.3);opacity:0}to{transform:scale(1);opacity:1}}
+/* QUIZ */
+.q{background:var(--panel);border:1px solid rgba(212,175,55,.2);border-radius:14px;padding:16px;margin-bottom:14px}
+.q h3{font-size:15px;margin-bottom:10px;font-weight:normal}
+.q h3 em{color:var(--gold);font-style:normal;font-size:12px;letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:4px}
+.opt{display:block;width:100%;text-align:left;background:rgba(233,227,211,.06);color:var(--txt);border:1px solid rgba(233,227,211,.15);border-radius:10px;padding:10px 13px;margin-bottom:8px;font-family:inherit;font-size:14px;cursor:pointer}
+.opt.ok{border-color:#69c07a;background:rgba(105,192,122,.15)}
+.opt.no{border-color:#c06a5f;background:rgba(192,106,95,.13);opacity:.8}
+.expl{display:none;font-size:13.5px;opacity:.85;border-left:2px solid var(--gold);padding-left:10px;margin-top:6px}
+#total{font-size:15px}
+#total b{color:var(--gold)}
+/* CHAT */
+#chat .chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+#chat .chip{background:none;border:1px solid var(--line);color:var(--txt);border-radius:16px;padding:6px 12px;font-family:inherit;font-size:12.5px;cursor:pointer}
+#chatlog{background:var(--panel);border:1px solid rgba(212,175,55,.2);border-radius:14px;padding:14px;min-height:90px;max-height:300px;overflow-y:auto;font-size:14px}
+#chatlog .u{color:var(--gold);margin-top:10px}
+#chatlog .a{margin-top:4px}
+#chatrow{display:flex;gap:8px;margin-top:10px}
+#chatin{flex:1;background:var(--panel);border:1px solid rgba(233,227,211,.2);border-radius:22px;padding:10px 15px;color:var(--txt);font-family:inherit;font-size:14px}
+/* MISC */
+.videoph{background:var(--panel);border:1px dashed var(--line);border-radius:14px;padding:26px 16px;text-align:center;font-size:14px;opacity:.85}
+.next{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
+.ncard{background:var(--panel);border:1px solid rgba(212,175,55,.25);border-radius:14px;padding:14px;font-size:13.5px}
+.ncard.main{grid-column:1/3;border-color:var(--line)}
+.ncard .lbl{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);opacity:.9;display:block;margin-bottom:5px}
+.ncard.soon{opacity:.65}
+.support{background:linear-gradient(160deg,#181206,#12151c);border:1px solid var(--line);border-radius:16px;padding:18px;text-align:center;margin-top:22px}
+.support p{font-size:14px;margin-bottom:10px}
+/* компактная кнопка: кружок, разворачивается у футера, прячется при скролле вниз (не перекрывает текст) */
+#heart{position:fixed;right:12px;bottom:14px;z-index:60;background:rgba(18,21,28,.92);border:1px solid var(--line);border-radius:26px;width:46px;height:46px;display:flex;align-items:center;justify-content:center;font-size:17px;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.5);transition:transform .35s ease,width .3s ease,opacity .3s ease;overflow:hidden}
+#heart .lbl{display:none;white-space:nowrap;margin-left:7px;font-size:14px}
+#heart.wide{width:auto;padding:0 17px}
+#heart.wide .lbl{display:inline}
+#heart.tuck{transform:translateY(96px);opacity:0;pointer-events:none}
+footer{margin-top:44px;padding:26px 18px 90px;border-top:1px solid rgba(212,175,55,.2);text-align:center;font-size:12.5px;opacity:.85}
+footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
+.src{font-size:12px;opacity:.7;margin-top:10px;word-break:break-all}
+/* сравнение масштаба */
+.scale{background:var(--panel);border:1px solid rgba(212,175,55,.2);border-radius:14px;padding:14px;margin-top:6px}
+.scale svg{width:100%;height:auto;display:block}
+.scale p{font-size:13.5px;opacity:.9;margin-top:10px}
+/* разбор для внимательных */
+.deep h3{font-size:15px;color:var(--gold);font-weight:normal;margin:16px 0 6px}
+.deep p{font-size:14.5px;margin-bottom:10px}
+/* хронология шторма */
+.tl{margin-top:12px;padding-left:6px}
+.tli{position:relative;padding:0 0 16px 26px;border-left:1px solid rgba(212,175,55,.3)}
+.tli:last-child{border-left-color:transparent;padding-bottom:2px}
+.tli .dot{position:absolute;left:-6px;top:4px;width:11px;height:11px;border-radius:50%;background:var(--panel);border:2px solid var(--gold)}
+.tli.now .dot{background:var(--gold);box-shadow:0 0 12px 3px rgba(212,175,55,.55)}
+.tli b{font-size:14px;color:var(--txt);font-weight:normal;display:block}
+.tli.now b{color:var(--gold)}
+.tli p{font-size:13.5px;opacity:.85;margin-top:3px}
+/* сравнение с мировой живописью */
+.world{display:grid;gap:12px}
+@media (min-width:760px){.world{grid-template-columns:1fr 1fr 1fr;align-items:start}}
+.world figure{background:var(--panel);border:1px solid rgba(212,175,55,.2);border-radius:14px;padding:10px}
+.world figure.ours{border-color:var(--line);box-shadow:0 0 0 1px rgba(212,175,55,.18)}
+.world img{width:100%;aspect-ratio:1.4;object-fit:contain;background:#0b0b0c;border-radius:9px;display:block}
+.world figcaption{font-size:12.5px;opacity:.88;margin-top:8px;line-height:1.5}
+.world figcaption b{color:var(--gold);font-weight:normal;display:block;font-size:13.5px;margin-bottom:3px}
+/* аудиогид */
+.audio{display:flex;align-items:center;gap:12px;background:var(--panel);border:1px solid rgba(212,175,55,.25);border-radius:14px;padding:13px 15px;margin-bottom:14px}
+.audio button{flex-shrink:0;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:linear-gradient(180deg,#e3c04d,#b8912a);color:#1a1508;font-size:17px;cursor:pointer}
+.audio .meta{font-size:13px;line-height:1.45}
+.audio .meta b{color:var(--gold);font-weight:normal;display:block;font-size:14px}
+#agaudio{color-scheme:dark}
+.agnav{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin-bottom:16px}
+.agnav .lbl{font-size:12px;opacity:.6;width:100%;margin-bottom:2px}
+.agnav button{background:none;border:1px solid rgba(212,175,55,.3);color:var(--txt);border-radius:15px;padding:5px 11px;font-family:inherit;font-size:12.5px;cursor:pointer}
+.agnav button:hover,.agnav button.on{border-color:var(--gold);color:var(--gold)}
+/* переключатель языка */
+.lang{position:absolute;top:12px;right:14px;font-size:12px;letter-spacing:1px}
+.lang a{opacity:.6}.lang a.on{opacity:1;border-bottom:1px solid var(--gold)}
+
+/* ── панель деталей под картиной (вместо карточки поверх полотна) ── */
+#zpanel{background:var(--panel);border-bottom:1px solid var(--line);padding:13px 16px 17px}
+.zbtns{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.zb{background:none;border:1px solid rgba(212,175,55,.32);color:var(--txt);border-radius:18px;padding:7px 13px;font-family:inherit;font-size:13px;cursor:pointer;display:inline-flex;align-items:center;gap:7px;transition:border-color .2s,background .2s}
+.zb em{font-style:normal;font-weight:bold;color:var(--gold);font-family:Georgia,serif;font-size:14px}
+.zb:hover{border-color:var(--gold)}
+.zb.on{border-color:var(--gold);background:rgba(212,175,55,.13);color:var(--gold)}
+.zb.all{margin-left:auto;opacity:.7;font-size:12.5px}
+#zbody h3{font-family:Georgia,serif;font-size:15.5px;color:var(--gold);margin-bottom:6px}
+#zbody p{font-size:14px;line-height:1.55}
+.ring.live{animation:pulse 2s infinite}
+.openseadragon-container .navigator{border-radius:6px!important}
+
+/* ── календарь музея (стандарт для всех музеев) ── */
+#calendar .calnav{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+.calarrow{background:none;border:1px solid var(--line);color:var(--gold);border-radius:50%;width:34px;height:34px;font-size:19px;line-height:1;cursor:pointer;font-family:Georgia,serif;flex:none}
+.calarrow:hover{border-color:var(--gold);background:rgba(212,175,55,.1)}
+.caldate{font-family:Georgia,serif;font-size:16px;letter-spacing:.5px;text-align:center;flex:1}
+.caldate b{color:var(--gold);font-weight:normal;font-size:13px}
+.calcard{background:var(--panel);border:1px solid rgba(212,175,55,.25);border-radius:14px;padding:16px}
+.calcard.empty{border-style:dashed;opacity:.85}
+.calcard h3{font-family:Georgia,serif;font-size:16px;font-weight:normal;color:var(--gold);margin-bottom:8px}
+.calcard .caly{opacity:.55;font-size:13px;color:var(--txt)}
+.calcard p{font-size:14px;line-height:1.6}
+.calcard a{display:inline-block;margin-top:10px;font-size:13.5px}
+
+/* ── карта маршрута ── */
+#routewrap{position:relative;background:#070b12;border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
+#routewrap img{width:100%;display:block}
+#routesvg{position:absolute;inset:0;width:100%;height:100%}
+#routesvg .track{fill:none;stroke:rgba(212,175,55,.28);stroke-width:.7;stroke-linecap:round}
+#routesvg .live{fill:none;stroke:var(--gold);stroke-width:1.1;stroke-linecap:round;filter:drop-shadow(0 0 3px rgba(212,175,55,.9));stroke-dasharray:200;stroke-dashoffset:200;transition:stroke-dashoffset 3.4s ease-in-out}
+#routesvg .live.go{stroke-dashoffset:0}
+.rpt{position:absolute;width:26px;height:26px;margin:-13px 0 0 -13px;border-radius:50%;background:radial-gradient(circle,#ffdf70 0 60%,#c9a227 100%);border:2px solid rgba(7,11,18,.9);box-shadow:0 0 0 2px rgba(255,246,214,.9),0 0 14px 4px rgba(212,175,55,.7);display:flex;align-items:center;justify-content:center;font:bold 13px Georgia,serif;color:#1a1508;cursor:pointer;z-index:6}
+.rpt.on{transform:scale(1.25)}
+.rlbl{position:absolute;transform:translate(-50%,0);max-width:38vw;overflow:hidden;text-overflow:ellipsis;max-width:40vw;overflow:hidden;text-overflow:ellipsis;margin-top:16px;font-size:11px;letter-spacing:.4px;color:#e9e3d3;text-shadow:0 1px 4px #000,0 0 10px #000;white-space:nowrap;pointer-events:none;z-index:5;opacity:.9}
+#rpanel{background:var(--panel);border-bottom:1px solid var(--line);padding:13px 16px 17px}
+.rbtns{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.rb{background:none;border:1px solid rgba(212,175,55,.32);color:var(--txt);border-radius:18px;padding:7px 13px;font-family:inherit;font-size:13px;cursor:pointer;display:inline-flex;align-items:center;gap:7px}
+.rb em{font-style:normal;font-weight:bold;color:var(--gold);font-family:Georgia,serif}
+.rb.on{border-color:var(--gold);background:rgba(212,175,55,.13);color:var(--gold)}
+.rb.play{margin-left:auto;opacity:.85}
+#rbody h3{font-family:Georgia,serif;font-size:15.5px;color:var(--gold);margin-bottom:6px}
+#rbody .when{font-size:12px;letter-spacing:1px;text-transform:uppercase;opacity:.6;margin-bottom:5px}
+#rbody p{font-size:14px;line-height:1.55}
+/* порядок событий */
+.ord{display:grid;gap:8px;margin:10px 0}
+.ordi{background:rgba(233,227,211,.06);border:1px solid rgba(233,227,211,.16);border-radius:10px;padding:10px 13px;font-size:13.5px;cursor:pointer;text-align:left;color:var(--txt);font-family:inherit}
+.ordi.ok{border-color:#69c07a;background:rgba(105,192,122,.14);cursor:default}
+.ordi .num{color:var(--gold);font-weight:bold;margin-right:8px}
+</style>
+</head>
+<body>
+
+<header class="site" style="position:relative">
+  <div class="lang"><a class="on" href="exp-dezhnev-1648.html">RU</a></div>
+  <div class="b1">Русские первопроходцы</div>
+  <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
+</header>
+<nav class="crumbs"><a href="../index.html">Русская цивилизация</a> › <a href="index.html">Русские первопроходцы</a> › <span>Поход Дежнёва, 1648</span></nav>
+
+<div class="hero">
+  <div class="bg"></div>
+  <div class="scrim"></div>
+  <div class="inner">
+    <span class="chip">1648 · Колыма → Анадырь · 7 кочей, 90 человек</span>
+    <h1>Поход <b>Дежнёва</b></h1>
+    <div class="hook">Он шёл за моржовым клыком. А прошёл пролив между двумя материками — и не узнал об этом.</div>
+    <div class="down">тапните — пройти маршрут ▾</div>
+  </div>
+</div>
+
+<section id="put">
+  <h2 class="t"><small>Маршрут</small>Путь, которого не должно было получиться</h2>
+  <p class="mb">Летом 1648 года из устья Колымы вышли семь кочей — деревянных судов, сшитых без единого гвоздя. Девяносто человек шли искать реку Погычу, богатую «рыбьим зубом» — моржовой костью, которая стоила дороже соболя. Никакого пролива они не искали: о том, что Азия и Америка разделены, в мире тогда не знал никто. Нажмите на точку — и путь пойдёт дальше.</p>
+</section>
+
+<div id="routewrap">
+  <img src="media/dezhnev-route.jpg" alt="Карта северо-востока Азии: путь Дежнёва от устья Колымы вокруг Чукотки к устью Анадыря">
+  <svg id="routesvg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+    <path class="track" d="M23.3,37.1 C30,32 34,29 39.5,28.4 C50,27 56,30 60,33 C67,38 72,46 74.3,54.3 C70,60 60,63 51.8,62.9"/>
+    <path class="live" id="rlive" d="M23.3,37.1 C30,32 34,29 39.5,28.4 C50,27 56,30 60,33 C67,38 72,46 74.3,54.3 C70,60 60,63 51.8,62.9"/>
+  </svg>
+</div>
+
+<div id="rpanel">
+  <div class="rbtns" id="rbtns"></div>
+  <div id="rbody"><div class="when"></div><h3></h3><p></p></div>
+</div>
+
+<section id="atlas">
+  <h2 class="t"><small>Как это видели тогда</small>Атлас Ремезова, 1701 год</h2>
+  <p class="mb">Через полвека после похода тобольский картограф Семён Ремезов составил «Чертёжную книгу Сибири» — первый русский географический атлас. Перед вами подлинный лист в разрешении 5100 × 7201 точек: можно приблизиться до отдельного росчерка пера. Это ровно та картина мира, в которой открытие Дежнёва не значилось.</p>
+  <p class="mb" style="font-size:13px;opacity:.72">Золотых точек-подсказок здесь нет намеренно. Подписи сделаны скорописью XVII века, и выдавать наши догадки за атрибуцию мы не станем. Рассматривайте свободно — ниже написано, что стоит заметить.</p>
+</section>
+
+<div id="zoomwrap">
+  <div id="viewer"></div>
+  <div id="zhint">Щипок — приблизить · двойной тап — крупнее</div>
+</div>
+
+<section id="chto-zametit">
+  <h2 class="t"><small>На что смотреть</small>Четыре вещи, заметные только вблизи</h2>
+  <div class="q"><h3><em>Первое</em>Нет ни одной цифры широты и долготы</h3><p style="font-size:14px">Градусной сетки на чертеже нет. Расстояния здесь меряются не градусами, а днями пути: «до того острогу ходу семь ден». Карта отвечает не на вопрос «где это», а на вопрос «как туда дойти» — и этим отличается от всего, к чему мы привыкли.</p></div>
+  <div class="q"><h3><em>Второе</em>Реки прорисованы подробнее берегов</h3><p style="font-size:14px">Приблизьте любую речную систему — она разветвлена до мелких притоков. А морской берег часто дан общей линией. Причина простая: по рекам ходили, по ним возили меха и ясак, их знали. Море было краем, а не дорогой.</p></div>
+  <div class="q"><h3><em>Третье</em>Города нарисованы домиками</h3><p style="font-size:14px">Условных знаков ещё нет — есть рисунок. Острог изображается башенкой с частоколом, монастырь — церковкой. Карту не читают по легенде, её рассматривают.</p></div>
+  <div class="q"><h3><em>Четвёртое</em>Текст живёт прямо на карте</h3><p style="font-size:14px">Пояснения написаны не на полях, а вписаны в само поле чертежа, между реками и горами. Ремезов не разделял карту и рассказ — для него это была одна вещь.</p></div>
+</section>
+
+<section id="trudno-poverit">
+  <h2 class="t"><small>Поход и человек</small>В это трудно поверить</h2>
+  <div class="q"><h3><em>Факт 1</em>Он открыл пролив — и об этом не знали 88 лет</h3><p style="font-size:14px">Отписки Дежнёва легли в архив якутской воеводской канцелярии и пролежали там почти девяносто лет. Их нашёл историк Герхард Миллер в 1736 году, разбирая сибирские бумаги. К этому времени пролив уже прошёл Витус Беринг — в 1728 году, на восемьдесят лет позже, — и имя на карте осталось за ним.</p></div>
+  <div class="q"><h3><em>Факт 2</em>Он вообще не искал пролив</h3><p style="font-size:14px">Экспедиция шла за моржовым клыком: «рыбий зуб» ценился дороже соболя, и слухи о реке Погыче, где лежбища моржей, будоражили Колыму. Географическое открытие оказалось побочным результатом торговой ходки. Дежнёв и в отписках пишет не «я открыл пролив», а описывает, где какой промысел.</p></div>
+  <div class="q"><h3><em>Факт 3</em>Кочи шились без единого гвоздя</h3><p style="font-size:14px">Коч — поморское судно, доски которого сшивались корнями можжевельника или вицей. Корпус делали яйцевидным: сжатый льдами, он не ломался, а выдавливался наверх. На таких судах девяносто человек пошли в море, о котором не знали ничего.</p></div>
+  <div class="q"><h3><em>Факт 4</em>Он двенадцать лет прожил там, куда его выбросило</h3><p style="font-size:14px">После крушения остатки отряда вышли к Анадырю. Дежнёв провёл на этой реке двенадцать лет, поставил Анадырский острог, а в 1652 году нашёл огромное моржовое лежбище — то самое богатство, за которым и шли. Он не вернулся домой — он остался жить в том месте, куда его занесло.</p></div>
+  <div class="q"><h3><em>Факт 5</em>Жалованье ему не платили девятнадцать лет</h3><p style="font-size:14px">В 1664 году Дежнёв добрался до Москвы с грузом моржовой кости: 289 пудов, около четырёх с половиной тонн, проданных на 17 340 рублей. Свою долю он получил — 500 рублей соболями. И тогда же подал челобитную о выдаче жалованья за девятнадцать прошедших лет, которое ему причиталось, но так и не было выплачено.</p></div>
+</section>
+
+<section id="istoriya">
+  <h2 class="t"><small>История</small>Открытие, которое положили в архив</h2>
+  <p class="mb lead">Двадцатого июня 1648 года из устья Колымы в Ледовитое море вышли семь кочей. Возглавляли поход двое: казак Семён Иванович Дежнёв, служилый человек с двадцатилетним стажем в Сибири, и торговый человек Федот Алексеев Попов. Девяносто человек. Цель — река Погыча, о которой рассказывали, что в её устье лежбища моржа, а моржовый клык, «рыбий зуб», в Москве стоил дороже соболя.</p>
+  <p class="mb">Надо понимать, куда они шли. Восточнее Колымы для русского человека семнадцатого века не было ничего — ни карт, ни рассказов, ни уверенности, что море там вообще проходимо. Попытки были и раньше, и все заканчивались одинаково: льды, поворот, возвращение. Никто в мире тогда не знал, соединяются Азия и Америка или разделены. Этот вопрос был открыт, и его никто не собирался решать в тот июнь.</p>
+  <p class="mb">Море съело экспедицию по частям. До сентября дошли не все кочи: одни разбились, другие пропали. И двадцатого сентября 1648 года оставшиеся обогнули то, что Дежнёв в отписке назвал <i>Большим Каменным Носом</i> — скалистый мыс, за которым берег поворачивал на юг. Тысяча четыреста километров от устья Колымы. Это была крайняя восточная точка Азии, и они прошли между двумя материками, не подозревая, что делают.</p>
+  <p class="mb">Дальше было крушение. Коч Дежнёва выбросило южнее устья Анадыря, и остатки отряда пошли пешком — зимой, без запасов, по земле, которой не знали. Дошли не все. Тем, кто дошёл, предстояло обживаться: Дежнёв поставил на Анадыре острог и остался там на двенадцать лет. В 1652 году он нашёл то самое лежбище моржей — цель похода, добытая через четыре года после его начала.</p>
+  <p class="mb">В 1664 году он привёз в Москву 289 пудов моржовой кости — около четырёх с половиной тонн. Казна продала их на 17 340 рублей, Дежнёв получил свою долю: пятьсот рублей соболями, сумму по тем временам огромную. Тогда же он подал челобитную о жалованье, которое ему не выплачивали девятнадцать лет. Про Большой Каменный Нос в бумагах речи не шло: с точки зрения приказа это была не заслуга, а подробность маршрута.</p>
+  <p class="mb">А его отписки остались в Якутске. Они пролежали в архиве воеводской канцелярии почти девяносто лет, пока в 1736 году их не нашёл историк Герхард Фридрих Миллер, разбиравший сибирские бумаги для описания края. Только тогда стало ясно, что казак прошёл пролив за восемьдесят лет до Витуса Беринга, который сделал это в 1728 году с картами, приборами и государственным заданием. Имя на карте осталось за Берингом — оно уже было там. Дежнёву достался мыс, тот самый Большой Каменный Нос, и то лишь в 1898 году.</p>
+  <p class="mb">Здесь стоит остановиться на одной вещи, о которой обычно не говорят. Открытие не состоялось не потому, что его скрыли, и не потому, что кто-то был против. Оно не состоялось потому, что <b>никто не понял, что произошло</b>. Дежнёв описал то, что видел, честно и подробно. Просто в 1648 году не было вопроса, на который его отписка была ответом. Вопрос появился позже — и тогда пришлось искать ответ заново.</p>
+  <p class="mb"><b style="color:var(--gold)">Человек одним абзацем.</b> Семён Иванович Дежнёв (около 1605 — начало 1673). Родом с русского Севера, с Пинеги или из Великого Устюга. Служил в Тобольске, Енисейске, Якутске; собирал ясак, ходил в дальние ходки, был не раз ранен. Прижизненных изображений Дежнёва не существует — все портреты, которые вы видели, придуманы художниками позже. Мы их здесь не показываем.</p>
+  <div class="src">Источники: rgo.ru (Русское географическое общество) · old.bigenc.ru (Большая российская энциклопедия) · vokrugsveta.ru · iz.ru · geroiarktiki.goarctic.ru · Атлас Ремезова — НЭБ «Книжные памятники», подлинник в РГБ</div>
+</section>
+
+<section class="deep" id="razbor">
+  <h2 class="t"><small>Разбор</small>Для тех, кто смотрит внимательно</h2>
+
+  <h3>Почему пролив назван не его именем</h3>
+  <p>Название на карте появляется не тогда, когда человек проходит место, а тогда, когда об этом узнаёт наука. К моменту, когда отписки Дежнёва прочитали, экспедиция Беринга была уже описана, опубликована и нанесена на карты Европы. Переименовывать было поздно и незачем — географическое сообщество работает с тем, что напечатано. Дежнёву достался мыс, и это справедливее, чем кажется: именно мыс он и видел, а пролива, как явления, он не видел никогда.</p>
+
+  <h3>Что такое коч и почему на нём вообще возможно было идти</h3>
+  <p>Коч — поморское судно с яйцевидным корпусом, доски которого сшивались вицей, а не сколачивались гвоздями. Сжатый льдами корпус такой формы не ломается, а выжимается вверх. Гибкость сшивки давала то, чего не давало жёсткое крепление: судно играло на волне и во льдах. Европейские корабли того времени в такие льды не ходили — не потому что были хуже, а потому что были построены для другого моря.</p>
+
+  <h3>Отписка вместо отчёта</h3>
+  <p>Дежнёв писал не научный труд, а служебную бумагу — отписку в приказ: где был, что взял, сколько людей потерял, сколько добыл ясака. Из-за этого его открытие и утонуло: в жанре отписки нет места для фразы «здесь заканчивается материк». Миллер, читавший эти бумаги через девяносто лет, увидел в них географию потому, что искал географию. Тот же текст, прочитанный по-разному, дал разный результат.</p>
+
+  <h3>Чего на самом деле стоила моржовая кость</h3>
+  <p>Четыре с половиной тонны клыка, проданные на 17 340 рублей, — это цифра, которая мало что говорит сегодня. Для сравнения: годовое жалованье рядового казака в Сибири составляло несколько рублей. Именно поэтому за «рыбьим зубом» шли туда, откуда можно не вернуться, — экономика похода была устроена так же, как позже устроят золотую лихорадку.</p>
+
+  <div class="src">Источники: Большая российская энциклопедия · РГО · Президентская библиотека</div>
+</section>
+
+<section id="mirovoy-kontekst">
+  <h2 class="t"><small>Контекст</small>Что в это время делал мир</h2>
+  <p class="mb">Тысяча шестьсот сорок восьмой год. В Европе Вестфальским миром заканчивается Тридцатилетняя война — континент выходит из самой страшной бойни своего времени. В Англии идёт гражданская война, до казни короля остаются месяцы. Голландские корабли ходят в Ост-Индию, испанские — в Америку, и обе державы считают, что мир уже поделён и описан.</p>
+  <p class="mb">В этот же год девяносто человек на сшитых нитками лодках выходят в море, которого нет ни на одной карте мира, и проходят между двумя континентами. Об этом не узнают ни в Лондоне, ни в Амстердаме, ни даже в Москве. Разница не в смелости — смелых хватало везде. Разница в том, что европейские плавания снаряжали компании и короны, которые требовали отчёта и публикации, а этот поход снаряжали промышленники за свой счёт, и отчитываться надо было только в приказную избу.</p>
+  <p class="mb">Отсюда простой вывод, ради которого и стоит держать эту страницу в музее: <b>первенство — это не только дойти первым. Это ещё и суметь рассказать.</b> Дежнёв сделал первое и не сделал второго, и восемьдесят лет история шла так, будто его не было.</p>
+</section>
+
+<section id="game">
+  <h2 class="t"><small>Игра</small>Соберите поход по порядку</h2>
+  <p class="mb">Пять событий похода перепутаны. Нажимайте их в правильном порядке — за каждое верное десять баллов, за ошибку порядок сбрасывается.</p>
+  <div class="ord" id="ord"></div>
+  <p id="ordres" class="mb" style="display:none;margin-top:10px"></p>
+</section>
+
+<section id="quiz">
+  <h2 class="t"><small>Проверь себя</small>Четыре вопроса музея</h2>
+  <div class="q"><h3><em>Главное · 10 баллов</em>Зачем на самом деле шла экспедиция Дежнёва?</h3>
+    <button class="opt" data-q="0">Найти пролив между Азией и Америкой</button>
+    <button class="opt" data-q="0" data-ok="1">За моржовой костью — «рыбьим зубом»</button>
+    <button class="opt" data-q="0">Проложить путь в Китай</button>
+    <button class="opt" data-q="0">Составить карту побережья</button>
+    <p class="expl">Шли за моржовым клыком, который стоил дороже соболя, к реке Погыче. Пролив они прошли попутно и не поняли, что прошли.</p></div>
+  <div class="q"><h3><em>Для знатоков · 10 баллов</em>Сколько лет об открытии никто не знал?</h3>
+    <button class="opt" data-q="1">Около десяти</button>
+    <button class="opt" data-q="1">Около тридцати</button>
+    <button class="opt" data-q="1" data-ok="1">Почти девяносто</button>
+    <button class="opt" data-q="1">Открытие признали сразу</button>
+    <p class="expl">Отписки пролежали в якутском архиве с 1648 до 1736 года — их нашёл историк Миллер. К тому времени пролив уже прошёл Беринг.</p></div>
+  <div class="q"><h3><em>Правда или миф · 5 баллов</em>«Кочи сшивались без единого гвоздя»</h3>
+    <button class="opt" data-q="2" data-ok="1">Правда</button>
+    <button class="opt" data-q="2">Миф</button>
+    <p class="expl">Правда. Доски сшивались вицей, а яйцевидный корпус при сжатии льдами выдавливался вверх, а не ломался.</p></div>
+  <div class="q"><h3><em>Верю — не верю · 5 баллов</em>Сохранился прижизненный портрет Дежнёва</h3>
+    <button class="opt" data-q="3">Верю</button>
+    <button class="opt" data-q="3" data-ok="1">Не верю</button>
+    <p class="expl">Прижизненных изображений нет. Все «портреты Дежнёва» придуманы художниками позднее — поэтому на этой странице их нет.</p></div>
+  <p id="total" class="mb">Итог: <b id="pts">0</b> из 80 (игра — 50, вопросы — 30). <span id="rank"></span></p>
+</section>
+
+<section id="sharada">
+  <h2 class="t"><small>Шарада</small>Угадай по строчке</h2>
+  <div class="q"><h3>«Я прошёл там, где кончается один материк и начинается другой. Я написал об этом бумагу. Её прочитали, когда меня не было на свете уже шестьдесят лет. Кто я?»</h3>
+  <button class="opt" id="riddleBtn">Показать ответ</button>
+  <p class="expl" id="riddleA">Семён Дежнёв — человек, чьё открытие пролежало в архиве почти девяносто лет.</p></div>
+</section>
+
+<section id="chat">
+  <h2 class="t"><small>Интервью</small>Спросите Дежнёва</h2>
+  <div id="chatlog"><div class="a">— Семён Иванов сын Дежнёв, служилый человек. Спрашивайте — про Колыму, про Большой Каменный Нос, про то, как на Анадыре двенадцать лет жить.</div></div>
+  <div class="chips">
+    <button class="chip">Зачем вы пошли в это море?</button>
+    <button class="chip">Что за Большой Каменный Нос?</button>
+    <button class="chip">Почему про вас забыли?</button>
+    <button class="chip">Что такое коч?</button>
+    <button class="chip">Много ли людей вернулось?</button>
+    <button class="chip">Что было на Анадыре?</button>
+    <button class="chip">Вам заплатили?</button>
+  </div>
+  <p class="mb" style="font-size:12.5px;opacity:.62;margin-top:11px">Ответы собраны из документированных отписок и челобитных Дежнёва и из работ историков. Это реконструкция голоса, а не запись его подлинной речи.</p>
+  <div id="chatrow"><input id="chatin" placeholder="Ваш вопрос первопроходцу…"><button class="gbtn" id="chatgo">→</button></div>
+</section>
+
+<section id="kuda-dalshe">
+  <h2 class="t"><small>Куда дальше</small>Музей продолжается</h2>
+  <div class="next">
+    <div class="ncard main soon"><span class="lbl">Следующая экспедиция</span>Беллинсгаузен и Лазарев (1819–1821) — открыли последний материк планеты и не поняли, что открыли. <i>Страница готовится.</i></div>
+    <div class="ncard"><span class="lbl">Весь музей</span><a href="index.html">Русские первопроходцы →</a></div>
+    <div class="ncard"><span class="lbl">Город-музей</span><a href="../index.html">Русская цивилизация →</a></div>
+  </div>
+  <div class="support"><p>Музей делает крошечная команда — и делает бесплатным для всех. Если этот поход отсюда виден лучше, чем из учебника, — поддержите проект.</p><a class="gbtn sec" href="../index.html">❤ Как поддержать</a></div>
+</section>
+
+<section id="calendar">
+  <h2 class="t"><small>Календарь музея</small>Этот день в русских открытиях</h2>
+  <p class="mb" style="font-size:13.5px;opacity:.75">У каждого дня года свой повод — выход экспедиции, открытие, основание острога. Листайте стрелками.</p>
+  <div id="calbox"></div>
+</section>
+
+<footer>
+  <div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>
+  Музей «Русские первопроходцы» · экспедиция Дежнёва, 1648<br>
+  Нашли неточность? <a href="mailto:arabelthera@gmail.com?subject=Ошибка на странице Дежнёва">Сообщите нам</a> — проверим по источникам.
+</footer>
+<div id="heart">❤<span class="lbl">Поддержать</span></div>
+
+<script src="vendor/openseadragon/openseadragon.min.js"></script>
+<script>
+/* ─ Маршрут: точки на карте + объяснение ПОД картой ─ */
+var PTS=[
+ {x:.233,y:.371,n:"Колыма",when:"20 июня 1648",t:"Устье Колымы. Отсюда вышли",
+  d:"Семь кочей, девяносто человек, двое во главе: казак Семён Дежнёв и торговый человек Федот Попов. Идут на восток искать реку Погычу, где, по слухам, лежбища моржа. Восточнее Колымы для них нет ничего: ни карт, ни рассказов, ни уверенности, что море там вообще проходимо."},
+ {x:.395,y:.284,n:"Шелагский",when:"июль 1648",t:"Мыс, за который раньше не заходили",
+  d:"Северный берег Чукотки. До Дежнёва здесь поворачивали все, кто пробовал: льды прижимают к берегу и закрывают дорогу. В этот год лёд отошёл — редкая удача, которая и сделала поход возможным. Кочи идут дальше на восток, теряя суда одно за другим."},
+ {x:.743,y:.543,n:"Каменный Нос",when:"20 сентября 1648",t:"Край материка. Здесь и случилось открытие",
+  d:"Скалистый мыс, за которым берег поворачивает на юг. Тысяча четыреста километров от устья Колымы. Это крайняя восточная точка Азии — и, обогнув её, отряд прошёл между двумя материками. В отписке Дежнёв опишет мыс подробно и точно. Слов «пролив» или «Америка» там не будет: такого вопроса тогда просто не существовало."},
+ {x:.518,y:.629,n:"Анадырь",when:"осень 1648 — 1660",t:"Крушение и двенадцать лет жизни",
+  d:"Коч выбросило южнее устья Анадыря. Остатки отряда шли пешком, зимой, без запасов. Дежнёв поставил на реке острог и прожил здесь двенадцать лет. В 1652 году нашёл то самое моржовое лежбище — цель похода, добытую через четыре года после его начала."}];
+
+var wrap=document.getElementById('routewrap'),live=document.getElementById('rlive');
+var rbtns=document.getElementById('rbtns'),rbody=document.getElementById('rbody');
+var DEF_T='Четыре точки одного похода',DEF_D='Нажмите номер — линия дойдёт до этого места, а рассказ появится здесь. Кнопка «пройти весь путь» прогонит маршрут целиком.';
+var els=[];
+PTS.forEach(function(p,i){
+  var el=document.createElement('div'); el.className='rpt'; el.textContent=i+1;
+  el.style.left=(p.x*100)+'%'; el.style.top=(p.y*100)+'%';
+  el.addEventListener('click',function(){show(i);});
+  wrap.appendChild(el); els.push(el);
+  var lb=document.createElement('div'); lb.className='rlbl'; lb.textContent=p.n;
+  lb.style.left=(p.x*100)+'%'; lb.style.top=(p.y*100)+'%'; wrap.appendChild(lb);
+  var b=document.createElement('button'); b.className='rb';
+  b.innerHTML='<em>'+(i+1)+'</em>'+p.n;
+  b.addEventListener('click',function(){show(i);}); rbtns.appendChild(b);
+});
+(function(){var b=document.createElement('button'); b.className='rb play';
+ b.textContent='▶ Пройти весь путь';
+ b.addEventListener('click',function(){runPath();}); rbtns.appendChild(b);})();
+
+function setBody(when,t,d){rbody.querySelector('.when').textContent=when;rbody.querySelector('h3').textContent=t;rbody.querySelector('p').textContent=d;}
+setBody('1648–1660', DEF_T, DEF_D);
+
+var LEN=200;
+function runPath(frac){
+  var f=(frac===undefined?1:frac);
+  live.style.transition='none'; live.style.strokeDashoffset=LEN;
+  live.getBoundingClientRect();
+  live.style.transition='stroke-dashoffset '+(1.2+2.4*f)+'s ease-in-out';
+  live.style.strokeDashoffset=LEN*(1-f);
+}
+function show(i){
+  var p=PTS[i];
+  setBody(p.when,p.t,p.d);
+  document.querySelectorAll('.rb').forEach(function(b,j){b.classList.toggle('on',j===i);});
+  els.forEach(function(e,j){e.classList.toggle('on',j===i);});
+  runPath((i+1)/PTS.length);
+  document.getElementById('rpanel').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+var seen=false;
+window.addEventListener('scroll',function(){
+  if(seen)return; var r=wrap.getBoundingClientRect();
+  if(r.top<window.innerHeight*0.75&&r.bottom>0){seen=true;runPath(1);}
+},{passive:true});
+
+/* ─ Атлас Ремезова: свободный глубокий зум ─ */
+var viewer=OpenSeadragon({id:"viewer",prefixUrl:"vendor/openseadragon/images/",
+  tileSources:"media/tiles/remezov.dzi",showNavigationControl:true,
+  navigationControlAnchor:OpenSeadragon.ControlAnchor.BOTTOM_RIGHT,
+  showNavigator:true,navigatorPosition:"TOP_RIGHT",navigatorSizeRatio:.15,
+  navigatorBackground:"rgba(0,0,0,.55)",navigatorBorderColor:"rgba(212,175,55,.75)",
+  navigatorDisplayRegionColor:"#d4af37",
+  gestureSettingsTouch:{pinchToZoom:true,flickEnabled:true},
+  maxZoomPixelRatio:2.2,visibilityRatio:1,minZoomLevel:.85,animationTime:1.1,springStiffness:7});
+setTimeout(function(){var h=document.getElementById('zhint');if(h)h.style.opacity='0';},6000);
+
+/* ─ Баллы ─ */
+var pts=0;function addPts(n){pts+=n;document.getElementById('pts').textContent=pts;
+ var r=document.getElementById('rank');
+ r.textContent=pts>=70?'Звание: Землепроходец 🧭':pts>=40?'Звание: Кормщик':'';}
+
+/* ─ Игра «соберите поход по порядку» ─ */
+var EV=[
+ "Семь кочей выходят из устья Колымы",
+ "Отряд огибает Большой Каменный Нос",
+ "Коч Дежнёва выбрасывает южнее устья Анадыря",
+ "Дежнёв ставит Анадырский острог и находит моржовое лежбище",
+ "Историк Миллер находит отписки в якутском архиве"];
+var order=[],box=document.getElementById('ord'),ores=document.getElementById('ordres');
+(function(){
+  var idx=EV.map(function(_,i){return i;});
+  for(var i=idx.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=idx[i];idx[i]=idx[j];idx[j]=t;}
+  idx.forEach(function(i){
+    var b=document.createElement('button'); b.className='ordi'; b.dataset.i=i; b.textContent=EV[i];
+    b.addEventListener('click',function(){pick(b);}); box.appendChild(b);
+  });
+})();
+function pick(b){
+  if(b.classList.contains('ok'))return;
+  var need=order.length;
+  if(parseInt(b.dataset.i,10)===need){
+    order.push(need); b.classList.add('ok');
+    b.innerHTML='<span class="num">'+(need+1)+'</span>'+EV[need];
+    addPts(10);
+    if(order.length===EV.length){ores.style.display='block';
+      ores.innerHTML='<b style="color:var(--gold)">Весь поход собран — +50 баллов.</b> Обратите внимание на последний пункт: между четвёртым и пятым событием прошло почти девяносто лет.';}
+  }else{
+    b.classList.add('no'); var el=b; setTimeout(function(){el.classList.remove('no');},600);
+    order=[]; box.querySelectorAll('.ordi').forEach(function(x){x.classList.remove('ok');x.textContent=EV[parseInt(x.dataset.i,10)];});
+    ores.style.display='block'; ores.textContent='Не тот порядок — начните сначала. Подсказка: поход начинается на Колыме.';
+  }
+}
+
+/* ─ Викторина ─ */
+document.querySelectorAll('.opt[data-q]').forEach(function(b){
+  b.addEventListener('click',function(){
+    var q=b.getAttribute('data-q');if(b.parentNode.dataset.done)return;b.parentNode.dataset.done=1;
+    b.parentNode.querySelectorAll('.opt').forEach(function(o){if(o.dataset.ok)o.classList.add('ok');});
+    if(b.dataset.ok){addPts(q<2?10:5);}else{b.classList.add('no');}
+    b.parentNode.querySelector('.expl').style.display='block';
+  });
+});
+document.getElementById('riddleBtn').addEventListener('click',function(){document.getElementById('riddleA').style.display='block';this.style.display='none';});
+
+/* ─ Интервью ─ */
+var kb=[
+ {k:['зачем','почему пошл','цель','искал'],a:'За рыбьим зубом — моржовым клыком. Сказывали, есть река Погыча, а в устье её зверя того лежбища. Клык в Москве дороже соболя идёт. За тем и пошли, а не за проливами.'},
+ {k:['каменный нос','большой камен','мыс','нос'],a:'Нос тот каменный, крутой, в море далеко вышел. Обошли мы его, а за ним берег поворачивает к полудню. Записал я, как видел: где какой камень, где зверь, где люди живут.'},
+ {k:['забы','не знал','миллер','архив','поздно'],a:'Отписку мою в Якуцком остроге в короб положили. Я о том не печалился: моё дело было доложить, а не славиться. Что бумага моя девяносто лет пролежит — про то мне знать не дано было.'},
+ {k:['коч','судн','корабл','лодк'],a:'Коч шьётся вицей, гвоздей в нём нет. Бок круглый: как лёд сожмёт, судно кверху выдавит, а не раздавит. На иных не пройти там, где мы прошли.'},
+ {k:['сколько','вернул','погиб','люди','отряд'],a:'Пошли на семи кочах, девяносто душ. Море съело нас по частям: которые разбились, которых унесло, а про иных и не ведаю. До Анадыря дошли немногие, и шли пеши, зимой.'},
+ {k:['анадыр','остро','двенадцать','жил'],a:'На Анадыре поставил я острожек и сидел двенадцать лет. В шестьсот шестидесятом году от сотворения счёту нашего сыскал моржовое лежбище — вот оно, ради чего шли.'},
+ {k:['заплат','жалован','деньг','челобит','богат'],a:'Кость привёз в Москву — двести восемьдесят девять пуд. Долю мою дали соболями, пятьсот рублёв. А жалованья за девятнадцать лет не плачено было, о том и бил челом.'},
+ {k:['беринг','пролив','именем'],a:'Про Беринга не знаю, я до него не дожил. Слыхал от вас, что имя его на карте стоит. Пусть стоит: он ходил с наукою и с указом, я — с промышленными людьми и на свой страх.'},
+ {k:['портрет','как выгляд','лицо'],a:'Обличья моего никто не писал. Что вам показывают — то художники после придумали. Не верьте.'},
+ {k:['откуда','родом','родил'],a:'С Севера я, с Пинеги. Иные говорят — устюжанин. Дело давнее, сам не всё упомню.'},
+ {k:['страшно','боял','холод'],a:'Страшно? Голодно было страшно. А море — что море, оно не злое, оно просто не про нас.'},
+ {k:['америк','матери','континент'],a:'Про Америку в те годы у нас и слова такого не ходило. Земля за проливом была — люди сказывали, что есть. А что она другой свет, о том узнали без меня.'},
+ {k:['ясак','служб','казак'],a:'Служилый я человек. Ясак сбирал, в дальние ходки ходил, ранен бывал не раз. Тем и жил.'},
+ {k:['сейчас','сегодня','будущ','интернет','знаешь ли'],a:'Того не ведаю, я в семьсот тридцать третьем году от Рождества уже сорок лет как преставился. Спрашивайте про Колыму да про Анадырь — про то знаю.'}];
+var log=document.getElementById('chatlog');
+function ask(q){
+  var d=document.createElement('div');d.className='u';d.textContent='— '+q;log.appendChild(d);
+  var ql=q.toLowerCase(),ans=null;
+  for(var i=0;i<kb.length;i++){if(kb[i].k.some(function(k){return ql.indexOf(k)>=0;})){ans=kb[i].a;break;}}
+  if(!ans)ans='Про то не скажу — не ведаю. А про Колыму, про Каменный Нос да про Анадырь спрашивайте смело.';
+  var a=document.createElement('div');a.className='a';a.textContent='— '+ans;log.appendChild(a);log.scrollTop=log.scrollHeight;
+}
+document.querySelectorAll('#chat .chip').forEach(function(c){c.addEventListener('click',function(){ask(c.textContent);});});
+document.getElementById('chatgo').addEventListener('click',function(){var v=document.getElementById('chatin').value.trim();if(v){ask(v);document.getElementById('chatin').value='';}});
+document.getElementById('chatin').addEventListener('keydown',function(e){if(e.key==='Enter'){document.getElementById('chatgo').click();}});
+
+document.getElementById('heart').addEventListener('click',function(){document.querySelector('.support').scrollIntoView({behavior:'smooth'});});
+(function(){var h=document.getElementById('heart'),last=window.scrollY,t=null;
+ window.addEventListener('scroll',function(){var y=window.scrollY;
+   if(y>last+6){h.classList.add('tuck');}else if(y<last-6){h.classList.remove('tuck');}
+   last=y;clearTimeout(t);t=setTimeout(function(){h.classList.remove('tuck');},700);
+   var sup=document.querySelector('.support');
+   if(sup){var r=sup.getBoundingClientRect();h.classList.toggle('wide',r.top<window.innerHeight&&r.bottom>0);}
+ },{passive:true});})();
+document.querySelector('.hero').addEventListener('click',function(){document.getElementById('routewrap').scrollIntoView({behavior:'smooth'});});
+window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});
+</script>
+<script src="../assets/museum-calendar.js"></script>
+<script src="calendar-pervoprohodcy.js"></script>
+</body>
+</html>

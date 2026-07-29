@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Русские первопроходцы — музей русских открытий: маршруты экспедиций, подлинные карты эпохи, глубокий зум по атласу Ремезова.">
+<title>Русские первопроходцы · Русская цивилизация</title>
+<style>
+:root{--gold:#d4af37;--ink:#0b0d11;--panel:#12151c;--line:rgba(212,175,55,.35);--txt:#e9e3d3}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--ink);color:var(--txt);font-family:Georgia,'Times New Roman',serif;line-height:1.6}
+a{color:var(--gold);text-decoration:none}
+header{padding:34px 18px 10px;text-align:center}
+header .b1{font-size:12px;letter-spacing:2.5px;color:var(--gold);text-transform:uppercase}
+h1{font-size:clamp(28px,7vw,44px);font-weight:normal;margin-top:6px}
+header p{font-size:14px;opacity:.8;font-style:italic;margin-top:6px}
+nav.crumbs{font-size:12.5px;padding:4px 16px 14px;text-align:center}
+nav.crumbs span{opacity:.55}
+main{max-width:720px;margin:0 auto;padding:10px 16px 40px}
+.today{background:linear-gradient(160deg,#181206,#12151c);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:26px}
+.today .lbl{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold)}
+.today p{font-size:14px;margin-top:6px}
+h2{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:normal;margin:24px 0 12px}
+.hall{display:block;background:var(--panel);border:1px solid rgba(212,175,55,.2);border-radius:14px;padding:14px 16px;margin-bottom:10px;color:var(--txt)}
+.hall .n{font-size:11px;color:var(--gold);letter-spacing:1.5px}
+.hall .t{font-size:16px;margin-top:2px}
+.hall .s{font-size:12.5px;opacity:.65;margin-top:2px;font-style:italic}
+.hall.open{border-color:var(--line);box-shadow:0 0 18px rgba(212,175,55,.12)}
+.hall.soon{opacity:.55}
+.pics{display:grid;gap:8px;margin-top:12px}
+@media (min-width:720px){.pics{grid-template-columns:1fr 1fr 1fr}}
+.pics a{display:block;background:rgba(233,227,211,.045);border:1px solid rgba(212,175,55,.22);border-radius:11px;padding:11px 13px;font-size:12.5px;line-height:1.5;color:var(--txt);opacity:.9}
+.pics a:hover{border-color:var(--gold);opacity:1}
+.pics a b{display:block;color:var(--gold);font-size:13.5px;font-weight:normal;margin-bottom:3px}
+.council,.support{background:var(--panel);border:1px solid rgba(212,175,55,.2);border-radius:14px;padding:15px;font-size:13.5px;margin-top:14px}
+footer{padding:22px 16px 60px;border-top:1px solid rgba(212,175,55,.2);text-align:center;font-size:12.5px;opacity:.85;margin-top:30px}
+footer .slog{font-style:italic;color:var(--gold);margin-bottom:6px}
+
+/* календарь музея (стандарт: свой календарь у каждого музея — свой ежедневный ролик) */
+#calendar .calnav{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:10px 0 12px}
+.calarrow{background:none;border:1px solid var(--line);color:var(--gold);border-radius:50%;width:32px;height:32px;font-size:18px;line-height:1;cursor:pointer;font-family:Georgia,serif;flex:none}
+.calarrow:hover{border-color:var(--gold);background:rgba(212,175,55,.1)}
+.caldate{font-family:Georgia,serif;font-size:15px;text-align:center;flex:1}
+.caldate b{color:var(--gold);font-weight:normal;font-size:12.5px}
+.calcard h3{font-family:Georgia,serif;font-size:15.5px;font-weight:normal;color:var(--gold);margin-bottom:7px}
+.calcard .caly{opacity:.55;font-size:13px;color:var(--txt)}
+.calcard p{font-size:13.5px;line-height:1.6}
+.calcard.empty{opacity:.85}
+.calcard a{display:inline-block;margin-top:9px;font-size:13px}
+</style>
+</head>
+<body>
+<header>
+  <div class="b1">Первый цифровой музей достижений России</div>
+  <h1>Русские первопроходцы</h1>
+  <p>За краем карты. Музей, в котором открытия проходят вместе с вами.</p>
+</header>
+<nav class="crumbs"><a href="../index.html">Русская цивилизация</a> › <span>Русские первопроходцы</span></nav>
+<main>
+  <div class="today" id="calendar"><span class="lbl">Сегодня в русских открытиях</span>
+    <div id="calbox"></div>
+  </div>
+
+  <h2>Экспедиции</h2>
+  <div class="hall open"><span class="n">XVII век · ОТКРЫТО</span><div class="t">Семён Дежнёв, 1648</div><div class="s">Он шёл за моржовым клыком, а прошёл пролив между двумя материками</div>
+    <div class="pics">
+      <a href="exp-dezhnev-1648.html"><b>Колыма → Анадырь · 1648</b>Семь кочей, девяносто человек. Открытие, о котором не знали 88 лет: отписки пролежали в якутском архиве, а имя на карте досталось Берингу.</a>
+    </div>
+  </div>
+  <span class="hall soon"><span class="n">XIX век</span><div class="t">Беллинсгаузен и Лазарев, 1819–1821</div><div class="s">Открыли последний материк планеты и не поняли, что открыли · готовится</div></span>
+  <span class="hall soon"><span class="n">XIX век</span><div class="t">Миклухо-Маклай, 1871</div><div class="s">Год среди людей, которых Европа не считала людьми · готовится</div></span>
+  <span class="hall soon"><span class="n">XVIII век</span><div class="t">Крузенштерн и Лисянский</div><div class="s">Первое русское кругосветное плавание · визия</div></span>
+  <span class="hall soon"><span class="n">XVIII век</span><div class="t">Вторая Камчатская экспедиция Беринга</div><div class="s">Крупнейшая экспедиция своего времени · визия</div></span>
+  <span class="hall soon"><span class="n">XX век</span><div class="t">Арктика: папанинцы и полюс</div><div class="s">Первая в мире дрейфующая станция · визия</div></span>
+
+  <div class="council"><b style="color:var(--gold)">Научный совет музея.</b> Ищем научного консультанта — историка географических открытий, готового проверять факты и держать планку. Напишите: <a href="mailto:arabelthera@gmail.com?subject=Научный совет музея Русские первопроходцы">arabelthera@gmail.com</a></div>
+  <div class="support"><b style="color:var(--gold)">❤ Поддержать проект.</b> Музей бесплатный для всех и делается крошечной командой. Донат-реквизиты появятся здесь; пока лучшая поддержка — показать музей друзьям и школе.</div>
+</main>
+<footer><div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>Музей «Русские первопроходцы» · <a href="../index.html">в город-музей →</a></footer>
+<script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
+<script src="../assets/museum-calendar.js"></script>
+<script src="calendar-pervoprohodcy.js"></script>
+</body>
+</html>
