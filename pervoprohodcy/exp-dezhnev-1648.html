@@ -187,6 +187,19 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 .ordi.ok{border-color:#69c07a;background:rgba(105,192,122,.14);cursor:default}
 .ordi .num{color:var(--gold);font-weight:bold;margin-right:8px}
 .calnext{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);opacity:.75;margin-bottom:7px}
+
+#audioguide{padding-top:26px}
+.agtop{display:flex;align-items:center;gap:16px;background:linear-gradient(160deg,#1d1607,#12151c);border:1px solid var(--gold);border-radius:16px;padding:18px;box-shadow:0 0 26px rgba(212,175,55,.16)}
+.agtop button{flex-shrink:0;width:62px;height:62px;border-radius:50%;border:none;background:linear-gradient(180deg,#e3c04d,#b8912a);color:#1a1508;font-size:24px;cursor:pointer;box-shadow:0 5px 18px rgba(212,175,55,.45)}
+.aglbl{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);opacity:.9}
+.agttl{font-family:Georgia,serif;font-size:19px;margin:2px 0 5px}
+.agttl span{color:var(--gold)}
+.agsub{font-size:12.5px;opacity:.72;line-height:1.5}
+#mapgame{position:absolute;top:10px;left:10px;right:10px;z-index:20;display:none;justify-content:space-between;align-items:center;background:rgba(18,21,28,.93);border:1px solid var(--gold);border-radius:12px;padding:9px 13px;font-size:13.5px}
+#mapgame .tm{color:var(--gold);font-size:17px;min-width:44px;text-align:right}
+.hit{position:absolute;width:52px;height:52px;margin:-26px 0 0 -26px;border:3px solid #69c07a;border-radius:50%;box-shadow:0 0 16px 4px rgba(105,192,122,.6);z-index:7;animation:ringpop .45s ease-out}
+.miss{position:absolute;width:34px;height:34px;margin:-17px 0 0 -17px;border:2px solid #c06a5f;border-radius:50%;z-index:7;animation:ringpop .4s ease-out}
+@keyframes ringpop{from{transform:scale(.3);opacity:0}to{transform:scale(1);opacity:1}}
 </style>
 </head>
 <body>
@@ -209,14 +222,17 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
   </div>
 </div>
 
-<section id="put">
-  <h2 class="t"><small>Маршрут</small>Путь, которого не должно было получиться</h2>
-  <p class="mb">Летом 1648 года из устья Колымы вышли семь кочей — деревянных судов, сшитых без единого гвоздя. Девяносто человек шли искать реку Погычу, богатую «рыбьим зубом» — моржовой костью, которая стоила дороже соболя. Никакого пролива они не искали: о том, что Азия и Америка разделены, в мире тогда не знал никто. Нажмите на точку — и путь пойдёт дальше.</p>
-  <div class="audio">
+
+<section id="audioguide">
+  <div class="agtop">
     <button id="agbtn" aria-label="Включить аудиогид">▶</button>
-    <div class="meta"><b>Полный аудиогид · <span id="agdur">6 минут</span></b>Экскурсия по всему походу: кто и зачем пошёл, что случилось 20 сентября 1648 года, двенадцать лет на Анадыре, восемьдесят восемь лет молчания и атлас Ремезова.</div>
+    <div class="agtxt">
+      <div class="aglbl">Аудиогид музея</div>
+      <div class="agttl">Весь поход за <span id="agdur">6 минут</span></div>
+      <div class="agsub">Кто и зачем пошёл · что случилось 20 сентября 1648 · двенадцать лет на Анадыре · восемьдесят восемь лет молчания · атлас Ремезова. Можно слушать и одновременно вести пальцем по карте.</div>
+    </div>
   </div>
-  <audio id="agaudio" src="audio-guide-dezhnev-ru.mp3" preload="metadata" controls style="width:100%;margin:-6px 0 14px;border-radius:10px"></audio>
+  <audio id="agaudio" src="audio-guide-dezhnev-ru.mp3" preload="metadata" controls style="width:100%;margin:12px 0;border-radius:10px"></audio>
   <div class="agnav">
     <span class="lbl">Перейти к главе:</span>
     <button data-t="0">Что это за поход</button>
@@ -229,8 +245,15 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
   </div>
 </section>
 
+<section id="put">
+  <h2 class="t"><small>Маршрут</small>Путь, которого не должно было получиться</h2>
+  <p class="mb">Летом 1648 года из устья Колымы вышли семь кочей — деревянных судов, сшитых без единого гвоздя. Девяносто человек шли искать реку Погычу, богатую «рыбьим зубом» — моржовой костью, которая стоила дороже соболя. Никакого пролива они не искали: о том, что Азия и Америка разделены, в мире тогда не знал никто. Нажмите на точку — и путь пойдёт дальше.</p>
+
+</section>
+
 <div id="routewrap">
   <img src="media/dezhnev-route.jpg" alt="Карта северо-востока Азии: путь Дежнёва от устья Колымы вокруг Чукотки к устью Анадыря">
+  <div id="mapgame"><span id="mgtask">Найдите: …</span><span class="tm" id="mgtime">60</span></div>
   <svg id="routesvg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
     <path class="track" d="M23.3,37.1 C30,32 34,29 39.5,28.4 C50,27 56,30 60,33 C67,38 72,46 74.3,54.3 C70,60 60,63 51.8,62.9"/>
     <path class="live" id="rlive" d="M23.3,37.1 C30,32 34,29 39.5,28.4 C50,27 56,30 60,33 C67,38 72,46 74.3,54.3 C70,60 60,63 51.8,62.9"/>
@@ -309,10 +332,10 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 </section>
 
 <section id="game">
-  <h2 class="t"><small>Игра</small>Соберите поход по порядку</h2>
-  <p class="mb">Пять событий похода перепутаны. Нажимайте их в правильном порядке — за каждое верное десять баллов, за ошибку порядок сбрасывается.</p>
-  <div class="ord" id="ord"></div>
-  <p id="ordres" class="mb" style="display:none;margin-top:10px"></p>
+  <h2 class="t"><small>Игра</small>Пройдите маршрут сами</h2>
+  <p class="mb">Подписи и точки с карты исчезнут. Вам назовут место — надо ткнуть в него пальцем прямо по карте наверху. Четыре точки, шестьдесят секунд, по десять баллов за попадание.</p>
+  <button class="gbtn" id="mgstart">Начать · 4 точки</button>
+  <p id="mgres" class="mb" style="display:none;margin-top:12px"></p>
 </section>
 
 
@@ -344,7 +367,7 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
     <button class="opt" data-q="3">Верю</button>
     <button class="opt" data-q="3" data-ok="1">Не верю</button>
     <p class="expl">Прижизненных изображений нет. Все «портреты Дежнёва» придуманы художниками позднее — поэтому на этой странице их нет.</p></div>
-  <p id="total" class="mb">Итог: <b id="pts">0</b> из 80 (игра — 50, вопросы — 30). <span id="rank"></span></p>
+  <p id="total" class="mb">Итог: <b id="pts">0</b> из 70 (карта — 40, вопросы — 30). <span id="rank"></span></p>
 </section>
 
 <section id="sharada">
@@ -464,38 +487,47 @@ setTimeout(function(){var h=document.getElementById('zhint');if(h)h.style.opacit
 /* ─ Баллы ─ */
 var pts=0;function addPts(n){pts+=n;document.getElementById('pts').textContent=pts;
  var r=document.getElementById('rank');
- r.textContent=pts>=70?'Звание: Землепроходец 🧭':pts>=40?'Звание: Кормщик':'';}
+ r.textContent=pts>=60?'Звание: Землепроходец 🧭':pts>=35?'Звание: Кормщик':'';}
 
-/* ─ Игра «соберите поход по порядку» ─ */
-var EV=[
- "Семь кочей выходят из устья Колымы",
- "Отряд огибает Большой Каменный Нос",
- "Коч Дежнёва выбрасывает южнее устья Анадыря",
- "Дежнёв ставит Анадырский острог и находит моржовое лежбище",
- "Историк Миллер находит отписки в якутском архиве"];
-var order=[],box=document.getElementById('ord'),ores=document.getElementById('ordres');
-(function(){
-  var idx=EV.map(function(_,i){return i;});
-  for(var i=idx.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=idx[i];idx[i]=idx[j];idx[j]=t;}
-  idx.forEach(function(i){
-    var b=document.createElement('button'); b.className='ordi'; b.dataset.i=i; b.textContent=EV[i];
-    b.addEventListener('click',function(){pick(b);}); box.appendChild(b);
-  });
-})();
-function pick(b){
-  if(b.classList.contains('ok'))return;
-  var need=order.length;
-  if(parseInt(b.dataset.i,10)===need){
-    order.push(need); b.classList.add('ok');
-    b.innerHTML='<span class="num">'+(need+1)+'</span>'+EV[need];
-    addPts(10);
-    if(order.length===EV.length){ores.style.display='block';
-      ores.innerHTML='<b style="color:var(--gold)">Весь поход собран — +50 баллов.</b> Обратите внимание на последний пункт: между четвёртым и пятым событием прошло почти девяносто лет.';}
-  }else{
-    b.classList.add('no'); var el=b; setTimeout(function(){el.classList.remove('no');},600);
-    order=[]; box.querySelectorAll('.ordi').forEach(function(x){x.classList.remove('ok');x.textContent=EV[parseInt(x.dataset.i,10)];});
-    ores.style.display='block'; ores.textContent='Не тот порядок — начните сначала. Подсказка: поход начинается на Колыме.';
+/* ─ Игра: найди место на карте ─ */
+var mg={on:false,i:0,t:60,timer:null,marks:[]};
+var mgbar=document.getElementById('mapgame'),mgtask=document.getElementById('mgtask'),
+    mgtime=document.getElementById('mgtime'),mgres=document.getElementById('mgres');
+var ASK=["устье Колымы — отсюда вышли","мыс Шелагский","Большой Каменный Нос","устье Анадыря"];
+function clearMarks(){mg.marks.forEach(function(m){m.remove();});mg.marks=[];}
+document.getElementById('mgstart').addEventListener('click',function(){
+  mg.on=true;mg.i=0;mg.t=60;clearMarks();mgres.style.display='none';
+  els.forEach(function(e){e.style.visibility='hidden';});
+  document.querySelectorAll('.rlbl').forEach(function(l){l.style.visibility='hidden';});
+  live.style.strokeDashoffset=LEN;
+  mgbar.style.display='flex';mgtask.textContent='Найдите: '+ASK[0];mgtime.textContent=60;
+  wrap.scrollIntoView({behavior:'smooth',block:'start'});
+  mg.timer=setInterval(function(){mg.t--;mgtime.textContent=mg.t;if(mg.t<=0)endMg(false);},1000);
+});
+wrap.addEventListener('click',function(ev){
+  if(!mg.on)return;
+  var r=wrap.getBoundingClientRect();
+  var fx=(ev.clientX-r.left)/r.width, fy=(ev.clientY-r.top)/r.height;
+  var p=PTS[mg.i];
+  var hit=Math.abs(fx-p.x)<.07&&Math.abs(fy-p.y)<.09;
+  var m=document.createElement('div');
+  m.className=hit?'hit':'miss';
+  m.style.left=(hit?p.x:fx)*100+'%'; m.style.top=(hit?p.y:fy)*100+'%';
+  wrap.appendChild(m); mg.marks.push(m);
+  if(hit){ addPts(10); mg.i++;
+    if(mg.i>=PTS.length){endMg(true);} else {mgtask.textContent='Найдите: '+ASK[mg.i];}
   }
+});
+function endMg(win){
+  mg.on=false;clearInterval(mg.timer);mgbar.style.display='none';
+  els.forEach(function(e){e.style.visibility='visible';});
+  document.querySelectorAll('.rlbl').forEach(function(l){l.style.visibility='visible';});
+  runPath(1);
+  mgres.style.display='block';
+  mgres.innerHTML=win
+    ? '<b style="color:var(--gold)">Весь маршрут пройден — +40 баллов.</b> Вы повторили пальцем то, на что у Дежнёва ушло три месяца и шесть из семи кочей.'
+    : 'Время вышло. Найдено '+mg.i+' из 4 (+'+(mg.i*10)+' баллов). Точки вернулись на карту — посмотрите и попробуйте снова.';
+  setTimeout(clearMarks,2500);
 }
 
 /* ─ Викторина ─ */
