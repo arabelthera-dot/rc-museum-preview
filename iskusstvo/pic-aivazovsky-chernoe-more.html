@@ -187,8 +187,19 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
   <h2 class="t"><small>Глубокий зум</small>Рассмотрите каждый мазок</h2>
   <p class="mb">Эта картина — единственная в зале, которую <b>невозможно понять по репродукции</b>. На маленькой картинке здесь действительно пусто: две серые полосы. Всё, ради чего она написана, живёт в мазке и в масштабе. Приблизьте линию горизонта — и найдёте то, из-за чего спор о «пустой картине» заканчивается.</p>
   <div class="audio">
-    <button aria-label="Аудиогид готовится" style="opacity:.4;cursor:default">▶</button>
-    <div class="meta"><b>Полный аудиогид · готовится</b>Семь глав: что на полотне · спрятанный корабль · приговор Крамского · два названия · как это написано · судьба картины · мировая живопись. Появится здесь следующей поставкой.</div>
+    <button id="agbtn" aria-label="Включить аудиогид">▶</button>
+    <div class="meta"><b>Полный аудиогид · <span id="agdur">9 минут</span></b>Экскурсия по всей картине: что здесь на самом деле изображено, спрятанный корабль, приговор Крамского, два названия, как это написано, судьба полотна и место в мировой живописи.</div>
+  </div>
+  <audio id="agaudio" src="audio-guide-chernoe-more-ru.mp3" preload="metadata" controls style="width:100%;margin:-6px 0 14px;border-radius:10px"></audio>
+  <div class="agnav">
+    <span class="lbl">Перейти к главе:</span>
+    <button data-t="0">Что на полотне</button>
+    <button data-t="95">Спрятанный корабль</button>
+    <button data-t="170">Приговор Крамского</button>
+    <button data-t="255">Два названия</button>
+    <button data-t="304">Как это написано</button>
+    <button data-t="380">Судьба картины</button>
+    <button data-t="438">Мировая живопись</button>
   </div>
   <div class="scale">
     <svg viewBox="0 0 300 212" role="img" aria-label="Сравнение размера картины 208 на 149 сантиметров с ростом человека 170 сантиметров">
