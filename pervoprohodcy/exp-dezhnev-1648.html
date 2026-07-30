@@ -214,8 +214,8 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 .miss{position:absolute;width:34px;height:34px;margin:-17px 0 0 -17px;border:2px solid #c06a5f;border-radius:50%;z-index:7;animation:ringpop .4s ease-out}
 @keyframes ringpop{from{transform:scale(.3);opacity:0}to{transform:scale(1);opacity:1}}
 
-/* ── кнопка возврата: видна всегда, на каждой странице музея ── */
-.backbtn{position:fixed;top:10px;left:10px;z-index:60;display:inline-flex;align-items:center;gap:7px;
+/* ── кнопка возврата: в потоке над шапкой, не перекрывает текст ── */
+.backbtn{position:static;margin:12px 0 0 12px;display:inline-flex;align-items:center;gap:7px;
   background:rgba(11,13,17,.86);backdrop-filter:blur(6px);border:1px solid var(--gold);color:var(--gold);
   border-radius:22px;padding:9px 15px;font-family:Georgia,serif;font-size:13.5px;text-decoration:none;
   box-shadow:0 4px 16px rgba(0,0,0,.5);transition:background .2s}
@@ -224,8 +224,12 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 @media (max-width:520px){.backbtn{font-size:12.5px;padding:8px 13px}}
 
 /* ── липкий указатель разделов: где я нахожусь и сколько осталось ── */
-.backbtn{transition:background .2s,opacity .25s}
-body.scrolled .backbtn{opacity:0;pointer-events:none}
+header.site{padding-top:8px}
+/* «Разбор» — четыре текстовых сюжета, свёрнуты по умолчанию */
+.deepd summary{cursor:pointer;font-family:Georgia,serif;font-size:14px;color:var(--gold);
+  border:1px solid rgba(212,175,55,.32);border-radius:18px;padding:8px 14px;display:inline-block;list-style:none}
+.deepd summary::-webkit-details-marker{display:none}
+.deepd[open] summary{margin-bottom:14px;opacity:.75}
 #secnav{position:sticky;top:0;z-index:55;background:rgba(11,13,17,.94);
   -webkit-backdrop-filter:blur(9px);backdrop-filter:blur(9px);border-bottom:1px solid var(--line)}
 #secnav .row{display:flex;gap:6px;overflow-x:auto;padding:9px 12px;scrollbar-width:none;-ms-overflow-style:none}
@@ -262,15 +266,15 @@ section[id],div[id="routewrap"],div[id="zoomwrap"]{scroll-margin-top:56px}
     <span class="chip">1648 · Колыма → Анадырь · 7 кочей, 90 человек</span>
     <h1>Поход <b>Дежнёва</b></h1>
     <div class="hook">Он шёл за моржовым клыком. А прошёл пролив между двумя материками — и не узнал об этом.</div>
-    <div class="down">тапните — пройти маршрут ▾</div>
+    <div class="down">тапните — начать с ролика ▾</div>
   </div>
 </div>
 
 <nav id="secnav" aria-label="Разделы страницы">
   <div class="row">
     <a class="home" href="index.html">← Музей</a>
-    <a href="#audioguide">Аудиогид</a>
     <a href="#rolik">Ролик</a>
+    <a href="#audioguide">Аудиогид</a>
     <a href="#put">Маршрут</a>
     <a href="#game">Игра</a>
     <a href="#atlas">Атлас</a>
@@ -285,6 +289,16 @@ section[id],div[id="routewrap"],div[id="zoomwrap"]{scroll-margin-top:56px}
 </nav>
 
 
+<section id="rolik">
+  <h2 class="t"><small>Ролик · 47 секунд</small>Если время только на одно — посмотрите это</h2>
+  <video controls preload="none" playsinline poster="media/dezhnev-poster.jpg"
+         style="width:100%;border-radius:14px;border:1px solid var(--line);display:block;background:#000">
+    <source src="exp-dezhnev-1648.mp4" type="video/mp4">
+    Ваш браузер не умеет показывать видео — <a href="exp-dezhnev-1648.mp4">скачайте файл</a>.
+  </video>
+  <p class="mb" style="font-size:13px;opacity:.7;margin-top:8px">Весь поход за сорок семь секунд: как открыть край света и не заметить этого. Кадры идут по подлинному листу атласа Ремезова 1701 года, голос тот же, что в аудиогиде. Дальше на странице — то же самое, но подробно и с картой.</p>
+</section>
+
 <section id="audioguide">
   <div class="agtop">
     <button id="agbtn" aria-label="Включить аудиогид">▶</button>
@@ -294,7 +308,7 @@ section[id],div[id="routewrap"],div[id="zoomwrap"]{scroll-margin-top:56px}
       <div class="agsub">Голос ведёт по всему походу — от выхода с Колымы до архивного короба в Якутске. Можно слушать и одновременно вести пальцем по карте ниже.</div>
     </div>
   </div>
-  <audio id="agaudio" src="audio-guide-dezhnev-ru.mp3" preload="metadata" controls style="width:100%;margin:12px 0;border-radius:10px"></audio>
+  <audio id="agaudio" src="audio-guide-dezhnev-ru.mp3" preload="metadata" controls style="width:100%;margin:12px 0;border-radius:10px;display:none"></audio>
   <div class="agnav">
     <span class="lbl">Перейти к главе:</span>
     <button data-t="0">Что это за поход</button>
@@ -307,15 +321,9 @@ section[id],div[id="routewrap"],div[id="zoomwrap"]{scroll-margin-top:56px}
   </div>
 </section>
 
-<section id="rolik">
-  <h2 class="t"><small>Ролик · 47 секунд</small>Если время только на одно — посмотрите это</h2>
-  <video controls preload="none" playsinline poster="media/dezhnev-poster.jpg"
-         style="width:100%;border-radius:14px;border:1px solid var(--line);display:block;background:#000">
-    <source src="exp-dezhnev-1648.mp4" type="video/mp4">
-    Ваш браузер не умеет показывать видео — <a href="exp-dezhnev-1648.mp4">скачайте файл</a>.
-  </video>
-  <p class="mb" style="font-size:13px;opacity:.7;margin-top:8px">Весь поход за сорок семь секунд: как открыть край света и не заметить этого. Кадры идут по подлинному листу атласа Ремезова 1701 года, голос тот же, что в аудиогиде. Дальше на странице — то же самое, но подробно и с картой.</p>
-</section>
+<section style="padding:18px 18px 0"><div class="support" id="support" style="margin-top:0">
+  <p><b style="color:var(--gold)">❤ Поддержать музей.</b> Он бесплатный: без рекламы, регистрации и платных разделов. Помочь можно тремя способами — <b>показать</b> страницу тому, кому она зайдёт; <b>поправить</b> нас, если нашли ошибку в дате или цифре (<a href="mailto:arabelthera@gmail.com?subject=Музей первопроходцев — замечание по странице Дежнёва">написать</a>); <b>дать денег</b> на сканы подлинников и озвучку — реквизиты появятся, когда будет оформлен сбор.</p>
+</div></section>
 
 <section id="put">
   <h2 class="t"><small>Маршрут</small>Путь, которого не должно было получиться</h2>
@@ -404,6 +412,9 @@ section[id],div[id="routewrap"],div[id="zoomwrap"]{scroll-margin-top:56px}
 <section class="deep" id="razbor">
   <h2 class="t"><small>Разбор</small>Для тех, кто смотрит внимательно</h2>
 
+  <details class="deepd">
+  <summary>Четыре сюжета подробно — развернуть</summary>
+
   <h3>Почему пролив назван не его именем</h3>
   <p>Название на карте появляется не тогда, когда человек проходит место, а тогда, когда об этом узнаёт наука. К моменту, когда отписки Дежнёва прочитали, экспедиция Беринга была уже описана, опубликована и нанесена на карты Европы. Переименовывать было поздно и незачем — географическое сообщество работает с тем, что напечатано. Дежнёву достался мыс, и это справедливее, чем кажется: именно мыс он и видел, а пролива, как явления, он не видел никогда.</p>
 
@@ -415,6 +426,8 @@ section[id],div[id="routewrap"],div[id="zoomwrap"]{scroll-margin-top:56px}
 
   <h3>Чего на самом деле стоила моржовая кость</h3>
   <p>Четыре с половиной тонны клыка, проданные на 17 340 рублей, — это цифра, которая мало что говорит сегодня. Для сравнения: годовое жалованье рядового казака в Сибири составляло несколько рублей. Именно поэтому за «рыбьим зубом» шли туда, откуда можно не вернуться, — экономика похода была устроена так же, как позже устроят золотую лихорадку.</p>
+
+  </details>
 
   <div class="src">Источники: Большая российская энциклопедия · РГО · Президентская библиотека</div>
 </section>
@@ -451,7 +464,7 @@ section[id],div[id="routewrap"],div[id="zoomwrap"]{scroll-margin-top:56px}
     <button class="opt" data-q="3">Верю</button>
     <button class="opt" data-q="3" data-ok="1">Не верю</button>
     <p class="expl">Прижизненных изображений нет. Все «портреты Дежнёва» придуманы художниками позднее — поэтому на этой странице их нет.</p></div>
-  <p id="total" class="mb">Итог: <b id="pts">0</b> из 70 (карта — 40, вопросы — 30). <span id="rank"></span></p>
+  <p id="total" class="mb" style="display:none">Итог: <b id="pts">0</b> из 70 (карта — 40, вопросы — 30). <span id="rank"></span></p>
   <div id="final" style="display:none">
     <h3>Семьдесят из семидесяти</h3>
     <p>Вы прошли маршрут Дежнёва пальцем по карте и ответили на все вопросы. Для сравнения: из семи кочей, вышедших с Колымы, до цели дошёл один, а само открытие ждало признания восемьдесят восемь лет.</p>
@@ -485,6 +498,12 @@ section[id],div[id="routewrap"],div[id="zoomwrap"]{scroll-margin-top:56px}
   <div id="chatrow"><input id="chatin" placeholder="Ваш вопрос первопроходцу…"><button class="gbtn" id="chatgo">→</button></div>
 </section>
 
+<section id="calendar">
+  <h2 class="t"><small>Календарь музея</small>Год русских открытий по дням</h2>
+  <p class="mb" style="font-size:13.5px;opacity:.75">У каждого дня года свой повод — выход экспедиции, открытие, основание острога. Календарь наполняется: пустые месяцы ждут своих дат.</p>
+  <div id="calbox"></div>
+</section>
+
 <section id="kuda-dalshe">
   <h2 class="t"><small>Куда дальше</small>Музей продолжается</h2>
   <div class="next">
@@ -492,20 +511,6 @@ section[id],div[id="routewrap"],div[id="zoomwrap"]{scroll-margin-top:56px}
     <div class="ncard"><span class="lbl">Весь музей</span><a href="index.html">Русские первопроходцы →</a></div>
     <div class="ncard"><span class="lbl">Город-музей</span><a href="../index.html">Русская цивилизация →</a></div>
   </div>
-  <div class="support" id="support">
-    <p><b style="color:var(--gold)">❤ Поддержать музей.</b> Музей делает крошечная команда, и он бесплатный для всех — без рекламы, регистрации и платных разделов. Если этот поход отсюда виден лучше, чем из учебника, помочь можно тремя способами, и первые два не стоят денег.</p>
-    <ol class="sup">
-      <li><b>Показать.</b> Отправьте ссылку на эту страницу одному человеку, которому она зайдёт, — учителю истории, географу, родителю школьника. Один показ стоит нам дороже любого рекламного бюджета, которого у нас нет.</li>
-      <li><b>Поправить.</b> Нашли ошибку в дате, цифре или формулировке — напишите. Мы правим и указываем, что поправлено. Отдельно ищем научного консультанта по истории географических открытий: <a href="mailto:arabelthera@gmail.com?subject=Музей первопроходцев — замечание по странице Дежнёва">arabelthera@gmail.com</a></li>
-      <li><b>Дать денег.</b> Деньги идут на одно: сканы подлинников в высоком разрешении, права на изображения и озвучку. Реквизиты появятся здесь, когда будет оформлен сбор, — обещать раньше времени не будем.</li>
-    </ol>
-  </div>
-</section>
-
-<section id="calendar">
-  <h2 class="t"><small>Календарь музея</small>Этот день в русских открытиях</h2>
-  <p class="mb" style="font-size:13.5px;opacity:.75">У каждого дня года свой повод — выход экспедиции, открытие, основание острога. Листайте стрелками.</p>
-  <div id="calbox"></div>
 </section>
 
 <footer>
@@ -550,7 +555,23 @@ PTS.forEach(function(p,i){
 function setBody(when,t,d){rbody.querySelector('.when').textContent=when;rbody.querySelector('h3').textContent=t;rbody.querySelector('p').textContent=d;}
 setBody('1648–1660', DEF_T, DEF_D);
 
-var LEN=200;
+/* Длина линии берётся у самого пути. Раньше стояло фиксированное 200 при реальной
+   длине ~95 — из-за этого линия «доходила до конца» уже на второй точке. */
+var LEN=live.getTotalLength();
+live.style.strokeDasharray=LEN;
+live.style.strokeDashoffset=LEN;
+/* доля пути до каждой точки: ищем на линии место, ближайшее к точке */
+var FRAC=(function(){
+  var best=PTS.map(function(){return {d:1e9,l:0};}), step=LEN/800;
+  for(var l=0;l<=LEN;l+=step){
+    var pt=live.getPointAtLength(l);
+    for(var i=0;i<PTS.length;i++){
+      var dx=pt.x-PTS[i].x*100, dy=pt.y-PTS[i].y*100, d=dx*dx+dy*dy;
+      if(d<best[i].d){best[i].d=d;best[i].l=l;}
+    }
+  }
+  return best.map(function(b,i){return i===0?Math.max(.07,b.l/LEN):b.l/LEN;});
+})();
 function runPath(frac){
   var f=(frac===undefined?1:frac);
   live.style.transition='none'; live.style.strokeDashoffset=LEN;
@@ -559,11 +580,12 @@ function runPath(frac){
   live.style.strokeDashoffset=LEN*(1-f);
 }
 function show(i){
+  seen=true;              /* выбрали точку вручную — автопрогон всей линии больше не нужен */
   var p=PTS[i];
   setBody(p.when,p.t,p.d);
   document.querySelectorAll('.rb').forEach(function(b,j){b.classList.toggle('on',j===i);});
   els.forEach(function(e,j){e.classList.toggle('on',j===i);});
-  runPath((i+1)/PTS.length);
+  runPath(FRAC[i]);
   document.getElementById('rpanel').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 var seen=false;
@@ -585,6 +607,7 @@ setTimeout(function(){var h=document.getElementById('zhint');if(h)h.style.opacit
 
 /* ─ Баллы ─ */
 var pts=0;function addPts(n){pts+=n;document.getElementById('pts').textContent=pts;
+ var tt=document.getElementById('total'); if(tt)tt.style.display='block';   /* счёт показываем тому, кто начал играть */
  var r=document.getElementById('rank');
  r.textContent=pts>=60?'Звание: Землепроходец 🧭':pts>=35?'Звание: Кормщик':'';
  if(pts>=70){var f=document.getElementById('final');if(f&&f.style.display==='none'){f.style.display='block';f.scrollIntoView({behavior:'smooth',block:'center'});}}}
@@ -682,7 +705,8 @@ document.getElementById('heart').addEventListener('click',function(){document.qu
 (function(){var b=document.getElementById('agbtn'),a=document.getElementById('agaudio');
  if(!b||!a)return;
  b.addEventListener('click',function(){if(a.paused){a.play();}else{a.pause();}});
- a.addEventListener('play',function(){b.textContent='❚❚';});
+ /* системную панель показываем только после запуска: иначе две кнопки play подряд */
+ a.addEventListener('play',function(){b.textContent='❚❚';a.style.display='block';});
  a.addEventListener('pause',function(){b.textContent='▶';});
  a.addEventListener('ended',function(){b.textContent='▶';});
  a.addEventListener('loadedmetadata',function(){
@@ -699,7 +723,7 @@ document.getElementById('heart').addEventListener('click',function(){document.qu
    });
  });})();
 
-document.querySelector('.hero').addEventListener('click',function(){document.getElementById('routewrap').scrollIntoView({behavior:'smooth'});});
+document.querySelector('.hero').addEventListener('click',function(){document.getElementById('rolik').scrollIntoView({behavior:'smooth'});});
 window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});
 </script>
 <script>
@@ -734,7 +758,7 @@ window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();
   upd();
 })();
 </script>
-<script src="../assets/museum-calendar.js"></script>
+<script src="../assets/museum-calendar-year.js"></script>
 <script src="calendar-pervoprohodcy.js"></script>
 </body>
 </html>
