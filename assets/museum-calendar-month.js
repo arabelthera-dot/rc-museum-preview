@@ -30,7 +30,9 @@
       'background:rgba(233,227,211,.06);border:1px solid rgba(212,175,55,.3);color:var(--gold);' +
       'font-size:18px;line-height:1;display:flex;align-items:center;justify-content:center}' +
     '#calbox .calnav:hover{background:rgba(212,175,55,.14)}' +
-    '#calbox .calgrid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin:12px 0 0}' +
+    /* minmax(0,1fr), а не 1fr: в узком контейнере (например в карточке на титульной музея)
+       1fr считается по контенту и колонки разъезжаются — ловил 30.07 на титульной искусства */
+    '#calbox .calgrid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin:12px 0 0}' +
     '#calbox .cday{position:relative;aspect-ratio:1/1;border-radius:10px;cursor:pointer;' +
       'background:rgba(233,227,211,.04);border:1px solid rgba(233,227,211,.10);color:var(--txt);' +
       'font-family:Georgia,serif;font-size:14px;opacity:.4;padding:0}' +
@@ -71,6 +73,10 @@
     if (!box) return;
 
     var data = window.MUSEUM_CALENDAR || {};
+    /* текст пустого дня — свой у каждого музея: задаётся в файле данных строкой
+       window.MUSEUM_CALENDAR_EMPTY. Иначе в галерее искусства висело «основание острога». */
+    var emptyTxt = window.MUSEUM_CALENDAR_EMPTY ||
+      'Календарь наполняется: к каждому дню года мы привязываем событие этого музея.';
     var today = new Date(), tm = today.getMonth(), td = today.getDate();
     var tk = pad(tm + 1) + '-' + pad(td);
     var total = Object.keys(data).length;
@@ -109,8 +115,7 @@
       var n = nearest();
       return '<div class="calcard empty"><div class="cdate">' + head + '</div>' +
         '<h3>На этот день записи пока нет</h3>' +
-        '<p>Календарь наполняется: к каждому дню года мы привязываем событие — выход экспедиции, ' +
-        'открытие, основание острога.</p>' +
+        '<p>' + esc(emptyTxt) + '</p>' +
         (n ? '<button class="caljump" data-k="' + n.k + '">Ближайшая запись · через ' + n.days +
              ' ' + plural(n.days, 'день', 'дня', 'дней') + ' →</button>' : '') +
         '</div>';
