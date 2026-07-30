@@ -89,6 +89,12 @@ p.mb{margin-bottom:14px}
 .ncard.soon{opacity:.65}
 .support{background:linear-gradient(160deg,#181206,#12151c);border:1px solid var(--line);border-radius:16px;padding:18px;text-align:center;margin-top:22px}
 .support p{font-size:14px;margin-bottom:10px}
+.support{scroll-margin-top:70px}
+#support{text-align:left}
+ol.sup{text-align:left;margin:0;padding-left:20px;font-size:13.5px;line-height:1.6}
+ol.sup li{margin-bottom:9px}
+ol.sup li::marker{color:var(--gold)}
+ol.sup b{color:var(--gold);font-weight:normal}
 /* компактная кнопка: кружок, разворачивается у футера, прячется при скролле вниз (не перекрывает текст) */
 #heart{position:fixed;right:12px;bottom:14px;z-index:60;background:rgba(18,21,28,.92);border:1px solid var(--line);border-radius:26px;width:46px;height:46px;display:flex;align-items:center;justify-content:center;font-size:17px;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.5);transition:transform .35s ease,width .3s ease,opacity .3s ease;overflow:hidden}
 #heart .lbl{display:none;white-space:nowrap;margin-left:7px;font-size:14px}
@@ -122,6 +128,13 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 .world img{width:100%;aspect-ratio:1.4;object-fit:contain;background:#0b0b0c;border-radius:9px;display:block}
 .world figcaption{font-size:12.5px;opacity:.88;margin-top:8px;line-height:1.5}
 .world figcaption b{color:var(--gold);font-weight:normal;display:block;font-size:13.5px;margin-bottom:3px}
+/* экспонаты в тексте */
+.exh{margin:20px 0;background:var(--panel);border:1px solid rgba(212,175,55,.2);border-radius:14px;padding:10px}
+.exh img{width:100%;display:block;border-radius:10px;background:#0b0b0c}
+.exh.narrow img{max-width:520px;margin:0 auto}
+.exh figcaption{font-size:12.5px;opacity:.88;margin-top:9px;line-height:1.55}
+.exh figcaption b{color:var(--gold);font-weight:normal;display:block;font-size:13.5px;margin-bottom:3px}
+.exh figcaption i{display:block;font-style:normal;opacity:.55;font-size:11.5px;margin-top:6px}
 /* аудиогид */
 .audio{display:flex;align-items:center;gap:12px;background:var(--panel);border:1px solid rgba(212,175,55,.25);border-radius:14px;padding:13px 15px;margin-bottom:14px}
 .audio button{flex-shrink:0;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:linear-gradient(180deg,#e3c04d,#b8912a);color:#1a1508;font-size:17px;cursor:pointer}
@@ -200,9 +213,23 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 .hit{position:absolute;width:52px;height:52px;margin:-26px 0 0 -26px;border:3px solid #69c07a;border-radius:50%;box-shadow:0 0 16px 4px rgba(105,192,122,.6);z-index:7;animation:ringpop .45s ease-out}
 .miss{position:absolute;width:34px;height:34px;margin:-17px 0 0 -17px;border:2px solid #c06a5f;border-radius:50%;z-index:7;animation:ringpop .4s ease-out}
 @keyframes ringpop{from{transform:scale(.3);opacity:0}to{transform:scale(1);opacity:1}}
+
+/* ── кнопка возврата: видна всегда, на каждой странице музея ── */
+.backbtn{position:fixed;top:10px;left:10px;z-index:60;display:inline-flex;align-items:center;gap:7px;
+  background:rgba(11,13,17,.86);backdrop-filter:blur(6px);border:1px solid var(--gold);color:var(--gold);
+  border-radius:22px;padding:9px 15px;font-family:Georgia,serif;font-size:13.5px;text-decoration:none;
+  box-shadow:0 4px 16px rgba(0,0,0,.5);transition:background .2s}
+.backbtn:hover{background:rgba(212,175,55,.18)}
+.backbtn .ar{font-size:16px;line-height:1}
+@media (max-width:520px){.backbtn{font-size:12.5px;padding:8px 13px}}
+#final{background:linear-gradient(160deg,#1d1607,#12151c);border:1px solid var(--gold);border-radius:16px;padding:20px;margin-top:14px;box-shadow:0 0 26px rgba(212,175,55,.18)}
+#final h3{font-family:Georgia,serif;font-size:21px;font-weight:normal;color:var(--gold);margin-bottom:8px}
+#final p{font-size:14px;line-height:1.6;margin-bottom:14px}
+.fbtns{display:flex;flex-wrap:wrap;gap:10px}
 </style>
 </head>
 <body>
+<a class="backbtn" href="index.html"><span class="ar">←</span>Русские первопроходцы</a>
 
 <header class="site" style="position:relative">
   <div class="lang"><a class="on" href="exp-dezhnev-1648.html">RU</a></div>
@@ -296,6 +323,10 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
   <div class="q"><h3><em>Факт 1</em>Он открыл пролив — и об этом не знали 88 лет</h3><p style="font-size:14px">Отписки Дежнёва легли в архив якутской воеводской канцелярии и пролежали там почти девяносто лет. Их нашёл историк Герхард Миллер в 1736 году, разбирая сибирские бумаги. К этому времени пролив уже прошёл Витус Беринг — в 1728 году, на восемьдесят лет позже, — и имя на карте осталось за ним.</p></div>
   <div class="q"><h3><em>Факт 2</em>Он вообще не искал пролив</h3><p style="font-size:14px">Экспедиция шла за моржовым клыком: «рыбий зуб» ценился дороже соболя, и слухи о реке Погыче, где лежбища моржей, будоражили Колыму. Географическое открытие оказалось побочным результатом торговой ходки. Дежнёв и в отписках пишет не «я открыл пролив», а описывает, где какой промысел.</p></div>
   <div class="q"><h3><em>Факт 3</em>Кочи шились без единого гвоздя</h3><p style="font-size:14px">Коч — поморское судно, доски которого сшивались корнями можжевельника или вицей. Корпус делали яйцевидным: сжатый льдами, он не ломался, а выдавливался наверх. На таких судах девяносто человек пошли в море, о котором не знали ничего.</p></div>
+  <figure class="exh narrow">
+    <img src="media/koch-deveer.jpg" alt="Гравюра XVI века: русское поморское судно с парусом и людьми на борту" loading="lazy">
+    <figcaption><b>Так это выглядело со стороны</b>Русское северное судно на гравюре из книги Геррита де Веера — участника голландской экспедиции Виллема Баренца. Голландцы встретили поморов в Ледовитом море в 1590-х и зарисовали их суда: чужой корабль без единого гвоздя показался им диковиной, достойной книги. Через полвека на таких же пойдут к Анадырю.<i>Gerrit de Veer, конец XVI века</i></figcaption>
+  </figure>
   <div class="q"><h3><em>Факт 4</em>Он двенадцать лет прожил там, куда его выбросило</h3><p style="font-size:14px">После крушения остатки отряда вышли к Анадырю. Дежнёв провёл на этой реке двенадцать лет, поставил Анадырский острог, а в 1652 году нашёл огромное моржовое лежбище — то самое богатство, за которым и шли. Он не вернулся домой — он остался жить в том месте, куда его занесло.</p></div>
   <div class="q"><h3><em>Факт 5</em>Жалованье ему не платили девятнадцать лет</h3><p style="font-size:14px">В 1664 году Дежнёв добрался до Москвы с грузом моржовой кости: 289 пудов, около четырёх с половиной тонн, проданных на 17 340 рублей. Свою долю он получил — 500 рублей соболями. И тогда же подал челобитную о выдаче жалованья за девятнадцать прошедших лет, которое ему причиталось, но так и не было выплачено.</p></div>
 </section>
@@ -305,9 +336,21 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
   <p class="mb lead">Двадцатого июня 1648 года из устья Колымы в Ледовитое море вышли семь кочей. Возглавляли поход двое: казак Семён Иванович Дежнёв, служилый человек с двадцатилетним стажем в Сибири, и торговый человек Федот Алексеев Попов. Девяносто человек. Цель — река Погыча, о которой рассказывали, что в её устье лежбища моржа, а моржовый клык, «рыбий зуб», в Москве стоил дороже соболя.</p>
   <p class="mb">Надо понимать, куда они шли. Восточнее Колымы для русского человека семнадцатого века не было ничего — ни карт, ни рассказов, ни уверенности, что море там вообще проходимо. Попытки были и раньше, и все заканчивались одинаково: льды, поворот, возвращение. Никто в мире тогда не знал, соединяются Азия и Америка или разделены. Этот вопрос был открыт, и его никто не собирался решать в тот июнь.</p>
   <p class="mb">Море съело экспедицию по частям. До сентября дошли не все кочи: одни разбились, другие пропали. И двадцатого сентября 1648 года оставшиеся обогнули то, что Дежнёв в отписке назвал <i>Большим Каменным Носом</i> — скалистый мыс, за которым берег поворачивал на юг. Тысяча четыреста километров от устья Колымы. Это была крайняя восточная точка Азии, и они прошли между двумя материками, не подозревая, что делают.</p>
+  <figure class="exh">
+    <img src="media/dezhnev-cape.jpg" alt="Современное фото мыса Дежнёва: скалистый берег Чукотки, обрывающийся в море" loading="lazy">
+    <figcaption><b>Тот самый Большой Каменный Нос</b>Мыс Дежнёва сегодня — крайняя восточная точка Азии, 169°39′ западной долготы. До Аляски отсюда 86 километров, в ясный день американский берег виден невооружённым глазом. Дежнёв прошёл вдоль этих скал 20 сентября 1648 года и записал в отписке, что берег повернул на юг.<i>Фото: Wikimedia Commons, 2014</i></figcaption>
+  </figure>
   <p class="mb">Дальше было крушение. Коч Дежнёва выбросило южнее устья Анадыря, и остатки отряда пошли пешком — зимой, без запасов, по земле, которой не знали. Дошли не все. Тем, кто дошёл, предстояло обживаться: Дежнёв поставил на Анадыре острог и остался там на двенадцать лет. В 1652 году он нашёл то самое лежбище моржей — цель похода, добытая через четыре года после его начала.</p>
   <p class="mb">В 1664 году он привёз в Москву 289 пудов моржовой кости — около четырёх с половиной тонн. Казна продала их на 17 340 рублей, Дежнёв получил свою долю: пятьсот рублей соболями, сумму по тем временам огромную. Тогда же он подал челобитную о жалованье, которое ему не выплачивали девятнадцать лет. Про Большой Каменный Нос в бумагах речи не шло: с точки зрения приказа это была не заслуга, а подробность маршрута.</p>
+  <figure class="exh narrow">
+    <img src="media/walrus-tusk.jpg" alt="Резной моржовый клык — изделие из моржовой кости, ради которой шла экспедиция" loading="lazy">
+    <figcaption><b>«Рыбий зуб» — то, ради чего шли</b>Моржовый клык вырастает до 80 сантиметров и весит несколько килограммов. В XVII веке кость шла на рукояти, гребни, шкатулки и ценилась дороже соболя — за неё платили и в Москве, и в Китае. Дежнёв привёз 289 пудов такого клыка: около четырёх с половиной тонн, проданных на 17 340 рублей при годовом жалованье казака в несколько рублей. Пролив в этой бухгалтерии не значился.<i>Резной моржовый клык, коллекция Metropolitan Museum of Art</i></figcaption>
+  </figure>
   <p class="mb">А его отписки остались в Якутске. Они пролежали в архиве воеводской канцелярии почти девяносто лет, пока в 1736 году их не нашёл историк Герхард Фридрих Миллер, разбиравший сибирские бумаги для описания края. Только тогда стало ясно, что казак прошёл пролив за восемьдесят лет до Витуса Беринга, который сделал это в 1728 году с картами, приборами и государственным заданием. Имя на карте осталось за Берингом — оно уже было там. Дежнёву достался мыс, тот самый Большой Каменный Нос, и то лишь в 1898 году.</p>
+  <figure class="exh narrow">
+    <img src="media/dezhnev-lighthouse.jpg" alt="Маяк-памятник Семёну Дежнёву на мысе Дежнёва: обелиск с бюстом и фонарным сооружением наверху" loading="lazy">
+    <figcaption><b>Памятник, который работает маяком</b>На мысе Дежнёва стоит четырёхгранный обелиск с бюстом казака — и одновременно действующий навигационный знак: наверху фонарь, светящий проходящим судам. Поставлен в 1955 году, в самой восточной точке страны, куда не ведёт ни одна дорога. Памятник человеку, чьего лица никто не знает: прижизненных портретов Дежнёва не существует.<i>Фото: Wikimedia Commons</i></figcaption>
+  </figure>
   <p class="mb">Здесь стоит остановиться на одной вещи, о которой обычно не говорят. Открытие не состоялось не потому, что его скрыли, и не потому, что кто-то был против. Оно не состоялось потому, что <b>никто не понял, что произошло</b>. Дежнёв описал то, что видел, честно и подробно. Просто в 1648 году не было вопроса, на который его отписка была ответом. Вопрос появился позже — и тогда пришлось искать ответ заново.</p>
   <p class="mb"><b style="color:var(--gold)">Человек одним абзацем.</b> Семён Иванович Дежнёв (около 1605 — начало 1673). Родом с русского Севера, с Пинеги или из Великого Устюга. Служил в Тобольске, Енисейске, Якутске; собирал ясак, ходил в дальние ходки, был не раз ранен. Прижизненных изображений Дежнёва не существует — все портреты, которые вы видели, придуманы художниками позже. Мы их здесь не показываем.</p>
   <div class="src">Источники: rgo.ru (Русское географическое общество) · old.bigenc.ru (Большая российская энциклопедия) · vokrugsveta.ru · iz.ru · geroiarktiki.goarctic.ru · Атлас Ремезова — НЭБ «Книжные памятники», подлинник в РГБ</div>
@@ -343,8 +386,12 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 
 <section id="rolik">
   <h2 class="t"><small>Ролик</small>Минута о походе Дежнёва</h2>
-  <img src="media/dezhnev-poster.jpg" alt="Кадр из готовящегося ролика о походе Дежнёва" style="width:100%;border-radius:14px;border:1px solid var(--line);display:block">
-  <p class="mb" style="font-size:13px;opacity:.7;margin-top:8px">Ролик готовится: как открыть край света и не заметить этого. Кадры пойдут по подлинной карте 1701 года, голос тот же, что в аудиогиде.</p>
+  <video controls preload="none" playsinline poster="media/dezhnev-poster.jpg"
+         style="width:100%;border-radius:14px;border:1px solid var(--line);display:block;background:#000">
+    <source src="exp-dezhnev-1648.mp4" type="video/mp4">
+    Ваш браузер не умеет показывать видео — <a href="exp-dezhnev-1648.mp4">скачайте файл</a>.
+  </video>
+  <p class="mb" style="font-size:13px;opacity:.7;margin-top:8px">Сорок семь секунд: как открыть край света и не заметить этого. Кадры идут по подлинному листу атласа Ремезова 1701 года, голос тот же, что в аудиогиде.</p>
 </section>
 
 <section id="quiz">
@@ -370,6 +417,14 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
     <button class="opt" data-q="3" data-ok="1">Не верю</button>
     <p class="expl">Прижизненных изображений нет. Все «портреты Дежнёва» придуманы художниками позднее — поэтому на этой странице их нет.</p></div>
   <p id="total" class="mb">Итог: <b id="pts">0</b> из 70 (карта — 40, вопросы — 30). <span id="rank"></span></p>
+  <div id="final" style="display:none">
+    <h3>Семьдесят из семидесяти</h3>
+    <p>Вы прошли маршрут Дежнёва пальцем по карте и ответили на все вопросы. Для сравнения: из семи кочей, вышедших с Колымы, до цели дошёл один, а само открытие ждало признания восемьдесят восемь лет.</p>
+    <div class="fbtns">
+      <a class="gbtn" href="#kuda-dalshe">Куда дальше →</a>
+      <a class="gbtn sec" href="#support">❤ Поддержать музей</a>
+    </div>
+  </div>
 </section>
 
 <section id="sharada">
@@ -402,7 +457,14 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
     <div class="ncard"><span class="lbl">Весь музей</span><a href="index.html">Русские первопроходцы →</a></div>
     <div class="ncard"><span class="lbl">Город-музей</span><a href="../index.html">Русская цивилизация →</a></div>
   </div>
-  <div class="support"><p>Музей делает крошечная команда — и делает бесплатным для всех. Если этот поход отсюда виден лучше, чем из учебника, — поддержите проект.</p><a class="gbtn sec" href="../index.html">❤ Как поддержать</a></div>
+  <div class="support" id="support">
+    <p><b style="color:var(--gold)">❤ Поддержать музей.</b> Музей делает крошечная команда, и он бесплатный для всех — без рекламы, регистрации и платных разделов. Если этот поход отсюда виден лучше, чем из учебника, помочь можно тремя способами, и первые два не стоят денег.</p>
+    <ol class="sup">
+      <li><b>Показать.</b> Отправьте ссылку на эту страницу одному человеку, которому она зайдёт, — учителю истории, географу, родителю школьника. Один показ стоит нам дороже любого рекламного бюджета, которого у нас нет.</li>
+      <li><b>Поправить.</b> Нашли ошибку в дате, цифре или формулировке — напишите. Мы правим и указываем, что поправлено. Отдельно ищем научного консультанта по истории географических открытий: <a href="mailto:arabelthera@gmail.com?subject=Музей первопроходцев — замечание по странице Дежнёва">arabelthera@gmail.com</a></li>
+      <li><b>Дать денег.</b> Деньги идут на одно: сканы подлинников в высоком разрешении, права на изображения и озвучку. Реквизиты появятся здесь, когда будет оформлен сбор, — обещать раньше времени не будем.</li>
+    </ol>
+  </div>
 </section>
 
 <section id="calendar">
@@ -489,7 +551,8 @@ setTimeout(function(){var h=document.getElementById('zhint');if(h)h.style.opacit
 /* ─ Баллы ─ */
 var pts=0;function addPts(n){pts+=n;document.getElementById('pts').textContent=pts;
  var r=document.getElementById('rank');
- r.textContent=pts>=60?'Звание: Землепроходец 🧭':pts>=35?'Звание: Кормщик':'';}
+ r.textContent=pts>=60?'Звание: Землепроходец 🧭':pts>=35?'Звание: Кормщик':'';
+ if(pts>=70){var f=document.getElementById('final');if(f&&f.style.display==='none'){f.style.display='block';f.scrollIntoView({behavior:'smooth',block:'center'});}}}
 
 /* ─ Игра: найди место на карте ─ */
 var mg={on:false,i:0,t:60,timer:null,marks:[]};

@@ -18,7 +18,8 @@
   function start() {
     var host = document.getElementById('calyear');
     var card = document.getElementById('calcard');
-    if (!host) return;
+    if (!host && !card) return;   // страница без календаря вовсе
+
     var data = window.MUSEUM_CALENDAR || {};
     var today = new Date(), tk = pad(today.getMonth() + 1) + '-' + pad(today.getDate());
     var filled = Object.keys(data).length;
@@ -26,7 +27,9 @@
     var h = '<div class="calstat">Заполнено дней: <b>' + filled + '</b> из 365 · ' +
             'каждый заполненный день — готовый повод для ролика и поста</div>';
 
-    for (var m = 0; m < 12; m++) {
+    /* годовая сетка рисуется только там, где для неё есть место (#calyear).
+       На витрине музея его нет — там живёт одна карточка сегодняшнего дня. */
+    for (var m = 0; host && m < 12; m++) {
       var cnt = 0, cells = '';
       for (var d = 1; d <= DAYS[m]; d++) {
         var k = pad(m + 1) + '-' + pad(d);
@@ -40,7 +43,7 @@
            '<span class="cnt">' + (cnt ? cnt + ' ' + (cnt === 1 ? 'запись' : 'записи') : '—') + '</span></h2>' +
            '<div class="cgrid">' + cells + '</div></section>';
     }
-    host.innerHTML = h;
+    if (host) host.innerHTML = h;
 
     function show(k) {
       var it = data[k];
@@ -52,13 +55,15 @@
         '<p>' + it.d + '</p>' +
         (it.href ? '<a href="' + it.href + '">' + (it.link || 'Открыть →') + '</a>' : '');
       card.style.display = 'block';
-      host.querySelectorAll('.cday').forEach(function (b) { b.classList.remove('on'); });
-      var b = host.querySelector('.cday[data-k="' + k + '"]');
-      if (b) b.classList.add('on');
-      card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      if (host) {
+        host.querySelectorAll('.cday').forEach(function (b) { b.classList.remove('on'); });
+        var b = host.querySelector('.cday[data-k="' + k + '"]');
+        if (b) b.classList.add('on');
+        card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
     }
 
-    host.querySelectorAll('.cday[data-k]').forEach(function (b) {
+    if (host) host.querySelectorAll('.cday[data-k]').forEach(function (b) {
       b.addEventListener('click', function () { show(b.dataset.k); });
     });
 

@@ -72,9 +72,19 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:6px}
 .gamecard .lbl{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
 .gamecard h3{font-family:Georgia,serif;font-size:19px;font-weight:normal;margin:4px 0 7px}
 .gamecard p{font-size:13.5px;line-height:1.55;opacity:.85;margin-bottom:12px}
+
+/* ── кнопка возврата: видна всегда, на каждой странице музея ── */
+.backbtn{position:fixed;top:10px;left:10px;z-index:60;display:inline-flex;align-items:center;gap:7px;
+  background:rgba(11,13,17,.86);backdrop-filter:blur(6px);border:1px solid var(--gold);color:var(--gold);
+  border-radius:22px;padding:9px 15px;font-family:Georgia,serif;font-size:13.5px;text-decoration:none;
+  box-shadow:0 4px 16px rgba(0,0,0,.5);transition:background .2s}
+.backbtn:hover{background:rgba(212,175,55,.18)}
+.backbtn .ar{font-size:16px;line-height:1}
+@media (max-width:520px){.backbtn{font-size:12.5px;padding:8px 13px}}
 </style>
 </head>
 <body>
+<a class="backbtn" href="../index.html"><span class="ar">←</span>В город-музей</a>
 <header>
   <div class="b1">Первый цифровой музей достижений России</div>
   <h1>Русские первопроходцы</h1>
@@ -82,8 +92,7 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:6px}
 </header>
 <nav class="crumbs"><a href="../index.html">Русская цивилизация</a> › <span>Русские первопроходцы</span></nav>
 <main>
-  <div class="today" id="calendar"><span class="lbl">Сегодня в русских открытиях</span>
-    <div id="calbox"></div>
+  
   </div>
 
   <h2>Экспедиции</h2>
@@ -108,8 +117,7 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:6px}
 
   <h2>Календарь музея</h2>
   <div id="calcard"></div>
-  <div id="calyear"></div>
-  <p style="font-size:13px;opacity:.7;margin-top:10px"><a href="calendar.html">Открыть календарь отдельной страницей →</a></p>
+  <p style="font-size:13px;opacity:.7;margin-top:10px"><a href="calendar.html">Весь год целиком — 365 дней в календаре музея →</a></p>
 
   <div class="council"><b style="color:var(--gold)">Научный совет музея.</b> Ищем научного консультанта — историка географических открытий, готового проверять факты и держать планку. Напишите: <a href="mailto:arabelthera@gmail.com?subject=Научный совет музея Русские первопроходцы">arabelthera@gmail.com</a></div>
   <div class="support"><b style="color:var(--gold)">❤ Поддержать проект.</b> Музей бесплатный для всех и делается крошечной командой. Донат-реквизиты появятся здесь; пока лучшая поддержка — показать музей друзьям и школе.</div>
@@ -117,7 +125,6 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:6px}
 <footer><div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>Музей «Русские первопроходцы» · <a href="../index.html">в город-музей →</a></footer>
 <script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
 <script src="calendar-pervoprohodcy.js"></script>
-<script src="../assets/museum-calendar.js"></script>
 <script src="../assets/museum-calendar-page.js"></script>
 </body>
 </html>
