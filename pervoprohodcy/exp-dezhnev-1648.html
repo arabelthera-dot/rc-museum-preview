@@ -222,6 +222,23 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 .backbtn:hover{background:rgba(212,175,55,.18)}
 .backbtn .ar{font-size:16px;line-height:1}
 @media (max-width:520px){.backbtn{font-size:12.5px;padding:8px 13px}}
+
+/* ── липкий указатель разделов: где я нахожусь и сколько осталось ── */
+.backbtn{transition:background .2s,opacity .25s}
+body.scrolled .backbtn{opacity:0;pointer-events:none}
+#secnav{position:sticky;top:0;z-index:55;background:rgba(11,13,17,.94);
+  -webkit-backdrop-filter:blur(9px);backdrop-filter:blur(9px);border-bottom:1px solid var(--line)}
+#secnav .row{display:flex;gap:6px;overflow-x:auto;padding:9px 12px;scrollbar-width:none;-ms-overflow-style:none}
+#secnav .row::-webkit-scrollbar{display:none}
+#secnav a{flex:none;font-size:12.5px;padding:6px 12px;border:1px solid var(--line);border-radius:16px;
+  color:var(--txt);opacity:.7;text-decoration:none;white-space:nowrap;transition:opacity .2s,border-color .2s,background .2s}
+#secnav a:hover{opacity:1;border-color:var(--gold)}
+#secnav a.on{opacity:1;color:var(--gold);border-color:var(--gold);background:rgba(212,175,55,.13)}
+#secnav a.home{color:var(--gold);opacity:.85;border-color:rgba(212,175,55,.45)}
+#secnav .prog{height:2px;width:0;background:var(--gold);box-shadow:0 0 8px rgba(212,175,55,.6)}
+section[id],div[id="routewrap"],div[id="zoomwrap"]{scroll-margin-top:56px}
+@media (max-width:520px){#secnav a{font-size:12px;padding:5px 10px}#secnav .row{padding:8px 10px}}
+@media (prefers-reduced-motion:reduce){#secnav a{transition:none}}
 #final{background:linear-gradient(160deg,#1d1607,#12151c);border:1px solid var(--gold);border-radius:16px;padding:20px;margin-top:14px;box-shadow:0 0 26px rgba(212,175,55,.18)}
 #final h3{font-family:Georgia,serif;font-size:21px;font-weight:normal;color:var(--gold);margin-bottom:8px}
 #final p{font-size:14px;line-height:1.6;margin-bottom:14px}
@@ -249,6 +266,24 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
   </div>
 </div>
 
+<nav id="secnav" aria-label="Разделы страницы">
+  <div class="row">
+    <a class="home" href="index.html">← Музей</a>
+    <a href="#audioguide">Аудиогид</a>
+    <a href="#rolik">Ролик</a>
+    <a href="#put">Маршрут</a>
+    <a href="#game">Игра</a>
+    <a href="#atlas">Атлас</a>
+    <a href="#trudno-poverit">Факты</a>
+    <a href="#istoriya">История</a>
+    <a href="#razbor">Разбор</a>
+    <a href="#quiz">Викторина</a>
+    <a href="#chat">Интервью</a>
+    <a href="#calendar">Календарь</a>
+  </div>
+  <div class="prog" id="secprog"></div>
+</nav>
+
 
 <section id="audioguide">
   <div class="agtop">
@@ -256,7 +291,7 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
     <div class="agtxt">
       <div class="aglbl">Аудиогид музея</div>
       <div class="agttl">Весь поход за <span id="agdur">6 минут</span></div>
-      <div class="agsub">Кто и зачем пошёл · что случилось 20 сентября 1648 · двенадцать лет на Анадыре · восемьдесят восемь лет молчания · атлас Ремезова. Можно слушать и одновременно вести пальцем по карте.</div>
+      <div class="agsub">Голос ведёт по всему походу — от выхода с Колымы до архивного короба в Якутске. Можно слушать и одновременно вести пальцем по карте ниже.</div>
     </div>
   </div>
   <audio id="agaudio" src="audio-guide-dezhnev-ru.mp3" preload="metadata" controls style="width:100%;margin:12px 0;border-radius:10px"></audio>
@@ -272,9 +307,19 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
   </div>
 </section>
 
+<section id="rolik">
+  <h2 class="t"><small>Ролик · 47 секунд</small>Если время только на одно — посмотрите это</h2>
+  <video controls preload="none" playsinline poster="media/dezhnev-poster.jpg"
+         style="width:100%;border-radius:14px;border:1px solid var(--line);display:block;background:#000">
+    <source src="exp-dezhnev-1648.mp4" type="video/mp4">
+    Ваш браузер не умеет показывать видео — <a href="exp-dezhnev-1648.mp4">скачайте файл</a>.
+  </video>
+  <p class="mb" style="font-size:13px;opacity:.7;margin-top:8px">Весь поход за сорок семь секунд: как открыть край света и не заметить этого. Кадры идут по подлинному листу атласа Ремезова 1701 года, голос тот же, что в аудиогиде. Дальше на странице — то же самое, но подробно и с картой.</p>
+</section>
+
 <section id="put">
   <h2 class="t"><small>Маршрут</small>Путь, которого не должно было получиться</h2>
-  <p class="mb">Летом 1648 года из устья Колымы вышли семь кочей — деревянных судов, сшитых без единого гвоздя. Девяносто человек шли искать реку Погычу, богатую «рыбьим зубом» — моржовой костью, которая стоила дороже соболя. Никакого пролива они не искали: о том, что Азия и Америка разделены, в мире тогда не знал никто. Нажмите на точку — и путь пойдёт дальше.</p>
+  <p class="mb">Летом 1648 года из устья Колымы вышли семь кочей — деревянных промысловых судов поморской постройки. Девяносто человек шли искать реку Погычу, богатую «рыбьим зубом» — моржовой костью, которая стоила дороже соболя. Никакого пролива они не искали: о том, что Азия и Америка разделены, в мире тогда не знал никто. Нажмите на точку — и путь пойдёт дальше.</p>
 
 </section>
 
@@ -320,15 +365,15 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 
 <section id="trudno-poverit">
   <h2 class="t"><small>Поход и человек</small>В это трудно поверить</h2>
-  <div class="q"><h3><em>Факт 1</em>Он открыл пролив — и об этом не знали 88 лет</h3><p style="font-size:14px">Отписки Дежнёва легли в архив якутской воеводской канцелярии и пролежали там почти девяносто лет. Их нашёл историк Герхард Миллер в 1736 году, разбирая сибирские бумаги. К этому времени пролив уже прошёл Витус Беринг — в 1728 году, на восемьдесят лет позже, — и имя на карте осталось за ним.</p></div>
+  <div class="q"><h3><em>Факт 1</em>Он открыл пролив — и об этом не знали 88 лет</h3><p style="font-size:14px">Отписку положили в короб якутской воеводской канцелярии, и она пролежала там дольше, чем Дежнёв прожил после похода. Восемьдесят восемь лет — это дольше средней человеческой жизни того времени: успело родиться, вырасти и умереть поколение, которое могло бы знать о проливе со школьной скамьи. Как именно бумага вышла из короба — ниже, в разделе «История».</p></div>
   <div class="q"><h3><em>Факт 2</em>Он вообще не искал пролив</h3><p style="font-size:14px">Экспедиция шла за моржовым клыком: «рыбий зуб» ценился дороже соболя, и слухи о реке Погыче, где лежбища моржей, будоражили Колыму. Географическое открытие оказалось побочным результатом торговой ходки. Дежнёв и в отписках пишет не «я открыл пролив», а описывает, где какой промысел.</p></div>
   <div class="q"><h3><em>Факт 3</em>Кочи шились без единого гвоздя</h3><p style="font-size:14px">Коч — поморское судно, доски которого сшивались корнями можжевельника или вицей. Корпус делали яйцевидным: сжатый льдами, он не ломался, а выдавливался наверх. На таких судах девяносто человек пошли в море, о котором не знали ничего.</p></div>
   <figure class="exh narrow">
     <img src="media/koch-deveer.jpg" alt="Гравюра XVI века: русское поморское судно с парусом и людьми на борту" loading="lazy">
-    <figcaption><b>Так это выглядело со стороны</b>Русское северное судно на гравюре из книги Геррита де Веера — участника голландской экспедиции Виллема Баренца. Голландцы встретили поморов в Ледовитом море в 1590-х и зарисовали их суда: чужой корабль без единого гвоздя показался им диковиной, достойной книги. Через полвека на таких же пойдут к Анадырю.<i>Gerrit de Veer, конец XVI века</i></figcaption>
+    <figcaption><b>Так это выглядело со стороны</b>Русское северное судно на гравюре из книги Геррита де Веера — участника голландской экспедиции Виллема Баренца. Голландцы встретили поморов в Ледовитом море в 1590-х и зарисовали их суда: шитое судно с круглым боком показалось им диковиной, достойной книги. Через полвека на таких же пойдут к Анадырю.<i>Gerrit de Veer, конец XVI века</i></figcaption>
   </figure>
   <div class="q"><h3><em>Факт 4</em>Он двенадцать лет прожил там, куда его выбросило</h3><p style="font-size:14px">После крушения остатки отряда вышли к Анадырю. Дежнёв провёл на этой реке двенадцать лет, поставил Анадырский острог, а в 1652 году нашёл огромное моржовое лежбище — то самое богатство, за которым и шли. Он не вернулся домой — он остался жить в том месте, куда его занесло.</p></div>
-  <div class="q"><h3><em>Факт 5</em>Жалованье ему не платили девятнадцать лет</h3><p style="font-size:14px">В 1664 году Дежнёв добрался до Москвы с грузом моржовой кости: 289 пудов, около четырёх с половиной тонн, проданных на 17 340 рублей. Свою долю он получил — 500 рублей соболями. И тогда же подал челобитную о выдаче жалованья за девятнадцать прошедших лет, которое ему причиталось, но так и не было выплачено.</p></div>
+  <div class="q"><h3><em>Факт 5</em>Жалованье ему не платили девятнадцать лет</h3><p style="font-size:14px">Добравшись в 1664 году до Москвы, Дежнёв подал челобитную: оклада ему не выдавали девятнадцать лет. Не месяц и не год — все девятнадцать он служил, ходил в море, ставил острог и жил тем, что добудет сам. Человек, прошедший край материка, приехал в столицу не за славой, а за своим неполученным жалованьем.</p></div>
 </section>
 
 <section id="istoriya">
@@ -344,7 +389,7 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
   <p class="mb">В 1664 году он привёз в Москву 289 пудов моржовой кости — около четырёх с половиной тонн. Казна продала их на 17 340 рублей, Дежнёв получил свою долю: пятьсот рублей соболями, сумму по тем временам огромную. Тогда же он подал челобитную о жалованье, которое ему не выплачивали девятнадцать лет. Про Большой Каменный Нос в бумагах речи не шло: с точки зрения приказа это была не заслуга, а подробность маршрута.</p>
   <figure class="exh narrow">
     <img src="media/walrus-tusk.jpg" alt="Резной моржовый клык — изделие из моржовой кости, ради которой шла экспедиция" loading="lazy">
-    <figcaption><b>«Рыбий зуб» — то, ради чего шли</b>Моржовый клык вырастает до 80 сантиметров и весит несколько килограммов. В XVII веке кость шла на рукояти, гребни, шкатулки и ценилась дороже соболя — за неё платили и в Москве, и в Китае. Дежнёв привёз 289 пудов такого клыка: около четырёх с половиной тонн, проданных на 17 340 рублей при годовом жалованье казака в несколько рублей. Пролив в этой бухгалтерии не значился.<i>Резной моржовый клык, коллекция Metropolitan Museum of Art</i></figcaption>
+    <figcaption><b>«Рыбий зуб» — то, ради чего шли</b>Моржовый клык вырастает до 80 сантиметров и весит несколько килограммов. В XVII веке кость шла на рукояти, гребни, шкатулки и ценилась дороже соболя — за неё платили и в Москве, и в Китае. Вот этот предмет, а не пролив между материками, был целью похода: именно его искали, за него рисковали кочами и людьми. Пролив в промысловой бухгалтерии не значился вовсе.<i>Резной моржовый клык, коллекция Metropolitan Museum of Art</i></figcaption>
   </figure>
   <p class="mb">А его отписки остались в Якутске. Они пролежали в архиве воеводской канцелярии почти девяносто лет, пока в 1736 году их не нашёл историк Герхард Фридрих Миллер, разбиравший сибирские бумаги для описания края. Только тогда стало ясно, что казак прошёл пролив за восемьдесят лет до Витуса Беринга, который сделал это в 1728 году с картами, приборами и государственным заданием. Имя на карте осталось за Берингом — оно уже было там. Дежнёву достался мыс, тот самый Большой Каменный Нос, и то лишь в 1898 году.</p>
   <figure class="exh narrow">
@@ -383,16 +428,6 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 
 
 
-
-<section id="rolik">
-  <h2 class="t"><small>Ролик</small>Минута о походе Дежнёва</h2>
-  <video controls preload="none" playsinline poster="media/dezhnev-poster.jpg"
-         style="width:100%;border-radius:14px;border:1px solid var(--line);display:block;background:#000">
-    <source src="exp-dezhnev-1648.mp4" type="video/mp4">
-    Ваш браузер не умеет показывать видео — <a href="exp-dezhnev-1648.mp4">скачайте файл</a>.
-  </video>
-  <p class="mb" style="font-size:13px;opacity:.7;margin-top:8px">Сорок семь секунд: как открыть край света и не заметить этого. Кадры идут по подлинному листу атласа Ремезова 1701 года, голос тот же, что в аудиогиде.</p>
-</section>
 
 <section id="quiz">
   <h2 class="t"><small>Проверь себя</small>Четыре вопроса музея</h2>
@@ -666,6 +701,38 @@ document.getElementById('heart').addEventListener('click',function(){document.qu
 
 document.querySelector('.hero').addEventListener('click',function(){document.getElementById('routewrap').scrollIntoView({behavior:'smooth'});});
 window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});
+</script>
+<script>
+/* ─ Липкий указатель разделов: подсветка текущего + полоса прочитанного ─ */
+(function(){
+  var nav=document.getElementById('secnav'); if(!nav) return;
+  var row=nav.querySelector('.row'), prog=document.getElementById('secprog');
+  var links=[].slice.call(nav.querySelectorAll('a[href^="#"]'));
+  var secs=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1));});
+  var navH=nav.offsetHeight, tick=0;
+  function upd(){
+    var y=window.scrollY||document.documentElement.scrollTop;
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    prog.style.width=(h>0?Math.min(100,y/h*100):0).toFixed(1)+'%';
+    document.body.classList.toggle('scrolled', y>80);
+    var cur=-1;
+    for(var i=0;i<secs.length;i++){
+      if(secs[i]&&secs[i].getBoundingClientRect().top<=navH+50) cur=i;
+    }
+    for(var j=0;j<links.length;j++) links[j].classList.toggle('on', j===cur);
+    if(cur>-1){                      /* активный чип держим в поле зрения */
+      var a=links[cur], l=a.offsetLeft, r=l+a.offsetWidth;
+      if(l<row.scrollLeft+10) row.scrollLeft=Math.max(0,l-14);
+      else if(r>row.scrollLeft+row.clientWidth-10) row.scrollLeft=r-row.clientWidth+14;
+    }
+  }
+  addEventListener('scroll',function(){
+    if(tick) return;
+    tick=requestAnimationFrame(function(){tick=0;upd();});
+  },{passive:true});
+  addEventListener('resize',function(){navH=nav.offsetHeight;upd();});
+  upd();
+})();
 </script>
 <script src="../assets/museum-calendar.js"></script>
 <script src="calendar-pervoprohodcy.js"></script>
