@@ -48,9 +48,19 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:6px}
 .calcard.empty{opacity:.85}
 .calcard a{display:inline-block;margin-top:9px;font-size:13px}
 .calnext{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);opacity:.75;margin-bottom:7px}
+
+/* ── кнопка возврата: видна всегда, на каждой странице музея ── */
+.backbtn{position:fixed;top:10px;left:10px;z-index:60;display:inline-flex;align-items:center;gap:7px;
+  background:rgba(11,13,17,.86);backdrop-filter:blur(6px);border:1px solid var(--gold);color:var(--gold);
+  border-radius:22px;padding:9px 15px;font-family:Georgia,serif;font-size:13.5px;text-decoration:none;
+  box-shadow:0 4px 16px rgba(0,0,0,.5);transition:background .2s}
+.backbtn:hover{background:rgba(212,175,55,.18)}
+.backbtn .ar{font-size:16px;line-height:1}
+@media (max-width:520px){.backbtn{font-size:12.5px;padding:8px 13px}}
 </style>
 </head>
 <body>
+<a class="backbtn" href="../index.html"><span class="ar">←</span>В город-музей</a>
 <header>
   <div class="b1">Первый цифровой музей достижений России</div>
   <h1>Русское искусство</h1>

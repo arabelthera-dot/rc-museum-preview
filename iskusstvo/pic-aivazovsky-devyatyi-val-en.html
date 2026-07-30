@@ -119,9 +119,19 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 /* переключатель языка */
 .lang{position:absolute;top:12px;right:14px;font-size:12px;letter-spacing:1px}
 .lang a{opacity:.6}.lang a.on{opacity:1;border-bottom:1px solid var(--gold)}
+
+/* ── кнопка возврата: видна всегда, на каждой странице музея ── */
+.backbtn{position:fixed;top:10px;left:10px;z-index:60;display:inline-flex;align-items:center;gap:7px;
+  background:rgba(11,13,17,.86);backdrop-filter:blur(6px);border:1px solid var(--gold);color:var(--gold);
+  border-radius:22px;padding:9px 15px;font-family:Georgia,serif;font-size:13.5px;text-decoration:none;
+  box-shadow:0 4px 16px rgba(0,0,0,.5);transition:background .2s}
+.backbtn:hover{background:rgba(212,175,55,.18)}
+.backbtn .ar{font-size:16px;line-height:1}
+@media (max-width:520px){.backbtn{font-size:12.5px;padding:8px 13px}}
 </style>
 </head>
 <body>
+<a class="backbtn" href="index.html"><span class="ar">←</span>Русское искусство</a>
 
 <header class="site" style="position:relative">
   <div class="lang"><a href="pic-aivazovsky-devyatyi-val.html">RU</a> · <a class="on" href="pic-aivazovsky-devyatyi-val-en.html">EN</a></div>
