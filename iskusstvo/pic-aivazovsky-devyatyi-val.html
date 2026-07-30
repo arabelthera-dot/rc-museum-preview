@@ -173,6 +173,11 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 .backbtn:hover{background:rgba(212,175,55,.18)}
 .backbtn .ar{font-size:16px;line-height:1}
 @media (max-width:520px){.backbtn{font-size:12.5px;padding:8px 13px}}
+/* ── поделиться страницей (под шапкой) ── */
+.sharerow{text-align:center;padding:10px 16px 0}
+.sharebtn{background:rgba(18,21,28,.9);border:1px solid var(--line);color:var(--gold);border-radius:22px;padding:8px 18px;font-family:inherit;font-size:13.5px;cursor:pointer}
+.sharebtn span{margin-right:7px}
+.sharehint{font-size:12.5px;opacity:.85;margin-left:10px;display:none}
 </style>
 </head>
 <body>
@@ -194,6 +199,11 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
     <div class="hook">Художник пережил такой шторм сам — газеты успели напечатать его некролог.</div>
     <div class="down">тапните по полотну — рассмотреть вблизи ▾</div>
   </div>
+</div>
+
+<div class="sharerow">
+  <button class="sharebtn" type="button" id="sharebtn"><span>⤴</span>Поделиться страницей</button>
+  <span class="sharehint" id="sharehint"></span>
 </div>
 
 <section id="glubokiy-zum">
@@ -548,5 +558,24 @@ window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();
 </script>
 <script src="../assets/museum-calendar-month.js"></script>
 <script src="calendar-art.js"></script>
+<script>
+/* ─ Поделиться страницей ─ */
+(function(){
+ var h=document.getElementById('sharehint');
+ function hint(txt){if(!h)return;h.textContent=txt;h.style.display='inline';
+  setTimeout(function(){h.style.display='none';},2800);}
+ function share(){
+  var url=location.href.split('#')[0];
+  var payload={title:'«Девятый вал» Айвазовского — музей «Русское искусство»',
+   text:'Три метра холста, написанные за одиннадцать дней: катастрофа, в середине которой художник оставил надежду.',url:url};
+  if(navigator.share){navigator.share(payload).catch(function(){});return;}
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+   navigator.clipboard.writeText(url).then(function(){hint('Ссылка скопирована');},function(){hint(url);});return;}
+  hint(url);
+ }
+ ['sharebtn','sharefinal'].forEach(function(id){var b=document.getElementById(id);
+  if(b)b.addEventListener('click',share);});
+})();
+</script>
 </body>
 </html>
