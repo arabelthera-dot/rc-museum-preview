@@ -96,7 +96,32 @@
   .ad-slot .lbl{position:absolute;top:7px;right:12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.15);font-family:'Inter',sans-serif}
   .ad-slot .ph-txt{font-size:12px;max-width:80%;color:rgba(255,255,255,.18)}
   footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
-  @media(max-width:600px){.hero h1{font-size:26px}.hero .hook{font-size:15px}}
+  footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px;font-family:'Playfair Display',Georgia,serif;font-size:15px;letter-spacing:0}
+  .q{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:18px 22px;margin:12px 0}
+  .q h3{margin:0 0 6px;font-size:19px;color:#fff;font-family:'Playfair Display',Georgia,serif}
+  .q h3 em{display:block;font-style:normal;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-family:'Inter',sans-serif;margin-bottom:5px;font-weight:700}
+  .q p{margin:0;color:var(--muted);font-size:14.5px}
+  .deepd{background:rgba(255,255,255,.02);border:1px solid var(--card-b);border-radius:16px;padding:16px 22px}
+  .deepd summary{cursor:pointer;font-family:'Inter',sans-serif;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);font-weight:700;list-style:none}
+  .deepd summary::-webkit-details-marker{display:none}
+  .deepd[open] summary{margin-bottom:12px;opacity:.7}
+  .deepd h3{font-family:'Playfair Display',Georgia,serif;color:var(--gold-l);font-size:20px;margin:20px 0 6px}
+  .src{font-size:12px;color:var(--muted);opacity:.8;margin-top:14px}
+  .next{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
+  .ncard{background:var(--card);border:1px solid var(--card-b);border-radius:14px;padding:14px 16px;font-size:13.5px;color:var(--muted)}
+  .ncard.main{grid-column:1/3;border-color:rgba(201,168,76,.3)}
+  .ncard.soon{opacity:.7}
+  .ncard .lbl{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:5px;font-family:'Inter',sans-serif;font-weight:700}
+  .ncard a{color:var(--gold-l);text-decoration:none;font-weight:600}
+  .ncard a:hover{text-decoration:underline}
+  .support{background:var(--gold-g);border:1px solid rgba(201,168,76,.25);border-radius:16px;padding:18px 22px}
+  .support a{color:var(--gold-l)}
+  #heart{position:fixed;right:12px;bottom:82px;z-index:60;background:rgba(6,12,23,.92);border:1px solid rgba(201,168,76,.3);border-radius:26px;width:46px;height:46px;display:flex;align-items:center;justify-content:center;font-size:17px;color:var(--gold);cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.5);transition:transform .35s ease,width .3s ease,opacity .3s ease;overflow:hidden;font-family:'Inter',sans-serif}
+  #heart .lbl{display:none;white-space:nowrap;margin-left:7px;font-size:14px}
+  #heart.wide{width:auto;padding:0 17px}
+  #heart.wide .lbl{display:inline}
+  #heart.tuck{transform:translateY(96px);opacity:0;pointer-events:none}
+  @media(max-width:600px){.hero h1{font-size:26px}.hero .hook{font-size:15px}.next{grid-template-columns:1fr}.ncard.main{grid-column:1}}
 </style>
 </head>
 <body>
@@ -151,6 +176,8 @@
   <div class="wrap">
     <a href="#story">Читать</a>
     <a href="#video">Видео</a>
+    <a href="#trudno-poverit">Факты</a>
+    <a href="#razbor">Разбор</a>
     <a href="#quiz">Викторина</a>
     <a href="#fork">Развилка</a>
     <a href="#chat-sec">Спросить</a>
@@ -223,6 +250,63 @@
     <div class="card"><b style="color:var(--gold-l)">Керосинопровод Баку — Батум</b><p style="margin:6px 0 0">835 километров — крупнейший в мире на момент пуска (1907). Плюс нефтеналивные баржи, водотрубные котлы, форсунка для мазута.</p></div>
   </div>
 </section>
+<!-- ── НА ЧТО СМОТРЕТЬ ── -->
+<section class="block" id="chto-zametit">
+  <div class="wrap">
+    <div class="kicker">На что смотреть</div>
+    <h2 style="margin-bottom:6px">Четыре вещи, заметные только вблизи</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Работы Шухова выглядят просто, пока не подойдёшь ближе. Тогда становится видно, что простота — это результат расчёта.</p>
+    <div class="q"><h3><em>Первое</em>В гиперболоидной башне нет ни одной гнутой детали</h3><p>Подойдите к любой шуховской башне и проследите взглядом за отдельным стержнем — он прямой. Круглая, изогнутая форма собрана целиком из прямых железных полос, поставленных под углом друг к другу. Кривизна здесь не выковывается в кузнице, а возникает сама из геометрии. Поэтому башню и мог собрать обычный клепальщик из типового проката — гнуть было нечего.</p></div>
+    <div class="q"><h3><em>Второе</em>Башня росла сама из себя</h3><p>Ни лесов, ни высоких кранов на стройке Шаболовки не было. Секции собирали внизу, внутри уже стоящей части, и поднимали лебёдками сквозь неё — как складную подзорную трубу, только наоборот. Метод называется телескопическим, и придуман он был потому, что в 1920 году в стране не нашлось бы ни лесов, ни техники на 160-метровую высоту.</p></div>
+    <div class="q"><h3><em>Третье</em>Труба 1878 года — всего три дюйма</h3><p>На фотографиях первого нефтепровода труба выглядит несерьёзно: тонкая нитка вдоль дороги, рядом с ней громоздкие арбы и бочки. Но именно эта нитка пропускала до 80 тысяч пудов нефти в сутки — больше, чем сотни подвод. Размер здесь ничего не говорит о мощности: всё решают давление, диаметр и расстояние между насосами, то есть три числа из формул Шухова.</p></div>
+    <div class="q"><h3><em>Четвёртое</em>Стеклянные крыши ГУМа держатся почти ни на чём</h3><p>Посмотрите вверх в Верхних торговых рядах или в Пушкинском музее: между стеклом и небом — тонкая стальная сетка, без единой массивной балки. Нагрузка в такой оболочке расходится по всей поверхности, а не давит в нескольких точках. Отсюда ощущение, что крыши нет вовсе, — а держит она снег московской зимы уже больше века.</p></div>
+  </div>
+</section>
+
+<!-- ── ТРУДНО ПОВЕРИТЬ ── -->
+<section class="block" id="trudno-poverit" style="background:rgba(6,12,23,.6)">
+  <div class="wrap">
+    <div class="kicker">Инженер и его время</div>
+    <h2 style="margin-bottom:6px">В это трудно поверить</h2>
+    <div class="q"><h3><em>Факт 1</em>Ему вынесли приговор — расстрел условно</h3><p>29 июня 1921 года при подъёме четвёртой секции башни на Шаболовке лопнула третья: конструкция рухнула, погибли рабочие. Комиссия установила причину — дефектный металл, вины инженера нет. Приговор Шухову тем не менее вынесли: расстрел с отсрочкой до окончания строительства. Он достраивал башню, зная, что при новой аварии приговор приведут в исполнение. В марте 1922 года комиссия приняла башню, началось радиовещание — и приговор отменили.</p></div>
+    <div class="q"><h3><em>Факт 2</em>Башня должна была быть выше Эйфелевой</h3><p>В первом проекте — 350 метров против 305 у Эйфелевой, и при этом втрое легче по металлу. Проект не приняли: страна выходила из Гражданской войны, столько железа взять было негде. Построили 160 метров — и всё равно получили конструкцию, которую сто лет спустя копируют по всему миру, от портовых мачт до небоскрёбов.</p></div>
+    <div class="q"><h3><em>Факт 3</em>Его форсунку Менделеев поставил на обложку своей книги</h3><p>Паровая форсунка для сжигания мазута — вещь, на вид пустяковая: до неё мазут считали отходом и просто сливали. Шухов заставил его гореть. Дмитрий Менделеев оценил изобретение так, что поместил рисунок форсунки на обложку своей книги «Основы фабрично-заводской промышленности» 1897 года — высшая рецензия, какую тогда мог получить русский инженер.</p></div>
+    <div class="q"><h3><em>Факт 4</em>В 79 лет он выпрямил падающий минарет</h3><p>1932 год, Самарканд: восточный минарет медресе Улугбека, простоявший пятьсот лет, кренится и грозит рухнуть. Задачу отдали Шухову. Вместе с архитектором Мауэром он спроектировал устройство, которое подняло и повернуло многотонную кирпичную башню целиком, — и минарет встал на место. Инженеру было семьдесят девять.</p></div>
+    <div class="q"><h3><em>Факт 5</em>Резервуары, которые до него ставили на фундамент</h3><p>Нефть хранили в ямах и деревянных ящиках, а стальные баки было принято ставить на дорогой каменный фундамент. Шухов в 1883 году показал расчётом: фундамент не нужен — достаточно песчаной подушки, если правильно подобрать толщину стенок по высоте. Так появился привычный сегодня цилиндрический резервуар. Их построили десятки тысяч, и стоят они ровно так, как он посчитал.</p></div>
+  </div>
+</section>
+
+<!-- ── РАЗБОР ── -->
+<section class="block" id="razbor">
+  <div class="wrap">
+    <div class="kicker">Разбор</div>
+    <h2 style="margin-bottom:10px">Для тех, кто смотрит внимательно</h2>
+    <details class="deepd">
+      <summary>Четыре сюжета подробно — развернуть</summary>
+      <h3>Труба была не первой. Первой была наука о трубе</h3>
+      <p>Честно: нефть по трубам качали и до Баку. В 1865 году в Пенсильвании Сэмюэл ван Сайкл проложил восемь километров двухдюймовой трубы и погнал по ней нефть насосами — это работало и приносило деньги. Но строилось на глаз: диаметр, давление и расстояние между станциями подбирали пробами, а неудачные линии просто бросали. Шухов в 1878 году сделал другое — вывел формулы, связавшие расход, вязкость, температуру и потери напора, и опубликовал их. После этого нефтепровод перестал быть удачей и стал расчётом. Первенство здесь не в том, кто раньше положил железо в землю, а в том, кто первым объяснил, почему оно работает.</p>
+      <h3>Почему гиперболоид собирают из прямых палок</h3>
+      <p>Однополостный гиперболоид — одна из немногих кривых поверхностей, которую можно целиком построить из прямых линий: через каждую её точку проходят две прямые, лежащие на самой поверхности. Шухов первым понял, что это не математический курьёз, а способ строить. Прямой прокат дёшев, его не надо гнуть, соединения простые, а сетка из двух встречных семейств стержней работает на кручение лучше любой башни-«трубы». Легенда про плетёную корзину, перевёрнутую вверх дном, скорее всего правдива, но идею дала геометрия, а не корзина.</p>
+      <h3>Почему крекинг оказался никому не нужен</h3>
+      <p>В 1891 году бензин был отходом. Керосин для ламп — вот что покупали, а лёгкие фракции сливали или сжигали, потому что двигателей, которым они нужны, почти не существовало. Патент Шухова на разложение тяжёлой нефти нагревом под давлением решал задачу, которой в России ещё не было. К 1913 году, когда в Америке появились миллионы автомобилей, задача возникла — и решение запатентовали там. Изобретение опередило не технику, а рынок; для инженерной истории это самый частый способ проиграть.</p>
+      <h3>Что на самом деле убила труба</h3>
+      <p>Перевозка нефти в бочках на арбах стоила дороже самой нефти в бочке — это не фигура речи, а причина, по которой бакинские промышленники согласились на неизвестную технологию. Возчиков в Баку были тысячи, они держали монополию и цену, и по нефтепроводу первое время ходила охрана: трубу обещали разрушить. Против экономики это не помогло. Через десять лет труба стала отраслевым стандартом, а в 1907-м заработал керосинопровод Баку — Батум длиной 835 километров, крупнейший в мире на тот момент.</p>
+    </details>
+    <div class="src">Источники: nkj.ru · aif.ru · kf.bmstu.ru · engineer-history.ru · moslenta.ru · kommersant.ru</div>
+  </div>
+</section>
+
+<!-- ── МИРОВОЙ КОНТЕКСТ ── -->
+<section class="block" id="mirovoy-kontekst">
+  <div class="wrap">
+    <div class="kicker">Контекст</div>
+    <h2 style="margin-bottom:6px">Что в это время делал мир</h2>
+    <p style="max-width:66ch">Тысяча восемьсот семьдесят восьмой. В Берлине большие державы перекраивают карту Балкан после русско-турецкой войны. В Америке Эдисон только что запатентовал фонограф и обещает публике электрический свет. В Пенсильвании — нефтяная лихорадка в разгаре: Рокфеллер скупает заводы, вокруг скважин выросли города, которые исчезнут через десять лет.</p>
+    <p style="max-width:66ch">Нефть в тот год умеют добывать все, а возить — почти никто. Технология мирового уровня выглядит как караван бочек на телегах. И в Баку, самой богатой нефтью точке планеты, двадцатичетырёхлетний инженер вместо каравана считает вязкость, напор и диаметр — и превращает перевозку в физическую задачу с решением.</p>
+    <p style="max-width:66ch">Отсюда вывод, ради которого этот день стоит в календаре: <b style="color:var(--gold-l)">первым бывает не тот, кто раньше начал, а тот, кто первым понял, как это устроено.</b> Трубы клали и до Шухова — но по всему миру их до сих пор считают по его формулам.</p>
+  </div>
+</section>
+
 <section class="block" id="theme-inventions" style="background:rgba(201,168,76,.03);border-top:1px solid rgba(201,168,76,.15)">
   <div class="wrap">
     <div class="kicker">Транспорт · Русские первенства</div>
@@ -382,7 +466,7 @@
       <input id="chatInput" type="text" placeholder="Написать вопрос..." style="flex:1;padding:12px 16px;font-size:15px">
       <button class="btn gold" onclick="sendChat()">Отправить</button>
     </div>
-    <p style="font-size:12px;color:var(--muted);margin-top:8px">Ответы сформированы на основе документальных источников.</p>
+    <p style="font-size:12px;color:var(--muted);margin-top:8px">Это <b>реконструкция</b>: голос собран по документам, статьям и воспоминаниям о Шухове. Таких разговоров он не вёл — но факты в ответах проверены по источникам.</p>
   </div>
 </section>
 
@@ -529,6 +613,23 @@ window.shCheck=function(){if(!shSel)return;const cost=shSel.dataset.cost;
   </div>
 </section>
 
+<!-- ── КУДА ДАЛЬШЕ ── -->
+<section class="block" id="kuda-dalshe">
+  <div class="wrap">
+    <div class="kicker">Куда дальше</div>
+    <h2 style="margin-bottom:10px">Музей продолжается</h2>
+    <div class="next">
+      <div class="ncard main"><span class="lbl">Следующий день</span><a href="day-06jan-bering.html">6 января — Витус Беринг и пролив между материками →</a><br>Русские моряки прошли между Азией и Америкой и доказали, что материки не соединяются.</div>
+      <div class="ncard"><span class="lbl">Предыдущий день</span><a href="day-04jan-pilchikov.html">4 января — Пильчиков →</a><br>Первое в мире публичное радиоуправление.</div>
+      <div class="ncard"><span class="lbl">Весь музей</span><a href="index.html">Что изобрели русские первыми →</a><br>Полная база изобретений по алфавиту и по дням года.</div>
+      <div class="ncard main"><span class="lbl">Город-музей</span><a href="../index.html">Русская цивилизация →</a><br>Все музеи проекта на одной карте: первопроходцы, изобретения, искусство.</div>
+    </div>
+    <div class="support" style="margin-top:18px">
+      <p style="margin:0"><b style="color:var(--gold)">❤ Поддержать музей.</b> Он бесплатный: без регистрации и платных разделов. Помочь можно тремя способами — <b>показать</b> страницу тому, кому она зайдёт; <b>поправить</b> нас, если нашли ошибку в дате или цифре (<a href="mailto:arabelthera@gmail.com?subject=Музей изобретений — замечание по странице Шухова">написать</a>); <b>дать денег</b> на архивные сканы и озвучку — реквизиты появятся, когда будет оформлен сбор.</p>
+    </div>
+  </div>
+</section>
+
 <section class="block" id="catalog" style="background:linear-gradient(135deg,#16294a,#0f1e33);border-bottom:none">
   <div class="wrap" style="text-align:center">
     <h2 style="margin-bottom:6px;color:#fff">У нас много изобретений</h2>
@@ -537,7 +638,23 @@ window.shCheck=function(){if(!shSel)return;const cost=shSel.dataset.cost;
   </div>
 </section>
 
-<footer><div class="wrap">Русская цивилизация · «Что изобрели русские первыми в мире» · 2026</div></footer>
+<footer><div class="wrap">
+  <div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>
+  Русская цивилизация · «Что изобрели русские первыми в мире» · 2026<br>
+  Нашли неточность? <a href="mailto:arabelthera@gmail.com?subject=Ошибка на странице Шухова" style="color:rgba(201,168,76,.6)">Сообщите нам</a> — проверим по источникам.
+</div></footer>
+
+<div id="heart" title="Поддержать музей">❤<span class="lbl">Поддержать</span></div>
+<script>
+(function(){var h=document.getElementById('heart'),last=window.scrollY,t=null;
+ h.addEventListener('click',function(){var s=document.querySelector('.support');if(s)s.scrollIntoView({behavior:'smooth',block:'center'});});
+ window.addEventListener('scroll',function(){var y=window.scrollY;
+   if(y>last+6){h.classList.add('tuck');}else if(y<last-6){h.classList.remove('tuck');}
+   last=y;clearTimeout(t);t=setTimeout(function(){h.classList.remove('tuck');},700);
+   var sup=document.querySelector('.support');
+   if(sup){var r=sup.getBoundingClientRect();h.classList.toggle('wide',r.top<window.innerHeight&&r.bottom>0);}
+ },{passive:true});})();
+</script>
 
 <script>
 // ── СЧЁТ ──────────────────────────────────────────────────────────────────────
