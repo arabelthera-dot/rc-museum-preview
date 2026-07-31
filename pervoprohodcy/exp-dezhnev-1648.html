@@ -981,5 +981,16 @@ window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();
 </script>
 <script src="../assets/museum-calendar-month.js"></script>
 <script src="calendar-pervoprohodcy.js"></script>
+
+<!-- единая обвязка музеев: сюда попадают стрелки «пред/след» и строка
+     «Случайное · Все экспонаты · В город-музей» (остальное на странице уже есть) -->
+<script>window.MUSEUM_CHROME={
+  museum:{title:'Русские первопроходцы',href:'index.html'},
+  share:{title:'Поход Дежнёва, 1648 — музей «Русские первопроходцы»',
+         text:'Он шёл за моржовым клыком, а прошёл пролив между двумя материками — и не узнал об этом.'},
+  all:{href:'index.html',label:'Все экспедиции'},
+  city:'../index.html'
+};</script>
+<script src="../assets/museum-chrome.js"></script>
 </body>
 </html>

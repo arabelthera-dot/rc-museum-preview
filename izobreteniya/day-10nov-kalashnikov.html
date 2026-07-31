@@ -644,5 +644,19 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.targe
 document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
 </script>
 <script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
+
+<!-- единая обвязка музеев: backbtn, «Поделиться», чипсы разделов,
+     стрелки «пред/след», строка «Случайное · Все · В город-музей» -->
+<script>window.MUSEUM_CHROME={
+  museum:{title:'Музей изобретений',href:'index.html'},
+  share:{title:'автомат Калашникова АК-47 — Музей изобретений «Русская цивилизация»',
+         text:'автомат Калашникова АК-47. Что Россия дала миру раньше всех — день за днём.'},
+  prev:{href:'day-26sep-pavlov.html',title:'26 сентября · Павлов'},
+  next:{href:'day-25nov-pirogov.html',title:'25 ноября · Пирогов'},
+  all:{href:'index.html',label:'Все изобретения'},
+  city:'../index.html',
+  random:['day-01jan-cabletv.html','day-02jan-luna1.html','day-03jan-luna9.html','day-04jan-pilchikov.html','day-05jan-shukhov.html','day-06jan-bering.html','day-07jan-buran.html','day-08jan-icebreaker.html','day-09jan-blinov.html','day-30jan-kotelnikov.html','day-18mar-leonov.html','day-15may-mechnikov.html','day-16jun-tereshkova.html','day-26sep-pavlov.html','day-10nov-kalashnikov.html','day-25nov-pirogov.html','day-01dec-lobachevsky.html','day-14dec-laser.html']
+};</script>
+<script src="../assets/museum-chrome.js"></script>
 </body>
 </html>

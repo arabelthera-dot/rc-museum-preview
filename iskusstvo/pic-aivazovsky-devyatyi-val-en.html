@@ -366,7 +366,7 @@ document.getElementById('riddleBtn').addEventListener('click',function(){documen
 /* ─ Interview ─ */
 var kb=[
  {k:['натур','from life','why did you not pain'],a:'The movements of the living elements are elusive for the brush. Lightning, a gust of wind, the burst of a wave cannot be copied from life. I watched, I remembered — and I painted from memory.'},
- {k:['ninth wave','what is the ninth','belief'],a:'A sailors' belief: waves travel in succession and the ninth is the most terrible. I painted the people awaiting it — and the sun, which is stronger.'},
+ {k:['ninth wave','what is the ninth','belief'],a:'A sailors\' belief: waves travel in succession and the ninth is the most terrible. I painted the people awaiting it — and the sun, which is stronger.'},
  {k:['11 days','eleven','how long','so fast'],a:'A painting ripens in the memory for months and reaches the canvas all at once. Eleven days were only the last step of a long road.'},
  {k:['favourite painting','favourite'],a:'Ask a father which of his children he loves. But the public loved The Ninth Wave so much that it became my name.'},
  {k:['feodosia','gave','gallery'],a:'To my home town I gave a picture gallery, and I campaigned for its water supply and railway. An artist is in debt to the place that bore him.'},
@@ -376,7 +376,7 @@ var kb=[
  {k:['how many painting','6000','six thousand'],a:'About six thousand. I worked every day; by the sea there are no idle days.'},
  {k:['teacher','academy'],a:'The Academy of Arts in St Petersburg, and Italy. But my first teacher was the shore at Feodosia.'},
  {k:['storm','did you see','death'],a:'I saw a storm so close that the newspapers once managed to print news of my death. The sea jokes darkly.'},
- {k:['antarctic','lazarev'],a:'I painted the ice from Admiral Lazarev's words — he discovered it and described it to me. Memory can see through another's eyes.'},
+ {k:['antarctic','lazarev'],a:'I painted the ice from Admiral Lazarev\'s words — he discovered it and described it to me. Memory can see through another\'s eyes.'},
  {k:['critic','outdated','stasov'],a:'In my old age they called me outdated. I went on painting: the sea does not grow old.'},
  {k:['rich','money'],a:'The brush fed me generously, I will not deny it. But a gallery, water and a school for the town — that is what money is good for.'},
  {k:['regret','dream'],a:'I regret that the day is short. Six thousand paintings — and there is sea enough in me for six thousand more.'},
@@ -412,5 +412,17 @@ document.getElementById('heart').addEventListener('click',function(){document.qu
 document.querySelector('.hero').addEventListener('click',function(){document.getElementById('zoomwrap').scrollIntoView({behavior:'smooth'});});
 window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});
 </script>
+
+<!-- shared museum chrome: section chips, share, way-out row -->
+<script>window.MUSEUM_CHROME={
+  museum:{title:'Russian Art',href:'index.html',homeLabel:'← Museum'},
+  share:{title:'The Ninth Wave — Aivazovsky · Russian Art museum',
+         text:'The most famous wave in Russian painting — and the six men who survived it.'},
+  all:{href:'pic-aivazovsky-devyatyi-val.html',label:'Русская версия'},
+  city:'../index.html',
+  labels:{'game':'Game','quiz':'Quiz','chat':'Interview'},
+  t:{share:'Share this page',city:'To the city-museum'}
+};</script>
+<script src="../assets/museum-chrome.js"></script>
 </body>
 </html>
