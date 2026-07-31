@@ -383,9 +383,6 @@ section[id],div[id="routewrap"],div[id="zoomwrap"]{scroll-margin-top:56px}
   </div>
 </section>
 
-<section style="padding:18px 18px 0"><div class="support" id="support" style="margin-top:0">
-  <p><b style="color:var(--gold)">❤ Поддержать музей.</b> Он бесплатный: без рекламы, регистрации и платных разделов. Помочь можно тремя способами — <b>показать</b> страницу тому, кому она зайдёт; <b>поправить</b> нас, если нашли ошибку в дате или цифре (<a href="mailto:arabelthera@gmail.com?subject=Музей первопроходцев — замечание по странице Дежнёва">написать</a>); <b>дать денег</b> на сканы подлинников и озвучку — реквизиты появятся, когда будет оформлен сбор.</p>
-</div></section>
 
 <section id="put">
   <h2 class="t"><small>Маршрут</small>Путь, которого не должно было получиться</h2>
@@ -567,7 +564,7 @@ section[id],div[id="routewrap"],div[id="zoomwrap"]{scroll-margin-top:56px}
     <p>Для сравнения: у Дежнёва до Анадыря дошёл один коч из семи и двадцать четыре человека из девяноста, цель похода он нашёл через четыре года, а признания его открытие ждало восемьдесят восемь лет.</p>
     <div class="fbtns">
       <a class="gbtn" href="#kuda-dalshe">Куда дальше →</a>
-      <a class="gbtn sec" href="#support">❤ Поддержать музей</a>
+      <a class="gbtn sec" href="#support">❤ Поддержать проект</a>
       <button class="gbtn sec" type="button" id="sharefinal">⤴ Поделиться</button>
     </div>
   </div>
@@ -594,7 +591,7 @@ section[id],div[id="routewrap"],div[id="zoomwrap"]{scroll-margin-top:56px}
   Нашли неточность? <a href="mailto:arabelthera@gmail.com?subject=Ошибка на странице Дежнёва">Сообщите нам</a> — проверим по источникам.
 </footer>
 <div id="ptsbar" title="Ваши баллы"><span>⚑</span> <b>0</b> / 130</div>
-<div id="heart">❤<span class="lbl">Поддержать</span></div>
+<div id="heart" title="Поддержать проект">❤<span class="lbl">Поддержать проект</span></div>
 
 <script src="vendor/openseadragon/openseadragon.min.js"></script>
 <script src="../assets/museum-choice-run.js"></script>
@@ -992,5 +989,7 @@ window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();
   city:'../index.html'
 };</script>
 <script src="../assets/museum-chrome.js"></script>
+<script>window.MUSEUM_SUPPORT={museum:'Русские первопроходцы',heartBound:true};</script>
+<script src="../assets/museum-support.js"></script>
 </body>
 </html>
