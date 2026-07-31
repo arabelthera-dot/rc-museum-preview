@@ -5,10 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Первый в мире расчётный нефтепровод — Шухов — Русские первые в мире</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/three@0.160/build/three.min.js"></script>
 <style>
+/* Hallmark · macrostructure: Workbench (чертёжный лист) · tone: technical/editorial · anchor hue: cyan 230°
+ * pre-emit critique: P5 H4 E4 S5 R4 V5 · слой поверх существующей обвязки музея, блоки не тронуты */
   :root{
+    /* ── чертёжный слой ── */
+    --bp:#0a1c30;--bp2:#071527;--bp-line:rgba(125,200,255,.07);--bp-line2:rgba(125,200,255,.13);
+    --cyan:#7fd0ff;--cyan-d:#3b8dc4;--paper:#efe9da;--paper2:#e4dcc9;--paper-ink:#1b2733;--paper-mut:#5d6b78;
+    --mono:'JetBrains Mono',ui-monospace,monospace;
     --dark:#060c17;--dark2:#0c1826;--surface:#111f33;
     --card:rgba(255,255,255,.05);--card-b:rgba(255,255,255,.09);
     --gold:#c9a84c;--gold-l:#e4c97a;--gold-g:rgba(201,168,76,.13);
@@ -96,7 +102,107 @@
   .ad-slot .lbl{position:absolute;top:7px;right:12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.15);font-family:'Inter',sans-serif}
   .ad-slot .ph-txt{font-size:12px;max-width:80%;color:rgba(255,255,255,.18)}
   footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
-  footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px;font-family:'Playfair Display',Georgia,serif;font-size:15px;letter-spacing:0}
+  @media(max-width:600px){.hero h1{font-size:26px}.hero .hook{font-size:15px}}
+
+  /* ═══════════ ЧЕРТЁЖНЫЙ СЛОЙ (v2) ═══════════ */
+  html,body{overflow-x:clip}
+  body{
+    background:var(--bp);
+    background-image:
+      repeating-linear-gradient(0deg,var(--bp-line) 0 1px,transparent 1px 9px),
+      repeating-linear-gradient(90deg,var(--bp-line) 0 1px,transparent 1px 9px),
+      repeating-linear-gradient(0deg,var(--bp-line2) 0 1px,transparent 1px 54px),
+      repeating-linear-gradient(90deg,var(--bp-line2) 0 1px,transparent 1px 54px),
+      radial-gradient(120% 70% at 50% 0%,#0e2b4a 0%,transparent 60%);
+    background-attachment:fixed;
+  }
+  .mono{font-family:var(--mono);letter-spacing:.02em}
+  .kicker{font-family:var(--mono);letter-spacing:2.6px;color:var(--cyan);text-transform:uppercase}
+  section.block{border-bottom:1px dashed rgba(125,200,255,.14)}
+
+  /* поля листа: боковые линии рамки */
+  .sheet-rule{position:fixed;top:0;bottom:0;width:1px;background:linear-gradient(180deg,transparent,rgba(125,200,255,.22) 12%,rgba(125,200,255,.22) 88%,transparent);z-index:1;pointer-events:none}
+  .sheet-rule.l{left:max(12px,calc(50% - 470px))}
+  .sheet-rule.r{right:max(12px,calc(50% - 470px))}
+  @media(max-width:900px){.sheet-rule{display:none}}
+
+  /* ── HERO: чертёж ── */
+  .bp-hero{position:relative;padding:34px 0 0;overflow:hidden}
+  .bp-hero .wrap{position:relative;z-index:2}
+  .bp-sheet{position:relative;border:1px solid rgba(125,200,255,.28);border-radius:2px;padding:18px 18px 0;background:linear-gradient(180deg,rgba(9,28,50,.55),rgba(7,21,39,.75))}
+  .bp-sheet::before{content:'';position:absolute;inset:6px;border:1px solid rgba(125,200,255,.12);border-radius:1px;pointer-events:none}
+  .bp-corner{position:absolute;width:13px;height:13px;border:1px solid var(--cyan-d);opacity:.65}
+  .bp-corner.tl{top:-1px;left:-1px;border-right:0;border-bottom:0}
+  .bp-corner.tr{top:-1px;right:-1px;border-left:0;border-bottom:0}
+  .bp-corner.bl{bottom:-1px;left:-1px;border-right:0;border-top:0}
+  .bp-corner.br{bottom:-1px;right:-1px;border-left:0;border-top:0}
+
+  .tower-box{position:relative;display:flex;align-items:center;justify-content:center;min-height:330px;height:44vh;max-height:460px}
+  #tower{width:100%;height:100%;max-width:560px;overflow:visible}
+  #tower line{stroke:var(--cyan);stroke-width:1;opacity:.55;transition:stroke .2s,opacity .2s}
+  #tower line.lit{stroke:#ffe08a;opacity:1;stroke-width:1.6}
+  #tower .rim{stroke:rgba(125,200,255,.35);fill:none;stroke-dasharray:3 4}
+  #tower .axis{stroke:rgba(255,224,138,.35);stroke-dasharray:7 5 2 5;stroke-width:1}
+  .tower-cap{position:absolute;left:0;right:0;bottom:2px;min-height:2.6em;text-align:center;line-height:1.55;font-family:var(--mono);font-size:10.5px;letter-spacing:1.4px;color:#8fb6d6}
+  .tower-cap b{color:var(--cyan);font-weight:500}
+  .dim-tag{position:absolute;font-family:var(--mono);font-size:10px;letter-spacing:1px;color:#8fb6d6;white-space:nowrap}
+  .dim-tag.h{right:6px;top:50%;transform:translateY(-50%) rotate(90deg);transform-origin:right center}
+  .dim-tag.w{left:50%;bottom:26px;transform:translateX(-50%)}
+
+  /* штамп чертежа */
+  .stamp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(125,200,255,.28);margin-top:14px}
+  .stamp div{padding:11px 12px;border-left:1px solid rgba(125,200,255,.16);min-width:0}
+  .stamp div:first-child{border-left:0}
+  .stamp .v{font-family:var(--mono);font-size:clamp(15px,3.4vw,21px);font-weight:700;color:var(--cyan);line-height:1.1;overflow-wrap:anywhere}
+  .stamp .k{font-family:var(--mono);font-size:9px;letter-spacing:1.6px;text-transform:uppercase;color:#7893ab;margin-top:5px}
+  @media(max-width:600px){.stamp{grid-template-columns:repeat(2,minmax(0,1fr))}.stamp div:nth-child(3){border-left:0}.stamp div:nth-child(n+3){border-top:1px solid rgba(125,200,255,.16)}}
+
+  .bp-title{margin:26px 0 0}
+  .bp-title h1{font-size:clamp(30px,6.2vw,56px);overflow-wrap:anywhere;min-width:0}
+  .bp-meta{font-family:var(--mono);font-size:11px;letter-spacing:2px;color:#7f9cb6;text-transform:uppercase}
+  .bp-meta i{color:var(--cyan);font-style:normal}
+
+  /* ── СТАТЬЯ НА КАЛЬКЕ ── */
+  #story{background:var(--paper);color:var(--paper-ink);border-bottom:1px solid #cfc6b0;
+    background-image:repeating-linear-gradient(0deg,rgba(0,0,0,.028) 0 1px,transparent 1px 26px);box-shadow:inset 0 1px 0 #fff}
+  #story h2{color:#101a24}
+  #story p{color:#26333f}
+  #story b{color:#0d1720}
+  #story .kicker{color:#a2551f}
+  #story .article.collapsed .body:after{background:linear-gradient(transparent,var(--paper))}
+  #story .btn.ghost{background:transparent;border:1px solid #b9ae95;color:#3d4a56}
+  #story .btn.ghost:hover{border-color:#8b7b5c;background:rgba(0,0,0,.04)}
+  #story p[style*="var(--muted)"]{color:var(--paper-mut)!important}
+  #story .wrap{position:relative}
+  .paper-clip{position:absolute;top:-9px;left:26px;width:74px;height:18px;background:rgba(201,168,76,.5);transform:rotate(-1.4deg);box-shadow:0 1px 4px rgba(0,0,0,.25)}
+
+  /* ── ПОЛНОЭКРАННАЯ ФРАЗА ── */
+  .fullbleed{position:relative;scroll-margin-top:130px;min-height:82vh;display:flex;align-items:center;padding:70px 0;border-bottom:1px dashed rgba(125,200,255,.14);overflow:hidden}
+  .fullbleed .big{font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:clamp(30px,7.4vw,84px);line-height:1.03;color:#fff;overflow-wrap:anywhere;min-width:0;margin:0}
+  .fullbleed .big em{font-style:normal;color:var(--cyan)}
+  .fullbleed .sub{font-family:var(--mono);font-size:12px;letter-spacing:2.4px;color:#7f9cb6;text-transform:uppercase;margin-bottom:22px}
+  .fullbleed .after{max-width:56ch;color:#a9c3d8;margin-top:26px;font-size:17px}
+  .fb-ghost{position:absolute;right:-4%;top:50%;transform:translateY(-50%);font-family:var(--mono);font-size:clamp(140px,30vw,340px);color:rgba(125,200,255,.045);pointer-events:none;user-select:none;line-height:1}
+  .fb-line{position:absolute;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);opacity:.3}
+  .fb-line.t{top:0}.fb-line.b{bottom:0}
+
+  /* карточки-чертежи */
+  #more .card,#theme-inventions .card{background:rgba(10,28,48,.55);border:1px solid rgba(125,200,255,.2);border-radius:2px;position:relative}
+  #more .card::after{content:'';position:absolute;top:8px;right:8px;width:7px;height:7px;border-right:1px solid var(--cyan-d);border-top:1px solid var(--cyan-d);opacity:.7}
+  #more .card b{color:var(--cyan)!important;font-family:var(--mono);font-size:14px;letter-spacing:.4px}
+
+  @media(prefers-reduced-motion:reduce){
+    #tower line{animation:none!important;stroke-dashoffset:0!important}
+    .reveal{transition:opacity .15s linear;transform:none}
+  }
+  @media(max-width:600px){
+    .bp-sheet{padding:12px 12px 0}
+    .tower-box{height:38vh;min-height:260px}
+    .dim-tag.h{display:none}
+    .fullbleed{min-height:auto;padding:64px 0}
+  }
+
+  /* ── СЕКЦИИ ИЗ ЭТАЛОНА (заметить / трудно поверить / разбор) ── */
   .q{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:18px 22px;margin:12px 0}
   .q h3{margin:0 0 6px;font-size:19px;color:#fff;font-family:'Playfair Display',Georgia,serif}
   .q h3 em{display:block;font-style:normal;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-family:'Inter',sans-serif;margin-bottom:5px;font-weight:700}
@@ -107,21 +213,33 @@
   .deepd[open] summary{margin-bottom:12px;opacity:.7}
   .deepd h3{font-family:'Playfair Display',Georgia,serif;color:var(--gold-l);font-size:20px;margin:20px 0 6px}
   .src{font-size:12px;color:var(--muted);opacity:.8;margin-top:14px}
+  /* ── КУДА ДАЛЬШЕ ── */
   .next{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
   .ncard{background:var(--card);border:1px solid var(--card-b);border-radius:14px;padding:14px 16px;font-size:13.5px;color:var(--muted)}
   .ncard.main{grid-column:1/3;border-color:rgba(201,168,76,.3)}
-  .ncard.soon{opacity:.7}
   .ncard .lbl{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:5px;font-family:'Inter',sans-serif;font-weight:700}
   .ncard a{color:var(--gold-l);text-decoration:none;font-weight:600}
   .ncard a:hover{text-decoration:underline}
-  .support{background:var(--gold-g);border:1px solid rgba(201,168,76,.25);border-radius:16px;padding:18px 22px}
+  @media(max-width:600px){.next{grid-template-columns:1fr}.ncard.main{grid-column:1}}
+  /* ── ПОДДЕРЖАТЬ ПРОЕКТ: серифная «вклейка», нарочно не как остальной текст ── */
+  .support{position:relative;background:linear-gradient(180deg,rgba(201,168,76,.10),rgba(201,168,76,.028));border:1px solid rgba(201,168,76,.34);border-radius:3px;padding:24px 28px 22px;
+           font-family:'Playfair Display',Georgia,serif;font-size:17px;line-height:1.66;color:#f0e6cf}
+  .support::before{content:'';position:absolute;inset:5px;border:1px solid rgba(201,168,76,.15);border-radius:1px;pointer-events:none}
+  .support>*{position:relative}
+  .support .sup-l{display:flex;align-items:center;gap:10px;font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:3.4px;text-transform:uppercase;color:var(--gold);margin-bottom:11px}
+  .support .sup-l::before{content:'❤';font-size:13px;letter-spacing:0}
+  .support .sup-l::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(201,168,76,.45),transparent)}
+  .support p{margin:0;font-size:17px}
+  .support b{color:var(--gold-l);font-weight:700}
   .support a{color:var(--gold-l)}
-  #heart{position:fixed;right:12px;bottom:82px;z-index:60;background:rgba(6,12,23,.92);border:1px solid rgba(201,168,76,.3);border-radius:26px;width:46px;height:46px;display:flex;align-items:center;justify-content:center;font-size:17px;color:var(--gold);cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.5);transition:transform .35s ease,width .3s ease,opacity .3s ease;overflow:hidden;font-family:'Inter',sans-serif}
-  #heart .lbl{display:none;white-space:nowrap;margin-left:7px;font-size:14px}
+  .support .sup-btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px;font-family:'Inter',sans-serif}
+  @media(max-width:600px){.support{padding:20px 18px;font-size:16px}.support p{font-size:16px}}
+  #heart{position:fixed;right:12px;bottom:82px;z-index:60;background:rgba(6,12,23,.92);border:1px solid rgba(201,168,76,.35);border-radius:26px;width:46px;height:46px;display:flex;align-items:center;justify-content:center;font-size:17px;color:var(--gold);cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.5);transition:transform .35s ease,width .3s ease,opacity .3s ease;overflow:hidden;font-family:'Inter',sans-serif}
+  #heart .lbl{display:none;white-space:nowrap;margin-left:7px;font-size:13px;letter-spacing:.3px}
   #heart.wide{width:auto;padding:0 17px}
   #heart.wide .lbl{display:inline}
   #heart.tuck{transform:translateY(96px);opacity:0;pointer-events:none}
-  @media(max-width:600px){.hero h1{font-size:26px}.hero .hook{font-size:15px}.next{grid-template-columns:1fr}.ncard.main{grid-column:1}}
+  footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px;font-family:'Playfair Display',Georgia,serif;font-size:15px;letter-spacing:0}
 </style>
 </head>
 <body>
@@ -144,25 +262,36 @@
 <nav class="crumbs"><div class="wrap">
   <a href="../index.html">Русская цивилизация</a>
   <span class="sep">›</span>
-  <a href="index.html">Музей изобретений</a>
+  <a href="index.html">Что изобрели русские первыми в мире</a>
   <span class="sep">›</span>
   <span class="here">5 января · Шухов</span>
 </div></nav>
 
-<div class="hero">
-  <div class="hero-visual">
-    <canvas id="heroCvs" class="hero-particles"></canvas>
-    <div class="hero-year">1878</div>
-    <div id="heroHint" style="position:absolute;left:50%;bottom:14px;transform:translateX(-50%);background:rgba(6,12,23,.6);border:1px solid rgba(201,168,76,.35);border-radius:20px;padding:6px 18px;font-size:11px;letter-spacing:1.5px;color:var(--gold-l);font-family:'Inter',sans-serif;white-space:nowrap;transition:opacity .8s;pointer-events:none">⚡ тапни — запусти насос Шухова</div>
-    <div style="position:absolute;left:14px;top:12px;background:rgba(6,12,23,.5);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:4px 12px;font-size:10px;letter-spacing:1.2px;color:var(--muted);font-family:'Inter',sans-serif">Баку · 1878 · Балаханы → Чёрный город</div>
-  </div>
-  <div class="hero-text">
-    <div class="wrap">
-      <div class="date-chip">5 января · 1878</div>
+<div class="sheet-rule l"></div><div class="sheet-rule r"></div>
+
+<div class="bp-hero">
+  <div class="wrap">
+    <div class="bp-sheet">
+      <i class="bp-corner tl"></i><i class="bp-corner tr"></i><i class="bp-corner bl"></i><i class="bp-corner br"></i>
+      <div class="bp-meta">Лист 1 · Балаханы → Чёрный город · Баку <i>1878</i></div>
+      <div class="tower-box">
+        <svg id="tower" viewBox="0 0 560 430" role="img" aria-label="Схема гиперболоида: каркас из прямых стержней"></svg>
+        <div class="tower-cap">каркас собран из <b>прямых</b> стержней — ни одной гнутой детали · <span id="towerHint">наведи на стержень</span></div>
+      </div>
+      <div class="stamp">
+        <div><div class="v">10 км</div><div class="k">длина нитки</div></div>
+        <div><div class="v">3″</div><div class="k">диаметр трубы</div></div>
+        <div><div class="v">80 000</div><div class="k">пудов в сутки</div></div>
+        <div><div class="v">24</div><div class="k">года автору</div></div>
+      </div>
+    </div>
+
+    <div class="bp-title">
+      <div class="date-chip mono">5 января · 1878</div>
       <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
       <h1>Первый в мире расчётный нефтепровод</h1>
       <p class="hook">Перевозка бочки нефти стоила дороже самой нефти — пока 24-летний инженер не посчитал, что нефть может течь сама. Двести подвод заменила одна труба.</p>
-      <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <div style="display:flex;gap:12px;flex-wrap:wrap;padding-bottom:38px">
         <button class="btn gold" onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">Читать историю ↓</button>
         <button class="btn ghost" onclick="document.getElementById('video').scrollIntoView({behavior:'smooth'})">▶ Смотреть видео</button>
       </div>
@@ -170,14 +299,13 @@
   </div>
 </div>
 
+
 <div class="wrap"><div class="ad-slot"><span class="lbl">Реклама</span><span class="ph-txt">Баннер-шапка — размещается здесь.</span></div></div>
 
 <nav class="daynav">
   <div class="wrap">
     <a href="#story">Читать</a>
     <a href="#video">Видео</a>
-    <a href="#trudno-poverit">Факты</a>
-    <a href="#razbor">Разбор</a>
     <a href="#quiz">Викторина</a>
     <a href="#fork">Развилка</a>
     <a href="#chat-sec">Спросить</a>
@@ -194,7 +322,7 @@
     <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap"><h2 style="margin:0">История в 76 секунд</h2><span style="background:var(--gold-g);color:var(--gold);border:1px solid rgba(201,168,76,.3);border-radius:20px;padding:3px 14px;font-size:12px;font-weight:600;font-family:'Inter',sans-serif">🎬 нейроголос · 76 сек</span></div>
     <p style="color:var(--muted);margin-top:0">Та же история кинематографическим роликом — закадровый нейроголос и атмосферная музыка.</p>
     <video controls playsinline preload="metadata" poster="day-05jan-shukhov-poster.jpg" style="width:100%;aspect-ratio:16/9;background:#050c18;border-radius:14px;display:block;box-shadow:0 8px 40px rgba(0,0,0,.5)">
-      <source src="../day-05jan-shukhov.mp4?v=1" type="video/mp4">
+      <source src="day-05jan-shukhov.mp4?v=1" type="video/mp4">
       Ваш браузер не поддерживает видео.
     </video>
     <p style="font-size:13px;color:var(--muted);margin-top:10px">Закадровый голос — нейросеть Microsoft Azure Neural (ru-RU-DmitryNeural). Музыка — атмосферный дрон, генерация. Визуальный ряд — архивные фото Балахан 1880-х и дизайн-анимация: счётчик подвод, линия первого нефтепровода, решётка гиперболоида.</p>
@@ -204,6 +332,7 @@
 <!-- ── СТАТЬЯ ── -->
 <section class="block" id="story">
   <div class="wrap">
+    <div class="paper-clip" aria-hidden="true"></div>
     <div class="kicker">История изобретения</div>
     <h2>Труба, по которой потёк XX век</h2>
     <div class="article collapsed" id="article">
@@ -239,6 +368,17 @@
   </div>
 </section>
 
+<!-- ── ФРАЗА ВО ВЕСЬ ЭКРАН ── -->
+<section class="fullbleed" id="credo">
+  <div class="fb-line t"></div><div class="fb-line b"></div>
+  <div class="fb-ghost" aria-hidden="true">1878</div>
+  <div class="wrap">
+    <div class="sub">Вывод дня · лист 2</div>
+    <h2 class="big">Всё, что течёт сегодня по трубам мира,<br>течёт по <em>формулам 1878 года</em></h2>
+    <p class="after">Диаметр, давление, вязкость, расстояние между насосными станциями — Шухов вывел это первым и опубликовал. По этим формулам трубопроводы проектируют до сих пор, во всём мире.</p>
+  </div>
+</section>
+
 <section class="block" id="more">
   <div class="wrap">
     <div class="kicker">Не только нефтепровод</div>
@@ -250,7 +390,6 @@
     <div class="card"><b style="color:var(--gold-l)">Керосинопровод Баку — Батум</b><p style="margin:6px 0 0">835 километров — крупнейший в мире на момент пуска (1907). Плюс нефтеналивные баржи, водотрубные котлы, форсунка для мазута.</p></div>
   </div>
 </section>
-<!-- ── НА ЧТО СМОТРЕТЬ ── -->
 <section class="block" id="chto-zametit">
   <div class="wrap">
     <div class="kicker">На что смотреть</div>
@@ -466,7 +605,7 @@
       <input id="chatInput" type="text" placeholder="Написать вопрос..." style="flex:1;padding:12px 16px;font-size:15px">
       <button class="btn gold" onclick="sendChat()">Отправить</button>
     </div>
-    <p style="font-size:12px;color:var(--muted);margin-top:8px">Это <b>реконструкция</b>: голос собран по документам, статьям и воспоминаниям о Шухове. Таких разговоров он не вёл — но факты в ответах проверены по источникам.</p>
+    <p style="font-size:12px;color:var(--muted);margin-top:8px">Ответы сформированы на основе документальных источников.</p>
   </div>
 </section>
 
@@ -592,12 +731,12 @@ window.shCheck=function(){if(!shSel)return;const cost=shSel.dataset.cost;
     <h2 style="margin-bottom:6px">Сколько баллов ты собрал?</h2>
     <p style="color:var(--muted);margin-top:0;max-width:62ch">Читай статью, играй, отвечай в викторине и спрашивай изобретателя — за всё начисляются баллы. Собери все 100 и стань Первым инженером империи.</p>
     <div class="card"><div class="gm-bar" style="height:10px"><i id="dayBar" style="width:0%"></i></div><div id="dayTxt" style="margin-top:10px;color:var(--gold-l);font-weight:600">0 / 100 · звание: Гость музея</div></div>
-
-    <div class="support" style="margin-top:18px">
-      <p style="margin:0"><b style="color:var(--gold)">❤ Понравился день?</b> Музей делают два человека, и он бесплатный — без регистрации и платных разделов. Самое ценное, что можно сделать прямо сейчас, — <b>отправить страницу тому, кому она зайдёт</b>. Один такой пересыл приводит больше людей, чем реклама.</p>
-      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+    <div class="support" style="margin-top:20px">
+      <div class="sup-l">Поддержать проект</div>
+      <p>Музей делают два человека, и он бесплатный — без рекламы, регистрации и платных разделов. Самое ценное, что можно сделать прямо сейчас, — <b>отправить страницу тому, кому она зайдёт</b>. Один такой пересыл приводит больше людей, чем реклама.</p>
+      <div class="sup-btns">
         <button class="btn gold" onclick="(navigator.share?navigator.share({title:document.title,url:location.href}):navigator.clipboard.writeText(location.href).then(()=>{this.textContent='Ссылка скопирована ✓'}));award('share',5)" style="font-size:14px">⤴ Поделиться страницей</button>
-        <button class="btn ghost" onclick="document.querySelectorAll('.support')[1].scrollIntoView({behavior:'smooth',block:'center'})" style="font-size:14px">Другие способы помочь →</button>
+        <button class="btn ghost" onclick="document.querySelectorAll('.support')[1].scrollIntoView({behavior:'smooth',block:'center'})" style="font-size:14px">Другие способы поддержать →</button>
       </div>
     </div>
   </div>
@@ -621,7 +760,6 @@ window.shCheck=function(){if(!shSel)return;const cost=shSel.dataset.cost;
   </div>
 </section>
 
-<!-- ── КУДА ДАЛЬШЕ ── -->
 <section class="block" id="kuda-dalshe">
   <div class="wrap">
     <div class="kicker">Куда дальше</div>
@@ -632,8 +770,9 @@ window.shCheck=function(){if(!shSel)return;const cost=shSel.dataset.cost;
       <div class="ncard"><span class="lbl">Весь музей</span><a href="index.html">Что изобрели русские первыми →</a><br>Полная база изобретений по алфавиту и по дням года.</div>
       <div class="ncard main"><span class="lbl">Город-музей</span><a href="../index.html">Русская цивилизация →</a><br>Все музеи проекта на одной карте: первопроходцы, изобретения, искусство.</div>
     </div>
-    <div class="support" style="margin-top:18px">
-      <p style="margin:0"><b style="color:var(--gold)">❤ Поддержать музей.</b> Он бесплатный: без регистрации и платных разделов. Помочь можно тремя способами — <b>показать</b> страницу тому, кому она зайдёт; <b>поправить</b> нас, если нашли ошибку в дате или цифре (<a href="mailto:arabelthera@gmail.com?subject=Музей изобретений — замечание по странице Шухова">написать</a>); <b>дать денег</b> на архивные сканы и озвучку — реквизиты появятся, когда будет оформлен сбор.</p>
+    <div class="support" style="margin-top:20px">
+      <div class="sup-l">Поддержать проект</div>
+      <p>Музей бесплатный: без рекламы, регистрации и платных разделов. Поддержать его можно тремя способами — <b>показать</b> страницу тому, кому она зайдёт; <b>поправить</b> нас, если нашли ошибку в дате или цифре (<a href="mailto:arabelthera@gmail.com?subject=Музей «Что изобрели русские первыми в мире» — замечание по странице Шухова">написать</a>); <b>поддержать проект рублём</b> — на архивные сканы, съёмку и озвучку: реквизиты появятся, когда будет оформлен сбор.</p>
     </div>
   </div>
 </section>
@@ -652,7 +791,7 @@ window.shCheck=function(){if(!shSel)return;const cost=shSel.dataset.cost;
   Нашли неточность? <a href="mailto:arabelthera@gmail.com?subject=Ошибка на странице Шухова" style="color:rgba(201,168,76,.6)">Сообщите нам</a> — проверим по источникам.
 </div></footer>
 
-<div id="heart" title="Поддержать музей">❤<span class="lbl">Поддержать</span></div>
+<div id="heart" title="Поддержать проект">❤<span class="lbl">Поддержать проект</span></div>
 <script>
 (function(){var h=document.getElementById('heart'),last=window.scrollY,t=null;
  var sups=[].slice.call(document.querySelectorAll('.support'));
@@ -954,11 +1093,88 @@ document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
 window.addEventListener('pageshow',e=>{if(e.persisted)location.reload()});
 </script>
 
-<!-- единая обвязка музеев: backbtn, «Поделиться», чипсы разделов,
-     стрелки «пред/след», строка «Случайное · Все · В город-музей» -->
+<!-- ── ГИПЕРБОЛОИД: каркас из прямых стержней ── -->
+<script>
+(function(){
+  const svg=document.getElementById('tower'); if(!svg) return;
+  const NS='http://www.w3.org/2000/svg';
+  const cx=280, yT=54, yB=372, rT=86, rB=132, ry=.26, N=22, TW=1.72;
+  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const mk=(t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);return e;};
+  const pos=(a,r,y)=>[cx+r*Math.cos(a), y+r*ry*Math.sin(a)];
+
+  // обода и ось
+  svg.appendChild(mk('ellipse',{cx,cy:yB,rx:rB,ry:rB*ry,class:'rim'}));
+  svg.appendChild(mk('ellipse',{cx,cy:yT,rx:rT,ry:rT*ry,class:'rim'}));
+  svg.appendChild(mk('line',{x1:cx,y1:yT-26,x2:cx,y2:yB+26,class:'axis'}));
+
+  // размерные линии — чертёжные обозначения, без выдуманных цифр
+  const dx=cx-rB-34;
+  svg.appendChild(mk('line',{x1:dx,y1:yT,x2:dx,y2:yB,stroke:'rgba(125,200,255,.4)','stroke-width':1}));
+  [[yT,1],[yB,-1]].forEach(([y,s])=>{
+    svg.appendChild(mk('line',{x1:dx-4,y1:y+6*s,x2:dx,y2:y,stroke:'rgba(125,200,255,.4)','stroke-width':1}));
+    svg.appendChild(mk('line',{x1:dx+4,y1:y+6*s,x2:dx,y2:y,stroke:'rgba(125,200,255,.4)','stroke-width':1}));
+    svg.appendChild(mk('line',{x1:dx-9,y1:y,x2:dx+9,y2:y,stroke:'rgba(125,200,255,.25)','stroke-width':1}));
+  });
+  const hLbl=mk('text',{x:dx-9,y:(yT+yB)/2,fill:'#8fb6d6','font-family':'JetBrains Mono, monospace','font-size':11,'text-anchor':'middle',transform:`rotate(-90 ${dx-9} ${(yT+yB)/2})`});
+  hLbl.textContent='H'; svg.appendChild(hLbl);
+
+  // стержни: два встречных направления. У каждого — прозрачный «толстый» двойник для наведения
+  const bars=[], hits=[];
+  for(let d=0;d<2;d++){
+    for(let i=0;i<N;i++){
+      const a=2*Math.PI*i/N, tw=d?TW:-TW;
+      const ln=mk('line',{'stroke-linecap':'round'});
+      ln._a=a; ln._tw=tw; svg.appendChild(ln); bars.push(ln);
+    }
+  }
+  bars.forEach(ln=>{
+    const h=mk('line',{stroke:'transparent','stroke-width':11,'pointer-events':'stroke'});
+    h._a=ln._a; h._tw=ln._tw; h._bar=ln; svg.appendChild(h); hits.push(h);
+  });
+  function draw(phase){
+    const put=ln=>{
+      const [x1,y1]=pos(ln._a,rB,yB), [x2,y2]=pos(ln._a+ln._tw*phase,rT,yT);
+      ln.setAttribute('x1',x1);ln.setAttribute('y1',y1);ln.setAttribute('x2',x2);ln.setAttribute('y2',y2);
+    };
+    bars.forEach(put); hits.forEach(put);
+  }
+  draw(1);
+
+  // сборка: каждый стержень «прочерчивается»
+  if(!reduce){
+    bars.forEach((ln,i)=>{
+      const L=ln.getTotalLength();
+      ln.style.strokeDasharray=L; ln.style.strokeDashoffset=L;
+      ln.style.transition='stroke-dashoffset .62s cubic-bezier(.2,.7,.2,1) '+(i%N*34+ (i<N?0:120))+'ms';
+    });
+    requestAnimationFrame(()=>requestAnimationFrame(()=>bars.forEach(l=>l.style.strokeDashoffset=0)));
+    // лёгкое «дыхание» закрутки — только пока схема в кадре
+    let vis=true, t0=performance.now();
+    new IntersectionObserver(e=>{vis=e[0].isIntersecting;}).observe(svg);
+    const tick=now=>{ if(vis) draw(1+Math.sin((now-t0)/4200)*.05); requestAnimationFrame(tick); };
+    setTimeout(()=>{
+      bars.forEach(l=>{l.style.strokeDasharray='';l.style.transition='';});
+      t0=performance.now(); requestAnimationFrame(tick);
+    },1750);
+  }
+
+  // подсветка одного стержня — доказательство «он прямой»
+  const hint=document.getElementById('towerHint');
+  const touch=window.matchMedia('(hover: none)').matches;
+  if(hint&&touch) hint.textContent='коснись стержня';
+  const base=hint?hint.textContent:'';
+  let lit=null;
+  const light=ln=>{ if(lit===ln) return; if(lit) lit.classList.remove('lit'); lit=ln;
+    if(ln){ ln.classList.add('lit'); if(hint) hint.innerHTML='<b>стержень прямой</b> — от нижнего кольца до верхнего';}
+    else if(hint) hint.textContent=base; };
+  svg.addEventListener('pointerover',e=>{ if(e.target._bar) light(e.target._bar); });
+  svg.addEventListener('pointerleave',()=>light(null));
+})();
+</script>
 <script>window.MUSEUM_CHROME={
-  museum:{title:'Музей изобретений',href:'index.html'},
-  share:{title:'Первый в мире расчётный нефтепровод — Музей изобретений «Русская цивилизация»',
+  museum:{title:'Что изобрели русские первыми в мире',href:'index.html'},
+  share:{title:'Первый в мире расчётный нефтепровод — музей «Что изобрели русские первыми в мире»',
          text:'Первый в мире расчётный нефтепровод. Что Россия дала миру раньше всех — день за днём.'},
   prev:{href:'day-04jan-pilchikov.html',title:'4 января · Пильчиков'},
   next:{href:'day-06jan-bering.html',title:'6 января · Беринг'},
