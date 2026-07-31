@@ -1,0 +1,256 @@
+/* ============================================================
+   museum-theme.css — система тем и фактур музеев «Русская цивилизация»
+   Три уровня: КАРКАС (един, живёт в самих страницах и движках)
+               ТЕМА (один язык на музей)  html[data-museum]
+               ФАКТУРА (материал экспоната) html[data-fabric]
+   Подключается ПОСЛЕ страничного <style> — перекрывает его токены.
+   Акцент страницы можно взять из её главного изображения:
+   <style>:root{--acc:#e8873a}</style> после этой ссылки.
+   ============================================================ */
+
+/* ───────────────── БАЗОВЫЕ ТОКЕНЫ ───────────────── */
+:root{
+  --acc:#d4af37;            /* акцент страницы — обычно из главного изображения */
+  --acc-soft:rgba(212,175,55,.16);
+  --font-h:Georgia,serif;   /* заголовки */
+  --font-b:Georgia,serif;   /* текст */
+  --font-m:ui-monospace,monospace; /* служебное: даты, координаты, номера */
+  --radius:14px;
+  --label-tr:2.2px;         /* трекинг этикеточных строк */
+}
+
+/* ═══════════════ ТЕМА 1 · ИЗОБРЕТЕНИЯ — инженерная ═══════════════ */
+:root[data-museum="inventions"]{
+  --gold:#c9a84c;--ink:#060c17;--panel:#111f33;--line:rgba(201,168,76,.32);--txt:#e8eef5;
+  --acc:#c9a84c;--acc-soft:rgba(201,168,76,.14);
+  --font-h:'Playfair Display',Georgia,serif;
+  --font-b:'Inter',system-ui,sans-serif;
+  --font-m:'JetBrains Mono',ui-monospace,monospace;
+}
+
+/* ═══════════════ ТЕМА 2 · ПЕРВОПРОХОДЦЫ — лист из атласа ═══════════════ */
+:root[data-museum="explorers"]{
+  --gold:#a8341f;           /* киноварь вместо золота: цвет меток на старых картах */
+  --ink:#efe6d2;            /* пергамент */
+  --panel:#e6dac0;          /* лист поверх листа */
+  --line:rgba(36,29,22,.28);
+  --txt:#241d16;            /* сажевые чернила */
+  --acc:#a8341f;--acc-soft:rgba(168,52,31,.12);
+  --sea:#122a3c;            /* морские секции */
+  --font-h:'Old Standard TT',Georgia,serif;
+  --font-b:'PT Serif',Georgia,serif;
+  --font-m:'JetBrains Mono',ui-monospace,monospace;
+  --radius:4px;             /* бумага не имеет скруглений */
+}
+
+/* ═══════════════ ТЕМА 3 · ИСКУССТВО — зал с полотном ═══════════════ */
+:root[data-museum="art"]{
+  --gold:var(--acc);
+  --ink:#14100e;            /* тёплый уголь стены, не чёрный */
+  --panel:#1d1815;
+  --line:rgba(255,255,255,.12);
+  --txt:#e9e4dc;
+  --font-h:'Playfair Display',Georgia,serif;
+  --font-b:'Lora',Georgia,serif;
+  --font-m:'Inter',system-ui,sans-serif;
+  --radius:2px;             /* в зале нет скруглений — есть рамы */
+}
+
+/* ───────────────── ТИПОГРАФИКА ПО ТЕМЕ ───────────────── */
+[data-museum] body{font-family:var(--font-b)}
+[data-museum] h1,[data-museum] h2,[data-museum] h3,
+[data-museum] h2.t,[data-museum] .calcard h3,[data-museum] #zbody h3{font-family:var(--font-h)}
+[data-museum] header.site .b1,[data-museum] .chip,[data-museum] h2.t small,
+[data-museum] .ncard .lbl,[data-museum] .calnext,[data-museum] .exh figcaption i{
+  font-family:var(--font-m);letter-spacing:var(--label-tr)}
+[data-museum] header.site .b2{font-size:11.5px;opacity:.72;max-width:640px;margin:3px auto 0;line-height:1.45}
+[data-museum] h2.t{color:var(--acc)}
+
+/* ═══════════════ ФАКТУРЫ — материал экспоната ═══════════════
+   blueprint — чертёж, синька: конструкции, мосты, башни
+   instrument — приборная: космос, радио, электроника
+   manuscript — рукопись: наука, математика
+   clinic — стерильная: медицина
+   ice — лёд и сталь: Арктика, ледоколы
+   field — полевая: оборона, техника
+   atlas — карта: экспедиции
+   hall — зал: живопись
+   Фактура задаёт ФОН И ХАРАКТЕР ЛИНИЙ, не цвет темы.        */
+
+body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none}
+
+[data-fabric="blueprint"] body::before{
+  background-image:
+    repeating-linear-gradient(0deg,rgba(125,200,255,.07) 0 1px,transparent 1px 9px),
+    repeating-linear-gradient(90deg,rgba(125,200,255,.07) 0 1px,transparent 1px 9px),
+    repeating-linear-gradient(0deg,rgba(125,200,255,.13) 0 1px,transparent 1px 54px),
+    repeating-linear-gradient(90deg,rgba(125,200,255,.13) 0 1px,transparent 1px 54px)}
+
+[data-fabric="instrument"] body::before{
+  background-image:repeating-linear-gradient(0deg,rgba(120,220,200,.05) 0 1px,transparent 1px 4px)}
+
+[data-fabric="manuscript"] body::before{
+  background-image:repeating-linear-gradient(0deg,rgba(36,29,22,.07) 0 1px,transparent 1px 28px)}
+
+[data-fabric="clinic"] body::before{background:none}
+
+[data-fabric="ice"] body::before{
+  background-image:linear-gradient(135deg,rgba(180,220,255,.05) 0 2px,transparent 2px 22px)}
+
+[data-fabric="field"] body::before{
+  background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.03) 0 3px,transparent 3px 12px)}
+
+/* АТЛАС — волокно бумаги + румбовые линии портолана по полям */
+[data-fabric="atlas"] body::before{
+  background-color:var(--ink);
+  background-image:
+    repeating-linear-gradient(0deg,rgba(36,29,22,.045) 0 1px,transparent 1px 26px),
+    repeating-linear-gradient(90deg,rgba(36,29,22,.03) 0 1px,transparent 1px 26px),
+    radial-gradient(ellipse at 12% 30%,rgba(168,52,31,.05),transparent 55%),
+    radial-gradient(ellipse at 88% 72%,rgba(18,42,60,.06),transparent 55%)}
+[data-fabric="atlas"] body{
+  background:var(--ink);
+  box-shadow:inset 0 0 140px rgba(120,92,48,.28)} /* потемневшие от времени поля листа */
+
+/* ЗАЛ — ровный свет на стене, картина в центре внимания */
+[data-fabric="hall"] body::before{
+  background:radial-gradient(ellipse 90% 55% at 50% 0%,rgba(255,240,215,.07),transparent 70%)}
+
+/* ───────────────── HERO · АТЛАС: карта как лист, подпись под ним ───────────────── */
+[data-fabric="atlas"] .hero{height:auto;min-height:0;padding:14px 14px 0;cursor:pointer}
+[data-fabric="atlas"] .hero .bg{position:relative;inset:auto;height:min(58vh,62vw);min-height:240px;
+  border:1px solid rgba(36,29,22,.35);box-shadow:0 10px 30px rgba(40,28,12,.28),inset 0 0 60px rgba(90,66,30,.25)}
+[data-fabric="atlas"] .hero .scrim{display:none}
+[data-fabric="atlas"] .hero .inner{position:relative;inset:auto;bottom:auto;text-align:left;
+  max-width:760px;margin:0 auto;padding:16px 4px 4px;pointer-events:auto}
+[data-fabric="atlas"] .hero .chip{background:none;border:none;border-left:2px solid var(--acc);
+  border-radius:0;padding:0 0 0 9px;font-size:11.5px;letter-spacing:1.6px;text-transform:uppercase;
+  color:var(--txt);opacity:.72;display:block;margin-bottom:9px}
+[data-fabric="atlas"] .hero h1{font-size:clamp(30px,6.4vw,50px);letter-spacing:0;line-height:1.06}
+[data-fabric="atlas"] .hero h1 b{color:var(--acc)}
+[data-fabric="atlas"] .hero .hook{font-style:italic;opacity:.85;margin-top:10px;max-width:52ch}
+[data-fabric="atlas"] .hero .down{text-align:left;opacity:.6;font-family:var(--font-m);font-size:11.5px}
+
+/* ───────────────── HERO · ЗАЛ: полотно целиком, ни слова поверх ───────────────── */
+[data-fabric="hall"] .hero{height:auto;min-height:0;padding:26px 16px 0;cursor:zoom-in;
+  background:linear-gradient(180deg,#1a1512,var(--ink))}
+[data-fabric="hall"] .hero .bg{position:relative;inset:auto;height:min(66vh,58vw);min-height:250px;
+  background-size:contain;background-position:center;background-repeat:no-repeat;animation:none;
+  filter:drop-shadow(0 26px 40px rgba(0,0,0,.6))}
+[data-fabric="hall"] .hero .scrim{display:none}
+/* этикетка под полотном — музейный стандарт: имя, название, дата, материал, размер, собрание */
+[data-fabric="hall"] .hero .inner{position:relative;inset:auto;bottom:auto;text-align:center;
+  padding:22px 16px 4px;pointer-events:auto;display:flex;flex-direction:column;align-items:center}
+/* порядок этикетки: название → выходные данные → хук → подсказка */
+[data-fabric="hall"] .hero h1{font-size:clamp(28px,5.4vw,46px);letter-spacing:.5px;order:1}
+[data-fabric="hall"] .hero h1 b{color:var(--txt)}
+[data-fabric="hall"] .hero .chip{order:2;display:block;background:none;border:none;border-radius:0;padding:0;
+  font-size:11px;letter-spacing:2.4px;text-transform:uppercase;opacity:.6;margin:12px 0 0}
+[data-fabric="hall"] .hero .hook{order:3;font-style:italic;opacity:.85;margin-top:16px;max-width:56ch}
+[data-fabric="hall"] .hero .down{order:4;opacity:.5;font-family:var(--font-m);font-size:11px;letter-spacing:1.4px}
+
+/* ───────────────── КОМПОНЕНТЫ: снять хардкод золота ───────────────── */
+[data-museum="explorers"] a,[data-museum="art"] a{color:var(--acc)}
+[data-museum="explorers"] header.site .b1,[data-museum="art"] header.site .b1{color:var(--acc)}
+
+[data-museum="explorers"] .q,[data-museum="art"] .q,
+[data-museum="explorers"] .calcard,[data-museum="art"] .calcard,
+[data-museum="explorers"] .ncard,[data-museum="art"] .ncard,
+[data-museum="explorers"] .scale,[data-museum="art"] .scale,
+[data-museum="explorers"] .exh,[data-museum="art"] .exh,
+[data-museum="explorers"] .world figure,[data-museum="art"] .world figure,
+[data-museum="explorers"] .audio,[data-museum="art"] .audio,
+[data-museum="explorers"] #chatlog,[data-museum="art"] #chatlog{
+  background:var(--panel);border-color:var(--line);border-radius:var(--radius)}
+
+[data-museum="explorers"] .opt,[data-museum="art"] .opt{
+  background:rgba(0,0,0,.05);border-color:var(--line);color:var(--txt);
+  font-family:var(--font-b);border-radius:var(--radius)}
+[data-museum="art"] .opt{background:rgba(255,255,255,.05)}
+[data-museum] .expl{border-left-color:var(--acc)}
+
+[data-museum="explorers"] .gbtn,[data-museum="art"] .gbtn,
+[data-museum="explorers"] .audio button,[data-museum="art"] .audio button{
+  background:var(--acc);color:#fff;box-shadow:none;border:none}
+[data-museum="explorers"] .gbtn.sec,[data-museum="art"] .gbtn.sec{
+  background:none;color:var(--acc);border:1px solid var(--line)}
+
+[data-museum="explorers"] .backbtn,[data-museum="art"] .backbtn,
+[data-museum="explorers"] .sharebtn,[data-museum="art"] .sharebtn,
+[data-museum="explorers"] #heart,[data-museum="art"] #heart{
+  background:var(--panel);border:1px solid var(--line);color:var(--acc);
+  font-family:var(--font-m);font-size:12.5px;letter-spacing:.6px;border-radius:var(--radius)}
+[data-museum="explorers"] #heart,[data-museum="art"] #heart{border-radius:26px}
+
+[data-museum] .tli{border-left-color:var(--line)}
+[data-museum] .tli .dot{background:var(--panel);border-color:var(--acc)}
+[data-museum] .tli.now .dot{background:var(--acc)}
+[data-museum] .tli.now b,[data-museum] .deep h3,[data-museum] .calcard h3,
+[data-museum] #total b,[data-museum] footer .slog,[data-museum] .calnext,
+[data-museum] .ncard .lbl,[data-museum] .exh figcaption b,
+[data-museum] .world figcaption b{color:var(--acc)}
+[data-museum] footer{border-top-color:var(--line)}
+[data-museum] .lead:first-letter{color:var(--acc)}
+
+[data-museum="explorers"] .support,[data-museum="art"] .support{
+  background:var(--panel);border-color:var(--line);border-radius:var(--radius)}
+
+[data-museum="explorers"] .agnav button,[data-museum="art"] .agnav button,
+[data-museum="explorers"] .zb,[data-museum="art"] .zb,
+[data-museum="explorers"] #chat .chips .chip,[data-museum="art"] #chat .chips .chip{
+  border-color:var(--line);color:var(--txt);font-family:var(--font-m);font-size:12px;
+  border-radius:var(--radius)}
+[data-museum="explorers"] .agnav button.on,[data-museum="art"] .agnav button.on,
+[data-museum="explorers"] .zb.on,[data-museum="art"] .zb.on{
+  border-color:var(--acc);color:var(--acc);background:var(--acc-soft)}
+
+/* ───────────────── СВЕТ ПОД ЧТЕНИЕ / ТЬМА ПОД ИЗОБРАЖЕНИЯ ───────────────── */
+/* Длинный текст на чёрном утомляет вдвое быстрее: в зале статья идёт на бумаге. */
+[data-museum="art"] section#istoriya,[data-museum="art"] section.deep{
+  background:#f3efe7;color:#211c18;max-width:none;padding:34px 0 24px}
+[data-museum="art"] section#istoriya>*,[data-museum="art"] section.deep>*{
+  max-width:760px;margin-left:auto;margin-right:auto;padding-left:18px;padding-right:18px}
+[data-museum="art"] section#istoriya h2.t,[data-museum="art"] section.deep h2.t,
+[data-museum="art"] section.deep h3{color:#8a3d1a}
+[data-museum="art"] section#istoriya h2.t small{color:#211c18}
+[data-museum="art"] section.deep .tli{border-left-color:rgba(33,28,24,.25)}
+[data-museum="art"] section.deep .tli .dot{background:#f3efe7;border-color:#8a3d1a}
+[data-museum="art"] section.deep .tli b{color:#211c18}
+[data-museum="art"] section.deep .tli.now b{color:#8a3d1a}
+
+/* ───────────────── НАВИГАЦИЯ-МАРШРУТ (первопроходцы) ───────────────── */
+[data-fabric="atlas"] #secnav .row{position:relative}
+[data-fabric="atlas"] #secnav a{border-color:var(--line);color:var(--txt);
+  font-family:var(--font-m);font-size:11.5px;letter-spacing:.4px;border-radius:2px;background:rgba(0,0,0,.03)}
+[data-fabric="atlas"] #secnav a.on,[data-fabric="atlas"] #secnav a:hover{
+  border-color:var(--acc);color:var(--acc);background:var(--acc-soft)}
+
+/* ───────────────── ПАНЕЛЬ РАЗДЕЛОВ · ЗАЛ ───────────────── */
+[data-museum="art"] #secnav{background:rgba(20,16,14,.94);border-bottom:1px solid var(--line)}
+[data-museum="art"] #secnav a{border-color:var(--line);color:var(--txt);
+  font-family:var(--font-m);font-size:11.5px;letter-spacing:.5px;border-radius:2px}
+[data-museum="art"] #secnav a.on,[data-museum="art"] #secnav a:hover{
+  border-color:var(--acc);color:var(--acc);background:var(--acc-soft)}
+[data-museum="explorers"] #secnav{background:rgba(239,230,210,.95);border-bottom:1px solid var(--line)}
+
+/* боковые переходы между экспонатами (museum-chrome.js) */
+[data-museum="art"] .mcnav,[data-museum="explorers"] .mcnav{
+  background:var(--panel);border:1px solid var(--line);color:var(--txt);
+  font-family:var(--font-m);font-size:11.5px;letter-spacing:.4px}
+[data-museum="art"] .mcnav .ar,[data-museum="explorers"] .mcnav .ar{color:var(--acc)}
+
+/* ───────────────── ЗУМ ───────────────── */
+[data-museum] #zoomwrap{border-color:var(--line)}
+[data-museum="art"] #zoomwrap{background:#0d0a08}
+[data-museum="explorers"] #zoomwrap{background:#1a1712}
+[data-museum] #zpanel{background:var(--panel);border-bottom-color:var(--line)}
+[data-museum] #zhint,[data-museum] #gamebar{background:var(--panel);border-color:var(--line);
+  font-family:var(--font-m);font-size:11.5px}
+
+/* ───────────────── ДОСТУПНОСТЬ ───────────────── */
+@media (prefers-reduced-motion:reduce){
+  [data-museum] .hero .bg{animation:none}
+  [data-museum] .spark{animation:none}
+}
+[data-museum] a:focus-visible,[data-museum] button:focus-visible{
+  outline:2px solid var(--acc);outline-offset:2px}
