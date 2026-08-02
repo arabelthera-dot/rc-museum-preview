@@ -294,6 +294,30 @@
 </div>
 
 
+<!-- ── ЖИВАЯ СЦЕНА: БАКУ, 5 ЯНВАРЯ 1878 ── -->
+<style>
+.scene-box{position:relative;border:1px solid rgba(201,168,76,.22);border-radius:14px;overflow:hidden;
+  background:linear-gradient(180deg,#050a14 0%,#081222 60%,#060d18 100%);height:340px}
+.scene-box canvas{display:block;width:100%;height:100%}
+.scene-hint{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);z-index:2;pointer-events:none;
+  font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.4px;color:#e4c97a;
+  background:rgba(6,12,23,.72);border:1px solid rgba(201,168,76,.3);border-radius:20px;padding:7px 16px;
+  transition:opacity .6s;white-space:nowrap}
+.scene-cap{margin-top:10px;font-size:13.5px;line-height:1.6;color:var(--muted,#7a9ab8)}
+@media(max-width:640px){.scene-box{height:230px}.scene-hint{font-size:11px;padding:6px 12px}}
+</style>
+<section class="block" id="scene-baku" style="padding-top:22px;padding-bottom:22px">
+  <div class="wrap">
+    <div class="kicker">Живая сцена</div>
+    <h2 style="margin:2px 0 12px">Баку, 5 января 1878 — пуск</h2>
+    <div class="scene-box">
+      <canvas id="heroCvs"></canvas>
+      <div class="scene-hint" id="heroHint">нажми на сцену — запусти насос</div>
+    </div>
+    <div class="scene-cap">Слева — промысел Балаханы с буровой вышкой и паровым насосом, справа — заводы Чёрного города. Между ними десять километров трубы, а внизу тянется караван подвод. Пока насос стоит, нефть в Баку возят бочками.</div>
+  </div>
+</section>
+
 <div class="wrap"><div class="ad-slot"><span class="lbl">Реклама</span><span class="ph-txt">Баннер-шапка — размещается здесь.</span></div></div>
 
 <nav class="daynav">
@@ -641,33 +665,154 @@
 .gm-drop.over{border-color:#c9a84c;background:rgba(201,168,76,.08)}
 .gm-drop.filled{border-style:solid;border-color:#c9a84c;color:#e4c97a;font-weight:600}
 </style>
+<style>
+.pipe-lead{color:var(--muted,#7a9ab8);font-size:14px;line-height:1.65;margin:0 0 14px}
+.pipe-goal{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.pipe-goal>div{flex:1 1 150px;background:rgba(201,168,76,.07);border:1px solid rgba(201,168,76,.2);border-radius:10px;padding:9px 13px}
+.pipe-goal b{display:block;font-family:'Playfair Display',serif;font-size:19px;color:#e4c97a;line-height:1.2}
+.pipe-goal span{font-size:10.5px;letter-spacing:.9px;text-transform:uppercase;color:#7a9ab8}
+.pipe-ctl{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:16px}
+.pipe-ctl label{display:block;font-size:13px;color:#e8eef5;font-weight:600}
+.pipe-ctl .lv{float:right;color:#e4c97a}
+.pipe-ctl input{width:100%;margin-top:9px;accent-color:#c9a84c}
+.pipe-ctl .sub{font-size:11.5px;color:#7a9ab8;margin-top:4px;font-weight:400;line-height:1.4}
+.pipe-stage{position:relative;height:104px;border-radius:12px;background:linear-gradient(180deg,#050b16,#0a1424);border:1px solid rgba(255,255,255,.07);overflow:hidden;margin-bottom:14px}
+.pipe-tube{position:absolute;left:11%;right:11%;top:50%;transform:translateY(-50%);border-radius:20px;
+  background:linear-gradient(180deg,#7896be,#37557d 45%,#122037);border:1px solid rgba(140,170,210,.3);transition:height .35s}
+.pipe-flow{position:absolute;inset:1px;border-radius:20px;overflow:hidden}
+.pipe-flow i{position:absolute;top:50%;width:15px;height:60%;transform:translateY(-50%);border-radius:50%;
+  background:radial-gradient(circle,#ffcf6a 10%,rgba(245,180,55,.12) 70%);animation:pflow linear infinite}
+@keyframes pflow{from{left:-10%}to{left:104%}}
+.pipe-end{position:absolute;top:0;bottom:0;width:11%;display:flex;align-items:center;justify-content:center;font-size:21px;opacity:.85}
+.pipe-pump{position:absolute;top:14px;font-size:16px;transform:translateX(-50%);transition:.3s;filter:drop-shadow(0 0 7px rgba(201,168,76,.55))}
+.pipe-cart{position:absolute;bottom:7px;font-size:14px;opacity:.6;transition:opacity .5s}
+.pipe-gauge{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.pipe-gauge>div{flex:1 1 150px;border-radius:10px;padding:10px 13px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09)}
+.pipe-gauge b{display:block;font-size:20px;font-family:'Playfair Display',serif;line-height:1.25}
+.pipe-gauge span{font-size:10.5px;letter-spacing:.9px;text-transform:uppercase;color:#7a9ab8}
+.pipe-gauge .g-ok{color:#7ed4a0}.pipe-gauge .g-no{color:#f08080}.pipe-gauge .g-n{color:#e4c97a}
+.pipe-note{font-size:11.5px;color:#5f7a94;margin-top:12px;line-height:1.5}
+.pipe-try{font-size:12.5px;color:#7a9ab8;margin-bottom:8px}
+@media(max-width:640px){
+  .pipe-goal{gap:7px}
+  .pipe-goal>div{flex:1 1 0;min-width:0;padding:7px 9px}
+  .pipe-goal b{font-size:13px;margin-top:2px}
+  .pipe-goal span{font-size:9px;letter-spacing:.4px}
+  .pipe-ctl{gap:13px}
+  .pipe-stage{height:88px}
+  .pipe-gauge>div{flex:1 1 0;min-width:0;padding:8px 10px}
+  .pipe-gauge b{font-size:16px}
+  .pipe-gauge span{font-size:9px;letter-spacing:.4px}
+}
+</style>
 <div class="gm" id="gm_shukhov">
-<h3>🛢 Игра 1 · Проложи нефтепровод Шухова</h3>
-<p style="color:var(--muted);font-size:14px;margin-bottom:14px">Выбери оптимальный маршрут трубы от промысла до завода — как выбирал Шухов в 1877 году</p>
-<div style="display:flex;flex-direction:column;gap:10px;margin-bottom:14px">
-<div id="shRoute" style="display:flex;gap:8px;flex-wrap:wrap">
-  <div class="sh-node" onclick="shPick(this,'start')" style="padding:10px 14px;border:2px solid rgba(201,168,76,.4);border-radius:10px;cursor:pointer;font-size:13px;background:rgba(201,168,76,.08)">🛢️ Балаханы (промысел)</div>
-  <div style="color:var(--muted);align-self:center;font-size:20px">→</div>
-  <div id="shMid" style="display:flex;gap:6px;flex-wrap:wrap">
-    <div class="sh-node" onclick="shPick(this,'mid')" data-cost="2" data-label="через горы" style="padding:8px 12px;border:1px solid rgba(255,255,255,.12);border-radius:10px;cursor:pointer;font-size:12px;color:var(--muted)">⛰️ Через горы <b style="color:#f08080">+40%</b></div>
-    <div class="sh-node" onclick="shPick(this,'mid')" data-cost="1" data-label="прямо" style="padding:8px 12px;border:1px solid rgba(255,255,255,.12);border-radius:10px;cursor:pointer;font-size:12px;color:var(--muted)">📐 Прямо по расчёту <b style="color:#7ed4a0">оптим.</b></div>
-    <div class="sh-node" onclick="shPick(this,'mid')" data-cost="3" data-label="в обход" style="padding:8px 12px;border:1px solid rgba(255,255,255,.12);border-radius:10px;cursor:pointer;font-size:12px;color:var(--muted)">🔄 В обход +60%</div>
-  </div>
-  <div style="color:var(--muted);align-self:center;font-size:20px">→</div>
-  <div class="sh-node" style="padding:10px 14px;border:2px solid rgba(45,140,191,.4);border-radius:10px;font-size:13px;background:rgba(45,140,191,.08)">🏭 Чёрный город (завод)</div>
+<h3>🛢 Игра 1 · Посчитай трубу, как Шухов</h3>
+<p class="pipe-lead">Баку, 1877 год. Промышленник Кокорев требует: перегнать <b>80 000 пудов</b> нефти в сутки из Балахан в Чёрный город — десять километров — и не разорить его на смете. Крути три ручки, как крутил их в расчётах Шухов: труба, насосы, вязкость нефти. Приборы считают вживую.</p>
+
+<div class="pipe-goal">
+  <div><span>норма</span><b>80 000 пуд/сут</b></div>
+  <div><span>смета</span><b>≤ 90 тыс. руб.</b></div>
+  <div><span>длина</span><b>10 км</b></div>
 </div>
+
+<div class="pipe-ctl">
+  <label>Диаметр трубы <span class="lv" id="pDv">3″</span>
+    <input type="range" id="pD" min="0" max="3" step="1" value="1">
+    <div class="sub" id="pDs">Толще труба — меньше сопротивление, но дороже сталь.</div>
+  </label>
+  <label>Насосных станций <span class="lv" id="pNv">1</span>
+    <input type="range" id="pN" min="0" max="3" step="1" value="1">
+    <div class="sub" id="pNs">Каждая добавляет напор и 18 тыс. руб. к смете.</div>
+  </label>
+  <label>Подогрев нефти <span class="lv" id="pHv">+10 °C</span>
+    <input type="range" id="pH" min="0" max="2" step="1" value="1">
+    <div class="sub" id="pHs">Тёплая нефть жиже и течёт легче — но топливо тоже деньги.</div>
+  </label>
 </div>
-<button class="btn gold" onclick="shCheck()" id="shBtn" style="width:100%;opacity:.4" disabled>Проложить трубу →</button>
-<div id="shResult" style="margin-top:10px;font-size:14px;min-height:20px"></div>
-<script>let shSel=null;
-document.querySelectorAll('#shMid .sh-node').forEach(n=>n.addEventListener('click',function(){
-  shSel=this;document.querySelectorAll('#shMid .sh-node').forEach(x=>x.style.borderColor='rgba(255,255,255,.12)');
-  this.style.borderColor='#c9a84c';document.getElementById('shBtn').disabled=false;document.getElementById('shBtn').style.opacity='1';}));
-window.shCheck=function(){if(!shSel)return;const cost=shSel.dataset.cost;
-  const r=document.getElementById('shResult');
-  if(cost==='1'){r.innerHTML='✅ <b>Правильно!</b> Шухов сделал именно так — рассчитал прямой оптимальный маршрут. Себестоимость транспортировки упала в разы, 200 подвод стали не нужны.';r.style.color='#7ed4a0';if(typeof award==='function')award('gm_shukhov',20);}
-  else if(cost==='2')r.innerHTML='❌ Через горы — давление в трубе не выдержит перепада высот. Шухов выбрал прямой маршрут по расчёту.',r.style.color='#f08080';
-  else r.innerHTML='❌ В обход — трубы втрое длиннее, потери давления огромные. Шухов умел считать лучше.',r.style.color='#f08080';};</script></div>
+
+<div class="pipe-stage">
+  <div class="pipe-end" style="left:0">🛢️</div>
+  <div class="pipe-end" style="right:0">🏭</div>
+  <div class="pipe-tube" id="pTube"><div class="pipe-flow" id="pFlow"></div></div>
+  <div id="pPumps"></div>
+  <div class="pipe-cart" id="pCarts" style="left:38%">🐎🛒🛒</div>
+</div>
+
+<div class="pipe-gauge">
+  <div><span>расход</span><b id="pQ" class="g-n">—</b></div>
+  <div><span>смета</span><b id="pC" class="g-n">—</b></div>
+  <div><span>цена доставки пуда</span><b id="pP" class="g-n">—</b></div>
+</div>
+
+<div class="pipe-try" id="pTry">Попыток: 0</div>
+<button class="btn gold" id="pGo" style="width:100%">Построить и пустить нефть →</button>
+<div id="pRes" style="margin-top:12px;font-size:14px;line-height:1.6;min-height:20px"></div>
+<div class="pipe-note">Модель упрощена: расход считается по формуле сопротивления трубы (диаметр в степени 2,6, напор — под корнем), смета — в условных рублях 1878 года. Историческое решение — три дюйма и одна насосная станция.</div>
+<script>
+(function(){
+  var D=[2,3,4,6], NU=[60,35,22], HEAT=[0,10,20], HCOST=[0,14,30];
+  var tries=0, won=false, best=null;
+  var $=function(id){return document.getElementById(id);};
+  function calc(di,n,h){
+    var q=n?Math.round(27300*Math.pow(D[di],2.6)*Math.sqrt(n)/Math.sqrt(NU[h])/100)*100:0;
+    var c=Math.round(12*Math.pow(D[di],1.4)+18*n+HCOST[h]);
+    return {q:q,c:c};
+  }
+  function fmt(x){return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g,' ');}
+  function draw(){
+    var di=+$('pD').value, n=+$('pN').value, h=+$('pH').value, r=calc(di,n,h);
+    $('pDv').textContent=D[di]+'″';
+    $('pNv').textContent=n?n:'нет';
+    $('pHv').textContent=HEAT[h]?'+'+HEAT[h]+' °C':'без подогрева';
+    $('pTube').style.height=(7+di*5)+'px';
+    var pumps='';
+    for(var i=0;i<n;i++)pumps+='<div class="pipe-pump" style="left:'+(15+i*26)+'%">⚙️</div>';
+    $('pPumps').innerHTML=pumps;
+    var flow='';
+    if(r.q>0){
+      var dur=Math.max(.55,3.2-r.q/45000);            // быстрее поток — выше расход
+      var cnt=Math.min(9,2+Math.round(r.q/22000));
+      for(var j=0;j<cnt;j++)flow+='<i style="animation-duration:'+dur.toFixed(2)+'s;animation-delay:'+(-dur*j/cnt).toFixed(2)+'s"></i>';
+    }
+    $('pFlow').innerHTML=flow;
+    $('pCarts').style.opacity=r.q>=80000?0:.6;
+    $('pQ').innerHTML=r.q?fmt(r.q)+' <small style="font-size:12px;color:#7a9ab8">пуд/сут</small>':'нефть стоит';
+    $('pQ').className=r.q>=80000?'g-ok':'g-no';
+    $('pC').innerHTML=fmt(r.c)+' <small style="font-size:12px;color:#7a9ab8">тыс. руб.</small>';
+    $('pC').className=r.c<=90?'g-ok':'g-no';
+    var price=r.q?(r.c*1000*100/(r.q*30)):0;         // условно: смета делится на месяц перекачки, копейки за пуд
+    $('pP').innerHTML=r.q?price.toFixed(2).replace('.',',')+' <small style="font-size:12px;color:#7a9ab8">коп./пуд</small>':'—';
+    $('pP').className='g-n';
+    return r;
+  }
+  ['pD','pN','pH'].forEach(function(id){var e=$(id);if(e)e.addEventListener('input',draw);});
+  var go=$('pGo');
+  if(go)go.onclick=function(){
+    var di=+$('pD').value, n=+$('pN').value, h=+$('pH').value, r=draw(), out=$('pRes');
+    tries++;
+    if(r.q>=80000&&(!best||r.c<best))best=r.c;
+    $('pTry').textContent='Попыток: '+tries+(best?' · лучшая смета при выполненной норме: '+best+' тыс.':'');
+    if(r.q===0){
+      out.innerHTML='⛔ <b>Насосов нет — нефть стоит в трубе.</b> Самотёком на десять километров она не пойдёт: Балаханы и Чёрный город почти на одной высоте.';
+      out.style.color='#f08080';return;
+    }
+    if(r.q<80000){
+      var need=Math.round((80000-r.q)/1000);
+      out.innerHTML='❌ <b>'+fmt(r.q)+' пудов в сутки — мало,</b> не хватает '+need+' тысяч. Возчики остаются при работе. Сопротивление трубы душит поток: попробуй шире диаметр, ещё насос или подогрей нефть.';
+      out.style.color='#f08080';return;
+    }
+    if(!best||r.c<best)best=r.c;
+    if(r.c>90){
+      out.innerHTML='⚠️ <b>Норму взял — '+fmt(r.q)+' пудов в сутки, но смета '+r.c+' тыс. руб.</b> Кокорев такое не подпишет: труба окупится позже, чем кончится терпение. Тот же поток можно получить дешевле.';
+      out.style.color='#e4c97a';return;
+    }
+    out.innerHTML='✅ <b>Это решение Шухова.</b> Труба три дюйма, одна паровая станция, подогретая нефть — '+fmt(r.q)+' пудов в сутки при смете '+r.c+' тыс. руб. Двести подвод стали не нужны, доставка подешевела в разы. В 1878 году так и запустили: Балаханы → Чёрный город, первый в мире нефтепровод, рассчитанный по формулам, а не на глаз.';
+    out.style.color='#7ed4a0';
+    if(!won){won=true;var pts=tries<=1?20:(tries<=3?15:10);if(typeof award==='function')award('gm_shukhov',pts);}
+  };
+  draw();
+})();
+</script></div>
 <div class="gm" id="gm_quiz2">
   <h3>⏱ Игра 2 · Быстрый ответ</h3>
   <div class="gm-score">Чем быстрее ответишь — тем больше очков. Осталось: <b id="gm_quiz2_t">15</b> сек</div>
@@ -1011,6 +1156,7 @@ document.querySelectorAll('.starter-btn').forEach(b=>{
 
   function fire(){keyHint();on=true;surge=0;
     // мгновенный видимый впрыск: волна капель + толчок дыма над заводом
+    const gy=H*.82;
     for(let i=0;i<3;i++)smoke.push({x:W*.86,y:gy-H*.16,r:3,a:.55,vx:(Math.random()-.3)*.5,vy:-.7-Math.random()*.5});
     if(reduce){scene();}}  // без анимации всё равно перерисуем кадр
   function keyHint(){if(hinted)return;hinted=true;
