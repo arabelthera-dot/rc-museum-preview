@@ -20,8 +20,11 @@
 }
 
 /* ═══════════════ ТЕМА 1 · ИЗОБРЕТЕНИЯ — инженерная ═══════════════ */
+/* ВНИМАНИЕ: на страницах изобретений --ink означает ЦВЕТ ТЕКСТА (чернила),
+   а на страницах искусства и первопроходцев --ink — это ФОН.
+   Поэтому тема изобретений НЕ переопределяет цветовые токены страницы:
+   палитра там уже верная, тема добавляет только шрифты и акцент. */
 :root[data-museum="inventions"]{
-  --gold:#c9a84c;--ink:#060c17;--panel:#111f33;--line:rgba(201,168,76,.32);--txt:#e8eef5;
   --acc:#c9a84c;--acc-soft:rgba(201,168,76,.14);
   --font-h:'Playfair Display',Georgia,serif;
   --font-b:'Inter',system-ui,sans-serif;
@@ -37,6 +40,9 @@
   --txt:#241d16;            /* сажевые чернила */
   --acc:#a8341f;--acc-soft:rgba(168,52,31,.12);
   --sea:#122a3c;            /* морские секции */
+  /* токены, которые спрашивают движки обвязки: без них они падают на светлое золото */
+  --gold-l:#7a2415;--gold-g:rgba(168,52,31,.10);--fg:#241d16;--muted:#5d5348;
+  --dark:#efe6d2;--surface:#e6dac0;
   --font-h:'Old Standard TT',Georgia,serif;
   --font-b:'PT Serif',Georgia,serif;
   --font-m:'JetBrains Mono',ui-monospace,monospace;
@@ -50,6 +56,8 @@
   --panel:#1d1815;
   --line:rgba(255,255,255,.12);
   --txt:#e9e4dc;
+  --gold-l:#f0a765;--gold-g:rgba(232,135,58,.12);--fg:#e9e4dc;--muted:#a49a90;
+  --dark:#14100e;--surface:#1d1815;
   --font-h:'Playfair Display',Georgia,serif;
   --font-b:'Lora',Georgia,serif;
   --font-m:'Inter',system-ui,sans-serif;
@@ -194,6 +202,24 @@ body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none}
 
 [data-museum="explorers"] .support,[data-museum="art"] .support{
   background:var(--panel);border-color:var(--line);border-radius:var(--radius)}
+/* «Поддержать проект» вставляет движок со своими цветами — на светлой теме
+   его светло-жёлтый текст сливался с фоном. Цвета задаются явно, не наследованием. */
+[data-museum="explorers"] .support,[data-museum="explorers"] .support p,
+[data-museum="explorers"] .support li,[data-museum="explorers"] .support span,
+[data-museum="explorers"] .support div{color:var(--txt)}
+[data-museum="explorers"] .support h2,[data-museum="explorers"] .support h3,
+[data-museum="explorers"] .support b,[data-museum="explorers"] .support strong{color:var(--acc)}
+/* главная кнопка — заливка акцентом, вторичная — контур: обе читаемы на любой теме */
+[data-museum="explorers"] .support button.gold,[data-museum="art"] .support button.gold,
+[data-museum="explorers"] .support [data-sup-share],[data-museum="art"] .support [data-sup-share]{
+  background:var(--acc);color:#fff;border:1px solid var(--acc);border-radius:var(--radius)}
+[data-museum="explorers"] .support [data-sup-more],[data-museum="art"] .support [data-sup-more],
+[data-museum="explorers"] .support a,[data-museum="art"] .support a{
+  background:none;color:var(--acc);border:1px solid var(--acc);border-radius:var(--radius)}
+[data-museum="art"] .support,[data-museum="art"] .support p,
+[data-museum="art"] .support li,[data-museum="art"] .support div{color:var(--txt)}
+[data-museum="art"] .support h2,[data-museum="art"] .support h3,
+[data-museum="art"] .support b{color:var(--acc)}
 
 [data-museum="explorers"] .agnav button,[data-museum="art"] .agnav button,
 [data-museum="explorers"] .zb,[data-museum="art"] .zb,
