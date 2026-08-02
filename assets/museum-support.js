@@ -302,6 +302,24 @@
     }
   }
 
+  /* ── 2б. СТАНДАРТ: ровно два размещения — первая треть и подвал (правка Сергея 02.08).
+        Третий блок появлялся, когда ручной блок страницы уезжал из первой трети
+        на узком экране и движок ставил свой сверху. Средние снимаем. ── */
+  function keepTwo(){
+    var all = [].slice.call(doc.querySelectorAll('.support'));
+    if(all.length <= 2) return;
+    all.slice(1, -1).forEach(function(el){
+      if(el === peakEl) return;                 /* главный блок первой трети не трогаем */
+      var box = el.parentNode;
+      el.parentNode.removeChild(el);
+      if(box && box !== body && box !== peakHolder && !box.children.length && box.parentNode)
+        box.parentNode.removeChild(box);        /* пустая обёртка-холдер */
+    });
+  }
+  keepTwo();
+  window.addEventListener('load', function(){ keepTwo(); setTimeout(keepTwo, 1000); });
+  setTimeout(keepTwo, 1500);
+
   /* ── 3. кнопки внутри блоков ── */
   var sups = [].slice.call(doc.querySelectorAll('.support'));
   if(!doc.getElementById('support') && sups.length) sups[0].id = 'support';

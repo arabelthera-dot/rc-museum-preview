@@ -27,18 +27,21 @@
   h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.13;margin:0}
   .wrap{max-width:840px;margin:0 auto;padding:0 24px}
   a{color:var(--accent)}
-  header.top{background:rgba(6,12,23,.88);backdrop-filter:blur(24px);border-bottom:1px solid var(--card-b);color:#fff;position:sticky;top:0;z-index:30}
-  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
-  .logo .lt{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:16px}
-  .logo .lt small{display:block;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-family:'Inter',sans-serif}
-  .score{background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:6px 16px;font-size:13px;color:var(--gold-l);cursor:pointer;font-family:'Inter',sans-serif}
-  .crumbs{background:rgba(6,12,23,.6);border-bottom:1px solid var(--card-b);font-family:'Inter',sans-serif;font-size:12.5px}
-  .crumbs .wrap{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
-  .crumbs a{color:var(--gold-l);text-decoration:none;white-space:nowrap}
+  /* шапка — единый стандарт музеев (как у Дежнёва и «Девятого вала») */
+  header.top{position:relative;padding:14px 16px 8px;text-align:center;font-family:'Inter',sans-serif}
+  header.top .b1{font-size:13px;letter-spacing:2.5px;color:var(--gold);text-transform:uppercase}
+  header.top .b2{font-size:11px;opacity:.6;margin-top:2px}
+  .score{position:absolute;top:12px;right:14px;background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:5px 13px;font-size:12px;color:var(--gold-l);font-family:'Inter',sans-serif}
+  .crumbs{font-family:'Inter',sans-serif;font-size:12.5px;padding:6px 16px 10px;text-align:center;opacity:.9}
+  .crumbs a{color:var(--gold-l);text-decoration:none}
   .crumbs a:hover{text-decoration:underline}
   .crumbs .sep{color:var(--muted);opacity:.6}
-  .crumbs .here{color:var(--muted);white-space:nowrap}
+  .crumbs .here{color:var(--muted);opacity:.55}
+  @media(max-width:520px){
+    header.top{padding-top:34px}
+    .score{top:6px;right:50%;transform:translateX(50%)}
+    header.top .b1{font-size:11.5px;letter-spacing:1.8px}
+  }
   .hero{display:flex;flex-direction:column}
   .hero-visual{position:relative;height:52vh;min-height:280px;max-height:520px;overflow:hidden;background:linear-gradient(160deg,#0a1e3a 0%,rgb(18,56,96) 55%,#0d2240 100%);display:flex;align-items:center;justify-content:center}
   .hero-visual .hero-year{font-family:'Playfair Display',Georgia,serif;font-size:clamp(60px,14vw,130px);font-weight:900;color:rgba(255,255,255,.04);user-select:none;line-height:1;animation:yearFade 1.4s ease both;pointer-events:none}
@@ -63,7 +66,7 @@
   .hero h1{color:#fff;font-size:clamp(28px,6vw,52px);font-weight:900;line-height:1.06;margin-bottom:14px}
   .hero .hook{color:#b8ccde;font-size:18px;max-width:580px;margin-bottom:26px;line-height:1.65}
   .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:14px;font-family:'Inter',sans-serif;letter-spacing:.5px}
-  .daynav{position:sticky;top:64px;z-index:25;background:rgba(6,12,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-b)}
+  .daynav{position:sticky;top:0;z-index:25;background:rgba(6,12,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-b)}
   .daynav .wrap{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
   .daynav a{flex:0 0 auto;padding:14px 20px;font-size:11px;font-weight:700;font-family:'Inter',sans-serif;color:var(--muted);text-decoration:none;white-space:nowrap;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:.18s}
   .daynav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
@@ -245,27 +248,18 @@
 <body>
 
 <header class="top">
-  <div class="wrap">
-    <a class="logo" href="../index.html">
-      <svg width="34" height="34" viewBox="0 0 48 48" aria-label="логотип">
-        <circle cx="24" cy="24" r="23" fill="#0f1e33" stroke="#c8a24a" stroke-width="2"/>
-        <path d="M24 10 L24 30 L12 30 Z" fill="#c8a24a"/>
-        <path d="M26 14 L36 30 L26 30 Z" fill="#c8a24a" opacity=".7"/>
-        <path d="M10 33 q14 6 28 0" fill="none" stroke="#c8a24a" stroke-width="2"/>
-      </svg>
-      <span class="lt">Русская цивилизация<small>первые в мире</small></span>
-    </a>
-    <div class="score" id="scoreBox">⭐ <span id="score">0</span> / 100</div>
-  </div>
+  <div class="b1">Что изобрели русские первыми в мире</div>
+  <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
+  <div class="score" id="scoreBox">⭐ <span id="score">0</span> / 100</div>
 </header>
 
-<nav class="crumbs"><div class="wrap">
+<nav class="crumbs">
   <a href="../index.html">Русская цивилизация</a>
   <span class="sep">›</span>
   <a href="index.html">Что изобрели русские первыми в мире</a>
   <span class="sep">›</span>
   <span class="here">5 января · Шухов</span>
-</div></nav>
+</nav>
 
 <div class="sheet-rule l"></div><div class="sheet-rule r"></div>
 
@@ -731,14 +725,6 @@ window.shCheck=function(){if(!shSel)return;const cost=shSel.dataset.cost;
     <h2 style="margin-bottom:6px">Сколько баллов ты собрал?</h2>
     <p style="color:var(--muted);margin-top:0;max-width:62ch">Читай статью, играй, отвечай в викторине и спрашивай изобретателя — за всё начисляются баллы. Собери все 100 и стань Первым инженером империи.</p>
     <div class="card"><div class="gm-bar" style="height:10px"><i id="dayBar" style="width:0%"></i></div><div id="dayTxt" style="margin-top:10px;color:var(--gold-l);font-weight:600">0 / 100 · звание: Гость музея</div></div>
-    <div class="support" style="margin-top:20px">
-      <div class="sup-l">Поддержать проект</div>
-      <p>Музей делают два человека, и он бесплатный — без рекламы, регистрации и платных разделов. Самое ценное, что можно сделать прямо сейчас, — <b>отправить страницу тому, кому она зайдёт</b>. Один такой пересыл приводит больше людей, чем реклама.</p>
-      <div class="sup-btns">
-        <button class="btn gold" onclick="(navigator.share?navigator.share({title:document.title,url:location.href}):navigator.clipboard.writeText(location.href).then(()=>{this.textContent='Ссылка скопирована ✓'}));award('share',5)" style="font-size:14px">⤴ Поделиться страницей</button>
-        <button class="btn ghost" onclick="document.querySelectorAll('.support')[1].scrollIntoView({behavior:'smooth',block:'center'})" style="font-size:14px">Другие способы поддержать →</button>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -1152,7 +1138,10 @@ window.addEventListener('pageshow',e=>{if(e.persisted)location.reload()});
     // лёгкое «дыхание» закрутки — только пока схема в кадре
     let vis=true, t0=performance.now();
     new IntersectionObserver(e=>{vis=e[0].isIntersecting;}).observe(svg);
-    const tick=now=>{ if(vis) draw(1+Math.sin((now-t0)/4200)*.05); requestAnimationFrame(tick); };
+    /* закрутка гуляет заметно: ±16% за ~9 с — гиперболоид «дышит», видно, что
+       форма меняется, а стержни остаются прямыми (правка Сергея 02.08:
+       прежние ±5% за 26 с выглядели как застывшая картинка) */
+    const tick=now=>{ if(vis) draw(1+Math.sin((now-t0)/1450)*.16); requestAnimationFrame(tick); };
     setTimeout(()=>{
       bars.forEach(l=>{l.style.strokeDasharray='';l.style.transition='';});
       t0=performance.now(); requestAnimationFrame(tick);
