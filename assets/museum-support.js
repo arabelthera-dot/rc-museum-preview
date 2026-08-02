@@ -8,12 +8,20 @@
      3. прилипшее сердечко «❤ Поддержать проект» справа снизу;
      4. название везде «Поддержать проект»; формулировка «дать денег» ЗАПРЕЩЕНА,
         третий способ — «поддержать проект рублём»;
-     5. блок обязан ВЫДЕЛЯТЬСЯ из общего текста, но не резать глаз: свой шрифт
-        (Playfair Display 17px), золотая подложка, двойная рамка, левая золотая
-        полоса, капс-заголовок Inter 10px / трекинг 3.4px. Стили идут с !important —
-        иначе ручной CSS страницы (Айвазовский) красит блок в цвет фона и он сливается;
+     5. блок обязан ВЫДЕЛЯТЬСЯ из общего текста, но не резать глаз: золотая подложка,
+        двойная рамка, левая золотая полоса, капс-заголовок Inter 10px / трекинг 3.4px.
+        Стили идут с !important — иначе ручной CSS страницы (Айвазовский) красит блок
+        в цвет фона и он сливается;
      6. светлая/тёмная тема определяется по фону страницы — цвет текста подбирается,
-        а не берётся из --fg, которой на части страниц нет.
+        а не берётся из --fg, которой на части страниц нет;
+     7. ШРИФТ БЛОКА КОНТРАСТЕН ШРИФТУ СТРАНИЦЫ (правка Сергея 02.08). Жёстко заданный
+        Playfair не годился: на Айвазовском текст Georgia, на v2 — Lora, оба серифные,
+        и блок выглядел тем же шрифтом. Теперь класс шрифта страницы определяется на
+        лету: сериф → блок гротеском (Inter), гротеск → блок серифом (Playfair).
+        Цвет текста блока тоже сдвинут в тёплый (#f6ead2 против #e9e3d3 у статьи) —
+        разница в 3 единицы, как было раньше, глазом не читается;
+     8. ручные блоки старого образца («крошечная команда», кнопка «Как поддержать»)
+        нормализуются в стандартную разметку — на месте, где стоят.
 
    Движок также ЧИНИТ вручную свёрстанные блоки: ссылка «Как поддержать»,
    ведущая на ../index.html (в превью-репо это страница парашюта Котельникова),
@@ -58,14 +66,6 @@
   var MAILTO = 'mailto:' + MAIL + '?subject=' + encodeURIComponent(T.subject);
   T.final = T.final.replace('MAILTO', MAILTO);
 
-  /* ── шрифт: блок обязан отличаться от текста страницы ── */
-  if(!/Playfair/.test(doc.documentElement.innerHTML.slice(0, 8000))){
-    var fl = doc.createElement('link');
-    fl.rel = 'stylesheet';
-    fl.href = 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600;700&display=swap';
-    doc.head.appendChild(fl);
-  }
-
   /* ── тема страницы: светлая или тёмная (цвет текста нельзя брать из --fg) ── */
   function lum(c){
     var m = /rgba?\(\s*(\d+)[,\s]+(\d+)[,\s]+(\d+)(?:[,\s/]+([\d.]+))?/.exec(c || '');
@@ -77,26 +77,64 @@
   if(L === null) L = lum(getComputedStyle(doc.documentElement).backgroundColor);
   var LIGHT = (L !== null && L > 0.55);
 
-  var FG   = LIGHT ? '#2a2118' : '#ece7dc';       /* текст блока */
-  var ACC  = LIGHT ? '#8a6a1e' : '#e3c883';       /* выделения и ссылки */
-  var LBL  = LIGHT ? '#8a6a1e' : '#c8a24a';       /* капс-заголовок */
-  var BG1  = LIGHT ? 'rgba(201,168,76,.22)' : 'rgba(201,168,76,.15)';
-  var BG2  = LIGHT ? 'rgba(201,168,76,.07)' : 'rgba(201,168,76,.045)';
-  var BRD  = LIGHT ? 'rgba(150,116,30,.55)'  : 'rgba(201,168,76,.5)';
+  /* ── шрифт страницы: блок берёт ПРОТИВОПОЛОЖНЫЙ класс ──
+     Georgia/Lora/PT Serif против Playfair — формально разные шрифты, глазом одинаковые. */
+  function pageFont(){
+    var p = doc.querySelector('article p, main p, section p, .wrap p, p');
+    var f = p ? getComputedStyle(p).fontFamily : getComputedStyle(body).fontFamily;
+    return f || '';
+  }
+  var PF = pageFont();
+  /* решает ПЕРВОЕ семейство списка — оно и применяется. Хвост 'sans-serif' содержит
+     подстроку 'serif', поэтому поиск по всей строке даёт ложный сериф (ловил на Шухове). */
+  var FIRST = (PF.split(',')[0] || '').replace(/['"]/g, '').trim().toLowerCase();
+  var SERIFS = /^(serif|georgia|lora|playfair|pt serif|merriweather|times|garamond|cormorant|literata|charter|noto serif|source serif|roboto slab|bitter|spectral|ibm plex serif|old standard|alegreya|ptserif)/;
+  var SANSES = /^(sans-serif|system-ui|-apple-system|ui-sans|inter|roboto|helvetica|arial|segoe|open sans|montserrat|lato|pt sans|noto sans|manrope|rubik|golos|nunito|raleway|oswald|jost)/;
+  var PAGE_SERIF = SERIFS.test(FIRST) ? true
+    : SANSES.test(FIRST) ? false
+    : /(^|,)\s*serif\s*$/i.test(PF);
+  var FONT = PAGE_SERIF
+    ? "'Inter',system-ui,-apple-system,'Segoe UI',sans-serif"   /* страница серифом → блок гротеском */
+    : "'Playfair Display',Georgia,serif";                        /* страница гротеском → блок серифом */
+  var FSIZE = PAGE_SERIF ? '16.5px' : '17px';
+  var MSIZE = PAGE_SERIF ? '16px' : '16.5px';   /* мобильный: у серифа кегль крупнее по рисунку */
+  var FTRACK = PAGE_SERIF ? '.1px' : '0';
+  var FLINE = PAGE_SERIF ? '1.58' : '1.62';
+
+  /* цвет: заметный сдвиг в тёплый, а не оттенок того же бежевого, что у статьи */
+  var FG   = LIGHT ? '#3b2c12' : '#f6ead2';       /* текст блока */
+  var ACC  = LIGHT ? '#7a5a12' : '#e8c874';       /* выделения и ссылки */
+  var LBL  = LIGHT ? '#8a6a1e' : '#d9b45c';       /* капс-заголовок */
+  var BG1  = LIGHT ? 'rgba(201,168,76,.30)' : 'rgba(201,168,76,.24)';
+  var BG2  = LIGHT ? 'rgba(201,168,76,.10)' : 'rgba(201,168,76,.06)';
+  var BRD  = LIGHT ? 'rgba(150,116,30,.60)'  : 'rgba(201,168,76,.55)';
   var BTNB = LIGHT ? 'rgba(255,253,247,.92)' : 'rgba(18,21,28,.9)';
+  var GLOW = LIGHT ? '0 2px 20px rgba(120,92,20,.14)' : '0 2px 22px rgba(0,0,0,.34),0 0 34px -14px rgba(201,168,76,.55)';
+
+  /* ── шрифт качаем только тот, которым будет набран блок, и только если его нет ── */
+  var NEED = PAGE_SERIF ? 'Inter' : 'Playfair';
+  if(doc.documentElement.innerHTML.indexOf(NEED) < 0){
+    var fl = doc.createElement('link');
+    fl.rel = 'stylesheet';
+    fl.href = 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600;700&display=swap';
+    doc.head.appendChild(fl);
+  }
 
   /* ── CSS: !important, иначе ручной CSS страницы перекрашивает блок в фон ── */
   var I = ' !important;';
   var css = ''
   + '.support{position:relative' + I + 'display:block' + I
   + 'background:linear-gradient(180deg,' + BG1 + ',' + BG2 + ')' + I
-  + 'border:1px solid ' + BRD + I + 'border-left:3px solid ' + LBL + I
+  + 'border:1px solid ' + BRD + I + 'border-left:4px solid ' + LBL + I
   + 'border-radius:3px' + I + 'padding:24px 28px 22px' + I
   + 'margin:26px 0 22px' + I + 'scroll-margin-top:70px' + I
-  + 'box-shadow:0 2px 22px rgba(0,0,0,' + (LIGHT ? '.10' : '.32') + ')' + I
-  + "font-family:'Playfair Display',Georgia,serif" + I
-  + 'font-size:17px' + I + 'line-height:1.62' + I + 'text-align:left' + I
-  + 'color:' + FG + I + '}'
+  + 'box-shadow:' + GLOW + I
+  + 'font-family:' + FONT + I
+  + 'font-size:' + FSIZE + I + 'line-height:' + FLINE + I + 'letter-spacing:' + FTRACK + I
+  + 'text-align:left' + I + 'color:' + FG + I + '}'
+  /* выпуск за колонку текста: блок читается как другой слой, а не как ещё одна карточка.
+     Только на широком экране — на мобильном полей может не хватить и появится горизонтальная прокрутка. */
+  + '@media(min-width:700px){.support{margin-left:-10px' + I + 'margin-right:-10px' + I + '}}'
   + ".support::before{content:''" + I + 'position:absolute' + I + 'inset:5px' + I
   + 'border:1px solid ' + (LIGHT ? 'rgba(150,116,30,.22)' : 'rgba(201,168,76,.18)') + I
   + 'border-radius:1px' + I + 'pointer-events:none' + I + '}'
@@ -108,7 +146,8 @@
   + ".support .sup-l::before{content:'❤'" + I + 'font-size:13px' + I + 'letter-spacing:0' + I + '}'
   + ".support .sup-l::after{content:''" + I + 'flex:1' + I + 'height:1px' + I
   + 'background:linear-gradient(90deg,' + BRD + ',transparent)' + I + '}'
-  + '.support p{margin:0' + I + 'font-size:17px' + I + 'line-height:1.62' + I + 'color:' + FG + I + '}'
+  + '.support p{margin:0' + I + 'font-family:' + FONT + I + 'font-size:' + FSIZE + I
+  + 'line-height:' + FLINE + I + 'letter-spacing:' + FTRACK + I + 'color:' + FG + I + '}'
   + '.support b{color:' + ACC + I + 'font-weight:700' + I + '}'
   + '.support a{color:' + ACC + I + '}'
   + ".support .sup-btns{display:flex" + I + 'gap:10px' + I + 'flex-wrap:wrap' + I
@@ -118,8 +157,8 @@
   + 'font-size:14px' + I + 'cursor:pointer' + I + 'transition:background .2s' + I + '}'
   + '.support .sup-btns button.gold{background:rgba(201,168,76,' + (LIGHT ? '.26' : '.18') + ')' + I + '}'
   + '.support .sup-btns button:hover{background:rgba(201,168,76,' + (LIGHT ? '.36' : '.28') + ')' + I + '}'
-  + '@media(max-width:600px){.support{padding:20px 18px' + I + 'font-size:16px' + I + '}'
-  + '.support p{font-size:16px' + I + '}}'
+  + '@media(max-width:600px){.support{padding:20px 18px' + I + 'font-size:' + MSIZE + I + '}'
+  + '.support p{font-size:' + MSIZE + I + '}}'
   + "#heart{position:fixed;right:12px;bottom:82px;z-index:60;background:rgba(6,12,23,.92);border:1px solid rgba(201,168,76,.35);"
   + 'border-radius:26px;width:46px;height:46px;display:flex;align-items:center;justify-content:center;font-size:17px;'
   + "color:#c8a24a;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.5);overflow:hidden;font-family:'Inter',system-ui,sans-serif;"
@@ -149,8 +188,18 @@
   function hasSupport(el){ return !!(el && el.querySelector && el.querySelector('.support')); }
   function topOf(el){ var r = el.getBoundingClientRect(); return r.top + window.scrollY; }
 
-  /* ── 0. чиним ручные блоки: битые ссылки и приводим подпись к стандарту ──
-        href="../index.html" вёл на корень превью — страницу парашюта Котельникова. */
+  /* ── 0. ручные блоки старого образца → стандартная разметка на том же месте ──
+        Айвазовский: «Музей делает крошечная команда» + кнопка «❤ Как поддержать»,
+        без капс-заголовка и без трёх способов поддержки (правка Сергея 02.08). */
+  var H0 = Math.max(doc.documentElement.scrollHeight, body.scrollHeight, 1);
+  [].slice.call(doc.querySelectorAll('.support')).forEach(function(el){
+    if(el.querySelector('.sup-l')) return;                       /* уже по стандарту */
+    var top = el.getBoundingClientRect().top + window.scrollY;
+    el.innerHTML = (top < H0 * 0.40 ? peakBlock() : finalBlock()).innerHTML;
+  });
+
+  /* чиним битые ссылки: href="../index.html" вёл на корень превью —
+     страницу парашюта Котельникова. */
   [].slice.call(doc.querySelectorAll('.support a')).forEach(function(a){
     var h = a.getAttribute('href') || '';
     if(/(^|\/)index\.html?($|[?#])/i.test(h) || h === '../' || h === './'){
