@@ -124,38 +124,57 @@ body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none}
 [data-fabric="hall"] body::before{
   background:radial-gradient(ellipse 90% 55% at 50% 0%,rgba(255,240,215,.07),transparent 70%)}
 
-/* ───────────────── HERO · АТЛАС: карта как лист, подпись под ним ───────────────── */
-[data-fabric="atlas"] .hero{height:auto;min-height:0;padding:14px 14px 0;cursor:pointer}
-[data-fabric="atlas"] .hero .bg{position:relative;inset:auto;height:min(58vh,62vw);min-height:240px;
+/* ═══════════════ HERO — ТОЛЬКО ПО ЯВНОМУ СОГЛАСИЮ СТРАНИЦЫ ═══════════════
+   Правило волны 2 (03.08): подключение темы НЕ ИМЕЕТ ПРАВА менять обложку.
+   Полноэкранные hero Айвазовского и Дежнёва утверждены Сергеем — фактура
+   их больше не переопределяет. Блоки ниже включаются отдельным атрибутом:
+     <html data-hero="sheet">  — карта как лист (было: любой data-fabric=atlas)
+     <html data-hero="canvas"> — полотно целиком (было: любой data-fabric=hall)
+   Без data-hero страница получает шрифты, цвета и фактуру, а обложку — свою.
+   ═════════════════════════════════════════════════════════════════════════ */
+
+/* Обложка живёт по своим законам: текст лежит поверх фотографии или карты,
+   и цвет ему диктует снимок, а не тема. Светлая тема первопроходцев красит
+   текст сажей — на тёмной половине старинной карты заголовок пропадал (поймано 03.08).
+   Пока страница не выбрала data-hero, текст обложки остаётся светлым. */
+[data-museum="explorers"]:not([data-hero]) .hero,
+[data-museum="explorers"]:not([data-hero]) .hero *{color:#f4ece0}
+[data-museum="explorers"]:not([data-hero]) .hero h1 b{color:#e8c87a}
+[data-museum="explorers"]:not([data-hero]) .hero .chip{
+  background:rgba(20,14,8,.42);border-color:rgba(244,236,224,.35)}
+
+/* ───────────────── HERO · ЛИСТ: карта как лист, подпись под ним ───────────────── */
+[data-hero="sheet"] .hero{height:auto;min-height:0;padding:14px 14px 0;cursor:pointer}
+[data-hero="sheet"] .hero .bg{position:relative;inset:auto;height:min(58vh,62vw);min-height:240px;
   border:1px solid rgba(36,29,22,.35);box-shadow:0 10px 30px rgba(40,28,12,.28),inset 0 0 60px rgba(90,66,30,.25)}
-[data-fabric="atlas"] .hero .scrim{display:none}
-[data-fabric="atlas"] .hero .inner{position:relative;inset:auto;bottom:auto;text-align:left;
+[data-hero="sheet"] .hero .scrim{display:none}
+[data-hero="sheet"] .hero .inner{position:relative;inset:auto;bottom:auto;text-align:left;
   max-width:760px;margin:0 auto;padding:16px 4px 4px;pointer-events:auto}
-[data-fabric="atlas"] .hero .chip{background:none;border:none;border-left:2px solid var(--acc);
+[data-hero="sheet"] .hero .chip{background:none;border:none;border-left:2px solid var(--acc);
   border-radius:0;padding:0 0 0 9px;font-size:11.5px;letter-spacing:1.6px;text-transform:uppercase;
   color:var(--txt);opacity:.72;display:block;margin-bottom:9px}
-[data-fabric="atlas"] .hero h1{font-size:clamp(30px,6.4vw,50px);letter-spacing:0;line-height:1.06}
-[data-fabric="atlas"] .hero h1 b{color:var(--acc)}
-[data-fabric="atlas"] .hero .hook{font-style:italic;opacity:.85;margin-top:10px;max-width:52ch}
-[data-fabric="atlas"] .hero .down{text-align:left;opacity:.6;font-family:var(--font-m);font-size:11.5px}
+[data-hero="sheet"] .hero h1{font-size:clamp(30px,6.4vw,50px);letter-spacing:0;line-height:1.06}
+[data-hero="sheet"] .hero h1 b{color:var(--acc)}
+[data-hero="sheet"] .hero .hook{font-style:italic;opacity:.85;margin-top:10px;max-width:52ch}
+[data-hero="sheet"] .hero .down{text-align:left;opacity:.6;font-family:var(--font-m);font-size:11.5px}
 
-/* ───────────────── HERO · ЗАЛ: полотно целиком, ни слова поверх ───────────────── */
-[data-fabric="hall"] .hero{height:auto;min-height:0;padding:26px 16px 0;cursor:zoom-in;
+/* ───────────────── HERO · ПОЛОТНО: картина целиком, ни слова поверх ───────────────── */
+[data-hero="canvas"] .hero{height:auto;min-height:0;padding:26px 16px 0;cursor:zoom-in;
   background:linear-gradient(180deg,#1a1512,var(--ink))}
-[data-fabric="hall"] .hero .bg{position:relative;inset:auto;height:min(66vh,58vw);min-height:250px;
+[data-hero="canvas"] .hero .bg{position:relative;inset:auto;height:min(66vh,58vw);min-height:250px;
   background-size:contain;background-position:center;background-repeat:no-repeat;animation:none;
   filter:drop-shadow(0 26px 40px rgba(0,0,0,.6))}
-[data-fabric="hall"] .hero .scrim{display:none}
+[data-hero="canvas"] .hero .scrim{display:none}
 /* этикетка под полотном — музейный стандарт: имя, название, дата, материал, размер, собрание */
-[data-fabric="hall"] .hero .inner{position:relative;inset:auto;bottom:auto;text-align:center;
+[data-hero="canvas"] .hero .inner{position:relative;inset:auto;bottom:auto;text-align:center;
   padding:22px 16px 4px;pointer-events:auto;display:flex;flex-direction:column;align-items:center}
 /* порядок этикетки: название → выходные данные → хук → подсказка */
-[data-fabric="hall"] .hero h1{font-size:clamp(28px,5.4vw,46px);letter-spacing:.5px;order:1}
-[data-fabric="hall"] .hero h1 b{color:var(--txt)}
-[data-fabric="hall"] .hero .chip{order:2;display:block;background:none;border:none;border-radius:0;padding:0;
+[data-hero="canvas"] .hero h1{font-size:clamp(28px,5.4vw,46px);letter-spacing:.5px;order:1}
+[data-hero="canvas"] .hero h1 b{color:var(--txt)}
+[data-hero="canvas"] .hero .chip{order:2;display:block;background:none;border:none;border-radius:0;padding:0;
   font-size:11px;letter-spacing:2.4px;text-transform:uppercase;opacity:.6;margin:12px 0 0}
-[data-fabric="hall"] .hero .hook{order:3;font-style:italic;opacity:.85;margin-top:16px;max-width:56ch}
-[data-fabric="hall"] .hero .down{order:4;opacity:.5;font-family:var(--font-m);font-size:11px;letter-spacing:1.4px}
+[data-hero="canvas"] .hero .hook{order:3;font-style:italic;opacity:.85;margin-top:16px;max-width:56ch}
+[data-hero="canvas"] .hero .down{order:4;opacity:.5;font-family:var(--font-m);font-size:11px;letter-spacing:1.4px}
 
 /* ───────────────── КОМПОНЕНТЫ: снять хардкод золота ───────────────── */
 [data-museum="explorers"] a,[data-museum="art"] a{color:var(--acc)}
