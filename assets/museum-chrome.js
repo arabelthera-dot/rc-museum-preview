@@ -38,6 +38,8 @@
     'kartina-i-hudozhnik':'Картина','story':'История','istoriya':'История',
     'put':'Маршрут','routewrap':'Маршрут','atlas':'Атлас',
     'trudno-poverit':'Факты','more':'Ещё','theme-inventions':'Тема',
+    /* 03.08: секции, которые выпадали из панели на всех трёх флагманах */
+    'chto-zametit':'Детали','mirovoy-kontekst':'Мир','scene-baku':'Сцена',
     'kontekst':'Мир','razbor':'Разбор',
     'chat':'Интервью','chat-sec':'Интервью',
     'game':'Игра','games':'Игры','pohod':'Игра','geom-sec':'Игра',

@@ -116,7 +116,10 @@
   if(doc.documentElement.innerHTML.indexOf(NEED) < 0){
     var fl = doc.createElement('link');
     fl.rel = 'stylesheet';
-    fl.href = 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600;700&display=swap';
+    /* локальный fonts.css вместо fonts.googleapis.com (03.08): путь считаем от src самого движка,
+       страницы лежат в подпапках музеев */
+    var me = doc.currentScript || doc.querySelector('script[src*="museum-support"]');
+    fl.href = (me ? me.src.replace(/museum-support\.js.*$/, '') : '../assets/') + 'fonts.css';
     doc.head.appendChild(fl);
   }
 

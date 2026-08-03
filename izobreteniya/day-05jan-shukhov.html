@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-museum="inventions" data-fabric="blueprint">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Первый в мире расчётный нефтепровод — Шухов — Русские первые в мире</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/three@0.160/build/three.min.js"></script>
+<link href="../assets/fonts.css" rel="stylesheet">
+<script src="../assets/vendor/three.min.js"></script>
 <style>
 /* Hallmark · macrostructure: Workbench (чертёжный лист) · tone: technical/editorial · anchor hue: cyan 230°
  * pre-emit critique: P5 H4 E4 S5 R4 V5 · слой поверх существующей обвязки музея, блоки не тронуты */
@@ -244,6 +243,8 @@
   #heart.tuck{transform:translateY(96px);opacity:0;pointer-events:none}
   footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px;font-family:'Playfair Display',Georgia,serif;font-size:15px;letter-spacing:0}
 </style>
+<!-- тема музея + фактура (03.08) -->
+<link rel="stylesheet" href="../assets/museum-theme.css">
 </head>
 <body>
 
@@ -318,8 +319,6 @@
   </div>
 </section>
 
-<div class="wrap"><div class="ad-slot"><span class="lbl">Реклама</span><span class="ph-txt">Баннер-шапка — размещается здесь.</span></div></div>
-
 <nav class="daynav">
   <div class="wrap">
     <a href="#story">Читать</a>
@@ -337,13 +336,13 @@
 <section class="block" id="video">
   <div class="wrap">
     <div class="kicker">Видео дня</div>
-    <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap"><h2 style="margin:0">История в 76 секунд</h2><span style="background:var(--gold-g);color:var(--gold);border:1px solid rgba(201,168,76,.3);border-radius:20px;padding:3px 14px;font-size:12px;font-weight:600;font-family:'Inter',sans-serif">🎬 нейроголос · 76 сек</span></div>
-    <p style="color:var(--muted);margin-top:0">Та же история кинематографическим роликом — закадровый нейроголос и атмосферная музыка.</p>
-    <video controls playsinline preload="metadata" poster="day-05jan-shukhov-poster.jpg" style="width:100%;aspect-ratio:16/9;background:#050c18;border-radius:14px;display:block;box-shadow:0 8px 40px rgba(0,0,0,.5)">
+    <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap"><h2 style="margin:0">История в 76 секунд</h2><span style="background:var(--gold-g);color:var(--gold);border:1px solid rgba(201,168,76,.3);border-radius:20px;padding:3px 14px;font-size:12px;font-weight:600;font-family:'Inter',sans-serif">76 сек</span></div>
+    <p style="color:var(--muted);margin-top:0">Та же история кинематографическим роликом — от каравана подвод до первой трубы.</p>
+    <video controls playsinline preload="none" poster="day-05jan-shukhov-poster.jpg" style="width:100%;aspect-ratio:16/9;background:#050c18;border-radius:14px;display:block;box-shadow:0 8px 40px rgba(0,0,0,.5)">
       <source src="day-05jan-shukhov.mp4?v=1" type="video/mp4">
       Ваш браузер не поддерживает видео.
     </video>
-    <p style="font-size:13px;color:var(--muted);margin-top:10px">Закадровый голос — нейросеть Microsoft Azure Neural (ru-RU-DmitryNeural). Музыка — атмосферный дрон, генерация. Визуальный ряд — архивные фото Балахан 1880-х и дизайн-анимация: счётчик подвод, линия первого нефтепровода, решётка гиперболоида.</p>
+    <p style="font-size:13px;color:var(--muted);margin-top:10px">Визуальный ряд ролика — архивные фотографии Балахан 1880-х годов и чертёжная анимация: счётчик подвод, линия первого нефтепровода, решётка гиперболоида. Закадровый текст озвучен синтезом речи.</p>
   </div>
 </section>
 
@@ -397,7 +396,7 @@
   </div>
 </section>
 
-<section class="block" id="more">
+<section class="block" id="more" data-nav="Работы">
   <div class="wrap">
     <div class="kicker">Не только нефтепровод</div>
     <h2>Другие работы Шухова</h2>
@@ -860,8 +859,6 @@
     </div>
   </div>
 </section>
-
-<div class="wrap"><div class="ad-slot"><span class="lbl">Реклама</span><span class="ph-txt">Партнёрский блок в середине страницы.</span></div></div>
 
 
 <section class="block" id="result">
