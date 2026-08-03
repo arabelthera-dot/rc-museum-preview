@@ -159,6 +159,39 @@
   .stamp .k{font-family:var(--mono);font-size:9px;letter-spacing:1.6px;text-transform:uppercase;color:#7893ab;margin-top:5px}
   @media(max-width:600px){.stamp{grid-template-columns:repeat(2,minmax(0,1fr))}.stamp div:nth-child(3){border-left:0}.stamp div:nth-child(n+3){border-top:1px solid rgba(125,200,255,.16)}}
 
+  /* архивный отпечаток, наклеенный на чертёжный лист */
+  .bp-photo{position:relative;border:1px solid rgba(125,200,255,.28);background:#0a1524;overflow:hidden}
+  .bp-photo img{display:block;width:100%;height:36vh;min-height:230px;max-height:420px;object-fit:cover;object-position:50% 58%;filter:contrast(1.06) saturate(.9)}
+  .bp-photo::after{content:'';position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(180deg,rgba(6,14,26,.4) 0%,rgba(6,14,26,0) 22%,rgba(6,14,26,.55) 42%,rgba(6,14,26,.88) 70%,rgba(6,14,26,.97) 100%)}
+  .bp-over{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:0 14px 13px}
+  .bp-over .date-chip{margin-bottom:9px}
+  .bp-over h1{font-size:clamp(25px,5.6vw,46px);line-height:1.14;margin:0;text-wrap:balance;text-shadow:0 2px 20px rgba(0,0,0,.8)}
+  @media(max-width:600px){.bp-over{padding:0 11px 11px}}
+  .bp-photo .pin{position:absolute;top:10px;left:12px;z-index:2;font-family:var(--mono);font-size:9.5px;letter-spacing:1.8px;
+    text-transform:uppercase;color:#cfe4f5;background:rgba(6,14,26,.6);border:1px solid rgba(125,200,255,.3);padding:4px 10px}
+  .bp-cap{font-family:var(--mono);font-size:10.5px;letter-spacing:1.2px;color:#7893ab;padding:9px 2px 0;line-height:1.6}
+  .bp-title .who{font-family:'Inter',sans-serif;font-size:clamp(13px,3vw,15px);letter-spacing:.4px;color:var(--cyan);
+    margin-bottom:10px;font-weight:600}
+  .bp-title .who i{font-style:normal;color:#7893ab;font-weight:400}
+  /* архивные фотографии в теле страницы */
+  .fig{margin:22px 0;border:1px solid rgba(125,200,255,.22);background:#0a1524}
+  .fig img{display:block;width:100%;height:auto}
+  .fig figcaption{font-family:var(--mono);font-size:10.5px;letter-spacing:1.1px;line-height:1.65;color:#7893ab;
+    padding:9px 12px;border-top:1px solid rgba(125,200,255,.14)}
+  .figs{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin:22px 0}
+  .figs .fig{margin:0}
+  .fig-side{float:right;width:190px;margin:4px 0 16px 20px}
+  @media(max-width:600px){.fig-side{float:none;width:60%;margin:16px auto}}
+  /* грамота в финале — по образцу музея первопроходцев */
+  .diploma{border:1px solid var(--gold);border-radius:14px;padding:18px;text-align:center;background:rgba(6,12,23,.55);margin:16px 0 14px}
+  .diploma .dl{display:block;font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);opacity:.85;margin-bottom:8px;font-family:'Inter',sans-serif}
+  .diploma b{display:block;font-family:'Playfair Display',Georgia,serif;font-size:20px;font-weight:normal;margin-bottom:8px}
+  .diploma .dp{display:block;font-size:13.5px;opacity:.88;line-height:1.6}
+  .diploma .dp i{color:var(--gold);font-style:normal;font-weight:700}
+  .diploma .ds{display:block;margin-top:10px;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;opacity:.55}
+  /* лист 2 — гиперболоид, опущен под первый экран */
+  #tower-sheet .tower-box{margin-bottom:6px}
   .bp-title{margin:26px 0 0}
   .bp-title h1{font-size:clamp(30px,6.2vw,56px);overflow-wrap:anywhere;min-width:0}
   .bp-meta{font-family:var(--mono);font-size:11px;letter-spacing:2px;color:#7f9cb6;text-transform:uppercase}
@@ -269,10 +302,16 @@
     <div class="bp-sheet">
       <i class="bp-corner tl"></i><i class="bp-corner tr"></i><i class="bp-corner bl"></i><i class="bp-corner br"></i>
       <div class="bp-meta">Лист 1 · Балаханы → Чёрный город · Баку <i>1878</i></div>
-      <div class="tower-box">
-        <svg id="tower" viewBox="0 0 560 430" role="img" aria-label="Схема гиперболоида: каркас из прямых стержней"></svg>
-        <div class="tower-cap">каркас собран из <b>прямых</b> стержней — ни одной гнутой детали · <span id="towerHint">наведи на стержень</span></div>
-      </div>
+      <figure class="bp-photo" style="margin:12px 0 0">
+        <span class="pin">Балаханы · фотография</span>
+        <img src="day-05jan-shukhov-balakhany1880.jpg" alt="Нефтяной промысел Балаханы под Баку: деревянные вышки до горизонта, чёрная от нефти земля" loading="eager" width="730" height="330">
+        <div class="bp-over">
+          <div class="date-chip mono">5 января · 1878</div>
+          <div class="who">Владимир Шухов <i>· инженер, 24 года</i></div>
+          <h1>Первый в мире расчётный нефтепровод</h1>
+        </div>
+      </figure>
+      <div class="bp-cap">Балаханы под Баку, 1880-е. Отсюда нефть шла на заводы Чёрного города — до 1878 года её везли бочками на арбах.</div>
       <div class="stamp">
         <div><div class="v">10 км</div><div class="k">длина нитки</div></div>
         <div><div class="v">3″</div><div class="k">диаметр трубы</div></div>
@@ -281,11 +320,8 @@
       </div>
     </div>
 
-    <div class="bp-title">
-      <div class="date-chip mono">5 января · 1878</div>
-      <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
-      <h1>Первый в мире расчётный нефтепровод</h1>
-      <p class="hook">Перевозка бочки нефти стоила дороже самой нефти — пока 24-летний инженер не посчитал, что нефть может течь сама. Двести подвод заменила одна труба.</p>
+    <div class="bp-title" style="margin-top:16px">
+      <p class="hook" style="max-width:62ch">Перевозка бочки нефти стоила дороже самой нефти — пока 24-летний инженер не посчитал, что нефть может течь сама. Двести подвод заменила одна труба.</p>
       <div style="display:flex;gap:12px;flex-wrap:wrap;padding-bottom:38px">
         <button class="btn gold" onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">Читать историю ↓</button>
         <button class="btn ghost" onclick="document.getElementById('video').scrollIntoView({behavior:'smooth'})">▶ Смотреть видео</button>
@@ -358,9 +394,25 @@
 
 <p><b>5 января 1878 года, Баку.</b> На нефтепромысле Балаханы запускают паровой насос. Нефть уходит в трёхдюймовую стальную трубу и — впервые в истории промышленности — сама течёт десять километров до нефтеперегонных заводов Чёрного города. Ни бочек. Ни подвод. Ни возчиков. У трубы стоит автор проекта — инженеру Владимиру Шухову двадцать четыре года.</p>
 
+<figure class="fig fig-side">
+  <img src="day-05jan-shukhov-portret.jpg" alt="Владимир Шухов в молодости: высокий лоб, борода, прямой взгляд" loading="lazy" width="200" height="302">
+  <figcaption>Шухов, начало 1890-х</figcaption>
+</figure>
+
 <p><b>Кто этот человек.</b> Выпускник Императорского технического училища, Шухов отказался от кафедры у самого Пафнутия Чебышёва — не хотел чистой математики, хотел строить. Про него потом скажут: «первый инженер Российской империи» и «русский Леонардо». Он брал любую задачу — нефть, вода, мосты, башни, котлы — и решал её расчётом там, где другие действовали на глазок.</p>
 
 <p><b>В чём была загвоздка.</b> Баку 1870-х — нефтяная столица мира, задыхавшаяся от собственной нефти. Добыть её научились, а вот доставить с промыслов на заводы — нет. Нефть заливали в деревянные бочки, грузили на арбы, и сотни возчиков днём и ночью тянулись через город. Перевозка бочки стоила дороже самой нефти в ней. Возчики держали монополию и цены — и промышленники им платили, потому что выхода не было.</p>
+
+<div class="figs">
+  <figure class="fig">
+    <img src="day-05jan-shukhov-podvoda.jpg" alt="Лошадь, запряжённая в телегу с нефтяной бочкой, на промысле среди вышек" loading="lazy" width="730" height="341">
+    <figcaption>Вот что заменила труба: одна подвода, одна бочка, один возчик. Балаханы, 1890-е</figcaption>
+  </figure>
+  <figure class="fig">
+    <img src="day-05jan-shukhov-karavan.jpg" alt="Верблюжий караван с грузом у клёпаных нефтяных резервуаров" loading="lazy" width="730" height="420">
+    <figcaption>Верблюды у нефтяных резервуаров. Так возили нефть в том же Баку, где уже работал первый в мире нефтепровод</figcaption>
+  </figure>
+</div>
 
 <p><b>Как родилась идея.</b> Молодой Шухов, приехавший в Баку от конторы инженера Бари, увидел в этом хаосе задачу по гидравлике. В Америке уже пробовали качать нефть по коротким трубам — но без строгой теории, методом проб и ошибок. Шухов первым вывел точные формулы: какой диаметр трубы нужен под заданный поток, какое давление создавать насосами, где ставить перекачечные станции, как меняется вязкость нефти с температурой. Это была не прикидка — это была наука о трубопроводах, создаваемая с нуля.</p>
 
@@ -378,7 +430,14 @@
 
 
 
-<p style="font-size:13px;color:var(--muted);margin-top:26px">Источники: rg.ru · histrf.ru · culture.ru · tass.ru</p>
+<div style="margin-top:28px;padding-top:16px;border-top:1px solid rgba(125,200,255,.16);font-size:13px;line-height:1.9;color:var(--muted)">
+  <b style="display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:#7893ab;margin-bottom:8px">Источники</b>
+  <a href="https://transnefthistory.tass.ru/tube-1.html" target="_blank" rel="noopener">ТАСС · «Первый российский трубопровод»</a> — хронология стройки Балаханы — Чёрный город<br>
+  <a href="https://www.nkj.ru/archive/articles/23482/" target="_blank" rel="noopener">«Наука и жизнь» · «Человек-фабрика»</a> — инженерная биография и крекинг 1891 года<br>
+  <a href="https://rg.ru/2023/08/28/glavnyj-russkij-inzhener-170-let-so-dnia-rozhdeniia-vladimira-shuhova.html" target="_blank" rel="noopener">«Российская газета» · «Главный русский инженер»</a> — к 170-летию Шухова<br>
+  <a href="https://www.culture.ru/persons/8469/vladimir-shukhov" target="_blank" rel="noopener">Культура.РФ · биография Владимира Шухова</a> — работы, даты жизни, судьба построек<br>
+  <span style="display:block;margin-top:8px;font-size:12px;opacity:.75">Фотографии: архивные снимки Балаханских промыслов и Баку 1880–1890-х годов, авторы неизвестны, общественное достояние.</span>
+</div>
       </div>
       <div class="more"><button class="btn ghost" id="moreBtn">Читать дальше ↓</button></div>
     </div>
@@ -396,12 +455,30 @@
   </div>
 </section>
 
+<!-- ── ЛИСТ 2: ГИПЕРБОЛОИД (опущен из первого экрана 03.08) ── -->
+<section class="block" id="tower-sheet" data-nav="Чертёж" style="padding-top:26px">
+  <div class="wrap">
+    <div class="bp-sheet">
+      <i class="bp-corner tl"></i><i class="bp-corner tr"></i><i class="bp-corner bl"></i><i class="bp-corner br"></i>
+      <div class="bp-meta">Лист 2 · Гиперболоид · патент <i>1899</i></div>
+      <div class="tower-box">
+        <svg id="tower" viewBox="0 0 560 430" role="img" aria-label="Схема гиперболоида: каркас из прямых стержней"></svg>
+        <div class="tower-cap">каркас собран из <b>прямых</b> стержней — ни одной гнутой детали · <span id="towerHint">наведи на стержень</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="block" id="more" data-nav="Работы">
   <div class="wrap">
     <div class="kicker">Не только нефтепровод</div>
     <h2>Другие работы Шухова</h2>
     <p style="color:var(--muted);max-width:62ch">Около двухсот изобретений — «первый инженер Российской империи» строил всё: от котлов до башен.</p>
     <div class="card"><b style="color:var(--gold-l)">Крекинг нефти (1891)</b><p style="margin:6px 0 0">Разложение тяжёлой нефти на лёгкие фракции — основа производства бензина. Американцы запатентовали то же через 22 года и в 1923-м официально признали первенство Шухова.</p></div>
+    <figure class="fig" style="max-width:420px">
+      <img src="day-05jan-shukhov-shabolovka.jpg" alt="Шуховская башня на Шаболовке: ажурная сетка секций на фоне неба" loading="lazy" width="400" height="400">
+      <figcaption>Шаболовская башня, 160 метров: шесть секций, ни одной гнутой детали</figcaption>
+    </figure>
     <div class="card"><b style="color:var(--gold-l)">Гиперболоидные башни</b><p style="margin:6px 0 0">Ажурные сетки из прямых стержней — лёгкие и прочные. Та самая Шуховская башня на Шаболовке; задумывалась выше Эйфелевой, в 350 метров.</p></div>
     <div class="card"><b style="color:var(--gold-l)">Сетчатые перекрытия</b><p style="margin:6px 0 0">Стеклянные небеса ГУМа и Пушкинского музея держатся на шуховских конструкциях.</p></div>
     <div class="card"><b style="color:var(--gold-l)">Керосинопровод Баку — Батум</b><p style="margin:6px 0 0">835 километров — крупнейший в мире на момент пуска (1907). Плюс нефтеналивные баржи, водотрубные котлы, форсунка для мазута.</p></div>
@@ -424,6 +501,10 @@
   <div class="wrap">
     <div class="kicker">Инженер и его время</div>
     <h2 style="margin-bottom:6px">В это трудно поверить</h2>
+    <figure class="fig fig-side">
+      <img src="day-05jan-shukhov-velo.jpg" alt="Молодой Шухов в костюме и кепи на высоком велосипеде-пенни-фартинге" loading="lazy" width="400" height="629">
+      <figcaption>Шухов на «пауке», 1880-е: инженер всерьёз увлекался велосипедным спортом</figcaption>
+    </figure>
     <div class="q"><h3><em>Факт 1</em>Ему вынесли приговор — расстрел условно</h3><p>29 июня 1921 года при подъёме четвёртой секции башни на Шаболовке лопнула третья: конструкция рухнула, погибли рабочие. Комиссия установила причину — дефектный металл, вины инженера нет. Приговор Шухову тем не менее вынесли: расстрел с отсрочкой до окончания строительства. Он достраивал башню, зная, что при новой аварии приговор приведут в исполнение. В марте 1922 года комиссия приняла башню, началось радиовещание — и приговор отменили.</p></div>
     <div class="q"><h3><em>Факт 2</em>Башня должна была быть выше Эйфелевой</h3><p>В первом проекте — 350 метров против 305 у Эйфелевой, и при этом втрое легче по металлу. Проект не приняли: страна выходила из Гражданской войны, столько железа взять было негде. Построили 160 метров — и всё равно получили конструкцию, которую сто лет спустя копируют по всему миру, от портовых мачт до небоскрёбов.</p></div>
     <div class="q"><h3><em>Факт 3</em>Его форсунку Менделеев поставил на обложку своей книги</h3><p>Паровая форсунка для сжигания мазута — вещь, на вид пустяковая: до неё мазут считали отходом и просто сливали. Шухов заставил его гореть. Дмитрий Менделеев оценил изобретение так, что поместил рисунок форсунки на обложку своей книги «Основы фабрично-заводской промышленности» 1897 года — высшая рецензия, какую тогда мог получить русский инженер.</p></div>
@@ -867,6 +948,14 @@
     <h2 style="margin-bottom:6px">Сколько баллов ты собрал?</h2>
     <p style="color:var(--muted);margin-top:0;max-width:62ch">Читай статью, играй, отвечай в викторине и спрашивай изобретателя — за всё начисляются баллы. Собери все 100 и стань Первым инженером империи.</p>
     <div class="card"><div class="gm-bar" style="height:10px"><i id="dayBar" style="width:0%"></i></div><div id="dayTxt" style="margin-top:10px;color:var(--gold-l);font-weight:600">0 / 100 · звание: Гость музея</div></div>
+
+    <div class="diploma" id="dipl" style="display:none">
+      <span class="dl">Музей «Что изобрели русские первыми в мире»</span>
+      <b>Грамота участника пуска 5 января 1878 года</b>
+      <span class="dp">Десять километров от Балахан до Чёрного города пройдены — по статье, по чертежу, по игре и по вопросам музея. Баллов: <i id="dpts">0</i> из 100.</span>
+      <span class="ds">Цивилизация первенств</span>
+    </div>
+    <p id="diplnote" style="display:none;color:var(--muted);max-width:62ch">Для сравнения: Шухову было двадцать четыре года, свой патент на крекинг он ждал признания тридцать два года, а гонорар за большинство проектов не брал вовсе.</p>
   </div>
 </section>
 
@@ -939,7 +1028,9 @@
 let score=0; const earned={};
 function award(k,n){if(earned[k])return;earned[k]=true;score+=n;document.getElementById('score').textContent=score;updateResult();}
 function rank(v){return v>=100?'Первый инженер империи':v>=70?'Знаток трубопроводов':v>=40?'Экскурсант':'Гость музея';}
-function updateResult(){const b=document.getElementById('dayBar'),x=document.getElementById('dayTxt');if(!b)return;b.style.width=Math.min(100,score)+'%';x.textContent=score+' / 100 · звание: '+rank(score);}
+function updateResult(){const b=document.getElementById('dayBar'),x=document.getElementById('dayTxt');if(!b)return;b.style.width=Math.min(100,score)+'%';x.textContent=score+' / 100 · звание: '+rank(score);
+  var d=document.getElementById('dipl'),dn=document.getElementById('diplnote'),dp=document.getElementById('dpts');
+  if(d){var open=score>=60;d.style.display=open?'block':'none';if(dn)dn.style.display=open?'block':'none';if(dp)dp.textContent=score;}}
 
 // ── СТАТЬЯ ────────────────────────────────────────────────────────────────────
 document.getElementById('moreBtn').onclick=function(){
