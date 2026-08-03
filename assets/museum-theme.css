@@ -299,3 +299,35 @@ body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none}
 }
 [data-museum] a:focus-visible,[data-museum] button:focus-visible{
   outline:2px solid var(--acc);outline-offset:2px}
+
+/* ───────── «КУДА ДАЛЬШЕ» (волна 2, 03.08) ─────────
+   Отдельные имена kd-* — чтобы не переопределить .next/.ncard страниц,
+   у которых блок сделан вручную (Шухов, Дежнёв, «Девятый вал»). */
+[data-museum] .kd{padding:54px 0;border-top:1px solid var(--line,rgba(0,0,0,.12))}
+[data-museum] .kd .kd-kicker{font-family:var(--font-m,ui-monospace,monospace);
+  font-size:11px;letter-spacing:var(--label-tr,2.2px);text-transform:uppercase;
+  color:var(--acc,#c9a84c);margin-bottom:8px}
+[data-museum] .kd h2{font-family:var(--font-h,Georgia,serif);font-size:clamp(24px,3.4vw,34px);
+  margin:0 0 18px;color:var(--txt,inherit)}
+[data-museum] .kd-grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+[data-museum] .kd-card{position:relative;padding:16px 18px 16px 20px;border-radius:var(--radius,14px);
+  background:var(--panel,rgba(255,255,255,.04));border:1px solid var(--line,rgba(0,0,0,.12));
+  transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+[data-museum] .kd-card::before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:3px;
+  border-radius:3px;background:var(--acc,#c9a84c);opacity:.35;transition:opacity .18s ease}
+[data-museum] .kd-card.main::before{opacity:1}
+[data-museum] .kd-card:hover{transform:translateY(-2px);border-color:var(--acc,#c9a84c);
+  box-shadow:0 8px 24px rgba(0,0,0,.10)}
+[data-museum] .kd-card:hover::before{opacity:1}
+[data-museum] .kd-card .kd-lbl{display:block;font-family:var(--font-m,ui-monospace,monospace);
+  font-size:10px;letter-spacing:var(--label-tr,2.2px);text-transform:uppercase;
+  color:var(--muted,#7d7468);margin-bottom:6px}
+[data-museum] .kd-card a{font-family:var(--font-h,Georgia,serif);font-size:17px;line-height:1.35;
+  color:var(--txt,inherit);text-decoration:none;border-bottom:1px solid var(--acc-soft,rgba(201,168,76,.3))}
+[data-museum] .kd-card a:hover{color:var(--acc,#c9a84c);border-bottom-color:var(--acc,#c9a84c)}
+[data-museum] .kd-card a .kd-arr{display:inline-block;transition:transform .18s ease}
+[data-museum] .kd-card:hover a .kd-arr{transform:translateX(4px)}
+[data-museum] .kd-card p{margin:8px 0 0;font-family:var(--font-b,Georgia,serif);font-size:14px;
+  line-height:1.55;color:var(--muted,#7d7468)}
+[data-museum] footer .slog{font-family:var(--font-h,Georgia,serif);font-size:15px;
+  color:var(--acc,#c9a84c);margin-bottom:8px;letter-spacing:.2px}
