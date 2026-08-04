@@ -26,11 +26,11 @@
   .wrap{max-width:840px;margin:0 auto;padding:0 24px}
   a{color:var(--accent)}
   /* шапка — единый стандарт музеев (как у Дежнёва и «Девятого вала») */
-  header.top{position:relative;padding:14px 16px 8px;text-align:center;font-family:'Inter',sans-serif}
+  header.top{position:relative;padding:10px 16px 5px;text-align:center;font-family:'Inter',sans-serif}
   header.top .b1{font-size:13px;letter-spacing:2.5px;color:var(--gold);text-transform:uppercase}
   header.top .b2{font-size:11px;opacity:.6;margin-top:2px}
   .score{position:absolute;top:12px;right:14px;background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:5px 13px;font-size:12px;color:var(--gold-l);font-family:'Inter',sans-serif}
-  .crumbs{font-family:'Inter',sans-serif;font-size:12.5px;padding:6px 16px 10px;text-align:center;opacity:.9}
+  .crumbs{font-family:'Inter',sans-serif;font-size:12.5px;padding:4px 16px 7px;text-align:center;opacity:.9}
   .crumbs a{color:var(--gold-l);text-decoration:none}
   .crumbs a:hover{text-decoration:underline}
   .crumbs .sep{color:var(--muted);opacity:.6}
@@ -62,17 +62,19 @@
   /* ── HERO музея: СЦЕНА ОТДЕЛЬНО, ТЕКСТ ОТДЕЛЬНО (правило Сергея 03.08) ──
      Текст поверх изображения ЗАПРЕЩЕН — и поверх фото, и поверх живой 3D-сцены.
      Порядок: сцена во всю ширину → этикетка сцены → заголовок и хук под ней. */
-  .hero-scene{position:relative;height:48vh;min-height:300px;max-height:520px;overflow:hidden;cursor:pointer;
+  /* Высота сцены подобрана так, чтобы h1 и хук попадали в первый экран (замер 03.08:
+     при 48vh заголовок начинался на 880 px и на мобиле не был виден вовсе). */
+  .hero-scene{position:relative;height:38vh;min-height:250px;max-height:400px;overflow:hidden;cursor:pointer;
         background:linear-gradient(180deg,#050a14 0%,#081222 60%,#060d18 100%);
         border-bottom:1px solid rgba(201,168,76,.22)}
   .hero-scene canvas{display:block;width:100%;height:100%}
-  .scene-caption{background:#060d18;padding:14px 0 16px}
+  .scene-caption{background:#060d18;padding:11px 0 12px}
   .scene-caption .wrap{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
   .scene-cap{font-size:13.5px;line-height:1.6;color:var(--muted);border-left:2px solid rgba(201,168,76,.4);padding-left:14px;flex:1 1 420px}
   .scene-hint{flex:0 0 auto;font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.4px;color:#e4c97a;
         background:rgba(201,168,76,.10);border:1px solid rgba(201,168,76,.3);border-radius:20px;padding:7px 16px;
         transition:opacity .6s;white-space:nowrap}
-  .hero-lead{background:linear-gradient(180deg,#0b1624 0%,#060d18 100%);padding:30px 0 26px}
+  .hero-lead{background:linear-gradient(180deg,#0b1624 0%,#060d18 100%);padding:22px 0 22px}
   .hero-lead .museum{color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:12px;opacity:.9}
   .hero-lead .who{font-family:'Inter',sans-serif;font-size:clamp(13px,3vw,15px);letter-spacing:.4px;color:var(--accent-l,#7dc8ff);margin-bottom:10px}
   .hero-lead .who i{font-style:normal;color:#7893ab;font-weight:400}
@@ -80,9 +82,21 @@
   .hero-lead .hook{color:#c6d8e8;font-size:18px;max-width:62ch;margin-bottom:20px;line-height:1.65}
   .hero-lead .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
   .hero-under{background:linear-gradient(180deg,#060d18,#060c17);padding:4px 0 22px}
-  @media(max-width:640px){.hero-scene{height:44vh;min-height:280px}
-        .hero-scene .scene-hint{right:14px;font-size:11px;padding:6px 12px}
-        .hero-lead{padding:24px 0 22px}}
+  @media(max-width:640px){.hero-scene{height:26vh;min-height:200px;max-height:260px}
+        .hero-lead{padding:18px 0 20px}
+        header.top .b2{font-size:10.5px}
+        .crumbs{font-size:11px;padding:3px 10px 6px}
+        .sharerow{padding:4px 0 !important}
+        /* Подсказка про интерактив на узком экране уезжала под этикетку и не читалась
+           (замер 03.08: 780 px). Ставим её ПЕРВОЙ строкой этикетки, сразу под сценой. */
+        .scene-caption .wrap{flex-direction:column;gap:9px}
+        .scene-hint{order:-1;align-self:flex-start;font-size:11.5px;padding:6px 13px}
+        .scene-cap{font-size:12.8px;flex:1 1 auto}}
+  /* Архивные сканы шириной 730 px растягивались контейнером до 790 и мылились (замер 03.08).
+     Больше натуральной ширины не увеличиваем — лучше поля, чем мыло. */
+  img[width="730"]{max-width:730px;margin-left:auto;margin-right:auto;display:block}
+  /* Прилипшее сердечко сидело посреди контента и накрывало текст справа внизу. */
+  @media(max-width:640px){#heart{bottom:14px !important;right:10px !important;opacity:.93}}
   .hero-text{background:linear-gradient(180deg,#0c1826 0%,#060c17 100%);color:#fff;padding:28px 0 38px}
   .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:14px;font-family:'Inter',sans-serif;letter-spacing:.5px}
   .daynav{position:sticky;top:0;z-index:25;background:rgba(6,12,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-b)}
@@ -361,7 +375,7 @@
 <nav class="crumbs">
   <a href="../index.html">Русская цивилизация</a>
   <span class="sep">›</span>
-  <a href="index.html">Что изобрели русские первыми в мире</a>
+  <a href="index.html">Музей изобретений</a>
   <span class="sep">›</span>
   <span class="here">5 января · Шухов</span>
 </nav>
@@ -377,7 +391,7 @@
 
 <div class="scene-caption">
   <div class="wrap">
-    <div class="scene-cap">Слева — промысел Балаханы с буровой вышкой и паровым насосом, справа — заводы Чёрного города. Между ними десять километров трубы, а внизу тянется караван подвод. Пока насос стоит, нефть в Баку возят бочками.</div>
+    <div class="scene-cap">Слева — промысел Балаханы, справа — заводы Чёрного города, между ними десять километров трубы. Пока насос стоит, нефть тянут подводами — двести в день.</div>
     <div class="scene-hint" id="heroHint">нажми на сцену — запусти насос</div>
   </div>
 </div>
@@ -412,10 +426,10 @@
     <a href="#video">Видео</a>
     <a href="#audioguide">Аудиогид</a>
     <a href="#story">Читать</a>
-    <a href="#quiz">Викторина</a>
-    <a href="#fork">Развилка</a>
-    <a href="#chat-sec">Спросить</a>
     <a href="#games">Игры</a>
+    <a href="#quiz">Викторина</a>
+    <a href="#chat-sec">Спросить</a>
+    <a href="#fork">Развилка</a>
     <a href="#result">Итог</a>
   </div>
 </nav>
@@ -1380,9 +1394,8 @@ document.querySelectorAll('.starter-btn').forEach(b=>{
           ctx.strokeStyle='rgba(160,130,70,.8)';ctx.lineWidth=1.4;ctx.stroke();
           ctx.beginPath();ctx.moveTo(cx+dx-3,cy+1);ctx.lineTo(cx+dx+3,cy+1);ctx.stroke();}}
       ctx.restore();
-      if(carts>0&&!on){ctx.fillStyle='rgba(122,154,184,.55)';
-        ctx.font='10px Inter,sans-serif';ctx.textAlign='center';
-        ctx.fillText('двести подвод в день…',W*.55,gy+HS*.03);}}
+      /* Подпись «двести подвод в день…» рисовалась прямо на сцене — это текст поверх
+         живой картинки, запрещено (правило Сергея 03.08). Смысл ушёл в этикетку под сценой. */}
   }
 
   function fire(){keyHint();on=true;surge=0;
