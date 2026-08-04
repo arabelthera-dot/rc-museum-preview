@@ -94,14 +94,63 @@
   + 'color:var(--txt,#e8e6e1);opacity:.82;text-decoration:none;transition:opacity .2s,border-color .2s,background .2s}'
   + '.wayrow a:hover{opacity:1;border-color:var(--gold,#c8a24a);background:rgba(200,162,74,.1)}'
   + '.wayrow a.dice{color:var(--gold,#c8a24a);border-color:rgba(200,162,74,.45);opacity:1}'
-  + '@media (prefers-reduced-motion:reduce){.mcnav,#secnav a,.wayrow a{transition:none}}';
+  + '@media (prefers-reduced-motion:reduce){.mcnav,#secnav a,.wayrow a{transition:none}}'
+  /* ── обложка обязана уместиться в первый экран ВМЕСТЕ с заголовком (04.08, разбор Шухова) ──
+     Было: шапка 200/265 px + сцена 48vh → h1 начинался на 880 px, на мобиле первый экран =
+     одна служебная навигация. --hero-fit считает JS от реального верха визуала. */
+  + '.hero-scene,.hero-visual,.hero .bg{max-height:var(--hero-fit,none)!important}'
+  /* на мобиле до заголовка стояли: подзаголовок музея (2 строки), этикетка сцены крупным
+     кеглем и щедрый отступ обложки — вместе больше половины экрана */
+  + '@media (max-width:600px){header.top .b2,header.site .b2{display:none!important}'
+  + '.scene-caption{padding:10px 0 12px!important}'
+  + '.scene-caption .scene-cap{font-size:12.5px;line-height:1.45}'
+  /* подсказка про интерактив стояла последней и уезжала под этикетку на 780 px —
+     ставим её первой строкой сразу под сценой (разбор Шухова, 04.08) */
+  + '.scene-caption .scene-hint{order:-1;width:100%;margin-bottom:8px}'
+  + '.hero-lead{padding-top:18px!important}}';
 
   var st = doc.createElement('style'); st.textContent = css; doc.head.appendChild(st);
 
   function el(tag, cls, html){var e=doc.createElement(tag); if(cls)e.className=cls; if(html!=null)e.innerHTML=html; return e;}
 
-  /* ── 1. кнопка возврата в музей ── */
-  if(!doc.querySelector('.backbtn') && M.href){
+  /* ── 0. высота обложки: сцена + этикетка + начало заголовка влезают в первый экран ──
+     Считаем от реального верха визуала, поэтому работает при любой шапке и на любом экране.
+     Резерв под этикетку сцены и первую строку h1 — 26% высоты окна, но не меньше 150 и не больше 210. */
+  function fitHero(){
+    var v = doc.querySelector('.hero-scene, .hero-visual, .hero .bg');
+    if(!v) return;
+    var vh = window.innerHeight || 700, y = window.pageYOffset || 0;
+    var vr = v.getBoundingClientRect(), top = vr.top + y;
+    var h1 = doc.querySelector('h1'), reserve = 0;
+    if(h1){
+      var hr = h1.getBoundingClientRect();
+      var gap = (hr.top + y) - (vr.bottom + y);   /* этикетка сцены, дата, имя — всё между */
+      /* в первый экран должен попасть ВЕСЬ заголовок и начало хука, а не верхние 40 px строки:
+         замер 04.08 — при резерве в одну строку у Шухова на 390 px было видно 41 px из h1 */
+      var need = hr.height + 28;
+      /* gap < 0 — старый формат, где заголовок лежит внутри обложки: там резерв не нужен */
+      if(gap > 0) reserve = Math.min(Math.round(vh * 0.58), gap + need);
+    }
+    if(!reserve) reserve = Math.max(150, Math.min(210, Math.round(vh * 0.26)));
+    var h = Math.max(200, Math.round(vh - top - reserve));
+    doc.documentElement.style.setProperty('--hero-fit', h + 'px');
+  }
+  fitHero();
+  window.addEventListener('load', function(){ fitHero(); window.dispatchEvent(new Event('resize')); });
+  var fitT; window.addEventListener('resize', function(){
+    clearTimeout(fitT); fitT = setTimeout(fitHero, 160);
+  });
+
+  /* ── 1. кнопка возврата в музей ──
+     Крошки ведут в тот же музей тем же текстом, поэтому кнопка при них — третий повтор
+     названия в шапке и лишние 55 px до заголовка (разбор Шухова, 04.08). */
+  var crumbHome = doc.querySelector('nav.crumbs a[href="' + (M.href || ' ') + '"]');
+  var oldBack = doc.querySelector('.backbtn');
+  if(oldBack && crumbHome && oldBack.getAttribute('href') === M.href && oldBack.parentNode){
+    oldBack.parentNode.removeChild(oldBack);   /* кнопка, вшитая в HTML до появления крошек */
+    oldBack = null;
+  }
+  if(!oldBack && M.href && !crumbHome){
     var back = el('a','backbtn','<span class="ar">←</span>'+(M.title||'Музей'));
     back.href = M.href;
     body.insertBefore(back, body.firstChild);

@@ -168,7 +168,10 @@
   + 'transition:transform .35s ease,width .3s ease,opacity .3s ease}'
   + '#heart .lbl{display:none;white-space:nowrap;margin-left:7px;font-size:13px;letter-spacing:.3px}'
   + '#heart.wide{width:auto;padding:0 17px}#heart.wide .lbl{display:inline}'
-  + '#heart.tuck{transform:translateY(96px);opacity:0;pointer-events:none}';
+  + '#heart.tuck{transform:translateY(96px);opacity:0;pointer-events:none}'
+  /* в первом экране блока поддержки ещё не было, а сердечко перекрывало текст этикетки
+     сцены на 390 px (разбор Шухова 04.08) — до 0.6 экрана прокрутки его нет */
+  + '#heart.atop{transform:translateY(96px);opacity:0;pointer-events:none}';
   var st = doc.createElement('style'); st.id = 'sup-css'; st.textContent = css;
   doc.head.appendChild(st);
 
@@ -360,6 +363,16 @@
     var lbl = h.querySelector('.lbl');
     if(lbl) lbl.textContent = T.heart;       /* приводим подпись к стандарту */
   }
+  /* сердечко прячется в первом экране — работает и там, где оно вшито в HTML */
+  (function(){
+    function topGuard(){
+      h.classList.toggle('atop', (window.scrollY || 0) < (window.innerHeight || 700) * 0.6);
+    }
+    topGuard();
+    window.addEventListener('scroll', topGuard, {passive:true});
+    window.addEventListener('resize', topGuard);
+  })();
+
   if(!h.dataset.supBound && C.heartBound !== true){   /* heartBound:true — сердечко уже привязано в HTML */
     h.dataset.supBound = '1';
     h.addEventListener('click', function(){
