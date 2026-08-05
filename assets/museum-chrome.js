@@ -82,12 +82,19 @@
   + 'font-family:inherit;font-size:12.5px;line-height:1.3;padding:10px 13px;opacity:0;pointer-events:none;transition:opacity .3s,border-color .2s}'
   + '.mcnav.show{opacity:.92;pointer-events:auto}'
   + '.mcnav:hover{opacity:1;border-color:var(--gold,#c8a24a)}'
-  + '.mcnav .ar{color:var(--gold,#c8a24a);font-size:17px;line-height:1;flex:none}'
-  + '.mcnav .tx{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}'
+  + '.mcnav .ar{color:var(--gold,#c8a24a);font-size:19px;line-height:1;flex:none}'
+  /* Название соседней страницы раскрывается ТОЛЬКО когда поля шире самой подписи:
+     контент музеев ≤ 840 px, подпись ≤ 300 px → 840 + 2×320 ≈ 1480 px.
+     Уже — компактная стрелка 44 px, иначе она садится на заголовки секций (аудит 05.08). */
+  + '.mcnav .tx{display:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}'
+  + '@media (min-width:1480px){.mcnav .tx{display:block}}'
+  + '.mcnav{min-width:44px;min-height:44px;justify-content:center;padding:12px 11px}'
   + '.mcnav.prev{left:0;border-left:none;border-radius:0 22px 22px 0}'
   + '.mcnav.next{right:0;border-right:none;border-radius:22px 0 0 22px;text-align:right}'
-  + '@media (max-width:860px){.mcnav .tx{display:none}.mcnav{padding:12px 10px}'
-  + '.mcnav.prev{bottom:74px;top:auto;transform:none}.mcnav.next{bottom:74px;top:auto;transform:none}}'
+  /* До 1024 px свободных полей нет вовсе — стрелки уходят в нижние углы.
+     Правая поднята над сердечком поддержки (#heart: bottom 82 px, высота 46 px). */
+  + '@media (max-width:1023px){.mcnav{padding:12px 10px}'
+  + '.mcnav.prev{bottom:74px;top:auto;transform:none}.mcnav.next{bottom:136px;top:auto;transform:none}}'
   /* строка «Случайное · Все · В город-музей» */
   + '.wayrow{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin:18px auto 4px;padding:0 14px}'
   + '.wayrow a{font-size:13px;padding:9px 16px;border:1px solid var(--line,rgba(255,255,255,.14));border-radius:20px;'
@@ -99,6 +106,10 @@
      Было: шапка 200/265 px + сцена 48vh → h1 начинался на 880 px, на мобиле первый экран =
      одна служебная навигация. --hero-fit считает JS от реального верха визуала. */
   + '.hero-scene,.hero-visual,.hero .bg{max-height:var(--hero-fit,none)!important}'
+  /* Исключение — картинные музеи: полотно показывается целиком (.fit-full), обрезать его
+     ради первого экрана нельзя. Высоту там держит сама картинка (max-height:62vh). */
+  + '.hero-scene.fit-full{max-height:none!important}'
+  + '.hero-scene.fit-full img{max-height:min(62vh,var(--hero-fit,62vh))}'
   /* на мобиле до заголовка стояли: подзаголовок музея (2 строки), этикетка сцены крупным
      кеглем и щедрый отступ обложки — вместе больше половины экрана */
   + '@media (max-width:600px){header.top .b2,header.site .b2{display:none!important}'
@@ -144,7 +155,7 @@
   /* ── 1. кнопка возврата в музей ──
      Крошки ведут в тот же музей тем же текстом, поэтому кнопка при них — третий повтор
      названия в шапке и лишние 55 px до заголовка (разбор Шухова, 04.08). */
-  var crumbHome = doc.querySelector('nav.crumbs a[href="' + (M.href || ' ') + '"]');
+  var crumbHome = doc.querySelector('nav.crumbs a[href="' + (M.href || '') + '"]');
   var oldBack = doc.querySelector('.backbtn');
   if(oldBack && crumbHome && oldBack.getAttribute('href') === M.href && oldBack.parentNode){
     oldBack.parentNode.removeChild(oldBack);   /* кнопка, вшитая в HTML до появления крошек */

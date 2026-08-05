@@ -16,19 +16,23 @@ header.site .b1{font-size:13px;letter-spacing:2.5px;color:var(--gold);text-trans
 header.site .b2{font-size:11px;opacity:.6;margin-top:2px}
 nav.crumbs{font-size:12.5px;padding:6px 16px 10px;text-align:center;opacity:.9}
 nav.crumbs span{opacity:.55}
-/* HERO */
-.hero{position:relative;height:72vh;min-height:420px;overflow:hidden;cursor:pointer}
-.hero .bg{position:absolute;inset:-4%;background:url('media/devyatyi-val-hero.jpg') center/cover no-repeat;animation:breath 14s ease-in-out infinite alternate}
-@keyframes breath{from{transform:scale(1)}to{transform:scale(1.045)}}
-@media (prefers-reduced-motion:reduce){.hero .bg{animation:none}}
-.hero .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,13,17,.55),transparent 30%,transparent 55%,rgba(11,13,17,.92));pointer-events:none}
-.hero .inner{position:absolute;left:0;right:0;bottom:26px;text-align:center;padding:0 18px;pointer-events:none}
-.hero .chip{display:inline-block;font-size:12px;border:1px solid var(--line);border-radius:16px;padding:3px 12px;background:rgba(11,13,17,.55);margin-bottom:10px}
-.hero h1{font-size:clamp(30px,7vw,54px);font-weight:normal;letter-spacing:1px}
-.hero h1 b{color:var(--gold);font-weight:normal}
-.hero .hook{font-size:clamp(14px,3.4vw,18px);font-style:italic;opacity:.92;margin-top:6px}
-.hero .down{margin-top:10px;font-size:12.5px;opacity:.7;animation:bob 1.8s infinite;pointer-events:none;white-space:nowrap}
-@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+/* HERO — схема эталона (сцена → этикетка → заголовок), движок ../assets/museum-hero.css.
+   Текста поверх полотна нет: картина показывается целиком, слова живут под ней. */
+.wrap{max-width:760px;margin:0 auto;padding:0 18px}
+.hero-scene{border-bottom:1px solid var(--line)}
+.scene-caption{background:#0e1118;border-bottom:1px solid rgba(212,175,55,.14)}
+.scene-cap{color:#b8b2a2;border-left-color:rgba(212,175,55,.45)}
+.scene-hint{color:var(--gold);background:rgba(212,175,55,.10);border-color:var(--line);animation:bob 1.8s infinite}
+.hero-lead{background:linear-gradient(180deg,#12151c 0%,var(--ink) 100%)}
+.hero-lead .who{font-family:Georgia,serif;color:#c9c2ae;font-size:15px;margin-bottom:8px}
+.hero-lead .who i{color:#8d8778}
+.hero-lead h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(30px,7vw,54px);font-weight:normal;letter-spacing:1px;color:var(--txt);margin-bottom:12px}
+.hero-lead h1 b{color:var(--gold);font-weight:normal}
+.hero-lead .hook{font-size:clamp(15px,3.4vw,18px);font-style:italic;color:#cfc8b6;opacity:.95;margin-bottom:18px}
+.hero-lead .btn{background:none;border:1px solid var(--line);color:var(--gold);border-radius:22px;padding:9px 18px;font-family:inherit;font-size:13.5px;cursor:pointer}
+.hero-lead .btn:hover{background:rgba(212,175,55,.1)}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(3px)}}
+@media (prefers-reduced-motion:reduce){.scene-hint{animation:none}}
 /* SECTIONS */
 section{max-width:760px;margin:0 auto;padding:34px 18px 6px}
 h2.t{font-size:22px;font-weight:normal;color:var(--gold);letter-spacing:.5px;margin-bottom:14px}
@@ -167,6 +171,7 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 .sharehint{font-size:12.5px;opacity:.85;margin-left:10px;display:none}
 </style>
 <link rel="stylesheet" href="../assets/museum-theme.css">
+<link rel="stylesheet" href="../assets/museum-hero.css">
 <!-- rc-meta:start -->
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="description" content="«Девятый вал» Айвазовского в разрешении, где видно каждую каплю: почему после самой страшной ночи художник написал рассвет, а не гибель. С аудиогидом и разбором деталей.">
@@ -229,16 +234,31 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 </header>
 <nav class="crumbs"><a href="../index.html">Русская цивилизация</a> › <a href="index.html">Русское искусство</a> › <a href="index.html#aivazovsky">Зал Айвазовского</a> › <span>«Девятый вал»</span></nav>
 
-<div class="hero">
-  <div class="bg"></div>
-  <div class="scrim"></div>
-  <div class="inner">
-    <span class="chip">1850 · Русский музей · 221 × 332 см</span>
-    <h1>«<b>Девятый вал</b>»</h1>
-    <div class="hook">Художник пережил такой шторм сам — газеты успели напечатать его некролог.</div>
-    <div class="down">тапните по полотну — рассмотреть вблизи ▾</div>
+<!-- Обложка по эталону day-05jan-shukhov.html: сначала полотно целиком, под ним этикетка,
+     затем заголовок и хук. Ничего поверх картины — правило Сергея 03.08. -->
+<div class="hero-scene fit-full is-live" id="hero">
+  <img src="media/devyatyi-val-hero.jpg" width="1800" height="1189"
+       alt="«Девятый вал» Ивана Айвазовского: шестеро уцелевших держатся за обломок мачты, за ними встаёт солнце">
+</div>
+
+<div class="scene-caption">
+  <div class="wrap">
+    <div class="scene-cap">Иван Айвазовский, «Девятый вал», 1850. Холст, масло, 221 × 332 см. Государственный Русский музей, Санкт-Петербург.</div>
+    <div class="scene-hint" id="heroHint">тапните по полотну — рассмотреть вблизи ▾</div>
   </div>
 </div>
+
+<header class="hero-lead">
+  <div class="wrap">
+    <div class="who">Иван Айвазовский <i>· маринист, 33 года</i></div>
+    <h1>«<b>Девятый вал</b>»</h1>
+    <p class="hook">Художник пережил такой шторм сам — газеты успели напечатать его некролог.</p>
+    <div class="hero-btns">
+      <button class="btn" type="button" onclick="document.getElementById('zoomwrap').scrollIntoView({behavior:'smooth'})">Рассмотреть вблизи ↓</button>
+      <button class="btn" type="button" onclick="document.getElementById('audioguide').scrollIntoView({behavior:'smooth'})">🎧 Аудиогид 7:31</button>
+    </div>
+  </div>
+</header>
 
 <div class="sharerow">
   <button class="sharebtn" type="button" id="sharebtn"><span>⤴</span>Поделиться страницей</button>
@@ -254,7 +274,7 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 <section id="glubokiy-zum">
   <h2 class="t"><small>Глубокий зум</small>Рассмотрите каждый мазок</h2>
   <p class="mb">В учебниках эта картина — маленькая репродукция. Здесь — скан, в который можно провалиться: щипком приблизьте людей на обломке мачты, красный платок, прозрачную волну. Золотые точки — подсказки.</p>
-  <div class="audio">
+  <div class="audio" id="audioguide">
     <button id="agbtn" aria-label="Включить аудиогид">▶</button>
     <div class="meta"><b>Полный аудиогид · <span id="agdur">7 минут</span></b>Экскурсия по всей картине: детали полотна, история, разбор, мировой контекст. Слушайте и рассматривайте одновременно.</div>
   </div>
@@ -312,7 +332,7 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
   <p class="mb">Автор этого моря — Ованнес, сын разорившегося армянского торговца из Феодосии. Мальчиком он рисовал углём на городских заборах — и за это его не выпороли, а отдали учиться: рассказывают, что рисунки заметил сам градоначальник. Дальше были гимназия, Академия художеств в Петербурге — и к тридцати трём годам европейская слава под именем Иван Айвазовский.</p>
   <p class="mb">Главная странность мариниста номер один: он <i>не писал море с натуры</i>. «Движения живых стихий неуловимы для кисти», — говорил он. Он смотрел на шторм часами, запоминал — и уходил в мастерскую, окна которой упирались в стену: чтобы работала память, а не глаза. «Девятый вал», два метра на три, написан так за одиннадцать дней. Это не легенда — документированный факт.</p>
   <p class="mb">А главное — эту ночь он знал не понаслышке. За шесть лет до картины, в 1844-м, его корабль попал в шторм в Бискайском заливе. Судно сочли погибшим, газеты напечатали некролог. «Страх не подавил во мне способности сохранить в памяти впечатление бури, как дивной живой картины», — вспоминал художник. «Девятый вал» — это та самая ночь, увиденная изнутри и побеждённая.</p>
-  <p class="mb">Картину купил император Николай I — для галереи Эрмитажа. В 1897 году её передали в только создававшийся Русский музей, и при открытии в 1898-м она стала одним из первых его экспонатов. Там она и живёт; в 2018-м ездила в Японию и стала главным событием выставки.</p>
+  <p class="mb">Картину купил император Николай I — для галереи Эрмитажа. В 1897 году её передали в только создававшийся Русский музей, и при открытии в 1898-м она стала одним из первых его экспонатов. Там она и живёт; в 2018-м во второй раз ездила в Японию и стала главным событием выставки.</p>
   <p class="mb">Есть в этой истории и горькая нота. К концу века молодые художники и критики считали манеру Айвазовского устаревшей «эффектностью». Он умер в 1900-м за мольбертом — а через десять лет русское искусство ушло в авангард, и его моря на полвека записали в «салон». Время рассудило иначе: сегодня «Девятый вал» — одна из самых узнаваемых русских картин в мире, а выражение «девятый вал» стало в русском языке синонимом высшей точки испытания.</p>
   <p class="mb"><b style="color:var(--gold)">Художник одним абзацем.</b> Иван Константинович Айвазовский (1817–1900). Первый живописец Главного морского штаба России — с правом ношения морского мундира. Почётный гражданин Феодосии; городу подарил картинную галерею, ныне носящую его имя. Около шести тысяч работ. Умер у мольберта, не дописав последнюю картину.</p>
   <div class="src">Источники: rusmuseum.ru/collections/…/devyatyy-val · ar.culture.ru/ru/subject/devyatyy-val · tass.ru/kultura/4446686 · culture.ru/persons/8258</div>
@@ -346,7 +366,7 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
   <p>В 1842 году в Риме Айвазовский познакомился с Уильямом Тёрнером — главным маринистом Европы. Англичанин восхитился точностью, с которой русский художник пишет прозрачную воду. Оба шли одной дорогой: яркая палитра, свет как главный герой, стихия вместо сюжета. Разница в том, что Тёрнер растворял форму в свете, а Айвазовский свет в форму не отпускал — у него шторм остаётся узнаваемым штормом, а люди — людьми. «Девятый вал» написан в 1850-м, когда автору было тридцать три.</p>
 
   <h3>Путь полотна</h3>
-  <p>Картину сразу купил Николай I — для Эрмитажа. В 1897 году она стала одним из первых поступлений в только что созданный Русский музей императора Александра III, где висит и сегодня. За полтора века полотно ни разу не покидало Петербург надолго: слишком велико и слишком хрупко для дальних поездок.</p>
+  <p>Картину сразу купил Николай I — для Эрмитажа. В 1897 году она стала одним из первых поступлений в только что созданный Русский музей императора Александра III, где висит и сегодня. За полтора века полотно почти не покидало Петербург — слишком велико и слишком хрупко для дорог. Исключение одно, и то дважды: Япония. Второй раз «Девятый вал» уехал в Художественный музей Фудзи осенью 2018-го и вернулся в марте 2019-го — за шестьдесят дней выставки его увидели около трёхсот тысяч человек.</p>
 
   <h3>Хронология одной ночи</h3>
   <p style="opacity:.8;font-size:13.5px">Главное, что нужно понять про эту картину: на ней изображён <b>не пик шторма</b>. Самое страшное уже случилось — ночью, и этого на холсте нет. Разверните хронологию, и станет видно, почему солнце здесь важнее волны.</p>
@@ -432,7 +452,7 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 <section id="kuda-dalshe">
   <h2 class="t"><small>Куда дальше</small>Зал продолжается</h2>
   <div class="next">
-    <div class="ncard main soon"><span class="lbl">Следующая по нити «Покорение стихии»</span>«Радуга» (1873) — кораблекрушение, где вместо ужаса… радуга. <i>Страница готовится.</i></div>
+    <div class="ncard main"><span class="lbl">Следующая по нити «Покорение стихии»</span><a href="pic-aivazovsky-raduga.html">«Радуга» (1873) — кораблекрушение, где вместо ужаса… радуга →</a></div>
     <div class="ncard"><span class="lbl">Весь зал</span><a href="index.html#aivazovsky">Айвазовский: план зала →</a></div>
     <div class="ncard"><span class="lbl">Город-музей</span><a href="../index.html">Русская цивилизация →</a></div>
   </div>
@@ -592,7 +612,7 @@ document.getElementById('heart').addEventListener('click',function(){document.qu
    var sup=document.querySelector('.support');
    if(sup){var r=sup.getBoundingClientRect();h.classList.toggle('wide',r.top<window.innerHeight&&r.bottom>0);}
  },{passive:true});})();
-document.querySelector('.hero').addEventListener('click',function(){document.getElementById('zoomwrap').scrollIntoView({behavior:'smooth'});});
+document.querySelector('.hero-scene').addEventListener('click',function(){document.getElementById('zoomwrap').scrollIntoView({behavior:'smooth'});});
 window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});
 </script>
 <script src="../assets/museum-calendar-month.js"></script>
