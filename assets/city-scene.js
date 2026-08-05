@@ -124,23 +124,27 @@
   /* ---- сборка слоёв: дальний бледный, ближний плотный ---- */
   function build() {
     layers = [];
+    /* Масштаб постройки считается не от одной высоты: на весь экран (1280×800) высота
+       растёт вдвое, и город раздувался до пяти домов на кадр. Берём меньшее из высоты
+       и доли ширины — тогда в развороте прибавляется город, а не размер избы. */
+    var SC = Math.min(H, Math.max(W * 0.42, 300)) / 420;
     var base = [
-      { depth: 0.18, alpha: 0.22, scale: 0.55, step: 150 },
-      { depth: 0.42, alpha: 0.40, scale: 0.80, step: 190 },
-      { depth: 0.85, alpha: 0.78, scale: 1.00, step: 240 }
+      { depth: 0.18, alpha: 0.50, scale: 0.62, step: 150 },
+      { depth: 0.42, alpha: 0.74, scale: 0.86, step: 190 },
+      { depth: 0.85, alpha: 0.96, scale: 1.00, step: 240 }
     ];
     base.forEach(function (L, li) {
       var items = [], span = W * 2 + 400, x = -100, i = 0;
       while (x < span) {
         var r = rnd(SEED * 31 + li * 97 + i * 13);
-        var s = (18 + r * 26) * L.scale * (H / 420);
+        var s = (27 + r * 34) * L.scale * SC;
         var kind;
         if (li === 2 && i % 7 === 3) kind = 'shukhov';
         else if (li === 2 && i % 11 === 6) kind = 'rocket';
         else if (li === 1 && i % 9 === 4) kind = 'sail';
         else kind = KIT[Math.floor(r * 1000) % KIT.length];
         items.push({ x: x, s: s, kind: kind, lit: rnd(SEED + i * 7 + li) });
-        x += (L.step * L.scale * (0.7 + r * 0.7)) * (H / 420);
+        x += (L.step * L.scale * (0.62 + r * 0.62)) * SC;
         i++;
       }
       L.items = items; L.width = x;
@@ -167,35 +171,54 @@
 
   function draw(now) {
     var t = (now - t0) / 1000;
-    /* небо */
-    var g = ctx.createLinearGradient(0, 0, 0, H);
-    g.addColorStop(0, '#0b1020');
-    g.addColorStop(0.55, '#141a2e');
-    g.addColorStop(1, '#20243a');
-    ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+    var HOR = H * (H > W * 0.5 ? 0.80 : 0.855);                                /* линия горизонта: выше неё — небо */
 
-    /* звёзды */
+    /* небо: рассвет. Тёмная синь вверху → тёплый свет у горизонта, чтобы силуэты читались
+       контрастом «тёмное на светлом», а не «чёрное на чёрном» (правка Сергея 05.08). */
+    var g = ctx.createLinearGradient(0, 0, 0, HOR);
+    g.addColorStop(0, '#16203f');
+    g.addColorStop(0.34, '#33355f');
+    g.addColorStop(0.60, '#6b4f6d');
+    g.addColorStop(0.80, '#b4705a');
+    g.addColorStop(0.93, '#e0914c');
+    g.addColorStop(1, '#f5c377');
+    ctx.fillStyle = g; ctx.fillRect(0, 0, W, HOR);
+
+    /* звёзды — только в верхней, ещё тёмной части неба */
     for (var i = 0; i < stars.length; i++) {
-      var st = stars[i], tw = 0.55 + 0.45 * Math.sin(t * 0.9 + st.p * 6.283);
-      ctx.globalAlpha = 0.7 * tw;
-      ctx.fillStyle = '#dfe6ff';
-      ctx.beginPath(); ctx.arc(st.x * W, st.y * H, st.r, 0, 6.283); ctx.fill();
+      var st = stars[i], sy = st.y * HOR * 0.72, tw = 0.55 + 0.45 * Math.sin(t * 0.9 + st.p * 6.283);
+      ctx.globalAlpha = 0.55 * tw * (1 - sy / (HOR * 0.85));
+      ctx.fillStyle = '#eef2ff';
+      ctx.beginPath(); ctx.arc(st.x * W, sy, st.r, 0, 6.283); ctx.fill();
     }
     ctx.globalAlpha = 1;
 
-    /* зарево над городом акцентным цветом */
-    var gl = ctx.createRadialGradient(W * 0.5, H * 1.02, H * 0.05, W * 0.5, H * 1.02, H * 0.95);
-    gl.addColorStop(0, hexA(ACC, 0.30));
-    gl.addColorStop(0.5, hexA(ACC, 0.09));
-    gl.addColorStop(1, hexA(ACC, 0));
-    ctx.fillStyle = gl; ctx.fillRect(0, 0, W, H);
+    /* солнце у горизонта — источник света, за силуэтами города */
+    var sunX = W * 0.63, sunY = HOR - H * 0.045, sunR = Math.max(16, H * 0.052);
+    var sg = ctx.createRadialGradient(sunX, sunY, sunR * 0.2, sunX, sunY, sunR * 7);
+    sg.addColorStop(0, 'rgba(255,236,190,.95)');
+    sg.addColorStop(0.16, 'rgba(255,196,116,.55)');
+    sg.addColorStop(0.45, hexA(ACC, 0.22));
+    sg.addColorStop(1, hexA(ACC, 0));
+    ctx.fillStyle = sg; ctx.fillRect(0, 0, W, HOR);
+    ctx.fillStyle = 'rgba(255,240,205,.92)';
+    ctx.beginPath(); ctx.arc(sunX, sunY, sunR, 0, 6.283); ctx.fill();
 
-    /* холмы под городом */
-    ctx.fillStyle = 'rgba(10,14,26,.55)';
+    /* дымка над горизонтом — воздушная перспектива, разделяет планы */
+    var hz = ctx.createLinearGradient(0, HOR - H * 0.30, 0, HOR);
+    hz.addColorStop(0, 'rgba(246,200,140,0)');
+    hz.addColorStop(1, 'rgba(246,200,140,.30)');
+    ctx.fillStyle = hz; ctx.fillRect(0, HOR - H * 0.30, W, H * 0.30);
+
+    /* земля под городом */
+    var eg = ctx.createLinearGradient(0, HOR - H * 0.02, 0, H);
+    eg.addColorStop(0, '#2a2038');
+    eg.addColorStop(1, '#120f22');
+    ctx.fillStyle = eg;
     ctx.beginPath();
     ctx.moveTo(0, H);
     for (var x = 0; x <= W; x += 12) {
-      ctx.lineTo(x, H * 0.90 - Math.sin(x / W * 3.1 + SEED) * H * 0.03 - Math.sin(x / W * 7.3) * H * 0.015);
+      ctx.lineTo(x, HOR - Math.sin(x / W * 3.1 + SEED) * H * 0.018 - Math.sin(x / W * 7.3) * H * 0.010);
     }
     ctx.lineTo(W, H); ctx.closePath(); ctx.fill();
 
@@ -203,11 +226,11 @@
     var speed = reduced ? 0 : 1;
     for (var li = 0; li < layers.length; li++) {
       var L = layers[li];
-      var baseY = H * (0.80 + li * 0.065);
+      var baseY = HOR - H * 0.055 + li * H * 0.030;
       var off = (t * 4.5 * L.depth * speed) % L.width;
       ctx.save();
       ctx.globalAlpha = L.alpha;
-      ctx.fillStyle = li === 2 ? '#05070f' : (li === 1 ? '#0a0f1e' : '#141b30');
+      ctx.fillStyle = li === 2 ? '#0f0c1c' : (li === 1 ? '#332a4a' : '#6e5a78');
       for (var k = 0; k < L.items.length; k++) {
         var it = L.items[k], px = it.x - off;
         if (px < -160) px += L.width;
@@ -220,7 +243,7 @@
       }
       /* тёплые окна ближнего слоя */
       if (li === 2) {
-        ctx.fillStyle = hexA(ACC, 0.85);
+        ctx.fillStyle = 'rgba(255,206,122,.95)';
         for (var w2 = 0; w2 < L.items.length; w2++) {
           var iw = L.items[w2], pw = iw.x - off;
           if (pw < -60) pw += L.width;
@@ -247,11 +270,12 @@
       ctx.globalAlpha = 1;
     }
 
-    /* мягкая виньетка снизу — стык с фоном страницы */
-    var vg = ctx.createLinearGradient(0, H * 0.72, 0, H);
+    /* узкая виньетка у самого низа — только стык с фоном страницы.
+       Раньше она шла с 0.72H и закрашивала сами здания (правка 05.08). */
+    var vg = ctx.createLinearGradient(0, H * 0.93, 0, H);
     vg.addColorStop(0, 'rgba(11,16,32,0)');
-    vg.addColorStop(1, 'rgba(11,16,32,.85)');
-    ctx.fillStyle = vg; ctx.fillRect(0, H * 0.72, W, H * 0.28);
+    vg.addColorStop(1, 'rgba(11,16,32,.80)');
+    ctx.fillStyle = vg; ctx.fillRect(0, H * 0.93, W, H * 0.07);
 
     requestAnimationFrame(draw);
   }
@@ -263,7 +287,74 @@
     return 'rgba(' + ((n >> 16) & 255) + ',' + ((n >> 8) & 255) + ',' + (n & 255) + ',' + a + ')';
   }
 
+  /* ---- полный экран по клику (правка Сергея 05.08) ----
+     Нативный Fullscreen API, а где его нет (Safari на iPhone не даёт fullscreen для div) —
+     запасной режим классом .scene-max: position:fixed на весь вьюпорт. Выход — повторный
+     клик, кнопка или Esc. Стили и кнопку вставляет сам движок: иначе это 58 правок в HTML. */
+  var box = cv.parentNode;
+  if (box && !C.noFull) {
+    if (!document.getElementById('city-scene-css')) {
+      var stl = document.createElement('style');
+      stl.id = 'city-scene-css';
+      stl.textContent =
+        '.hero-scene{cursor:zoom-in}' +
+        '.hero-scene.scene-max{position:fixed;inset:0;width:100%;height:100%;z-index:9999;' +
+        'max-height:none;cursor:zoom-out;background:#16203f}' +
+        '.hero-scene:fullscreen{height:100%;cursor:zoom-out}' +
+        '.hero-scene:-webkit-full-screen{height:100%;cursor:zoom-out}' +
+        '.scene-full{position:absolute;right:12px;bottom:12px;z-index:5;display:inline-flex;' +
+        'align-items:center;gap:7px;padding:7px 12px;border-radius:20px;cursor:pointer;' +
+        'font:600 12px/1 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;letter-spacing:.4px;' +
+        'color:#fff3dd;background:rgba(12,10,26,.55);border:1px solid rgba(255,214,150,.45);' +
+        'backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:background .18s,transform .18s}' +
+        '.scene-full:hover{background:rgba(12,10,26,.8);transform:translateY(-1px)}' +
+        '.scene-full svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2}' +
+        '@media (max-width:640px){.scene-full span{display:none}.scene-full{padding:9px;right:10px;bottom:10px}}';
+      document.head.appendChild(stl);
+    }
+    var ICON_IN = '<svg viewBox="0 0 20 20"><path d="M7 2H2v5M13 2h5v5M7 18H2v-5M13 18h5v-5"/></svg>';
+    var ICON_OUT = '<svg viewBox="0 0 20 20"><path d="M2 7h5V2M18 7h-5V2M2 13h5v5M18 13h-5v5"/></svg>';
+    var btn = document.createElement('button');
+    btn.type = 'button'; btn.className = 'scene-full';
+    btn.innerHTML = ICON_IN + '<span>Во весь экран</span>';
+    btn.setAttribute('aria-label', 'Показать панораму города во весь экран');
+    if (getComputedStyle(box).position === 'static') box.style.position = 'relative';
+    box.appendChild(btn);
+
+    var isFull = function () {
+      return !!(document.fullscreenElement || document.webkitFullscreenElement) ||
+        box.classList.contains('scene-max');
+    };
+    var paint = function () {
+      var f = isFull();
+      btn.innerHTML = (f ? ICON_OUT : ICON_IN) + '<span>' + (f ? 'Свернуть' : 'Во весь экран') + '</span>';
+      btn.setAttribute('aria-label', f ? 'Свернуть панораму' : 'Показать панораму города во весь экран');
+      setTimeout(resize, 60);
+    };
+    var enter = function () {
+      var rq = box.requestFullscreen || box.webkitRequestFullscreen;
+      if (rq) { var p = rq.call(box); if (p && p.catch) p.catch(function () { box.classList.add('scene-max'); paint(); }); }
+      else { box.classList.add('scene-max'); }
+      paint();
+    };
+    var exit = function () {
+      if (document.fullscreenElement || document.webkitFullscreenElement) {
+        (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+      }
+      box.classList.remove('scene-max');
+      paint();
+    };
+    var toggle = function (e) { e.preventDefault(); isFull() ? exit() : enter(); };
+    box.addEventListener('click', toggle);
+    document.addEventListener('fullscreenchange', paint);
+    document.addEventListener('webkitfullscreenchange', paint);
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && box.classList.contains('scene-max')) exit();
+    });
+  }
+
   window.addEventListener('resize', resize);
+  window.addEventListener('orientationchange', function () { setTimeout(resize, 120); });
   resize();
   requestAnimationFrame(draw);
 })();
