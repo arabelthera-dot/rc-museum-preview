@@ -42,17 +42,6 @@
   .score{background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:6px 16px;font-size:13px;color:var(--gold-l);cursor:pointer;font-family:'Inter',sans-serif}
   .score-info{position:absolute;right:12px;top:66px;max-width:260px;background:#0e1c30;color:var(--ink);border:1px solid var(--card-b);border-radius:14px;padding:14px 16px;font-size:13px;line-height:1.6;box-shadow:0 20px 60px rgba(0,0,0,.6);display:none;z-index:40}
   .score-info.show{display:block}
-
-  /* ── HERO — СТАНДАРТ (не менять): 3D-сцена сверху, текст отдельным блоком ниже ── */
-  .hero{display:flex;flex-direction:column}
-  .hero-visual{position:relative;height:56vh;min-height:320px;max-height:580px;overflow:hidden;background:linear-gradient(160deg,#0a1e3a 0%,#1a3a6a 55%,#0d2240 100%)}
-  .hero-visual canvas.scene,.hero-visual img.scene{width:100%;height:100%;display:block;object-fit:cover}
-  .scene3d-tag{position:absolute;left:14px;top:14px;z-index:2;background:rgba(6,12,23,.72);color:var(--gold);border:1px solid rgba(201,168,76,.35);border-radius:24px;padding:5px 16px;font-size:11px;letter-spacing:.6px;backdrop-filter:blur(10px);font-family:'Inter',sans-serif;font-weight:600}
-  .hero-text{background:linear-gradient(180deg,#0c1826 0%,#060c17 100%);color:#fff;padding:28px 0 38px}
-  .hero .museum{color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:12px;opacity:.9}
-  .hero h1{color:#fff;font-size:56px;font-weight:900;line-height:1.04;margin-bottom:16px}
-  .hero .hook{color:#b8ccde;font-size:19px;max-width:580px;margin-bottom:28px;line-height:1.65;font-weight:400}
-  @media(max-width:680px){.hero h1{font-size:34px}.hero .hook{font-size:16px}.hero-visual{height:44vh;min-height:240px}}
   .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:16px;font-family:'Inter',sans-serif;letter-spacing:.5px}
 
   /* ── НАВИГАЦИЯ ДНЯ ── */
@@ -229,6 +218,7 @@
 }
   </script>
   <!-- rc-meta:end -->
+  <link rel="stylesheet" href="../assets/museum-hero.css">
 </head>
 <body>
 
@@ -257,13 +247,21 @@
 </div></nav>
 
 
-<div class="hero">
-  <div class="hero-visual">
-    <canvas id="hero3d" class="scene" aria-label="3D-визуализация парашюта РК-1"></canvas>
-    <div class="scene3d-tag">3D · парашют РК-1</div>
+<!-- Обложка по эталону Шухова: сцена, под ней этикетка, под ней заголовок.
+     Никакого текста поверх изображения. Стили — assets/museum-hero.css. -->
+<div class="hero-scene" id="hero">
+  <canvas id="hero3d" class="scene" aria-label="3D-визуализация парашюта РК-1"></canvas>
+</div>
+
+<div class="scene-caption">
+  <div class="wrap">
+    <div class="scene-cap">Ранец РК-1 за спиной лётчика: купол уложен в плоскую коробку, вытяжное кольцо — под правой рукой. До него парашют хранился в корпусе аэроплана и падал вместе с машиной.</div>
+    <div class="scene-hint" id="heroHint">3D · парашют РК-1</div>
   </div>
-  <div class="hero-text">
-    <div class="wrap">
+</div>
+
+<header class="hero-lead">
+  <div class="wrap">
       <div class="date-chip">30 января · 1912</div>
       <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
       <h1>Первый в мире<br>ранцевый парашют</h1>
@@ -273,8 +271,8 @@
         <button class="btn ghost" id="videoBtn">▶ Смотреть видео</button>
       </div>
     </div>
-  </div>
-</div>
+</header>
+
 
 <div class="adband">
   <div class="wrap">
