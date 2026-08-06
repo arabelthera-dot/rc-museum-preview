@@ -15,7 +15,7 @@ header.site{padding:14px 16px 8px;text-align:center}
 header.site .b1{font-size:13px;letter-spacing:2.5px;color:var(--gold);text-transform:uppercase}
 header.site .b2{font-size:11px;opacity:.6;margin-top:2px}
 nav.crumbs{font-size:12.5px;padding:6px 16px 10px;text-align:center;opacity:.9}
-nav.crumbs span{opacity:.55}
+nav.crumbs span{opacity:.68}
 /* HERO — схема эталона (сцена → этикетка → заголовок), движок ../assets/museum-hero.css.
    Текста поверх полотна нет: картина показывается целиком, слова живут под ней. */
 .wrap{max-width:760px;margin:0 auto;padding:0 18px}
@@ -44,7 +44,8 @@ p.mb{margin-bottom:14px}
 #zoomwrap{position:relative;height:min(74vh,calc(100vw * .68));min-height:300px;background:#000;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 @media (min-width:900px){#zoomwrap{height:74vh}}
 #viewer{position:absolute;inset:0}
-.spark{width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;cursor:pointer;background:radial-gradient(circle,#ffdf70 0 60%,#c9a227 100%);border:2px solid rgba(11,13,17,.9);box-shadow:0 0 0 2px rgba(255,246,214,.95),0 0 16px 5px rgba(212,175,55,.8);display:flex;align-items:center;justify-content:center;color:#1a1508;font-size:14px;font-weight:bold;font-family:Georgia,serif;animation:pulse 2.2s infinite}
+.spark{width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;cursor:pointer;background:radial-gradient(circle,#ffdf70 0 60%,#c9a227 100%);border:2px solid rgba(11,13,17,.9);box-shadow:0 0 0 2px rgba(255,246,214,.95),0 0 16px 5px rgba(212,175,55,.8);display:flex;align-items:center;justify-content:center;color:#1a1508;font-size:14px;font-weight:bold;font-family:Georgia,serif;animation:pulse 2.2s infinite;position:relative}
+.spark::after{content:'';position:absolute;inset:-7px}
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.35)}}
 @media (prefers-reduced-motion:reduce){.spark{animation:none}}
 #zhint{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);z-index:15;background:rgba(18,21,28,.85);border:1px solid var(--line);border-radius:20px;padding:6px 15px;font-size:12px;white-space:nowrap;transition:opacity .6s;pointer-events:none}
@@ -54,6 +55,8 @@ p.mb{margin-bottom:14px}
 .gbtn{display:inline-block;background:linear-gradient(180deg,#e3c04d,#b8912a);color:#1a1508;border:none;border-radius:22px;padding:11px 24px;font-family:inherit;font-size:15px;cursor:pointer;box-shadow:0 4px 14px rgba(212,175,55,.35)}
 .gbtn.sec{background:none;color:var(--gold);border:1px solid var(--line);box-shadow:none}
 .ring{width:56px;height:56px;margin:-28px 0 0 -28px;border:3px solid var(--gold);border-radius:50%;box-shadow:0 0 18px 4px rgba(212,175,55,.7);animation:ringpop .5s ease-out}
+.gkb{margin-bottom:8px}
+.gkb.done{border-color:#69c07a;background:rgba(105,192,122,.15);opacity:.8;cursor:default}
 @keyframes ringpop{from{transform:scale(.3);opacity:0}to{transform:scale(1);opacity:1}}
 /* QUIZ */
 .q{background:var(--panel);border:1px solid rgba(212,175,55,.2);border-radius:14px;padding:16px;margin-bottom:14px}
@@ -150,14 +153,15 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 
 /* ── календарь музея (стандарт для всех музеев) ── */
 #calendar .calnav{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
-.calarrow{background:none;border:1px solid var(--line);color:var(--gold);border-radius:50%;width:34px;height:34px;font-size:19px;line-height:1;cursor:pointer;font-family:Georgia,serif;flex:none}
+.calarrow{background:none;border:1px solid var(--line);color:var(--gold);border-radius:50%;width:34px;height:34px;font-size:19px;line-height:1;cursor:pointer;font-family:Georgia,serif;flex:none;position:relative}
+.calarrow::after{content:'';position:absolute;inset:-5px}
 .calarrow:hover{border-color:var(--gold);background:rgba(212,175,55,.1)}
 .caldate{font-family:Georgia,serif;font-size:16px;letter-spacing:.5px;text-align:center;flex:1}
 .caldate b{color:var(--gold);font-weight:normal;font-size:13px}
 .calcard{background:var(--panel);border:1px solid rgba(212,175,55,.25);border-radius:14px;padding:16px}
 .calcard.empty{border-style:dashed;opacity:.85}
 .calcard h3{font-family:Georgia,serif;font-size:16px;font-weight:normal;color:var(--gold);margin-bottom:8px}
-.calcard .caly{opacity:.55;font-size:13px;color:var(--txt)}
+.calcard .caly{opacity:.68;font-size:13px;color:var(--txt)}
 .calcard p{font-size:14px;line-height:1.6}
 .calcard a{display:inline-block;margin-top:10px;font-size:13.5px}
 .calnext{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);opacity:.75;margin-bottom:7px}
@@ -329,7 +333,7 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
     <p>Был и англичанин Уильям Тёрнер, с которым Айвазовский познакомился в Риме в 1842 году. Тёрнер восхитился тем, как русский художник пишет прозрачную воду. Он шёл дальше всех: у него шторм растворял в свете и корабль, и человека. И вот на этом фоне Айвазовский оказывается единственным, кто поставил в центр катастрофы свет. Не «человек погиб в стихии», а «человек пережил стихию» — у него люди остаются людьми, и им можно сопереживать. Выражение «девятый вал» с тех пор вошло в русский язык и означает высшую точку испытания.</p>
     <p>А картина, которую вы сейчас рассматриваете, — о том, что рассвет побеждает катастрофу. Спасибо, что дослушали. Рассмотрите полотно ещё раз сами — теперь вы знаете, что искать.</p>
   </details>
-  <p style="font-size:12px;color:var(--txt);opacity:.55;margin:10px 0 0">Расшифровка — распознавание речи (Whisper) с редактурой по фактам страницы; сверено на слух местами вручную.</p>
+  <p style="font-size:12px;color:var(--txt);opacity:.68;margin:10px 0 0">Расшифровка — распознавание речи (Whisper) с редактурой по фактам страницы; сверено на слух местами вручную.</p>
   <div class="scale">
     <svg viewBox="0 0 430 250" role="img" aria-label="Сравнение размера картины 221 на 332 сантиметра с ростом человека 170 сантиметров">
       <rect x="4" y="14" width="332" height="221" rx="3" fill="rgba(212,175,55,.10)" stroke="#d4af37" stroke-width="1.5"/>
@@ -448,6 +452,9 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
   <p class="mb">Айвазовский спрятал на полотне то, что видно только внимательным. Три детали, 60 секунд, искать — тапом прямо по картине наверху.</p>
   <button class="gbtn" id="gstart">Начать поиск · 3 детали</button>
   <p id="gres" class="mb" style="display:none;margin-top:12px"></p>
+  <div id="gkbd" style="display:none;margin-top:14px" role="group" aria-label="Отметить найденные детали кнопками">
+    <p class="mb" style="font-size:12.5px;opacity:.75;margin-bottom:8px">Без мыши или тача — отметьте находки кнопками:</p>
+  </div>
 </section>
 
 <section id="quiz">
@@ -550,30 +557,42 @@ var pts=0;function addPts(n){pts+=n;document.getElementById('pts').textContent=p
 var targets=[{x:.415,y:.80,n:"красный платок"},{x:.60,y:.30,n:"солнце сквозь тучи"},{x:.30,y:.44,n:"прозрачную волну"}];
 var g={on:false,found:[],t:60,timer:null};
 var gbar=document.getElementById('gamebar'),gtask=document.getElementById('gtask'),gtime=document.getElementById('gtime'),gres=document.getElementById('gres');
+var gkbd=document.getElementById('gkbd');
+var gkbtns=targets.map(function(t,i){
+  var b=document.createElement('button');
+  b.type='button';b.className='opt gkb';b.textContent='Нашёл: '+t.n;
+  b.addEventListener('click',function(){foundTarget(i);});
+  gkbd.appendChild(b);
+  return b;
+});
 document.getElementById('gstart').addEventListener('click',function(){
   g.on=true;g.found=[];g.t=60;pts-=0;gres.style.display='none';
   sparkEls.forEach(function(e){e.style.visibility='hidden';});clearRing();document.querySelectorAll('.zb').forEach(function(b){b.classList.remove('on');});
   gbar.style.display='flex';task();
+  gkbd.style.display='block';gkbtns.forEach(function(b){b.disabled=false;b.classList.remove('done');});
   document.getElementById('zoomwrap').scrollIntoView({behavior:'smooth'});
   viewer.viewport.goHome();
   g.timer=setInterval(function(){g.t--;gtime.textContent=g.t;if(g.t<=0)endGame(false);},1000);
 });
 function task(){var left=targets.filter(function(t,i){return g.found.indexOf(i)<0;});gtask.textContent='Найдите тапом: '+left.map(function(t){return t.n;}).join(', ');}
+function foundTarget(i){
+  if(!g.on||g.found.indexOf(i)>=0)return;
+  g.found.push(i);
+  var t=targets[i];
+  var r=document.createElement('div');r.className='ring';viewer.addOverlay({element:r,location:new OpenSeadragon.Point(t.x,t.y*AR)});
+  addPts(10);task();
+  gkbtns[i].disabled=true;gkbtns[i].classList.add('done');
+  if(g.found.length===targets.length)endGame(true);
+}
 viewer.addHandler('canvas-click',function(ev){
   if(!g.on||!ev.quick)return;
   var vp=viewer.viewport.pointFromPixel(ev.position),fx=vp.x,fy=vp.y/AR;
   targets.forEach(function(t,i){
-    if(g.found.indexOf(i)>=0)return;
-    if(Math.abs(fx-t.x)<.055&&Math.abs(fy-t.y)<.055){
-      g.found.push(i);
-      var r=document.createElement('div');r.className='ring';viewer.addOverlay({element:r,location:new OpenSeadragon.Point(t.x,t.y*AR)});
-      addPts(10);task();
-      if(g.found.length===targets.length)endGame(true);
-    }
+    if(Math.abs(fx-t.x)<.055&&Math.abs(fy-t.y)<.055)foundTarget(i);
   });
 });
 function endGame(win){
-  g.on=false;clearInterval(g.timer);gbar.style.display='none';
+  g.on=false;clearInterval(g.timer);gbar.style.display='none';gkbd.style.display='none';
   sparkEls.forEach(function(e){e.style.visibility='visible';});
   gres.style.display='block';
   gres.innerHTML=win?'<b style="color:var(--gold)">Все три детали найдены — +30 баллов!</b> Теперь вы видите картину так, как её задумал автор.':'Время вышло. Найдено: '+g.found.length+' из 3 (+'+(g.found.length*10)+' баллов). Золотые точки подскажут остальное.';
