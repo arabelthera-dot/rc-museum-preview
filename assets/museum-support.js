@@ -49,18 +49,20 @@
   var T = EN ? {
     label:'Support the project',
     heart:'Support the project',
-    peak:'The museum is made by two people and it is free — no ads, no sign-up, no paywalls. The most valuable thing you can do right now is <b>send this page to someone who will enjoy it</b>. One such share brings more people than advertising.',
+    peak:'The museum is created by a small team. You can help in three ways: <b>share</b> this page, <b>report an inaccuracy</b>, or <b>support a new release</b>.',
     share:'⤴ Share this page',
-    more:'Other ways to help →',
-    final:'The museum is free: no ads, no sign-up, no paywalls. There are three ways to support it — <b>show</b> the page to someone who will enjoy it; <b>correct</b> us if you spot a wrong date or figure (<a href="MAILTO">write to us</a>); <b>support the project financially</b> — for archive scans, filming and voice-over: details will appear once the fundraiser is set up.',
+    correct:'Report an inaccuracy',
+    more:'Support a new release →',
+    final:'The museum is created by a small team. You can support it in three ways — <b>share</b> the page with someone who will enjoy it; <b>help improve accuracy</b> if you spot a wrong date or figure (<a href="MAILTO">write to us</a>); <b>support a new release</b> — archive scans, filming and voice-over.',
     subject:MUSEUM + ' — note on ' + PAGE
   } : {
     label:'Поддержать проект',
     heart:'Поддержать проект',
-    peak:'Музей делают два человека, и он бесплатный — без рекламы, регистрации и платных разделов. Самое ценное, что можно сделать прямо сейчас, — <b>отправить страницу тому, кому она зайдёт</b>. Один такой пересыл приводит больше людей, чем реклама.',
+    peak:'Музей создаёт небольшая команда. Поддержать проект можно тремя способами: <b>рассказать о странице</b>, <b>помочь исправить неточность</b> или <b>поддержать выпуск новых материалов</b>.',
     share:'⤴ Поделиться страницей',
-    more:'Другие способы поддержать →',
-    final:'Музей бесплатный: без рекламы, регистрации и платных разделов. Поддержать его можно тремя способами — <b>показать</b> страницу тому, кому она зайдёт; <b>поправить</b> нас, если нашли ошибку в дате или цифре (<a href="MAILTO">написать</a>); <b>поддержать проект рублём</b> — на архивные сканы, съёмку и озвучку: реквизиты появятся, когда будет оформлен сбор.',
+    correct:'Сообщить об ошибке',
+    more:'Поддержать выпуск →',
+    final:'Музей создаёт небольшая команда. Поддержать его можно тремя способами — <b>рассказать</b> о странице; <b>помочь точности</b>, если нашли ошибку в дате или цифре (<a href="MAILTO">написать</a>); <b>поддержать выпуск новых материалов</b> — архивные сканы, съёмку и озвучку.',
     subject:'Музей «' + MUSEUM + '» — замечание по ' + PAGE
   };
   var MAILTO = 'mailto:' + MAIL + '?subject=' + encodeURIComponent(T.subject);
@@ -155,11 +157,12 @@
   + '.support a{color:' + ACC + I + '}'
   + ".support .sup-btns{display:flex" + I + 'gap:10px' + I + 'flex-wrap:wrap' + I
   + 'margin-top:15px' + I + "font-family:'Inter',system-ui,sans-serif" + I + '}'
-  + '.support .sup-btns button{background:' + BTNB + I + 'border:1px solid ' + BRD + I
+  + '.support .sup-btns button,.support .sup-btns .sup-action{background:' + BTNB + I + 'border:1px solid ' + BRD + I
   + 'color:' + ACC + I + 'border-radius:22px' + I + 'padding:10px 17px' + I
-  + 'font-size:14px' + I + 'cursor:pointer' + I + 'transition:background .2s' + I + '}'
+  + 'font-size:14px' + I + 'cursor:pointer' + I + 'transition:background .2s' + I
+  + 'text-decoration:none' + I + 'display:inline-flex' + I + 'align-items:center' + I + '}'
   + '.support .sup-btns button.gold{background:rgba(201,168,76,' + (LIGHT ? '.26' : '.18') + ')' + I + '}'
-  + '.support .sup-btns button:hover{background:rgba(201,168,76,' + (LIGHT ? '.36' : '.28') + ')' + I + '}'
+  + '.support .sup-btns button:hover,.support .sup-btns .sup-action:hover{background:rgba(201,168,76,' + (LIGHT ? '.36' : '.28') + ')' + I + '}'
   + '@media(max-width:600px){.support{padding:20px 18px' + I + 'font-size:' + MSIZE + I + '}'
   + '.support p{font-size:' + MSIZE + I + '}}'
   + "#heart{position:fixed;right:12px;bottom:82px;z-index:60;background:rgba(6,12,23,.92);border:1px solid rgba(201,168,76,.35);"
@@ -181,6 +184,7 @@
     d.innerHTML = '<div class="sup-l">' + T.label + '</div><p>' + T.peak + '</p>'
       + '<div class="sup-btns">'
       + '<button class="gold" data-sup-share>' + T.share + '</button>'
+      + '<a class="sup-action" href="' + MAILTO + '">' + T.correct + '</a>'
       + '<button data-sup-more>' + T.more + '</button></div>';
     return d;
   }
