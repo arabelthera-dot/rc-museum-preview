@@ -14,6 +14,29 @@
   var ACC = C.acc || '#e8873a';
   var SEED = C.seed == null ? 1 : C.seed;
 
+  /* ---- живой город: здание = музей ----
+     Привязка идёт по типу постройки, а не подряд: гиперболоид Шухова ведёт в изобретения,
+     ракета — в космос, парус коча — к первопроходцам. Здания без смысловой пары остаются
+     фоном города и не кликаются: натянутая связь хуже её отсутствия.
+     Интерактив включается только флагом linked — на страницах музеев сцена декоративна,
+     и относительные ссылки оттуда вели бы в никуда. */
+  var SPOTS = C.spots || {
+    shukhov: { href: 'izobreteniya/index.html', name: 'Музей изобретений',
+               hook: 'Башня из прямых стержней, которая стоит уже второй век' },
+    rocket: { href: 'muzei/kosmos/index.html', name: 'Музей космоса',
+              hook: 'Королёв считал: чтобы полететь, надо сначала перестать бояться' },
+    sail: { href: 'pervoprohodcy/index.html', name: 'Музей первопроходцев',
+            hook: 'На таком коче Дежнёв прошёл пролив за восемьдесят лет до Беринга' },
+    tentChurch: { href: 'muzei/arhitektura/index.html', name: 'Музей архитектуры',
+                  hook: 'Шатёр вместо купола — так строили только на Руси' },
+    church: { href: 'muzei/ikona/index.html', name: 'Музей иконы',
+              hook: 'Внутри пятиглавого храма — лица, писанные светом' }
+  };
+  var LINKED = !!C.linked;
+  var hits = [], hover = null, tapped = null, label = null;
+
+  function kindKey(kind) { return typeof kind === 'string' ? kind : (kind && kind.name) || ''; }
+
   function rnd(s) { var x = Math.sin(s * 127.1 + 311.7) * 43758.5453; return x - Math.floor(x); }
 
   var cv = document.getElementById(C.canvas || 'city');
@@ -143,7 +166,11 @@
         else if (li === 2 && i % 11 === 6) kind = 'rocket';
         else if (li === 1 && i % 9 === 4) kind = 'sail';
         else kind = KIT[Math.floor(r * 1000) % KIT.length];
-        items.push({ x: x, s: s, kind: kind, lit: rnd(SEED + i * 7 + li) });
+        items.push({
+          x: x, s: s, kind: kind, lit: rnd(SEED + i * 7 + li),
+          /* кликается только ближний слой: по дальнему бледному силуэту не целятся */
+          spot: (LINKED && li === 2) ? SPOTS[kindKey(kind)] || null : null
+        });
         x += (L.step * L.scale * (0.62 + r * 0.62)) * SC;
         i++;
       }
@@ -231,15 +258,40 @@
       ctx.save();
       ctx.globalAlpha = L.alpha;
       ctx.fillStyle = li === 2 ? '#0f0c1c' : (li === 1 ? '#332a4a' : '#6e5a78');
+      if (li === 2) hits = [];
       for (var k = 0; k < L.items.length; k++) {
         var it = L.items[k], px = it.x - off;
         if (px < -160) px += L.width;
         if (px > W + 160) continue;
+        /* здание под курсором выступает из строя: теплеет камень и загорается ореол */
+        var hot = it.spot && hover === it;
+        if (hot) {
+          ctx.save();
+          /* два прохода: широкий тёплый ореол вокруг силуэта, затем сам камень посветлее.
+             Один проход давал еле заметное свечение у основания — здание не откликалось. */
+          ctx.shadowColor = hexA(ACC, 1);
+          ctx.shadowBlur = Math.max(26, it.s * 1.6);
+          ctx.fillStyle = hexA(ACC, 0.55);
+          if (it.kind === 'shukhov') shukhov(px, baseY, it.s * 3.4);
+          else if (it.kind === 'rocket') rocket(px, baseY, it.s * 3.2);
+          else if (it.kind === 'sail') sail(px, baseY, it.s * 1.8);
+          else if (it.kind === wallTower) wallTower(px, baseY, it.s * 0.9, it.s * 1.7);
+          else it.kind(px, baseY, it.s);
+          ctx.shadowBlur = Math.max(12, it.s * 0.7);
+          ctx.fillStyle = '#3d2b52';
+        }
         if (it.kind === 'shukhov') shukhov(px, baseY, it.s * 3.4);
         else if (it.kind === 'rocket') rocket(px, baseY, it.s * 3.2);
         else if (it.kind === 'sail') sail(px, baseY, it.s * 1.8);
         else if (it.kind === wallTower) wallTower(px, baseY, it.s * 0.9, it.s * 1.7);
         else it.kind(px, baseY, it.s);
+        if (hot) ctx.restore();
+        if (it.spot) {
+          var kk = kindKey(it.kind);
+          var hh = kk === 'shukhov' ? it.s * 3.4 : kk === 'rocket' ? it.s * 3.2
+                 : kk === 'sail' ? it.s * 1.8 : it.s * 2.6;
+          hits.push({ item: it, x: px, y: baseY, w: it.s * 1.9, h: hh });
+        }
       }
       /* тёплые окна ближнего слоя */
       if (li === 2) {
@@ -344,13 +396,93 @@
       box.classList.remove('scene-max');
       paint();
     };
-    var toggle = function (e) { e.preventDefault(); isFull() ? exit() : enter(); };
+    /* клик по зданию — это вход в музей, а не полный экран: разводим два жеста */
+    var toggle = function (e) {
+      if (hover && hover.spot) return;
+      e.preventDefault(); isFull() ? exit() : enter();
+    };
     box.addEventListener('click', toggle);
     document.addEventListener('fullscreenchange', paint);
     document.addEventListener('webkitfullscreenchange', paint);
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && box.classList.contains('scene-max')) exit();
     });
+  }
+
+  /* ---- живой город: наведение и вход ----
+     Подпись живёт ОТДЕЛЬНЫМ блоком под сценой, внутри картинки текста нет
+     (правило Сергея 03.08). Здание светится — читаем, что в нём, под холстом. */
+  if (LINKED) {
+    var IDLE = C.idle || 'Наведи на здание — узнаешь, какой музей внутри';
+    if (!document.getElementById('city-link-css')) {
+      var lst = document.createElement('style');
+      lst.id = 'city-link-css';
+      lst.textContent =
+        '.city-label{margin:14px 0 0;min-height:1.6em;font:400 16px/1.55 "PT Serif",Georgia,serif;' +
+        'color:#b9b3a6;transition:color .2s}' +
+        '.city-label.is-on{color:#f4f1ea}' +
+        '.city-label b{font-weight:700;color:#f4f1ea}' +
+        '.city-go{white-space:nowrap;color:' + ACC + ';font-weight:700}' +
+        '@media (max-width:640px){.city-label{font-size:15px}}';
+      document.head.appendChild(lst);
+    }
+    label = document.querySelector('[data-city-label]');
+    if (!label) {
+      label = document.createElement('p');
+      label.setAttribute('data-city-label', '');
+      if (box && box.parentNode) box.parentNode.insertBefore(label, box.nextSibling);
+    }
+    label.className = 'city-label';
+    label.setAttribute('aria-live', 'polite');
+    label.textContent = IDLE;
+
+    var paintLabel = function () {
+      if (!label) return;
+      if (hover && hover.spot) {
+        label.innerHTML = '<b>' + hover.spot.name + '</b> — ' + hover.spot.hook +
+          ' <span class="city-go">войти →</span>';
+        label.classList.add('is-on');
+      } else {
+        label.textContent = IDLE;
+        label.classList.remove('is-on');
+      }
+    };
+    var setHover = function (item) {
+      if (hover === item) return;
+      hover = item;
+      cv.style.cursor = item ? 'pointer' : '';
+      paintLabel();
+    };
+    var pick = function (e) {
+      var r = cv.getBoundingClientRect();
+      var mx = e.clientX - r.left, my = e.clientY - r.top;
+      for (var i = hits.length - 1; i >= 0; i--) {
+        var b = hits[i];
+        if (mx >= b.x - b.w / 2 && mx <= b.x + b.w / 2 && my >= b.y - b.h && my <= b.y + 8) {
+          return b.item;
+        }
+      }
+      return null;
+    };
+    cv.addEventListener('mousemove', function (e) { setHover(pick(e)); });
+    cv.addEventListener('mouseleave', function () { setHover(null); });
+    cv.addEventListener('click', function (e) {
+      var item = pick(e);
+      if (!item || !item.spot) return;
+      e.preventDefault(); e.stopPropagation();
+      window.location.href = item.spot.href;
+    });
+    /* телефон: первый тап зажигает здание и показывает подпись, второй — открывает музей */
+    cv.addEventListener('touchstart', function (e) {
+      var touch = e.touches[0];
+      if (!touch) return;
+      var item = pick(touch);
+      if (!item || !item.spot) { setHover(null); tapped = null; return; }
+      e.preventDefault(); e.stopPropagation();
+      if (tapped === item) { window.location.href = item.spot.href; return; }
+      tapped = item;
+      setHover(item);
+    }, { passive: false });
   }
 
   window.addEventListener('resize', resize);
