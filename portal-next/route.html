@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'">
+  <title>Маршрут — Русская цивилизация</title>
+  <link rel="stylesheet" href="portal.css">
+</head>
+<body data-build-environment="preview" data-routes-url="assets/portal-routes.json" data-target-prefix="../">
+  <header class="masthead">
+    <div class="brand"><span>Русская цивилизация</span><strong>Виртуальный город-музей</strong></div>
+    <span class="work-label">Маршрутный лист · предпросмотр P11</span>
+  </header>
+  <main class="route-shell">
+    <a class="route-back" href="index.html">← Вернуться к карте музеев</a>
+    <p class="eyebrow" id="route-label">Посетительский маршрут</p>
+    <h1 id="route-title">Загружаю маршрут…</h1>
+    <p class="lead" id="route-promise"></p>
+    <div class="route-progress" aria-live="polite">
+      <strong id="route-progress-text">Подготавливаю остановки…</strong>
+      <progress id="route-progress" value="0" max="1">0%</progress>
+    </div>
+    <p>Каждый материал откроется в новой вкладке. Вернись сюда и сам отметь остановку пройденной — музей не следит за чтением и не записывает движение мыши.</p>
+    <section class="route-steps" id="route-steps" aria-label="Остановки маршрута"></section>
+    <section class="route-finish" id="route-finish" hidden tabindex="-1">
+      <p class="eyebrow">Маршрут завершён</p>
+      <h2>Ты прошёл все остановки</h2>
+      <p id="route-result"></p>
+      <button type="button" id="route-reset">Пройти маршрут заново</button>
+    </section>
+  </main>
+  <footer><strong>Русская цивилизация</strong><p>Прогресс хранится только до закрытия этой вкладки и не отправляется на сервер.</p></footer>
+  <script src="portal-analytics.js" defer></script>
+  <script src="route.js" defer></script>
+</body>
+</html>

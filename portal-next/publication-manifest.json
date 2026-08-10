@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "environment": "preview",
+  "public_path": "portal-next/",
+  "noindex": true,
+  "root_source_commit": "46e53bd62ef60a13234bc591714df0cee64b01bf",
+  "preview_base_commit": "755b1b9e830cb7190f3f01063f87d60b21c1d565",
+  "generated_at": "2026-08-10T13:19:20.995Z",
+  "files": [
+    {
+      "path": "portal-next/index.html",
+      "bytes": 9477,
+      "sha256": "befcb6751d6021c11d4e2de032d48cc06d5ca910e294599c0f442375563236e9"
+    },
+    {
+      "path": "portal-next/route.html",
+      "bytes": 2538,
+      "sha256": "12c211483e8325353f1ee58ecf403f4820ad152d5a1a4112cb2073d80020f0b5"
+    },
+    {
+      "path": "portal-next/portal.css",
+      "bytes": 8513,
+      "sha256": "69fe847d61d9d6cec728fee52a5f2b9b03ca4db9e958f61251c2c74b76096e1a"
+    },
+    {
+      "path": "portal-next/portal-search.js",
+      "bytes": 8497,
+      "sha256": "df772e32a4b61cc6558e3deca4ad9551a55a9f31da0670ddf98a4c52ce94e800"
+    },
+    {
+      "path": "portal-next/portal-analytics.js",
+      "bytes": 622,
+      "sha256": "becdee7590f29ef6a297d9ca42aee0dbe1f434a42559edc56e868f438fd1bc3a"
+    },
+    {
+      "path": "portal-next/route.js",
+      "bytes": 5275,
+      "sha256": "946664ad76e54540c2333d32540e428d29c4708dc5bd187b78b6ecd5919ed894"
+    },
+    {
+      "path": "portal-next/assets/portal-museums.json",
+      "bytes": 54412,
+      "sha256": "5adf9157c9482ae36bd4015f8945bc9d472f66b3592ad88602065d4116678df0"
+    },
+    {
+      "path": "portal-next/assets/portal-routes.json",
+      "bytes": 5070,
+      "sha256": "6ea9f065afdf2408cc4f937174077ea53fbde4c0459dd66afd4d96f6862e1a75"
+    },
+    {
+      "path": "portal-next/structured-data.json",
+      "bytes": 2004,
+      "sha256": "fb9418e37255b65476a2d55e75955e8e2c28ee2093602abd1623e8646524ea32"
+    }
+  ]
+}

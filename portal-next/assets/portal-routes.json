@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "routes": [
+    {
+      "route_id": "rc:route:portal:surprise-three-times",
+      "title_ru": "Удивиться трижды",
+      "entry_label_ru": "Хочу удивиться",
+      "mode": "sequence",
+      "status": "work",
+      "estimated_minutes": 20,
+      "promise_ru": "Три истории из разных музеев показывают, как открытие, картина и экспедиция меняют привычный взгляд.",
+      "visitor_result_ru": "Посетитель сможет объяснить, почему важное достижение не всегда сразу замечают современники.",
+      "stops": [
+        { "museum_id": "rc:museum:izobreteniya", "path": "izobreteniya/day-30jan-kotelnikov.html", "title_ru": "Парашют Котельникова", "reason_ru": "Изобретение родилось из чужой катастрофы и театральной наблюдательности." },
+        { "museum_id": "rc:museum:iskusstvo", "path": "iskusstvo/pic-aivazovsky-devyatyi-val.html", "title_ru": "«Девятый вал»", "reason_ru": "После страшной ночи художник показывает не гибель, а возможность спасения." },
+        { "museum_id": "rc:museum:pervoprohodcy", "path": "pervoprohodcy/exp-dezhnev-1648.html", "title_ru": "Поход Дежнёва", "reason_ru": "Открытие состоялось, но почти век оставалось неизвестным." }
+      ]
+    },
+    {
+      "route_id": "rc:route:portal:five-minute-choice",
+      "title_ru": "Одно открытие за пять минут",
+      "entry_label_ru": "У меня пять минут",
+      "mode": "choose_one",
+      "status": "work",
+      "estimated_minutes": 5,
+      "promise_ru": "Выбери одну завершённую историю вместо длинной экскурсии.",
+      "visitor_result_ru": "Посетитель получает один предмет, конфликт и вывод без обязательства проходить весь музей.",
+      "stops": [
+        { "museum_id": "rc:museum:izobreteniya", "path": "izobreteniya/day-01dec-lobachevsky.html", "title_ru": "Лобачевский против аксиомы", "reason_ru": "Короткая история о сомнении, которое изменило геометрию." },
+        { "museum_id": "rc:museum:iskusstvo", "path": "iskusstvo/pic-aivazovsky-chernoe-more.html", "title_ru": "Парусник в «Чёрном море»", "reason_ru": "Найти почти невидимую деталь и понять масштаб полотна." },
+        { "museum_id": "rc:museum:pervoprohodcy", "path": "pervoprohodcy/exp-dezhnev-1648.html", "title_ru": "Пролив до Беринга", "reason_ru": "Проверить, почему открытие не сразу становится знанием." }
+      ]
+    },
+    {
+      "route_id": "rc:route:portal:aivazovsky-sea-reading",
+      "title_ru": "Как читать море Айвазовского",
+      "entry_label_ru": "Хочу изучить тему",
+      "mode": "sequence",
+      "status": "work",
+      "estimated_minutes": 30,
+      "promise_ru": "Три картины показывают, как свет, цвет и почти пустое пространство меняют смысл моря.",
+      "visitor_result_ru": "Посетитель сможет различить три разные драматургии моря, а не только узнавать манеру художника.",
+      "stops": [
+        { "museum_id": "rc:museum:iskusstvo", "path": "iskusstvo/pic-aivazovsky-devyatyi-val.html", "title_ru": "«Девятый вал»", "reason_ru": "Свет после катастрофы." },
+        { "museum_id": "rc:museum:iskusstvo", "path": "iskusstvo/pic-aivazovsky-raduga.html", "title_ru": "«Радуга»", "reason_ru": "Цвет как почти незаметный выход." },
+        { "museum_id": "rc:museum:iskusstvo", "path": "iskusstvo/pic-aivazovsky-chernoe-more.html", "title_ru": "«Чёрное море»", "reason_ru": "Минимум событий и максимальный масштаб." }
+      ]
+    },
+    {
+      "route_id": "rc:route:portal:family-entry",
+      "title_ru": "Семейный маршрут",
+      "entry_label_ru": "Иду с ребёнком",
+      "mode": "sequence",
+      "status": "review_required",
+      "estimated_minutes": null,
+      "promise_ru": "Маршрут откроется только после возрастной, содержательной и доступностной проверки реальных материалов.",
+      "visitor_result_ru": "Не обещать детский опыт только потому, что на странице есть игра.",
+      "stops": []
+    }
+  ]
+}

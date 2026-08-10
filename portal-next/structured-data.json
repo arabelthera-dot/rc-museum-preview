@@ -1,0 +1,35 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://arabelthera-dot.github.io/rc-museum-preview/#website",
+  "url": "https://arabelthera-dot.github.io/rc-museum-preview/",
+  "name": "Русская цивилизация",
+  "description": "Виртуальный город-музей: проверенные истории русских изобретений, искусства и первопроходцев.",
+  "inLanguage": "ru-RU",
+  "hasPart": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://arabelthera-dot.github.io/rc-museum-preview/izobreteniya/index.html#museum",
+      "url": "https://arabelthera-dot.github.io/rc-museum-preview/izobreteniya/index.html",
+      "name": "Музей Русских изобретений",
+      "description": "365 дней в году — и на каждый приходится вещь, которую русские сделали первыми в мире.",
+      "inLanguage": "ru-RU"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://arabelthera-dot.github.io/rc-museum-preview/iskusstvo/index.html#museum",
+      "url": "https://arabelthera-dot.github.io/rc-museum-preview/iskusstvo/index.html",
+      "name": "Музей Русского искусства",
+      "description": "Картина, разобранная до последнего мазка: почему волна стоит именно так.",
+      "inLanguage": "ru-RU"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://arabelthera-dot.github.io/rc-museum-preview/pervoprohodcy/index.html#museum",
+      "url": "https://arabelthera-dot.github.io/rc-museum-preview/pervoprohodcy/index.html",
+      "name": "Музей Русских первопроходцев",
+      "description": "Дежнёв прошёл пролив между Азией и Америкой за 80 лет до Беринга — и об этом забыли на век.",
+      "inLanguage": "ru-RU"
+    }
+  ]
+}

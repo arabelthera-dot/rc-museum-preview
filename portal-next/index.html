@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self' 'sha256-x/Ao1MRMgjWkgeUoxMiVaLscKsJj1RAO880FgZp+V+E='; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b1020'/%3E%3Cpath d='M6 25V12l10-6 10 6v13h-5v-9H11v9z' fill='%23d8a640'/%3E%3C/svg%3E">
+  <title>Предпросмотр нового портала — Русская цивилизация</title>
+  <link rel="stylesheet" href="portal.css">
+  <link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://arabelthera-dot.github.io/rc-museum-preview/#website",
+  "url": "https://arabelthera-dot.github.io/rc-museum-preview/",
+  "name": "Русская цивилизация",
+  "description": "Виртуальный город-музей: проверенные истории русских изобретений, искусства и первопроходцев.",
+  "inLanguage": "ru-RU",
+  "hasPart": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://arabelthera-dot.github.io/rc-museum-preview/izobreteniya/index.html#museum",
+      "url": "https://arabelthera-dot.github.io/rc-museum-preview/izobreteniya/index.html",
+      "name": "Музей Русских изобретений",
+      "description": "365 дней в году — и на каждый приходится вещь, которую русские сделали первыми в мире.",
+      "inLanguage": "ru-RU"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://arabelthera-dot.github.io/rc-museum-preview/iskusstvo/index.html#museum",
+      "url": "https://arabelthera-dot.github.io/rc-museum-preview/iskusstvo/index.html",
+      "name": "Музей Русского искусства",
+      "description": "Картина, разобранная до последнего мазка: почему волна стоит именно так.",
+      "inLanguage": "ru-RU"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://arabelthera-dot.github.io/rc-museum-preview/pervoprohodcy/index.html#museum",
+      "url": "https://arabelthera-dot.github.io/rc-museum-preview/pervoprohodcy/index.html",
+      "name": "Музей Русских первопроходцев",
+      "description": "Дежнёв прошёл пролив между Азией и Америкой за 80 лет до Беринга — и об этом забыли на век.",
+      "inLanguage": "ru-RU"
+    }
+  ]
+}</script>
+</head>
+<body data-build-environment="preview" data-museums-url="assets/portal-museums.json" data-routes-url="assets/portal-routes.json" data-target-prefix="../">
+  <a class="skip" href="#results">К результатам поиска</a>
+  <header class="masthead">
+    <div class="brand"><span>Русская цивилизация</span><strong>Виртуальный город-музей</strong></div>
+    <span class="work-label">Предпросмотр P11 · отдельная версия</span>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="portal-title">
+      <p class="eyebrow">60 музеев · один проверяемый каталог</p>
+      <h1 id="portal-title">Не выбирай название.<br>Начни с интереса.</h1>
+      <p class="lead">Напиши тему, героя, предмет или настроение. Поиск работает прямо в браузере, не отправляет запрос на сервер и не обращается к ИИ.</p>
+      <form class="search" role="search" id="search-form">
+        <label for="query">Что ты хочешь узнать?</label>
+        <div class="search-line">
+          <input id="query" name="q" type="search" autocomplete="off" placeholder="Например: космос, сказка, Дежнёв, ребёнку">
+          <button type="submit">Найти музей</button>
+        </div>
+        <div class="filters">
+          <label>Раздел
+            <select id="category"><option value="">Все разделы</option></select>
+          </label>
+          <label>Доступность
+            <select id="availability">
+              <option value="">Все музеи</option>
+              <option value="open">Можно войти сейчас</option>
+              <option value="planned">Создаётся</option>
+            </select>
+          </label>
+        </div>
+      </form>
+      <div class="quick" aria-label="Быстрые темы">
+        <button type="button" data-query="космос">Космос</button>
+        <button type="button" data-category="detyam">Для ребёнка</button>
+        <button type="button" data-query="искусство">Искусство</button>
+        <button type="button" data-query="история">История</button>
+        <button type="button" data-query="ремесло">Ремесло</button>
+      </div>
+    </section>
+
+    <section class="routes" id="routes" aria-labelledby="routes-title">
+      <p class="eyebrow">Не каталог, а готовый путь</p>
+      <h2 id="routes-title">Как ты хочешь войти сегодня?</h2>
+      <p class="routes-lead">Маршруты ведут только к реально открытым материалам. Время указано как редакционная оценка, а не как обещание для каждого посетителя.</p>
+      <div class="route-grid" id="route-grid"><p>Загружаю маршруты…</p></div>
+    </section>
+
+    <section class="catalog" id="results" aria-labelledby="results-title">
+      <div class="results-head">
+        <div><p class="eyebrow">Карта города</p><h2 id="results-title" tabindex="-1">Музеи по твоему запросу</h2></div>
+        <p id="result-count" role="status" aria-live="polite">Загружаю каталог…</p>
+      </div>
+      <div class="grid" id="museum-grid"></div>
+      <div class="empty" id="empty" hidden>
+        <h3>Точного совпадения пока нет</h3>
+        <p>Попробуй более широкую тему. Поиск знает только проверенный каталог музеев и не придумывает несуществующие материалы.</p>
+        <button type="button" id="reset">Показать все музеи</button>
+      </div>
+      <noscript>Для фильтрации нужен JavaScript. Полный список музеев остаётся доступен на действующей главной странице.</noscript>
+    </section>
+
+    <section class="question-lab" id="question-lab" aria-labelledby="question-title">
+      <p class="eyebrow">Отложенный вопрос · рабочая проверка</p>
+      <h2 id="question-title">Не нашёл ответа?</h2>
+      <p class="routes-lead">Сначала попробуй поиск выше. Если ответа нет, вопрос в будущем сможет помочь дополнить общую базу знаний. Это не чат: немедленного или персонального ответа не будет.</p>
+      <form id="question-form" novalidate>
+        <label for="question">Один вопрос без имени, телефона и электронной почты</label>
+        <textarea id="question" minlength="20" maxlength="1000" rows="6" aria-describedby="question-help question-count"></textarea>
+        <div class="question-meta"><span id="question-help">От 20 до 1000 знаков, не больше одной ссылки, без вложений.</span><span id="question-count">0 / 1000</span></div>
+        <label class="honeypot" aria-hidden="true">Оставь поле пустым<input id="website" tabindex="-1" autocomplete="off"></label>
+        <label class="confirm"><input id="question-confirm" type="checkbox"> Я не указываю персональные или чувствительные данные и понимаю, что ответа в реальном времени не будет.</label>
+        <button type="submit">Проверить вопрос локально</button>
+        <p class="form-status" id="question-status" role="status" aria-live="polite">Рабочая форма ничего не отправляет и не сохраняет.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Первый цифровой музей достижений России</strong>
+    <p>Это рабочая сборка поиска P11. Она не заменяет действующую главную страницу и не собирает персональные данные.</p>
+  </footer>
+  <script src="portal-analytics.js" defer></script>
+  <script src="portal-search.js" defer></script>
+</body>
+</html>
