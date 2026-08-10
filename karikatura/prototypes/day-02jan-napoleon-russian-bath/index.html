@@ -61,7 +61,6 @@
     .scene::before { content: ""; position: absolute; inset: 0; z-index: 1; background: radial-gradient(circle at 50% 56%, rgba(255,236,194,.1) 0 16%, rgba(31,15,12,.38) 68%, rgba(20,12,9,.72) 100%); transition: background .6s ease; }
     .scene[data-step="1"]::before, .scene[data-step="2"]::before, .scene[data-step="3"]::before { background: radial-gradient(circle at 50% 63%, rgba(255,236,194,.08) 0 9%, rgba(31,15,12,.48) 30%, transparent 52%), radial-gradient(circle at 18% 57%, rgba(245,202,119,.3), transparent 27%), radial-gradient(circle at 82% 57%, rgba(245,202,119,.3), transparent 27%), rgba(20,12,9,.34); }
     .scene-art { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; object-fit: cover; }
-    .scene-label { position: absolute; top: 12px; left: 12px; z-index: 8; padding: 7px 10px; border: 1px solid rgba(255,255,255,.28); border-radius: 8px; background: rgba(25,18,14,.88); color: white; font-size: .72rem; font-weight: 800; letter-spacing: .03em; }
     .steam { position: absolute; z-index: 2; border: 2px solid rgba(255,248,229,.42); border-color: rgba(255,248,229,.48) transparent transparent; border-radius: 50%; opacity: .55; transform: rotate(-18deg); }
     .steam-one { width: 42%; height: 53%; left: 28%; bottom: 5%; }
     .steam-two { width: 24%; height: 37%; left: 38%; bottom: 17%; transform: rotate(24deg); }
@@ -76,7 +75,6 @@
     .figure .body::before, .figure .body::after { content: ""; position: absolute; top: 24px; width: 47px; height: 18px; border: 3px solid #171310; background: inherit; }
     .figure .body::before { right: 65%; transform: rotate(24deg); border-radius: 12px 2px 2px 12px; }
     .figure .body::after { left: 65%; transform: rotate(-24deg); border-radius: 2px 12px 12px 2px; }
-    .figure strong { display: block; margin-top: 8px; padding: 4px 5px; border: 1px solid rgba(255,255,255,.2); border-radius: 6px; background: rgba(24,18,14,.88); color: #fff8e8; font-size: .72rem; }
     .napoleon { left: calc(50% - 56px); z-index: 6; transform: scale(1.18); filter: drop-shadow(0 0 24px rgba(219,66,50,.68)); }
     .napoleon .head::after { bottom: 42px; width: 76px; height: 24px; border: 0; border-radius: 50% 50% 12% 12%; background: #171310; clip-path: polygon(0 70%, 25% 20%, 50% 65%, 75% 20%, 100% 70%, 50% 100%); }
     .napoleon .body { background: linear-gradient(145deg, #c84636, #7e1f22); }
@@ -87,11 +85,19 @@
     .scene[data-step="1"] .razor, .scene[data-step="2"] .razor, .scene[data-step="3"] .razor,
     .scene[data-step="1"] .broom, .scene[data-step="2"] .broom, .scene[data-step="3"] .broom { filter: drop-shadow(0 0 18px rgba(240,199,118,.7)); }
     .tool, .speech { opacity: 0; transition: opacity .35s ease, transform .35s ease; }
-    .tool { position: absolute; z-index: 7; display: grid; place-items: center; min-width: 64px; min-height: 38px; padding: 0 9px; border: 1px solid rgba(255,244,214,.6); border-radius: 999px; background: rgba(25,18,14,.92); color: #f0c776; font-size: .72rem; font-weight: 900; letter-spacing: .04em; transform: translateY(12px); }
+    .tool { position: absolute; z-index: 7; width: 52px; height: 52px; border: 1px solid rgba(255,244,214,.55); border-radius: 50%; background: rgba(25,18,14,.9); transform: translateY(12px); }
+    .tool-razor::before { content: ""; position: absolute; left: 12px; top: 15px; width: 27px; height: 8px; border: 3px solid #f0c776; border-radius: 3px; transform: rotate(-12deg); }
+    .tool-razor::after { content: ""; position: absolute; left: 25px; top: 24px; width: 5px; height: 17px; border-radius: 3px; background: #f0c776; transform: rotate(-12deg); }
+    .tool-broom::before { content: ""; position: absolute; left: 24px; top: 8px; width: 4px; height: 27px; border-radius: 3px; background: #f0c776; transform: rotate(13deg); }
+    .tool-broom::after { content: ""; position: absolute; left: 13px; top: 30px; width: 28px; height: 12px; background: repeating-linear-gradient(90deg, #f0c776 0 2px, transparent 2px 5px); transform: rotate(13deg); }
     .tool-razor { left: 30%; bottom: 175px; }
     .tool-broom { right: 27%; bottom: 165px; }
     .scene[data-step="2"] .tool, .scene[data-step="3"] .tool { opacity: 1; transform: translateY(0); }
-    .speech { position: absolute; z-index: 7; top: 76px; width: 190px; padding: 10px 12px; border: 1px solid #f0c776; border-radius: 14px; background: rgba(23,19,16,.94); color: #fff8e8; font-weight: 750; font-size: .82rem; box-shadow: 0 10px 24px rgba(12,6,3,.3); }
+    .speech { position: absolute; z-index: 7; top: 76px; width: 76px; height: 42px; border: 1px solid #f0c776; border-radius: 20px; background: rgba(23,19,16,.94); box-shadow: 0 10px 24px rgba(12,6,3,.3); }
+    .speech::before { content: ""; position: absolute; left: 24px; top: 18px; width: 5px; height: 5px; border-radius: 50%; background: #f0c776; box-shadow: 11px 0 #f0c776, 22px 0 #f0c776; }
+    .speech::after { content: ""; position: absolute; bottom: -8px; width: 15px; height: 15px; border-right: 1px solid #f0c776; border-bottom: 1px solid #f0c776; background: rgba(23,19,16,.94); transform: rotate(45deg); }
+    .speech-left::after { left: 15px; }
+    .speech-right::after { right: 15px; }
     .speech-left { left: 18px; }
     .speech-right { right: 18px; }
     .scene[data-step="3"] .speech { opacity: 1; }
@@ -101,6 +107,9 @@
     .scene[data-step="1"] + .scene-legend span:nth-child(1) i,
     .scene[data-step="2"] + .scene-legend span:nth-child(-n+2) i,
     .scene[data-step="3"] + .scene-legend span i { background: #f0c776; box-shadow: 0 0 10px rgba(240,199,118,.7); }
+    .scene-caption { margin: 12px 2px 0; padding-top: 12px; border-top: 1px solid rgba(240,199,118,.24); color: #eee3cf; }
+    .scene-caption strong { display: block; color: #f0c776; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; }
+    .scene-caption span { display: block; margin-top: 4px; font-size: .84rem; line-height: 1.42; }
     .panel { padding: 22px; }
     .progress { display: flex; gap: 6px; margin-bottom: 18px; }
     .progress span { flex: 1; height: 6px; border-radius: 99px; background: #ded5c8; }
@@ -160,15 +169,19 @@
       .figure .head::after { bottom: 4px; width: 10px; height: 4px; border-bottom-width: 2px; }
       .figure .body::before, .figure .body::after { top: 13px; width: 26px; height: 10px; border-width: 2px; }
       .napoleon .head::after { bottom: 23px; width: 44px; height: 15px; border: 0; }
-      .figure strong { margin-top: 4px; padding: 2px; font-size: .62rem; line-height: 1.15; }
       .razor { left: 1%; }
       .napoleon { left: calc(50% - 32px); }
       .broom { right: 1%; }
       .support { right: 22%; bottom: 83px; transform: scale(.75); }
-      .tool { min-width: 46px; min-height: 28px; padding: 0 6px; font-size: .56rem; }
+      .tool { width: 34px; height: 34px; }
+      .tool-razor::before { left: 7px; top: 9px; width: 18px; height: 6px; border-width: 2px; }
+      .tool-razor::after { left: 16px; top: 16px; width: 4px; height: 12px; }
+      .tool-broom::before { left: 16px; top: 5px; width: 3px; height: 19px; }
+      .tool-broom::after { left: 8px; top: 21px; width: 19px; height: 8px; }
       .tool-razor { left: 29%; bottom: 88px; }
       .tool-broom { right: 27%; bottom: 86px; }
-      .speech { top: 42px; width: 124px; padding: 6px; font-size: .63rem; line-height: 1.2; }
+      .speech { top: 42px; width: 48px; height: 30px; }
+      .speech::before { left: 13px; top: 12px; width: 4px; height: 4px; box-shadow: 8px 0 #f0c776, 16px 0 #f0c776; }
       .speech-left { left: 8px; }
       .speech-right { right: 8px; }
       .scene-legend { grid-template-columns: 1fr; gap: 4px; font-size: .66rem; }
@@ -200,20 +213,20 @@
         </div>
         <div class="scene" id="scene" data-step="0" aria-label="Учебная схема без улик: крупная фигура Наполеона находится в центре, по сторонам расположены три русских персонажа.">
           <img class="scene-art" src="assets/stage-scenography-v1.webp" width="1280" height="853" alt="">
-          <span class="scene-label">Современная образовательная реконструкция</span>
           <span class="steam steam-one" aria-hidden="true"></span>
           <span class="steam steam-two" aria-hidden="true"></span>
           <svg class="control-lines" viewBox="0 0 700 470" preserveAspectRatio="none" aria-hidden="true"><path d="M112 307 C205 225 258 238 340 308"/><path d="M588 307 C495 225 442 238 360 308"/></svg>
-          <div class="speech speech-left">Действие задаёт левая группа</div>
-          <div class="speech speech-right">Правая группа поддерживает приговор</div>
-          <div class="figure razor" aria-hidden="true"><div class="head"></div><div class="body"></div><strong>фигура слева</strong></div>
-          <div class="figure napoleon" aria-hidden="true"><div class="head"></div><div class="body"></div><strong>Наполеон</strong></div>
-          <div class="figure support" aria-hidden="true"><div class="head"></div><div class="body"></div><strong>фигура позади</strong></div>
-          <div class="figure broom" aria-hidden="true"><div class="head"></div><div class="body"></div><strong>фигура справа</strong></div>
-          <span class="tool tool-razor" aria-hidden="true">бритва</span>
-          <span class="tool tool-broom" aria-hidden="true">веник</span>
+          <div class="speech speech-left" aria-hidden="true"></div>
+          <div class="speech speech-right" aria-hidden="true"></div>
+          <div class="figure razor" aria-hidden="true"><div class="head"></div><div class="body"></div></div>
+          <div class="figure napoleon" aria-hidden="true"><div class="head"></div><div class="body"></div></div>
+          <div class="figure support" aria-hidden="true"><div class="head"></div><div class="body"></div></div>
+          <div class="figure broom" aria-hidden="true"><div class="head"></div><div class="body"></div></div>
+          <span class="tool tool-razor" aria-hidden="true"></span>
+          <span class="tool tool-broom" aria-hidden="true"></span>
         </div>
         <div class="scene-legend" aria-hidden="true"><span><i></i>Масштаб</span><span><i></i>Действие</span><span><i></i>Реплики</span></div>
+        <p class="scene-caption"><strong>Современная образовательная реконструкция</strong><span id="scene-caption-text">Сначала смотри только на положение, цвет и масштаб фигур. Подсказки появятся отдельно после твоего выбора.</span></p>
       </div>
 
       <div class="panel">
@@ -282,6 +295,7 @@
       const bars = [...document.querySelectorAll('.progress span')];
       const comparison = document.querySelector('#comparison');
       const stageCounter = document.querySelector('#stage-counter');
+      const sceneCaptionText = document.querySelector('#scene-caption-text');
       let step = 0;
       let firstAnswer = '';
       let finalAnswer = '';
@@ -296,6 +310,12 @@
         'Открыт масштаб: центральная фигура Наполеона уменьшилась, а боковые фигуры стали визуально сильнее.',
         'Открыты масштаб и действие: линии, бритва и веник показывают, что действие направлено на Наполеона.',
         'Открыты все улики: масштаб, направленные действия и реплики передают контроль над сценой русским персонажам.'
+      ];
+      const sceneCaptions = [
+        'Сначала смотри только на положение, цвет и масштаб фигур. Подсказки появятся отдельно после твоего выбора.',
+        'Масштаб: центральное положение ещё не означает власть — после раскрытия Наполеон становится меньше окружающих фигур.',
+        'Действие: световые траектории, бритва и веник показывают, что воздействие направлено на Наполеона.',
+        'Реплики: графические знаки разговора завершают перенос контроля к русским персонажам; точное объяснение находится в панели справа.'
       ];
 
       function select(buttons, button) {
@@ -314,6 +334,7 @@
         step += 1;
         scene.dataset.step = String(step);
         scene.setAttribute('aria-label', sceneDescriptions[step]);
+        sceneCaptionText.textContent = sceneCaptions[step];
         stageCounter.textContent = `${step} из 3 улик`;
         bars.forEach((bar, index) => bar.classList.toggle('on', index <= step));
         clue.hidden = false;
@@ -352,6 +373,7 @@
         finalAnswer = '';
         scene.dataset.step = '0';
         scene.setAttribute('aria-label', sceneDescriptions[0]);
+        sceneCaptionText.textContent = sceneCaptions[0];
         stageCounter.textContent = '0 из 3 улик';
         bars.forEach((bar, index) => bar.classList.toggle('on', index === 0));
         choices.forEach(button => button.setAttribute('aria-pressed', 'false'));
