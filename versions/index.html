@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Путь главной страницы — Русская цивилизация</title>
+<link rel="stylesheet" href="../assets/fonts.css">
+<style>
+  :root { --ink: #f4f1ea; --muted: #b9b3a6; --bg: #0c0a1a; --line: rgba(244,241,234,.14); }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font-family: "PT Serif", Georgia, serif; line-height: 1.6; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 56px 20px 80px; }
+  h1 { font-size: clamp(28px, 5vw, 44px); line-height: 1.15; margin: 0 0 12px; }
+  .lead { color: var(--muted); font-size: 18px; margin: 0 0 40px; max-width: 62ch; }
+  ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
+  .v-card { border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px;
+            background: rgba(255,255,255,.03); }
+  .v-meta { display: flex; gap: 12px; align-items: center; margin-bottom: 8px; }
+  .v-date { font-family: ui-monospace, monospace; font-size: 13px; color: var(--muted); }
+  .v-kind { font-size: 12px; text-transform: uppercase; letter-spacing: .08em;
+            color: #e8c98a; border: 1px solid rgba(232,201,138,.35);
+            border-radius: 999px; padding: 2px 10px; }
+  .v-card h2 { font-size: 22px; margin: 0 0 6px; }
+  .v-card a { color: var(--ink); text-decoration-color: rgba(232,201,138,.6);
+              text-underline-offset: 4px; }
+  .v-card a:hover { color: #e8c98a; }
+  .v-card p { margin: 0; color: var(--muted); font-size: 16px; }
+  .back { display: inline-block; margin-top: 40px; color: #e8c98a; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Путь главной страницы</h1>
+    <p class="lead">Служебная страница для владельца проекта: как менялся вход в город музеев.
+      Каждый снимок заморожен вместе со своими стилями и скриптами и открывается таким,
+      каким был в тот день. Живые ветви — параллельные варианты главной, из которых
+      берутся лучшие решения.</p>
+    <ul>
+      <li class="v-card">
+        <div class="v-meta"><span class="v-date">2026-08-10</span><span class="v-kind">живая ветвь</span></div>
+        <h2><a href="../portal-next/">Ветвь «Поиск»: утилитарный стенд портала</a></h2>
+        <p>Каталог, фильтры, поиск по музеям и маршрутам. Сильная сторона — быстрый доступ к нужному музею и честные пустые состояния. Отсюда в главную забирается механика поиска.</p>
+      </li>
+      <li class="v-card">
+        <div class="v-meta"><span class="v-date">2026-08-10</span><span class="v-kind">живая ветвь</span></div>
+        <h2><a href="../portal-atlas/">Ветвь «Атлас»: главная с иллюстрированной картой города</a></h2>
+        <p>Рисованная карта города и разговорные заголовки: «Не изучай список», «Начни не с музея, а с желания». Отсюда в главную забирается интонация обращения к посетителю.</p>
+      </li>
+      <li class="v-card">
+        <div class="v-meta"><span class="v-date">2026-08-10</span><span class="v-kind">снимок</span></div>
+        <h2><a href="2026-08-05-city/">Главная с живой сценой — принята Сергеем 05.08</a></h2>
+        <p>Отправная точка. Кварталы города, 60 музеев списком, холст с панорамой: силуэты, купола, смена дня и ночи. Сцена красивая, но неподвижная — здания ни с чем не связаны.</p>
+      </li>
+    </ul>
+    <a class="back" href="../">← на главную</a>
+  </div>
+</body>
+</html>

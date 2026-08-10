@@ -6,3 +6,4 @@ Disallow: /backup-wave2nav/
 Disallow: /iskusstvo/_wip/
 
 Sitemap: https://arabelthera-dot.github.io/rc-museum-preview/sitemap.xml
+Disallow: /versions/
