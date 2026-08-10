@@ -3,9 +3,9 @@
   "environment": "preview",
   "public_path": "portal-next/",
   "noindex": true,
-  "root_source_commit": "46e53bd62ef60a13234bc591714df0cee64b01bf",
-  "preview_base_commit": "755b1b9e830cb7190f3f01063f87d60b21c1d565",
-  "generated_at": "2026-08-10T13:19:20.995Z",
+  "root_source_commit": "99c0a75788421789a4cb0b908e1ecaebce239052",
+  "preview_base_commit": "b0731cfe35dfd7a3bf158239a0fc0d36ad35565b",
+  "generated_at": "2026-08-10T13:25:43.095Z",
   "files": [
     {
       "path": "portal-next/index.html",
@@ -14,8 +14,8 @@
     },
     {
       "path": "portal-next/route.html",
-      "bytes": 2538,
-      "sha256": "12c211483e8325353f1ee58ecf403f4820ad152d5a1a4112cb2073d80020f0b5"
+      "bytes": 2783,
+      "sha256": "ee658fc992fb3b34ea2e57ea2acb05a480b4e94bdd1c66bd88ca531b973cdd6d"
     },
     {
       "path": "portal-next/portal.css",
