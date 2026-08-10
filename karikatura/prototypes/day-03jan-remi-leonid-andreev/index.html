@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23633b70'/%3E%3Ccircle cx='16' cy='13' r='6' fill='%23f0cf9f'/%3E%3Cpath d='M7 29c1-7 5-10 9-10s8 3 9 10' fill='%23d99b34'/%3E%3C/svg%3E">
+  <title>Прототип «Когда исчезает человек?»</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1916;
+      --muted: #675e56;
+      --paper: #f2ede4;
+      --card: #fffdf8;
+      --line: #cabca8;
+      --violet: #633b70;
+      --violet-dark: #3d2647;
+      --amber: #d99b34;
+      --green: #27604c;
+      --focus: #1264a3;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { overflow-wrap: anywhere; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: radial-gradient(circle at 8% 0%, rgba(99,59,112,.14), transparent 32rem), var(--paper);
+      line-height: 1.5;
+    }
+    button { font: inherit; }
+    button:focus-visible, summary:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+    .shell { width: min(100% - 32px, 1050px); margin: 0 auto; padding: 28px 0 56px; }
+    .eyebrow { margin: 0 0 10px; color: var(--violet-dark); font-size: .78rem; font-weight: 850; letter-spacing: .09em; text-transform: uppercase; }
+    h1 { max-width: 850px; margin: 0; font-family: Georgia, serif; font-size: clamp(2.2rem, 7vw, 4.9rem); line-height: .98; letter-spacing: -.04em; }
+    .lead { max-width: 720px; margin: 20px 0 12px; font-size: clamp(1.05rem, 2.4vw, 1.35rem); }
+    .notice { display: inline-flex; max-width: 100%; gap: 8px; margin: 8px 0 24px; padding: 8px 12px; border: 1px solid var(--amber); border-radius: 999px; background: #fff4d9; font-size: .88rem; font-weight: 800; }
+    .notice::before { content: "◆"; color: var(--amber); }
+    .game { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(300px, .85fr); gap: 22px; align-items: start; }
+    .stage, .panel, .text-version { border: 1px solid var(--line); border-radius: 22px; background: var(--card); box-shadow: 0 16px 42px rgba(43,30,28,.1); }
+    .stage, .panel { min-width: 0; }
+    .stage { padding: 14px; background: #18141b; border-color: #45374b; }
+    .stage-head { display: flex; justify-content: space-between; gap: 14px; align-items: center; padding: 3px 3px 13px; color: #fff7e8; }
+    .stage-kicker { margin: 0; color: #d8a5df; font-size: .7rem; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
+    .stage-title { margin: 3px 0 0; font-family: Georgia, serif; font-size: 1.22rem; }
+    .counter { padding: 7px 10px; border: 1px solid rgba(216,165,223,.55); border-radius: 999px; color: #efd0f2; font-size: .7rem; font-weight: 800; white-space: nowrap; }
+    .scene { position: relative; min-height: 465px; overflow: hidden; border: 1px solid #604d65; border-radius: 15px; background: #26202b; isolation: isolate; }
+    .scene::before { content: ""; position: absolute; inset: 0; z-index: -3; background: radial-gradient(circle at 50% 38%, rgba(224,174,95,.32), transparent 23%), linear-gradient(145deg, #593b63, #17131a 66%); }
+    .backdrop { position: absolute; inset: 0; z-index: -2; opacity: 1; transition: opacity .55s ease; }
+    .backdrop::before, .backdrop::after { content: ""; position: absolute; border: 2px solid rgba(238,210,241,.22); border-radius: 50%; }
+    .backdrop::before { width: 320px; height: 320px; left: -80px; bottom: -100px; }
+    .backdrop::after { width: 270px; height: 270px; right: -70px; top: -50px; }
+    .ground { position: absolute; left: 8%; right: 8%; bottom: 42px; height: 120px; z-index: -1; border-radius: 50%; background: radial-gradient(ellipse, rgba(217,155,52,.27), transparent 68%); transition: opacity .55s ease; }
+    .portrait { position: absolute; left: 50%; bottom: 58px; width: 250px; height: 330px; transform: translateX(-50%); filter: drop-shadow(0 20px 18px rgba(0,0,0,.35)); }
+    .aura { position: absolute; left: 50%; top: 34px; width: 210px; height: 230px; border: 2px solid rgba(240,198,116,.32); border-radius: 48% 52% 42% 58%; transform: translateX(-50%) rotate(-7deg); transition: opacity .45s ease; }
+    .body { position: absolute; left: 50%; bottom: 0; width: 190px; height: 195px; border: 4px solid #0f0d10; border-radius: 68px 68px 18px 18px; background: linear-gradient(145deg, #81538d, #392342); transform: translateX(-50%); transition: clip-path .55s ease, background .55s ease; }
+    .body::before, .body::after { content: ""; position: absolute; top: 45px; width: 86px; height: 30px; border: 4px solid #0f0d10; background: #57335f; }
+    .body::before { right: 72%; border-radius: 18px 3px 3px 18px; transform: rotate(25deg); }
+    .body::after { left: 72%; border-radius: 3px 18px 18px 3px; transform: rotate(-25deg); }
+    .head { position: absolute; left: 50%; top: 22px; width: 122px; height: 145px; border: 4px solid #0f0d10; border-radius: 48% 52% 46% 54%; background: #d9a774; transform: translateX(-50%); transition: border-radius .55s ease, background .55s ease; }
+    .hair { position: absolute; left: 50%; top: 3px; width: 135px; height: 74px; border-radius: 60% 40% 30% 30%; background: #19151b; transform: translateX(-50%) rotate(-4deg); transition: opacity .4s ease; }
+    .hair::after { content: ""; position: absolute; right: -10px; top: 35px; width: 42px; height: 76px; border-radius: 20% 70% 60% 30%; background: #19151b; transform: rotate(12deg); }
+    .features { position: absolute; left: 50%; top: 78px; width: 80px; height: 58px; transform: translateX(-50%); opacity: 1; transition: opacity .4s ease; }
+    .eyes { position: absolute; left: 6px; right: 6px; top: 4px; height: 7px; border-left: 13px solid #171318; border-right: 13px solid #171318; }
+    .nose { position: absolute; left: 36px; top: 10px; width: 10px; height: 25px; border-left: 3px solid #6d3e35; border-bottom: 3px solid #6d3e35; transform: skew(-11deg); }
+    .mouth { position: absolute; left: 24px; bottom: 4px; width: 34px; height: 10px; border-bottom: 4px solid #6d2d39; border-radius: 50%; }
+    .scene[data-step="2"] .backdrop, .scene[data-step="2"] .ground,
+    .scene[data-step="3"] .backdrop, .scene[data-step="3"] .ground,
+    .scene[data-step="4"] .backdrop, .scene[data-step="4"] .ground { opacity: 0; }
+    .scene[data-step="3"] .features, .scene[data-step="4"] .features { opacity: 0; }
+    .scene[data-step="4"] .hair, .scene[data-step="4"] .aura { opacity: 0; }
+    .scene[data-step="4"] .head { border-radius: 50%; background: #b58a67; }
+    .scene[data-step="4"] .body { clip-path: polygon(14% 100%, 23% 26%, 50% 4%, 77% 26%, 86% 100%); background: #49314f; }
+    .layer-map { display: grid; grid-template-columns: repeat(4, 1fr); gap: 7px; margin: 12px 2px 0; color: #ded1e1; font-size: .68rem; }
+    .layer-map span { display: flex; align-items: center; gap: 6px; }
+    .layer-map i { width: 9px; height: 9px; flex: 0 0 auto; border-radius: 50%; background: #d99b34; transition: opacity .3s ease; }
+    .scene[data-step="1"] + .layer-map span:nth-child(1) i,
+    .scene[data-step="2"] + .layer-map span:nth-child(-n+2) i,
+    .scene[data-step="3"] + .layer-map span:nth-child(-n+3) i,
+    .scene[data-step="4"] + .layer-map span i { opacity: .25; }
+    .caption { margin: 12px 2px 0; padding-top: 12px; border-top: 1px solid rgba(216,165,223,.22); color: #eee5ef; }
+    .caption strong { display: block; color: #d8a5df; font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; }
+    .caption span { display: block; margin-top: 4px; font-size: .84rem; line-height: 1.42; }
+    .identity { margin: 10px 2px 0; padding: 10px 12px; border: 1px solid rgba(217,155,52,.45); border-radius: 10px; color: #f2ddb8; font-size: .8rem; }
+    .identity[hidden] { display: none; }
+    .panel { padding: 22px; }
+    .progress { display: flex; gap: 6px; margin-bottom: 18px; }
+    .progress span { flex: 1; height: 6px; border-radius: 99px; background: #ddd4ca; }
+    .progress span.on { background: var(--violet); }
+    .step-title { margin: 0 0 8px; font-family: Georgia, serif; font-size: 1.48rem; }
+    .step-copy { margin: 0 0 17px; color: var(--muted); }
+    .start, .answer, .next, .restart {
+      min-height: 48px; width: 100%; padding: 10px 14px; border: 2px solid var(--ink); border-radius: 12px;
+      background: white; color: var(--ink); cursor: pointer; font-weight: 780;
+    }
+    .start, .next { border-color: var(--violet-dark); background: var(--violet); color: white; text-align: center; }
+    .start:hover, .next:hover { background: var(--violet-dark); }
+    .answer-grid { display: grid; gap: 9px; }
+    .answer { text-align: left; }
+    .answer[aria-pressed="true"] { border-color: var(--violet); background: #f0e4f2; color: var(--violet-dark); }
+    .next { margin-top: 14px; }
+    .next:disabled { cursor: not-allowed; opacity: .45; }
+    .removed { margin: 14px 0 0; padding: 13px; border-left: 5px solid var(--amber); background: #fff3d8; }
+    .removed strong { display: block; }
+    .result { display: none; }
+    .result.visible { display: block; }
+    .trace { display: grid; grid-template-columns: repeat(4, 1fr); gap: 7px; margin: 15px 0; }
+    .trace-item { padding: 10px 6px; border-radius: 10px; background: #eee7df; text-align: center; font-size: .75rem; }
+    .trace-item.lost { background: #f5dddd; color: #742b36; }
+    .trace-item.held { background: #dfeee7; color: #245b47; }
+    .support-choice { margin-top: 15px; }
+    .support-choice legend { margin-bottom: 8px; font-weight: 850; }
+    .restart { margin-top: 14px; border-color: var(--green); color: var(--green); text-align: center; }
+    .status { min-height: 1.5em; margin: 12px 0 0; color: var(--green); font-weight: 750; }
+    .text-version { margin-top: 22px; padding: 20px 22px; }
+    .text-version summary { cursor: pointer; font-size: 1.06rem; font-weight: 850; }
+    .text-version h2 { font-family: Georgia, serif; }
+    .source-note { margin: 18px 0 0; color: var(--muted); font-size: .88rem; }
+    @media (max-width: 760px) {
+      .shell { width: min(100% - 20px, 1050px); padding-top: 20px; }
+      h1 { font-size: clamp(1.85rem, 9vw, 2.45rem); }
+      .lead { margin: 13px 0 8px; font-size: 1rem; }
+      .notice { margin-bottom: 16px; border-radius: 18px; }
+      .game { grid-template-columns: 1fr; gap: 14px; }
+      .stage { padding: 9px; }
+      .stage-title { font-size: 1rem; }
+      .counter { padding: 6px 8px; font-size: .6rem; }
+      .scene { min-height: 265px; }
+      .portrait { bottom: 34px; width: 145px; height: 205px; }
+      .aura { top: 23px; width: 132px; height: 145px; }
+      .body { width: 112px; height: 116px; border-width: 3px; border-radius: 42px 42px 12px 12px; }
+      .body::before, .body::after { top: 28px; width: 52px; height: 18px; border-width: 3px; }
+      .head { top: 15px; width: 75px; height: 90px; border-width: 3px; }
+      .hair { top: 3px; width: 82px; height: 46px; }
+      .hair::after { right: -5px; top: 20px; width: 25px; height: 48px; }
+      .features { top: 48px; width: 50px; height: 38px; }
+      .eyes { left: 4px; right: 4px; top: 3px; height: 5px; border-left-width: 8px; border-right-width: 8px; }
+      .nose { left: 22px; top: 7px; width: 7px; height: 16px; border-width: 0 0 2px 2px; }
+      .mouth { left: 14px; bottom: 3px; width: 22px; height: 7px; border-bottom-width: 3px; }
+      .layer-map { grid-template-columns: 1fr 1fr; }
+      .panel { padding: 15px; }
+      .step-title { font-size: 1.3rem; }
+      .trace { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 250px) {
+      .shell { width: calc(100% - 12px); }
+      .stage-head { align-items: flex-start; flex-direction: column; gap: 7px; }
+      .counter { white-space: normal; }
+      .scene { min-height: 230px; }
+      .portrait { width: 125px; transform: translateX(-50%) scale(.86); transform-origin: 50% 100%; }
+      .layer-map, .trace { grid-template-columns: 1fr; }
+      .notice { border-radius: 12px; }
+      .panel, .text-version { padding: 12px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <p class="eyebrow">Проверка механики · выпуск 3</p>
+    <h1>Сколько можно отнять у лица, прежде чем исчезнет человек?</h1>
+    <p class="lead">Запомни учебного героя. Затем сними четыре опоры образа и отметь момент, когда он перестал быть тем же человеком.</p>
+    <p class="notice">Учебная фигура не изображает Андреева и не воспроизводит работу Ре-Ми</p>
+
+    <section class="game" aria-labelledby="game-title">
+      <div class="stage">
+        <div class="stage-head">
+          <div><p class="stage-kicker">Лаборатория узнавания</p><p class="stage-title">Минимальная система признаков</p></div>
+          <span class="counter" id="counter" aria-live="polite">Полный образ</span>
+        </div>
+        <div class="scene" id="scene" data-step="0" aria-label="Полная учебная фигура: фон, подпись вне изображения, окружение, лицо, причёска и силуэт.">
+          <div class="backdrop" aria-hidden="true"></div><div class="ground" aria-hidden="true"></div>
+          <div class="portrait" aria-hidden="true"><div class="aura"></div><div class="body"></div><div class="head"></div><div class="hair"></div><div class="features"><span class="eyes"></span><span class="nose"></span><span class="mouth"></span></div></div>
+        </div>
+        <div class="layer-map" aria-hidden="true"><span><i></i>Подпись</span><span><i></i>Окружение</span><span><i></i>Лицо</span><span><i></i>Силуэт</span></div>
+        <p class="caption"><strong>Образовательная схема механики</strong><span id="caption-text">У героя есть имя, окружение, лицо, причёска и характерный силуэт. Посмотри 5 секунд и запомни систему целиком.</span></p>
+        <p class="identity" id="identity">Учебный персонаж А · имя существует только для проверки роли подписи</p>
+      </div>
+
+      <div class="panel">
+        <div class="progress" aria-hidden="true"><span class="on"></span><span></span><span></span><span></span><span></span></div>
+        <div id="intro">
+          <h2 class="step-title" id="game-title">Запомни не деталь, а целого человека</h2>
+          <p class="step-copy">Когда будешь готов, начни снятие признаков. Вернуть предыдущий слой внутри попытки нельзя.</p>
+          <button class="start" id="start" type="button">Я запомнил образ — начать</button>
+        </div>
+        <div id="question" hidden>
+          <h2 class="step-title" id="question-title">Образ ещё держится?</h2>
+          <p class="step-copy" id="question-copy"></p>
+          <div class="removed"><strong id="removed-title"></strong><span id="removed-copy"></span></div>
+          <div class="answer-grid" role="group" aria-label="Оценка узнаваемости">
+            <button class="answer" type="button" data-value="held" aria-pressed="false">Да, это всё ещё тот же человек</button>
+            <button class="answer" type="button" data-value="lost" aria-pressed="false">Нет, образ для меня уже потерян</button>
+          </div>
+          <button class="next" id="next" type="button" disabled>Снять следующий слой</button>
+        </div>
+        <div class="result" id="result">
+          <h2 class="step-title">Твоя граница узнавания</h2>
+          <p class="step-copy" id="boundary"></p>
+          <div class="trace" id="trace" aria-label="Траектория ответов"></div>
+          <fieldset class="support-choice">
+            <legend>Что держало образ дольше всего?</legend>
+            <div class="answer-grid" id="support-choices">
+              <button class="answer" type="button" data-value="Подпись" aria-pressed="false">Подпись и знание имени</button>
+              <button class="answer" type="button" data-value="Окружение" aria-pressed="false">Окружение и настроение</button>
+              <button class="answer" type="button" data-value="Лицо" aria-pressed="false">Детали лица</button>
+              <button class="answer" type="button" data-value="Силуэт" aria-pressed="false">Силуэт и масса фигуры</button>
+            </div>
+          </fieldset>
+          <p id="conclusion" hidden><strong>Поворот:</strong> твоя последняя опора — <span id="support-answer"></span>. Но узнаваемость держалась на связи нескольких признаков: каждый слой менял работу оставшихся.</p>
+          <button class="restart" id="restart" type="button">Пройти ещё раз</button>
+        </div>
+        <p class="status" id="status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <details class="text-version">
+      <summary>Пройти смысл без интерактива</summary>
+      <h2>Пять состояний учебного образа</h2>
+      <ol>
+        <li><strong>Полная система:</strong> подпись, окружение, лицо, причёска и силуэт работают вместе.</li>
+        <li><strong>Без подписи:</strong> имя больше не подсказывает идентичность, остаются зрительные признаки.</li>
+        <li><strong>Без окружения:</strong> исчезают настроение и пространственная рамка, остаётся фигура.</li>
+        <li><strong>Без деталей лица:</strong> узнавание переносится на причёску, позу и массу.</li>
+        <li><strong>Только силуэт:</strong> индивидуальность превращается в предельно общую схему.</li>
+      </ol>
+      <p><strong>Вывод:</strong> художественный минимум — не одна линия, а минимальная работающая связь признаков. Учебная фигура проверяет механику и ничего не утверждает о конкретном шарже Ре-Ми.</p>
+    </details>
+    <p class="source-note">Предметный выпуск остаётся в статусе research. Шарж Ре-Ми не загружался, не копировался и не преобразовывался; права на его послойное использование не закрыты.</p>
+  </main>
+
+  <script>
+    (() => {
+      const scene = document.querySelector('#scene');
+      const counter = document.querySelector('#counter');
+      const caption = document.querySelector('#caption-text');
+      const identity = document.querySelector('#identity');
+      const intro = document.querySelector('#intro');
+      const question = document.querySelector('#question');
+      const result = document.querySelector('#result');
+      const answers = [...question.querySelectorAll('.answer')];
+      const supportChoices = [...document.querySelectorAll('#support-choices .answer')];
+      const next = document.querySelector('#next');
+      const bars = [...document.querySelectorAll('.progress span')];
+      const status = document.querySelector('#status');
+      let step = 0;
+      let current = '';
+      let trace = [];
+
+      const states = [
+        null,
+        { title: 'Снята подпись', copy: 'Имя больше не подсказывает, кого ты запомнил.', caption: 'Подпись исчезла. Теперь идентичность должны удерживать только зрительные признаки.', counter: '1 из 4 · без подписи', aria: 'Учебная фигура без подписи; окружение, лицо, причёска и силуэт сохранены.' },
+        { title: 'Снято окружение', copy: 'Исчезли цветовая среда, пространственная рамка и настроение.', caption: 'Окружение исчезло. Перед тобой только фигура, и все ожидания теперь создаёт её устройство.', counter: '2 из 4 · без окружения', aria: 'Учебная фигура без подписи и окружения; лицо, причёска и силуэт сохранены.' },
+        { title: 'Сняты детали лица', copy: 'Глаза, нос и рот больше не различают героя.', caption: 'Лицо стало пустой массой. Проверь, достаточно ли причёски, позы и силуэта.', counter: '3 из 4 · без лица', aria: 'Учебная фигура без подписи, окружения и деталей лица; сохранены причёска и силуэт.' },
+        { title: 'Осталась общая масса', copy: 'Причёска и индивидуальный контур заменены предельно общей схемой.', caption: 'Осталась только масса головы и корпуса. Это ещё тот же герой — или уже любой человек?', counter: '4 из 4 · только масса', aria: 'Предельно общая учебная схема без подписи, окружения, деталей лица и индивидуальной причёски.' }
+      ];
+      const labels = ['Подпись', 'Окружение', 'Лицо', 'Силуэт'];
+
+      function select(buttons, selected) {
+        buttons.forEach((button) => button.setAttribute('aria-pressed', String(button === selected)));
+      }
+
+      function showStep() {
+        const state = states[step];
+        scene.dataset.step = String(step);
+        scene.setAttribute('aria-label', state.aria);
+        counter.textContent = state.counter;
+        caption.textContent = state.caption;
+        identity.hidden = step >= 1;
+        document.querySelector('#removed-title').textContent = state.title;
+        document.querySelector('#removed-copy').textContent = state.copy;
+        document.querySelector('#question-copy').textContent = `Шаг ${step} из 4. Ответь по своему ощущению — единого правильного порога нет.`;
+        bars.forEach((bar, index) => bar.classList.toggle('on', index <= step));
+        select(answers, null);
+        current = '';
+        next.disabled = true;
+        next.textContent = step === 4 ? 'Показать мою границу' : 'Снять следующий слой';
+        status.textContent = `${state.title}.`;
+      }
+
+      function finish() {
+        question.hidden = true;
+        result.classList.add('visible');
+        const firstLost = trace.findIndex((value) => value === 'lost');
+        const boundaryText = firstLost === -1
+          ? 'Ты сохранил узнаваемость даже в общей массе. Для тебя образ держался всей траекторией.'
+          : `Впервые образ потерялся после снятия слоя «${labels[firstLost]}».`;
+        document.querySelector('#boundary').textContent = boundaryText;
+        document.querySelector('#trace').innerHTML = trace.map((value, index) => `<span class="trace-item ${value}">${labels[index]}<br><strong>${value === 'held' ? 'держится' : 'потерян'}</strong></span>`).join('');
+        supportChoices[0].focus();
+        status.textContent = 'Твоя траектория собрана. Выбери последнюю опору образа.';
+      }
+
+      document.querySelector('#start').addEventListener('click', () => {
+        intro.hidden = true;
+        question.hidden = false;
+        step = 1;
+        showStep();
+        answers[0].focus();
+      });
+
+      answers.forEach((button) => button.addEventListener('click', () => {
+        select(answers, button);
+        current = button.dataset.value;
+        next.disabled = false;
+        status.textContent = current === 'held' ? 'Записано: образ ещё держится.' : 'Записано: образ уже потерян.';
+      }));
+
+      next.addEventListener('click', () => {
+        if (!current) return;
+        trace.push(current);
+        if (step === 4) return finish();
+        step += 1;
+        showStep();
+        answers[0].focus();
+      });
+
+      supportChoices.forEach((button) => button.addEventListener('click', () => {
+        select(supportChoices, button);
+        document.querySelector('#support-answer').textContent = button.dataset.value.toLowerCase();
+        document.querySelector('#conclusion').hidden = false;
+        status.textContent = `Последняя опора выбрана: ${button.dataset.value}.`;
+      }));
+
+      document.querySelector('#restart').addEventListener('click', () => {
+        step = 0;
+        current = '';
+        trace = [];
+        scene.dataset.step = '0';
+        scene.setAttribute('aria-label', 'Полная учебная фигура: фон, подпись вне изображения, окружение, лицо, причёска и силуэт.');
+        counter.textContent = 'Полный образ';
+        caption.textContent = 'У героя есть имя, окружение, лицо, причёска и характерный силуэт. Посмотри 5 секунд и запомни систему целиком.';
+        identity.hidden = false;
+        bars.forEach((bar, index) => bar.classList.toggle('on', index === 0));
+        select(answers, null);
+        select(supportChoices, null);
+        document.querySelector('#conclusion').hidden = true;
+        document.querySelector('#trace').innerHTML = '';
+        intro.hidden = false;
+        question.hidden = true;
+        result.classList.remove('visible');
+        next.disabled = true;
+        status.textContent = 'Прототип сброшен.';
+        document.querySelector('#start').focus();
+      });
+    })();
+  </script>
+</body>
+</html>
