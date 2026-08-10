@@ -1,2 +1,3 @@
 backup-wave2/
 *.bak-*
+.playwright-cli/

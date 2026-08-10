@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Живой атлас — Русская цивилизация</title>
+  <meta name="description" content="Виртуальный город-музей: 60 музеев, маршруты и тысячи историй России.">
+  <link rel="stylesheet" href="atlas.css">
+</head>
+<body>
+  <a class="skip" href="#main">Перейти к содержанию</a>
+  <header class="site-header">
+    <a class="identity" href="#top" aria-label="Русская цивилизация — на главную">
+      <span class="identity-mark" aria-hidden="true">РЦ</span>
+      <span><strong>Русская цивилизация</strong><small>Виртуальный город-музей</small></span>
+    </a>
+    <nav aria-label="Главная навигация">
+      <a href="#city">Город</a><a href="#museums">Музеи</a><a href="#routes">Маршруты</a><a href="#trust">О проекте</a>
+    </nav>
+    <a class="support-link" href="#support">Поддержать проект</a>
+    <button class="menu" type="button" aria-expanded="false" aria-controls="mobile-nav">Меню</button>
+    <div id="mobile-nav" class="mobile-nav" hidden><a href="#city">Город</a><a href="#museums">Музеи</a><a href="#routes">Маршруты</a><a href="#trust">О проекте</a><a href="#support">Поддержать проект</a></div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="kicker">60 музеев · 365 историй в каждом</p>
+        <h1>Не изучай список.<br><em>Войди в историю.</em></h1>
+        <p class="hero-lead">Люди, вещи, картины и открытия соединяются здесь в один живой город — с маршрутами на пять минут и путешествиями на целый вечер.</p>
+        <div class="hero-actions"><a class="button primary" href="#today">Удивить меня за 5 минут</a><a class="button secondary" href="#city">Открыть карту города</a></div>
+        <p class="proof">Источники, авторство и дата проверки — у каждой истории.</p>
+      </div>
+      <figure class="hero-visual">
+        <img src="assets/museum-city-atlas-v1.png" width="1672" height="941" alt="Иллюстрированный виртуальный город с музейными районами науки, искусства, путешествий, ремёсел, театра и природы">
+        <figcaption><span>Панорама города</span><strong>Восемь районов связывают 60 музеев</strong></figcaption>
+      </figure>
+    </section>
+
+    <section class="discovery" aria-label="Поиск по городу">
+      <div><p class="section-no">Городская станция поиска</p><h2>Что ты хочешь открыть сегодня?</h2></div>
+      <form id="search-form" role="search"><label class="sr-only" for="query">Имя, предмет, эпоха или тема</label><input id="query" type="search" placeholder="Например: космос, Айвазовский, ремесло"><button type="submit">Найти</button></form>
+      <div class="intent-links"><button data-intent="удив">Удивиться</button><button data-intent="искусство">Понять картину</button><button data-intent="путеше">Путешествовать</button><button data-intent="дет">Смотреть с ребёнком</button><button data-intent="изобрет">Изобретать</button></div>
+    </section>
+
+    <section class="today" id="today">
+      <div class="today-art"><div class="sun" aria-hidden="true"></div><p>01</p><strong>история<br>сегодня</strong></div>
+      <div class="today-copy"><p class="kicker">Сегодня на центральной площади · 7 минут</p><h2>Катастрофа, театральный рюкзак и идея, которая спасла тысячи жизней</h2><p>Глеб Котельников увидел гибель лётчика — и понял, каким должен быть первый действительно переносной парашют.</p><a class="text-link" href="../izobreteniya/day-30jan-kotelnikov.html">Начать историю <span>→</span></a></div>
+    </section>
+
+    <section class="support support-top" id="support-top">
+      <p class="section-no">Город строится маленькой командой</p><div><h2>Помоги открывать новые истории</h2><p>Можно рассказать о проекте, сообщить об ошибке или поддержать работу редакции рублём.</p></div><a class="button support-button" href="#support">Поддержать проект</a>
+    </section>
+
+    <section class="city" id="city">
+      <header class="section-head"><div><p class="kicker">Живой атлас</p><h2>Выбери район города</h2></div><p>Каждый район — свой способ смотреть на историю. Выбери на карте или воспользуйся равноправным списком.</p></header>
+      <div class="city-layout">
+        <figure class="city-map"><img src="assets/museum-city-atlas-v1.png" width="1672" height="941" alt="Карта районов виртуального музейного города"><figcaption>Карта города · визуальная навигация дублируется списком районов</figcaption></figure>
+        <div class="district-panel"><p class="coordinate">Район О–01</p><h3 id="district-title">Изобретать</h3><p id="district-copy">От чертежа и сомнения — к вещам, которые изменили повседневную жизнь и представление о возможном.</p><p id="district-count">8 музеев · 4 маршрута</p><a class="text-link" href="#museums">Войти в район <span>→</span></a></div>
+      </div>
+      <div class="districts" role="list" aria-label="Районы города">
+        <button class="active" data-title="Изобретать" data-copy="От чертежа и сомнения — к вещам, которые изменили повседневную жизнь и представление о возможном." data-count="8 музеев · 4 маршрута">Изобретать <span>О–01</span></button>
+        <button data-title="Создавать" data-copy="Картины, архитектура и дизайн как способы увидеть мир заново." data-count="9 музеев · 6 маршрутов">Создавать <span>О–02</span></button>
+        <button data-title="Исследовать" data-copy="Пути через океаны, материки и космос — и цена каждого открытия." data-count="7 музеев · 5 маршрутов">Исследовать <span>О–03</span></button>
+        <button data-title="Жить" data-copy="Быт, дом, еда и привычки, из которых складывается повседневная история." data-count="10 музеев · 7 маршрутов">Жить <span>О–04</span></button>
+        <button data-title="Слышать" data-copy="Музыка, театр, речь и сцена — культура как живое присутствие." data-count="8 музеев · 5 маршрутов">Слышать <span>О–05</span></button>
+        <button data-title="Помнить" data-copy="События, решения и человеческие судьбы без упрощения сложных вопросов." data-count="10 музеев · 8 маршрутов">Помнить <span>О–06</span></button>
+        <button data-title="Смеяться" data-copy="Сатира, карикатура и способность общества посмотреть на себя со стороны." data-count="4 музея · 3 маршрута">Смеяться <span>О–07</span></button>
+        <button data-title="Расти" data-copy="Совместные маршруты для детей и взрослых: рассматривать, слушать и пробовать." data-count="4 музея · 6 маршрутов">Расти <span>О–08</span></button>
+      </div>
+    </section>
+
+    <section class="routes" id="routes">
+      <header class="section-head"><div><p class="kicker">Экскурсовод уже собрал путь</p><h2>Начни не с музея, а с желания</h2></div><p>Короткий маршрут, глубокое исследование или совместное семейное путешествие.</p></header>
+      <div class="route-cards">
+        <article class="route route-main"><p class="route-index">Маршрут 01 · 20 минут · 3 остановки</p><h3>Три открытия, которые современники не заметили</h3><p>Изобретение, картина и экспедиция показывают, почему важное не всегда признают сразу.</p><a href="../portal-next/route.html?id=rc%3Aroute%3Aportal%3Asurprise-three-times">Пройти маршрут →</a></article>
+        <article class="route"><p class="route-index">5 минут</p><h3>Одно открытие</h3><p>Один предмет, конфликт и вывод.</p><a href="../portal-next/route.html?id=rc%3Aroute%3Aportal%3Afive-minute-choice">Начать →</a></article>
+        <article class="route"><p class="route-index">30 минут</p><h3>Читать море</h3><p>Три драматургии Айвазовского.</p><a href="../portal-next/route.html?id=rc%3Aroute%3Aportal%3Aaivazovsky-sea-reading">Начать →</a></article>
+        <article class="route"><p class="route-index">Вместе</p><h3>Семейный город</h3><p>Смотреть, слушать и обсуждать.</p><a href="#museums">Выбрать возраст →</a></article>
+      </div>
+    </section>
+
+    <section class="museums" id="museums">
+      <header class="section-head"><div><p class="kicker">Все двери города</p><h2>60 музеев</h2></div><p>Фильтруй по району, времени и формату или свободно гуляй по полному указателю.</p></header>
+      <div class="catalog-tools"><div id="category-filters" class="category-filters" aria-label="Категории музеев"></div><p id="result-count" aria-live="polite"></p></div>
+      <div class="museum-grid" id="museum-grid"><p>Загружаю указатель музеев…</p></div>
+      <button class="more" id="show-more" type="button">Показать ещё музеи</button>
+    </section>
+
+    <section class="trust" id="trust">
+      <div><p class="kicker">Не легенда без подписи</p><h2>Как мы проверяем истории</h2><p>Удивление работает только там, где ему можно доверять. Поэтому факт, версия и интерпретация обозначаются по-разному.</p><a class="text-link" href="#">Редакционные принципы <span>→</span></a></div>
+      <ol><li><span>01</span><strong>Ищем первичные и официальные источники</strong></li><li><span>02</span><strong>Проверяем контекст и спорные версии</strong></li><li><span>03</span><strong>Указываем авторство и права на изображения</strong></li><li><span>04</span><strong>Показываем дату последней редакционной проверки</strong></li></ol>
+    </section>
+
+    <section class="support support-bottom" id="support">
+      <p class="section-no">Поддержать проект</p><div><h2>Помоги городу оставаться открытым</h2><p>Расскажи о музее, предложи уточнение или поддержи работу с источниками, изображениями, аудио и доступными экскурсиями.</p><div class="support-ways"><a href="#">Рассказать о проекте</a><a href="#">Сообщить об ошибке</a><a href="#">Поддержать проект рублём</a></div></div>
+    </section>
+  </main>
+
+  <footer><div class="identity"><span class="identity-mark" aria-hidden="true">РЦ</span><span><strong>Русская цивилизация</strong><small>Виртуальный город-музей</small></span></div><div><a href="#city">Карта города</a><a href="#museums">Все музеи</a><a href="#trust">О проекте</a><a href="#support">Поддержать проект</a></div><p>Истории России через людей, вещи, идеи и связи между ними.</p></footer>
+  <a class="support-float" href="#support" aria-label="Поддержать проект">♥</a>
+  <script src="atlas.js" defer></script>
+</body>
+</html>
