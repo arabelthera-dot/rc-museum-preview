@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231e4f55'/%3E%3Cpath d='M6 22h20v5H6zM9 6h14l2 13H7z' fill='%23e3b34d'/%3E%3C/svg%3E">
+  <title>Прототип «Громче камня»</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #182122;
+      --muted: #596565;
+      --paper: #eee9df;
+      --card: #fffdf7;
+      --line: #b9b1a2;
+      --teal: #1e4f55;
+      --teal-dark: #12363b;
+      --amber: #e3b34d;
+      --red: #8a3438;
+      --green: #28604c;
+      --focus: #075ea8;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { overflow-wrap: anywhere; }
+    body { margin: 0; color: var(--ink); background: radial-gradient(circle at 90% 0, rgba(227,179,77,.18), transparent 30rem), var(--paper); line-height: 1.5; }
+    button { font: inherit; }
+    button:focus-visible, summary:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+    .shell { width: min(100% - 32px, 1120px); margin: auto; padding: 28px 0 54px; }
+    .eyebrow { margin: 0 0 10px; color: var(--teal); font-size: .78rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+    h1 { max-width: 950px; margin: 0; font-family: Georgia, serif; font-size: clamp(2.25rem, 6.8vw, 5.1rem); line-height: .96; letter-spacing: -.045em; }
+    .lead { max-width: 800px; margin: 20px 0 10px; font-size: clamp(1.05rem, 2.2vw, 1.35rem); }
+    .notice { display: inline-flex; max-width: 100%; gap: 8px; margin: 8px 0 23px; padding: 8px 12px; border: 1px solid #9b762b; border-radius: 999px; background: #fff3cf; font-size: .86rem; font-weight: 800; }
+    .notice::before { content: "◆"; color: #9b762b; }
+    .game { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(320px, .92fr); gap: 22px; align-items: start; }
+    .stage, .panel, .text-version { min-width: 0; border: 1px solid var(--line); border-radius: 22px; background: var(--card); box-shadow: 0 16px 42px rgba(33,42,41,.1); }
+    .stage { padding: 14px; color: #f8f2df; background: #172a2c; border-color: #38575a; }
+    .stage-head { display: flex; justify-content: space-between; gap: 14px; align-items: center; padding: 3px 3px 13px; }
+    .stage-kicker { margin: 0; color: #9fd0ce; font-size: .7rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+    .stage-title { margin: 3px 0 0; font-family: Georgia, serif; font-size: 1.22rem; }
+    .counter { padding: 7px 10px; border: 1px solid rgba(159,208,206,.55); border-radius: 999px; color: #bde5e1; font-size: .7rem; font-weight: 850; white-space: nowrap; }
+    .scene { position: relative; min-height: 430px; overflow: hidden; border: 1px solid #4c6667; border-radius: 15px; background: linear-gradient(145deg, #29484b, #101c1e 72%); isolation: isolate; }
+    .bench { position: absolute; left: 8%; right: 8%; bottom: 42px; height: 28px; border: 3px solid #171a19; border-radius: 5px; background: #8a5a3d; box-shadow: 0 15px 0 #513522; }
+    .stone { position: absolute; left: 50%; bottom: 73px; width: 64%; height: 190px; transform: translateX(-50%); border: 5px solid #171a19; border-radius: 48% 45% 42% 46% / 16% 18% 12% 15%; background: #c8c0aa; box-shadow: inset 0 0 0 7px rgba(255,255,255,.16), 0 22px 25px rgba(0,0,0,.25); transition: background .35s ease, filter .35s ease; }
+    .drawing { position: absolute; inset: 22px 18%; opacity: 0; transition: opacity .35s ease; }
+    .drawing::before { content: ""; position: absolute; left: 50%; top: 10px; width: 70px; height: 90px; transform: translateX(-50%); border: 8px solid #493c37; border-radius: 48% 52% 42% 55%; }
+    .drawing::after { content: ""; position: absolute; left: 50%; bottom: 8px; width: 135px; height: 58px; transform: translateX(-50%); border: 8px solid #493c37; border-radius: 60px 60px 8px 8px; }
+    .roller { position: absolute; top: 33px; left: 11%; width: 105px; height: 35px; border: 4px solid #111; border-radius: 20px; background: #151515; transform: rotate(-8deg); opacity: .25; transition: opacity .3s ease, transform .3s ease; }
+    .roller::after { content: ""; position: absolute; left: 98px; top: 9px; width: 78px; height: 9px; background: #8b613d; transform: rotate(8deg); transform-origin: left; }
+    .press { position: absolute; right: 8%; top: 28px; width: 80px; height: 115px; opacity: .28; transition: opacity .3s ease; }
+    .press::before { content: ""; position: absolute; left: 31px; width: 18px; height: 105px; background: #d5aa4d; border: 4px solid #151817; }
+    .press::after { content: ""; position: absolute; left: 0; top: 48px; width: 80px; height: 18px; background: #d5aa4d; border: 4px solid #151817; }
+    .sheet { position: absolute; left: 50%; bottom: 93px; width: 55%; height: 155px; transform: translateX(-50%) rotate(-2deg); border: 2px solid #c3b9a6; background: #f8f1df; opacity: 0; transition: opacity .4s ease, transform .4s ease; }
+    .sheet::before, .sheet::after { content: ""; position: absolute; left: 50%; transform: translateX(-50%); border: 5px solid #3e4140; opacity: .75; }
+    .sheet::before { top: 24px; width: 50px; height: 58px; border-radius: 50%; }
+    .sheet::after { bottom: 18px; width: 95px; height: 38px; border-radius: 50px 50px 6px 6px; }
+    .scene[data-progress="1"] .drawing, .scene[data-progress="2"] .drawing, .scene[data-progress="3"] .drawing, .scene[data-progress="4"] .drawing, .scene[data-progress="5"] .drawing { opacity: .75; }
+    .scene[data-progress="3"] .stone { background: #b6c5bb; }
+    .scene[data-progress="4"] .roller { opacity: 1; transform: translateX(120px) rotate(-8deg); }
+    .scene[data-progress="5"] .press { opacity: 1; }
+    .scene[data-result="clean"] .sheet { opacity: 1; transform: translateX(-50%) rotate(1deg); }
+    .scene[data-result="dirty"] .stone { background: repeating-linear-gradient(25deg,#262626 0 8px,#918b7c 8px 15px); }
+    .scene[data-result="blank"] .sheet { opacity: 1; }
+    .scene[data-result="blur"] .sheet { opacity: 1; filter: blur(3px); }
+    .voice-map { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin: 12px 2px 0; }
+    .voice-map span { min-height: 7px; border-radius: 99px; background: #587174; }
+    .voice-map span.on { background: var(--amber); }
+    .caption { margin: 12px 2px 0; padding-top: 12px; border-top: 1px solid rgba(159,208,206,.22); }
+    .caption strong { display: block; color: #9fd0ce; font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; }
+    .caption span { display: block; margin-top: 4px; font-size: .85rem; }
+    .panel { padding: 22px; }
+    .round { margin: 0 0 7px; color: var(--teal); font-size: .73rem; font-weight: 900; letter-spacing: .09em; text-transform: uppercase; }
+    .step-title { margin: 0 0 8px; font-family: Georgia, serif; font-size: 1.55rem; }
+    .step-copy { margin: 0 0 16px; color: var(--muted); }
+    .choices { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+    .choice, .action, .restart {
+      min-height: 48px; width: 100%; padding: 10px 13px; border: 2px solid var(--ink); border-radius: 12px;
+      background: white; color: var(--ink); cursor: pointer; font-weight: 780; text-align: left;
+    }
+    .choice:hover { border-color: var(--teal); }
+    .choice:disabled { cursor: default; opacity: .48; }
+    .choice.done { border-color: var(--green); background: #e1eee8; color: #204f40; }
+    .action { margin-top: 12px; border-color: var(--teal-dark); background: var(--teal); color: white; text-align: center; }
+    .action:hover { background: var(--teal-dark); }
+    .action.secondary { background: white; color: var(--teal-dark); }
+    .action[hidden], .round-panel[hidden] { display: none; }
+    .sequence { min-height: 55px; margin: 15px 0; padding: 11px; border: 1px solid var(--line); border-radius: 12px; background: #f0ece4; }
+    .sequence ol { margin: 0; padding-left: 23px; }
+    .feedback { min-height: 3em; margin: 13px 0 0; padding: 12px; border-left: 5px solid var(--amber); background: #fff3d3; }
+    .feedback.error { border-color: var(--red); background: #f8e1df; }
+    .feedback.success { border-color: var(--green); background: #dfeee6; }
+    .ledger { display: grid; gap: 9px; margin: 15px 0; }
+    .ledger-row { display: grid; grid-template-columns: 1.25fr .75fr; gap: 10px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 11px; background: #f3efe8; }
+    .ledger-row strong:last-child { text-align: right; }
+    .unknown { color: var(--red); }
+    .voice-choices { display: grid; gap: 8px; }
+    .voice-choices .choice { display: flex; justify-content: space-between; gap: 12px; align-items: center; }
+    .result { margin-top: 15px; padding: 15px; border-radius: 14px; background: var(--teal-dark); color: white; }
+    .result h3 { margin: 0 0 7px; font-family: Georgia, serif; font-size: 1.35rem; }
+    .restart { margin-top: 12px; border-color: var(--green); color: var(--green); text-align: center; }
+    .text-version { margin-top: 22px; padding: 20px 22px; }
+    .text-version summary { cursor: pointer; font-size: 1.06rem; font-weight: 850; }
+    .fact-table { width: 100%; border-collapse: collapse; margin-top: 14px; }
+    .fact-table th, .fact-table td { padding: 9px; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+    .source-note { margin: 18px 0 0; color: var(--muted); font-size: .88rem; }
+    @media (max-width: 780px) {
+      .shell { width: min(100% - 20px, 1120px); padding-top: 20px; }
+      h1 { font-size: clamp(1.85rem, 9vw, 2.6rem); }
+      .lead { margin: 13px 0 8px; font-size: 1rem; }
+      .notice { margin-bottom: 16px; border-radius: 16px; }
+      .game { grid-template-columns: 1fr; gap: 14px; }
+      .stage { padding: 9px; }
+      .scene { min-height: 275px; }
+      .stone { height: 130px; bottom: 63px; }
+      .bench { bottom: 34px; }
+      .sheet { bottom: 73px; height: 112px; }
+      .roller { transform: scale(.7) rotate(-8deg); transform-origin: left top; }
+      .scene[data-progress="4"] .roller { transform: translateX(70px) scale(.7) rotate(-8deg); }
+      .press { transform: scale(.72); transform-origin: right top; }
+      .panel { padding: 15px; }
+      .step-title { font-size: 1.3rem; }
+    }
+    @media (max-width: 330px) {
+      .choices { grid-template-columns: 1fr; }
+      .stage-head { align-items: flex-start; flex-direction: column; gap: 7px; }
+      .counter { white-space: normal; }
+      .ledger-row { grid-template-columns: 1fr; }
+      .ledger-row strong:last-child { text-align: left; }
+      .fact-table, .fact-table tbody, .fact-table tr, .fact-table th, .fact-table td { display: block; }
+      .fact-table tr { margin-bottom: 10px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <p class="eyebrow">Проверка механики · выпуск 4</p>
+    <h1>Ты можешь напечатать сто листов. Можешь ли доказать, что их увидел хоть кто-нибудь?</h1>
+    <p class="lead">Сначала получи чистый литографский оттиск. Затем попробуй превратить техническую возможность в общественный голос — не выдумав ни одного числа.</p>
+    <p class="notice">Образовательная модель процесса · историческая репродукция не используется</p>
+
+    <section class="game" aria-labelledby="game-title">
+      <div class="stage">
+        <div class="stage-head">
+          <div><p class="stage-kicker">Литографская лаборатория</p><p class="stage-title">Камень → оттиск → аудитория</p></div>
+          <span class="counter" id="counter" aria-live="polite">0 из 6 операций</span>
+        </div>
+        <div class="scene" id="scene" data-progress="0" data-result="none" aria-label="Учебный литографский камень на рабочем столе; рисунок ещё не нанесён.">
+          <div class="roller" aria-hidden="true"></div><div class="press" aria-hidden="true"></div><div class="bench" aria-hidden="true"></div>
+          <div class="stone" aria-hidden="true"><div class="drawing"></div></div><div class="sheet" aria-hidden="true"></div>
+        </div>
+        <div class="voice-map" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+        <p class="caption"><strong>Состояние модели</strong><span id="caption">Камень подготовлен к учебной последовательности. Выбери первую операцию.</span></p>
+      </div>
+
+      <div class="panel">
+        <section class="round-panel" id="round-one">
+          <p class="round">Раунд 1 · получить оттиск</p>
+          <h2 class="step-title" id="game-title">Что сделать следующим?</h2>
+          <p class="step-copy">Выбирай операции по одной. Ошибка покажет конкретный сбой и начнёт новую попытку.</p>
+          <div class="choices" id="process-choices"></div>
+          <div class="sequence" id="sequence"><span>Последовательность пока пуста.</span></div>
+          <p class="feedback" id="feedback" role="status" aria-live="polite">Подсказка: литография держится на различии воды и жирной краски.</p>
+          <button class="action secondary" id="reveal" type="button" hidden>Показать учебную последовательность</button>
+        </section>
+
+        <section class="round-panel" id="round-two" hidden>
+          <p class="round">Раунд 2 · собрать общественный голос</p>
+          <h2 class="step-title">Оттиск готов. Он уже «говорит громче»?</h2>
+          <p class="step-copy">Техническая копия — ещё не доказательство исторического охвата. Собери условия публичного высказывания.</p>
+          <div class="ledger" aria-label="Состояние доказательств">
+            <div class="ledger-row"><span>Учебных оттисков в модели</span><strong id="model-count">1</strong></div>
+            <div class="ledger-row"><span>Исторический тираж альбома 1863 года</span><strong class="unknown">не установлен</strong></div>
+            <div class="ledger-row"><span>Подтверждённый охват аудитории</span><strong class="unknown">не установлен</strong></div>
+          </div>
+          <button class="action secondary" id="more-prints" type="button">Напечатать ещё 99 учебных листов</button>
+          <p class="feedback" id="voice-feedback" role="status" aria-live="polite">Один оттиск доказывает работу модели, но не историю распространения.</p>
+          <div class="voice-choices" id="voice-choices">
+            <button class="choice" type="button" data-voice="Серия">Добавить серию из пяти листов</button>
+            <button class="choice" type="button" data-voice="Издание">Добавить издательскую форму</button>
+            <button class="choice" type="button" data-voice="Контекст">Добавить заголовок и контекст</button>
+            <button class="choice" type="button" data-voice="Распространение">Добавить канал распространения</button>
+            <button class="choice" type="button" data-voice="Аудитория">Добавить аудиторию</button>
+          </div>
+          <button class="action" id="finish" type="button" disabled>Сформулировать вывод без выдуманного тиража</button>
+          <div class="result" id="result" role="status" tabindex="-1" hidden>
+            <h3>Голос получился из цепочки, а не из одного пресса</h3>
+            <p>Литография дала возможность повторять изображение. Серия, издательская рамка, подпись, распространение и аудитория превращали эту возможность в публичное высказывание. Но точный тираж «Бюрократического катехизиса» здесь честно остаётся неизвестным.</p>
+          </div>
+          <button class="restart" id="restart" type="button">Начать заново</button>
+        </section>
+      </div>
+    </section>
+
+    <details class="text-version">
+      <summary>Пройти смысл без интерактива</summary>
+      <h2>Как учебная модель получает оттиск</h2>
+      <ol>
+        <li>На подготовленный камень наносят жирный рисунок.</li>
+        <li>Камень обрабатывают, разделяя печатающие и пробельные участки.</li>
+        <li>Поверхность увлажняют: пробельные участки удерживают воду.</li>
+        <li>Накатывают жирную краску, которая удерживается печатающими участками.</li>
+        <li>Кладут бумагу и переносят изображение под давлением.</li>
+        <li>Получают оттиск; для следующего повторяют увлажнение, накат и печать.</li>
+      </ol>
+      <h2>Что может пойти не так</h2>
+      <ul>
+        <li>Краска до обработки и увлажнения загрязняет пробельные участки.</li>
+        <li>Бумага до наката краски даёт пустой учебный лист.</li>
+        <li>Нарушение подготовки формы даёт нечёткий или загрязнённый результат.</li>
+      </ul>
+      <table class="fact-table">
+        <thead><tr><th>Возможность техники</th><th>Доказанный факт о серии</th><th>Пока неизвестно</th></tr></thead>
+        <tbody><tr><td>Получать повторные оттиски с подготовленного камня.</td><td>Серия 1863 года состояла из пяти литографий и была переиздана в 1864 году с изменённым цензурой названием.</td><td>Точный тираж и подтверждённый охват конкретного издания.</td></tr></tbody>
+      </table>
+    </details>
+    <p class="source-note">Исторический выпуск остаётся в статусе research. Учебная модель опирается на технические описания ГМИИ, Третьяковской галереи и Русского музея; музейный цифровой файл серии не загружался и не преобразовывался.</p>
+  </main>
+
+  <script>
+    (() => {
+      const operations = [
+        ['draw', 'Жирный рисунок'], ['prepare', 'Обработка камня'], ['wet', 'Увлажнение'],
+        ['ink', 'Накат краски'], ['press', 'Бумага и давление'], ['print', 'Получить оттиск']
+      ];
+      const scene = document.querySelector('#scene');
+      const choices = document.querySelector('#process-choices');
+      const sequence = document.querySelector('#sequence');
+      const feedback = document.querySelector('#feedback');
+      const counter = document.querySelector('#counter');
+      const caption = document.querySelector('#caption');
+      const reveal = document.querySelector('#reveal');
+      const roundOne = document.querySelector('#round-one');
+      const roundTwo = document.querySelector('#round-two');
+      const voiceButtons = [...document.querySelectorAll('#voice-choices .choice')];
+      const bars = [...document.querySelectorAll('.voice-map span')];
+      let selected = [];
+      let failures = 0;
+      let voice = new Set();
+
+      choices.innerHTML = operations.map(([id, label]) => `<button class="choice" type="button" data-operation="${id}">${label}</button>`).join('');
+
+      function describeFailure(id, expected) {
+        if (id === 'ink' && !selected.includes('wet')) return ['dirty', 'Краска нанесена до увлажнения: пробельные участки тоже загрязнились. Получился грязный фон.'];
+        if (id === 'press' && !selected.includes('ink')) return ['blank', 'Бумага попала под пресс до наката краски. Учебный лист остался пустым.'];
+        if (id === 'print' && selected.length < 5) return ['blur', 'Попытка снять оттиск до подготовки формы дала нечёткий результат.'];
+        return ['dirty', `Операция «${operations.find(item => item[0] === id)[1]}» выполнена слишком рано. Сейчас нужна операция «${expected[1]}».`];
+      }
+
+      function renderSequence() {
+        sequence.innerHTML = selected.length ? `<ol>${selected.map(id => `<li>${operations.find(item => item[0] === id)[1]}</li>`).join('')}</ol>` : '<span>Последовательность пока пуста.</span>';
+        [...choices.querySelectorAll('button')].forEach(button => {
+          const done = selected.includes(button.dataset.operation);
+          button.disabled = done;
+          button.classList.toggle('done', done);
+        });
+      }
+
+      function resetAttempt() {
+        selected = [];
+        scene.dataset.progress = '0';
+        renderSequence();
+        counter.textContent = '0 из 6 операций';
+      }
+
+      function completePrint() {
+        scene.dataset.result = 'clean';
+        scene.setAttribute('aria-label', 'Чистый учебный оттиск лежит над подготовленным литографским камнем.');
+        caption.textContent = 'Чистый учебный оттиск получен. Теперь нужно отделить возможность повторения от доказанного исторического охвата.';
+        feedback.className = 'feedback success';
+        feedback.textContent = 'Оттиск готов. Но пресс ещё ничего не рассказал о тираже, распространении и читателях.';
+        setTimeout(() => {
+          roundOne.hidden = true;
+          roundTwo.hidden = false;
+          counter.textContent = '1 учебный оттиск';
+          document.querySelector('#more-prints').focus();
+        }, matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 450);
+      }
+
+      choices.addEventListener('click', event => {
+        const button = event.target.closest('button[data-operation]');
+        if (!button) return;
+        const id = button.dataset.operation;
+        const expected = operations[selected.length];
+        if (id !== expected[0]) {
+          failures += 1;
+          const [result, message] = describeFailure(id, expected);
+          scene.dataset.result = result;
+          scene.setAttribute('aria-label', message);
+          caption.textContent = message;
+          feedback.className = 'feedback error';
+          feedback.textContent = `${message} Попытка ${failures} завершена; последовательность сброшена.`;
+          if (failures >= 2) reveal.hidden = false;
+          resetAttempt();
+          choices.querySelector('button:not(:disabled)').focus();
+          return;
+        }
+        scene.dataset.result = 'none';
+        selected.push(id);
+        scene.dataset.progress = String(Math.min(selected.length, 5));
+        counter.textContent = `${selected.length} из 6 операций`;
+        caption.textContent = `Выполнено: ${expected[1]}. ${selected.length < 6 ? 'Выбери следующий шаг.' : ''}`;
+        feedback.className = 'feedback';
+        feedback.textContent = `Верно: ${expected[1].toLowerCase()}.`;
+        renderSequence();
+        if (selected.length === 6) completePrint();
+        else choices.querySelector('button:not(:disabled)').focus();
+      });
+
+      reveal.addEventListener('click', () => {
+        selected = operations.map(item => item[0]);
+        renderSequence();
+        scene.dataset.progress = '5';
+        feedback.className = 'feedback success';
+        feedback.textContent = 'Учебная последовательность раскрыта после двух попыток. Она не заменяет полный химический регламент мастерской.';
+        reveal.hidden = true;
+        const continueButton = document.createElement('button');
+        continueButton.className = 'action';
+        continueButton.type = 'button';
+        continueButton.textContent = 'Получить оттиск по этой последовательности';
+        continueButton.addEventListener('click', completePrint, { once: true });
+        reveal.insertAdjacentElement('afterend', continueButton);
+        continueButton.focus();
+      });
+
+      document.querySelector('#more-prints').addEventListener('click', event => {
+        document.querySelector('#model-count').textContent = '100';
+        event.currentTarget.disabled = true;
+        const vf = document.querySelector('#voice-feedback');
+        vf.className = 'feedback error';
+        vf.textContent = 'В модели стало 100 листов. Исторический тираж и реальная аудитория не изменились: для них по-прежнему нет источника.';
+        voiceButtons[0].focus();
+      });
+
+      voiceButtons.forEach((button, index) => button.addEventListener('click', () => {
+        voice.add(button.dataset.voice);
+        button.disabled = true;
+        button.classList.add('done');
+        bars[index].classList.add('on');
+        document.querySelector('#voice-feedback').className = 'feedback';
+        document.querySelector('#voice-feedback').textContent = `Добавлено условие «${button.dataset.voice}». Это часть цепочки публичного высказывания, а не доказательство конкретного тиража.`;
+        document.querySelector('#finish').disabled = voice.size < voiceButtons.length;
+        const next = voiceButtons.find(item => !item.disabled);
+        (next || document.querySelector('#finish')).focus();
+      }));
+
+      document.querySelector('#finish').addEventListener('click', () => {
+        document.querySelector('#result').hidden = false;
+        document.querySelector('#finish').disabled = true;
+        caption.textContent = 'Собрана цепочка публичного голоса. Поля исторического тиража и аудитории намеренно остались неизвестными.';
+        counter.textContent = 'Вывод собран честно';
+        document.querySelector('#voice-feedback').className = 'feedback success';
+        document.querySelector('#voice-feedback').textContent = 'Готово: возможность техники отделена от доказанного исторического факта.';
+        document.querySelector('#result').focus();
+      });
+
+      document.querySelector('#restart').addEventListener('click', () => {
+        failures = 0;
+        voice = new Set();
+        resetAttempt();
+        scene.dataset.result = 'none';
+        scene.setAttribute('aria-label', 'Учебный литографский камень на рабочем столе; рисунок ещё не нанесён.');
+        caption.textContent = 'Камень подготовлен к учебной последовательности. Выбери первую операцию.';
+        feedback.className = 'feedback';
+        feedback.textContent = 'Подсказка: литография держится на различии воды и жирной краски.';
+        reveal.hidden = true;
+        roundTwo.hidden = true;
+        roundOne.hidden = false;
+        document.querySelector('#model-count').textContent = '1';
+        document.querySelector('#more-prints').disabled = false;
+        voiceButtons.forEach(button => { button.disabled = false; button.classList.remove('done'); });
+        bars.forEach(bar => bar.classList.remove('on'));
+        document.querySelector('#finish').disabled = true;
+        document.querySelector('#result').hidden = true;
+        [...document.querySelectorAll('#reveal + .action')].forEach(button => button.remove());
+        choices.querySelector('button').focus();
+      });
+
+      renderSequence();
+    })();
+  </script>
+</body>
+</html>
