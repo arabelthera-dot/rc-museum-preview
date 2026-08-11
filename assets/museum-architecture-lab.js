@@ -70,6 +70,7 @@
       beam.classList.add('is-on');
       reveal.hidden = false;
       reveal.innerHTML = '<span>Твой результат · Архитектор вертикали</span><strong>Ты заставил камень взлететь.</strong><p>Берег, галерея, каменные ступени и шатёр превратили семейный храм в 62-метровый знак, который было видно издалека.</p><div><button class="share-result" type="button" data-lab-compare>Сравнить схему и храм</button> <button class="share-result secondary" type="button" data-lab-share>Поделиться открытием</button></div>';
+      if (root.dataset.finishHref) reveal.insertAdjacentHTML('beforeend', '<p><a class="primary" href="' + root.dataset.finishHref + '">Шаг 3 из 3 · Увидеть вывод →</a></p>');
       feedback.textContent = 'Готово! Свет проходит по всему храму — от высокого берега до креста.';
       model.setAttribute('aria-label', 'Храм собран. Четыре найденных секрета создают одно движение от берега до креста.');
     }
