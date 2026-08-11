@@ -12,27 +12,30 @@
 
   function render() {
     const steps = document.querySelector('#route-steps');
+    const chooseOne = route.mode === 'choose_one';
+    const completionTarget = chooseOne ? 1 : route.stops.length;
+    const finished = state.completed.length >= completionTarget;
     steps.innerHTML = route.stops.map((stop, index) => {
       const opened = state.opened.includes(index);
       const done = state.completed.includes(index);
       return `<article class="route-step ${done ? 'done' : ''}" data-step="${index}">
-        <p class="eyebrow">Остановка ${index + 1} из ${route.stops.length}${done ? ' · пройдена' : ''}</p>
+        <p class="eyebrow">${chooseOne ? 'Вариант' : 'Остановка'} ${index + 1} из ${route.stops.length}${done ? ' · пройден' : ''}</p>
         <h2>${escape(stop.title_ru)}</h2>
         <p>${escape(stop.reason_ru)}</p>
         <div class="route-actions">
           <a href="${escape(targetPrefix + stop.path)}" target="_blank" rel="noopener" data-open-step="${index}">Открыть материал в новой вкладке →</a>
-          <button type="button" data-complete-step="${index}" ${opened || done ? '' : 'disabled'}>${done ? 'Остановка пройдена ✓' : 'Отметить как пройденную'}</button>
+          <button type="button" data-complete-step="${index}" ${((opened || done) && (!finished || done)) ? '' : 'disabled'}>${done ? 'История пройдена ✓' : 'Отметить как пройденную'}</button>
         </div>
       </article>`;
     }).join('');
-    const completeCount = state.completed.length;
-    document.querySelector('#route-progress').max = route.stops.length;
+    const completeCount = Math.min(state.completed.length, completionTarget);
+    document.querySelector('#route-progress').max = completionTarget;
     document.querySelector('#route-progress').value = completeCount;
-    document.querySelector('#route-progress-text').textContent = `Пройдено: ${completeCount} из ${route.stops.length}`;
-    const finished = completeCount === route.stops.length;
+    document.querySelector('#route-progress-text').textContent = chooseOne ? `Выбрано историй: ${completeCount} из 1` : `Пройдено: ${completeCount} из ${route.stops.length}`;
+    document.querySelector('#route-finish-title').textContent = chooseOne ? 'Одно открытие завершено' : 'Ты прошёл все остановки';
     document.querySelector('#route-finish').hidden = !finished;
     if (finished && !state.completionTracked) {
-      window.rcPortalTrack?.('portal_route_complete', { route_id: route.route_id, stop_count: route.stops.length, completion_mode: 'visitor_confirmed' });
+      window.rcPortalTrack?.('portal_route_complete', { route_id: route.route_id, stop_count: completionTarget, route_mode: route.mode, completion_mode: 'visitor_confirmed' });
       state.completionTracked = true;
       save();
       document.querySelector('#route-finish').focus();
