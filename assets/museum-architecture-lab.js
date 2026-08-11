@@ -2,13 +2,37 @@
   'use strict';
 
   function init(root) {
+    var order = ['base', 'transition', 'crown', 'site'];
+    var current = 0;
     var choices = { base: '', transition: '', crown: '', site: '' };
     var correct = { base: 'gallery', transition: 'kokoshnik', crown: 'tent', site: 'bank' };
-    var labels = {
-      gallery: 'высокий подклет и круговая галерея', cube: 'простой четверик', low: 'низкое основание',
-      kokoshnik: 'ступени, кокошники и восьмерик', direct: 'резкий переход', drum: 'круглый барабан',
-      tent: 'каменный шатёр', dome: 'купол', spire: 'европейский шпиль',
+    var names = {
+      gallery: 'широкая галерея и высокий подклет', cube: 'ровный тяжёлый куб', low: 'низкое основание',
+      kokoshnik: 'ступени, кокошники и восьмерик', direct: 'резкий скачок к крыше', drum: 'круглый барабан',
+      tent: 'каменный шатёр', dome: 'купол', spire: 'острый шпиль',
       bank: 'высокий берег', square: 'ровная площадь', hollow: 'низина'
+    };
+    var reactions = {
+      base: {
+        gallery: 'Есть! Галерея дала храму разбег — будто он готовится к прыжку.',
+        cube: 'Получился крепкий дом, но он не взлетает. Попробуй дать ему больше разбега.',
+        low: 'Храм присел к земле. Для взлёта нужно другое основание.'
+      },
+      transition: {
+        kokoshnik: 'Вот оно! Ступени мягко превращают тяжёлый квадрат в узкую вершину.',
+        direct: 'Верх будто поставили на коробку. Части пока не стали одним целым.',
+        drum: 'Круглый барабан готовит купол. Но движение к шатру здесь останавливается.'
+      },
+      crown: {
+        tent: 'Шатёр не накрывает храм — он продолжает его вверх.',
+        dome: 'Красиво, но взгляд остановился на округлой вершине. Нам нужен новый рывок вверх.',
+        spire: 'Вверх устремился только острый наконечник. Сможешь поднять весь храм?'
+      },
+      site: {
+        bank: 'Берег добавил высоту, хотя архитектор не положил ни одного камня.',
+        square: 'На площади храм заметен, но земля больше не помогает ему взлететь.',
+        hollow: 'Склоны спрятали основание. Храм потерял часть своей высоты ещё до первого камня.'
+      }
     };
     var feedback = root.querySelector('[data-lab-feedback]');
     var progress = root.querySelector('[data-lab-progress]');
@@ -16,10 +40,8 @@
     var beam = root.querySelector('[data-eye-path]');
     var model = root.querySelector('[data-lab-model]');
     var groups = [].slice.call(root.querySelectorAll('[data-lab-group]'));
-
-    function selectedCount() {
-      return Object.keys(choices).filter(function (key) { return choices[key]; }).length;
-    }
+    var decisions = [].slice.call(root.querySelectorAll('.decision'));
+    var next = root.querySelector('[data-lab-next]');
 
     function updateModel(key, value) {
       model.setAttribute('data-' + key, value);
@@ -29,117 +51,96 @@
       model.classList.remove('is-changing');
       void model.getBoundingClientRect();
       model.classList.add('is-changing');
-      model.setAttribute('aria-label', 'Учебная модель. Выбрано решений: ' + selectedCount() + ' из 4. Последнее изменение: ' + labels[value] + '.');
+      model.setAttribute('aria-label', 'Учебная модель. Найдено секретов: ' + current + ' из 4. Последнее изменение: ' + names[value] + '.');
     }
 
-    function explain(key, value) {
-      var messages = {
-        base: {
-          gallery: 'Совпадает с устройством Коломенского: галерея и высокий подклет начинают движение ещё у земли.',
-          cube: 'Четверик даёт ясную массу, но взгляд начинает подниматься слишком поздно.',
-          low: 'Низкое основание лишает здание зрительного разбега.'
-        },
-        transition: {
-          kokoshnik: 'Кокошники и восьмерик превращают сужение в последовательность, а не в скачок.',
-          direct: 'Без переходных ярусов шатёр выглядит поставленным сверху отдельной крышей.',
-          drum: 'Барабан естественно готовит купол, но ослабляет шатровую непрерывность.'
-        },
-        crown: {
-          tent: 'Шатёр продолжает грани нижних объёмов почти до самой главы.',
-          dome: 'Купол собирает движение вокруг центра — это другой пространственный жест.',
-          spire: 'Шпиль тоже ведёт вверх, но остаётся башенным завершением, а не русским каменным шатром.'
-        },
-        site: {
-          bank: 'Высокий берег становится первым невидимым ярусом композиции.',
-          square: 'На площади храм сохраняет силуэт, но теряет усиление естественным рельефом.',
-          hollow: 'Низина спорит с замыслом: окружающая земля гасит вертикаль.'
-        }
-      };
-      return messages[key][value];
-    }
-
-    function render() {
-      var count = selectedCount();
-      progress.value = count;
-      progress.setAttribute('aria-valuetext', count + ' из 4 решений');
-      groups.forEach(function (group) {
-        var key = group.getAttribute('data-lab-group');
-        [].slice.call(group.querySelectorAll('button')).forEach(function (button) {
-          var active = choices[key] === button.getAttribute('data-value');
-          button.classList.toggle('is-active', active);
-          button.setAttribute('aria-pressed', active ? 'true' : 'false');
-        });
+    function showStep(index) {
+      decisions.forEach(function (decision, i) {
+        decision.classList.toggle('is-current', i === index);
+        decision.hidden = i !== index;
       });
-      if (count < 4) {
-        reveal.hidden = true;
-        beam.classList.remove('is-on');
-        return;
+      next.hidden = true;
+      if (index < order.length) {
+        feedback.textContent = 'Ход ' + (index + 1) + ' из 4. Выбирай и смотри, что произойдёт с храмом.';
       }
-      var score = Object.keys(correct).filter(function (key) { return choices[key] === correct[key]; }).length;
+    }
+
+    function finish() {
+      root.classList.add('is-solved');
+      beam.classList.add('is-on');
       reveal.hidden = false;
-      if (score === 4) {
-        root.classList.add('is-solved');
-        beam.classList.add('is-on');
-        reveal.innerHTML = '<span>Твой результат · Архитектор вертикали</span><strong>Ты построил не крышу, а маршрут взгляда.</strong><p>Берег, галерея, сужающиеся переходы и шатёр сложились в одну вертикаль. Поэтому 62-метровый храм кажется ещё выше — хотя внутри это камерная домовая церковь.</p><button class="share-result" type="button" data-lab-share>Поделиться открытием</button>';
-        feedback.textContent = 'Все четыре решения работают вместе. Запусти взгляд от берега к кресту.';
-      } else {
-        root.classList.remove('is-solved');
-        beam.classList.remove('is-on');
-        reveal.innerHTML = '<span>Почти получилось</span><strong>Совпало решений: ' + score + ' из 4.</strong><p>Меняй варианты и наблюдай не за отдельной крышей, а за непрерывностью всего силуэта снизу вверх.</p>';
-      }
+      reveal.innerHTML = '<span>Твой результат · Архитектор вертикали</span><strong>Ты заставил камень взлететь.</strong><p>Берег, галерея, каменные ступени и шатёр превратили семейный храм в 62-метровый знак, который было видно издалека.</p><div><button class="share-result" type="button" data-lab-compare>Сравнить схему и храм</button> <button class="share-result secondary" type="button" data-lab-share>Поделиться открытием</button></div>';
+      feedback.textContent = 'Готово! Свет проходит по всему храму — от высокого берега до креста.';
+      model.setAttribute('aria-label', 'Храм собран. Четыре найденных секрета создают одно движение от берега до креста.');
     }
 
     groups.forEach(function (group) {
       group.addEventListener('click', function (event) {
         var button = event.target.closest('button[data-value]');
-        if (!button) return;
+        if (!button || button.disabled) return;
         var key = group.getAttribute('data-lab-group');
+        if (key !== order[current]) return;
         var value = button.getAttribute('data-value');
         choices[key] = value;
         updateModel(key, value);
-        feedback.textContent = explain(key, value);
-        render();
+        [].slice.call(group.querySelectorAll('button')).forEach(function (item) {
+          var active = item === button;
+          item.classList.toggle('is-active', active);
+          item.setAttribute('aria-pressed', active ? 'true' : 'false');
+        });
+        feedback.textContent = reactions[key][value];
+        if (value === correct[key]) {
+          [].slice.call(group.querySelectorAll('button')).forEach(function (item) { item.disabled = true; });
+          current += 1;
+          progress.value = current;
+          progress.setAttribute('aria-valuetext', current + ' из 4 секретов найдено');
+          if (current === order.length) finish();
+          else next.hidden = false;
+        } else {
+          root.classList.remove('is-shake');
+          void root.getBoundingClientRect();
+          root.classList.add('is-shake');
+        }
       });
     });
 
+    next.addEventListener('click', function () { showStep(current); });
+
     [].slice.call(document.querySelectorAll('[data-hero-crown]')).forEach(function (button) {
       button.addEventListener('click', function () {
-        choices.crown = button.getAttribute('data-hero-crown');
-        updateModel('crown', choices.crown);
-        feedback.textContent = explain('crown', choices.crown) + ' Теперь выбери ещё три решения.';
-        render();
+        root.dataset.firstCrown = button.getAttribute('data-hero-crown');
+        feedback.textContent = 'Запомнили твой выбор. На третьем ходу проверим, заставит ли он весь храм взлететь.';
         root.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
 
     root.addEventListener('click', function (event) {
-      if (!event.target.closest('[data-lab-share]')) return;
-      var share = { title: document.title, text: 'Я раскрыл секрет Коломенского: 62 метра нужны не для большого зала, а для движения взгляда от берега к кресту.', url: location.href };
-      if (navigator.share) {
-        navigator.share(share).catch(function () {});
-      } else if (navigator.clipboard) {
-        navigator.clipboard.writeText(share.text + ' ' + share.url).then(function () { feedback.textContent = 'Открытие и ссылка скопированы.'; });
-      } else {
-        feedback.textContent = 'Скопируй адрес страницы из строки браузера и поделись открытием.';
+      if (event.target.closest('[data-lab-compare]')) {
+        root.classList.toggle('show-model');
+        event.target.textContent = root.classList.contains('show-model') ? 'Показать настоящий храм' : 'Показать мою схему';
       }
+      if (!event.target.closest('[data-lab-share]')) return;
+      var share = { title: document.title, text: 'Я заставил камень взлететь и раскрыл секрет Коломенского.', url: location.href };
+      if (navigator.share) navigator.share(share).catch(function () {});
+      else if (navigator.clipboard) navigator.clipboard.writeText(share.text + ' ' + share.url).then(function () { feedback.textContent = 'Открытие и ссылка скопированы.'; });
+      else feedback.textContent = 'Скопируй адрес страницы из строки браузера и поделись открытием.';
     });
 
     var reset = root.querySelector('[data-lab-reset]');
-    if (reset) reset.addEventListener('click', function () {
+    reset.addEventListener('click', function () {
+      current = 0;
       choices = { base: '', transition: '', crown: '', site: '' };
-      model.removeAttribute('data-base');
-      model.removeAttribute('data-transition');
-      model.removeAttribute('data-crown');
-      model.removeAttribute('data-site');
+      order.forEach(function (key) { model.removeAttribute('data-' + key); });
       [].slice.call(model.querySelectorAll('[data-variant-base],[data-variant-transition],[data-variant-crown],[data-variant-site]')).forEach(function (node) { node.hidden = true; });
-      root.classList.remove('is-solved');
-      feedback.textContent = 'Начни с основания. Модель будет меняться после каждого решения.';
-      reveal.hidden = true;
+      groups.forEach(function (group) { [].slice.call(group.querySelectorAll('button')).forEach(function (button) { button.disabled = false; button.classList.remove('is-active'); button.setAttribute('aria-pressed', 'false'); }); });
+      root.classList.remove('is-solved', 'show-model', 'is-shake');
       beam.classList.remove('is-on');
-      render();
+      progress.value = 0;
+      reveal.hidden = true;
+      showStep(0);
     });
 
-    render();
+    showStep(0);
   }
 
   document.addEventListener('DOMContentLoaded', function () {
@@ -148,10 +149,10 @@
       var stage = tool.querySelector('[data-compare-stage]');
       var text = tool.querySelector('[data-compare-text]');
       var messages = {
-        dome: 'Во флорентийском куполе движение собирается вокруг большого свода и его вершины.',
-        spire: 'У готического собора острота сосредоточена в башнях и их верхнем завершении.',
-        tent: 'В Коломенском подъём начинается внизу: рельеф и основание включены в общую вертикаль.',
-        all: 'При наложении видно: похожая устремлённость вверх возникает разными архитектурными средствами.'
+        dome: 'Флоренция: огромный купол собирает всё движение вокруг своей вершины.',
+        spire: 'Кёльн: две острые башни взмывают вверх, словно каменные иглы.',
+        tent: 'Коломенское: взлёт начинается ещё на склоне и проходит через всё здание.',
+        all: 'Теперь видно: похожее стремление вверх рождается тремя совершенно разными способами.'
       };
       tool.addEventListener('click', function (event) {
         var button = event.target.closest('button[data-mode]');
@@ -169,9 +170,7 @@
     [].slice.call(document.querySelectorAll('.teaser details')).forEach(function (details) {
       details.addEventListener('toggle', function () {
         if (!details.open || window.innerWidth > 820) return;
-        [].slice.call(document.querySelectorAll('.teaser details[open]')).forEach(function (other) {
-          if (other !== details) other.open = false;
-        });
+        [].slice.call(document.querySelectorAll('.teaser details[open]')).forEach(function (other) { if (other !== details) other.open = false; });
       });
     });
   });
