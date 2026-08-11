@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru" data-museum="architecture" data-fabric="white-stone">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Как камню приказали взлететь? — церковь Вознесения в Коломенском</title>
+  <meta name="description" content="Разберите церковь Вознесения в Коломенском по ярусам и соберите вертикаль одного из первых каменных шатровых храмов Руси.">
+  <link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/muzei/arhitektura/kolomenskoe.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Как камню приказали взлететь?">
+  <meta property="og:description" content="Интерактивный разбор церкви Вознесения в Коломенском — 1532 год, шесть объёмов, одна устремлённая вверх композиция.">
+  <meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/arhitektura/kolomenskoe-unesco-livio-garuccio.jpg">
+  <meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/arhitektura/kolomenskoe.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../../favicon.ico">
+  <link rel="stylesheet" href="../../assets/fonts.css">
+  <style>
+    :root{
+      --ink:#18211e;--muted:#5d6963;--paper:#f4f0e7;--paper-2:#e9e2d4;
+      --white:#fffdf7;--moss:#425944;--moss-2:#6f8464;--gold:#a97824;
+      --line:rgba(49,61,54,.16);--shadow:0 24px 80px rgba(34,45,38,.14);
+      --serif:'Old Standard TT',Georgia,serif;--sans:'Inter','Segoe UI',sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;background:var(--paper)}
+    body{margin:0;color:var(--ink);background:
+      radial-gradient(circle at 16% 4%,rgba(255,255,255,.85),transparent 30rem),
+      linear-gradient(180deg,#f7f3eb 0,#eee7da 100%);font:17px/1.72 var(--serif)}
+    img,svg{display:block;max-width:100%}
+    a{color:#49674d}
+    button,a{touch-action:manipulation}
+    .wrap{width:min(1120px,calc(100% - 40px));margin-inline:auto}
+    .reading{width:min(800px,calc(100% - 40px));margin-inline:auto}
+    .skip{position:absolute;left:12px;top:-60px;background:#fff;color:#111;padding:10px 14px;z-index:100}
+    .skip:focus{top:12px}
+    .top{padding:11px 20px 8px;text-align:center;background:#17211d;color:#f7f0dc;border-bottom:1px solid rgba(255,255,255,.1)}
+    .top .b1{font:600 13px/1.2 var(--sans);letter-spacing:3px;text-transform:uppercase;color:#d8b86f}
+    .top .b2{margin-top:4px;font:400 11px/1.4 var(--sans);opacity:.78}
+    .crumbs{padding:9px 20px;text-align:center;background:#202c27;color:#c5d0c7;font:12px/1.5 var(--sans)}
+    .crumbs a{color:#e5cf96;text-decoration:none}.crumbs a:hover{text-decoration:underline}
+    .hero{padding:34px 0 30px;border-bottom:1px solid var(--line)}
+    .hero-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(360px,1.1fr);gap:clamp(28px,5vw,72px);align-items:center}
+    .eyebrow{font:700 11px/1.3 var(--sans);letter-spacing:3px;text-transform:uppercase;color:var(--gold)}
+    h1,h2,h3{font-family:var(--serif);line-height:1.04;margin:0}
+    h1{font-size:clamp(44px,7vw,84px);font-weight:700;letter-spacing:-2px;margin:14px 0 18px}
+    .lead{font-size:clamp(18px,2.2vw,23px);line-height:1.55;color:#3f4c46;max-width:36rem}
+    .meta{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0}
+    .chip{border:1px solid rgba(66,89,68,.28);border-radius:999px;padding:9px 14px;min-height:44px;display:inline-flex;align-items:center;font:600 12px/1.2 var(--sans);color:#425944;background:rgba(255,255,255,.5)}
+    .primary{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:13px 22px;border-radius:4px;background:#425944;color:#fff;text-decoration:none;font:700 14px/1.2 var(--sans);box-shadow:0 10px 30px rgba(66,89,68,.2)}
+    .primary:hover{background:#314735}.primary:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid #d49a30;outline-offset:3px}
+    .hero-figure{margin:0;background:#d9dfd5;border-radius:2px;overflow:hidden;box-shadow:var(--shadow)}
+    .hero-figure img{width:100%;height:min(68vh,660px);object-fit:cover;object-position:center 45%}
+    figcaption{padding:12px 16px;background:#fffdf7;color:#56615c;font:12px/1.55 var(--sans)}
+    .section{padding:76px 0;border-bottom:1px solid var(--line)}
+    .section-head{display:grid;grid-template-columns:180px minmax(0,1fr);gap:28px;margin-bottom:34px}
+    .section-no{font:700 11px/1.3 var(--sans);letter-spacing:2.5px;text-transform:uppercase;color:var(--gold)}
+    h2{font-size:clamp(36px,5vw,58px);letter-spacing:-1px}
+    h3{font-size:27px;margin-bottom:10px}
+    .intro{font-size:21px;color:#3e4b45;max-width:46rem}
+    .builder-shell{background:#17211d;color:#f6f0df;border-radius:6px;overflow:hidden;box-shadow:var(--shadow)}
+    .builder{display:grid;grid-template-columns:minmax(350px,1.05fr) minmax(320px,.95fr);min-height:690px}
+    .builder-visual{position:relative;display:grid;place-items:center;padding:28px;background:
+      radial-gradient(circle at 50% 36%,rgba(242,225,175,.14),transparent 32%),
+      linear-gradient(160deg,#27372f,#111916)}
+    .builder-visual::after{content:'';position:absolute;left:8%;right:8%;bottom:6%;height:15%;background:radial-gradient(ellipse,rgba(114,139,91,.52),transparent 68%);filter:blur(10px)}
+    .church-svg{position:relative;z-index:1;width:min(100%,520px);max-height:620px;filter:drop-shadow(0 26px 24px rgba(0,0,0,.28))}
+    [data-stack-layer]{opacity:.22;transition:transform .65s cubic-bezier(.2,.8,.2,1),opacity .45s,filter .45s;transform-origin:center}
+    [data-stack-layer]:nth-of-type(odd){transform:translateX(-86px)}
+    [data-stack-layer]:nth-of-type(even){transform:translateX(86px)}
+    [data-stack-layer].is-placed{opacity:1;transform:none;filter:drop-shadow(0 0 8px rgba(243,217,150,.2))}
+    .builder.is-complete .church-svg{animation:arrive 1.4s ease both}
+    @keyframes arrive{0%{filter:drop-shadow(0 26px 24px rgba(0,0,0,.28))}55%{filter:drop-shadow(0 0 42px rgba(245,214,129,.55))}100%{filter:drop-shadow(0 28px 30px rgba(0,0,0,.36))}}
+    .builder-panel{padding:42px 38px;background:#f8f3e8;color:var(--ink);display:flex;flex-direction:column}
+    .builder-panel .eyebrow{margin-bottom:10px}.builder-panel h3{font-size:38px}
+    .builder-panel>p{color:#53605a;margin:7px 0 18px}
+    .progress{display:block;width:100%;height:5px;border:0;background:#ddd4c3;margin:4px 0 22px;overflow:hidden;border-radius:9px;appearance:none}
+    .progress::-webkit-progress-bar{background:#ddd4c3}
+    .progress::-webkit-progress-value{background:linear-gradient(90deg,#6e865f,#c4953d);transition:width .45s}
+    .progress::-moz-progress-bar{background:linear-gradient(90deg,#6e865f,#c4953d)}
+    .steps{display:grid;gap:8px}
+    .step{width:100%;min-height:52px;padding:11px 14px;border:1px solid #d2c9b9;border-radius:3px;background:#fffdf8;color:#27332d;text-align:left;cursor:pointer;display:grid;grid-template-columns:30px 1fr;gap:10px;align-items:center;font:600 14px/1.35 var(--sans)}
+    .step span:first-child{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#ebe4d6;color:#607063;font-size:12px}
+    .step:hover:not(:disabled),.step.is-next{border-color:#75866e;background:#f4f5ed}
+    .step.is-placed{opacity:.64}.step.is-placed span:first-child{background:#425944;color:#fff}.step.is-placed span:first-child::before{content:'✓';font-size:14px}.step.is-placed span:first-child{font-size:0}
+    .feedback{min-height:72px;margin:17px 0 10px;padding:12px 14px;border-left:3px solid #b48535;background:#eee6d7;font:14px/1.5 var(--sans);color:#49564f}
+    .reset{align-self:flex-start;min-height:44px;border:0;background:transparent;color:#506955;text-decoration:underline;cursor:pointer;font:600 13px var(--sans)}
+    .result{margin-top:17px;padding:18px;border:1px solid rgba(169,120,36,.38);background:#fff9e9;color:#334037}
+    .result strong{display:block;color:#976c21;font:700 12px/1.3 var(--sans);text-transform:uppercase;letter-spacing:1.7px;margin-bottom:6px}
+    .builder.is-shake .builder-panel{animation:shake .25s linear}
+    @keyframes shake{25%{transform:translateX(-3px)}75%{transform:translateX(3px)}}
+    .note{margin-top:14px;color:#9eb0a6;font:12px/1.55 var(--sans)}
+    .fact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px}
+    .fact{background:rgba(255,255,255,.56);border:1px solid var(--line);padding:26px;border-radius:3px}
+    .fact b{display:block;font:700 12px/1.3 var(--sans);letter-spacing:1.4px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+    .fact p{margin:0;color:#46534d}
+    .story{display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:56px}
+    .story p{margin:0 0 22px}.story p:first-child::first-letter{float:left;font-size:70px;line-height:.75;margin:11px 10px 0 0;color:#a97824}
+    .aside{border-top:3px solid #a97824;padding-top:18px;font:14px/1.65 var(--sans);color:#53605a}
+    .aside b{display:block;color:#26332d;margin-bottom:8px}
+    .parts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:30px}
+    .part{padding:24px;background:#fffdf8;border:1px solid var(--line)}
+    .part .n{font:700 11px var(--sans);color:#a97824;letter-spacing:2px}.part h3{font-size:24px;margin:9px 0}.part p{margin:0;color:#58645e}
+    .quote{margin:34px 0;padding:28px 34px;border-left:4px solid #6d8565;background:#e4e6dc;font-size:24px;line-height:1.45}
+    .source-list{padding:0;list-style:none;border-top:1px solid var(--line)}
+    .source-list li{padding:16px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:34px 1fr;gap:12px}
+    .source-list span{font:700 12px var(--sans);color:#a97824}
+    .next-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:18px;margin-top:28px}
+    .next-card{display:block;padding:30px;background:#223029;color:#f7f0df;text-decoration:none;min-height:180px;border-radius:3px}
+    .next-card.alt{background:#ddd6c8;color:#26332d}.next-card .small{font:700 11px var(--sans);letter-spacing:2px;text-transform:uppercase;color:#d9b96e}.next-card.alt .small{color:#8e671e}.next-card h3{font-size:30px;margin-top:18px}
+    footer{padding:28px 20px 90px;background:#17211d;color:#bbc6bd;font:12px/1.6 var(--sans);text-align:center}
+    footer a{color:#e0c988}
+    #kuda-dalshe>.support{width:min(800px,calc(100% - 40px));margin-left:auto!important;margin-right:auto!important}
+    .support .sup-btns button,.support .sup-btns .sup-action{min-height:44px!important}
+    #heart.over-visual{transform:translateY(96px)!important;opacity:0!important;pointer-events:none!important}
+    @media(max-width:860px){
+      .hero-grid,.builder,.story{grid-template-columns:1fr}.hero-figure img{height:52vh;min-height:390px}.builder{min-height:0}.builder-visual{min-height:520px}.section-head{grid-template-columns:1fr;gap:10px}.fact-grid{grid-template-columns:1fr}.story{gap:30px}.next-grid{grid-template-columns:1fr}.parts{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:560px){
+      .wrap,.reading{width:min(100% - 28px,1120px)}.top{padding-top:10px}.top .b1{font-size:11px;letter-spacing:2px}.top .b2{font-size:10px}.hero{padding-top:16px}.hero-grid{gap:24px}.hero-figure img{height:46vh;min-height:330px}h1{font-size:44px;letter-spacing:-1px}.lead{font-size:18px}.section{padding:54px 0}.builder-visual{min-height:410px;padding:10px}.church-svg{max-height:440px}.builder-panel{padding:28px 18px}.builder-panel h3{font-size:32px}.parts{grid-template-columns:1fr}.quote{font-size:20px;padding:22px}.primary{width:100%}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Как камню приказали взлететь?","inLanguage":"ru","about":{"@type":"LandmarksOrHistoricalBuildings","name":"Церковь Вознесения Господня в Коломенском"},"isPartOf":{"@type":"WebSite","name":"Русская цивилизация"}}</script>
+</head>
+<body>
+  <a class="skip" href="#content">Перейти к содержанию</a>
+  <header class="top">
+    <div class="b1">Русская цивилизация</div>
+    <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
+  </header>
+  <nav class="crumbs" aria-label="Хлебные крошки"><a href="../../index.html">Город-музей</a> · <a href="index.html">Музей русской архитектуры</a> · <span>Коломенское</span></nav>
+
+  <main id="content">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Коломенское · 1532 · около 3 минут</div>
+          <h1 id="page-title">Как камню приказали взлететь?</h1>
+          <p class="lead">Разбери церковь Вознесения по ярусам — и собери заново замысел, который изменил русскую архитектуру.</p>
+          <div class="meta"><span class="chip">Архитектурный разбор</span><span class="chip">Интерактив без регистрации</span><span class="chip">6 шагов</span></div>
+          <a class="primary" href="#sobrat">Разобрать храм ↓</a>
+        </div>
+        <figure class="hero-figure">
+          <img src="kolomenskoe-unesco-livio-garuccio.jpg" width="1000" height="1220" alt="Белокаменная церковь Вознесения в Коломенском с высоким шатром на фоне неба">
+          <figcaption>Церковь Вознесения Господня в Коломенском. Фото: © UNESCO / Livio Garuccio, <a href="https://creativecommons.org/licenses/by-sa/3.0/igo/" rel="license">CC BY-SA 3.0 IGO</a>. Изображение не изменено.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="sobrat">
+      <div class="wrap">
+        <div class="section-head"><div class="section-no">01 · Действие</div><div><h2>Собери вертикаль</h2><p class="intro">Начни с основания. Каждый следующий объём уже предыдущего — и взгляд невольно поднимается вместе со зданием.</p></div></div>
+        <div class="builder-shell">
+          <div class="builder" id="kolomenskoe-stack" data-stack-builder data-complete-message="Последовательное сужение объёмов и высокий шатёр связали шесть частей в одно движение вверх.">
+            <div class="builder-visual" aria-hidden="true">
+              <svg class="church-svg" viewBox="0 0 520 660" role="img" aria-label="Схема церкви Вознесения, собранная из шести архитектурных объёмов">
+                <defs>
+                  <linearGradient id="stone" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fffdf4"/><stop offset=".55" stop-color="#e8e0cd"/><stop offset="1" stop-color="#beb49f"/></linearGradient>
+                  <linearGradient id="shade" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#dcd3c0"/><stop offset="1" stop-color="#a79c86"/></linearGradient>
+                  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f0cf70"/><stop offset="1" stop-color="#9b6b1e"/></linearGradient>
+                </defs>
+                <g data-stack-layer="0">
+                  <path d="M82 560 260 505 438 560 260 627Z" fill="#6c805b" opacity=".88"/>
+                  <path d="M112 529 260 485 408 529 408 577 260 622 112 577Z" fill="url(#stone)" stroke="#8e846f" stroke-width="2"/>
+                  <path d="M112 529 260 574 408 529 260 485Z" fill="#fffdf4"/>
+                  <path d="M140 549v30m36-19v30m168-41v30m36-19v20" stroke="#988d79" stroke-width="6" opacity=".7"/>
+                  <path d="M92 546 55 571v20l68-22M428 546l37 25v20l-68-22" fill="none" stroke="#ded5c4" stroke-width="13"/>
+                  <g fill="#25332c"><circle cx="75" cy="600" r="5"/><path d="M75 605v22m-8-11h16" stroke="#25332c" stroke-width="4"/></g>
+                </g>
+                <g data-stack-layer="1">
+                  <path d="M170 330 260 301 350 330 350 518 260 548 170 518Z" fill="url(#stone)" stroke="#928773" stroke-width="2"/>
+                  <path d="M170 330 260 360 350 330 260 301Z" fill="#fffdf5"/>
+                  <path d="M205 342v171m110-171v171" stroke="#c4baa5" stroke-width="8"/>
+                  <path d="M229 392v63m62-63v63" stroke="#7f7666" stroke-width="10" stroke-linecap="round"/>
+                  <path d="M170 407h180M170 481h180" stroke="#9d927e" opacity=".6"/>
+                </g>
+                <g data-stack-layer="2">
+                  <path d="M165 332 196 285 228 329 260 274 292 329 324 285 355 332 260 365Z" fill="url(#stone)" stroke="#918671" stroke-width="2"/>
+                  <path d="M188 323q9-25 18 0m36 8q18-52 36 0m36-8q9-25 18 0" fill="none" stroke="#a79b84" stroke-width="5"/>
+                  <path d="M187 284 260 252 333 284 260 312Z" fill="#f9f4e7" stroke="#958a76" stroke-width="2"/>
+                </g>
+                <g data-stack-layer="3">
+                  <path d="M201 220 260 198 319 220 319 286 260 310 201 286Z" fill="url(#stone)" stroke="#8f846f" stroke-width="2"/>
+                  <path d="M201 220 260 242 319 220 260 198Z" fill="#fffdf4"/>
+                  <path d="M211 238l22-8 12 20-22 8Zm64-24 22 8-12 20-22-8Zm-42 51 22-8 12 20-22 8Zm54-7 18 7-10 17-18-7Z" fill="#b4aa96" opacity=".65"/>
+                </g>
+                <g data-stack-layer="4">
+                  <path d="M198 220 260 45 322 220 260 245Z" fill="url(#stone)" stroke="#8c816d" stroke-width="2"/>
+                  <path d="M198 220 260 45 260 245Z" fill="#f8f3e8" opacity=".74"/>
+                  <path d="M218 217 260 45M240 235 260 45M280 235 260 45M302 217 260 45" stroke="#b0a58f" stroke-width="2"/>
+                  <path d="M213 198h94M221 174h78M231 146h58M241 114h38" stroke="#c5baa4" stroke-width="2"/>
+                </g>
+                <g data-stack-layer="5">
+                  <path d="M246 47h28v31h-28Z" fill="url(#stone)" stroke="#8c816d"/>
+                  <path d="M241 44q19-33 38 0-6 18-19 20-13-2-19-20Z" fill="url(#gold)" stroke="#8c651f"/>
+                  <path d="M260 11v25m-13-17h26m-20-7h14" stroke="#d5af4e" stroke-width="4" stroke-linecap="round"/>
+                </g>
+              </svg>
+            </div>
+            <div class="builder-panel">
+              <div class="eyebrow">Образовательная реконструкция</div>
+              <h3>Что держит взгляд?</h3>
+              <p>Нажимай части в порядке снизу вверх. Это разбор композиции, а не расчёт прочности.</p>
+              <progress class="progress" data-stack-progress aria-label="Собрано частей" value="0" max="6"></progress>
+              <div class="steps" role="group" aria-label="Части храма">
+                <button class="step" type="button" data-stack-step="0" data-stack-detail="подклет и обходная галерея образуют широкое основание."><span>1</span><span>Подклет и галерея</span></button>
+                <button class="step" type="button" data-stack-step="1" data-stack-detail="крестчатый основной объём поднимает стены над галереей."><span>2</span><span>Крестчатый объём</span></button>
+                <button class="step" type="button" data-stack-step="2" data-stack-detail="переходные ярусы и кокошники сужают силуэт."><span>3</span><span>Кокошники и переход</span></button>
+                <button class="step" type="button" data-stack-step="3" data-stack-detail="восьмерик становится основанием шатра."><span>4</span><span>Восьмерик</span></button>
+                <button class="step" type="button" data-stack-step="4" data-stack-detail="высокий каменный шатёр резко усиливает вертикаль."><span>5</span><span>Шатёр</span></button>
+                <button class="step" type="button" data-stack-step="5" data-stack-detail="глава и крест завершают движение вверх."><span>6</span><span>Глава и крест</span></button>
+              </div>
+              <div class="feedback" data-stack-status role="status" aria-live="polite">Начни с основания, на которое опирается весь храм.</div>
+              <button class="reset" type="button" data-stack-reset>Собрать заново</button>
+              <div class="result" data-stack-result tabindex="-1" hidden><strong>Вот почему это работает</strong>Широкое основание постепенно уступает место всё более узким объёмам. Шатёр продолжает это движение почти без остановки — поэтому здание воспринимается не как сложенная башня, а как единый взлёт.</div>
+            </div>
+          </div>
+        </div>
+        <p class="note">Схема упрощена для чтения композиции и не заменяет архитектурные обмеры. Главное знание доступно в тексте справа и ниже.</p>
+      </div>
+    </section>
+
+    <section id="support-peak" aria-label="Поддержка музея"><div class="reading"></div></section>
+
+    <section class="section">
+      <div class="reading">
+        <div class="section-head"><div class="section-no">02 · Наблюдение</div><div><h2>Не одна высокая крыша</h2><p class="intro">Вертикаль начинается у земли: каждый следующий объём продолжает движение предыдущего.</p></div></div>
+        <div class="fact-grid">
+          <article class="fact"><b>Широкое основание</b><p>Высокий подклет и галерея дают зданию устойчивый зрительный постамент и позволяют обойти храм вокруг.</p></article>
+          <article class="fact"><b>Переход</b><p>Основной объём сменяется ярусами и восьмериком. Силуэт становится уже не скачком, а последовательностью.</p></article>
+          <article class="fact"><b>Шатёр</b><p>Высокое многогранное завершение собирает ритм нижних частей в одно направленное движение.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="reading">
+        <div class="section-head"><div class="section-no">03 · История</div><div><h2>1532 год: факт и версии</h2></div></div>
+        <div class="story">
+          <div>
+            <p>Церковь Вознесения была завершена в государевой усадьбе Коломенское в 1532 году. Её поставили на высоком берегу Москвы-реки, и здание стало композиционным центром окружающего пространства.</p>
+            <p>Распространённое предание связывает строительство с появлением долгожданного наследника Василия III — будущего Ивана IV. Официальный музей осторожно называет это преданием и сообщает, что точная продолжительность строительства неизвестна.</p>
+            <p>Авторство также не доказано окончательно. Исследователи предполагают участие итальянского архитектора Пьетро Аннибале, известного в России как Петрок Малой. На странице это остаётся версией, а не подписью бесспорного автора.</p>
+          </div>
+          <aside class="aside"><b>Как читать страницу</b>«Построена и освящена к 1532 году» — проверяемый факт. Связь с рождением Ивана IV и имя архитектора — исторические версии, которые мы показываем отдельно.</aside>
+        </div>
+        <blockquote class="quote">В 1994 году церковь включили в Список всемирного наследия UNESCO по критерию влияния на развитие архитектуры.</blockquote>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="reading">
+        <div class="section-head"><div class="section-no">04 · Детали</div><div><h2>Шесть остановок взгляда</h2><p class="intro">Теперь пройди тот же путь без игры — от земли до креста.</p></div></div>
+        <div class="parts">
+          <article class="part"><span class="n">01</span><h3>Подклет</h3><p>Высокая нижняя часть поднимает основной объём над окружающим рельефом.</p></article>
+          <article class="part"><span class="n">02</span><h3>Галерея</h3><p>Обход и лестницы связывают здание с движением человека вокруг него.</p></article>
+          <article class="part"><span class="n">03</span><h3>Крестчатый объём</h3><p>Основная масса храма уже имеет направленные наружу выступы и выраженные грани.</p></article>
+          <article class="part"><span class="n">04</span><h3>Кокошники</h3><p>Переходные формы дробят границу между нижним объёмом и восьмериком.</p></article>
+          <article class="part"><span class="n">05</span><h3>Восьмерик</h3><p>Восьмигранное основание подготавливает переход к многогранному шатру.</p></article>
+          <article class="part"><span class="n">06</span><h3>Шатёр</h3><p>Самая протяжённая линия силуэта почти непрерывно ведёт взгляд к завершению.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="reading">
+        <div class="section-head"><div class="section-no">05 · Источники</div><div><h2>На чём основан рассказ</h2><p class="intro">Факт, версия и цифровое изображение проверяются отдельно.</p></div></div>
+        <ol class="source-list">
+          <li><span>01</span><div><a href="https://www.mgomz.ru/ru/place/tserkov-vozneseniya">Музей-заповедник «Коломенское»</a> — дата, статус памятника, осторожная формулировка предания и авторства.</div></li>
+          <li><span>02</span><div><a href="https://whc.unesco.org/en/list/634/">UNESCO World Heritage Centre</a> — включение в список, критерий и значение для развития архитектуры.</div></li>
+          <li><span>03</span><div><a href="https://www.culture.ru/institutes/13749/cerkov-vozneseniya-v-kolomenskom">Культура.РФ</a> — устройство объёмно-пространственной композиции и архитектурные детали.</div></li>
+          <li><span>04</span><div><a href="https://whc.unesco.org/en/documents/118297">Фотография UNESCO</a> — © UNESCO / Livio Garuccio, CC BY-SA 3.0 IGO. Использована без изменения.</div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="kuda-dalshe">
+      <div class="reading">
+        <div class="section-head"><div class="section-no">06 · Куда дальше</div><div><h2>Другая вертикаль</h2><p class="intro">В Коломенском взгляд поднимает каменный шатёр. У Шухова ту же работу начинают выполнять прямые металлические линии.</p></div></div>
+        <div class="next-grid">
+          <a class="next-card" href="../../izobreteniya/day-05jan-shukhov.html"><span class="small">Главный следующий путь</span><h3>Шухов: как прямые линии создают изогнутую башню →</h3></a>
+          <a class="next-card alt" href="index.html"><span class="small">Вернуться</span><h3>Музей русской архитектуры</h3></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><a href="../../index.html">Город-музей</a> · <a href="index.html">Музей русской архитектуры</a><br>«Русская цивилизация» — цифровой музейный город. Материал подготовлен небольшой командой при поддержке музейного проекта.</footer>
+  <noscript><div class="reading"><p>Интерактив требует JavaScript, но его вывод доступен в тексте: широкое основание сменяется всё более узкими объёмами, а высокий шатёр продолжает единое движение вверх.</p></div></noscript>
+  <script>window.MUSEUM_SUPPORT={museum:'Русская архитектура',page:'церкви Вознесения в Коломенском',lang:'ru',peak:'#support-peak'};</script>
+  <script src="../../assets/museum-stack-builder.js" defer></script>
+  <script src="../../assets/museum-support.js" defer></script>
+  <script src="../../assets/analytics.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded',function(){
+      var visual=document.querySelector('.builder-visual');
+      var heart=document.getElementById('heart');
+      if(!visual||!heart||!('IntersectionObserver' in window))return;
+      new IntersectionObserver(function(entries){
+        heart.classList.toggle('over-visual',entries[0].isIntersecting);
+      },{threshold:.08}).observe(visual);
+    });
+  </script>
+</body>
+</html>
