@@ -1,0 +1,4 @@
+#!/bin/sh
+# Версионируемый сторож стандартов музейных HTML.
+repo_root=$(git rev-parse --show-toplevel) || exit 1
+exec /home/agent/opt/bin/python3 "$repo_root/tools/audit-precommit.py"
