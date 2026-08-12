@@ -130,6 +130,9 @@
     var a = item.states[0], b = item.states[1];
     var frame = el('div', 'fl-frame');
     if (item.ratio) frame.style.aspectRatio = item.ratio;
+    // вертикальный архивный кадр во всю ширину колонки съедает экран целиком:
+    // maxw держит его в разумном поле и центрует
+    if (item.maxw) { frame.style.maxWidth = item.maxw; frame.style.margin = '0 auto'; }
     frame.appendChild(image(a, 'bottom'));
     var top = image(b, 'top');
     frame.appendChild(top);
@@ -190,6 +193,9 @@
   function buildEras(box, item) {
     var frame = el('div', 'fl-frame');
     if (item.ratio) frame.style.aspectRatio = item.ratio;
+    // вертикальный архивный кадр во всю ширину колонки съедает экран целиком:
+    // maxw держит его в разумном поле и центрует
+    if (item.maxw) { frame.style.maxWidth = item.maxw; frame.style.margin = '0 auto'; }
     box.classList.add('fl-mode-eras');
 
     var layers = item.states.map(function (st, i) {
