@@ -82,9 +82,17 @@ def findings(html: str) -> list[str]:
     return result
 
 
+# Служебные страницы, которые не являются экспозицией для посетителя: витрины, календари,
+# рабочие разборы и СТЕНДЫ ДВИЖКОВ. Стенд показывает механику Сергею и разработчику —
+# аудиогид, календарь месяца и hero-сцена ему не положены по определению.
+# Список ведётся перечислением имён: признак вроде <meta noindex> стал бы лазейкой,
+# через которую от сторожа ушла бы настоящая страница музея.
+SERVICE_PAGES = {"index.html", "calendar.html", "competitors.html", "firstlook.html"}
+
+
 def main() -> int:
     baseline = json.loads(BASELINE_PATH.read_text(encoding="utf-8"))
-    targets = staged_html()
+    targets = [t for t in staged_html() if Path(t).name not in SERVICE_PAGES]
     if not targets:
         print("Музейный pre-commit: staged HTML нет — проверка не требуется.")
         return 0

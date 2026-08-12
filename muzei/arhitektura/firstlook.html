@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Первозданный облик — стенд движка · Музей русской архитектуры</title>
+<meta name="description" content="Стенд движка museum-firstlook.js: шторка «было/стало» и переключатель закреплённых дат. Экспонат показан таким, каким его видели современники.">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+  :root{
+    --bg:#12100e; --surface:#1a1714; --fg:#efe7d8; --muted:#a89e8e;
+    --gold:#c9a24a; --gold-l:#e6c877; --gold-g:#8a6f2c; --line:rgba(201,162,74,.28);
+    --dark:#0c0a09;
+    /* переменные движка первозданного облика */
+    --fl-accent:#c9a24a; --fl-fg:#efe7d8; --fl-line:rgba(201,162,74,.34); --fl-frame-bg:#0c0a09;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);
+       font:400 17px/1.7 Inter,system-ui,-apple-system,sans-serif;
+       -webkit-font-smoothing:antialiased}
+  .wrap{max-width:900px;margin:0 auto;padding:0 22px}
+  .block{padding:clamp(34px,6vw,64px) 0}
+  h1,h2,h3{font-family:"Playfair Display",Georgia,serif;font-weight:700;line-height:1.16;margin:0 0 14px}
+  h1{font-size:clamp(30px,6vw,54px)}
+  h2{font-size:clamp(22px,3.6vw,34px)}
+  p{margin:0 0 16px;max-width:66ch}
+  .eyebrow{font:600 10px/1.4 Inter,sans-serif;letter-spacing:.3em;text-transform:uppercase;
+           color:var(--gold);margin:0 0 14px}
+  .lead{font-size:clamp(18px,2.4vw,21px);color:var(--fg);opacity:.92}
+  .muted{color:var(--muted)}
+  header.top{border-bottom:1px solid var(--line);background:linear-gradient(180deg,#171310,#12100e)}
+  .crumbs{font:400 13px/1.5 Inter,sans-serif;color:var(--muted);padding:18px 0}
+  .crumbs a{color:var(--muted);text-decoration:none;border-bottom:1px solid transparent}
+  .crumbs a:hover{color:var(--gold-l);border-bottom-color:var(--gold-g)}
+  .hero{padding:clamp(26px,5vw,54px) 0 clamp(20px,3vw,30px)}
+  .note{border-left:3px solid var(--gold-g);padding:12px 0 12px 16px;margin:0 0 26px;
+        color:var(--muted);font-size:15px;max-width:66ch}
+  .sep{height:1px;background:var(--line);border:0;margin:0}
+  pre{background:#0c0a09;border:1px solid var(--line);border-radius:12px;padding:18px;
+      overflow:auto;font:400 13px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;color:#d8cdb6}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+  ul{max-width:66ch;padding-left:20px}
+  li{margin:0 0 10px}
+  footer{border-top:1px solid var(--line);padding:30px 0 60px;color:var(--muted);font-size:14px}
+  a{color:var(--gold-l)}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap"><nav class="crumbs">
+    <a href="../../index.html">Город-музей</a> · <a href="kolomenskoe.html">Музей русской архитектуры</a> · Первозданный облик
+  </nav></div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Стенд движка · museum-firstlook.js</div>
+    <h1>Первозданный облик</h1>
+    <p class="lead">Кижи и Малые Корелы показывают почерневшие брёвна — и молодой посетитель
+    не понимает, на что смотрит. Мы показываем то, что видели современники: свежее дерево,
+    роспись, цвет. Нынешнее состояние стоит рядом — как «стало», а не как единственная правда.</p>
+    <p class="muted">Ниже — два способа сравнения, оба работают одним движком, без внешних
+    библиотек. Тяни границу мышкой, пальцем или стрелками на клавиатуре.</p>
+  </div>
+</section>
+
+<hr class="sep">
+
+<section class="block">
+  <div class="wrap">
+    <div id="firstlook-izba"></div>
+  </div>
+</section>
+
+<section class="block" id="support-anchor">
+  <div class="wrap">
+    <h2>Зачем это музею</h2>
+    <p>Пятнадцать музеев архитектуры, которые мы разобрали, делятся на два лагеря: одни дают
+    красоту реконструкции без интернета, другие — интернет с чёрным деревом. Совместить не берётся
+    никто. Шторка стоит дёшево, а меняет главное: посетитель видит здание живым, а потом сам
+    решает, что с ним сделало время.</p>
+    <p>Второе правило движка — <b>слой достоверности</b> под каждым кадром. Посетитель всегда знает,
+    смотрит он на документальный снимок, на реконструкцию музея или на учебную схему. Ни один из
+    пятнадцати конкурентов этого не подписывает.</p>
+  </div>
+</section>
+
+<hr class="sep">
+
+<section class="block">
+  <div class="wrap">
+    <div id="firstlook-spire"></div>
+  </div>
+</section>
+
+<hr class="sep">
+
+<section class="block">
+  <div class="wrap">
+    <h2>Как это ставится на страницу дня</h2>
+    <p class="muted">Движок подключается двумя строками; вёрстки в теле страницы нет — значит
+    уточнение вкуса правится один раз для всех страниц музея, а не в каждом файле.</p>
+<pre>&lt;section class="block" id="firstlook"&gt;&lt;/section&gt;
+
+&lt;script&gt;window.MUSEUM_FIRSTLOOK=[{
+  mount:'#firstlook',
+  eyebrow:'Первозданный облик',
+  title:'Изба, какой её видели в 1870 году',
+  lead:'Потяни границу…',
+  mode:'shutter',                 // 'shutter' — две эпохи, 'eras' — 3–5 дат
+  states:[
+    {date:'1870-е', label:'Свежий сруб', img:'…', kind:'Реконструкция',
+     caption:'…', source:'…'},
+    {date:'сегодня', label:'То, что осталось', img:'…', kind:'Фотография',
+     caption:'…', source:'…'}
+  ]
+}];&lt;/script&gt;
+&lt;script src="../../assets/museum-firstlook.js"&gt;&lt;/script&gt;</pre>
+    <ul>
+      <li><b>Текста внутри кадра нет вообще</b> — даты, подписи и источник живут отдельными
+      строками под картинкой. Это правило страницы, а не настройка.</li>
+      <li><b>Клавиатура и тач</b>: шторка — ползунок под кадром, даты — стрелки влево-вправо.</li>
+      <li><b>Кадры строятся одним генератором</b> (<code>tools/gen-firstlook-demo.py</code>) —
+      геометрия совпадает точно, иначе под шторкой здание «прыгает».</li>
+    </ul>
+    <div class="note">Графика на этом стенде — авторская реконструкция музея, а не фотография,
+    и подписана именно так. Документальные снимки встанут на её место по мере расчистки прав.</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Стенд движка «Первозданный облик» · механики M-39, M-47, M-48, M-49 из реестра
+    <code>docs/interactive/REGISTRY.md</code> · «Русская цивилизация»
+  </div>
+</footer>
+
+<script>
+window.MUSEUM_FIRSTLOOK = [
+  {
+    mount:'#firstlook-izba',
+    eyebrow:'Шторка · было и стало',
+    title:'Изба, какой её видели в 1870 году',
+    lead:'Потяни границу поперёк кадра. Слева — дом, каким его сдал плотницкий артельщик: тёс ещё золотой, роспись видно с дороги, ставни синие. Справа — то же дерево через полтора века.',
+    mode:'shutter',
+    ratio:'16/10',
+    start:58,
+    states:[
+      { date:'1870-е', label:'Свежий сруб',
+        img:'media/firstlook/izba-1870.svg',
+        alt:'Расписная изба верхневолжского типа в первозданном виде: светлое дерево, роспись на фронтоне, резные наличники и синие ставни',
+        kind:'Реконструкция',
+        caption:'Роспись фронтона читалась с дороги: розетка в центре, две поменьше по краям. Наличники и причелины красили белым, ставни — синим, чтобы дом было видно от околицы.',
+        source:'Реконструкция музея по образцам верхневолжской домовой росписи и резьбы' },
+      { date:'сегодня', label:'То, что осталось',
+        img:'media/firstlook/izba-now.svg',
+        alt:'Та же изба сегодня: почерневшее дерево, шиферная кровля, заколоченное окно, покосившийся забор',
+        kind:'Нынешнее состояние',
+        caption:'Дерево почернело, роспись сошла до пятна, крайнее окно заколочено, тёс заменён шифером. Именно это молодой посетитель видит в музее под открытым небом — и не понимает, на что смотреть.',
+        source:'Нынешнее состояние типового дома, обобщённый вид' }
+    ]
+  },
+  {
+    mount:'#firstlook-spire',
+    eyebrow:'Даты одного места · как прятали Питер',
+    title:'Адмиралтейская игла: золото, чехол, золото',
+    lead:'Три закреплённые даты одного кадра. Осенью 1941 года золотую иглу — главный ориентир для немецких артиллеристов — зашили в серый чехол; альпинисты работали на высоте под обстрелом.',
+    mode:'eras',
+    ratio:'16/10',
+    states:[
+      { date:'до войны', label:'Золотая игла',
+        img:'media/firstlook/spire-1939.svg',
+        alt:'Адмиралтейство до войны: золочёный шпиль с корабликом на солнце',
+        kind:'Реконструкция',
+        caption:'Игла с корабликом видна с Невы, с Дворцовой и с залива — на этот блеск город ориентировался двести лет.',
+        source:'Реконструкция музея, обобщённый вид довоенного Адмиралтейства' },
+      { date:'1942', label:'Под чехлом',
+        img:'media/firstlook/spire-1942.svg',
+        alt:'Адмиралтейство в блокаду: шпиль зашит в серый чехол, на стенах маскировочные пятна, в небе аэростат',
+        kind:'Реконструкция',
+        caption:'Тот же ориентир — теперь мишень. Чехол сшили по месту, стены закрыли маскировочными пятнами, у основания сложили мешки с песком, над городом подняли аэростаты.',
+        source:'Реконструкция музея по описаниям маскировки ленинградских высотных доминант' },
+      { date:'сегодня', label:'Снова золото',
+        img:'media/firstlook/spire-today.svg',
+        alt:'Адмиралтейство сегодня: золочёный шпиль, зелень сада, транспорт на набережной',
+        kind:'Нынешнее состояние',
+        caption:'Чехол сняли весной 1945-го. Разница между вторым и третьим кадром — единственное, ради чего стоит показывать первый.',
+        source:'Нынешнее состояние, обобщённый вид' }
+    ]
+  }
+];
+</script>
+<script src="../../assets/museum-firstlook.js"></script>
+<script>window.MUSEUM_SUPPORT={
+  museum:'Музей русской архитектуры',
+  page:'стенде «Первозданный облик»',
+  peak:'#support-anchor'
+};</script>
+<script src="../../assets/museum-support.js"></script>
+</body>
+</html>
