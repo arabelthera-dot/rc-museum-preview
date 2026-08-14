@@ -42,6 +42,7 @@
     var groups = [].slice.call(root.querySelectorAll('[data-lab-group]'));
     var decisions = [].slice.call(root.querySelectorAll('.decision'));
     var next = root.querySelector('[data-lab-next]');
+    var stateText = root.querySelector('[data-lab-state]');
 
     function updateModel(key, value) {
       model.setAttribute('data-' + key, value);
@@ -52,6 +53,7 @@
       void model.getBoundingClientRect();
       model.classList.add('is-changing');
       model.setAttribute('aria-label', 'Учебная модель. Найдено секретов: ' + current + ' из 4. Последнее изменение: ' + names[value] + '.');
+      if (stateText) stateText.textContent = 'Состояние модели: ' + names[value] + '. Найдено верных решений: ' + current + ' из 4.';
     }
 
     function showStep(index) {
@@ -73,6 +75,7 @@
       if (root.dataset.finishHref) reveal.insertAdjacentHTML('beforeend', '<p><a class="primary" href="' + root.dataset.finishHref + '">Шаг 3 из 3 · Увидеть вывод →</a></p>');
       feedback.textContent = 'Готово! Свет проходит по всему храму — от высокого берега до креста.';
       model.setAttribute('aria-label', 'Храм собран. Четыре найденных секрета создают одно движение от берега до креста.');
+      if (stateText) stateText.textContent = 'Модель завершена: высокий берег, широкая галерея, сужающиеся ярусы и гранёный шатёр соединены в одно движение к кресту.';
     }
 
     groups.forEach(function (group) {
@@ -101,6 +104,7 @@
           root.classList.remove('is-shake');
           void root.getBoundingClientRect();
           root.classList.add('is-shake');
+          feedback.textContent += ' Этот ход сохранён на модели: сравни силуэт, затем осознанно выбери другой вариант.';
         }
       });
     });
@@ -138,6 +142,7 @@
       beam.classList.remove('is-on');
       progress.value = 0;
       reveal.hidden = true;
+      if (stateText) stateText.textContent = 'Состояние модели: выбор ещё не сделан.';
       showStep(0);
     });
 
