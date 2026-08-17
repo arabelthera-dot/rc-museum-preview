@@ -1,6 +1,9 @@
 {
-  "version": "1.0",
-  "updated": "2026-08-05",
+  "version": "1.1",
+  "updated": "2026-08-17",
+  "generated_from": "platform/catalog/museums.json",
+  "generated_by": "platform/scripts/build-catalog-derivatives.mjs",
+  "comment": "ПРОИЗВОДНАЯ. Руками не править — правка вносится в источник и пересобирается.",
   "source": "docs/registries/master-list.md (расшифровка папок Сергея 02.07.2026) + сведение дублей + добор до 60",
   "quarters": [
     {
@@ -54,8 +57,8 @@
       "full": "Музей русских изобретений и научных открытий",
       "q": "nauka",
       "status": "live",
-      "href": "muzei/izobreteniya/index.html",
       "hook": "365 дней в году — и на каждый приходится вещь, которую русские сделали первыми в мире.",
+      "href": "muzei/izobreteniya/index.html",
       "meta": "365 дней · 20 страниц"
     },
     {
@@ -65,8 +68,8 @@
       "full": "Музей русского искусства",
       "q": "iskusstvo",
       "status": "live",
-      "href": "muzei/iskusstvo/index.html",
       "hook": "Картина, разобранная до последнего мазка: почему волна стоит именно так.",
+      "href": "muzei/iskusstvo/index.html",
       "meta": "галерея · 3 картины"
     },
     {
@@ -76,8 +79,8 @@
       "full": "Музей русских первопроходцев и путешественников",
       "q": "istoriya",
       "status": "live",
-      "href": "muzei/pervoprohodcy/index.html",
       "hook": "Дежнёв прошёл пролив между Азией и Америкой за 80 лет до Беринга — и об этом забыли на век.",
+      "href": "muzei/pervoprohodcy/index.html",
       "meta": "экспедиции · 1 маршрут"
     },
     {
