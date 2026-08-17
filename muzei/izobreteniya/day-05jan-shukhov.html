@@ -71,9 +71,22 @@
   .scene-caption{background:#060d18;padding:11px 0 12px}
   .scene-caption .wrap{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
   .scene-cap{font-size:13.5px;line-height:1.6;color:var(--muted);border-left:2px solid rgba(201,168,76,.4);padding-left:14px;flex:1 1 420px}
+  /* Подсказка про интерактив была пассивной надписью — посетитель её не замечал и не понимал,
+     что сцену вообще можно запустить (правка Сергея 17.08). Теперь это КНОПКА: нажимается сама,
+     пульсирует до первого запуска и гаснет после. Стоит под сценой, не поверх неё. */
   .scene-hint{flex:0 0 auto;font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.4px;color:#e4c97a;
         background:rgba(201,168,76,.10);border:1px solid rgba(201,168,76,.3);border-radius:20px;padding:7px 16px;
         transition:opacity .6s;white-space:nowrap}
+  button.scene-hint{cursor:pointer;font-weight:600;color:#f4dc9a;background:rgba(201,168,76,.16)}
+  button.scene-hint:hover{background:rgba(201,168,76,.26);border-color:rgba(201,168,76,.6)}
+  /* «Дыхание» кнопки-пуска: заметно, но не стробоскоп — 1,6 с на цикл (вкус Сергея: цеплять,
+     а не резать глаз). Снимается классом .cta-done сразу после первого нажатия. */
+  @keyframes ctaPulse{
+    0%,100%{box-shadow:0 0 0 0 rgba(201,168,76,.42);transform:scale(1)}
+    50%    {box-shadow:0 0 0 9px rgba(201,168,76,0);transform:scale(1.045)}}
+  .cta-pulse{animation:ctaPulse 1.6s ease-in-out infinite}
+  .cta-done{animation:none!important;transform:none!important;box-shadow:none!important;
+        cursor:default;pointer-events:none;font-weight:400}
   .hero-lead{background:linear-gradient(180deg,#0b1624 0%,#060d18 100%);padding:22px 0 22px}
   .hero-lead .museum{color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:12px;opacity:.9}
   .hero-lead .who{font-family:'Inter',sans-serif;font-size:clamp(13px,3vw,15px);letter-spacing:.4px;color:var(--accent-l,#7dc8ff);margin-bottom:10px}
@@ -181,6 +194,18 @@
   #tower .axis{stroke:rgba(255,224,138,.35);stroke-dasharray:7 5 2 5;stroke-width:1}
   .tower-cap{position:absolute;left:0;right:0;bottom:2px;min-height:2.6em;text-align:center;line-height:1.55;font-family:var(--mono);font-size:10.5px;letter-spacing:1.4px;color:#8fb6d6}
   .tower-cap b{color:var(--cyan);font-weight:500}
+  /* Кнопка у чертежа башни — та же механика, что у сцены, но в чертёжной, синей палитре
+     и с честной формулировкой: она не «пускает», а подсвечивает один стержень (правка 17.08). */
+  .tower-cta{font-family:var(--mono);font-size:10.5px;letter-spacing:1.4px;color:#bfe4ff;cursor:pointer;
+        background:rgba(125,200,255,.14);border:1px solid rgba(125,200,255,.42);border-radius:20px;
+        padding:5px 13px;transition:background .2s,border-color .2s}
+  .tower-cta:hover{background:rgba(125,200,255,.26);border-color:rgba(125,200,255,.7)}
+  @keyframes ctaPulseCyan{
+    0%,100%{box-shadow:0 0 0 0 rgba(125,200,255,.45);transform:scale(1)}
+    50%    {box-shadow:0 0 0 9px rgba(125,200,255,0);transform:scale(1.05)}}
+  .tower-cta.cta-pulse{animation:ctaPulseCyan 1.6s ease-in-out infinite}
+  /* пульс отработал — кнопка живёт дальше (ею перебирают стержни), но больше не дышит */
+  .cta-quiet{animation:none!important;transform:none!important;box-shadow:none!important}
   .dim-tag{position:absolute;font-family:var(--mono);font-size:10px;letter-spacing:1px;color:#8fb6d6;white-space:nowrap}
   .dim-tag.h{right:6px;top:50%;transform:translateY(-50%) rotate(90deg);transform-origin:right center}
   .dim-tag.w{left:50%;bottom:26px;transform:translateX(-50%)}
@@ -263,6 +288,8 @@
   @media(prefers-reduced-motion:reduce){
     #tower line{animation:none!important;stroke-dashoffset:0!important}
     .reveal{transition:opacity .15s linear;transform:none}
+    /* кнопка остаётся, пульс убираем — иначе она бьёт по тем, кто просил меньше движения */
+    .cta-pulse{animation:none!important;transform:none!important}
   }
   @media(max-width:600px){
     .bp-sheet{padding:12px 12px 0}
@@ -392,7 +419,7 @@
 <div class="scene-caption">
   <div class="wrap">
     <div class="scene-cap">Слева — промысел Балаханы, справа — заводы Чёрного города, между ними десять километров трубы. Пока насос стоит, нефть тянут подводами — двести в день.</div>
-    <div class="scene-hint" id="heroHint">нажми на сцену — запусти насос</div>
+    <button type="button" class="scene-hint cta-pulse" id="heroHint">▶ Нажать — пустить нефть</button>
   </div>
 </div>
 
@@ -541,7 +568,7 @@
       <div class="bp-meta">Лист 2 · Гиперболоид · патент <i>1899</i></div>
       <div class="tower-box">
         <svg id="tower" viewBox="0 0 560 430" role="img" aria-label="Схема гиперболоида: каркас из прямых стержней"></svg>
-        <div class="tower-cap">каркас собран из <b>прямых</b> стержней — ни одной гнутой детали · <span id="towerHint">наведи на стержень</span></div>
+        <div class="tower-cap">каркас собран из <b>прямых</b> стержней — ни одной гнутой детали · <button type="button" class="tower-cta cta-pulse" id="towerHint">▶ Показать прямой стержень</button></div>
       </div>
     </div>
   </div>
@@ -1313,10 +1340,16 @@ document.querySelectorAll('.starter-btn').forEach(b=>{
     for(let i=0;i<3;i++)smoke.push({x:W*.86,y:gy-HS*.16,r:3,a:.55,vx:(Math.random()-.3)*.5,vy:-.7-Math.random()*.5});
     if(reduce){scene();}}  // без анимации всё равно перерисуем кадр
   function keyHint(){if(hinted)return;hinted=true;
-    const h=document.getElementById('heroHint');if(h){h.textContent='нефть пошла — двести подвод больше не нужны';setTimeout(()=>{h.style.opacity='0';},2200);}}
+    const h=document.getElementById('heroHint');
+    if(h){h.classList.remove('cta-pulse');h.classList.add('cta-done');
+      h.textContent='нефть пошла — двести подвод больше не нужны';
+      setTimeout(()=>{h.style.opacity='0';},2200);}}
 
   cv.style.cursor='pointer';cv.style.pointerEvents='auto';
   cv.addEventListener('click',fire);
+  /* нажать можно и саму кнопку под сценой — целиться в картинку не обязательно */
+  const hbtn=document.getElementById('heroHint');
+  if(hbtn) hbtn.addEventListener('click',fire);
   cv.addEventListener('touchstart',e=>{e.preventDefault();fire();},{passive:false});
 
   if(reduce){t=1;scene();return;}   // ждём тап; fire() перерисует кадр
@@ -1450,14 +1483,26 @@ window.addEventListener('pageshow',e=>{if(e.persisted)location.reload()});
   // подсветка одного стержня — доказательство «он прямой»
   const hint=document.getElementById('towerHint');
   const touch=window.matchMedia('(hover: none)').matches;
-  if(hint&&touch) hint.textContent='коснись стержня';
-  const base=hint?hint.textContent:'';
+  /* до первого показа кнопка зовёт нажать, после — подсказывает, что стержень можно выбрать любой */
+  let base=hint?hint.textContent:'';
   let lit=null;
   const light=ln=>{ if(lit===ln) return; if(lit) lit.classList.remove('lit'); lit=ln;
     if(ln){ ln.classList.add('lit'); if(hint) hint.innerHTML='<b>стержень прямой</b> — от нижнего кольца до верхнего';}
     else if(hint) hint.textContent=base; };
-  svg.addEventListener('pointerover',e=>{ if(e.target._bar) light(e.target._bar); });
+  /* первое взаимодействие — хоть кнопкой, хоть наведением — снимает пульс и меняет базовый текст */
+  let used=false;
+  const done=()=>{ if(used) return; used=true;
+    base=touch?'коснись любого стержня':'наведи на любой стержень';
+    if(hint){hint.classList.remove('cta-pulse');hint.classList.add('cta-quiet');} };
+  svg.addEventListener('pointerover',e=>{ if(e.target._bar){done();light(e.target._bar);} });
   svg.addEventListener('pointerleave',()=>light(null));
+  if(hint){
+    let k=0;
+    hint.addEventListener('click',()=>{ done();
+      if(!bars.length) return;
+      /* каждый следующий клик подсвечивает другой стержень — видно, что прямой любой, а не один */
+      light(bars[k%bars.length]); k++; });
+  }
 })();
 </script>
 <script>window.MUSEUM_AUDIOGUIDE={
