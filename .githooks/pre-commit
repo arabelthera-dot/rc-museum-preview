@@ -9,6 +9,7 @@ WS="$HOME/workspace/tools"
 if [ -f "$WS/audit-precommit.py" ] && [ -f "$WS/audit-structure.py" ]; then
   "$PY" "$WS/audit-precommit.py" || exit 1
   "$PY" "$WS/audit-structure.py" --staged || exit 1
+  [ -f "$WS/check-catalog.py" ] && { "$PY" "$WS/check-catalog.py" || exit 1; }
   exit 0
 fi
 

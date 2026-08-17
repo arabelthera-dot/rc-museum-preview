@@ -21,17 +21,27 @@
      Интерактив включается только флагом linked — на страницах музеев сцена декоративна,
      и относительные ссылки оттуда вели бы в никуда. */
   var SPOTS = C.spots || {
-    shukhov: { href: 'muzei/izobreteniya/index.html', name: 'Музей изобретений',
+    shukhov: { slug: 'izobreteniya', name: 'Музей изобретений',
                hook: 'Башня из прямых стержней, которая стоит уже второй век' },
-    rocket: { href: 'muzei/kosmos/index.html', name: 'Музей космоса',
+    rocket: { slug: 'kosmos', name: 'Музей космоса',
               hook: 'Королёв считал: чтобы полететь, надо сначала перестать бояться' },
-    sail: { href: 'muzei/pervoprohodcy/index.html', name: 'Музей первопроходцев',
+    sail: { slug: 'pervoprohodcy', name: 'Музей первопроходцев',
             hook: 'На таком коче Дежнёв прошёл пролив за восемьдесят лет до Беринга' },
-    tentChurch: { href: 'muzei/arhitektura/index.html', name: 'Музей архитектуры',
+    tentChurch: { slug: 'arhitektura', name: 'Музей архитектуры',
                   hook: 'Шатёр вместо купола — так строили только на Руси' },
-    church: { href: 'muzei/ikona/index.html', name: 'Музей иконы',
+    church: { slug: 'ikona', name: 'Музей иконы',
               hook: 'Внутри пятиглавого храма — лица, писанные светом' }
   };
+
+  /* Адрес здания собирается из slug'а через общую адресную книгу (assets/rc-paths.js),
+     а не хранится строкой: переезд музея правится в одном файле на весь город.
+     C.depth — глубина страницы со сценой (0 — портал); href в spot оставлен как ручной обход. */
+  function spotHref(spot) {
+    if (!spot) return '';
+    if (spot.href) return spot.href;
+    if (!window.RCPaths) { console.warn('city-scene: не подключён assets/rc-paths.js'); return ''; }
+    return window.RCPaths.museumUrl(spot.slug, C.depth || 0);
+  }
   var LINKED = !!C.linked;
   var hits = [], hover = null, tapped = null, label = null;
 
@@ -470,7 +480,7 @@
       var item = pick(e);
       if (!item || !item.spot) return;
       e.preventDefault(); e.stopPropagation();
-      window.location.href = item.spot.href;
+      window.location.href = spotHref(item.spot);
     });
     /* телефон: первый тап зажигает здание и показывает подпись, второй — открывает музей */
     cv.addEventListener('touchstart', function (e) {
@@ -479,7 +489,7 @@
       var item = pick(touch);
       if (!item || !item.spot) { setHover(null); tapped = null; return; }
       e.preventDefault(); e.stopPropagation();
-      if (tapped === item) { window.location.href = item.spot.href; return; }
+      if (tapped === item) { window.location.href = spotHref(item.spot); return; }
       tapped = item;
       setHover(item);
     }, { passive: false });
