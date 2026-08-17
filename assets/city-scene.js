@@ -21,11 +21,11 @@
      Интерактив включается только флагом linked — на страницах музеев сцена декоративна,
      и относительные ссылки оттуда вели бы в никуда. */
   var SPOTS = C.spots || {
-    shukhov: { href: 'izobreteniya/index.html', name: 'Музей изобретений',
+    shukhov: { href: 'muzei/izobreteniya/index.html', name: 'Музей изобретений',
                hook: 'Башня из прямых стержней, которая стоит уже второй век' },
     rocket: { href: 'muzei/kosmos/index.html', name: 'Музей космоса',
               hook: 'Королёв считал: чтобы полететь, надо сначала перестать бояться' },
-    sail: { href: 'pervoprohodcy/index.html', name: 'Музей первопроходцев',
+    sail: { href: 'muzei/pervoprohodcy/index.html', name: 'Музей первопроходцев',
             hook: 'На таком коче Дежнёв прошёл пролив за восемьдесят лет до Беринга' },
     tentChurch: { href: 'muzei/arhitektura/index.html', name: 'Музей архитектуры',
                   hook: 'Шатёр вместо купола — так строили только на Руси' },

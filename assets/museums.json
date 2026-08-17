@@ -54,7 +54,7 @@
       "full": "Музей русских изобретений и научных открытий",
       "q": "nauka",
       "status": "live",
-      "href": "izobreteniya/index.html",
+      "href": "muzei/izobreteniya/index.html",
       "hook": "365 дней в году — и на каждый приходится вещь, которую русские сделали первыми в мире.",
       "meta": "365 дней · 20 страниц"
     },
@@ -65,7 +65,7 @@
       "full": "Музей русского искусства",
       "q": "iskusstvo",
       "status": "live",
-      "href": "iskusstvo/index.html",
+      "href": "muzei/iskusstvo/index.html",
       "hook": "Картина, разобранная до последнего мазка: почему волна стоит именно так.",
       "meta": "галерея · 3 картины"
     },
@@ -76,7 +76,7 @@
       "full": "Музей русских первопроходцев и путешественников",
       "q": "istoriya",
       "status": "live",
-      "href": "pervoprohodcy/index.html",
+      "href": "muzei/pervoprohodcy/index.html",
       "hook": "Дежнёв прошёл пролив между Азией и Америкой за 80 лет до Беринга — и об этом забыли на век.",
       "meta": "экспедиции · 1 маршрут"
     },
