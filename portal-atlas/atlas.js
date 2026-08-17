@@ -22,3 +22,11 @@ document.querySelectorAll('[data-intent]').forEach(button=>button.addEventListen
 more.addEventListener('click',()=>{state.limit+=12;render()});
 document.querySelector('.districts').addEventListener('click',e=>{const button=e.target.closest('button');if(!button)return;document.querySelectorAll('.districts button').forEach(item=>item.classList.toggle('active',item===button));document.querySelector('#district-title').textContent=button.dataset.title;document.querySelector('#district-copy').textContent=button.dataset.copy;document.querySelector('#district-count').textContent=button.dataset.count});
 const menu=document.querySelector('.menu');const mobile=document.querySelector('#mobile-nav');menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')==='true';menu.setAttribute('aria-expanded',String(!open));mobile.hidden=open;mobile.classList.toggle('open',!open)});
+/* «Рассказать о проекте» — системное «Поделиться», иначе копия ссылки в буфер (17.08) */
+document.querySelectorAll('[data-share]').forEach(link=>link.addEventListener('click',e=>{
+  e.preventDefault();
+  const share={title:document.title,url:location.href};
+  if(navigator.share){navigator.share(share).catch(()=>{});return}
+  if(navigator.clipboard){navigator.clipboard.writeText(location.href).then(()=>{
+    const was=link.textContent;link.textContent='Ссылка скопирована ✓';setTimeout(()=>{link.textContent=was},2000)})}
+}));
