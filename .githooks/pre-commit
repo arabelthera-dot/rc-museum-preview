@@ -1,4 +1,15 @@
 #!/bin/sh
-# Версионируемый сторож стандартов музейных HTML.
+# Сторожа стандартов. Канон — ~/workspace/tools/, запаска — сторож из самого репо.
+# Блокируют только регрессию: новое нарушение не проходит, старые долги коммитятся.
 repo_root=$(git rev-parse --show-toplevel) || exit 1
-exec /home/agent/opt/bin/python3 "$repo_root/tools/audit-precommit.py"
+PY=/home/agent/opt/bin/python3
+[ -x "$PY" ] || PY=python3
+
+WS="$HOME/workspace/tools"
+if [ -f "$WS/audit-precommit.py" ] && [ -f "$WS/audit-structure.py" ]; then
+  "$PY" "$WS/audit-precommit.py" || exit 1
+  "$PY" "$WS/audit-structure.py" --staged || exit 1
+  exit 0
+fi
+
+exec "$PY" "$repo_root/tools/audit-precommit.py"
