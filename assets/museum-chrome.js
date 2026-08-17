@@ -18,10 +18,10 @@
        prev:{href:'day-04jan-pilchikov.html',title:'4 января · Пильчиков'},
        next:{href:'day-06jan-bering.html',title:'6 января · Беринг'},
        all:{href:'index.html',label:'Все изобретения'},
-       city:'../index.html',
+       city:'../../index.html',
        random:['day-01jan-cabletv.html','…']
      };</script>
-     <script src="../assets/museum-chrome.js"></script>
+     <script src="../../assets/museum-chrome.js"></script>
 */
 (function(){
   var C = window.MUSEUM_CHROME || {};
@@ -311,7 +311,7 @@
       row.appendChild(d);
     }
     if(all && all.href){var a2 = el('a', null, all.label || T.all || 'Все экспонаты'); a2.href = all.href; row.appendChild(a2);}
-    var city = C.city || '../index.html';
+    var city = C.city || '../../index.html';
     var a3 = el('a', null, T.city || 'В город-музей'); a3.href = city; row.appendChild(a3);
     if(row.children.length < 2) return;
 
