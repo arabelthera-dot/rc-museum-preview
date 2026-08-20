@@ -26,9 +26,9 @@
   .logo .lt{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:16px}
   .logo .lt small{display:block;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-family:'Inter',sans-serif}
   .score{background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:6px 16px;font-size:13px;color:var(--gold-l);cursor:pointer;font-family:'Inter',sans-serif}
-  .hero{display:flex;flex-direction:column}
-  .hero-visual{position:relative;height:52vh;min-height:280px;max-height:520px;overflow:hidden;background:linear-gradient(160deg,#0a1e3a 0%,rgb(18,56,96) 55%,#0d2240 100%);display:flex;align-items:center;justify-content:center}
-  .hero-visual .hero-year{font-family:'Playfair Display',Georgia,serif;font-size:clamp(80px,20vw,180px);font-weight:900;color:rgba(255,255,255,.07);user-select:none;line-height:1;animation:yearFade 1.4s ease both}
+  .hero{position:relative;height:52vh;min-height:280px;max-height:520px;overflow:hidden;background:linear-gradient(160deg,#0a1e3a 0%,rgb(18,56,96) 55%,#0d2240 100%)}
+  .hero-caption{background:#0c1826;border-bottom:1px solid var(--card-b);padding:10px 0}
+  .hero-year{font-family:'Inter',sans-serif;font-size:11px;font-weight:600;letter-spacing:.6px;color:var(--gold);line-height:1.4}
   @keyframes yearFade{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
   .hero-particles{position:absolute;inset:0;pointer-events:none}
   /* ── КАЛЕНДАРЬ ── */
@@ -46,9 +46,9 @@
   .cal2-cell.sel{background:var(--gold);color:#1a0f00;border-color:var(--gold);font-weight:700}
   .cal2-detail{margin-top:14px;background:var(--gold-g);border-left:3px solid var(--gold);border-radius:0 12px 12px 0;padding:12px 16px;font-size:14px;color:var(--ink)}
   .hero-text{background:linear-gradient(180deg,#0c1826 0%,#060c17 100%);color:#fff;padding:28px 0 38px}
-  .hero .museum{color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:12px;opacity:.9}
-  .hero h1{color:#fff;font-size:clamp(28px,6vw,52px);font-weight:900;line-height:1.06;margin-bottom:14px}
-  .hero .hook{color:#b8ccde;font-size:18px;max-width:580px;margin-bottom:26px;line-height:1.65}
+  .hero-text .museum{color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:12px;opacity:.9}
+  .hero-text h1{color:#fff;font-size:clamp(28px,6vw,52px);font-weight:900;line-height:1.06;margin-bottom:14px}
+  .hero-text .hook{color:#b8ccde;font-size:18px;max-width:580px;margin-bottom:26px;line-height:1.65}
   .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:14px;font-family:'Inter',sans-serif;letter-spacing:.5px}
   .daynav{position:sticky;top:64px;z-index:25;background:rgba(6,12,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-b)}
   .daynav .wrap{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
@@ -176,20 +176,18 @@
 
 
 <div class="hero">
-  <div class="hero-visual">
-    <canvas id="heroCvs" class="hero-particles"></canvas>
-    <div class="hero-year">1966</div>
-  </div>
-  <div class="hero-text">
-    <div class="wrap">
-      <div class="date-chip">3 февраля</div>
-      <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
-      <h1>первая в мире мягкая посадка на Луну — «Луна-9»</h1>
-      <p class="hook">Главный конструктор умер за двадцать дней до триумфа. Королёв не увидел как «Луна-9» плавно опускается на лунный грунт и присылает первые в истории снимки лунной поверхности сделанные прямо на месте. До этого никто не знал: а можно ли вообще там сесть? Одни учёные считали — поверхность покрыта многометровым слоем пыли и любой аппарат в ней утонет. «Луна-9» ответила: нет, твёрдая. И прислала доказательства.</p>
-      <div style="display:flex;gap:12px;flex-wrap:wrap">
-        <button class="btn gold" onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">Читать историю ↓</button>
-        <button class="btn ghost" onclick="document.getElementById('video').scrollIntoView({behavior:'smooth'})">▶ Смотреть видео</button>
-      </div>
+  <canvas id="heroCvs" class="hero-particles"></canvas>
+</div>
+<div class="hero-caption"><div class="wrap"><div class="hero-year">1966</div></div></div>
+<div class="hero-text">
+  <div class="wrap">
+    <div class="date-chip">3 февраля</div>
+    <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
+    <h1>первая в мире мягкая посадка на Луну — «Луна-9»</h1>
+    <p class="hook">Главный конструктор умер за двадцать дней до триумфа. Королёв не увидел как «Луна-9» плавно опускается на лунный грунт и присылает первые в истории снимки лунной поверхности сделанные прямо на месте. До этого никто не знал: а можно ли вообще там сесть? Одни учёные считали — поверхность покрыта многометровым слоем пыли и любой аппарат в ней утонет. «Луна-9» ответила: нет, твёрдая. И прислала доказательства.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <button class="btn gold" onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">Читать историю ↓</button>
+      <button class="btn ghost" onclick="document.getElementById('video').scrollIntoView({behavior:'smooth'})">▶ Смотреть видео</button>
     </div>
   </div>
 </div>
@@ -218,6 +216,12 @@
   <source src="day-03jan-luna9.mp4" type="video/mp4">
   Ваш браузер не поддерживает видео.
 </video>
+  </div>
+</section>
+
+<section class="block" id="audioguide" style="padding:40px 0">
+  <div class="wrap">
+    <audio controls preload="metadata" src="day-03jan-luna9.mp4" style="display:block;width:100%"></audio>
   </div>
 </section>
 
