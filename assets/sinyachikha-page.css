@@ -24,6 +24,9 @@ body {
     system-ui,
     sans-serif;
 }
+main {
+  overflow: clip;
+}
 a {
   color: inherit;
   text-underline-offset: 4px;
@@ -107,8 +110,10 @@ button:disabled {
 }
 .hero-visual img {
   width: 100%;
-  height: min(620px, 48vw);
+  height: clamp(340px, 48vw, 610px);
   object-fit: cover;
+  object-position: center;
+  box-shadow: 0 24px 70px rgba(23, 35, 30, 0.16);
 }
 .hero-label {
   max-width: 1280px;
@@ -125,6 +130,16 @@ button:disabled {
   grid-template-columns: 7fr 4fr;
   gap: 8.33%;
   align-items: end;
+  position: relative;
+}
+.hero-copy:before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: -2rem;
+  width: 82px;
+  height: 4px;
+  background: var(--red);
 }
 h1,
 h2,
@@ -146,6 +161,21 @@ h3 {
 .intro {
   font-size: clamp(19px, 2vw, 25px);
   line-height: 1.46;
+}
+.hero-thesis {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 1.1rem;
+  margin: 2rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+}
+.hero-thesis span {
+  color: var(--red);
+  font-weight: 800;
+  letter-spacing: 0.08em;
 }
 .eyebrow {
   text-transform: uppercase;
@@ -179,6 +209,10 @@ h3 {
 }
 .section {
   padding: 6.5rem 0;
+}
+.section > .reading,
+.section > .wide {
+  position: relative;
 }
 .wide {
   max-width: 1280px;
@@ -226,10 +260,46 @@ summary {
   gap: 2rem;
   margin: 2rem 0;
 }
+.interactive-section {
+  background:
+    radial-gradient(circle at 85% 12%, rgba(182, 123, 50, 0.13), transparent 22rem),
+    var(--milk);
+}
+.principle {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 1.2rem;
+  max-width: 880px;
+  margin: 1.5rem 0 2.3rem;
+  padding: 1.1rem 1.3rem;
+  border-left: 5px solid var(--red);
+  background: #eadfce;
+}
+.principle b {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 12px;
+}
 .lab-stage {
   background: var(--wood);
-  padding: 16px;
+  padding: 18px;
   color: var(--milk);
+  box-shadow: 0 30px 70px rgba(23, 35, 30, 0.2);
+}
+.lab-progress {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 7px;
+  margin-bottom: 12px;
+}
+.lab-progress i {
+  display: block;
+  height: 4px;
+  background: #65756d;
+}
+.lab-progress i.is-done,
+.lab-progress i.is-current {
+  background: #efb56d;
 }
 .step {
   margin: 0 0 12px;
@@ -241,9 +311,20 @@ summary {
   height: auto;
 }
 .planes path {
-  fill: #d8c5a8;
   stroke: #4d4539;
   stroke-width: 3;
+}
+.planes .wall-a {
+  fill: url(#wall-a);
+}
+.planes .wall-b {
+  fill: url(#wall-b);
+}
+.planes .ceiling {
+  fill: #eadcc4;
+}
+.planes .floor {
+  fill: #a77c50;
 }
 .room-lines path {
   fill: none;
@@ -252,7 +333,8 @@ summary {
   stroke-dasharray: 9 8;
 }
 .lab-stage text {
-  font: 18px Inter;
+  font: 700 14px Inter;
+  letter-spacing: 0.08em;
   fill: #615746;
 }
 .art .stem {
@@ -292,6 +374,9 @@ summary {
 .room .planes path:nth-child(3) {
   transform: matrix(0.72, 0.12, -0.25, 0.5, 140, 45);
 }
+.room .planes path:nth-child(4) {
+  transform: matrix(0.74, -0.06, 0.18, 0.72, 60, 98);
+}
 .room .room-lines {
   opacity: 0.25;
 }
@@ -317,11 +402,41 @@ summary {
   display: grid;
   gap: 0.65rem;
 }
+.lab-controls legend {
+  padding: 0 0.4rem;
+  font-family: "Old Standard TT", Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+}
 .lab-controls label {
   min-height: 44px;
   display: flex;
   align-items: center;
   gap: 0.6rem;
+}
+.lab-controls label:has(input:checked) {
+  font-weight: 700;
+}
+.lab-controls label small {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+}
+.swatch {
+  flex: 0 0 36px;
+  width: 36px;
+  height: 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.swatch.red-milk {
+  background: linear-gradient(90deg, var(--red) 0 48%, #fff7df 52%);
+}
+.swatch.ochre-green {
+  background: linear-gradient(90deg, var(--ochre) 0 48%, var(--green) 52%);
+}
+.swatch.single {
+  background: var(--ochre);
 }
 .lab-controls input {
   width: 20px;
@@ -350,10 +465,26 @@ summary {
   padding: 1rem;
   border: 1px solid var(--line);
 }
+.result-tools[hidden] {
+  display: none;
+}
 .result-tools > div {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+}
+.result-tools > div b {
+  flex: 0 0 100%;
+  margin-bottom: 0.25rem;
+  font-family: "Old Standard TT", Georgia, serif;
+  font-size: 18px;
+}
+.evidence-note {
+  flex: 1 0 100%;
+  margin: 0.4rem 0 0;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
 }
 .result-tools [aria-pressed="true"],
 .result-tools [aria-checked="true"] {
@@ -375,13 +506,24 @@ td {
 .tradition-lead,
 .map-cols {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.4rem;
 }
 .scale-row article,
 .tradition-lead article {
   border-top: 3px solid var(--red);
   padding-top: 1rem;
+}
+.scale-row article span {
+  display: block;
+  color: var(--red);
+  font: 700 12px/1 Inter, sans-serif;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.7rem;
+}
+.scale-row article b {
+  font-family: "Old Standard TT", Georgia, serif;
+  font-size: 25px;
 }
 .tradition-lead {
   grid-template-columns: repeat(2, 1fr);
@@ -484,6 +626,10 @@ body .support {
   .map-cols {
     grid-template-columns: 1fr;
   }
+  .principle {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
   .lab-stage {
     margin: 0 -16px;
     padding: 12px;
@@ -511,6 +657,17 @@ body .support {
   .crumbs {
     overflow: auto;
     white-space: nowrap;
+  }
+}
+@media (max-width: 380px) {
+  h1 {
+    font-size: 46px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  .hero-thesis {
+    display: grid;
   }
 }
 @media (max-width: 240px) {

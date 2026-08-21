@@ -15,6 +15,7 @@
       feedback = lab.querySelector("[data-feedback]"),
       step = lab.querySelector("[data-step]"),
       caption = lab.querySelector("[data-stage-caption]"),
+      progress = lab.querySelectorAll(".lab-progress i"),
       anchorBox = lab.querySelector("[data-anchor]"),
       cross = lab.querySelector('[data-action="cross"]'),
       fold = lab.querySelector('[data-action="fold"]'),
@@ -51,8 +52,16 @@
       stage.classList.toggle("room", state.fold);
       tools.hidden = !state.fold;
       caption.textContent = state.fold
-        ? "Учебная горница: мотив связывает три плоскости."
-        : "Пустая учебная развертка.";
+        ? "Учебная горница: один путь связывает стену, угол и потолок."
+        : state.cross
+          ? "Ветвь пересекла сгибы: плоскости уже читаются как один маршрут."
+          : state.anchor
+            ? "Крупный мотив удерживает взгляд на стене."
+            : state.stroke
+              ? "Двуцветный след появился одним движением."
+              : state.palette
+                ? "Кисть набрана: два цвета готовы встретиться в одном следе."
+                : "Пустая учебная развёртка.";
       paint();
       var n = !state.palette
         ? 1
@@ -74,6 +83,10 @@
           "проведи через сгиб",
           "собери горницу",
         ][n - 1];
+      progress.forEach(function (dot, i) {
+        dot.classList.toggle("is-done", i < n - 1);
+        dot.classList.toggle("is-current", i === n - 1);
+      });
     }
     function save() {
       history.push(JSON.stringify(state));
@@ -155,7 +168,7 @@
         lab.querySelectorAll("input").forEach(function (x) {
           x.checked = false;
         });
-        stage.className = "";
+        stage.setAttribute("class", "");
         tools.hidden = true;
         render();
         announce("Модель очищена. Набери два края кисти разными красками.");
@@ -173,14 +186,23 @@
       };
     });
     var ev = document.querySelectorAll("[data-evidence]");
+    var evidenceNote = document.querySelector("[data-evidence-note]");
     ev.forEach(function (b, i) {
       b.onclick = function () {
         ev.forEach(function (x) {
           x.setAttribute("aria-checked", String(x === b));
+          x.setAttribute("tabindex", x === b ? "0" : "-1");
         });
         stage.classList.remove("evidence-document", "evidence-limit");
         if (b.dataset.evidence !== "model")
           stage.classList.add("evidence-" + b.dataset.evidence);
+        if (evidenceNote)
+          evidenceNote.textContent =
+            b.dataset.evidence === "document"
+              ? "Документ подтверждает музейный корпус и два фрагмента из Камельской, атрибутированные Варламу Рябкову. Он не подтверждает авторство показанной панорамы."
+              : b.dataset.evidence === "limit"
+                ? "Неизвестны автор росписи на панораме и точный исторический вид этой учебной комнаты. Серым показана граница, которую нельзя дорисовать уверенностью."
+                : "Ярким показан пространственный принцип. Это учебная модель, не историческая реконструкция.";
         announce(
           b.dataset.evidence === "document"
             ? "Документ подтверждает музейный контекст и атрибуцию двух отдельных фрагментов, не эту модель целиком."
