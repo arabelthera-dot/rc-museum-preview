@@ -131,7 +131,16 @@
       }
       if (a === "undo") {
         var old = history.pop();
-        if (old) state = JSON.parse(old);
+        if (old) {
+          state = JSON.parse(old);
+          announce(
+            state.fold
+              ? "Отменён последний ход. Горница остаётся собранной."
+              : state.cross
+                ? "Сборка отменена. Ветвь снова показана на плоской развертке."
+                : "Последний ход отменён. Продолжи с восстановленного шага.",
+          );
+        }
         else announce("Отменять пока нечего.");
       }
       if (a === "reset") {
@@ -148,7 +157,9 @@
         });
         stage.className = "";
         tools.hidden = true;
+        render();
         announce("Модель очищена. Набери два края кисти разными красками.");
+        return;
       }
       render();
     });

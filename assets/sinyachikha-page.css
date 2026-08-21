@@ -335,6 +335,9 @@ summary {
   flex-wrap: wrap;
   gap: 0.7rem;
 }
+.lab-actions button {
+  flex: 0 0 auto;
+}
 .feedback,
 .text-alt {
   padding: 1rem;
