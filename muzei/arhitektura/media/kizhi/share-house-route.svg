@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#071512"/><stop offset="1" stop-color="#285448"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="70" y="76" fill="#e7c56e" font-family="Arial,sans-serif" font-size="22" font-weight="700" letter-spacing="3">ДОМ ОШЕВНЕВА · КИЖИ</text>
+  <text x="70" y="135" fill="#fff8e9" font-family="Georgia,serif" font-size="49" font-weight="700">Я нашёл защищённый</text><text x="70" y="190" fill="#fff8e9" font-family="Georgia,serif" font-size="49" font-weight="700">зимний маршрут</text>
+  <path d="M102 530H1090L1140 365 1085 238H115L60 365Z" fill="#18352d" stroke="#d3aa53" stroke-width="8"/>
+  <rect x="130" y="288" width="315" height="195" rx="8" fill="#8b5f3d" stroke="#f6e5bd" stroke-width="4"/><rect x="455" y="288" width="120" height="195" rx="8" fill="#665044" stroke="#f6e5bd" stroke-width="4"/><rect x="585" y="288" width="460" height="195" rx="8" fill="#526f59" stroke="#f6e5bd" stroke-width="4"/>
+  <text x="287" y="333" fill="white" font-family="Arial,sans-serif" font-size="24" font-weight="700" text-anchor="middle">ЖИЛЬЁ</text><text x="515" y="333" fill="white" font-family="Arial,sans-serif" font-size="24" font-weight="700" text-anchor="middle">СЕНИ</text><text x="815" y="333" fill="white" font-family="Arial,sans-serif" font-size="24" font-weight="700" text-anchor="middle">ДВОР · ХЛЕВ · СЕНО</text>
+  <path d="M220 405C340 405 385 405 515 405S690 405 930 405" fill="none" stroke="#ffd263" stroke-width="15" stroke-linecap="round" stroke-dasharray="30 18"/><circle cx="220" cy="405" r="18" fill="#fff4bf"/><circle cx="930" cy="405" r="18" fill="#fff4bf"/>
+  <text x="600" y="575" fill="#dce9e3" font-family="Arial,sans-serif" font-size="23" text-anchor="middle">Жильё и хозяйство идут параллельно под общей крышей</text>
+</svg>
