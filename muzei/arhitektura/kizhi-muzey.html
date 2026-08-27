@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="../../assets/fonts.css">
   <link rel="stylesheet" href="../../assets/kolomenskoe-page.css?v=eight-20260814">
-  <link rel="stylesheet" href="../../assets/kizhi-page.css?v=4">
+  <link rel="stylesheet" href="../../assets/kizhi-page.css?v=5">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Кижи — остров, который стал музеем","description":"Интерактивный музейный маршрут о разнице между историческим Кижским погостом и собранием перевезённых памятников музея под открытым небом.","inLanguage":"ru","isAccessibleForFree":true,"datePublished":"2026-08-27","dateModified":"2026-08-27","mainEntityOfPage":"https://arabelthera-dot.github.io/rc-museum-preview/muzei/arhitektura/kizhi-muzey.html","image":{"@type":"ImageObject","url":"https://arabelthera-dot.github.io/rc-museum-preview/muzei/arhitektura/media/kizhi/pogost-1280.webp","width":1280,"height":853},"about":{"@type":"LandmarksOrHistoricalBuildings","name":"Кижский погост и музей-заповедник «Кижи»","address":{"@type":"PostalAddress","addressRegion":"Республика Карелия","addressCountry":"RU"}},"publisher":{"@type":"Organization","name":"Русская цивилизация"}}</script>
 </head>
 <body>
@@ -154,16 +154,23 @@
             <canvas data-house3d-canvas tabindex="0" aria-label="Учебная трёхмерная модель северного дома-комплекса. Выбирай части кнопками рядом или нажимай на объёмы в сцене."></canvas>
           </div>
           <div class="house3d-panel">
-            <div class="house3d-status"><span data-house3d-stage>Наблюдение 1 из 4</span><b data-house3d-progress>0 / 4</b></div>
+            <div class="house3d-status"><span data-house3d-stage>Архитектурное испытание</span><b data-house3d-progress>0 / 4</b></div>
             <h3 data-house3d-question>Как огромный дом защищал повседневную жизнь от непогоды?</h3>
-            <p data-house3d-feedback role="status">Сначала раскрой дом: кровля поднимется, а объёмы разойдутся в учебный разрез.</p>
+            <div class="house3d-feedback" data-house3d-feedback role="status" aria-live="polite"><b>Твоя задача</b><span>Раскрой дом, собери четыре части и проверь свой маршрут настоящей северной метелью.</span></div>
             <button class="house3d-primary" type="button" data-house3d-start>Раскрыть устройство дома</button>
+            <ol class="house3d-journey" aria-label="Ход сборки дома">
+              <li data-house-progress-part="living"><span>1</span><b>Тепло</b></li>
+              <li data-house-progress-part="passage"><span>2</span><b>Переход</b></li>
+              <li data-house-progress-part="yard"><span>3</span><b>Хозяйство</b></li>
+              <li data-house-progress-part="loft"><span>4</span><b>Запас</b></li>
+            </ol>
             <div class="house3d-parts" data-house3d-parts hidden>
               <button type="button" data-house-part="living"><b>Жилая изба</b><span>печь и жизнь семьи</span></button>
               <button type="button" data-house-part="passage"><b>Сени</b><span>защищённый переход</span></button>
               <button type="button" data-house-part="yard"><b>Двор и хлев</b><span>работа и животные</span></button>
               <button type="button" data-house-part="loft"><b>Сеновал</b><span>корм над хозяйством</span></button>
             </div>
+            <button class="house3d-primary house3d-next" type="button" data-house3d-next hidden>Следующий шаг</button>
             <button class="house3d-primary" type="button" data-house3d-storm hidden>Запустить метель</button>
             <div class="house3d-views" role="group" aria-label="Подготовленные ракурсы трёхмерной модели">
               <button type="button" data-house-view="exterior" aria-pressed="true">Снаружи</button>
@@ -205,7 +212,7 @@
   <script src="../../assets/museum-calendar-month.js?v=20260827" defer></script>
   <script src="../../assets/museum-audioguide.js" defer></script>
   <script src="../../assets/analytics.js" defer></script>
-  <script type="module" src="../../assets/kizhi-house-3d.js?v=20260827-2"></script>
+  <script type="module" src="../../assets/kizhi-house-3d.js?v=20260827-3"></script>
   <script>
   document.addEventListener('DOMContentLoaded',function(){
     var shareButton=document.getElementById('sharebtn'),shareHint=document.getElementById('sharehint');if(shareButton){shareButton.addEventListener('click',function(){var url=location.href.split('#')[0],payload={title:'Кижи — остров, который стал музеем',text:'Что на острове стояло исторически, а что перевезли ради сохранения?',url:url};function hint(t){if(!shareHint)return;shareHint.textContent=t;shareHint.style.display='inline';setTimeout(function(){shareHint.style.display='none';},2800);}if(navigator.share){navigator.share(payload).catch(function(){});return;}if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(url).then(function(){hint('Ссылка скопирована');},function(){hint(url);});return;}hint(url);});}
