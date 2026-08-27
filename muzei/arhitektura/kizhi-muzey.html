@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="../../assets/fonts.css">
   <link rel="stylesheet" href="../../assets/kolomenskoe-page.css?v=eight-20260814">
-  <link rel="stylesheet" href="../../assets/kizhi-page.css?v=3">
+  <link rel="stylesheet" href="../../assets/kizhi-page.css?v=4">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Кижи — остров, который стал музеем","description":"Интерактивный музейный маршрут о разнице между историческим Кижским погостом и собранием перевезённых памятников музея под открытым небом.","inLanguage":"ru","isAccessibleForFree":true,"datePublished":"2026-08-27","dateModified":"2026-08-27","mainEntityOfPage":"https://arabelthera-dot.github.io/rc-museum-preview/muzei/arhitektura/kizhi-muzey.html","image":{"@type":"ImageObject","url":"https://arabelthera-dot.github.io/rc-museum-preview/muzei/arhitektura/media/kizhi/pogost-1280.webp","width":1280,"height":853},"about":{"@type":"LandmarksOrHistoricalBuildings","name":"Кижский погост и музей-заповедник «Кижи»","address":{"@type":"PostalAddress","addressRegion":"Республика Карелия","addressCountry":"RU"}},"publisher":{"@type":"Organization","name":"Русская цивилизация"}}</script>
 </head>
 <body>
@@ -145,7 +145,42 @@
 
     <section class="section soft" id="pohod" aria-labelledby="walk-title"><div class="wrap"><div class="section-head"><div class="number">Маршрут по острову</div><div><h2 id="walk-title">Четыре остановки, чтобы увидеть два слоя</h2></div></div><div class="route-cards"><article><b>1 · мыс</b><h3>Погост</h3><p>Сначала очерти глазами ограду и назови три главных сооружения.</p></article><article><b>2 · русский сектор</b><h3>Дом Ошевнева</h3><p>Найди масштаб хозяйства под одной крышей и вспомни исходную деревню.</p></article><article><b>3 · малый объём</b><h3>Церковь Лазаря</h3><p>Сравни камерный сруб с многоглавым силуэтом погоста.</p></article><article><b>4 · звук и вертикаль</b><h3>Часовня Архангела Михаила</h3><p>Посмотри, как небольшая постройка собирает молитвенное помещение и колокольню.</p></article></div></div></section>
 
-    <section class="section dark" id="game" aria-labelledby="game-title"><div class="wrap"><div class="section-head"><div class="number">Интерактивная миссия · 4 решения</div><div><h2 id="game-title">Спаси дом Ошевнева</h2><p class="intro">Не расставляй готовые пункты по порядку — принимай решение на каждом этапе и наблюдай, что происходит с домом.</p></div></div><div class="move-game" data-move-game><div class="move-stage" data-move-stage data-state="0" role="img" aria-label="Дом Ошевнева стоит в исходной деревне; выполнено 0 из 4 этапов перевозки"><div class="move-sky"></div><div class="move-place move-village">Ошевнево</div><div class="move-place move-island">остров Кижи</div><div class="move-water"></div><div class="move-house" aria-hidden="true"><div class="move-roof"></div><div class="move-log l1">1</div><div class="move-log l2">2</div><div class="move-log l3">3</div><div class="move-log l4">4</div><div class="move-door"></div></div><div class="measure-lines" aria-hidden="true">↔ ОБМЕР ↕</div><div class="move-trail" aria-hidden="true"></div><div class="restoration-key" aria-hidden="true"><span>старое</span><span>заменено</span></div><div class="mission-progress"><b data-game-progress>0 / 4</b><span>дом ещё в исходной деревне</span></div></div><div class="game-board"><div class="game-kicker">Твоё решение меняет сцену слева</div><h3 data-game-step>Шаг 1 из 4 · до разборки</h3><div class="game-choices" data-game-choices></div><p class="game-feedback" data-game-feedback role="status">Что нужно сделать прежде всего?</p><button class="retry-button" type="button" data-game-reset hidden>Сыграть ещё раз</button></div></div></div></section>
+    <section class="section dark" id="game" aria-labelledby="game-title">
+      <div class="wrap">
+        <div class="section-head"><div class="number">Hero 3D · архитектурный эксперимент</div><div><h2 id="game-title">Дом против метели</h2><p class="intro">Собери жилую и хозяйственную части под одной кровлей, затем проверь дом северной метелью. Увидишь маршрут, которого фасад не показывает.</p></div></div>
+        <div class="house3d" data-house3d>
+          <div class="house3d-visual">
+            <div class="house3d-poster" data-house3d-poster><img src="media/kizhi/oshevnev-1280.jpg" width="1280" height="853" loading="lazy" alt="Документальная фотография дома Ошевнева"><span>Загрузка объёмной модели…</span></div>
+            <canvas data-house3d-canvas tabindex="0" aria-label="Учебная трёхмерная модель северного дома-комплекса. Выбирай части кнопками рядом или нажимай на объёмы в сцене."></canvas>
+          </div>
+          <div class="house3d-panel">
+            <div class="house3d-status"><span data-house3d-stage>Наблюдение 1 из 4</span><b data-house3d-progress>0 / 4</b></div>
+            <h3 data-house3d-question>Как огромный дом защищал повседневную жизнь от непогоды?</h3>
+            <p data-house3d-feedback role="status">Сначала раскрой дом: кровля поднимется, а объёмы разойдутся в учебный разрез.</p>
+            <button class="house3d-primary" type="button" data-house3d-start>Раскрыть устройство дома</button>
+            <div class="house3d-parts" data-house3d-parts hidden>
+              <button type="button" data-house-part="living"><b>Жилая изба</b><span>печь и жизнь семьи</span></button>
+              <button type="button" data-house-part="passage"><b>Сени</b><span>защищённый переход</span></button>
+              <button type="button" data-house-part="yard"><b>Двор и хлев</b><span>работа и животные</span></button>
+              <button type="button" data-house-part="loft"><b>Сеновал</b><span>корм над хозяйством</span></button>
+            </div>
+            <button class="house3d-primary" type="button" data-house3d-storm hidden>Запустить метель</button>
+            <div class="house3d-views" role="group" aria-label="Подготовленные ракурсы трёхмерной модели">
+              <button type="button" data-house-view="exterior" aria-pressed="true">Снаружи</button>
+              <button type="button" data-house-view="cutaway" aria-pressed="false">Разрез</button>
+              <button type="button" data-house-view="route" aria-pressed="false">Тёплый путь</button>
+              <button type="button" data-house-view="reset" aria-pressed="false">Сначала</button>
+            </div>
+            <p class="house3d-note">Учебная пространственная модель, а не обмер и не фотограмметрия. Она показывает принцип северного дома-комплекса; размеры и детали условны.</p>
+          </div>
+        </div>
+        <div class="house3d-reveal" data-house3d-reveal hidden>
+          <figure><img src="media/kizhi/oshevnev-1280.jpg" width="1280" height="853" loading="lazy" alt="Дом Ошевнева на острове Кижи"><figcaption>Дом Ошевнева. Документальная фотография: Alexxx1979, CC BY-SA 4.0.</figcaption></figure>
+          <div><b>Открытие</b><h3>Это не просто большой фасад</h3><p>Под общей кровлей соединены жильё, сени, двор, хлев и сеновал. В метель человек мог пройти от тёплой печи к хозяйству, не выходя наружу.</p><button type="button" data-house3d-replay>Пройти ещё раз</button></div>
+        </div>
+        <details class="house3d-alt"><summary>Пройти без 3D и движения</summary><ol><li><b>Жилая изба:</b> тёплый объём с печью.</li><li><b>Сени:</b> буфер между жильём и хозяйством.</li><li><b>Двор и хлев:</b> работа и животные под защитой стен.</li><li><b>Сеновал:</b> корм хранится над хозяйственной частью.</li></ol><p><b>Вывод:</b> единая кровля превращает отдельные помещения в непрерывный защищённый маршрут.</p></details>
+      </div>
+    </section>
 
     <section class="section" id="quiz" aria-labelledby="quiz-title"><div class="reading"><div class="section-head"><div class="number">Проверка открытия</div><div><h2 id="quiz-title">Теперь ты различаешь место и коллекцию?</h2></div></div><div class="quiz-grid" data-quiz>
       <article class="quiz-card"><h3>Что входит в исторический Кижский погост?</h3><div class="quiz-options"><button type="button" data-answer="good">Две церкви и колокольня внутри ограды</button><button type="button" data-answer="bad">Все постройки острова</button><button type="button" data-answer="bad">Только Преображенская церковь</button></div><p class="quiz-feedback" aria-live="polite"></p></article>
@@ -170,6 +205,7 @@
   <script src="../../assets/museum-calendar-month.js?v=20260827" defer></script>
   <script src="../../assets/museum-audioguide.js" defer></script>
   <script src="../../assets/analytics.js" defer></script>
+  <script type="module" src="../../assets/kizhi-house-3d.js?v=20260827-2"></script>
   <script>
   document.addEventListener('DOMContentLoaded',function(){
     var shareButton=document.getElementById('sharebtn'),shareHint=document.getElementById('sharehint');if(shareButton){shareButton.addEventListener('click',function(){var url=location.href.split('#')[0],payload={title:'Кижи — остров, который стал музеем',text:'Что на острове стояло исторически, а что перевезли ради сохранения?',url:url};function hint(t){if(!shareHint)return;shareHint.textContent=t;shareHint.style.display='inline';setTimeout(function(){shareHint.style.display='none';},2800);}if(navigator.share){navigator.share(payload).catch(function(){});return;}if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(url).then(function(){hint('Ссылка скопирована');},function(){hint(url);});return;}hint(url);});}
