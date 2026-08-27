@@ -206,6 +206,7 @@
     secs.forEach(function(s){
       var id = s.id;
       if(!id || SKIP[id]) return;
+      if(Array.isArray(C.navIds) && C.navIds.indexOf(id) === -1) return;
       var lab = s.getAttribute('data-nav') || (C.labels && C.labels[id]) || LABEL[id];
       if(!lab) return;
       if(chips.some(function(c){return c.lab === lab;})) return;   /* «Игра 1/2» — один чип */
@@ -214,7 +215,7 @@
     if(chips.length > 2){
       nav = el('nav'); nav.id = 'secnav'; nav.setAttribute('aria-label','Разделы страницы');
       var row = el('div','row');
-      if(M.href){var hm = el('a','home', M.homeLabel || '← Музей'); hm.href = M.href; row.appendChild(hm);}
+      if(M.href && C.showMuseumHome !== false){var hm = el('a','home', M.homeLabel || '← Музей'); hm.href = M.href; row.appendChild(hm);}
       chips.forEach(function(c){var a = el('a', null, c.lab); a.href = '#'+c.id; row.appendChild(a);});
       nav.appendChild(row);
       var prog = el('div','prog'); prog.id = 'secprog'; nav.appendChild(prog);
@@ -259,7 +260,7 @@
         if(targets[i] && targets[i].getBoundingClientRect().top <= navH + 50) cur = i;
       }
       for(var j=0;j<links.length;j++) links[j].classList.toggle('on', j === cur);
-      if(cur > -1 && nrow){
+      if(cur > -1 && nrow && !C.stableNav){
         var a = links[cur], l = a.offsetLeft, r = l + a.offsetWidth;
         if(l < nrow.scrollLeft + 10) nrow.scrollLeft = Math.max(0, l - 14);
         else if(r > nrow.scrollLeft + nrow.clientWidth - 10) nrow.scrollLeft = r - nrow.clientWidth + 14;
