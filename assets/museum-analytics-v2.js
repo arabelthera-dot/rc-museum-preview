@@ -11,12 +11,12 @@
 
   var allowedEvents = new Set([
     'issue_open', 'depth_select', 'section_view', 'interactive_start',
-    'interactive_complete', 'media_progress', 'source_open', 'next_route',
+    'interactive_step', 'interactive_complete', 'media_progress', 'source_open', 'next_route',
     'share_open', 'support_open'
   ]);
   var allowedFields = new Set([
     'depth', 'section', 'media_kind', 'progress', 'source_id', 'target_id',
-    'support_kind', 'details_opened', 'headline_id', 'impression_changed'
+    'support_kind', 'details_opened', 'headline_id', 'impression_changed', 'outcome'
   ]);
   var fired = new Set();
 
