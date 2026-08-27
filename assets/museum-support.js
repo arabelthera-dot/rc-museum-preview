@@ -360,10 +360,14 @@
   if(!h){
     h = doc.createElement('div');
     h.id = 'heart'; h.title = T.heart;
+    h.setAttribute('role', 'complementary');
+    h.setAttribute('aria-label', T.heart);
     h.innerHTML = '❤<span class="lbl">' + T.heart + '</span>';
     body.appendChild(h);
   } else {
     h.title = T.heart;
+    h.setAttribute('role', 'complementary');
+    h.setAttribute('aria-label', T.heart);
     var lbl = h.querySelector('.lbl');
     if(lbl) lbl.textContent = T.heart;       /* приводим подпись к стандарту */
   }
