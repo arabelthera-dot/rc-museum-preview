@@ -36,10 +36,13 @@
       radial-gradient(160% 130% at 50% 118%,rgba(0,0,0,.5),transparent 60%);}
   body>*{position:relative;z-index:1}
 
-  /* шапка — канон портала: сверху бренд, под ним слоган портала (28.08.2026) */
+  /* шапка — канон портала (28.08.2026): бренд + слоган портала, ниже название музея + его девиз, раздельно */
   header.top{position:relative;padding:14px 16px 6px;text-align:center;font-family:'Inter',sans-serif}
   header.top .b1{font-size:13px;letter-spacing:2.5px;color:var(--gold-l);text-transform:uppercase;font-weight:700}
   header.top .b2{font-size:11px;opacity:.62;margin-top:2px;color:var(--muted)}
+  header.top .top-sep{width:48px;height:1px;margin:12px auto 0;background:linear-gradient(90deg,transparent,rgba(201,168,76,.6),transparent)}
+  header.top .museum{font-size:15px;letter-spacing:3px;text-transform:uppercase;font-weight:700;color:var(--gold);margin-top:11px}
+  header.top .museum-slog{font-family:var(--font-h);font-style:italic;font-size:16px;color:var(--gold-l);margin-top:4px}
   .crumbs{font-family:'Inter',sans-serif;font-size:12.5px;padding:4px 16px 8px;text-align:center;opacity:.9}
   .crumbs a{color:var(--gold-l);text-decoration:none}
   .crumbs a:hover{text-decoration:underline}
@@ -57,10 +60,6 @@
   .scene-cap{font-size:13px;line-height:1.62;color:var(--muted);border-left:2px solid rgba(201,168,76,.45);padding-left:14px;flex:1 1 420px}
   .hero-lead{text-align:center;padding:26px 0 22px;
     background:radial-gradient(60% 100% at 50% 0%,rgba(201,168,76,.05),transparent 70%)}
-  .hero-lead .museum{font-family:'Inter',sans-serif;font-size:12px;letter-spacing:4px;text-transform:uppercase;font-weight:700;color:var(--gold);margin-bottom:6px;opacity:.92}
-  .hero-lead .museum-slog{font-family:var(--font-h);font-style:italic;font-size:clamp(15px,2.6vw,18px);color:var(--gold-l);margin-bottom:16px}
-  .hero-lead .who{font-family:'Inter',sans-serif;font-size:clamp(13px,3vw,15px);letter-spacing:.4px;color:var(--gold-l);margin-bottom:12px}
-  .hero-lead .who i{font-style:normal;color:var(--muted);font-weight:400}
   .hero-lead h1{color:#fff;font-size:clamp(30px,6vw,54px);font-weight:700;line-height:1.08;margin-bottom:16px;overflow-wrap:anywhere;min-width:0}
   .hero-lead .hook{color:#c6d8e8;font-size:18px;max-width:60ch;margin:0 auto 22px;line-height:1.68}
   .hero-lead .hero-btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
