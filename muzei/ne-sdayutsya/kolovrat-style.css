@@ -37,24 +37,23 @@
   body>*{position:relative;z-index:1}
 
   /* шапка — канон портала (28.08.2026): бренд + слоган портала, ниже название музея + его девиз, раздельно */
-  header.top{position:relative;padding:14px 16px 6px;text-align:center;font-family:'Inter',sans-serif}
-  header.top .b1{font-size:13px;letter-spacing:2.5px;color:var(--gold-l);text-transform:uppercase;font-weight:700}
-  header.top .b2{font-size:11px;opacity:.62;margin-top:2px;color:var(--muted)}
-  header.top .top-sep{width:48px;height:1px;margin:12px auto 0;background:linear-gradient(90deg,transparent,rgba(201,168,76,.6),transparent)}
-  header.top .museum{font-size:15px;letter-spacing:3px;text-transform:uppercase;font-weight:700;color:var(--gold);margin-top:11px}
-  header.top .museum-slog{font-family:var(--font-h);font-style:italic;font-size:16px;color:var(--gold-l);margin-top:4px}
+  header.top{position:relative;padding:22px 16px 10px;text-align:center;font-family:'Inter',sans-serif}
+  header.top .b1{font-family:var(--font-h);font-size:22px;letter-spacing:.5px;color:var(--gold);text-transform:none;font-weight:700;margin:0}
+  header.top .b2{font-size:12px;opacity:.78;margin:4px auto 0;color:var(--muted);max-width:60ch}
+  header.top .top-sep{width:56px;height:1px;margin:14px auto 0;background:linear-gradient(90deg,transparent,rgba(201,168,76,.6),transparent)}
+  header.top .museum{font-family:var(--font-h);font-size:17px;letter-spacing:.3px;text-transform:none;font-weight:700;color:var(--gold);margin-top:13px}
+  header.top .museum-slog{font-family:var(--font-h);font-style:italic;font-size:14px;color:var(--gold-l);margin-top:3px}
   .crumbs{font-family:'Inter',sans-serif;font-size:12.5px;padding:4px 16px 8px;text-align:center;opacity:.9}
   .crumbs a{color:var(--gold-l);text-decoration:none}
   .crumbs a:hover{text-decoration:underline}
   .crumbs .sep{color:var(--muted);opacity:.6}
   .crumbs .here{color:var(--muted);opacity:.55}
-  @media(max-width:520px){header.top{padding-top:9px}header.top .b1{font-size:11.5px;letter-spacing:1.8px}.crumbs{font-size:11px}}
+  @media(max-width:520px){header.top{padding-top:14px}header.top .b1{font-size:18px;letter-spacing:.4px}.crumbs{font-size:11px}}
 
   /* ── HERO: картина во всю ширину ОТДЕЛЬНО, текст ОТДЕЛЬНО (правило 03.08) ── */
   .hero-scene{position:relative;padding:0;text-align:center;overflow:hidden;
     background:linear-gradient(180deg,#0b1624 0%,#060d18 100%);border-bottom:1px solid var(--line)}
-  .hero-scene img{display:block;width:100%;max-width:1200px;margin:0 auto;height:auto;max-height:74vh;
-    object-fit:contain;object-position:center;box-shadow:0 30px 60px rgba(0,0,0,.5)}
+  .hero-scene img{display:block;width:100%;max-width:1200px;margin:0 auto;height:auto;object-fit:cover;box-shadow:0 30px 60px rgba(0,0,0,.5)}
   .scene-caption{background:transparent;padding:12px 0 10px}
   .scene-caption .wrap{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
   .scene-cap{font-size:13px;line-height:1.62;color:var(--muted);border-left:2px solid rgba(201,168,76,.45);padding-left:14px;flex:1 1 420px}
@@ -65,7 +64,7 @@
   .hero-lead .hero-btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
   .hero-under{padding:6px 0 26px}
   .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold-l);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:16px;font-family:'Inter',sans-serif;letter-spacing:.5px}
-  @media(max-width:640px){.hero-scene img{max-height:60vh}
+  @media(max-width:640px){
     .hero-lead{padding:20px 0 18px}.scene-caption .wrap{flex-direction:column;gap:9px}.scene-cap{font-size:12.6px}}
 
   /* штамп-цифры под hero */
@@ -111,8 +110,8 @@
   .fig{margin:22px 0;border:1px solid rgba(120,147,171,.18);background:var(--surface)}
   .fig img{display:block;width:100%;height:auto}
   .fig figcaption{font-size:11px;letter-spacing:.4px;line-height:1.65;color:var(--muted);padding:9px 12px;border-top:1px solid var(--card-b)}
-  .fig-side{float:right;width:220px;margin:4px 0 16px 20px}
-  @media(max-width:600px){.fig-side{float:none;width:70%;margin:16px auto}}
+  .fig-side{float:none;width:100%;margin:26px 0 8px}
+  @media(max-width:600px){.fig-side{width:100%;margin:20px 0 6px}}
 
   /* пергаментный вкладыш — документ (первоисточник) */
   .doc{background:var(--paper);color:var(--paper-ink);border:1px solid #d5c9a8;border-radius:3px;padding:26px 28px;margin:22px 0;
