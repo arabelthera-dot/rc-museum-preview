@@ -1,4 +1,5 @@
 :root{--palace-red:#793d2b;--palace-green:#31523f;--palace-cream:#f4ead7}
+.translation-draft{width:min(1160px,calc(100% - 40px));margin:16px auto;padding:14px 18px;border-left:6px solid #b98735;background:#fff4cf;color:#2c382f;font:14px/1.5 var(--sans)}.translation-draft a{font-weight:700;color:#684719}
 .palace-hero img{object-position:center 58%}.palace-hero-caption{width:min(1160px,calc(100% - 40px));margin:auto;padding:11px 0 13px;color:#c2cdc6;font:13px/1.5 var(--sans)}.palace-hero-caption a{color:#d9c47d}.palace-copy{background:linear-gradient(145deg,#261d17,#3e2a1f)}
 .palace-film .film-stage img{object-position:center 48%}
 .hero.hero-figure.palace-hero img{height:min(29svh,300px)!important;min-height:220px!important}.palace-copy{padding:28px 0 38px}.palace-copy h1{font-size:clamp(44px,5.5vw,70px);margin-bottom:12px}.palace-copy .lead{font-size:clamp(18px,1.9vw,23px)}.palace-copy .route-choice{margin-top:18px}.quick-progress:not(.has-result){grid-template-columns:repeat(3,minmax(0,1fr))}.quick-progress [hidden]{display:none!important}.quick-progress a.is-current{background:#efe3c8}.quick-progress a.is-current b{background:#8a5b22}
