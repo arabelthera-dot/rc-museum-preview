@@ -40,7 +40,7 @@
      Шрифт разделяет текст: бренд — служебная строка Inter uppercase, название музея — крупный Playfair. */
   header.top{position:relative;padding:20px 16px 12px;text-align:center;font-family:'Inter',sans-serif}
   header.top .b1{font-family:'Inter',sans-serif;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:700;margin:0}
-  header.top .b2{font-size:11.5px;opacity:.62;margin:5px auto 0;color:var(--muted);max-width:64ch}
+  header.top .b2{font-size:13.5px;opacity:1;margin:7px auto 0;color:#c8d4e0;max-width:64ch}
   header.top .top-sep{width:56px;height:1px;margin:16px auto 0;background:linear-gradient(90deg,transparent,rgba(201,168,76,.6),transparent)}
   header.top .museum{font-family:var(--font-h);font-size:30px;letter-spacing:.2px;text-transform:none;font-weight:700;color:#fff;margin-top:14px;line-height:1.1}
   header.top .museum-slog{font-family:var(--font-h);font-style:italic;font-size:15px;color:var(--gold-l);margin-top:6px}
