@@ -69,10 +69,53 @@
     apply();
   }
 
+  function initVisualRibbon(root) {
+    var track = root.querySelector('[data-ribbon-track]');
+    var previous = root.querySelector('[data-ribbon-prev]');
+    var next = root.querySelector('[data-ribbon-next]');
+    var status = root.querySelector('[data-ribbon-status]');
+    var items = track ? [].slice.call(track.children) : [];
+    if (!track || !previous || !next || !items.length) return;
+
+    function metrics() {
+      var gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap) || 0;
+      var step = items[0].getBoundingClientRect().width + gap;
+      var visible = Math.max(1, Math.floor((track.clientWidth + gap) / step));
+      var index = Math.max(0, Math.min(items.length - 1, Math.round(track.scrollLeft / step)));
+      return { step: step, visible: visible, index: index };
+    }
+
+    function update() {
+      var data = metrics();
+      var last = Math.min(items.length, data.index + data.visible);
+      previous.disabled = track.scrollLeft <= 2;
+      next.disabled = track.scrollLeft >= track.scrollWidth - track.clientWidth - 2;
+      if (status) status.textContent = (data.index + 1) + '–' + last + ' из ' + items.length;
+    }
+
+    function move(direction) {
+      var data = metrics();
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      track.scrollBy({ left: direction * data.step, behavior: reduce ? 'auto' : 'smooth' });
+    }
+
+    previous.addEventListener('click', function () { move(-1); });
+    next.addEventListener('click', function () { move(1); });
+    track.addEventListener('keydown', function (event) {
+      if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+      event.preventDefault();
+      move(event.key === 'ArrowLeft' ? -1 : 1);
+    });
+    track.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  }
+
   function init(root) {
     (root || document).querySelectorAll('[data-route-gate]').forEach(initGate);
     (root || document).querySelectorAll('[data-lazy-media]').forEach(initLazyMedia);
     (root || document).querySelectorAll('details[data-visual-corpus]').forEach(initVisualCorpus);
+    (root || document).querySelectorAll('[data-visual-ribbon]').forEach(initVisualRibbon);
   }
 
   window.MuseumPageRuntime = {
