@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Демо вау-слоя — Евпатий Коловрат</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#070b14; --surface:#0d1424; --ink:#e9e4d6;
+    --gold:#d9a441; --gold-l:#ecc470; --gold-g:rgba(217,164,65,.14);
+    --muted:#9aa1b0; --line:rgba(217,164,65,.22);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+    -webkit-font-smoothing:antialiased;line-height:1.6}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+  /* Шапка демо */
+  .top{border-bottom:1px solid var(--line);padding:14px 20px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+  .top .brand{font:700 13px/1 Inter,system-ui,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+  .top .demo-tag{font-size:12px;color:var(--muted)}
+
+  /* ===== Скроллтеллинг: закреплённая картина + сменяемые главки ===== */
+  .scrolltelling{display:grid;grid-template-columns:1fr;gap:0}
+  .media{position:sticky;top:0;height:44vh;overflow:hidden;background:#000}
+  .scene{position:absolute;inset:0}
+  .scene-layer{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+    object-position:center 30%;opacity:0;transition:opacity 1.1s ease;transform:scale(1.02)}
+  .scene-layer.active{opacity:1}
+  .scene-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,11,20,.25) 0%,rgba(7,11,20,0) 40%,rgba(7,11,20,.85) 100%)}
+  .cap{position:absolute;left:0;right:0;bottom:0;padding:18px 20px 16px}
+  .cap-layer{display:block;margin:0;font-size:11.5px;line-height:1.45;color:var(--muted);
+    opacity:0;transition:opacity .9s ease}
+  .cap-layer.active{opacity:1}
+
+  .chapters{display:flex;flex-direction:column}
+  .step{min-height:56vh;display:flex;flex-direction:column;justify-content:center;
+    padding:28px 20px;border-bottom:1px solid var(--line)}
+  .step .num{font:700 12px/1 Inter,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+  .step h2{font-family:'Playfair Display',Georgia,serif;font-weight:700;
+    font-size:clamp(22px,5vw,32px);line-height:1.15;margin:0 0 12px;color:var(--ink)}
+  .step .hook{font-size:16px;line-height:1.55;color:var(--muted);margin:0}
+  .step .hook b{color:var(--ink);font-weight:700}
+
+  /* ===== Таймлайн 1237 ===== */
+  .timeline-block{padding:48px 0 56px;border-top:1px solid var(--line)}
+  .timeline-block .tl-title{font-family:'Playfair Display',Georgia,serif;font-size:clamp(22px,4vw,28px);font-weight:700;margin:0 0 6px}
+  .timeline-block .tl-sub{color:var(--muted);font-size:14px;margin:0 0 20px}
+  .timeline{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;padding:6px 4px 18px;margin:0 -4px;cursor:grab}
+  .timeline:active{cursor:grabbing}
+  .timeline::-webkit-scrollbar{height:6px}
+  .timeline::-webkit-scrollbar-thumb{background:var(--gold-g);border-radius:99px}
+  .tl-card{flex:0 0 250px;scroll-snap-align:start;background:var(--surface);
+    border:1px solid var(--line);border-radius:14px;padding:18px 16px;position:relative}
+  .tl-card .yr{font:700 11px/1 Inter,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+  .tl-card h3{font-family:'Playfair Display',Georgia,serif;font-size:18px;font-weight:700;margin:10px 0 8px;line-height:1.2}
+  .tl-card p{margin:0;font-size:13.5px;color:var(--muted);line-height:1.5}
+  .tl-card .dot{position:absolute;top:18px;right:16px;width:8px;height:8px;border-radius:50%;
+    background:var(--gold);box-shadow:0 0 0 4px var(--gold-g)}
+  .tl-hint{text-align:center;color:var(--muted);font-size:12px;margin-top:4px}
+
+  footer{border-top:1px solid var(--line);padding:22px 20px;color:var(--muted);font-size:12.5px;text-align:center}
+
+  @media(min-width:860px){
+    .scrolltelling{grid-template-columns:1fr 1fr;align-items:start}
+    .media{height:100vh;grid-row:1;grid-column:1}
+    .chapters{grid-column:2}
+    .step{min-height:100vh}
+    .timeline{overflow-x:auto}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <span class="brand">Русская цивилизация</span>
+  <span class="demo-tag">демо вау-слоя · музей «Русские не сдаются» · Евпатий Коловрат</span>
+</header>
+
+<!-- ===== Скроллтеллинг ===== -->
+<section class="scrolltelling" aria-label="История Коловрата — картина меняется по мере чтения">
+  <div class="media" id="media">
+    <div class="scene">
+      <img class="scene-layer active" src="../muzei/ne-sdayutsya/kolovrat-presnyakov-kartina.jpg" alt="Картина Преснякова — всадник с мечом на фоне пламени">
+      <img class="scene-layer" src="../muzei/ne-sdayutsya/kolovrat-ryazan-miniatura.jpg" alt="Миниатюра Лицевого летописного свода XVI века — среда подвига">
+      <img class="scene-layer" src="../muzei/ne-sdayutsya/kolovrat-pamyatnik-ryazan.jpg" alt="Памятник Евпатию Коловрату в Рязани">
+    </div>
+    <div class="scene-veil"></div>
+    <div class="cap">
+      <p class="cap-layer active">Максим Пресняков, «Евпатий Коловрат», 2009 — всадник на фоне пламени.</p>
+      <p class="cap-layer">Миниатюра Лицевого летописного свода XVI века — «Повесть о разорении Рязани Батыем».</p>
+      <p class="cap-layer">Памятник Евпатию Коловрату в Рязани — имя жило, хотя в летописях XIII века его нет.</p>
+    </div>
+  </div>
+
+  <div class="chapters">
+    <article class="step" data-idx="0">
+      <div class="num">Шаг 1 · Выбор</div>
+      <h2>Один — против войска, бравшего города</h2>
+      <p class="hook">Батый сжёг Рязань — но запомнил имя того, кто рубился на пепелище. Воевода <b>выбрал не сдаться</b>: догнать орду, которая сильнее его в сто раз.</p>
+    </article>
+    <article class="step" data-idx="1">
+      <div class="num">Шаг 2 · Бой</div>
+      <h2>Бой, который не мог быть выигран</h2>
+      <p class="hook">В поединке Коловрат <b>рассёк Хостоврула надвое, до седла</b>. И орда, взявшая десятки городов, запомнила этот бой.</p>
+    </article>
+    <article class="step" data-idx="2">
+      <div class="num">Шаг 3 · Память</div>
+      <h2>Память, которая осталась</h2>
+      <p class="hook">В летописях XIII века его имени нет — но памятник стоит. Значит, <b>имя жило в народе</b> шесть веков, прежде чем встало в бронзе.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ===== Таймлайн 1237 ===== -->
+<section class="timeline-block">
+  <div class="wrap">
+    <h2 class="tl-title">Что делал мир в 1237 году</h2>
+    <p class="tl-sub">Тяни ленту вбок — увидишь, что происходило параллельно с подвигом.</p>
+  </div>
+  <div class="timeline" aria-label="Лента событий 1237 года">
+    <div class="tl-card"><span class="yr">1237</span><div class="dot"></div><h3>Рязань в пепле</h3><p>Батый сжигает столицу княжества: князь убит, княгиня убита, жители перебиты.</p></div>
+    <div class="tl-card"><span class="yr">1237</span><div class="dot"></div><h3>Коловрат в Чернигове</h3><p>Весть о нашествии застаёт его у князя Ингваря Ингваревича — далеко от дома.</p></div>
+    <div class="tl-card"><span class="yr">1237</span><div class="dot"></div><h3>Возвращение на пепелище</h3><p>Возвращаться больше некуда. Он собирает тех, кто уцелел, и идёт следом за ордой.</p></div>
+    <div class="tl-card"><span class="yr">1237</span><div class="dot"></div><h3>Бой в Суздальской земле</h3><p>Настигает Батыя и бьёт внезапно, в спину войску, которое не ждало погони.</p></div>
+    <div class="tl-card"><span class="yr">1237</span><div class="dot"></div><h3>Гибель Коловрата</h3><p>Взять живым не смог никто — его убили камнемётными орудиями, что разрушали стены.</p></div>
+  </div>
+  <p class="tl-hint">← тяни ленту →</p>
+</section>
+
+<footer>Это демо-страница для показа механик, не полный выпуск музея. Готовые страницы Коловрата и Меркурия не менялись.</footer>
+
+<script>
+(function(){
+  var steps=document.querySelectorAll('.step');
+  var layers=document.querySelectorAll('.scene-layer');
+  var caps=document.querySelectorAll('.cap-layer');
+  if(!steps.length)return;
+
+  function activate(idx){
+    layers.forEach(function(l,i){l.classList.toggle('active',i===idx);});
+    caps.forEach(function(c,i){c.classList.toggle('active',i===idx);});
+  }
+
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){activate(Number(e.target.dataset.idx));}
+      });
+    },{threshold:0.5,rootMargin:'-10% 0px -40% 0px'});
+    steps.forEach(function(s){io.observe(s);});
+  }else{
+    // фолбэк: смена по клику не нужна, оставляем первую сцену
+  }
+})();
+</script>
+</body>
+</html>
