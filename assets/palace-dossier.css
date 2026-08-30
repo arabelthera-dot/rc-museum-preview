@@ -139,7 +139,7 @@ h3 { font-size: clamp(24px, 2.5vw, 36px); line-height: 1.12; }
 .section-head .number { padding-top: 9px; }
 .section-head .intro { max-width: 730px; margin: 16px 0 0; color: #5e635f; font-size: 17px; }
 .dark .section-head .intro { color: #c7c7bf; }
-.act-start { padding-top: clamp(84px, 10vw, 150px); }
+[data-museum-act] { padding-top: clamp(84px, 10vw, 150px); }
 .act-label {
   display: grid; grid-template-columns: 185px minmax(0, 1fr); gap: 28px; margin: 0 0 64px;
   padding-top: 18px; border-top: 1px solid currentColor; color: var(--ink);
@@ -147,14 +147,6 @@ h3 { font-size: clamp(24px, 2.5vw, 36px); line-height: 1.12; }
 .dark .act-label { color: var(--paper); }
 .act-label span { color: var(--red); font-size: 11px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
 .act-label b { font: 400 clamp(25px, 2.5vw, 39px)/1.08 var(--serif); }
-#istoriya::before, #game::before {
-  display: block; width: min(900px, calc(100% - 56px)); margin: 0 auto 64px; padding-top: 18px;
-  border-top: 1px solid var(--ink); color: var(--red); font-size: 11px; font-weight: 700;
-  letter-spacing: .13em; text-transform: uppercase;
-}
-#istoriya::before { content: "Акт 4 · проверить происхождение образа — документ → модель → современная материя"; }
-#game::before { content: "Акт 5 · сделать собственный вывод — этикетка, которую можно защитить доказательствами"; }
-
 .film-player { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(310px, .7fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
 .film-stage { position: relative; min-height: 520px; background: #111714; overflow: hidden; }
 .film-stage img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .35s ease; }
@@ -355,20 +347,20 @@ footer { padding: 38px 28px; background: var(--ink); color: #bbbeb8; font-size: 
   .brand { min-height: 56px; padding: 14px; border-right: 0; border-bottom: 1px solid rgba(241,236,226,.2); font-size: 25px; }
   .motto { gap: 4px; padding: 12px 14px 14px; }
   .motto span:first-child { font-size: 11px; }
-  .motto span:last-child { font-size: 10px; line-height: 1.35; }
+  .motto span:last-child { display: none; }
   .crumbs { padding: 11px 0; }
   .crumbs { white-space: normal; overflow: visible; line-height: 1.55; }
   .dossier-hero { min-height: 0; }
-  .palace-hero img { min-height: 0; height: 260px; object-position: center 52%; }
-  .palace-hero-caption { position: static; padding: 10px 14px; }
-  .palace-copy { padding: 34px 0 40px; }
+  .palace-hero img { min-height: 0; height: 210px; object-position: center 52%; }
+  .palace-hero-caption { position: static; padding: 8px 14px; font-size: 10px; }
+  .palace-copy { padding: 26px 0 32px; }
   .palace-copy .wrap { padding: 0 14px; }
   .hero-copy { padding-left: 16px; }
-  .palace-copy h1 { margin: 13px 0 16px; font-size: 39px; line-height: 1; }
+  .palace-copy h1 { margin: 11px 0 14px; font-size: 34px; line-height: 1.02; }
   .lead { font-size: 16px; }
   .route-choice { margin-top: 22px; }
-  .quick-progress { position: relative; grid-template-columns: 1fr; }
-  .quick-progress a { min-height: 54px; border-right: 0; border-bottom: 1px solid var(--line); }
+  .quick-progress { position: relative; grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(168px, 1fr); overflow-x: auto; scrollbar-width: thin; }
+  .quick-progress a { min-height: 54px; border-right: 1px solid var(--line); border-bottom: 0; }
   .section { padding: 74px 0; }
   .section-head, .act-label { grid-template-columns: 1fr; gap: 12px; }
   .act-label { margin-bottom: 42px; }
@@ -397,7 +389,6 @@ footer { padding: 38px 28px; background: var(--ink); color: #bbbeb8; font-size: 
   .calendar-shell { padding: 16px; }
   .next strong { font-size: 24px; }
   .wayrow { width: calc(100% - 28px); }
-  #istoriya::before, #game::before { width: calc(100% - 28px); margin-bottom: 42px; }
 }
 
 @media (max-width: 360px) {

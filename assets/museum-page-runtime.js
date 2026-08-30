@@ -69,10 +69,28 @@
     apply();
   }
 
+  function initNarrativeAct(section) {
+    var label = section.dataset.museumAct;
+    var title = section.dataset.museumActTitle;
+    if (!label || !title) return;
+    var wrap = section.querySelector(':scope > .wrap, :scope > .reading');
+    if (!wrap) return;
+    if (wrap.querySelector(':scope > .act-label')) return;
+    var marker = document.createElement('div');
+    marker.className = 'act-label';
+    var step = document.createElement('span');
+    step.textContent = label;
+    var heading = document.createElement('b');
+    heading.textContent = title;
+    marker.append(step, heading);
+    wrap.insertBefore(marker, wrap.firstChild);
+  }
+
   function init(root) {
     (root || document).querySelectorAll('[data-route-gate]').forEach(initGate);
     (root || document).querySelectorAll('[data-lazy-media]').forEach(initLazyMedia);
     (root || document).querySelectorAll('details[data-visual-corpus]').forEach(initVisualCorpus);
+    (root || document).querySelectorAll('[data-museum-act]').forEach(initNarrativeAct);
   }
 
   window.MuseumPageRuntime = {
