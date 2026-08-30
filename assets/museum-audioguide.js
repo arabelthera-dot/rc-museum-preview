@@ -75,7 +75,7 @@
           + '<div class="agsub">'+esc(CFG.lead||'')+'</div>'
         + '</div>'
       + '</div>'
-      + '<audio id="agaudio" src="'+esc(CFG.audioSrc)+'" preload="metadata" controls style="width:100%;margin:14px 0 0;border-radius:10px;display:none"></audio>'
+      + '<audio id="agaudio" data-src="'+esc(CFG.audioSrc)+'" preload="none" controls style="width:100%;margin:14px 0 0;border-radius:10px;display:none"></audio>'
       + '<div class="agnav"><span class="lbl">Перейти к остановке:</span>'+stopsHtml+'</div>'
       + (CFG.transcript && CFG.transcript.length ? '<details class="agtext"><summary>Текст экскурсии — читать глазами</summary>'+CFG.transcript.join('')+'</details>' : '')
       + (CFG.note ? '<p style="font-size:12px;color:var(--muted);opacity:.75;margin:14px 0 0">'+esc(CFG.note)+'</p>' : '')
@@ -84,7 +84,13 @@
 
   var b=document.getElementById('agbtn'), a=document.getElementById('agaudio');
   if(!b||!a) return;
-  b.addEventListener('click',function(){ a.paused ? a.play() : a.pause(); });
+  function ensureAudio(){
+    if(!a.getAttribute('src')){
+      a.setAttribute('src',a.dataset.src);
+      a.load();
+    }
+  }
+  b.addEventListener('click',function(){ if(a.paused){ensureAudio();a.play();}else a.pause(); });
   a.addEventListener('play',function(){ b.textContent='❚❚'; a.style.display='block'; });
   a.addEventListener('pause',function(){ b.textContent='▶'; });
   a.addEventListener('ended',function(){ b.textContent='▶'; });
@@ -97,7 +103,11 @@
   var btns=host.querySelectorAll('.agnav button');
   btns.forEach(function(btn){
     btn.addEventListener('click',function(){
-      a.currentTime=parseInt(btn.dataset.t,10); a.play();
+      ensureAudio();
+      var targetTime=parseInt(btn.dataset.t,10);
+      if(a.readyState>=1) a.currentTime=targetTime;
+      else a.addEventListener('loadedmetadata',function seek(){a.currentTime=targetTime;},{once:true});
+      a.play();
       btns.forEach(function(x){x.classList.remove('on');});
       btn.classList.add('on');
     });

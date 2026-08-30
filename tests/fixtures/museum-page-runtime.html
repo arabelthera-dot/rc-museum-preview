@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Проверка общего runtime музейной страницы</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;font:16px/1.5 system-ui;background:#f6f1e8;color:#201b16}
+    main{width:min(100% - 32px,800px);margin:auto;padding:24px 0}a,button,summary{font:inherit}
+    nav{display:flex;gap:12px;flex-wrap:wrap}.is-locked{opacity:.5}.frame{min-height:120px;background:#ddd}
+    details{margin:24px 0;padding:16px;border:1px solid #987}section{margin:32px 0}
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Один вопрос и два маршрута</h1>
+    <nav aria-label="Короткий маршрут">
+      <a href="#start">Начало</a>
+      <a href="#result" data-route-gate>Будущий результат</a>
+    </nav>
+    <p><button type="button" id="success">Успех</button> <button type="button" id="reset">Сброс</button></p>
+    <section id="audioguide"></section>
+    <section data-lazy-media>
+      <h2>Кадры по действию</h2>
+      <div class="frame"><img data-future-frame data-src="future-frame.svg" width="320" height="120" alt="Учебный будущий кадр"></div>
+      <button type="button" data-load-media>Загрузить кадр</button>
+    </section>
+    <details data-visual-corpus>
+      <summary>Дополнительный визуальный корпус</summary>
+      <p>Подробности видимы на широком экране и раскрываются по запросу на телефоне.</p>
+    </details>
+    <section id="result"><h2>Результат</h2><p>Посетитель формулирует итог самостоятельно.</p></section>
+  </main>
+  <script>window.MUSEUM_AUDIOGUIDE={audioSrc:'never-loaded-before-action.mp3',stops:[{t:0,mark:'0:00',title:'Начало'}],transcript:['<p>Доступная расшифровка.</p>']};</script>
+  <script src="../../assets/museum-audioguide.js"></script>
+  <script src="../../assets/museum-page-runtime.js"></script>
+  <script>
+    document.getElementById('success').addEventListener('click',function(){document.dispatchEvent(new CustomEvent('museum:route-success'));});
+    document.getElementById('reset').addEventListener('click',function(){document.dispatchEvent(new CustomEvent('museum:route-reset'));});
+  </script>
+</body>
+</html>
