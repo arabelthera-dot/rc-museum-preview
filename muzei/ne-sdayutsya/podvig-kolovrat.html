@@ -55,28 +55,46 @@
   <span class="here">День 1 · Евпатий Коловрат</span>
 </nav>
 
-<!-- ── HERO: сцена ОТДЕЛЬНО, текст ОТДЕЛЬНО (правило 03.08) ── -->
-<div class="hero-scene" id="hero">
-  <img src="kolovrat-presnyakov-kartina.jpg" alt="Картина Максима Преснякова «Евпатий Коловрат»: всадник с мечом на фоне пламени">
-</div>
-
-<div class="scene-caption">
-  <div class="wrap">
-    <div class="scene-cap">Максим Пресняков, «Евпатий Коловрат», 2009 — современная художественная интерпретация, не документ XIII века. Воевода на коне, один, на фоне пламени: образ человека, который пошёл в бой, которого не мог выиграть.</div>
-  </div>
-</div>
-
-<header class="hero-lead">
-  <div class="wrap">
-    <div class="date-chip">воевода · XIII век · Рязань</div>
-    <h1>Евпатий Коловрат</h1>
-    <p class="hook">Батый сжёг Рязань — но запомнил имя того, кто рубился на пепелище.</p>
-    <div class="hero-btns">
-      <button class="btn gold" onclick="document.getElementById('istoriya').scrollIntoView({behavior:'smooth'})">Читать историю ↓</button>
-      <button class="btn ghost" onclick="document.getElementById('audioguide').scrollIntoView({behavior:'smooth'})">Слушать аудиогид</button>
+<!-- ── HERO: скроллтеллинг M-73 — картина закреплена, сцены следуют за текстом ── -->
+<article class="scrolltelling" id="hero" aria-label="Евпатий Коловрат — картина меняется по мере чтения">
+  <div class="st-media">
+    <div class="hero-scene st-stage">
+      <img class="st-scene active" src="kolovrat-presnyakov-kartina.jpg" alt="Картина Максима Преснякова «Евпатий Коловрат»: всадник с мечом на фоне пламени">
+      <img class="st-scene" src="kolovrat-ryazan-miniatura.jpg" alt="Миниатюра Лицевого летописного свода XVI века: татары Батыя разоряют Рязань" aria-hidden="true">
+      <img class="st-scene" src="kolovrat-pamyatnik-ryazan.jpg" alt="Памятник Евпатию Коловрату в Рязани: всадник на коне" aria-hidden="true">
+    </div>
+    <div class="st-cap">
+      <p class="st-cap-layer active"><span class="st-src">Максим Пресняков, «Евпатий Коловрат», 2009</span>Современная художественная интерпретация, не документ XIII века. Воевода на коне, один, на фоне пламени: образ человека, который пошёл в бой, которого не мог выиграть.</p>
+      <p class="st-cap-layer" aria-hidden="true"><span class="st-src">Лицевой летописный свод, XVI век</span>Миниатюра «Повести о разорении Рязани Батыем» — среда подвига: Батый жжёт и разоряет Рязань.</p>
+      <p class="st-cap-layer" aria-hidden="true"><span class="st-src">Памятник Евпатию Коловрату, Рязань</span>Имя жило в народе шесть веков, прежде чем встало в бронзе, — хотя в летописях XIII века его нет.</p>
     </div>
   </div>
-</header>
+  <div class="st-chapters">
+    <header class="hero-lead">
+      <div class="date-chip">воевода · XIII век · Рязань</div>
+      <h1>Евпатий Коловрат</h1>
+      <p class="hook">Батый сжёг Рязань — но запомнил имя того, кто рубился на пепелище.</p>
+      <div class="hero-btns">
+        <button class="btn gold" onclick="document.getElementById('istoriya').scrollIntoView({behavior:'smooth'})">Читать историю ↓</button>
+        <button class="btn ghost" onclick="document.getElementById('audioguide').scrollIntoView({behavior:'smooth'})">Слушать аудиогид</button>
+      </div>
+    </header>
+    <div class="st-steps">
+      <article class="st-step" data-idx="0">
+        <div class="kicker">◆ Выбор</div>
+        <p>Воевода <b>выбрал не сдаться</b>: догнать орду, которая сильнее его в сто раз.</p>
+      </article>
+      <article class="st-step" data-idx="1">
+        <div class="kicker">◆ Бой</div>
+        <p>В поединке Коловрат <b>рассёк Хостоврула надвое, до седла</b> — и орда, взявшая десятки городов, запомнила этот бой.</p>
+      </article>
+      <article class="st-step" data-idx="2">
+        <div class="kicker">◆ Память</div>
+        <p>В летописях XIII века его имени нет — но <b>имя жило в народе</b>, пока не встало в бронзе.</p>
+      </article>
+    </div>
+  </div>
+</article>
 
 <div class="hero-under">
   <div class="wrap">
@@ -263,14 +281,17 @@
   </div>
 </section>
 
-<!-- ── МИРОВОЙ КОНТЕКСТ ── -->
-<section class="block" id="mirovoy-kontekst">
-  <div class="wrap">
+<!-- ── МИРОВОЙ КОНТЕКСТ: таймлайн M-74 — горизонтальная лента параллельных событий ── -->
+<section class="block timeline-block" id="mirovoy-kontekst">
+  <div class="wrap tl-head">
     <div class="kicker">Контекст</div>
-    <h2 style="margin-bottom:6px">Что делал мир в 1237 году</h2>
-    <div class="q"><h3><em>Запад ещё не знает</em>Пожар на востоке</h3><p>Пока на Рязань шла орда, Европа не подозревала, что на востоке уже горит её будущее. В 1237 году монгольское войско Батыя, внука Чингисхана, начинает большой западный поход. Через несколько лет оно дойдёт до Венгрии и Польши.</p></div>
-    <div class="q"><h3><em>Русь порознь</em>Каждый сам за себя</h3><p>Русские княжества в этот момент разрознены: помощи ждать неоткуда. Именно эта разрозненность — главная причина, по которой Рязань пала в одиночку, а следом — Владимир, Суздаль, Козельск. Стоять порознь — значит падать по одному.</p></div>
-    <div class="q"><h3><em>Исключение</em>Тот, кто не сдался</h3><p>И на этом фоне — сюжет, который не вписывается в хронику катастрофы: воевода без города, с малой дружиной, бросающийся вдогонку войску, которое сильнее в сто раз. Не ради победы. Ради того, чтобы даже в пепле остался кто-то, кто не сдался.</p></div>
+    <h2 class="tl-title">Что делал мир в 1237 году</h2>
+    <p class="tl-sub">Тяни ленту вбок — увидишь, что происходило параллельно с подвигом.</p>
+  </div>
+  <div class="timeline" aria-label="Лента событий 1237 года">
+    <div class="tl-card"><span class="yr">1237</span><div class="dot"></div><h3>Пожар на востоке</h3><p>Европа ещё не знает: войско Батыя, внука Чингисхана, начинает большой западный поход. Через несколько лет оно дойдёт до Венгрии и Польши.</p></div>
+    <div class="tl-card"><div class="dot"></div><h3>Русь порознь</h3><p>Княжества разрознены, помощи ждать неоткуда. Поэтому Рязань пала в одиночку, а следом — Владимир, Суздаль, Козельск.</p></div>
+    <div class="tl-card"><div class="dot"></div><h3>Исключение</h3><p>Воевода без города, с малой дружиной, бросается вдогонку войску, которое сильнее в сто раз. Не ради победы — чтобы в пепле остался кто-то, кто не сдался.</p></div>
   </div>
 </section>
 
@@ -457,6 +478,7 @@ window.addEventListener('pageshow',function(e){if(e.persisted)location.reload();
   random:[]
 };</script>
 <script src="../../assets/museum-chrome.js"></script>
+<script src="../../assets/scrolltelling.js"></script>
 <script>window.MUSEUM_SUPPORT={museum:'Русские не сдаются'};</script>
 <script src="../../assets/museum-support.js"></script>
 <script>window.MUSEUM_CALENDAR_INITIAL='01-01';</script>
