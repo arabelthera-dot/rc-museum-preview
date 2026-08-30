@@ -1,45 +1,43 @@
 {
+ "muzei/arhitektura/dvorets-alekseya-mihaylovicha.html": [],
+ "muzei/arhitektura/kizhi-muzey.html": [],
  "muzei/arhitektura/kolomenskoe.html": [
+  "аудиоплеер",
   "текст НЕ поверх картинки",
   "hero — сцена или большой визуал"
  ],
+ "muzei/arhitektura/raspisnye-doma-povazhya.html": [
+  "аудиоплеер"
+ ],
+ "muzei/arhitektura/terem-astashovo.html": [],
  "muzei/iskusstvo/pic-aivazovsky-chernoe-more.html": [
+  "аудиоплеер",
   "аудиогид не в конце",
   "текст НЕ поверх картинки"
  ],
  "muzei/iskusstvo/pic-aivazovsky-devyatyi-val-en.html": [
+  "аудиоплеер",
   "аудиогид не в конце",
   "текст НЕ поверх картинки",
   "календарь месяца"
  ],
- "muzei/iskusstvo/pic-aivazovsky-devyatyi-val.html": [],
+ "muzei/iskusstvo/pic-aivazovsky-devyatyi-val.html": [
+  "аудиоплеер"
+ ],
  "muzei/iskusstvo/pic-aivazovsky-raduga.html": [
+  "аудиоплеер",
   "аудиогид не в конце",
   "текст НЕ поверх картинки"
  ],
  "muzei/izobreteniya/day-01dec-lobachevsky.html": [
-  "аудиоплеер",
-  "аудиогид не в конце",
-  "текст НЕ поверх картинки",
-  "hero — сцена или большой визуал"
+  "аудиоплеер"
  ],
- "muzei/izobreteniya/day-01jan-cabletv.html": [
-  "аудиоплеер",
-  "аудиогид не в конце",
-  "текст НЕ поверх картинки",
-  "hero — сцена или большой визуал"
- ],
+ "muzei/izobreteniya/day-01jan-cabletv.html": [],
  "muzei/izobreteniya/day-02jan-luna1.html": [
-  "аудиоплеер",
-  "аудиогид не в конце",
-  "текст НЕ поверх картинки",
-  "hero — сцена или большой визуал"
+  "аудиоплеер"
  ],
  "muzei/izobreteniya/day-03jan-luna9.html": [
-  "аудиоплеер",
-  "аудиогид не в конце",
-  "текст НЕ поверх картинки",
-  "hero — сцена или большой визуал"
+  "аудиоплеер"
  ],
  "muzei/izobreteniya/day-04jan-pilchikov.html": [
   "аудиоплеер",
@@ -86,9 +84,7 @@
  ],
  "muzei/izobreteniya/day-15may-mechnikov.html": [
   "аудиоплеер",
-  "аудиогид не в конце",
-  "текст НЕ поверх картинки",
-  "hero — сцена или большой визуал"
+  "аудиогид не в конце"
  ],
  "muzei/izobreteniya/day-16jun-tereshkova.html": [
   "аудиоплеер",
@@ -114,23 +110,17 @@
   "текст НЕ поверх картинки",
   "hero — сцена или большой визуал"
  ],
- "muzei/izobreteniya/day-30jan-kotelnikov.html": [
-  "аудиоплеер",
-  "аудиогид не в конце"
- ],
+ "muzei/izobreteniya/day-30jan-kotelnikov.html": [],
+ "muzei/karikatura/day-01jan-russian-bear-v2.html": [],
  "muzei/karikatura/day-01jan-russian-bear.html": [
   "аудиоплеер",
   "текст НЕ поверх картинки",
   "hero — сцена или большой визуал"
  ],
- "muzei/karikatura/day-04jan-russian-bear.html": [
-  "аудиоплеер",
-  "аудиогид не в конце",
-  "hero — сцена или большой визуал",
-  "блок поддержки",
-  "календарь месяца"
- ],
+ "muzei/ne-sdayutsya/podvig-kolovrat.html": [],
+ "muzei/ne-sdayutsya/podvig-merkuriy.html": [],
  "muzei/pervoprohodcy/exp-dezhnev-1648.html": [
+  "аудиоплеер",
   "текст НЕ поверх картинки"
  ]
 }
