@@ -440,11 +440,11 @@ button:focus-visible, a:focus-visible, summary:focus-visible { outline: 4px soli
   .crumbs { padding: 8px 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .asta-hero { max-height: none; }
   .asta-hero img { height: 30svh; min-height: 236px; object-position: center 39%; }
-  .asta-caption { padding: 7px 14px 8px; font-size: 14px; }
-  .asta-copy { padding: 20px 0 28px; background: var(--asta-paper); }
+  .asta-caption { padding: 7px 14px 8px; font-size: 14px; line-height: 1.4; }
+  .asta-copy { padding: 14px 0 28px; background: var(--asta-paper); }
   .asta-copy .hero-copy { padding-left: 10px; border-left: 2px solid var(--asta-gold); }
   .eyebrow, .asta-number { font-size: 14px; letter-spacing: .08em; }
-  .asta-hero img { height: 24svh; min-height: 180px; }
+  .asta-hero img { height: 17.5svh; min-height: 146px; }
   .asta-copy h1 { margin: 7px 0 10px; font-size: clamp(33px, 9.9vw, 42px); line-height: .97; }
   .asta-copy .lead { font-size: 17px; line-height: 1.42; }
   .route-choice { grid-template-columns: 1fr 1fr; gap: 7px; margin-top: 16px; }
@@ -488,6 +488,12 @@ button:focus-visible, a:focus-visible, summary:focus-visible { outline: 4px soli
   .route-finale { padding: 25px 18px; }
   .route-finale > div { grid-template-columns: repeat(2, 1fr); }
   .route-finale > div b { padding: 10px 6px; font-size: 14px; }
+}
+
+@media (max-width: 350px) {
+  .asta-hero img { height: 130px; min-height: 130px; }
+  .asta-caption .caption-context { display: none; }
+  .asta-copy { padding-top: 10px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
