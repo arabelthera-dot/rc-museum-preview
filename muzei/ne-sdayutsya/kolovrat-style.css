@@ -200,3 +200,17 @@
     .reveal{transition:opacity .15s linear;transform:none}
     .hero-scene img{animation:none}
   }
+
+  /* карта пути (M-72) — интерактивный маршрут подвига */
+  .route-map{margin:26px 0 6px;padding:20px 18px 16px;background:var(--card);border:1px solid var(--card-b);border-radius:14px}
+  .rm-head{font-family:var(--font-h);color:var(--gold-l);font-size:17px;margin-bottom:10px}
+  .route-map svg{width:100%;height:auto;display:block;overflow:visible}
+  .rm-label{fill:#e7dcc0;font-size:13px;font-weight:600;font-family:'Inter',sans-serif}
+  .rm-sub{fill:var(--muted);font-size:10.5px;font-family:'Inter',sans-serif;letter-spacing:.4px}
+  .rm-node{cursor:pointer;outline:none}
+  .rm-node circle{transition:r .2s ease,fill .2s ease,stroke .2s ease}
+  .rm-node:hover circle,.rm-node:focus-visible circle{fill:rgba(201,168,76,.25);stroke:#e2c878}
+  .rm-node.sel circle{fill:rgba(201,168,76,.3);stroke:#f0c66a;stroke-width:3}
+  .rm-desc{margin-top:12px;min-height:54px;color:var(--ink);font-size:14.5px;line-height:1.62;border-left:2px solid rgba(201,168,76,.5);padding-left:14px}
+  .rm-desc b{color:var(--gold-l);font-weight:700;display:block;margin-bottom:2px}
+  @media(max-width:600px){.rm-label{font-size:12px}.rm-sub{font-size:10px}}
