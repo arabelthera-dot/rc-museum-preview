@@ -54,6 +54,40 @@
     root.addEventListener('museum:load-media', function () { loadMedia(root); });
   }
 
+  var nativeLazyObserver = null;
+
+  function loadNativeLazyImage(image) {
+    if (image.complete && image.naturalWidth) return;
+    var source = image.getAttribute('src');
+    if (!source) return;
+    image.loading = 'eager';
+    image.classList.add('is-lazy-loading');
+    image.addEventListener('load', function () {
+      image.classList.remove('is-lazy-loading');
+      image.classList.add('is-lazy-loaded');
+    }, { once: true });
+    image.removeAttribute('src');
+    image.setAttribute('src', source);
+  }
+
+  function initNativeLazyImage(image) {
+    if (image.complete && image.naturalWidth) return;
+    if (!('IntersectionObserver' in window)) {
+      loadNativeLazyImage(image);
+      return;
+    }
+    if (!nativeLazyObserver) {
+      nativeLazyObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          nativeLazyObserver.unobserve(entry.target);
+          loadNativeLazyImage(entry.target);
+        });
+      }, { rootMargin: '1200px 0px' });
+    }
+    nativeLazyObserver.observe(image);
+  }
+
   function initVisualCorpus(details) {
     if (details.tagName !== 'DETAILS') return;
     var query = window.matchMedia('(max-width: 820px)');
@@ -89,6 +123,7 @@
   function init(root) {
     (root || document).querySelectorAll('[data-route-gate]').forEach(initGate);
     (root || document).querySelectorAll('[data-lazy-media]').forEach(initLazyMedia);
+    (root || document).querySelectorAll('img[loading="lazy"][src]').forEach(initNativeLazyImage);
     (root || document).querySelectorAll('details[data-visual-corpus]').forEach(initVisualCorpus);
     (root || document).querySelectorAll('[data-museum-act]').forEach(initNarrativeAct);
   }
@@ -96,6 +131,7 @@
   window.MuseumPageRuntime = {
     init: init,
     loadMedia: loadMedia,
+    loadNativeLazyImage: loadNativeLazyImage,
     lockGate: lockGate,
     unlockGate: unlockGate
   };
