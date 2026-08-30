@@ -5,10 +5,14 @@
  *
  * Цели (rc_* — имена, по ним в Метрике строятся отчёты):
  *   rc_scroll75   — дочитал 75% страницы
+ *   rc_read60     — провёл на странице минуту (реальное чтение, а не отскок)
  *   rc_support    — клик по блоку/кнопке «Поддержать проект»
  *   rc_share      — клик «Поделиться»
  *   rc_telegram   — переход в Telegram-канал
  *   rc_game       — старт игры или викторины
+ *   rc_audio      — запуск аудиогида
+ *   rc_video      — запуск видео (ролик дня)
+ *   rc_calendar   — клик по дате в календаре музея
  */
 (function () {
   'use strict';
@@ -55,6 +59,18 @@
     });
   }, { passive: true });
 
+  // минута на странице — отсекает случайный заход от настоящего чтения
+  setTimeout(function () { once('rc_read60'); }, 60000);
+
+  // запуск видео и аудио: слушаем на фазе перехвата, ловит и плееры, вставленные позже
+  document.addEventListener('play', function (ev) {
+    var t = ev.target;
+    if (!t || !t.tagName) return;
+    var src = (t.currentSrc || t.getAttribute('src') || '').split('/').pop();
+    if (t.tagName === 'VIDEO') once('rc_video', { file: src });
+    if (t.tagName === 'AUDIO') once('rc_audio', { file: src });
+  }, true);
+
   // клики: поддержка, «поделиться», телеграм, игры
   document.addEventListener('click', function (ev) {
     var el = ev.target && ev.target.closest ? ev.target.closest('a,button,[role="button"]') : null;
@@ -64,6 +80,8 @@
     var cls = (el.className && el.className.baseVal !== undefined ? el.className.baseVal : el.className || '') + '';
 
     if (/t\.me\//.test(href)) return window.rcGoal('rc_telegram', { href: href });
+    if (/(^|\/)(day|exp|pic)-[^\/]+\.html/.test(href))
+      return window.rcGoal('rc_calendar', { day: href.split('/').pop().replace('.html', '') });
     if (/поддержать|донат|support/.test(txt) || /support/.test(cls) || /#support/.test(href))
       return window.rcGoal('rc_support', { where: cls || txt.slice(0, 40) });
     if (/поделиться|share/.test(txt) || /share/.test(cls))
