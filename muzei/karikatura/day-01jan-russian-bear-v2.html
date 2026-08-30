@@ -68,7 +68,7 @@
 </head>
 <body>
   <header class="civic"><div class="wrap civic-in"><div><a class="civic-title" href="../../index.html">Русская цивилизация</a><div class="civic-kicker">Первый цифровой музей достижений России</div></div><div><div class="civic-motto">Цивилизация первенств — что Россия дала миру раньше всех</div><div class="tools">RU · EN готовится &nbsp;·&nbsp; Баллы: <b id="headScore">0</b></div></div></div></header>
-  <div class="museum-head"><div class="wrap museum-in"><div><div class="museum-label">Календарь визуальной сатиры</div><div class="museum-name">Музей русской карикатуры</div><div class="museum-sub">Серьёзная история несерьёзного жанра</div></div><a class="back" href="../../index.html">← Все музеи</a></div></div>
+  <div class="museum-head"><div class="wrap museum-in"><div><div class="museum-label">Музей русской карикатуры</div><div class="museum-name">Острее пера</div><div class="museum-sub">Серьёзная история несерьёзного жанра</div></div><a class="back" href="../../index.html">← Все музеи</a></div></div>
   <div class="wrap crumbs"><a href="../../index.html">Русская цивилизация</a> › <span>Музей русской карикатуры</span> › Редакторское расследование №1</div>
   <main>
     <section class="hero-scene hero-visual"><img src="media/russian-bear-1791.jpg" width="4701" height="3787" fetchpriority="high" decoding="async" alt="Британская карикатура 1791 года: Потёмкин верхом на Екатерине II в образе медведицы"></section><div class="caption"><b>Исторический оригинал.</b> Лондон, 19 апреля 1791 года · издатель William Holland · раскрашенный офорт · автор не установлен · Library of Congress.</div><div class="hero-copy"><div class="wrap"><div class="eyebrow">1 января · первая тема музея · дело №1</div><h1>Почему Россия стала медведем?</h1><p class="hook">Ты увидел Россию — или чужой страх перед Россией?</p><div class="promise">Выбери глубину: за минуту увидеть смену ролей, за семь минут разобрать приёмы или исследовать источники и права.</div></div></div>
@@ -189,7 +189,7 @@
     
     <div id="kuda-dalshe"></div>
   </main>
-  <footer><div class="wrap"><b>Русская цивилизация</b><p>Первый цифровой музей достижений России</p><p class="fine">Музей русской карикатуры · выпуск 1 января.</p></div></footer>
+  <footer><div class="wrap"><b>Русская цивилизация</b><p>Первый цифровой музей достижений России</p><p class="fine">Острее пера · Музей русской карикатуры · выпуск 1 января.</p></div></footer>
   <script>
     let first='',head='',gameScore=0,quizScore=0;const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
     function updateScore(){const score=gameScore+quizScore;$('#score').textContent=score;$('#headScore').textContent=score;$('#rank').textContent=score>=90?'Редактор-исследователь: ты отделяешь факт от подачи.':score>=60?'Внимательный читатель: механизм образа уже виден.':'Продолжай расследование: главные улики ещё впереди.'}
@@ -206,7 +206,7 @@
     async function share(text){const hint=$('#shareHint');try{if(navigator.share){await navigator.share({title:'Почему Россия стала медведем?',text,url:location.href});hint.textContent='Окно отправки открыто.'}else if(navigator.clipboard){await navigator.clipboard.writeText(location.href);hint.textContent='Ссылка скопирована.'}else{throw new Error('share unavailable')}}catch(e){hint.textContent=e&&e.name==='AbortError'?'Отправка отменена.':'Не удалось отправить автоматически. Скопируй адрес страницы из строки браузера.'}}$('#shareTop').onclick=()=>share('Интерактивное расследование музея карикатуры');$('#shareResult').onclick=()=>share($('#personalTitle').textContent);
     $$('button').forEach(b=>b.type='button');
     const hero=document.querySelector('main section');if(hero)hero.id='hero';const cal=document.querySelector('.calendar');if(cal){cal.id='calbox';cal.closest('section').id='calendar-section'}const personal=$('#personalTitle')&&$('#personalTitle').closest('section');if(personal)personal.id='personal-result';const projectSupport=$('#project-support'),act3=$('#act3');if(projectSupport&&act3)act3.insertAdjacentElement('afterend',projectSupport);const next=document.querySelector('.next'),trueEnd=$('#kuda-dalshe');if(next&&trueEnd){const nextSection=next.closest('section');nextSection.id='next-links';trueEnd.parentNode.insertBefore(nextSection,trueEnd)};
-    window.MUSEUM_CHROME={museum:{title:'Музей русской карикатуры',href:'../../index.html',homeLabel:'← Все музеи'},share:{title:'Почему Россия стала медведем?',text:'Редакторское расследование музея карикатуры'},all:{href:'../../index.html',label:'Все музеи'},city:'../../index.html',random:[]};
+    window.MUSEUM_CHROME={museum:{title:'Острее пера',href:'../../index.html',homeLabel:'← Все музеи'},share:{title:'Почему Россия стала медведем?',text:'Редакторское расследование музея карикатуры'},all:{href:'../../index.html',label:'Все музеи'},city:'../../index.html',random:[]};
     window.addEventListener('pageshow',e=>{if(e.persisted)location.reload()});
   </script>
 <script>
@@ -229,7 +229,7 @@
   const act3=q('#act3 .measure');if(act3)act3.insertBefore(history,act3.querySelector('.factgrid'));
   const watch=q('#chto-smotret .factgrid');if(watch&&watch.children.length===3){const c=document.createElement('article');c.className='fact';c.innerHTML='<h3>Масштаб и дистанция</h3><p>Огромная фигура слева и разрозненная группа справа заранее распределяют ощущение силы. Это чтение композиции музеем, а не доказанный замысел автора.</p>';watch.appendChild(c)}
   const src=q('#sources-rights');if(src&&src.querySelector('.rights-sources')){const li=document.createElement('li');li.innerHTML='<a href="https://imo.sgu.ru/ru/articles/nachalo-anglo-russkogo-diplomaticheskogo-protivostoyaniya-v-ramkah-vostochnogo-voprosa" target="_blank" rel="noopener">Саратовский государственный университет</a> — научная статья об Очаковском кризисе 1791 года.';src.querySelector('.rights-sources').prepend(li)}
-  const result=q('#shareResult')&&q('#shareResult').closest('.resultcard');if(result){const card=document.createElement('div');card.className='share-verdict';card.innerHTML='<span class="eyebrow">Музей русской карикатуры · Дело №1</span><b>Почему Россия стала медведем?</b><div class="before-after"><div><small>Сначала я увидел</small><strong id="shareBefore">—</strong></div><div><small>После расследования</small><strong>редакторский приём</strong></div></div><span>Вердикт вынесен · 1 из 31</span><p>А что первым увидишь ты?</p>';result.insertAdjacentElement('afterend',card);const row=q('#shareTop')&&q('#shareTop').closest('.share');if(row)result.parentElement.appendChild(row)}
+  const result=q('#shareResult')&&q('#shareResult').closest('.resultcard');if(result){const card=document.createElement('div');card.className='share-verdict';card.innerHTML='<span class="eyebrow">Острее пера · Дело №1</span><b>Почему Россия стала медведем?</b><div class="before-after"><div><small>Сначала я увидел</small><strong id="shareBefore">—</strong></div><div><small>После расследования</small><strong>редакторский приём</strong></div></div><span>Вердикт вынесен · 1 из 31</span><p>А что первым увидишь ты?</p>';result.insertAdjacentElement('afterend',card);const row=q('#shareTop')&&q('#shareTop').closest('.share');if(row)result.parentElement.appendChild(row)}
   ['#firstResult','#lensText','#gameResult','#rank','#chatAnswer','#shareHint'].forEach(s=>{const e=q(s);if(e){e.setAttribute('role','status');e.setAttribute('aria-live','polite');e.setAttribute('aria-atomic','true')}});
   qa('.pin').forEach((b,i)=>b.setAttribute('aria-label',['Улика 1: Медведица-Екатерина','Улика 2: Потёмкин с саблей','Улика 3: Британская линия'][i]));
   ['.choice[data-first]','.lens','.headline'].forEach(s=>qa(s).forEach(b=>b.setAttribute('aria-pressed',b.classList.contains('on')?'true':'false')));
@@ -256,7 +256,7 @@ document.querySelectorAll('.carousel').forEach(function(car){var nav=car.parentE
   <script src="../../assets/museum-calendar-month.js"></script>
   <script>window.addEventListener('DOMContentLoaded',function(){var steps=(12-new Date().getMonth())%12;for(var i=0;i<steps;i++){var next=document.querySelector('#calbox .calnav[data-step="1"]');if(next)next.click()}var first=document.querySelector('#calbox .cday[data-k="01-01"]');if(first)first.click()});</script>
   <script src="../../assets/museum-chrome.js"></script>
-  <script>window.MUSEUM_SUPPORT={museum:'Музей русской карикатуры',page:'страница «Почему Россия стала медведем?»',peak:'#project-support'};</script>
+  <script>window.MUSEUM_SUPPORT={museum:'Острее пера',page:'страница «Почему Россия стала медведем?»',peak:'#project-support'};</script>
   <script src="../../assets/museum-support.js"></script>
   <script src="../../assets/museum-audioguide.js"></script>
   <script>window.RC_ANALYTICS_CONFIG={museum_id:'rc:museum:karikatura',issue_id:'rc:issue:karikatura:russian-bear',issue_version:'0.5.0',build_version:'stage6-package5'};</script>
