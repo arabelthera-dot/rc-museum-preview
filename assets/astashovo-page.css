@@ -290,6 +290,22 @@ section[id] { scroll-margin-top: 78px; }
 .audio-stops figure, .scale-grid figure { margin: 0; background: var(--asta-card); color: var(--asta-ink); }
 .audio-stops img, .scale-grid img { display: block; width: 100%; height: 230px; object-fit: cover; }
 .audio-stops figcaption, .scale-grid figcaption { min-height: 116px; padding: 15px; color: #2e2923; font: 14px/1.5 var(--asta-sans); }
+.motif-atlas { margin-top: clamp(38px, 6vw, 70px); padding-top: 30px; border-top: 1px solid #9b8c77; scroll-margin-top: 82px; }
+.motif-atlas-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px; align-items: end; margin-bottom: 20px; }
+.motif-atlas h3 { max-width: 780px; margin: 4px 0 10px; font-size: clamp(30px, 4vw, 48px); }
+.motif-atlas .motif-intro { max-width: 780px; margin: 0; color: #51483f; font-size: 18px; line-height: 1.55; }
+.motif-controls { display: flex; align-items: center; gap: 8px; font-family: var(--asta-sans); }
+.motif-controls button { display: grid; width: 48px; height: 48px; place-items: center; padding: 0; border: 1px solid #796a55; background: var(--asta-card); color: var(--asta-ink); cursor: pointer; font: 800 22px var(--asta-sans); }
+.motif-controls button:disabled { border-color: #c4b8a6; color: #81786f; cursor: default; }
+.motif-position { min-width: 68px; color: #51483f; font: 750 14px var(--asta-sans); text-align: center; }
+.motif-track { display: flex; gap: 14px; width: 100%; padding: 0 0 18px; overflow-x: auto; overscroll-behavior-inline: contain; scroll-padding-inline: 0; scroll-snap-type: x mandatory; scrollbar-color: var(--asta-rust) #d7cbb8; }
+.motif-card { flex: 0 0 clamp(310px, 48vw, 650px); margin: 0; scroll-snap-align: start; border: 1px solid #a79983; background: var(--asta-card); color: var(--asta-ink); }
+.motif-card > a { display: flex; height: min(58vw, 590px); max-height: 68svh; min-height: 0; align-items: center; justify-content: center; overflow: hidden; padding: 14px; background: #ded3c1; }
+.motif-card img { display: block; width: auto; max-width: 100%; height: auto; max-height: 100%; object-fit: contain; background: #ded3c1; }
+.motif-card figcaption { min-height: 132px; padding: 16px 18px; font: 14px/1.5 var(--asta-sans); }
+.motif-card figcaption b { display: block; margin-bottom: 5px; color: #783a25; font-size: 16px; }
+.motif-card figcaption small { display: block; margin-top: 7px; color: var(--asta-muted); font-size: 14px; }
+.motif-note { max-width: 850px; margin: 14px 0 0; color: var(--asta-muted); font: 14px/1.55 var(--asta-sans); }
 
 #support-peak > .reading { width: min(810px, calc(100% - 40px)); }
 #support-peak .support, #kuda-dalshe > .support {
@@ -467,6 +483,12 @@ button:focus-visible, a:focus-visible, summary:focus-visible { outline: 4px soli
   .audio-stops, .scale-grid, .notice-grid, .world-grid, .next-grid, .timeline { grid-template-columns: 1fr; }
   .audio-stops img, .scale-grid img { height: 300px; }
   .audio-stops figcaption, .scale-grid figcaption { min-height: 0; }
+  .motif-atlas-head { grid-template-columns: 1fr; gap: 14px; }
+  .motif-controls { justify-content: space-between; }
+  .motif-track { padding-inline: 0; scroll-padding-inline: 0; }
+  .motif-card { flex-basis: calc(100vw - 42px); }
+  .motif-card > a { height: min(62svh, 500px); padding: 9px; }
+  .motif-card figcaption { min-height: 150px; padding: 14px; }
   .guide-card { padding: 19px 15px; }
   #support-peak > .reading { width: calc(100% - 28px); }
   .rescue-visual { grid-template-rows: minmax(430px, 1fr) auto; }

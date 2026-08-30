@@ -88,6 +88,60 @@
     nativeLazyObserver.observe(image);
   }
 
+  function initVisualRail(root) {
+    if (root.dataset.railReady === 'true') return;
+    var track = root.querySelector('[data-rail-track]');
+    var cards = track ? Array.prototype.slice.call(track.querySelectorAll('[data-rail-card]')) : [];
+    var previous = root.querySelector('[data-rail-prev]');
+    var next = root.querySelector('[data-rail-next]');
+    var status = root.querySelector('[data-rail-status]');
+    if (!track || !cards.length || !previous || !next || !status) return;
+    root.dataset.railReady = 'true';
+    var active = 0;
+    var scrolling = false;
+
+    function nearestCard() {
+      var left = track.scrollLeft;
+      var closest = 0;
+      var distance = Infinity;
+      cards.forEach(function (card, index) {
+        var current = Math.abs(card.offsetLeft - track.offsetLeft - left);
+        if (current < distance) { distance = current; closest = index; }
+      });
+      return closest;
+    }
+
+    function update() {
+      active = nearestCard();
+      previous.disabled = active === 0;
+      next.disabled = active === cards.length - 1;
+      status.textContent = (active + 1) + ' из ' + cards.length;
+    }
+
+    function goTo(index) {
+      active = Math.max(0, Math.min(cards.length - 1, index));
+      track.scrollTo({
+        left: cards[active].offsetLeft - track.offsetLeft,
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
+      });
+      window.setTimeout(update, 350);
+    }
+
+    previous.addEventListener('click', function () { goTo(nearestCard() - 1); });
+    next.addEventListener('click', function () { goTo(nearestCard() + 1); });
+    track.addEventListener('keydown', function (event) {
+      if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+      event.preventDefault();
+      goTo(nearestCard() + (event.key === 'ArrowRight' ? 1 : -1));
+    });
+    track.addEventListener('scroll', function () {
+      if (scrolling) return;
+      scrolling = true;
+      window.requestAnimationFrame(function () { scrolling = false; update(); });
+    }, { passive: true });
+    update();
+  }
+
   function initVisualCorpus(details) {
     if (details.tagName !== 'DETAILS') return;
     var query = window.matchMedia('(max-width: 820px)');
@@ -124,6 +178,7 @@
     (root || document).querySelectorAll('[data-route-gate]').forEach(initGate);
     (root || document).querySelectorAll('[data-lazy-media]').forEach(initLazyMedia);
     (root || document).querySelectorAll('img[loading="lazy"][src]').forEach(initNativeLazyImage);
+    (root || document).querySelectorAll('[data-visual-rail]').forEach(initVisualRail);
     (root || document).querySelectorAll('details[data-visual-corpus]').forEach(initVisualCorpus);
     (root || document).querySelectorAll('[data-museum-act]').forEach(initNarrativeAct);
   }
@@ -132,6 +187,7 @@
     init: init,
     loadMedia: loadMedia,
     loadNativeLazyImage: loadNativeLazyImage,
+    initVisualRail: initVisualRail,
     lockGate: lockGate,
     unlockGate: unlockGate
   };
