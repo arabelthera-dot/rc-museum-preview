@@ -113,6 +113,9 @@ section[id] {
   margin: 0;
   background: #2d201d;
 }
+.hero figure {
+  margin: 0;
+}
 .hero img {
   width: 100%;
   height: min(32svh, 340px);
@@ -828,7 +831,7 @@ details > summary {
   background: #f2d7cf;
   border-color: #a44832;
 }
-.quick-route footer {
+.quick-footer {
   position: sticky;
   bottom: 0;
   display: flex;
@@ -837,8 +840,8 @@ details > summary {
   padding: 14px 22px;
   background: #ead9c6;
 }
-.quick-route footer button,
-.quick-route footer a {
+.quick-footer button,
+.quick-footer a {
   min-height: 48px;
   padding: 10px 17px;
   border: 1px solid var(--brick);
@@ -847,8 +850,8 @@ details > summary {
   font: 800 15px var(--sans);
   text-decoration: none;
 }
-.quick-route footer a,
-.quick-route footer button:last-of-type {
+.quick-footer a,
+.quick-footer button:last-of-type {
   background: var(--brick);
   color: #fff;
 }
@@ -903,10 +906,10 @@ summary:focus-visible,
   .quick-route figure img {
     max-height: 34dvh;
   }
-  .quick-route footer {
+  .quick-footer {
     justify-content: stretch;
   }
-  .quick-route footer > * {
+  .quick-footer > * {
     flex: 1;
   }
   .quick-shell > header {
@@ -977,10 +980,10 @@ summary:focus-visible,
     width: 32px;
     height: 32px;
   }
-  .quick-route footer {
+  .quick-footer {
     flex-wrap: wrap;
   }
-  .quick-route footer a {
+  .quick-footer a {
     flex-basis: 100%;
   }
 }

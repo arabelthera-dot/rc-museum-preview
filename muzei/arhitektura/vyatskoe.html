@@ -71,23 +71,25 @@
       <a href="index.html">Музей русской архитектуры</a> · Вятское
     </nav>
     <main id="content">
-      <figure class="hero">
-        <img
-          src="media/vyatskoe/landscape.webp"
-          width="1280"
-          height="854"
-          fetchpriority="high"
-          alt="Панорама исторического села Вятского с храмом, домами и зелёным ландшафтом"
-        />
-        <figcaption>
-          Вятское, 2020. Фото: Vyatskoe,
-          <a
-            href="https://creativecommons.org/licenses/by-sa/4.0/"
-            rel="license"
-            >CC BY-SA 4.0</a
-          >. Документальный современный вид.
-        </figcaption>
-      </figure>
+      <section class="hero-scene" aria-label="Современный вид Вятского">
+        <figure class="hero">
+          <img
+            src="media/vyatskoe/landscape.webp"
+            width="1280"
+            height="854"
+            fetchpriority="high"
+            alt="Панорама исторического села Вятского с храмом, домами и зелёным ландшафтом"
+          />
+          <figcaption>
+            Вятское, 2020. Фото: Vyatskoe,
+            <a
+              href="https://creativecommons.org/licenses/by-sa/4.0/"
+              rel="license"
+              >CC BY-SA 4.0</a
+            >. Документальный современный вид.
+          </figcaption>
+        </figure>
+      </section>
       <header class="hero-copy">
         <div class="wrap">
           <p class="eyebrow">4 января · условная дата · Вятское</p>
@@ -284,13 +286,13 @@
               <p role="status">Отдели наблюдение от недоказанной атрибуции.</p>
             </div>
           </section>
-          <footer>
+          <div class="quick-footer">
             <button type="button" data-quick-back disabled>Назад</button
             ><button type="button" data-quick-next disabled>Дальше</button
             ><a href="#observe" data-quick-finish hidden
               >Пройти главное исследование →</a
             >
-          </footer>
+          </div>
         </div>
       </dialog>
 
