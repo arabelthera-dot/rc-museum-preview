@@ -51,19 +51,8 @@
   .crumbs .here{color:var(--muted);opacity:.55}
   @media(max-width:520px){header.top{padding-top:14px}header.top .b1{font-size:11px;letter-spacing:2.4px}header.top .museum{font-size:24px}.crumbs{font-size:11px}}
 
-  /* ── HERO: картина-баннер во всю ширину, текст ОТДЕЛЬНО (правило 03.08) ──
-     Квадратная картина не растягивается в гигантский квадрат: баннер фикс. высоты,
-     object-fit:cover честно заполняет, без пустых полей по бокам и снизу. */
-  .hero-scene{position:relative;padding:0;text-align:center;overflow:hidden;height:min(68vh,560px);
-    background:linear-gradient(180deg,#0b1624 0%,#060d18 100%);border-bottom:1px solid var(--line)}
-  .hero-scene::after{content:'';position:absolute;inset:0;pointer-events:none;
-    box-shadow:inset 0 0 0 1px rgba(201,168,76,.16),inset 0 0 150px rgba(4,8,14,.4),inset 0 -90px 130px rgba(4,8,14,.6)}
-  .hero-scene img{display:block;width:100%;max-width:1200px;height:100%;margin:0 auto;object-fit:cover;object-position:center top;
-    animation:heroIn 1.6s cubic-bezier(.2,.7,.2,1) both}
-  @keyframes heroIn{from{opacity:.35;transform:scale(1.04)}to{opacity:1;transform:scale(1)}}
-  .scene-caption{background:transparent;padding:12px 0 10px}
-  .scene-caption .wrap{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
-  .scene-cap{font-size:13px;line-height:1.62;color:var(--muted);border-left:2px solid rgba(201,168,76,.45);padding-left:14px;flex:1 1 420px}
+  /* ── HERO: заголовок, хук и кнопки ОТДЕЛЬНО от картины (правило 03.08).
+     Сама картина — в .st-stage скроллтеллинга ниже. */
   .hero-lead{text-align:center;padding:26px 0 22px;
     background:radial-gradient(60% 100% at 50% 0%,rgba(201,168,76,.05),transparent 70%)}
   .hero-lead h1{color:#fff;font-size:clamp(32px,6vw,56px);font-weight:700;line-height:1.06;letter-spacing:-.5px;margin-bottom:18px;overflow-wrap:anywhere;min-width:0;text-shadow:0 2px 40px rgba(0,0,0,.45)}
@@ -72,14 +61,14 @@
   .hero-under{padding:6px 0 26px}
   .date-chip{display:inline-block;background:linear-gradient(180deg,rgba(201,168,76,.16),rgba(201,168,76,.05));border:1px solid rgba(201,168,76,.38);color:var(--gold-l);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:16px;font-family:'Inter',sans-serif;letter-spacing:.6px}
   @media(max-width:640px){
-    .hero-scene{height:58vh}.hero-lead{padding:20px 0 18px}.scene-caption .wrap{flex-direction:column;gap:9px}.scene-cap{font-size:12.6px}}
+    .hero-lead{padding:20px 0 18px}}
 
   /* штамп-цифры под hero */
   .stamp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid rgba(201,168,76,.18);border-radius:2px;overflow:hidden;background:rgba(201,168,76,.03)}
   .stamp div{padding:11px 12px;border-left:1px solid rgba(201,168,76,.15);min-width:0}
   .stamp div:first-child{border-left:0}
   .stamp .v{font-family:var(--font-h);font-size:clamp(17px,3.4vw,23px);font-weight:400;color:var(--gold-l);line-height:1.1;overflow-wrap:anywhere;text-shadow:0 0 26px rgba(201,168,76,.16)}
-  .stamp .k{font-size:10.5px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);margin-top:5px;font-family:'Inter',sans-serif}
+  .stamp .k{font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);margin-top:5px;font-family:'Inter',sans-serif}
   @media(max-width:600px){.stamp{grid-template-columns:repeat(2,minmax(0,1fr))}.stamp div:nth-child(3){border-left:0}.stamp div:nth-child(n+3){border-top:1px solid rgba(201,168,76,.15)}}
   .stamp-note{font-size:11px;line-height:1.6;color:var(--muted);margin-top:9px;font-family:'Inter',sans-serif}
 
@@ -97,12 +86,12 @@
   .kicker{font-size:11.5px;letter-spacing:.14em;color:var(--gold);margin-bottom:10px;font-family:'Inter',sans-serif}
   .kicker::before{content:'◆';font-size:8px;vertical-align:2px;margin-right:8px;color:var(--gold);opacity:.8}
   section.block h2{font-size:33px;color:#fff;margin-bottom:12px}
-  p{margin:14px 0;color:var(--ink)}
+  p{margin:14px 0;color:var(--ink);max-width:66ch}
   p b, .pull b, .q p b{color:var(--gold-l);font-weight:700}
   .pull{background:var(--gold-g);border-left:3px solid var(--gold);padding:20px 24px;border-radius:0 14px 14px 0;font-style:italic;color:#e7dcc0;font-family:var(--font-h);font-size:20px;line-height:1.52;margin:26px 0}
   .q{background:var(--card);border:1px solid var(--card-b);border-radius:14px;padding:18px 22px;margin:12px 0}
   .q h3{margin:0 0 6px;font-size:20px;color:#fff}
-  .q h3 em{display:block;font-style:normal;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-family:'Inter',sans-serif;margin-bottom:6px;font-weight:700}
+  .q h3 em{display:block;font-style:normal;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-family:'Inter',sans-serif;margin-bottom:6px;font-weight:700}
   .q p{margin:0;color:var(--muted);font-size:15px}
   .btn{cursor:pointer;border:none;border-radius:12px;padding:13px 24px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;transition:.18s}
   .btn:hover{filter:brightness(1.14)}
@@ -131,7 +120,7 @@
     box-shadow:0 20px 44px rgba(0,0,0,.4)}
   .doc::before{content:'';position:absolute;inset:5px;border:1px solid rgba(43,35,23,.12);border-radius:1px;pointer-events:none}
   .doc>*{position:relative}
-  .doc .dk{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#a2551f;font-family:'Inter',sans-serif;font-weight:700;margin-bottom:10px}
+  .doc .dk{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:#a2551f;font-family:'Inter',sans-serif;font-weight:700;margin-bottom:10px}
   .doc p{color:var(--paper-ink);font-family:'PT Serif',Georgia,serif;font-size:18px;line-height:1.72}
   .doc .src{font-size:12px;color:var(--paper-mut);font-family:'Inter',sans-serif;margin-top:10px}
 
@@ -168,7 +157,7 @@
   .next{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
   .ncard{background:var(--card);border:1px solid var(--card-b);border-radius:14px;padding:14px 16px;font-size:13.5px;color:var(--muted);line-height:1.55}
   .ncard.main{grid-column:1/3;border-color:rgba(201,168,76,.32)}
-  .ncard .lbl{font-size:10px;letter-spacing:2.2px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:5px;font-family:'Inter',sans-serif;font-weight:700}
+  .ncard .lbl{font-size:12px;letter-spacing:2.2px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:5px;font-family:'Inter',sans-serif;font-weight:700}
   .ncard a{color:var(--gold-l);text-decoration:none;font-weight:600}
   .ncard .soon{color:var(--muted);font-style:italic}
   .ncard a:hover{text-decoration:underline}
@@ -179,7 +168,7 @@
     font-family:'PT Serif',Georgia,serif;font-size:17px;line-height:1.68;color:#e7dcc0}
   .support::before{content:'';position:absolute;inset:5px;border:1px solid rgba(201,168,76,.16);border-radius:1px;pointer-events:none}
   .support>*{position:relative}
-  .support .sup-l{display:flex;align-items:center;gap:10px;font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-l);margin-bottom:11px}
+  .support .sup-l{display:flex;align-items:center;gap:10px;font-family:'Inter',sans-serif;font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-l);margin-bottom:11px}
   .support .sup-l::before{content:'❤';font-size:13px;letter-spacing:0}
   .support .sup-l::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(201,168,76,.5),transparent)}
   .support p{margin:0;font-size:17px}
@@ -198,7 +187,6 @@
   .reveal.on{transform:none}
   @media(prefers-reduced-motion:reduce){
     .reveal{transition:opacity .15s linear;transform:none}
-    .hero-scene img{animation:none}
   }
 
   /* карта пути (M-72) — интерактивный маршрут подвига */
@@ -219,13 +207,16 @@
   .scrolltelling{display:grid;grid-template-columns:1fr;border-bottom:1px solid var(--line)}
   .st-media{display:flex;flex-direction:column;min-width:0}
   .st-stage{position:relative;height:56vh;min-height:300px;overflow:hidden;background:#000}
-  .st-stage .st-scene{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;opacity:0;transition:opacity 1s ease}
+  .st-stage .st-scene{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;opacity:0;transition:opacity 1s ease,transform .4s ease-out;will-change:transform}
   .st-stage .st-scene.active{opacity:1}
-  .st-stage::after{display:none}
-  .st-cap{background:var(--surface);border-top:1px solid var(--line)}
-  .st-cap-layer{display:none;margin:0;padding:14px 24px;font-size:13px;line-height:1.62;color:var(--muted)}
+  .st-indicator{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);display:flex;gap:9px;z-index:3}
+  .st-dot{width:7px;height:7px;border-radius:50%;background:rgba(226,200,120,.28);transition:background .3s,box-shadow .3s}
+  .st-dot.on{background:var(--gold-l);box-shadow:0 0 8px rgba(201,168,76,.55)}
+  .st-cap{display:flex;align-items:flex-start;gap:16px;background:var(--surface);border-top:1px solid var(--line);padding:14px 24px}
+  .st-cap-layer{display:none;margin:0;padding:0;flex:1 1 auto;min-width:0;font-size:13px;line-height:1.62;color:var(--muted)}
   .st-cap-layer.active{display:block}
-  .st-cap-layer .st-src{display:block;font:700 10px/1.5 'Inter',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:5px}
+  .st-counter{flex:0 0 auto;font:700 11px/1.5 'Inter',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);padding-top:2px}
+  .st-cap-layer .st-src{display:block;font:700 12px/1.5 'Inter',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:5px}
   .st-chapters{display:flex;flex-direction:column;min-width:0}
   .st-chapters .hero-lead{text-align:left;padding:26px 24px 8px}
   .st-chapters .hero-lead h1{margin-bottom:14px}
@@ -247,11 +238,15 @@
   .timeline::-webkit-scrollbar{height:6px}
   .timeline::-webkit-scrollbar-thumb{background:var(--gold-g);border-radius:99px}
   .tl-card{flex:0 0 250px;scroll-snap-align:start;background:var(--surface);border:1px solid var(--card-b);border-radius:14px;padding:18px 16px;position:relative}
-  .tl-card .yr{font:700 10px/1 'Inter',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+  .tl-card .yr{font:700 12px/1 'Inter',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
   .tl-card h3{font-family:var(--font-h);font-size:17px;font-weight:700;margin:10px 0 8px;line-height:1.2;color:var(--ink)}
   .tl-card p{margin:0;font-size:13.5px;color:var(--muted);line-height:1.5}
   .tl-card .dot{position:absolute;top:18px;right:16px;width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px var(--gold-g)}
 
+  @media(max-width:899px){
+    .st-stage{height:44vh}
+    .st-chapters .hero-lead{padding-top:14px}
+  }
   @media(min-width:900px){
     .scrolltelling{grid-template-columns:1fr 1fr;align-items:start}
     .st-media{grid-column:1;grid-row:1;position:sticky;top:0;align-self:start;max-height:100vh}
