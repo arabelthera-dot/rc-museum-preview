@@ -190,6 +190,7 @@
         }
         frames.forEach(function (frame, j) {
           frame.classList.toggle("is-active", j === i);
+          frame.setAttribute("aria-hidden", String(j !== i));
         });
         buttons.forEach(function (button, j) {
           button.classList.toggle("is-active", j === i);
@@ -244,20 +245,24 @@
             ],
           },
           {
-            image: "media/vyatskoe/lion-detail.webp",
-            alt: "Лепная львиная маска",
-            q: "Что доказывает деталь?",
+            image: "media/vyatskoe/salov-house-1984.png",
+            alt: "Дом лепщиков Саловых с гипсовой лепниной, Некрасовский район, 1984 год",
+            q: "Какая подпись к архивному снимку честная?",
             a: [
-              ["bad", "Авторство Телушкина", "Такого документа нет."],
               [
                 "bad",
-                "Что всё сделано из гипса",
-                "Материал всего декора не установлен.",
+                "Так выглядел дом во Вятском",
+                "Книжная подпись указывает Некрасовский район, но не Вятское.",
               ],
               [
                 "good",
-                "Мастерство лепщиков",
-                "Точно: это честная граница источников.",
+                "Региональная практика лепного промысла",
+                "Да: снимок подтверждает лепнину на крестьянской избе в регионе, не конкретный фасад Вятского.",
+              ],
+              [
+                "bad",
+                "Весь декор Вятского сделан из гипса",
+                "Один региональный снимок не доказывает материал фасадов Вятского.",
               ],
             ],
           },
@@ -274,6 +279,7 @@
         var item = data[i];
         img.src = item.image;
         img.alt = item.alt;
+        game.classList.toggle("is-archive", item.image.indexOf("salov-house") !== -1);
         counter.textContent = "Кадр " + (i + 1) + " из " + data.length;
         q.textContent = item.q;
         actions.innerHTML = "";
@@ -307,7 +313,11 @@
               "Ты связал деталь, фасад и улицу. Ошибки можно пройти заново без штрафа.";
             actions.innerHTML = "";
             reset.hidden = false;
-          } else draw();
+            q.focus();
+          } else {
+            draw();
+            q.focus();
+          }
         }, 300);
       });
       reset.addEventListener("click", function () {
@@ -315,6 +325,7 @@
         score = 0;
         reset.hidden = true;
         draw();
+        q.focus();
       });
       draw();
     }
