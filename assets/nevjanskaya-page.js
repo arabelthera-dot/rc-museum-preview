@@ -20,6 +20,12 @@
     if(n===3&&window.rcGoal)window.rcGoal('rc_game_complete',{game:'nevjansk_plumb',total:4});
   }
   if(range){range.addEventListener('input',e=>showStage(e.target.value));showStage(range.value);}
+  document.addEventListener('museum:media-loaded',event=>{
+    const video=event.target.querySelector?.('video');
+    if(!video)return;
+    video.load();
+    video.play().catch(()=>{});
+  });
   document.querySelectorAll('[data-route]').forEach(button=>button.addEventListener('click',()=>{
     const target=button.dataset.route==='short'?'#plumb':'#four-scales';
     document.querySelector(target)?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
