@@ -78,105 +78,6 @@
           if (window.rcGoal) window.rcGoal("rc_audio_complete");
         });
       });
-    var quick = document.querySelector("[data-quick-route]");
-    if (quick) {
-      var index = 0,
-        steps = [].slice.call(quick.querySelectorAll("[data-quick-step]")),
-        dots = [].slice.call(quick.querySelectorAll(".quick-progress i")),
-        back = quick.querySelector("[data-quick-back]"),
-        next = quick.querySelector("[data-quick-next]"),
-        finish = quick.querySelector("[data-quick-finish]"),
-        title = quick.querySelector("#quick-title");
-      function render(focus) {
-        steps.forEach(function (step, i) {
-          step.hidden = i !== index;
-          step.querySelectorAll("[data-answer]").forEach(function (button) {
-            button.disabled = false;
-            button.classList.remove("good", "bad");
-          });
-        });
-        dots.forEach(function (dot, i) {
-          dot.classList.toggle("is-current", i === index);
-          dot.classList.toggle("is-done", i < index);
-        });
-        back.disabled = index === 0;
-        next.hidden = index === steps.length - 1;
-        next.disabled = true;
-        finish.hidden = true;
-        quick.scrollTop = 0;
-        if (focus) {
-          var heading = index ? steps[index].querySelector("h3") : title;
-          requestAnimationFrame(function () {
-            heading.focus({ preventScroll: true });
-            quick.scrollTop = 0;
-          });
-        }
-      }
-      document.querySelectorAll("[data-route-start]").forEach(function (start) {
-        start.addEventListener("click", function () {
-          index = 0;
-          if (window.MuseumPageRuntime) {
-            window.MuseumPageRuntime.loadMedia(quick);
-          }
-          render(false);
-          quick.showModal();
-          title.focus();
-        });
-      });
-      quick
-        .querySelector("[data-quick-close]")
-        .addEventListener("click", function () {
-          quick.close();
-        });
-      quick.addEventListener("click", function (event) {
-        if (event.target === quick) {
-          quick.close();
-          return;
-        }
-        var button = event.target.closest("[data-answer]");
-        if (!button) return;
-        var section = button.closest("[data-quick-step]"),
-          good = button.dataset.answer === "good";
-        section.querySelectorAll("[data-answer]").forEach(function (item) {
-          item.classList.remove("good", "bad");
-        });
-        button.classList.add(good ? "good" : "bad");
-        section.querySelector('[role="status"]').textContent =
-          button.dataset.feedback;
-        if (good) {
-          section.querySelectorAll("[data-answer]").forEach(function (item) {
-            item.disabled = true;
-          });
-          next.disabled = false;
-          if (index === steps.length - 1) {
-            finish.hidden = false;
-            var saved = state();
-            saved.vyatskoe = { completedAt: new Date().toISOString() };
-            try {
-              localStorage.setItem(storageKey, JSON.stringify(saved));
-            } catch (error) {}
-            paint();
-            document.dispatchEvent(new CustomEvent("museum:route-success"));
-          }
-        }
-      });
-      back.addEventListener("click", function () {
-        if (index) {
-          index -= 1;
-          render(true);
-        }
-      });
-      next.addEventListener("click", function () {
-        if (index < steps.length - 1) {
-          index += 1;
-          render(true);
-        }
-      });
-      finish.addEventListener("click", function () {
-        quick.close();
-      });
-      render(false);
-    }
     var film = document.querySelector("[data-film]");
     if (film) {
       var frames = [].slice.call(film.querySelectorAll(".film-stage img")),
@@ -205,45 +106,99 @@
           show((current + 1) % frames.length);
       });
     }
-    var game = document.querySelector("[data-feature-game]");
-    if (game) {
-      var data = [
+    var lab = document.querySelector("[data-distance-lab]");
+    if (lab) {
+      var labData = [
+          {
+            image: "media/vyatskoe/landscape.webp",
+            alt: "Общий вид Вятского",
+            kicker: "1 · Село",
+            title: "Сначала увидь целое",
+            copy: "На общем виде декор ещё не читается: архитектура начинается со связи домов, дороги, храма и ландшафта.",
+            caption: "Село: дома, дорога и храм читаются как связанная среда.",
+            result: "Проявлена связь поселения: дорога ведёт взгляд между домами к общей вертикали храма.",
+          },
           {
             image: "media/vyatskoe/street.webp",
-            alt: "Улица Клюшниково",
-            q: "Какой признак связывает несколько домов?",
-            a: [
-              [
-                "good",
-                "Непрерывная линия фасадов",
-                "Да: она превращает отдельные дома в уличный фронт.",
-              ],
-              [
-                "bad",
-                "Один цвет",
-                "Цвет различается; связь создаёт положение фасадов.",
-              ],
-              [
-                "bad",
-                "Высота колокольни",
-                "Колокольня — ориентир, но не принцип жилой улицы.",
-              ],
-            ],
+            alt: "Дома на улице Клюшниково стоят вдоль общей линии",
+            kicker: "2 · Улица",
+            title: "Проведи линию фасадов",
+            copy: "Соседние дома обращены к улице парадной стороной, а проезды не разрушают общий фронт.",
+            caption: "Улица: отдельные дома удерживают общую границу пространства.",
+            result: "Проявлена линия фасадов: городской характер создаёт взаимное положение домов, а не одинаковый цвет.",
           },
           {
             image: "media/vyatskoe/house-16.webp",
-            alt: "Фасад дома 16",
-            q: "Что делает фасад парадным?",
-            a: [
-              ["bad", "Только камень", "Материал не заменяет композицию."],
-              [
-                "good",
-                "Карниз, вертикали, ритм",
-                "Верно: три элемента работают вместе.",
-              ],
-              ["bad", "Много окон", "Важно не число, а порядок."],
-            ],
+            alt: "Парадный фасад дома 16 на улице Клюшниково",
+            kicker: "3 · Дом",
+            title: "Собери парадное лицо",
+            copy: "Карниз завершает стену, вертикали делят её, а проёмы задают повторяемый ритм.",
+            caption: "Дом: карниз, вертикали и окна образуют композицию.",
+            result: "Проявлена схема фасада: верхняя горизонталь и вертикальные оси связывают окна в одно целое.",
           },
+          {
+            image: "media/vyatskoe/lion-detail.webp",
+            alt: "Лепная львиная маска на фасаде дома во Вятском",
+            kicker: "4 · Деталь",
+            title: "Отдели ремесло от атрибуции",
+            copy: "Рельеф показывает мастерство лепщика, но сам не называет автора и не доказывает состав всей отделки.",
+            caption: "Деталь: видимый след лепного ремесла внутри большого целого.",
+            result: "Проявлен рельеф. Честный вывод: перед нами лепная деталь; имя мастера и материал всего фасада не установлены.",
+          },
+        ],
+        labImage = lab.querySelector("[data-lab-image]"),
+        labCaption = lab.querySelector("[data-lab-caption]"),
+        labKicker = lab.querySelector("[data-lab-kicker]"),
+        labTitle = lab.querySelector("[data-lab-title]"),
+        labCopy = lab.querySelector("[data-lab-copy]"),
+        labResult = lab.querySelector("[data-lab-result]"),
+        labReveal = lab.querySelector("[data-lab-reveal]"),
+        labButtons = [].slice.call(lab.querySelectorAll("[data-lab-step]")),
+        labIndex = 0;
+      function drawLab(index, focus) {
+        var item = labData[index];
+        labIndex = index;
+        lab.classList.remove("is-revealed");
+        labImage.src = item.image;
+        labImage.alt = item.alt;
+        labCaption.textContent = item.caption;
+        labKicker.textContent = item.kicker;
+        labTitle.textContent = item.title;
+        labCopy.textContent = item.copy;
+        labResult.textContent = "Нажми «Проявить признак», чтобы увидеть схему на кадре.";
+        labReveal.textContent = "Проявить признак на кадре";
+        labButtons.forEach(function (button, i) {
+          button.setAttribute("aria-pressed", String(i === index));
+        });
+        if (focus) labTitle.focus();
+      }
+      labButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          drawLab(Number(button.dataset.labStep), true);
+        });
+      });
+      labReveal.addEventListener("click", function () {
+        lab.classList.toggle("is-revealed");
+        var revealed = lab.classList.contains("is-revealed");
+        labResult.textContent = revealed
+          ? labData[labIndex].result
+          : "Схема скрыта. Можно выбрать другое расстояние.";
+        labReveal.textContent = revealed ? "Скрыть схему" : "Проявить признак на кадре";
+        if (revealed && labIndex === labData.length - 1) {
+          var saved = state();
+          saved.vyatskoe = { completedAt: new Date().toISOString() };
+          try {
+            localStorage.setItem(storageKey, JSON.stringify(saved));
+          } catch (error) {}
+          paint();
+          document.dispatchEvent(new CustomEvent("museum:route-success"));
+        }
+      });
+      drawLab(0, false);
+    }
+    var game = document.querySelector("[data-feature-game]");
+    if (game) {
+      var data = [
           {
             image: "media/vyatskoe/salov-house-1984.png",
             alt: "Дом лепщиков Саловых с гипсовой лепниной, Некрасовский район, 1984 год",
@@ -280,7 +235,7 @@
         img.src = item.image;
         img.alt = item.alt;
         game.classList.toggle("is-archive", item.image.indexOf("salov-house") !== -1);
-        counter.textContent = "Кадр " + (i + 1) + " из " + data.length;
+        counter.textContent = data.length === 1 ? "Один документ" : "Кадр " + (i + 1) + " из " + data.length;
         q.textContent = item.q;
         actions.innerHTML = "";
         item.a.forEach(function (answer) {
@@ -291,7 +246,7 @@
           button.textContent = answer[1];
           actions.appendChild(button);
         });
-        feedback.textContent = "Выбери наблюдаемый признак.";
+        feedback.textContent = "Проверь место, материал и границу вывода.";
       }
       actions.addEventListener("click", function (event) {
         var button = event.target.closest("button");
@@ -299,6 +254,7 @@
         var good = button.dataset.kind === "good";
         feedback.textContent = button.dataset.feedback;
         button.classList.add(good ? "good" : "bad");
+        feedback.focus({ preventScroll: true });
         if (!good) return;
         score += 1;
         actions.querySelectorAll("button").forEach(function (item) {
@@ -307,10 +263,10 @@
         window.setTimeout(function () {
           i += 1;
           if (i === data.length) {
-            counter.textContent = "Результат";
-            q.textContent = score + " из 3 признаков найдены";
+            counter.textContent = "Вывод документа";
+            q.textContent = "Граница доказательства найдена";
             feedback.textContent =
-              "Ты связал деталь, фасад и улицу. Ошибки можно пройти заново без штрафа.";
+              "Снимок подтверждает региональную практику лепного промысла, но не место во Вятском и не материал всех его фасадов.";
             actions.innerHTML = "";
             reset.hidden = false;
             q.focus();

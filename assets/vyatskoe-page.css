@@ -118,7 +118,7 @@ section[id] {
 }
 .hero img {
   width: 100%;
-  height: min(32svh, 340px);
+  height: min(16svh, 180px);
   object-fit: cover;
   object-position: center 47%;
 }
@@ -130,7 +130,7 @@ section[id] {
   font: 14px/1.5 var(--sans);
 }
 .hero-copy {
-  padding: clamp(42px, 7vw, 90px) 0;
+  padding: clamp(28px, 3vw, 38px) 0;
   background:
     radial-gradient(
       circle at 88% 10%,
@@ -154,13 +154,13 @@ section[id] {
 .hero-copy h1 {
   max-width: 940px;
   margin: 0;
-  font: clamp(42px, 6vw, 74px) / 0.98 var(--serif);
+  font: clamp(38px, 4.6vw, 58px) / 0.98 var(--serif);
   letter-spacing: -0.035em;
 }
 .lead {
   max-width: 790px;
-  margin: 26px 0 30px;
-  font-size: clamp(21px, 2.4vw, 29px);
+  margin: 18px 0 22px;
+  font-size: clamp(20px, 2vw, 26px);
   line-height: 1.42;
 }
 .route-choice {
@@ -185,6 +185,10 @@ section[id] {
   background: transparent;
   color: var(--brick);
 }
+.route-choice .route-primary {
+  background: var(--brick);
+  color: #fffaf0;
+}
 .route-choice b,
 .route-choice span {
   display: block;
@@ -199,7 +203,6 @@ section[id] {
 }
 .route-choice span {
   font: 14px/1.4 var(--sans);
-  opacity: 0.82;
 }
 .section {
   padding: clamp(68px, 9vw, 120px) 0;
@@ -307,7 +310,6 @@ section[id] {
 }
 .media-note {
   font: 14px/1.5 var(--sans);
-  opacity: 0.8;
 }
 .film-copy details {
   margin-top: 16px;
@@ -431,6 +433,30 @@ details > summary {
   border-left: 5px solid var(--brick);
   background: rgba(255, 250, 241, 0.72);
 }
+.history-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 28px;
+}
+.history-cards article {
+  padding: 24px;
+  border: 1px solid var(--line);
+  background: var(--card);
+}
+.history-cards h3 {
+  margin: 0 0 10px;
+  font: 29px/1.15 var(--serif);
+}
+.world-context {
+  background: #d7c2a6;
+}
+.street-route {
+  padding-left: 24px;
+}
+.street-route li + li {
+  margin-top: 8px;
+}
 #support-peak {
   background: var(--paper);
 }
@@ -438,6 +464,88 @@ details > summary {
 .game-section {
   background: #37211c;
   color: #fff6e8;
+}
+.distance-lab {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(330px, 0.7fr);
+  min-height: 610px;
+  background: #1f1714;
+}
+.distance-stage,
+.distance-stage figure {
+  position: relative;
+  min-height: 610px;
+  margin: 0;
+  overflow: hidden;
+}
+.distance-stage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.distance-stage figcaption {
+  padding: 13px 18px;
+  background: #160f0d;
+  color: #fff6e8;
+  font: 14px/1.5 var(--sans);
+}
+.lab-mark {
+  position: absolute;
+  inset: 12% 8% 15%;
+  border: 0 solid #f4cf79;
+  opacity: 0;
+  pointer-events: none;
+}
+.distance-lab.is-revealed .lab-mark {
+  border-width: 4px 0;
+  opacity: 1;
+  box-shadow: inset 0 0 0 2px rgba(42, 18, 12, 0.55);
+}
+.distance-controls {
+  align-self: center;
+  padding: clamp(24px, 4vw, 48px);
+}
+.distance-controls h3 {
+  margin: 0 0 12px;
+  font: clamp(31px, 4vw, 46px) / 1.08 var(--serif);
+}
+.distance-controls > p:not(.eyebrow) {
+  color: #f2e4d6;
+}
+.distance-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin: 24px 0 12px;
+}
+.distance-buttons button,
+.reveal-feature {
+  min-height: 50px;
+  padding: 10px 14px;
+  border: 1px solid #c39a81;
+  background: #4a2d26;
+  color: #fff;
+  cursor: pointer;
+}
+.distance-buttons button[aria-pressed="true"] {
+  border-color: var(--gold);
+  background: #76502d;
+}
+.reveal-feature {
+  width: 100%;
+  background: var(--brick);
+  font-weight: 800;
+}
+.lab-result {
+  min-height: 74px;
+  margin-bottom: 0;
+}
+.lab-next {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  color: #ffe0a0;
+  font: 800 15px/1.4 var(--sans);
 }
 .observe {
   display: grid;
@@ -726,135 +834,6 @@ details > summary {
 .site-footer a {
   color: #f4d58b;
 }
-.quick-route {
-  width: min(1080px, calc(100% - 28px));
-  max-height: 92dvh;
-  padding: 0;
-  border: 0;
-  background: #f8eee0;
-  color: var(--ink);
-}
-.quick-route::backdrop {
-  background: rgba(20, 12, 9, 0.78);
-}
-.quick-shell > header {
-  position: sticky;
-  top: 0;
-  z-index: 2;
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 18px 22px;
-  background: #48271f;
-  color: #fff;
-}
-.quick-shell > header h2 {
-  margin: 2px 0 0;
-  font: 29px/1.1 var(--serif);
-}
-.quick-shell > header span {
-  font: 12px var(--sans);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-.quick-shell > header button {
-  width: 48px;
-  height: 48px;
-  border: 1px solid #fff;
-  background: transparent;
-  color: #fff;
-  font-size: 30px;
-}
-.quick-progress {
-  display: flex;
-  gap: 8px;
-  padding: 16px 22px;
-}
-.quick-progress i {
-  display: grid;
-  place-items: center;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: #d4c2ad;
-  font: 700 14px var(--sans);
-  font-style: normal;
-}
-.quick-progress i.is-current {
-  background: var(--brick);
-  color: #fff;
-}
-.quick-progress i.is-done {
-  background: #3a7b4d;
-  color: #fff;
-}
-.quick-route section {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 26px;
-  padding: 0 22px 22px;
-}
-.quick-route figure {
-  margin: 0;
-}
-.quick-route figure img {
-  width: 100%;
-  max-height: 500px;
-  object-fit: cover;
-}
-.quick-route figcaption {
-  padding: 9px 0;
-  font: 14px var(--sans);
-  color: var(--muted);
-}
-.quick-route h3 {
-  margin: 0 0 18px;
-  font: 34px/1.1 var(--serif);
-}
-.quick-options {
-  display: grid;
-  gap: 9px;
-}
-.quick-options button {
-  min-height: 50px;
-  padding: 10px 14px;
-  border: 1px solid var(--brick);
-  background: #fff8ef;
-  color: var(--ink);
-  text-align: left;
-}
-.quick-options button.good {
-  background: #d8eadb;
-  border-color: #2d7b43;
-}
-.quick-options button.bad {
-  background: #f2d7cf;
-  border-color: #a44832;
-}
-.quick-footer {
-  position: sticky;
-  bottom: 0;
-  display: flex;
-  justify-content: flex-end;
-  gap: 9px;
-  padding: 14px 22px;
-  background: #ead9c6;
-}
-.quick-footer button,
-.quick-footer a {
-  min-height: 48px;
-  padding: 10px 17px;
-  border: 1px solid var(--brick);
-  background: transparent;
-  color: var(--brick);
-  font: 800 15px var(--sans);
-  text-decoration: none;
-}
-.quick-footer a,
-.quick-footer button:last-of-type {
-  background: var(--brick);
-  color: #fff;
-}
 button:focus-visible,
 a:focus-visible,
 summary:focus-visible,
@@ -870,11 +849,19 @@ summary:focus-visible,
   .film,
   .audio-card,
   .observe,
+  .distance-lab,
   .game,
   .act-label,
-  .evidence-pair,
-  .quick-route section {
+  .evidence-pair {
     grid-template-columns: 1fr;
+  }
+  .distance-lab,
+  .distance-stage,
+  .distance-stage figure {
+    min-height: 0;
+  }
+  .distance-stage img {
+    aspect-ratio: 16 / 10;
   }
   .act-label {
     gap: 10px;
@@ -894,46 +881,33 @@ summary:focus-visible,
     min-height: 54vw;
   }
   .fact-grid,
+  .history-cards,
   .calendar-neighbours {
     grid-template-columns: 1fr;
   }
   .rail-track figure {
     flex-basis: 84vw;
   }
-  .quick-route section {
-    gap: 12px;
-  }
-  .quick-route figure img {
-    max-height: 34dvh;
-  }
-  .quick-footer {
-    justify-content: stretch;
-  }
-  .quick-footer > * {
-    flex: 1;
-  }
-  .quick-shell > header {
-    padding: 14px;
-  }
-  .quick-progress {
-    padding: 12px 16px;
-  }
-  .quick-route section {
-    padding: 0 16px 16px;
-  }
 }
 @media (max-width: 480px) {
+  .top > div:not(.brand) {
+    display: none;
+  }
+  .top,
+  .crumbs {
+    padding-block: 7px;
+  }
   .wrap,
   .reading,
   .hero figcaption {
     width: min(100% - 28px, 1160px);
   }
   .hero-copy h1 {
-    font-size: 37px;
+    font-size: 29px;
     line-height: 1;
   }
   .hero img {
-    height: 120px;
+    height: 88px;
   }
   .hero figcaption {
     padding-block: 6px 8px;
@@ -941,28 +915,29 @@ summary:focus-visible,
     line-height: 1.35;
   }
   .hero-copy {
-    padding: 22px 0 30px;
+    padding: 12px 0 18px;
   }
   .lead {
-    margin: 16px 0 18px;
-    font-size: 19px;
+    margin: 10px 0 12px;
+    font-size: 17px;
     line-height: 1.35;
   }
   .route-choice button,
   .route-choice a {
-    min-height: 66px;
-    padding: 12px 15px;
+    min-height: 52px;
+    padding: 8px 12px;
   }
   .route-choice {
     grid-template-columns: 1fr;
   }
   .section {
-    padding: 64px 0;
+    padding: 52px 0;
   }
   .film-stage {
     min-height: 360px;
   }
   .film-copy,
+  .distance-controls,
   .observe-panel,
   .game > div {
     padding: 22px;
@@ -970,21 +945,23 @@ summary:focus-visible,
   .rail-track figure {
     flex-basis: 88vw;
   }
-  .quick-shell > header h2 {
-    font-size: 23px;
+}
+
+@media (max-width: 340px) {
+  .hero figcaption,
+  .hero-copy .lead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
   }
-  .quick-route h3 {
-    font-size: 28px;
-  }
-  .quick-progress i {
-    width: 32px;
-    height: 32px;
-  }
-  .quick-footer {
-    flex-wrap: wrap;
-  }
-  .quick-footer a {
-    flex-basis: 100%;
+  .route-primary span {
+    display: none;
   }
 }
 
@@ -993,7 +970,6 @@ summary:focus-visible,
 body small,
 body .fact-grid article > span,
 body .calendar em,
-body .quick-shell > header span,
 body .backbtn,
 body .sharebtn,
 body .sharehint,
@@ -1025,11 +1001,29 @@ body #heart.wide {
   opacity: 0 !important;
   pointer-events: none !important;
 }
+body #heart {
+  right: max(12px, env(safe-area-inset-right)) !important;
+  bottom: max(12px, env(safe-area-inset-bottom)) !important;
+  max-width: calc(100vw - 24px) !important;
+}
+body #calbox button,
+body #calbox a {
+  min-width: 44px !important;
+  min-height: 44px !important;
+}
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
-  .film-stage img {
-    transition: none;
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  body .support .sup-btns button,
+  body .support .sup-btns .sup-action {
+    transition: none !important;
   }
 }
