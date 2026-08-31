@@ -256,3 +256,21 @@
   @media(prefers-reduced-motion:reduce){
     .st-scene{transition:none}
   }
+
+  /* ── HERO-МЕДАЛЬОН (Сиротинин и другие герои без прижизненных портретов) ── */
+  .hero-medallion{text-align:center;padding:34px 24px 6px;border-bottom:1px solid var(--line)}
+  .med-lead{margin-bottom:18px}
+  .med-lead h1{margin-bottom:14px}
+  .medallion{max-width:340px;margin:0 auto 6px}
+  .medallion svg{width:100%;height:auto;display:block}
+  .med-num{font-family:var(--font-h);font-size:34px;font-weight:700;fill:#e2c878}
+  .med-lab{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;fill:var(--muted)}
+  .med-year{font-family:var(--font-h);font-size:40px;font-weight:700;fill:#fff}
+  .med-sub{font-family:'Inter',sans-serif;font-size:12px;fill:var(--gold-l)}
+  .med-line{color:var(--gold-l);font-family:var(--font-h);font-style:italic;font-size:15px;margin:8px auto 20px;max-width:56ch;line-height:1.5}
+  .hero-medallion .hero-btns{justify-content:center}
+  @media(max-width:600px){
+    .hero-medallion{padding-top:24px}
+    .med-num{font-size:28px}
+    .med-year{font-size:34px}
+  }
