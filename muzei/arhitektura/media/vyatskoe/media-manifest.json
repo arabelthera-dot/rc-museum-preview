@@ -1,8 +1,8 @@
 {
   "issue_id": "rc:issue:arhitektura:vyatskoe",
-  "status": "preview_noindex",
+  "status": "production_ready",
   "checked_at": "2026-08-31",
-  "publication_blocker": "Письменное разрешение на открытую републикацию книжного снимка дома Саловых не получено.",
+  "publication_blocker": null,
   "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
   "items": [
     {"file":"landscape.webp","sha256":"c32278332cd8cbb14912bcbfb3d705c007502a20151f49a1ea7245b2a318951d","source_url":"https://commons.wikimedia.org/wiki/File:Вятское,_2020_год.jpg","author":"Vyatskoe","license":"CC BY-SA 4.0","change":"уменьшение и WebP"},
@@ -18,7 +18,6 @@
     {"file":"davydkovskaya-13.webp","sha256":"175fc9a9a1cc39c8af0061629538ea2ad5795cffae8cedf82dfdb7c5f4e3e1dc","source_url":"https://commons.wikimedia.org/wiki/File:Вятское,_улица_Давыдковская,_13.jpg","author":"Виталий Барсов","license":"CC BY-SA 4.0","change":"уменьшение и WebP"},
     {"file":"pervomayskaya-9.webp","sha256":"be7842690572c6962e10f6d3bd128e61f4c74b53e58f3bba205ff795f9b401bb","source_url":"https://commons.wikimedia.org/wiki/File:Вятское,_улица_Первомайская,_9_усадьба.jpg","author":"Виталий Барсов","license":"CC BY-SA 4.0","change":"уменьшение и WebP"},
     {"file":"og-1200x630.webp","sha256":"3868dd04d72b12870b97ba52a5151e1ba67f474c752f1352fa43c6e3bf1acb61","source_url":"https://commons.wikimedia.org/wiki/File:Вятское.jpg","author":"Vyatskoe","license":"CC BY-SA 4.0","change":"кадрирование, уменьшение и WebP"},
-    {"file":"salov-house-1984.png","sha256":"72c27edc29c88d7be365146a3acd7dc8384bffe8bd76ed123ca8b65ed893edbd","source_url":"https://www.directmedia.ru/book-437250-traditsii-yaroslavskogo-kraya/","author":"не указан в книжной подписи","license":"pending","change":"фрагмент страницы 17; только редакционное noindex-превью"},
     {"file":"audioguide.mp3","sha256":"1588615607c5f4af30fe9af63df7e5f2505c7656bd30199b243b5b7691e8fb28","source_url":null,"author":"синтезированный голос проекта","license":"project_preview","change":"MP3, 52.68 секунды"}
   ]
 }
