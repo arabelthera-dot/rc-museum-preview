@@ -33,7 +33,8 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="stylesheet" href="../../assets/vyatskoe-page.css?v=20260830-1" />
+    <link rel="stylesheet" href="../../assets/vyatskoe-page.css?v=20260831-1" />
+    <noscript><style>.js-only { display: none !important; }</style></noscript>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -43,7 +44,7 @@
         "inLanguage": "ru",
         "isAccessibleForFree": true,
         "datePublished": "2026-08-30",
-        "dateModified": "2026-08-30",
+        "dateModified": "2026-08-31",
         "mainEntityOfPage": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/arhitektura/vyatskoe.html",
         "image": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/arhitektura/media/vyatskoe/og-1200x630.webp",
         "about": {
@@ -99,7 +100,7 @@
             четыре раза и найди систему: село → улица → дом → лепная деталь.
           </p>
           <div class="route-choice">
-            <button type="button" data-route-start>
+            <button class="js-only" type="button" data-route-start>
               <b>Увидеть главное</b
               ><span>около 3 минут · четыре расстояния</span></button
             ><a href="#rolik"
@@ -107,6 +108,12 @@
               ><span>фоторассказ · аудиопрогулка · документы</span></a
             >
           </div>
+          <noscript>
+            <p class="nojs-note">
+              Интерактивный маршрут требует JavaScript. Все факты, фотографии
+              и <a href="#history">архивный документ</a> доступны ниже без него.
+            </p>
+          </noscript>
         </div>
       </header>
       <dialog
@@ -306,20 +313,24 @@
             <div class="film-stage">
               <img
                 class="is-active"
+                aria-hidden="false"
                 src="media/vyatskoe/landscape.webp"
                 data-caption="Село: архитектура начинается со связи домов, улиц и ландшафта."
                 alt="Вятское в ландшафте"
               /><img
+                aria-hidden="true"
                 data-src="media/vyatskoe/street.webp"
                 loading="lazy"
                 data-caption="Улица: фасады держат общую линию, а проезды связывают дворы."
                 alt="Улица Клюшниково"
               /><img
+                aria-hidden="true"
                 data-src="media/vyatskoe/house-16.webp"
                 loading="lazy"
                 data-caption="Дом: карниз, вертикали и проёмы образуют парадную композицию."
                 alt="Фасад дома номер 16"
               /><img
+                aria-hidden="true"
                 data-src="media/vyatskoe/lion-detail.webp"
                 loading="lazy"
                 data-caption="Деталь: лепная маска показывает мастерство, но не заменяет всю систему."
@@ -327,7 +338,7 @@
               />
             </div>
             <div class="film-copy">
-              <h3 data-film-caption>
+              <h3 data-film-caption aria-live="polite">
                 Село: архитектура начинается со связи домов, улиц и ландшафта.
               </h3>
               <div class="film-dots" aria-label="Четыре кадра">
@@ -708,27 +719,85 @@
         data-museum-act="5"
         data-museum-act-title="Человек и ремесло"
       >
-        <div class="reading prose">
-          <p class="eyebrow">Отходник возвращается домой</p>
-          <h2>Городской фасад приехал не чертежом, а навыком</h2>
-          <p class="standfirst">
-            Жители Вятского уходили на заработки каменщиками, штукатурами,
-            лепщиками, кровельщиками и печниками. Возвращаясь, они приносили в
-            село способы работы, увиденные и освоенные в городах.
-          </p>
-          <p>
-            Так появляется важный поворот: перед нами не «крестьянская копия
-            дворца», а местная среда, которую меняет мобильное ремесло. Дом
-            обращается к улице парадным фасадом; соседние дома образуют плотную
-            линию; лепной рельеф становится видимым свидетельством мастерства.
-          </p>
-          <aside>
-            <b>Граница истории.</b> Пётр Телушкин — подтверждённый уроженец
-            Вятского и знаменитый отходник-кровельщик, отремонтировавший шпиль
-            Петропавловского собора без лесов. Но это не доказывает его
-            авторство лепных фасадов. На странице он показывает мобильность
-            ремесла, а не получает вымышленную подпись под домом.
-          </aside>
+        <div class="wrap">
+          <div class="history-intro prose">
+            <p class="eyebrow">Отходник возвращается домой</p>
+            <h2>Городской опыт возвращался вместе с мастерами</h2>
+            <p class="standfirst">
+              Вятское было селом отходников. Заявка Российской Федерации в
+              предварительный список ЮНЕСКО связывает его с каменщиками,
+              штукатурами и лепщиками и отмечает сохранившуюся лепную работу.
+            </p>
+            <p>
+              Лепная деталь, организация фасада и линия улицы работают на
+              разных расстояниях. Архивный снимок ниже показывает родственную
+              практику в пределах бывшего Даниловского уезда, но относится не
+              к Вятскому.
+            </p>
+          </div>
+          <div
+            class="evidence-pair"
+            aria-label="Региональный документ и современное Вятское"
+          >
+            <figure class="archive-witness">
+              <div class="archive-mat">
+                <img
+                  src="media/vyatskoe/salov-house-1984.png"
+                  width="142"
+                  height="206"
+                  loading="lazy"
+                  alt="Женщина стоит перед деревянной избой с гипсовой лепниной вокруг окна; дом лепщиков Саловых, Некрасовский район, 1984 год"
+                />
+              </div>
+              <figcaption>
+                <span>Региональный документ · не Вятское</span>
+                <b>Гипсовая лепнина на деревянной избе</b>
+                <p>
+                  «Лепнина на крестьянской избе. Дом лепщиков Саловых.
+                  Некрасовский район. Фотография 1984 года».
+                </p>
+                <small>
+                  А. А. Маслова, Ю. В. Маслов. «Традиции Ярославского края.
+                  Дом и быт. Семейные обычаи». Рыбинск: Медиарост, 2013,
+                  с. 17. Автор фотографии в книжной подписи не указан.
+                  <a
+                    href="https://www.directmedia.ru/book-437250-traditsii-yaroslavskogo-kraya/"
+                    >Карточка издания и фрагмент</a
+                  >. Редакционное превью: право открытой републикации снимка
+                  уточняется до выпуска.
+                </small>
+              </figcaption>
+            </figure>
+            <figure class="modern-witness">
+              <img
+                src="media/vyatskoe/lion-detail.webp"
+                width="1000"
+                height="1000"
+                loading="lazy"
+                alt="Лепная львиная маска на фасаде дома во Вятском"
+              />
+              <figcaption>
+                <span>Современное Вятское</span>
+                <b>Лепная деталь на фасаде</b>
+                <p>
+                  Снимки нельзя сливать в одно доказательство: дом Саловых
+                  показывает региональный промысел, а этот кадр — сохранившийся
+                  декор Вятского. Материал и автор конкретного фасада не
+                  приписываются.
+                </p>
+                <small>Фото Vyatskoe, CC BY-SA 4.0.</small>
+              </figcaption>
+            </figure>
+          </div>
+          <details class="history-note">
+            <summary>Почему здесь не называем мастера фасада</summary>
+            <p>
+              Пётр Телушкин — подтверждённый уроженец Вятского и известный
+              отходник-кровельщик. Но это не доказывает его авторство лепных
+              фасадов. Дом Саловых также не назван домом Вятского: книжная
+              подпись указывает только Некрасовский район.
+            </p>
+          </details>
         </div>
       </section>
 
@@ -748,8 +817,9 @@
               <span>Факт</span>
               <h3>Более 50 памятников</h3>
               <p>
-                Предварительная карточка ЮНЕСКО описывает сохранившийся
-                историко-градостроительный комплекс XVI–XIX веков.
+                Заявка Российской Федерации в предварительный список ЮНЕСКО
+                описывает сохранившийся историко-градостроительный комплекс
+                XVI–XIX веков.
               </p>
             </article>
             <article>
@@ -769,11 +839,12 @@
               </p>
             </article>
             <article class="warning">
-              <span>Не утверждаем</span>
-              <h3>Весь декор — гипс</h3>
+              <span>Не смешиваем</span>
+              <h3>Дом Саловых — не Вятское</h3>
               <p>
-                Без реставрационного анализа материала честное название страницы
-                — «лепные фасады».
+                Фото 1984 года подтверждает гипсовую лепнину на крестьянской
+                избе в Некрасовском районе, но не материал и авторство фасадов
+                Вятского.
               </p>
             </article>
           </div>
@@ -805,6 +876,14 @@
               <li>
                 Фотографии: Wikimedia Commons; автор и лицензия указаны у
                 каждого кадра. Текст Википедии не использован.
+              </li>
+              <li>
+                А. А. Маслова, Ю. В. Маслов.
+                <a
+                  href="https://www.directmedia.ru/book-437250-traditsii-yaroslavskogo-kraya/"
+                  >«Традиции Ярославского края. Дом и быт. Семейные обычаи»</a
+                >. Рыбинск: Медиарост, 2013. С. 17. Архивный снимок дома
+                лепщиков Саловых; автор фотографии в подписи не указан.
               </li>
             </ol>
           </details>
@@ -847,8 +926,8 @@
               />
             </figure>
             <div>
-              <p data-game-counter>Кадр 1 из 3</p>
-              <h3 data-game-question>
+              <p data-game-counter aria-live="polite">Кадр 1 из 3</p>
+              <h3 data-game-question tabindex="-1">
                 Какой признак связывает несколько домов?
               </h3>
               <div data-game-actions></div>
@@ -1050,12 +1129,14 @@
           "audioguide",
           "observe",
           "atlas",
+          "history",
           "facts",
           "calendar",
         ],
         labels: {
           observe: "Четыре расстояния",
           atlas: "Фасады",
+          history: "Мастера",
           facts: "Что доказано",
         },
         showMuseumHome: false,
@@ -1104,7 +1185,7 @@
         museum_id: "rc:museum:arhitektura",
         issue_id: "rc:issue:arhitektura:vyatskoe",
         issue_version: "0.1.0",
-        build_version: "vyatskoe-preview-20260830",
+        build_version: "vyatskoe-preview-20260831",
       };
     </script>
     <script
@@ -1115,7 +1196,7 @@
       src="../../assets/museum-architecture-observe.js?v=20260830-1"
       defer
     ></script>
-    <script src="../../assets/vyatskoe-page.js?v=20260830-1" defer></script>
+    <script src="../../assets/vyatskoe-page.js?v=20260831-1" defer></script>
     <script src="../../assets/museum-chrome.js?v=20260830" defer></script>
     <script src="../../assets/museum-support.js" defer></script>
     <script
