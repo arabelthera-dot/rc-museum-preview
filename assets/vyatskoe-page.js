@@ -112,6 +112,7 @@
           {
             image: "media/vyatskoe/landscape.webp",
             alt: "Общий вид Вятского",
+            overlay: "landscape",
             kicker: "1 · Село",
             title: "Сначала увидь целое",
             copy: "На общем виде декор ещё не читается: архитектура начинается со связи домов, дороги, храма и ландшафта.",
@@ -120,16 +121,18 @@
           },
           {
             image: "media/vyatskoe/street.webp",
-            alt: "Дома на улице Клюшниково стоят вдоль общей линии",
+            alt: "Дома 9 и 11 на улице Клюшниково",
+            overlay: "street",
             kicker: "2 · Улица",
             title: "Проведи линию фасадов",
-            copy: "Соседние дома обращены к улице парадной стороной, а проезды не разрушают общий фронт.",
-            caption: "Улица: отдельные дома удерживают общую границу пространства.",
-            result: "Проявлена линия фасадов: городской характер создаёт взаимное положение домов, а не одинаковый цвет.",
+            copy: "Кадр домов 9 и 11 показывает, как фасады обращаются к улице. Для вывода о всём фронте нужен уже ряд документальных видов.",
+            caption: "Улица Клюшниково: дома 9 и 11 — одна точка внутри более длинного ряда.",
+            result: "Проявлена граница улицы. Это схема музейного чтения кадра, не обмер и не доказательство непрерывности всей улицы.",
           },
           {
             image: "media/vyatskoe/house-16.webp",
             alt: "Парадный фасад дома 16 на улице Клюшниково",
+            overlay: "house",
             kicker: "3 · Дом",
             title: "Собери парадное лицо",
             copy: "Карниз завершает стену, вертикали делят её, а проёмы задают повторяемый ритм.",
@@ -137,13 +140,14 @@
             result: "Проявлена схема фасада: верхняя горизонталь и вертикальные оси связывают окна в одно целое.",
           },
           {
-            image: "media/vyatskoe/lion-detail.webp",
-            alt: "Лепная львиная маска на фасаде дома во Вятском",
+            image: "media/vyatskoe/facade-detail.webp",
+            alt: "Карниз и проёмы дома 16 на улице Клюшниково крупным планом",
+            overlay: "detail",
             kicker: "4 · Деталь",
-            title: "Отдели ремесло от атрибуции",
-            copy: "Рельеф показывает мастерство лепщика, но сам не называет автора и не доказывает состав всей отделки.",
-            caption: "Деталь: видимый след лепного ремесла внутри большого целого.",
-            result: "Проявлен рельеф. Честный вывод: перед нами лепная деталь; имя мастера и материал всего фасада не установлены.",
+            title: "Назови части фасада",
+            copy: "На том же доме теперь можно различить карниз, оконные обрамления и простенки — участки стены между проёмами.",
+            caption: "Деталь того же дома № 16: карниз, обрамления окон и простенки.",
+            result: "Проявлены части фасада: карниз завершает стену, обрамления выделяют окна, простенки задают паузы между ними.",
           },
         ],
         labImage = lab.querySelector("[data-lab-image]"),
@@ -154,8 +158,27 @@
         labResult = lab.querySelector("[data-lab-result]"),
         labReveal = lab.querySelector("[data-lab-reveal]"),
         labButtons = [].slice.call(lab.querySelectorAll("[data-lab-step]")),
-        labIndex = 0;
-      function drawLab(index, focus) {
+        labModeButtons = [].slice.call(lab.querySelectorAll("[data-lab-mode]")),
+        labProgress = lab.querySelector("[data-lab-progress]"),
+        labComplete = lab.querySelector("[data-lab-complete]"),
+        labReset = lab.querySelector("[data-lab-reset]"),
+        overlayGroups = [].slice.call(lab.querySelectorAll("[data-overlay]")),
+        labIndex = 0,
+        labMode = "guided",
+        visited = [false, false, false, false];
+      function updateLabControls() {
+        var count = visited.filter(Boolean).length;
+        labProgress.textContent = "Шаг " + (labIndex + 1) + " из 4 · пройдено " + count;
+        labButtons.forEach(function (button, i) {
+          button.setAttribute("aria-pressed", String(i === labIndex));
+          button.classList.toggle("is-done", visited[i]);
+          button.disabled = labMode === "guided" && i > count;
+        });
+        labModeButtons.forEach(function (button) {
+          button.setAttribute("aria-pressed", String(button.dataset.labMode === labMode));
+        });
+      }
+      function drawLab(index) {
         var item = labData[index];
         labIndex = index;
         lab.classList.remove("is-revealed");
@@ -165,26 +188,39 @@
         labKicker.textContent = item.kicker;
         labTitle.textContent = item.title;
         labCopy.textContent = item.copy;
-        labResult.textContent = "Нажми «Проявить признак», чтобы увидеть схему на кадре.";
-        labReveal.textContent = "Проявить признак на кадре";
-        labButtons.forEach(function (button, i) {
-          button.setAttribute("aria-pressed", String(i === index));
+        labResult.textContent = "Нажми «Провести схему», чтобы проверить признак на кадре.";
+        labReveal.textContent = "Провести схему по кадру";
+        labReveal.disabled = false;
+        overlayGroups.forEach(function (group) {
+          group.classList.toggle("is-active", group.dataset.overlay === item.overlay);
         });
-        if (focus) labTitle.focus();
+        updateLabControls();
       }
       labButtons.forEach(function (button) {
         button.addEventListener("click", function () {
-          drawLab(Number(button.dataset.labStep), true);
+          if (!button.disabled) drawLab(Number(button.dataset.labStep));
+        });
+      });
+      labModeButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          labMode = button.dataset.labMode;
+          updateLabControls();
+          labResult.textContent = labMode === "guided"
+            ? "Управляемый режим: проявляй масштабы по порядку."
+            : "Свободный режим: можно сравнить любой масштаб; завершение всё равно требует всех четырёх.";
         });
       });
       labReveal.addEventListener("click", function () {
+        if (labMode === "guided" && lab.classList.contains("is-revealed")) return;
         lab.classList.toggle("is-revealed");
         var revealed = lab.classList.contains("is-revealed");
         labResult.textContent = revealed
           ? labData[labIndex].result
           : "Схема скрыта. Можно выбрать другое расстояние.";
-        labReveal.textContent = revealed ? "Скрыть схему" : "Проявить признак на кадре";
-        if (revealed && labIndex === labData.length - 1) {
+        labReveal.textContent = revealed ? "Скрыть схему" : "Провести схему по кадру";
+        if (revealed) visited[labIndex] = true;
+        updateLabControls();
+        if (revealed && visited.every(Boolean)) {
           var saved = state();
           saved.vyatskoe = { completedAt: new Date().toISOString() };
           try {
@@ -192,16 +228,26 @@
           } catch (error) {}
           paint();
           document.dispatchEvent(new CustomEvent("museum:route-success"));
+          labComplete.hidden = false;
+          labComplete.focus({ preventScroll: true });
+        } else if (revealed && labMode === "guided" && labIndex < labData.length - 1) {
+          labButtons[labIndex + 1].focus({ preventScroll: true });
         }
       });
-      drawLab(0, false);
+      labReset.addEventListener("click", function () {
+        visited = [false, false, false, false];
+        labComplete.hidden = true;
+        labMode = "guided";
+        drawLab(0);
+        labButtons[0].focus({ preventScroll: true });
+        document.dispatchEvent(new CustomEvent("museum:route-reset"));
+      });
+      drawLab(0);
     }
     var game = document.querySelector("[data-feature-game]");
     if (game) {
       var data = [
           {
-            image: "media/vyatskoe/salov-house-1984.png",
-            alt: "Дом лепщиков Саловых с гипсовой лепниной, Некрасовский район, 1984 год",
             q: "Какая подпись к архивному снимку честная?",
             a: [
               [
@@ -211,8 +257,8 @@
               ],
               [
                 "good",
-                "Региональная практика лепного промысла",
-                "Да: снимок подтверждает лепнину на крестьянской избе в регионе, не конкретный фасад Вятского.",
+                "Дом Саловых, Некрасовский район, 1984",
+                "Да: именно место, семья и год названы в книжной подписи.",
               ],
               [
                 "bad",
@@ -221,10 +267,25 @@
               ],
             ],
           },
+          {
+            q: "Что снимок позволяет сказать о материале?",
+            a: [
+              ["good", "На этой избе подпись называет лепнину гипсовой", "Да. Это точная граница одного документированного дома."],
+              ["bad", "Вся лепнина Ярославской области гипсовая", "Один снимок не описывает весь региональный корпус."],
+              ["bad", "Материал фасадов Вятского установлен", "Дом Саловых не находится во Вятском, а материал его фасада нельзя переносить на другой объект."],
+            ],
+          },
+          {
+            q: "Какой более широкий вывод требует уже текста исследования?",
+            a: [
+              ["bad", "На фотографии виден деревянный дом", "Это видно непосредственно и не требует отдельной региональной теории."],
+              ["bad", "Снимок сделан в 1984 году", "Год уже дан в подписи."],
+              ["good", "Такой декор связан с отходным лепным промыслом", "Да. Связь с промыслом опирается на текст исследования, а не выводится из одного кадра."],
+            ],
+          },
         ],
         i = 0,
         score = 0,
-        img = game.querySelector("[data-game-image]"),
         counter = game.querySelector("[data-game-counter]"),
         q = game.querySelector("[data-game-question]"),
         actions = game.querySelector("[data-game-actions]"),
@@ -232,10 +293,7 @@
         reset = game.querySelector("[data-game-reset]");
       function draw() {
         var item = data[i];
-        img.src = item.image;
-        img.alt = item.alt;
-        game.classList.toggle("is-archive", item.image.indexOf("salov-house") !== -1);
-        counter.textContent = data.length === 1 ? "Один документ" : "Кадр " + (i + 1) + " из " + data.length;
+        counter.textContent = "Вопрос " + (i + 1) + " из " + data.length;
         q.textContent = item.q;
         actions.innerHTML = "";
         item.a.forEach(function (answer) {
@@ -254,7 +312,6 @@
         var good = button.dataset.kind === "good";
         feedback.textContent = button.dataset.feedback;
         button.classList.add(good ? "good" : "bad");
-        feedback.focus({ preventScroll: true });
         if (!good) return;
         score += 1;
         actions.querySelectorAll("button").forEach(function (item) {
@@ -269,10 +326,10 @@
               "Снимок подтверждает региональную практику лепного промысла, но не место во Вятском и не материал всех его фасадов.";
             actions.innerHTML = "";
             reset.hidden = false;
-            q.focus();
+            reset.focus({ preventScroll: true });
           } else {
             draw();
-            q.focus();
+            actions.querySelector("button").focus({ preventScroll: true });
           }
         }, 300);
       });
@@ -281,9 +338,24 @@
         score = 0;
         reset.hidden = true;
         draw();
-        q.focus();
+        actions.querySelector("button").focus({ preventScroll: true });
       });
       draw();
+    }
+    var progress = document.querySelector("[data-page-progress]");
+    if (progress && "IntersectionObserver" in window) {
+      var acts = [].slice.call(document.querySelectorAll("[data-museum-act]")),
+        progressCount = progress.querySelector("[data-page-progress-count]"),
+        progressTitle = progress.querySelector("[data-page-progress-title]");
+      var actObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          var index = acts.indexOf(entry.target);
+          progressCount.textContent = (index + 1) + "/" + acts.length;
+          progressTitle.textContent = entry.target.dataset.museumActTitle;
+        });
+      }, { rootMargin: "-30% 0px -60%" });
+      acts.forEach(function (act) { actObserver.observe(act); });
     }
   });
 })();
