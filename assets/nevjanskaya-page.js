@@ -16,7 +16,8 @@
     tiers.forEach((tier,i)=>tier.classList.toggle('is-active',i===3-n));
     progress.textContent=`Наблюдение ${n+1} из 4`;
     result.innerHTML=`<strong>${observations[n][0]}</strong><p>${observations[n][1]}</p>`;
-    if(n===3){gate.hidden=false;gate.removeAttribute('aria-disabled');if(window.rcGoal)window.rcGoal('rc_game_complete',{game:'nevjansk_plumb',total:4});}
+    document.dispatchEvent(new CustomEvent(n===3?'museum:route-success':'museum:route-reset'));
+    if(n===3&&window.rcGoal)window.rcGoal('rc_game_complete',{game:'nevjansk_plumb',total:4});
   }
   if(range){range.addEventListener('input',e=>showStage(e.target.value));showStage(range.value);}
   document.querySelectorAll('[data-route]').forEach(button=>button.addEventListener('click',()=>{
