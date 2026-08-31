@@ -55,28 +55,46 @@
   <span class="here">День 2 · Бриг «Меркурий»</span>
 </nav>
 
-<!-- ── HERO: сцена ОТДЕЛЬНО, текст ОТДЕЛЬНО (правило 03.08) ── -->
-<div class="hero-scene" id="hero">
-  <img src="merkuriy-aivazovsky-1892.jpg" alt="Картина Айвазовского «Бриг „Меркурий“, атакованный двумя турецкими кораблями» (1892): малый бриг под огнём двух турецких линейных кораблей">
-</div>
-
-<div class="scene-caption">
-  <div class="wrap">
-    <div class="scene-cap">Иван Айвазовский, «Бриг „Меркурий“, атакованный двумя турецкими кораблями», 1892, Феодосийская картинная галерея. Художник писал бой через шестьдесят с лишним лет по донесениям и документам: бриг, идущий под огнём двух линейных кораблей, которых больше и во много раз сильнее.</div>
-  </div>
-</div>
-
-<header class="hero-lead">
-  <div class="wrap">
-    <div class="date-chip">бриг · 1829 · Босфор</div>
-    <h1>Бриг «Меркурий»</h1>
-    <p class="hook">За три дня до этого русский фрегат сдался без боя. Экипаж «Меркурия» положил пистолет у пороха — и пошёл в бой против десятикратного перевеса.</p>
-    <div class="hero-btns">
-      <button class="btn gold" onclick="document.getElementById('istoriya').scrollIntoView({behavior:'smooth'})">Читать историю ↓</button>
-      <button class="btn ghost" onclick="document.getElementById('audioguide').scrollIntoView({behavior:'smooth'})">Слушать аудиогид</button>
+<!-- ── HERO: скроллтеллинг M-73 — картина закреплена, сцены следуют за текстом ── -->
+<article class="scrolltelling" id="hero" aria-label="Бриг «Меркурий» — картина меняется по мере чтения">
+  <div class="st-media">
+    <div class="hero-scene st-stage">
+      <img class="st-scene active" src="merkuriy-aivazovsky-1892.jpg" alt="Картина Айвазовского «Бриг „Меркурий“, атакованный двумя турецкими кораблями» (1892): малый бриг под огнём двух турецких линейных кораблей">
+      <img class="st-scene" src="merkuriy-aivazovsky-1848.jpg" alt="Картина Айвазовского «Бриг „Меркурий“ после победы над двумя турецкими кораблями» (1848): избитый бриг встречается с русской эскадрой" aria-hidden="true">
+      <img class="st-scene" src="merkuriy-kazarsky-pamyatnik.jpg" alt="Памятник Казарскому в Севастополе: колонна с кораблём наверху" aria-hidden="true">
+    </div>
+    <div class="st-cap">
+      <p class="st-cap-layer active"><span class="st-src">Иван Айвазовский, «Бриг „Меркурий“, атакованный двумя турецкими кораблями», 1892</span>Художник писал бой через шестьдесят с лишним лет по донесениям и документам: бриг, идущий под огнём двух линейных кораблей, которых больше и во много раз сильнее.</p>
+      <p class="st-cap-layer" aria-hidden="true"><span class="st-src">Иван Айвазовский, «Бриг „Меркурий“ после победы над двумя турецкими судами», 1848</span>Малый бриг с избитым рангоутом возвращается к своей эскадре — флаг не спущен.</p>
+      <p class="st-cap-layer" aria-hidden="true"><span class="st-src">Памятник Казарскому, Севастополь, 1839</span>Четыре слова на постаменте: «Казарскому. Потомству в пример».</p>
     </div>
   </div>
-</header>
+  <div class="st-chapters">
+    <header class="hero-lead">
+      <div class="date-chip">бриг · 1829 · Босфор</div>
+      <h1>Бриг «Меркурий»</h1>
+      <p class="hook">За три дня до этого русский фрегат сдался без боя. Экипаж «Меркурия» положил пистолет у пороха — и пошёл в бой против десятикратного перевеса.</p>
+      <div class="hero-btns">
+        <button class="btn gold" onclick="document.getElementById('istoriya').scrollIntoView({behavior:'smooth'})">Читать историю ↓</button>
+        <button class="btn ghost" onclick="document.getElementById('audioguide').scrollIntoView({behavior:'smooth'})">Слушать аудиогид</button>
+      </div>
+    </header>
+    <div class="st-steps">
+      <article class="st-step" data-idx="0">
+        <div class="kicker">◆ Выбор</div>
+        <p>Экипаж <b>выбрал не сдаться</b>: совет постановил принять бой, а при угрозе захвата — взорвать крюйт-камеру. На порох положили заряженный пистолет.</p>
+      </article>
+      <article class="st-step" data-idx="1">
+        <div class="kicker">◆ Бой</div>
+        <p>Четыре часа против <b>184 орудий двух линейных кораблей</b> — и бриг вернулся к своим, не спустив флага.</p>
+      </article>
+      <article class="st-step" data-idx="2">
+        <div class="kicker">◆ Память</div>
+        <p>Кормовой Георгиевский флаг — <b>второй случай в истории флота</b>; на памятнике в Севастополе — «Казарскому. Потомству в пример».</p>
+      </article>
+    </div>
+  </div>
+</article>
 
 <div class="hero-under">
   <div class="wrap">
@@ -273,14 +291,17 @@
   </div>
 </section>
 
-<!-- ── МИРОВОЙ КОНТЕКСТ ── -->
-<section class="block" id="mirovoy-kontekst">
-  <div class="wrap">
+<!-- ── МИРОВОЙ КОНТЕКСТ: таймлайн M-74 — горизонтальная лента параллельных событий ── -->
+<section class="block timeline-block" id="mirovoy-kontekst">
+  <div class="wrap tl-head">
     <div class="kicker">Контекст</div>
-    <h2 style="margin-bottom:6px">Что делал мир в 1829 году</h2>
-    <div class="q"><h3><em>Пока шёл бой</em>Мир жил своей жизнью</h3><p>В тот же 1829 год Александр Пушкин едет в действующую армию на Кавказ — потом напишет «Путешествие в Арзрум». В январе в Тегеране погиб Грибоедов. А у Босфора в эти недели решалась судьба одного малого брига.</p></div>
-    <div class="q"><h3><em>Война на Чёрном море</em>Россия и Турция</h3><p>Русско-турецкая война 1828–1829 годов. Русский флот ищет турецкую эскадру на Чёрном море и у Босфора. Через несколько месяцев — Адрианопольский мир; Греция получает независимость.</p></div>
-    <div class="q"><h3><em>Исключение</em>Корабль, который не сдался</h3><p>На фоне войны, где корабли сдавались без боя — как «Рафаил», — один бриг выбрал иначе. Не ради победы. Ради того, чтобы в этом флоте остался пример: можно не сдаться, даже когда сдаться разумно.</p></div>
+    <h2 class="tl-title">Что делал мир в 1829 году</h2>
+    <p class="tl-sub">Тяни ленту вбок — увидишь, что происходило параллельно с подвигом.</p>
+  </div>
+  <div class="timeline" aria-label="Лента событий 1829 года">
+    <div class="tl-card"><span class="yr">1829</span><div class="dot"></div><h3>Мир жил своей жизнью</h3><p>Александр Пушкин едет в действующую армию на Кавказ — потом напишет «Путешествие в Арзрум». В январе в Тегеране погиб Грибоедов. А у Босфора в эти недели решалась судьба одного малого брига.</p></div>
+    <div class="tl-card"><div class="dot"></div><h3>Война на Чёрном море</h3><p>Русско-турецкая война 1828–1829 годов. Русский флот ищет турецкую эскадру у Босфора. Через несколько месяцев — Адрианопольский мир; Греция получает независимость.</p></div>
+    <div class="tl-card"><div class="dot"></div><h3>Корабль, который не сдался</h3><p>На фоне войны, где корабли сдавались без боя — как «Рафаил», — один бриг выбрал иначе. Можно не сдаться, даже когда сдаться разумно.</p></div>
   </div>
 </section>
 
@@ -467,6 +488,7 @@ window.addEventListener('pageshow',function(e){if(e.persisted)location.reload();
   random:[]
 };</script>
 <script src="../../assets/museum-chrome.js"></script>
+<script src="../../assets/scrolltelling.js"></script>
 <script>window.MUSEUM_SUPPORT={museum:'Русские не сдаются'};</script>
 <script src="../../assets/museum-support.js"></script>
 <script>window.MUSEUM_CALENDAR_INITIAL='01-02';</script>
