@@ -29,7 +29,7 @@
 .scale-grid{display:grid;grid-template-columns:1.4fr .8fr .8fr;grid-template-rows:300px 250px;gap:12px}
 .scale-grid figure{display:flex;flex-direction:column;margin:0;background:#0f211b;color:#fff;overflow:hidden}.scale-grid figure:first-child{grid-row:1/3}.scale-grid figure:last-child{grid-column:2/4}
 .scale-grid img{display:block;width:100%;min-height:0;flex:1;object-fit:cover}.scale-grid figcaption{padding:12px 14px;font:13px/1.45 var(--sans)}
-.scale-grid .detail-scale{position:relative}.scale-grid .detail-scale img{transform:scale(1.55);transform-origin:53% 19%;clip-path:inset(0)}
+.scale-grid .detail-scale{position:relative}.scale-grid .detail-scale img{object-position:53% 19%}
 .origin-lab{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(320px,.9fr);gap:1px;background:#6a775f;border:1px solid #6a775f}
 .origin-stage{position:relative;min-height:620px;background:linear-gradient(180deg,#8eb1b8 0 42%,#486b58 42% 100%);overflow:hidden}
 .origin-stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.28}.origin-stage::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,19,15,.3),transparent)}
@@ -78,4 +78,8 @@ section[id]{scroll-margin-top:84px!important}
 #secnav{position:static!important;top:auto!important;transform:none!important}
 body.house3d-in-view #heart{opacity:0!important;pointer-events:none!important}
 @media(max-width:900px){.house3d-reveal figure{display:flex;flex-direction:column}.house3d-reveal img{height:auto;min-height:0;aspect-ratio:3/2}.house3d-reveal figcaption{position:static}}
-@media(max-width:600px){.top{padding:10px 12px}.top .motto{display:block;font-size:10.5px;line-height:1.35}.top .motto span{display:block}#secnav .row{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:3px;overflow:visible;padding:7px 5px}#secnav a{justify-content:center;min-width:0;padding:7px 3px!important;font-size:10.5px!important;white-space:nowrap}section[id]{scroll-margin-top:76px!important}}
+@media(max-width:600px){.top{padding:10px 12px}.top .motto{display:block;line-height:1.35}.top .motto span{display:block}#secnav .row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:3px;overflow:visible;padding:7px 5px}#secnav a{justify-content:center;min-width:0;padding:7px 3px!important;white-space:normal}section[id]{scroll-margin-top:112px!important}}
+
+/* Level A: readable semantic copy and controls at both audit widths. */
+body p,body li,body blockquote{font-size:16px!important}
+body figcaption,body label,body button,body a,body summary,body small,body .eyebrow,body [role="button"],body [role="tab"],body th,body td{font-size:14px!important}
