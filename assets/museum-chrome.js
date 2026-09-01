@@ -112,7 +112,7 @@
   + '.hero-scene.fit-full img{max-height:min(62vh,var(--hero-fit,62vh))}'
   /* на мобиле до заголовка стояли: подзаголовок музея (2 строки), этикетка сцены крупным
      кеглем и щедрый отступ обложки — вместе больше половины экрана */
-  + '@media (max-width:600px){header.top .b2,header.site .b2{display:none!important}'
+  + '@media (max-width:600px){header.top .b2,header.site .b2{display:block!important;font-size:11.5px;line-height:1.4;max-width:94%}'
   + '.scene-caption{padding:10px 0 12px!important}'
   + '.scene-caption .scene-cap{font-size:12.5px;line-height:1.45}'
   /* подсказка про интерактив стояла последней и уезжала под этикетку на 780 px —
