@@ -44,7 +44,7 @@
           <p>Фильм ставит вопрос; интерактив ниже даст проверить ответ самому.</p>
         </div>
         <div class="media-card" data-lazy-media>
-          <video controls preload="metadata" poster="media/nevjanskaya-bashnya/og-1200x630.webp">
+          <video controls preload="metadata" poster="media/nevjanskaya-bashnya/og-1200x630.webp" aria-label="Вводный фильм о наклоне Невьянской башни">
             <source data-src="media/nevjanskaya-bashnya/intro-film.mp4" type="video/mp4">
             <track kind="captions" srclang="ru" label="Русские субтитры" src="media/nevjanskaya-bashnya/intro-film-ru.vtt" default>
             Ваш браузер не поддерживает видео. Полная расшифровка находится ниже.
@@ -177,7 +177,7 @@
     <section class="section dark" id="game">
       <div class="section-inner">
         <div class="section-head"><p class="kicker">Игра · факт или легенда</p><h2>Не дай красивой истории стать документом</h2><p>Четыре утверждения. Сначала выбери категорию сам — объяснение появится после ответа.</p></div>
-        <div class="evidence-game" role="group" aria-describedby="game-feedback">
+        <div class="evidence-game" role="group" aria-labelledby="game-progress game-statement" aria-describedby="game-feedback">
           <p class="game-progress" id="game-progress">Утверждение 1 из 4</p>
           <p class="game-statement" id="game-statement"></p>
           <div class="game-choices"><button type="button" data-game-choice="fact">Факт</button><button type="button" data-game-choice="legend">Легенда</button></div>
