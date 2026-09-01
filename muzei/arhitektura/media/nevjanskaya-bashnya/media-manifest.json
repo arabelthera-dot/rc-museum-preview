@@ -4,6 +4,8 @@
   "checked_at": "2026-08-31",
   "images": [
     {"file":"hero.webp","sha256":"334c8e70bd70fc6c2970c10b5f904f363371d14b2d10c10e36d0f3bed0b46943","source":"https://commons.wikimedia.org/wiki/File:Leaning_Tower_of_Nevyansk-2021_-_1.jpeg","author":"Vyacheslav Bukharov","license":"CC BY-SA 4.0"},
+    {"file":"hero-480.webp","sha256":"74e63a7892442198f4e29c9db1c21977d45753dee9239b575a353eb06ecd05c0","derived_from":"hero.webp","license":"CC BY-SA 4.0"},
+    {"file":"hero-768.webp","sha256":"292c7b686e702009b49e36193aa994eb494d66844df9d78743f04d50a85d228c","derived_from":"hero.webp","license":"CC BY-SA 4.0"},
     {"file":"foundation.webp","sha256":"19c4eaa111d50651d4692bd6e4766e38e8f5ca11c73fecdefd9750c66eded4f1","source":"https://commons.wikimedia.org/wiki/File:Leaning_Tower_of_Nevyansk-2021_-_3.jpeg","author":"Vyacheslav Bukharov","license":"CC BY-SA 4.0"},
     {"file":"ensemble.webp","sha256":"d9e7eb573498798ec535fb58fb59b99008740d7363a6497429faf0bb5dc58b05","source":"https://commons.wikimedia.org/wiki/File:NevyanskTower_0036.jpg","author":"Ludvig14","license":"CC BY-SA 4.0"},
     {"file":"landscape.webp","sha256":"926a01955305a9ba8c53923d87c9e64f7037ee8c125d9ee8925ae949dd90786a","source":"https://commons.wikimedia.org/wiki/File:Leaning_Tower_of_Nevyansk-2021_-_34.jpeg","author":"Vyacheslav Bukharov","license":"CC BY-SA 4.0"},
@@ -13,10 +15,10 @@
     {"file":"og-1200x630.webp","sha256":"808b141f8d0e2685d9fbade6aa114ba8d71a07fed188f74a3a1f65378b1c6fb2","derived_from":"hero.webp","license":"CC BY-SA 4.0"}
   ],
   "audio": [
-    {"file":"audioguide-ru.mp3","sha256":"10e32b59364d594a23879b4f20817f62e1aa2df679607d4c0960108c592f977e","voice":"ru-RU-DmitryNeural","generation":"edge-tts","synthetic_voice_disclosed":true,"transcript":"audioguide-transcript-ru.txt"},
-    {"file":"film-narration-ru.mp3","sha256":"4273bf8ba5d54b16ee103988312454739076ff6d9cf8feb95f42ed50d14115aa","voice":"ru-RU-DmitryNeural","generation":"edge-tts","synthetic_voice_disclosed":true,"transcript":"film-transcript-ru.txt"}
+    {"file":"audioguide-ru.mp3","sha256":"ef3d06dd2e32e5dff65f652a8a62e24db1e54dfbeb1a79d47911879115790471","voice":"ru-RU-DmitryNeural","generation":"edge-tts","synthetic_voice_disclosed":true,"transcript":"audioguide-transcript-ru.txt"},
+    {"file":"film-narration-ru.mp3","sha256":"3063f83b2136d9014ad6d82a1f3ac7a89cd6f6af13706139cd94014d6520afb9","voice":"ru-RU-DmitryNeural","generation":"edge-tts","synthetic_voice_disclosed":true,"transcript":"film-transcript-ru.txt"}
   ],
   "video": [
-    {"file":"intro-film.mp4","sha256":"414dc8675ee52905f9449726c760cb90325db43ad0cabe5fcf4c3353876a38d1","captions":"intro-film-ru.vtt","visual_basis":"licensed still photographs listed above","ai_generated_visuals":false}
+    {"file":"intro-film.mp4","sha256":"22a8bd71fbb7c37361c31c774cfc757fd6f9a81ddbd810ab3ece12e824f37527","captions":"intro-film-ru.vtt","visual_basis":"licensed still photographs listed above","ai_generated_visuals":false}
   ]
 }
