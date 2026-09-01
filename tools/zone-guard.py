@@ -80,6 +80,13 @@ def owner_of(path, zones):
     return None
 
 
+def resolve(signature, zones):
+    """Прежнее имя приводим к нынешнему: 30.08 kimi-bot переименовался в deepseek2,
+    и его старые коммиты — не чужак, а он же. Иначе сторож краснеет на законной
+    истории, а сторожа, который врёт, перестают читать."""
+    return zones.get("aliases", {}).get(signature, signature)
+
+
 def check(files, signature, zones):
     """Возвращает список нарушений: (файл, подпись хозяина)."""
     if signature in zones["orchestrators"]:
@@ -148,7 +155,7 @@ def main():
         return 1
 
     if "--whoami" in args:
-        signature = git("config", "user.name")
+        signature = resolve(git("config", "user.name"), zones)
         print(f"{signature or '(подпись не задана)'} — {describe(signature, zones)}")
         print(f"источник: {zpath}")
         return 0
@@ -158,7 +165,7 @@ def main():
         commits = [c for c in git("rev-list", rng).splitlines() if c]
         violations = []
         for sha in commits:
-            author = git("show", "-s", "--format=%an", sha)
+            author = resolve(git("show", "-s", "--format=%an", sha), zones)
             files = [f for f in git("show", "--pretty=", "--name-only", sha).splitlines() if f]
             bad = check(files, author, zones)
             if bad:
@@ -172,7 +179,7 @@ def main():
         return 0
 
     # По умолчанию — режим хука: то, что лежит в индексе.
-    signature = git("config", "user.name")
+    signature = resolve(git("config", "user.name"), zones)
     files = [f for f in git("diff", "--cached", "--name-only").splitlines() if f]
     bad = check(files, signature, zones)
     if bad:

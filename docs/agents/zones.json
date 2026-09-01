@@ -4,12 +4,17 @@
     "и только по прямой команде Сергея «меняю зону такого-то».",
     "Читают: tools/zone-guard.py (хук pre-commit и GitHub Actions обоих репозиториев),",
     "tools/whoami.py (представление агента в начале сессии).",
-    "Таблица в AGENTS.md и docs/agents/README.md должна совпадать с этим файлом дословно."
+    "Таблица в AGENTS.md и docs/agents/README.md должна совпадать с этим файлом дословно.",
+    "Псевдонимы: прежние подписи, приведённые к нынешним. kimi-bot — это deepseek2 до 30.08.2026."
   ],
   "updated": "2026-09-01",
   "decision": "Сергей, 31.08.2026, вечер: «Над карикатурой работает Дипсик 2. Ты Джарвис, ты работаешь над изобретениями»",
 
   "orchestrators": ["arabelthera-dot", "misha-admin"],
+
+  "aliases": {
+    "kimi-bot": "deepseek2"
+  },
 
   "agents": {
     "arabelthera-dot": {
