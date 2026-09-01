@@ -1,0 +1,63 @@
+{
+  "_comment": [
+    "ЕДИНЫЙ ИСТОЧНИК ПРАВДЫ О ЗОНАХ АГЕНТОВ. Правит только Claude (arabelthera-dot),",
+    "и только по прямой команде Сергея «меняю зону такого-то».",
+    "Читают: tools/zone-guard.py (хук pre-commit и GitHub Actions обоих репозиториев),",
+    "tools/whoami.py (представление агента в начале сессии).",
+    "Таблица в AGENTS.md и docs/agents/README.md должна совпадать с этим файлом дословно."
+  ],
+  "updated": "2026-09-01",
+  "decision": "Сергей, 31.08.2026, вечер: «Над карикатурой работает Дипсик 2. Ты Джарвис, ты работаешь над изобретениями»",
+
+  "orchestrators": ["arabelthera-dot", "misha-admin"],
+
+  "agents": {
+    "arabelthera-dot": {
+      "name": "Джарвис (Claude)",
+      "museum": "музей изобретений",
+      "pilot": "pilot-izobreteniya",
+      "preview": "muzei/izobreteniya"
+    },
+    "deepseek2": {
+      "name": "Дипсик №2",
+      "museum": "музей карикатуры",
+      "pilot": "pilot-karikatura",
+      "preview": "muzei/karikatura"
+    },
+    "bot4": {
+      "name": "Дипсик №1",
+      "museum": "музей «Русские не сдаются»",
+      "pilot": "pilot-nesdayutsya",
+      "preview": "muzei/ne-sdayutsya"
+    },
+    "codex-bot": {
+      "name": "Кодекс",
+      "museum": "музей архитектуры",
+      "pilot": "pilot-arhitektura",
+      "preview": "muzei/arhitektura"
+    }
+  },
+
+  "rules_files": [
+    "AGENTS.md",
+    "CLAUDE.md",
+    "PREFERENCES.md",
+    "docs/agents/README.md",
+    "docs/agents/zones.json",
+    "docs/skills/",
+    "docs/standards/",
+    "context/"
+  ],
+  "rules_owner": "arabelthera-dot",
+
+  "shared": [
+    "docs/agents/HANDOFF.md",
+    "docs/research/",
+    "docs/registries/",
+    "docs/interactive/",
+    "assets/",
+    "lab/",
+    "tools/",
+    "platform/"
+  ]
+}

@@ -25,6 +25,21 @@ if [ -z "$TOOLS" ]; then
   exit 1
 fi
 
+# --- Сторож зон: чужой музей не коммитится (Сергей, 01.09.2026) --------------
+# Стоит ПЕРВЫМ: сначала «твоя ли это работа», потом «по стандарту ли она сделана».
+for d in "$RC_TOOLS" \
+         "/home/agent/projects/russian-civilization/tools" \
+         "$repo_root/../tools" \
+         "$repo_root/tools"; do
+  [ -n "$d" ] && [ -f "$d/zone-guard.py" ] && { ZONES="$d"; break; }
+done
+if [ -z "$ZONES" ]; then
+  echo "╳ КОММИТ ОСТАНОВЛЕН: сторож зон (zone-guard.py) не найден."
+  echo "  Сделай git pull: без него не проверить, твой ли это музей."
+  exit 1
+fi
+"$PY" "$ZONES/zone-guard.py" --staged || exit 1
+
 "$PY" "$TOOLS/audit-precommit.py" || exit 1
 [ -f "$TOOLS/audit-structure.py" ] && { "$PY" "$TOOLS/audit-structure.py" --staged || exit 1; }
 exit 0
