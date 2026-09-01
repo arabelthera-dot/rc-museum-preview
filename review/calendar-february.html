@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Февраль — календарь Музея русской архитектуры</title>
+  <meta name="description" content="28 тем февраля для просмотра и утверждения: экспонат, хук, механика и архитектурное доказательство.">
+  <link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/review/calendar-february.html">
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../assets/fonts.css">
+  <style>
+    :root{--ink:#152229;--muted:#5c6b71;--paper:#f4f0e7;--card:#fffdf8;--line:#d8d0c1;--gold:#c88a27;--deep:#102127;--ok:#276346;--review:#996515}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,sans-serif;line-height:1.55}
+    a{color:inherit}
+    .skip{position:absolute;left:-9999px;top:8px;background:#fff;padding:10px;z-index:5}
+    .skip:focus{left:8px}
+    .topbar{background:var(--deep);color:#f7f1e4;padding:14px max(18px,calc((100vw - 1180px)/2))}
+    .topbar a{text-decoration:none}
+    .hero{max-width:1180px;margin:0 auto;padding:58px 24px 38px}
+    .eyebrow{margin:0 0 14px;color:#8c601b;font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:.82rem}
+    h1{max-width:920px;margin:0;font-family:Georgia,serif;font-size:clamp(2.5rem,7vw,5.4rem);line-height:.96;letter-spacing:-.035em}
+    .lead{max-width:780px;margin:24px 0 0;font-size:clamp(1.08rem,2vw,1.35rem);color:#405159}
+    .status{display:inline-flex;align-items:center;gap:9px;margin-top:24px;padding:9px 13px;border:1px solid #d1a14f;border-radius:999px;background:#fff6dc;font-weight:700}
+    .status::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--gold)}
+    .legend{max-width:1180px;margin:0 auto;padding:0 24px 34px}
+    .legend-box{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;padding:22px;border:1px solid var(--line);border-radius:18px;background:#ebe4d6}
+    .legend h2{margin:0 0 8px;font:700 1.1rem Georgia,serif}
+    .legend p{margin:0;color:#45555b}
+    main{max-width:1180px;margin:0 auto;padding:0 24px 70px}
+    .month-head{display:flex;justify-content:space-between;align-items:end;gap:20px;border-top:1px solid var(--line);padding:34px 0 22px}
+    .month-head h2{margin:0;font:700 clamp(1.8rem,4vw,2.7rem) Georgia,serif}
+    .month-head p{margin:0;color:var(--muted)}
+    .days{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .day-card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 10px 28px rgba(36,34,28,.05)}
+    .day-head{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+    .day-num{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--deep);color:#fff;font-weight:800}
+    .day-date{font-weight:800;color:#76501a;text-transform:uppercase;letter-spacing:.08em;font-size:.82rem}
+    .day-card h2{margin:0;font:700 clamp(1.35rem,2.2vw,1.8rem) Georgia,serif;line-height:1.18}
+    .day-card h2 strong{font-weight:700}
+    .hook{margin:18px 0;font-size:1.08rem}
+    dl{margin:0;border-top:1px solid var(--line)}
+    dl div{padding-top:13px}
+    dt{color:var(--muted);font-size:.76rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+    dd{margin:4px 0 0}
+    .summary{margin-top:34px;padding:30px;background:var(--deep);color:#f6f0e4;border-radius:22px}
+    .summary h2{margin:0 0 16px;font:700 2rem Georgia,serif}
+    .summary ul{margin:0;padding-left:20px;columns:2;column-gap:50px}
+    .summary li{break-inside:avoid;margin:8px 0}
+    .decision{margin-top:20px;padding:26px;border:2px solid var(--gold);border-radius:22px;background:#fffaf0}
+    .decision h2{margin:0 0 8px;font:700 1.7rem Georgia,serif}
+    .decision p{margin:7px 0;color:#405159}
+    footer{padding:28px 24px;background:#0b171c;color:#dce5e7;text-align:center}
+    footer a{font-weight:700}
+    @media(max-width:760px){
+      .hero{padding:38px 18px 28px}
+      .legend,main{padding-left:14px;padding-right:14px}
+      .legend-box,.days{grid-template-columns:1fr}
+      .month-head{align-items:start;flex-direction:column}
+      .day-card{padding:20px 18px}
+      .summary ul{columns:1}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#calendar">К календарю</a>
+  <nav class="topbar" aria-label="Навигация"><a href="../muzei/arhitektura/index.html">← Музей русской архитектуры</a></nav>
+  <header class="hero">
+    <p class="eyebrow">Февраль · 28 дней · редакция для согласования</p>
+    <h1>Календарь русской архитектуры</h1>
+    <p class="lead">Каждый день — отдельный архитектурный вопрос: что именно увидит посетитель, какое действие совершит и на каком доказательстве будет держаться вывод.</p>
+    <div class="status">Статус: на утверждение Сергею</div>
+  </header>
+  <section class="legend" aria-labelledby="legend-title">
+    <div class="legend-box">
+      <div><h2 id="legend-title">Привязка даты</h2><p><strong>[И]</strong> событие · <strong>[Р]</strong> рождение · <strong>[К]</strong> календарный якорь · <strong>[У]</strong> условная дата.</p></div>
+      <div><h2>Готовность</h2><p><strong>✅</strong> проверено или готово к повторному использованию · <strong>🧪</strong> прототип · <strong>💡</strong> идея · <strong>🔎</strong> требуется сверка перед страницей.</p></div>
+    </div>
+  </section>
+  <main id="calendar">
+    <div class="month-head"><h2>Все 28 предложений</h2><p>Пять обязательных полей сохранены в каждой карточке.</p></div>
+    <section class="days" aria-label="Предложения на февраль">
+      <article class="day-card" id="day-1">
+        <div class="day-head"><span class="day-num">01</span><span class="day-date">1 фев</span></div>
+        <h2><strong>Храм, восстановленный из половины руин</strong> — Спас на Нередице, 1198; заказчик князь Ярослав Владимирович <strong>[У]</strong></h2>
+        <p class="hook">В 1941 году храм превратился в руины. Как реставраторы решили, где продолжать древнюю кладку, а где начинается новое?</p>
+        <dl>
+          <div><dt>Механика</dt><dd>M-47 «Было/стало» ✅</dd></div>
+          <div><dt>Доказательство и статус</dt><dd>Руины, довоенные обмеры и восстановленная кладка; факт подтверждён Новгородским музеем-заповедником ✅</dd></div>
+        </dl>
+      </article>
+      <article class="day-card" id="day-2">
+        <div class="day-head"><span class="day-num">02</span><span class="day-date">2 фев</span></div>
+        <h2><strong>Гора, превращённая в маршрут памяти</strong> — Мамаев курган; Е. Вучетич, Я. Белопольский, 1959–1967 <strong>[К]</strong></h2>
+        <p class="hook">Почему к «Родине-матери» нельзя просто подойти — и зачем архитектура заставляет пройти весь путь битвы?</p>
+        <dl>
+          <div><dt>Механика</dt><dd>M-33 «Четыре расстояния» ✅</dd></div>
+          <div><dt>Доказательство и статус</dt><dd>План подъёма, площади и смена масштаба; авторство и даты подтверждены музеем-заповедником «Сталинградская битва» ✅</dd></div>
+        </dl>
+      </article>
+      <article class="day-card" id="day-3">
+        <div class="day-head"><span class="day-num">03</span><span class="day-date">3 фев</span></div>
+        <h2><strong>Пятнадцать глав и полторы тысячи историй</strong> — церковь Иоанна Предтечи в Толчкове, 1671–1687; автор проекта не установлен <strong>[У]</strong></h2>
+        <p class="hook">Как пятнадцать глав не превращаются в хаос — и где глаз всё-таки находит центр?</p>
+        <dl>
+          <div><dt>Механика</dt><dd>M-09 «Лупа на деталь» 🧪</dd></div>
+          <div><dt>Доказательство и статус</dt><dd>Силуэт, изразцы и корпус росписей; числа и датировку сверить перед страницей 🔎</dd></div>
+        </dl>
+      </article>
+      <article class="day-card" id="day-4">
+        <div class="day-head"><span class="day-num">04</span><span class="day-date">4 фев</span></div>
+        <h2><strong>Крепость, которую сплавили по Волге</strong> — Свияжск, 1551; работы связываются с Иваном Выродковым <strong>[У]</strong></h2>
+        <p class="hook">Город заранее срубили под Угличем, пронумеровали брёвна и собрали на острове за четыре недели. Что это — крепость или гигантский конструктор?</p>
+        <dl>
+          <div><dt>Механика</dt><dd>M-49 «Линия одного места» ✅</dd></div>
+          <div><dt>Доказательство и статус</dt><dd>Лес → плот → размеченные срубы → остров; четыре недели и сплав подтверждены официальным турпорталом Татарстана, роль Выродкова сверить 🔎</dd></div>
+        </dl>
+      </article>
+      <article class="day-card" id="day-5">
+        <div class="day-head"><span class="day-num">05</span><span class="day-date">5 фев</span></div>
+        <h2><strong>Стена с тремя уровнями боя</strong> — Смоленская крепость; Фёдор Конь, 1595–1602 <strong>[У]</strong></h2>
+        <p class="hook">Зачем одной стене круглые, глухие прямоугольные и надвратные башни — и почему их нельзя было сделать одинаковыми?</p>
+        <dl>
+          <div><dt>Механика</dt><dd>M-27 «Собрать силуэт решениями» ✅</dd></div>
+          <div><dt>Доказательство и статус</dt><dd>План, разрезы и разные зоны обстрела; даты, автор и 38 башен подтверждены Государственным музеем «Смоленская крепость» ✅</dd></div>
+        </dl>
+      </article>
+      <article class="day-card" id="day-6">
+        <div class="day-head"><span class="day-num">06</span><span class="day-date">6 фев</span></div>
+        <h2><strong>Башня, которую сначала признали памятником, а потом разобрали</strong> — Сухарева башня; Михаил Чоглоков, 1692–1701 <strong>[У]</strong></h2>
+        <p class="hook">В башне работал музей, её только что отреставрировали — почему через несколько лет она всё равно исчезла?</p>
+        <dl>
+          <div><dt>Механика</dt><dd>M-48 «Тогда/сейчас» ✅</dd></div>
+          <div><dt>Доказательство и статус</dt><dd>Архивные ракурсы площади, обмеры и пустое место; данные подтверждены Музеем Москвы ✅</dd></div>
+        </dl>
+      </article>
+      <article class="day-card" id="day-7">
+        <div class="day-head"><span class="day-num">07</span><span class="day-date">7 фев</span></div>
+        <h2><strong>Триумфальная арка, проигравшая трамваю</strong> — Красные ворота; Дмитрий Ухтомский, 1753 <strong>[У]</strong></h2>
+        <p class="hook">Каменная арка пережила смену империй, но не новое движение города. Правда ли архитектура мешала улице?</p>
+        <dl>
+          <div><dt>Механика</dt><dd>M-47 «Было/стало» ✅</dd></div>
+          <div><dt>Доказательство и статус</dt><dd>Стабильный ракурс площади до и после сноса; датировку и транспортный аргумент сверить 🔎</dd></div>
+        </dl>
+      </article>
+      <article class="day-card" id="day-8">
+        <div class="day-head"><span class="day-num">08</span><span class="day-date">8 фев</span></div>
+        <h2><strong>Город учёных, спрятанный в лесу</strong> — Новосибирский Академгородок, с 1957 года <strong>[К]</strong></h2>
+        <p class="hook">Почему научную столицу построили не вокруг парадной площади, а среди сосен и пешеходных троп?</p>
+        <dl>
+          <div><dt>Механика</dt><dd>M-33 «Четыре расстояния» ✅</dd></div>
+          <div><dt>Доказательство и статус</dt><dd>Генплан, лесные разрывы и маршрут дом → институт; авторский коллектив генплана сверить 🔎</dd></div>
+        </dl>
+      </article>
+      <article class="day-card" id="day-9">
+        <div class="day-head"><span class="day-num">09</span><span class="day-date">9 фев</span></div>
+        <h2><strong>Дом, который переехал вместе с жильцами</strong> — Саввинское подворье; Иван Кузнецов, 1905–1907, передвижка 1939 <strong>[У]</strong></h2>
+        <p class="hook">Огромный дом отодвинули в глубину квартала, не выселяя людей. Как стены выдержали путешествие?</p>
+        <dl>
+          <div><dt>Механика</dt><dd>M-47 «Было/стало» ✅</dd></div>
+          <div><dt>Доказательство и статус</dt><dd>Старое и новое положение на плане, инженерная схема передвижки; даты и роль Эммануила Генделя сверить 🔎</dd></div>
+        </dl>
+      </article>
+      <article class="day-card" id="day-10">
+        <div class="day-head"><span class="day-num">10</span><span class="day-date">10 фев</span></div>
+        <h2><strong>Кремль, который построили ради звука</strong> — Ростовский архиерейский двор; митрополит Иона Сысоевич, 1670–1680-е <strong>[У]</strong></h2>
+        <p class="hook">Колокола здесь не приложение к архитектуре: дворы, стены и звонницы образуют один музыкальный инструмент. Можно ли увидеть звон глазами?</p>
+        <dl>
+          <div><dt>Механика</dt><dd>M-04 «Звуковой слой эпохи» 💡</dd></div>
+          <div><dt>Доказательство и статус</dt><dd>План дворов, звонница и документальные записи ростовских звонов; точные даты сверить 🔎</dd></div>
+        </dl>
+      </article>
+      <article class="day-card" id="day-11">
+        <div class="day-head"><span class="day-num">11</span><span class="day-date">11 фев</span></div>
+        <h2><strong>Как Кремль превратили в жилой квартал</strong> — маскировка Москвы, 1941; группа Бориса Иофана <strong>[У]</strong></h2>
+        <p class="hook">С воздуха стены исчезли, площади стали крышами, а улицы — ложными кварталами. Какие признаки города пришлось подделать?</p>
+        <dl>
+          <div><dt>Механика</dt><dd>M-31 «Слои достоверности» ✅</dd></div>
+          <div><dt>Доказательство и статус</dt><dd>Аэрофото, схема маскировки и современный план; состав авторской группы сверить 🔎</dd></div>
+        </dl>
+      </article>
+      <article class="day-card" id="day-12">
+        <div class="day-head"><span class="day-num">12</span><span class="day-date">12 фев</span></div>
+        <h2><strong>Дворец, собранный после взрыва</strong> — Большой Петергофский дворец; Б. Растрелли, послевоенная реставрация с 1944 года <strong>[У]</strong></h2>
+        <p class="hook">Если от дворца остались обгоревшие стены, фотографии и обломки, где заканчивается реставрация и начинается воссоздание?</p>
+        <dl>
+          <div><dt>Механика</dt><dd>M-49 «Линия одного места» ✅</dd></div>
+          <div><dt>Доказательство и статус</dt><dd>Довоенный кадр → руины → проект → восстановленные залы; этапы и авторов реставрации сверить 🔎</dd></div>
+        </dl>
+      </article>
+      <article class="day-card" id="day-13">
+        <div class="day-head"><span class="day-num">13</span><span class="day-date">13 фев</span></div>
+        <h2><strong>Готический зал средневекового Новгорода</strong> — Владычная палата, 1433; иностранная артель, приглашённая архиепископом Евфимием II <strong>[У]</strong></h2>
+        <p class="hook">Откуда в Новгороде XV века нервюрные своды — и почему гражданское здание оказалось долговечнее многих храмов?</p>
+        <dl>
+          <div><dt>Механика</dt><dd>M-31 «Слои достоверности» ✅</dd></div>
+          <div><dt>Доказательство и статус</dt><dd>Свод, план палаты и строительная летопись; состав артели требует точной атрибуции 🔎</dd></div>
+        </dl>
+      </article>
+      <article class="day-card" id="day-14">
+        <div class="day-head"><span class="day-num">14</span><span class="day-date">14 фев</span></div>
+        <h2><strong>Дворец, найденный внутри колокольни</strong> — палаты Андрея Боголюбского, 1158–1165 <strong>[У]</strong></h2>
+        <p class="hook">От всего дворца остались лестничная башня и переход. Как по двум фрагментам доказали существование целого ансамбля?</p>
+        <dl>
+          <div><dt>Механика</dt><dd>M-09 «Лупа на деталь» 🧪</dd></div>
+          <div><dt>Доказательство и статус</dt><dd>Кладка, лестница, археология и реконструкция плана; историю опознания в 1954 году сверить 🔎</dd></div>
+        </dl>
+      </article>
+      <article class="day-card" id="day-15">
+        <div class="day-head"><span class="day-num">15</span><span class="day-date">15 фев</span></div>
+        <h2><strong>Художник, который фотографировал исчезающий Север</strong> — экспедиции Ивана Билибина, 1902–1904 <strong>[У]</strong></h2>
+        <p class="hook">Билибин ехал за сказочными образами, а привёз документальный архив храмов и деревень. Может ли фотография остановить исчезновение?</p>
+        <dl>
+          <div><dt>Механика</dt><dd>M-58 «Доказательство фотографией» 💡</dd></div>
+          <div><dt>Доказательство и статус</dt><dd>Авторские снимки и современные состояния; экспедиции подтверждены Российским этнографическим музеем ✅</dd></div>
+        </dl>
+      </article>
+      <article class="day-card" id="day-16">
+        <div class="day-head"><span class="day-num">16</span><span class="day-date">16 фев</span></div>
+        <h2><strong>Храм-крест, который снаружи кажется башней</strong> — Успенская церковь в Варзуге; плотник Клемент, 1674 <strong>[У]</strong></h2>
+        <p class="hook">Только план раскрывает, что высокий шатёр растёт не из простой избы, а из четырёх рукавов креста.</p>
+        <dl>
+          <div><dt>Механика</dt><dd>M-29 «Наложить контуры» ✅</dd></div>
+          <div><dt>Доказательство и статус</dt><dd>План-крест ↔ внешний силуэт; имя мастера и датировку сверить 🔎</dd></div>
+        </dl>
+      </article>
+      <article class="day-card" id="day-17">
+        <div class="day-head"><span class="day-num">17</span><span class="day-date">17 фев</span></div>
+        <h2><strong>Крыша-куб, которой нет в геометрии</strong> — Вознесенская церковь в Кушереке, 1669; автор не установлен <strong>[У]</strong></h2>
+        <p class="hook">Северный «куб» похож на раздутый парус. Почему такая кровля появилась именно в краю дождя и снега?</p>
+        <dl>
+          <div><dt>Механика</dt><dd>M-29 «Наложить контуры» ✅</dd></div>
+          <div><dt>Доказательство и статус</dt><dd>Разрез кубоватой кровли и сравнение с шатром; климатическую причинность доказать источником 🔎</dd></div>
+        </dl>
+      </article>
+      <article class="day-card" id="day-18">
+        <div class="day-head"><span class="day-num">18</span><span class="day-date">18 фев</span></div>
+        <h2><strong>Храм, поставленный ярусами как горка</strong> — церковь Рождества Иоанна Предтечи Ширкова погоста, 1694; автор не установлен <strong>[У]</strong></h2>
+        <p class="hook">Убери один ярус — и вертикальный взлёт исчезнет. Что здесь действительно держит силуэт?</p>
+        <dl>
+          <div><dt>Механика</dt><dd>M-28 «Сломать одним движением» ✅</dd></div>
+          <div><dt>Доказательство и статус</dt><dd>Последовательное снятие ярусов на одном контуре; дату сверить 🔎</dd></div>
+        </dl>
+      </article>
+      <article class="day-card" id="day-19">
+        <div class="day-head"><span class="day-num">19</span><span class="day-date">19 фев</span></div>
+        <h2><strong>Расписной купол без камня</strong> — «небеса» Кенозерья, XVIII–XIX века; местные иконописцы <strong>[У]</strong></h2>
+        <p class="hook">Плоский деревянный потолок превращается в раскрытое небо. Как радиальные грани создают купол, которого физически нет?</p>
+        <dl>
+          <div><dt>Механика</dt><dd>M-31 «Слои достоверности» ✅</dd></div>
+          <div><dt>Доказательство и статус</dt><dd>Каркас, грани и роспись; 17 полных комплексов подтверждены Кенозерским национальным парком ✅</dd></div>
+        </dl>
+      </article>
+      <article class="day-card" id="day-20">
+        <div class="day-head"><span class="day-num">20</span><span class="day-date">20 фев</span></div>
+        <h2><strong>Небо, которое однажды собрали не в ту сторону</strong> — часовня Иоанна Богослова в Зехнове, 1846; «небо» конца XVIII века <strong>[У]</strong></h2>
+        <p class="hook">После ремонта святые на потолке пошли на запад вместо востока. Может ли ошибка сборки выдать историю реставрации?</p>
+        <dl>
+          <div><dt>Механика</dt><dd>M-31 «Слои достоверности» ✅</dd></div>
+          <div><dt>Доказательство и статус</dt><dd>Сравнение нынешней последовательности граней с канонической; факт подтверждён Кенозерским национальным парком ✅</dd></div>
+        </dl>
+      </article>
+      <article class="day-card" id="day-21">
+        <div class="day-head"><span class="day-num">21</span><span class="day-date">21 фев</span></div>
+        <h2><strong>Храм, который пережили его обмеры</strong> — Анхимово → Богословка; 1708 / 2003–2008, обмеры Александра Ополовникова <strong>[У]</strong></h2>
+        <p class="hook">Подлинный 21-главый храм сгорел, но точные чертежи остались. Что вернулось в новой постройке — форма, технология или памятник?</p>
+        <dl>
+          <div><dt>Механика</dt><dd>M-47 «Было/стало» ✅</dd></div>
+          <div><dt>Доказательство и статус</dt><dd>Обмеры, фотографии, утрата и воссоздание на новом месте; хронологию сверить 🔎</dd></div>
+        </dl>
+      </article>
+      <article class="day-card" id="day-22">
+        <div class="day-head"><span class="day-num">22</span><span class="day-date">22 фев</span></div>
+        <h2><strong>Двести сорок четыре года — и сорок пять минут</strong> — Успенская церковь в Кондопоге, 1774–2018; автор не установлен <strong>[У]</strong></h2>
+        <p class="hook">Огонь уничтожил один из главных силуэтов деревянного Севера. Хватит ли обмеров и фотографий, чтобы вернуть его честно?</p>
+        <dl>
+          <div><dt>Механика</dt><dd>M-49 «Линия одного места» ✅</dd></div>
+          <div><dt>Доказательство и статус</dt><dd>Четыре состояния: предшественники → храм 1774 года → пожар → проект будущего; длительность пожара сверить 🔎</dd></div>
+        </dl>
+      </article>
+      <article class="day-card" id="day-23">
+        <div class="day-head"><span class="day-num">23</span><span class="day-date">23 фев</span></div>
+        <h2><strong>Крепость длиной восемьсот километров</strong> — Белгородская черта, 1630–1650-е; государственная строительная система <strong>[К]</strong></h2>
+        <p class="hook">Оружием стали не только стены, но и лес, земля, реки и десятки городов. Как увидеть крепость, если она длиннее дороги?</p>
+        <dl>
+          <div><dt>Механика</dt><dd>M-36 «Карта страны как вход» 💡</dd></div>
+          <div><dt>Доказательство и статус</dt><dd>Карта валов, засек, рек и городов; протяжённость, 27 городов и даты требуют финальной сверки 🔎</dd></div>
+        </dl>
+      </article>
+      <article class="day-card" id="day-24">
+        <div class="day-head"><span class="day-num">24</span><span class="day-date">24 фев</span></div>
+        <h2><strong>Крепость без средневековых башен</strong> — Петропавловская крепость; Доменико Трезини, с 1703 года <strong>[У]</strong></h2>
+        <p class="hook">Почему бастион почти исчезает с горизонта, но стреляет туда, куда круглая башня не достаёт?</p>
+        <dl>
+          <div><dt>Механика</dt><dd>M-27 «Собрать силуэт решениями» ✅</dd></div>
+          <div><dt>Доказательство и статус</dt><dd>Башня ↔ бастион: сравнение мёртвых зон и линий огня; этапы земляной и каменной крепости сверить 🔎</dd></div>
+        </dl>
+      </article>
+      <article class="day-card" id="day-25">
+        <div class="day-head"><span class="day-num">25</span><span class="day-date">25 фев</span></div>
+        <h2><strong>Форт, построенный посреди моря за одну зиму</strong> — Кроншлот, 1703–1704; по замыслу Петра I <strong>[У]</strong></h2>
+        <p class="hook">Пока лёд держал людей и грузы, на дне Финского залива выросло основание крепости. Что произойдёт, когда лёд растает?</p>
+        <dl>
+          <div><dt>Механика</dt><dd>M-39 «Первозданный облик» ✅</dd></div>
+          <div><dt>Доказательство и статус</dt><dd>Сваи, ряжи и островное основание в разрезе; авторство и технологию подтвердить источниками 🔎</dd></div>
+        </dl>
+      </article>
+      <article class="day-card" id="day-26">
+        <div class="day-head"><span class="day-num">26</span><span class="day-date">26 фев</span></div>
+        <h2><strong>Монастырь, превратившийся в артиллерийский город</strong> — стены Кирилло-Белозерского монастыря, 1654–1680; авторы не установлены <strong>[У]</strong></h2>
+        <p class="hook">Зачем монастырю стены толщиной с дом — и почему огромная крепость так и не повторила судьбу старой осады?</p>
+        <dl>
+          <div><dt>Механика</dt><dd>M-33 «Четыре расстояния» ✅</dd></div>
+          <div><dt>Доказательство и статус</dt><dd>Ландшафт озера → стены → башня → бойницы; размеры и этапы строительства сверить 🔎</dd></div>
+        </dl>
+      </article>
+      <article class="day-card" id="day-27">
+        <div class="day-head"><span class="day-num">27</span><span class="day-date">27 фев</span></div>
+        <h2><strong>Башня, убежавшая от водохранилища</strong> — Спасская башня Илимского острога, 1667; перенесена в музей «Тальцы» <strong>[У]</strong></h2>
+        <p class="hook">Старый город ушёл под воду, а башню разобрали и собрали выше будущего берега. Осталась ли она частью крепости?</p>
+        <dl>
+          <div><dt>Механика</dt><dd>M-05 «Судьба объекта» 💡</dd></div>
+          <div><dt>Доказательство и статус</dt><dd>Историческое место, схема разборки и современное музейное окружение; даты переноса сверить 🔎</dd></div>
+        </dl>
+      </article>
+      <article class="day-card" id="day-28">
+        <div class="day-head"><span class="day-num">28</span><span class="day-date">28 фев</span></div>
+        <h2><strong>Погост, который спасали без дороги</strong> — Порженский погост, XVIII век; авторы не установлены <strong>[У]</strong></h2>
+        <p class="hook">Как реставрировать деревянную крепость в лесу, куда материалы нельзя привезти обычной машиной?</p>
+        <dl>
+          <div><dt>Механика</dt><dd>M-05 «Судьба объекта» 💡</dd></div>
+          <div><dt>Доказательство и статус</dt><dd>Погост, священная роща, логистика и следы реставрации; точные даты и состав работ сверить 🔎</dd></div>
+        </dl>
+      </article>
+    </section>
+    <section class="summary">
+      <h2>Баланс месяца</h2>
+      <ul>
+        <li>6 сюжетов об утрате и восстановлении</li>
+        <li>7 сюжетов о крепостях и городских границах</li>
+        <li>8 сюжетов о деревянном Севере</li>
+        <li>7 сюжетов о городе, ансамбле и маршруте</li>
+        <li>Календарные якоря: 2, 8 и 23 февраля</li>
+        <li>Остальные даты условные и могут переставляться до утверждения</li>
+      </ul>
+    </section>
+    <section class="decision">
+      <h2>Решение пока не внесено</h2>
+      <p>Это страница для просмотра и утверждения, а не объявление окончательного состава.</p>
+      <p>Можно отвечать коротко: «1–5 оставить; 6 заменить; 7 перенести».</p>
+    </section>
+  </main>
+  <footer><a href="../muzei/arhitektura/index.html">Музей русской архитектуры</a> · проект «Русская цивилизация»</footer>
+</body>
+</html>
