@@ -83,3 +83,4 @@ body.house3d-in-view #heart{opacity:0!important;pointer-events:none!important}
 /* Level A: readable semantic copy and controls at both audit widths. */
 body p,body li,body blockquote{font-size:16px!important}
 body figcaption,body label,body button,body a,body summary,body small,body .eyebrow,body [role="button"],body [role="tab"],body th,body td{font-size:14px!important}
+body p.plan-proof-note,body p.house3d-note{font-size:16px!important}
