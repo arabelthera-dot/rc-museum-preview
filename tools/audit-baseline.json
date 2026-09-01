@@ -6,10 +6,14 @@
   "текст НЕ поверх картинки",
   "hero — сцена или большой визуал"
  ],
+ "muzei/arhitektura/nevjanskaya-bashnya.html": [
+  "текст НЕ поверх картинки"
+ ],
  "muzei/arhitektura/raspisnye-doma-povazhya.html": [
   "аудиоплеер"
  ],
  "muzei/arhitektura/terem-astashovo.html": [],
+ "muzei/arhitektura/vyatskoe.html": [],
  "muzei/iskusstvo/pic-aivazovsky-chernoe-more.html": [
   "аудиоплеер",
   "аудиогид не в конце",
@@ -29,9 +33,7 @@
   "аудиогид не в конце",
   "текст НЕ поверх картинки"
  ],
- "muzei/izobreteniya/day-01dec-lobachevsky.html": [
-  "аудиоплеер"
- ],
+ "muzei/izobreteniya/day-01dec-lobachevsky.html": [],
  "muzei/izobreteniya/day-01jan-cabletv.html": [],
  "muzei/izobreteniya/day-02jan-luna1.html": [
   "аудиоплеер"
@@ -44,10 +46,6 @@
   "аудиогид не в конце"
  ],
  "muzei/izobreteniya/day-05jan-shukhov.html": [],
- "muzei/izobreteniya/day-06jan-bering.html": [
-  "аудиоплеер",
-  "аудиогид не в конце"
- ],
  "muzei/izobreteniya/day-07jan-buran.html": [
   "аудиоплеер",
   "аудиогид не в конце"
@@ -57,10 +55,6 @@
   "аудиогид не в конце"
  ],
  "muzei/izobreteniya/day-09jan-blinov.html": [
-  "аудиоплеер",
-  "аудиогид не в конце"
- ],
- "muzei/izobreteniya/day-10nov-kalashnikov.html": [
   "аудиоплеер",
   "аудиогид не в конце"
  ],
@@ -89,14 +83,21 @@
   "аудиогид не в конце"
  ],
  "muzei/izobreteniya/day-30jan-kotelnikov.html": [],
- "muzei/karikatura/day-01jan-russian-bear-v2.html": [],
- "muzei/karikatura/day-01jan-russian-bear.html": [
-  "аудиоплеер",
-  "текст НЕ поверх картинки",
-  "hero — сцена или большой визуал"
+ "muzei/karikatura/day-01jan-russian-bear.html": [],
+ "muzei/karikatura/day-02jan-napoleon-russian-bath.html": [
+  "аудиогид не в конце"
  ],
  "muzei/ne-sdayutsya/podvig-kolovrat.html": [],
+ "muzei/ne-sdayutsya/podvig-kozelsk.html": [],
  "muzei/ne-sdayutsya/podvig-merkuriy.html": [],
+ "muzei/ne-sdayutsya/podvig-sirotinin.html": [
+  "аудиогид не в конце",
+  "hero — сцена или большой визуал"
+ ],
+ "muzei/pervoprohodcy/exp-bering-1728.html": [
+  "аудиоплеер",
+  "аудиогид не в конце"
+ ],
  "muzei/pervoprohodcy/exp-dezhnev-1648.html": [
   "аудиоплеер",
   "текст НЕ поверх картинки"
