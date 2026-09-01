@@ -257,6 +257,15 @@
     .st-scene{transition:none}
   }
 
+  /* ── Светлая читательная поверхность: длинный текст на бумаге, не на почти чёрном ── */
+  .block--paper{background:var(--paper);color:var(--paper-ink)}
+  .block--paper h2{color:var(--paper-ink)}
+  .block--paper p{color:var(--paper-ink)}
+  .block--paper p b{color:var(--paper-ink)}
+  .block--paper .kicker{color:var(--gold)}
+  .block--paper .fig{background:transparent;border-color:rgba(36,29,22,.18)}
+  .block--paper .fig figcaption{color:var(--paper-mut)}
+
   /* ── HERO-МЕДАЛЬОН (Сиротинин и другие герои без прижизненных портретов) ── */
   .hero-medallion{text-align:center;padding:34px 24px 6px;border-bottom:1px solid var(--line)}
   .med-lead{margin-bottom:18px}
