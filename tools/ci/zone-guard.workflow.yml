@@ -1,0 +1,70 @@
+name: Сторож зон
+
+# Зачем: агенты через несколько сессий «перелетают» в чужой музей, убеждение не держится.
+# Хук pre-commit стоит в клоне бота — клон можно переставить, хук потерять.
+# GitHub Actions — единственный контур, не зависящий от среды бота: сюда приезжает всё.
+# Источник правды о зонах: docs/agents/zones.json.
+#
+# Проверяются ТОЛЬКО коммиты этого пуша (before..after), а не вся история:
+# старые нарушения уже разобраны, поднимать их каждый раз — шум.
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  zones:
+    name: Каждый агент — свой музей
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # нужен для rev-list по диапазону
+
+      - name: Определить диапазон коммитов
+        id: range
+        run: |
+          set -u
+          BEFORE="${{ github.event.before }}"
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            RANGE="${{ github.event.pull_request.base.sha }}..${{ github.event.pull_request.head.sha }}"
+          elif [ -n "$BEFORE" ] \
+               && [ "$BEFORE" != "0000000000000000000000000000000000000000" ] \
+               && git cat-file -e "${BEFORE}^{commit}" 2>/dev/null; then
+            RANGE="${BEFORE}..${{ github.sha }}"
+          elif git rev-parse -q --verify "${{ github.sha }}^" >/dev/null; then
+            # новая ветка или force-push: судим только вершину
+            RANGE="${{ github.sha }}~1..${{ github.sha }}"
+          else
+            RANGE=""   # самый первый коммит репозитория, сравнивать не с чем
+          fi
+          echo "range=$RANGE" >> "$GITHUB_OUTPUT"
+          echo "Диапазон: ${RANGE:-(нечего проверять)}"
+
+      - name: Проверка зон
+        if: steps.range.outputs.range != ''
+        run: |
+          set -o pipefail
+          python3 tools/zone-guard.py \
+            --range "${{ steps.range.outputs.range }}" | tee /tmp/zones.txt
+        continue-on-error: false
+
+      - name: Итог в отчёт сборки
+        if: always() && steps.range.outputs.range != ''
+        run: |
+          {
+            echo "## Сторож зон"
+            echo ""
+            echo "Диапазон: \`${{ steps.range.outputs.range }}\`"
+            echo ""
+            echo '```'
+            cat /tmp/zones.txt 2>/dev/null || echo "(вывод не получен)"
+            echo '```'
+            echo ""
+            echo "Карта зон: \`docs/agents/zones.json\`."
+            echo "Зона меняется только прямой командой Сергея «меняю зону такого-то»."
+          } >> "$GITHUB_STEP_SUMMARY"
