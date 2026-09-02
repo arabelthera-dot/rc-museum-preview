@@ -55,43 +55,49 @@
   <span class="here">День 3 · Николай Сиротинин</span>
 </nav>
 
-<!-- ── HERO: скроллтеллинг M-73 — сцена закреплена, текст подвига следует за чтением ── -->
-<article class="scrolltelling" id="hero" aria-label="Николай Сиротинин — подвиг артиллериста, сцены меняются по мере чтения">
-  <div class="st-media">
-    <div class="hero-scene st-stage">
-      <img class="st-scene active" src="sirotinin-f22-pushka.jpg" alt="76-мм дивизионная пушка Ф-22 обр. 1936 — орудие, из которого воевал Сиротинин">
-      <img class="st-scene" src="sirotinin-memorial-krichev.jpg" alt="Братская могила в Кричеве на берегу Сожа, в начале улицы Сиротинина" aria-hidden="true">
-    </div>
-    <div class="st-cap">
-      <p class="st-cap-layer active"><span class="st-src">76-мм дивизионная пушка Ф-22, обр. 1936 — Alf van Beem, Wikimedia Commons</span>Та самая пушка. Первым выстрелом он подбил головной танк, вторым — замыкающую машину, и колонна встала.</p>
-      <p class="st-cap-layer" aria-hidden="true"><span class="st-src">Братская могила в Кричеве, на берегу Сожа — CastleMound, Wikimedia Commons, CC BY-SA 4.0</span>Память живёт на месте: в Кричеве улица носит имя Сиротинина, у реки — братская могила защитников.</p>
-    </div>
+<!-- ── HERO: медальон подвига (прижизненных фото нет — вместо портрета круг с цифрами) ── -->
+<article id="hero" class="hero-medallion" aria-label="Николай Сиротинин — подвиг в цифрах">
+  <div class="hero-lead med-lead">
+    <div class="date-chip">артиллерист · 20 лет · 1941 · Сокольничи</div>
+    <h1>Николай Сиротинин</h1>
+    <p class="hook">Один парень. Одна пушка. Уничтожил 11 танков, 7 бронемашин и 57 солдат.</p>
   </div>
-  <div class="st-chapters">
-    <header class="hero-lead">
-      <div class="date-chip">артиллерист · 20 лет · 1941 · Сокольничи</div>
-      <h1>Николай Сиротинин</h1>
-      <p class="hook">Один парень. Одна пушка. И целая танковая колонна встала.</p>
-      <div class="hero-btns">
-        <button class="btn gold" onclick="document.getElementById('istoriya').scrollIntoView({behavior:'smooth'})">Читать историю ↓</button>
-        <button class="btn ghost" onclick="document.getElementById('audioguide').scrollIntoView({behavior:'smooth'})">Слушать аудиогид</button>
-      </div>
-    </header>
-    <div class="st-steps">
-      <article class="st-step" data-idx="0">
-        <div class="kicker">◆ Выбор и стойкость</div>
-        <p>Прозвучал приказ отступать. Сиротинин <b>не ушёл</b> — вызвался остаться один, прикрыть отход полка. Два часа один ствол держал дорогу, и противник был уверен, что бьёт батарея. Когда снаряды кончились — <b>отстреливался из карабина до последнего</b>.</p>
-      </article>
-      <article class="st-step" data-idx="1">
-        <div class="kicker">◆ Память</div>
-        <p>О подвиге узнали из дневника противника. В Кричеве именем Сиротинина названа улица — город помнит того, кто <b>не сдался</b>.</p>
-      </article>
-    </div>
+  <div class="medallion" role="img" aria-label="Итог боя у моста через Добрость: 11 танков, 7 бронемашин, 57 солдат. Бой шёл около двух часов.">
+    <svg viewBox="0 0 340 340" aria-hidden="true">
+      <defs>
+        <radialGradient id="medBg" cx="50%" cy="38%" r="72%">
+          <stop offset="0%" stop-color="#12203a"/>
+          <stop offset="100%" stop-color="#060d18"/>
+        </radialGradient>
+      </defs>
+      <circle cx="170" cy="170" r="160" fill="url(#medBg)" stroke="#c9a84c" stroke-width="2"/>
+      <circle cx="170" cy="170" r="152" fill="none" stroke="rgba(201,168,76,.14)" stroke-width="1"/>
+      <circle cx="170" cy="170" r="144" fill="none" stroke="rgba(201,168,76,.35)" stroke-width="1"/>
+      <text x="170" y="158" text-anchor="middle" class="med-year">1941</text>
+      <text x="170" y="182" text-anchor="middle" class="med-sub">17 июля · бой ~2 часа</text>
+      <text x="170" y="72" text-anchor="middle" class="med-num">11</text>
+      <text x="170" y="92" text-anchor="middle" class="med-lab">танков</text>
+      <text x="296" y="204" text-anchor="middle" class="med-num">7</text>
+      <text x="296" y="224" text-anchor="middle" class="med-lab">бронемашин</text>
+      <text x="44" y="204" text-anchor="middle" class="med-num">57</text>
+      <text x="44" y="224" text-anchor="middle" class="med-lab">солдат</text>
+    </svg>
+  </div>
+  <div class="med-line">немцы отдали честь на похоронах этого героя</div>
+  <div class="hero-btns">
+    <button class="btn gold" onclick="document.getElementById('istoriya').scrollIntoView({behavior:'smooth'})">Читать историю ↓</button>
+    <button class="btn ghost" onclick="document.getElementById('audioguide').scrollIntoView({behavior:'smooth'})">Слушать аудиогид</button>
   </div>
 </article>
 
 <div class="hero-under">
   <div class="wrap">
+    <div class="stamp">
+      <div><div class="v">11</div><div class="k">танков</div></div>
+      <div><div class="v">7</div><div class="k">бронемашин</div></div>
+      <div><div class="v">57</div><div class="k">солдат</div></div>
+      <div><div class="v">2 часа</div><div class="k">держал мост</div></div>
+    </div>
     <div class="stamp-note">Итог боя 17 июля 1941 года у деревни Сокольничи — по канонической версии, принятой в русских источниках.</div>
   </div>
 </div>
@@ -444,7 +450,6 @@ window.addEventListener('pageshow',function(e){if(e.persisted)location.reload();
   random:[]
 };</script>
 <script src="../../assets/museum-chrome.js"></script>
-<script src="../../assets/scrolltelling.js"></script>
 <script>window.MUSEUM_SUPPORT={museum:'Русские не сдаются'};</script>
 <script src="../../assets/museum-support.js"></script>
 <script>window.MUSEUM_CALENDAR_INITIAL='01-03';</script>
