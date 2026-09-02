@@ -37,6 +37,24 @@
         "local": "muzei/izobreteniya/video/day-05jan-shukhov-9x16-poster.jpg",
         "v": 1
       }
+    },
+    "izobreteniya/01jan-cabletv": {
+      "title": "История в 84 секунды",
+      "note": "Часть кадров сгенерирована нейросетью (Genosai) — не архивная съёмка. Закадровый текст озвучен синтезом речи.",
+      "horizontal": {
+        "file": "izobreteniya/01jan-cabletv/day-01jan-cabletv.mp4",
+        "local": "muzei/izobreteniya/video/day-01jan-cabletv.mp4",
+        "v": 1,
+        "w": 1920,
+        "h": 1080,
+        "sec": 84,
+        "mb": 20.8
+      },
+      "poster": {
+        "file": "izobreteniya/01jan-cabletv/day-01jan-cabletv-poster.jpg",
+        "local": "muzei/izobreteniya/video/day-01jan-cabletv-poster.jpg",
+        "v": 1
+      }
     }
   }
 }
