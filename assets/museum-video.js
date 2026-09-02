@@ -61,12 +61,23 @@
       source.type = 'video/mp4';
       video.appendChild(source);
     }
-    // Абсолютный адрес из HTML сравниваем с новым: одинаковые — плеер не трогаем,
-    // иначе load() на каждой загрузке страницы сбрасывает уже начатый просмотр.
+    // Абсолютный адрес из HTML сравниваем с новым: одинаковые — плеер не трогаем.
+    // Новый адрес назначаем только при намерении запустить ролик. Вызов load() во время
+    // инициализации заставляет Chromium скачать MP4 даже при preload="none".
     if (source.src !== src) {
-      source.setAttribute('src', src);
-      source.setAttribute('type', 'video/mp4');
-      video.load();
+      var activate = function () {
+        if (source.src !== src) {
+          source.setAttribute('src', src);
+          source.setAttribute('type', 'video/mp4');
+          video.load();
+        }
+        video.removeEventListener('pointerdown', activate);
+        video.removeEventListener('click', activate);
+        video.removeEventListener('keydown', activate);
+      };
+      video.addEventListener('pointerdown', activate, { once: true });
+      video.addEventListener('click', activate, { once: true });
+      video.addEventListener('keydown', activate, { once: true });
     }
     video.setAttribute('data-rc-video-src', src);
   }
