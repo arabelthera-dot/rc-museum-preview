@@ -1,0 +1,42 @@
+{
+  "_": "СГЕНЕРИРОВАНО tools/video-sync.py из docs/video/REGISTRY.json. Руками не править.",
+  "version": 2,
+  "updated": "2026-09-02",
+  "hosting": {
+    "base": ""
+  },
+  "releases": {
+    "izobreteniya/05jan-shukhov": {
+      "title": "История в 82 секунды",
+      "note": "Часть кадров сгенерирована нейросетью (Genosai) — не архивная съёмка. Закадровый текст озвучен синтезом речи.",
+      "horizontal": {
+        "file": "izobreteniya/05jan-shukhov/day-05jan-shukhov.mp4",
+        "local": "muzei/izobreteniya/video/day-05jan-shukhov.mp4",
+        "v": 3,
+        "w": 1920,
+        "h": 1080,
+        "sec": 82,
+        "mb": 20.8
+      },
+      "vertical": {
+        "file": "izobreteniya/05jan-shukhov/day-05jan-shukhov-9x16.mp4",
+        "local": "muzei/izobreteniya/video/day-05jan-shukhov-9x16.mp4",
+        "v": 1,
+        "w": 1080,
+        "h": 1920,
+        "sec": 34.8,
+        "mb": 11.9
+      },
+      "poster": {
+        "file": "izobreteniya/05jan-shukhov/day-05jan-shukhov-poster.jpg",
+        "local": "muzei/izobreteniya/video/day-05jan-shukhov-poster.jpg",
+        "v": 1
+      },
+      "poster_vertical": {
+        "file": "izobreteniya/05jan-shukhov/day-05jan-shukhov-9x16-poster.jpg",
+        "local": "muzei/izobreteniya/video/day-05jan-shukhov-9x16-poster.jpg",
+        "v": 1
+      }
+    }
+  }
+}
