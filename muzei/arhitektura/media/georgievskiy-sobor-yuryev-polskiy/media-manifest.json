@@ -7,8 +7,9 @@
     {"path":"detail.webp","sha256":"91e300f3a90a6e0c3db56578706f9f247663561c38177e9164bd9d4c0f4cef36","source_url":"https://commons.wikimedia.org/wiki/File:Георгиевский_собор_Юрьев-Польский.jpg","author":"Kate Vader","license":"CC BY-SA 4.0","changes":"crop, resize, WebP"},
     {"path":"ensemble.webp","sha256":"f6094b76d5fb5300018fbd37da1869725f4e8583547ae2fa5c2ba1f7a011b2c8","source_url":"https://commons.wikimedia.org/wiki/File:2011.05.09_3277_Георгиевский_собор_в_Юрьеве_Польском.JPG","author":"Ded egor","license":"CC BY-SA 3.0","changes":"auto-orient, resize, WebP"},
     {"path":"historic.webp","sha256":"5d7e2514f421b38444573fd5684bfb777a5f3842454686eb92043ddb84506c7e","source_url":"https://commons.wikimedia.org/wiki/File:Георгиевский_собор_(Юрьев-Польский).jpg","author":"И. Толстой, Н. Кондаков","license":"Public domain","changes":"resize, WebP"},
-    {"path":"intro-film.mp4","sha256":"53e51f706001d6ae0910364cbcb76c86f8479239733c5f2ab8d39689a64c5cb0","source_url":"derived from cleared images above","author":"Редакционная сборка Русской цивилизации","license":"Mixed: CC BY-SA 4.0 / CC BY-SA 3.0 / PD","changes":"22-second documentary montage, silent AAC track"}
+    {"path":"intro-film.mp4","sha256":"53e51f706001d6ae0910364cbcb76c86f8479239733c5f2ab8d39689a64c5cb0","source_url":"derived from cleared images above","author":"Редакционная сборка Русской цивилизации","license":"Mixed: CC BY-SA 4.0 / CC BY-SA 3.0 / PD","changes":"22-second documentary montage, silent AAC track"},
+    {"path":"audioguide-ru.mp3","sha256":"7df9cd630220875d45901a411b10a84345b13e9c582765291b9c78db4c9f1805","source_url":"project TTS pipeline","author":"Редакционная сборка Русской цивилизации; синтезированный голос ru-RU-DmitryNeural","license":"project-produced audio","changes":"speech synthesis from approved transcript, rate -8%"}
   ],
-  "audio_status": "blocked_missing_OPENAI_API_KEY",
+  "audio_status": "cleared_synthetic_voice_disclosed",
   "ai_image_modification": "not_used"
 }
