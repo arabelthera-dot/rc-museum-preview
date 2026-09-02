@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Витрина роликов — «Русская цивилизация»</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#c9a84c;--gold-g:rgba(201,168,76,.08);--bg:#050c18;--card:#0a1424;--muted:#8fa0b8;--line:rgba(201,168,76,.22)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:#eef3fa;font-family:'Inter',system-ui,sans-serif;line-height:1.6}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header{padding:56px 0 34px;border-bottom:1px solid var(--line)}
+.kicker{color:var(--gold);font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+h1{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(30px,5vw,46px);margin:8px 0 10px;font-weight:700}
+.lead{color:var(--muted);max-width:70ch;margin:0}
+.day{margin:44px 0 0;padding:26px;background:var(--card);border:1px solid var(--line);border-radius:16px}
+.day h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:28px;margin:0 0 4px;font-weight:700}
+.day .date{color:var(--gold);font-size:13px;font-weight:600;letter-spacing:.04em}
+.pair{display:grid;grid-template-columns:1.55fr 1fr;gap:24px;margin-top:22px}
+@media(max-width:820px){.pair{grid-template-columns:1fr}}
+.slot{min-width:0}
+.slot h3{font-size:14px;margin:0 0 4px;font-weight:600}
+.slot p.meta{color:var(--muted);font-size:12.5px;margin:0 0 12px}
+video{width:100%;background:#03080f;border-radius:12px;display:block;border:1px solid rgba(255,255,255,.06)}
+video.h{aspect-ratio:16/9}
+video.v{aspect-ratio:9/16;max-height:70vh;margin:0 auto}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.chip{background:var(--gold-g);color:var(--gold);border:1px solid var(--line);border-radius:20px;padding:2px 12px;font-size:11.5px;font-weight:600}
+.note{color:var(--muted);font-size:12.5px;margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.06)}
+a{color:var(--gold)}
+footer{color:var(--muted);font-size:12.5px;padding:40px 0 60px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="kicker">Служебная витрина</div>
+  <h1>Ролики музеев — просмотр перед публикацией</h1>
+  <p class="lead">Здесь лежат оба файла каждого выпуска: сайтовый горизонтальный для страницы дня
+  и вертикальный мастер для лент. Страница нужна для просмотра и приёмки, в поиске не индексируется.</p>
+</div></header>
+
+<div class="wrap">
+
+  <section class="day">
+    <div class="date">Музей изобретений · 5 января</div>
+    <h2>Шухов — первый в мире нефтепровод</h2>
+    <div class="pair">
+      <div class="slot">
+        <h3>Сайтовый · 16:9</h3>
+        <p class="meta">Стоит в блоке «Видео дня» на странице выпуска.</p>
+        <video class="h" controls playsinline preload="none" poster="../muzei/izobreteniya/video/day-05jan-shukhov-poster.jpg">
+          <source src="../muzei/izobreteniya/video/day-05jan-shukhov.mp4?v=3" type="video/mp4">
+        </video>
+        <div class="chips"><span class="chip">1920×1080</span><span class="chip">82 сек</span><span class="chip">21,8 МБ</span><span class="chip">норма ≤ 25 МБ</span></div>
+      </div>
+      <div class="slot">
+        <h3>Соцсетевой · 9:16</h3>
+        <p class="meta">Один мастер на TikTok, Reels, Shorts, VK Клипы и Rutube.</p>
+        <video class="v" controls playsinline preload="none">
+          <source src="../muzei/izobreteniya/video/day-05jan-shukhov-9x16.mp4?v=3" type="video/mp4">
+        </video>
+        <div class="chips"><span class="chip">1080×1920</span><span class="chip">35 сек</span><span class="chip">12,5 МБ</span><span class="chip">норма ≤ 15 МБ</span></div>
+      </div>
+    </div>
+    <p class="note">Вертикаль собрана из трёх сцен паспорта — хук, ключевой факт, финал. Титры держатся
+    выше 74 % высоты кадра: нижние 20 % отданы интерфейсу площадки. Часть кадров сгенерирована
+    нейросетью (Genosai) и архивной съёмкой не является. Закадровый голос — синтез речи.
+    Страница выпуска: <a href="../muzei/izobreteniya/day-05jan-shukhov.html#video">Шухов, 5 января</a>.</p>
+  </section>
+
+</div>
+
+<footer><div class="wrap">«Русская цивилизация» · служебная витрина роликов · обновляется по мере выпусков</div></footer>
+</body>
+</html>
