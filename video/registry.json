@@ -55,6 +55,38 @@
         "local": "muzei/izobreteniya/video/day-01jan-cabletv-poster.jpg",
         "v": 1
       }
+    },
+    "arhitektura/01jan-kizhi": {
+      "title": "Все ли эти здания всегда стояли здесь?",
+      "note": "Документальные фотографии: Alexxx1979, CC BY-SA 4.0. Две сцены созданы GenosAI и маркированы как образовательные ИИ-визуализации, не хроника. Голос и предметная фонограмма синтезированы и раскрыты в паспорте.",
+      "horizontal": {
+        "file": "arhitektura/01jan-kizhi/day-01jan-kizhi.mp4",
+        "local": "muzei/arhitektura/video/day-01jan-kizhi.mp4",
+        "v": 1,
+        "w": 1920,
+        "h": 1080,
+        "sec": 83.2,
+        "mb": 21.3
+      },
+      "vertical": {
+        "file": "arhitektura/01jan-kizhi/day-01jan-kizhi-9x16.mp4",
+        "local": "muzei/arhitektura/video/day-01jan-kizhi-9x16.mp4",
+        "v": 1,
+        "w": 1080,
+        "h": 1920,
+        "sec": 43.1,
+        "mb": 12.5
+      },
+      "poster": {
+        "file": "arhitektura/01jan-kizhi/day-01jan-kizhi-poster.jpg",
+        "local": "muzei/arhitektura/video/day-01jan-kizhi-poster.jpg",
+        "v": 1
+      },
+      "poster_vertical": {
+        "file": "arhitektura/01jan-kizhi/day-01jan-kizhi-9x16-poster.jpg",
+        "local": "muzei/arhitektura/video/day-01jan-kizhi-9x16-poster.jpg",
+        "v": 1
+      }
     }
   }
 }
