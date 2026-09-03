@@ -1,7 +1,7 @@
 {
   "_": "СГЕНЕРИРОВАНО tools/video-sync.py из docs/video/REGISTRY.json. Руками не править.",
   "version": 2,
-  "updated": "2026-09-02",
+  "updated": "2026-09-03",
   "hosting": {
     "base": ""
   },
@@ -50,9 +50,23 @@
         "sec": 84,
         "mb": 20.8
       },
+      "vertical": {
+        "file": "izobreteniya/01jan-cabletv/day-01jan-cabletv-9x16.mp4",
+        "local": "muzei/izobreteniya/video/day-01jan-cabletv-9x16.mp4",
+        "v": 1,
+        "w": 1080,
+        "h": 1920,
+        "sec": 42.7,
+        "mb": 12.4
+      },
       "poster": {
         "file": "izobreteniya/01jan-cabletv/day-01jan-cabletv-poster.jpg",
         "local": "muzei/izobreteniya/video/day-01jan-cabletv-poster.jpg",
+        "v": 1
+      },
+      "poster_vertical": {
+        "file": "izobreteniya/01jan-cabletv/day-01jan-cabletv-9x16-poster.jpg",
+        "local": "muzei/izobreteniya/video/day-01jan-cabletv-9x16-poster.jpg",
         "v": 1
       }
     },
