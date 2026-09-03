@@ -101,6 +101,38 @@
         "local": "muzei/izobreteniya/video/day-01jan-cabletv-9x16-poster.jpg",
         "v": 1
       }
+    },
+    "karikatura/02jan-napoleon": {
+      "title": "Пришёл за славой — ушёл с носом",
+      "note": "Документальные изображения: листы Ивана Теребенева 1812–1813 годов (Государственный исторический музей), общественное достояние. Закадровый голос синтезирован (edge-tts).",
+      "horizontal": {
+        "file": "karikatura/02jan-napoleon/day-02jan-napoleon.mp4",
+        "local": "muzei/karikatura/video/day-02jan-napoleon.mp4",
+        "v": 1,
+        "w": 1920,
+        "h": 1080,
+        "sec": 61.2,
+        "mb": 21.3
+      },
+      "vertical": {
+        "file": "karikatura/02jan-napoleon/day-02jan-napoleon-9x16.mp4",
+        "local": "muzei/karikatura/video/day-02jan-napoleon-9x16.mp4",
+        "v": 1,
+        "w": 1080,
+        "h": 1920,
+        "sec": 35.7,
+        "mb": 12.7
+      },
+      "poster": {
+        "file": "karikatura/02jan-napoleon/day-02jan-napoleon-poster.jpg",
+        "local": "muzei/karikatura/video/day-02jan-napoleon-poster.jpg",
+        "v": 1
+      },
+      "poster_vertical": {
+        "file": "karikatura/02jan-napoleon/day-02jan-napoleon-9x16-poster.jpg",
+        "local": "muzei/karikatura/video/day-02jan-napoleon-9x16-poster.jpg",
+        "v": 1
+      }
     }
   }
 }
