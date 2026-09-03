@@ -244,7 +244,8 @@
   .tl-card .dot{position:absolute;top:18px;right:16px;width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px var(--gold-g)}
 
   @media(max-width:899px){
-    .st-stage{height:44vh}
+    .st-media{position:sticky;top:0;z-index:2;align-self:start;background:var(--bg)}
+    .st-stage{height:36vh;min-height:230px}
     .st-chapters .hero-lead{padding-top:14px}
   }
   @media(min-width:900px){

@@ -13,6 +13,7 @@
        lead:'Подлинные надписи защитников крепости…',
        hint:'Нажми на надпись — раскроется, где её нашли, и можно послушать.',
        note:'Озвучено синтезом речи — временно, до записи голосом автора музея.',
+       bgImage:'brest-kirpich-kladka.jpg',   // реальное фото кирпичной стены (фон .sg-wall); нет — рисуется кирпич-градиент
        wall:[
          { text:'…', text2:'…', place:'…', note:'…', audio:'slovo-geroya-1.mp3' }
        ]
@@ -28,22 +29,26 @@
   var host = document.getElementById('slovo-geroya');
   if(!host || host.querySelector('.sg-wall')) return;
 
+  var wallBg = CFG.bgImage
+    ? 'radial-gradient(ellipse at 50% -20%, rgba(255,255,255,.06), transparent 62%),'
+      + 'linear-gradient(165deg, rgba(26,13,7,.62), rgba(12,7,4,.78)),'
+      + 'url("' + CFG.bgImage + '") center/cover no-repeat'
+    : 'radial-gradient(ellipse at 50% -20%, rgba(255,255,255,.07), transparent 62%),'
+      + 'repeating-linear-gradient(0deg, rgba(0,0,0,.17) 0 2px, transparent 2px 32px),'
+      + 'repeating-linear-gradient(90deg, rgba(0,0,0,.14) 0 2px, transparent 2px 64px),'
+      + 'linear-gradient(170deg,#4c2a1a 0%,#331b12 52%,#231108 100%)';
   var css = ''
   + '.sg-wall{position:relative;overflow:hidden;border:1px solid rgba(201,168,76,.20);border-radius:12px;'
   + 'padding:clamp(22px,4.5vw,42px);box-shadow:inset 0 0 80px rgba(0,0,0,.55),0 14px 44px rgba(0,0,0,.35);'
-  + 'background:'
-  +   'radial-gradient(ellipse at 50% -20%, rgba(255,255,255,.07), transparent 62%),'
-  +   'repeating-linear-gradient(0deg, rgba(0,0,0,.17) 0 2px, transparent 2px 32px),'
-  +   'repeating-linear-gradient(90deg, rgba(0,0,0,.14) 0 2px, transparent 2px 64px),'
-  +   'linear-gradient(170deg,#4c2a1a 0%,#331b12 52%,#231108 100%)}'
+  + 'background:' + wallBg + '}'
   + '.sg-wall::after{content:\'\';position:absolute;inset:0;pointer-events:none;'
   + 'background:radial-gradient(ellipse at 80% 110%, rgba(201,168,76,.10), transparent 55%)}'
   + '.sg-scratch{display:block;width:100%;text-align:left;background:none;border:none;cursor:pointer;'
-  + 'font-family:var(--mono);color:#e6d9bd;font-size:clamp(14.5px,2.3vw,19px);line-height:1.55;'
-  + 'letter-spacing:.15px;margin:0 0 24px;padding:0;'
-  + 'text-shadow:0 1px 0 rgba(0,0,0,.7),0 0 2px rgba(230,217,189,.4);'
-  + 'transform:rotate(-.5deg);transition:transform .22s ease,color .22s ease}'
-  + '.sg-scratch:nth-child(even){transform:rotate(.55deg)}'
+  + 'font-family:var(--mono);color:#e9dcc0;font-size:clamp(14.5px,2.3vw,19px);line-height:1.55;'
+  + 'letter-spacing:.2px;margin:0 0 24px;padding:0;'
+  + 'text-shadow:0 2px 3px rgba(0,0,0,.85),0 -1px 0 rgba(255,255,255,.10);'
+  + 'transform:rotate(-.7deg);transition:transform .22s ease,color .22s ease}'
+  + '.sg-scratch:nth-child(even){transform:rotate(.8deg)}'
   + '.sg-scratch:last-child{margin-bottom:0}'
   + '.sg-scratch:hover,.sg-scratch:focus-visible{color:#f5ead0;transform:rotate(0deg) translateX(4px);outline:none}'
   + '.sg-scratch .sg-num{display:block;color:var(--gold);font-size:11px;letter-spacing:2.4px;'
