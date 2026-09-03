@@ -70,6 +70,38 @@
         "v": 2
       }
     },
+    "arhitektura/07jan-nerl": {
+      "title": "Зачем маленькому храму основание высотой 5,3 метра?",
+      "note": "Документальные фотографии с открытыми лицензиями; образовательные схемы маркированы, генеративные изображения и исторические реконструкции не использованы. Голос и предметная фонограмма синтезированы и раскрыты в паспорте.",
+      "horizontal": {
+        "file": "arhitektura/07jan-nerl/day-07jan-nerl.mp4",
+        "local": "muzei/arhitektura/video/day-07jan-nerl.mp4",
+        "v": 1,
+        "w": 1920,
+        "h": 1080,
+        "sec": 62.4,
+        "mb": 19.8
+      },
+      "vertical": {
+        "file": "arhitektura/07jan-nerl/day-07jan-nerl-9x16.mp4",
+        "local": "muzei/arhitektura/video/day-07jan-nerl-9x16.mp4",
+        "v": 1,
+        "w": 1080,
+        "h": 1920,
+        "sec": 38.4,
+        "mb": 12.9
+      },
+      "poster": {
+        "file": "arhitektura/07jan-nerl/day-07jan-nerl-poster.jpg",
+        "local": "muzei/arhitektura/video/day-07jan-nerl-poster.jpg",
+        "v": 1
+      },
+      "poster_vertical": {
+        "file": "arhitektura/07jan-nerl/day-07jan-nerl-9x16-poster.jpg",
+        "local": "muzei/arhitektura/video/day-07jan-nerl-9x16-poster.jpg",
+        "v": 1
+      }
+    },
     "izobreteniya/01jan-cabletv": {
       "title": "История в 84 секунды",
       "note": "Часть кадров сгенерирована нейросетью (Genosai) — не архивная съёмка. Закадровый текст озвучен синтезом речи.",
