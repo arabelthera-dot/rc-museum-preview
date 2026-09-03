@@ -197,6 +197,38 @@
         "local": "muzei/karikatura/video/day-02jan-napoleon-9x16-poster.jpg",
         "v": 1
       }
+    },
+    "nesdayutsya/06aug-osovets": {
+      "title": "Атака мертвецов: 60 против 7000",
+      "note": "Архивные фотографии крепости Осовец 1915 года — Wikimedia Commons (общественное достояние). Сцена газового облака сгенерирована нейросетью (Genosai, veo-3.1-fast) — не архивная съёмка, в реестр источников не идёт. Закадровый текст озвучен синтезом речи (edge-tts).",
+      "horizontal": {
+        "file": "nesdayutsya/06aug-osovets/day-06aug-osovets.mp4",
+        "local": "muzei/ne-sdayutsya/video/day-06aug-osovets.mp4",
+        "v": 1,
+        "w": 1920,
+        "h": 1080,
+        "sec": 69.4,
+        "mb": 21.1
+      },
+      "vertical": {
+        "file": "nesdayutsya/06aug-osovets/day-06aug-osovets-9x16.mp4",
+        "local": "muzei/ne-sdayutsya/video/day-06aug-osovets-9x16.mp4",
+        "v": 1,
+        "w": 1080,
+        "h": 1920,
+        "sec": 35.0,
+        "mb": 12.5
+      },
+      "poster": {
+        "file": "nesdayutsya/06aug-osovets/day-06aug-osovets-poster.jpg",
+        "local": "muzei/ne-sdayutsya/video/day-06aug-osovets-poster.jpg",
+        "v": 1
+      },
+      "poster_vertical": {
+        "file": "nesdayutsya/06aug-osovets/day-06aug-osovets-9x16-poster.jpg",
+        "local": "muzei/ne-sdayutsya/video/day-06aug-osovets-9x16-poster.jpg",
+        "v": 1
+      }
     }
   }
 }
