@@ -70,6 +70,38 @@
         "v": 2
       }
     },
+    "arhitektura/02jan-dvorets": {
+      "title": "Дворец XVII века — или здание 2010 года?",
+      "note": "Современные фотографии: A. Savin и Mvad, CC BY-SA 3.0; Юрий Д.К., CC BY 4.0. Исторические листы — общественное достояние. Одна сцена создана GenosAI и маркирована как образовательная ИИ-визуализация, не хроника. Голос и предметная фонограмма синтезированы и раскрыты в паспорте.",
+      "horizontal": {
+        "file": "arhitektura/02jan-dvorets/day-02jan-dvorets.mp4",
+        "local": "muzei/arhitektura/video/day-02jan-dvorets.mp4",
+        "v": 1,
+        "w": 1920,
+        "h": 1080,
+        "sec": 85.9,
+        "mb": 21.6
+      },
+      "vertical": {
+        "file": "arhitektura/02jan-dvorets/day-02jan-dvorets-9x16.mp4",
+        "local": "muzei/arhitektura/video/day-02jan-dvorets-9x16.mp4",
+        "v": 1,
+        "w": 1080,
+        "h": 1920,
+        "sec": 42.0,
+        "mb": 12.7
+      },
+      "poster": {
+        "file": "arhitektura/02jan-dvorets/day-02jan-dvorets-poster.jpg",
+        "local": "muzei/arhitektura/video/day-02jan-dvorets-poster.jpg",
+        "v": 1
+      },
+      "poster_vertical": {
+        "file": "arhitektura/02jan-dvorets/day-02jan-dvorets-9x16-poster.jpg",
+        "local": "muzei/arhitektura/video/day-02jan-dvorets-9x16-poster.jpg",
+        "v": 1
+      }
+    },
     "arhitektura/07jan-nerl": {
       "title": "Зачем маленькому храму основание высотой 5,3 метра?",
       "note": "Документальные фотографии с открытыми лицензиями; образовательные схемы маркированы, генеративные изображения и исторические реконструкции не использованы. Голос и предметная фонограмма синтезированы и раскрыты в паспорте.",
