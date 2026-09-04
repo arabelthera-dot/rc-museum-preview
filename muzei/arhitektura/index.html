@@ -1,87 +1,149 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Музей русской архитектуры и зодчества — Русская цивилизация</title>
-<meta name="description" content="Храм в двадцать два купола, срубленный топором без единого гвоздя. Музей создаётся: музей русской архитектуры и зодчества в виртуальном городе «Русская цивилизация».">
-<link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/muzei/arhitektura/">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Музей русской архитектуры и зодчества — Русская цивилизация">
-<meta property="og:description" content="Храм в двадцать два купола, срубленный топором без единого гвоздя. Музей создаётся: музей русской архитектуры и зодчества в виртуальном городе «Русская цивилизация».">
-<meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/og/og-default.jpg">
-<meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/arhitektura/">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="../../favicon.ico">
-<link rel="stylesheet" href="../../assets/fonts.css">
-<link rel="stylesheet" href="../../assets/portal.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Музей русской архитектуры — Русская цивилизация</title>
+  <meta name="description" content="Почему здания России устроены именно так? Смотри на архитектуру через место, пространство, материал, людей и состояние памятника.">
+  <link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/muzei/arhitektura/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Музей русской архитектуры — Русская цивилизация">
+  <meta property="og:description" content="Не галерея фасадов, а музей архитектурных решений: место, пространство, материал, труд и время.">
+  <meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/arhitektura/media/kizhi/pogost-1280.webp">
+  <meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/arhitektura/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../../favicon.ico">
+  <link rel="stylesheet" href="../../assets/fonts.css">
+  <style>
+    /* Hallmark · pre-emit critique: P5 H5 E4 S5 R5 V5 */
+    :root{
+      --color-paper:#f2efe6;--color-paper-2:#e7e0d2;--color-ink:#191b19;
+      --color-muted:#5f625c;--color-rule:#c8c0af;--color-accent:#a44b25;
+      --color-accent-ink:#fffaf1;--color-copper:#2f7167;--color-night:#17201f;
+      --color-night-ink:#edf0e7;--color-focus:#0b68b0;
+      --font-display:"Playfair Display",Georgia,serif;--font-body:"Inter","Segoe UI",sans-serif;
+      --font-mono:"JetBrains Mono",monospace;--page:min(1220px,calc(100% - 48px));
+      --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:72px;
+      --ease:cubic-bezier(.2,.75,.25,1)
+    }
+    *{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:clip}body{margin:0;background:var(--color-paper);color:var(--color-ink);font-family:var(--font-body);overflow-x:clip}button,a{font:inherit}a{color:inherit}img{display:block;max-width:100%}:focus-visible{outline:3px solid var(--color-focus);outline-offset:4px}
+    .top{width:var(--page);margin:auto;padding:var(--s4) 0 var(--s3);display:grid;grid-template-columns:1fr auto;align-items:end;border-bottom:1px solid var(--color-ink);gap:var(--s4)}
+    .brand{font-family:var(--font-display);font-size:clamp(1.35rem,2vw,2rem);text-decoration:none}.top-note{font:600 .68rem/1.3 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;text-align:right;color:var(--color-muted)}
+    .crumbs{width:var(--page);margin:auto;padding:var(--s3) 0;font-size:.78rem;color:var(--color-muted);display:flex;gap:var(--s2);flex-wrap:wrap}.crumbs a{text-underline-offset:3px}
+    .hero{width:var(--page);margin:0 auto var(--s8);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(320px,.65fr);border-top:1px solid var(--color-rule);border-bottom:1px solid var(--color-rule)}
+    .hero-scene{height:clamp(360px,55vw,660px);min-height:250px;max-height:660px;border-right:1px solid var(--color-rule);position:relative;overflow:hidden;background:var(--color-paper-2)}
+    .hero-scene img{width:100%;height:100%;object-fit:cover;object-position:center 42%}.scene-caption{padding:var(--s3) var(--s4);font-size:.76rem;line-height:1.5;color:var(--color-muted);border-top:1px solid var(--color-rule)}
+    .scene-caption a{text-underline-offset:3px}.hero-copy{padding:clamp(28px,4vw,64px);display:flex;flex-direction:column;justify-content:space-between;min-width:0}
+    .eyebrow,.section-no{font:700 .7rem/1.3 var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--color-accent)}
+    .hero h1{font:500 clamp(2.8rem,5.7vw,6.3rem)/.92 var(--font-display);letter-spacing:-.045em;margin:var(--s4) 0 var(--s5);overflow-wrap:anywhere;min-width:0}.hook{font-size:clamp(1.05rem,1.5vw,1.35rem);line-height:1.55;margin:0 0 var(--s6);max-width:32ch}
+    .hero-btns{display:flex;flex-wrap:wrap;gap:var(--s3)}.btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center;padding:0 20px;border:1px solid var(--color-ink);text-decoration:none;font-weight:750}.btn-primary{background:var(--color-accent);border-color:var(--color-accent);color:var(--color-accent-ink)}.btn:hover{transform:translateY(-2px);transition:transform .18s var(--ease)}
+    .facts{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--color-rule)}.fact{padding:var(--s4);border-right:1px solid var(--color-rule)}.fact:last-child{border:0}.fact b{display:block;font:600 1rem/1.2 var(--font-display)}.fact span{font-size:.72rem;color:var(--color-muted)}
+    .section{width:var(--page);margin:0 auto;padding:var(--s8) 0;border-top:1px solid var(--color-rule)}.section-head{display:grid;grid-template-columns:150px minmax(0,760px);gap:var(--s5);margin-bottom:var(--s7)}.section h2{font:500 clamp(2.25rem,4.7vw,4.8rem)/.98 var(--font-display);letter-spacing:-.035em;margin:0;overflow-wrap:anywhere}.intro{font-size:1.08rem;line-height:1.7;color:var(--color-muted);max-width:62ch;margin:var(--s4) 0 0}
+    .lens-workbench{display:grid;grid-template-columns:minmax(260px,.7fr) minmax(0,1.3fr);border:1px solid var(--color-ink);background:var(--color-paper-2)}.lens-tabs{padding:var(--s5);border-right:1px solid var(--color-ink)}.lens-tab{width:100%;min-height:58px;text-align:left;border:0;border-top:1px solid var(--color-rule);background:transparent;padding:var(--s3) 0;cursor:pointer;display:grid;grid-template-columns:36px 1fr;gap:var(--s2);align-items:center;color:var(--color-muted)}.lens-tab:first-child{border-top:0}.lens-tab span{font:700 .7rem var(--font-mono)}.lens-tab strong{font-size:.98rem}.lens-tab[aria-selected="true"]{color:var(--color-accent)}
+    .lens-stage{padding:clamp(24px,5vw,72px);min-height:390px;display:flex;flex-direction:column;justify-content:space-between;position:relative}.lens-stage:before{content:"";position:absolute;inset:22px;background:linear-gradient(var(--color-rule) 1px,transparent 1px),linear-gradient(90deg,var(--color-rule) 1px,transparent 1px);background-size:42px 42px;opacity:.28;pointer-events:none}.lens-stage>*{position:relative}.lens-kicker{font:700 .68rem var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--color-copper)}.lens-stage h3{font:500 clamp(2rem,4vw,4.4rem)/1 var(--font-display);max-width:12ch;margin:var(--s5) 0}.lens-stage p{font-size:1.05rem;line-height:1.65;max-width:54ch}.lens-proof{display:flex;gap:var(--s3);align-items:center;font:.72rem var(--font-mono);color:var(--color-muted)}.lens-mark{width:52px;height:52px;border:2px solid var(--color-accent);border-radius:50%;display:grid;place-items:center;color:var(--color-accent);font-weight:800}
+    .map-shell{background:var(--color-night);color:var(--color-night-ink);display:grid;grid-template-columns:minmax(0,1fr) 360px;min-height:520px}.map-field{position:relative;padding:var(--s6);overflow:hidden;background:radial-gradient(circle at 44% 48%,rgba(164,75,37,.22),transparent 32%),linear-gradient(125deg,transparent 16%,rgba(255,255,255,.035) 16% 18%,transparent 18% 70%,rgba(255,255,255,.025) 70%)}.map-field:before{content:"МЕСТО × ВРЕМЯ";position:absolute;left:var(--s5);bottom:var(--s4);font:700 clamp(2rem,6vw,6rem)/1 var(--font-mono);letter-spacing:-.07em;color:rgba(255,255,255,.07)}
+    .map-point{position:absolute;min-width:44px;min-height:44px;border:1px solid rgba(255,255,255,.7);border-radius:50%;background:var(--color-night);color:var(--color-night-ink);cursor:pointer;font:700 .7rem var(--font-mono)}.map-point[aria-pressed="true"]{background:var(--color-accent);border-color:var(--color-accent)}.p1{left:23%;top:23%}.p2{left:34%;top:49%}.p3{left:51%;top:34%}.p4{left:67%;top:56%}.p5{left:80%;top:26%}
+    .map-line{position:absolute;height:1px;background:rgba(255,255,255,.2);transform-origin:left}.ml1{width:57%;left:25%;top:29%;transform:rotate(9deg)}.ml2{width:46%;left:34%;top:53%;transform:rotate(-23deg)}
+    .map-panel{border-left:1px solid rgba(255,255,255,.2);padding:var(--s6);display:flex;flex-direction:column}.map-panel label{font:.7rem var(--font-mono);text-transform:uppercase;color:#aebcb4}.map-panel input{width:100%;accent-color:var(--color-accent);margin:var(--s3) 0 var(--s5)}.map-panel h3{font:500 2.4rem/1.05 var(--font-display);margin:auto 0 var(--s3)}.map-panel p{line-height:1.6;color:#b9c2bc}.map-link{margin-top:var(--s4);color:#fff;text-underline-offset:5px;font-weight:750}
+    .hall-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));border-top:1px solid var(--color-rule);border-left:1px solid var(--color-rule)}.hall{grid-column:span 4;padding:var(--s5);min-height:230px;border-right:1px solid var(--color-rule);border-bottom:1px solid var(--color-rule);display:flex;flex-direction:column;justify-content:space-between}.hall:nth-child(2),.hall:nth-child(7){grid-column:span 5}.hall:nth-child(3),.hall:nth-child(8){grid-column:span 3}.hall b{font:700 .68rem var(--font-mono);color:var(--color-accent)}.hall h3{font:500 1.75rem/1.05 var(--font-display);margin:var(--s5) 0 var(--s3)}.hall p{color:var(--color-muted);line-height:1.5;margin:0}.hall a{margin-top:var(--s5);font-weight:750;text-underline-offset:4px}.hall[data-material="wood"]{background:#e9dfcc}.hall[data-material="stone"]{background:#edebe4}.hall[data-material="brick"]{background:#e3cfc1}.hall[data-material="metal"]{background:#dbe4e0}.hall[data-material="concrete"]{background:#d9dad5}
+    .week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));border:1px solid var(--color-ink)}.day{min-height:250px;padding:var(--s4);border-right:1px solid var(--color-ink);display:flex;flex-direction:column;gap:var(--s4)}.day:last-child{border:0}.day time{font:700 .72rem var(--font-mono);color:var(--color-accent)}.day strong{font:500 1.2rem/1.15 var(--font-display)}.day p{font-size:.82rem;line-height:1.45;color:var(--color-muted);margin:0}.day a{margin-top:auto;font-size:.78rem;font-weight:750;text-underline-offset:4px}.day-empty{background:var(--color-paper-2)}
+    .truth{background:var(--color-night);color:var(--color-night-ink);padding:var(--s8) max(24px,calc((100vw - 1220px)/2))}.truth-inner{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:var(--s8)}.truth h2{font:500 clamp(2.5rem,5vw,5rem)/.95 var(--font-display);margin:var(--s4) 0}.truth p{line-height:1.7;color:#bec8c0}.legend{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(255,255,255,.25)}.legend article{padding:var(--s5) 0;border-bottom:1px solid rgba(255,255,255,.25)}.legend article:nth-child(odd){padding-right:var(--s5);border-right:1px solid rgba(255,255,255,.25)}.legend article:nth-child(even){padding-left:var(--s5)}.legend b{display:block;margin-bottom:var(--s2)}.legend span{font-size:.85rem;color:#aeb9b1;line-height:1.5}
+    .people{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s5)}.person{border-top:4px solid var(--color-accent);padding-top:var(--s4)}.person span{font:700 .65rem var(--font-mono);text-transform:uppercase;color:var(--color-muted)}.person h3{font:500 1.65rem var(--font-display);margin:var(--s3) 0}.person p{line-height:1.6;color:var(--color-muted)}
+    .support-mini{width:var(--page);margin:calc(var(--s8) * -1) auto var(--s8);padding:var(--s5) 0;border-top:1px solid var(--color-ink);border-bottom:1px solid var(--color-ink);display:grid;grid-template-columns:1fr auto;gap:var(--s5);align-items:center}.support-mini p{margin:0;line-height:1.55;max-width:70ch}.support-mini a{font-weight:800;text-underline-offset:5px;white-space:nowrap}.support{width:var(--page);margin:0 auto var(--s8);background:var(--color-accent);color:var(--color-accent-ink);padding:clamp(28px,5vw,64px);display:grid;grid-template-columns:1fr auto;align-items:end;gap:var(--s5)}.support h2{font:500 clamp(2rem,4vw,4rem)/1 var(--font-display);margin:0 0 var(--s3);max-width:15ch}.support p{max-width:58ch;line-height:1.6;margin:0}.support .btn{border-color:var(--color-accent-ink);white-space:nowrap}
+    .footer{background:#0e1514;color:#dce3dc;padding:var(--s7) max(24px,calc((100vw - 1220px)/2));display:grid;grid-template-columns:1fr auto;gap:var(--s6)}.footer strong{font:500 clamp(1.8rem,3vw,3.5rem) var(--font-display)}.footer nav{display:flex;flex-wrap:wrap;gap:var(--s4);justify-content:flex-end}.footer a{text-underline-offset:4px}.footer small{grid-column:1/-1;color:#8e9a92}
+    @media(max-width:960px){.hero{grid-template-columns:1fr}.hero-scene{border-right:0}.facts{grid-template-columns:1fr 1fr}.fact:nth-child(2){border-right:0}.fact:nth-child(-n+2){border-bottom:1px solid var(--color-rule)}.lens-workbench,.map-shell,.truth-inner{grid-template-columns:1fr}.lens-tabs,.map-panel{border-right:0;border-left:0;border-bottom:1px solid var(--color-ink)}.map-field{min-height:420px}.map-panel{min-height:300px}.hall{grid-column:span 6!important}.week{grid-template-columns:1fr 1fr}.day{border-bottom:1px solid var(--color-ink)}.day:nth-child(even){border-right:0}.people{grid-template-columns:1fr 1fr}}
+    @media(max-width:640px){:root{--page:calc(100% - 32px);--s8:48px}.top{grid-template-columns:1fr}.top-note{text-align:left}.hero-scene{height:26vh;min-height:200px;max-height:260px}.scene-caption{padding-left:0;padding-right:0}.hero-copy{padding:28px 0}.hero h1{font-size:clamp(2.65rem,14vw,4.2rem)}.hero-btns{display:grid}.btn{width:100%;min-height:48px}.section-head{grid-template-columns:1fr;gap:var(--s3)}.lens-workbench{margin-left:-16px;margin-right:-16px}.lens-tabs{padding:var(--s4)}.lens-tab{min-height:52px}.lens-stage{min-height:430px;padding:32px 20px}.support-mini{grid-template-columns:1fr;margin-top:calc(var(--s8) * -1)}.support-mini a{min-height:44px;display:inline-flex;align-items:center}.map-shell{margin-left:-16px;margin-right:-16px}.map-field{min-height:360px;padding:var(--s4)}.map-panel{padding:var(--s5)}.hall-grid{grid-template-columns:1fr}.hall{grid-column:1!important;min-height:190px}.week{grid-template-columns:1fr}.day{min-height:0;border-right:0}.truth{padding-top:var(--s8);padding-bottom:var(--s8)}.legend{grid-template-columns:1fr}.legend article,.legend article:nth-child(odd),.legend article:nth-child(even){padding:var(--s4) 0;border-right:0}.people{grid-template-columns:1fr}.support{grid-template-columns:1fr;margin-bottom:0}.footer{grid-template-columns:1fr}.footer nav{justify-content:flex-start}.footer small{grid-column:1} .map-point{min-width:48px;min-height:48px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn:hover{transform:none;transition:none}}
+  </style>
 </head>
 <body>
-<header class="top">
-  <div class="b1">Русская цивилизация</div>
-  <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
-</header>
-<nav class="crumbs"><a href="../../index.html">Город-музей</a> › <a href="../../index.html#iskusstvo">Искусство</a> › <span class="cur">Русской архитектуры</span></nav><div class="hero-scene"><canvas id="city"></canvas></div>
-<div class="scene-caption"><b>Панорама города-музея.</b> Силуэты собраны из настоящих русских построек и конструкций: крепостные башни и шатровые храмы, гиперболоид Шухова, ракета на стартовом столе, парус поморского коча. Сцена рисуется в браузере и живёт сама.</div>
-<script>window.CITY_SCENE={acc:'#7a5cc4',seed:13};</script>
-<script src="../../assets/city-scene.js" defer></script>
-<div class="hero-lead" style="--acc:#7a5cc4">
-  <span class="kicker">Создаётся</span>
-  <h1>Музей русской архитектуры и зодчества</h1>
-  <p class="hook">Храм в двадцать два купола, срубленный топором без единого гвоздя.</p>
-  <div class="btns">
-    <a class="btn btn-main" href="../izobreteniya/index.html">Пока смотреть открытый музей</a>
-    <a class="btn btn-ghost" href="../../index.html#iskusstvo">Квартал «Искусство»</a>
-  </div>
-  <div id="sup-peak"></div>
-</div>
-<main>
-  <div class="status-box" style="--acc:#7a5cc4">
-    <div class="lbl">Статус на 09.08.2026</div>
-    <h2>Музей создаётся</h2>
-    <p>Место в городе занято, тема закреплена, состав экспонатов собирается. Мы делаем музеи
-    по одному и целиком: сначала эталонный экспонат с разбором, аудиогидом и интерактивом —
-    и только потом остальные. Быстрее получится, если проект поддержат.</p>
-    <div class="bar"><i style="--pct:8%"></i></div>
-    <div class="bar-cap">город-музей: 3 из 44 музеев открыто</div>
-  </div>
+  <header class="top"><a class="brand" href="../../index.html">Русская цивилизация</a><div class="top-note">Музей русской архитектуры<br>Входной зал · 9 открытых историй</div></header>
+  <nav class="crumbs" aria-label="Хлебные крошки"><a href="../../index.html">Город-музей</a><span>›</span><span>Музей русской архитектуры</span></nav>
 
-  <section class="sec" id="plan"><div class="sec-h"><h2>Что здесь будет</h2>
-  <span class="sub">формат одинаков во всех музеях города</span></div>
-  <div class="plan">
-    <div class="p-item"><b>Картина под лупой</b><span>Увеличение до мазка: что художник переписывал и что спрятал в углу.</span></div>
-    <div class="p-item"><b>Аудиогид</b><span>Пять минут перед вещью — как в зале, только без очереди.</span></div>
-    <div class="p-item"><b>Сравнение</b><span>Рядом — то, с чем спорил автор: чужая работа, эскиз, первая версия.</span></div>
-    <div class="p-item"><b>Галерея дней</b><span>Календарь, где у каждого дня своя вещь и своя история.</span></div>
-  </div></section>
-<section class="sec"><div class="sec-h"><h2>Город, а не сайт</h2>
-  <span class="sub">почему музеев сразу сорок четыре</span></div>
-  <p style="max-width:760px;color:#cfd8f4">Достижения России разбросаны по разным книгам, музеям и
-  городам: парашют — в одном месте, икона — в другом, а гиперболоид вообще мало где. Мы собираем
-  их в один город, где у каждой темы свой музей, и заранее ставим все сорок четыре квартала —
-  чтобы было видно масштаб замысла, а не десять случайных страниц.</p>
-  <p style="max-width:760px;color:#cfd8f4">Музеи открываются по одному и целиком: сначала эталонный
-  экспонат с разбором, аудиогидом и интерактивом, потом остальные по тому же образцу. «Русской архитектуры»
-  стоит в очереди — место занято, тема закреплена, материал собирается.</p>
-  <div class="btns" style="margin-top:18px">
-    <a class="btn btn-ghost" href="../../index.html">Посмотреть весь город</a>
-    <a class="btn btn-ghost" href="../../map.html">Открыть карту</a>
-  </div></section>
-<section class="sec open-now" id="kuda-dalshe"><div class="sec-h"><h2>А это уже открыто</h2><span class="sub">три музея города работают прямо сейчас</span></div><div class="grid"><a class="m-card" href="../izobreteniya/index.html"><span class="num">01</span><h3>Русских изобретений</h3><p>365 дней в году — и на каждый приходится вещь, которую русские сделали первыми в мире.</p><span class="tag tag-live">Открыт</span><span class="meta">365 дней · 20 страниц</span></a><a class="m-card" href="../iskusstvo/index.html"><span class="num">02</span><h3>Русского искусства</h3><p>Картина, разобранная до последнего мазка: почему волна стоит именно так.</p><span class="tag tag-live">Открыт</span><span class="meta">галерея · 3 картины</span></a><a class="m-card" href="../pervoprohodcy/index.html"><span class="num">03</span><h3>Русских первопроходцев</h3><p>Дежнёв прошёл пролив между Азией и Америкой за 80 лет до Беринга — и об этом забыли на век.</p><span class="tag tag-live">Открыт</span><span class="meta">экспедиции · 1 маршрут</span></a></div></section>
-</main>
-<script>window.MUSEUM_SUPPORT={museum:"arhitektura",lang:"ru",peak:"#sup-peak"};</script>
-<script src="../../assets/museum-support.js" defer></script>
-<footer class="foot">
-  <div class="fl">
-    <a href="../../index.html">Город-музей</a>
-    <a href="../../map.html">Карта</a>
-    <a href="../izobreteniya/index.html">Изобретения</a>
-    <a href="../iskusstvo/index.html">Искусство</a>
-    <a href="../pervoprohodcy/index.html">Первопроходцы</a>
-  </div>
-  <div>«Русская цивилизация» — продолжение музейного комплекса «Русский парк»
-  в Переславле-Залесском. Обновлено 09.08.2026.</div>
-</footer>
-<script src="../../assets/analytics.js" defer></script>
+  <main>
+    <article class="hero" id="today">
+      <figure style="margin:0"><div class="hero-scene"><img src="media/kizhi/pogost-1280.webp" srcset="media/kizhi/pogost-640.webp 640w, media/kizhi/pogost-960.webp 960w, media/kizhi/pogost-1280.webp 1280w" sizes="(max-width:960px) 100vw,68vw" width="1280" height="853" alt="Кижский погост с двумя деревянными многоглавыми церквями и колокольней" fetchpriority="high"></div><figcaption class="scene-caption"><b>Кижский погост, современный вид.</b> Фото: Alexxx1979, CC BY-SA 4.0; редакционное уменьшение. <a href="https://commons.wikimedia.org/wiki/File:Kizhi_Pogost_P7114012_2200.jpg">Источник и лицензия</a>.</figcaption></figure>
+      <header class="hero-copy"><div><p class="eyebrow">Сегодня в музее · Карелия</p><h1>Почему здания России устроены именно так?</h1><p class="hook">Не любуйся фасадом издалека. Проверь, как место, пространство, материал, деньги и человеческий труд заставили здание стать именно таким.</p></div><div class="hero-btns"><a class="btn btn-primary" href="kizhi-muzey.html">Увидеть главное за 3 минуты</a><a class="btn" href="#map">Открыть карту музея</a></div></header>
+      <div class="facts" aria-label="Коротко о музее"><div class="fact"><b>9 историй</b><span>уже открыто</span></div><div class="fact"><b>5 линз</b><span>чтобы читать здание</span></div><div class="fact"><b>12 залов</b><span>от жилища до модернизма</span></div><div class="fact"><b>365 дней</b><span>календарный замысел</span></div></div>
+    </article>
+
+    <section class="section" id="lenses" aria-labelledby="lenses-title">
+      <div class="section-head"><p class="section-no">01 · Метод музея</p><div><h2 id="lenses-title">Пять способов прочитать здание</h2><p class="intro">Один фасад отвечает не на все вопросы. Меняй линзу — и Кижи будут говорить то о месте, то о пространстве, то о работе мастера.</p></div></div>
+      <div class="lens-workbench">
+        <div class="lens-tabs" role="tablist" aria-label="Архитектурные линзы">
+          <button class="lens-tab" role="tab" aria-selected="true" aria-controls="lens-panel" data-lens="place"><span>01</span><strong>Почему именно здесь?</strong></button>
+          <button class="lens-tab" role="tab" aria-selected="false" aria-controls="lens-panel" data-lens="space"><span>02</span><strong>Как устроено пространство?</strong></button>
+          <button class="lens-tab" role="tab" aria-selected="false" aria-controls="lens-panel" data-lens="material"><span>03</span><strong>Из чего и как построено?</strong></button>
+          <button class="lens-tab" role="tab" aria-selected="false" aria-controls="lens-panel" data-lens="people"><span>04</span><strong>Кто строил и кто платил?</strong></button>
+          <button class="lens-tab" role="tab" aria-selected="false" aria-controls="lens-panel" data-lens="state"><span>05</span><strong>Что перед нами сегодня?</strong></button>
+        </div>
+        <div class="lens-stage" id="lens-panel" role="tabpanel" tabindex="0"><div><p class="lens-kicker" id="lens-kicker">Место · остров Кижи</p><h3 id="lens-title">Вода здесь — не фон.</h3><p id="lens-text">Остров связывал деревни Заонежья. Сегодня тот же путь по воде отделяет музей от материка и заставляет увидеть ансамбль сразу целиком.</p></div><div class="lens-proof"><span class="lens-mark" id="lens-number">01</span><span id="lens-proof">Сначала смотри на ландшафт, затем приближайся к зданию.</span></div></div>
+      </div>
+      <noscript><p class="intro">Без JavaScript: место связывает здание с ландшафтом; план объясняет пространство; материал хранит след инструмента; заказ и труд раскрывают человеческую цену; нынешнее состояние отделяет подлинное от восстановленного.</p></noscript>
+    </section>
+
+    <aside class="support-mini" id="support-peak" aria-label="Поддержка музея"><p><b>Музей создаёт небольшая команда.</b> Можно рассказать об открытой истории, сообщить о неточности или помочь выпустить следующую.</p><a href="mailto:arabelthera@gmail.com?subject=%D0%9C%D1%83%D0%B7%D0%B5%D0%B9%20%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%B9%20%D0%B0%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D1%8B">Поддержать проект →</a></aside>
+
+    <section class="section" id="map" aria-labelledby="map-title">
+      <div class="section-head"><p class="section-no">02 · Навигация</p><div><h2 id="map-title">Место × время</h2><p class="intro">Не ищи памятник среди сотен точек. Выбери регион, сдвинь эпоху и получи короткий маршрут из реально открытых историй.</p></div></div>
+      <div class="map-shell"><div class="map-field" aria-label="Схематическая карта открытых историй"><span class="map-line ml1"></span><span class="map-line ml2"></span><button class="map-point p1" data-place="Карелия" data-title="Кижи" data-copy="Исторический погост и перевезённая музейная коллекция живут в одном сегодняшнем пейзаже." data-href="kizhi-muzey.html" aria-pressed="true">КЖ</button><button class="map-point p2" data-place="Москва" data-title="Коломенское" data-copy="Шатровый храм, исчезнувший дворец и современная реконструкция требуют разных способов проверки." data-href="kolomenskoe.html" aria-pressed="false">МСК</button><button class="map-point p3" data-place="Ярославская область" data-title="Вятское" data-copy="Здесь отдельная деталь складывается в дом, улицу и целое село." data-href="vyatskoe.html" aria-pressed="false">ЯР</button><button class="map-point p4" data-place="Свердловская область" data-title="Невьянская башня" data-copy="Отвес отделяет измеримый наклон от легенд, которыми обросла башня." data-href="nevjanskaya-bashnya.html" aria-pressed="false">УР</button><button class="map-point p5" data-place="Костромская область" data-title="Терем Асташово" data-copy="Маршрут восстановления показывает, что именно спасали в заброшенном деревянном доме." data-href="terem-astashovo.html" aria-pressed="false">КО</button></div><aside class="map-panel" aria-live="polite"><label for="epoch">Эпоха · <output id="epoch-out">XVIII век</output></label><input id="epoch" type="range" min="12" max="20" value="18" step="1"><p class="lens-kicker" id="map-place">Карелия</p><h3 id="map-story">Кижи</h3><p id="map-copy">Исторический погост и перевезённая музейная коллекция живут в одном сегодняшнем пейзаже.</p><a class="map-link" id="map-link" href="kizhi-muzey.html">Открыть историю →</a></aside></div>
+    </section>
+
+    <section class="section" id="halls" aria-labelledby="halls-title">
+      <div class="section-head"><p class="section-no">03 · Постоянная экспозиция</p><div><h2 id="halls-title">Двенадцать залов</h2><p class="intro">Периоды пересекаются. Поэтому каждый зал назван не академическим термином, а вопросом, который архитектура решала на земле.</p></div></div>
+      <div class="hall-grid">
+        <article class="hall" data-material="wood"><b>01 · Дерево</b><div><h3>Дом, который держит зиму</h3><p>Народное жилище, двор и хозяйство под одной кровлей.</p></div></article>
+        <article class="hall" data-material="wood"><b>02 · Дерево</b><div><h3>Дерево, поднятое к небу</h3><p>Северные храмы и ансамбли.</p></div><a href="kizhi-muzey.html">Войти через Кижи →</a></article>
+        <article class="hall" data-material="stone"><b>03 · Белый камень</b><div><h3>Камень научился говорить</h3><p>Школы Древней Руси и резной фасад.</p></div><a href="georgievskiy-sobor-yuryev-polskiy.html">Собрать собор →</a></article>
+        <article class="hall" data-material="brick"><b>04 · Стена</b><div><h3>Город за стеной</h3><p>Крепости, башни и граница безопасности.</p></div></article>
+        <article class="hall" data-material="brick"><b>05 · Кирпич</b><div><h3>Узор собирает силуэт</h3><p>Посад, храм и городская праздничность.</p></div></article>
+        <article class="hall" data-material="stone"><b>06 · Порядок</b><div><h3>Страну чертят по линейке</h3><p>Регулярный город и имперская перспектива.</p></div></article>
+        <article class="hall" data-material="wood"><b>07 · Дом</b><div><h3>Сказка становится проектом</h3><p>Русский стиль между ремеслом, альбомом и заказом.</p></div><a href="terem-astashovo.html">Пройти путь спасения →</a></article>
+        <article class="hall" data-material="metal"><b>08 · Металл</b><div><h3>Железо меняет горизонт</h3><p>Инженерная и промышленная архитектура.</p></div><a href="nevjanskaya-bashnya.html">Проверить наклон →</a></article>
+        <article class="hall" data-material="brick"><b>09 · Город</b><div><h3>Доход определяет план</h3><p>Улица, торговля, усадьба и многоквартирный дом.</p></div><a href="vyatskoe.html">Увидеть четыре масштаба →</a></article>
+        <article class="hall" data-material="concrete"><b>10 · Новый быт</b><div><h3>Дом как машина жизни</h3><p>Авангард и попытка заново собрать повседневность.</p></div></article>
+        <article class="hall" data-material="concrete"><b>11 · Масштаб</b><div><h3>Архитектура говорит от имени страны</h3><p>Парадный ансамбль и общественное здание.</p></div></article>
+        <article class="hall" data-material="concrete"><b>12 · XX век</b><div><h3>Город, в котором выросли мы</h3><p>Массовое жильё и советский модернизм.</p></div></article>
+      </div>
+    </section>
+
+    <section class="section" id="week" aria-labelledby="week-title">
+      <div class="section-head"><p class="section-no">04 · Неделя-расследование</p><div><h2 id="week-title">Одно здание. Семь вопросов.</h2><p class="intro">Неделя не рассыпается на одинаковые карточки. Каждый день меняет масштаб: от места к конструкции, от человеческого труда к тому, что дошло до нас.</p></div></div>
+      <div class="week">
+        <article class="day"><time>01 · Место</time><strong>Что на острове стояло всегда?</strong><p>Отдели исторический погост от перевезённых домов.</p><a href="kizhi-muzey.html">Открыть →</a></article>
+        <article class="day"><time>02 · Пространство</time><strong>Что в новом дворце действительно старое?</strong><p>Сверь документы и реконструкцию.</p><a href="dvorets-alekseya-mihaylovicha.html">Открыть →</a></article>
+        <article class="day"><time>03 · Конструкция</time><strong>Как подняли умирающий терем?</strong><p>Восстанови порядок спасения.</p><a href="terem-astashovo.html">Открыть →</a></article>
+        <article class="day"><time>04 · Масштаб</time><strong>Где кончается дом?</strong><p>Свяжи деталь, здание, улицу и село.</p><a href="vyatskoe.html">Открыть →</a></article>
+        <article class="day"><time>05 · Измерение</time><strong>Почему башня наклонилась?</strong><p>Проведи отвес и отдели факт от легенды.</p><a href="nevjanskaya-bashnya.html">Открыть →</a></article>
+        <article class="day"><time>06 · Утрата</time><strong>Можно ли собрать собор без рисунка?</strong><p>Проверь уверенность каждой версии.</p><a href="georgievskiy-sobor-yuryev-polskiy.html">Открыть →</a></article>
+        <article class="day"><time>07 · Ландшафт</time><strong>Что скрыто под зелёным холмом?</strong><p>Пройди четыре расстояния до храма.</p><a href="pokrova-na-nerli.html">Открыть →</a></article>
+      </div>
+    </section>
+
+    <section class="truth" id="truth" aria-labelledby="truth-title"><div class="truth-inner"><div><p class="section-no">05 · Достоверность</p><h2 id="truth-title">Что перед нами на самом деле?</h2><p>Старое дерево и точная реконструкция могут выглядеть одинаково убедительно. Мы всегда подписываем границу: где документ, где восстановление, а где только версия.</p></div><div class="legend"><article><b>Документальная фотография</b><span>Камера фиксирует нынешнее состояние и выбранный ракурс.</span></article><article><b>Сохранившаяся часть</b><span>Материал дошёл от прежнего здания, но мог пройти реставрацию.</span></article><article><b>Реставрация</b><span>Специалисты укрепили, раскрыли или дополнили предмет.</span></article><article><b>Реконструкция по документам</b><span>Утраченное воссоздано по измерениям, чертежам и изображениям.</span></article><article><b>Учебная схема</b><span>Она объясняет принцип, но не притворяется историческим видом.</span></article><article><b>Гипотеза</b><span>Версия исследователей отмечена как версия, а не как доказанный факт.</span></article></div></div></section>
+
+    <section class="section" id="people" aria-labelledby="people-title"><div class="section-head"><p class="section-no">06 · Люди и труд</p><div><h2 id="people-title">Кто это построил?</h2><p class="intro">Архитектура начинается не с фасада. За ней стоят рука, расчёт, заказ, деньги и ежедневная жизнь людей, для которых здание стало своим.</p></div></div><div class="people"><article class="person"><span>Материал</span><h3>Мастер</h3><p>Инструмент оставляет след. По нему видно, как дерево тесали, камень резали, а кирпич связывали раствором.</p></article><article class="person"><span>Решение</span><h3>Архитектор и инженер</h3><p>План и конструкция отвечают на ограничения места, бюджета и задачи.</p></article><article class="person"><span>Возможность</span><h3>Заказчик</h3><p>Власть, община, купец или семья решают, что строить и за что платить.</p></article><article class="person"><span>Продолжение</span><h3>Житель и реставратор</h3><p>Один меняет дом жизнью. Другой решает, какой след времени сохранить.</p></article></div></section>
+
+    <section class="support" id="support"><div><h2>Помоги открыть следующий зал</h2><p>Поддержка идёт на исследование, права на изображения, озвучку и разработку интерактивов. Музей остаётся открытым для всех.</p></div><a class="btn" href="mailto:arabelthera@gmail.com?subject=%D0%9C%D1%83%D0%B7%D0%B5%D0%B9%20%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%B9%20%D0%B0%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D1%8B">Поддержать проект</a></section>
+  </main>
+
+  <footer class="footer"><strong>Смотри на здание как на принятое решение.</strong><nav aria-label="Нижняя навигация"><a href="#today">Сегодня</a><a href="#map">Карта</a><a href="#halls">Залы</a><a href="#week">Неделя</a><a href="../../index.html">Город-музей</a></nav><small>«Русская цивилизация» — продолжение музейного комплекса «Русский парк» в Переславле-Залесском. Обновлено 4 сентября 2026 года.</small></footer>
+  <script>
+    (()=>{
+      const lensData={
+        place:['Место · остров Кижи','Вода здесь — не фон.','Остров связывал деревни Заонежья. Сегодня тот же путь по воде отделяет музей от материка и заставляет увидеть ансамбль сразу целиком.','Сначала смотри на ландшафт, затем приближайся к зданию.'],
+        space:['Пространство · движение','План начинается с шага.','Вход, переход и поворот взгляда объясняют здание лучше перечня комнат. Представь путь человека — и фасад перестанет быть плоской картинкой.','Пройди маршрут мысленно: снаружи, через порог, к главному месту.'],
+        material:['Материал · след инструмента','Дерево помнит руку.','Бревно отвечает на влагу, мороз и нагрузку. Соединение показывает не украшение, а способ, которым мастер заставил части работать вместе.','Ищи стык: именно там конструкция выдаёт свой замысел.'],
+        people:['Люди · цена решения','За линией стоит договор.','Мастер строил, заказчик платил, житель менял пространство под жизнь. Архитектура — это ещё и распределение труда, денег и права решать.','Спроси, кому было можно войти, работать и распоряжаться зданием.'],
+        state:['Состояние · граница знания','Сегодняшний вид не равен прошлому.','Старый материал, замена, реставрация и реконструкция могут стоять рядом. Подпись должна разделить их до того, как возникнет красивая легенда.','Сначала установи статус части, потом делай вывод о целом.']
+      };
+      const tabs=[...document.querySelectorAll('.lens-tab')],title=document.querySelector('#lens-title'),text=document.querySelector('#lens-text'),kicker=document.querySelector('#lens-kicker'),proof=document.querySelector('#lens-proof'),number=document.querySelector('#lens-number');
+      tabs.forEach((tab,index)=>tab.addEventListener('click',()=>{tabs.forEach(t=>t.setAttribute('aria-selected','false'));tab.setAttribute('aria-selected','true');const d=lensData[tab.dataset.lens];kicker.textContent=d[0];title.textContent=d[1];text.textContent=d[2];proof.textContent=d[3];number.textContent=String(index+1).padStart(2,'0');document.querySelector('#lens-panel').focus({preventScroll:true})}));
+      const points=[...document.querySelectorAll('.map-point')],place=document.querySelector('#map-place'),story=document.querySelector('#map-story'),copy=document.querySelector('#map-copy'),link=document.querySelector('#map-link');
+      points.forEach(point=>point.addEventListener('click',()=>{points.forEach(p=>p.setAttribute('aria-pressed','false'));point.setAttribute('aria-pressed','true');place.textContent=point.dataset.place;story.textContent=point.dataset.title;copy.textContent=point.dataset.copy;link.href=point.dataset.href}));
+      const epoch=document.querySelector('#epoch'),epochOut=document.querySelector('#epoch-out');epoch.addEventListener('input',()=>epochOut.textContent=epoch.value==='20'?'XX век':epoch.value==='19'?'XIX век':epoch.value==='18'?'XVIII век':epoch.value==='17'?'XVII век':epoch.value==='16'?'XVI век':epoch.value==='15'?'XV век':epoch.value==='14'?'XIV век':epoch.value==='13'?'XIII век':'XII век');
+    })();
+  </script>
+  <script src="../../assets/analytics.js" defer></script>
 </body>
 </html>
