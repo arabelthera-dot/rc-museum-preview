@@ -102,6 +102,38 @@
         "v": 1
       }
     },
+    "arhitektura/03jan-astashovo": {
+      "title": "С какого повреждения деревянный дом начинает умирать?",
+      "note": "Документальные фотографии: IvanShkaev, CC BY-SA 3.0; Olga Shuklina, Usadboved / Vadim Razumov и Pilgrim-chik, CC BY-SA 4.0; снимок 1910 года — общественное достояние. Одна сцена создана GenosAI и маркирована как образовательная ИИ-визуализация, не хроника. Голос и предметная фонограмма синтезированы и раскрыты в паспорте.",
+      "horizontal": {
+        "file": "arhitektura/03jan-astashovo/day-03jan-astashovo.mp4",
+        "local": "muzei/arhitektura/video/day-03jan-astashovo.mp4",
+        "v": 1,
+        "w": 1920,
+        "h": 1080,
+        "sec": 78.5,
+        "mb": 21.4
+      },
+      "vertical": {
+        "file": "arhitektura/03jan-astashovo/day-03jan-astashovo-9x16.mp4",
+        "local": "muzei/arhitektura/video/day-03jan-astashovo-9x16.mp4",
+        "v": 1,
+        "w": 1080,
+        "h": 1920,
+        "sec": 39.9,
+        "mb": 12.7
+      },
+      "poster": {
+        "file": "arhitektura/03jan-astashovo/day-03jan-astashovo-poster.jpg",
+        "local": "muzei/arhitektura/video/day-03jan-astashovo-poster.jpg",
+        "v": 1
+      },
+      "poster_vertical": {
+        "file": "arhitektura/03jan-astashovo/day-03jan-astashovo-9x16-poster.jpg",
+        "local": "muzei/arhitektura/video/day-03jan-astashovo-9x16-poster.jpg",
+        "v": 1
+      }
+    },
     "arhitektura/07jan-nerl": {
       "title": "Зачем маленькому храму основание высотой 5,3 метра?",
       "note": "Документальные фотографии с открытыми лицензиями; образовательные схемы маркированы, генеративные изображения и исторические реконструкции не использованы. Голос и предметная фонограмма синтезированы и раскрыты в паспорте.",
