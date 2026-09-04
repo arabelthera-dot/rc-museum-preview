@@ -1,7 +1,7 @@
 {
   "_": "СГЕНЕРИРОВАНО tools/video-sync.py из docs/video/REGISTRY.json. Руками не править.",
   "version": 2,
-  "updated": "2026-09-03",
+  "updated": "2026-09-04",
   "hosting": {
     "base": ""
   },
@@ -163,6 +163,38 @@
       "poster_vertical": {
         "file": "izobreteniya/01jan-cabletv/day-01jan-cabletv-9x16-poster.jpg",
         "local": "muzei/izobreteniya/video/day-01jan-cabletv-9x16-poster.jpg",
+        "v": 1
+      }
+    },
+    "izobreteniya/02jan-luna1": {
+      "title": "История в 90 секунд",
+      "note": "Все кадры ролика созданы нейросетью (Genosai) — образовательные визуализации, не архивная съёмка; в реестр источников они не идут. Факты — по русским официальным и научным источникам со страницы дня. Закадровый текст озвучен синтезом речи (edge-tts).",
+      "horizontal": {
+        "file": "izobreteniya/02jan-luna1/day-02jan-luna1.mp4",
+        "local": "muzei/izobreteniya/video/day-02jan-luna1.mp4",
+        "v": 1,
+        "w": 1920,
+        "h": 1080,
+        "sec": 90.4,
+        "mb": 21.2
+      },
+      "vertical": {
+        "file": "izobreteniya/02jan-luna1/day-02jan-luna1-9x16.mp4",
+        "local": "muzei/izobreteniya/video/day-02jan-luna1-9x16.mp4",
+        "v": 1,
+        "w": 1080,
+        "h": 1920,
+        "sec": 45.8,
+        "mb": 12.9
+      },
+      "poster": {
+        "file": "izobreteniya/02jan-luna1/day-02jan-luna1-poster.jpg",
+        "local": "muzei/izobreteniya/video/day-02jan-luna1-poster.jpg",
+        "v": 1
+      },
+      "poster_vertical": {
+        "file": "izobreteniya/02jan-luna1/day-02jan-luna1-9x16-poster.jpg",
+        "local": "muzei/izobreteniya/video/day-02jan-luna1-9x16-poster.jpg",
         "v": 1
       }
     },
