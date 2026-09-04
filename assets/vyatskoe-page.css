@@ -1214,7 +1214,7 @@ summary:focus-visible,
   }
 }
 @media (max-width: 480px) {
-  .top > div:not(.brand) {
+  .top > div:not(.brand):not(.motto) {
     display: none;
   }
   .top,
