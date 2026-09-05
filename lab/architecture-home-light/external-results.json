@@ -1,0 +1,19 @@
+{
+  "status": 200,
+  "initial": {
+    "title": "Музей русской архитектуры — светлый вариант",
+    "fonts": "loaded",
+    "images": true,
+    "stories": 7,
+    "calendar": 365,
+    "button": 727.515625,
+    "overflow": false
+  },
+  "anchor": true,
+  "zoom": {
+    "overflow": true,
+    "bodyWidth": 375
+  },
+  "errors": [],
+  "url": "https://arabelthera-dot.github.io/rc-museum-preview/lab/architecture-home-light/home-light.html?preview=light-final"
+}
