@@ -1,0 +1,223 @@
+{
+  "schema_version": "1.0.0",
+  "museum_id": "rc:museum:arhitektura",
+  "issue_id": "rc:issue:arhitektura:museum-home",
+  "content_family_id": "rc:family:arhitektura:museum-home",
+  "version": "2.5.1",
+  "identity": {
+    "title_ru": "Музей русской архитектуры",
+    "slug": "architecture-home-light",
+    "calendar_slot": "01-01",
+    "museum_name_ru": "Музей русской архитектуры",
+    "language": "ru",
+    "summary_ru": "Визуальный вход в музей: сегодняшний календарный вопрос, Кижи, пять расстояний до здания, школьные маршруты и утверждённый календарь 365/365."
+  },
+  "lifecycle": {
+    "current": "preview",
+    "history": [
+      {
+        "status": "preview",
+        "at": "2026-09-04T17:00:00Z",
+        "actor": "codex-bot",
+        "note_ru": "Собрана первая версия главной страницы по концепции, утверждённой Сергеем 4 сентября 2026 года."
+      },
+      {
+        "status": "preview",
+        "at": "2026-09-04T18:00:00Z",
+        "actor": "codex-bot",
+        "note_ru": "После замечания Сергея первая версия радикально пересобрана дизайн-группой: текст сокращён, карточные сетки удалены, центр страницы отдан документальной фотографии и действию приближения."
+      },
+      {
+        "status": "preview",
+        "at": "2026-09-04T19:00:00Z",
+        "actor": "codex-bot",
+        "note_ru": "Возвращена каноническая шапка, отделён сегодняшний утверждённый сюжет 4 сентября, добавлены два школьных сценария и календарь 365/365; исправлена типографика крупного манифеста."
+      },
+      {
+        "status": "preview",
+        "at": "2026-09-04T20:00:00Z",
+        "actor": "codex-bot",
+        "note_ru": "По прямому решению Сергея блок «Сегодня» переведён с фиксированного 4 сентября на локальную дату посетителя и единый утверждённый календарный источник."
+      },
+      {
+        "status": "preview",
+        "at": "2026-09-05T06:00:00Z",
+        "actor": "codex-bot",
+        "note_ru": "По международному аудиту добавлен поиск по реестру опубликованных историй, пустое состояние и прямой вход в каталог; календарный состав и предметные страницы не менялись."
+      },
+      {
+        "status": "preview",
+        "at": "2026-09-05T18:00:00Z",
+        "actor": "codex-bot",
+        "note_ru": "Отдельный светлый вариант по явному разрешению Сергея; исходные HTML не изменены. Порядок главных разделов соответствует принятому в диалоге предложению."
+      }
+    ]
+  },
+  "narrative": {
+    "visitor_promise_ru": "Посетитель поймёт, что музей показывает не красивые фасады, а причины архитектурных решений, и выберет одну открытую историю.",
+    "hook_ru": "Что держит Кижи?",
+    "turn_ru": "Издалека виден силуэт; при приближении открываются ансамбль, дом, деталь и след реставрации.",
+    "conclusion_ru": "Архитектуру можно читать как цепочку решений, а не как набор стилей.",
+    "depths": {
+      "see": "Сегодняшний утверждённый вопрос отделён от главной открытой истории.",
+      "understand": "Пять расстояний меняют смысл одного памятника; школьный маршрут превращает просмотр в совместное расследование.",
+      "research": "Асимметричный фотоатлас и календарь 365/365 ведут к открытым страницам и честно маркируют готовящиеся."
+    }
+  },
+  "interactive": {
+    "title_ru": "Подойти ближе",
+    "type": "photographic_scale_reader",
+    "visitor_action_ru": "Посетитель проходит пять расстояний до Кижей: остров, ансамбль, дом, деталь и сегодняшнее состояние.",
+    "exclusive_insight_ru": "Смена реальных документальных кадров показывает, как один памятник меняет смысл с расстоянием.",
+    "wow_effect_ru": "Посетитель совершает архитектурное действие — приближается — вместо переключения абстрактных текстовых вкладок.",
+    "text_alternative_ru": "Без сценария пять масштабов перечислены в текстовой альтернативе сразу после интерактива.",
+    "engine": "inline-home-distance-v2",
+    "unique_to_issue": true
+  },
+  "claims": [
+    {
+      "claim_id": "rc:claim:arhitektura:home:kizhi-layers",
+      "text_ru": "Современный музей на острове соединяет исторический Кижский погост и перевезённые памятники архитектуры.",
+      "kind": "fact",
+      "key_claim": true,
+      "confidence": "verified",
+      "source_ids": [
+        "rc:source:kizhi:history",
+        "rc:source:unesco:kizhi"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "rc:source:kizhi:history",
+      "title_ru": "Из истории создания музея-заповедника «Кижи»",
+      "publisher_ru": "Музей-заповедник «Кижи»",
+      "url": "https://site.kizhi.karelia.ru/library/otchet-o-deyatelnosti-muzeya-kizhi-2011/959.html",
+      "source_type": "museum",
+      "language": "ru",
+      "checked_at": "2026-08-27"
+    },
+    {
+      "source_id": "rc:source:unesco:kizhi",
+      "title_ru": "Kizhi Pogost",
+      "publisher_ru": "UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/list/544/",
+      "source_type": "official_catalog",
+      "language": "en",
+      "checked_at": "2026-08-27"
+    },
+    {
+      "source_id": "rc:source:commons:kizhi-pogost",
+      "title_ru": "Kizhi Pogost P7114012",
+      "publisher_ru": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Kizhi_Pogost_P7114012_2200.jpg",
+      "source_type": "official_catalog",
+      "language": "en",
+      "checked_at": "2026-08-27"
+    }
+  ],
+  "objects": [
+    {
+      "object_id": "rc:object:architecture:kizhi-pogost",
+      "object_type": "architectural-ensemble",
+      "title_ru": "Кижский погост",
+      "date_display_ru": "XVIII–XIX века",
+      "attribution_ru": "Народные мастера; авторство отдельных построек не установлено",
+      "holder_ru": "Музей-заповедник «Кижи»",
+      "source_ids": [
+        "rc:source:kizhi:history",
+        "rc:source:unesco:kizhi"
+      ]
+    }
+  ],
+  "images": [
+    {
+      "image_id": "rc:image:arhitektura:home:kizhi-pogost",
+      "object_id": "rc:object:architecture:kizhi-pogost",
+      "local_path": "muzei/arhitektura/media/kizhi/pogost-1280.webp",
+      "sha256": "4473e3b9aeb6c88fe3591c896f2604c00e1b0fccbeee2cf6457de2dcfe6585b9",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Kizhi_Pogost_P7114012_2200.jpg",
+      "credit_ru": "Alexxx1979, CC BY-SA 4.0; редакционное уменьшение WebP",
+      "alt_ru": "Кижский погост с двумя деревянными многоглавыми церквями и колокольней",
+      "rights": {
+        "status": "cleared",
+        "basis_ru": "Фотография доступна по CC BY-SA 4.0; атрибуция и ссылка сохранены.",
+        "checked_at": "2026-08-27",
+        "commercial_use": "allowed",
+        "derivatives": "allowed",
+        "ai_modification": "not_used"
+      }
+    }
+  ],
+  "risks": {
+    "historical": {
+      "level": "low",
+      "reason_ru": "Главная страница сокращает сложные истории до навигационных формул.",
+      "mitigation_ru": "Фактические выводы раскрываются только на предметных страницах со своими источниками.",
+      "approved_by": null
+    },
+    "legal": {
+      "level": "low",
+      "reason_ru": "В обложке используется производная открыто лицензированной фотографии.",
+      "mitigation_ru": "Автор, лицензия, источник и контрольная сумма записаны и показаны под кадром.",
+      "approved_by": null
+    },
+    "reputational": {
+      "level": "low",
+      "reason_ru": "Короткие навигационные формулы не раскрывают всю сложность памятников.",
+      "mitigation_ru": "Каждая формула ведёт на полную предметную страницу с доказательствами, источниками и статусом изображения.",
+      "approved_by": null
+    }
+  },
+  "seo": {
+    "title_ru": "Музей русской архитектуры — Русская цивилизация",
+    "description_ru": "Смотри не на фасад, а внутрь архитектурного решения: место, пространство, материал, люди и время.",
+    "h1_ru": "Что держит Кижи?",
+    "canonical_url": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/arhitektura/",
+    "index_state": "index",
+    "primary_query_ru": "музей русской архитектуры онлайн",
+    "og_image_id": "rc:image:arhitektura:home:kizhi-pogost"
+  },
+  "media": [
+    {
+      "media_id": "rc:media:arhitektura:home:page",
+      "kind": "page",
+      "platform": "web",
+      "status": "review",
+      "path": "muzei/arhitektura/index.html"
+    },
+    {
+      "media_id": "rc:media:arhitektura:home:distance",
+      "kind": "interactive",
+      "platform": "web",
+      "status": "review",
+      "path": "muzei/arhitektura/index.html#reader"
+    },
+    {
+      "media_id": "rc:media:arhitektura:home:school",
+      "kind": "interactive",
+      "platform": "web",
+      "status": "review",
+      "path": "muzei/arhitektura/index.html#school"
+    },
+    {
+      "media_id": "rc:media:arhitektura:home:calendar",
+      "kind": "interactive",
+      "platform": "web",
+      "status": "review",
+      "path": "muzei/arhitektura/index.html#calendar"
+    }
+  ],
+  "publication": {
+    "blockers": [
+      "Независимая приёмка и слияние веток",
+      "Внешняя проверка постоянного GitHub Pages после слияния"
+    ],
+    "approvals": {
+      "fact_check": true,
+      "rights": true,
+      "editorial": true
+    },
+    "target_path": "muzei/arhitektura/index.html"
+  }
+}

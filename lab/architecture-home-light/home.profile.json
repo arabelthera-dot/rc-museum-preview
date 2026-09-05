@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "profile": "arhitektura.home.v2.5",
+  "museum": "arhitektura",
+  "required": {
+    "selectors": [
+      ".top",
+      ".b1",
+      ".b2",
+      ".museum-identity",
+      "#today-calendar",
+      "#today",
+      "#reader",
+      "#atlas",
+      "#story-filters",
+      "#story-search",
+      "#catalog-empty",
+      "#my-route",
+      "#school",
+      "#calendar",
+      "#next",
+      ".support-line",
+      "#start-route"
+    ]
+  },
+  "collection": {
+    "enabled": false
+  },
+  "published_catalog": {
+    "enabled": true,
+    "source": "published-stories.json",
+    "derived_count": true,
+    "search": [
+      "title",
+      "question",
+      "region",
+      "century",
+      "material",
+      "space",
+      "action",
+      "duration"
+    ],
+    "filters": [
+      "region",
+      "century",
+      "material",
+      "space",
+      "action",
+      "duration"
+    ],
+    "regression": "pilot-arhitektura/tools/test-home-page.mjs"
+  },
+  "score": {
+    "enabled": false
+  },
+  "calendar": {
+    "enabled": true,
+    "selector": "#calbox",
+    "source": "calendar-data.js"
+  }
+}
