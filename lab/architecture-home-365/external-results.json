@@ -1,0 +1,33 @@
+{
+  "out": [
+    {
+      "version": "manual"
+    },
+    {
+      "page": "home",
+      "http": 200,
+      "cards": 3,
+      "overflow": false,
+      "fonts": "loaded",
+      "action": 769.515625
+    },
+    {
+      "zoom200": true
+    },
+    {
+      "page": "catalog",
+      "count": "1–12 из 365 · страница 1 из 31",
+      "cards": 12
+    },
+    {
+      "page2": "13–24 из 365 · страница 2 из 31"
+    },
+    {
+      "catalogMobile": {
+        "overflow": false,
+        "images": true
+      }
+    }
+  ],
+  "errors": []
+}
