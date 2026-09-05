@@ -35,4 +35,4 @@
 @media(max-width:360px){:root{--page:calc(100% - 32px)}.top{gap:12px}.b1{font-size:21px}.hero h2{font-size:34px}.calendar-act{padding-left:16px;padding-right:16px}.calendar-shell{padding:8px}.atlas{padding-left:16px;padding-right:16px}.support-line{padding:16px}.school{padding-left:16px;padding-right:16px}.end{padding-left:16px;padding-right:16px}.reader-tabs{grid-template-columns:1fr}}
 
 @media(max-width:640px){.reader-tabs{grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr))}.reader-tab{min-width:0;overflow-wrap:anywhere}}
-h1,h2,h3{overflow-wrap:anywhere;hyphens:auto}
+h1,h2,h3{overflow-wrap:anywhere;hyphens:manual}
