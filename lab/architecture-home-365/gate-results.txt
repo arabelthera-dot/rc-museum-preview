@@ -1,0 +1,42 @@
+OK   канон museum-core.md: /home/agent/projects/russian-civilization/rc-museum-production/standards/museum-core.md
+OK   канон page-production-standard.md: /home/agent/projects/russian-civilization/docs/standards/page-production-standard.md
+OK   канон audit-pages.py: /home/agent/projects/russian-civilization/tools/audit-pages.py
+OK   тематический skill: /home/agent/projects/russian-civilization/docs/skills/museum-architecture/SKILL.md
+OK   копии skill совпадают: 3c8ccb09d972: /home/agent/projects/russian-civilization/docs/skills/museum-architecture/SKILL.md
+OK   зависимость rc-text: /home/agent/.claude/skills/rc-text/SKILL.md
+OK   копии rc-text совпадают: версий: 1
+OK   зависимость rc-artdirection: /home/agent/.claude/skills/rc-artdirection/SKILL.md
+OK   копии rc-artdirection совпадают: версий: 1
+OK   зависимость rc-hero: /home/agent/.claude/skills/rc-hero/SKILL.md
+OK   копии rc-hero совпадают: версий: 1
+OK   зависимость rc-design-review: /home/agent/.claude/skills/rc-design-review/SKILL.md
+OK   копии rc-design-review совпадают: версий: 1
+OK   паспорт issue.json: /home/agent/worktrees/architecture-home-365/lab/architecture-home-365/issue.json
+OK   интерпретатор: /usr/bin/python3
+OK   HTML страницы: /home/agent/worktrees/architecture-home-365/lab/architecture-home-365/index.html
+OK   валидатор issue.json: Паспорт: /home/agent/worktrees/architecture-home-365/lab/architecture-home-365/issue.json
+Режим: проверка рабочего паспорта
+ИТОГ: проверка пройдена; ошибок 0, предупреждений 0.
+OK   версия профиля: 1
+OK   имя профиля: arhitektura.home.v3.0
+OK   музей профиля: профиль=arhitektura; команда=arhitektura
+FAIL канонический audit-pages: ✗ нет принятого профиля главной для /home/agent/worktrees/architecture-home-365/lab/architecture-home-365/index.html
+ИТОГ: главных 1, проверок 1, нарушений 1; профиль неизвестен
+OK   обязательный узел .top: найдено: 1
+OK   обязательный узел .b1: найдено: 1
+OK   обязательный узел .b2: найдено: 1
+OK   обязательный узел .museum-identity: найдено: 1
+OK   обязательный узел #today-calendar: найдено: 1
+OK   обязательный узел #today: найдено: 1
+OK   обязательный узел #reader: найдено: 1
+OK   обязательный узел #atlas: найдено: 1
+OK   обязательный узел #school: найдено: 1
+OK   обязательный узел #calendar: найдено: 1
+OK   обязательный узел #next: найдено: 1
+OK   обязательный узел .support-line: найдено: 1
+OK   обязательный узел #interests: найдено: 1
+OK   обязательный узел .all-stories: найдено: 1
+OK   календарь разобран: дней: 365
+FAIL хуки всех открытых дней: 01-01:нет kizhi-muzey.html, 01-02:нет dvorets-alekseya-mihaylovicha.html, 01-03:нет terem-astashovo.html, 01-04:нет vyatskoe.html, 01-05:нет nevjanskaya-bashnya.html, 01-06:нет georgievskiy-sobor-yuryev-polskiy.html, 01-07:нет pokrova-na-nerli.html
+
+ИТОГ: прошло 35, ошибок 2, предупреждений 0

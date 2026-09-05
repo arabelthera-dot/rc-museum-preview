@@ -1,0 +1,60 @@
+{
+  "results": [
+    {
+      "width": 320,
+      "overflow": false,
+      "stories": 3,
+      "support": 0.15151881883093307,
+      "button": 738.53125
+    },
+    {
+      "width": 360,
+      "overflow": false,
+      "stories": 3,
+      "support": 0.16131884790298132,
+      "button": 763.53125
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "stories": 3,
+      "support": 0.16410723581467984,
+      "button": 769.515625
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "stories": 3,
+      "support": 0.17987467747880576,
+      "button": 540
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "stories": 3,
+      "support": 0.20556006493506493,
+      "button": 632.3125
+    },
+    {
+      "catalog": "1–12 из 365 · страница 1 из 31",
+      "cards": 12
+    },
+    {
+      "catalogWidth": 320,
+      "overflow": false
+    },
+    {
+      "catalogWidth": 390,
+      "overflow": false
+    },
+    {
+      "catalogWidth": 768,
+      "overflow": false
+    },
+    {
+      "catalogWidth": 1440,
+      "overflow": false
+    }
+  ],
+  "errors": []
+}

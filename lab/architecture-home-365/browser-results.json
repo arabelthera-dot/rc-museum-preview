@@ -1,0 +1,150 @@
+[
+  {
+    "name": "page 2",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "last page 5 entries",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "next disabled",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "question dialog",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "escape closes",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "search matches",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "reload retains query",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "empty",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "published 7",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "route unlock",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "route persistence",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "back retains filter",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "December 31",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "theme nonempty",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "region matches",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "view space",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "view material",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "view people",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "view time",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "view place",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "school 35",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "school 15",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "calendar 1",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "calendar 12",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "calendar 25",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "today January link",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "today actual",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "zoom 200%",
+    "ok": false,
+    "detail": {
+      "sw": 435,
+      "w": 390
+    }
+  },
+  {
+    "name": "console",
+    "ok": true,
+    "detail": []
+  }
+]
