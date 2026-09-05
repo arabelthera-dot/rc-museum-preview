@@ -177,7 +177,9 @@
         label.append(select);filters.append(label);
       });
       const mobileFilters=matchMedia('(max-width:640px)');
-      if(mobileFilters.matches)filters.classList.add('is-collapsed');
+      const syncFilterLayout=matches=>{filters.classList.toggle('is-collapsed',matches);filterToggle.setAttribute('aria-expanded',String(!matches));filterToggle.lastElementChild.textContent=matches?'+':'-'};
+      syncFilterLayout(mobileFilters.matches);
+      mobileFilters.addEventListener('change',event=>syncFilterLayout(event.matches));
       filterToggle.addEventListener('click',()=>{const collapsed=filters.classList.toggle('is-collapsed');filterToggle.setAttribute('aria-expanded',String(!collapsed));filterToggle.lastElementChild.textContent=collapsed?'+':'-'});
       const routeKey='rc-architecture-route-v1';
       let route=[];
@@ -203,7 +205,7 @@
       function applyFilters(){
         const values=Object.fromEntries(new FormData(filterForm)),query=normalize(values.q),facets=Object.entries(values).filter(([key])=>key!=='q');let visible=0;
         document.querySelectorAll('[data-story-index]').forEach(card=>{const story=stories[Number(card.dataset.storyIndex)],searchable=normalize([story.title,story.question,story.region,story.century,story.material,story.space,story.action,`${story.duration} мин`].join(' ')),show=(!query||query.split(' ').every(token=>searchable.includes(token)))&&facets.every(([key,value])=>!value||String(story[key])===value);card.hidden=!show;if(show)visible++});
-        const active=Object.values(values).filter(Boolean).length;
+        const active=facets.filter(([,value])=>Boolean(value)).length;
         filterActive.textContent=active?`· ${active}`:'';
         catalogCount.textContent=`Показано ${visible} из ${stories.length} опубликованных историй`;
         catalogEmpty.hidden=visible!==0;
