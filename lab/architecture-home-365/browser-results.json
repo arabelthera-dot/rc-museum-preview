@@ -136,9 +136,9 @@
   },
   {
     "name": "zoom 200%",
-    "ok": false,
+    "ok": true,
     "detail": {
-      "sw": 435,
+      "sw": 375,
       "w": 390
     }
   },
