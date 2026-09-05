@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "profile": "arhitektura.home.v3.0",
+  "profile": "arhitektura.home.v3.1",
   "museum": "arhitektura",
   "required": {
     "selectors": [
@@ -15,9 +15,11 @@
       "#school",
       "#calendar",
       "#next",
-      ".support-line",
       "#interests",
-      ".all-stories"
+      ".all-stories",
+      "#support-peak",
+      ".museum-slogan",
+      ".portal-identity"
     ]
   },
   "collection": {
@@ -57,5 +59,16 @@
     "enabled": true,
     "selector": "#calbox",
     "source": "../../muzei/arhitektura/calendar-data.js"
+  },
+  "acceptance": {
+    "script": "standards-check.js",
+    "header_order": [
+      "header.top",
+      ".museum-identity",
+      ".chrome-row"
+    ],
+    "calendar_last": true,
+    "support_engine": "museum-support.js",
+    "support_max_fraction": 0.3333333333333333
   }
 }
