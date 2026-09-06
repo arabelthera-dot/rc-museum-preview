@@ -45,12 +45,21 @@ h1,h2,h3{font-family:var(--serif);line-height:1.12}h1{font-size:clamp(40px,6.5vw
 #calbox{margin-top:24px}.calhead{display:flex;align-items:center;justify-content:center;gap:20px;margin-bottom:16px}.calnav{width:46px;height:46px;border:1px solid var(--line);background:var(--cream);color:var(--ink);font-size:24px;cursor:pointer;border-radius:50%;line-height:1}.calnav:hover{border-color:var(--red)}.calmname{font:700 clamp(26px,3.4vw,36px) var(--serif);text-align:center;min-width:220px}.calmname i{display:block;font:500 13px var(--sans);color:var(--muted);font-style:normal}
 .calgrid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}.cday{min-height:58px;border:1px solid var(--line);background:var(--cream);color:var(--ink);cursor:pointer;font:600 15px var(--sans);border-radius:6px}.cday:hover{border-color:var(--gold)}.cday.full{background:#efe0c3;border-color:#c7ae80;font-weight:800}.cday.today{outline:2px solid var(--red);outline-offset:-1px}.cday.on{background:var(--red);color:#fff;border-color:var(--red)}
 .calcard{margin-top:16px;padding:24px 26px;background:#fff8e9;border:1px solid #c7ae80;border-left:6px solid var(--red)}.calcard .cdate{font:800 12px var(--sans);letter-spacing:.15em;text-transform:uppercase;color:var(--gold-ink);margin-bottom:8px}.calcard h3{font:700 26px/1.2 var(--serif);margin:0 0 10px}.calcard h3 span{color:var(--gold-ink);font-size:18px}.calcard p{font:500 16px/1.6 var(--sans);color:#4b3f35;max-width:760px;margin:0 0 16px}.calcard a{display:inline-block;background:var(--red);color:#fff;padding:12px 18px;text-decoration:none;font-weight:800;border-radius:4px}.calcard.empty{background:#efe9da;border-left-color:var(--muted)}.calfoot{margin-top:14px;font-size:13px;color:var(--muted)}
+/* уроки */
+.uroki-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px}
+.lesson{display:flex;flex-direction:column;background:#fffdf6;border:1px solid var(--line);padding:20px 18px;transition:transform .3s ease,box-shadow .3s ease}.lesson:hover{transform:translateY(-5px);box-shadow:0 20px 42px rgba(0,0,0,.12)}
+.lesson .subj{font:800 11px var(--sans);letter-spacing:.15em;text-transform:uppercase;color:var(--red)}.lesson .klass{margin-left:8px;font:700 12px var(--sans);color:var(--gold-ink)}
+.lesson h3{font-size:19px;margin:10px 0 10px}
+.lesson ul{list-style:none;margin:0 0 16px;padding:0}.lesson li{font-size:13.5px;line-height:1.45;color:var(--ink);padding:5px 0;border-top:1px dashed var(--line)}.lesson li:first-child{border-top:0}
+.lesson .urok-slot{margin-top:auto;padding:11px 12px;background:#fff3d9;border:1px dashed #c7ae80;font-size:12.5px;line-height:1.5;color:#6b5620}.lesson .urok-slot b{color:var(--red)}
+.lesson .urok-go{display:inline-block;margin-top:12px;font-weight:800;color:var(--red);font-size:13px;text-decoration:none}.lesson .urok-go:hover{text-decoration:underline}
+.uroki-note{margin-top:20px;font-size:13px;color:var(--muted);max-width:860px;line-height:1.6}
 /* куда дальше */
 .kd{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:26px}.kd a{display:block;padding:22px;background:var(--cream);border:1px solid var(--line);text-decoration:none}.kd a:hover{border-color:var(--gold)}.kd b{display:block;font:700 19px var(--serif)}.kd span{font-size:14px;color:var(--muted)}
 html.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1)}html.js .reveal.on{opacity:1;transform:none}
 footer{background:#111;color:#cabcaa;padding:34px 0}.foot-in{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}.foot-links a{color:#cabcaa;margin-right:16px;font-size:13px;text-decoration:none}
-@media(max-width:900px){.halls{grid-template-columns:1fr 1fr}.today-card{grid-template-columns:160px 1fr}.today-card img{width:160px}}
-@media(max-width:640px){.hero-visual img{height:min(46vh,360px)}.civic-in{grid-template-columns:1fr;gap:8px;padding:18px 0}.civic-motto{text-align:left}.museum-in{flex-direction:column;align-items:flex-start;padding:14px 0}.back{align-self:flex-start}.halls,.kd{grid-template-columns:1fr}.today-card{grid-template-columns:1fr;gap:14px}.today-card img{width:100%;height:150px}.act{padding-block:52px}.calgrid{gap:3px}.cday{min-height:48px;font-size:13px}}
+@media(max-width:900px){.halls{grid-template-columns:1fr 1fr}.uroki-grid{grid-template-columns:1fr 1fr}.today-card{grid-template-columns:160px 1fr}.today-card img{width:160px}}
+@media(max-width:640px){.hero-visual img{height:min(46vh,360px)}.civic-in{grid-template-columns:1fr;gap:8px;padding:18px 0}.civic-motto{text-align:left}.museum-in{flex-direction:column;align-items:flex-start;padding:14px 0}.back{align-self:flex-start}.halls,.kd,.uroki-grid{grid-template-columns:1fr}.today-card{grid-template-columns:1fr;gap:14px}.today-card img{width:100%;height:150px}.act{padding-block:52px}.calgrid{gap:3px}.cday{min-height:48px;font-size:13px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}.marquee-track{animation:none!important}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 </style>
 </head>
@@ -101,6 +110,19 @@ footer{background:#111;color:#cabcaa;padding:34px 0}.foot-in{display:flex;justif
       <article class="hall"><div class="hall-img"><img src="media/krokodil-1924-delegat.jpg" alt="Советская карикатура 1924 года" loading="lazy" decoding="async"></div><div class="hall-body"><span class="hall-num">Зал 08</span><h3>Короткий век</h3><p>Оттепель, застой, перестройка — сатира в рамках и вне их.</p></div></article>
       <article class="hall digital"><div class="hall-img"><b>09</b></div><div class="hall-body"><span class="hall-num">Зал 09</span><h3>Пиксель и мем</h3><p>Цифровая эпоха: карикатура после бумаги.</p></div></article>
     </div>
+  </div></section>
+
+  <section class="act reveal" id="uroki"><div class="wrap">
+    <div class="actno">Школе и учителю</div>
+    <h2>Уроки: карикатура как исторический документ</h2>
+    <p class="lead">Готовые маршруты по залам музея для урока в классе. Каждый урок — 15 или 35 минут: идём по экспонатам ссылками, три вопроса классу, домашнее задание и раздатка одним файлом.</p>
+    <div class="uroki-grid">
+      <article class="lesson"><span class="subj">История</span><span class="klass">8–9 класс</span><h3>Отечественная война 1812 года</h3><ul><li>Наполеон в карикатуре</li><li>Война карандашом</li><li>Русский медведь</li></ul><div class="urok-slot"><b>Внутри урока:</b> маршрут по экспонатам · 3 вопроса классу · домашнее задание · раздатка</div><a class="urok-go" href="day-02jan-napoleon-slava-nos.html">Открыть выпуск по теме →</a></article>
+      <article class="lesson"><span class="subj">Литература</span><span class="klass">6–8 класс</span><h3>Сатира и русская литература</h3><ul><li>Чиновник</li><li>Сатирикон</li><li>Крокодилье зеркало</li></ul><div class="urok-slot"><b>Внутри урока:</b> маршрут по экспонатам · 3 вопроса классу · домашнее задание · раздатка</div><a class="urok-go" href="day-05jan-krokodil-first-issue.html">Открыть выпуск по теме →</a></article>
+      <article class="lesson"><span class="subj">ИЗО</span><span class="klass">5–7 класс</span><h3>Как устроен сатирический рисунок</h3><ul><li>Азбука карикатуры</li><li>Линия и пятно</li><li>Как картинка стала массовой</li></ul><div class="urok-slot"><b>Внутри урока:</b> маршрут по экспонатам · 3 вопроса классу · домашнее задание · раздатка</div><a class="urok-go" href="day-04jan-litografiya.html">Открыть выпуск по теме →</a></article>
+      <article class="lesson"><span class="subj">Обществознание</span><span class="klass">9–11 класс</span><h3>Смех, цензура и границы дозволенного</h3><ul><li>Цензор и художник</li><li>Граница смеха</li><li>Границы жанра</li></ul><div class="urok-slot"><b>Внутри урока:</b> маршрут по экспонатам · 3 вопроса классу · домашнее задание · раздатка</div><a class="urok-go" href="day-03jan-radakov-tri-linii.html">Открыть выпуск по теме →</a></article>
+    </div>
+    <p class="uroki-note">Уроки собираются из принятых залов — правило «эталон-первый»: сначала один урок целиком на приёмку, затем тираж по предметам. Сейчас маршруты опираются на уже открытые январские выпуски.</p>
   </div></section>
 
   <section class="act dark reveal" id="dni"><div class="wrap">
