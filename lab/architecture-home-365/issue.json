@@ -3,7 +3,7 @@
   "museum_id": "rc:museum:arhitektura",
   "issue_id": "rc:issue:arhitektura:museum-home",
   "content_family_id": "rc:family:arhitektura:museum-home",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "identity": {
     "title_ru": "Музей русской архитектуры",
     "slug": "architecture-home-365",
@@ -56,6 +56,12 @@
         "at": "2026-09-05T18:20:00Z",
         "actor": "codex-bot",
         "note_ru": "По прямому запросу Сергея: ограниченная главная, отдельный каталог 365 записей по 12; функции поиска и маршрута перенесены в каталог."
+      },
+      {
+        "status": "preview",
+        "at": "2026-09-05T18:46:00Z",
+        "actor": "codex-bot",
+        "note_ru": "По прямому разрешению Сергея исправлены шапка, самостоятельный слоган музея, общая поддержка и календарь в самом низу. Предложения стандартам вынесены отдельно для Jarvis."
       }
     ]
   },

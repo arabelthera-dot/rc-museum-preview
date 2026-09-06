@@ -1,0 +1,301 @@
+{
+  "passed": 50,
+  "failed": [],
+  "checks": [
+    {
+      "name": "Portal title",
+      "ok": true
+    },
+    {
+      "name": "Portal slogan",
+      "ok": true
+    },
+    {
+      "name": "Museum H1",
+      "ok": true
+    },
+    {
+      "name": "Museum slogan",
+      "ok": true
+    },
+    {
+      "name": "Header order",
+      "ok": true
+    },
+    {
+      "name": "Shared support",
+      "ok": true
+    },
+    {
+      "name": "Five support methods",
+      "ok": true
+    },
+    {
+      "name": "Same-page support link",
+      "ok": true
+    },
+    {
+      "name": "Home selection limited",
+      "ok": true
+    },
+    {
+      "name": "365 calendar days",
+      "ok": true
+    },
+    {
+      "name": "Layout 320",
+      "ok": true,
+      "detail": {
+        "width": 320,
+        "scroll": 305,
+        "support": 0.15249488091389157,
+        "calendarLast": true,
+        "bottom": 9278.75,
+        "doc": 9279,
+        "fonts": "loaded"
+      }
+    },
+    {
+      "name": "Support first third 320",
+      "ok": true,
+      "detail": 0.15249488091389157
+    },
+    {
+      "name": "Calendar last 320",
+      "ok": true,
+      "detail": {
+        "width": 320,
+        "scroll": 305,
+        "support": 0.15249488091389157,
+        "calendarLast": true,
+        "bottom": 9278.75,
+        "doc": 9279,
+        "fonts": "loaded"
+      }
+    },
+    {
+      "name": "Fonts 320",
+      "ok": true
+    },
+    {
+      "name": "Heart hidden at support 320",
+      "ok": true
+    },
+    {
+      "name": "Layout 360",
+      "ok": true,
+      "detail": {
+        "width": 360,
+        "scroll": 345,
+        "support": 0.16413997492305937,
+        "calendarLast": true,
+        "bottom": 8772.59375,
+        "doc": 8773,
+        "fonts": "loaded"
+      }
+    },
+    {
+      "name": "Support first third 360",
+      "ok": true,
+      "detail": 0.16413997492305937
+    },
+    {
+      "name": "Calendar last 360",
+      "ok": true,
+      "detail": {
+        "width": 360,
+        "scroll": 345,
+        "support": 0.16413997492305937,
+        "calendarLast": true,
+        "bottom": 8772.59375,
+        "doc": 8773,
+        "fonts": "loaded"
+      }
+    },
+    {
+      "name": "Fonts 360",
+      "ok": true
+    },
+    {
+      "name": "Heart hidden at support 360",
+      "ok": true
+    },
+    {
+      "name": "Layout 390",
+      "ok": true,
+      "detail": {
+        "width": 390,
+        "scroll": 375,
+        "support": 0.16368198529411765,
+        "calendarLast": true,
+        "bottom": 8500.375,
+        "doc": 8500,
+        "fonts": "loaded"
+      }
+    },
+    {
+      "name": "Support first third 390",
+      "ok": true,
+      "detail": 0.16368198529411765
+    },
+    {
+      "name": "Calendar last 390",
+      "ok": true,
+      "detail": {
+        "width": 390,
+        "scroll": 375,
+        "support": 0.16368198529411765,
+        "calendarLast": true,
+        "bottom": 8500.375,
+        "doc": 8500,
+        "fonts": "loaded"
+      }
+    },
+    {
+      "name": "Fonts 390",
+      "ok": true
+    },
+    {
+      "name": "Heart hidden at support 390",
+      "ok": true
+    },
+    {
+      "name": "Layout 768",
+      "ok": true,
+      "detail": {
+        "width": 768,
+        "scroll": 753,
+        "support": 0.1759876568692206,
+        "calendarLast": true,
+        "bottom": 6056.4375,
+        "doc": 6056,
+        "fonts": "loaded"
+      }
+    },
+    {
+      "name": "Support first third 768",
+      "ok": true,
+      "detail": 0.1759876568692206
+    },
+    {
+      "name": "Calendar last 768",
+      "ok": true,
+      "detail": {
+        "width": 768,
+        "scroll": 753,
+        "support": 0.1759876568692206,
+        "calendarLast": true,
+        "bottom": 6056.4375,
+        "doc": 6056,
+        "fonts": "loaded"
+      }
+    },
+    {
+      "name": "Fonts 768",
+      "ok": true
+    },
+    {
+      "name": "Heart hidden at support 768",
+      "ok": true
+    },
+    {
+      "name": "Layout 1440",
+      "ok": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1425,
+        "support": 0.19598301727207978,
+        "calendarLast": true,
+        "bottom": 5615.921875,
+        "doc": 5616,
+        "fonts": "loaded"
+      }
+    },
+    {
+      "name": "Support first third 1440",
+      "ok": true,
+      "detail": 0.19598301727207978
+    },
+    {
+      "name": "Calendar last 1440",
+      "ok": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1425,
+        "support": 0.19598301727207978,
+        "calendarLast": true,
+        "bottom": 5615.921875,
+        "doc": 5616,
+        "fonts": "loaded"
+      }
+    },
+    {
+      "name": "Fonts 1440",
+      "ok": true
+    },
+    {
+      "name": "Heart hidden at support 1440",
+      "ok": true
+    },
+    {
+      "name": "Support link scrolls",
+      "ok": true
+    },
+    {
+      "name": "More reaches methods",
+      "ok": true
+    },
+    {
+      "name": "School long",
+      "ok": true
+    },
+    {
+      "name": "School short",
+      "ok": true
+    },
+    {
+      "name": "View space",
+      "ok": true
+    },
+    {
+      "name": "View material",
+      "ok": true
+    },
+    {
+      "name": "View people",
+      "ok": true
+    },
+    {
+      "name": "View time",
+      "ok": true
+    },
+    {
+      "name": "View place",
+      "ok": true
+    },
+    {
+      "name": "Day hook 1",
+      "ok": true
+    },
+    {
+      "name": "Day hook 12",
+      "ok": true
+    },
+    {
+      "name": "Day hook 25",
+      "ok": true
+    },
+    {
+      "name": "Published today link",
+      "ok": true
+    },
+    {
+      "name": "Zoom 200%",
+      "ok": true
+    },
+    {
+      "name": "Images loaded",
+      "ok": true
+    }
+  ]
+}
