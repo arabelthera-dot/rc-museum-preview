@@ -1,0 +1,31 @@
+{
+  "status": "предварительное превью",
+  "viewport_checks": {
+    "320": "no overflow; images loaded",
+    "390": "no overflow; images loaded",
+    "768": "no overflow; images loaded",
+    "1440": "no overflow; images loaded"
+  },
+  "support_positions_percent": [
+    21,
+    95
+  ],
+  "broken_internal_anchors": 0,
+  "detail_tabs": 3,
+  "calendar_checked_dates": [
+    "01-02",
+    "01-03",
+    "01-05"
+  ],
+  "filters": "all / press verified; returns 4 / 2 cards",
+  "school": "7 and 15 minute paths verified",
+  "static_auditor": {
+    "violations": 1,
+    "not_checked": 0,
+    "reason": "Нет принятого профиля главной для отдельного нового прототипа"
+  },
+  "remaining": [
+    "Независимая предметная приёмка и утверждение владельцем",
+    "Полный год календаря после согласования источника данных"
+  ]
+}
