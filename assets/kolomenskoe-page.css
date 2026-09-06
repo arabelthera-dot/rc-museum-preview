@@ -102,10 +102,10 @@ nav[aria-label="Разделы страницы"] a[aria-current="location"]{bac
 .scene-caption a{color:inherit}
 .hero-intro{width:100%;margin:0;padding:24px max(14px,calc((100% - 920px)/2)) 32px;background:#17241e;color:#f7f1e4}
 .hero-intro::before{content:none}
-.hero-intro h1{margin:12px 0 18px;font:500 clamp(34px,5vw,64px)/1.05 var(--serif);text-wrap:balance}
-.hero-intro .lead{max-width:760px;margin:0;color:#dce3dc;font-size:clamp(18px,2vw,24px);line-height:1.4}
+.hero-intro h1{margin:12px 0 18px;font:500 clamp(34px,4.5vw,56px)/1.05 var(--serif);text-wrap:balance}
+.hero-intro .lead{max-width:760px;margin:0;color:#dce3dc;font-size:clamp(18px,2vw,22px);line-height:1.4}
 @media(max-width:640px){.hero-intro{padding-top:18px}.hero-intro .route-choice{margin-top:18px}.hero-intro .route-choice small{font-size:14px}}
 
 .hero-intro .route-choice{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
 .hero-intro .route-choice a{min-height:48px;padding:10px 12px;font-size:16px;line-height:1.25}
-@media(max-width:640px){.hero-intro{padding-top:12px}.hero-intro .eyebrow{font-size:12px;letter-spacing:1px}.hero-intro h1{font-size:30px;margin:8px 0 10px}.hero-intro .lead{font-size:16px;line-height:1.35}.scene-caption{padding:6px 14px;font-size:14px;line-height:1.3}.hero-intro .route-choice{margin-top:12px}}
+@media(max-width:640px){.hero-intro{padding-top:8px}.hero-intro .eyebrow{font-size:12px;letter-spacing:1px}.hero-intro h1{font-size:28px;margin:8px 0 10px}.hero-intro .lead{font-size:16px;line-height:1.3}.scene-caption{padding:6px 14px;font-size:14px;line-height:1.3}.hero-intro .route-choice{margin-top:12px}}
