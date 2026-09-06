@@ -19,7 +19,7 @@
 :root{--ink:#211b17;--paper:#f4ecdd;--cream:#fffaf0;--red:#9d2f28;--gold:#c59b54;--gold-ink:#8a6420;--night:#191613;--muted:#70655b;--line:#cfc0aa;--green:#294d44;--serif:'Playfair Display',Georgia,serif;--sans:'Inter',system-ui,sans-serif;--muted-dark:#d4c7b7}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 var(--sans)}button{font:inherit}a{color:inherit}.wrap{width:min(1160px,calc(100% - 32px));margin:auto}.measure{width:min(780px,calc(100% - 32px));margin:auto}
 .civic{background:#111;color:#f7efe3;border-bottom:1px solid #3c3329}.civic-in{min-height:94px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:28px}.civic-title{font:700 clamp(22px,3vw,31px)/1.1 var(--serif);color:#e6c785;text-decoration:none}.civic-motto{text-align:right;max-width:390px;font:700 15px/1.35 var(--serif);color:#e6c785}.tools{margin-top:7px;font-size:11px;color:#b8aa98}
-.museum-head{background:#211d19;color:white;border-bottom:3px solid var(--red)}.museum-in{min-height:82px;display:flex;justify-content:space-between;align-items:center;gap:20px}.museum-label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#bbad9a}.museum-name{font:700 clamp(24px,3.4vw,32px) var(--serif);line-height:1.05}.museum-sub{font:italic 500 14px var(--serif);color:#cfc1b0;margin-top:3px}.back{border:1px solid #62584c;border-radius:22px;padding:8px 14px;text-decoration:none;font-size:12px}.back:hover{border-color:var(--gold)}
+.museum-head{background:#211d19;color:white;border-bottom:3px solid var(--red)}.museum-in{min-height:82px;display:flex;justify-content:space-between;align-items:center;gap:20px}.museum-label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#bbad9a}.museum-name{font:700 clamp(24px,3.4vw,32px) var(--serif);line-height:1.05;display:flex;align-items:center}.mlogo{width:clamp(22px,3vw,30px);height:clamp(22px,3vw,30px);margin-right:12px;color:var(--gold);flex:0 0 auto}.museum-sub{font:italic 500 14px var(--serif);color:#cfc1b0;margin-top:3px}.back{border:1px solid #62584c;border-radius:22px;padding:8px 14px;text-decoration:none;font-size:12px}.back:hover{border-color:var(--gold)}
 .crumbs{padding:12px 0;color:var(--muted);font-size:12px}.crumbs a{color:var(--gold-ink)}
 /* hero — витрина обложек */
 .hero-visual{position:relative;background:radial-gradient(ellipse at 50% 26%,#3a2d1c 0%,#17120c 52%,#090706 100%);overflow:hidden}
@@ -72,7 +72,7 @@ footer{background:#111;color:#cabcaa;padding:34px 0}.foot-in{display:flex;justif
 </head>
 <body>
 <header class="civic"><div class="wrap civic-in"><div><a class="civic-title" href="../../index.html">Русская цивилизация</a></div><div><div class="civic-motto">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div><div class="tools">RU · EN готовится &nbsp;·&nbsp; Баллы: <b id="headScore">0</b></div></div></div></header>
-<div class="museum-head"><div class="wrap museum-in"><div><div class="museum-label">Музей русской карикатуры</div><div class="museum-name">Острее пера</div><div class="museum-sub">Серьёзная история несерьёзного жанра</div></div><a class="back" href="../../index.html">← Все музеи</a></div></div>
+<div class="museum-head"><div class="wrap museum-in"><div><div class="museum-label">Музей русской карикатуры</div><div class="museum-name"><svg class="mlogo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" y1="8" x2="2" y2="22"></line><line x1="17.5" y1="15" x2="9" y2="15"></line></svg>Острее пера</div><div class="museum-sub">Серьёзная история несерьёзного жанра</div></div><a class="back" href="../../index.html">← Все музеи</a></div></div>
 <div class="wrap crumbs"><a href="../../index.html">Русская цивилизация</a> › <span>Музей русской карикатуры</span></div>
 <main>
   <section class="hero-scene hero-visual" id="heroSlide" aria-roledescription="карусель">
@@ -190,7 +190,7 @@ window.addEventListener('DOMContentLoaded',function(){
     var img=DAYIMG[key]||'media/krokodil-1922-oblozhka-I.jpg';
     box.innerHTML='<img src="'+img+'" alt="" loading="lazy"><div><h3 class="today-title">'+h+'</h3><p class="today-hook">'+d+'</p>'+(href?'<a class="btn" href="'+href+'">'+link+'</a>':'')+'</div>';
   } else {
-    box.innerHTML='<img src="media/krokodil-1922-oblozhka-I.jpg" alt="" loading="lazy"><div><h3 class="today-title">Запись на этот день готовится</h3><p class="today-hook">Календарь музея идёт с 1 января — заполненные дни открываются в сетке ниже.</p><a class="btn" href="#calendar">Открыть календарь ↓</a></div>';
+    box.innerHTML='<img src="media/krokodil-1922-oblozhka-I.jpg" alt="" loading="lazy"><div><h3 class="today-title">Музей открывается с 1 января</h3><p class="today-hook">Сегодняшний выпуск ещё впереди — начните с первого дня сатиры, он уже открыт.</p><a class="btn" href="day-01jan-russian-bear.html">Начать с первого выпуска →</a></div>';
   }
 });
 </script>
@@ -208,20 +208,16 @@ window.addEventListener('DOMContentLoaded',function(){
   var dotsWrap=document.getElementById('hDots');
   var caption=document.getElementById('heroCaption');
   if(!slides.length)return;
-  var idx=0,timer=null;
-  for(var i=0;i<slides.length;i++){var b=document.createElement('button');b.className='hdot'+(i===0?' on':'');b.setAttribute('aria-label','Обложка '+(i+1));b.addEventListener('click',(function(n){return function(){go(n);restart();}})(i));dotsWrap.appendChild(b);}
+  var idx=0;
+  for(var i=0;i<slides.length;i++){var b=document.createElement('button');b.className='hdot'+(i===0?' on':'');b.setAttribute('aria-label','Обложка '+(i+1));b.addEventListener('click',(function(n){return function(){go(n);}})(i));dotsWrap.appendChild(b);}
   var dots=dotsWrap.children;
   function go(n){
     idx=(n+slides.length)%slides.length;
     for(var i=0;i<slides.length;i++){slides[i].classList.toggle('on',i===idx);dots[i].classList.toggle('on',i===idx);}
     if(caption)caption.innerHTML=CAPTIONS[idx];
   }
-  function next(){go(idx+1);}
-  function restart(){if(timer)clearInterval(timer);timer=setInterval(next,5200);}
-  document.querySelector('#heroSlide .hprev').addEventListener('click',function(){go(idx-1);restart();});
-  document.querySelector('#heroSlide .hnext').addEventListener('click',function(){go(idx+1);restart();});
-  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(!reduce)restart();
+  document.querySelector('#heroSlide .hprev').addEventListener('click',function(){go(idx-1);});
+  document.querySelector('#heroSlide .hnext').addEventListener('click',function(){go(idx+1);});
 })();
 </script>
 <script src="../../assets/museum-calendar-month.js"></script>
