@@ -19,18 +19,25 @@
 :root{--ink:#211b17;--paper:#f4ecdd;--cream:#fffaf0;--red:#9d2f28;--gold:#c59b54;--gold-ink:#8a6420;--night:#191613;--muted:#70655b;--line:#cfc0aa;--green:#294d44;--serif:'Playfair Display',Georgia,serif;--sans:'Inter',system-ui,sans-serif;--muted-dark:#d4c7b7}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 var(--sans)}button{font:inherit}a{color:inherit}.wrap{width:min(1160px,calc(100% - 32px));margin:auto}.measure{width:min(780px,calc(100% - 32px));margin:auto}
 .civic{background:#111;color:#f7efe3;border-bottom:1px solid #3c3329}.civic-in{min-height:94px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:28px}.civic-title{font:700 clamp(22px,3vw,31px)/1.1 var(--serif);color:#e6c785;text-decoration:none}.civic-motto{text-align:right;max-width:390px;font:700 15px/1.35 var(--serif);color:#e6c785}.tools{margin-top:7px;font-size:11px;color:#b8aa98}
-.museum-head{background:#211d19;color:white}.museum-in{min-height:70px;display:flex;justify-content:space-between;align-items:center;gap:20px}.museum-label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#bbad9a}.museum-name{font:700 21px var(--serif)}.museum-sub{font-size:12px;color:#cfc1b0}.back{border:1px solid #62584c;border-radius:22px;padding:8px 14px;text-decoration:none;font-size:12px}.back:hover{border-color:var(--gold)}
+.museum-head{background:#211d19;color:white;border-bottom:3px solid var(--red)}.museum-in{min-height:82px;display:flex;justify-content:space-between;align-items:center;gap:20px}.museum-label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#bbad9a}.museum-name{font:700 clamp(24px,3.4vw,32px) var(--serif);line-height:1.05}.museum-sub{font:italic 500 14px var(--serif);color:#cfc1b0;margin-top:3px}.back{border:1px solid #62584c;border-radius:22px;padding:8px 14px;text-decoration:none;font-size:12px}.back:hover{border-color:var(--gold)}
 .crumbs{padding:12px 0;color:var(--muted);font-size:12px}.crumbs a{color:var(--gold-ink)}
-/* hero */
-.hero-visual{background:radial-gradient(ellipse at 50% 26%,#3a2d1c 0%,#17120c 50%,#090706 100%);padding:clamp(8px,2vw,20px)}.hero-visual img{display:block;width:100%;height:min(72vh,760px);object-fit:contain;margin:auto;filter:drop-shadow(0 26px 64px rgba(0,0,0,.6))}
-.caption{background:#25211d;color:#d5c7b5;padding:13px max(16px,calc((100% - 1128px)/2));font-size:12px}
-.hero-copy{background:var(--cream);padding:48px 0 44px;border-bottom:1px solid var(--line)}.eyebrow{font:800 11px/1.2 var(--sans);letter-spacing:.17em;text-transform:uppercase;color:var(--red)}
-h1,h2,h3{font-family:var(--serif);line-height:1.12}h1{font-size:clamp(40px,6.5vw,74px);max-width:1000px;margin:10px 0 17px}h2{font-size:clamp(30px,4.2vw,46px);margin:9px 0 14px}h3{font-size:21px;margin:0 0 8px}
+/* hero — витрина обложек */
+.hero-visual{position:relative;background:radial-gradient(ellipse at 50% 26%,#3a2d1c 0%,#17120c 52%,#090706 100%);overflow:hidden}
+.hero-slides{position:relative;height:min(68vh,720px)}
+.hslide{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:clamp(8px,2vw,20px);opacity:0;transform:scale(1.025);transition:opacity 1s ease,transform 1.4s ease;pointer-events:none}
+.hslide.on{opacity:1;transform:none;pointer-events:auto;z-index:2}
+.hslide img{display:block;max-width:100%;height:100%;object-fit:contain;margin:auto;filter:drop-shadow(0 26px 64px rgba(0,0,0,.62))}
+.hprev,.hnext{position:absolute;top:50%;transform:translateY(-50%);z-index:5;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:rgba(20,14,8,.45);color:#f4e9d6;font-size:26px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;padding-bottom:3px}.hprev{left:14px}.hnext{right:14px}.hprev:hover,.hnext:hover{border-color:var(--gold);color:var(--gold)}
+.hdots{position:absolute;left:0;right:0;bottom:16px;z-index:5;display:flex;gap:9px;justify-content:center}.hdot{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.32);border:0;cursor:pointer;padding:0;transition:transform .25s ease,background .25s ease}.hdot.on{background:var(--red);transform:scale(1.35)}
+.caption{background:#25211d;color:#d5c7b5;padding:13px max(16px,calc((100% - 1128px)/2));font-size:12px;min-height:41px}.caption b{color:#e8c98a}.caption a{color:#e8c98a;font-weight:700;text-decoration:none;border-bottom:1px solid #6b5a3f}.caption a:hover{color:#fff}
+.hero-copy{background:var(--cream);padding:46px 0 42px;border-bottom:1px solid var(--line)}.eyebrow{font:800 11px/1.2 var(--sans);letter-spacing:.17em;text-transform:uppercase;color:var(--red)}
+h1,h2,h3{font-family:var(--serif);line-height:1.1}h1{font-size:clamp(40px,6.5vw,74px);max-width:1000px;margin:10px 0 17px}h2{font-size:clamp(30px,4.2vw,46px);margin:9px 0 14px}h3{font-size:21px;margin:0 0 8px}
 .hook{font:600 clamp(19px,2.4vw,27px)/1.45 var(--serif);max-width:820px;color:#4b3f35}
 .hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{display:inline-block;border:0;background:var(--red);color:#fff;padding:13px 20px;cursor:pointer;font-weight:800;text-decoration:none;min-height:44px;line-height:1.35}.btn:hover{background:#7b241f}.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}.ghost:hover{border-color:var(--red);background:transparent}
 .stats{display:flex;gap:clamp(22px,4vw,46px);flex-wrap:wrap;margin-top:26px}.stats b{display:block;font:700 clamp(36px,4.5vw,52px)/1 var(--serif);color:var(--red)}.stats span{font:500 13px var(--sans);color:var(--muted);letter-spacing:.02em}
-/* бегущая лента листов */
-.marquee{overflow:hidden;background:#14110d;border-block:1px solid #3a3229;padding:16px 0}.marquee-track{display:flex;width:max-content;animation:mscroll 70s linear infinite}.marquee-track img{height:148px;width:auto;display:block;background:#efe4cc;padding:5px;border-radius:5px;margin-right:14px}
+/* бегущая лента листов — газетный конвейер */
+.marquee{overflow:hidden;background:#14110d;border-block:1px solid #3a3229;padding:18px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}.marquee-track{display:flex;width:max-content;animation:mscroll 92s linear infinite}.marquee-track img{height:172px;width:auto;display:block;background:#efe4cc;padding:6px;border-radius:6px;margin-right:16px;box-shadow:0 10px 24px rgba(0,0,0,.45)}
+.marquee-track:hover{animation-play-state:paused}
 @keyframes mscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 /* секции */
 .act{padding:70px 0;border-top:1px solid rgba(70,50,35,.15)}.act.dark{background:var(--night);color:#f5ecdf}.dark .lead{color:#cbbdab}.actno{font:800 12px var(--sans);letter-spacing:.17em;text-transform:uppercase;color:var(--gold)}.act:not(.dark) .actno{color:var(--gold-ink)}.lead{font:500 19px/1.65 var(--serif);max-width:810px;color:#594c41}.fine{font-size:12px;color:var(--muted)}
@@ -59,7 +66,7 @@ h1,h2,h3{font-family:var(--serif);line-height:1.12}h1{font-size:clamp(40px,6.5vw
 html.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1)}html.js .reveal.on{opacity:1;transform:none}
 footer{background:#111;color:#cabcaa;padding:34px 0}.foot-in{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}.foot-links a{color:#cabcaa;margin-right:16px;font-size:13px;text-decoration:none}
 @media(max-width:900px){.halls{grid-template-columns:1fr 1fr}.uroki-grid{grid-template-columns:1fr 1fr}.today-card{grid-template-columns:160px 1fr}.today-card img{width:160px}}
-@media(max-width:640px){.hero-visual img{height:min(46vh,360px)}.civic-in{grid-template-columns:1fr;gap:8px;padding:18px 0}.civic-motto{text-align:left}.museum-in{flex-direction:column;align-items:flex-start;padding:14px 0}.back{align-self:flex-start}.halls,.kd,.uroki-grid{grid-template-columns:1fr}.today-card{grid-template-columns:1fr;gap:14px}.today-card img{width:100%;height:150px}.act{padding-block:52px}.calgrid{gap:3px}.cday{min-height:48px;font-size:13px}}
+@media(max-width:640px){.hero-slides{height:min(50vh,380px)}.civic-in{grid-template-columns:1fr;gap:8px;padding:18px 0}.civic-motto{text-align:left}.museum-in{flex-direction:column;align-items:flex-start;padding:14px 0}.back{align-self:flex-start}.halls,.kd,.uroki-grid{grid-template-columns:1fr}.today-card{grid-template-columns:1fr;gap:14px}.today-card img{width:100%;height:150px}.act{padding-block:52px}.calgrid{gap:3px}.cday{min-height:48px;font-size:13px}.hprev,.hnext{width:38px;height:38px;font-size:20px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}.marquee-track{animation:none!important}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 </style>
 </head>
@@ -68,8 +75,19 @@ footer{background:#111;color:#cabcaa;padding:34px 0}.foot-in{display:flex;justif
 <div class="museum-head"><div class="wrap museum-in"><div><div class="museum-label">Музей русской карикатуры</div><div class="museum-name">Острее пера</div><div class="museum-sub">Серьёзная история несерьёзного жанра</div></div><a class="back" href="../../index.html">← Все музеи</a></div></div>
 <div class="wrap crumbs"><a href="../../index.html">Русская цивилизация</a> › <span>Музей русской карикатуры</span></div>
 <main>
-  <section class="hero-scene hero-visual"><img src="media/krokodil-1922-oblozhka-I.jpg" alt="Обложка первого номера журнала «Крокодил» 1922 года — красный крокодил прорывает газетную полосу" width="1280" height="1738" fetchpriority="high" decoding="async"></section>
-  <div class="caption"><b>Исторический оригинал.</b> Обложка первого номера журнала «Крокодил» · Иван Малютин · 1922 год · красный крокодил прорывает полосу «Рабочей газеты».</div>
+  <section class="hero-scene hero-visual" id="heroSlide" aria-roledescription="карусель">
+    <div class="hero-slides">
+      <figure class="hslide on"><img src="media/krokodil-1922-oblozhka-I.jpg" alt="Обложка первого номера журнала «Крокодил» 1922 года — красный крокодил прорывает газетную полосу" width="1280" height="1738" fetchpriority="high" decoding="async"></figure>
+      <figure class="hslide"><img src="media/radakov-satirikon-1918-oblozhka.jpg" alt="Обложка журнала «Сатирикон» работы Алексея Радакова" loading="lazy" decoding="async"></figure>
+      <figure class="hslide"><img src="media/lubok-kostroma.jpg" alt="Сатирический лубок «Как мыши кота хоронили»" loading="lazy" decoding="async"></figure>
+      <figure class="hslide"><img src="media/napoleon-nos-paris.jpg" alt="Теребеневский лист «Нос, привезённый Наполеоном из России в Париж», 1813 год" loading="lazy" decoding="async"></figure>
+      <figure class="hslide"><img src="media/radakov-plakat-samoderzhavie.jpg" alt="Революционный плакат Алексея Радакова" loading="lazy" decoding="async"></figure>
+    </div>
+    <button class="hprev" aria-label="Предыдущая обложка">‹</button>
+    <button class="hnext" aria-label="Следующая обложка">›</button>
+    <div class="hdots" id="hDots"></div>
+  </section>
+  <div class="caption" id="heroCaption"><b>Исторический оригинал.</b> Обложка первого номера журнала «Крокодил» · Иван Малютин · 1922 год · красный крокодил прорывает полосу «Рабочей газеты».</div>
   <div class="hero-copy"><div class="wrap">
     <div class="eyebrow">Музей русской карикатуры · 365 дней сатиры</div>
     <h1>Вторая история страны</h1>
@@ -176,12 +194,42 @@ window.addEventListener('DOMContentLoaded',function(){
   }
 });
 </script>
+<script>
+/* витрина обложек: автопрокрутка, стрелки, точки, подпись под слайдером */
+(function(){
+  var CAPTIONS=[
+    '<b>Исторический оригинал.</b> Обложка первого номера журнала «Крокодил» · Иван Малютин · 1922 год · красный крокодил прорывает полосу «Рабочей газеты». <a href="day-05jan-krokodil-first-issue.html">Открыть выпуск →</a>',
+    '<b>Исторический оригинал.</b> Обложка журнала «Сатирикон» · Алексей Радаков · 1918 год. <a href="day-03jan-radakov-tri-linii.html">Открыть выпуск →</a>',
+    '<b>Исторический оригинал.</b> Сатирический лубок «Как мыши кота хоронили» · XVII–XVIII век · народная сатира в картинках.',
+    '<b>Исторический оригинал.</b> Теребеневский лист «Нос, привезённый Наполеоном из России в Париж» · 1813 год. <a href="day-02jan-napoleon-slava-nos.html">Открыть выпуск →</a>',
+    '<b>Исторический оригинал.</b> Революционный плакат · Алексей Радаков · сатира становится оружием.'
+  ];
+  var slides=document.querySelectorAll('#heroSlide .hslide');
+  var dotsWrap=document.getElementById('hDots');
+  var caption=document.getElementById('heroCaption');
+  if(!slides.length)return;
+  var idx=0,timer=null;
+  for(var i=0;i<slides.length;i++){var b=document.createElement('button');b.className='hdot'+(i===0?' on':'');b.setAttribute('aria-label','Обложка '+(i+1));b.addEventListener('click',(function(n){return function(){go(n);restart();}})(i));dotsWrap.appendChild(b);}
+  var dots=dotsWrap.children;
+  function go(n){
+    idx=(n+slides.length)%slides.length;
+    for(var i=0;i<slides.length;i++){slides[i].classList.toggle('on',i===idx);dots[i].classList.toggle('on',i===idx);}
+    if(caption)caption.innerHTML=CAPTIONS[idx];
+  }
+  function next(){go(idx+1);}
+  function restart(){if(timer)clearInterval(timer);timer=setInterval(next,5200);}
+  document.querySelector('#heroSlide .hprev').addEventListener('click',function(){go(idx-1);restart();});
+  document.querySelector('#heroSlide .hnext').addEventListener('click',function(){go(idx+1);restart();});
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduce)restart();
+})();
+</script>
 <script src="../../assets/museum-calendar-month.js"></script>
 <script>window.addEventListener('DOMContentLoaded',function(){var steps=(12-new Date().getMonth())%12;for(var i=0;i<steps;i++){var next=document.querySelector('#calbox .calnav[data-step="1"]');if(next)next.click()}var first=document.querySelector('#calbox .cday[data-k="01-01"]');if(first)first.click()});</script>
 <script src="../../assets/museum-chrome.js"></script>
 <script>window.MUSEUM_SUPPORT={museum:'Острее пера',page:'главная музея русской карикатуры',peak:'#project-support'};</script>
 <script src="../../assets/museum-support.js"></script>
-<script>window.RC_ANALYTICS_CONFIG={museum_id:'rc:museum:karikatura',issue_id:'rc:issue:karikatura:home',issue_version:'2.0.0',build_version:'home-v2-visual'};</script>
+<script>window.RC_ANALYTICS_CONFIG={museum_id:'rc:museum:karikatura',issue_id:'rc:issue:karikatura:home',issue_version:'2.1.0',build_version:'home-v3-visual'};</script>
 <script src="../../assets/museum-analytics-v2.js"></script>
 <script>document.documentElement.classList.add('js');if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.12});document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});}else{document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('on')});}</script>
 </body>
