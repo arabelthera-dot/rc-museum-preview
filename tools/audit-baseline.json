@@ -1,97 +1,275 @@
 {
- "muzei/arhitektura/dvorets-alekseya-mihaylovicha.html": [],
- "muzei/arhitektura/georgievskiy-sobor-yuryev-polskiy.html": [],
- "muzei/arhitektura/kizhi-muzey.html": [],
+ "muzei/arhitektura/dvorets-alekseya-mihaylovicha.html": [
+  "слоганы в шапке",
+  "хук в норме длины",
+  "этикетка сцены непустая"
+ ],
+ "muzei/arhitektura/georgievskiy-sobor-yuryev-polskiy.html": [
+  "слоганы в шапке",
+  "хук в норме длины",
+  "мобильная высота сцены",
+  "этикетка сцены непустая"
+ ],
+ "muzei/arhitektura/kizhi-muzey.html": [
+  "слоганы в шапке",
+  "хук в норме длины",
+  "этикетка сцены непустая"
+ ],
  "muzei/arhitektura/kolomenskoe.html": [
-  "аудиоплеер",
-  "текст НЕ поверх картинки",
-  "hero — сцена или большой визуал"
+  "хук в норме длины",
+  "этикетка сцены непустая"
  ],
  "muzei/arhitektura/nevjanskaya-bashnya.html": [
-  "текст НЕ поверх картинки"
+  "текст НЕ поверх картинки",
+  "слоганы в шапке",
+  "хук в норме длины",
+  "мобильная высота сцены",
+  "этикетка сцены непустая"
+ ],
+ "muzei/arhitektura/pokrova-na-nerli.html": [
+  "слоганы в шапке",
+  "хук в норме длины",
+  "мобильная высота сцены",
+  "этикетка сцены непустая"
  ],
  "muzei/arhitektura/raspisnye-doma-povazhya.html": [
-  "аудиоплеер"
+  "аудиоплеер",
+  "хук в норме длины",
+  "этикетка сцены непустая"
  ],
- "muzei/arhitektura/terem-astashovo.html": [],
- "muzei/arhitektura/vyatskoe.html": [],
+ "muzei/arhitektura/terem-astashovo.html": [
+  "слоганы в шапке",
+  "хук в норме длины",
+  "этикетка сцены непустая"
+ ],
+ "muzei/arhitektura/vyatskoe.html": [
+  "слоганы в шапке",
+  "хук в норме длины",
+  "мобильная высота сцены",
+  "этикетка сцены непустая"
+ ],
  "muzei/iskusstvo/pic-aivazovsky-chernoe-more.html": [
   "аудиоплеер",
   "аудиогид не в конце",
-  "текст НЕ поверх картинки"
+  "текст НЕ поверх картинки",
+  "хук в норме длины",
+  "этикетка сцены непустая"
  ],
  "muzei/iskusstvo/pic-aivazovsky-devyatyi-val-en.html": [
   "аудиоплеер",
   "аудиогид не в конце",
   "текст НЕ поверх картинки",
-  "календарь месяца"
+  "календарь месяца",
+  "слоганы в шапке",
+  "хук в норме длины",
+  "этикетка сцены непустая"
  ],
  "muzei/iskusstvo/pic-aivazovsky-devyatyi-val.html": [
-  "аудиоплеер"
+  "аудиоплеер",
+  "мобильная высота сцены"
  ],
  "muzei/iskusstvo/pic-aivazovsky-raduga.html": [
   "аудиоплеер",
   "аудиогид не в конце",
-  "текст НЕ поверх картинки"
+  "текст НЕ поверх картинки",
+  "хук в норме длины",
+  "этикетка сцены непустая"
  ],
- "muzei/izobreteniya/day-01dec-lobachevsky.html": [],
- "muzei/izobreteniya/day-01jan-cabletv.html": [],
- "muzei/izobreteniya/day-02jan-luna1.html": [],
- "muzei/izobreteniya/day-03jan-luna9.html": [],
- "muzei/izobreteniya/day-04jan-pilchikov.html": [],
+ "muzei/izobreteniya/day-01dec-lobachevsky.html": [
+  "слоганы в шапке",
+  "этикетка сцены непустая",
+  "счёт из 100"
+ ],
+ "muzei/izobreteniya/day-01jan-cabletv.html": [
+  "слоганы в шапке",
+  "строка «кто»",
+  "счёт из 100"
+ ],
+ "muzei/izobreteniya/day-02jan-luna1.html": [
+  "слоганы в шапке",
+  "хук в норме длины",
+  "h1 с заглавной",
+  "этикетка сцены непустая",
+  "нет следов черновика",
+  "счёт из 100",
+  "нет пустых интерактивов"
+ ],
+ "muzei/izobreteniya/day-03jan-luna9.html": [
+  "слоганы в шапке",
+  "хук в норме длины",
+  "h1 с заглавной",
+  "этикетка сцены непустая",
+  "нет следов черновика",
+  "счёт из 100",
+  "нет пустых интерактивов"
+ ],
+ "muzei/izobreteniya/day-04jan-pilchikov.html": [
+  "слоганы в шапке",
+  "мобильная высота сцены",
+  "строка «кто»",
+  "две кнопки первого экрана"
+ ],
  "muzei/izobreteniya/day-05jan-shukhov.html": [],
  "muzei/izobreteniya/day-07jan-buran.html": [
   "аудиоплеер",
-  "аудиогид не в конце"
+  "аудиогид не в конце",
+  "слоганы в шапке",
+  "мобильная высота сцены",
+  "строка «кто»",
+  "две кнопки первого экрана"
  ],
  "muzei/izobreteniya/day-08jan-icebreaker.html": [
   "аудиоплеер",
-  "аудиогид не в конце"
+  "аудиогид не в конце",
+  "слоганы в шапке",
+  "мобильная высота сцены",
+  "строка «кто»",
+  "две кнопки первого экрана"
  ],
  "muzei/izobreteniya/day-09jan-blinov.html": [
   "аудиоплеер",
-  "аудиогид не в конце"
+  "аудиогид не в конце",
+  "слоганы в шапке",
+  "мобильная высота сцены",
+  "строка «кто»",
+  "две кнопки первого экрана"
  ],
  "muzei/izobreteniya/day-14dec-laser.html": [
   "аудиоплеер",
-  "аудиогид не в конце"
+  "аудиогид не в конце",
+  "слоганы в шапке",
+  "хук в норме длины",
+  "h1 с заглавной",
+  "мобильная высота сцены",
+  "этикетка сцены непустая",
+  "строка «кто»",
+  "две кнопки первого экрана",
+  "нет следов черновика",
+  "счёт из 100",
+  "нет пустых интерактивов"
  ],
  "muzei/izobreteniya/day-15may-mechnikov.html": [
   "аудиоплеер",
-  "аудиогид не в конце"
+  "аудиогид не в конце",
+  "слоганы в шапке",
+  "хук в норме длины",
+  "h1 с заглавной",
+  "мобильная высота сцены",
+  "этикетка сцены непустая",
+  "строка «кто»",
+  "две кнопки первого экрана",
+  "нет следов черновика",
+  "счёт из 100",
+  "нет пустых интерактивов"
  ],
  "muzei/izobreteniya/day-16jun-tereshkova.html": [
   "аудиоплеер",
-  "аудиогид не в конце"
+  "аудиогид не в конце",
+  "слоганы в шапке",
+  "хук в норме длины",
+  "h1 с заглавной",
+  "мобильная высота сцены",
+  "этикетка сцены непустая",
+  "строка «кто»",
+  "две кнопки первого экрана",
+  "нет следов черновика",
+  "счёт из 100",
+  "нет пустых интерактивов"
  ],
  "muzei/izobreteniya/day-18mar-leonov.html": [
   "аудиоплеер",
-  "аудиогид не в конце"
+  "аудиогид не в конце",
+  "слоганы в шапке",
+  "хук в норме длины",
+  "h1 с заглавной",
+  "мобильная высота сцены",
+  "этикетка сцены непустая",
+  "строка «кто»",
+  "две кнопки первого экрана",
+  "нет следов черновика",
+  "счёт из 100",
+  "нет пустых интерактивов"
  ],
  "muzei/izobreteniya/day-25nov-pirogov.html": [
   "аудиоплеер",
-  "аудиогид не в конце"
+  "аудиогид не в конце",
+  "слоганы в шапке",
+  "хук в норме длины",
+  "h1 с заглавной",
+  "мобильная высота сцены",
+  "этикетка сцены непустая",
+  "строка «кто»",
+  "две кнопки первого экрана",
+  "нет следов черновика",
+  "счёт из 100",
+  "нет пустых интерактивов"
  ],
  "muzei/izobreteniya/day-26sep-pavlov.html": [
   "аудиоплеер",
-  "аудиогид не в конце"
+  "аудиогид не в конце",
+  "слоганы в шапке",
+  "хук в норме длины",
+  "h1 с заглавной",
+  "мобильная высота сцены",
+  "этикетка сцены непустая",
+  "строка «кто»",
+  "две кнопки первого экрана",
+  "нет следов черновика",
+  "счёт из 100",
+  "нет пустых интерактивов"
  ],
- "muzei/izobreteniya/day-30jan-kotelnikov.html": [],
- "muzei/karikatura/day-01jan-russian-bear.html": [],
- "muzei/karikatura/day-02jan-napoleon-russian-bath.html": [],
- "muzei/karikatura/day-02jan-napoleon-slava-nos.html": [],
- "muzei/ne-sdayutsya/podvig-brest.html": [],
- "muzei/ne-sdayutsya/podvig-kolovrat.html": [],
- "muzei/ne-sdayutsya/podvig-kozelsk.html": [],
- "muzei/ne-sdayutsya/podvig-merkuriy.html": [],
- "muzei/ne-sdayutsya/podvig-osovets.html": [],
- "muzei/ne-sdayutsya/podvig-sirotinin.html": [],
+ "muzei/izobreteniya/day-30jan-kotelnikov.html": [
+  "слоганы в шапке",
+  "мобильная высота сцены",
+  "строка «кто»",
+  "две кнопки первого экрана",
+  "счёт из 100"
+ ],
+ "muzei/karikatura/day-01jan-russian-bear.html": [
+  "этикетка сцены непустая"
+ ],
+ "muzei/karikatura/day-02jan-napoleon-slava-nos.html": [
+  "этикетка сцены непустая"
+ ],
+ "muzei/karikatura/day-03jan-radakov-tri-linii.html": [
+  "этикетка сцены непустая"
+ ],
+ "muzei/karikatura/day-04jan-litografiya.html": [
+  "этикетка сцены непустая"
+ ],
+ "muzei/karikatura/day-05jan-krokodil-first-issue.html": [
+  "этикетка сцены непустая"
+ ],
+ "muzei/ne-sdayutsya/podvig-brest.html": [
+  "этикетка сцены непустая"
+ ],
+ "muzei/ne-sdayutsya/podvig-kolovrat.html": [
+  "этикетка сцены непустая"
+ ],
+ "muzei/ne-sdayutsya/podvig-kozelsk.html": [
+  "этикетка сцены непустая"
+ ],
+ "muzei/ne-sdayutsya/podvig-merkuriy.html": [
+  "этикетка сцены непустая"
+ ],
+ "muzei/ne-sdayutsya/podvig-osovets.html": [
+  "этикетка сцены непустая"
+ ],
+ "muzei/ne-sdayutsya/podvig-sirotinin.html": [
+  "этикетка сцены непустая"
+ ],
  "muzei/pervoprohodcy/exp-bering-1728.html": [
   "аудиоплеер",
-  "аудиогид не в конце"
+  "аудиогид не в конце",
+  "слоганы в шапке",
+  "мобильная высота сцены",
+  "строка «кто»",
+  "две кнопки первого экрана"
  ],
  "muzei/pervoprohodcy/exp-dezhnev-1648.html": [
   "аудиоплеер",
-  "текст НЕ поверх картинки"
+  "текст НЕ поверх картинки",
+  "хук в норме длины",
+  "этикетка сцены непустая"
  ]
 }
