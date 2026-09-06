@@ -1,0 +1,29 @@
+{
+  "museum": "karikatura",
+  "type": "museum-home",
+  "status": "preview",
+  "title": "Острее пера",
+  "scope": "Отдельный сравнительный прототип главной; исходные страницы и общие компоненты не меняются",
+  "reference": "muzei/arhitektura/index.html @ 5468ab4",
+  "sources": [
+    "pilot-karikatura/concept.md",
+    "muzei/karikatura/calendar-karikatura.js",
+    "day-02jan-napoleon-slava-nos.html",
+    "day-03jan-radakov-tri-linii.html",
+    "day-05jan-krokodil-first-issue.html",
+    "day-04jan-litografiya.html"
+  ],
+  "known_limits": [
+    "Показан существующий январский календарь; пересобираемые месяцы не выдаются за утверждённые.",
+    "Медиаматериалы и предметные утверждения наследуют источники существующих выпусков; независимая повторная предметная приёмка не проведена."
+  ],
+  "acceptance": [
+    "390px and 1440px",
+    "detail tabs and keyboard",
+    "filters",
+    "calendar title and hook",
+    "school duration switches",
+    "support first third",
+    "no dead local anchors"
+  ]
+}
