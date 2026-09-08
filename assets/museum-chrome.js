@@ -110,7 +110,11 @@
   /* ── обложка обязана уместиться в первый экран ВМЕСТЕ с заголовком (04.08, разбор Шухова) ──
      Было: шапка 200/265 px + сцена 48vh → h1 начинался на 880 px, на мобиле первый экран =
      одна служебная навигация. --hero-fit считает JS от реального верха визуала. */
-  + '.hero-scene,.hero-visual,.hero .bg{max-height:var(--hero-fit,none)!important}'
+  /* .mc-cover — вторая раскладка обложки: сам блок .hero является визуалом (внутри canvas),
+     а заголовок лежит СНАРУЖИ, в .hero-text. Такую обложку расчёт не видел вообще, и Луна-1
+     (912), Луна-9 (933), Лобачевский (847) держали заголовок за сгибом. Класс ставит JS —
+     только там, где внутри .hero нет ни своего заголовка, ни .hero-lead (замер 08.09.2026). */
+  + '.hero-scene,.hero-visual,.hero .bg,.hero.mc-cover{max-height:var(--hero-fit,none)!important}'
   /* Исключение — картинные музеи: полотно показывается целиком (.fit-full), обрезать его
      ради первого экрана нельзя. Высоту там держит сама картинка (max-height:62vh). */
   + '.hero-scene.fit-full{max-height:none!important}'
@@ -145,18 +149,31 @@
   + 'header.top{padding-top:30px!important}'
   + 'header.top .b2,header.site .b2{font-size:11px;line-height:1.35;padding-bottom:5px}'
   + '.crumbs{font-size:11px!important;line-height:1.3;padding:2px 10px 4px!important}'
+  /* крошки «Русская цивилизация › Что изобрели русские первыми в мире › 1 января» вставали
+     в ТРИ строки и съедали 82 px первого экрана (замер cabletv 08.09.2026). Одна строка
+     с горизонтальной прокруткой — тот же приём, что у .daynav; навигация не теряется. */
+  + '.crumbs,.crumbs .wrap{white-space:nowrap;overflow-x:auto;scrollbar-width:none}'
+  + '.crumbs::-webkit-scrollbar,.crumbs .wrap::-webkit-scrollbar{display:none}'
+  /* строка .museum в подводке — третий повтор названия музея (оно уже в шапке и в крошках)
+     и её нет среди пяти элементов подводки (museum-core, 6-бис п.5). На телефоне убираем. */
+  + '.hero-lead .museum,.hero-text .museum{display:none!important}'
+  + '.hero-lead .date-chip,.hero-text .date-chip{margin-bottom:8px!important}'
   /* строка «поделиться» стояла между крошками и обложкой и съедала 42 px первого экрана */
   + '.sharerow{padding:2px 0!important}'
   + '.sharerow .sharebtn{padding:5px 11px!important;font-size:11.5px!important}'
-  + '.scene-caption{padding:6px 0 8px!important}'
+  + '.scene-caption{padding:4px 0 6px!important}'
   + '.scene-caption .scene-cap{font-size:12px;line-height:1.4}'
+  /* добор последних 14 px у cabletv (замер 08.09.2026): подсказка, отступ подводки и низ
+     заголовка. Высота кнопок не трогается — 44 px это тач-цель, а не украшение. */
+  + '.scene-caption .scene-hint{margin-bottom:2px!important}'
+  + '.hero-lead,.hero-text{padding-top:8px!important}'
   /* min-height страницы побеждает max-height движка: у cabletv сцена держалась на 230 px
      вопреки расчёту --hero-fit. Нижний предел обложки задаёт сам расчёт (200 px), не CSS. */
-  + '.hero-scene,.hero-visual,.hero .bg{min-height:0!important}'
+  + '.hero-scene,.hero-visual,.hero .bg,.hero.mc-cover{min-height:0!important}'
   /* заголовок обложки: на cabletv кегль оставался 34 px и h1 занимал 106 px в две строки.
      Обложечные заголовки других раскладок (.bp-over, .bp-title) не трогаются. */
-  + '.hero-lead h1,header.hero-lead h1{font-size:25px!important;line-height:1.1;margin-bottom:10px!important}'
-  + '.hero-lead .hook{font-size:14.5px;line-height:1.45}'
+  + '.hero-lead h1,header.hero-lead h1{font-size:25px!important;line-height:1.1;margin-bottom:6px!important}'
+  + '.hero-lead .hook{font-size:14.5px;line-height:1.45;margin:8px 0 12px!important}'
   /* кнопки: две по 46 px в столбик + зазор 12 = 104 px; при трёх кнопках было 169 */
   + '.hero-btns{gap:8px!important}'
   + '.hero-btns>a,.hero-btns>button{padding:11px 15px!important;font-size:13.5px!important}}';
@@ -193,6 +210,15 @@
      Резерв под этикетку сцены и первую строку h1 — 26% высоты окна, но не меньше 150 и не больше 210. */
   function fitHero(){
     var v = doc.querySelector('.hero-scene, .hero-visual, .hero .bg');
+    /* вторая раскладка обложки (Луна-1, Луна-9, Лобачевский): визуал — сам блок .hero,
+       заголовок лежит снаружи, в .hero-text. Ограничивать высоту можно ТОЛЬКО когда внутри
+       .hero нет текста: иначе max-height обрежет заголовок вместо того, чтобы поднять его. */
+    if(!v){
+      var hero = doc.querySelector('.hero');
+      if(hero && !hero.querySelector('h1, .hero-lead, .hero-text, .hook')){
+        hero.className += ' mc-cover'; v = hero;
+      }
+    }
     if(!v) return;
     var vh = window.innerHeight || 700, y = window.pageYOffset || 0;
     var vr = v.getBoundingClientRect(), top = vr.top + y;

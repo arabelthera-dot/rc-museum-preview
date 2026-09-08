@@ -271,7 +271,7 @@
 
 <div class="scene-caption">
   <div class="wrap">
-    <div class="scene-cap">Вечер, комната московского дома. Телевизор АТП-1 в деревянном корпусе, на круглом кинескопе — эфир Шуховской башни. Сигнал приходит сюда не с антенны на крыше, а по кабелю из подвала.</div>
+    <div class="scene-cap">Вечер, московская квартира. На круглом кинескопе АТП-1 — эфир Шуховской башни: сигнал пришёл не с антенны на крыше, а по кабелю из подвала.</div>
     <span class="scene-hint">3D · телевизор АТП-1</span>
   </div>
 </div>
@@ -284,7 +284,6 @@
     <p class="hook">Кабельное телевидение придумали не в Америке. Первые 30 кабельных абонентов планеты жили в одном московском доме — за 9 лет до США.</p>
     <div class="hero-btns">
       <button class="btn gold" id="readBtn">Читать историю ↓</button>
-      <button class="btn ghost" id="videoBtn">▶ Смотреть видео</button>
       <button class="btn ghost" onclick="document.getElementById('audioguide').scrollIntoView({behavior:'smooth'})">🎧 Слушать аудиогид</button>
     </div>
   </div>
@@ -555,7 +554,6 @@
   function award(k,n){if(earned[k])return;earned[k]=true;score+=n;sc.textContent=score;renderResult();}
   // читать дальше
   document.getElementById('readBtn').onclick=()=>document.getElementById('story').scrollIntoView({behavior:'smooth'});
-  document.getElementById('videoBtn').onclick=()=>document.getElementById('video').scrollIntoView({behavior:'smooth'});
   document.getElementById('moreBtn').onclick=()=>{document.getElementById('article').classList.remove('collapsed');document.getElementById('moreBtn').style.display='none';};
   // раздел «Другие изобретения»
   function openMore(){document.getElementById('moreInvBody').style.display='block';document.getElementById('moreInv2').textContent='▲ Свернуть';}
