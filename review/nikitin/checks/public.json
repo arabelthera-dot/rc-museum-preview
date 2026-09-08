@@ -1,0 +1,58 @@
+{
+  "url": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/pervoprohodcy/exp-nikitin-1468.html?v=047dba7",
+  "date": "2026-09-08T15:29:05.583Z",
+  "checks": [
+    {
+      "name": "external HTTP",
+      "ok": true
+    },
+    {
+      "name": "correct page",
+      "ok": true
+    },
+    {
+      "name": "initial focus not stolen",
+      "ok": true
+    },
+    {
+      "name": "audio plays",
+      "ok": true,
+      "details": {
+        "time": 1.034945,
+        "duration": 218.664
+      }
+    },
+    {
+      "name": "video decodes and plays",
+      "ok": true,
+      "details": {
+        "width": 1280,
+        "height": 720,
+        "duration": 46.944,
+        "time": 1.075163
+      }
+    },
+    {
+      "name": "external atlas",
+      "ok": true
+    },
+    {
+      "name": "internal links",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "all external images",
+      "ok": true
+    },
+    {
+      "name": "public journey",
+      "ok": true
+    },
+    {
+      "name": "public console",
+      "ok": true,
+      "details": []
+    }
+  ]
+}

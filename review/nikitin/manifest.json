@@ -122,5 +122,11 @@
       "bytes": 11015,
       "sha256": "20148e4e9330e53f49a1ea67c03589ed88ae911d92c3c6960e59772ad49af0ff"
     }
-  ]
+  ],
+  "engine": {
+    "path": "assets/museum-choice-run.js",
+    "bytes": 13541,
+    "sha256": "ec5f2a60fd2fa1887ca4fa983bd9ed232494ce5eccd9ca5dae702429ac8185c5",
+    "scope": "journey opt-in, legacy unchanged"
+  }
 }
