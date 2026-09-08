@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ru" data-museum="literatura" data-fabric="manuscript">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Слово о полку Игореве — первый великий текст Руси — Музей русских писателей</title>
+<link href="../../assets/fonts.css" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/museum-literatura.css">
+<link rel="stylesheet" href="../../assets/museum-theme.css">
+<style>:root{--acc:#c9a84c;--acc-soft:rgba(201,168,76,.16)}
+@media(max-width:640px){.hero-scene{height:26vh;min-height:200px;max-height:260px}.hero-lead{padding:18px 0 20px}}</style>
+<!-- rc-meta:start -->
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="description" content="В 1185 году князь Игорь проиграл битву в степи и попал в плен — из этого поражения вырос первый великий текст Руси. Рукопись сгорела, «Слово» дошло до нас чудом.">
+  <link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/muzei/literatura/lit-slovo-o-polku-igoreve.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Русская цивилизация">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Слово о полку Игореве — первый великий текст Руси — Музей русских писателей">
+  <meta property="og:description" content="В 1185 году князь Игорь проиграл битву в степи и попал в плен — из этого поражения вырос первый великий текст Руси. Рукопись сгорела, «Слово» дошло до нас чудом.">
+  <meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/literatura/lit-slovo-o-polku-igoreve.html">
+  <meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/og/og-default.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Слово о полку Игореве — первый великий текст Руси — Музей русских писателей">
+  <meta name="twitter:description" content="В 1185 году князь Игорь проиграл битву в степи и попал в плен — из этого поражения вырос первый великий текст Руси. Рукопись сгорела, «Слово» дошло до нас чудом.">
+  <meta name="theme-color" content="#14100c">
+  <link rel="icon" href="../../favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="192x192" href="../../icon-192.png">
+  <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Слово о полку Игореве — первый великий текст Руси — Музей русских писателей",
+  "description": "В 1185 году князь Игорь проиграл битву в степи и попал в плен — из этого поражения вырос первый великий текст Руси. Рукопись сгорела, «Слово» дошло до нас чудом.",
+  "url": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/literatura/lit-slovo-o-polku-igoreve.html",
+  "image": "https://arabelthera-dot.github.io/rc-museum-preview/og/og-default.jpg",
+  "inLanguage": "ru-RU",
+  "isAccessibleForFree": true,
+  "publisher": {
+    "@type": "Organization",
+    "name": "Русская цивилизация",
+    "url": "https://arabelthera-dot.github.io/rc-museum-preview/",
+    "logo": "https://arabelthera-dot.github.io/rc-museum-preview/icon-512.png"
+  },
+  "isPartOf": {
+    "@type": "CollectionPage",
+    "name": "Музей русских писателей",
+    "url": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/literatura/"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "Русская цивилизация",
+    "url": "https://arabelthera-dot.github.io/rc-museum-preview/",
+    "logo": "https://arabelthera-dot.github.io/rc-museum-preview/icon-512.png"
+  }
+}
+  </script>
+  <!-- rc-meta:end -->
+</head>
+<body>
+
+<header class="top">
+  <div class="b1">Музей русских писателей</div>
+  <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
+  <div class="score" id="scoreBox">⭐ <span id="score">0</span> / 100</div>
+</header>
+
+<nav class="crumbs">
+  <a href="../../index.html">Русская цивилизация</a>
+  <span class="sep">›</span>
+  <a href="index.html">Музей русских писателей</a>
+  <span class="sep">›</span>
+  <span class="here">1 января · Слово о полку Игореве</span>
+</nav>
+
+<!-- ── HERO: сцена ОТДЕЛЬНО, текст ОТДЕЛЬНО (правило Сергея, 03.08).
+     Сцена — стилизованный лист рукописи, без читаемого текста. -->
+<div class="hero-scene" id="hero">
+  <canvas id="heroCvs"></canvas>
+</div>
+
+<div class="scene-caption">
+  <div class="wrap">
+    <div class="scene-cap">Стилизованный лист древнерусской рукописи: киноварная заставка, инициал, плотные строки устава. Оригинал «Слова» не сохранился — сгорел в 1812 году, поэтому сцена условна, без подлинного текста.</div>
+  </div>
+</div>
+
+<header class="hero-lead">
+  <div class="wrap">
+    <div class="date-chip">1 января · XII век</div>
+    <div class="who">Автор неизвестен <i>· древнерусский памятник</i></div>
+    <h1>Слово о полку Игореве</h1>
+    <p class="hook">В 1185 году князь Игорь проиграл битву в степи и попал в плен — из этого поражения вырос первый великий текст Руси. Рукопись сгорела, «Слово» дошло до нас чудом.</p>
+    <div class="hero-btns">
+      <button class="btn gold" onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">Читать историю ↓</button>
+      <button class="btn ghost" onclick="document.getElementById('plach').scrollIntoView({behavior:'smooth'})">🎧 Слушать плач Ярославны</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero-under">
+  <div class="wrap">
+    <div class="stamp" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(201,168,76,.28);margin-top:14px">
+      <div style="padding:11px 12px;border-left:1px solid rgba(201,168,76,.16);min-width:0"><div style="font-family:'Playfair Display',serif;font-size:clamp(15px,3.4vw,21px);font-weight:700;color:var(--gold-l);line-height:1.1">XII век</div><div style="font-family:'Inter',sans-serif;font-size:9px;letter-spacing:1.6px;text-transform:uppercase;color:#8f8068;margin-top:5px">время создания</div></div>
+      <div style="padding:11px 12px;border-left:1px solid rgba(201,168,76,.16);min-width:0"><div style="font-family:'Playfair Display',serif;font-size:clamp(15px,3.4vw,21px);font-weight:700;color:var(--gold-l);line-height:1.1">1185</div><div style="font-family:'Inter',sans-serif;font-size:9px;letter-spacing:1.6px;text-transform:uppercase;color:#8f8068;margin-top:5px">поход Игоря</div></div>
+      <div style="padding:11px 12px;border-left:1px solid rgba(201,168,76,.16);min-width:0"><div style="font-family:'Playfair Display',serif;font-size:clamp(15px,3.4vw,21px);font-weight:700;color:var(--gold-l);line-height:1.1">1800</div><div style="font-family:'Inter',sans-serif;font-size:9px;letter-spacing:1.6px;text-transform:uppercase;color:#8f8068;margin-top:5px">первое издание</div></div>
+      <div style="padding:11px 12px;border-left:1px solid rgba(201,168,76,.16);min-width:0"><div style="font-family:'Playfair Display',serif;font-size:clamp(15px,3.4vw,21px);font-weight:700;color:var(--gold-l);line-height:1.1">1812</div><div style="font-family:'Inter',sans-serif;font-size:9px;letter-spacing:1.6px;text-transform:uppercase;color:#8f8068;margin-top:5px">рукопись сгорела</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="daynav">
+  <div class="wrap">
+    <a href="#plach">Плач Ярославны</a>
+    <a href="#story">Читать</a>
+    <a href="#syuzhet">Сюжет</a>
+    <a href="#quiz">Викторина</a>
+    <a href="#pervenstvo">Первенство</a>
+    <a href="#sudba">Судьба</a>
+    <a href="#result">Итог</a>
+    <a href="#calendar">Календарь</a>
+  </div>
+</nav>
+
+<!-- ── ПЛАЧ ЯРОСЛАВНЫ (аудиогид + оригинал) — сразу под обложкой, канон §6: аудиогид вторым слотом ── -->
+<section class="block" id="plach">
+  <div class="wrap">
+    <div class="kicker">Главный звучащий блок</div>
+    <h2>Плач Ярославны</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Самый знаменитый отрывок «Слова» — жена князя Игоря плачет на стене Путивля. Услышь его в переводе Жуковского и прочитай в древнерусском оригинале.</p>
+    <div id="audioguide"></div>
+
+    <div class="orig">
+      <b>Оригинал на древнерусском</b> (по первому изданию 1800 года, в передаче):<br><br>
+      «Ярославна рано плачетъ въ Путивлѣ на забралѣ, аркучи: <i>„О вѣтрѣ, вѣтрило! чему, господине, насильно вѣеши? чему мычеши хиновьскыя стрѣлкы на своею нетрудною крилцю на моея лады вои? Мало ли ти бяшеть горѣ подъ облакы вѣяти, лелѣючи корабли на синѣ морѣ? чему, господине, мое веселіе по ковылію развѣя?“</i><br><br>
+      Ярославна рано плачетъ Путивлю городу на заборолѣ, аркучи: <i>„О Днепре Словутицю! ты пробилъ еси каменныя горы сквозѣ землю Половецкую. Ты лелѣялъ еси на себѣ Святославли носады до плъку Кобякова. Възлелѣй, господине, мою ладу къ мнѣ, а быхъ не слала къ нему слезъ на море рано.“</i><br><br>
+      Ярославна рано плачетъ въ Путивлѣ на забралѣ, аркучи: <i>„Свѣтлое и тресвѣтлое слънце! всѣмъ тепло и красно еси. Чему, господине, простре горячюю свою лучю на ладѣ вои? въ полѣ безводнѣ жаждею имь лучи съпряже, тугою имъ тули затче?“</i><br><br>
+      <span style="color:#a89a80">«Зегзица» из этого плача — кукушка: так в древнерусском называли её.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── ЧТО ЭТО ЗА ТЕКСТ ── -->
+<section class="block" id="story">
+  <div class="wrap">
+    <div class="kicker">Что это за текст</div>
+    <h2>Рукопись, с которой началась русская поэзия</h2>
+    <div class="article collapsed" id="article">
+      <div class="body" id="articleBody">
+
+<p><b>«Слово о полку Игореве»</b> — памятник древнерусской литературы конца XII века. Это рассказ о неудачном походе новгород-северского князя Игоря Святославича на половцев в 1185 году. Имя автора история не сохранила — мы знаем только, что это был человек огромного поэтического дара.</p>
+
+<p><b>Сюжет.</b> Весной 1185 года князь Игорь уходит в степь воевать с половцами. В пути его настигает дурное знамение — 1 мая солнце меркнет, но князь не поворачивает. Первая стычка оборачивается победой, однако на реке Каяле русское войско терпит страшное поражение, Игорь попадает в плен. В Путивле его жена Ярославна плачет на городской стене — этот плач станет первым великим поэтическим образом Руси. В финале Игорь бежит из плена с помощью половца Овлура и возвращается домой.</p>
+
+<p><b>Чудо находки.</b> Рукопись в конце XVIII века разыскал граф Алексей Мусин-Пушкин: он купил сборник в Спасо-Ярославском монастыре и понял, что держит в руках бесценный памятник. Для Екатерины II сняли копию — она сохранилась. По ней подготовили первое издание: 1800 год, Сенатская типография, 1200 экземпляров под названием «Ироическая песнь о походе на половцев…».</p>
+
+<p><b>Гибель.</b> Единственная рукопись сгорела в пожаре Москвы 1812 года вместе с библиотекой Мусина-Пушкина. До нас «Слово» дошло чудом — через печатное издание 1800 года и рукописную копию.</p>
+
+<p><b>Подлинность.</b> «Слово» не раз объявляли подделкой XVIII века. Лингвист Андрей Зализняк доказал обратное: язык памятника подчиняется законам XII века, а не XVIII — сфабриковать такой текст в то время было невозможно. «Слово о полку Игореве» — подлинный памятник древнерусской словесности.</p>
+
+<p><b>Почему это начало.</b> До «Слова» русская письменность — это летописи, хроника событий. А здесь впервые заговорила поэзия: лирический плач, живой язык, образ, звучащий через восемь веков. С этого текста начинается русская литература.</p>
+
+      </div>
+      <div class="more"><button class="btn ghost" id="moreBtn">Читать дальше ↓</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── СЮЖЕТ ЗА 60 СЕКУНД (игра) ── -->
+<section class="block" id="syuzhet">
+  <div class="wrap">
+    <div class="kicker">Сюжет за 60 секунд</div>
+    <h2>Собери поход по порядку</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Шесть событий перепутаны. Расставь их так, как они шли в 1185 году, — от сбора в поход до возвращения Игоря. Верный порядок — 50 баллов.</p>
+    <div class="syuzhet-steps" id="syuzhetSteps"></div>
+    <div id="syuzhetMsg" style="min-height:22px;color:var(--gold-l);font-size:14px;font-weight:600"></div>
+  </div>
+</section>
+
+<!-- ── ВИКТОРИНА ── -->
+<section class="block" id="quiz">
+  <div class="wrap">
+    <div class="kicker">Проверь себя</div>
+    <h2>Три вопроса о «Слове»</h2>
+    <div class="card" id="quizBox" style="margin-top:18px"></div>
+  </div>
+</section>
+
+<!-- ── ПОЧЕМУ ЭТО ПЕРВЕНСТВО ── -->
+<section class="block" id="pervenstvo">
+  <div class="wrap">
+    <div class="kicker">Почему это первенство</div>
+    <h2>Первый великий текст Руси</h2>
+    <p>До «Слова» русская письменность знала летопись — сухую хронику: что случилось, в каком году, кто с кем. «Слово о полку Игореве» — первое произведение, где заговорила не хроника, а <b>поэзия</b>.</p>
+    <div class="pull">«Плач Ярославны» — первый великий поэтический образ русской словесности. Через восемь веков он звучит так, будто написан вчера.</div>
+    <p>Здесь впервые появилось то, что потом назовут русской литературой: лирическое чувство, живой ритм, образ, который не сообщает событие, а даёт его пережить. Автор не просто пересказывает неудачный поход — он превращает военное поражение в нравственную победу: в призыв к единству русских земель перед внешним врагом.</p>
+    <p>Именно поэтому «Слово» открывает музей русских писателей: с него, с XII века, начинается отсчёт русской словесности как искусства.</p>
+  </div>
+</section>
+
+<!-- ── СУДЬБА РУКОПИСИ ── -->
+<section class="block" id="sudba">
+  <div class="wrap">
+    <div class="kicker">Судьба рукописи</div>
+    <h2>Текст, который выжил чудом</h2>
+    <ul class="tl">
+      <li><span class="y">~1185–1187</span><p>Создано «Слово» — вскоре после похода Игоря, пока события ещё живы в памяти.</p></li>
+      <li><span class="y">Конец XVIII века</span><p>Граф Алексей Мусин-Пушкин покупает рукописный сборник в Спасо-Ярославском монастыре — и находит в нём «Слово».</p></li>
+      <li><span class="y">1795–1796</span><p>С рукописи снимают копию для Екатерины II — она уцелеет и донесёт текст.</p></li>
+      <li><span class="y">1800</span><p>Первое издание: Сенатская типография, 1200 экземпляров, «Ироическая песнь о походе на половцев…».</p></li>
+      <li><span class="y">1812</span><p>Пожар Москвы. Единственная рукопись сгорает вместе с библиотекой Мусина-Пушкина.</p></li>
+      <li><span class="y">До наших дней</span><p>«Слово» живёт в печатном издании и рукописной копии — и остаётся первым великим текстом Руси.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ── ИТОГ ── -->
+<section class="block" id="result">
+  <div class="wrap">
+    <div class="kicker">Итог дня</div>
+    <h2 style="margin-bottom:6px">Сколько баллов ты собрал?</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Слушай плач Ярославны, собирай сюжет и отвечай на вопросы — за всё начисляются баллы. Собери все 100 и стань хранителем первого текста Руси.</p>
+    <div class="card"><div class="gm-bar"><i id="dayBar" style="width:0%"></i></div><div id="dayTxt" style="margin-top:10px;color:var(--gold-l);font-weight:600">0 / 100 · звание: Гость музея</div></div>
+    <div class="diploma" id="dipl" style="display:none">
+      <span class="dl">Музей русских писателей</span>
+      <b>Грамота хранителя первого текста Руси</b>
+      <span class="dp">Ты услышал плач Ярославны, собрал поход Игоря по порядку и ответил на вопросы музея. Баллов: <i id="dpts">0</i> из 100.</span>
+      <span class="ds">Цивилизация первенств</span>
+    </div>
+    <p id="diplnote" style="display:none;color:var(--muted);max-width:62ch">Для сравнения: автор «Слова» остался безымянным, а его текст пережил восемь веков и пожар Москвы — и дошёл до тебя.</p>
+  </div>
+</section>
+
+<!-- ── ИСТОЧНИКИ ── -->
+<section class="block" id="istochniki">
+  <div class="wrap">
+    <div class="kicker">Источники</div>
+    <h2>Откуда мы это знаем</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Факты страницы — по русским научным и музейным источникам, не по Википедии.</p>
+    <div class="src">
+      <a href="https://feb-web.ru/" target="_blank" rel="noopener">ФЭБ — Фундаментальная электронная библиотека</a> — текст «Слова» и переводы;<br>
+      <a href="https://pushkinskijdom.ru/" target="_blank" rel="noopener">Пушкинский Дом (ИРЛИ РАН)</a> — научные комментарии, история находки и издания;<br>
+      <a href="https://goslitmuz.ru/" target="_blank" rel="noopener">Государственный музей истории российской литературы</a> — прижизненные издания и свидетельства эпохи;<br>
+      Перевод «Плача Ярославны» — В. А. Жуковский (1817–1819), общественное достояние.
+    </div>
+  </div>
+</section>
+
+<!-- ── КАЛЕНДАРЬ ── -->
+<section class="block" id="calendar">
+  <div class="wrap">
+    <div class="kicker">Календарь музея</div>
+    <h2 style="margin-bottom:6px">Каждый день — писатель или книга</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Нажми на подсвеченный день — увидишь название и хук. Первый выпуск открыт, остальные страницы появятся по очереди.</p>
+    <div id="calbox"></div>
+  </div>
+</section>
+
+<!-- ── КУДА ДАЛЬШЕ ── -->
+<section class="block" id="kuda-dalshe">
+  <div class="wrap">
+    <div class="kicker">Куда дальше</div>
+    <h2 style="margin-bottom:10px">Музей продолжается</h2>
+    <div class="next">
+      <div class="ncard main"><span class="lbl">Весь музей</span><a href="index.html">Музей русских писателей →</a><br>Календарь года: писатели, книги и литературные открытия по дням.</div>
+      <div class="ncard"><span class="lbl">Город-музей</span><a href="../../index.html">Русская цивилизация →</a><br>Все музеи проекта на одной карте.</div>
+      <div class="ncard"><span class="lbl">Открытый музей</span><a href="../izobreteniya/index.html">Русские изобретения →</a><br>365 дней — вещи, которые русские сделали первыми в мире.</div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>
+  Русская цивилизация · «Музей русских писателей» · 2026<br>
+  Нашли неточность? <a href="mailto:arabelthera@gmail.com?subject=Ошибка на странице «Слово о полку Игореве»" style="color:rgba(201,168,76,.6)">Сообщите нам</a> — проверим по источникам.
+</div></footer>
+
+<script>
+// ── СЧЁТ ──────────────────────────────────────────────────────────────────────
+let score=0; const earned={};
+function award(k,n){if(earned[k])return;earned[k]=true;score+=n;document.getElementById('score').textContent=score;updateResult();}
+function rank(v){return v>=100?'Хранитель первого текста Руси':v>=70?'Знаток «Слова»':v>=40?'Слушатель':'Гость музея';}
+function updateResult(){const b=document.getElementById('dayBar'),x=document.getElementById('dayTxt');if(!b)return;b.style.width=Math.min(100,score)+'%';x.textContent=score+' / 100 · звание: '+rank(score);
+  var d=document.getElementById('dipl'),dn=document.getElementById('diplnote'),dp=document.getElementById('dpts');
+  if(d){var open=score>=60;d.style.display=open?'block':'none';if(dn)dn.style.display=open?'block':'none';if(dp)dp.textContent=score;}}
+
+// аудиогид: начисляем, когда посетитель запустил плач
+document.addEventListener('play',function(e){if(e.target&&e.target.id==='agaudio')award('audio',20);},true);
+
+// ── СТАТЬЯ ────────────────────────────────────────────────────────────────────
+document.getElementById('moreBtn').onclick=function(){
+  document.getElementById('article').classList.remove('collapsed');
+  this.style.display='none';
+};
+
+// ── ИГРА «СОБЕРИ СЮЖЕТ» ──────────────────────────────────────────────────────
+(function(){
+  const order=[
+    'Князь Игорь весной 1185 года уходит в степь на половцев',
+    '1 мая — солнечное затмение, дурной знак, но князь не поворачивает',
+    'Первая стычка — победа русских',
+    'Поражение на реке Каяле, Игорь в плену',
+    'Ярославна плачет на стене Путивля',
+    'Игорь бежит из плена и возвращается домой'
+  ];
+  const shuffled=[...order].sort(function(){return Math.random()-0.5;});
+  const box=document.getElementById('syuzhetSteps');
+  const msg=document.getElementById('syuzhetMsg');
+  let cursor=0;
+  shuffled.forEach(function(t){
+    const b=document.createElement('button');
+    b.type='button';b.className='syuzhet-step';b.textContent=t;
+    b.onclick=function(){
+      if(t===order[cursor]){
+        b.classList.add('done');b.dataset.n=(cursor+1);
+        cursor++;
+        if(cursor===order.length){
+          msg.textContent='Сюжет собран верно: от похода до возвращения. +50 баллов.';
+          award('syuzhet',50);
+        }else{
+          msg.textContent='Верно! Дальше: событие '+(cursor+1)+' из 6.';
+        }
+      }else{
+        b.classList.add('bad');
+        msg.textContent='Не то событие — вспомни, что было раньше, а что позже.';
+        setTimeout(function(){b.classList.remove('bad');},400);
+      }
+    };
+    box.appendChild(b);
+  });
+})();
+
+// ── ВИКТОРИНА ─────────────────────────────────────────────────────────────────
+const quiz=[
+ {"q":"Кто написал «Слово о полку Игореве»?", "o":["Автор неизвестен — имя не сохранилось","Летописец Нестор","Сам князь Игорь","Монах Кирилл Туровский"], "c":0, "e":"Имя автора история не сохранила. Известно только, что это был человек огромного поэтического дара — и что текст подлинный (это доказал лингвист Андрей Зализняк)."},
+ {"q":"Что стало с единственной рукописью «Слова»?", "o":["Сгорела в пожаре Москвы 1812 года","Хранится в Эрмитаже","Её подарили Екатерине II","Её увезли за границу в 1812-м"], "c":0, "e":"Оригинал сгорел вместе с библиотекой графа Мусина-Пушкина в пожаре 1812 года. До нас текст дошёл через печатное издание 1800 года и рукописную копию для Екатерины II."},
+ {"q":"Кто такая «зегзица» из плача Ярославны?", "o":["Кукушка","Лебедь","Ласточка","Чайка"], "c":0, "e":"«Зегзица» — древнерусское название кукушки. Ярославна хочет полететь кукушкою по Дунаю, чтобы омочить рукав в Каяле и обтереть раны мужа."}
+];
+const qBox=document.getElementById('quizBox');
+let qIdx=0;
+function renderQ(){
+  if(qIdx>=quiz.length){qBox.innerHTML='<p style="color:var(--gold-l);font-weight:600">Все вопросы пройдены. Молодец!</p>';return;}
+  const q=quiz[qIdx];
+  qBox.innerHTML='<p style="font-weight:600;font-size:17px;margin-bottom:8px">'+(qIdx+1)+' / '+quiz.length+'. '+q.q+'</p>'
+    + q.o.map(function(o,i){return '<button class="opt" data-i="'+i+'" onclick="answerQ('+i+')">'+('АБВГ'[i])+') '+o+'</button>';}).join('')
+    + '<div class="exp" id="exp'+qIdx+'">'+q.e+'</div>';
+}
+function answerQ(i){
+  const q=quiz[qIdx];
+  document.querySelectorAll('#quizBox .opt').forEach(function(b,j){
+    b.disabled=true;
+    if(j===q.c)b.classList.add('correct');
+    else if(j===i&&i!==q.c)b.classList.add('wrong');
+  });
+  document.getElementById('exp'+qIdx).classList.add('show');
+  if(i===q.c)award('q'+qIdx,10);
+  setTimeout(function(){qIdx++;renderQ();},2200);
+}
+renderQ();
+</script>
+
+<script>
+// ── HERO: лист рукописи на canvas (сцена без читаемого текста) ──
+(function(){
+  const cv=document.getElementById('heroCvs');if(!cv)return;
+  const ctx=cv.getContext('2d');
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const dpr=Math.min(devicePixelRatio||1,2);
+  let W=0,H=0,t=0;
+  function resize(){const p=cv.parentElement;if(!p)return;W=p.offsetWidth;H=p.offsetHeight;
+    cv.width=W*dpr;cv.height=H*dpr;cv.style.width=W+'px';cv.style.height=H+'px';ctx.setTransform(dpr,0,0,dpr,0,0);}
+  resize();addEventListener('resize',resize);
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    const bg=ctx.createRadialGradient(W/2,H*.2,8,W/2,H*.5,W*.8);
+    bg.addColorStop(0,'#2c1d10');bg.addColorStop(1,'#0c0805');
+    ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
+    const sh=Math.min(H*.8,W*.62), sw=sh*.72, x=W/2-sw/2, y=H/2-sh/2;
+    ctx.save();ctx.shadowColor='rgba(0,0,0,.6)';ctx.shadowBlur=40;ctx.shadowOffsetY=12;
+    const pg=ctx.createLinearGradient(0,y,0,y+sh);
+    pg.addColorStop(0,'#e9dec2');pg.addColorStop(.6,'#e0d3b2');pg.addColorStop(1,'#d8c9a4');
+    ctx.fillStyle=pg;ctx.fillRect(x,y,sw,sh);ctx.restore();
+    ctx.strokeStyle='rgba(150,60,35,.4)';ctx.lineWidth=1;ctx.strokeRect(x+9,y+9,sw-18,sh-18);
+    const zw=sw*.34,zh=sh*.10,zx=W/2-zw/2,zy=y+sh*.12;
+    const zg=ctx.createLinearGradient(zx,zy,zx+zw,zy);
+    zg.addColorStop(0,'#b3402c');zg.addColorStop(1,'#8a2c1b');
+    ctx.fillStyle=zg;ctx.fillRect(zx,zy,zw,zh);
+    ctx.strokeStyle='rgba(255,220,180,.25)';ctx.strokeRect(zx+3,zy+3,zw-6,zh-6);
+    ctx.strokeStyle='rgba(150,60,35,.55)';ctx.strokeRect(x+sw*.13,y+sh*.32,sw*.2,sh*.13);
+    ctx.fillStyle='rgba(70,52,32,.32)';
+    const lx=x+sw*.13, lr=x+sw*.87;
+    for(let i=0;i<8;i++){
+      const ly=y+sh*.32+i*sh*.07;
+      const a=Math.max(0,Math.min(1,t*.6-i*.06));
+      ctx.globalAlpha=a;
+      ctx.fillRect(lx,ly,(lr-lx)*(i%3===0?0.78:(i%2===0?0.94:0.86)),3);
+    }
+    ctx.globalAlpha=1;
+  }
+  if(reduce){t=1;draw();return;}
+  (function loop(){t+=0.016;draw();requestAnimationFrame(loop);})();
+})();
+</script>
+
+<!-- ── АУДИОГИД ── -->
+<script>window.MUSEUM_AUDIOGUIDE={
+  audioSrc:'audio-guide-slovo-yaroslavna-ru.mp3',
+  heading:'Плач Ярославны — услышать',
+  durationLabel:'около полутора минут',
+  lead:'Голос Ярославны ведёт плач по переводу Жуковского: кукушка над Дунаем, ветер, Днепр, солнце — четыре обращения к силам, которые не пожалели её мужа. Слушать можно фоном, пока читаешь статью.',
+  stops:[
+    {t:0,mark:'0:00',title:'Плач Ярославны'}
+  ],
+  transcript:[
+    '<p>«Плач Ярославны. Перевод Василия Жуковского.</p>',
+    '<p>Ярославна поутру плачет в Путивле на стене, приговаривая: полечу, говорит, кукушкою по Дунаю, омочу бобровый рукав в Каяле-реке, оботру князю кровавые раны на отвердевшем теле его.</p>',
+    '<p>Ярославна поутру плачет в Путивле на стене, приговаривая: о ветер, ты, ветер! К чему же так сильно веешь? На что же наносишь ты стрелы ханские своими лёгкими крыльями на воинов лады моей? Мало ль подоблачных гор твоему веянью? Мало ль кораблей на синем море твоему лелеянью? На что ж, как ковыль-траву, ты развеял моё веселие?</p>',
+    '<p>Ярославна поутру плачет в Путивле на стене, припеваючи: о ты, Днепр, ты, Днепр, ты, слава-река! Ты пробил горы каменные сквозь землю Половецкую. Ты, лелея, нёс суда Святославовы к рати Кобяковой. Прилелей же ко мне ты ладу мою, чтоб не слала к нему по утрам, по зорям слёз я на море!</p>',
+    '<p>Ярославна поутру плачет в Путивле на стене городской, припеваючи: ты, светлое, ты, пресветлое солнышко! Ты для всех тепло, ты для всех красно! Что ж так простёрло ты свой горячий луч на воинов лады моей, что в безводной степи луки им сжало жаждой и заточило им тулы печалию?»</p>'
+  ],
+  note:'Озвучено синтезом речи — временно, до записи голосом.'
+};</script>
+<script src="../../assets/museum-audioguide.js"></script>
+<script>window.MUSEUM_CHROME={
+  museum:{title:'Музей русских писателей',href:'index.html'},
+  share:{title:'Слово о полку Игореве — первый великий текст Руси',
+         text:'В 1185 году князь Игорь проиграл битву и попал в плен — из этого поражения вырос первый великий текст Руси.'},
+  prev:null,
+  next:null,
+  all:{href:'index.html',label:'Все писатели'},
+  city:'../../index.html',
+  random:[]
+};</script>
+<script src="../../assets/museum-chrome.js"></script>
+<script>window.MUSEUM_SUPPORT={museum:'Музей русских писателей'};</script>
+<script src="../../assets/museum-support.js"></script>
+<script>window.MUSEUM_CALENDAR_INITIAL='01-01';</script>
+<script src="../../assets/museum-calendar-month.js"></script>
+<script src="calendar-literatura.js"></script>
+  <!-- rc-analytics --><script defer src="../../assets/analytics.js"></script>
+</body>
+</html>

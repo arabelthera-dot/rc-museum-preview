@@ -1,0 +1,128 @@
+/* Музей русских писателей · фактура manuscript (рукопись) · тон: пергамент/сепия
+   * anchor hue: золото-киноварь. Слой поверх общей обвязки музея. */
+  :root{
+    --bp:#14100c;--bp2:#0e0a07;
+    --gold:#c9a84c;--gold-l:#e4c97a;--gold-g:rgba(201,168,76,.13);
+    --kino:#b3402c;--kino-l:#c9583f;
+    --parch:#e7dcc0;--parch2:#ddd0b2;--parch-ink:#2b2216;--parch-mut:#6b5d48;
+    --ink:#f0e8d8;--muted:#a89a80;--line:rgba(255,255,255,.07);
+    --accent:#c9a84c;--accent2:#8f6a2a;
+    --dark:#0c0805;--dark2:#15100b;--surface:#1d1710;
+    --card:rgba(255,255,255,.05);--card-b:rgba(255,255,255,.09);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Lora',Georgia,serif;color:var(--ink);background:var(--dark);line-height:1.74}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.14;margin:0}
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px}
+  a{color:var(--gold-l)}
+  /* шапка — единый стандарт музеев */
+  header.top{position:relative;padding:10px 16px 5px;text-align:center;font-family:'Inter',sans-serif}
+  header.top .b1{font-size:13px;letter-spacing:2.5px;color:var(--gold);text-transform:uppercase}
+  header.top .b2{font-size:11px;opacity:.6;margin-top:2px}
+  .score{position:absolute;top:12px;right:14px;background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:5px 13px;font-size:12px;color:var(--gold-l);font-family:'Inter',sans-serif}
+  .crumbs{font-family:'Inter',sans-serif;font-size:12.5px;padding:4px 16px 7px;text-align:center;opacity:.9}
+  .crumbs a{color:var(--gold-l);text-decoration:none}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--muted);opacity:.6}
+  .crumbs .here{color:var(--muted);opacity:.55}
+  @media(max-width:520px){
+    header.top{padding-top:34px}
+    .score{top:6px;right:50%;transform:translateX(50%)}
+    header.top .b1{font-size:11.5px;letter-spacing:1.8px}
+  }
+  /* ── HERO: сцена (манускрипт) ОТДЕЛЬНО, текст ОТДЕЛЬНО (правило 03.08) ── */
+  .hero-scene{position:relative;height:38vh;min-height:250px;max-height:400px;overflow:hidden;cursor:default;
+        background:radial-gradient(130% 90% at 50% 0%,#2c1d10 0%,#150f09 58%,#0c0805 100%);
+        border-bottom:1px solid rgba(201,168,76,.22)}
+  .hero-scene canvas{display:block;width:100%;height:100%}
+  .scene-caption{background:#0a0705;padding:11px 0 12px}
+  .scene-caption .wrap{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+  .scene-cap{font-size:13.5px;line-height:1.6;color:var(--muted);border-left:2px solid rgba(201,168,76,.4);padding-left:14px;flex:1 1 420px}
+  .hero-lead{background:linear-gradient(180deg,#17110b 0%,#0c0805 100%);padding:22px 0 22px}
+  .hero-lead .who{font-family:'Inter',sans-serif;font-size:clamp(13px,3vw,15px);letter-spacing:.4px;color:var(--gold-l);margin-bottom:10px}
+  .hero-lead .who i{font-style:normal;color:#8f8068;font-weight:400}
+  .hero-lead h1{color:#fff;font-size:clamp(28px,6vw,50px);font-weight:900;line-height:1.07;margin-bottom:14px}
+  .hero-lead .hook{color:#d9ccb0;font-size:18px;max-width:62ch;margin-bottom:20px;line-height:1.66}
+  .hero-lead .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+  .hero-under{background:linear-gradient(180deg,#0c0805,#0c0805);padding:4px 0 22px}
+  @media(max-width:640px){.hero-scene{height:26vh;min-height:200px;max-height:260px}
+        .hero-lead{padding:18px 0 20px}
+        header.top .b2{font-size:10.5px}
+        .crumbs{font-size:11px;padding:3px 10px 6px}
+        .scene-caption .wrap{flex-direction:column;gap:9px}
+        .scene-cap{font-size:12.8px;flex:1 1 auto}}
+  .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:14px;font-family:'Inter',sans-serif;letter-spacing:.5px}
+  .daynav{position:sticky;top:0;z-index:25;background:rgba(12,8,5,.94);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-b)}
+  .daynav .wrap{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+  .daynav a{flex:0 0 auto;padding:14px 20px;font-size:11px;font-weight:700;font-family:'Inter',sans-serif;color:var(--muted);text-decoration:none;white-space:nowrap;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:.18s}
+  .daynav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+  section.block{padding:60px 0;border-bottom:1px solid var(--line);scroll-margin-top:130px}
+  .kicker{font-size:10px;text-transform:uppercase;letter-spacing:3.5px;color:var(--gold);font-weight:700;font-family:'Inter',sans-serif;margin-bottom:8px}
+  section.block h2{font-size:32px;color:#fff;margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink)}
+  .pull{background:var(--gold-g);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 14px 14px 0;font-style:italic;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-size:19px;line-height:1.5;margin:24px 0}
+  .article{position:relative}
+  .article.collapsed .body{max-height:340px;overflow:hidden}
+  .article.collapsed .body:after{content:'';position:absolute;left:0;right:0;bottom:44px;height:110px;background:linear-gradient(transparent,var(--parch))}
+  .more{text-align:center;margin-top:16px}
+  .btn{cursor:pointer;border:none;border-radius:12px;padding:13px 24px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;background:var(--accent2);color:#fff;transition:.18s}
+  .btn:hover{filter:brightness(1.18)}
+  .btn.ghost{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid var(--card-b)}
+  .btn.gold{background:linear-gradient(135deg,var(--gold),#b8882b);color:#1a0f00;box-shadow:0 4px 20px rgba(201,168,76,.25)}
+  .btn.gold:hover{filter:brightness(1.1)}
+  .card{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:20px 22px;margin:14px 0}
+  .opt{display:block;width:100%;text-align:left;background:rgba(255,255,255,.04);border:1px solid var(--card-b);border-radius:12px;padding:12px 16px;margin:8px 0;cursor:pointer;font-size:15px;color:var(--ink);font-family:'Inter',sans-serif;transition:.16s}
+  .opt:hover{border-color:var(--gold);background:rgba(201,168,76,.08)}
+  .opt.correct{background:rgba(40,120,60,.18);border-color:#3f9b52;color:#7ed4a0;font-weight:600}
+  .opt.wrong{background:rgba(180,40,40,.13);border-color:#c0453f;color:#f08080}
+  .exp{margin-top:10px;font-size:14px;background:var(--gold-g);border-radius:10px;padding:12px 14px;display:none;color:var(--gold-l)}
+  .exp.show{display:block}
+  /* ── СТАТЬЯ НА ПЕРГАМЕНТЕ ── */
+  #story{background:var(--parch);color:var(--parch-ink);border-bottom:1px solid #c9b88f;
+    background-image:repeating-linear-gradient(0deg,rgba(0,0,0,.024) 0 1px,transparent 1px 27px);box-shadow:inset 0 1px 0 #f5eed8}
+  #story h2{color:#14100b}
+  #story p{color:#2e2517}
+  #story b{color:#14100b}
+  #story .kicker{color:#a33a24}
+  #story .article.collapsed .body:after{background:linear-gradient(transparent,var(--parch))}
+  #story .btn.ghost{background:transparent;border:1px solid #bfae85;color:#4a3d29}
+  #story .btn.ghost:hover{border-color:#8b7550;background:rgba(0,0,0,.04)}
+  .src{font-size:12.5px;color:var(--muted);opacity:.85;margin-top:6px;line-height:1.8}
+  /* ── ИГРА: собрать сюжет ── */
+  .syuzhet-steps{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+  .syuzhet-step{cursor:pointer;background:rgba(255,255,255,.04);border:1px solid var(--card-b);border-radius:12px;padding:11px 15px;font-size:14px;color:var(--ink);font-family:'Inter',sans-serif;transition:.16s;max-width:100%}
+  .syuzhet-step:hover{border-color:var(--gold);background:rgba(201,168,76,.09)}
+  .syuzhet-step.done{background:rgba(40,120,60,.2);border-color:#3f9b52;color:#7ed4a0;cursor:default;pointer-events:none}
+  .syuzhet-step.done::before{content:attr(data-n)'. ';font-weight:700;color:#7ed4a0}
+  .syuzhet-step.bad{animation:shake .4s}
+  @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+  /* ── ОРИГИНАЛ ── */
+  .orig{background:rgba(255,255,255,.03);border:1px solid var(--card-b);border-radius:14px;padding:20px 24px;margin:18px 0;font-family:'Playfair Display',Georgia,serif;font-size:17px;line-height:1.8;color:#e4d9c2}
+  .orig i{color:#c9a84c}
+  /* ── ТАЙМЛАЙН ── */
+  .tl{list-style:none;margin:18px 0 0;padding:0;border-left:2px solid rgba(201,168,76,.35);padding-left:20px}
+  .tl li{margin:0 0 18px;position:relative}
+  .tl li::before{content:'';position:absolute;left:-26px;top:6px;width:10px;height:10px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px rgba(201,168,76,.18)}
+  .tl .y{font-family:'Inter',sans-serif;font-weight:700;color:var(--gold);letter-spacing:.5px;font-size:13px}
+  .tl p{margin:4px 0 0;color:var(--muted)}
+  /* ── КУДА ДАЛЬШЕ ── */
+  .next{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
+  .ncard{background:var(--card);border:1px solid var(--card-b);border-radius:14px;padding:14px 16px;font-size:13.5px;color:var(--muted)}
+  .ncard.main{grid-column:1/3;border-color:rgba(201,168,76,.3)}
+  .ncard .lbl{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:5px;font-family:'Inter',sans-serif;font-weight:700}
+  .ncard a{color:var(--gold-l);text-decoration:none;font-weight:600}
+  .ncard a:hover{text-decoration:underline}
+  @media(max-width:600px){.next{grid-template-columns:1fr}.ncard.main{grid-column:1}}
+  /* ── ИТОГ ── */
+  .diploma{border:1px solid var(--gold);border-radius:14px;padding:18px;text-align:center;background:rgba(12,8,5,.6);margin:16px 0 14px}
+  .diploma .dl{display:block;font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);opacity:.85;margin-bottom:8px;font-family:'Inter',sans-serif}
+  .diploma b{display:block;font-family:'Playfair Display',Georgia,serif;font-size:20px;font-weight:normal;margin-bottom:8px;color:#fff}
+  .diploma .dp{display:block;font-size:13.5px;opacity:.88;line-height:1.6;color:var(--ink)}
+  .diploma .dp i{color:var(--gold);font-style:normal;font-weight:700}
+  .diploma .ds{display:block;margin-top:10px;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;opacity:.55;color:var(--muted)}
+  .gm-bar{height:10px;background:rgba(255,255,255,.08);border-radius:6px;overflow:hidden}
+  .gm-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-l));border-radius:6px;transition:width .4s}
+  footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
+  footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px;font-family:'Playfair Display',Georgia,serif;font-size:15px;letter-spacing:0}
+  @media(prefers-reduced-motion:reduce){.hero-scene canvas{animation:none!important}}
