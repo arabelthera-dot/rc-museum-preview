@@ -115,6 +115,18 @@
      ради первого экрана нельзя. Высоту там держит сама картинка (max-height:62vh). */
   + '.hero-scene.fit-full{max-height:none!important}'
   + '.hero-scene.fit-full img{max-height:min(62vh,var(--hero-fit,62vh))}'
+  /* ── строка слогана портала под названием музея (museum-core, раздел 6-бис) ──
+     Слоган стоял руками только у эталона Шухова, у остальных 15 страниц января его не было
+     (аудит 08.09.2026). Повторяющийся блок отдан движку, а не размножен копией по файлам
+     (договор о приёмке, п. 10). Кегль и прозрачность — как в эталоне. */
+  + 'header.top .b2,header.site .b2{display:block;text-align:center;font-size:11px;opacity:.62;'
+  + 'line-height:1.45;max-width:760px;margin-left:auto;margin-right:auto;padding:2px 16px 7px;'
+  + 'overflow:hidden;max-height:64px;transition:max-height .25s,opacity .2s,padding .25s}'
+  /* липкая шапка со слоганом занимала на мобиле 122 px вместо 64 и висела над всей страницей:
+     в исходном положении слоган виден, при прокрутке строка убирается (только там, где шапка
+     действительно sticky — у эталона Шухова шапка обычная и уезжает сама) */
+  + 'header.mc-shrink .b2{max-height:0;opacity:0;padding-top:0;padding-bottom:0}'
+  + '@media (prefers-reduced-motion:reduce){header.top .b2,header.site .b2{transition:none}}'
   /* на мобиле до заголовка стояли: подзаголовок музея (2 строки), этикетка сцены крупным
      кеглем и щедрый отступ обложки — вместе больше половины экрана */
   + '@media (max-width:600px){header.top .b2,header.site .b2{display:block!important;font-size:11.5px;line-height:1.4;max-width:94%}'
@@ -128,6 +140,29 @@
   var st = doc.createElement('style'); st.textContent = css; doc.head.appendChild(st);
 
   function el(tag, cls, html){var e=doc.createElement(tag); if(cls)e.className=cls; if(html!=null)e.innerHTML=html; return e;}
+
+  /* ── 0-бис. строка слогана портала в шапке ──
+     Слоган портала один на все музеи и меняться не может (museum-core, раздел 6-бис),
+     поэтому текст живёт здесь, а не в конфиге страницы. Переопределение — только для
+     иноязычной версии через C.t.slogan. Если строка уже стоит в HTML (эталон Шухова) —
+     движок её не трогает, как и любой другой готовый элемент. */
+  /* Одной строкой, без склейки: аудитор ищет слоган в тексте этого файла (slogan_ok
+     в tools/audit-pages.py), разорванная конкатенацией строка ему не видна. */
+  var SLOGAN = 'Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех';
+  (function(){
+    var head = doc.querySelector('header.top') || doc.querySelector('header.site');
+    if(!head) return;
+    if(!head.querySelector('.b2')) head.appendChild(el('div','b2', T.slogan || SLOGAN));
+    /* сжатие только у липкой шапки: обычная уезжает при прокрутке сама */
+    if((doc.defaultView.getComputedStyle(head).position || '') !== 'sticky') return;
+    var shrunk = false;
+    doc.defaultView.addEventListener('scroll', function(){
+      var need = (doc.defaultView.pageYOffset || 0) > 90;
+      if(need === shrunk) return;
+      shrunk = need;
+      head.classList[need ? 'add' : 'remove']('mc-shrink');
+    }, {passive:true});
+  })();
 
   /* ── 0. высота обложки: сцена + этикетка + начало заголовка влезают в первый экран ──
      Считаем от реального верха визуала, поэтому работает при любой шапке и на любом экране.
