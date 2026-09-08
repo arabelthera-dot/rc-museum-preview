@@ -1,0 +1,38 @@
+{
+  "date": "2026-09-08",
+  "scope": "Перестановка этапов и две формы таблицы; не новый аудит готовности музеев.",
+  "old_rows_preserved": 54,
+  "old_status_cells_preserved": 2160,
+  "new_unknown_cells": 216,
+  "sequence_columns": 18,
+  "full_columns": 44,
+  "stages": 9,
+  "desktop_1440": {
+    "rows": 54,
+    "header_cell_alignment": true,
+    "view_switch": true,
+    "search_includes_related_themes": true,
+    "cell_details": true,
+    "jump_to_media": true,
+    "return_to_start": true
+  },
+  "mobile_390": {
+    "no_document_overflow": true,
+    "table_scrolls": true
+  },
+  "script_errors": 0,
+  "xlsx": {
+    "sheets": 3,
+    "matrix_rows": 54,
+    "status_columns": [
+      18,
+      44
+    ],
+    "source_notes": "cell comments"
+  },
+  "pdf": {
+    "pages": 1,
+    "stages_present": 9,
+    "time_limit_present": true
+  }
+}
