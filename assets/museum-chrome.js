@@ -134,8 +134,32 @@
   + '.scene-caption .scene-cap{font-size:12.5px;line-height:1.45}'
   /* подсказка про интерактив стояла последней и уезжала под этикетку на 780 px —
      ставим её первой строкой сразу под сценой (разбор Шухова, 04.08) */
-  + '.scene-caption .scene-hint{order:-1;width:100%;margin-bottom:8px}'
-  + '.hero-lead{padding-top:18px!important}}';
+  + '.scene-caption .scene-hint{order:-1;width:100%;margin-bottom:6px;padding:5px 10px!important}'
+  + '.hero-lead{padding-top:12px!important}'
+  /* ── уплотнение первого экрана 08.09.2026 (замер fold-parts.mjs на 390×844) ──
+     Сцена уже стояла на нижнем пределе 200 px, а низ кнопок у эталона Шухова был на 919 px
+     при экране 844. Значит резать надо не обложку, а то, что стоит до неё и после неё:
+     каждая строка ниже — измеренный кусок высоты, а не косметика.
+     шапка со слоганом 118 · крошки 28 · строка «поделиться» 42 · этикетка 140 ·
+     подводка до h1 99 · h1 55 · хук 119 · кнопки 104 */
+  + 'header.top{padding-top:30px!important}'
+  + 'header.top .b2,header.site .b2{font-size:11px;line-height:1.35;padding-bottom:5px}'
+  + '.crumbs{font-size:11px!important;line-height:1.3;padding:2px 10px 4px!important}'
+  /* строка «поделиться» стояла между крошками и обложкой и съедала 42 px первого экрана */
+  + '.sharerow{padding:2px 0!important}'
+  + '.sharerow .sharebtn{padding:5px 11px!important;font-size:11.5px!important}'
+  + '.scene-caption{padding:6px 0 8px!important}'
+  + '.scene-caption .scene-cap{font-size:12px;line-height:1.4}'
+  /* min-height страницы побеждает max-height движка: у cabletv сцена держалась на 230 px
+     вопреки расчёту --hero-fit. Нижний предел обложки задаёт сам расчёт (200 px), не CSS. */
+  + '.hero-scene,.hero-visual,.hero .bg{min-height:0!important}'
+  /* заголовок обложки: на cabletv кегль оставался 34 px и h1 занимал 106 px в две строки.
+     Обложечные заголовки других раскладок (.bp-over, .bp-title) не трогаются. */
+  + '.hero-lead h1,header.hero-lead h1{font-size:25px!important;line-height:1.1;margin-bottom:10px!important}'
+  + '.hero-lead .hook{font-size:14.5px;line-height:1.45}'
+  /* кнопки: две по 46 px в столбик + зазор 12 = 104 px; при трёх кнопках было 169 */
+  + '.hero-btns{gap:8px!important}'
+  + '.hero-btns>a,.hero-btns>button{padding:11px 15px!important;font-size:13.5px!important}}';
 
   var st = doc.createElement('style'); st.textContent = css; doc.head.appendChild(st);
 
