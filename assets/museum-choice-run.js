@@ -36,10 +36,11 @@
 
   // Opt-in individual journey. The fleet mode below remains unchanged.
   function initJourney(cfg, box) {
+    var started = false;
     var data = cfg.data, stage = 0, log = [], awarded = {}, state = {stage:0, choices:log};
     box.classList.add('crun');
     function button(label, action, cls) { var b=el('button',cls||'gbtn',label); b.type='button';b.addEventListener('click',action);return b; }
-    function focusHeading(){var h=box.querySelector('h3');if(h){h.tabIndex=-1;h.focus({preventScroll:true});}}
+    function focusHeading(){if(!started)return;var h=box.querySelector('h3');if(h){h.tabIndex=-1;h.focus({preventScroll:true});}}
     function render(){
       state.stage=stage; box.innerHTML='';
       if(stage>=data.stages.length){
@@ -58,7 +59,7 @@
       box.appendChild(el('h3',null,s.title));box.appendChild(el('p',null,s.text));
       var opts=el('div','journey-options');
       s.options.forEach(function(o){opts.appendChild(button(o.label,function(){
-        log[stage]=o;
+        started=true;log[stage]=o;
         if(!awarded[stage]){awarded[stage]=true;if(cfg.onPoints)cfg.onPoints(data.pointsPerStage,stage);}
         box.innerHTML='';box.appendChild(el('div','journey-header','Результат твоего выбора · учебная альтернатива'));
         box.appendChild(el('h3',null,o.label));box.appendChild(el('p','journey-outcome',o.echo));
