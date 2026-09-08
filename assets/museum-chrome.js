@@ -51,6 +51,11 @@
 
   /* ── CSS: цвета берём у страницы, фолбэк — палитра «Русской цивилизации» ── */
   var css = ''
+  /* Страница не ездит вбок. Найдено 08.09.2026 браузерной проверкой: на 320px все страницы
+     дней, кроме эталона Шухова, вылезали на 62–72px — в эталоне строка стояла руками.
+     Именно clip, а не hidden: hidden делает html скролл-контейнером и ломает position:sticky
+     у #secnav и у аудиогида. */
+  + 'html,body{overflow-x:clip}'
   + '.backbtn{position:static;margin:12px 0 0 12px;display:inline-flex;align-items:center;gap:7px;'
   + 'background:rgba(11,13,17,.86);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);'
   + 'border:1px solid var(--gold,#c8a24a);color:var(--gold,#c8a24a);border-radius:22px;padding:9px 15px;'
