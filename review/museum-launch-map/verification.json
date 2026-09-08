@@ -1,16 +1,12 @@
 {
-  "original_rows_preserved": 42,
-  "original_status_cells_preserved": 798,
-  "original_ideas_preserved": 12,
-  "new_promotion_columns": 17,
-  "visible_rows": 54,
-  "columns": 38,
-  "single_html_table": true,
-  "browser_desktop": "1440x960 passed",
-  "browser_mobile": "390x844 passed",
-  "search": true,
-  "filters": true,
-  "dialog": true,
-  "column_jump": true,
-  "console_errors": 0
+  "literature_months": 12,
+  "literature_unique_days_per_month": true,
+  "literature_total_entries": 365,
+  "rows": 54,
+  "columns": 40,
+  "readable_documents": 151,
+  "scope": "Available shared files and repository history; no claim to unseen private chats",
+  "browser": "1440 and 390 px: table, audit, source reader, storage explanation passed",
+  "public_links_checked": 64,
+  "public_links_failed": 0
 }
