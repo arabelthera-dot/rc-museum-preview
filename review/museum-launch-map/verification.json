@@ -1,0 +1,16 @@
+{
+  "original_rows_preserved": 42,
+  "original_status_cells_preserved": 798,
+  "original_ideas_preserved": 12,
+  "new_promotion_columns": 17,
+  "visible_rows": 54,
+  "columns": 38,
+  "single_html_table": true,
+  "browser_desktop": "1440x960 passed",
+  "browser_mobile": "390x844 passed",
+  "search": true,
+  "filters": true,
+  "dialog": true,
+  "column_jump": true,
+  "console_errors": 0
+}
