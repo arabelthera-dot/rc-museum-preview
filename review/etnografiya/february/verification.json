@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-09-08",
+  "days": 28,
+  "columns": 5,
+  "calendar": 3,
+  "conditional": 25,
+  "sources_http_200": 27,
+  "xlsx": {
+    "rows": 28,
+    "columns": 5,
+    "zip_xml_valid": true
+  },
+  "pdf": {
+    "pages": 3,
+    "all_dates": true,
+    "latest_content": true
+  },
+  "browser": {
+    "widths": [
+      1440,
+      390,
+      320
+    ],
+    "horizontal_page_overflow": false,
+    "search": true,
+    "calendar_filter_count": 3,
+    "conditional_filter_count": 25,
+    "empty_state": true,
+    "js_errors": []
+  }
+}
