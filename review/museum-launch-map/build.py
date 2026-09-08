@@ -5,7 +5,7 @@ d=json.loads((p/'map.json').read_text())
 assert len({m['id'] for m in d['museums']})==len(d['museums'])
 assert all(set(m['matrix'])=={c['id'] for c in d['columns']} for m in d['museums'])
 with (p/'museum-map.csv').open('w',encoding='utf-8-sig',newline='') as f:
-    w=csv.writer(f);w.writerow(['№','Музей / тема']+[c['title'] for c in d['columns']])
+    w=csv.writer(f,lineterminator="\n");w.writerow(['№','Музей / тема']+[c['title'] for c in d['columns']])
     for m in d['museums']:w.writerow([m['number'],m['title']]+[m['matrix'][c['id']]['label'] for c in d['columns']])
 (p/'audit.json').write_text(json.dumps(d['work_audit'],ensure_ascii=False))
 view=copy.deepcopy(d)
