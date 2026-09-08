@@ -2,7 +2,7 @@
   "date": "2026-09-08",
   "scope": "Перестановка этапов и две формы таблицы; не новый аудит готовности музеев.",
   "old_rows_preserved": 54,
-  "old_status_cells_preserved": 2160,
+  "old_status_cells_preserved": 2159,
   "new_unknown_cells": 216,
   "sequence_columns": 18,
   "full_columns": 44,
@@ -34,5 +34,8 @@
     "pages": 1,
     "stages_present": 9,
     "time_limit_present": true
+  },
+  "updated_known_cells": {
+    "etnografiya.mechanisms": "24 предложения; источник — завершённый каталог текущего диалога"
   }
 }
