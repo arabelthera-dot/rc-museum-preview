@@ -1,0 +1,90 @@
+{
+  "url": "http://172.22.0.4:8768/review/etnografiya/demo/",
+  "results": [
+    {
+      "name": "photo loaded",
+      "ok": true
+    },
+    {
+      "name": "three details",
+      "ok": true
+    },
+    {
+      "name": "reset zoom",
+      "ok": true
+    },
+    {
+      "name": "wrong answer feedback",
+      "ok": true
+    },
+    {
+      "name": "second wrong feedback",
+      "ok": true
+    },
+    {
+      "name": "success",
+      "ok": true
+    },
+    {
+      "name": "retry",
+      "ok": true
+    },
+    {
+      "name": "memory restored",
+      "ok": true
+    },
+    {
+      "name": "download",
+      "ok": true
+    },
+    {
+      "name": "no overflow 320",
+      "ok": true
+    },
+    {
+      "name": "internal anchors 320",
+      "ok": true
+    },
+    {
+      "name": "no overflow 360",
+      "ok": true
+    },
+    {
+      "name": "internal anchors 360",
+      "ok": true
+    },
+    {
+      "name": "no overflow 390",
+      "ok": true
+    },
+    {
+      "name": "internal anchors 390",
+      "ok": true
+    },
+    {
+      "name": "no overflow 768",
+      "ok": true
+    },
+    {
+      "name": "internal anchors 768",
+      "ok": true
+    },
+    {
+      "name": "no overflow 1440",
+      "ok": true
+    },
+    {
+      "name": "internal anchors 1440",
+      "ok": true
+    },
+    {
+      "name": "reduced motion",
+      "ok": true
+    },
+    {
+      "name": "no JS errors",
+      "ok": true
+    }
+  ],
+  "errors": []
+}
