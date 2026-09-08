@@ -1,0 +1,299 @@
+{
+  "url": "http://172.22.0.4:8813/muzei/pervoprohodcy/exp-nikitin-1468.html",
+  "checks": [
+    {
+      "name": "geometry 320",
+      "ok": true,
+      "details": {
+        "overflow": -15,
+        "h1": {
+          "top": 531.734375,
+          "bottom": 586.734375,
+          "width": 269,
+          "height": 55
+        },
+        "buttons": {
+          "top": 690.796875,
+          "bottom": 786.796875,
+          "width": 269,
+          "height": 96
+        },
+        "support": [
+          {
+            "position": 0.15122430839664913,
+            "hrefs": [
+              "mailto:arabelthera@gmail.com?subject=%D0%9C%D1%83%D0%B7%D0%B5%D0%B9%20%C2%AB%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BF%D0%B5%D1%80%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%85%D0%BE%D0%B4%D1%86%D1%8B%C2%BB%20%E2%80%94%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D0%BE%20%D0%90%D1%84%D0%B0%D0%BD%D0%B0%D1%81%D0%B8%D0%B9%20%D0%9D%D0%B8%D0%BA%D0%B8%D1%82%D0%B8%D0%BD%20%E2%80%94%20%D0%98%D0%B7%20%D0%A2%D0%B2%D0%B5%D1%80%D0%B8%20%D0%B2%20%D0%98%D0%BD%D0%B4%D0%B8%D1%8E%20XV%20%D0%B2%D0%B5%D0%BA%D0%B0%20%C2%B7%20%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BF%D0%B5%D1%80%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%85%D0%BE%D0%B4%D1%86%D1%8B"
+            ]
+          },
+          {
+            "position": 0.9749920855250341,
+            "hrefs": [
+              "mailto:arabelthera@gmail.com?subject=%D0%9C%D1%83%D0%B7%D0%B5%D0%B9%20%C2%AB%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BF%D0%B5%D1%80%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%85%D0%BE%D0%B4%D1%86%D1%8B%C2%BB%20%E2%80%94%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D0%BE%20%D0%90%D1%84%D0%B0%D0%BD%D0%B0%D1%81%D0%B8%D0%B9%20%D0%9D%D0%B8%D0%BA%D0%B8%D1%82%D0%B8%D0%BD%20%E2%80%94%20%D0%98%D0%B7%20%D0%A2%D0%B2%D0%B5%D1%80%D0%B8%20%D0%B2%20%D0%98%D0%BD%D0%B4%D0%B8%D1%8E%20XV%20%D0%B2%D0%B5%D0%BA%D0%B0%20%C2%B7%20%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BF%D0%B5%D1%80%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%85%D0%BE%D0%B4%D1%86%D1%8B"
+            ]
+          }
+        ],
+        "font": "17px"
+      }
+    },
+    {
+      "name": "geometry 360",
+      "ok": true,
+      "details": {
+        "overflow": -15,
+        "h1": {
+          "top": 513.734375,
+          "bottom": 568.734375,
+          "width": 309,
+          "height": 55
+        },
+        "buttons": {
+          "top": 672.796875,
+          "bottom": 768.796875,
+          "width": 309,
+          "height": 96
+        },
+        "support": [
+          {
+            "position": 0.15881231165243595,
+            "hrefs": [
+              "mailto:arabelthera@gmail.com?subject=%D0%9C%D1%83%D0%B7%D0%B5%D0%B9%20%C2%AB%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BF%D0%B5%D1%80%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%85%D0%BE%D0%B4%D1%86%D1%8B%C2%BB%20%E2%80%94%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D0%BE%20%D0%90%D1%84%D0%B0%D0%BD%D0%B0%D1%81%D0%B8%D0%B9%20%D0%9D%D0%B8%D0%BA%D0%B8%D1%82%D0%B8%D0%BD%20%E2%80%94%20%D0%98%D0%B7%20%D0%A2%D0%B2%D0%B5%D1%80%D0%B8%20%D0%B2%20%D0%98%D0%BD%D0%B4%D0%B8%D1%8E%20XV%20%D0%B2%D0%B5%D0%BA%D0%B0%20%C2%B7%20%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BF%D0%B5%D1%80%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%85%D0%BE%D0%B4%D1%86%D1%8B"
+            ]
+          },
+          {
+            "position": 0.9752721883894191,
+            "hrefs": [
+              "mailto:arabelthera@gmail.com?subject=%D0%9C%D1%83%D0%B7%D0%B5%D0%B9%20%C2%AB%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BF%D0%B5%D1%80%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%85%D0%BE%D0%B4%D1%86%D1%8B%C2%BB%20%E2%80%94%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D0%BE%20%D0%90%D1%84%D0%B0%D0%BD%D0%B0%D1%81%D0%B8%D0%B9%20%D0%9D%D0%B8%D0%BA%D0%B8%D1%82%D0%B8%D0%BD%20%E2%80%94%20%D0%98%D0%B7%20%D0%A2%D0%B2%D0%B5%D1%80%D0%B8%20%D0%B2%20%D0%98%D0%BD%D0%B4%D0%B8%D1%8E%20XV%20%D0%B2%D0%B5%D0%BA%D0%B0%20%C2%B7%20%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BF%D0%B5%D1%80%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%85%D0%BE%D0%B4%D1%86%D1%8B"
+            ]
+          }
+        ],
+        "font": "17px"
+      }
+    },
+    {
+      "name": "geometry 390",
+      "ok": true,
+      "details": {
+        "overflow": -15,
+        "h1": {
+          "top": 513.734375,
+          "bottom": 568.734375,
+          "width": 339,
+          "height": 55
+        },
+        "buttons": {
+          "top": 651.78125,
+          "bottom": 695.78125,
+          "width": 339,
+          "height": 44
+        },
+        "support": [
+          {
+            "position": 0.16031361160515784,
+            "hrefs": [
+              "mailto:arabelthera@gmail.com?subject=%D0%9C%D1%83%D0%B7%D0%B5%D0%B9%20%C2%AB%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BF%D0%B5%D1%80%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%85%D0%BE%D0%B4%D1%86%D1%8B%C2%BB%20%E2%80%94%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D0%BE%20%D0%90%D1%84%D0%B0%D0%BD%D0%B0%D1%81%D0%B8%D0%B9%20%D0%9D%D0%B8%D0%BA%D0%B8%D1%82%D0%B8%D0%BD%20%E2%80%94%20%D0%98%D0%B7%20%D0%A2%D0%B2%D0%B5%D1%80%D0%B8%20%D0%B2%20%D0%98%D0%BD%D0%B4%D0%B8%D1%8E%20XV%20%D0%B2%D0%B5%D0%BA%D0%B0%20%C2%B7%20%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BF%D0%B5%D1%80%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%85%D0%BE%D0%B4%D1%86%D1%8B"
+            ]
+          },
+          {
+            "position": 0.9760657514450867,
+            "hrefs": [
+              "mailto:arabelthera@gmail.com?subject=%D0%9C%D1%83%D0%B7%D0%B5%D0%B9%20%C2%AB%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BF%D0%B5%D1%80%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%85%D0%BE%D0%B4%D1%86%D1%8B%C2%BB%20%E2%80%94%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D0%BE%20%D0%90%D1%84%D0%B0%D0%BD%D0%B0%D1%81%D0%B8%D0%B9%20%D0%9D%D0%B8%D0%BA%D0%B8%D1%82%D0%B8%D0%BD%20%E2%80%94%20%D0%98%D0%B7%20%D0%A2%D0%B2%D0%B5%D1%80%D0%B8%20%D0%B2%20%D0%98%D0%BD%D0%B4%D0%B8%D1%8E%20XV%20%D0%B2%D0%B5%D0%BA%D0%B0%20%C2%B7%20%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BF%D0%B5%D1%80%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%85%D0%BE%D0%B4%D1%86%D1%8B"
+            ]
+          }
+        ],
+        "font": "17px"
+      }
+    },
+    {
+      "name": "first fold 390",
+      "ok": true,
+      "details": {
+        "top": 651.78125,
+        "bottom": 695.78125,
+        "width": 339,
+        "height": 44
+      }
+    },
+    {
+      "name": "geometry 768",
+      "ok": true,
+      "details": {
+        "overflow": -15,
+        "h1": {
+          "top": 565.03125,
+          "bottom": 660.1875,
+          "width": 705,
+          "height": 95.15625
+        },
+        "buttons": {
+          "top": 801.078125,
+          "bottom": 847.078125,
+          "width": 705,
+          "height": 46
+        },
+        "support": [
+          {
+            "position": 0.17089984465057637,
+            "hrefs": [
+              "mailto:arabelthera@gmail.com?subject=%D0%9C%D1%83%D0%B7%D0%B5%D0%B9%20%C2%AB%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BF%D0%B5%D1%80%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%85%D0%BE%D0%B4%D1%86%D1%8B%C2%BB%20%E2%80%94%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D0%BE%20%D0%90%D1%84%D0%B0%D0%BD%D0%B0%D1%81%D0%B8%D0%B9%20%D0%9D%D0%B8%D0%BA%D0%B8%D1%82%D0%B8%D0%BD%20%E2%80%94%20%D0%98%D0%B7%20%D0%A2%D0%B2%D0%B5%D1%80%D0%B8%20%D0%B2%20%D0%98%D0%BD%D0%B4%D0%B8%D1%8E%20XV%20%D0%B2%D0%B5%D0%BA%D0%B0%20%C2%B7%20%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BF%D0%B5%D1%80%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%85%D0%BE%D0%B4%D1%86%D1%8B"
+            ]
+          },
+          {
+            "position": 0.9798883003872478,
+            "hrefs": [
+              "mailto:arabelthera@gmail.com?subject=%D0%9C%D1%83%D0%B7%D0%B5%D0%B9%20%C2%AB%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BF%D0%B5%D1%80%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%85%D0%BE%D0%B4%D1%86%D1%8B%C2%BB%20%E2%80%94%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D0%BE%20%D0%90%D1%84%D0%B0%D0%BD%D0%B0%D1%81%D0%B8%D0%B9%20%D0%9D%D0%B8%D0%BA%D0%B8%D1%82%D0%B8%D0%BD%20%E2%80%94%20%D0%98%D0%B7%20%D0%A2%D0%B2%D0%B5%D1%80%D0%B8%20%D0%B2%20%D0%98%D0%BD%D0%B4%D0%B8%D1%8E%20XV%20%D0%B2%D0%B5%D0%BA%D0%B0%20%C2%B7%20%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BF%D0%B5%D1%80%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%85%D0%BE%D0%B4%D1%86%D1%8B"
+            ]
+          }
+        ],
+        "font": "18px"
+      }
+    },
+    {
+      "name": "geometry 1440",
+      "ok": true,
+      "details": {
+        "overflow": -15,
+        "h1": {
+          "top": 565.03125,
+          "bottom": 737.21875,
+          "width": 1032,
+          "height": 172.1875
+        },
+        "buttons": {
+          "top": 878.109375,
+          "bottom": 924.109375,
+          "width": 1032,
+          "height": 46
+        },
+        "support": [
+          {
+            "position": 0.1879054295637961,
+            "hrefs": [
+              "mailto:arabelthera@gmail.com?subject=%D0%9C%D1%83%D0%B7%D0%B5%D0%B9%20%C2%AB%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BF%D0%B5%D1%80%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%85%D0%BE%D0%B4%D1%86%D1%8B%C2%BB%20%E2%80%94%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D0%BE%20%D0%90%D1%84%D0%B0%D0%BD%D0%B0%D1%81%D0%B8%D0%B9%20%D0%9D%D0%B8%D0%BA%D0%B8%D1%82%D0%B8%D0%BD%20%E2%80%94%20%D0%98%D0%B7%20%D0%A2%D0%B2%D0%B5%D1%80%D0%B8%20%D0%B2%20%D0%98%D0%BD%D0%B4%D0%B8%D1%8E%20XV%20%D0%B2%D0%B5%D0%BA%D0%B0%20%C2%B7%20%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BF%D0%B5%D1%80%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%85%D0%BE%D0%B4%D1%86%D1%8B"
+            ]
+          },
+          {
+            "position": 0.9785313872714271,
+            "hrefs": [
+              "mailto:arabelthera@gmail.com?subject=%D0%9C%D1%83%D0%B7%D0%B5%D0%B9%20%C2%AB%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BF%D0%B5%D1%80%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%85%D0%BE%D0%B4%D1%86%D1%8B%C2%BB%20%E2%80%94%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D0%BE%20%D0%90%D1%84%D0%B0%D0%BD%D0%B0%D1%81%D0%B8%D0%B9%20%D0%9D%D0%B8%D0%BA%D0%B8%D1%82%D0%B8%D0%BD%20%E2%80%94%20%D0%98%D0%B7%20%D0%A2%D0%B2%D0%B5%D1%80%D0%B8%20%D0%B2%20%D0%98%D0%BD%D0%B4%D0%B8%D1%8E%20XV%20%D0%B2%D0%B5%D0%BA%D0%B0%20%C2%B7%20%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BF%D0%B5%D1%80%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%85%D0%BE%D0%B4%D1%86%D1%8B"
+            ]
+          }
+        ],
+        "font": "18px"
+      }
+    },
+    {
+      "name": "images",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "route stop 8",
+      "ok": true
+    },
+    {
+      "name": "route reset",
+      "ok": true
+    },
+    {
+      "name": "atlas zoom",
+      "ok": true
+    },
+    {
+      "name": "atlas rotation",
+      "ok": true
+    },
+    {
+      "name": "choice 0",
+      "ok": true
+    },
+    {
+      "name": "choice 1",
+      "ok": true
+    },
+    {
+      "name": "choice 2",
+      "ok": true
+    },
+    {
+      "name": "choice 3",
+      "ok": true
+    },
+    {
+      "name": "choice 4",
+      "ok": true
+    },
+    {
+      "name": "choice 5",
+      "ok": true
+    },
+    {
+      "name": "six choices",
+      "ok": true
+    },
+    {
+      "name": "journey score",
+      "ok": true
+    },
+    {
+      "name": "no repeat points",
+      "ok": true
+    },
+    {
+      "name": "sea error",
+      "ok": true
+    },
+    {
+      "name": "sea points",
+      "ok": true
+    },
+    {
+      "name": "quiz error",
+      "ok": true
+    },
+    {
+      "name": "100 reachable",
+      "ok": true
+    },
+    {
+      "name": "calendar populated",
+      "ok": true
+    },
+    {
+      "name": "calendar title hook 0",
+      "ok": true
+    },
+    {
+      "name": "calendar title hook 7",
+      "ok": true
+    },
+    {
+      "name": "calendar title hook 20",
+      "ok": true
+    },
+    {
+      "name": "media metadata",
+      "ok": true,
+      "details": [
+        {
+          "tag": "VIDEO",
+          "duration": 46.944
+        },
+        {
+          "tag": "AUDIO",
+          "duration": 218.664
+        }
+      ]
+    },
+    {
+      "name": "console errors",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "anchors",
+      "ok": true,
+      "details": []
+    }
+  ],
+  "errors": []
+}

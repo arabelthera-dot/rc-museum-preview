@@ -1,0 +1,61 @@
+OK   канон museum-core.md: /home/agent/projects/russian-civilization/rc-museum-production/standards/museum-core.md
+OK   канон page-production-standard.md: /home/agent/projects/russian-civilization/docs/standards/page-production-standard.md
+OK   канон audit-pages.py: /home/agent/projects/russian-civilization/tools/audit-pages.py
+OK   тематический skill: /home/agent/projects/russian-civilization/docs/skills/museum-pervoprohodcy/SKILL.md, /home/agent/.claude/skills/museum-pervoprohodcy/SKILL.md
+OK   копии skill совпадают: 690fe0e1c48e: /home/agent/projects/russian-civilization/docs/skills/museum-pervoprohodcy/SKILL.md, /home/agent/.claude/skills/museum-pervoprohodcy/SKILL.md
+OK   зависимость rc-text: /home/agent/.claude/skills/rc-text/SKILL.md
+OK   копии rc-text совпадают: версий: 1
+OK   зависимость rc-hero: /home/agent/.claude/skills/rc-hero/SKILL.md
+OK   копии rc-hero совпадают: версий: 1
+OK   зависимость rc-design-review: /home/agent/.claude/skills/rc-design-review/SKILL.md
+OK   копии rc-design-review совпадают: версий: 1
+OK   паспорт issue.json: /home/agent/worktrees/nikitin-page/review/nikitin/issue.json
+OK   интерпретатор: /usr/bin/python3
+OK   HTML страницы: /home/agent/worktrees/nikitin-page/muzei/pervoprohodcy/exp-nikitin-1468.html
+OK   валидатор issue.json: Паспорт: /home/agent/worktrees/nikitin-page/review/nikitin/issue.json
+Режим: проверка рабочего паспорта
+ИТОГ: проверка пройдена; ошибок 0, предупреждений 0.
+OK   версия профиля: 1
+OK   имя профиля: pervoprohodcy.expedition
+OK   музей профиля: профиль=pervoprohodcy; команда=pervoprohodcy
+OK   канонический audit-pages:   20. след. день честен — не применимо на 1
+
+ИТОГ: страниц 1, нарушений 0, НЕ ПРОВЕРЕНО 0
+OK   обязательный узел .top: найдено: 1
+OK   обязательный узел .crumbs: найдено: 1
+OK   обязательный узел .hero-scene: найдено: 1
+OK   обязательный узел .scene-caption: найдено: 1
+OK   обязательный узел .hero-lead: найдено: 1
+OK   обязательный узел .hero-under: найдено: 1
+OK   обязательный узел #rolik: найдено: 1
+OK   обязательный узел #audioguide: найдено: 1
+OK   обязательный узел #put: найдено: 1
+OK   обязательный узел #atlas: найдено: 1
+OK   обязательный узел #story: найдено: 1
+OK   обязательный узел #voice: найдено: 1
+OK   обязательный узел #deep: найдено: 1
+OK   обязательный узел #world: найдено: 1
+OK   обязательный узел #pohod: найдено: 1
+OK   обязательный узел #quiz: найдено: 1
+OK   обязательный узел #order: найдено: 1
+OK   обязательный узел #calendar: найдено: 1
+OK   обязательный узел #result: найдено: 1
+OK   обязательный узел #next: найдено: 1
+OK   обязательный узел #sources: найдено: 1
+OK   реестр экспонатов: экспонатов: 12
+OK   реестр прав: записей: 12
+OK   ID экспонатов уникальны: ['atlas', 'volga', 'baku', 'hormuz', 'bidar', 'bidar-gate', 'trabzon', 'book', 'hampi', 'baku-city', 'hormuz-red', 'chaul']
+OK   ID прав уникальны: ['rights-atlas', 'rights-volga', 'rights-baku', 'rights-baku-city', 'rights-bidar', 'rights-bidar-gate', 'rights-hampi', 'rights-trabzon', 'rights-hormuz', 'rights-hormuz-red', 'rights-book', 'rights-chaul']
+OK   экспонат → права: все связаны
+OK   нет сиротских прав: сирот нет
+OK   поля экспонатов: комплектны
+OK   файлы экспонатов: существуют и распознаны
+OK   производные счётчики: ожидалось 12; узлов 1; ошибки: []
+OK   ID начислений уникальны: ['journey', 'seas', 'quiz']
+OK   сумма начислений: сумма=100, манифест=100, профиль=100
+OK   знаменатель показан: ожидался / 100
+OK   база ссылок календаря: base не задан, ссылки от папки страницы
+OK   календарь разобран: дней: 31
+OK   хуки всех открытых дней: открытых дней: 1
+
+ИТОГ: прошло 55, ошибок 0, предупреждений 0, не применимо 0, НЕ ПРОВЕРЕНО 0

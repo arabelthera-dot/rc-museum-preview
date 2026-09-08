@@ -1,0 +1,126 @@
+{
+  "date": "2026-09-08",
+  "status": "technical-preview",
+  "files": [
+    {
+      "path": "muzei/pervoprohodcy/exp-nikitin-1468.html",
+      "bytes": 74079,
+      "sha256": "7fd19fc4a776633eeb1bb419af5cf3a805ed7d0cc543904e026c68ffbe924d4c"
+    },
+    {
+      "path": "muzei/pervoprohodcy/nikitin/audioguide.mp3",
+      "bytes": 1312221,
+      "sha256": "1b086fe657d4fbcd0cb9990228bfa4452657d2984be762a045d75fbf6dd66928"
+    },
+    {
+      "path": "muzei/pervoprohodcy/nikitin/baku-city.jpg",
+      "bytes": 109979,
+      "sha256": "4b2056443d20fbbcf18b3a7490d7f7b5426743e5465626f9e0c3583fabb975c4"
+    },
+    {
+      "path": "muzei/pervoprohodcy/nikitin/film.vtt",
+      "bytes": 1398,
+      "sha256": "76726c7f76681206f2ba181da8d9e407b6d12d576f74e7328e3be3a790186849"
+    },
+    {
+      "path": "muzei/pervoprohodcy/nikitin/trabzon.jpg",
+      "bytes": 48701,
+      "sha256": "426e1d66d49357d0d5a024970805603fe88741a357bff1b6b06cbe373553d03e"
+    },
+    {
+      "path": "muzei/pervoprohodcy/nikitin/hormuz.jpg",
+      "bytes": 81240,
+      "sha256": "b269309c5ff2cac980386316692f62d303e7f1b7005a16ccec72ec71b577a145"
+    },
+    {
+      "path": "muzei/pervoprohodcy/nikitin/bidar-gate.jpg",
+      "bytes": 471119,
+      "sha256": "175591b5672038f0b79e87c638979191d3418d856cda73ed2cc3692cbbe5da16"
+    },
+    {
+      "path": "muzei/pervoprohodcy/nikitin/page.css",
+      "bytes": 11516,
+      "sha256": "ef7c793d8ed9ffee2d890c357617e8c805b6647d42a16a15f680bf4ba3713abf"
+    },
+    {
+      "path": "muzei/pervoprohodcy/nikitin/hormuz-red.jpg",
+      "bytes": 66816,
+      "sha256": "fea4495423ade59524b6a53fd9d849918c16b5a6766503e5043f1a3d51c022b6"
+    },
+    {
+      "path": "muzei/pervoprohodcy/nikitin/baku.jpg",
+      "bytes": 79881,
+      "sha256": "7201f08608f016b1cce5060423c9b8023bb4d25cfe74a514aa9858e3ee5dca15"
+    },
+    {
+      "path": "muzei/pervoprohodcy/nikitin/route.svg",
+      "bytes": 19109,
+      "sha256": "caa01d38fff5ddd2d7fbc545a384caaff69c0fdafc5a666ff2db9e60c163bb88"
+    },
+    {
+      "path": "muzei/pervoprohodcy/nikitin/film-poster.jpg",
+      "bytes": 413169,
+      "sha256": "85a2d69b1d31bb13cf043b3f2af3da757681c305d73156929fbce29fe72d815c"
+    },
+    {
+      "path": "muzei/pervoprohodcy/nikitin/page.js",
+      "bytes": 18141,
+      "sha256": "0e1303eab876e93e3830b5a1d5a2df75e951f8a5b02639f18537ab1e82296952"
+    },
+    {
+      "path": "muzei/pervoprohodcy/nikitin/volga.jpg",
+      "bytes": 394886,
+      "sha256": "29779a217ed939e750f2941591cdb3d72d56803b0558a89d549455c96f7e2ed3"
+    },
+    {
+      "path": "muzei/pervoprohodcy/nikitin/atlas-detail.jpg",
+      "bytes": 8287615,
+      "sha256": "53e5844f20a465b8913ad78dc3a1778fd8ce6e4bd8508c7d1b1970847bb89fa4"
+    },
+    {
+      "path": "muzei/pervoprohodcy/nikitin/audio.json",
+      "bytes": 6710,
+      "sha256": "f266a10715a1954dfe836c91734a8ca22402c31e51d192901c46ef0c8e7eea57"
+    },
+    {
+      "path": "muzei/pervoprohodcy/nikitin/film.mp4",
+      "bytes": 7258855,
+      "sha256": "e417913cf18603876e96332d25707b5c5f30624abfa1a3854270b6db408549d3"
+    },
+    {
+      "path": "muzei/pervoprohodcy/nikitin/hampi.jpg",
+      "bytes": 435010,
+      "sha256": "0cbfb0b6a42e4753966e342c75f5e0d7bf5e4ab7f8d0449cb810167e72b0f690"
+    },
+    {
+      "path": "muzei/pervoprohodcy/nikitin/calendar.js",
+      "bytes": 10957,
+      "sha256": "64ed0fe530b8d19694506708f6da85063d9b537490b0c791dec88f406a943a88"
+    },
+    {
+      "path": "muzei/pervoprohodcy/nikitin/atlas-preview.jpg",
+      "bytes": 640215,
+      "sha256": "c3b5f640911ddf9f42f687821cb1dd35097c066c3b0f7e6f0dbae80283a2249f"
+    },
+    {
+      "path": "muzei/pervoprohodcy/nikitin/bidar.jpg",
+      "bytes": 423960,
+      "sha256": "71fa3a6e517ef02f41bd65907206749a70e52e142a7e03c434b9219f289fd3c7"
+    },
+    {
+      "path": "muzei/pervoprohodcy/nikitin/book.jpg",
+      "bytes": 186648,
+      "sha256": "ce068e8067702e5d9b4f0510c909880220c201bf2431dc197b0dc0b4fc3b2c7d"
+    },
+    {
+      "path": "muzei/pervoprohodcy/nikitin/chaul.png",
+      "bytes": 2198036,
+      "sha256": "5827606ab8f5336d48cbc98158142b73e8cfee1f0879ab7c92791727650d3d3f"
+    },
+    {
+      "path": "muzei/pervoprohodcy/nikitin/rights.json",
+      "bytes": 11015,
+      "sha256": "20148e4e9330e53f49a1ea67c03589ed88ae911d92c3c6960e59772ad49af0ff"
+    }
+  ]
+}

@@ -34,9 +34,45 @@
     '<path class="mast" d="M11.4 2.4h1.2v15h-1.2z"/><path class="sail" d="M13.4 4.2l6 5.4-6 2.4z"/>' +
     '<path class="sail2" d="M10.6 5.6L5.4 10l5.2 1.9z"/></svg>';
 
+  // Opt-in individual journey. The fleet mode below remains unchanged.
+  function initJourney(cfg, box) {
+    var data = cfg.data, stage = 0, log = [], awarded = {}, state = {stage:0, choices:log};
+    box.classList.add('crun');
+    function button(label, action, cls) { var b=el('button',cls||'gbtn',label); b.type='button';b.addEventListener('click',action);return b; }
+    function focusHeading(){var h=box.querySelector('h3');if(h){h.tabIndex=-1;h.focus({preventScroll:true});}}
+    function render(){
+      state.stage=stage; box.innerHTML='';
+      if(stage>=data.stages.length){
+        box.appendChild(el('div','journey-header','Путь пройден · '+data.stages.length+' решений'));
+        box.appendChild(el('h3',null,data.finale.title));
+        box.appendChild(el('p',null,data.finale.text));
+        var list=el('ol','journey-log');
+        log.forEach(function(o,i){list.appendChild(el('li',null,'<b>'+data.stages[i].title+'</b><br>'+o.label+'<small>'+o.echo+'</small><small><b>Исторический путь:</b> '+data.stages[i].truth+'</small>'));});
+        box.appendChild(list);
+        box.appendChild(button('Пройти заново',function(){stage=0;log.length=0;render();},'gbtn sec'));
+        if(cfg.onFinish)cfg.onFinish({choices:log.slice(),points:Object.keys(awarded).length*data.pointsPerStage});
+        focusHeading();return;
+      }
+      var s=data.stages[stage];
+      box.appendChild(el('div','journey-header','<span>'+s.when+'</span><span>Решение '+(stage+1)+' / '+data.stages.length+'</span>'));
+      box.appendChild(el('h3',null,s.title));box.appendChild(el('p',null,s.text));
+      var opts=el('div','journey-options');
+      s.options.forEach(function(o){opts.appendChild(button(o.label,function(){
+        log[stage]=o;
+        if(!awarded[stage]){awarded[stage]=true;if(cfg.onPoints)cfg.onPoints(data.pointsPerStage,stage);}
+        box.innerHTML='';box.appendChild(el('div','journey-header','Результат твоего выбора · учебная альтернатива'));
+        box.appendChild(el('h3',null,o.label));box.appendChild(el('p','journey-outcome',o.echo));
+        box.appendChild(el('div','journey-truth','<b>Как было у Никитина</b><p>'+s.truth+'</p>'));
+        box.appendChild(button(stage+1<data.stages.length?'Следующий эпизод Никитина →':'Сопоставить весь путь →',function(){stage++;render();}));focusHeading();
+      },'journey-option'));});box.appendChild(opts);focusHeading();
+    }
+    render();return {state:state};
+  }
+
   function init(cfg) {
     var box = typeof cfg.mount === 'string' ? d.querySelector(cfg.mount) : cfg.mount;
     if (!box) return null;
+    if (cfg.data.mode === "journey") return initJourney(cfg, box);
     var data = cfg.data,
         onPoints = cfg.onPoints || function () {},
         onFinish = cfg.onFinish || function () {};

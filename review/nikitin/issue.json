@@ -1,0 +1,502 @@
+{
+  "schema_version": "1.0.0",
+  "museum_id": "rc:nikitin:pervoprohodcy",
+  "issue_id": "rc:nikitin:nikitin-1468",
+  "content_family_id": "rc:nikitin:nikitin-three-seas",
+  "version": "1.0.0",
+  "identity": {
+    "title_ru": "Из Твери — в Индию XV века",
+    "slug": "exp-nikitin-1468",
+    "calendar_slot": "01-01",
+    "museum_name_ru": "Русские первопроходцы",
+    "language": "ru",
+    "summary_ru": "В начале пути он потерял весь товар. Дошёл до Индии, записал чужую жизнь и повернул к Руси. До дома добрались его тетради. Сам купец не вернулся."
+  },
+  "lifecycle": {
+    "current": "preview",
+    "history": [
+      {
+        "status": "preview",
+        "at": "2026-09-08T15:00:00Z",
+        "actor": "codex-bot",
+        "note_ru": "Собрано по принятому предложению, подготовка к личной приёмке Сергея"
+      }
+    ]
+  },
+  "narrative": {
+    "visitor_promise_ru": "Пройти торговую дорогу и увидеть, как сохраняется знание о чужой жизни",
+    "hook_ru": "В начале пути он потерял весь товар. Дошёл до Индии, записал чужую жизнь и повернул к Руси. До дома добрались его тетради. Сам купец не вернулся.",
+    "turn_ru": "Товар потерян, но наблюдение продолжается",
+    "conclusion_ru": "Дорога человека оборвалась; дорога текста продолжилась",
+    "depths": {
+      "see": "Ролик и карта",
+      "understand": "Шесть глав и решения",
+      "research": "Первичный текст и глубокий зум"
+    }
+  },
+  "interactive": {
+    "title_ru": "Пройти три моря",
+    "type": "choice_path",
+    "visitor_action_ru": "Выбрать шесть решений и сопоставить их последствия с историческим маршрутом",
+    "exclusive_insight_ru": "Каждое решение показывает новую дорожную задачу и предел известного",
+    "wow_effect_ru": "В конце вся личная цепочка решений сопоставляется с путём Никитина",
+    "text_alternative_ru": "Весь исторический путь и объяснения доступны в шести главах рассказа",
+    "engine": "museum-choice-run.js, opt-in journey",
+    "unique_to_issue": true
+  },
+  "claims": [
+    {
+      "claim_id": "rc:nikitin:claim-journey",
+      "text_ru": "Никитин достиг Индии, оставил записки и умер на обратном пути до Смоленска",
+      "kind": "fact",
+      "key_claim": true,
+      "confidence": "verified",
+      "source_ids": [
+        "rc:nikitin:src-text",
+        "rc:nikitin:src-rgo"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "rc:nikitin:src-text",
+      "title_ru": "Хождение за три моря. БЛДР, том 7",
+      "publisher_ru": "Наука; электронное воспроизведение Азбука веры",
+      "url": "https://azbyka.ru/otechnik/Istorija_Tserkvi/biblioteka-literatury-drevnej-rusi-tom-7/11",
+      "source_type": "academic",
+      "language": "ru",
+      "checked_at": "2026-09-08"
+    },
+    {
+      "source_id": "rc:nikitin:src-rgo",
+      "title_ru": "За три моря",
+      "publisher_ru": "Русское географическое общество",
+      "url": "https://rgo.ru/activity/redaction/news/08-24/",
+      "source_type": "official_publication",
+      "language": "ru",
+      "checked_at": "2026-09-08"
+    }
+  ],
+  "objects": [
+    {
+      "object_id": "rc:nikitin:obj-atlas",
+      "object_type": "map",
+      "title_ru": "File:Fra Mauro World Map, c.1450 (1806 copy).jpg",
+      "date_display_ru": "XV век, копия 1806",
+      "attribution_ru": "Fra Mauro (W. Fraser)",
+      "holder_ru": "Wikimedia Commons",
+      "source_ids": [
+        "rc:nikitin:src-text"
+      ]
+    },
+    {
+      "object_id": "rc:nikitin:obj-volga",
+      "object_type": "documentary-image",
+      "title_ru": "File:Volga-near-Zubtsov-Prokudin-Gorskii.jpeg",
+      "date_display_ru": "Позднейшее изображение; см. атрибуцию",
+      "attribution_ru": "Sergei Mikhailovich Prokudin-Gorskii (1863–1944), photographer.",
+      "holder_ru": "Wikimedia Commons",
+      "source_ids": [
+        "rc:nikitin:src-text"
+      ]
+    },
+    {
+      "object_id": "rc:nikitin:obj-baku",
+      "object_type": "documentary-image",
+      "title_ru": "File:Baku sea port 1890.jpg",
+      "date_display_ru": "Позднейшее изображение; см. атрибуцию",
+      "attribution_ru": "Paul Nadar (1856–1939)",
+      "holder_ru": "Wikimedia Commons",
+      "source_ids": [
+        "rc:nikitin:src-text"
+      ]
+    },
+    {
+      "object_id": "rc:nikitin:obj-baku-city",
+      "object_type": "documentary-image",
+      "title_ru": "File:Old Baku 1890 (Paul Nadar).jpg",
+      "date_display_ru": "Позднейшее изображение; см. атрибуцию",
+      "attribution_ru": "Paul Nadar",
+      "holder_ru": "Wikimedia Commons",
+      "source_ids": [
+        "rc:nikitin:src-text"
+      ]
+    },
+    {
+      "object_id": "rc:nikitin:obj-bidar",
+      "object_type": "documentary-image",
+      "title_ru": "File:Bidar fort complex from Solah Khambha Masjid.jpg",
+      "date_display_ru": "Позднейшее изображение; см. атрибуцию",
+      "attribution_ru": "iMahesh",
+      "holder_ru": "Wikimedia Commons",
+      "source_ids": [
+        "rc:nikitin:src-text"
+      ]
+    },
+    {
+      "object_id": "rc:nikitin:obj-bidar-gate",
+      "object_type": "documentary-image",
+      "title_ru": "File:Sharza Darwaza in Bidar fort.jpg",
+      "date_display_ru": "Позднейшее изображение; см. атрибуцию",
+      "attribution_ru": "iMahesh",
+      "holder_ru": "Wikimedia Commons",
+      "source_ids": [
+        "rc:nikitin:src-text"
+      ]
+    },
+    {
+      "object_id": "rc:nikitin:obj-hampi",
+      "object_type": "documentary-image",
+      "title_ru": "File:Hampi, India, View of Hampi Bazaar from Matanga Hill.jpg",
+      "date_display_ru": "Позднейшее изображение; см. атрибуцию",
+      "attribution_ru": "Vyacheslav Argenberg",
+      "holder_ru": "Wikimedia Commons",
+      "source_ids": [
+        "rc:nikitin:src-text"
+      ]
+    },
+    {
+      "object_id": "rc:nikitin:obj-trabzon",
+      "object_type": "documentary-image",
+      "title_ru": "File:Paul Nadar Trebizond 2.jpg",
+      "date_display_ru": "Позднейшее изображение; см. атрибуцию",
+      "attribution_ru": "(Paul Nadar, 1856-1939)",
+      "holder_ru": "Wikimedia Commons",
+      "source_ids": [
+        "rc:nikitin:src-text"
+      ]
+    },
+    {
+      "object_id": "rc:nikitin:obj-hormuz",
+      "object_type": "documentary-image",
+      "title_ru": "File:Hormuz .Island 02.jpg",
+      "date_display_ru": "Позднейшее изображение; см. атрибуцию",
+      "attribution_ru": "مهدی ذاکری",
+      "holder_ru": "Wikimedia Commons",
+      "source_ids": [
+        "rc:nikitin:src-text"
+      ]
+    },
+    {
+      "object_id": "rc:nikitin:obj-hormuz-red",
+      "object_type": "documentary-image",
+      "title_ru": "File:Hormuz .Island 06.jpg",
+      "date_display_ru": "Позднейшее изображение; см. атрибуцию",
+      "attribution_ru": "مهدی ذاکری",
+      "holder_ru": "Wikimedia Commons",
+      "source_ids": [
+        "rc:nikitin:src-text"
+      ]
+    },
+    {
+      "object_id": "rc:nikitin:obj-book",
+      "object_type": "documentary-image",
+      "title_ru": "File:Срезневский И И Хожение за три моря Афанасия Никитина 1466 1472 1857.pdf",
+      "date_display_ru": "Позднейшее изображение; см. атрибуцию",
+      "attribution_ru": "дореволюционное издание",
+      "holder_ru": "Wikimedia Commons",
+      "source_ids": [
+        "rc:nikitin:src-text"
+      ]
+    },
+    {
+      "object_id": "rc:nikitin:obj-chaul",
+      "object_type": "documentary-image",
+      "title_ru": "File:Fortaleza Chaul.png",
+      "date_display_ru": "Позднейшее изображение; см. атрибуцию",
+      "attribution_ru": "Manuel de Faria y Sousa",
+      "holder_ru": "Wikimedia Commons",
+      "source_ids": [
+        "rc:nikitin:src-text"
+      ]
+    }
+  ],
+  "images": [
+    {
+      "image_id": "rc:nikitin:img-atlas",
+      "object_id": "rc:nikitin:obj-atlas",
+      "local_path": "../../muzei/pervoprohodcy/nikitin/atlas-detail.jpg",
+      "sha256": "53e5844f20a465b8913ad78dc3a1778fd8ce6e4bd8508c7d1b1970847bb89fa4",
+      "source_url": "https://commons.wikimedia.org/wiki/File%3AFra%20Mauro%20World%20Map%2C%20c.1450%20%281806%20copy%29.jpg",
+      "credit_ru": "Fra Mauro (W. Fraser); Public domain",
+      "alt_ru": "File:Fra Mauro World Map, c.1450 (1806 copy).jpg",
+      "rights": {
+        "status": "cleared",
+        "basis_ru": "Public domain по карточке Wikimedia Commons; атрибуция размещена на странице",
+        "checked_at": "2026-09-08",
+        "commercial_use": "allowed",
+        "derivatives": "allowed",
+        "ai_modification": "not_used",
+        "reviewer": "codex-bot"
+      }
+    },
+    {
+      "image_id": "rc:nikitin:img-volga",
+      "object_id": "rc:nikitin:obj-volga",
+      "local_path": "../../muzei/pervoprohodcy/nikitin/volga.jpg",
+      "sha256": "29779a217ed939e750f2941591cdb3d72d56803b0558a89d549455c96f7e2ed3",
+      "source_url": "https://commons.wikimedia.org/wiki/File%3AVolga-near-Zubtsov-Prokudin-Gorskii.jpeg",
+      "credit_ru": "Sergei Mikhailovich Prokudin-Gorskii (1863–1944), photographer.; Public domain",
+      "alt_ru": "File:Volga-near-Zubtsov-Prokudin-Gorskii.jpeg",
+      "rights": {
+        "status": "cleared",
+        "basis_ru": "Public domain по карточке Wikimedia Commons; атрибуция размещена на странице",
+        "checked_at": "2026-09-08",
+        "commercial_use": "allowed",
+        "derivatives": "allowed",
+        "ai_modification": "not_used",
+        "reviewer": "codex-bot"
+      }
+    },
+    {
+      "image_id": "rc:nikitin:img-baku",
+      "object_id": "rc:nikitin:obj-baku",
+      "local_path": "../../muzei/pervoprohodcy/nikitin/baku.jpg",
+      "sha256": "7201f08608f016b1cce5060423c9b8023bb4d25cfe74a514aa9858e3ee5dca15",
+      "source_url": "https://commons.wikimedia.org/wiki/File%3ABaku%20sea%20port%201890.jpg",
+      "credit_ru": "Paul Nadar (1856–1939); Public domain",
+      "alt_ru": "File:Baku sea port 1890.jpg",
+      "rights": {
+        "status": "cleared",
+        "basis_ru": "Public domain по карточке Wikimedia Commons; атрибуция размещена на странице",
+        "checked_at": "2026-09-08",
+        "commercial_use": "allowed",
+        "derivatives": "allowed",
+        "ai_modification": "not_used",
+        "reviewer": "codex-bot"
+      }
+    },
+    {
+      "image_id": "rc:nikitin:img-baku-city",
+      "object_id": "rc:nikitin:obj-baku-city",
+      "local_path": "../../muzei/pervoprohodcy/nikitin/baku-city.jpg",
+      "sha256": "4b2056443d20fbbcf18b3a7490d7f7b5426743e5465626f9e0c3583fabb975c4",
+      "source_url": "https://commons.wikimedia.org/wiki/File%3AOld%20Baku%201890%20%28Paul%20Nadar%29.jpg",
+      "credit_ru": "Paul Nadar; Public domain",
+      "alt_ru": "File:Old Baku 1890 (Paul Nadar).jpg",
+      "rights": {
+        "status": "cleared",
+        "basis_ru": "Public domain по карточке Wikimedia Commons; атрибуция размещена на странице",
+        "checked_at": "2026-09-08",
+        "commercial_use": "allowed",
+        "derivatives": "allowed",
+        "ai_modification": "not_used",
+        "reviewer": "codex-bot"
+      }
+    },
+    {
+      "image_id": "rc:nikitin:img-bidar",
+      "object_id": "rc:nikitin:obj-bidar",
+      "local_path": "../../muzei/pervoprohodcy/nikitin/bidar.jpg",
+      "sha256": "71fa3a6e517ef02f41bd65907206749a70e52e142a7e03c434b9219f289fd3c7",
+      "source_url": "https://commons.wikimedia.org/wiki/File%3ABidar%20fort%20complex%20from%20Solah%20Khambha%20Masjid.jpg",
+      "credit_ru": "iMahesh; CC BY-SA 4.0",
+      "alt_ru": "File:Bidar fort complex from Solah Khambha Masjid.jpg",
+      "rights": {
+        "status": "cleared",
+        "basis_ru": "CC BY-SA 4.0 по карточке Wikimedia Commons; атрибуция размещена на странице",
+        "checked_at": "2026-09-08",
+        "commercial_use": "allowed",
+        "derivatives": "allowed",
+        "ai_modification": "not_used",
+        "reviewer": "codex-bot"
+      }
+    },
+    {
+      "image_id": "rc:nikitin:img-bidar-gate",
+      "object_id": "rc:nikitin:obj-bidar-gate",
+      "local_path": "../../muzei/pervoprohodcy/nikitin/bidar-gate.jpg",
+      "sha256": "175591b5672038f0b79e87c638979191d3418d856cda73ed2cc3692cbbe5da16",
+      "source_url": "https://commons.wikimedia.org/wiki/File%3ASharza%20Darwaza%20in%20Bidar%20fort.jpg",
+      "credit_ru": "iMahesh; CC BY-SA 4.0",
+      "alt_ru": "File:Sharza Darwaza in Bidar fort.jpg",
+      "rights": {
+        "status": "cleared",
+        "basis_ru": "CC BY-SA 4.0 по карточке Wikimedia Commons; атрибуция размещена на странице",
+        "checked_at": "2026-09-08",
+        "commercial_use": "allowed",
+        "derivatives": "allowed",
+        "ai_modification": "not_used",
+        "reviewer": "codex-bot"
+      }
+    },
+    {
+      "image_id": "rc:nikitin:img-hampi",
+      "object_id": "rc:nikitin:obj-hampi",
+      "local_path": "../../muzei/pervoprohodcy/nikitin/hampi.jpg",
+      "sha256": "0cbfb0b6a42e4753966e342c75f5e0d7bf5e4ab7f8d0449cb810167e72b0f690",
+      "source_url": "https://commons.wikimedia.org/wiki/File%3AHampi%2C%20India%2C%20View%20of%20Hampi%20Bazaar%20from%20Matanga%20Hill.jpg",
+      "credit_ru": "Vyacheslav Argenberg; CC BY 4.0",
+      "alt_ru": "File:Hampi, India, View of Hampi Bazaar from Matanga Hill.jpg",
+      "rights": {
+        "status": "cleared",
+        "basis_ru": "CC BY 4.0 по карточке Wikimedia Commons; атрибуция размещена на странице",
+        "checked_at": "2026-09-08",
+        "commercial_use": "allowed",
+        "derivatives": "allowed",
+        "ai_modification": "not_used",
+        "reviewer": "codex-bot"
+      }
+    },
+    {
+      "image_id": "rc:nikitin:img-trabzon",
+      "object_id": "rc:nikitin:obj-trabzon",
+      "local_path": "../../muzei/pervoprohodcy/nikitin/trabzon.jpg",
+      "sha256": "426e1d66d49357d0d5a024970805603fe88741a357bff1b6b06cbe373553d03e",
+      "source_url": "https://commons.wikimedia.org/wiki/File%3APaul%20Nadar%20Trebizond%202.jpg",
+      "credit_ru": "(Paul Nadar, 1856-1939); Public domain",
+      "alt_ru": "File:Paul Nadar Trebizond 2.jpg",
+      "rights": {
+        "status": "cleared",
+        "basis_ru": "Public domain по карточке Wikimedia Commons; атрибуция размещена на странице",
+        "checked_at": "2026-09-08",
+        "commercial_use": "allowed",
+        "derivatives": "allowed",
+        "ai_modification": "not_used",
+        "reviewer": "codex-bot"
+      }
+    },
+    {
+      "image_id": "rc:nikitin:img-hormuz",
+      "object_id": "rc:nikitin:obj-hormuz",
+      "local_path": "../../muzei/pervoprohodcy/nikitin/hormuz.jpg",
+      "sha256": "b269309c5ff2cac980386316692f62d303e7f1b7005a16ccec72ec71b577a145",
+      "source_url": "https://commons.wikimedia.org/wiki/File%3AHormuz%20.Island%2002.jpg",
+      "credit_ru": "مهدی ذاکری; CC BY 4.0",
+      "alt_ru": "File:Hormuz .Island 02.jpg",
+      "rights": {
+        "status": "cleared",
+        "basis_ru": "CC BY 4.0 по карточке Wikimedia Commons; атрибуция размещена на странице",
+        "checked_at": "2026-09-08",
+        "commercial_use": "allowed",
+        "derivatives": "allowed",
+        "ai_modification": "not_used",
+        "reviewer": "codex-bot"
+      }
+    },
+    {
+      "image_id": "rc:nikitin:img-hormuz-red",
+      "object_id": "rc:nikitin:obj-hormuz-red",
+      "local_path": "../../muzei/pervoprohodcy/nikitin/hormuz-red.jpg",
+      "sha256": "fea4495423ade59524b6a53fd9d849918c16b5a6766503e5043f1a3d51c022b6",
+      "source_url": "https://commons.wikimedia.org/wiki/File%3AHormuz%20.Island%2006.jpg",
+      "credit_ru": "مهدی ذاکری; CC BY 4.0",
+      "alt_ru": "File:Hormuz .Island 06.jpg",
+      "rights": {
+        "status": "cleared",
+        "basis_ru": "CC BY 4.0 по карточке Wikimedia Commons; атрибуция размещена на странице",
+        "checked_at": "2026-09-08",
+        "commercial_use": "allowed",
+        "derivatives": "allowed",
+        "ai_modification": "not_used",
+        "reviewer": "codex-bot"
+      }
+    },
+    {
+      "image_id": "rc:nikitin:img-book",
+      "object_id": "rc:nikitin:obj-book",
+      "local_path": "../../muzei/pervoprohodcy/nikitin/book.jpg",
+      "sha256": "ce068e8067702e5d9b4f0510c909880220c201bf2431dc197b0dc0b4fc3b2c7d",
+      "source_url": "https://commons.wikimedia.org/wiki/File%3A%D0%A1%D1%80%D0%B5%D0%B7%D0%BD%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9%20%D0%98%20%D0%98%20%D0%A5%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B7%D0%B0%20%D1%82%D1%80%D0%B8%20%D0%BC%D0%BE%D1%80%D1%8F%20%D0%90%D1%84%D0%B0%D0%BD%D0%B0%D1%81%D0%B8%D1%8F%20%D0%9D%D0%B8%D0%BA%D0%B8%D1%82%D0%B8%D0%BD%D0%B0%201466%201472%201857.pdf",
+      "credit_ru": "дореволюционное издание; Public domain",
+      "alt_ru": "File:Срезневский И И Хожение за три моря Афанасия Никитина 1466 1472 1857.pdf",
+      "rights": {
+        "status": "cleared",
+        "basis_ru": "Public domain по карточке Wikimedia Commons; атрибуция размещена на странице",
+        "checked_at": "2026-09-08",
+        "commercial_use": "allowed",
+        "derivatives": "allowed",
+        "ai_modification": "not_used",
+        "reviewer": "codex-bot"
+      }
+    },
+    {
+      "image_id": "rc:nikitin:img-chaul",
+      "object_id": "rc:nikitin:obj-chaul",
+      "local_path": "../../muzei/pervoprohodcy/nikitin/chaul.png",
+      "sha256": "5827606ab8f5336d48cbc98158142b73e8cfee1f0879ab7c92791727650d3d3f",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Fortaleza_Chaul.png",
+      "credit_ru": "Manuel de Faria y Sousa; Public domain",
+      "alt_ru": "File:Fortaleza Chaul.png",
+      "rights": {
+        "status": "cleared",
+        "basis_ru": "Public domain по карточке Wikimedia Commons; атрибуция размещена на странице",
+        "checked_at": "2026-09-08",
+        "commercial_use": "allowed",
+        "derivatives": "allowed",
+        "ai_modification": "not_used",
+        "reviewer": "codex-bot"
+      }
+    }
+  ],
+  "risks": {
+    "historical": {
+      "level": "low",
+      "reason_ru": "Даты расходятся; позднейшие виды не равны XV веку",
+      "mitigation_ru": "Различия дат и статусы изображений подписаны рядом",
+      "approved_by": null
+    },
+    "legal": {
+      "level": "low",
+      "reason_ru": "Свободные лицензии требуют атрибуции",
+      "mitigation_ru": "Источник, автор и лицензия размещены",
+      "approved_by": null
+    },
+    "reputational": {
+      "level": "low",
+      "reason_ru": "Результат ещё не принят владельцем",
+      "mitigation_ru": "Статус preview сохраняется до решения Сергея",
+      "approved_by": null
+    }
+  },
+  "seo": {
+    "title_ru": "Из Твери — в Индию XV века",
+    "description_ru": "В начале пути он потерял весь товар. Дошёл до Индии, записал чужую жизнь и повернул к Руси. До дома добрались его тетради. Сам купец не вернулся.",
+    "h1_ru": "Из Твери — в Индию XV века",
+    "canonical_url": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/pervoprohodcy/exp-nikitin-1468.html",
+    "index_state": "noindex",
+    "primary_query_ru": "Афанасий Никитин Хождение за три моря",
+    "og_image_id": "rc:nikitin:img-atlas"
+  },
+  "media": [
+    {
+      "media_id": "rc:nikitin:media-page",
+      "kind": "page",
+      "platform": "web",
+      "status": "review",
+      "path": "../../muzei/pervoprohodcy/exp-nikitin-1468.html"
+    },
+    {
+      "media_id": "rc:nikitin:media-audio",
+      "kind": "audio",
+      "platform": "web",
+      "status": "review",
+      "path": "../../muzei/pervoprohodcy/nikitin/audioguide.mp3"
+    },
+    {
+      "media_id": "rc:nikitin:media-video",
+      "kind": "video",
+      "platform": "web",
+      "status": "review",
+      "path": "../../muzei/pervoprohodcy/nikitin/film.mp4"
+    },
+    {
+      "media_id": "rc:nikitin:media-transcript",
+      "kind": "transcript",
+      "platform": "web",
+      "status": "review",
+      "path": "../../muzei/pervoprohodcy/nikitin/audio.json"
+    }
+  ],
+  "publication": {
+    "blockers": [
+      "Личная приёмка Сергея для основного музейного каталога"
+    ],
+    "approvals": {
+      "fact_check": true,
+      "rights": true,
+      "editorial": true
+    },
+    "target_path": "muzei/pervoprohodcy/exp-nikitin-1468.html"
+  }
+}

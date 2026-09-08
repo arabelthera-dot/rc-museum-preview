@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "profile": "pervoprohodcy.expedition",
+  "museum": "pervoprohodcy",
+  "version": "1.0.0",
+  "required": {
+    "selectors": [
+      ".top",
+      ".crumbs",
+      ".hero-scene",
+      ".scene-caption",
+      ".hero-lead",
+      ".hero-under",
+      "#rolik",
+      "#audioguide",
+      "#put",
+      "#atlas",
+      "#story",
+      "#voice",
+      "#deep",
+      "#world",
+      "#pohod",
+      "#quiz",
+      "#order",
+      "#calendar",
+      "#result",
+      "#next",
+      "#sources"
+    ]
+  },
+  "score": {
+    "enabled": true,
+    "maximum": 100,
+    "manifest_selector": "#museum-score-manifest"
+  },
+  "calendar": {
+    "enabled": true,
+    "source": "nikitin/calendar.js"
+  },
+  "collection": {
+    "enabled": true,
+    "item_selector": "[data-rc-exhibit-id]",
+    "rights_selector": "li[data-rc-rights-id]",
+    "count_selector": "[data-rc-count=exhibits]",
+    "required_fields": [
+      "title",
+      "attribution",
+      "explanation"
+    ]
+  }
+}
