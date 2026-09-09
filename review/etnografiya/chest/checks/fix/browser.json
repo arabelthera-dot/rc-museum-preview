@@ -3,7 +3,7 @@
   "url": "https://chest.local/index.html",
   "dom": {
     "path": "rendered.html",
-    "sha256": "7d755453c91bfba8e8f869941dd2af07940968405c5e51e0a6bf01285b3dbf9c"
+    "sha256": "334c30907e47c5e21bde194be4ca87b877ee302d7e20dfcf4e0467d96279d399"
   },
   "viewports": [
     {
@@ -17,7 +17,7 @@
       "buttons": 785.28125,
       "support": [
         0.11790356748896912,
-        0.9577966744384276
+        0.9578005916566386
       ],
       "small": [],
       "targets": [],
@@ -29,11 +29,11 @@
       "support_fraction": 0.11790356748896912,
       "first_screen": {
         "path": "320-first.png",
-        "sha256": "e16c92980483276da9af10b2cead247aef605c1aca4524db3ad7fde3eacb6a05"
+        "sha256": "9ab6c4bae95f816a25a3438d3d0b4c8424a6cae79c6cfd3b3013160ad2b35162"
       },
       "full_page": {
         "path": "320-full.png",
-        "sha256": "baea9ad4b7a6ee5b051b3fed79d3e5f38b42910f1b6af69239dbc85d1830ec50"
+        "sha256": "6be73213a79318f59d4855bb6e7c37e967f0591447382797ff080d76257fc68d"
       }
     },
     {
@@ -47,7 +47,7 @@
       "buttons": 632.25,
       "support": [
         0.12095224452146691,
-        0.9582296791144902
+        0.9582349200581395
       ],
       "small": [],
       "targets": [],
@@ -59,11 +59,11 @@
       "support_fraction": 0.12095224452146691,
       "first_screen": {
         "path": "390-first.png",
-        "sha256": "06ae0e445993a1c7feb7f8099adf28e94aff56d0a2183ddf1877252198acfedd"
+        "sha256": "b603f081deea3ff83123efd9c5b1d7b8df6b1f8b10b2ca02213dd2742ad4652f"
       },
       "full_page": {
         "path": "390-full.png",
-        "sha256": "b4b80055c6af7c8cb8b849f3420bb5354b6e18363c66308a4d40d0842c7df8e2"
+        "sha256": "65f9fd823cfc776935e531f2f65ad0fcbf1d6b80b292449746692fb60a516c64"
       }
     },
     {
@@ -73,31 +73,31 @@
       "broken_images": 0,
       "scrollY": 0,
       "overflow": false,
-      "h1": 670.578125,
-      "buttons": 832.25,
+      "h1": 670.890625,
+      "buttons": 832.5625,
       "support": [
-        0.17045399260508562,
-        0.9659606901920083
+        0.1702203024807306,
+        0.9659577611891962
       ],
       "small": [],
       "targets": [],
       "width": 1440,
       "height": 844,
-      "h1_bottom": 670.578125,
-      "buttons_bottom": 832.25,
+      "h1_bottom": 670.890625,
+      "buttons_bottom": 832.5625,
       "support_count": 2,
-      "support_fraction": 0.17045399260508562,
+      "support_fraction": 0.1702203024807306,
       "first_screen": {
         "path": "1440-first.png",
         "sha256": "2cabbf6f09d0db0ddd12e6ccc5201a86fa9f8cbb18c315e820e1fd2d9562bc4e"
       },
       "full_page": {
         "path": "1440-full.png",
-        "sha256": "d3539a7fbc48cde025906a8bb9b456371dd87af8b167084e983e3d2aa0fb4887"
+        "sha256": "d6f84f047167d45984f2f113674f7dabfb8e49faa5edb7e8d1fecbcd6e4972d3"
       }
     }
   ],
-  "page_sha256": "5cf12d7adb3390c153acfe5859c73758bd24b141da03cf3aa32c2b9ecf5e56c0",
+  "page_sha256": "2b5995dc98f2a919797b8fcbbe267cdad1b1ac0bf3415d8306f8c16d5859a215",
   "checks": [
     {
       "name": "no premature audio or video",
@@ -192,7 +192,7 @@
       "buttons": 785.28125,
       "support": [
         0.11790356748896912,
-        0.9577966744384276
+        0.9578005916566386
       ],
       "small": [],
       "targets": []
@@ -208,7 +208,7 @@
       "buttons": 764.984375,
       "support": [
         0.12154052903294481,
-        0.959342900101123
+        0.9593478897227101
       ],
       "small": [],
       "targets": []
@@ -224,7 +224,7 @@
       "buttons": 632.25,
       "support": [
         0.12095224452146691,
-        0.9582296791144902
+        0.9582349200581395
       ],
       "small": [],
       "targets": []
@@ -236,11 +236,11 @@
       "broken_images": 0,
       "scrollY": 0,
       "overflow": false,
-      "h1": 638.078125,
-      "buttons": 799.75,
+      "h1": 638.859375,
+      "buttons": 800.53125,
       "support": [
-        0.17099534433712624,
-        0.9652716905927494
+        0.17103571310445195,
+        0.9652595174307071
       ],
       "small": [],
       "targets": []
@@ -252,11 +252,11 @@
       "broken_images": 0,
       "scrollY": 0,
       "overflow": false,
-      "h1": 670.578125,
-      "buttons": 832.25,
+      "h1": 670.890625,
+      "buttons": 832.5625,
       "support": [
-        0.17045399260508562,
-        0.9659606901920083
+        0.1702203024807306,
+        0.9659577611891962
       ],
       "small": [],
       "targets": []
@@ -272,5 +272,5 @@
     "cues": 10
   },
   "errors": [],
-  "gzip": 15808
+  "gzip": 15932
 }

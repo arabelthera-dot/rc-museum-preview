@@ -8,3 +8,5 @@ body .calnav,body .cday,body .wayrow a,body #secnav a{min-width:44px!important;m
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}
 
 @media(max-width:359px){body #calbox{overflow-x:auto}body #calbox .calgrid{min-width:308px}body #calbox .cday{min-width:44px!important}}
+/* Navigation stays in the document flow: it cannot cover the exhibit. */
+body #secnav{position:static!important;top:auto!important;transform:none!important}body .secnav-spacer{display:none!important}.complete .order-pieces figcaption{display:none}
