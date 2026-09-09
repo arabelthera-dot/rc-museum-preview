@@ -1,0 +1,74 @@
+{
+  "status": "draft",
+  "checks": [
+    {
+      "check": "museum-customs frontmatter",
+      "passed": true,
+      "output": "Skill is valid!"
+    },
+    {
+      "check": "museum-things frontmatter",
+      "passed": true,
+      "output": "Skill is valid!"
+    },
+    {
+      "check": "relative link variants.md → materials.md",
+      "passed": true
+    },
+    {
+      "check": "relative link README.md → skills/museum-things/SKILL.md",
+      "passed": true
+    },
+    {
+      "check": "relative link README.md → skills/museum-customs/SKILL.md",
+      "passed": true
+    },
+    {
+      "check": "relative link README.md → variants.md",
+      "passed": true
+    },
+    {
+      "check": "relative link README.md → materials.md",
+      "passed": true
+    },
+    {
+      "check": "relative link README.md → admission.md",
+      "passed": true
+    },
+    {
+      "check": "relative link README.md → checks.json",
+      "passed": true
+    },
+    {
+      "check": "relative link README.md → standards-lock.json",
+      "passed": true
+    },
+    {
+      "check": "six scenario variants",
+      "passed": true
+    },
+    {
+      "check": "no HTML or runtime added",
+      "passed": true
+    },
+    {
+      "check": "git diff --check",
+      "passed": true,
+      "output": ""
+    }
+  ],
+  "passed": 13,
+  "failed": 0,
+  "not_verified": [
+    "owner approval",
+    "independent review",
+    "museum page G0-G7",
+    "browser prototypes",
+    "public image rights"
+  ],
+  "preflight_old_slug": {
+    "passed": 14,
+    "failed": 1,
+    "reason": "issue.json absent; thematic approval not established"
+  }
+}
