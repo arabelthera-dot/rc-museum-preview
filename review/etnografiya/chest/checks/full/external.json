@@ -1,0 +1,21 @@
+{
+  "url": "https://htmlpreview.github.io/?https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/chest-full-0909/review/etnografiya/chest/index.html",
+  "http": 200,
+  "source_matches": true,
+  "audio": {
+    "duration": 165.36,
+    "playing": true
+  },
+  "film": {
+    "duration": 82.368,
+    "width": 1920,
+    "playing": true
+  },
+  "viewer": true,
+  "geometry": {
+    "overflow": false,
+    "buttons": 619.96875,
+    "broken": 0
+  },
+  "errors": []
+}

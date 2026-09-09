@@ -6,8 +6,7 @@
   "museum": "things",
   "errors": [
     "profile: обязательный файл не указан",
-    "reference: в принятом профиле не закреплён эталон с SHA-256",
-    "review: обязательный файл не указан"
+    "reference: в принятом профиле не закреплён эталон с SHA-256"
   ],
   "inputs": {
     "/home/agent/worktrees/chest-full-0909/review/etnografiya/chest/index.html": "413a8907a91f3a61828f41abec87c7e2ed7a160847e45bc3b577808368535dd0",
@@ -25,7 +24,8 @@
     "/home/agent/worktrees/chest-full-0909/review/etnografiya/chest/checks/full/390-first_screen.png": "4ee9f41f059be41d9091a92f610d6bf2e0efe44fc34282f67e88c2fbe9751b70",
     "/home/agent/worktrees/chest-full-0909/review/etnografiya/chest/checks/full/390-full_page.png": "41a7083d16428824047a59b6a97899f2d68d19d908b8d9b8d463e259261f01fc",
     "/home/agent/worktrees/chest-full-0909/review/etnografiya/chest/checks/full/1440-first_screen.png": "adaa5ec1156ad14da04a582af7fa0a46c711f44d98c3badbdc2c8215607d4c0c",
-    "/home/agent/worktrees/chest-full-0909/review/etnografiya/chest/checks/full/1440-full_page.png": "92c795f74c6e4a64ec3d9cc9255fae0ce687ab4445240a30efdddc044724d3fc"
+    "/home/agent/worktrees/chest-full-0909/review/etnografiya/chest/checks/full/1440-full_page.png": "92c795f74c6e4a64ec3d9cc9255fae0ce687ab4445240a30efdddc044724d3fc",
+    "/home/agent/worktrees/chest-full-0909/review/etnografiya/chest/checks/full/review.json": "5bd144bec36955800a69ddaf6f0a539fe3d9ad6bd8f55a66b3cf845fb607ae4b"
   },
   "request": {
     "kind": "page",
@@ -34,7 +34,7 @@
     "profile": null,
     "issue": "/home/agent/worktrees/chest-full-0909/review/etnografiya/chest/issue.json",
     "browser_report": "/home/agent/worktrees/chest-full-0909/review/etnografiya/chest/checks/full/browser.json",
-    "review": null
+    "review": "/home/agent/worktrees/chest-full-0909/review/etnografiya/chest/checks/full/review.json"
   },
   "page_sha256": "413a8907a91f3a61828f41abec87c7e2ed7a160847e45bc3b577808368535dd0",
   "core_checks": {
