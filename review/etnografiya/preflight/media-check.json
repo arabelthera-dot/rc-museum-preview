@@ -22,6 +22,16 @@
       "sha256": "9321ab18ec6848263d62bf29743f5078288afdd84b95ab91de84befdecb29acc",
       "visually_checked": true,
       "published": false
+    },
+    {
+      "role": "front-larger-request",
+      "url": "https://collection.ethnomuseum.ru/api/spf/Z8FH8HkvzvKyuixnt_FSwi4_MIHJ5rG8EC-MtQmqZ-ZAQg4OCYDMBjX-lhdlVnAf.jpg?w=4096&h=4096",
+      "width": 1333,
+      "height": 2000,
+      "bytes": 153638,
+      "sha256": "1423aefd10d6b71e98321e2ba3c77b0bf9fdb3a9023c3f5f4febbaaca6dcc427",
+      "visually_checked": true,
+      "published": false
     }
   ],
   "rights_status": "Условия сайта прочитаны; разрешение на публичное использование этих фотографий не подтверждено",
