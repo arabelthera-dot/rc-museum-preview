@@ -1,0 +1,21 @@
+{
+  "date": "2026-09-09",
+  "status": "editorial_review",
+  "scope": "Single substantial visual chest story; not a full calendar-day release",
+  "browser": {
+    "mobile": "390x844, no horizontal overflow",
+    "desktop": "1440x1000, no horizontal overflow",
+    "modal_opens_actual_drawers_photo": true,
+    "natural_pixel_size_scrolls_on_mobile": true,
+    "escape_closes": true,
+    "gallery_updates_image_and_explanation": true,
+    "quiz_feedback": true,
+    "javascript_errors": []
+  },
+  "images": "3 unmodified embedded JPEGs from Pudov 2022 article, Russian Museum object ONI/M-4",
+  "limitations": [
+    "Museum full production gates not claimed",
+    "Photograph reproduction rights not cleared for commercial publication",
+    "Source image resolution 697x519, 517x628, 835x626"
+  ]
+}
