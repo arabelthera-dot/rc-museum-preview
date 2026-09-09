@@ -11,7 +11,7 @@ for i,b in enumerate(blocks):
 s=s.replace('/*FONT*/','\n'.join(blocks))
 for name in ['chest','lock','drawers']:
  s=s.replace('{{'+name+'}}','data:image/jpeg;base64,'+base64.b64encode((p/'media'/f'{name}.jpeg').read_bytes()).decode())
-s=s.replace('<script src="https://arabelthera-dot.github.io/rc-museum-preview/assets/museum-support.js"></script>','<script>'+ (p.parents[2]/'assets/museum-support.js').read_text() +'</script>')
+s=s.replace('<script src="https://arabelthera-dot.github.io/rc-museum-preview/assets/museum-support.js"></script>','<script>'+ (p.parents[2]/'assets/museum-support.js').read_text().replace('</script', '<\\/script') +'</script>')
 assert '{{' not in s
 (p/'index.html').write_text(s)
 print('Built',len(s.encode()),'bytes;',len(blocks),'font blocks')
