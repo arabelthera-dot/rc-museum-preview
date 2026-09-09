@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "status": "rejected",
+  "page": "/home/agent/worktrees/chest-full-0909/review/etnografiya/chest/index.html",
+  "kind": "page",
+  "museum": "things",
+  "errors": [
+    "profile: обязательный файл не указан",
+    "reference: в принятом профиле не закреплён эталон с SHA-256",
+    "review: обязательный файл не указан"
+  ],
+  "inputs": {
+    "/home/agent/worktrees/chest-full-0909/review/etnografiya/chest/index.html": "413a8907a91f3a61828f41abec87c7e2ed7a160847e45bc3b577808368535dd0",
+    "/home/agent/worktrees/museum-delivery-control/russian-civilization/platform/contracts/accepted-page-profiles.json": "ade39dbfdaa669346cd5af64addad8962d27d89b75e4c5abafd72f2dc8e675d2",
+    "/home/agent/worktrees/museum-delivery-control/russian-civilization/tools/page_delivery.py": "6cfb3125be929da3b774003cde6235b08f877c34be83a909c935069aa0273355",
+    "/home/agent/worktrees/museum-delivery-control/russian-civilization/tools/rc-page.py": "f0316cb187d79454694d908c605389cf0afed3261bca7ee7f7fcf6648ceaf880",
+    "/home/agent/worktrees/museum-delivery-control/russian-civilization/tools/audit-pages.py": "5b2cac6c5daee8079cc3da61ebe55dd572eaa82d60a05a40c1ae3f4432e9a6b5",
+    "/home/agent/worktrees/museum-delivery-control/russian-civilization/docs/skills/museum-page-production/scripts/page_gate.py": "442a4f73af8de2799b82eebf85e75d1e0eab171c0da577ce3ce52ab76106de46",
+    "/home/agent/worktrees/museum-delivery-control/russian-civilization/platform/runtime/profile_contract.py": "c697584b941a6374b1be5c306f09c30dba777c7d3ca75369c5e3e5973c57429b",
+    "/home/agent/worktrees/chest-full-0909/review/etnografiya/chest/issue.json": "74778bbe8e560015beda6bb84fa70b32aa8a836a1ba284d0c06bf84391d20fa2",
+    "/home/agent/worktrees/chest-full-0909/review/etnografiya/chest/checks/full/browser.json": "e4b094c25696c3bc1eedc8128f707e3350ac2b0b7c5232e51b5917fd49ddadda",
+    "/home/agent/worktrees/chest-full-0909/review/etnografiya/chest/checks/full/rendered.html": "0381e2f53f1cc77acf70608fdae8ff8e1f774213b85024d963860d5eeab1174d",
+    "/home/agent/worktrees/chest-full-0909/review/etnografiya/chest/checks/full/320-first_screen.png": "66e494a27e101a14a219f29f542de07346f386ab896bfedd48ef93c9e81a3bec",
+    "/home/agent/worktrees/chest-full-0909/review/etnografiya/chest/checks/full/320-full_page.png": "63c899e52362b9fbb05ad5b8d11d59b250835c6e06bf65e9c22d3b5eeaac80ae",
+    "/home/agent/worktrees/chest-full-0909/review/etnografiya/chest/checks/full/390-first_screen.png": "4ee9f41f059be41d9091a92f610d6bf2e0efe44fc34282f67e88c2fbe9751b70",
+    "/home/agent/worktrees/chest-full-0909/review/etnografiya/chest/checks/full/390-full_page.png": "41a7083d16428824047a59b6a97899f2d68d19d908b8d9b8d463e259261f01fc",
+    "/home/agent/worktrees/chest-full-0909/review/etnografiya/chest/checks/full/1440-first_screen.png": "adaa5ec1156ad14da04a582af7fa0a46c711f44d98c3badbdc2c8215607d4c0c",
+    "/home/agent/worktrees/chest-full-0909/review/etnografiya/chest/checks/full/1440-full_page.png": "92c795f74c6e4a64ec3d9cc9255fae0ce687ab4445240a30efdddc044724d3fc"
+  },
+  "request": {
+    "kind": "page",
+    "museum": "things",
+    "project": "/home/agent/worktrees/museum-delivery-control/russian-civilization",
+    "profile": null,
+    "issue": "/home/agent/worktrees/chest-full-0909/review/etnografiya/chest/issue.json",
+    "browser_report": "/home/agent/worktrees/chest-full-0909/review/etnografiya/chest/checks/full/browser.json",
+    "review": null
+  },
+  "page_sha256": "413a8907a91f3a61828f41abec87c7e2ed7a160847e45bc3b577808368535dd0",
+  "core_checks": {
+    "core.header": true,
+    "core.crumbs": true,
+    "core.date": true,
+    "core.caption": true,
+    "core.video": true,
+    "core.audio": true,
+    "core.calendar": true,
+    "core.next": true,
+    "core.buttons": true,
+    "core.header_order": true
+  }
+}

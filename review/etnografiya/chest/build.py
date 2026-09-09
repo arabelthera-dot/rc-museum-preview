@@ -1,7 +1,7 @@
 from pathlib import Path
 import base64,re
 p=Path(__file__).parent
-s=(p/'story.html').read_text().replace('/*TOKENS*/',(p/'tokens.css').read_text())
+s=(p/'full-source.html').read_text()
 css=p.parents[2]/'assets/fonts.css'
 fontcss=css.read_text()
 blocks=[b for b in re.findall(r'@font-face\s*\{[^}]+\}',fontcss) if "font-family: 'Lora'" in b and 'font-style: normal' in b and 'font-weight: 400' in b and ('U+0301' in b or 'U+0000' in b)]

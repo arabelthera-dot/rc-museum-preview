@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "page_sha256": "413a8907a91f3a61828f41abec87c7e2ed7a160847e45bc3b577808368535dd0",
+  "url": "https://chest.local/index.html",
+  "errors": [],
+  "viewports": [
+    {
+      "width": 320,
+      "height": 844,
+      "content_width": 305,
+      "overflow": false,
+      "broken_images": 0,
+      "fonts_loaded": true,
+      "h1_bottom": 517.515625,
+      "buttons_bottom": 745.03125,
+      "support_count": 2,
+      "support_fraction": 0.12247236406105709,
+      "first_screen": {
+        "path": "320-first_screen.png",
+        "sha256": "66e494a27e101a14a219f29f542de07346f386ab896bfedd48ef93c9e81a3bec"
+      },
+      "full_page": {
+        "path": "320-full_page.png",
+        "sha256": "63c899e52362b9fbb05ad5b8d11d59b250835c6e06bf65e9c22d3b5eeaac80ae"
+      }
+    },
+    {
+      "width": 360,
+      "height": 844,
+      "content_width": 345,
+      "overflow": false,
+      "broken_images": 0,
+      "fonts_loaded": true,
+      "h1_bottom": 468.6875,
+      "buttons_bottom": 675.1875,
+      "support_count": 2,
+      "support_fraction": 0.1214599609375
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "content_width": 375,
+      "overflow": false,
+      "broken_images": 0,
+      "fonts_loaded": true,
+      "h1_bottom": 468.6875,
+      "buttons_bottom": 619.96875,
+      "support_count": 2,
+      "support_fraction": 0.12236365118300938,
+      "first_screen": {
+        "path": "390-first_screen.png",
+        "sha256": "4ee9f41f059be41d9091a92f610d6bf2e0efe44fc34282f67e88c2fbe9751b70"
+      },
+      "full_page": {
+        "path": "390-full_page.png",
+        "sha256": "41a7083d16428824047a59b6a97899f2d68d19d908b8d9b8d463e259261f01fc"
+      }
+    },
+    {
+      "width": 768,
+      "height": 844,
+      "content_width": 753,
+      "overflow": false,
+      "broken_images": 0,
+      "fonts_loaded": true,
+      "h1_bottom": 658.15625,
+      "buttons_bottom": 825.625,
+      "support_count": 2,
+      "support_fraction": 0.1782551031646964
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "content_width": 1425,
+      "overflow": false,
+      "broken_images": 0,
+      "fonts_loaded": true,
+      "h1_bottom": 674.234375,
+      "buttons_bottom": 841.703125,
+      "support_count": 2,
+      "support_fraction": 0.1887478108581436,
+      "first_screen": {
+        "path": "1440-first_screen.png",
+        "sha256": "adaa5ec1156ad14da04a582af7fa0a46c711f44d98c3badbdc2c8215607d4c0c"
+      },
+      "full_page": {
+        "path": "1440-full_page.png",
+        "sha256": "92c795f74c6e4a64ec3d9cc9255fae0ce687ab4445240a30efdddc044724d3fc"
+      }
+    }
+  ],
+  "checks": [
+    {
+      "name": "ошибка не даёт баллов",
+      "pass": true
+    },
+    {
+      "name": "ошибка объяснена",
+      "pass": true
+    },
+    {
+      "name": "достижимы 100 баллов",
+      "pass": true
+    },
+    {
+      "name": "повтор не накручивает счёт",
+      "pass": true
+    },
+    {
+      "name": "диплом открыт",
+      "pass": true
+    },
+    {
+      "name": "диплом содержит результат",
+      "pass": true
+    },
+    {
+      "name": "сброс результата",
+      "pass": true
+    },
+    {
+      "name": "ракурс ящиков выбран",
+      "pass": true
+    },
+    {
+      "name": "просмотр открыт",
+      "pass": true
+    },
+    {
+      "name": "исходный размер",
+      "pass": true
+    },
+    {
+      "name": "возврат фокуса",
+      "pass": true
+    },
+    {
+      "name": "календарь раскрывает хук",
+      "pass": true
+    },
+    {
+      "name": "календарь переключает месяц",
+      "pass": true
+    },
+    {
+      "name": "аудиогид играет",
+      "pass": true
+    },
+    {
+      "name": "аудиогид на паузе",
+      "pass": true
+    },
+    {
+      "name": "ролик играет",
+      "pass": true
+    },
+    {
+      "name": "геометрия 320",
+      "pass": true
+    },
+    {
+      "name": "геометрия 360",
+      "pass": true
+    },
+    {
+      "name": "геометрия 390",
+      "pass": true
+    },
+    {
+      "name": "обе кнопки первого экрана",
+      "pass": true
+    },
+    {
+      "name": "геометрия 768",
+      "pass": true
+    },
+    {
+      "name": "геометрия 1440",
+      "pass": true
+    },
+    {
+      "name": "режим уменьшения движения",
+      "pass": true
+    },
+    {
+      "name": "нет ошибок JavaScript",
+      "pass": true
+    }
+  ],
+  "dom": {
+    "path": "rendered.html",
+    "sha256": "0381e2f53f1cc77acf70608fdae8ff8e1f774213b85024d963860d5eeab1174d"
+  },
+  "passed": 24
+}

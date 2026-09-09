@@ -1,0 +1,309 @@
+{
+  "schema_version": "1.0.0",
+  "museum_id": "rc:museum:things",
+  "issue_id": "rc:issue:things-chest-1750",
+  "content_family_id": "rc:family:things-chest",
+  "version": "1.0.0",
+  "identity": {
+    "title_ru": "За пятью замками",
+    "slug": "chest-1750",
+    "calendar_slot": "09-23",
+    "museum_name_ru": "Музей русских вещей и мастерства",
+    "language": "ru",
+    "summary_ru": "Ларец 1750 года через внешность, надпись и устройство ящиков.",
+    "date_basis": "дата надписи; не изменение полного календаря музея"
+  },
+  "lifecycle": {
+    "current": "preview",
+    "history": [
+      {
+        "status": "preview",
+        "at": "2026-09-09T15:12:00Z",
+        "actor": "codex-bot",
+        "note_ru": "Полная сборка для показа по прямой команде Сергея на имеющихся материалах; права не переименованы в полученную лицензию."
+      }
+    ]
+  },
+  "interactive": {
+    "title_ru": "Прочитай устройство ларца",
+    "type": "documentary-viewpoints",
+    "visitor_action_ru": "Открыть три настоящих ракурса и найти доказательство ответа на самом предмете.",
+    "exclusive_insight_ru": "Соединить закрытый вид с девятью отделениями и восемью ящиками внутри.",
+    "wow_effect_ru": "За единой крышкой открывается организованное внутреннее пространство.",
+    "text_alternative_ru": "Полный рассказ, описания ракурсов, объяснения ответов и расшифровки медиа.",
+    "engine": "existing chest viewer; museum-chrome; museum-audioguide; museum-calendar-month; museum-support",
+    "unique_to_issue": true
+  },
+  "sources": [
+    {
+      "source_id": "rc:source:chest-s01",
+      "title_ru": "Карточка Русского музея: ОНИ/М-4",
+      "publisher_ru": "Государственный Русский музей",
+      "url": "https://rusmuseumvrm.ru/data/collections/folk_art/oni-m-4/index.php",
+      "source_type": "museum",
+      "language": "ru",
+      "checked_at": "2026-09-09"
+    },
+    {
+      "source_id": "rc:source:chest-s02",
+      "title_ru": "Ларец-подголовник на ARTEFACT",
+      "publisher_ru": "Государственный Русский музей / ARTEFACT",
+      "url": "https://ar.culture.ru/ru/subject/larec-podgolovnik",
+      "source_type": "museum",
+      "language": "ru",
+      "checked_at": "2026-09-09"
+    },
+    {
+      "source_id": "rc:source:chest-s03",
+      "title_ru": "Г. А. Пудов. О сундуке-подголовнике (1750) из коллекции отдела народного искусства Государственного Русского музея",
+      "publisher_ru": "Вестник МГХПА, 2022, №2, часть 2, с.169–178",
+      "url": "https://rghpu.ru/uploads/catalogfiles/7984_2022_2_2_vestnik.pdf",
+      "source_type": "research",
+      "language": "ru",
+      "checked_at": "2026-09-09"
+    },
+    {
+      "source_id": "rc:source:chest-s04",
+      "title_ru": "Условия использования и публикации материалов Русского музея",
+      "publisher_ru": "Государственный Русский музей",
+      "url": "https://rusmuseumvrm.ru/terms/index.php",
+      "source_type": "museum",
+      "language": "ru",
+      "checked_at": "2026-09-09"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "rc:claim:chest-c01",
+      "text_ru": "Ларец датирован 1750 годом; номер ОНИ/М-4; размеры 34 × 55 × 42 см.",
+      "source_ids": [
+        "rc:source:chest-s01",
+        "rc:source:chest-s02",
+        "rc:source:chest-s03"
+      ],
+      "key_claim": true,
+      "confidence": "supported",
+      "status": "fact",
+      "note_ru": "Метаданные совпали. Календарный день музея из этой даты не выводится."
+    },
+    {
+      "claim_id": "rc:claim:chest-c02",
+      "text_ru": "Музейная карточка указывает И. Чупятова; на личине читается имя Ивана Чупятова.",
+      "source_ids": [
+        "rc:source:chest-s01",
+        "rc:source:chest-s03"
+      ],
+      "key_claim": false,
+      "confidence": "supported",
+      "status": "catalogue_attribution",
+      "note_ru": "Сохранять отличие каталожной атрибуции от чтения надписи."
+    },
+    {
+      "claim_id": "rc:claim:chest-c03",
+      "text_ru": "Пудов допускает принадлежность имени на надписи мастеру или владельцу.",
+      "source_ids": [
+        "rc:source:chest-s03"
+      ],
+      "key_claim": false,
+      "confidence": "needs_review",
+      "status": "interpretation",
+      "note_ru": "Нельзя объявить подтверждённую биографию мастера."
+    },
+    {
+      "claim_id": "rc:claim:chest-c04",
+      "text_ru": "В исследовании описаны три внутренних и два подвесных замка.",
+      "source_ids": [
+        "rc:source:chest-s03"
+      ],
+      "key_claim": false,
+      "confidence": "supported",
+      "status": "source_statement",
+      "note_ru": "Скрытые механизмы на имеющихся кадрах не видны; работа замков не проверена."
+    },
+    {
+      "claim_id": "rc:claim:chest-c05",
+      "text_ru": "Девять отделений, восемь с ящиками; ящики различаются по высоте.",
+      "source_ids": [
+        "rc:source:chest-s02",
+        "rc:source:chest-s03"
+      ],
+      "key_claim": true,
+      "confidence": "supported",
+      "status": "source_statement",
+      "note_ru": "Тексты могут быть зависимы. Фотография помогает рассмотреть ряды; содержимое неизвестно."
+    },
+    {
+      "claim_id": "rc:claim:chest-c06",
+      "text_ru": "Холмогоры или Великий Устюг предложены как вероятное место происхождения.",
+      "source_ids": [
+        "rc:source:chest-s03"
+      ],
+      "key_claim": false,
+      "confidence": "needs_review",
+      "status": "interpretation",
+      "note_ru": "Не превращать в достоверное место изготовления."
+    },
+    {
+      "claim_id": "rc:claim:chest-c07",
+      "text_ru": "Повреждения шарниров исследователь связывает с возможной попыткой взлома.",
+      "source_ids": [
+        "rc:source:chest-s03"
+      ],
+      "key_claim": false,
+      "confidence": "needs_review",
+      "status": "interpretation",
+      "note_ru": "Не называть доказанный взлом и не инсценировать преступление."
+    },
+    {
+      "claim_id": "rc:claim:chest-c08",
+      "text_ru": "Каталог: собрание Половцова. Исследование: приобретение в 1914 году у Расула Магомеда Оглы; поступление из Эрмитажа в 1938 году.",
+      "source_ids": [
+        "rc:source:chest-s01",
+        "rc:source:chest-s03"
+      ],
+      "key_claim": false,
+      "confidence": "needs_review",
+      "status": "unresolved_provenance",
+      "note_ru": "Сведения не обязательно противоречат друг другу. Промежуточные владельцы и связь цепочек не установлены; подготовлен вопрос музею."
+    },
+    {
+      "claim_id": "rc:claim:chest-c09",
+      "text_ru": "Первоначальное содержимое именно этого ларца в прочитанных материалах не установлено.",
+      "source_ids": [
+        "rc:source:chest-s01",
+        "rc:source:chest-s02",
+        "rc:source:chest-s03"
+      ],
+      "key_claim": false,
+      "confidence": "supported",
+      "status": "unknown",
+      "note_ru": "Назначение типа изделия не доказывает, что конкретный владелец хранил письма, деньги или приданое."
+    }
+  ],
+  "objects": [
+    {
+      "object_id": "rc:object:oni-m-4",
+      "title_ru": "Ларец-подголовник",
+      "date_display_ru": "1750",
+      "attribution_ru": "И. Чупятов по каталогу; имя мастера или владельца по исследованию",
+      "holder_ru": "Государственный Русский музей, ОНИ/М-4",
+      "source_ids": [
+        "rc:source:chest-s01",
+        "rc:source:chest-s03"
+      ]
+    }
+  ],
+  "images": [
+    {
+      "image_id": "rc:image:chest-chest",
+      "object_id": "rc:object:oni-m-4",
+      "local_path": "media/chest.jpeg",
+      "sha256": "1e014cc092b0c01488f126c9e18d5dbc6f3509bbe69e56a6dfedf4e2371993c8",
+      "source_url": "https://rghpu.ru/uploads/catalogfiles/7984_2022_2_2_vestnik.pdf",
+      "credit_ru": "Государственный Русский музей, ОНИ/М-4. Иллюстрация к статье Г. А. Пудова, 2022.",
+      "alt_ru": "Общий вид ларца с железными полосами и просечными накладками",
+      "rights": {
+        "status": "pending",
+        "checked_at": "2026-09-09",
+        "commercial_use": "unclear",
+        "derivatives": "unclear",
+        "ai_modification": "not_requested",
+        "basis_ru": "Открытый PDF не является разрешением; порядок запроса S04. Право повторного использования цифровой фотографии отдельно не подтверждено."
+      }
+    },
+    {
+      "image_id": "rc:image:chest-lock",
+      "object_id": "rc:object:oni-m-4",
+      "local_path": "media/lock.jpeg",
+      "sha256": "21ebb5d88095d382b6c508950105b9fdd186b2b22170fec5aa89ac01e0e15850",
+      "source_url": "https://rghpu.ru/uploads/catalogfiles/7984_2022_2_2_vestnik.pdf",
+      "credit_ru": "Государственный Русский музей, ОНИ/М-4. Иллюстрация к статье Г. А. Пудова, 2022.",
+      "alt_ru": "Замочная пластина с надписью и отверстиями для ключей",
+      "rights": {
+        "status": "pending",
+        "checked_at": "2026-09-09",
+        "commercial_use": "unclear",
+        "derivatives": "unclear",
+        "ai_modification": "not_requested",
+        "basis_ru": "Открытый PDF не является разрешением; порядок запроса S04. Право повторного использования цифровой фотографии отдельно не подтверждено."
+      }
+    },
+    {
+      "image_id": "rc:image:chest-drawers",
+      "object_id": "rc:object:oni-m-4",
+      "local_path": "media/drawers.jpeg",
+      "sha256": "ec70a655ee8d6469da231d1bfd6e5d2816e4239f09562e6f254ac808ae491e9a",
+      "source_url": "https://rghpu.ru/uploads/catalogfiles/7984_2022_2_2_vestnik.pdf",
+      "credit_ru": "Государственный Русский музей, ОНИ/М-4. Иллюстрация к статье Г. А. Пудова, 2022.",
+      "alt_ru": "Внутренний вид ларца: деревянные ящики и пустое верхнее отделение справа",
+      "rights": {
+        "status": "pending",
+        "checked_at": "2026-09-09",
+        "commercial_use": "unclear",
+        "derivatives": "unclear",
+        "ai_modification": "not_requested",
+        "basis_ru": "Открытый PDF не является разрешением; порядок запроса S04. Право повторного использования цифровой фотографии отдельно не подтверждено."
+      }
+    }
+  ],
+  "risks": {
+    "historical": {
+      "level": "medium",
+      "reason_ru": "Существуют отмеченные ограничения источников, атрибуции и прав.",
+      "mitigation_ru": "Сохранены подписи и статусы; показ поручен владельцем, неизвестные факты не дописываются."
+    },
+    "legal": {
+      "level": "medium",
+      "reason_ru": "Существуют отмеченные ограничения источников, атрибуции и прав.",
+      "mitigation_ru": "Сохранены подписи и статусы; показ поручен владельцем, неизвестные факты не дописываются."
+    },
+    "reputational": {
+      "level": "medium",
+      "reason_ru": "Существуют отмеченные ограничения источников, атрибуции и прав.",
+      "mitigation_ru": "Сохранены подписи и статусы; показ поручен владельцем, неизвестные факты не дописываются."
+    }
+  },
+  "seo": {
+    "title_ru": "За пятью замками",
+    "description_ru": "Ларец 1750 года: фотографии, аудиогид, ролик и рассматривание.",
+    "h1_ru": "За пятью замками",
+    "canonical_url": "https://htmlpreview.github.io/?https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/chest-full-0909/review/etnografiya/chest/index.html",
+    "index_state": "noindex",
+    "primary_query_ru": "ларец подголовник 1750 Чупятов",
+    "og_image_id": "rc:image:chest-chest"
+  },
+  "media": [
+    {
+      "media_id": "rc:media:chest-audio",
+      "kind": "audio",
+      "platform": "museum",
+      "status": "generated",
+      "path": "media/audioguide.mp3"
+    },
+    {
+      "media_id": "rc:media:chest-film",
+      "kind": "video",
+      "platform": "museum",
+      "status": "generated",
+      "path": "media/chest-film.mp4"
+    }
+  ],
+  "publication": {
+    "blockers": [
+      "Строгая регистрация нового предметного профиля и эталона не завершена",
+      "Лицензия держателя не получена; показ на имеющемся материале прямо поручен Сергеем 09.09"
+    ],
+    "approvals": {
+      "fact_check": true,
+      "rights": false,
+      "editorial": true
+    },
+    "target_path": "review/etnografiya/chest/index.html"
+  },
+  "score_ledger": {
+    "main": 40,
+    "date": 20,
+    "pattern": 20,
+    "evidence": 20
+  }
+}
