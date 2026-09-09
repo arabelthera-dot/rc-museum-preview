@@ -1,0 +1,169 @@
+{
+  "status": "research_package_checked",
+  "checked_at": "2026-09-09",
+  "checks": [
+    {
+      "check": "claim_source_refs",
+      "status": "pass",
+      "evidence": "9 утверждений, все ссылки разрешаются в реестре"
+    },
+    {
+      "check": "unique_ids",
+      "status": "pass",
+      "evidence": "Идентификаторы утверждений и источников уникальны"
+    },
+    {
+      "check": "image_chest",
+      "status": "pass",
+      "evidence": {
+        "size": [
+          697,
+          519
+        ],
+        "bytes": 43924,
+        "sha256": "1e014cc092b0c01488f126c9e18d5dbc6f3509bbe69e56a6dfedf4e2371993c8"
+      }
+    },
+    {
+      "check": "image_lock",
+      "status": "pass",
+      "evidence": {
+        "size": [
+          517,
+          628
+        ],
+        "bytes": 57552,
+        "sha256": "21ebb5d88095d382b6c508950105b9fdd186b2b22170fec5aa89ac01e0e15850"
+      }
+    },
+    {
+      "check": "image_drawers",
+      "status": "pass",
+      "evidence": {
+        "size": [
+          835,
+          626
+        ],
+        "bytes": 83062,
+        "sha256": "ec70a655ee8d6469da231d1bfd6e5d2816e4239f09562e6f254ac808ae491e9a"
+      }
+    },
+    {
+      "check": "rights_are_pending",
+      "status": "pass",
+      "evidence": "Ни одна цифровая копия не объявлена разрешённой к публикации"
+    },
+    {
+      "check": "hook_150",
+      "status": "pass",
+      "evidence": {
+        "characters": 150,
+        "text": "Пять замков защищали дубовый ларец, а железо на крышке превращалось в кружево. Внутри — восемь ящиков: русское мастерство видно по обе стороны крышки."
+      }
+    },
+    {
+      "check": "hook_157",
+      "status": "pass",
+      "evidence": {
+        "characters": 157,
+        "text": "Восемь ящиков скрыты за крышкой ларца 1750 года. Снаружи — железные полосы и ажурный узор; внутри — устройство, которое открывается только при смене ракурса."
+      }
+    },
+    {
+      "check": "hook_159",
+      "status": "pass",
+      "evidence": {
+        "characters": 159,
+        "text": "На железе сохранились год и имя, за крышкой — восемь ящиков. Ларец 1750 года позволяет рассмотреть работу русских мастеров, даже когда их биографии неизвестны."
+      }
+    },
+    {
+      "check": "timing_75",
+      "status": "pass",
+      "evidence": {
+        "total_seconds": 75,
+        "scenes": 12,
+        "final_card_seconds": 6
+      }
+    },
+    {
+      "check": "timing_40",
+      "status": "pass",
+      "evidence": {
+        "total_seconds": 40,
+        "scenes": 7,
+        "final_card_seconds": 6
+      }
+    },
+    {
+      "check": "audio_script_exists",
+      "status": "pass",
+      "evidence": {
+        "words": 283,
+        "pauses": 3,
+        "note": "Длительность не измерена: записи ещё нет"
+      }
+    },
+    {
+      "check": "standards_hashes",
+      "status": "pass",
+      "evidence": "8 файлов правил совпали с записанными SHA-256"
+    },
+    {
+      "check": "original_page_unchanged",
+      "status": "pass",
+      "evidence": {
+        "tracked_diff": [],
+        "note": "Новые файлы ограничены production/; старые HTML и JPEG не редактировались"
+      }
+    }
+  ],
+  "passed": 14,
+  "failed": 0,
+  "not_checked": [
+    "Готовые MP3/MP4 отсутствуют",
+    "Браузерная приёмка новой полной страницы: страницы нет",
+    "Независимая рецензия и живой посетитель не подключались",
+    "Штатный tools/text-metrics.py в указанных проектом путях отсутствует",
+    "Решение держателя о правах не получено"
+  ],
+  "working_delivery_command_present": false,
+  "not_page_acceptance": true,
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "548288c0a5757261128745d027ec4b468e4c44b2a97c6eea4c0c83091dd8222e",
+      "bytes": 4377
+    },
+    {
+      "path": "audioguide.md",
+      "sha256": "04be76e971af59e018ae724d39fb11fb4d1ea67118afee79c372e9fd9b6f6526",
+      "bytes": 6152
+    },
+    {
+      "path": "completion-map.md",
+      "sha256": "6047a1298f67bf58a074cda1bf36a33a725b88c737192373b6b9e98a522232cc",
+      "bytes": 6423
+    },
+    {
+      "path": "hooks.md",
+      "sha256": "a5da78c229cff2e38e3be3f9f9e9ecc54093711eae9a1f0fa9656493ed474236",
+      "bytes": 1826
+    },
+    {
+      "path": "materials.json",
+      "sha256": "009236ba3caab82bab528271a522594aa13bca4086f670e35463453f0f69616b",
+      "bytes": 14149
+    },
+    {
+      "path": "rights-request.md",
+      "sha256": "0bf1b36775918431625ee5ea272f9f92422ed70517eb7540eaef5268788f34dc",
+      "bytes": 5145
+    },
+    {
+      "path": "video.md",
+      "sha256": "f345a2a3400dd9af3cac47165fa8e55aabfdbb9d9ea31577b89992b749d6aea9",
+      "bytes": 12317
+    }
+  ]
+}

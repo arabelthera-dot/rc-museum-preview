@@ -1,0 +1,259 @@
+{
+  "format": "research-materials",
+  "version": "2026-09-09.1",
+  "status": "draft",
+  "author": "codex-bot",
+  "museum": "Музей русских вещей и мастерства",
+  "object_id": "ОНИ/М-4",
+  "not_issue_passport": true,
+  "calendar_slot": null,
+  "sources": [
+    {
+      "id": "S01",
+      "title": "Карточка Русского музея: ОНИ/М-4",
+      "url": "https://rusmuseumvrm.ru/data/collections/folk_art/oni-m-4/index.php",
+      "publisher": "Государственный Русский музей",
+      "checked_at": "2026-09-09",
+      "method": "web.open: текст карточки прочитан",
+      "independence_group": "russian-museum"
+    },
+    {
+      "id": "S02",
+      "title": "Ларец-подголовник на ARTEFACT",
+      "url": "https://ar.culture.ru/ru/subject/larec-podgolovnik",
+      "publisher": "Государственный Русский музей / ARTEFACT",
+      "checked_at": "2026-09-09",
+      "method": "web.open: карточка и описание прочитаны; файлы снимков повторно получить не удалось",
+      "independence_group": "russian-museum",
+      "note": "Другой сайт, но тот же держатель и близкий текст. Не считать независимым от S01 или автоматически независимым от S03."
+    },
+    {
+      "id": "S03",
+      "title": "Г. А. Пудов. О сундуке-подголовнике (1750) из коллекции отдела народного искусства Государственного Русского музея",
+      "url": "https://rghpu.ru/uploads/catalogfiles/7984_2022_2_2_vestnik.pdf",
+      "publisher": "Вестник МГХПА, 2022, №2, часть 2, с.169–178",
+      "doi": "10.37485/1997-4663_2022_2_2_169_178",
+      "checked_at": "2026-09-09",
+      "method": "Текст ранее загруженного PDF прочитан из /tmp/chest-only.txt; повторный web.open вернул Internal Error, свежая сетевая доступность PDF не заявляется",
+      "local_source_sha256": "d3e621eb365bfd072314b6aae7953846a016fffe8d6350dd658b92d4197d6a48",
+      "local_source_bytes": 15018600,
+      "independence_group": "pudov-study",
+      "note": "Исследование сотрудника того же музея. Самостоятельный анализ с архивными ссылками; независимость происхождения каждого утверждения требует отдельной оценки."
+    },
+    {
+      "id": "S04",
+      "title": "Условия использования и публикации материалов Русского музея",
+      "url": "https://rusmuseumvrm.ru/terms/index.php",
+      "publisher": "Государственный Русский музей",
+      "checked_at": "2026-09-09",
+      "method": "web.click из карточки предмета: условия прочитаны",
+      "independence_group": "russian-museum",
+      "finding": "Для изображений и права публикации музей просит официальное письмо на бланке учреждения с указанием предметов и целей."
+    }
+  ],
+  "claims": [
+    {
+      "id": "C01",
+      "status": "fact",
+      "text": "Ларец датирован 1750 годом; номер ОНИ/М-4; размеры 34 × 55 × 42 см.",
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03"
+      ],
+      "limit": "Метаданные совпали. Календарный день музея из этой даты не выводится."
+    },
+    {
+      "id": "C02",
+      "status": "catalogue_attribution",
+      "text": "Музейная карточка указывает И. Чупятова; на личине читается имя Ивана Чупятова.",
+      "source_ids": [
+        "S01",
+        "S03"
+      ],
+      "limit": "Сохранять отличие каталожной атрибуции от чтения надписи."
+    },
+    {
+      "id": "C03",
+      "status": "interpretation",
+      "text": "Пудов допускает принадлежность имени на надписи мастеру или владельцу.",
+      "source_ids": [
+        "S03"
+      ],
+      "limit": "Нельзя объявить подтверждённую биографию мастера."
+    },
+    {
+      "id": "C04",
+      "status": "source_statement",
+      "text": "В исследовании описаны три внутренних и два подвесных замка.",
+      "source_ids": [
+        "S03"
+      ],
+      "limit": "Скрытые механизмы на имеющихся кадрах не видны; работа замков не проверена."
+    },
+    {
+      "id": "C05",
+      "status": "source_statement",
+      "text": "Девять отделений, восемь с ящиками; ящики различаются по высоте.",
+      "source_ids": [
+        "S02",
+        "S03"
+      ],
+      "limit": "Тексты могут быть зависимы. Фотография помогает рассмотреть ряды; содержимое неизвестно."
+    },
+    {
+      "id": "C06",
+      "status": "interpretation",
+      "text": "Холмогоры или Великий Устюг предложены как вероятное место происхождения.",
+      "source_ids": [
+        "S03"
+      ],
+      "limit": "Не превращать в достоверное место изготовления."
+    },
+    {
+      "id": "C07",
+      "status": "interpretation",
+      "text": "Повреждения шарниров исследователь связывает с возможной попыткой взлома.",
+      "source_ids": [
+        "S03"
+      ],
+      "limit": "Не называть доказанный взлом и не инсценировать преступление."
+    },
+    {
+      "id": "C08",
+      "status": "unresolved_provenance",
+      "text": "Каталог: собрание Половцова. Исследование: приобретение в 1914 году у Расула Магомеда Оглы; поступление из Эрмитажа в 1938 году.",
+      "source_ids": [
+        "S01",
+        "S03"
+      ],
+      "limit": "Сведения не обязательно противоречат друг другу. Промежуточные владельцы и связь цепочек не установлены; подготовлен вопрос музею."
+    },
+    {
+      "id": "C09",
+      "status": "unknown",
+      "text": "Первоначальное содержимое именно этого ларца в прочитанных материалах не установлено.",
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03"
+      ],
+      "limit": "Назначение типа изделия не доказывает, что конкретный владелец хранил письма, деньги или приданое."
+    }
+  ],
+  "images": [
+    {
+      "id": "chest",
+      "path": "../media/chest.jpeg",
+      "width": 697,
+      "height": 519,
+      "bytes": 43924,
+      "sha256": "1e014cc092b0c01488f126c9e18d5dbc6f3509bbe69e56a6dfedf4e2371993c8",
+      "source_id": "S03",
+      "source_url": "https://rghpu.ru/uploads/catalogfiles/7984_2022_2_2_vestnik.pdf",
+      "figure": 1,
+      "holder": "Государственный Русский музей",
+      "photographer": "не указан отдельно в прочитанной подписи",
+      "alt": "Общий вид ларца с железными полосами и просечными накладками",
+      "credit": "Государственный Русский музей, ОНИ/М-4. Иллюстрация к статье Г. А. Пудова, 2022.",
+      "rights": {
+        "status": "pending",
+        "basis": "Открытый PDF не является разрешением; порядок запроса S04. Право повторного использования цифровой фотографии отдельно не подтверждено.",
+        "checked_at": "2026-09-09",
+        "commercial_use": "unclear",
+        "derivatives": "unclear",
+        "ai_modification": "not_requested"
+      },
+      "quality_limit": "Не обещать наблюдение деталей сверх этих пикселей; запросить более крупный файл."
+    },
+    {
+      "id": "lock",
+      "path": "../media/lock.jpeg",
+      "width": 517,
+      "height": 628,
+      "bytes": 57552,
+      "sha256": "21ebb5d88095d382b6c508950105b9fdd186b2b22170fec5aa89ac01e0e15850",
+      "source_id": "S03",
+      "source_url": "https://rghpu.ru/uploads/catalogfiles/7984_2022_2_2_vestnik.pdf",
+      "figure": 2,
+      "holder": "Государственный Русский музей",
+      "photographer": "не указан отдельно в прочитанной подписи",
+      "alt": "Замочная пластина с надписью и отверстиями для ключей",
+      "credit": "Государственный Русский музей, ОНИ/М-4. Иллюстрация к статье Г. А. Пудова, 2022.",
+      "rights": {
+        "status": "pending",
+        "basis": "Открытый PDF не является разрешением; порядок запроса S04. Право повторного использования цифровой фотографии отдельно не подтверждено.",
+        "checked_at": "2026-09-09",
+        "commercial_use": "unclear",
+        "derivatives": "unclear",
+        "ai_modification": "not_requested"
+      },
+      "quality_limit": "Не обещать наблюдение деталей сверх этих пикселей; запросить более крупный файл."
+    },
+    {
+      "id": "drawers",
+      "path": "../media/drawers.jpeg",
+      "width": 835,
+      "height": 626,
+      "bytes": 83062,
+      "sha256": "ec70a655ee8d6469da231d1bfd6e5d2816e4239f09562e6f254ac808ae491e9a",
+      "source_id": "S03",
+      "source_url": "https://rghpu.ru/uploads/catalogfiles/7984_2022_2_2_vestnik.pdf",
+      "figure": 3,
+      "holder": "Государственный Русский музей",
+      "photographer": "не указан отдельно в прочитанной подписи",
+      "alt": "Внутренний вид ларца: деревянные ящики и пустое верхнее отделение справа",
+      "credit": "Государственный Русский музей, ОНИ/М-4. Иллюстрация к статье Г. А. Пудова, 2022.",
+      "rights": {
+        "status": "pending",
+        "basis": "Открытый PDF не является разрешением; порядок запроса S04. Право повторного использования цифровой фотографии отдельно не подтверждено.",
+        "checked_at": "2026-09-09",
+        "commercial_use": "unclear",
+        "derivatives": "unclear",
+        "ai_modification": "not_requested"
+      },
+      "quality_limit": "Не обещать наблюдение деталей сверх этих пикселей; запросить более крупный файл."
+    }
+  ],
+  "standards": [
+    {
+      "path": "/home/agent/projects/russian-civilization/rc-museum-production/standards/museum-core.md",
+      "sha256": "0c05b43d521669ddda2cb62fe52cb462d1ee5caf327cc67098d84e22a7b13733"
+    },
+    {
+      "path": "/home/agent/projects/russian-civilization/docs/standards/page-production-standard.md",
+      "sha256": "b3c694c84809cad8603124e2726eecf2376e696628c12f6f2588d75e5e4c14f0"
+    },
+    {
+      "path": "/home/agent/projects/russian-civilization/docs/standards/sources-rights.md",
+      "sha256": "a17e304c3a088016366c107d864ba3c440eacc038d98902e172625307e82a8f9"
+    },
+    {
+      "path": "/home/agent/projects/russian-civilization/docs/standards/video-social.md",
+      "sha256": "e88d474a5174da56da509e96c084f00a10df05fd9b96aa34b3a7aa9c3addb769"
+    },
+    {
+      "path": "/home/agent/projects/russian-civilization/rc-museum-production/standards/text-editing.md",
+      "sha256": "5b3930b98fc98819945008f70b9501001f21dd10201fed1c8c3044b25d4911af"
+    },
+    {
+      "path": "/home/agent/.codex/skills/museum-page-production/SKILL.md",
+      "sha256": "e1b00f6c7dcf193829c212d73f7ec0b7b00ea8ca334e196f7c5f7b59cef60866"
+    },
+    {
+      "path": "/home/agent/.codex/skills/museum-etnografiya/SKILL.md",
+      "sha256": "95f3250739fb3ae848e5036b2d286617a5af0ae91278c0524fe1c77973c5faef"
+    },
+    {
+      "path": "/home/agent/rc-museum-preview/review/etnografiya/split/pair/skills/museum-things/SKILL.md",
+      "sha256": "38047e22e09e26787e680413df876b754bf1b80d1f7fd8767faf80f279a37d53"
+    }
+  ],
+  "blockers": [
+    "Нет подтверждённого разрешения на выбранные фотографии",
+    "Нет готовых ролика и аудиозаписи",
+    "Нет действительного отчёта строгой сдачи полной страницы",
+    "Принятые профиль, календарная привязка и эталон не зафиксированы производственным паспортом"
+  ],
+  "source_independence_note": "Количество URL не выдаётся за количество независимых свидетельств. Согласие Сергея с общей темой не подменяет отсутствующие производственные доказательства."
+}
