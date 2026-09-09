@@ -163,7 +163,7 @@
       </svg>
       <span class="lt">Русская цивилизация<small>первые в мире</small></span>
     </a>
-    <div class="score" id="scoreBox">⭐ <span id="score">0</span> / 60</div>
+    <div class="score" id="scoreBox">⭐ <span id="score">0</span> / 100</div>
   </div>
 </header>
 <nav class="crumbs"><div class="wrap">
@@ -669,9 +669,9 @@
   Русская цивилизация · «Что изобрели русские первыми в мире» · 2026</div></footer>
 
 <script>
-// ── СЧЁТ ──────────────────────────────────────────────────────────────────────
-let score=0; const earned={};
-function award(k,n){if(earned[k])return;earned[k]=true;score+=n;document.getElementById('score').textContent=score;}
+// ── СЧЁТ ── шкала посетителя из 100 держит движок assets/museum-score.js
+// Здесь только награды этой страницы: сумма сырых очков и звания.
+window.MUSEUM_SCORE = {max: 38, ranks: [[100,'Знаток дня'],[70,'Знаток'],[40,'Экскурсант'],[0,'Гость музея']]};
 
 // ── СТАТЬЯ ────────────────────────────────────────────────────────────────────
 document.getElementById('moreBtn').onclick=function(){
@@ -949,6 +949,7 @@ document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
   city:'../../index.html',
   random:['day-01jan-cabletv.html','day-02jan-luna1.html','day-03jan-luna9.html','day-04jan-pilchikov.html','day-05jan-shukhov.html','day-07jan-buran.html','day-08jan-icebreaker.html','day-09jan-blinov.html','day-30jan-kotelnikov.html','day-18mar-leonov.html','day-15may-mechnikov.html','day-16jun-tereshkova.html','day-26sep-pavlov.html','day-25nov-pirogov.html','day-01dec-lobachevsky.html','day-14dec-laser.html']
 };</script>
+<script src="../../assets/museum-score.js"></script>
 <script src="../../assets/museum-chrome.js"></script>
 <script>window.MUSEUM_SUPPORT={museum:'Что изобрели русские первыми в мире'};</script>
 <script src="../../assets/museum-support.js"></script>
