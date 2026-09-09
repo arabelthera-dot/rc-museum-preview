@@ -17,5 +17,8 @@
   "csv_counts_match": true,
   "creative_skill_schema": "quick_validate.py passed",
   "creative_skill_behavioral_effect": "not tested",
-  "existing_skill_marked_superseded": true
+  "existing_skill_marked_superseded": true,
+  "split_approved": true,
+  "project_mission_recorded": true,
+  "reference_preferences_question": "withdrawn after Sergey response 2026-09-09"
 }
