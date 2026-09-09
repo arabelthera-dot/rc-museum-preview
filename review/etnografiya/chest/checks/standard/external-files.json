@@ -1,0 +1,14 @@
+[
+  {
+    "path": "review/etnografiya/chest/index.html",
+    "url": "https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/c2732af/review/etnografiya/chest/index.html",
+    "sha256": "cb017ba8a7620ddd7e8a6a6bed3a886d73d151c93e135b678f421eadce4efe9f",
+    "external_matches": true
+  },
+  {
+    "path": "assets/museum-support.js",
+    "url": "https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/c2732af/assets/museum-support.js",
+    "sha256": "07aae3f4321981df5fcc259d59cf106bebfbbe3587e4bac271f7f5e170953802",
+    "external_matches": true
+  }
+]

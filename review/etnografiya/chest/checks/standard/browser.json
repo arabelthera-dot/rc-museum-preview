@@ -1,8 +1,56 @@
 {
   "schema_version": 1,
-  "page_sha256": "853ba2d195f8887766131f7b8bf9c0b7d5ec78eee4b1f2197236bf0f71f1e09c",
-  "url": "https://htmlpreview.github.io/?https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/d5a3351/review/etnografiya/chest/index.html",
+  "page_sha256": "cb017ba8a7620ddd7e8a6a6bed3a886d73d151c93e135b678f421eadce4efe9f",
+  "url": "https://htmlpreview.github.io/?https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/c2732af/review/etnografiya/chest/index.html",
   "checks": [
+    {
+      "name": "призыв поддержки по стандарту",
+      "pass": true
+    },
+    {
+      "name": "предложены источник и профессиональная помощь",
+      "pass": true
+    },
+    {
+      "name": "обязательные слоты в порядке канона",
+      "pass": true
+    },
+    {
+      "name": "документальный голос содержит подлинную надпись",
+      "pass": true
+    },
+    {
+      "name": "блок проверенных фактов перед статьёй",
+      "pass": true
+    },
+    {
+      "name": "полоса фактов что когда сколько итог",
+      "pass": true
+    },
+    {
+      "name": "стрелка переключает основной ракурс",
+      "pass": true
+    },
+    {
+      "name": "стрелка возвращает общий вид",
+      "pass": true
+    },
+    {
+      "name": "галерея корректно проходит край",
+      "pass": true
+    },
+    {
+      "name": "свайп основной галереи",
+      "pass": true
+    },
+    {
+      "name": "свайп модального просмотра",
+      "pass": true
+    },
+    {
+      "name": "увеличенный снимок прокручивается без смены",
+      "pass": true
+    },
     {
       "name": "нельзя пропустить основной опыт",
       "pass": true
@@ -52,6 +100,14 @@
       "pass": true
     },
     {
+      "name": "браузер начал скачивание диплома",
+      "pass": true
+    },
+    {
+      "name": "диплом скачивается с достигнутым счётом",
+      "pass": true
+    },
+    {
       "name": "повтор не накручивает",
       "pass": true
     },
@@ -96,6 +152,22 @@
       "pass": true
     },
     {
+      "name": "карточки фактов в границах экрана 320",
+      "pass": true
+    },
+    {
+      "name": "источник обложки виден 320",
+      "pass": true
+    },
+    {
+      "name": "текст вне обложки 320",
+      "pass": true
+    },
+    {
+      "name": "три строки шапки в порядке 320",
+      "pass": true
+    },
+    {
       "name": "Поделиться доступно 320",
       "pass": true
     },
@@ -108,6 +180,22 @@
       "pass": true
     },
     {
+      "name": "карточки фактов в границах экрана 360",
+      "pass": true
+    },
+    {
+      "name": "источник обложки виден 360",
+      "pass": true
+    },
+    {
+      "name": "текст вне обложки 360",
+      "pass": true
+    },
+    {
+      "name": "три строки шапки в порядке 360",
+      "pass": true
+    },
+    {
       "name": "Поделиться доступно 360",
       "pass": true
     },
@@ -117,6 +205,22 @@
     },
     {
       "name": "геометрия и поддержка 390",
+      "pass": true
+    },
+    {
+      "name": "карточки фактов в границах экрана 390",
+      "pass": true
+    },
+    {
+      "name": "источник обложки виден 390",
+      "pass": true
+    },
+    {
+      "name": "текст вне обложки 390",
+      "pass": true
+    },
+    {
+      "name": "три строки шапки в порядке 390",
       "pass": true
     },
     {
@@ -136,6 +240,22 @@
       "pass": true
     },
     {
+      "name": "карточки фактов в границах экрана 768",
+      "pass": true
+    },
+    {
+      "name": "источник обложки виден 768",
+      "pass": true
+    },
+    {
+      "name": "текст вне обложки 768",
+      "pass": true
+    },
+    {
+      "name": "три строки шапки в порядке 768",
+      "pass": true
+    },
+    {
       "name": "Поделиться доступно 768",
       "pass": true
     },
@@ -145,6 +265,22 @@
     },
     {
       "name": "геометрия и поддержка 1440",
+      "pass": true
+    },
+    {
+      "name": "карточки фактов в границах экрана 1440",
+      "pass": true
+    },
+    {
+      "name": "источник обложки виден 1440",
+      "pass": true
+    },
+    {
+      "name": "текст вне обложки 1440",
+      "pass": true
+    },
+    {
+      "name": "три строки шапки в порядке 1440",
       "pass": true
     },
     {
@@ -171,21 +307,38 @@
       "height": 844,
       "overflow": false,
       "broken_images": 0,
+      "facts_fit": true,
+      "credit_visible": true,
+      "visual_clear": true,
+      "header_rows": [
+        {
+          "top": 30,
+          "bottom": 50.296875
+        },
+        {
+          "top": 53.296875,
+          "bottom": 133.046875
+        },
+        {
+          "top": 137.046875,
+          "bottom": 157.34375
+        }
+      ],
       "fonts_loaded": true,
       "content_width": 305,
-      "h1_bottom": 572.203125,
-      "buttons_bottom": 793.28125,
+      "h1_bottom": 617.796875,
+      "buttons_bottom": 838.875,
       "support_count": 2,
-      "support_fraction": 0.10908456258526603,
+      "support_fraction": 0.10725449600129908,
       "share": "flex",
       "small": [],
       "first_screen": {
         "path": "320-first_screen.png",
-        "sha256": "c39585451a7f9c7c881cf1133987a17593208de9e2c7516e27b89fd8501bad00"
+        "sha256": "f13debfc80780d7e06ba976429bea1e505d858b1ea8ea906cec41ace97075019"
       },
       "full_page": {
         "path": "320-full_page.png",
-        "sha256": "ec0a3bc5a30170ba1ea8417515f26e96c1626b7880432b3bbb833842e64200bb"
+        "sha256": "8bb26b84d1f203c67bfdef5d42ccbae20062e1a1388673774a93aae4019d38c8"
       }
     },
     {
@@ -193,12 +346,29 @@
       "height": 844,
       "overflow": false,
       "broken_images": 0,
+      "facts_fit": true,
+      "credit_visible": true,
+      "visual_clear": true,
+      "header_rows": [
+        {
+          "top": 30,
+          "bottom": 50.296875
+        },
+        {
+          "top": 53.296875,
+          "bottom": 133.046875
+        },
+        {
+          "top": 137.046875,
+          "bottom": 157.34375
+        }
+      ],
       "fonts_loaded": true,
       "content_width": 345,
-      "h1_bottom": 551.90625,
-      "buttons_bottom": 772.984375,
+      "h1_bottom": 597.5,
+      "buttons_bottom": 818.578125,
       "support_count": 2,
-      "support_fraction": 0.1109357408241387,
+      "support_fraction": 0.10852458224150521,
       "share": "flex",
       "small": []
     },
@@ -207,21 +377,38 @@
       "height": 844,
       "overflow": false,
       "broken_images": 0,
+      "facts_fit": true,
+      "credit_visible": true,
+      "visual_clear": true,
+      "header_rows": [
+        {
+          "top": 30,
+          "bottom": 50.296875
+        },
+        {
+          "top": 53.296875,
+          "bottom": 114.859375
+        },
+        {
+          "top": 118.859375,
+          "bottom": 139.15625
+        }
+      ],
       "fonts_loaded": true,
       "content_width": 375,
-      "h1_bottom": 484.1875,
-      "buttons_bottom": 632.25,
+      "h1_bottom": 529.78125,
+      "buttons_bottom": 677.84375,
       "support_count": 2,
-      "support_fraction": 0.11123332743153919,
+      "support_fraction": 0.10884348002159827,
       "share": "flex",
       "small": [],
       "first_screen": {
         "path": "390-first_screen.png",
-        "sha256": "6e77edb884e13bad3c0d24f9cdb9ab93beeffb86b6baa21e8973cd572d5b545a"
+        "sha256": "d52c5dec20a18c269e809bf772a8be6153d9e15dafdc7eb2685491b3eea2a5ef"
       },
       "full_page": {
         "path": "390-full_page.png",
-        "sha256": "e87a244a61a6220f0c2b19775324f049b6d8c84abcb88d7ff2eda39a643499e4"
+        "sha256": "a94fa7fa4f999138c1df0fe03dc3007a75cfc636692087231628667548a54c74"
       }
     },
     {
@@ -229,12 +416,29 @@
       "height": 844,
       "overflow": false,
       "broken_images": 0,
+      "facts_fit": true,
+      "credit_visible": true,
+      "visual_clear": true,
+      "header_rows": [
+        {
+          "top": 8,
+          "bottom": 28.296875
+        },
+        {
+          "top": 33.296875,
+          "bottom": 82.890625
+        },
+        {
+          "top": 86.890625,
+          "bottom": 107.1875
+        }
+      ],
       "fonts_loaded": true,
       "content_width": 753,
-      "h1_bottom": 638.078125,
-      "buttons_bottom": 799.75,
+      "h1_bottom": 654.796875,
+      "buttons_bottom": 816.46875,
       "support_count": 2,
-      "support_fraction": 0.1521345888287679,
+      "support_fraction": 0.1474040647326261,
       "share": "flex",
       "small": []
     },
@@ -243,29 +447,44 @@
       "height": 1000,
       "overflow": false,
       "broken_images": 0,
+      "facts_fit": true,
+      "credit_visible": true,
+      "visual_clear": true,
+      "header_rows": [
+        {
+          "top": 8,
+          "bottom": 28.296875
+        },
+        {
+          "top": 33.296875,
+          "bottom": 82.890625
+        },
+        {
+          "top": 86.890625,
+          "bottom": 107.1875
+        }
+      ],
       "fonts_loaded": true,
       "content_width": 1425,
-      "h1_bottom": 670.703125,
-      "buttons_bottom": 832.375,
+      "h1_bottom": 687.34375,
+      "buttons_bottom": 849.015625,
       "support_count": 2,
-      "support_fraction": 0.15904261650050408,
+      "support_fraction": 0.1530780011859199,
       "share": "flex",
       "small": [],
       "first_screen": {
         "path": "1440-first_screen.png",
-        "sha256": "6f525cdf05728445b9a89d470650b0205dac202ff9fd9e44f432ff06ebbe1610"
+        "sha256": "a6800249a1b1fe610127b68bb8fa9824da46a11579d8df2172e7c1ed36d9d8dd"
       },
       "full_page": {
         "path": "1440-full_page.png",
-        "sha256": "2fb198922fa7cc9dae99877916ecb1da3d56f8ab70c4a5988b17d61af5c99c74"
+        "sha256": "aa721884cb6485ded581f41a9b349479c59c960008eabbd268a65e121d9d8f34"
       }
     }
   ],
   "dom": {
     "path": "rendered.html",
-    "sha256": "84ce8f695d99e6260d3c1675a09fec24c571274e4912ee5875a1b6618cd51f58"
+    "sha256": "1711854e5227512aba05df5896fa9ca4c0a620a506a22f24d38ae3b79c345eb0"
   },
-  "passed": 40,
-  "source_url": "https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/d5a3351/review/etnografiya/chest/index.html",
-  "source_sha256_verified": "853ba2d195f8887766131f7b8bf9c0b7d5ec78eee4b1f2197236bf0f71f1e09c"
+  "passed": 74
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "status": "rejected",
-  "page": "/home/agent/worktrees/chest-standard-0909/review/etnografiya/chest/index.html",
+  "page": "/home/agent/worktrees/chest-contract-0909/review/etnografiya/chest/index.html",
   "kind": "page",
   "museum": "things",
   "errors": [
@@ -12,34 +12,34 @@
     "review.accessibility: нет результата с доказательством"
   ],
   "inputs": {
-    "/home/agent/worktrees/chest-standard-0909/review/etnografiya/chest/index.html": "853ba2d195f8887766131f7b8bf9c0b7d5ec78eee4b1f2197236bf0f71f1e09c",
+    "/home/agent/worktrees/chest-contract-0909/review/etnografiya/chest/index.html": "cb017ba8a7620ddd7e8a6a6bed3a886d73d151c93e135b678f421eadce4efe9f",
     "/home/agent/worktrees/museum-delivery-control/russian-civilization/platform/contracts/accepted-page-profiles.json": "ade39dbfdaa669346cd5af64addad8962d27d89b75e4c5abafd72f2dc8e675d2",
     "/home/agent/worktrees/museum-delivery-control/russian-civilization/tools/page_delivery.py": "6cfb3125be929da3b774003cde6235b08f877c34be83a909c935069aa0273355",
     "/home/agent/worktrees/museum-delivery-control/russian-civilization/tools/rc-page.py": "f0316cb187d79454694d908c605389cf0afed3261bca7ee7f7fcf6648ceaf880",
     "/home/agent/worktrees/museum-delivery-control/russian-civilization/tools/audit-pages.py": "5b2cac6c5daee8079cc3da61ebe55dd572eaa82d60a05a40c1ae3f4432e9a6b5",
     "/home/agent/worktrees/museum-delivery-control/russian-civilization/docs/skills/museum-page-production/scripts/page_gate.py": "442a4f73af8de2799b82eebf85e75d1e0eab171c0da577ce3ce52ab76106de46",
     "/home/agent/worktrees/museum-delivery-control/russian-civilization/platform/runtime/profile_contract.py": "c697584b941a6374b1be5c306f09c30dba777c7d3ca75369c5e3e5973c57429b",
-    "/home/agent/worktrees/chest-standard-0909/review/etnografiya/chest/issue.json": "c1451cd85f4670725df31864f505192808b48c6fa48763f6323c84fd8887950e",
-    "/home/agent/worktrees/chest-standard-0909/review/etnografiya/chest/checks/standard/browser.json": "828bf37a5c1e58efc5b2b0e4b5141032617e6f1378424011b755d38a6a911dc9",
-    "/home/agent/worktrees/chest-standard-0909/review/etnografiya/chest/checks/standard/rendered.html": "84ce8f695d99e6260d3c1675a09fec24c571274e4912ee5875a1b6618cd51f58",
-    "/home/agent/worktrees/chest-standard-0909/review/etnografiya/chest/checks/standard/320-first_screen.png": "c39585451a7f9c7c881cf1133987a17593208de9e2c7516e27b89fd8501bad00",
-    "/home/agent/worktrees/chest-standard-0909/review/etnografiya/chest/checks/standard/320-full_page.png": "ec0a3bc5a30170ba1ea8417515f26e96c1626b7880432b3bbb833842e64200bb",
-    "/home/agent/worktrees/chest-standard-0909/review/etnografiya/chest/checks/standard/390-first_screen.png": "6e77edb884e13bad3c0d24f9cdb9ab93beeffb86b6baa21e8973cd572d5b545a",
-    "/home/agent/worktrees/chest-standard-0909/review/etnografiya/chest/checks/standard/390-full_page.png": "e87a244a61a6220f0c2b19775324f049b6d8c84abcb88d7ff2eda39a643499e4",
-    "/home/agent/worktrees/chest-standard-0909/review/etnografiya/chest/checks/standard/1440-first_screen.png": "6f525cdf05728445b9a89d470650b0205dac202ff9fd9e44f432ff06ebbe1610",
-    "/home/agent/worktrees/chest-standard-0909/review/etnografiya/chest/checks/standard/1440-full_page.png": "2fb198922fa7cc9dae99877916ecb1da3d56f8ab70c4a5988b17d61af5c99c74",
-    "/home/agent/worktrees/chest-standard-0909/review/etnografiya/chest/checks/standard/review.json": "d645d45cd4ae63ebca7470b806665a5035fb1db955282615e2dd38079d8eaf1d"
+    "/home/agent/worktrees/chest-contract-0909/review/etnografiya/chest/issue.json": "07f580feceadb4837bab4454c4973125b95b757ee6b503ad6d5c223bf6c92e6a",
+    "/home/agent/worktrees/chest-contract-0909/review/etnografiya/chest/checks/standard/browser.json": "564504e8041edd132dbddfcd70da1581f5c2979e8370364841f87131ac1497b5",
+    "/home/agent/worktrees/chest-contract-0909/review/etnografiya/chest/checks/standard/rendered.html": "1711854e5227512aba05df5896fa9ca4c0a620a506a22f24d38ae3b79c345eb0",
+    "/home/agent/worktrees/chest-contract-0909/review/etnografiya/chest/checks/standard/320-first_screen.png": "f13debfc80780d7e06ba976429bea1e505d858b1ea8ea906cec41ace97075019",
+    "/home/agent/worktrees/chest-contract-0909/review/etnografiya/chest/checks/standard/320-full_page.png": "8bb26b84d1f203c67bfdef5d42ccbae20062e1a1388673774a93aae4019d38c8",
+    "/home/agent/worktrees/chest-contract-0909/review/etnografiya/chest/checks/standard/390-first_screen.png": "d52c5dec20a18c269e809bf772a8be6153d9e15dafdc7eb2685491b3eea2a5ef",
+    "/home/agent/worktrees/chest-contract-0909/review/etnografiya/chest/checks/standard/390-full_page.png": "a94fa7fa4f999138c1df0fe03dc3007a75cfc636692087231628667548a54c74",
+    "/home/agent/worktrees/chest-contract-0909/review/etnografiya/chest/checks/standard/1440-first_screen.png": "a6800249a1b1fe610127b68bb8fa9824da46a11579d8df2172e7c1ed36d9d8dd",
+    "/home/agent/worktrees/chest-contract-0909/review/etnografiya/chest/checks/standard/1440-full_page.png": "aa721884cb6485ded581f41a9b349479c59c960008eabbd268a65e121d9d8f34",
+    "/home/agent/worktrees/chest-contract-0909/review/etnografiya/chest/checks/standard/review.json": "bccc18d0e14f520c5510858f11175ace3fb623607f2ffa9b393eea0b3a9b6c76"
   },
   "request": {
     "kind": "page",
     "museum": "things",
     "project": "/home/agent/worktrees/museum-delivery-control/russian-civilization",
     "profile": null,
-    "issue": "/home/agent/worktrees/chest-standard-0909/review/etnografiya/chest/issue.json",
-    "browser_report": "/home/agent/worktrees/chest-standard-0909/review/etnografiya/chest/checks/standard/browser.json",
-    "review": "/home/agent/worktrees/chest-standard-0909/review/etnografiya/chest/checks/standard/review.json"
+    "issue": "/home/agent/worktrees/chest-contract-0909/review/etnografiya/chest/issue.json",
+    "browser_report": "/home/agent/worktrees/chest-contract-0909/review/etnografiya/chest/checks/standard/browser.json",
+    "review": "/home/agent/worktrees/chest-contract-0909/review/etnografiya/chest/checks/standard/review.json"
   },
-  "page_sha256": "853ba2d195f8887766131f7b8bf9c0b7d5ec78eee4b1f2197236bf0f71f1e09c",
+  "page_sha256": "cb017ba8a7620ddd7e8a6a6bed3a886d73d151c93e135b678f421eadce4efe9f",
   "core_checks": {
     "core.header": true,
     "core.crumbs": true,
