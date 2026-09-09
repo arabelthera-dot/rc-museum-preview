@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "page_sha256": "be3077ff893b053a4f74c6c21ca7ec2e99714c98b8955a4377bad79397314e68",
-  "url": "https://chest.test/index.html",
+  "page_sha256": "cc4b83bc6e17e77d1ffd81f4a9845696edc54e2295d938b297aeaacf452a9909",
+  "url": "https://htmlpreview.github.io/?https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/31793b4/review/etnografiya/chest/index.html",
   "checks": [
     {
       "name": "призыв поддержки по стандарту",
@@ -346,11 +346,11 @@
       "small": [],
       "first_screen": {
         "path": "320-first_screen.png",
-        "sha256": "87194ad501dfac8031ed8cf9bdd322d0368d36a7b8b983b4a61846c0c6fe1138"
+        "sha256": "001f52323205709f1b71d41c1da1ed9ff5ea93dd38621fb487f8d04c6d20d684"
       },
       "full_page": {
         "path": "320-full_page.png",
-        "sha256": "870543a6b4367e2fe32ac992d67b4bdf691b749a3e9952d4fbaeadbe471f60a1"
+        "sha256": "c81a3c06fe4b32c86c59626c32b7bbebe6f1db36b9c14be305b172d6ce9e9b0a"
       }
     },
     {
@@ -420,7 +420,7 @@
       },
       "full_page": {
         "path": "390-full_page.png",
-        "sha256": "4c0f0ad46333fed5ff1eb50978a0218b7c4676f908142f45e9762ddc6831dac3"
+        "sha256": "db5909a44fcc3c3f105f200e9c1191a0f755367a70e7036860906b84be1c582a"
       }
     },
     {
@@ -490,13 +490,13 @@
       },
       "full_page": {
         "path": "1440-full_page.png",
-        "sha256": "9882de0b1fb10563f9334587482c686eede380fd5e18cafb4df5b6e865afecb8"
+        "sha256": "36d81b7b2f1a936c9067ddd772db9d0b04e176ed673a32919fac8651fbc02e8a"
       }
     }
   ],
   "dom": {
     "path": "rendered.html",
-    "sha256": "67c5f079e85d4cda98c205f0d369c66201815c186dd8126a3d0b3f7330402eca"
+    "sha256": "e73da48c8a0e2e5324399c6dfa0f2966cc8e41eecae0bed8b691f27f13e32a9f"
   },
   "passed": 77
 }
