@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "page_sha256": "853ba2d195f8887766131f7b8bf9c0b7d5ec78eee4b1f2197236bf0f71f1e09c",
+  "url": "https://chest.test/index.html",
+  "checks": [
+    {
+      "name": "нельзя пропустить основной опыт",
+      "pass": true
+    },
+    {
+      "name": "прорези меняют визуал",
+      "pass": true
+    },
+    {
+      "name": "подкладка меняет цвет",
+      "pass": true
+    },
+    {
+      "name": "основной опыт даёт 30",
+      "pass": true
+    },
+    {
+      "name": "результат опыта доступен текстом",
+      "pass": true
+    },
+    {
+      "name": "опыт сохраняется",
+      "pass": true
+    },
+    {
+      "name": "неверная сборка не награждается",
+      "pass": true
+    },
+    {
+      "name": "отдельная игра даёт 10",
+      "pass": true
+    },
+    {
+      "name": "различимые текстовые части",
+      "pass": true
+    },
+    {
+      "name": "ракурс через Далее засчитан",
+      "pass": true
+    },
+    {
+      "name": "все действия дают 100",
+      "pass": true
+    },
+    {
+      "name": "диплом открыт",
+      "pass": true
+    },
+    {
+      "name": "повтор не накручивает",
+      "pass": true
+    },
+    {
+      "name": "частичный сброс игры",
+      "pass": true
+    },
+    {
+      "name": "после частичного сброса нет ложного успеха",
+      "pass": true
+    },
+    {
+      "name": "диплом закрыт",
+      "pass": true
+    },
+    {
+      "name": "сброс опыта снимает только его баллы",
+      "pass": true
+    },
+    {
+      "name": "полный сброс",
+      "pass": true
+    },
+    {
+      "name": "сброс сохраняется",
+      "pass": true
+    },
+    {
+      "name": "аудиогид воспроизводится",
+      "pass": true
+    },
+    {
+      "name": "видео воспроизводится",
+      "pass": true
+    },
+    {
+      "name": "субтитры загружены",
+      "pass": true
+    },
+    {
+      "name": "геометрия и поддержка 320",
+      "pass": true
+    },
+    {
+      "name": "Поделиться доступно 320",
+      "pass": true
+    },
+    {
+      "name": "нет текста мельче 14 320",
+      "pass": true
+    },
+    {
+      "name": "геометрия и поддержка 360",
+      "pass": true
+    },
+    {
+      "name": "Поделиться доступно 360",
+      "pass": true
+    },
+    {
+      "name": "нет текста мельче 14 360",
+      "pass": true
+    },
+    {
+      "name": "геометрия и поддержка 390",
+      "pass": true
+    },
+    {
+      "name": "Поделиться доступно 390",
+      "pass": true
+    },
+    {
+      "name": "нет текста мельче 14 390",
+      "pass": true
+    },
+    {
+      "name": "первый экран",
+      "pass": true
+    },
+    {
+      "name": "геометрия и поддержка 768",
+      "pass": true
+    },
+    {
+      "name": "Поделиться доступно 768",
+      "pass": true
+    },
+    {
+      "name": "нет текста мельче 14 768",
+      "pass": true
+    },
+    {
+      "name": "геометрия и поддержка 1440",
+      "pass": true
+    },
+    {
+      "name": "Поделиться доступно 1440",
+      "pass": true
+    },
+    {
+      "name": "нет текста мельче 14 1440",
+      "pass": true
+    },
+    {
+      "name": "уменьшение движения",
+      "pass": true
+    },
+    {
+      "name": "нет ошибок JavaScript",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "viewports": [
+    {
+      "width": 320,
+      "height": 844,
+      "overflow": false,
+      "broken_images": 0,
+      "fonts_loaded": true,
+      "content_width": 305,
+      "h1_bottom": 572.203125,
+      "buttons_bottom": 793.28125,
+      "support_count": 2,
+      "support_fraction": 0.10908456258526603,
+      "share": "flex",
+      "small": [],
+      "first_screen": {
+        "path": "320-first_screen.png",
+        "sha256": "1baafa5f23f4ed228d55e02c4e4ef166cf097682ea98348feb0652f7599f6010"
+      },
+      "full_page": {
+        "path": "320-full_page.png",
+        "sha256": "d6d847eb6cace61c6f516fdf7e5009c53dbd44ced170e043fdb77c06543821ab"
+      }
+    },
+    {
+      "width": 360,
+      "height": 844,
+      "overflow": false,
+      "broken_images": 0,
+      "fonts_loaded": true,
+      "content_width": 345,
+      "h1_bottom": 551.90625,
+      "buttons_bottom": 772.984375,
+      "support_count": 2,
+      "support_fraction": 0.1109357408241387,
+      "share": "flex",
+      "small": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "broken_images": 0,
+      "fonts_loaded": true,
+      "content_width": 375,
+      "h1_bottom": 484.1875,
+      "buttons_bottom": 632.25,
+      "support_count": 2,
+      "support_fraction": 0.11123332743153919,
+      "share": "flex",
+      "small": [],
+      "first_screen": {
+        "path": "390-first_screen.png",
+        "sha256": "b6bcf2a6b9a5406854a1dc5ba1f08a9ac7dadfd6f43edaffe0474741d8aeaa09"
+      },
+      "full_page": {
+        "path": "390-full_page.png",
+        "sha256": "e38642b593dd767aa21a7d271252e3880c6a05db6b14e7fa44604730910ed049"
+      }
+    },
+    {
+      "width": 768,
+      "height": 844,
+      "overflow": false,
+      "broken_images": 0,
+      "fonts_loaded": true,
+      "content_width": 753,
+      "h1_bottom": 638.375,
+      "buttons_bottom": 800.046875,
+      "support_count": 2,
+      "support_fraction": 0.1521427464352139,
+      "share": "flex",
+      "small": []
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "overflow": false,
+      "broken_images": 0,
+      "fonts_loaded": true,
+      "content_width": 1425,
+      "h1_bottom": 670.984375,
+      "buttons_bottom": 832.65625,
+      "support_count": 2,
+      "support_fraction": 0.15904946093531225,
+      "share": "flex",
+      "small": [],
+      "first_screen": {
+        "path": "1440-first_screen.png",
+        "sha256": "6f525cdf05728445b9a89d470650b0205dac202ff9fd9e44f432ff06ebbe1610"
+      },
+      "full_page": {
+        "path": "1440-full_page.png",
+        "sha256": "6b8584f8a59b798a273c06047da47585d54e2234340c30160212f0c8c0b0b6b6"
+      }
+    }
+  ],
+  "dom": {
+    "path": "rendered.html",
+    "sha256": "325e861c642e831e5a3fc7d103ccad4bfc352d38c07a8c473a0d5017d6d86540"
+  },
+  "passed": 40
+}

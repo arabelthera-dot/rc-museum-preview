@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "status": "rejected",
+  "page": "/home/agent/worktrees/chest-standard-0909/review/etnografiya/chest/index.html",
+  "kind": "page",
+  "museum": "things",
+  "errors": [
+    "profile: обязательный файл не указан",
+    "reference: в принятом профиле не закреплён эталон с SHA-256",
+    "review.verdict: нет положительного заключения проверяющего",
+    "review.reference_comparison: нет результата с доказательством",
+    "review.accessibility: нет результата с доказательством"
+  ],
+  "inputs": {
+    "/home/agent/worktrees/chest-standard-0909/review/etnografiya/chest/index.html": "853ba2d195f8887766131f7b8bf9c0b7d5ec78eee4b1f2197236bf0f71f1e09c",
+    "/home/agent/worktrees/museum-delivery-control/russian-civilization/platform/contracts/accepted-page-profiles.json": "ade39dbfdaa669346cd5af64addad8962d27d89b75e4c5abafd72f2dc8e675d2",
+    "/home/agent/worktrees/museum-delivery-control/russian-civilization/tools/page_delivery.py": "6cfb3125be929da3b774003cde6235b08f877c34be83a909c935069aa0273355",
+    "/home/agent/worktrees/museum-delivery-control/russian-civilization/tools/rc-page.py": "f0316cb187d79454694d908c605389cf0afed3261bca7ee7f7fcf6648ceaf880",
+    "/home/agent/worktrees/museum-delivery-control/russian-civilization/tools/audit-pages.py": "5b2cac6c5daee8079cc3da61ebe55dd572eaa82d60a05a40c1ae3f4432e9a6b5",
+    "/home/agent/worktrees/museum-delivery-control/russian-civilization/docs/skills/museum-page-production/scripts/page_gate.py": "442a4f73af8de2799b82eebf85e75d1e0eab171c0da577ce3ce52ab76106de46",
+    "/home/agent/worktrees/museum-delivery-control/russian-civilization/platform/runtime/profile_contract.py": "c697584b941a6374b1be5c306f09c30dba777c7d3ca75369c5e3e5973c57429b",
+    "/home/agent/worktrees/chest-standard-0909/review/etnografiya/chest/issue.json": "79a4af814be2f00e2bd8ca1c7ab2c5a138642a47e0fcd70fa513ed0aaa9f3060",
+    "/home/agent/worktrees/chest-standard-0909/review/etnografiya/chest/checks/standard/browser.json": "c3e7bb8f5d8b24b70ef0c6b616772d763724b1172cf87847f284f2953d8eb945",
+    "/home/agent/worktrees/chest-standard-0909/review/etnografiya/chest/checks/standard/rendered.html": "325e861c642e831e5a3fc7d103ccad4bfc352d38c07a8c473a0d5017d6d86540",
+    "/home/agent/worktrees/chest-standard-0909/review/etnografiya/chest/checks/standard/320-first_screen.png": "1baafa5f23f4ed228d55e02c4e4ef166cf097682ea98348feb0652f7599f6010",
+    "/home/agent/worktrees/chest-standard-0909/review/etnografiya/chest/checks/standard/320-full_page.png": "d6d847eb6cace61c6f516fdf7e5009c53dbd44ced170e043fdb77c06543821ab",
+    "/home/agent/worktrees/chest-standard-0909/review/etnografiya/chest/checks/standard/390-first_screen.png": "b6bcf2a6b9a5406854a1dc5ba1f08a9ac7dadfd6f43edaffe0474741d8aeaa09",
+    "/home/agent/worktrees/chest-standard-0909/review/etnografiya/chest/checks/standard/390-full_page.png": "e38642b593dd767aa21a7d271252e3880c6a05db6b14e7fa44604730910ed049",
+    "/home/agent/worktrees/chest-standard-0909/review/etnografiya/chest/checks/standard/1440-first_screen.png": "6f525cdf05728445b9a89d470650b0205dac202ff9fd9e44f432ff06ebbe1610",
+    "/home/agent/worktrees/chest-standard-0909/review/etnografiya/chest/checks/standard/1440-full_page.png": "6b8584f8a59b798a273c06047da47585d54e2234340c30160212f0c8c0b0b6b6",
+    "/home/agent/worktrees/chest-standard-0909/review/etnografiya/chest/checks/standard/review.json": "d645d45cd4ae63ebca7470b806665a5035fb1db955282615e2dd38079d8eaf1d"
+  },
+  "request": {
+    "kind": "page",
+    "museum": "things",
+    "project": "/home/agent/worktrees/museum-delivery-control/russian-civilization",
+    "profile": null,
+    "issue": "/home/agent/worktrees/chest-standard-0909/review/etnografiya/chest/issue.json",
+    "browser_report": "/home/agent/worktrees/chest-standard-0909/review/etnografiya/chest/checks/standard/browser.json",
+    "review": "/home/agent/worktrees/chest-standard-0909/review/etnografiya/chest/checks/standard/review.json"
+  },
+  "page_sha256": "853ba2d195f8887766131f7b8bf9c0b7d5ec78eee4b1f2197236bf0f71f1e09c",
+  "core_checks": {
+    "core.header": true,
+    "core.crumbs": true,
+    "core.date": true,
+    "core.caption": true,
+    "core.video": true,
+    "core.audio": true,
+    "core.calendar": true,
+    "core.next": true,
+    "core.buttons": true,
+    "core.header_order": true
+  }
+}
