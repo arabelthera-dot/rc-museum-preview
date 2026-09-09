@@ -1,0 +1,229 @@
+{
+  "days": 245,
+  "months": 8,
+  "five_columns": true,
+  "all_calendar_dates_present": true,
+  "unique_titles": 245,
+  "exact_title_duplicates_january_april": 0,
+  "previous_days": 120,
+  "year_total": 365,
+  "xlsx_sheets": 8,
+  "xlsx_xml_and_rows": "passed",
+  "pdf": {
+    "may": {
+      "pages": 3,
+      "all_dates": true,
+      "characters": 14883
+    },
+    "june": {
+      "pages": 3,
+      "all_dates": true,
+      "characters": 14212
+    },
+    "july": {
+      "pages": 3,
+      "all_dates": true,
+      "characters": 15523
+    },
+    "august": {
+      "pages": 3,
+      "all_dates": true,
+      "characters": 15348
+    },
+    "september": {
+      "pages": 3,
+      "all_dates": true,
+      "characters": 14793
+    },
+    "october": {
+      "pages": 3,
+      "all_dates": true,
+      "characters": 15474
+    },
+    "november": {
+      "pages": 3,
+      "all_dates": true,
+      "characters": 14900
+    },
+    "december": {
+      "pages": 3,
+      "all_dates": true,
+      "characters": 15452
+    },
+    "combined": {
+      "pages": 24,
+      "all_245_dates": true,
+      "characters": 114300
+    },
+    "year": {
+      "pages": 36,
+      "all_365_dates": true
+    }
+  },
+  "browser": {
+    "months": [
+      {
+        "month": "may",
+        "rows": 31,
+        "cols": 5,
+        "search": 1,
+        "calendar": 4,
+        "conditional": 27,
+        "widths": [
+          {
+            "width": 390,
+            "overflow": false,
+            "scrollable": true
+          },
+          {
+            "width": 320,
+            "overflow": false,
+            "scrollable": true
+          }
+        ]
+      },
+      {
+        "month": "june",
+        "rows": 30,
+        "cols": 5,
+        "search": 1,
+        "calendar": 3,
+        "conditional": 27,
+        "widths": [
+          {
+            "width": 390,
+            "overflow": false,
+            "scrollable": true
+          },
+          {
+            "width": 320,
+            "overflow": false,
+            "scrollable": true
+          }
+        ]
+      },
+      {
+        "month": "july",
+        "rows": 31,
+        "cols": 5,
+        "search": 1,
+        "calendar": 4,
+        "conditional": 27,
+        "widths": [
+          {
+            "width": 390,
+            "overflow": false,
+            "scrollable": true
+          },
+          {
+            "width": 320,
+            "overflow": false,
+            "scrollable": true
+          }
+        ]
+      },
+      {
+        "month": "august",
+        "rows": 31,
+        "cols": 5,
+        "search": 1,
+        "calendar": 6,
+        "conditional": 25,
+        "widths": [
+          {
+            "width": 390,
+            "overflow": false,
+            "scrollable": true
+          },
+          {
+            "width": 320,
+            "overflow": false,
+            "scrollable": true
+          }
+        ]
+      },
+      {
+        "month": "september",
+        "rows": 30,
+        "cols": 5,
+        "search": 1,
+        "calendar": 2,
+        "conditional": 28,
+        "widths": [
+          {
+            "width": 390,
+            "overflow": false,
+            "scrollable": true
+          },
+          {
+            "width": 320,
+            "overflow": false,
+            "scrollable": true
+          }
+        ]
+      },
+      {
+        "month": "october",
+        "rows": 31,
+        "cols": 5,
+        "search": 1,
+        "calendar": 1,
+        "conditional": 30,
+        "widths": [
+          {
+            "width": 390,
+            "overflow": false,
+            "scrollable": true
+          },
+          {
+            "width": 320,
+            "overflow": false,
+            "scrollable": true
+          }
+        ]
+      },
+      {
+        "month": "november",
+        "rows": 30,
+        "cols": 5,
+        "search": 1,
+        "calendar": 3,
+        "conditional": 27,
+        "widths": [
+          {
+            "width": 390,
+            "overflow": false,
+            "scrollable": true
+          },
+          {
+            "width": 320,
+            "overflow": false,
+            "scrollable": true
+          }
+        ]
+      },
+      {
+        "month": "december",
+        "rows": 31,
+        "cols": 5,
+        "search": 1,
+        "calendar": 3,
+        "conditional": 28,
+        "widths": [
+          {
+            "width": 390,
+            "overflow": false,
+            "scrollable": true
+          },
+          {
+            "width": 320,
+            "overflow": false,
+            "scrollable": true
+          }
+        ]
+      }
+    ],
+    "errors": []
+  },
+  "limits": "Проверена полнота редакционного состава и файлов. Отсутствие точных повторов заголовков не означает отсутствия развития общих тем. Частные сюжетные факты в строках-кандидатах не прошли предметную проверку. Механики предложены, не реализованы."
+}
