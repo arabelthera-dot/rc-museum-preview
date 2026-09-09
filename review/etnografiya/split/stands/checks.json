@@ -26,7 +26,10 @@
     "result_visible": true,
     "overflow": false,
     "family_anchor_top": 20,
-    "wrapper_console": "HTML Preview запрашивает собственный favicon.ico: 404; файл прототипа содержит data favicon."
+    "wrapper_console": "HTML Preview запрашивает собственный favicon.ico: 404; файл прототипа содержит data favicon.",
+    "anonymous_source_status": 200,
+    "anonymous_source_sha256": "54b2cbd23d7d5051461a3287aefd52265d1523965538b197b7cdf0e76818bb64",
+    "matches_local_bytes": true
   },
   "production_gate": {
     "status": "НЕ ПРОВЕРЕНО",
