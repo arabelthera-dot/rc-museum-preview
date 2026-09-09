@@ -1,0 +1,53 @@
+{
+  "date": "2026-09-09",
+  "days": 31,
+  "columns": 5,
+  "dates_sequential": true,
+  "titles_unique": true,
+  "exact_title_repeats_january_february": 0,
+  "xlsx_rows": 32,
+  "xlsx_columns": 5,
+  "xlsx_xml_valid": true,
+  "pdf_pages": 3,
+  "browser": {
+    "initial": {
+      "rows": 31,
+      "columns": 5,
+      "count": "31 из 31 дней",
+      "overflow": false
+    },
+    "search": 1,
+    "calendar": 5,
+    "conditional": 26,
+    "empty": true,
+    "mobile": [
+      {
+        "width": 390,
+        "overflow": false,
+        "tableScrollable": true
+      },
+      {
+        "width": 320,
+        "overflow": false,
+        "tableScrollable": true
+      }
+    ],
+    "errors": []
+  },
+  "status": "На согласование Сергею; механики — предложения",
+  "sha256": {
+    "march.md": "22380627cffaa87b4e8ed7e7e50122c4627c8728a121db73375f7a72334dbaca",
+    "march.xlsx": "5d97124e6a6da47b6d7aae1f6111229731bea13cd08bbc5fe56db4335ab92a50",
+    "march.pdf": "06a2f0b370b98b9c0d8b287df45232621caee9cc95c08fd7876e693dbddab09c",
+    "index.html": "35348f877ec609e91a5999c453c98d2fb63cdaa1c7a0a86fed9bc8d278182dd9"
+  },
+  "source_http": {
+    "total": 32,
+    "passed": 29,
+    "unverified": [
+      "harrow",
+      "alexei",
+      "master"
+    ]
+  }
+}
