@@ -4,7 +4,9 @@ ROOT=Path(__file__).parent
 names=['january','february','march','april','may','june','july','august','september','october','november','december'];ru=['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь']
 for i,m in enumerate(names[:4]):
  p=Path(f'/home/agent/dna/reports/ethnography-{m}-2026-09-{"08" if i<2 else "09"}');out=ROOT/'accepted'/m;out.mkdir(parents=True,exist_ok=True)
- for e in ['md','xlsx','pdf','json']:shutil.copy2(p/(m+'.'+e),out/(m+'.'+e))
+ for e in ['md','xlsx','pdf','json']:
+  if (p/(m+'.'+e)).exists():shutil.copy2(p/(m+'.'+e),out/(m+'.'+e))
+  else:assert (out/(m+'.'+e)).exists()
 base=zipfile.ZipFile(ROOT/'may-december.xlsx');ns='http://schemas.openxmlformats.org/package/2006/relationships'
 with zipfile.ZipFile(ROOT/'calendar-year.xlsx','w',zipfile.ZIP_DEFLATED) as z:
  for name in ['_rels/.rels','xl/styles.xml']:z.writestr(name,base.read(name))
