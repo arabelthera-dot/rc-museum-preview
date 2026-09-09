@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "status": "rejected",
+  "page": "/home/agent/worktrees/chest-fix-0909/review/etnografiya/chest/index.html",
+  "kind": "page",
+  "museum": "things",
+  "errors": [
+    "profile: обязательный файл не указан",
+    "reference: в принятом профиле не закреплён эталон с SHA-256",
+    "browser: обязательный файл не указан",
+    "core.audio: Нет аудиогида.",
+    "review: обязательный файл не указан"
+  ],
+  "inputs": {
+    "/home/agent/worktrees/chest-fix-0909/review/etnografiya/chest/index.html": "5cf12d7adb3390c153acfe5859c73758bd24b141da03cf3aa32c2b9ecf5e56c0",
+    "/home/agent/worktrees/museum-delivery-control/russian-civilization/platform/contracts/accepted-page-profiles.json": "ade39dbfdaa669346cd5af64addad8962d27d89b75e4c5abafd72f2dc8e675d2",
+    "/home/agent/worktrees/museum-delivery-control/russian-civilization/tools/page_delivery.py": "6cfb3125be929da3b774003cde6235b08f877c34be83a909c935069aa0273355",
+    "/home/agent/worktrees/museum-delivery-control/russian-civilization/tools/rc-page.py": "f0316cb187d79454694d908c605389cf0afed3261bca7ee7f7fcf6648ceaf880",
+    "/home/agent/worktrees/museum-delivery-control/russian-civilization/tools/audit-pages.py": "5b2cac6c5daee8079cc3da61ebe55dd572eaa82d60a05a40c1ae3f4432e9a6b5",
+    "/home/agent/worktrees/museum-delivery-control/russian-civilization/docs/skills/museum-page-production/scripts/page_gate.py": "442a4f73af8de2799b82eebf85e75d1e0eab171c0da577ce3ce52ab76106de46",
+    "/home/agent/worktrees/museum-delivery-control/russian-civilization/platform/runtime/profile_contract.py": "c697584b941a6374b1be5c306f09c30dba777c7d3ca75369c5e3e5973c57429b",
+    "/home/agent/worktrees/chest-fix-0909/review/etnografiya/chest/issue.json": "b6cb8bb318995c9276702dbdcd175994ebe0b62b9eecefcd43f594dc4b6a0a6e"
+  },
+  "request": {
+    "kind": "page",
+    "museum": "things",
+    "project": "/home/agent/worktrees/museum-delivery-control/russian-civilization",
+    "profile": null,
+    "issue": "/home/agent/worktrees/chest-fix-0909/review/etnografiya/chest/issue.json",
+    "browser_report": null,
+    "review": null
+  },
+  "page_sha256": "5cf12d7adb3390c153acfe5859c73758bd24b141da03cf3aa32c2b9ecf5e56c0",
+  "core_checks": {
+    "core.header": true,
+    "core.crumbs": true,
+    "core.date": true,
+    "core.caption": true,
+    "core.video": true,
+    "core.audio": false,
+    "core.calendar": true,
+    "core.next": true,
+    "core.buttons": true,
+    "core.header_order": true
+  }
+}

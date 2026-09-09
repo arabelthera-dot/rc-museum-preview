@@ -3,7 +3,7 @@
   "museum_id": "rc:museum:things",
   "issue_id": "rc:issue:things-chest-1750",
   "content_family_id": "rc:family:things-chest",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "identity": {
     "title_ru": "За пятью замками",
     "slug": "chest-1750",
@@ -27,7 +27,7 @@
   "interactive": {
     "title_ru": "Прочитай устройство ларца",
     "type": "documentary-viewpoints",
-    "visitor_action_ru": "Открыть три настоящих ракурса и найти доказательство ответа на самом предмете.",
+    "visitor_action_ru": "Восстановить взаимное расположение трёх фрагментов подлинной фотографии; рассмотреть дату и узор; проверить наблюдения.",
     "exclusive_insight_ru": "Соединить закрытый вид с девятью отделениями и восемью ящиками внутри.",
     "wow_effect_ru": "За единой крышкой открывается организованное внутреннее пространство.",
     "text_alternative_ru": "Полный рассказ, описания ракурсов, объяснения ответов и расшифровки медиа.",
@@ -267,7 +267,7 @@
     "title_ru": "За пятью замками",
     "description_ru": "Ларец 1750 года: фотографии, аудиогид, ролик и рассматривание.",
     "h1_ru": "За пятью замками",
-    "canonical_url": "https://htmlpreview.github.io/?https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/chest-full-0909/review/etnografiya/chest/index.html",
+    "canonical_url": "https://htmlpreview.github.io/?https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/chest-fix-0909/review/etnografiya/chest/index.html",
     "index_state": "noindex",
     "primary_query_ru": "ларец подголовник 1750 Чупятов",
     "og_image_id": "rc:image:chest-chest"
@@ -305,5 +305,38 @@
     "date": 20,
     "pattern": 20,
     "evidence": 20
+  },
+  "production": {
+    "level": "A",
+    "mode": "rewrite",
+    "reference_status": "candidate-not-owner-accepted",
+    "required_slots": [
+      "rolik",
+      "audioguide",
+      "open-chest",
+      "gallery",
+      "story",
+      "inscription",
+      "fact-version",
+      "mirovoy-kontekst",
+      "quiz",
+      "result",
+      "calendar",
+      "kuda-dalshe"
+    ],
+    "acts": [
+      "Крышка скрывает порядок",
+      "Собери внутренний вид",
+      "Прочти металл",
+      "Человек и следы времени",
+      "Отличи факт от версии",
+      "Сравни и сформулируй вывод"
+    ],
+    "media_roles": {
+      "video": "зрительная загадка о девяти отделениях и восьми ящиках",
+      "audio": "медленное рассматривание материала и работы рук",
+      "interactive": "восстановление взаимного расположения частей документального снимка",
+      "text": "человек, быт, атрибуция, происхождение, источники"
+    }
   }
 }

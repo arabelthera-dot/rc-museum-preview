@@ -1,0 +1,276 @@
+{
+  "schema_version": 1,
+  "url": "https://chest.local/index.html",
+  "dom": {
+    "path": "rendered.html",
+    "sha256": "7d755453c91bfba8e8f869941dd2af07940968405c5e51e0a6bf01285b3dbf9c"
+  },
+  "viewports": [
+    {
+      "w": 320,
+      "content_width": 305,
+      "fonts_loaded": true,
+      "broken_images": 0,
+      "scrollY": 0,
+      "overflow": false,
+      "h1": 572.203125,
+      "buttons": 785.28125,
+      "support": [
+        0.11790356748896912,
+        0.9577966744384276
+      ],
+      "small": [],
+      "targets": [],
+      "width": 320,
+      "height": 844,
+      "h1_bottom": 572.203125,
+      "buttons_bottom": 785.28125,
+      "support_count": 2,
+      "support_fraction": 0.11790356748896912,
+      "first_screen": {
+        "path": "320-first.png",
+        "sha256": "e16c92980483276da9af10b2cead247aef605c1aca4524db3ad7fde3eacb6a05"
+      },
+      "full_page": {
+        "path": "320-full.png",
+        "sha256": "baea9ad4b7a6ee5b051b3fed79d3e5f38b42910f1b6af69239dbc85d1830ec50"
+      }
+    },
+    {
+      "w": 390,
+      "content_width": 375,
+      "fonts_loaded": true,
+      "broken_images": 0,
+      "scrollY": 0,
+      "overflow": false,
+      "h1": 484.1875,
+      "buttons": 632.25,
+      "support": [
+        0.12095224452146691,
+        0.9582296791144902
+      ],
+      "small": [],
+      "targets": [],
+      "width": 390,
+      "height": 844,
+      "h1_bottom": 484.1875,
+      "buttons_bottom": 632.25,
+      "support_count": 2,
+      "support_fraction": 0.12095224452146691,
+      "first_screen": {
+        "path": "390-first.png",
+        "sha256": "06ae0e445993a1c7feb7f8099adf28e94aff56d0a2183ddf1877252198acfedd"
+      },
+      "full_page": {
+        "path": "390-full.png",
+        "sha256": "b4b80055c6af7c8cb8b849f3420bb5354b6e18363c66308a4d40d0842c7df8e2"
+      }
+    },
+    {
+      "w": 1440,
+      "content_width": 1425,
+      "fonts_loaded": true,
+      "broken_images": 0,
+      "scrollY": 0,
+      "overflow": false,
+      "h1": 670.578125,
+      "buttons": 832.25,
+      "support": [
+        0.17045399260508562,
+        0.9659606901920083
+      ],
+      "small": [],
+      "targets": [],
+      "width": 1440,
+      "height": 844,
+      "h1_bottom": 670.578125,
+      "buttons_bottom": 832.25,
+      "support_count": 2,
+      "support_fraction": 0.17045399260508562,
+      "first_screen": {
+        "path": "1440-first.png",
+        "sha256": "2cabbf6f09d0db0ddd12e6ccc5201a86fa9f8cbb18c315e820e1fd2d9562bc4e"
+      },
+      "full_page": {
+        "path": "1440-full.png",
+        "sha256": "d3539a7fbc48cde025906a8bb9b456371dd87af8b167084e983e3d2aa0fb4887"
+      }
+    }
+  ],
+  "page_sha256": "5cf12d7adb3390c153acfe5859c73758bd24b141da03cf3aa32c2b9ecf5e56c0",
+  "checks": [
+    {
+      "name": "no premature audio or video",
+      "pass": true
+    },
+    {
+      "name": "quiz cannot bypass action",
+      "pass": true
+    },
+    {
+      "name": "wrong assembly no points",
+      "pass": true
+    },
+    {
+      "name": "assembly earns 40",
+      "pass": true
+    },
+    {
+      "name": "photo inspection required",
+      "pass": true
+    },
+    {
+      "name": "100 achievable after action",
+      "pass": true
+    },
+    {
+      "name": "certificate visible",
+      "pass": true
+    },
+    {
+      "name": "progress survives reload",
+      "pass": true
+    },
+    {
+      "name": "reset removes certificate and score",
+      "pass": true
+    },
+    {
+      "name": "geometry 320",
+      "pass": true
+    },
+    {
+      "name": "geometry 360",
+      "pass": true
+    },
+    {
+      "name": "geometry 390",
+      "pass": true
+    },
+    {
+      "name": "first screen complete",
+      "pass": true
+    },
+    {
+      "name": "geometry 768",
+      "pass": true
+    },
+    {
+      "name": "geometry 1440",
+      "pass": true
+    },
+    {
+      "name": "video and subtitles",
+      "pass": true
+    },
+    {
+      "name": "audio plays",
+      "pass": true
+    },
+    {
+      "name": "no js errors",
+      "pass": true
+    },
+    {
+      "name": "canonical and og",
+      "pass": true
+    },
+    {
+      "name": "no inline shared engines",
+      "pass": true
+    }
+  ],
+  "views": [
+    {
+      "w": 320,
+      "content_width": 305,
+      "fonts_loaded": true,
+      "broken_images": 0,
+      "scrollY": 0,
+      "overflow": false,
+      "h1": 572.203125,
+      "buttons": 785.28125,
+      "support": [
+        0.11790356748896912,
+        0.9577966744384276
+      ],
+      "small": [],
+      "targets": []
+    },
+    {
+      "w": 360,
+      "content_width": 345,
+      "fonts_loaded": true,
+      "broken_images": 0,
+      "scrollY": 0,
+      "overflow": false,
+      "h1": 551.90625,
+      "buttons": 764.984375,
+      "support": [
+        0.12154052903294481,
+        0.959342900101123
+      ],
+      "small": [],
+      "targets": []
+    },
+    {
+      "w": 390,
+      "content_width": 375,
+      "fonts_loaded": true,
+      "broken_images": 0,
+      "scrollY": 0,
+      "overflow": false,
+      "h1": 484.1875,
+      "buttons": 632.25,
+      "support": [
+        0.12095224452146691,
+        0.9582296791144902
+      ],
+      "small": [],
+      "targets": []
+    },
+    {
+      "w": 768,
+      "content_width": 753,
+      "fonts_loaded": true,
+      "broken_images": 0,
+      "scrollY": 0,
+      "overflow": false,
+      "h1": 638.078125,
+      "buttons": 799.75,
+      "support": [
+        0.17099534433712624,
+        0.9652716905927494
+      ],
+      "small": [],
+      "targets": []
+    },
+    {
+      "w": 1440,
+      "content_width": 1425,
+      "fonts_loaded": true,
+      "broken_images": 0,
+      "scrollY": 0,
+      "overflow": false,
+      "h1": 670.578125,
+      "buttons": 832.25,
+      "support": [
+        0.17045399260508562,
+        0.9659606901920083
+      ],
+      "small": [],
+      "targets": []
+    }
+  ],
+  "media": {
+    "duration": 87.623373,
+    "width": 900,
+    "height": 1000,
+    "tracks": [
+      2
+    ],
+    "cues": 10
+  },
+  "errors": [],
+  "gzip": 15808
+}
