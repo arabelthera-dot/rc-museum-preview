@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "page_sha256": "853ba2d195f8887766131f7b8bf9c0b7d5ec78eee4b1f2197236bf0f71f1e09c",
-  "url": "https://chest.test/index.html",
+  "url": "https://htmlpreview.github.io/?https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/d5a3351/review/etnografiya/chest/index.html",
   "checks": [
     {
       "name": "нельзя пропустить основной опыт",
@@ -181,11 +181,11 @@
       "small": [],
       "first_screen": {
         "path": "320-first_screen.png",
-        "sha256": "1baafa5f23f4ed228d55e02c4e4ef166cf097682ea98348feb0652f7599f6010"
+        "sha256": "c39585451a7f9c7c881cf1133987a17593208de9e2c7516e27b89fd8501bad00"
       },
       "full_page": {
         "path": "320-full_page.png",
-        "sha256": "d6d847eb6cace61c6f516fdf7e5009c53dbd44ced170e043fdb77c06543821ab"
+        "sha256": "ec0a3bc5a30170ba1ea8417515f26e96c1626b7880432b3bbb833842e64200bb"
       }
     },
     {
@@ -217,11 +217,11 @@
       "small": [],
       "first_screen": {
         "path": "390-first_screen.png",
-        "sha256": "b6bcf2a6b9a5406854a1dc5ba1f08a9ac7dadfd6f43edaffe0474741d8aeaa09"
+        "sha256": "6e77edb884e13bad3c0d24f9cdb9ab93beeffb86b6baa21e8973cd572d5b545a"
       },
       "full_page": {
         "path": "390-full_page.png",
-        "sha256": "e38642b593dd767aa21a7d271252e3880c6a05db6b14e7fa44604730910ed049"
+        "sha256": "e87a244a61a6220f0c2b19775324f049b6d8c84abcb88d7ff2eda39a643499e4"
       }
     },
     {
@@ -231,10 +231,10 @@
       "broken_images": 0,
       "fonts_loaded": true,
       "content_width": 753,
-      "h1_bottom": 638.375,
-      "buttons_bottom": 800.046875,
+      "h1_bottom": 638.078125,
+      "buttons_bottom": 799.75,
       "support_count": 2,
-      "support_fraction": 0.1521427464352139,
+      "support_fraction": 0.1521345888287679,
       "share": "flex",
       "small": []
     },
@@ -245,10 +245,10 @@
       "broken_images": 0,
       "fonts_loaded": true,
       "content_width": 1425,
-      "h1_bottom": 670.984375,
-      "buttons_bottom": 832.65625,
+      "h1_bottom": 670.703125,
+      "buttons_bottom": 832.375,
       "support_count": 2,
-      "support_fraction": 0.15904946093531225,
+      "support_fraction": 0.15904261650050408,
       "share": "flex",
       "small": [],
       "first_screen": {
@@ -257,13 +257,15 @@
       },
       "full_page": {
         "path": "1440-full_page.png",
-        "sha256": "6b8584f8a59b798a273c06047da47585d54e2234340c30160212f0c8c0b0b6b6"
+        "sha256": "2fb198922fa7cc9dae99877916ecb1da3d56f8ab70c4a5988b17d61af5c99c74"
       }
     }
   ],
   "dom": {
     "path": "rendered.html",
-    "sha256": "325e861c642e831e5a3fc7d103ccad4bfc352d38c07a8c473a0d5017d6d86540"
+    "sha256": "84ce8f695d99e6260d3c1675a09fec24c571274e4912ee5875a1b6618cd51f58"
   },
-  "passed": 40
+  "passed": 40,
+  "source_url": "https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/d5a3351/review/etnografiya/chest/index.html",
+  "source_sha256_verified": "853ba2d195f8887766131f7b8bf9c0b7d5ec78eee4b1f2197236bf0f71f1e09c"
 }

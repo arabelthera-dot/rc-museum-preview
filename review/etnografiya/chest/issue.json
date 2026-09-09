@@ -3,7 +3,7 @@
   "museum_id": "rc:museum:things",
   "issue_id": "rc:issue:things-chest-1750",
   "content_family_id": "rc:family:things-chest",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "identity": {
     "title_ru": "За пятью замками",
     "slug": "chest-1750",
@@ -25,13 +25,13 @@
     ]
   },
   "interactive": {
-    "title_ru": "Прочитай устройство ларца",
-    "type": "documentary-viewpoints",
-    "visitor_action_ru": "Восстановить взаимное расположение трёх фрагментов подлинной фотографии; рассмотреть дату и узор; проверить наблюдения.",
-    "exclusive_insight_ru": "Соединить закрытый вид с девятью отделениями и восемью ящиками внутри.",
-    "wow_effect_ru": "За единой крышкой открывается организованное внутреннее пространство.",
-    "text_alternative_ru": "Полный рассказ, описания ракурсов, объяснения ответов и расшифровки медиа.",
-    "engine": "existing chest viewer; museum-chrome; museum-audioguide; museum-calendar-month; museum-support",
+    "title_ru": "Цвет спрятан под железом",
+    "type": "material-layer-experiment",
+    "visitor_action_ru": "Сравнить сплошное и просечное железо, красную/зелёную подкладку и её отсутствие; сопоставить результат с подлинной вещью.",
+    "exclusive_insight_ru": "Одно и то же железо даёт разный цвет узора за счёт видимой через прорези подкладки.",
+    "wow_effect_ru": "Пластина не меняется, но цвет металлического узора меняется при замене нижнего слоя.",
+    "text_alternative_ru": "Каждое состояние модели описано в aria-live и SVG desc; все действия выполняются кнопками. Отдельная сборка снабжена различимыми описаниями фрагментов.",
+    "engine": "material-lab.js; photo-order.js; общие museum-chrome/audioguide/calendar-month/support",
     "unique_to_issue": true
   },
   "sources": [
@@ -267,7 +267,7 @@
     "title_ru": "За пятью замками",
     "description_ru": "Ларец 1750 года: фотографии, аудиогид, ролик и рассматривание.",
     "h1_ru": "За пятью замками",
-    "canonical_url": "https://htmlpreview.github.io/?https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/chest-fix-0909/review/etnografiya/chest/index.html",
+    "canonical_url": "https://htmlpreview.github.io/?https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/chest-standard-0909/review/etnografiya/chest/index.html",
     "index_state": "noindex",
     "primary_query_ru": "ларец подголовник 1750 Чупятов",
     "og_image_id": "rc:image:chest-chest"
