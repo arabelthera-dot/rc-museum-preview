@@ -15,3 +15,8 @@ body #secnav{position:static!important;top:auto!important;transform:none!importa
 @media(max-width:700px){.material-lab{grid-template-columns:1fr;gap:20px}.lab-figure{position:static}.lab-status{min-height:0}.lab-controls .actions button{flex:1 1 130px}body .sharerow{margin:6px 0}.lab-steps{font-size:16px}body .support :is(div,span){font-size:14px!important}}
 body .support .sup-l{font-size:14px!important;letter-spacing:2px!important}body .sharerow *{font-size:14px!important}
 body #secnav{position:static!important}.section-return{display:inline-flex;align-items:center;min-height:44px;font-size:14px;margin-top:24px;color:var(--gold-l)}
+
+/* museum-core §6-бис: museum, slogan, score in visible reading order. */
+body header.top{padding:8px 18px 4px}body header.top .score{position:static!important;transform:none!important;margin:4px auto 0;display:table}body .hero-under .stamp strong{font-size:clamp(16px,2.5vw,25px);line-height:1.2;display:block}.fact-list dt{font-weight:700;color:var(--gold-l);margin-top:20px}.fact-list dd{margin:6px 0 20px}.gallery-display{touch-action:pan-y}.gallery-display:focus-visible{outline:3px solid #e4c97a;outline-offset:4px}#gallery-position{font-size:16px}
+
+body .credit-extra{display:inline!important}.gallery-credit{font-size:14px;color:var(--muted)}
