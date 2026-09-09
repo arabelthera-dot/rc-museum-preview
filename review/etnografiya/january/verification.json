@@ -1,0 +1,36 @@
+{
+  "days": 31,
+  "columns": 5,
+  "unique_titles": 31,
+  "sources": 29,
+  "calendar_dates": 9,
+  "conditional_dates": 22,
+  "xlsx": "ZIP/XML and 31x5 cells validated",
+  "browser": {
+    "desktop_overflow": false,
+    "mobile_overflow": false,
+    "mobile_table_scroll": true,
+    "search": true,
+    "date_filter": true,
+    "empty_state": true,
+    "page_errors": []
+  },
+  "pdf": {
+    "pages": 3,
+    "missing_dates": [],
+    "page_sizes": [
+      [
+        1191.12,
+        841.91998
+      ],
+      [
+        1191.12,
+        841.91998
+      ],
+      [
+        1191.12,
+        841.91998
+      ]
+    ]
+  }
+}
