@@ -1,0 +1,277 @@
+{
+  "schema_version": 1,
+  "url": "https://htmlpreview.github.io/?https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/d9a1abc/review/etnografiya/chest/index.html",
+  "dom": {
+    "path": "rendered.html",
+    "sha256": "f9008e46c177d2cef43b8aa73fc82fbe30207716f84232667ac9a1150f81ddcf"
+  },
+  "viewports": [
+    {
+      "w": 320,
+      "content_width": 305,
+      "fonts_loaded": true,
+      "broken_images": 0,
+      "scrollY": 0,
+      "overflow": false,
+      "h1": 572.203125,
+      "buttons": 793.28125,
+      "support": [
+        0.11825725491178829,
+        0.9578175120288693
+      ],
+      "small": [],
+      "targets": [],
+      "width": 320,
+      "height": 844,
+      "h1_bottom": 572.203125,
+      "buttons_bottom": 793.28125,
+      "support_count": 2,
+      "support_fraction": 0.11825725491178829,
+      "first_screen": {
+        "path": "320-first.png",
+        "sha256": "742bb666246c509db5d09a6d59ce2af59306101ef705949915f1831bf7f534d0"
+      },
+      "full_page": {
+        "path": "320-full.png",
+        "sha256": "53e596e7c2bd27c6cf779c40b6154d1ff30b97b5f8c72256c070c75aedd6813e"
+      }
+    },
+    {
+      "w": 390,
+      "content_width": 375,
+      "fonts_loaded": true,
+      "broken_images": 0,
+      "scrollY": 0,
+      "overflow": false,
+      "h1": 484.1875,
+      "buttons": 632.25,
+      "support": [
+        0.12095224452146691,
+        0.9582349200581395
+      ],
+      "small": [],
+      "targets": [],
+      "width": 390,
+      "height": 844,
+      "h1_bottom": 484.1875,
+      "buttons_bottom": 632.25,
+      "support_count": 2,
+      "support_fraction": 0.12095224452146691,
+      "first_screen": {
+        "path": "390-first.png",
+        "sha256": "cd4355c253e2542d65241df8241361b38b66880a785e7a1ca207ea522dbcc987"
+      },
+      "full_page": {
+        "path": "390-full.png",
+        "sha256": "ef5e858d05090f140e9445e7e872a92bb74987f5da81a70cc114808ccdb421d3"
+      }
+    },
+    {
+      "w": 1440,
+      "content_width": 1425,
+      "fonts_loaded": true,
+      "broken_images": 0,
+      "scrollY": 0,
+      "overflow": false,
+      "h1": 670.578125,
+      "buttons": 832.25,
+      "support": [
+        0.1702110862806063,
+        0.9660000890659411
+      ],
+      "small": [],
+      "targets": [],
+      "width": 1440,
+      "height": 844,
+      "h1_bottom": 670.578125,
+      "buttons_bottom": 832.25,
+      "support_count": 2,
+      "support_fraction": 0.1702110862806063,
+      "first_screen": {
+        "path": "1440-first.png",
+        "sha256": "2c6686b7a58fe883ab70d9c29eeb5721970ace5547b2edb0f370074fbee5a419"
+      },
+      "full_page": {
+        "path": "1440-full.png",
+        "sha256": "d89beea0f1ab0bff0b5140727d3c54a8b0898b9f7e2f2f1526645254362022e7"
+      }
+    }
+  ],
+  "page_sha256": "1fad7dd2eeb779d09b943580cf8a3e52016dc828a3f6adf9ddda85116b54da7f",
+  "checks": [
+    {
+      "name": "no premature audio or video",
+      "pass": true
+    },
+    {
+      "name": "quiz cannot bypass action",
+      "pass": true
+    },
+    {
+      "name": "wrong assembly no points",
+      "pass": true
+    },
+    {
+      "name": "assembly earns 40",
+      "pass": true
+    },
+    {
+      "name": "photo inspection required",
+      "pass": true
+    },
+    {
+      "name": "100 achievable after action",
+      "pass": true
+    },
+    {
+      "name": "certificate visible",
+      "pass": true
+    },
+    {
+      "name": "progress survives reload",
+      "pass": true
+    },
+    {
+      "name": "reset removes certificate and score",
+      "pass": true
+    },
+    {
+      "name": "geometry 320",
+      "pass": true
+    },
+    {
+      "name": "geometry 360",
+      "pass": true
+    },
+    {
+      "name": "geometry 390",
+      "pass": true
+    },
+    {
+      "name": "first screen complete",
+      "pass": true
+    },
+    {
+      "name": "geometry 768",
+      "pass": true
+    },
+    {
+      "name": "geometry 1440",
+      "pass": true
+    },
+    {
+      "name": "video and subtitles",
+      "pass": true
+    },
+    {
+      "name": "audio plays",
+      "pass": true
+    },
+    {
+      "name": "no js errors",
+      "pass": true
+    },
+    {
+      "name": "canonical and og",
+      "pass": true
+    },
+    {
+      "name": "no inline shared engines",
+      "pass": true
+    }
+  ],
+  "views": [
+    {
+      "w": 320,
+      "content_width": 305,
+      "fonts_loaded": true,
+      "broken_images": 0,
+      "scrollY": 0,
+      "overflow": false,
+      "h1": 572.203125,
+      "buttons": 793.28125,
+      "support": [
+        0.11825725491178829,
+        0.9578175120288693
+      ],
+      "small": [],
+      "targets": []
+    },
+    {
+      "w": 360,
+      "content_width": 345,
+      "fonts_loaded": true,
+      "broken_images": 0,
+      "scrollY": 0,
+      "overflow": false,
+      "h1": 551.90625,
+      "buttons": 772.984375,
+      "support": [
+        0.12191440123423951,
+        0.9593651912539235
+      ],
+      "small": [],
+      "targets": []
+    },
+    {
+      "w": 390,
+      "content_width": 375,
+      "fonts_loaded": true,
+      "broken_images": 0,
+      "scrollY": 0,
+      "overflow": false,
+      "h1": 484.1875,
+      "buttons": 632.25,
+      "support": [
+        0.12095224452146691,
+        0.9582349200581395
+      ],
+      "small": [],
+      "targets": []
+    },
+    {
+      "w": 768,
+      "content_width": 753,
+      "fonts_loaded": true,
+      "broken_images": 0,
+      "scrollY": 0,
+      "overflow": false,
+      "h1": 638.375,
+      "buttons": 800.046875,
+      "support": [
+        0.17100367136336575,
+        0.965227475689621
+      ],
+      "small": [],
+      "targets": []
+    },
+    {
+      "w": 1440,
+      "content_width": 1425,
+      "fonts_loaded": true,
+      "broken_images": 0,
+      "scrollY": 0,
+      "overflow": false,
+      "h1": 670.578125,
+      "buttons": 832.25,
+      "support": [
+        0.1702110862806063,
+        0.9660000890659411
+      ],
+      "small": [],
+      "targets": []
+    }
+  ],
+  "media": {
+    "duration": 87.623373,
+    "width": 900,
+    "height": 1000,
+    "tracks": [
+      2
+    ],
+    "cues": 10
+  },
+  "errors": [],
+  "gzip": 16975,
+  "passed": 20
+}
