@@ -7,19 +7,28 @@
   "errors": [
     "profile: обязательный файл не указан",
     "reference: в принятом профиле не закреплён эталон с SHA-256",
-    "browser: обязательный файл не указан",
-    "core.audio: Нет аудиогида.",
-    "review: обязательный файл не указан"
+    "review.verdict: нет положительного заключения проверяющего",
+    "review.reference_comparison: нет результата с доказательством",
+    "review.accessibility: нет результата с доказательством"
   ],
   "inputs": {
-    "/home/agent/worktrees/chest-fix-0909/review/etnografiya/chest/index.html": "5cf12d7adb3390c153acfe5859c73758bd24b141da03cf3aa32c2b9ecf5e56c0",
+    "/home/agent/worktrees/chest-fix-0909/review/etnografiya/chest/index.html": "29e3766057a47c78dee1e91645c6eb1e78dc7928c5f12095cb5a2058991c9b6a",
     "/home/agent/worktrees/museum-delivery-control/russian-civilization/platform/contracts/accepted-page-profiles.json": "ade39dbfdaa669346cd5af64addad8962d27d89b75e4c5abafd72f2dc8e675d2",
     "/home/agent/worktrees/museum-delivery-control/russian-civilization/tools/page_delivery.py": "6cfb3125be929da3b774003cde6235b08f877c34be83a909c935069aa0273355",
     "/home/agent/worktrees/museum-delivery-control/russian-civilization/tools/rc-page.py": "f0316cb187d79454694d908c605389cf0afed3261bca7ee7f7fcf6648ceaf880",
     "/home/agent/worktrees/museum-delivery-control/russian-civilization/tools/audit-pages.py": "5b2cac6c5daee8079cc3da61ebe55dd572eaa82d60a05a40c1ae3f4432e9a6b5",
     "/home/agent/worktrees/museum-delivery-control/russian-civilization/docs/skills/museum-page-production/scripts/page_gate.py": "442a4f73af8de2799b82eebf85e75d1e0eab171c0da577ce3ce52ab76106de46",
     "/home/agent/worktrees/museum-delivery-control/russian-civilization/platform/runtime/profile_contract.py": "c697584b941a6374b1be5c306f09c30dba777c7d3ca75369c5e3e5973c57429b",
-    "/home/agent/worktrees/chest-fix-0909/review/etnografiya/chest/issue.json": "b6cb8bb318995c9276702dbdcd175994ebe0b62b9eecefcd43f594dc4b6a0a6e"
+    "/home/agent/worktrees/chest-fix-0909/review/etnografiya/chest/issue.json": "b6cb8bb318995c9276702dbdcd175994ebe0b62b9eecefcd43f594dc4b6a0a6e",
+    "/home/agent/worktrees/chest-fix-0909/review/etnografiya/chest/checks/fix/browser.json": "5290eb8a876ab2d8e32e5e6e78b755003330808880957347a87888c64993f66a",
+    "/home/agent/worktrees/chest-fix-0909/review/etnografiya/chest/checks/fix/rendered.html": "a1e21250c81efb693f0a2854b79e1bfe225d4ddbea37c4072ecf8999d43e11c9",
+    "/home/agent/worktrees/chest-fix-0909/review/etnografiya/chest/checks/fix/320-first.png": "e16c92980483276da9af10b2cead247aef605c1aca4524db3ad7fde3eacb6a05",
+    "/home/agent/worktrees/chest-fix-0909/review/etnografiya/chest/checks/fix/320-full.png": "758f9e69c7361a69940e534469a42565da5e9695d57df63c9d83526fc1e86a71",
+    "/home/agent/worktrees/chest-fix-0909/review/etnografiya/chest/checks/fix/390-first.png": "3d5166ab80dfd7e291c8a0968c683d667136e8db1ca665268225e877c1613371",
+    "/home/agent/worktrees/chest-fix-0909/review/etnografiya/chest/checks/fix/390-full.png": "d383c6ec32fd3ede2ee6b6749698413ee787937109758c7d92a96dcc46b71c89",
+    "/home/agent/worktrees/chest-fix-0909/review/etnografiya/chest/checks/fix/1440-first.png": "2cabbf6f09d0db0ddd12e6ccc5201a86fa9f8cbb18c315e820e1fd2d9562bc4e",
+    "/home/agent/worktrees/chest-fix-0909/review/etnografiya/chest/checks/fix/1440-full.png": "275c7cc82979adccea59649a32fcb66dcf620cbca725dcbb619b5cb20ee66124",
+    "/home/agent/worktrees/chest-fix-0909/review/etnografiya/chest/checks/fix/review.json": "51fa6aa0cad4a84cdcca1a436b5ad650a9e4a69a56b3441e7d5216523d1ead59"
   },
   "request": {
     "kind": "page",
@@ -27,17 +36,17 @@
     "project": "/home/agent/worktrees/museum-delivery-control/russian-civilization",
     "profile": null,
     "issue": "/home/agent/worktrees/chest-fix-0909/review/etnografiya/chest/issue.json",
-    "browser_report": null,
-    "review": null
+    "browser_report": "/home/agent/worktrees/chest-fix-0909/review/etnografiya/chest/checks/fix/browser.json",
+    "review": "/home/agent/worktrees/chest-fix-0909/review/etnografiya/chest/checks/fix/review.json"
   },
-  "page_sha256": "5cf12d7adb3390c153acfe5859c73758bd24b141da03cf3aa32c2b9ecf5e56c0",
+  "page_sha256": "29e3766057a47c78dee1e91645c6eb1e78dc7928c5f12095cb5a2058991c9b6a",
   "core_checks": {
     "core.header": true,
     "core.crumbs": true,
     "core.date": true,
     "core.caption": true,
     "core.video": true,
-    "core.audio": false,
+    "core.audio": true,
     "core.calendar": true,
     "core.next": true,
     "core.buttons": true,

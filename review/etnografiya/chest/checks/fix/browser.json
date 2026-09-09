@@ -3,7 +3,7 @@
   "url": "https://chest.local/index.html",
   "dom": {
     "path": "rendered.html",
-    "sha256": "334c30907e47c5e21bde194be4ca87b877ee302d7e20dfcf4e0467d96279d399"
+    "sha256": "a1e21250c81efb693f0a2854b79e1bfe225d4ddbea37c4072ecf8999d43e11c9"
   },
   "viewports": [
     {
@@ -29,11 +29,11 @@
       "support_fraction": 0.11790356748896912,
       "first_screen": {
         "path": "320-first.png",
-        "sha256": "9ab6c4bae95f816a25a3438d3d0b4c8424a6cae79c6cfd3b3013160ad2b35162"
+        "sha256": "e16c92980483276da9af10b2cead247aef605c1aca4524db3ad7fde3eacb6a05"
       },
       "full_page": {
         "path": "320-full.png",
-        "sha256": "6be73213a79318f59d4855bb6e7c37e967f0591447382797ff080d76257fc68d"
+        "sha256": "758f9e69c7361a69940e534469a42565da5e9695d57df63c9d83526fc1e86a71"
       }
     },
     {
@@ -59,11 +59,11 @@
       "support_fraction": 0.12095224452146691,
       "first_screen": {
         "path": "390-first.png",
-        "sha256": "b603f081deea3ff83123efd9c5b1d7b8df6b1f8b10b2ca02213dd2742ad4652f"
+        "sha256": "3d5166ab80dfd7e291c8a0968c683d667136e8db1ca665268225e877c1613371"
       },
       "full_page": {
         "path": "390-full.png",
-        "sha256": "65f9fd823cfc776935e531f2f65ad0fcbf1d6b80b292449746692fb60a516c64"
+        "sha256": "d383c6ec32fd3ede2ee6b6749698413ee787937109758c7d92a96dcc46b71c89"
       }
     },
     {
@@ -73,31 +73,31 @@
       "broken_images": 0,
       "scrollY": 0,
       "overflow": false,
-      "h1": 670.890625,
-      "buttons": 832.5625,
+      "h1": 670.40625,
+      "buttons": 832.078125,
       "support": [
-        0.1702203024807306,
-        0.9659577611891962
+        0.1701999530379583,
+        0.9659889558232931
       ],
       "small": [],
       "targets": [],
       "width": 1440,
       "height": 844,
-      "h1_bottom": 670.890625,
-      "buttons_bottom": 832.5625,
+      "h1_bottom": 670.40625,
+      "buttons_bottom": 832.078125,
       "support_count": 2,
-      "support_fraction": 0.1702203024807306,
+      "support_fraction": 0.1701999530379583,
       "first_screen": {
         "path": "1440-first.png",
         "sha256": "2cabbf6f09d0db0ddd12e6ccc5201a86fa9f8cbb18c315e820e1fd2d9562bc4e"
       },
       "full_page": {
         "path": "1440-full.png",
-        "sha256": "d6f84f047167d45984f2f113674f7dabfb8e49faa5edb7e8d1fecbcd6e4972d3"
+        "sha256": "275c7cc82979adccea59649a32fcb66dcf620cbca725dcbb619b5cb20ee66124"
       }
     }
   ],
-  "page_sha256": "2b5995dc98f2a919797b8fcbbe267cdad1b1ac0bf3415d8306f8c16d5859a215",
+  "page_sha256": "29e3766057a47c78dee1e91645c6eb1e78dc7928c5f12095cb5a2058991c9b6a",
   "checks": [
     {
       "name": "no premature audio or video",
@@ -236,11 +236,11 @@
       "broken_images": 0,
       "scrollY": 0,
       "overflow": false,
-      "h1": 638.859375,
-      "buttons": 800.53125,
+      "h1": 638.078125,
+      "buttons": 799.75,
       "support": [
-        0.17103571310445195,
-        0.9652595174307071
+        0.17099534433712624,
+        0.9652716905927494
       ],
       "small": [],
       "targets": []
@@ -252,11 +252,11 @@
       "broken_images": 0,
       "scrollY": 0,
       "overflow": false,
-      "h1": 670.890625,
-      "buttons": 832.5625,
+      "h1": 670.40625,
+      "buttons": 832.078125,
       "support": [
-        0.1702203024807306,
-        0.9659577611891962
+        0.1701999530379583,
+        0.9659889558232931
       ],
       "small": [],
       "targets": []
@@ -272,5 +272,5 @@
     "cues": 10
   },
   "errors": [],
-  "gzip": 15932
+  "gzip": 16101
 }
