@@ -1,0 +1,28 @@
+{
+  "date": "2026-09-09",
+  "tested_commit": "3ab06a6",
+  "client": "urllib.request without authentication",
+  "scope": "review documents, not interactive preview",
+  "results": [
+    {
+      "url": "https://github.com/arabelthera-dot/rc-museum-preview/blob/codex/ethnography-pair/review/etnografiya/split/pair/README.md",
+      "http": 200,
+      "expected_document_text_found": true
+    },
+    {
+      "url": "https://github.com/arabelthera-dot/rc-museum-preview/blob/codex/ethnography-pair/review/etnografiya/split/pair/variants.md",
+      "http": 200,
+      "expected_document_text_found": true
+    },
+    {
+      "url": "https://github.com/arabelthera-dot/rc-museum-preview/blob/codex/ethnography-pair/review/etnografiya/split/pair/skills/museum-things/SKILL.md",
+      "http": 200,
+      "expected_document_text_found": true
+    },
+    {
+      "url": "https://github.com/arabelthera-dot/rc-museum-preview/blob/codex/ethnography-pair/review/etnografiya/split/pair/skills/museum-customs/SKILL.md",
+      "http": 200,
+      "expected_document_text_found": true
+    }
+  ]
+}
