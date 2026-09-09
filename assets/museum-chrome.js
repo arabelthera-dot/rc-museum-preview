@@ -154,6 +154,18 @@
      с горизонтальной прокруткой — тот же приём, что у .daynav; навигация не теряется. */
   + '.crumbs,.crumbs .wrap{white-space:nowrap;overflow-x:auto;scrollbar-width:none}'
   + '.crumbs::-webkit-scrollbar,.crumbs .wrap::-webkit-scrollbar{display:none}'
+  /* nowrap по тексту не спасал там, где крошки лежат во флекс-контейнере .crumbs .wrap:
+     переносился не текст, а сами ссылки — 3 строки, 82 px (замер top-tax.mjs 09.09.2026,
+     13 страниц против эталона Шухова с 20 px). Перенос запрещаем самому флексу, вертикальные
+     отступы контейнера равняем на эталон. */
+  + '.crumbs .wrap{flex-wrap:nowrap!important;padding-top:2px!important;padding-bottom:2px!important}'
+  /* шапка с логотипом держалась на жёстких 64 px (логотип 43 + поля), у эталона Шухова
+     тот же блок — две текстовые строки на 20+52. Разница 24 px первого экрана берётся
+     не текстом, а размером логотипа: на телефоне он уменьшается, высота становится
+     содержимым, тач-цель 44 px сохраняется. */
+  + 'header.top .wrap,header.site .wrap{height:auto!important;min-height:44px}'
+  + 'header.top .logo svg,header.site .logo svg{width:26px!important;height:26px!important}'
+  + 'header.top .logo .lt,header.site .logo .lt{font-size:12.5px;line-height:1.25}'
   /* строка .museum в подводке — третий повтор названия музея (оно уже в шапке и в крошках)
      и её нет среди пяти элементов подводки (museum-core, 6-бис п.5). На телефоне убираем. */
   + '.hero-lead .museum,.hero-text .museum{display:none!important}'
@@ -219,8 +231,23 @@
      не строим ничего: кнопка в никуда хуже отсутствующей кнопки (запрет заглушек, 06.09.2026).
      Стоит ДО fitHero: расчёт первого экрана меряет сгиб по низу .hero-btns. */
   (function(){
-    var lead = doc.querySelector('.hero-lead');
-    if(!lead || doc.querySelector('.hero-btns')) return;
+    var lead = doc.querySelector('.hero-lead') || doc.querySelector('.hero-text');
+    if(!lead) return;
+    /* усыновление чужой разметки (замер gap-parts.mjs 09.09.2026): на 7 страницах кнопки
+       первого экрана лежали в безымянном <div style="display:flex"> — движок их не видел,
+       строил ВТОРУЮ пару тех же кнопок, и расчёт сгиба мерил по ней: низ уезжал на 1003 px
+       при экране 844. Блок с двумя и более .btn внутри подводки — это и есть кнопки
+       первого экрана: помечаем его классом, дубль не строится, сгиб меряется по правде. */
+    if(!doc.querySelector('.hero-btns')){
+      var cand = lead.querySelectorAll('div, p');
+      for(var i=0;i<cand.length;i++){
+        if(cand[i].querySelectorAll(':scope > .btn, :scope > button, :scope > a.btn').length >= 2){
+          cand[i].className = (cand[i].className ? cand[i].className + ' ' : '') + 'hero-btns';
+          break;
+        }
+      }
+    }
+    if(doc.querySelector('.hero-btns')) return;
     if(!doc.getElementById('story') || !doc.getElementById('audioguide')) return;
     var box = el('div', 'hero-btns',
       '<button class="btn gold" type="button" data-mc-to="story">'
