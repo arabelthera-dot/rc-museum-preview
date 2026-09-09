@@ -27,7 +27,8 @@
 
   // Корень сайта выводится из адреса самого движка: .../assets/museum-video.js → .../
   var ROOT = String((script && script.src) || '').replace(/assets\/museum-video\.js.*$/, '');
-  var REGISTRY = ROOT + 'video/registry.json';
+  // Isolated previews can select a generated registry without changing live releases.
+  var REGISTRY = (window.MUSEUM_VIDEO && window.MUSEUM_VIDEO.registryUrl) || ROOT + 'video/registry.json';
 
   function warn(msg) { try { console.warn('[museum-video] ' + msg); } catch (e) {} }
 

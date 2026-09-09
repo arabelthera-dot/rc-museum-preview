@@ -1,0 +1,40 @@
+{
+  "_": "СГЕНЕРИРОВАНО tools/video-sync.py из docs/video/REGISTRY.json. Руками не править.",
+  "version": 1,
+  "updated": "2026-09-09",
+  "hosting": {
+    "base": "https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/chest-canon-0909/review/etnografiya/chest/media"
+  },
+  "releases": {
+    "things/chest-1750": {
+      "title": "Девять мест. Восемь ящиков.",
+      "note": "Подлинные фотографии; голос синтезирован.",
+      "horizontal": {
+        "file": "chest-film-v3.mp4",
+        "local": "review/etnografiya/chest/media/chest-film-v3.mp4",
+        "v": 3,
+        "w": 1920,
+        "h": 1080,
+        "sec": 87.582,
+        "mb": 12.242
+      },
+      "vertical": {
+        "file": "chest-film-v3-9x16.mp4",
+        "local": "review/etnografiya/chest/media/chest-film-v3-9x16.mp4",
+        "v": 3,
+        "w": 1080,
+        "h": 1920,
+        "sec": 37.102,
+        "mb": 3.658
+      },
+      "poster": {
+        "file": "chest-film-v3.jpg",
+        "local": "review/etnografiya/chest/media/chest-film-v3.jpg"
+      },
+      "poster_vertical": {
+        "file": "chest-film-v3-9x16.jpg",
+        "local": "review/etnografiya/chest/media/chest-film-v3-9x16.jpg"
+      }
+    }
+  }
+}

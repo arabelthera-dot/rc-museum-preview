@@ -21,3 +21,5 @@ body header.top{padding:8px 18px 4px}body header.top .score{position:static!impo
 
 body .credit-extra{display:inline!important}.gallery-credit{font-size:14px;color:var(--muted)}
 body .hero-under{grid-template-columns:repeat(4,minmax(0,1fr))}body .hero-under .stamp{min-width:0;overflow-wrap:anywhere}@media(max-width:359px){body .hero-under{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+body .film{aspect-ratio:16/9;max-width:1120px;max-height:none;width:100%}

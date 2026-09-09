@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "page_sha256": "cb017ba8a7620ddd7e8a6a6bed3a886d73d151c93e135b678f421eadce4efe9f",
-  "url": "https://htmlpreview.github.io/?https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/c2732af/review/etnografiya/chest/index.html",
+  "page_sha256": "be3077ff893b053a4f74c6c21ca7ec2e99714c98b8955a4377bad79397314e68",
+  "url": "https://chest.test/index.html",
   "checks": [
     {
       "name": "призыв поддержки по стандарту",
@@ -9,6 +9,10 @@
     },
     {
       "name": "предложены источник и профессиональная помощь",
+      "pass": true
+    },
+    {
+      "name": "манифест баллов совпадает с достижимым максимумом",
       "pass": true
     },
     {
@@ -141,6 +145,14 @@
     },
     {
       "name": "видео воспроизводится",
+      "pass": true
+    },
+    {
+      "name": "сайтовый ролик 1920×1080",
+      "pass": true
+    },
+    {
+      "name": "видео подключено реестром",
       "pass": true
     },
     {
@@ -329,16 +341,16 @@
       "h1_bottom": 617.796875,
       "buttons_bottom": 838.875,
       "support_count": 2,
-      "support_fraction": 0.10725449600129908,
+      "support_fraction": 0.10251487062808635,
       "share": "flex",
       "small": [],
       "first_screen": {
         "path": "320-first_screen.png",
-        "sha256": "f13debfc80780d7e06ba976429bea1e505d858b1ea8ea906cec41ace97075019"
+        "sha256": "87194ad501dfac8031ed8cf9bdd322d0368d36a7b8b983b4a61846c0c6fe1138"
       },
       "full_page": {
         "path": "320-full_page.png",
-        "sha256": "8bb26b84d1f203c67bfdef5d42ccbae20062e1a1388673774a93aae4019d38c8"
+        "sha256": "870543a6b4367e2fe32ac992d67b4bdf691b749a3e9952d4fbaeadbe471f60a1"
       }
     },
     {
@@ -368,7 +380,7 @@
       "h1_bottom": 597.5,
       "buttons_bottom": 818.578125,
       "support_count": 2,
-      "support_fraction": 0.10852458224150521,
+      "support_fraction": 0.1029225024856266,
       "share": "flex",
       "small": []
     },
@@ -399,7 +411,7 @@
       "h1_bottom": 529.78125,
       "buttons_bottom": 677.84375,
       "support_count": 2,
-      "support_fraction": 0.10884348002159827,
+      "support_fraction": 0.10230472645272413,
       "share": "flex",
       "small": [],
       "first_screen": {
@@ -408,7 +420,7 @@
       },
       "full_page": {
         "path": "390-full_page.png",
-        "sha256": "a94fa7fa4f999138c1df0fe03dc3007a75cfc636692087231628667548a54c74"
+        "sha256": "4c0f0ad46333fed5ff1eb50978a0218b7c4676f908142f45e9762ddc6831dac3"
       }
     },
     {
@@ -438,7 +450,7 @@
       "h1_bottom": 654.796875,
       "buttons_bottom": 816.46875,
       "support_count": 2,
-      "support_fraction": 0.1474040647326261,
+      "support_fraction": 0.13402575449398055,
       "share": "flex",
       "small": []
     },
@@ -469,7 +481,7 @@
       "h1_bottom": 687.34375,
       "buttons_bottom": 849.015625,
       "support_count": 2,
-      "support_fraction": 0.1530780011859199,
+      "support_fraction": 0.14524509003862685,
       "share": "flex",
       "small": [],
       "first_screen": {
@@ -478,13 +490,13 @@
       },
       "full_page": {
         "path": "1440-full_page.png",
-        "sha256": "aa721884cb6485ded581f41a9b349479c59c960008eabbd268a65e121d9d8f34"
+        "sha256": "9882de0b1fb10563f9334587482c686eede380fd5e18cafb4df5b6e865afecb8"
       }
     }
   ],
   "dom": {
     "path": "rendered.html",
-    "sha256": "1711854e5227512aba05df5896fa9ca4c0a620a506a22f24d38ae3b79c345eb0"
+    "sha256": "67c5f079e85d4cda98c205f0d369c66201815c186dd8126a3d0b3f7330402eca"
   },
-  "passed": 74
+  "passed": 77
 }
