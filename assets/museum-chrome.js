@@ -176,7 +176,13 @@
   + '.hero-lead .hook{font-size:14.5px;line-height:1.45;margin:8px 0 12px!important}'
   /* кнопки: две по 46 px в столбик + зазор 12 = 104 px; при трёх кнопках было 169 */
   + '.hero-btns{gap:8px!important}'
-  + '.hero-btns>a,.hero-btns>button{padding:11px 15px!important;font-size:13.5px!important}}';
+  + '.hero-btns>a,.hero-btns>button{padding:11px 15px!important;font-size:13.5px!important}}'
+  /* запасная форма для блока, который движок строит сам (раздел 0-тер): у страницы свои .btn
+     почти всегда есть, но голая кнопка без формы — тоже брак. :where даёт нулевую
+     специфичность, поэтому любое правило страницы перебивает эти значения молча. */
+  + ':where(.hero-btns){display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}'
+  + ':where(.hero-btns .btn){cursor:pointer;font:inherit;font-size:15px;border-radius:12px;'
+  + 'padding:13px 24px;border:1px solid currentColor;background:transparent;color:inherit}';
 
   var st = doc.createElement('style'); st.textContent = css; doc.head.appendChild(st);
 
@@ -203,6 +209,31 @@
       shrunk = need;
       head.classList[need ? 'add' : 'remove']('mc-shrink');
     }, {passive:true});
+  })();
+
+  /* ── 0-тер. две кнопки первого экрана ── маркер для аудитора: MC_BUILDS_HERO_BTNS
+     Блок одинаков на всех страницах дня (эталон — day-05jan-shukhov.html), поэтому его
+     строит движок, а не копия разметки в каждом файле (договор о приёмке, п. 10).
+     Условия жёсткие: есть куда вставить (.hero-lead), нечего дублировать (нет .hero-btns)
+     и есть КУДА вести — обе цели, #story и #audioguide, существуют на странице. Цели нет —
+     не строим ничего: кнопка в никуда хуже отсутствующей кнопки (запрет заглушек, 06.09.2026).
+     Стоит ДО fitHero: расчёт первого экрана меряет сгиб по низу .hero-btns. */
+  (function(){
+    var lead = doc.querySelector('.hero-lead');
+    if(!lead || doc.querySelector('.hero-btns')) return;
+    if(!doc.getElementById('story') || !doc.getElementById('audioguide')) return;
+    var box = el('div', 'hero-btns',
+      '<button class="btn gold" type="button" data-mc-to="story">'
+      + (T.readStory || 'Читать историю ↓') + '</button>'
+      + '<button class="btn ghost" type="button" data-mc-to="audioguide">'
+      + (T.listenGuide || '🎧 Слушать аудиогид') + '</button>');
+    box.addEventListener('click', function(e){
+      var b = e.target && e.target.closest ? e.target.closest('[data-mc-to]') : null;
+      if(!b) return;
+      var t = doc.getElementById(b.getAttribute('data-mc-to'));
+      if(t) t.scrollIntoView({behavior:'smooth'});
+    });
+    lead.appendChild(box);
   })();
 
   /* ── 0. высота обложки: сцена + этикетка + заголовок + кнопки влезают в первый экран ──
