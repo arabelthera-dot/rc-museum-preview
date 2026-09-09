@@ -1,7 +1,7 @@
 from pathlib import Path
 import re,json
 p=Path(__file__).parent
-base="https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/chest-canon-0909/review/etnografiya/chest/"
+base="https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/chest-structure-0909/review/etnografiya/chest/"
 s=(p/'full-source.html').read_text()
 for n in ['chest','lock','drawers']:
  s=s.replace('{{'+n+'}}',base+'media/'+n+'.webp')

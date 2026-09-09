@@ -7,7 +7,7 @@ body .calnav,body .cday,body .wayrow a,body #secnav a{min-width:44px!important;m
 @media(max-width:359px){body .wrap,body .wide,body .narrow{padding-left:12px;padding-right:12px}body #calbox .calgrid{gap:0!important}.order-pieces figcaption{justify-content:space-between}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}
 
-@media(max-width:359px){body #calbox{overflow-x:auto}body #calbox .calgrid{min-width:308px}body #calbox .cday{min-width:44px!important}}
+@media(max-width:379px){body #calbox{overflow-x:auto}body #calbox .calgrid{min-width:308px}body #calbox .cday{min-width:44px!important}}
 /* Navigation stays in the document flow: it cannot cover the exhibit. */
 body #secnav{position:static!important;top:auto!important;transform:none!important}body .secnav-spacer{display:none!important}.complete .order-pieces figcaption{display:none}
 /* Complete experience; text and controls remain outside the specimen and the model. */
@@ -23,3 +23,14 @@ body .credit-extra{display:inline!important}.gallery-credit{font-size:14px;color
 body .hero-under{grid-template-columns:repeat(4,minmax(0,1fr))}body .hero-under .stamp{min-width:0;overflow-wrap:anywhere}@media(max-width:359px){body .hero-under{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
 body .film{aspect-ratio:16/9;max-width:1120px;max-height:none;width:100%}
+
+/* Native article disclosure: all source text remains in the document. */
+.story-details{border-block:1px solid #465360;margin:24px 0;background:#0c1826;padding:0 20px}
+.story-details>summary{min-height:44px;padding:15px 0;cursor:pointer;color:#e4c97a;font-size:16px;line-height:1.5}
+.story-details[open]>summary{border-bottom:1px solid #465360}
+.story-body{padding:20px 0}.story-body .narrow,.story-body .wide{width:100%;max-width:100%}.story-body .chapter{margin:32px 0}.story-body .photo-band{margin:28px 0}
+.story-details summary:focus-visible{outline:3px solid #e4c97a;outline-offset:3px}
+.story-body p{color:#dce5ee}.story-body .ref{color:#b9cbdc}
+@media(max-width:600px){.story-details{padding-inline:12px}.story-body .observations{grid-template-columns:1fr}}
+
+@media(max-width:379px){body #calbox .calgrid{gap:0!important}}

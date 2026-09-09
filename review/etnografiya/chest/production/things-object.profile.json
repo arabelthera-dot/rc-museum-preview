@@ -33,7 +33,17 @@
       "#quiz",
       "#result",
       "#calendar",
-      "#kuda-dalshe"
+      "#kuda-dalshe",
+      "#story-details",
+      "#story-details > summary",
+      "#open-chest[data-nav]",
+      "#gallery[data-nav]",
+      "#verified-facts[data-nav]",
+      "#story[data-nav]",
+      "#sources[data-nav]",
+      "#inscription[data-nav]",
+      "#fact-version[data-nav]",
+      "#memory-game[data-nav]"
     ]
   },
   "score": {
