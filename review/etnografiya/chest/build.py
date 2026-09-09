@@ -11,7 +11,7 @@ s=re.sub(r'<link rel="stylesheet" href="[^"]+/page.css">','<style>'+(p/'page.css
 issue=json.loads((p/'issue.json').read_text())
 manifest={'maximum':sum(issue['score_ledger'].values()),'awards':[{'id':k,'max':v} for k,v in issue['score_ledger'].items()]}
 assert manifest['maximum']==100
-s=s.replace('{{score_manifest}}','<script type="application/json" id="museum-score-manifest">'+json.dumps(manifest)+'</script>')
+s=s.replace('{{score_manifest}}','<template id="score-data"><script type="application/json" id="museum-score-manifest">'+json.dumps(manifest)+'</script></template><script>document.head.append(document.getElementById("score-data").content.firstElementChild);</script>')
 assert '{{' not in s
 (p/'index.html').write_text(s)
 print('HTML',len(s.encode()),'bytes')
