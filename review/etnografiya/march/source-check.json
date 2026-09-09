@@ -1,0 +1,220 @@
+[
+  {
+    "key": "quilt",
+    "url": "https://ar.culture.ru/ru/subject/odeyalo-loskutnoe-2",
+    "http": 200,
+    "characters": 6238,
+    "method": "HTTP; содержание проверено отдельно по поиску/открытию источника"
+  },
+  {
+    "key": "scutch",
+    "url": "https://ar.culture.ru/ru/subject/trepalo-4",
+    "http": 200,
+    "characters": 6416,
+    "method": "HTTP; содержание проверено отдельно по поиску/открытию источника"
+  },
+  {
+    "key": "comb",
+    "url": "https://ar.culture.ru/ru/subject/chesalo-dlya-lna",
+    "http": 200,
+    "characters": 6225,
+    "method": "HTTP; содержание проверено отдельно по поиску/открытию источника"
+  },
+  {
+    "key": "reel",
+    "url": "https://ar.culture.ru/ru/subject/motovilo-2",
+    "http": 200,
+    "characters": 6242,
+    "method": "HTTP; содержание проверено отдельно по поиску/открытию источника"
+  },
+  {
+    "key": "loom",
+    "url": "https://ar.culture.ru/ru/subject/tkackiy-stanok-1",
+    "http": 200,
+    "characters": 10432,
+    "method": "HTTP; содержание проверено отдельно по поиску/открытию источника"
+  },
+  {
+    "key": "shuttle",
+    "url": "https://ar.culture.ru/ru/subject/tkackiy-chelnok-1",
+    "http": 200,
+    "characters": 5292,
+    "method": "HTTP; содержание проверено отдельно по поиску/открытию источника"
+  },
+  {
+    "key": "machine",
+    "url": "https://ar.culture.ru/ru/subject/shveynaya-mashina-2",
+    "http": 200,
+    "characters": 6373,
+    "method": "HTTP; содержание проверено отдельно по поиску/открытию источника"
+  },
+  {
+    "key": "iron",
+    "url": "https://ar.culture.ru/ru/subject/utyug-8",
+    "http": 200,
+    "characters": 6336,
+    "method": "HTTP; содержание проверено отдельно по поиску/открытию источника"
+  },
+  {
+    "key": "towel",
+    "url": "https://ar.culture.ru/ru/subject/polotence-obryadovoe",
+    "http": 200,
+    "characters": 7537,
+    "method": "HTTP; содержание проверено отдельно по поиску/открытию источника"
+  },
+  {
+    "key": "salt",
+    "url": "https://ar.culture.ru/ru/subject/solonica-1",
+    "http": 200,
+    "characters": 6274,
+    "method": "HTTP; содержание проверено отдельно по поиску/открытию источника"
+  },
+  {
+    "key": "tues",
+    "url": "https://ar.culture.ru/ru/subject/tues-28",
+    "http": 200,
+    "characters": 6163,
+    "method": "HTTP; содержание проверено отдельно по поиску/открытию источника"
+  },
+  {
+    "key": "milk",
+    "url": "https://ar.culture.ru/ru/subject/krynka-26",
+    "http": 200,
+    "characters": 6276,
+    "method": "HTTP; содержание проверено отдельно по поиску/открытию источника"
+  },
+  {
+    "key": "mortar",
+    "url": "https://ar.culture.ru/ru/subject/stupa-s-pestom-15",
+    "http": 200,
+    "characters": 6009,
+    "method": "HTTP; содержание проверено отдельно по поиску/открытию источника"
+  },
+  {
+    "key": "mill",
+    "url": "https://ar.culture.ru/ru/subject/zhernova-28",
+    "http": 200,
+    "characters": 6410,
+    "method": "HTTP; содержание проверено отдельно по поиску/открытию источника"
+  },
+  {
+    "key": "sieve",
+    "url": "https://ar.culture.ru/ru/subject/resheto-6",
+    "http": 200,
+    "characters": 5928,
+    "method": "HTTP; содержание проверено отдельно по поиску/открытию источника"
+  },
+  {
+    "key": "slate",
+    "url": "https://ar.culture.ru/ru/subject/doska-grifelnaya",
+    "http": 200,
+    "characters": 6143,
+    "method": "HTTP; содержание проверено отдельно по поиску/открытию источника"
+  },
+  {
+    "key": "drawknife",
+    "url": "https://ar.culture.ru/ru/subject/skobel-2",
+    "http": 200,
+    "characters": 6439,
+    "method": "HTTP; содержание проверено отдельно по поиску/открытию источника"
+  },
+  {
+    "key": "whistle",
+    "url": "https://ar.culture.ru/ru/subject/igrushka-abashevskaya-barynya-svistulka",
+    "http": 200,
+    "characters": 6519,
+    "method": "HTTP; содержание проверено отдельно по поиску/открытию источника"
+  },
+  {
+    "key": "bast",
+    "url": "https://ar.culture.ru/ru/subject/lapti-1",
+    "http": 200,
+    "characters": 7164,
+    "method": "HTTP; содержание проверено отдельно по поиску/открытию источника"
+  },
+  {
+    "key": "shoe",
+    "url": "https://ar.culture.ru/ru/subject/porshen",
+    "http": 200,
+    "characters": 6369,
+    "method": "HTTP; содержание проверено отдельно по поиску/открытию источника"
+  },
+  {
+    "key": "plough",
+    "url": "https://ar.culture.ru/ru/subject/nakonechnik-rogatiny-1",
+    "http": 200,
+    "characters": 6089,
+    "method": "HTTP; содержание проверено отдельно по поиску/открытию источника"
+  },
+  {
+    "key": "seed",
+    "url": "https://ar.culture.ru/ru/subject/sevalka-1",
+    "http": 200,
+    "characters": 9837,
+    "method": "HTTP; содержание проверено отдельно по поиску/открытию источника"
+  },
+  {
+    "key": "barrel",
+    "url": "https://ar.culture.ru/ru/subject/bochonok-6",
+    "http": 200,
+    "characters": 6749,
+    "method": "HTTP; содержание проверено отдельно по поиску/открытию источника"
+  },
+  {
+    "key": "clock",
+    "url": "https://ar.culture.ru/ru/subject/chasy-nastennye-mayatnikovye-girevye",
+    "http": 200,
+    "characters": 6230,
+    "method": "HTTP; содержание проверено отдельно по поиску/открытию источника"
+  },
+  {
+    "key": "women",
+    "url": "https://ethnomuseum.ru/collections/ethnocalendar/march/mezhdunarodnyj-zhenskij-den/",
+    "http": 200,
+    "characters": 6678,
+    "method": "HTTP; содержание проверено отдельно по поиску/открытию источника"
+  },
+  {
+    "key": "card",
+    "url": "https://search.rsl.ru/ru/record/01006565357",
+    "http": 200,
+    "characters": 8452,
+    "method": "HTTP; содержание проверено отдельно по поиску/открытию источника"
+  },
+  {
+    "key": "avdotya",
+    "url": "https://xn--90aevhf.xn--p1ai/%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D1%8C/%D0%BC%D0%B0%D1%80%D1%82/14-%D0%BC%D0%B0%D1%80%D1%82%D0%B0",
+    "http": 200,
+    "characters": 4672,
+    "method": "HTTP; содержание проверено отдельно по поиску/открытию источника"
+  },
+  {
+    "key": "rooks",
+    "url": "https://ethnomuseum.ru/collections/ethnocalendar/march/gerasim-grachevnik/",
+    "http": 200,
+    "characters": 5815,
+    "method": "HTTP; содержание проверено отдельно по поиску/открытию источника"
+  },
+  {
+    "key": "larks",
+    "url": "https://ethnomuseum.ru/collections/ethnocalendar/march/soroki-den-pamyati-soroka-muchenikov-sevastijskih/",
+    "http": 200,
+    "characters": 7327,
+    "method": "HTTP; содержание проверено отдельно по поиску/открытию источника"
+  },
+  {
+    "key": "harrow",
+    "url": "https://collection.kunstkamera.ru/entity/OBJECT/299241?fund=22&index=15",
+    "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)>"
+  },
+  {
+    "key": "alexei",
+    "url": "https://www.culture.ru/events/5691822/programma-sekrety-ale",
+    "error": "<urlopen error timed out>"
+  },
+  {
+    "key": "master",
+    "url": "https://www.culture.ru/objects/2975/tvorcheskoe-nasledie-berestyanshika-aleksandra-vladimirovicha-shutikhina-iz-goroda-kotlas-arkhangelskoi-oblasti",
+    "error": "<urlopen error timed out>"
+  }
+]
