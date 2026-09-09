@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-09-09",
+  "calendar_rows": 365,
+  "local_markdown_links": "passed",
+  "skill_validation": "passed: quick_validate.py",
+  "changed_accepted_calendar_files": [],
+  "new_browser_tests": "not applicable: no HTML/runtime changed",
+  "new_working_mechanisms": 0,
+  "historical_verification_all_365": "not completed",
+  "full_editorial_completion": false
+}

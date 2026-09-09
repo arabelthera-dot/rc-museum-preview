@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-09-09",
+  "rows": 365,
+  "unique_dates": 365,
+  "exact_title_duplicates": [],
+  "broad_overview_may_december": 122,
+  "source_dependency_counts": {
+    "Запись/альбом/описание; проверить локальность и пригодность": 174,
+    "Есть адрес предметной карточки; сверить содержание и медиа": 69,
+    "Общий обзор; нужен предмет": 122
+  },
+  "production_readiness": "Не проверена; production_ready=false означает отсутствие приёмки, а не непригодность темы",
+  "scope": "Структура, заявленные источники и зависимости 365 строк. Содержание всех внешних источников заново не проверялось.",
+  "original_month_hashes": {
+    "may-december/accepted/january/january.json": "fed821f0de9143a375fb39a6fe4d9b74793d4c0e9d9cb65ff930361d1b164fe0",
+    "may-december/accepted/february/february.json": "7df6c28b30297ec6965b1fe4ecbfe993504eec401be7987d2b69704d95784a66",
+    "may-december/accepted/march/march.json": "46c8a79b489eac393ae14e7685d228f806a2deb7f2ac88a609d06d950f3f7bed",
+    "may-december/accepted/april/april.json": "651ddd49a73f762c6cac0dba972c169beb092636cc366426e4d42a1da492af41",
+    "may-december/may/may.json": "04efd2d28f85fde18bf7e15c02daa0f6891882dc7741dac768035a1d77a7f646",
+    "may-december/june/june.json": "20381cd805726bcb18988036204ef53fdecaadee0f67c1c166c7ca51efbab843",
+    "may-december/july/july.json": "629af13acbd6b4526399281df4f49f3d7d973f7c8313d40e213026273f838f00",
+    "may-december/august/august.json": "d91817e2d16782b75e908391a8ca04e33e50259616ed23a41473454bdfbfdeee",
+    "may-december/september/september.json": "3c684ab13a945dc299d98da5e2ec609ac62d18a33f88a8bd69c00c3e3c599c6f",
+    "may-december/october/october.json": "34513931be1a7a612ee27e940ca13a77b87bfbb40cc17304c627665190d85f17",
+    "may-december/november/november.json": "022c77a3879c267976a185e8964955287466480e41cc63d5ee820dd6740ce170",
+    "may-december/december/december.json": "2c4ed6f43e01e23e81fa341beb39afafa4e64642128d7ee474b9841f6b2d4ceb"
+  },
+  "failures": []
+}
