@@ -1,0 +1,512 @@
+{
+  "page_sha256": "a367137f517aa9c2c6390102b210aaa1f230916c85f297ed767081b1b346f57d",
+  "url": "https://htmlpreview.github.io/?https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/7feefa6/review/etnografiya/chest/index.html",
+  "conditions": {
+    "viewport": 390,
+    "latency": 150,
+    "downloadBytesPerSecond": 200000,
+    "cpuSlowdown": 4,
+    "saveData": true,
+    "cacheDisabled": true
+  },
+  "titleAvailableMs": 1943,
+  "coldBytes": 402180,
+  "requests": [
+    {
+      "url": "https://htmlpreview.github.io/?https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/7feefa6/review/etnografiya/chest/index.html",
+      "type": "Document",
+      "bytes": 1083
+    },
+    {
+      "url": "https://htmlpreview.github.io/htmlpreview.js",
+      "type": "Script",
+      "bytes": 1798
+    },
+    {
+      "url": "https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/7feefa6/review/etnografiya/chest/index.html",
+      "type": "Fetch",
+      "bytes": 22901
+    },
+    {
+      "url": "https://arabelthera-dot.github.io/rc-museum-preview/assets/fonts.css",
+      "type": "Stylesheet",
+      "bytes": 3547
+    },
+    {
+      "url": "https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/chest-structure-0909/review/etnografiya/chest/photo-order.js",
+      "type": "Fetch",
+      "bytes": 2029
+    },
+    {
+      "url": "https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/chest-structure-0909/review/etnografiya/chest/material-lab.js",
+      "type": "Fetch",
+      "bytes": 1464
+    },
+    {
+      "url": "https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/chest-structure-0909/review/etnografiya/chest/media/chest-400.webp",
+      "type": "Image",
+      "bytes": 19064
+    },
+    {
+      "url": "https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/chest-structure-0909/review/etnografiya/chest/media/chest.webp",
+      "type": "Image",
+      "bytes": 51855
+    },
+    {
+      "url": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgMjQgMjQiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI1NSAyNTU7IiB4bWw6c3BhY2U9InByZXNlcnZlIiBmaWxsPSJXaW5kb3ciPgo8Zz4KCTxjaXJjbGUgY3g9IjEyIiBjeT0iNiIgcj0iMiIvPgoJPGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMiIvPgoJPGNpcmNsZSBjeD0iMTIiIGN5PSIxOCIgcj0iMiIvPgo8L2c+Cjwvc3ZnPgo=",
+      "type": "Image",
+      "bytes": 0
+    },
+    {
+      "url": "https://arabelthera-dot.github.io/rc-museum-preview/assets/fonts/inter-UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+      "type": "Font",
+      "bytes": 48692
+    },
+    {
+      "url": "data:image/svg+xml;base64,PHN2ZyBmaWxsPSJXaW5kb3ciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogICAgPHBhdGggZD0iTTggNXYxNGwxMS03eiIvPgogICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPgo8L3N2Zz4K",
+      "type": "Image",
+      "bytes": 0
+    },
+    {
+      "url": "data:image/svg+xml;base64,PHN2ZyBmaWxsPSJXaW5kb3ciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogICAgPHBhdGggZD0iTTMgOXY2aDRsNSA1VjRMNyA5SDN6bTEzLjUgM2MwLTEuNzctMS4wMi0zLjI5LTIuNS00LjAzdjguMDVjMS40OC0uNzMgMi41LTIuMjUgMi41LTQuMDJ6TTE0IDMuMjN2Mi4wNmMyLjg5Ljg2IDUgMy41NCA1IDYuNzFzLTIuMTEgNS44NS01IDYuNzF2Mi4wNmM0LjAxLS45MSA3LTQuNDkgNy04Ljc3cy0yLjk5LTcuODYtNy04Ljc3eiIvPgogICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPgo8L3N2Zz4K",
+      "type": "Image",
+      "bytes": 0
+    },
+    {
+      "url": "data:image/svg+xml;base64,PHN2ZyBmaWxsPSJXaW5kb3ciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPgogICAgPHBhdGggZD0iTTcgMTRINXY1aDV2LTJIN3YtM3ptLTItNGgyVjdoM1Y1SDV2NXptMTIgN2gtM3YyaDV2LTVoLTJ2M3pNMTQgNXYyaDN2M2gyVjVoLTV6Ii8+Cjwvc3ZnPgo=",
+      "type": "Image",
+      "bytes": 0
+    },
+    {
+      "url": "https://arabelthera-dot.github.io/rc-museum-preview/assets/fonts/inter-UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2",
+      "type": "Font",
+      "bytes": 18942
+    },
+    {
+      "url": "https://arabelthera-dot.github.io/rc-museum-preview/assets/fonts/lora-0QIvMX1D_JOuMwr7Iw.woff2",
+      "type": "Font",
+      "bytes": 37974
+    },
+    {
+      "url": "https://arabelthera-dot.github.io/rc-museum-preview/assets/fonts/lora-0QIvMX1D_JOuMw77I-NP.woff2",
+      "type": "Font",
+      "bytes": 21611
+    },
+    {
+      "url": "https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/chest-structure-0909/assets/museum-video.js",
+      "type": "Fetch",
+      "bytes": 2937
+    },
+    {
+      "url": "https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/chest-structure-0909/review/etnografiya/chest/video-registry.json",
+      "type": "Fetch",
+      "bytes": 800
+    },
+    {
+      "url": "https://arabelthera-dot.github.io/rc-museum-preview/assets/museum-audioguide.js",
+      "type": "Fetch",
+      "bytes": 3264
+    },
+    {
+      "url": "https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/chest-canon-0909/review/etnografiya/chest/media/chest-film-v3.jpg",
+      "type": "Image",
+      "bytes": 74992
+    },
+    {
+      "url": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjIuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxOTYgMTk2IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAxOTYgMTk2OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik05OCw0OXY0Yy0yNC45LDAtNDUsMjAuMS00NSw0NQoJYzAsMTgsMTAuNiwzMy42LDI1LjksNDAuOGwtMS43LDMuNmMwLjEsMCwwLjIsMC4xLDAuMywwLjFjLTAuMSwwLTAuMi0wLjEtMC4zLTAuMWwwLDBDNjAuNSwxMzQuNSw0OSwxMTcuNiw0OSw5OAoJQzQ5LDcwLjksNzAuOSw0OSw5OCw0OXoiLz4KPC9zdmc+Cg==",
+      "type": "Image",
+      "bytes": 0
+    },
+    {
+      "url": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjIuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxOTYgMTk2IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAxOTYgMTk2OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xNDcsOThjMCwxOS42LTExLjUsMzYuNS0yOC4yLDQ0LjRsMCwwYy0wLjEsMC0wLjIsMC4xLTAuMywwLjEKCWMwLjEsMCwwLjItMC4xLDAuMy0wLjFsLTEuNy0zLjZDMTMyLjQsMTMxLjYsMTQzLDExNiwxNDMsOThjMC0yNC45LTIwLjEtNDUtNDUtNDV2LTRDMTI1LjEsNDksMTQ3LDcwLjksMTQ3LDk4eiIvPgo8L3N2Zz4K",
+      "type": "Image",
+      "bytes": 0
+    },
+    {
+      "url": "https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/chest-structure-0909/assets/museum-support.js",
+      "type": "Fetch",
+      "bytes": 9445
+    },
+    {
+      "url": "https://arabelthera-dot.github.io/rc-museum-preview/assets/fonts/playfairdisplay-nuFiD-vYSZviVYUb_rj3ij__anPXDTjYgFE_.woff2",
+      "type": "Font",
+      "bytes": 21350
+    },
+    {
+      "url": "https://arabelthera-dot.github.io/rc-museum-preview/assets/fonts/playfairdisplay-nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2",
+      "type": "Font",
+      "bytes": 38767
+    },
+    {
+      "url": "https://arabelthera-dot.github.io/rc-museum-preview/assets/museum-calendar-month.js",
+      "type": "Fetch",
+      "bytes": 4454
+    },
+    {
+      "url": "https://arabelthera-dot.github.io/rc-museum-preview/assets/museum-chrome.js",
+      "type": "Fetch",
+      "bytes": 12698
+    },
+    {
+      "url": "https://arabelthera-dot.github.io/rc-museum-preview/assets/analytics.js",
+      "type": "Fetch",
+      "bytes": 2513
+    }
+  ],
+  "earlyMedia": [],
+  "vitals": {
+    "lcp": 1880,
+    "cls": 0.09696047795202811,
+    "events": [],
+    "shifts": [
+      {
+        "time": 2305.800000190735,
+        "value": 0.09613495246625188,
+        "sources": [
+          {
+            "previous": {
+              "x": 18,
+              "y": 539.78125,
+              "width": 354,
+              "height": 80.046875,
+              "top": 539.78125,
+              "right": 372,
+              "bottom": 619.828125,
+              "left": 18
+            },
+            "current": {
+              "x": 18,
+              "y": 539.78125,
+              "width": 354,
+              "height": 80.046875,
+              "top": 539.78125,
+              "right": 372,
+              "bottom": 619.828125,
+              "left": 18
+            }
+          },
+          {
+            "previous": {
+              "x": 28.625,
+              "y": 56.296875,
+              "width": 332.75,
+              "height": 53.375,
+              "top": 56.296875,
+              "right": 361.375,
+              "bottom": 109.671875,
+              "left": 28.625
+            },
+            "current": {
+              "x": 28.625,
+              "y": 55.296875,
+              "width": 332.75,
+              "height": 53.375,
+              "top": 55.296875,
+              "right": 361.375,
+              "bottom": 108.671875,
+              "left": 28.625
+            }
+          },
+          {
+            "previous": {
+              "x": 18,
+              "y": 382.15625,
+              "width": 354,
+              "height": 17,
+              "top": 382.15625,
+              "right": 372,
+              "bottom": 399.15625,
+              "left": 18
+            },
+            "current": {
+              "x": 18,
+              "y": 401.453125,
+              "width": 354,
+              "height": 17,
+              "top": 401.453125,
+              "right": 372,
+              "bottom": 418.453125,
+              "left": 18
+            }
+          },
+          {
+            "previous": {
+              "x": 0,
+              "y": 147.15625,
+              "width": 390,
+              "height": 17,
+              "top": 147.15625,
+              "right": 390,
+              "bottom": 164.15625,
+              "left": 0
+            },
+            "current": {
+              "x": 0,
+              "y": 147.15625,
+              "width": 390,
+              "height": 17,
+              "top": 147.15625,
+              "right": 390,
+              "bottom": 164.15625,
+              "left": 0
+            }
+          },
+          {
+            "node": "btn gold",
+            "previous": {
+              "x": 40.828125,
+              "y": 633.84375,
+              "width": 140.34375,
+              "height": 44,
+              "top": 633.84375,
+              "right": 181.171875,
+              "bottom": 677.84375,
+              "left": 40.828125
+            },
+            "current": {
+              "x": 34.046875,
+              "y": 633.84375,
+              "width": 147.421875,
+              "height": 44,
+              "top": 633.84375,
+              "right": 181.46875,
+              "bottom": 677.84375,
+              "left": 34.046875
+            }
+          }
+        ]
+      },
+      {
+        "time": 2459.5,
+        "value": 0.0006139284232548858,
+        "sources": [
+          {
+            "previous": {
+              "x": 18,
+              "y": 502.28125,
+              "width": 354,
+              "height": 32,
+              "top": 502.28125,
+              "right": 372,
+              "bottom": 534.28125,
+              "left": 18
+            },
+            "current": {
+              "x": 18,
+              "y": 499.28125,
+              "width": 354,
+              "height": 32,
+              "top": 499.28125,
+              "right": 372,
+              "bottom": 531.28125,
+              "left": 18
+            }
+          }
+        ]
+      },
+      {
+        "time": 4043.7000002861023,
+        "value": 0.00021159706252134547,
+        "sources": [
+          {
+            "node": "btn ghost",
+            "previous": {
+              "x": 183.8125,
+              "y": 633.84375,
+              "width": 174.5625,
+              "height": 44,
+              "top": 633.84375,
+              "right": 358.375,
+              "bottom": 677.84375,
+              "left": 183.8125
+            },
+            "current": {
+              "x": 187.8125,
+              "y": 633.84375,
+              "width": 174.5625,
+              "height": 44,
+              "top": 633.84375,
+              "right": 362.375,
+              "bottom": 677.84375,
+              "left": 187.8125
+            }
+          },
+          {
+            "node": "btn gold",
+            "previous": {
+              "x": 31.625,
+              "y": 633.84375,
+              "width": 152.1875,
+              "height": 44,
+              "top": 633.84375,
+              "right": 183.8125,
+              "bottom": 677.84375,
+              "left": 31.625
+            },
+            "current": {
+              "x": 27.625,
+              "y": 633.84375,
+              "width": 152.1875,
+              "height": 44,
+              "top": 633.84375,
+              "right": 179.8125,
+              "bottom": 677.84375,
+              "left": 27.625
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "paint": [
+    {
+      "name": "first-paint",
+      "startTime": 1388
+    },
+    {
+      "name": "first-contentful-paint",
+      "startTime": 1388
+    }
+  ],
+  "hero": {
+    "src": "https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/chest-structure-0909/review/etnografiya/chest/media/chest-400.webp",
+    "width": 351
+  },
+  "overflow": false,
+  "actionWorks": true,
+  "events": [
+    {
+      "name": "pointerover",
+      "duration": 128
+    },
+    {
+      "name": "pointerenter",
+      "duration": 128
+    },
+    {
+      "name": "pointerenter",
+      "duration": 128
+    },
+    {
+      "name": "pointerenter",
+      "duration": 128
+    },
+    {
+      "name": "pointerenter",
+      "duration": 128
+    },
+    {
+      "name": "pointerenter",
+      "duration": 128
+    },
+    {
+      "name": "pointerenter",
+      "duration": 128
+    },
+    {
+      "name": "pointerenter",
+      "duration": 128
+    },
+    {
+      "name": "pointerenter",
+      "duration": 128
+    },
+    {
+      "name": "pointerenter",
+      "duration": 128
+    },
+    {
+      "name": "pointerenter",
+      "duration": 128
+    },
+    {
+      "name": "pointerdown",
+      "duration": 128
+    },
+    {
+      "name": "touchstart",
+      "duration": 128
+    },
+    {
+      "name": "gotpointercapture",
+      "duration": 128
+    },
+    {
+      "name": "pointerup",
+      "duration": 128
+    },
+    {
+      "name": "lostpointercapture",
+      "duration": 128
+    },
+    {
+      "name": "pointerout",
+      "duration": 128
+    },
+    {
+      "name": "pointerleave",
+      "duration": 128
+    },
+    {
+      "name": "pointerleave",
+      "duration": 128
+    },
+    {
+      "name": "pointerleave",
+      "duration": 128
+    },
+    {
+      "name": "pointerleave",
+      "duration": 128
+    },
+    {
+      "name": "pointerleave",
+      "duration": 128
+    },
+    {
+      "name": "pointerleave",
+      "duration": 128
+    },
+    {
+      "name": "pointerleave",
+      "duration": 128
+    },
+    {
+      "name": "pointerleave",
+      "duration": 128
+    },
+    {
+      "name": "pointerleave",
+      "duration": 128
+    },
+    {
+      "name": "pointerleave",
+      "duration": 128
+    },
+    {
+      "name": "touchend",
+      "duration": 128
+    },
+    {
+      "name": "mouseover",
+      "duration": 200
+    },
+    {
+      "name": "mousedown",
+      "duration": 200
+    },
+    {
+      "name": "mouseup",
+      "duration": 200
+    },
+    {
+      "name": "click",
+      "duration": 200
+    }
+  ],
+  "limits": [
+    "Browser emulation is not physical low-end Android/iPhone testing",
+    "Laboratory LCP/CLS and event timings are not field Core Web Vitals/INP",
+    "Byte total includes HTMLPreview wrapper and requests through 5 seconds after shared engines are ready"
+  ]
+}

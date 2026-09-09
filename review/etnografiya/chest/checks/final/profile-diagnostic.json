@@ -1,0 +1,225 @@
+{
+  "status": "diagnostic-only-not-delivery",
+  "results": [
+    {
+      "name": "обязательный узел header.top",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "обязательный узел .b1",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "обязательный узел .b2",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "обязательный узел #scoreBox",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "обязательный узел nav.crumbs",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "обязательный узел .hero-scene",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "обязательный узел .scene-caption",
+      "status": "pass",
+      "detail": "найдено: 3"
+    },
+    {
+      "name": "обязательный узел .date-chip",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "обязательный узел .who",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "обязательный узел h1",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "обязательный узел .hook",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "обязательный узел .hero-btns",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "обязательный узел .hero-under",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "обязательный узел #rolik",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "обязательный узел #audioguide",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "обязательный узел #open-chest",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "обязательный узел #gallery",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "обязательный узел #verified-facts",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "обязательный узел #story",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "обязательный узел #inscription",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "обязательный узел #fact-version",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "обязательный узел #mirovoy-kontekst",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "обязательный узел #memory-game",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "обязательный узел #quiz",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "обязательный узел #result",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "обязательный узел #calendar",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "обязательный узел #kuda-dalshe",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "обязательный узел #story-details",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "обязательный узел #story-details > summary",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "обязательный узел #open-chest[data-nav]",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "обязательный узел #gallery[data-nav]",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "обязательный узел #verified-facts[data-nav]",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "обязательный узел #story[data-nav]",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "обязательный узел #sources[data-nav]",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "обязательный узел #inscription[data-nav]",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "обязательный узел #fact-version[data-nav]",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "обязательный узел #memory-game[data-nav]",
+      "status": "pass",
+      "detail": "найдено: 1"
+    },
+    {
+      "name": "ID начислений уникальны",
+      "status": "pass",
+      "detail": "['main', 'game', 'date', 'pattern', 'evidence']"
+    },
+    {
+      "name": "сумма начислений",
+      "status": "pass",
+      "detail": "сумма=100, манифест=100, профиль=100"
+    },
+    {
+      "name": "знаменатель показан",
+      "status": "pass",
+      "detail": "ожидался / 100"
+    },
+    {
+      "name": "база ссылок календаря",
+      "status": "pass",
+      "detail": "base не задан, ссылки от папки страницы"
+    },
+    {
+      "name": "календарь разобран",
+      "status": "pass",
+      "detail": "дней: 1"
+    },
+    {
+      "name": "хуки всех открытых дней",
+      "status": "pass",
+      "detail": "открытых дней: 1"
+    },
+    {
+      "name": "производные счётчики",
+      "status": "unknown",
+      "detail": "collection.enabled=false у профиля things.object, а записи в references/rule-scope.json нет — форма проверки не назначена"
+    }
+  ]
+}

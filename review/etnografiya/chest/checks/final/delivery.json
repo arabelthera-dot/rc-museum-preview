@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "status": "rejected",
+  "page": "/home/agent/worktrees/chest-structure-0909/review/etnografiya/chest/index.html",
+  "kind": "page",
+  "museum": "things",
+  "errors": [
+    "изменён договор приёмки: профиль не принят к работе: things.object",
+    "reference: в принятом профиле не закреплён эталон с SHA-256",
+    "review.verdict: нет положительного заключения проверяющего",
+    "review.reference_comparison: нет результата с доказательством",
+    "review.accessibility: нет результата с доказательством",
+    "profile_gate: профильная приёмка не пройдена; подробности в отчёте"
+  ],
+  "inputs": {
+    "/home/agent/worktrees/chest-structure-0909/review/etnografiya/chest/index.html": "a367137f517aa9c2c6390102b210aaa1f230916c85f297ed767081b1b346f57d",
+    "/home/agent/worktrees/museum-delivery-control/russian-civilization/platform/contracts/accepted-page-profiles.json": "ade39dbfdaa669346cd5af64addad8962d27d89b75e4c5abafd72f2dc8e675d2",
+    "/home/agent/worktrees/museum-delivery-control/russian-civilization/tools/page_delivery.py": "6cfb3125be929da3b774003cde6235b08f877c34be83a909c935069aa0273355",
+    "/home/agent/worktrees/museum-delivery-control/russian-civilization/tools/rc-page.py": "f0316cb187d79454694d908c605389cf0afed3261bca7ee7f7fcf6648ceaf880",
+    "/home/agent/worktrees/museum-delivery-control/russian-civilization/tools/audit-pages.py": "5b2cac6c5daee8079cc3da61ebe55dd572eaa82d60a05a40c1ae3f4432e9a6b5",
+    "/home/agent/worktrees/museum-delivery-control/russian-civilization/docs/skills/museum-page-production/scripts/page_gate.py": "884e115dba87c75e7620954160573574e78a03a0c1fb46fb48c6de100a56c34a",
+    "/home/agent/worktrees/museum-delivery-control/russian-civilization/platform/runtime/profile_contract.py": "c697584b941a6374b1be5c306f09c30dba777c7d3ca75369c5e3e5973c57429b",
+    "/home/agent/worktrees/chest-structure-0909/review/etnografiya/chest/production/things-object.profile.json": "30bc9668efcbc84aee831c02d5d8d6539552cb271d74abf8ee49910da50d015d",
+    "/home/agent/worktrees/chest-structure-0909/review/etnografiya/chest/issue.json": "0038f5b3d71066027a48c763a6c5041daeb62ee6f58a40a2137ae3cf07cbe975",
+    "/home/agent/worktrees/chest-structure-0909/review/etnografiya/chest/checks/standard/browser.json": "9fa7b0314e6c0880553b7e35a3c360dcf2469f7943b8803a2afa413ff60bc63c",
+    "/home/agent/worktrees/chest-structure-0909/review/etnografiya/chest/checks/standard/rendered.html": "9bc68fdfdee01efae28176d4ffe37a29c37245070e2d93c3cd4723a943e681d5",
+    "/home/agent/worktrees/chest-structure-0909/review/etnografiya/chest/checks/standard/320-first_screen.png": "9a5c451e210684af9329d0efd7f266b04d362240c38b9856dbb951bbd6daf339",
+    "/home/agent/worktrees/chest-structure-0909/review/etnografiya/chest/checks/standard/320-full_page.png": "933508a758fc1bb59974da208f38b8fff76c35aa4507c8b07d34a327c8e07ef7",
+    "/home/agent/worktrees/chest-structure-0909/review/etnografiya/chest/checks/standard/390-first_screen.png": "e2287e85033a9d5be2a9ed64c8b048683604328cd99a0c4a606d5e4dfc5ffd26",
+    "/home/agent/worktrees/chest-structure-0909/review/etnografiya/chest/checks/standard/390-full_page.png": "a23b36c584ddb5d647cb0ba7eadd5ae853633627a6098b98e3f4037d696d4361",
+    "/home/agent/worktrees/chest-structure-0909/review/etnografiya/chest/checks/standard/1440-first_screen.png": "6fda69188cb90f4873f9144200f4e6823d37e4539a7cc33b9ddd09e404be3144",
+    "/home/agent/worktrees/chest-structure-0909/review/etnografiya/chest/checks/standard/1440-full_page.png": "dfb56056e18d56402fef399f0ede665536a8bd97885377b431f8001f3e08c119",
+    "/home/agent/worktrees/chest-structure-0909/review/etnografiya/chest/checks/standard/review.json": "d036f47b9fb9cd2bf40528c3cc1b39f0c31f8fc206293e4006cb07772a72cb88"
+  },
+  "request": {
+    "kind": "page",
+    "museum": "things",
+    "project": "/home/agent/worktrees/museum-delivery-control/russian-civilization",
+    "profile": "/home/agent/worktrees/chest-structure-0909/review/etnografiya/chest/production/things-object.profile.json",
+    "issue": "/home/agent/worktrees/chest-structure-0909/review/etnografiya/chest/issue.json",
+    "browser_report": "/home/agent/worktrees/chest-structure-0909/review/etnografiya/chest/checks/standard/browser.json",
+    "review": "/home/agent/worktrees/chest-structure-0909/review/etnografiya/chest/checks/standard/review.json"
+  },
+  "page_sha256": "a367137f517aa9c2c6390102b210aaa1f230916c85f297ed767081b1b346f57d",
+  "core_checks": {
+    "core.header": true,
+    "core.crumbs": true,
+    "core.date": true,
+    "core.caption": true,
+    "core.video": true,
+    "core.audio": true,
+    "core.calendar": true,
+    "core.next": true,
+    "core.buttons": true,
+    "core.header_order": true
+  },
+  "profile_gate": {
+    "returncode": 1,
+    "stdout": "[\n  {\n    \"name\": \"канон museum-core.md\",\n    \"status\": \"pass\",\n    \"detail\": \"/home/agent/worktrees/museum-delivery-control/russian-civilization/rc-museum-production/standards/museum-core.md\"\n  },\n  {\n    \"name\": \"канон page-production-standard.md\",\n    \"status\": \"pass\",\n    \"detail\": \"/home/agent/worktrees/museum-delivery-control/russian-civilization/docs/standards/page-production-standard.md\"\n  },\n  {\n    \"name\": \"канон audit-pages.py\",\n    \"status\": \"pass\",\n    \"detail\": \"/home/agent/worktrees/museum-delivery-control/russian-civilization/tools/audit-pages.py\"\n  },\n  {\n    \"name\": \"тематический skill\",\n    \"status\": \"fail\",\n    \"detail\": \"museum-things\"\n  },\n  {\n    \"name\": \"зависимость rc-text\",\n    \"status\": \"pass\",\n    \"detail\": \"/home/agent/.claude/skills/rc-text/SKILL.md\"\n  },\n  {\n    \"name\": \"копии rc-text совпадают\",\n    \"status\": \"pass\",\n    \"detail\": \"версий: 1\"\n  },\n  {\n    \"name\": \"зависимость rc-artdirection\",\n    \"status\": \"pass\",\n    \"detail\": \"/home/agent/.claude/skills/rc-artdirection/SKILL.md\"\n  },\n  {\n    \"name\": \"копии rc-artdirection совпадают\",\n    \"status\": \"pass\",\n    \"detail\": \"версий: 1\"\n  },\n  {\n    \"name\": \"зависимость rc-hero\",\n    \"status\": \"pass\",\n    \"detail\": \"/home/agent/.claude/skills/rc-hero/SKILL.md\"\n  },\n  {\n    \"name\": \"копии rc-hero совпадают\",\n    \"status\": \"pass\",\n    \"detail\": \"версий: 1\"\n  },\n  {\n    \"name\": \"зависимость rc-design-review\",\n    \"status\": \"pass\",\n    \"detail\": \"/home/agent/.claude/skills/rc-design-review/SKILL.md\"\n  },\n  {\n    \"name\": \"копии rc-design-review совпадают\",\n    \"status\": \"pass\",\n    \"detail\": \"версий: 1\"\n  },\n  {\n    \"name\": \"паспорт issue.json\",\n    \"status\": \"pass\",\n    \"detail\": \"/home/agent/worktrees/chest-structure-0909/review/etnografiya/chest/issue.json\"\n  },\n  {\n    \"name\": \"интерпретатор\",\n    \"status\": \"pass\",\n    \"detail\": \"/usr/bin/python3\"\n  },\n  {\n    \"name\": \"HTML страницы\",\n    \"status\": \"pass\",\n    \"detail\": \"/home/agent/worktrees/chest-structure-0909/review/etnografiya/chest/index.html\"\n  },\n  {\n    \"name\": \"валидатор issue.json\",\n    \"status\": \"pass\",\n    \"detail\": \"ПРЕДУПРЕЖДЕНИЕ: изображение 2: права имеют статус pending.\\nПРЕДУПРЕЖДЕНИЕ: изображение 3: права имеют статус pending.\\nИТОГ: проверка пройдена; ошибок 0, предупреждений 7.\"\n  },\n  {\n    \"name\": \"договор приёмки\",\n    \"status\": \"fail\",\n    \"detail\": \"изменён договор приёмки: профиль не принят к работе: things.object\"\n  }\n]\n",
+    "stderr": ""
+  }
+}

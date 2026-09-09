@@ -1,0 +1,861 @@
+{
+  "page_sha256": "a367137f517aa9c2c6390102b210aaa1f230916c85f297ed767081b1b346f57d",
+  "url": "https://htmlpreview.github.io/?https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/7feefa6/review/etnografiya/chest/index.html#calendar",
+  "checks": [
+    {
+      "name": "Меню: rolik",
+      "pass": true
+    },
+    {
+      "name": "Переход: rolik",
+      "pass": true,
+      "evidence": {
+        "hash": "#rolik",
+        "exists": true,
+        "height": 486.46875,
+        "url": "https://htmlpreview.github.io/?https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/7feefa6/review/etnografiya/chest/index.html#rolik"
+      }
+    },
+    {
+      "name": "Меню: audioguide",
+      "pass": true
+    },
+    {
+      "name": "Переход: audioguide",
+      "pass": true,
+      "evidence": {
+        "hash": "#audioguide",
+        "exists": true,
+        "height": 572.984375,
+        "url": "https://htmlpreview.github.io/?https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/7feefa6/review/etnografiya/chest/index.html#audioguide"
+      }
+    },
+    {
+      "name": "Меню: open-chest",
+      "pass": true
+    },
+    {
+      "name": "Переход: open-chest",
+      "pass": true,
+      "evidence": {
+        "hash": "#open-chest",
+        "exists": true,
+        "height": 2740.78125,
+        "url": "https://htmlpreview.github.io/?https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/7feefa6/review/etnografiya/chest/index.html#open-chest"
+      }
+    },
+    {
+      "name": "Меню: gallery",
+      "pass": true
+    },
+    {
+      "name": "Переход: gallery",
+      "pass": true,
+      "evidence": {
+        "hash": "#gallery",
+        "exists": true,
+        "height": 897.09375,
+        "url": "https://htmlpreview.github.io/?https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/7feefa6/review/etnografiya/chest/index.html#gallery"
+      }
+    },
+    {
+      "name": "Меню: verified-facts",
+      "pass": true
+    },
+    {
+      "name": "Переход: verified-facts",
+      "pass": true,
+      "evidence": {
+        "hash": "#verified-facts",
+        "exists": true,
+        "height": 695.109375,
+        "url": "https://htmlpreview.github.io/?https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/7feefa6/review/etnografiya/chest/index.html#verified-facts"
+      }
+    },
+    {
+      "name": "Меню: story",
+      "pass": true
+    },
+    {
+      "name": "Переход: story",
+      "pass": true,
+      "evidence": {
+        "hash": "#story",
+        "exists": true,
+        "height": 666.171875,
+        "url": "https://htmlpreview.github.io/?https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/7feefa6/review/etnografiya/chest/index.html#story"
+      }
+    },
+    {
+      "name": "Меню: sources",
+      "pass": true
+    },
+    {
+      "name": "Переход: sources",
+      "pass": true,
+      "evidence": {
+        "hash": "#sources",
+        "exists": true,
+        "height": 1202.34375,
+        "url": "https://htmlpreview.github.io/?https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/7feefa6/review/etnografiya/chest/index.html#sources"
+      }
+    },
+    {
+      "name": "Меню: inscription",
+      "pass": true
+    },
+    {
+      "name": "Переход: inscription",
+      "pass": true,
+      "evidence": {
+        "hash": "#inscription",
+        "exists": true,
+        "height": 1393.96875,
+        "url": "https://htmlpreview.github.io/?https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/7feefa6/review/etnografiya/chest/index.html#inscription"
+      }
+    },
+    {
+      "name": "Меню: fact-version",
+      "pass": true
+    },
+    {
+      "name": "Переход: fact-version",
+      "pass": true,
+      "evidence": {
+        "hash": "#fact-version",
+        "exists": true,
+        "height": 879.484375,
+        "url": "https://htmlpreview.github.io/?https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/7feefa6/review/etnografiya/chest/index.html#fact-version"
+      }
+    },
+    {
+      "name": "Меню: mirovoy-kontekst",
+      "pass": true
+    },
+    {
+      "name": "Переход: mirovoy-kontekst",
+      "pass": true,
+      "evidence": {
+        "hash": "#mirovoy-kontekst",
+        "exists": true,
+        "height": 1004.328125,
+        "url": "https://htmlpreview.github.io/?https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/7feefa6/review/etnografiya/chest/index.html#mirovoy-kontekst"
+      }
+    },
+    {
+      "name": "Меню: memory-game",
+      "pass": true
+    },
+    {
+      "name": "Переход: memory-game",
+      "pass": true,
+      "evidence": {
+        "hash": "#memory-game",
+        "exists": true,
+        "height": 1273.453125,
+        "url": "https://htmlpreview.github.io/?https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/7feefa6/review/etnografiya/chest/index.html#memory-game"
+      }
+    },
+    {
+      "name": "Меню: quiz",
+      "pass": true
+    },
+    {
+      "name": "Переход: quiz",
+      "pass": true,
+      "evidence": {
+        "hash": "#quiz",
+        "exists": true,
+        "height": 1057.109375,
+        "url": "https://htmlpreview.github.io/?https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/7feefa6/review/etnografiya/chest/index.html#quiz"
+      }
+    },
+    {
+      "name": "Меню: result",
+      "pass": true
+    },
+    {
+      "name": "Переход: result",
+      "pass": true,
+      "evidence": {
+        "hash": "#result",
+        "exists": true,
+        "height": 479.6875,
+        "url": "https://htmlpreview.github.io/?https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/7feefa6/review/etnografiya/chest/index.html#result"
+      }
+    },
+    {
+      "name": "Меню: calendar",
+      "pass": true
+    },
+    {
+      "name": "Переход: calendar",
+      "pass": true,
+      "evidence": {
+        "hash": "#calendar",
+        "exists": true,
+        "height": 851.625,
+        "url": "https://htmlpreview.github.io/?https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/7feefa6/review/etnografiya/chest/index.html#calendar"
+      }
+    },
+    {
+      "name": "Название выхода соответствует всем музеям",
+      "pass": true
+    },
+    {
+      "name": "Главный выход ведёт к другому собранию",
+      "pass": true,
+      "evidence": "Смотреть другие русские вещи ↗"
+    },
+    {
+      "name": "Подробности изначально свёрнуты",
+      "pass": true
+    },
+    {
+      "name": "История раскрывается клавиатурой",
+      "pass": true
+    },
+    {
+      "name": "Полный рассказ доступен",
+      "pass": true
+    },
+    {
+      "name": "Сворачивание сохраняет место чтения",
+      "pass": true,
+      "evidence": {
+        "before": 423.203125,
+        "after": 423.203125
+      }
+    },
+    {
+      "name": "Геометрия 320 / false",
+      "pass": true,
+      "evidence": {
+        "overflow": false,
+        "broken": 0,
+        "buttonsBottom": -6217.125,
+        "support": [
+          {
+            "y": 2443.921875,
+            "ratio": 0.12490656623735051
+          },
+          {
+            "y": 18723.15625,
+            "ratio": 0.9569230425227435
+          }
+        ],
+        "hiddenMain": false,
+        "articleText": "rgb(220, 229, 238)",
+        "shortButtons": []
+      }
+    },
+    {
+      "name": "Поддержка 320 / false",
+      "pass": true,
+      "evidence": [
+        {
+          "y": 2443.921875,
+          "ratio": 0.12490656623735051
+        },
+        {
+          "y": 18723.15625,
+          "ratio": 0.9569230425227435
+        }
+      ]
+    },
+    {
+      "name": "Кнопки 44px 320 / false",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "Геометрия 320 / true",
+      "pass": true,
+      "evidence": {
+        "overflow": false,
+        "broken": 0,
+        "buttonsBottom": -1135.125,
+        "support": [
+          {
+            "y": 2443.921875,
+            "ratio": 0.0972318231549632
+          },
+          {
+            "y": 24291.671875,
+            "ratio": 0.9664480555002984
+          }
+        ],
+        "hiddenMain": false,
+        "articleText": "rgb(220, 229, 238)",
+        "shortButtons": []
+      }
+    },
+    {
+      "name": "Поддержка 320 / true",
+      "pass": true,
+      "evidence": [
+        {
+          "y": 2443.921875,
+          "ratio": 0.0972318231549632
+        },
+        {
+          "y": 24291.671875,
+          "ratio": 0.9664480555002984
+        }
+      ]
+    },
+    {
+      "name": "Кнопки 44px 320 / true",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "Геометрия 360 / false",
+      "pass": true,
+      "evidence": {
+        "overflow": false,
+        "broken": 0,
+        "buttonsBottom": 573.578125,
+        "support": [
+          {
+            "y": 2312.90625,
+            "ratio": 0.12421623254564984
+          },
+          {
+            "y": 17827.71875,
+            "ratio": 0.9574499865735768
+          }
+        ],
+        "hiddenMain": false,
+        "articleText": "rgb(220, 229, 238)",
+        "shortButtons": []
+      }
+    },
+    {
+      "name": "Поддержка 360 / false",
+      "pass": true,
+      "evidence": [
+        {
+          "y": 2312.90625,
+          "ratio": 0.12421623254564984
+        },
+        {
+          "y": 17827.71875,
+          "ratio": 0.9574499865735768
+        }
+      ]
+    },
+    {
+      "name": "Кнопки 44px 360 / false",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "Геометрия 360 / true",
+      "pass": true,
+      "evidence": {
+        "overflow": false,
+        "broken": 0,
+        "buttonsBottom": 773.578125,
+        "support": [
+          {
+            "y": 2312.90625,
+            "ratio": 0.09751280618913108
+          },
+          {
+            "y": 22927.3125,
+            "ratio": 0.9666222226906699
+          }
+        ],
+        "hiddenMain": false,
+        "articleText": "rgb(220, 229, 238)",
+        "shortButtons": []
+      }
+    },
+    {
+      "name": "Поддержка 360 / true",
+      "pass": true,
+      "evidence": [
+        {
+          "y": 2312.90625,
+          "ratio": 0.09751280618913108
+        },
+        {
+          "y": 22927.3125,
+          "ratio": 0.9666222226906699
+        }
+      ]
+    },
+    {
+      "name": "Кнопки 44px 360 / true",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "Геометрия 390 / false",
+      "pass": true,
+      "evidence": {
+        "overflow": false,
+        "broken": 0,
+        "buttonsBottom": 677.84375,
+        "support": [
+          {
+            "y": 2189.046875,
+            "ratio": 0.12346570078962212
+          },
+          {
+            "y": 16981.15625,
+            "ratio": 0.957764029892837
+          }
+        ],
+        "hiddenMain": false,
+        "articleText": "rgb(220, 229, 238)",
+        "shortButtons": []
+      }
+    },
+    {
+      "name": "Поддержка 390 / false",
+      "pass": true,
+      "evidence": [
+        {
+          "y": 2189.046875,
+          "ratio": 0.12346570078962212
+        },
+        {
+          "y": 16981.15625,
+          "ratio": 0.957764029892837
+        }
+      ]
+    },
+    {
+      "name": "Первый экран / false",
+      "pass": true,
+      "evidence": 677.84375
+    },
+    {
+      "name": "Кнопки 44px 390 / false",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "Геометрия 390 / true",
+      "pass": true,
+      "evidence": {
+        "overflow": false,
+        "broken": 0,
+        "buttonsBottom": 677.84375,
+        "support": [
+          {
+            "y": 2189.046875,
+            "ratio": 0.09723479212010838
+          },
+          {
+            "y": 21764.703125,
+            "ratio": 0.9667615655399103
+          }
+        ],
+        "hiddenMain": false,
+        "articleText": "rgb(220, 229, 238)",
+        "shortButtons": []
+      }
+    },
+    {
+      "name": "Поддержка 390 / true",
+      "pass": true,
+      "evidence": [
+        {
+          "y": 2189.046875,
+          "ratio": 0.09723479212010838
+        },
+        {
+          "y": 21764.703125,
+          "ratio": 0.9667615655399103
+        }
+      ]
+    },
+    {
+      "name": "Первый экран / true",
+      "pass": true,
+      "evidence": 677.84375
+    },
+    {
+      "name": "Кнопки 44px 390 / true",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "Геометрия 768 / false",
+      "pass": true,
+      "evidence": {
+        "overflow": false,
+        "broken": 0,
+        "buttonsBottom": 816.46875,
+        "support": [
+          {
+            "y": 2370.0625,
+            "ratio": 0.1602043057996485
+          },
+          {
+            "y": 14267.34375,
+            "ratio": 0.964400686088955
+          }
+        ],
+        "hiddenMain": false,
+        "articleText": "rgb(220, 229, 238)",
+        "shortButtons": []
+      }
+    },
+    {
+      "name": "Поддержка 768 / false",
+      "pass": true,
+      "evidence": [
+        {
+          "y": 2370.0625,
+          "ratio": 0.1602043057996485
+        },
+        {
+          "y": 14267.34375,
+          "ratio": 0.964400686088955
+        }
+      ]
+    },
+    {
+      "name": "Кнопки 44px 768 / false",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "Геометрия 768 / true",
+      "pass": true,
+      "evidence": {
+        "overflow": false,
+        "broken": 0,
+        "buttonsBottom": 816.46875,
+        "support": [
+          {
+            "y": 2370.0625,
+            "ratio": 0.13056756831203173
+          },
+          {
+            "y": 17625.25,
+            "ratio": 0.9709811591009255
+          }
+        ],
+        "hiddenMain": false,
+        "articleText": "rgb(220, 229, 238)",
+        "shortButtons": []
+      }
+    },
+    {
+      "name": "Поддержка 768 / true",
+      "pass": true,
+      "evidence": [
+        {
+          "y": 2370.0625,
+          "ratio": 0.13056756831203173
+        },
+        {
+          "y": 17625.25,
+          "ratio": 0.9709811591009255
+        }
+      ]
+    },
+    {
+      "name": "Кнопки 44px 768 / true",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "Геометрия 1440 / false",
+      "pass": true,
+      "evidence": {
+        "overflow": false,
+        "broken": 0,
+        "buttonsBottom": 849.015625,
+        "support": [
+          {
+            "y": 2601.75,
+            "ratio": 0.1753318956803019
+          },
+          {
+            "y": 14312,
+            "ratio": 0.9644854774580497
+          }
+        ],
+        "hiddenMain": false,
+        "articleText": "rgb(220, 229, 238)",
+        "shortButtons": []
+      }
+    },
+    {
+      "name": "Поддержка 1440 / false",
+      "pass": true,
+      "evidence": [
+        {
+          "y": 2601.75,
+          "ratio": 0.1753318956803019
+        },
+        {
+          "y": 14312,
+          "ratio": 0.9644854774580497
+        }
+      ]
+    },
+    {
+      "name": "Кнопки 44px 1440 / false",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "Геометрия 1440 / true",
+      "pass": true,
+      "evidence": {
+        "overflow": false,
+        "broken": 0,
+        "buttonsBottom": 849.015625,
+        "support": [
+          {
+            "y": 2601.75,
+            "ratio": 0.14374309392265194
+          },
+          {
+            "y": 17572.734375,
+            "ratio": 0.9708693024861879
+          }
+        ],
+        "hiddenMain": false,
+        "articleText": "rgb(220, 229, 238)",
+        "shortButtons": []
+      }
+    },
+    {
+      "name": "Поддержка 1440 / true",
+      "pass": true,
+      "evidence": [
+        {
+          "y": 2601.75,
+          "ratio": 0.14374309392265194
+        },
+        {
+          "y": 17572.734375,
+          "ratio": 0.9708693024861879
+        }
+      ]
+    },
+    {
+      "name": "Кнопки 44px 1440 / true",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "Нет ошибок JS",
+      "pass": true,
+      "evidence": []
+    }
+  ],
+  "viewports": [
+    {
+      "width": 320,
+      "expanded": false,
+      "overflow": false,
+      "broken": 0,
+      "buttonsBottom": -6217.125,
+      "support": [
+        {
+          "y": 2443.921875,
+          "ratio": 0.12490656623735051
+        },
+        {
+          "y": 18723.15625,
+          "ratio": 0.9569230425227435
+        }
+      ],
+      "hiddenMain": false,
+      "articleText": "rgb(220, 229, 238)",
+      "shortButtons": []
+    },
+    {
+      "width": 320,
+      "expanded": true,
+      "overflow": false,
+      "broken": 0,
+      "buttonsBottom": -1135.125,
+      "support": [
+        {
+          "y": 2443.921875,
+          "ratio": 0.0972318231549632
+        },
+        {
+          "y": 24291.671875,
+          "ratio": 0.9664480555002984
+        }
+      ],
+      "hiddenMain": false,
+      "articleText": "rgb(220, 229, 238)",
+      "shortButtons": []
+    },
+    {
+      "width": 360,
+      "expanded": false,
+      "overflow": false,
+      "broken": 0,
+      "buttonsBottom": 573.578125,
+      "support": [
+        {
+          "y": 2312.90625,
+          "ratio": 0.12421623254564984
+        },
+        {
+          "y": 17827.71875,
+          "ratio": 0.9574499865735768
+        }
+      ],
+      "hiddenMain": false,
+      "articleText": "rgb(220, 229, 238)",
+      "shortButtons": []
+    },
+    {
+      "width": 360,
+      "expanded": true,
+      "overflow": false,
+      "broken": 0,
+      "buttonsBottom": 773.578125,
+      "support": [
+        {
+          "y": 2312.90625,
+          "ratio": 0.09751280618913108
+        },
+        {
+          "y": 22927.3125,
+          "ratio": 0.9666222226906699
+        }
+      ],
+      "hiddenMain": false,
+      "articleText": "rgb(220, 229, 238)",
+      "shortButtons": []
+    },
+    {
+      "width": 390,
+      "expanded": false,
+      "overflow": false,
+      "broken": 0,
+      "buttonsBottom": 677.84375,
+      "support": [
+        {
+          "y": 2189.046875,
+          "ratio": 0.12346570078962212
+        },
+        {
+          "y": 16981.15625,
+          "ratio": 0.957764029892837
+        }
+      ],
+      "hiddenMain": false,
+      "articleText": "rgb(220, 229, 238)",
+      "shortButtons": []
+    },
+    {
+      "width": 390,
+      "expanded": true,
+      "overflow": false,
+      "broken": 0,
+      "buttonsBottom": 677.84375,
+      "support": [
+        {
+          "y": 2189.046875,
+          "ratio": 0.09723479212010838
+        },
+        {
+          "y": 21764.703125,
+          "ratio": 0.9667615655399103
+        }
+      ],
+      "hiddenMain": false,
+      "articleText": "rgb(220, 229, 238)",
+      "shortButtons": []
+    },
+    {
+      "width": 768,
+      "expanded": false,
+      "overflow": false,
+      "broken": 0,
+      "buttonsBottom": 816.46875,
+      "support": [
+        {
+          "y": 2370.0625,
+          "ratio": 0.1602043057996485
+        },
+        {
+          "y": 14267.34375,
+          "ratio": 0.964400686088955
+        }
+      ],
+      "hiddenMain": false,
+      "articleText": "rgb(220, 229, 238)",
+      "shortButtons": []
+    },
+    {
+      "width": 768,
+      "expanded": true,
+      "overflow": false,
+      "broken": 0,
+      "buttonsBottom": 816.46875,
+      "support": [
+        {
+          "y": 2370.0625,
+          "ratio": 0.13056756831203173
+        },
+        {
+          "y": 17625.25,
+          "ratio": 0.9709811591009255
+        }
+      ],
+      "hiddenMain": false,
+      "articleText": "rgb(220, 229, 238)",
+      "shortButtons": []
+    },
+    {
+      "width": 1440,
+      "expanded": false,
+      "overflow": false,
+      "broken": 0,
+      "buttonsBottom": 849.015625,
+      "support": [
+        {
+          "y": 2601.75,
+          "ratio": 0.1753318956803019
+        },
+        {
+          "y": 14312,
+          "ratio": 0.9644854774580497
+        }
+      ],
+      "hiddenMain": false,
+      "articleText": "rgb(220, 229, 238)",
+      "shortButtons": []
+    },
+    {
+      "width": 1440,
+      "expanded": true,
+      "overflow": false,
+      "broken": 0,
+      "buttonsBottom": 849.015625,
+      "support": [
+        {
+          "y": 2601.75,
+          "ratio": 0.14374309392265194
+        },
+        {
+          "y": 17572.734375,
+          "ratio": 0.9708693024861879
+        }
+      ],
+      "hiddenMain": false,
+      "articleText": "rgb(220, 229, 238)",
+      "shortButtons": []
+    }
+  ],
+  "errors": [],
+  "passed": 67,
+  "failed": []
+}

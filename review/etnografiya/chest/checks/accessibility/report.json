@@ -1,0 +1,387 @@
+{
+  "page_sha256": "a367137f517aa9c2c6390102b210aaa1f230916c85f297ed767081b1b346f57d",
+  "url": "https://htmlpreview.github.io/?https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/7feefa6/review/etnografiya/chest/index.html#open-chest",
+  "checks": [
+    {
+      "name": "Холодный старт без аудио и видео",
+      "pass": true,
+      "evidence": [
+        "https://htmlpreview.github.io/?https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/7feefa6/review/etnografiya/chest/index.html",
+        "https://htmlpreview.github.io/htmlpreview.js",
+        "https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/7feefa6/review/etnografiya/chest/index.html",
+        "https://arabelthera-dot.github.io/rc-museum-preview/assets/fonts.css",
+        "https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/chest-structure-0909/review/etnografiya/chest/photo-order.js",
+        "https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/chest-structure-0909/review/etnografiya/chest/material-lab.js",
+        "https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/chest-structure-0909/review/etnografiya/chest/media/chest-400.webp",
+        "https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/chest-structure-0909/review/etnografiya/chest/media/chest.webp",
+        "https://arabelthera-dot.github.io/rc-museum-preview/assets/fonts/inter-UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+        "https://arabelthera-dot.github.io/rc-museum-preview/assets/fonts/inter-UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2",
+        "https://arabelthera-dot.github.io/rc-museum-preview/assets/fonts/lora-0QIvMX1D_JOuMwr7Iw.woff2",
+        "https://arabelthera-dot.github.io/rc-museum-preview/assets/fonts/lora-0QIvMX1D_JOuMw77I-NP.woff2",
+        "https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/chest-structure-0909/assets/museum-video.js",
+        "https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/chest-structure-0909/review/etnografiya/chest/video-registry.json",
+        "https://arabelthera-dot.github.io/rc-museum-preview/assets/museum-audioguide.js",
+        "https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/chest-canon-0909/review/etnografiya/chest/media/chest-film-v3.jpg",
+        "https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/chest-structure-0909/assets/museum-support.js",
+        "https://arabelthera-dot.github.io/rc-museum-preview/assets/fonts/playfairdisplay-nuFiD-vYSZviVYUb_rj3ij__anPXDTjYgFE_.woff2",
+        "https://arabelthera-dot.github.io/rc-museum-preview/assets/fonts/playfairdisplay-nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2",
+        "https://arabelthera-dot.github.io/rc-museum-preview/assets/museum-calendar-month.js",
+        "https://arabelthera-dot.github.io/rc-museum-preview/assets/museum-chrome.js",
+        "https://arabelthera-dot.github.io/rc-museum-preview/assets/analytics.js"
+      ]
+    },
+    {
+      "name": "HTML gzip <250KB",
+      "pass": true,
+      "evidence": 22413
+    },
+    {
+      "name": "WCAG автоматические правила 390",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "WCAG автоматические правила 1440",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "Меню прилипает при прокрутке",
+      "pass": true,
+      "evidence": {
+        "position": "sticky",
+        "top": 0,
+        "scrollY": 2484
+      }
+    },
+    {
+      "name": "Меню не закрывает заголовок раздела",
+      "pass": true
+    },
+    {
+      "name": "Фокус остаётся на нажатом действии",
+      "pass": true
+    },
+    {
+      "name": "Состояние модели доступно текстом",
+      "pass": true
+    },
+    {
+      "name": "Диалог имеет доступное имя",
+      "pass": true
+    },
+    {
+      "name": "Фокус возвращается после диалога",
+      "pass": true
+    },
+    {
+      "name": "Дерево доступности содержит модель и её управление",
+      "pass": true
+    },
+    {
+      "name": "Увеличение 200% 780",
+      "pass": true,
+      "evidence": {
+        "overflow": false,
+        "bodyWidth": 765,
+        "viewport": 780,
+        "hiddenText": []
+      }
+    },
+    {
+      "name": "Увеличение 200% 1440",
+      "pass": true,
+      "evidence": {
+        "overflow": false,
+        "bodyWidth": 1425,
+        "viewport": 1440,
+        "hiddenText": []
+      }
+    },
+    {
+      "name": "При отказе медиа и Save-Data рассказ остаётся доступен",
+      "pass": true
+    },
+    {
+      "name": "Облегчённый опыт сохраняет текстовый результат",
+      "pass": true
+    },
+    {
+      "name": "Нет ошибок JS",
+      "pass": true,
+      "evidence": []
+    }
+  ],
+  "scans": [
+    {
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              ".crumbs"
+            ],
+            [
+              ".row > a[href$=\"#gallery\"]"
+            ],
+            [
+              "a[href$=\"#verified-facts\"]"
+            ],
+            [
+              ".row > a[href$=\"#story\"]"
+            ],
+            [
+              ".row > a[href$=\"#sources\"]"
+            ],
+            [
+              "a[href$=\"#inscription\"]"
+            ],
+            [
+              "a[href$=\"#fact-version\"]"
+            ],
+            [
+              "a[href$=\"#mirovoy-kontekst\"]"
+            ],
+            [
+              ".row > a[href$=\"#memory-game\"]"
+            ],
+            [
+              ".row > a[href$=\"#quiz\"]"
+            ],
+            [
+              "a[href$=\"#result\"]"
+            ],
+            [
+              "a[href$=\"#calendar\"]"
+            ],
+            [
+              ".agttl"
+            ],
+            [
+              "#agdur"
+            ],
+            [
+              ".agsub"
+            ],
+            [
+              ".agnav > .lbl"
+            ],
+            [
+              "button[data-t=\"0\"]"
+            ],
+            [
+              "button[data-t=\"0\"] > i"
+            ],
+            [
+              ".agtext > summary"
+            ],
+            [
+              ".agbox > p"
+            ],
+            [
+              "#support > .sup-l"
+            ],
+            [
+              "#support > p"
+            ],
+            [
+              "#support > p > b:nth-child(1)"
+            ],
+            [
+              "b:nth-child(2)"
+            ],
+            [
+              "#support > p > b:nth-child(3)"
+            ],
+            [
+              "b:nth-child(4)"
+            ],
+            [
+              "button[data-sup-share=\"\"]"
+            ],
+            [
+              ".sup-action"
+            ],
+            [
+              "button[data-sup-more=\"\"]"
+            ],
+            [
+              "#memory-game > p:nth-child(4)"
+            ],
+            [
+              "figure:nth-child(2) > figcaption"
+            ],
+            [
+              "figure:nth-child(2) > figcaption > .fragment-description"
+            ],
+            [
+              "button[aria-label=\"↑ Выше фрагмент с места 2\"]"
+            ],
+            [
+              "button[aria-label=\"↓ Ниже фрагмент с места 2\"]"
+            ],
+            [
+              "figure:nth-child(3) > figcaption"
+            ],
+            [
+              "figure:nth-child(3) > figcaption > .fragment-description"
+            ],
+            [
+              "button[aria-label=\"↑ Выше фрагмент с места 3\"]"
+            ],
+            [
+              "#kuda-dalshe > .support > .sup-l"
+            ],
+            [
+              "#kuda-dalshe > .support > p"
+            ],
+            [
+              "#kuda-dalshe > .support > p > b:nth-child(1)"
+            ],
+            [
+              ".support > p > a"
+            ],
+            [
+              "#kuda-dalshe > .support > p > b:nth-child(3)"
+            ]
+          ]
+        },
+        {
+          "id": "video-caption",
+          "targets": [
+            [
+              "video"
+            ]
+          ]
+        }
+      ],
+      "passes": 30
+    },
+    {
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              ".agttl"
+            ],
+            [
+              "#agdur"
+            ],
+            [
+              ".agsub"
+            ],
+            [
+              ".agnav > .lbl"
+            ],
+            [
+              "button[data-t=\"0\"]"
+            ],
+            [
+              "button[data-t=\"0\"] > i"
+            ],
+            [
+              ".agtext > summary"
+            ],
+            [
+              ".agbox > p"
+            ],
+            [
+              "#support > .sup-l"
+            ],
+            [
+              "#support > p"
+            ],
+            [
+              "#support > p > b:nth-child(1)"
+            ],
+            [
+              "b:nth-child(2)"
+            ],
+            [
+              "#support > p > b:nth-child(3)"
+            ],
+            [
+              "b:nth-child(4)"
+            ],
+            [
+              "button[data-sup-share=\"\"]"
+            ],
+            [
+              ".sup-action"
+            ],
+            [
+              "button[data-sup-more=\"\"]"
+            ],
+            [
+              "figure:nth-child(2) > figcaption"
+            ],
+            [
+              "figure:nth-child(2) > figcaption > .fragment-description"
+            ],
+            [
+              "button[aria-label=\"↑ Выше фрагмент с места 2\"]"
+            ],
+            [
+              "button[aria-label=\"↓ Ниже фрагмент с места 2\"]"
+            ],
+            [
+              "figure:nth-child(3) > figcaption > .fragment-description"
+            ],
+            [
+              "#kuda-dalshe > .support > .sup-l"
+            ],
+            [
+              "#kuda-dalshe > .support > p"
+            ],
+            [
+              "#kuda-dalshe > .support > p > b:nth-child(1)"
+            ],
+            [
+              ".support > p > a"
+            ],
+            [
+              "#kuda-dalshe > .support > p > b:nth-child(3)"
+            ]
+          ]
+        },
+        {
+          "id": "video-caption",
+          "targets": [
+            [
+              "video"
+            ]
+          ]
+        }
+      ],
+      "passes": 29
+    }
+  ],
+  "zoom": [
+    {
+      "width": 780,
+      "overflow": false,
+      "bodyWidth": 765,
+      "viewport": 780,
+      "hiddenText": []
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "bodyWidth": 1425,
+      "viewport": 1440,
+      "hiddenText": []
+    }
+  ],
+  "errors": [],
+  "passed": 16,
+  "failed": [],
+  "limits": [
+    "AX-дерево не заменяет проверку настоящим экранным диктором",
+    "CSS zoom 200% — модель увеличения; реальные Android/iPhone и системный размер текста не проверены"
+  ]
+}

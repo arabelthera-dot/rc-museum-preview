@@ -1,21 +1,19 @@
 {
   "date": "2026-09-09",
-  "status": "editorial_review",
-  "scope": "Single substantial visual chest story; not a full calendar-day release",
-  "browser": {
-    "mobile": "390x844, no horizontal overflow",
-    "desktop": "1440x1000, no horizontal overflow",
-    "modal_opens_actual_drawers_photo": true,
-    "natural_pixel_size_scrolls_on_mobile": true,
-    "escape_closes": true,
-    "gallery_updates_image_and_explanation": true,
-    "quiz_feedback": true,
-    "javascript_errors": []
-  },
-  "images": "3 unmodified embedded JPEGs from Pudov 2022 article, Russian Museum object ONI/M-4",
+  "status": "externally-checked-not-accepted",
+  "page_sha256": "a367137f517aa9c2c6390102b210aaa1f230916c85f297ed767081b1b346f57d",
+  "preview_commit": "7feefa6",
+  "url": "https://htmlpreview.github.io/?https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/7feefa6/review/etnografiya/chest/index.html",
+  "structure_checks": "checks/structure/browser.json",
+  "regression_checks": "checks/standard/browser.json",
+  "accessibility_checks": "checks/accessibility/report.json",
+  "contrast_checks": "checks/contrast/report.json",
+  "performance_checks": "checks/performance/report.json",
+  "delivery": "checks/final/delivery.json",
   "limitations": [
-    "Museum full production gates not claimed",
-    "Photograph reproduction rights not cleared for commercial publication",
-    "Source image resolution 697x519, 517x628, 835x626"
+    "Предметный навык, профиль things.object и эталон остаются непринятыми",
+    "Не выполнен ключевой путь с настоящим экранным диктором и физическими мобильными устройствами",
+    "Права фотографий pending; поручение показать материал не названо лицензией",
+    "Изменения общего инструмента проверены, но коммит отклонён контролем зон Джарвиса"
   ]
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "page_sha256": "cc4b83bc6e17e77d1ffd81f4a9845696edc54e2295d938b297aeaacf452a9909",
-  "url": "https://htmlpreview.github.io/?https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/31793b4/review/etnografiya/chest/index.html",
+  "page_sha256": "a367137f517aa9c2c6390102b210aaa1f230916c85f297ed767081b1b346f57d",
+  "url": "https://htmlpreview.github.io/?https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/7feefa6/review/etnografiya/chest/index.html",
   "checks": [
     {
       "name": "призыв поддержки по стандарту",
@@ -32,6 +32,10 @@
       "pass": true
     },
     {
+      "name": "показан файл надписи, а не прежний srcset",
+      "pass": true
+    },
+    {
       "name": "стрелка переключает основной ракурс",
       "pass": true
     },
@@ -48,6 +52,10 @@
       "pass": true
     },
     {
+      "name": "модальный ракурс загружает подлинную надпись",
+      "pass": true
+    },
+    {
       "name": "свайп модального просмотра",
       "pass": true
     },
@@ -57,6 +65,10 @@
     },
     {
       "name": "нельзя пропустить основной опыт",
+      "pass": true
+    },
+    {
+      "name": "опыт не отмечает сравнение до действия",
       "pass": true
     },
     {
@@ -341,16 +353,16 @@
       "h1_bottom": 617.796875,
       "buttons_bottom": 838.875,
       "support_count": 2,
-      "support_fraction": 0.10251487062808635,
+      "support_fraction": 0.1279373472038301,
       "share": "flex",
       "small": [],
       "first_screen": {
         "path": "320-first_screen.png",
-        "sha256": "001f52323205709f1b71d41c1da1ed9ff5ea93dd38621fb487f8d04c6d20d684"
+        "sha256": "9a5c451e210684af9329d0efd7f266b04d362240c38b9856dbb951bbd6daf339"
       },
       "full_page": {
         "path": "320-full_page.png",
-        "sha256": "c81a3c06fe4b32c86c59626c32b7bbebe6f1db36b9c14be305b172d6ce9e9b0a"
+        "sha256": "933508a758fc1bb59974da208f38b8fff76c35aa4507c8b07d34a327c8e07ef7"
       }
     },
     {
@@ -380,7 +392,7 @@
       "h1_bottom": 597.5,
       "buttons_bottom": 818.578125,
       "support_count": 2,
-      "support_fraction": 0.1029225024856266,
+      "support_fraction": 0.1274029457405822,
       "share": "flex",
       "small": []
     },
@@ -411,16 +423,16 @@
       "h1_bottom": 529.78125,
       "buttons_bottom": 677.84375,
       "support_count": 2,
-      "support_fraction": 0.10230472645272413,
+      "support_fraction": 0.12681463507135632,
       "share": "flex",
       "small": [],
       "first_screen": {
         "path": "390-first_screen.png",
-        "sha256": "d52c5dec20a18c269e809bf772a8be6153d9e15dafdc7eb2685491b3eea2a5ef"
+        "sha256": "e2287e85033a9d5be2a9ed64c8b048683604328cd99a0c4a606d5e4dfc5ffd26"
       },
       "full_page": {
         "path": "390-full_page.png",
-        "sha256": "db5909a44fcc3c3f105f200e9c1191a0f755367a70e7036860906b84be1c582a"
+        "sha256": "a23b36c584ddb5d647cb0ba7eadd5ae853633627a6098b98e3f4037d696d4361"
       }
     },
     {
@@ -450,7 +462,7 @@
       "h1_bottom": 654.796875,
       "buttons_bottom": 816.46875,
       "support_count": 2,
-      "support_fraction": 0.13402575449398055,
+      "support_fraction": 0.16404672991522,
       "share": "flex",
       "small": []
     },
@@ -481,22 +493,22 @@
       "h1_bottom": 687.34375,
       "buttons_bottom": 849.015625,
       "support_count": 2,
-      "support_fraction": 0.14524509003862685,
+      "support_fraction": 0.17909371436238009,
       "share": "flex",
       "small": [],
       "first_screen": {
         "path": "1440-first_screen.png",
-        "sha256": "a6800249a1b1fe610127b68bb8fa9824da46a11579d8df2172e7c1ed36d9d8dd"
+        "sha256": "6fda69188cb90f4873f9144200f4e6823d37e4539a7cc33b9ddd09e404be3144"
       },
       "full_page": {
         "path": "1440-full_page.png",
-        "sha256": "36d81b7b2f1a936c9067ddd772db9d0b04e176ed673a32919fac8651fbc02e8a"
+        "sha256": "dfb56056e18d56402fef399f0ede665536a8bd97885377b431f8001f3e08c119"
       }
     }
   ],
   "dom": {
     "path": "rendered.html",
-    "sha256": "e73da48c8a0e2e5324399c6dfa0f2966cc8e41eecae0bed8b691f27f13e32a9f"
+    "sha256": "9bc68fdfdee01efae28176d4ffe37a29c37245070e2d93c3cd4723a943e681d5"
   },
-  "passed": 77
+  "passed": 80
 }
