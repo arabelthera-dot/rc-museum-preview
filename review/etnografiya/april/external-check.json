@@ -1,0 +1,30 @@
+[
+  {
+    "file": "april.md",
+    "url": "https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/ethnography-april/review/etnografiya/april/april.md",
+    "status": 200,
+    "bytes": 44255,
+    "matches_local": true
+  },
+  {
+    "file": "april.xlsx",
+    "url": "https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/ethnography-april/review/etnografiya/april/april.xlsx",
+    "status": 200,
+    "bytes": 18797,
+    "matches_local": true
+  },
+  {
+    "file": "april.pdf",
+    "url": "https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/ethnography-april/review/etnografiya/april/april.pdf",
+    "status": 200,
+    "bytes": 101856,
+    "matches_local": true
+  },
+  {
+    "file": "how-it-looks.md",
+    "url": "https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/ethnography-april/review/etnografiya/april/how-it-looks.md",
+    "status": 200,
+    "bytes": 4048,
+    "matches_local": true
+  }
+]

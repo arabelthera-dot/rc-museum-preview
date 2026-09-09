@@ -43,5 +43,17 @@
     "april.xlsx": "ced88f367242152f59ac99c401380d7f8fb23110a5c24d193143db362e350cfa",
     "april.pdf": "8e15f421de88fa23eecdff1a969f3e7ce8d93192f7937865f6863dfc7e12b26b",
     "index.html": "4f59c6c15fa28024bea05dd8c5cfa901392923c6617350e9fd8733ef75b5f4aa"
+  },
+  "pdf_text": {
+    "pages": 3,
+    "text_characters": 18225,
+    "all_day_dates_present": true,
+    "first_story_present": true,
+    "last_story_present": true,
+    "page_text_lengths": [
+      6828,
+      7233,
+      4162
+    ]
   }
 }
