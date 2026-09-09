@@ -1,0 +1,32 @@
+{
+  "commit": "438d0be",
+  "checked_at": "2026-09-09",
+  "github_readme_http": 200,
+  "files": [
+    {
+      "file": "README.md",
+      "http": 200,
+      "matches_local": true
+    },
+    {
+      "file": "things.md",
+      "http": 200,
+      "matches_local": true
+    },
+    {
+      "file": "life.md",
+      "http": 200,
+      "matches_local": true
+    },
+    {
+      "file": "creative-direction.md",
+      "http": 200,
+      "matches_local": true
+    },
+    {
+      "file": "skill/museum-creative-direction/SKILL.md",
+      "http": 200,
+      "matches_local": true
+    }
+  ]
+}

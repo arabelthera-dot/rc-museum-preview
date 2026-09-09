@@ -1,0 +1,40 @@
+{
+  "checked_at": "2026-09-09",
+  "object": "РЭМ 468-1",
+  "object_url": "https://collection.ethnomuseum.ru/entity/OBJECT/303042",
+  "images": [
+    {
+      "role": "front",
+      "url": "https://collection.ethnomuseum.ru/api/spf/Z8FH8HkvzvKyuixnt_FSwi4_MIHJ5rG8EC-MtQmqZ-ZAQg4OCYDMBjX-lhdlVnAf.jpg?w=1600&h=1600",
+      "width": 1066,
+      "height": 1600,
+      "bytes": 107056,
+      "sha256": "407f7ecf615398d37147ef23417c9ab12c9d2b4e891b181e86534956a3bc5a12",
+      "visually_checked": true,
+      "published": false
+    },
+    {
+      "role": "side",
+      "url": "https://collection.ethnomuseum.ru/api/spf/Z8FH8HkvzvKyuixnt_FSwpOHYLYgRml33tpfMy9wfZVD8yLdPyrEXKHB8BroxVeA.jpg?w=1600&h=1600",
+      "width": 1066,
+      "height": 1600,
+      "bytes": 97925,
+      "sha256": "9321ab18ec6848263d62bf29743f5078288afdd84b95ab91de84befdecb29acc",
+      "visually_checked": true,
+      "published": false
+    },
+    {
+      "role": "front-larger-request",
+      "url": "https://collection.ethnomuseum.ru/api/spf/Z8FH8HkvzvKyuixnt_FSwi4_MIHJ5rG8EC-MtQmqZ-ZAQg4OCYDMBjX-lhdlVnAf.jpg?w=4096&h=4096",
+      "width": 1333,
+      "height": 2000,
+      "bytes": 153638,
+      "sha256": "1423aefd10d6b71e98321e2ba3c77b0bf9fdb3a9023c3f5f4febbaaca6dcc427",
+      "visually_checked": true,
+      "published": false
+    }
+  ],
+  "rights_status": "Условия сайта прочитаны; разрешение на публичное использование этих фотографий не подтверждено",
+  "quality": "Оба кадра просмотрены; низкий контраст резьбы, семейная сцена мала; глубокий зум не принят",
+  "scene_observation": "На снимках донце отдельно от вертикальной части; причина не установлена"
+}

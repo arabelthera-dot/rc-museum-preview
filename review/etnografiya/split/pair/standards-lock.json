@@ -1,0 +1,94 @@
+{
+  "checked_at": "2026-09-09",
+  "scope": "preparation-only",
+  "files": [
+    {
+      "path": "/home/agent/projects/russian-civilization/rc-museum-production/standards/museum-core.md",
+      "sha256": "aedd3eb7a999e3f9969991c687bab5e76f3cbe13aa1481de8075ed094e6b0806"
+    },
+    {
+      "path": "/home/agent/projects/russian-civilization/rc-museum-production/standards/museum-concept.md",
+      "sha256": "722ad21e39db1a2fd8d512bf493414d9c71d275aa2ba85b076090bbcce3e5620"
+    },
+    {
+      "path": "/home/agent/projects/russian-civilization/rc-museum-production/standards/text-editing.md",
+      "sha256": "5b3930b98fc98819945008f70b9501001f21dd10201fed1c8c3044b25d4911af"
+    },
+    {
+      "path": "/home/agent/projects/russian-civilization/docs/standards/page-production-standard.md",
+      "sha256": "b3c694c84809cad8603124e2726eecf2376e696628c12f6f2588d75e5e4c14f0"
+    },
+    {
+      "path": "/home/agent/projects/russian-civilization/docs/standards/sources-rights.md",
+      "sha256": "a17e304c3a088016366c107d864ba3c440eacc038d98902e172625307e82a8f9"
+    },
+    {
+      "path": "/home/agent/projects/russian-civilization/docs/standards/interactive-standard.md",
+      "sha256": "cd0298cbddc8c8b1bd22f677b99123215fae4a64560b177bfdb825fe275b04d6"
+    },
+    {
+      "path": "/home/agent/projects/russian-civilization/docs/interactive/REGISTRY.md",
+      "sha256": "a1a7ff2889e35d9ff91ae7a37944bbc5bdea4878d0a78c613abe53d83c8a2ba0"
+    },
+    {
+      "path": "/home/agent/projects/russian-civilization/docs/registries/sources-map.md",
+      "sha256": "1169556e0a2d20356251f4ace6a8e318bdbc8db51987d1f070044501257ada89"
+    },
+    {
+      "path": "/home/agent/.claude/skills/refs/museum-dvizhki.md",
+      "sha256": "7ab4e0484c44853d8f15675efeb8d5615dece7c765749a9e8015914bbdae8667"
+    },
+    {
+      "path": "/home/agent/.codex/skills/museum-etnografiya/SKILL.md",
+      "sha256": "95f3250739fb3ae848e5036b2d286617a5af0ae91278c0524fe1c77973c5faef"
+    },
+    {
+      "path": "/home/agent/.codex/skills/museum-page-production/SKILL.md",
+      "sha256": "e1b00f6c7dcf193829c212d73f7ec0b7b00ea8ca334e196f7c5f7b59cef60866"
+    },
+    {
+      "path": "/home/agent/.codex/skills/museum-page-production/references/dependency-routing.md",
+      "sha256": "0d29b62bd7f5a122f220459fcfd94ee0a0864fc5d66d28060ef90bed3347feb9"
+    },
+    {
+      "path": "/home/agent/.codex/skills/museum-page-production/references/museum-onboarding.md",
+      "sha256": "8a08a0029d81b2c3a35c09b7825e79fd695332d1208f963b0e0147a77acbf1a6"
+    },
+    {
+      "path": "/home/agent/.codex/skills/museum-page-production/references/gates.md",
+      "sha256": "bfa39c3c294b2377ec383df86bf9e57da30c3815dc9635cacb646df6055d159b"
+    },
+    {
+      "path": "/home/agent/.codex/skills/museum-page-production/references/profile-contract.md",
+      "sha256": "a4751569c83e489965cc11253134f52d5e33429c40d2e1c4cda58073d852b6bd"
+    },
+    {
+      "path": "/home/agent/.claude/skills/rc-text/SKILL.md",
+      "sha256": "627077c96f0ba7a9b01c5cd383ca0ff8bfe3691e565a0752404a838af3c309b2"
+    },
+    {
+      "path": "/home/agent/.claude/skills/rc-artdirection/SKILL.md",
+      "sha256": "0739b7bfa29b1038bb6be18551ce6050b908bc9822e1649ce17a61fd7a4874e5"
+    },
+    {
+      "path": "/home/agent/.claude/skills/rc-hero/SKILL.md",
+      "sha256": "efe111d4a300cdf508bddb0f2cb23e4b77c41577cc7609b3559d3a844979e17d"
+    },
+    {
+      "path": "/home/agent/.claude/skills/rc-design-review/SKILL.md",
+      "sha256": "476de86fc0a39d3293898ef1e6541f3434f5fd8c4a8a7b599873311f0440b342"
+    },
+    {
+      "path": "/home/agent/.claude/skills/museum-concept/SKILL.md",
+      "sha256": "0f5a51480c08b44770409c471c47ae349310bbbc6209d96e34c394df24326943"
+    },
+    {
+      "path": "/home/agent/.codex/skills/.system/skill-creator/SKILL.md",
+      "sha256": "6656e54755638e8efcf275a472b9672eaa8a9a1b9e59dc210e275b03b59e1e66"
+    },
+    {
+      "path": "/home/agent/worktrees/ethnography-pair/assets/museum-stack-builder.js",
+      "sha256": "78d13fd54d16764e10b1b684d14f8a452ce5914f37396339fca56aff2421910d"
+    }
+  ]
+}

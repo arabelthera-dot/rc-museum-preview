@@ -1,0 +1,43 @@
+{
+  "checked_at": "2026-09-09",
+  "commit": "b4c39d5",
+  "github_readme_http": 200,
+  "files": [
+    {
+      "file": "README.md",
+      "url": "https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/ethnography-preflight/review/etnografiya/preflight/README.md",
+      "http": 200,
+      "matches_local": true,
+      "sha256": "a70235df93c234c6062834addf33051a142e297a1841dca82604b8c4887400eb"
+    },
+    {
+      "file": "skill/museum-etnografiya/SKILL.md",
+      "url": "https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/ethnography-preflight/review/etnografiya/preflight/skill/museum-etnografiya/SKILL.md",
+      "http": 200,
+      "matches_local": true,
+      "sha256": "776e88090cd5bb649a7394675c7c6a2af3e567e686a489ecef337831bf43308a"
+    },
+    {
+      "file": "mechanism-trials.md",
+      "url": "https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/ethnography-preflight/review/etnografiya/preflight/mechanism-trials.md",
+      "http": 200,
+      "matches_local": true,
+      "sha256": "16ea8c7b8ac5c6b77abd76da296275bdcdd18abd673bf305877e93795c6bd437"
+    },
+    {
+      "file": "distaff-materials.md",
+      "url": "https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/ethnography-preflight/review/etnografiya/preflight/distaff-materials.md",
+      "http": 200,
+      "matches_local": true,
+      "sha256": "f7530c635a55b0037c4c98b3132f0005e796014ba7e88da36d06ca97d72f7e17"
+    },
+    {
+      "file": "calendar-worklist.csv",
+      "url": "https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/ethnography-preflight/review/etnografiya/preflight/calendar-worklist.csv",
+      "http": 200,
+      "matches_local": true,
+      "sha256": "7fc465821b54510f2792782c0ff2eb5f11a65d50885ca31b8c70ec99bd92fcdd"
+    }
+  ],
+  "note": "Проверка относится к b4c39d5; последующее уточнение размера изображения проверяется отдельно."
+}

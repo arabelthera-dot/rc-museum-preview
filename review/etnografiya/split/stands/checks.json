@@ -1,0 +1,49 @@
+{
+  "status": "предварительное превью",
+  "date": "2026-09-09",
+  "page_sha256": "54b2cbd23d7d5051461a3287aefd52265d1523965538b197b7cdf0e76818bb64",
+  "page_bytes": 20589,
+  "source_commit": "d10795c5bbbe95cc70877d8a189aad9ae68199a9",
+  "browser": {
+    "passed": 24,
+    "failed": 0,
+    "widths": [
+      320,
+      360,
+      390,
+      768,
+      1440
+    ],
+    "javascript_errors": 0,
+    "scenario": "browser-check.js"
+  },
+  "external": {
+    "url": "https://htmlpreview.github.io/?https://raw.githubusercontent.com/arabelthera-dot/rc-museum-preview/codex/ethnography-stands/review/etnografiya/split/stands/index.html",
+    "width": 390,
+    "title": "Вещь и человек — два музейных опыта",
+    "holes": "1",
+    "relations": 3,
+    "result_visible": true,
+    "overflow": false,
+    "family_anchor_top": 20,
+    "wrapper_console": "HTML Preview запрашивает собственный favicon.ico: 404; файл прототипа содержит data favicon.",
+    "anonymous_source_status": 200,
+    "anonymous_source_sha256": "54b2cbd23d7d5051461a3287aefd52265d1523965538b197b7cdf0e76818bb64",
+    "matches_local_bytes": true
+  },
+  "production_gate": {
+    "status": "НЕ ПРОВЕРЕНО",
+    "reason": "gate.py --eyes остановился: /home/agent/bin/shot отсутствует"
+  },
+  "text_metrics": {
+    "status": "НЕ ПРОВЕРЕНО",
+    "reason": "tools/text-metrics.py отсутствует в workspace и основном проекте"
+  },
+  "not_claimed": [
+    "готовность полноценной музейной страницы",
+    "реальный зум ларца",
+    "предметная экспертиза независимого рецензента",
+    "проверка живыми посетителями",
+    "принятые календари двух музеев"
+  ]
+}

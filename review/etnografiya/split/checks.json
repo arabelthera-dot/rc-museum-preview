@@ -1,0 +1,24 @@
+{
+  "source_sha256": "42afacad3d84ce3c23adcfabfac1a09872cbcd6a5e9ec9ff5366311d835eb218",
+  "source_rows": 365,
+  "assigned_rows": 365,
+  "unique_assignments": 365,
+  "counts": {
+    "life": 162,
+    "things": 203
+  },
+  "source_dates_are_not_new_release_dates": true,
+  "new_calendars_complete": false,
+  "names_approved": false,
+  "all_sources_rechecked": false,
+  "scope": "Редакторское разделение исходных историй по главному вопросу; не создание 730 страниц.",
+  "markdown_links": "passed",
+  "original_fields_preserved": true,
+  "csv_counts_match": true,
+  "creative_skill_schema": "quick_validate.py passed",
+  "creative_skill_behavioral_effect": "not tested",
+  "existing_skill_marked_superseded": true,
+  "split_approved": true,
+  "project_mission_recorded": true,
+  "reference_preferences_question": "withdrawn after Sergey response 2026-09-09"
+}

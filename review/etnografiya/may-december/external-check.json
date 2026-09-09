@@ -1,0 +1,141 @@
+[
+  {
+    "file": "README.md",
+    "status": 200,
+    "matches_local": true
+  },
+  {
+    "file": "calendar-year.xlsx",
+    "status": 200,
+    "matches_local": true
+  },
+  {
+    "file": "calendar-year.pdf",
+    "status": 200,
+    "matches_local": true
+  },
+  {
+    "file": "may/may.md",
+    "status": 200,
+    "matches_local": true
+  },
+  {
+    "file": "june/june.md",
+    "status": 200,
+    "matches_local": true
+  },
+  {
+    "file": "july/july.md",
+    "status": 200,
+    "matches_local": true
+  },
+  {
+    "file": "august/august.md",
+    "status": 200,
+    "matches_local": true
+  },
+  {
+    "file": "september/september.md",
+    "status": 200,
+    "matches_local": true
+  },
+  {
+    "file": "october/october.md",
+    "status": 200,
+    "matches_local": true
+  },
+  {
+    "file": "november/november.md",
+    "status": 200,
+    "matches_local": true
+  },
+  {
+    "file": "december/december.md",
+    "status": 200,
+    "matches_local": true
+  },
+  {
+    "url": "https://github.com/arabelthera-dot/rc-museum-preview/blob/codex/ethnography-may-december/review/etnografiya/may-december/README.md",
+    "status": 200
+  },
+  {
+    "file": "may/may.xlsx",
+    "status": 200,
+    "matches_local": true
+  },
+  {
+    "file": "may/may.pdf",
+    "status": 200,
+    "matches_local": true
+  },
+  {
+    "file": "june/june.xlsx",
+    "status": 200,
+    "matches_local": true
+  },
+  {
+    "file": "june/june.pdf",
+    "status": 200,
+    "matches_local": true
+  },
+  {
+    "file": "july/july.xlsx",
+    "status": 200,
+    "matches_local": true
+  },
+  {
+    "file": "july/july.pdf",
+    "status": 200,
+    "matches_local": true
+  },
+  {
+    "file": "august/august.xlsx",
+    "status": 200,
+    "matches_local": true
+  },
+  {
+    "file": "august/august.pdf",
+    "status": 200,
+    "matches_local": true
+  },
+  {
+    "file": "september/september.xlsx",
+    "status": 200,
+    "matches_local": true
+  },
+  {
+    "file": "september/september.pdf",
+    "status": 200,
+    "matches_local": true
+  },
+  {
+    "file": "october/october.xlsx",
+    "status": 200,
+    "matches_local": true
+  },
+  {
+    "file": "october/october.pdf",
+    "status": 200,
+    "matches_local": true
+  },
+  {
+    "file": "november/november.xlsx",
+    "status": 200,
+    "matches_local": true
+  },
+  {
+    "file": "november/november.pdf",
+    "status": 200,
+    "matches_local": true
+  },
+  {
+    "file": "december/december.xlsx",
+    "status": 200,
+    "matches_local": true
+  },
+  {
+    "file": "december/december.pdf",
+    "status": 200,
+    "matches_local": true
+  }
+]
