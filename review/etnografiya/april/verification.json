@@ -1,0 +1,47 @@
+{
+  "days": 30,
+  "columns": 5,
+  "dates_complete": true,
+  "unique_titles": true,
+  "previous_days_compared": 90,
+  "exact_title_duplicates": 0,
+  "calendar_dates": [
+    7,
+    12,
+    16
+  ],
+  "xlsx_rows_including_header": 31,
+  "xlsx_xml_valid": true,
+  "browser": {
+    "initial": {
+      "rows": 30,
+      "columns": 5,
+      "count": "30 из 30 дней",
+      "overflow": false
+    },
+    "search": 1,
+    "calendar": 3,
+    "conditional": 27,
+    "empty": true,
+    "mobile": [
+      {
+        "width": 390,
+        "overflow": false,
+        "tableScrollable": true
+      },
+      {
+        "width": 320,
+        "overflow": false,
+        "tableScrollable": true
+      }
+    ],
+    "errors": []
+  },
+  "pdf_pages": 3,
+  "sha256": {
+    "april.md": "b0d2ae9606f84d16c0ceb11d88948c17bf18e4a2eb1e7ee0e317d2b7c94f0a50",
+    "april.xlsx": "ced88f367242152f59ac99c401380d7f8fb23110a5c24d193143db362e350cfa",
+    "april.pdf": "8e15f421de88fa23eecdff1a969f3e7ce8d93192f7937865f6863dfc7e12b26b",
+    "index.html": "4f59c6c15fa28024bea05dd8c5cfa901392923c6617350e9fd8733ef75b5f4aa"
+  }
+}
