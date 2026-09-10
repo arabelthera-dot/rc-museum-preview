@@ -484,8 +484,12 @@
 <section class="block" id="result">
   <div class="wrap">
     <h2 style="margin-bottom:6px">Итог дня</h2>
-    <p style="color:var(--muted);margin-top:0;max-width:62ch">Баллы знаний показывают, насколько полно ты прошёл этот день: викторина, развилка и обе игры. Собери все 80 и получи звание.</p>
-    <div class="day-result" id="dayResult"></div>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Баллы знаний показывают, насколько полно ты прошёл этот день: викторина, развилка и обе игры. Собери все 100 и получи звание.</p>
+    <div class="day-result">
+      <div class="dr-score" id="dayTxt">0 / 100 · звание: Гость дня</div>
+      <div class="dr-bar"><i id="dayBar" style="width:0%"></i></div>
+      <div class="dr-note">Отвечай в викторине, выбирай в развилке, проходи обе игры — баллы сложатся.</div>
+    </div>
   </div>
 </section>
 
@@ -543,15 +547,10 @@
   Русская цивилизация · «Что изобрели русские первыми в мире» · дизайн-эталон · весь код и графику делает ИИ</div></footer>
 
 <script>
-  let score=0; const sc=document.getElementById('score'); const MAXP=80; const earned={};
-  function renderResult(){const el=document.getElementById('dayResult');if(!el)return;
-    const pct=Math.round(score/MAXP*100);
-    let rank='Гость дня',note='Начни проходить день — отвечай в викторине, выбирай в развилке, играй.';
-    if(score>=70){rank='Испытатель';note='Ты прошёл день как настоящий испытатель. Браво!';}
-    else if(score>=45){rank='Знаток';note='Ты хорошо знаешь этот день. Ещё немного до вершины.';}
-    else if(score>=20){rank='Любопытный';note='Любопытство — начало всех открытий. Двигайся дальше.';}
-    el.innerHTML='<div class="dr-rank">'+rank+'</div><div class="dr-score">'+score+' <span>из '+MAXP+' баллов</span></div><div class="dr-bar"><i style="width:'+pct+'%"></i></div><div class="dr-note">'+note+(score>=MAXP?' День пройден полностью.':'')+'</div>';}
-  function award(k,n){if(earned[k])return;earned[k]=true;score+=n;sc.textContent=score;renderResult();}
+  /* ── СЧЁТ ── шкала посетителя из 100 держит движок assets/museum-score.js
+     Здесь только награды этой страницы. Сумма: викторина 3×10 + игра 20
+     + сборка 20 + развилка 10 = 80. */
+  window.MUSEUM_SCORE = {max: 80, ranks: [[100,'Испытатель'],[70,'Знаток'],[40,'Любопытный'],[0,'Гость дня']]};
   // читать дальше
   document.getElementById('readBtn').onclick=()=>document.getElementById('story').scrollIntoView({behavior:'smooth'});
   document.getElementById('moreBtn').onclick=()=>{document.getElementById('article').classList.remove('collapsed');document.getElementById('moreBtn').style.display='none';};
@@ -792,7 +791,6 @@
   document.getElementById('calPrev').onclick=()=>{calM=calM===1?12:calM-1;renderCal();};
   document.getElementById('calNext').onclick=()=>{calM=calM===12?1:calM+1;renderCal();};
   renderCal();
-  renderResult();
   // подсказка по баллам (тап)
   (function(){const sb=document.getElementById('scoreBox'),si=document.getElementById('scoreInfo');
     if(sb&&si){sb.addEventListener('click',()=>si.classList.toggle('show'));
@@ -975,6 +973,7 @@ if(cv){ try{
 <script>window.MUSEUM_SUPPORT={museum:'Что изобрели русские первыми в мире'};</script>
 <script src="../../assets/museum-support.js"></script>
 <script src="../../assets/museum-video.js"></script>
+  <script src="../../assets/museum-score.js"></script>
   <!-- rc-analytics --><script defer src="../../assets/analytics.js"></script>
 </body>
 </html>

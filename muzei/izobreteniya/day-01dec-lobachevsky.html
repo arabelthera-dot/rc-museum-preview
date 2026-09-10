@@ -408,8 +408,12 @@
 <section class="block" id="result">
   <div class="wrap">
     <h2 style="margin-bottom:6px">Итог дня</h2>
-    <p style="color:var(--muted);margin-top:0;max-width:62ch">Баллы за викторину, развилку, игру «Правда или миф» и геометрическую игру. Собери все 60.</p>
-    <div class="day-result" id="dayResult"></div>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Баллы за викторину, развилку, игру «Правда или миф» и геометрическую игру. Собери все 100.</p>
+    <div class="day-result">
+      <div class="dr-score" id="dayTxt">0 / 100 · звание: Гость дня</div>
+      <div class="dr-bar"><i id="dayBar" style="width:0%"></i></div>
+      <div class="dr-note">Отвечай в викторине, выбирай в развилке, играй — баллы сложатся.</div>
+    </div>
   </div>
 </section>
 >
@@ -480,16 +484,10 @@
   Русская цивилизация · «Что изобрели русские первыми в мире» · весь код и графику делает ИИ</div></footer>
 
 <script>
-/* ── СЧЁТ ── */
-let score=0; const sc=document.getElementById('score'); const MAXP=60; const earned={};
-function renderResult(){const el=document.getElementById('dayResult');if(!el)return;
-  const pct=Math.round(score/MAXP*100);
-  let rank='Гость дня',note='Начни проходить день — отвечай в викторине, выбирай в развилке, играй.';
-  if(score>=52){rank='Знаток геометрии';note='Ты прошёл день как настоящий математик. Лобачевский бы оценил!';}
-  else if(score>=35){rank='Любопытный';note='Хорошо. Возвращайся и пройди то, что ещё не тронул.';}
-  else if(score>=15){rank='Начинающий';note='Попробуй викторину, игру и чат — баллы сложатся.';}
-  el.innerHTML='<div class="dr-rank">'+rank+'</div><div class="dr-score">'+score+' <span>из '+MAXP+' баллов</span></div><div class="dr-bar"><i style="width:'+pct+'%"></i></div><div class="dr-note">'+note+'</div>';}
-function award(k,n){if(earned[k])return;earned[k]=true;score+=n;sc.textContent=score;renderResult();}
+/* ── СЧЁТ ── шкала посетителя из 100 держит движок assets/museum-score.js
+   Здесь только награды этой страницы. Сумма: развилка 10 + викторина 3×10
+   + «Правда или миф» 4×5 + геометрическая игра 10 = 70. */
+window.MUSEUM_SCORE = {max: 70, ranks: [[100,'Знаток геометрии'],[70,'Любопытный'],[40,'Начинающий'],[0,'Гость дня']]};
 
 /* ── ЧИТАТЬ ДАЛЬШЕ ── */
 document.getElementById('readBtn').onclick=()=>document.getElementById('story').scrollIntoView({behavior:'smooth'});
@@ -783,9 +781,8 @@ renderCal();
 // Показать 1 декабря по умолчанию
 const dec1=calGrid.querySelector('.sel');
 if(dec1)selDay('12-1',dec1);
-
-renderResult();
 </script>
+<script src="../../assets/museum-score.js"></script>
 <script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
 
 <!-- единая обвязка музеев: backbtn, «Поделиться», чипсы разделов,
