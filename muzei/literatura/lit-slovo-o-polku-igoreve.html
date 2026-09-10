@@ -74,15 +74,20 @@
   <span class="here">1 января · Слово о полку Игореве</span>
 </nav>
 
+<div class="sheet-rule l"></div><div class="sheet-rule r"></div>
+
 <!-- ── HERO: сцена ОТДЕЛЬНО, текст ОТДЕЛЬНО (правило Сергея, 03.08).
-     Сцена — стилизованный лист рукописи, без читаемого текста. -->
+     Сцена — подлинник, а не рисунок: первое издание «Слова», Москва, 1800. -->
 <div class="hero-scene" id="hero">
-  <canvas id="heroCvs"></canvas>
+  <img class="hero-img" src="hero-slovo-1800.jpg"
+       srcset="hero-slovo-1800-mobile.jpg 780w, hero-slovo-1800.jpg 1440w"
+       sizes="100vw"
+       alt="Первое издание «Слова о полку Игореве» 1800 года: титульный лист и первая страница древнерусского текста с переводом в два столбца">
 </div>
 
 <div class="scene-caption">
   <div class="wrap">
-    <div class="scene-cap">Стилизованный лист древнерусской рукописи: киноварная заставка, инициал, плотные строки устава. Оригинал «Слова» не сохранился — сгорел в 1812 году, поэтому сцена условна, без подлинного текста.</div>
+    <div class="scene-cap">Подлинник: первое издание «Слова о полку Игореве» — титульный лист и начало текста в два столбца, древнерусский и перевод. Москва, Сенатская типография, 1800. Рукопись, с которой печатали, сгорела в 1812 году — поэтому само это издание и есть первоисточник.</div>
   </div>
 </div>
 
@@ -94,18 +99,18 @@
     <p class="hook">В 1185 году князь Игорь проиграл битву в степи и попал в плен — из этого поражения вырос первый великий текст Руси. Рукопись сгорела, «Слово» дошло до нас чудом.</p>
     <div class="hero-btns">
       <button class="btn gold" onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">Читать историю ↓</button>
-      <button class="btn ghost" onclick="document.getElementById('plach').scrollIntoView({behavior:'smooth'})">🎧 Слушать плач Ярославны</button>
+      <button class="btn ghost" onclick="document.getElementById('plach').scrollIntoView({behavior:'smooth'})">🎧 Слушать аудиогид</button>
     </div>
   </div>
 </header>
 
 <div class="hero-under">
   <div class="wrap">
-    <div class="stamp" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(201,168,76,.28);margin-top:14px">
-      <div style="padding:11px 12px;border-left:1px solid rgba(201,168,76,.16);min-width:0"><div style="font-family:'Playfair Display',serif;font-size:clamp(15px,3.4vw,21px);font-weight:700;color:var(--gold-l);line-height:1.1">XII век</div><div style="font-family:'Inter',sans-serif;font-size:9px;letter-spacing:1.6px;text-transform:uppercase;color:#8f8068;margin-top:5px">время создания</div></div>
-      <div style="padding:11px 12px;border-left:1px solid rgba(201,168,76,.16);min-width:0"><div style="font-family:'Playfair Display',serif;font-size:clamp(15px,3.4vw,21px);font-weight:700;color:var(--gold-l);line-height:1.1">1185</div><div style="font-family:'Inter',sans-serif;font-size:9px;letter-spacing:1.6px;text-transform:uppercase;color:#8f8068;margin-top:5px">поход Игоря</div></div>
-      <div style="padding:11px 12px;border-left:1px solid rgba(201,168,76,.16);min-width:0"><div style="font-family:'Playfair Display',serif;font-size:clamp(15px,3.4vw,21px);font-weight:700;color:var(--gold-l);line-height:1.1">1800</div><div style="font-family:'Inter',sans-serif;font-size:9px;letter-spacing:1.6px;text-transform:uppercase;color:#8f8068;margin-top:5px">первое издание</div></div>
-      <div style="padding:11px 12px;border-left:1px solid rgba(201,168,76,.16);min-width:0"><div style="font-family:'Playfair Display',serif;font-size:clamp(15px,3.4vw,21px);font-weight:700;color:var(--gold-l);line-height:1.1">1812</div><div style="font-family:'Inter',sans-serif;font-size:9px;letter-spacing:1.6px;text-transform:uppercase;color:#8f8068;margin-top:5px">рукопись сгорела</div></div>
+    <div class="stamp">
+      <div><div class="v">XII век</div><div class="k">время создания</div></div>
+      <div><div class="v">1185</div><div class="k">поход Игоря</div></div>
+      <div><div class="v">1800</div><div class="k">первое издание</div></div>
+      <div><div class="v">1812</div><div class="k">рукопись сгорела</div></div>
     </div>
   </div>
 </div>
@@ -278,12 +283,13 @@
 
 <script>
 // ── СЧЁТ ──────────────────────────────────────────────────────────────────────
-let score=0; const earned={};
-function award(k,n){if(earned[k])return;earned[k]=true;score+=n;document.getElementById('score').textContent=score;updateResult();}
-function rank(v){return v>=100?'Хранитель первого текста Руси':v>=70?'Знаток «Слова»':v>=40?'Слушатель':'Гость музея';}
-function updateResult(){const b=document.getElementById('dayBar'),x=document.getElementById('dayTxt');if(!b)return;b.style.width=Math.min(100,score)+'%';x.textContent=score+' / 100 · звание: '+rank(score);
-  var d=document.getElementById('dipl'),dn=document.getElementById('diplnote'),dp=document.getElementById('dpts');
-  if(d){var open=score>=60;d.style.display=open?'block':'none';if(dn)dn.style.display=open?'block':'none';if(dp)dp.textContent=score;}}
+// Шкалу посетителя держит общий движок (museum-core §6-тер). Страница объявляет
+// только свои награды; сумма = 20 (аудиогид) + 50 (игра «собери сюжет») + 3×10 (викторина).
+window.MUSEUM_SCORE = {
+  max: 100,
+  ranks: [[100,'Хранитель первого текста Руси'],[70,'Знаток «Слова»'],[40,'Слушатель'],[0,'Гость музея']],
+  diplomaAt: 60
+};
 
 // аудиогид: начисляем, когда посетитель запустил плач
 document.addEventListener('play',function(e){if(e.target&&e.target.id==='agaudio')award('audio',20);},true);
@@ -354,54 +360,13 @@ function answerQ(i){
     else if(j===i&&i!==q.c)b.classList.add('wrong');
   });
   document.getElementById('exp'+qIdx).classList.add('show');
-  if(i===q.c)award('q'+qIdx,10);
+  if(i===q.c){if(qIdx===0)award('q0',10);else if(qIdx===1)award('q1',10);else award('q2',10);}
   setTimeout(function(){qIdx++;renderQ();},2200);
 }
 renderQ();
 </script>
 
-<script>
-// ── HERO: лист рукописи на canvas (сцена без читаемого текста) ──
-(function(){
-  const cv=document.getElementById('heroCvs');if(!cv)return;
-  const ctx=cv.getContext('2d');
-  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const dpr=Math.min(devicePixelRatio||1,2);
-  let W=0,H=0,t=0;
-  function resize(){const p=cv.parentElement;if(!p)return;W=p.offsetWidth;H=p.offsetHeight;
-    cv.width=W*dpr;cv.height=H*dpr;cv.style.width=W+'px';cv.style.height=H+'px';ctx.setTransform(dpr,0,0,dpr,0,0);}
-  resize();addEventListener('resize',resize);
-  function draw(){
-    ctx.clearRect(0,0,W,H);
-    const bg=ctx.createRadialGradient(W/2,H*.2,8,W/2,H*.5,W*.8);
-    bg.addColorStop(0,'#2c1d10');bg.addColorStop(1,'#0c0805');
-    ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
-    const sh=Math.min(H*.8,W*.62), sw=sh*.72, x=W/2-sw/2, y=H/2-sh/2;
-    ctx.save();ctx.shadowColor='rgba(0,0,0,.6)';ctx.shadowBlur=40;ctx.shadowOffsetY=12;
-    const pg=ctx.createLinearGradient(0,y,0,y+sh);
-    pg.addColorStop(0,'#e9dec2');pg.addColorStop(.6,'#e0d3b2');pg.addColorStop(1,'#d8c9a4');
-    ctx.fillStyle=pg;ctx.fillRect(x,y,sw,sh);ctx.restore();
-    ctx.strokeStyle='rgba(150,60,35,.4)';ctx.lineWidth=1;ctx.strokeRect(x+9,y+9,sw-18,sh-18);
-    const zw=sw*.34,zh=sh*.10,zx=W/2-zw/2,zy=y+sh*.12;
-    const zg=ctx.createLinearGradient(zx,zy,zx+zw,zy);
-    zg.addColorStop(0,'#b3402c');zg.addColorStop(1,'#8a2c1b');
-    ctx.fillStyle=zg;ctx.fillRect(zx,zy,zw,zh);
-    ctx.strokeStyle='rgba(255,220,180,.25)';ctx.strokeRect(zx+3,zy+3,zw-6,zh-6);
-    ctx.strokeStyle='rgba(150,60,35,.55)';ctx.strokeRect(x+sw*.13,y+sh*.32,sw*.2,sh*.13);
-    ctx.fillStyle='rgba(70,52,32,.32)';
-    const lx=x+sw*.13, lr=x+sw*.87;
-    for(let i=0;i<8;i++){
-      const ly=y+sh*.32+i*sh*.07;
-      const a=Math.max(0,Math.min(1,t*.6-i*.06));
-      ctx.globalAlpha=a;
-      ctx.fillRect(lx,ly,(lr-lx)*(i%3===0?0.78:(i%2===0?0.94:0.86)),3);
-    }
-    ctx.globalAlpha=1;
-  }
-  if(reduce){t=1;draw();return;}
-  (function loop(){t+=0.016;draw();requestAnimationFrame(loop);})();
-})();
-</script>
+
 
 <!-- ── АУДИОГИД ── -->
 <script>window.MUSEUM_AUDIOGUIDE={
@@ -433,6 +398,7 @@ renderQ();
   random:[]
 };</script>
 <script src="../../assets/museum-chrome.js"></script>
+<script src="../../assets/museum-score.js"></script>
 <script>window.MUSEUM_SUPPORT={museum:'Музей русских писателей'};</script>
 <script src="../../assets/museum-support.js"></script>
 <script>window.MUSEUM_CALENDAR_INITIAL='01-01';</script>

@@ -64,6 +64,28 @@
   --radius:2px;             /* в зале нет скруглений — есть рамы */
 }
 
+/* ═══════════════ ТЕМА 4 · ЛИТЕРАТУРА — переплёт и пергамент ═══════════════
+   Тема добавлена 10.09.2026: блока литературы в движке не было вовсе, и страница
+   падала на голые базовые токены — отсюда «неправильная шапка» (Сергей, 08.09).
+   Светлая бумага первопроходцев не годится: у литературы тёмный переплёт. */
+/* Токены — ровно те, что несёт museum-literatura.css. Файл темы грузится ПОСЛЕ
+   страничного стиля и перекрывает его, поэтому здесь нельзя менять палитру:
+   --ink в литературе — ЦВЕТ ТЕКСТА (светлый), а не фон. Ошибка 10.09.2026:
+   тёмный --ink сделал невидимой строку-слоган шапки (b2). */
+:root[data-museum="literatura"]{
+  --gold:#c9a84c;--gold-l:#e4c97a;--gold-g:rgba(201,168,76,.13);
+  --ink:#f0e8d8;            /* цвет текста, светлый пергамент */
+  --muted:#a89a80;--line:rgba(255,255,255,.07);
+  --dark:#0c0805;--surface:#1d1710;--panel:#1d1710;
+  --acc:#c9a84c;--acc-soft:rgba(201,168,76,.14);
+  --fg:#f0e8d8;--txt:#f0e8d8;
+  --sheet-line:rgba(201,168,76,.20);
+  --font-h:'Playfair Display',Georgia,serif;
+  --font-b:'Lora',Georgia,serif;
+  --font-m:'Inter',system-ui,sans-serif;
+  --radius:3px;
+}
+
 /* ───────────────── ТИПОГРАФИКА ПО ТЕМЕ ───────────────── */
 [data-museum] body{font-family:var(--font-b)}
 [data-museum] h1,[data-museum] h2,[data-museum] h3,
@@ -99,6 +121,24 @@ body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none}
 
 [data-fabric="manuscript"] body::before{
   background-image:repeating-linear-gradient(0deg,rgba(36,29,22,.07) 0 1px,transparent 1px 28px)}
+
+/* Литература — тёмный переплёт: сажевая разлиновка на нём не видна (10.09.2026).
+   Тёплая пергаментная строка чертит линованный лист рукописи поверх тёмного фона. */
+[data-museum="literatura"][data-fabric="manuscript"] body::before{
+  background-image:
+    repeating-linear-gradient(0deg,rgba(201,168,76,.06) 0 1px,transparent 1px 28px),
+    repeating-linear-gradient(0deg,rgba(201,168,76,.10) 0 1px,transparent 1px 140px),
+    radial-gradient(ellipse 70% 40% at 50% 0%,rgba(201,168,76,.05),transparent 70%)}
+
+/* ───────────────── ЛИСТ — вертикальные поля страницы ─────────────────
+   Перенесено из эталона Шухова 10.09.2026: линии «листа» нужны каждой
+   странице музея, а жили в одной разметке — то же, что было со слоганами §6-бис.
+   Линейка та же, что была у Шухова; на узком экране убирается. */
+.sheet-rule{position:fixed;top:0;bottom:0;width:1px;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,transparent,var(--sheet-line,var(--line)) 12%,var(--sheet-line,var(--line)) 88%,transparent)}
+.sheet-rule.l{left:max(12px,calc(50% - 470px))}
+.sheet-rule.r{right:max(12px,calc(50% - 470px))}
+@media(max-width:900px){.sheet-rule{display:none}}
 
 [data-fabric="clinic"] body::before{background:none}
 
