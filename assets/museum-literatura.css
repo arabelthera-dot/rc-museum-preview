@@ -148,3 +148,17 @@
   footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
   footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px;font-family:'Playfair Display',Georgia,serif;font-size:15px;letter-spacing:0}
   @media(prefers-reduced-motion:reduce){.hero-scene canvas{animation:none!important}}
+
+/* ── Кадры-подлинники в тексте (образец: эталон Шухова, перенесено в тему музея писателей) ── */
+.fig{margin:24px 0;border:1px solid rgba(201,168,76,.24);background:rgba(0,0,0,.28);border-radius:4px;overflow:hidden}
+.fig img{display:block;width:100%;height:auto}
+.fig figcaption{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.4px;line-height:1.7;color:var(--muted);
+  padding:10px 13px;border-top:1px solid rgba(201,168,76,.16)}
+.fig figcaption b{color:var(--gold-l);font-weight:600}
+.fig figcaption a{color:rgba(201,168,76,.75);text-decoration:none;border-bottom:1px dotted rgba(201,168,76,.4)}
+.fig figcaption a:hover{color:var(--gold-l)}
+.figs{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin:24px 0}
+.figs .fig{margin:0}
+.fig-side{float:right;width:210px;margin:4px 0 16px 22px}
+.fig-portrait{max-width:300px;margin:24px auto}
+@media(max-width:640px){.fig-side{float:none;width:100%;margin:20px 0}}
