@@ -1,0 +1,63 @@
+<!doctype html><html lang='ru'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Музей карикатуры: чего не хватает и что делаю</title><style>
+:root{--ink:#1b1a17;--muted:#6b6459;--gold:#a8823c;--line:#e2d9c8;--paper:#faf7f1;--card:#fff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+ font:16px/1.6 Georgia,'Times New Roman',serif;padding:20px 14px 60px}
+.wrap{max-width:1180px;margin:0 auto}
+h1{font-size:27px;margin:0 0 6px;line-height:1.2}
+h2{font-size:21px;margin:34px 0 8px;padding-bottom:6px;border-bottom:2px solid var(--gold)}
+h3{font-size:18px;margin:22px 0 6px}
+p{margin:10px 0}
+.sub{color:var(--muted);font-size:15px;margin:0 0 18px}
+blockquote{margin:12px 0;padding:10px 14px;background:#f2ece0;border-left:4px solid var(--gold);
+ font-size:15px;color:#4a4437;border-radius:0 6px 6px 0}
+.table-wrap{overflow-x:auto;margin:14px 0;border-radius:6px}
+table{width:100%;border-collapse:collapse;background:var(--card);
+ box-shadow:0 1px 3px rgba(0,0,0,.07);border-radius:6px;overflow:hidden;font-size:15px}
+th{background:#f2ece0;text-align:left;font-size:14px;padding:11px 10px;
+ border-bottom:2px solid var(--gold);vertical-align:bottom}
+td{padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+ul,ol{margin:10px 0;padding-left:22px}
+li{margin:5px 0}
+code{background:#f2ece0;padding:1px 5px;border-radius:4px;font-size:14px;
+ font-family:ui-monospace,Menlo,Consolas,monospace}
+a{color:#8a6520}
+hr{border:none;border-top:1px solid var(--line);margin:26px 0}
+@media (max-width:640px){
+ body{padding:14px 10px 50px;font-size:15px}
+ h1{font-size:22px}h2{font-size:19px}
+ table{font-size:14px}
+ th,td{padding:9px 8px}
+}
+</style></head><body><div class='wrap'><h1>Музей карикатуры: чего не хватает и что делаю</h1><p class='sub'>План Дипсика 2 по слову Сергея, 10.09.2026</p><h1>Музей карикатуры «Острее пера» — чего не хватает и в каком порядке делаю</h1>
+<p>Составлено 10.09.2026, Дипсик 2 (deepseek2), по слову Сергея: «распиши мне последовательность действий, которые ты сейчас будешь делать. Составь план того, что не хватает в таблице по музею карикатуры».</p>
+<p>Основание: год (365 дней) расписан и утверждён целиком, главная принята 07.09. Вопросы по составу больше не задаются — календарь закрыт.</p>
+<h2>Таблица: что есть / чего не хватает</h2>
+<div class='table-wrap'><table><thead><tr><th>Раздел</th><th>Состояние</th><th>Чего не хватает</th><th>Следующий шаг</th></tr></thead><tbody><tr><td>Календарь 365 дней</td><td>✅ все 12 месяцев утверждены, год собран в <code>calendar-karikatura.js</code></td><td>—</td><td>—</td></tr><tr><td>Главная страница</td><td>✅ принята Сергеем 07.09</td><td>—</td><td>—</td></tr><tr><td>Страницы дней</td><td>6 (01–05 января, 04.01 в двух вариантах)</td><td>~359 дней</td><td>тираж эталона, по одному выпуску</td></tr><tr><td>Залы (9 залов из концепции)</td><td>0 страниц</td><td>все 9: «Смеясь и бичуя», «Журнальный век», «Серебряный век сатиры», «Революция и плакат», «Крокодил» и Кукрыниксы, «Дружеский шарж», «Как видели мы», «Короткий век», «Пиксель и мем»</td><td>первым — зал 1 (лубок), он же источник января</td></tr><tr><td>Маршрут «Русский медведь» (7 парусов)</td><td>расписан, 2 страницы (01.01, 04.01)</td><td>5 парусов</td><td>после тиража января</td></tr><tr><td>Механики из реестра</td><td>работают M-32, M-69, M-16</td><td>M-89 (подпись к листу), M-92 (годовой комплект журнала), M-96 (лист себе) — 0 внедрено</td><td>первая — M-89, ставится на статическую страницу без сервера</td></tr><tr><td>Аудиогиды</td><td>1 (04.01, литография)</td><td>на остальные эталонные дни и залы</td><td>озвучка <code>edge-tts</code>, бесплатно</td></tr><tr><td>Ролики выпуска</td><td>на паузе с 09.08, листы готовы в <code>social/</code></td><td>монтажи Reels/TikTok + голос</td><td>жду слова Сергея: снимать ли (долг с 09.08)</td></tr><tr><td>Школьные маршруты («Уроки», 4 предмета)</td><td>блок на главной</td><td>отдельных страниц маршрутов нет</td><td>после 10 страниц дней</td></tr><tr><td>Разбор конкурентов</td><td>✅ 3 отчёта + свод + страница сравнения (M-89…M-96 в реестре)</td><td>—</td><td>—</td></tr><tr><td>Паспорта кадров и права</td><td>ведутся по каждому дню</td><td>—</td><td>—</td></tr></tbody></table></div>
+<h2>Последовательность действий (что делаю сейчас, по шагам)</h2>
+<ol>
+<li><b>Закрываю первопроходцев.</b> Декабрь принят Сергеем → строка <code>pervo-months-refill-1010</code></li>
+<p>в HANDOFF: год 365/365 утверждён, пересборка закрыта. Музей собирается пакетом и отдаётся Джарвису для передачи Дипсику 1 (bot4) — по решению оркестратора от 10.09.</p>
+<li><b>Снимаю висящий вопрос по карикатуре</b> (день 8 октября): календарь закрыт и утверждён</li>
+<p>Сергеем целиком, вопрос больше не задаю — день остаётся в составе как есть.</p>
+<li><b>Сдаю Джарвису по карикатуре</b> строкой в HANDOFF: год закрыт, главная принята,</li>
+<p>разбор конкурентов сдан, дальше — тираж страниц.</p>
+<li><b>Начинаю тираж страниц дней</b> от эталона: первый выпуск — следующая страница января</li>
+<p>(06.01), затем по порядку. Каждый выпуск — по скиллу <code>museum-core</code> + <code>museum-karikatura</code>, один выпуск за сессию, Сергею — ссылка на живую страницу.</p>
+<li><b>Первая механика руками</b> — M-89 «подпись к листу» (wow высокий, сервер не нужен):</li>
+<p>лист без подписи → посетитель пишет свою → показывается историческая. Ставится на страницу дня, где лист без текста (кандидат — лубок января).</p>
+<li><b>Аудиогид</b> — на каждый эталонный день по мере вёрстки (бесплатно, <code>edge-tts</code>).</li>
+<li><b>Ролики</b> — не начинаю без прямого слова Сергея (пауза с 09.08).</li>
+</ol>
+<h2>Что решает Сергей (только это, остальное решаю сам)</h2>
+<ul>
+<li>Ролики эталонного выпуска: снимать ли (висит с 09.08).</li>
+<li>«Да» на публикацию каждой страницы дня — по канону, гейт Сергея.</li>
+</ul>
+<h2>Ссылки</h2>
+<ul>
+<li>Главная: https://arabelthera-dot.github.io/rc-museum-preview/muzei/karikatura/</li>
+<li>Календарь года: https://arabelthera-dot.github.io/rc-museum-preview/muzei/karikatura/calendar.html</li>
+<li>Разбор конкурентов: https://arabelthera-dot.github.io/rc-museum-preview/lab/karikatura-konkurenty/</li>
+</ul></div></body></html>
