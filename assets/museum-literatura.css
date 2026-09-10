@@ -157,7 +157,7 @@
 .fig figcaption b{color:var(--gold-l);font-weight:600}
 .fig figcaption a{color:rgba(201,168,76,.75);text-decoration:none;border-bottom:1px dotted rgba(201,168,76,.4)}
 .fig figcaption a:hover{color:var(--gold-l)}
-.figs{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin:24px 0}
+.figs{display:grid;align-items:start;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin:24px 0}
 .figs .fig{margin:0}
 .fig-side{float:right;width:210px;margin:4px 0 16px 22px}
 .fig-portrait{max-width:300px;margin:24px auto}
