@@ -162,3 +162,10 @@
 .fig-side{float:right;width:210px;margin:4px 0 16px 22px}
 .fig-portrait{max-width:300px;margin:24px auto}
 @media(max-width:640px){.fig-side{float:none;width:100%;margin:20px 0}}
+/* ── Кадры на светлой (пергаментной) секции: подписи и рамки читаемы ──
+   Ремонт 10.09.2026: на #story фон пергамент, а подпись была --muted по светлому. */
+#story .fig{background:transparent;border-color:rgba(107,93,72,.28)}
+#story .fig figcaption{color:var(--parch-mut);border-top-color:rgba(107,93,72,.22)}
+#story .fig figcaption b{color:var(--kino)}
+#story .fig figcaption a{color:#8a5a2b;border-bottom-color:rgba(138,90,43,.4)}
+#story .fig figcaption a:hover{color:var(--kino)}
