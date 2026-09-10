@@ -2,6 +2,15 @@
    Рисует год целиком: 12 месяцев, сетка дней, заполненные дни — золотые и кликабельные.
    Данные берёт из window.MUSEUM_CALENDAR (файл музея calendar-<тема>.js).
 
+   Два вида музея, поведение различает сам музей своим конфигом:
+     • датированный (по умолчанию) — ключи "ММ-ДД" это календарные дни месяца,
+       длины месяцев берутся из календаря, счётчик «из 365». Без конфига движок
+       работает ровно как раньше — ни одна существующая страница не меняется;
+     • недатированный (`dated: false`) — календарных дат у музея нет, «День N» это
+       номер единицы состава. Музей объявляет свой состав сам:
+         window.MUSEUM_CALENDAR = { months: [32,29,…], total: 376, dated: false, "01-01": {…} };
+       Подпись единицы — «День N», знаменатель счётчика — `total`.
+
    Подключение:
      <div id="calyear"></div><div id="calcard"></div>
      <script src="calendar-<тема>.js"></script>
@@ -12,6 +21,7 @@
   var MONR = ['января','февраля','марта','апреля','мая','июня',
               'июля','августа','сентября','октября','ноября','декабря'];
   var DAYS = [31,29,31,30,31,30,31,31,30,31,30,31];
+  var KEY = /^\d{2}-\d{2}$/;
 
   function pad(n) { return (n < 10 ? '0' : '') + n; }
 
@@ -20,24 +30,36 @@
     var card = document.getElementById('calcard');
     if (!host && !card) return;   // страница без календаря вовсе
 
-    var data = window.MUSEUM_CALENDAR || {};
+    /* конфиг музея — тоже поля того же объекта, поэтому записи дней отбираем
+       строго по ключу "ММ-ДД", иначе счётчик посчитал бы и months, и total */
+    var cfg = window.MUSEUM_CALENDAR || {};
+    var data = {};
+    Object.keys(cfg).forEach(function (k) { if (KEY.test(k)) data[k] = cfg[k]; });
+
+    var dated = cfg.dated !== false;
+    var mLen = (cfg.months && cfg.months.length === 12) ? cfg.months : DAYS;
+    var total = cfg.total || 365;
+
     var today = new Date(), tk = pad(today.getMonth() + 1) + '-' + pad(today.getDate());
     var filled = Object.keys(data).length;
 
-    var h = '<div class="calstat">Заполнено дней: <b>' + filled + '</b> из 365 · ' +
+    var h = '<div class="calstat">Заполнено дней: <b>' + filled + '</b> из ' + total + ' · ' +
             'каждый заполненный день — готовый повод для ролика и поста</div>';
 
     /* годовая сетка рисуется только там, где для неё есть место (#calyear).
        На витрине музея его нет — там живёт одна карточка сегодняшнего дня. */
     for (var m = 0; host && m < 12; m++) {
       var cnt = 0, cells = '';
-      for (var d = 1; d <= DAYS[m]; d++) {
+      for (var d = 1; d <= mLen[m]; d++) {
         var k = pad(m + 1) + '-' + pad(d);
         var it = data[k];
         if (it) cnt++;
-        cells += '<button class="cday' + (it ? ' full' : '') + (k === tk ? ' today' : '') + '"' +
+        var lbl = it ? it.t : 'запись готовится';
+        if (!dated) lbl = 'День ' + d + (it ? ' — ' + it.t : '');
+        cells += '<button class="cday' + (it ? ' full' : '') +
+                 (dated && k === tk ? ' today' : '') + '"' +
                  (it ? ' data-k="' + k + '"' : ' disabled') +
-                 ' title="' + (it ? it.t.replace(/"/g, '') : 'запись готовится') + '">' + d + '</button>';
+                 ' title="' + lbl.replace(/"/g, '') + '">' + d + '</button>';
       }
       h += '<section class="cmon"><h2>' + MON[m] +
            '<span class="cnt">' + (cnt ? cnt + ' ' + (cnt === 1 ? 'запись' : 'записи') : '—') + '</span></h2>' +
@@ -66,8 +88,12 @@
       var it = data[k];
       if (!it || !card) return;
       var mm = parseInt(k.slice(0, 2), 10), dd = parseInt(k.slice(3), 10);
-      card.innerHTML = '<div class="cdate">' + (note ? note + ' · ' : '') + dd + ' ' + MONR[mm - 1] +
-        (k === tk ? ' · <b>сегодня</b>' : '') + '</div>' +
+      /* у датированного музея подпись — календарный день, у недатированного —
+         номер единицы состава: писать «5 января» там, где даты нет, нельзя */
+      var when = dated
+        ? dd + ' ' + MONR[mm - 1] + (k === tk ? ' · <b>сегодня</b>' : '')
+        : 'День ' + dd + ' · ' + MON[mm - 1];
+      card.innerHTML = '<div class="cdate">' + (note ? note + ' · ' : '') + when + '</div>' +
         '<h3>' + it.t + (it.y ? ' <span class="caly">' + it.y + '</span>' : '') + '</h3>' +
         '<p>' + it.d + '</p>' +
         (it.href ? '<a href="' + it.href + '">' + (it.link || 'Открыть →') + '</a>' : '');
@@ -85,9 +111,13 @@
     });
 
     /* при открытии — сегодняшний день; если на сегодня записи нет, честно
-       показываем БЛИЖАЙШУЮ будущую (по кругу года) и пишем, через сколько дней */
+       показываем БЛИЖАЙШУЮ будущую (по кругу года) и пишем, через сколько дней.
+       У недатированного музея «сегодня» и «через N дней» смысла не имеют —
+       открываем первую единицу состава. */
     var keys = Object.keys(data).sort();
-    if (data[tk]) {
+    if (!dated) {
+      if (keys.length) show(keys[0]);
+    } else if (data[tk]) {
       show(tk);
     } else if (keys.length) {
       var next = keys[0], best = daysAhead(keys[0]);
