@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 /* Регрессионный тест общего движка витрины календаря (assets/museum-calendar-page.js).
    Два режима: датированный музей (без конфига, как было до правки) и недатированный
-   («День N», длины месяцев и total приходят из конфига музея).
+   («День N»; год — 365 дней, записи сверх года идут отдельным блоком).
    Запуск: node tests/test-museum-calendar-page.mjs
-   Рамка на правку — решение оркестратора 10.09.2026, строка engine-vitrina-376-1010. */
+   Рамка: решение Сергея 10.09.2026 — «оставляй 365, как в году должно быть;
+   они остаются» (строка engine-vitrina-376-1010, вопрос снят). */
 import { readFileSync } from 'node:fs';
 
 const HERE = new URL('.', import.meta.url);
@@ -109,8 +110,8 @@ console.log('Режим 1: датированный музей (без конф�
     r.card.innerHTML.slice(0, 90));
 }
 
-/* ── 2. Недатированный музей: наш год, 376 единиц ── */
-console.log('Режим 2: «Русские не сдаются» — 376 единиц без календарных дат');
+/* ── 2. Недатированный музей: год — 365 дней, единицы сверх года — отдельно ── */
+console.log('Режим 2: «Русские не сдаются» — год 365 дней, 376 записей, 11 сверх года');
 {
   const window = {};
   new Function('window', DATA)(window);
@@ -118,22 +119,25 @@ console.log('Режим 2: «Русские не сдаются» — 376 еди
   const r = render(data);
   const [filled, total] = stat(r.html);
   const keys = Object.keys(data).filter((k) => /^\d{2}-\d{2}$/.test(k)).length;
+  const BEYOND = r.html.match(
+    /<section class="cmon beyond"><h2>Сверх года<span class="cnt">([^<]*)<\/span><\/h2><div class="cgrid cgrid-wide">(.*?)<\/div><\/section>/s);
+  const chips = BEYOND ? [...BEYOND[2].matchAll(/data-k="(\d{2}-\d{2})"/g)].map((m) => m[1]) : [];
+  const cells = r.sections.reduce((a, s) => a + s.cells, 0);
 
-  check('в данных 376 записей дней', keys === 376, String(keys));
-  check('месяцы объявлены сами: январь 32, февраль 29, март 32',
-    r.sections[0].cells === 32 && r.sections[1].cells === 29 && r.sections[2].cells === 32,
+  check('в данных 376 записей — состав не урезан', keys === 376, String(keys));
+  check('месяцы как в году: январь 31, февраль 28, март 31',
+    r.sections[0].cells === 31 && r.sections[1].cells === 28 && r.sections[2].cells === 31,
     r.sections.slice(0, 3).map((s) => s.cells).join(','));
-  check('всего клеток 376', r.sections.reduce((a, s) => a + s.cells, 0) === 376,
-    String(r.sections.reduce((a, s) => a + s.cells, 0)));
-  check('счётчик «376 из 376», а не «из 365»', filled === '376' && total === '376',
-    [filled, total].join('/'));
-  check('подпись счётчика без слова «дней» — 376 не читается как длина года',
-    /Открыто: <b>\d+<\/b> из \d+/.test(r.html) && !/Заполнено дней/.test(r.html),
-    (r.html.match(/<div class="calstat">[^<]*(<b>[^<]*<\/b>)?[^<]*/) || [''])[0]);
-  check('32-й день января и 32-е марта на месте',
-    (r.host._btns.find((b) => b.dataset.k === '01-32') || {}).dataset !== undefined &&
-    !!r.host._btns.find((b) => b.dataset.k === '03-32'));
-  check('подпись единицы — «День N», без числа месяца',
+  check('всего клеток 365 — год как в году', cells === 365, String(cells));
+  check('счётчик «365 из 365»', filled === '365' && total === '365', [filled, total].join('/'));
+  check('в счётчике сказано про записи сверх года, и что они остаются',
+    /сверх года ещё 11 записей/.test(r.html) && /они остаются в музее/.test(r.html),
+    (r.html.match(/<div class="calstat">.*?<\/div>/s) || [''])[0].slice(0, 200));
+  check('блок «Сверх года» есть и в нём 11 записей', chips.length === 11, String(chips.length));
+  check('32-й день января в сетку года не влез, но из музея не пропал',
+    !r.host._btns.some((b) => b.dataset.k === '01-32') && chips.includes('01-32'),
+    chips.join(','));
+  check('подпись единицы года — «День N», без числа месяца',
     (r.host._btns.find((b) => b.dataset.k === '01-05') || {}).title.startsWith('День 5 —'),
     (r.host._btns.find((b) => b.dataset.k === '01-05') || {}).title);
   check('метки «сегодня» нет ни на одной клетке', !/class="cday full today/.test(r.html));

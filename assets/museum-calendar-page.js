@@ -7,10 +7,12 @@
        длины месяцев берутся из календаря, счётчик «из 365». Без конфига движок
        работает ровно как раньше — ни одна существующая страница не меняется;
      • недатированный (`dated: false`) — календарных дат у музея нет, «День N» это
-       номер единицы состава. Музей объявляет свой состав сам:
-         window.MUSEUM_CALENDAR = { months: [32,29,…], total: 376, dated: false, "01-01": {…} };
-       Подпись единицы — «День N», знаменатель счётчика — `total`
-       («Открыто: N из 376», без слова «дней» — иначе 376 читается как длина года).
+       номер единицы состава:
+         window.MUSEUM_CALENDAR = { total: 365, dated: false, "01-01": {…} };
+       Год рисуется как в году — 365 дней (31,28,31,30…), подпись единицы «День N».
+       Записи, чей номер больше числа дней месяца, в год не входят — но из музея не
+       пропадают: идут отдельным блоком «Сверх года» (решение Сергея 10.09.2026:
+       «оставляй 365, как в году должно быть; они остаются»). Молча ничего не режем.
 
    Подключение:
      <div id="calyear"></div><div id="calcard"></div>
@@ -22,6 +24,7 @@
   var MONR = ['января','февраля','марта','апреля','мая','июня',
               'июля','августа','сентября','октября','ноября','декабря'];
   var DAYS = [31,29,31,30,31,30,31,31,30,31,30,31];
+  var YEAR = [31,28,31,30,31,30,31,31,30,31,30,31];   /* год как в году — 365 дней */
   var KEY = /^\d{2}-\d{2}$/;
 
   function pad(n) { return (n < 10 ? '0' : '') + n; }
@@ -38,20 +41,32 @@
     Object.keys(cfg).forEach(function (k) { if (KEY.test(k)) data[k] = cfg[k]; });
 
     var dated = cfg.dated !== false;
-    var mLen = (cfg.months && cfg.months.length === 12) ? cfg.months : DAYS;
-    var total = cfg.total || 365;
+    /* датированный музей живёт по своим данным; недатированный — по обычному году:
+       365 дней, как и должно быть в году */
+    var mLen = dated
+      ? ((cfg.months && cfg.months.length === 12) ? cfg.months : DAYS)
+      : YEAR;
+    var total = dated ? (cfg.total || 365) : 365;
 
     var today = new Date(), tk = pad(today.getMonth() + 1) + '-' + pad(today.getDate());
-    var filled = Object.keys(data).length;
 
-    /* подпись счётчика у недатированного музея не имеет права говорить «дней»:
-       «Заполнено дней: N из 376» читается как «в году 376 дней», хотя 376 —
-       это число единиц состава. У датированного музея всё как было. */
-    var h = '<div class="calstat">' + (dated
-      ? 'Заполнено дней: <b>' + filled + '</b> из ' + total + ' · ' +
-        'каждый заполненный день — готовый повод для ролика и поста'
-      : 'Открыто: <b>' + filled + '</b> из ' + total + ' · ' +
-        'каждая запись — готовый повод для ролика и поста') + '</div>';
+    /* номер единицы недатированного музея может быть больше числа дней месяца —
+       такие записи в год не входят, но из музея не пропадают (блок «Сверх года») */
+    function beyondYear(k) {
+      return parseInt(k.slice(3), 10) > YEAR[parseInt(k.slice(0, 2), 10) - 1];
+    }
+    var allKeys = Object.keys(data).sort();
+    var beyond = dated ? [] : allKeys.filter(beyondYear);
+    var filled = dated ? allKeys.length : allKeys.length - beyond.length;
+
+    /* счётчик всегда про год: 365. Записи сверх года посчитаны отдельно и не молчат */
+    var h = '<div class="calstat">' + 'Заполнено дней: <b>' + filled + '</b> из ' + total +
+      ' · ' + (dated ? 'каждый заполненный день' : 'каждый день года') +
+      ' — готовый повод для ролика и поста' +
+      (beyond.length
+        ? ' · сверх года ещё ' + beyond.length + ' ' +
+          plural(beyond.length, 'запись', 'записи', 'записей') + ' — они остаются в музее'
+        : '') + '</div>';
 
     /* годовая сетка рисуется только там, где для неё есть место (#calyear).
        На витрине музея его нет — там живёт одна карточка сегодняшнего дня. */
@@ -72,6 +87,21 @@
            '<span class="cnt">' + (cnt ? cnt + ' ' + (cnt === 1 ? 'запись' : 'записи') : '—') + '</span></h2>' +
            '<div class="cgrid">' + cells + '</div></section>';
     }
+    /* записи сверх года — отдельным блоком: в году 365 дней, и терять их нельзя */
+    if (!dated && beyond.length) {
+      var chips = '';
+      beyond.forEach(function (k) {
+        var it = data[k];
+        var mm = parseInt(k.slice(0, 2), 10), dd = parseInt(k.slice(3), 10);
+        chips += '<button class="cday full cextra" data-k="' + k + '" title="' +
+                 ('День ' + dd + ' · ' + MON[mm - 1] + ' — ' + it.t).replace(/"/g, '') + '">' +
+                 dd + ' · ' + MON[mm - 1] + '</button>';
+      });
+      h += '<section class="cmon beyond"><h2>Сверх года<span class="cnt">' + beyond.length +
+           ' ' + plural(beyond.length, 'запись', 'записи', 'записей') +
+           '</span></h2><div class="cgrid cgrid-wide">' + chips + '</div></section>';
+    }
+
     if (host) host.innerHTML = h;
 
     /* сколько дней от сегодня до ключа MM-DD (вперёд по кругу года) */
