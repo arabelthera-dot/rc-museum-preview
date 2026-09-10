@@ -40,13 +40,18 @@
     var data = {};
     Object.keys(cfg).forEach(function (k) { if (KEY.test(k)) data[k] = cfg[k]; });
 
-    var dated = cfg.dated !== false;
+    /* длины месяцев и счётчик можно задать отдельным объектом MUSEUM_CALENDAR_META:
+       в MUSEUM_CALENDAR их держать нельзя — тот же объект читает месячный движок
+       и считает total по числу ключей, лишние поля ломают ему счётчик.
+       Нет META — работает ровно как раньше, ни одна страница не меняется. */
+    var meta = window.MUSEUM_CALENDAR_META || cfg;
+    var dated = meta.dated !== false;
     /* датированный музей живёт по своим данным; недатированный — по обычному году:
        365 дней, как и должно быть в году */
     var mLen = dated
-      ? ((cfg.months && cfg.months.length === 12) ? cfg.months : DAYS)
+      ? ((meta.months && meta.months.length === 12) ? meta.months : DAYS)
       : YEAR;
-    var total = dated ? (cfg.total || 365) : 365;
+    var total = dated ? (meta.total || 365) : 365;
 
     var today = new Date(), tk = pad(today.getMonth() + 1) + '-' + pad(today.getDate());
 
@@ -84,7 +89,7 @@
                  ' title="' + lbl.replace(/"/g, '') + '">' + d + '</button>';
       }
       h += '<section class="cmon"><h2>' + MON[m] +
-           '<span class="cnt">' + (cnt ? cnt + ' ' + (cnt === 1 ? 'запись' : 'записи') : '—') + '</span></h2>' +
+           '<span class="cnt">' + (cnt ? cnt + ' ' + plural(cnt, 'запись', 'записи', 'записей') : '—') + '</span></h2>' +
            '<div class="cgrid">' + cells + '</div></section>';
     }
     /* записи сверх года — отдельным блоком: в году 365 дней, и терять их нельзя */
