@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "profile": "izobreteniya.home.v1",
+  "museum": "izobreteniya",
+  "required": {
+    "selectors": [
+      ".top",
+      ".b1",
+      ".b2",
+      ".b3",
+      ".b4",
+      ".crumbs",
+      ".hero-scene",
+      ".scene-caption",
+      ".hero-lead",
+      ".hook",
+      ".hero-btns",
+      ".stamp",
+      "#segodnya",
+      "#god",
+      "#zaly",
+      "#kadry",
+      "#otkryto",
+      "#kak"
+    ]
+  },
+  "collection": {
+    "enabled": false
+  },
+  "published_catalog": {
+    "enabled": false
+  },
+  "score": {
+    "enabled": false
+  },
+  "calendar": {
+    "enabled": true,
+    "selector": "#god",
+    "source": "calendar-data.js"
+  },
+  "acceptance": {
+    "support_engine": "museum-support.js"
+  }
+}
