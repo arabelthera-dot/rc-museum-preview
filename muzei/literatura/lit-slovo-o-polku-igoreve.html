@@ -119,6 +119,7 @@
 
 <nav class="daynav">
   <div class="wrap">
+    <a href="#sily">Расклад сил</a>
     <a href="#plach">Плач Ярославны</a>
     <a href="#story">Читать</a>
     <a href="#syuzhet">Сюжет</a>
@@ -129,6 +130,42 @@
     <a href="#calendar">Календарь</a>
   </div>
 </nav>
+
+<!-- ── РАСКЛАД СИЛ 1185 (M-31 «Слои достоверности»: что известно по летописи, что достроено) ── -->
+<section class="block" id="sily">
+  <div class="wrap">
+    <div class="kicker">Расклад сил · 1185</div>
+    <h2>Кто с кем воевал</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Поход Игоря — не война Руси с половцами, а набег четырёх северских князей на степь, без великого князя киевского Святослава.</p>
+
+    <div class="sily-switch" role="tablist" aria-label="Сторона">
+      <button type="button" role="tab" id="tabSvoi" aria-selected="true" aria-controls="colSvoi">Русские дружины</button>
+      <button type="button" role="tab" id="tabFoe" aria-selected="false" aria-controls="colFoe">Половцы</button>
+    </div>
+
+    <div class="sily">
+      <div class="sily-col" id="colSvoi">
+        <h3>Русские дружины</h3>
+        <div class="sily-note">Северские князья · четыре полка</div>
+        <div class="sily-row"><span class="mark"></span><div><div class="nm">Игорь Святославич · Новгород-Северский</div><div class="rl">Старший в походе, инициатор. В «Слове» — главный герой.</div></div></div>
+        <div class="sily-row"><span class="mark"></span><div><div class="nm">Всеволод Святославич · Курск и Трубчевск</div><div class="rl">Брат Игоря, «буй тур» «Слова»; его дружина — самая сильная.</div></div></div>
+        <div class="sily-row"><span class="mark"></span><div><div class="nm">Владимир Игоревич · Путивль</div><div class="rl">Сын Игоря; попал в плен и позже женился на дочери Кончака.</div></div></div>
+        <div class="sily-row"><span class="mark"></span><div><div class="nm">Святослав Ольгович · Рыльск</div><div class="rl">Племянник Игоря; тоже пленён.</div></div></div>
+      </div>
+      <div class="sily-col foe is-off" id="colFoe">
+        <h3>Половецкая степь</h3>
+        <div class="sily-note">Ханы · ответный удар 1185</div>
+        <div class="sily-row"><span class="mark"></span><div><div class="nm">Кончак</div><div class="rl">Хан. Годом раньше разбит Святославом Киевским; после Каялы пошёл на Переяславль.</div></div></div>
+        <div class="sily-row"><span class="mark"></span><div><div class="nm">Гзак (Кза)</div><div class="rl">Хан. После победы разорил Путивль — город Ярославны.</div></div></div>
+        <div class="sily-row"><span class="mark"></span><div><div class="nm">Овлур</div><div class="rl">Половец, который помог Игорю бежать из плена; в «Слове» назван по имени.</div></div></div>
+      </div>
+    </div>
+
+    <div class="sily-out">
+      <p><b>Чем кончилось.</b> 1 мая 1185 года в степи произошло солнечное затмение — Игорь не повернул. Первую стычку русские выиграли, но на реке Каяле войско было разбито, все четыре князя попали в плен, а Кончак и Гзак ответили набегами на русские земли.</p>
+    </div>
+  </div>
+</section>
 
 <!-- ── ПЛАЧ ЯРОСЛАВНЫ (аудиогид + оригинал) — сразу под обложкой, канон §6: аудиогид вторым слотом ── -->
 <section class="block" id="plach">
@@ -144,12 +181,15 @@
 
     <div id="audioguide"></div>
 
-    <div class="orig">
+    <div class="orig collapsed" id="orig">
+      <div class="orig-body">
       <b>Оригинал на древнерусском</b> (по первому изданию 1800 года, в передаче):<br><br>
       «Ярославна рано плачетъ въ Путивлѣ на забралѣ, аркучи: <i>„О вѣтрѣ, вѣтрило! чему, господине, насильно вѣеши? чему мычеши хиновьскыя стрѣлкы на своею нетрудною крилцю на моея лады вои? Мало ли ти бяшеть горѣ подъ облакы вѣяти, лелѣючи корабли на синѣ морѣ? чему, господине, мое веселіе по ковылію развѣя?“</i><br><br>
       Ярославна рано плачетъ Путивлю городу на заборолѣ, аркучи: <i>„О Днепре Словутицю! ты пробилъ еси каменныя горы сквозѣ землю Половецкую. Ты лелѣялъ еси на себѣ Святославли носады до плъку Кобякова. Възлелѣй, господине, мою ладу къ мнѣ, а быхъ не слала къ нему слезъ на море рано.“</i><br><br>
       Ярославна рано плачетъ въ Путивлѣ на забралѣ, аркучи: <i>„Свѣтлое и тресвѣтлое слънце! всѣмъ тепло и красно еси. Чему, господине, простре горячюю свою лучю на ладѣ вои? въ полѣ безводнѣ жаждею имь лучи съпряже, тугою имъ тули затче?“</i><br><br>
       <span style="color:#a89a80">«Зегзица» из этого плача — кукушка: так в древнерусском называли её.</span>
+      </div>
+      <div class="more"><button class="btn ghost" id="origBtn">Показать оригинал полностью ↓</button></div>
     </div>
   </div>
 </section>
@@ -223,7 +263,7 @@
     <h2>Первый великий текст Руси</h2>
     <p>До «Слова» русская письменность знала летопись — сухую хронику: что случилось, в каком году, кто с кем. «Слово о полку Игореве» — первое произведение, где заговорила не хроника, а <b>поэзия</b>.</p>
     <div class="pull">«Плач Ярославны» — первый великий поэтический образ русской словесности. Через восемь веков он звучит так, будто написан вчера.</div>
-    <p>Здесь впервые появилось то, что потом назовут русской литературой: лирическое чувство, живой ритм, образ, который не сообщает событие, а даёт его пережить. Автор не просто пересказывает неудачный поход — он превращает военное поражение в нравственную победу: в призыв к единству русских земель перед внешним врагом.</p>
+    <p>Здесь впервые появилось то, что потом назовут русской литературой: лирическое чувство, живой ритм, образ. Автор не пересказывает неудачный поход — он превращает поражение в призыв к единству русских земель.</p>
     <p>Именно поэтому «Слово» открывает музей русских писателей: с него, с XII века, начинается отсчёт русской словесности как искусства.</p>
   </div>
 </section>
@@ -323,6 +363,29 @@ document.getElementById('moreBtn').onclick=function(){
   document.getElementById('article').classList.remove('collapsed');
   this.style.display='none';
 };
+
+// ── СХЕМА РАССТАНОВКИ СИЛ: переключатель сторон (только на телефоне) ────────
+(function(){
+  var tS=document.getElementById('tabSvoi'),tF=document.getElementById('tabFoe');
+  var cS=document.getElementById('colSvoi'),cF=document.getElementById('colFoe');
+  if(!tS||!tF)return;
+  function pick(side){
+    var s=side==='svoi';
+    tS.setAttribute('aria-selected',s?'true':'false');
+    tF.setAttribute('aria-selected',s?'false':'true');
+    cS.classList.toggle('is-off',!s);
+    cF.classList.toggle('is-off',s);
+  }
+  tS.onclick=function(){pick('svoi')};
+  tF.onclick=function(){pick('foe')};
+})();
+
+// ── ОРИГИНАЛ ПЛАЧА: развернуть по кнопке (длина страницы) ───────────────────
+(function(){
+  var b=document.getElementById('origBtn'),o=document.getElementById('orig');
+  if(!b||!o)return;
+  b.onclick=function(){o.classList.remove('collapsed');b.style.display='none';};
+})();
 
 // ── ИГРА «СОБЕРИ СЮЖЕТ» ──────────────────────────────────────────────────────
 (function(){

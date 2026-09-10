@@ -169,3 +169,39 @@
 #story .fig figcaption b{color:var(--kino)}
 #story .fig figcaption a{color:#8a5a2b;border-bottom-color:rgba(138,90,43,.4)}
 #story .fig figcaption a:hover{color:var(--kino)}
+
+/* ── Схема расстановки сил 1185 г. (M-31, блок #sily) ────────────────────
+   Две колонки: свои дружины / половецкая степь. На телефоне — переключатель,
+   чтобы обе стороны не растягивали страницу в высоту. */
+.sily-switch{display:none;gap:8px;margin:0 0 14px}
+.sily-switch button{flex:1;padding:11px 8px;border-radius:6px;border:1px solid rgba(201,168,76,.35);
+  background:transparent;color:var(--gold-l);font-family:'Inter',sans-serif;font-size:13px;font-weight:600;cursor:pointer}
+.sily-switch button[aria-selected="true"]{background:var(--gold-g);border-color:var(--gold);color:var(--gold-l)}
+.sily{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.sily-col{border:1px solid var(--line);border-radius:6px;padding:16px 18px;background:rgba(0,0,0,.18)}
+.sily-col.foe{border-color:rgba(179,64,44,.4);background:rgba(179,64,44,.07)}
+.sily-col h3{margin:0 0 4px;font-family:'Playfair Display',Georgia,serif;font-size:18px;color:var(--gold-l)}
+.sily-col.foe h3{color:var(--kino-l)}
+.sily-col .sily-note{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.6px;text-transform:uppercase;
+  color:var(--muted);margin-bottom:12px}
+.sily-row{display:flex;gap:11px;padding:10px 0;border-top:1px solid var(--line)}
+.sily-row:first-of-type{border-top:0}
+.sily-row .nm{font-weight:600;color:var(--ink)}
+.sily-row .rl{color:var(--muted);font-size:13.5px;line-height:1.55}
+.sily-row .mark{flex:0 0 auto;width:9px;height:9px;border-radius:50%;margin-top:7px;background:var(--gold)}
+.sily-col.foe .mark{background:var(--kino)}
+.sily-out{margin-top:16px;padding:14px 18px;border-left:2px solid rgba(201,168,76,.5);background:rgba(0,0,0,.18);
+  border-radius:0 6px 6px 0}
+.sily-out p{margin:0;color:var(--parch-mut)}
+@media(max-width:760px){
+  .sily-switch{display:flex}
+  .sily{grid-template-columns:1fr}
+  .sily-col.is-off{display:none}
+}
+
+/* ── Древнерусский оригинал плача свёрнут до кнопки (жалоба посетителя:
+   «простыня древнерусского текста мелким шрифтом»; 1174 px на телефоне). */
+.orig.collapsed .orig-body{max-height:190px;overflow:hidden;position:relative}
+.orig.collapsed .orig-body:after{content:'';position:absolute;left:0;right:0;bottom:0;height:80px;
+  background:linear-gradient(transparent,rgba(0,0,0,.72))}
+.orig .org-legend{display:block;margin-top:10px;font-size:12px;color:var(--muted)}
