@@ -27,7 +27,27 @@
  */
 (function () {
   var cfg = window.MUSEUM_SCORE || {};
-  var max = Number(cfg.max) || 0;
+
+  // Достижимое число очков. 11.09.2026: поле max писалось рукой и на проверенных страницах
+  // января оказывалось суммой ОДНИХ ЛИШЬ литеральных наград — награды из циклов
+  // (award('q'+qIdx,10) на каждый вопрос викторины) в него не входили. Шкала от этого
+  // занижена, а занижение хуже завышения: raw/max обрезается по 100, посетитель упирается
+  // в потолок и получает высшее звание задолго до конца дня. Теперь страница объявляет
+  // реестр наград, и максимум считает движок — расходиться стало не с чем:
+  //
+  //     awards: {read: 5, fork: 10, q: [4, 10]}   // число — очки; пара — [сколько раз, по сколько]
+  //
+  // Поле max сохранено для уже принятых страниц и берётся, когда реестра нет.
+  function sumAwards(a) {
+    var t = 0;
+    for (var k in a) {
+      if (!Object.prototype.hasOwnProperty.call(a, k)) continue;
+      var v = a[k];
+      t += Array.isArray(v) ? (Number(v[0]) || 0) * (Number(v[1]) || 0) : (Number(v) || 0);
+    }
+    return t;
+  }
+  var max = cfg.awards ? sumAwards(cfg.awards) : (Number(cfg.max) || 0);
   var ranks = cfg.ranks || [[100, 'Знаток'], [70, 'Знаток'], [40, 'Экскурсант'], [0, 'Гость музея']];
   var diplomaAt = cfg.diplomaAt == null ? null : Number(cfg.diplomaAt);
 
