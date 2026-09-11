@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "profile": "izobreteniya.home.v1",
+  "profile": "izobreteniya.home.v2",
   "museum": "izobreteniya",
   "required": {
     "selectors": [
@@ -21,7 +21,8 @@
       "#zaly",
       "#kadry",
       "#otkryto",
-      "#kak"
+      "#kak",
+      "#calendar"
     ]
   },
   "collection": {
@@ -35,8 +36,8 @@
   },
   "calendar": {
     "enabled": true,
-    "selector": "#god",
-    "source": "calendar-data.js"
+    "selector": "#calbox",
+    "source": "calendar-izobreteniya.js"
   },
   "acceptance": {
     "support_engine": "museum-support.js"

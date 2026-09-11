@@ -27,6 +27,7 @@
   --gold:#c9a84c;--gold-l:#e4c97a;--gold-g:rgba(201,168,76,.13);
   --ink:#e8eef5;--muted:#7a9ab8;--line:rgba(255,255,255,.07);
   --accent:#2d8cbf;--accent2:#1f6f8b;
+  --txt:#e8eef5;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -312,6 +313,13 @@ footer.bot .l{margin-bottom:9px}
   </div>
 </div></section>
 
+<!-- Календарь года: все двенадцать месяцев подряд, каждый день на месте -->
+<section id="calendar" style="background:linear-gradient(180deg,var(--bp2),var(--dark))"><div class="wrap">
+  <div class="sec-h"><h2>Весь год, день за днём</h2><span class="sub">364 даты, двенадцать месяцев подряд</span></div>
+  <p class="sec-note">Полный состав музея: на каждой дате стоит своё первенство. Золотым выделены дни, у которых уже открыта страница, — их можно открыть прямо отсюда.</p>
+  <div id="calbox"></div>
+</div></section>
+
 <footer class="bot"><div class="wrap">
   <div class="l"><a href="../../index.html">Русская цивилизация</a> · <a href="calendar.html">Календарь</a></div>
   <div>Музей «Что изобрели русские первыми в мире» · проект «Русская цивилизация»</div>
@@ -411,6 +419,8 @@ function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');}
 })();
 </script>
 
+<script src="calendar-izobreteniya.js"></script>
+<script src="../../assets/museum-calendar-year.js"></script>
 <script>window.MUSEUM_SUPPORT={museum:'Что изобрели русские первыми в мире'};</script>
 <script src="../../assets/museum-support.js"></script>
 <!-- rc-analytics --><script defer src="../../assets/analytics.js"></script>
