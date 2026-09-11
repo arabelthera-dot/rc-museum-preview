@@ -88,6 +88,11 @@ section{padding:46px 0}
 .sec-h h2{margin:0;font-size:clamp(22px,3.6vw,30px)}
 .sec-h .sub{font-size:13.5px;color:var(--muted)}
 .sec-note{margin:0 0 22px;color:var(--muted);font-size:15px;max-width:70ch}
+.council{background:var(--card);border:1px solid rgba(201,168,76,.28);border-left:3px solid var(--gold);
+  border-radius:14px;padding:18px 20px;font-size:15.5px;line-height:1.6;max-width:78ch;color:var(--ink)}
+.council b{color:var(--gold-l)}
+.council-go{margin-top:12px}
+.council-go a{color:var(--gold-l);text-decoration:none;border-bottom:1px solid rgba(228,201,122,.4)}
 
 /* ── Сегодня в музее ── */
 #segodnya{background:linear-gradient(180deg,var(--bp2),var(--dark))}
@@ -318,6 +323,18 @@ footer.bot .l{margin-bottom:9px}
   <div class="sec-h"><h2>Весь год, день за днём</h2><span class="sub">364 даты, двенадцать месяцев подряд</span></div>
   <p class="sec-note">Полный состав музея: на каждой дате стоит своё первенство. Золотым выделены дни, у которых уже открыта страница, — их можно открыть прямо отсюда.</p>
   <div id="calbox"></div>
+</div></section>
+
+<!-- Научный совет музея (канон 21.07.2026): только фамилии-ссылки; эксперта нет — честная строка-приглашение, выдуманные имена запрещены -->
+<section id="sovet"><div class="wrap">
+  <div class="sec-h"><h2>Научный совет музея</h2><span class="sub">кто отвечает за факты</span></div>
+  <p class="sec-note">Музей заявляет первенства — значит, за каждой датой должен стоять человек, готовый поставить под ней своё имя.</p>
+  <div class="council">
+    <b>Ищем научного консультанта музея</b> — историка техники, патентоведа или музейного работника, готового проверять факты и держать планку первенств.
+    Фамилии членов совета встанут здесь, и каждая будет открывать справку: кто он, чем занимается, что именно проверил в музее.
+    Пока совета нет, мы пишем об этом прямо, а не выдумываем имена: проект про правду не имеет права на фейковых консультантов.
+    <div class="council-go"><a href="mailto:arabelthera@gmail.com?subject=Научный совет музея «Что изобрели русские первыми в мире»">Написать в музей →</a></div>
+  </div>
 </div></section>
 
 <footer class="bot"><div class="wrap">

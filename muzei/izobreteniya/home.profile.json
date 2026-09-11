@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "profile": "izobreteniya.home.v2",
+  "profile": "izobreteniya.home.v3",
   "museum": "izobreteniya",
   "required": {
     "selectors": [
@@ -22,7 +22,9 @@
       "#kadry",
       "#otkryto",
       "#kak",
-      "#calendar"
+      "#calendar",
+      "#sovet",
+      ".council"
     ]
   },
   "collection": {
@@ -41,5 +43,8 @@
   },
   "acceptance": {
     "support_engine": "museum-support.js"
-  }
+  },
+  "notes": [
+    "v3 (11.09.2026): добавлен блок «Научный совет музея» — канон 21.07.2026, слово Сергея 11.09 «Про научный совет… в своём музее, да, это делай». Только приглашение, выдуманные имена запрещены."
+  ]
 }
