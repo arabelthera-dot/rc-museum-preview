@@ -553,7 +553,7 @@
   /* ── СЧЁТ ── шкала посетителя из 100 держит движок assets/museum-score.js
      Здесь только награды этой страницы. Сумма: викторина 3×10 + игра 20
      + сборка 20 + развилка 10 = 80. */
-  window.MUSEUM_SCORE = {max: 80, ranks: [[100,'Испытатель'],[70,'Знаток'],[40,'Любопытный'],[0,'Гость дня']]};
+  window.MUSEUM_SCORE = {awards: {q:[3,10], game1:20, assemble:20, fork:10}, ranks: [[100,'Испытатель'],[70,'Знаток'],[40,'Любопытный'],[0,'Гость дня']]};
   // читать дальше
   document.getElementById('readBtn').onclick=()=>document.getElementById('story').scrollIntoView({behavior:'smooth'});
   document.getElementById('moreBtn').onclick=()=>{document.getElementById('article').classList.remove('collapsed');document.getElementById('moreBtn').style.display='none';};

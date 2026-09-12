@@ -619,7 +619,7 @@ for(let i=0;i<10;i++){const type=types[Math.floor(Math.random()*types.length)];c
 <script>
 // ── СЧЁТ ── шкала посетителя из 100 держит движок assets/museum-score.js
 // Здесь только награды этой страницы: сумма сырых очков и звания.
-window.MUSEUM_SCORE = {max: 60, ranks: [[100,'Первопроходец Арктики'],[70,'Знаток'],[40,'Экскурсант'],[0,'Гость музея']]};
+window.MUSEUM_SCORE = {awards: {tm:5, vb:5, char:10, gm_ermak:15, gm_quiz2:15, read:5, q:[2,10], fork:10, chat:5, theme:5}, ranks: [[100,'Первопроходец Арктики'],[70,'Знаток'],[40,'Экскурсант'],[0,'Гость музея']]};
 
 // ── СТАТЬЯ ────────────────────────────────────────────────────────────────────
 document.getElementById('moreBtn').onclick=function(){
