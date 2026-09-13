@@ -13,11 +13,11 @@ BASE = pathlib.Path(__file__).resolve().parent.parent / 'izobreteniya'
 DAYS = [
     ('day-01jan-cabletv.html',      '1 января · Кабельное ТВ'),
     ('day-02jan-luna1.html',        '2 января · «Луна-1»'),
-    ('day-03jan-luna9.html',        '3 января · «Луна-9»'),
+    ('day-03feb-luna9.html',        '3 января · «Луна-9»'),
     ('day-04jan-pilchikov.html',    '4 января · Пильчиков'),
     ('day-05jan-shukhov.html',      '5 января · Шухов'),
     ('day-06jan-bering.html',       '6 января · Беринг'),
-    ('day-07jan-buran.html',        '7 января · «Буран»'),
+    ('day-15nov-buran.html',        '7 января · «Буран»'),
     ('day-08jan-icebreaker.html',   '8 января · «Ермак»'),
     ('day-09jan-blinov.html',       '9 января · Блинов'),
     ('day-30jan-kotelnikov.html',   '30 января · Котельников'),
