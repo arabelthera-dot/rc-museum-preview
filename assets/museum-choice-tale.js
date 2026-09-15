@@ -69,8 +69,15 @@
         btn.addEventListener('click', function () {
           var c = s.choices[+btn.dataset.i];
           chosen.push(c.tag);
-          idx++;
-          render();
+          if (cfg.feedbackEach && cfg.weights && cfg.weights[c.tag]) {
+            mount.querySelectorAll('.ct-choice').forEach(function (b) { b.disabled = true; });
+            var feedback = document.createElement('p'); feedback.className = 'ct-feedback';
+            feedback.setAttribute('role', 'status'); feedback.textContent = cfg.weights[c.tag]; mount.appendChild(feedback);
+            var next = document.createElement('button'); next.type = 'button'; next.className = 'ct-next';
+            next.textContent = idx + 1 < cfg.steps.length ? 'Следующее решение →' : 'Посмотреть свой путь';
+            next.addEventListener('click', function () { idx++; render(); var focus = mount.querySelector('button'); if(focus) focus.focus(); });
+            mount.appendChild(next); next.focus();
+          } else { idx++; render(); }
         });
       });
     }
@@ -84,16 +91,17 @@
       html += '<div class="ct-progress">Финал</div>';
       html += '<div class="ct-end">';
       html += '<div class="ct-verdict"><span class="ct-lbl">Твой путь</span>' + esc(pathTxt || '—') + '</div>';
-      if (dom && cfg.weights && cfg.weights[dom]) {
+      if (!cfg.feedbackEach && dom && cfg.weights && cfg.weights[dom]) {
         html += '<p class="ct-weight">' + esc(cfg.weights[dom]) + '</p>';
       }
+      if (cfg.feedbackEach && cfg.weights) chosen.forEach(function (tag) { if (!cfg.weights[tag]) return; html += '<p class="ct-weight">' + esc(cfg.weights[tag]) + '</p>'; });
       html += '<p class="ct-note">В этом зале нет правильного ответа — есть только цена каждого выбора. И есть то, что выбрали они.</p>';
       html += '<div class="ct-reality"><b>' + esc(cfg.reality.label || 'А они сделали так') + '</b> ' + esc(cfg.reality.text) + '</div>';
       html += '<button type="button" class="ct-reset">Пройти заново</button>';
       html += '</div>';
       mount.innerHTML = html;
       mount.querySelector('.ct-reset').addEventListener('click', function () {
-        chosen = []; idx = 0; render();
+        chosen = []; idx = 0; render(); var focus = mount.querySelector('.ct-choice'); if (focus) focus.focus();
       });
       if (typeof window.rcEvent === 'function') { try { window.rcEvent('rc_game', { mechanic: 'M-20' }); } catch (e) {} }
     }

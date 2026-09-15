@@ -174,6 +174,7 @@
   + '#heart.tuck{transform:translateY(96px);opacity:0;pointer-events:none}'
   /* в первом экране блока поддержки ещё не было, а сердечко перекрывало текст этикетки
      сцены на 390 px (разбор Шухова 04.08) — до 0.6 экрана прокрутки его нет */
+  + '#heart.support-visible{visibility:hidden;pointer-events:none}'
   + '#heart.atop{transform:translateY(96px);opacity:0;pointer-events:none}';
   var st = doc.createElement('style'); st.id = 'sup-css'; st.textContent = css;
   doc.head.appendChild(st);
@@ -347,7 +348,7 @@
       if(navigator.share) navigator.share({title:doc.title, url:location.href}).catch(function(){});
       else if(navigator.clipboard) navigator.clipboard.writeText(location.href).then(function(){
         share.textContent = EN ? 'Link copied ✓' : 'Ссылка скопирована ✓'; });
-      if(typeof window.award === 'function') window.award('share', 5);
+      if(typeof window.award === 'function') window.award('share', C.sharePoints == null ? 5 : C.sharePoints);
       return;
     }
     if(t.closest && (t.closest('[data-sup-more]') || t.closest('.support a[data-sup-scroll]'))){
@@ -376,7 +377,11 @@
     function topGuard(){
       h.classList.toggle('atop', (window.scrollY || 0) < (window.innerHeight || 700) * 0.6);
     }
-    topGuard();
+    function supportGuard(){
+      if(C.hideWhileVisible) h.classList.toggle('support-visible', sups.some(function(e){var r=e.getBoundingClientRect();return r.top < window.innerHeight && r.bottom > 0;}));
+    }
+    topGuard(); supportGuard();
+    window.addEventListener('resize', supportGuard);
     window.addEventListener('scroll', topGuard, {passive:true});
     window.addEventListener('resize', topGuard);
   })();
@@ -392,7 +397,7 @@
       var y = window.scrollY;
       if(y > last + 6) h.classList.add('tuck'); else if(y < last - 6) h.classList.remove('tuck');
       last = y; clearTimeout(t); t = setTimeout(function(){ h.classList.remove('tuck'); }, 700);
-      h.classList.toggle('wide', sups.some(function(e){
+      h.classList.toggle(C.hideWhileVisible ? 'support-visible' : 'wide', sups.some(function(e){
         var r = e.getBoundingClientRect(); return r.top < window.innerHeight && r.bottom > 0; }));
     }, {passive:true});
   }

@@ -93,6 +93,13 @@
         var right = answered.filter(Boolean).length;
         done.textContent = 'Вопросы пройдены: верных ' + right + ' из ' + cfg.items.length + '.';
         card.appendChild(done);
+        if (cfg.retry) {
+          var retry = document.createElement('button');
+          retry.type = 'button'; retry.className = 'mq-retry';
+          retry.textContent = 'Пройти ещё раз';
+          retry.addEventListener('click', function () { idx = 0; answered = []; render(); card.querySelector('.mq-opt').focus(); });
+          card.appendChild(retry); retry.focus();
+        }
         return;
       }
 
@@ -143,7 +150,7 @@
 
       var exp = list.parentNode.querySelector('.mq-exp');
       if (exp) {
-        exp.textContent = item.e || '';
+        exp.textContent = (cfg.retry ? (hit ? 'Верно. ' : 'Пока неверно. ') : '') + (item.e || '');
         exp.classList.add('is-on');
       }
 
@@ -151,7 +158,7 @@
       next.type = 'button';
       next.className = 'mq-next';
       next.textContent = idx + 1 < cfg.items.length ? 'Следующий вопрос →' : 'Завершить';
-      next.addEventListener('click', function () { idx++; render(); });
+      next.addEventListener('click', function () { idx++; render(); var focus = card.querySelector('.mq-opt,.mq-retry'); if (focus) focus.focus(); });
       card.appendChild(next);
       next.focus();
     }

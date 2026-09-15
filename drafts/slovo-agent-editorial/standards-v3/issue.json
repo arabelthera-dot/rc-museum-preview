@@ -1,0 +1,283 @@
+{
+  "schema_version": "1.0.0",
+  "museum_id": "rc:museum:literatura",
+  "issue_id": "rc:issue:slovo-01-01",
+  "content_family_id": "rc:family:slovo",
+  "version": "3.0.0",
+  "identity": {
+    "title_ru": "Слово о полку Игореве",
+    "slug": "slovo-standards-v3",
+    "calendar_slot": "01-01",
+    "museum_name_ru": "Музей русских писателей",
+    "language": "ru",
+    "summary_ru": "Игорь говорит, что смерть лучше плена, — а затем сам оказывается пленником и видит, как продолжает сражаться его брат."
+  },
+  "lifecycle": {
+    "current": "build",
+    "history": [
+      {
+        "status": "build",
+        "at": "2026-09-15T14:04:19.147865+00:00",
+        "actor": "codex-bot",
+        "note_ru": "Доработка существующего превью по прямой команде; статус приёмки не присваивался."
+      }
+    ]
+  },
+  "interactive": {
+    "title_ru": "Услышать и понять Ярославну",
+    "type": "sounding-text-and-choice",
+    "visitor_action_ru": "Посетитель слышит плач, читает строку и сопоставляет свой выбор с поступками героев.",
+    "exclusive_insight_ru": "Понимает конкретное движение любви: смочить рукав и обтереть раны близкого.",
+    "wow_effect_ru": "За княжеским походом слышит голос человека, который ждёт любимого.",
+    "text_alternative_ru": "Древнерусская строка, русский пересказ и полная расшифровка доступны без звука.",
+    "engine": "museum-audioguide.js; museum-choice-tale.js",
+    "unique_to_issue": true
+  },
+  "sources": [
+    {
+      "source_id": "rc:source:slovo-text",
+      "title_ru": "Академический текст «Слова»",
+      "publisher_ru": "ФЭБ",
+      "url": "https://feb-web.ru/feb/slovo/texts/a50/a50-007-.htm?cmd=p",
+      "source_type": "academic",
+      "language": "ru",
+      "checked_at": "2026-09-15"
+    },
+    {
+      "source_id": "rc:source:slovo-chronicle",
+      "title_ru": "Академический комментарий и летопись",
+      "publisher_ru": "ФЭБ",
+      "url": "https://feb-web.ru/feb/slovo/texts/a50/a50-375-.htm?cmd=p",
+      "source_type": "academic",
+      "language": "ru",
+      "checked_at": "2026-09-15"
+    },
+    {
+      "source_id": "rc:source:slovo-neb",
+      "title_ru": "Первое издание 1800 года",
+      "publisher_ru": "НЭБ",
+      "url": "https://kp.rusneb.ru/item/material/iroicheskaya-pesn-o-pohode-na-polovcov-udelnago-knyazya-novagoroda-severskago-igorya-svyatoslavicha",
+      "source_type": "academic",
+      "language": "ru",
+      "checked_at": "2026-09-15"
+    },
+    {
+      "source_id": "rc:source:slovo-copies",
+      "title_ru": "Сохранение текста",
+      "publisher_ru": "ФЭБ",
+      "url": "https://feb-web.ru/feb/slovbul/bul-abc/bul/bul-0982.htm?cmd=p&istext=1",
+      "source_type": "academic",
+      "language": "ru",
+      "checked_at": "2026-09-15"
+    },
+    {
+      "source_id": "rc:source:slovo-translations",
+      "title_ru": "Параллельный корпус переводов",
+      "publisher_ru": "Параллельный корпус «Слова»",
+      "url": "https://nevmenandr.net/slovo/",
+      "source_type": "academic",
+      "language": "ru",
+      "checked_at": "2026-09-15"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "rc:claim:slovo-campaign",
+      "text_ru": "Поход 1185 года завершился поражением и пленением Игоря.",
+      "key_claim": false,
+      "confidence": "documented",
+      "source_ids": [
+        "rc:source:slovo-text",
+        "rc:source:slovo-chronicle"
+      ]
+    },
+    {
+      "claim_id": "rc:claim:slovo-brother",
+      "text_ru": "Связанный Игорь видит сражающегося Всеволода — эпизод Ипатьевской летописи.",
+      "key_claim": false,
+      "confidence": "documented",
+      "source_ids": [
+        "rc:source:slovo-chronicle"
+      ]
+    },
+    {
+      "claim_id": "rc:claim:slovo-plach",
+      "text_ru": "Ярославна просит обтереть раны мужа своим рукавом.",
+      "key_claim": false,
+      "confidence": "documented",
+      "source_ids": [
+        "rc:source:slovo-text"
+      ]
+    },
+    {
+      "claim_id": "rc:claim:slovo-ovlur",
+      "text_ru": "Овлур помогает Игорю бежать.",
+      "key_claim": false,
+      "confidence": "documented",
+      "source_ids": [
+        "rc:source:slovo-text",
+        "rc:source:slovo-chronicle"
+      ]
+    },
+    {
+      "claim_id": "rc:claim:slovo-fire",
+      "text_ru": "Текст сохранился в издании 1800 года и Екатерининской копии после гибели позднего списка.",
+      "key_claim": true,
+      "confidence": "documented",
+      "source_ids": [
+        "rc:source:slovo-neb",
+        "rc:source:slovo-copies"
+      ]
+    },
+    {
+      "claim_id": "rc:claim:slovo-world",
+      "text_ru": "Есть корпус русских и иноязычных переводов произведения.",
+      "key_claim": false,
+      "confidence": "documented",
+      "source_ids": [
+        "rc:source:slovo-translations"
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "object_id": "rc:object:slovo-battle",
+      "title_ru": "После побоища Игоря Святославича с половцами",
+      "date_display_ru": "1880",
+      "attribution_ru": "Виктор Васнецов",
+      "holder_ru": "Государственная Третьяковская галерея",
+      "source_ids": [
+        "rc:source:slovo-text"
+      ]
+    },
+    {
+      "object_id": "rc:object:slovo-plach",
+      "title_ru": "Плач Ярославны",
+      "date_display_ru": "1881",
+      "attribution_ru": "Василий Перов",
+      "holder_ru": "Держатель цифровой репродукции требует уточнения",
+      "source_ids": [
+        "rc:source:slovo-text"
+      ]
+    },
+    {
+      "object_id": "rc:object:slovo-edition",
+      "title_ru": "Первое издание Слова",
+      "date_display_ru": "1800",
+      "attribution_ru": "Сенатская типография",
+      "holder_ru": "НЭБ, экземпляр первого издания",
+      "source_ids": [
+        "rc:source:slovo-neb"
+      ]
+    }
+  ],
+  "images": [
+    {
+      "image_id": "rc:image:slovo-battle",
+      "object_id": "rc:object:slovo-battle",
+      "local_path": "../../../muzei/literatura/media-slovo/hero-battle-1880.jpg",
+      "sha256": "53ed5fd458c94d0929ccaff7fa5d008d5ff1ac3c6368fec916526d3542aed9b5",
+      "source_url": "https://feb-web.ru/feb/slovo/texts/a50/a50-007-.htm?cmd=p",
+      "credit_ru": "Виктор Васнецов. После побоища Игоря Святославича с половцами. 1880",
+      "alt_ru": "После побоища Игоря Святославича с половцами",
+      "rights": {
+        "status": "pending",
+        "basis_ru": "Существующий материал исходной страницы. Точное происхождение цифрового файла и паспорт лицензии ещё не восстановлены; ссылка здесь на контекст, не на файл.",
+        "checked_at": "2026-09-15",
+        "commercial_use": "unclear",
+        "derivatives": "unclear",
+        "ai_modification": "unclear"
+      }
+    },
+    {
+      "image_id": "rc:image:slovo-plach",
+      "object_id": "rc:object:slovo-plach",
+      "local_path": "../../../muzei/literatura/media-slovo/plach-yaroslavny.jpg",
+      "sha256": "b1986e9a4b173babf9c364bc21313dc8a19ff2b798d7a22235ccc8a0ea63cd63",
+      "source_url": "https://feb-web.ru/feb/slovo/texts/a50/a50-007-.htm?cmd=p",
+      "credit_ru": "Василий Перов. Плач Ярославны. 1881",
+      "alt_ru": "Плач Ярославны",
+      "rights": {
+        "status": "pending",
+        "basis_ru": "Существующий материал исходной страницы. Точное происхождение цифрового файла и паспорт лицензии ещё не восстановлены; ссылка здесь на контекст, не на файл.",
+        "checked_at": "2026-09-15",
+        "commercial_use": "unclear",
+        "derivatives": "unclear",
+        "ai_modification": "unclear"
+      }
+    },
+    {
+      "image_id": "rc:image:slovo-edition",
+      "object_id": "rc:object:slovo-edition",
+      "local_path": "../../../muzei/literatura/hero-slovo-1800.jpg",
+      "sha256": "3e8376116fd44d8826d92b5a6574bf2578b4fea5f9566a97921dde050277361f",
+      "source_url": "https://kp.rusneb.ru/item/material/iroicheskaya-pesn-o-pohode-na-polovcov-udelnago-knyazya-novagoroda-severskago-igorya-svyatoslavicha",
+      "credit_ru": "Сенатская типография. Первое издание Слова. 1800",
+      "alt_ru": "Первое издание Слова",
+      "rights": {
+        "status": "pending",
+        "basis_ru": "Существующий материал исходной страницы. Точное происхождение цифрового файла и паспорт лицензии ещё не восстановлены; ссылка здесь на контекст, не на файл.",
+        "checked_at": "2026-09-15",
+        "commercial_use": "unclear",
+        "derivatives": "unclear",
+        "ai_modification": "unclear"
+      }
+    }
+  ],
+  "risks": {
+    "historical": {
+      "level": "medium",
+      "reason_ru": "Рассказ соединяет поэму и летопись.",
+      "mitigation_ru": "Раздельные видимые подписи источников и позднего списка."
+    },
+    "legal": {
+      "level": "medium",
+      "reason_ru": "Паспорт репродукций не восстановлен.",
+      "mitigation_ru": "Не заявлять допуск публичной финальной поставки."
+    },
+    "reputational": {
+      "level": "medium",
+      "reason_ru": "Превью может быть принято за законченную страницу.",
+      "mitigation_ru": "Точный статус и незакрытые ворота в приёмке."
+    }
+  },
+  "seo": {
+    "title_ru": "Слово о полку Игореве — плен, брат и возвращение домой",
+    "description_ru": "Игорь говорит, что смерть лучше плена, — а затем сам оказывается пленником и видит, как продолжает сражаться его брат.",
+    "h1_ru": "Слово о полку Игореве",
+    "canonical_url": "https://arabelthera-dot.github.io/rc-museum-preview/drafts/slovo-agent-editorial/standards-v3/page.html",
+    "index_state": "noindex",
+    "primary_query_ru": "Слово о полку Игореве",
+    "og_image_id": "rc:image:slovo-battle"
+  },
+  "media": [
+    {
+      "media_id": "rc:media:slovo-audio",
+      "kind": "audio",
+      "platform": "web",
+      "status": "existing-needs-transcript-audit",
+      "path": "../../../muzei/literatura/audio-guide-slovo-yaroslavna-ru.mp3"
+    }
+  ],
+  "publication": {
+    "blockers": [
+      "Самостоятельный ролик отсутствует",
+      "Права цифровых репродукций требуют восстановления",
+      "Принятые профиль и reference литературы отсутствуют",
+      "Финальная строгая и внешняя сдача не пройдена"
+    ],
+    "approvals": {
+      "fact_check": false,
+      "rights": false,
+      "editorial": false
+    },
+    "target_path": "drafts/slovo-agent-editorial/standards-v3/page.html"
+  },
+  "production": {
+    "level": "A",
+    "brief": "delta-brief.md",
+    "profile": "page.profile.json",
+    "basis_commit": "7c319fd",
+    "reference_status": "candidate-not-accepted"
+  }
+}

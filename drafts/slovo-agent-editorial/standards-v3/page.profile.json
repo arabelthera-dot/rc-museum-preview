@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "profile": "literatura.work.v1-candidate",
+  "museum": "literatura",
+  "status": "candidate-not-accepted",
+  "required": {
+    "selectors": [
+      ".top",
+      ".b1",
+      ".b2",
+      ".b3",
+      ".b4",
+      ".hero-scene",
+      ".scene-caption",
+      ".hero-lead",
+      ".museum",
+      ".hook",
+      ".hero-btns",
+      "#rolik",
+      "#audioguide",
+      "#choice",
+      "#brother",
+      "#yaroslavna",
+      "#ovlur",
+      "#fire",
+      "#world-context",
+      "#quiz",
+      "#calendar",
+      "#kuda-dalshe",
+      "#istochniki"
+    ]
+  },
+  "score": {
+    "enabled": true,
+    "maximum": 100,
+    "manifest_selector": "#museum-score-manifest"
+  },
+  "calendar": {
+    "enabled": true,
+    "source": "../../../muzei/literatura/calendar-literatura.js"
+  }
+}

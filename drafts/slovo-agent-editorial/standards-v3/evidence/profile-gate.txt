@@ -1,0 +1,57 @@
+OK   канон museum-core.md: /home/agent/projects/russian-civilization/rc-museum-production/standards/museum-core.md
+OK   канон page-production-standard.md: /home/agent/projects/russian-civilization/docs/standards/page-production-standard.md
+OK   канон audit-pages.py: /home/agent/projects/russian-civilization/tools/audit-pages.py
+OK   тематический skill: /home/agent/.claude/skills/museum-literatura/SKILL.md
+OK   копии skill совпадают: 6f9b6fdfe6a9: /home/agent/.claude/skills/museum-literatura/SKILL.md
+OK   зависимость rc-text: /home/agent/.claude/skills/rc-text/SKILL.md
+OK   копии rc-text совпадают: версий: 1
+OK   зависимость rc-artdirection: /home/agent/.claude/skills/rc-artdirection/SKILL.md
+OK   копии rc-artdirection совпадают: версий: 1
+OK   зависимость rc-hero: /home/agent/.claude/skills/rc-hero/SKILL.md
+OK   копии rc-hero совпадают: версий: 1
+OK   зависимость rc-design-review: /home/agent/.claude/skills/rc-design-review/SKILL.md
+OK   копии rc-design-review совпадают: версий: 1
+OK   паспорт issue.json: /home/agent/worktrees/slovo-finish-standards-1509/drafts/slovo-agent-editorial/standards-v3/issue.json
+OK   интерпретатор: /usr/bin/python3
+OK   HTML страницы: /home/agent/worktrees/slovo-finish-standards-1509/drafts/slovo-agent-editorial/standards-v3/page.html
+OK   валидатор issue.json: ПРЕДУПРЕЖДЕНИЕ: изображение 2: права имеют статус pending.
+ПРЕДУПРЕЖДЕНИЕ: изображение 3: права имеют статус pending.
+ИТОГ: проверка пройдена; ошибок 0, предупреждений 3.
+OK   версия профиля: 1
+OK   имя профиля: literatura.work.v1-candidate
+OK   музей профиля: профиль=literatura; команда=literatura
+FAIL канонический audit-pages:   23. хук — одна мысль (§6) — чисто
+
+ИТОГ: страниц 1, нарушений 1, НЕ ПРОВЕРЕНО 0
+OK   обязательный узел .top: найдено: 1
+OK   обязательный узел .b1: найдено: 1
+OK   обязательный узел .b2: найдено: 1
+OK   обязательный узел .b3: найдено: 1
+OK   обязательный узел .b4: найдено: 1
+OK   обязательный узел .hero-scene: найдено: 1
+OK   обязательный узел .scene-caption: найдено: 1
+OK   обязательный узел .hero-lead: найдено: 1
+OK   обязательный узел .museum: найдено: 1
+OK   обязательный узел .hook: найдено: 1
+OK   обязательный узел .hero-btns: найдено: 1
+FAIL обязательный узел #rolik: найдено: 0
+OK   обязательный узел #audioguide: найдено: 1
+OK   обязательный узел #choice: найдено: 1
+OK   обязательный узел #brother: найдено: 1
+OK   обязательный узел #yaroslavna: найдено: 1
+OK   обязательный узел #ovlur: найдено: 1
+OK   обязательный узел #fire: найдено: 1
+OK   обязательный узел #world-context: найдено: 1
+OK   обязательный узел #quiz: найдено: 1
+OK   обязательный узел #calendar: найдено: 1
+OK   обязательный узел #kuda-dalshe: найдено: 1
+OK   обязательный узел #istochniki: найдено: 1
+???? производные счётчики: collection.enabled=false у профиля literatura.work.v1-candidate, а записи в references/rule-scope.json нет — форма проверки не назначена
+OK   ID начислений уникальны: ['q']
+OK   сумма начислений: сумма=100, манифест=100, профиль=100
+OK   знаменатель показан: ожидался / 100
+OK   база ссылок календаря: base не задан, ссылки от папки страницы
+OK   календарь разобран: дней: 1
+FAIL хуки всех открытых дней: 01-01:нет lit-slovo-o-polku-igoreve.html
+
+ИТОГ: прошло 47, ошибок 3, предупреждений 0, не применимо 0, НЕ ПРОВЕРЕНО 1

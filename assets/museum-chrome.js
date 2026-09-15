@@ -196,6 +196,7 @@
   + ':where(.hero-btns .btn){cursor:pointer;font:inherit;font-size:15px;border-radius:12px;'
   + 'padding:13px 24px;border:1px solid currentColor;background:transparent;color:inherit}';
 
+  if (C.readableHeader) css += '@media(max-width:640px){html[data-museum] header.top{padding-top:8px!important}html[data-museum] .hero-lead .museum{display:block!important}html[data-museum] .hero-btns>a{font-size:14px!important;padding:8px 10px!important;min-height:44px}html[data-museum] .crumbs{font-size:14px!important}html[data-museum] .scene-caption .scene-cap{font-size:14px!important}html[data-museum] .hero-lead .date-chip{margin-bottom:3px!important}}';
   var st = doc.createElement('style'); st.textContent = css; doc.head.appendChild(st);
 
   function el(tag, cls, html){var e=doc.createElement(tag); if(cls)e.className=cls; if(html!=null)e.innerHTML=html; return e;}
@@ -399,6 +400,10 @@
         doc.head.appendChild(sm);
       }
     }
+  }
+  if (C.navigationAfterHero) {
+    var strip = doc.querySelector('.hero-under'), share = doc.querySelector('.sharerow');
+    if (strip) { if (nav) strip.insertAdjacentElement('afterend', nav); if (share) strip.insertAdjacentElement('afterend', share); }
   }
   if(nav){
     var nrow = nav.querySelector('.row'), nprog = doc.getElementById('secprog');

@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "/home/agent/projects/russian-civilization/tools/gate.py", line 218, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/home/agent/projects/russian-civilization/tools/gate.py", line 195, in main
+    results = [run(name, command, project) for name, command in checks]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agent/projects/russian-civilization/tools/gate.py", line 195, in <listcomp>
+    results = [run(name, command, project) for name, command in checks]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agent/projects/russian-civilization/tools/gate.py", line 37, in run
+    proc = subprocess.run(command, cwd=cwd, text=True, capture_output=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/subprocess.py", line 548, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/subprocess.py", line 1024, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/lib/python3.11/subprocess.py", line 1901, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/agent/bin/shot'

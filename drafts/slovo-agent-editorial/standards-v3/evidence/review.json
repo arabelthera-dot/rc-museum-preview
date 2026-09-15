@@ -1,0 +1,21 @@
+{
+  "page_sha256": "2f3267b49c584797bd01c61aae82118de20cc925a6300db09134ede90097821d",
+  "reviewer": "codex-bot + independent slovo_review",
+  "verdict": "fail",
+  "reference_comparison": {
+    "status": "fail",
+    "evidence": "Принятый reference литературы отсутствует. База 7c319fd сохранена архивом."
+  },
+  "content": {
+    "status": "fail",
+    "evidence": "Пять историй сохранены, добавлен мировой след; отсутствует самостоятельный ролик, права не закрыты."
+  },
+  "interaction": {
+    "status": "pass",
+    "evidence": "65 сценариев: восемь путей; 80→повтор→100; скрытые баллы отклонены. Итоговые числа в browser-final.json."
+  },
+  "accessibility": {
+    "status": "fail",
+    "evidence": "Повторный финальный браузерный отчёт должен быть сверён после последних размеров. Живой тест и экранный диктор не выполнены."
+  }
+}

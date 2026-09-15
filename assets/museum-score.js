@@ -103,6 +103,16 @@
   }
 
   window.award = function (key, points) {
+    if (cfg.strictAwards && cfg.awards) {
+      var valid = false;
+      Object.keys(cfg.awards).forEach(function (id) {
+        var item = cfg.awards[id];
+        if (Array.isArray(item)) {
+          for (var i = 0; i < item[0]; i++) if (key === id + i && Number(points) === Number(item[1])) valid = true;
+        } else if (key === id && Number(points) === Number(item)) valid = true;
+      });
+      if (!valid) return;
+    }
     if (earned[key]) return;
     earned[key] = true;
     raw += Number(points) || 0;

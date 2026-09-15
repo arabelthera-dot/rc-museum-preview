@@ -71,7 +71,7 @@
       + '<div class="agtop">'
         + '<button class="agbtn" id="agbtn" aria-label="Включить аудиогид">▶</button>'
         + '<div>'
-          + '<div class="agttl">Весь зал за <span id="agdur">'+esc(CFG.durationLabel||'…')+'</span></div>'
+          + '<div class="agttl">'+esc(CFG.durationPrefix == null ? 'Весь зал за ' : CFG.durationPrefix)+'<span id="agdur">'+esc(CFG.durationLabel||'…')+'</span></div>'
           + '<div class="agsub">'+esc(CFG.lead||'')+'</div>'
         + '</div>'
       + '</div>'
@@ -91,9 +91,9 @@
     }
   }
   b.addEventListener('click',function(){ if(a.paused){ensureAudio();a.play();}else a.pause(); });
-  a.addEventListener('play',function(){ b.textContent='❚❚'; a.style.display='block'; });
-  a.addEventListener('pause',function(){ b.textContent='▶'; });
-  a.addEventListener('ended',function(){ b.textContent='▶'; });
+  a.addEventListener('play',function(){ b.textContent='❚❚'; b.setAttribute('aria-label','Приостановить аудиогид'); a.style.display='block'; });
+  a.addEventListener('pause',function(){ b.textContent='▶'; b.setAttribute('aria-label','Включить аудиогид'); });
+  a.addEventListener('ended',function(){ b.textContent='▶'; b.setAttribute('aria-label','Включить аудиогид'); });
   a.addEventListener('loadedmetadata',function(){
     var d=a.duration; if(!isFinite(d))return;
     var m=Math.floor(d/60), s=Math.round(d%60); if(s===60){m++;s=0;}
