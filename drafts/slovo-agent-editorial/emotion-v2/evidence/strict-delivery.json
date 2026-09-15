@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "status": "rejected",
+  "page": "/home/agent/worktrees/slovo-agent-editorial/drafts/slovo-agent-editorial/emotion-v2/page.html",
+  "kind": "page",
+  "museum": "literatura",
+  "errors": [
+    "profile: обязательный файл не указан",
+    "issue: обязательный файл не указан",
+    "reference: в принятом профиле не закреплён эталон с SHA-256",
+    "browser: обязательный файл не указан",
+    "core.video: Нет ролика.",
+    "core.audio: Нет аудиогида.",
+    "core.buttons: Нет пары «Читать историю» / «Слушать аудиогид».",
+    "review: обязательный файл не указан"
+  ],
+  "inputs": {
+    "/home/agent/worktrees/slovo-agent-editorial/drafts/slovo-agent-editorial/emotion-v2/page.html": "6c200ecf96472ca26987521e4d280e7efb8177ecf7d600a37a13c80db4ff2aa9",
+    "/home/agent/worktrees/museum-delivery-control/russian-civilization/platform/contracts/accepted-page-profiles.json": "ade39dbfdaa669346cd5af64addad8962d27d89b75e4c5abafd72f2dc8e675d2",
+    "/home/agent/worktrees/museum-delivery-control/russian-civilization/tools/page_delivery.py": "6cfb3125be929da3b774003cde6235b08f877c34be83a909c935069aa0273355",
+    "/home/agent/worktrees/museum-delivery-control/russian-civilization/tools/rc-page.py": "f0316cb187d79454694d908c605389cf0afed3261bca7ee7f7fcf6648ceaf880",
+    "/home/agent/worktrees/museum-delivery-control/russian-civilization/tools/audit-pages.py": "5b2cac6c5daee8079cc3da61ebe55dd572eaa82d60a05a40c1ae3f4432e9a6b5",
+    "/home/agent/worktrees/museum-delivery-control/russian-civilization/docs/skills/museum-page-production/scripts/page_gate.py": "884e115dba87c75e7620954160573574e78a03a0c1fb46fb48c6de100a56c34a",
+    "/home/agent/worktrees/museum-delivery-control/russian-civilization/platform/runtime/profile_contract.py": "c697584b941a6374b1be5c306f09c30dba777c7d3ca75369c5e3e5973c57429b",
+    "/home/agent/worktrees/slovo-agent-editorial/assets/fonts.css": "6025405e45ebd2219a5716ff005bd18a234361b87151f483c5d749c9679d29a0",
+    "/home/agent/worktrees/slovo-agent-editorial/assets/museum-literatura.css": "c61af6100f347eca763bde21e186eed1e46b4f7595610697abd05e68e231773c",
+    "/home/agent/worktrees/slovo-agent-editorial/assets/museum-theme.css": "17e21938d52a36326f08ddf5555b9414e5771b165582e35c58690f77307fa9b5",
+    "/home/agent/worktrees/slovo-agent-editorial/muzei/literatura/media-slovo/hero-battle-1880.jpg": "53ed5fd458c94d0929ccaff7fa5d008d5ff1ac3c6368fec916526d3542aed9b5",
+    "/home/agent/worktrees/slovo-agent-editorial/muzei/literatura/media-slovo/plach-yaroslavny.jpg": "b1986e9a4b173babf9c364bc21313dc8a19ff2b798d7a22235ccc8a0ea63cd63",
+    "/home/agent/worktrees/slovo-agent-editorial/muzei/literatura/hero-slovo-1800.jpg": "3e8376116fd44d8826d92b5a6574bf2578b4fea5f9566a97921dde050277361f",
+    "/home/agent/worktrees/slovo-agent-editorial/assets/museum-score.js": "2182608307c7078473ece8453b34efa492a769f832ca5426169ff8eaddb59a2f",
+    "/home/agent/worktrees/slovo-agent-editorial/assets/museum-audioguide.js": "25ee813c11e79591f8a50895d65e0e52c230aa7abe5d604ee7ed335316b63caf",
+    "/home/agent/worktrees/slovo-agent-editorial/assets/museum-choice-tale.js": "6aee17abd710db0c72a01085967efaf55a414c5edfa666574b45b46be465b709",
+    "/home/agent/worktrees/slovo-agent-editorial/assets/museum-quiz.js": "cbad871665abd09691bcb0095c4f6eb859ae2f52b7551de37eef4b2d505bdd17",
+    "/home/agent/worktrees/slovo-agent-editorial/assets/museum-chrome.js": "36e66b9e071643768f4a23f2fa9daf1918cef8815962afd2a5ef60b30670c74b",
+    "/home/agent/worktrees/slovo-agent-editorial/assets/museum-support.js": "b01f62ae2ec23f6e1329f6a2c2b2e9bc85e72545696d360a418fe0df040bbbcd",
+    "/home/agent/worktrees/slovo-agent-editorial/muzei/literatura/calendar-literatura.js": "786488d43c62a9dcb4fc682c553a37c6e38b17d19bf12160fb6c463890a0baf2",
+    "/home/agent/worktrees/slovo-agent-editorial/assets/museum-calendar-month.js": "e597a197c185ee065da25691ccb5c4cd538960f7642629c30198dc4ab81d59b3"
+  },
+  "request": {
+    "kind": "page",
+    "museum": "literatura",
+    "project": "/home/agent/worktrees/museum-delivery-control/russian-civilization",
+    "profile": null,
+    "issue": null,
+    "browser_report": null,
+    "review": null
+  },
+  "page_sha256": "6c200ecf96472ca26987521e4d280e7efb8177ecf7d600a37a13c80db4ff2aa9",
+  "core_checks": {
+    "core.header": true,
+    "core.crumbs": true,
+    "core.date": true,
+    "core.caption": true,
+    "core.video": false,
+    "core.audio": false,
+    "core.calendar": true,
+    "core.next": true,
+    "core.buttons": false,
+    "core.header_order": true
+  }
+}

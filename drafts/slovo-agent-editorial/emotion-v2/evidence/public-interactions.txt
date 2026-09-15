@@ -1,0 +1,21 @@
+### Result
+{"details":"","images":[{"src":"https://raw.githack.com/arabelthera-dot/rc-museum-preview/7c319fd/muzei/literatura/media-slovo/hero-battle-1880.jpg","loaded":true},{"src":"https://raw.githack.com/arabelthera-dot/rc-museum-preview/7c319fd/muzei/literatura/media-slovo/hero-battle-1880.jpg","loaded":true},{"src":"https://raw.githack.com/arabelthera-dot/rc-museum-preview/7c319fd/muzei/literatura/media-slovo/plach-yaroslavny.jpg","loaded":true},{"src":"https://raw.githack.com/arabelthera-dot/rc-museum-preview/7c319fd/muzei/literatura/hero-slovo-1800.jpg","loaded":true}],"choice":"ФИНАЛ","score":"20","audio":{"duration":95.16,"time":0.547394,"paused":false}}
+### Ran Playwright code
+```js
+await (async page => {const out={};await page.locator("#brother summary").click();out.details=await page.locator("#brother details").getAttribute("open");await page.locator("#brother summary").click();for(const i of await page.locator("img").all()){await i.scrollIntoViewIfNeeded();}await page.waitForTimeout(400);out.images=await page.locator("img").evaluateAll(xs=>xs.map(i=>({src:i.src,loaded:i.complete&&i.naturalWidth>0})));for(let i=0;i<3;i++)await page.locator(".ct-choice").first().click();out.choice=await page.locator(".ct-progress").innerText();await page.locator(".ct-reset").click();await page.locator(".mq-opt").first().click();out.score=await page.locator("#score").innerText();await page.getByRole("button",{name:"Включить аудиогид",exact:true}).click();await page.waitForTimeout(900);out.audio=await page.locator("audio").evaluate(a=>({duration:a.duration,time:a.currentTime,paused:a.paused}));await page.locator("audio").evaluate(a=>a.pause());return out;})(page);
+```
+### Open tabs
+- 0: [Genosai — нейросеть для создания видео, фото и музыки онлайн](https://genosai.io/docs/public-api#intro)
+- 1: [Genosai — Login](https://genosai.io/auth)
+- 2: [Первый в мире расчётный нефтепровод — Шухов — Русские первые в мире](https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-05jan-shukhov.html)
+- 3: [New Tab](chrome://new-tab-page/)
+- 4: [«Девятый вал» · Айвазовский · Русское искусство](https://arabelthera-dot.github.io/rc-museum-preview/muzei/iskusstvo/pic-aivazovsky-devyatyi-val.html)
+- 5: [Брестская крепость — «Русские не сдаются» — Русская цивилизация](https://arabelthera-dot.github.io/rc-museum-preview/muzei/ne-sdayutsya/podvig-brest.html)
+- 6: [Слово о полку Игореве — плен, брат и возвращение домой](http://172.22.0.4:8873/muzei/literatura/lit-slovo-emotion.html)
+- 7: (current) [Слово о полку Игореве — плен, брат и возвращение домой](https://raw.githack.com/arabelthera-dot/rc-museum-preview/7c319fd/drafts/slovo-agent-editorial/emotion-v2/page.html)
+### Page
+- Page URL: https://raw.githack.com/arabelthera-dot/rc-museum-preview/7c319fd/drafts/slovo-agent-editorial/emotion-v2/page.html
+- Page Title: Слово о полку Игореве — плен, брат и возвращение домой
+- Console: 2 errors, 0 warnings
+### Events
+- New console entries: .playwright-cli/console-2026-09-15T12-50-36-600Z.log#L3

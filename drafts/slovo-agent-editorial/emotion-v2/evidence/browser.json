@@ -1,0 +1,130 @@
+{
+  "page_url": "http://172.22.0.4:8873/muzei/literatura/lit-slovo-emotion.html",
+  "page_sha256": "8a063fc4d9774a7551e33d47caf5cc262ebece6edcdbbcc4cf1b0fdad38d4874",
+  "reviewer": "codex-slovo-emotion visual subagent",
+  "status": "scenarios_passed",
+  "checked_at": "2026-09-15T12:48:20Z",
+  "mobile": {
+    "width": 390,
+    "height": 844,
+    "scrollWidth": 375,
+    "h1": 645.359375,
+    "buttons": 831.890625,
+    "images": "See interactions.images after scrolling",
+    "supports": [
+      {
+        "top": 2152.640625,
+        "percent": 21.55442700510664
+      },
+      {
+        "top": 9440.859375,
+        "percent": 94.5314846800841
+      }
+    ],
+    "audio": "See interactions.audio after play",
+    "details": 5
+  },
+  "desktop": {
+    "width": 1440,
+    "scrollWidth": 1425,
+    "h1": 791.96875,
+    "buttons": 940.8125,
+    "supports": [
+      22.92734621451104,
+      95.2255849106204
+    ]
+  },
+  "interactions": {
+    "choices": [
+      "ШАГ 1 ИЗ 3",
+      "ШАГ 2 ИЗ 3",
+      "ШАГ 3 ИЗ 3"
+    ],
+    "choiceFinal": "ТВОЙ ПУТЬберечь людей → довериться поступку → помнить надежду\n\nВ этом зале нет правильного ответа — есть только цена каждого выбора. И есть то, что выбрали они.\n\nВ истории осталось и то и другое. Игорь продолжил поход и оказался в плену. Овлур помог ему бежать. В «Слове» радость возвращения соседствует с горем о погибших. Это читательская развилка: твой выбор не меняет исторический исход.\nПройти заново",
+    "choiceReset": "ШАГ 1 ИЗ 3",
+    "wrong": "Кого ты запомнил в этой истории?\n\n1 / 5\n\nКто помог Игорю уйти из половецкого плена?\n\nОвлур, половец\nВсеволод привёл новое войско\nМусин-Пушкин\nОвлур помог побегу. Мусин-Пушкин связан с другой судьбой — сохранением самого произведения много веков спустя.\nСледующий вопрос →",
+    "correct": "Кого ты запомнил в этой истории?\n\n2 / 5\n\nЧто Ярославна хочет сделать, долетев до мужа?\n\nВручить ему оружие\nОбтереть его кровавые раны\nПотребовать нового похода\nОна хочет смочить рукав и обтереть раны мужа. За княжеской историей появляется желание оказаться рядом с любимым.\nСледующий вопрос →",
+    "score": "20",
+    "details": [
+      {
+        "opened": true,
+        "closed": true
+      },
+      {
+        "opened": true,
+        "closed": true
+      },
+      {
+        "opened": true,
+        "closed": true
+      },
+      {
+        "opened": true,
+        "closed": true
+      },
+      {
+        "opened": true,
+        "closed": true
+      }
+    ],
+    "images": [
+      {
+        "src": "media-slovo/hero-battle-1880.jpg",
+        "loaded": true
+      },
+      {
+        "src": "media-slovo/hero-battle-1880.jpg",
+        "loaded": true
+      },
+      {
+        "src": "media-slovo/plach-yaroslavny.jpg",
+        "loaded": true
+      },
+      {
+        "src": "hero-slovo-1800.jpg",
+        "loaded": true
+      }
+    ],
+    "audio": {
+      "duration": 95.16,
+      "currentTime": 1.75234,
+      "paused": false
+    }
+  },
+  "screenshots": [
+    "mobile-first.png",
+    "desktop-first.png",
+    "desktop-game.png",
+    "final-mobile-first.png",
+    "brother-open.png",
+    "score100.png"
+  ],
+  "limitations": [
+    "Initial unloaded lazy images were loaded by scrolling and confirmed in interactions.images.",
+    "Audio playback and progression verified; no full listening test.",
+    "Not the strict delivery gate; no accepted literature machine profile/reference available."
+  ],
+  "full_score_after_reload": {
+    "scores": [
+      "20",
+      "40",
+      "60",
+      "80",
+      "100"
+    ],
+    "quiz": "Кого ты запомнил в этой истории?\n\nВопросы пройдены: верных 5 из 5.",
+    "diploma": "Внимательный читатель «Слова»\n\nПять верных ответов о людях и судьбе произведения.\n\n100",
+    "diplomaVisible": true,
+    "score": "100"
+  },
+  "repeated_award": {
+    "before": "100",
+    "after": "100",
+    "method": "Repeated existing award q0 twice"
+  },
+  "final_mobile_fold": {
+    "h1": 637.25,
+    "buttons": 823.78125
+  },
+  "updated_at": "2026-09-15T12:49:50.748562+00:00"
+}

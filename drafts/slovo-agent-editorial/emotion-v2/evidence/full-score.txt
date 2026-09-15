@@ -1,0 +1,6 @@
+### Result
+{"scores":["20","40","60","80","100"],"quiz":"Кого ты запомнил в этой истории?\n\nВопросы пройдены: верных 5 из 5.","diploma":"Внимательный читатель «Слова»\n\nПять верных ответов о людях и судьбе произведения.\n\n100","diplomaVisible":true,"score":"100"}
+### Ran Playwright code
+```js
+await (async page => {let scores=[];for(const i of [0,1,2,0,1]){await page.locator(".mq-opt").nth(i).click();scores.push(await page.locator("#score").innerText());await page.locator(".mq-next").click();}return {scores,quiz:await page.locator("#quiz").innerText(),diploma:await page.locator("#dipl").innerText(),diplomaVisible:await page.locator("#dipl").isVisible(),score:await page.locator("#score").innerText()};})(page);
+```

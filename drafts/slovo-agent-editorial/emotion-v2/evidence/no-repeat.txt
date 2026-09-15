@@ -1,0 +1,10 @@
+### Result
+{
+  "before": "100",
+  "after": "100",
+  "method": "Repeated existing award q0 twice"
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => {const before=document.querySelector("#score").textContent;award("q0",20);award("q0",20);return {before,after:document.querySelector("#score").textContent,method:"Repeated existing award q0 twice"}}');
+```

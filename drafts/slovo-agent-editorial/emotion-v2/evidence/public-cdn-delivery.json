@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-09-15T12:51:20.126411+00:00",
+  "requested_url": "https://rawcdn.githack.com/arabelthera-dot/rc-museum-preview/7c319fd/drafts/slovo-agent-editorial/emotion-v2/page.html",
+  "access": "anonymous HTTP; no user-session verification",
+  "expected_markers": [
+    "Он уже в плену"
+  ],
+  "passed": true,
+  "errors": [],
+  "http_status": 200,
+  "final_url": "https://rawcdn.githack.com/arabelthera-dot/rc-museum-preview/7c319fd/drafts/slovo-agent-editorial/emotion-v2/page.html",
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 32918,
+  "sha256": "6c200ecf96472ca26987521e4d280e7efb8177ecf7d600a37a13c80db4ff2aa9"
+}
