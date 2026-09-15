@@ -329,25 +329,25 @@
     "literatura/slovo-standards-v3": {
       "title": "Рукопись сгорела. Голос остался",
       "horizontal": {
-        "file": "drafts/slovo-agent-editorial/standards-v3/media/slovo-horizontal.mp4",
-        "local": "drafts/slovo-agent-editorial/standards-v3/media/slovo-horizontal.mp4",
-        "mb": 3.711,
-        "sec": 86.36
+        "file": "drafts/slovo-agent-editorial/standards-v3/media/slovo-horizontal-v2.mp4",
+        "local": "drafts/slovo-agent-editorial/standards-v3/media/slovo-horizontal-v2.mp4",
+        "mb": 4.037,
+        "sec": 86.64
       },
       "vertical": {
-        "file": "drafts/slovo-agent-editorial/standards-v3/media/slovo-vertical.mp4",
-        "local": "drafts/slovo-agent-editorial/standards-v3/media/slovo-vertical.mp4",
-        "mb": 2.059,
-        "sec": 42.2
+        "file": "drafts/slovo-agent-editorial/standards-v3/media/slovo-vertical-v2.mp4",
+        "local": "drafts/slovo-agent-editorial/standards-v3/media/slovo-vertical-v2.mp4",
+        "mb": 2.031,
+        "sec": 43.99
       },
       "poster": {
-        "file": "drafts/slovo-agent-editorial/standards-v3/media/horizontal-poster.jpg",
-        "local": "drafts/slovo-agent-editorial/standards-v3/media/horizontal-poster.jpg",
+        "file": "drafts/slovo-agent-editorial/standards-v3/media/horizontal-poster-v2.jpg",
+        "local": "drafts/slovo-agent-editorial/standards-v3/media/horizontal-poster-v2.jpg",
         "mb": 0.047
       },
       "poster_vertical": {
-        "file": "drafts/slovo-agent-editorial/standards-v3/media/vertical-poster.jpg",
-        "local": "drafts/slovo-agent-editorial/standards-v3/media/vertical-poster.jpg",
+        "file": "drafts/slovo-agent-editorial/standards-v3/media/vertical-poster-v2.jpg",
+        "local": "drafts/slovo-agent-editorial/standards-v3/media/vertical-poster-v2.jpg",
         "mb": 0.057
       },
       "generated": false,

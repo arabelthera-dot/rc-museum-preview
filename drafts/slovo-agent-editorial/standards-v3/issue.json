@@ -165,7 +165,7 @@
       "title_ru": "Первое издание Слова",
       "date_display_ru": "1800",
       "attribution_ru": "Сенатская типография",
-      "holder_ru": "НЭБ, экземпляр первого издания",
+      "holder_ru": "Держатель экземпляра факсимиле ImWerden не установлен",
       "source_ids": [
         "rc:source:slovo-neb"
       ]
@@ -208,7 +208,11 @@
         "checked_at": "2026-09-15",
         "commercial_use": "unclear",
         "derivatives": "allowed",
-        "ai_modification": "not_used"
+        "ai_modification": "not_used",
+        "jurisdiction_notes": {
+          "RU": "public-domain-confirmed",
+          "US": "publication-history-unverified; not a prohibition claim"
+        }
       }
     },
     {
@@ -268,14 +272,14 @@
       "kind": "video",
       "platform": "web",
       "status": "built",
-      "path": "media/slovo-horizontal.mp4"
+      "path": "media/slovo-horizontal-v2-v2.mp4"
     },
     {
       "media_id": "rc:media:slovo-video-vertical",
       "kind": "video",
       "platform": "social",
       "status": "built",
-      "path": "media/slovo-vertical.mp4"
+      "path": "media/slovo-vertical-v2-v2.mp4"
     }
   ],
   "publication": {

@@ -7,9 +7,9 @@
     "rate": "+3%"
   },
   "images": {
-    "edition": "/home/agent/worktrees/slovo-finish-standards-1509/muzei/literatura/hero-slovo-1800.jpg",
-    "battle": "/home/agent/worktrees/slovo-finish-standards-1509/muzei/literatura/media-slovo/hero-battle-1880.jpg",
-    "plach": "/home/agent/worktrees/slovo-finish-standards-1509/muzei/literatura/media-slovo/plach-yaroslavny.jpg"
+    "edition": "media/edition.jpg",
+    "battle": "media/battle.jpg",
+    "plach": "media/plach.jpg"
   },
   "scenes": [
     {
@@ -76,10 +76,17 @@
       "short": true
     }
   ],
-  "format": "LAYER",
-  "supporting_format": "DETAIL",
+  "format": "MYSTERY",
+  "supporting_format": "нет",
   "disclosure": "Синтезированный голос; звуковая реконструкция шелеста бумаги. Картины XIX века, не кадры похода. Репродукции не дорисованы.",
-  "proof": "Печатный титульный лист и набор 1800 года; переход от материального носителя к звучанию строки.",
+  "proof": "Крупный план даты1800 и типографского набора на подлинном титуле; отдельно обозначенные схемы рукописи и тиража",
   "role": "Ставит вопрос о живом голосе после гибели рукописи; плач не пересказывает и не заменяет.",
-  "rights_status": "awaiting-independent-review"
+  "rights_status": "reviewed-with-perov-us-publication-gap",
+  "turn": "7.12: появляется крупный план выходных данных сохранившегося печатного издания",
+  "visual_status": "Кадрирование и схемы; исторические оригиналы не дорисованы",
+  "subtitle_timing": "Короткие фразы VTT распределены внутри исходных сцен; требуется просмотр синхронизации",
+  "vertical_hook": "Рукопись сгорела. Почему мы всё ещё читаем «Слово»? Ответ — на этом печатном листе.",
+  "hypothesis": "После просмотра посетитель открывает строку Ярославны и включает аудиогид",
+  "deep_link": "#plach",
+  "vertical_end": "Открой полную страницу по ссылке. Услышь Ярославну и реши: что делает этот голос живым для тебя? Русская цивилизация. Поддержи музей."
 }
