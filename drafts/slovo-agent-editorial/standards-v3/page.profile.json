@@ -37,6 +37,17 @@
   },
   "calendar": {
     "enabled": true,
-    "source": "../../../muzei/literatura/calendar-literatura.js"
+    "source": "calendar-page.js"
+  },
+  "collection": {
+    "enabled": true,
+    "item_selector": "figure[data-rc-exhibit-id]",
+    "rights_selector": "li[data-rc-rights-id]",
+    "count_selector": "[data-rc-count=exhibits]",
+    "required_fields": [
+      "title",
+      "attribution",
+      "explanation"
+    ]
   }
 }
