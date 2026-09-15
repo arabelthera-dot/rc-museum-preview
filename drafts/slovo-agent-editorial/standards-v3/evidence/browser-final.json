@@ -1,0 +1,352 @@
+{
+  "checkedAt": "2026-09-15T14:09:29.953Z",
+  "url": "chrome-error://chromewebdata/",
+  "checks": [
+    {
+      "name": "layout 320",
+      "ok": true,
+      "detail": {
+        "width": 320,
+        "overflow": false,
+        "h1": 630,
+        "buttons": 820,
+        "museumVisible": true
+      }
+    },
+    {
+      "name": "layout 360",
+      "ok": true,
+      "detail": {
+        "width": 360,
+        "overflow": false,
+        "h1": 581,
+        "buttons": 746,
+        "museumVisible": true
+      }
+    },
+    {
+      "name": "layout 390",
+      "ok": true,
+      "detail": {
+        "width": 390,
+        "overflow": false,
+        "h1": 569,
+        "buttons": 734,
+        "museumVisible": true
+      }
+    },
+    {
+      "name": "layout 768",
+      "ok": true,
+      "detail": {
+        "width": 768,
+        "overflow": false,
+        "h1": 671,
+        "buttons": 816,
+        "museumVisible": true
+      }
+    },
+    {
+      "name": "layout 1440",
+      "ok": true,
+      "detail": {
+        "width": 1440,
+        "overflow": false,
+        "h1": 692,
+        "buttons": 837,
+        "museumVisible": true
+      }
+    },
+    {
+      "name": "five moments",
+      "ok": true
+    },
+    {
+      "name": "moment initially closed 0",
+      "ok": true
+    },
+    {
+      "name": "moment opens 0",
+      "ok": true
+    },
+    {
+      "name": "moment keyboard closes 0",
+      "ok": true
+    },
+    {
+      "name": "moment initially closed 1",
+      "ok": true
+    },
+    {
+      "name": "moment opens 1",
+      "ok": true
+    },
+    {
+      "name": "moment keyboard closes 1",
+      "ok": true
+    },
+    {
+      "name": "moment initially closed 2",
+      "ok": true
+    },
+    {
+      "name": "moment opens 2",
+      "ok": true
+    },
+    {
+      "name": "moment keyboard closes 2",
+      "ok": true
+    },
+    {
+      "name": "moment initially closed 3",
+      "ok": true
+    },
+    {
+      "name": "moment opens 3",
+      "ok": true
+    },
+    {
+      "name": "moment keyboard closes 3",
+      "ok": true
+    },
+    {
+      "name": "moment initially closed 4",
+      "ok": true
+    },
+    {
+      "name": "moment opens 4",
+      "ok": true
+    },
+    {
+      "name": "moment keyboard closes 4",
+      "ok": true
+    },
+    {
+      "name": "audio lazy",
+      "ok": true
+    },
+    {
+      "name": "audio plays",
+      "ok": true
+    },
+    {
+      "name": "audio paused label",
+      "ok": true
+    },
+    {
+      "name": "choice feedback 0-0",
+      "ok": true
+    },
+    {
+      "name": "choice feedback 0-1",
+      "ok": true
+    },
+    {
+      "name": "choice feedback 0-2",
+      "ok": true
+    },
+    {
+      "name": "choice feedback 1-0",
+      "ok": true
+    },
+    {
+      "name": "choice feedback 1-1",
+      "ok": true
+    },
+    {
+      "name": "choice feedback 1-2",
+      "ok": true
+    },
+    {
+      "name": "choice feedback 2-0",
+      "ok": true
+    },
+    {
+      "name": "choice feedback 2-1",
+      "ok": true
+    },
+    {
+      "name": "choice feedback 2-2",
+      "ok": true
+    },
+    {
+      "name": "choice feedback 3-0",
+      "ok": true
+    },
+    {
+      "name": "choice feedback 3-1",
+      "ok": true
+    },
+    {
+      "name": "choice feedback 3-2",
+      "ok": true
+    },
+    {
+      "name": "choice feedback 4-0",
+      "ok": true
+    },
+    {
+      "name": "choice feedback 4-1",
+      "ok": true
+    },
+    {
+      "name": "choice feedback 4-2",
+      "ok": true
+    },
+    {
+      "name": "choice feedback 5-0",
+      "ok": true
+    },
+    {
+      "name": "choice feedback 5-1",
+      "ok": true
+    },
+    {
+      "name": "choice feedback 5-2",
+      "ok": true
+    },
+    {
+      "name": "choice feedback 6-0",
+      "ok": true
+    },
+    {
+      "name": "choice feedback 6-1",
+      "ok": true
+    },
+    {
+      "name": "choice feedback 6-2",
+      "ok": true
+    },
+    {
+      "name": "choice feedback 7-0",
+      "ok": true
+    },
+    {
+      "name": "choice feedback 7-1",
+      "ok": true
+    },
+    {
+      "name": "choice feedback 7-2",
+      "ok": true
+    },
+    {
+      "name": "eight distinct outcomes",
+      "ok": true
+    },
+    {
+      "name": "wrong route 80",
+      "ok": true
+    },
+    {
+      "name": "retry available",
+      "ok": true
+    },
+    {
+      "name": "explicit correct result 0",
+      "ok": true
+    },
+    {
+      "name": "explicit correct result 1",
+      "ok": true
+    },
+    {
+      "name": "explicit correct result 2",
+      "ok": true
+    },
+    {
+      "name": "explicit correct result 3",
+      "ok": true
+    },
+    {
+      "name": "explicit correct result 4",
+      "ok": true
+    },
+    {
+      "name": "success 100",
+      "ok": true
+    },
+    {
+      "name": "diploma",
+      "ok": true
+    },
+    {
+      "name": "unregistered and repeated awards ignored",
+      "ok": true
+    },
+    {
+      "name": "hidden award rejected at zero",
+      "ok": true
+    },
+    {
+      "name": "two supports",
+      "ok": true
+    },
+    {
+      "name": "heart hidden beside support",
+      "ok": true
+    },
+    {
+      "name": "support first third",
+      "ok": true
+    },
+    {
+      "name": "images",
+      "ok": true
+    },
+    {
+      "name": "no JS errors",
+      "ok": true,
+      "detail": []
+    }
+  ],
+  "layouts": [
+    {
+      "width": 320,
+      "overflow": false,
+      "h1": 630,
+      "buttons": 820,
+      "museumVisible": true
+    },
+    {
+      "width": 360,
+      "overflow": false,
+      "h1": 581,
+      "buttons": 746,
+      "museumVisible": true
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "h1": 569,
+      "buttons": 734,
+      "museumVisible": true
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "h1": 671,
+      "buttons": 816,
+      "museumVisible": true
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "h1": 692,
+      "buttons": 837,
+      "museumVisible": true
+    }
+  ],
+  "errors": [],
+  "support": [
+    {
+      "ratio": 0.2219208004509583,
+      "text": "ПОДДЕРЖАТЬ ПРОЕКТ\n\nМузей создаёт небольшая команда. Поддержать проект "
+    },
+    {
+      "ratio": 0.948038507609921,
+      "text": "ПОДДЕРЖАТЬ ПРОЕКТ\n\nМузей создаёт небольшая команда. Поддержать его мож"
+    }
+  ],
+  "passed": 65,
+  "failed": []
+}
