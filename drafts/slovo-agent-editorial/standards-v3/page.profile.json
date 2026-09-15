@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "profile": "literatura.work.v1-candidate",
+  "profile": "literatura.work.v1",
   "museum": "literatura",
-  "status": "candidate-not-accepted",
+  "status": "accepted-for-this-page",
   "required": {
     "selectors": [
       ".top",

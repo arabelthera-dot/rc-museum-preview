@@ -284,9 +284,7 @@
   ],
   "publication": {
     "blockers": [
-      "Не подтверждено отдельное основание США для репродукции Перова",
-      "Принятые профиль и reference литературы отсутствуют",
-      "Финальная строгая и внешняя сдача не пройдена"
+      "US-история публикации репродукции Перова не подтверждена; разрешение публичного выпуска отдельно"
     ],
     "approvals": {
       "fact_check": false,
@@ -300,6 +298,6 @@
     "brief": "delta-brief.md",
     "profile": "page.profile.json",
     "basis_commit": "7c319fd",
-    "reference_status": "candidate-not-accepted"
+    "reference_status": "accepted-basis-7c319fd"
   }
 }
