@@ -1,0 +1,29 @@
+{
+  "test_id": "entry-390",
+  "code": "entry",
+  "width": 390,
+  "javascript_enabled": true,
+  "url": "http://b6.local/muzei/karikatura/day-02jan-napoleon-slava-nos.html",
+  "steps": [
+    "Open full route",
+    "Answer one question",
+    "Reload saved answer"
+  ],
+  "checks": [
+    {
+      "label": "Fresh score",
+      "actual": 0,
+      "expected": 0,
+      "ok": true
+    },
+    {
+      "label": "Restored earned score",
+      "actual": 10,
+      "expected": 10,
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "screenshot": "entry-390.png",
+  "status": "pass"
+}

@@ -1,0 +1,45 @@
+{
+  "test_id": "empty-390",
+  "code": "empty",
+  "width": 390,
+  "javascript_enabled": true,
+  "url": "http://b6.local/muzei/karikatura/day-02jan-napoleon-slava-nos.html",
+  "steps": [
+    "Inspect promised collection and activities"
+  ],
+  "checks": [
+    {
+      "label": "Alphabet has 34 sheets",
+      "actual": 34,
+      "expected": 34,
+      "ok": true
+    },
+    {
+      "label": "Foreign title removed",
+      "actual": 0,
+      "expected": 0,
+      "ok": true
+    },
+    {
+      "label": "Six sortable originals",
+      "actual": 6,
+      "expected": 6,
+      "ok": true
+    },
+    {
+      "label": "Five questions",
+      "actual": 5,
+      "expected": 5,
+      "ok": true
+    },
+    {
+      "label": "All questions have four choices",
+      "actual": 20,
+      "expected": 20,
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "screenshot": "empty-390.png",
+  "status": "pass"
+}

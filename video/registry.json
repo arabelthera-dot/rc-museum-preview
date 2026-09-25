@@ -236,10 +236,10 @@
       "horizontal": {
         "file": "karikatura/02jan-napoleon/day-02jan-napoleon.mp4",
         "local": "muzei/karikatura/video/day-02jan-napoleon.mp4",
-        "v": 1,
+        "v": 2,
         "w": 1920,
         "h": 1080,
-        "sec": 61.2,
+        "sec": 62.9,
         "mb": 21.3
       },
       "vertical": {
@@ -254,7 +254,7 @@
       "poster": {
         "file": "karikatura/02jan-napoleon/day-02jan-napoleon-poster.jpg",
         "local": "muzei/karikatura/video/day-02jan-napoleon-poster.jpg",
-        "v": 1
+        "v": 2
       },
       "poster_vertical": {
         "file": "karikatura/02jan-napoleon/day-02jan-napoleon-9x16-poster.jpg",

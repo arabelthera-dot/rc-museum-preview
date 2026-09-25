@@ -1,0 +1,14 @@
+{
+  "test_id": "wrong-390",
+  "code": "wrong",
+  "width": 390,
+  "javascript_enabled": true,
+  "url": "http://b6.local/muzei/karikatura/day-02jan-napoleon-slava-nos.html",
+  "steps": [],
+  "checks": [],
+  "errors": [
+    "page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://b6.local/muzei/karikatura/day-02jan-napoleon-slava-nos.html\", waiting until \"load\"\u001b[22m\n",
+    "Screenshot: page.screenshot: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n"
+  ],
+  "status": "fail"
+}
