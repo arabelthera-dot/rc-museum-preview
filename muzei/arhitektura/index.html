@@ -64,6 +64,34 @@
     .support-line p,.eyebrow,.hero-sign,.freshness,.reader-kicker,.today-main .today-meta,.today-main #today-hook,.story p,.calendar-intro p,.end p{font-size:1rem}
     .act-intro,.school-steps p{font-size:1rem}body #calbox .calcard p{font-size:1rem}body #calbox .calcard a,body #calbox .calcard h3 span,body #calbox .cdate,.foot small{font-size:.875rem}
     .route-start{min-height:44px;display:inline-flex;align-items:center;padding:10px 14px;background:var(--oxide);color:white;font-weight:750;text-decoration:none}.route-start.is-locked{background:var(--chalk);color:var(--muted);border:1px solid var(--line)}
+    /* Залы музея (§6-quinquies, п.4): второй вход — не по дате, а по смыслу. Разметка статичная,
+       читается без единого нажатия; ссылки ведут только на открытые страницы из MUSEUM_PUBLISHED. */
+    .halls-act{width:var(--page);margin:auto;padding:clamp(80px,10vw,146px) 0;border-top:1px solid var(--ink)}
+    .halls-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.72fr);gap:clamp(26px,6vw,80px);align-items:end;margin-bottom:44px}
+    .halls-act h2{font:500 clamp(3rem,6vw,6.8rem)/.94 var(--display);letter-spacing:-.045em;margin:12px 0 0}
+    .halls-lead{font:500 1.05rem/1.55 var(--display);color:var(--muted);margin:0;max-width:34ch}
+    .halls{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--ink);border-left:1px solid var(--ink)}
+    .hall{display:flex;flex-direction:column;gap:12px;padding:24px 22px 26px;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+    .hall-no{font:800 .875rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--oxide)}
+    .hall h3{font:500 clamp(1.6rem,2.3vw,2.35rem)/1 var(--display);letter-spacing:-.03em;margin:0}
+    .hall p{margin:0;color:var(--muted);font-size:.95rem;line-height:1.5}
+    .hall-list{list-style:none;margin:auto 0 0;padding:0;border-top:1px solid var(--line)}
+    .hall-list li{border-bottom:1px solid var(--line)}
+    .hall-list a{display:flex;justify-content:space-between;align-items:baseline;gap:12px;min-height:44px;padding:10px 2px;text-decoration:none;font-weight:750}
+    .hall-list a span{font:750 .875rem/1.35 var(--mono);text-transform:uppercase;color:var(--muted);text-align:right}
+    .hall-list a:hover{background:var(--acid)}
+    .halls-note{margin:18px 0 0;font:750 .875rem/1.5 var(--mono);text-transform:uppercase;color:var(--muted)}
+    @media(max-width:1100px){.halls{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:640px){.halls-act{padding:76px 0}.halls-head{grid-template-columns:1fr;gap:16px}.halls{grid-template-columns:1fr}.hall{padding:20px 16px 22px}}
+    /* Научный совет музея (§6-quater): только фамилии-ссылки либо честное «ищем». */
+    .council-act{width:var(--page);margin:auto;padding:clamp(70px,9vw,132px) 0;display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:clamp(28px,7vw,90px);border-top:1px solid var(--ink)}
+    .council-act h2{font:500 clamp(2.6rem,5vw,5.4rem)/.94 var(--display);letter-spacing:-.045em;margin:12px 0 0;max-width:12ch}
+    .council-body p{margin:0 0 16px;line-height:1.6;max-width:54ch}
+    .council-body b{color:var(--oxide)}
+    .council-go{display:inline-flex;align-items:center;gap:22px;min-height:56px;padding:0 20px;margin-top:8px;background:var(--ink);color:var(--white);text-decoration:none;font-weight:800}
+    .council-go:after{content:"↗";font-size:1.2rem}
+    .council-go:hover{background:var(--oxide)}
+    @media(max-width:980px){.council-act{grid-template-columns:1fr;gap:22px}}
   </style>
 </head>
 <body>
@@ -106,17 +134,59 @@
       <section class="route-box" id="my-route" aria-labelledby="route-title"><div><h3 id="route-title">Мой маршрут</h3><p id="route-status">Сохрани 3–5 памятников — маршрут останется в этом браузере.</p></div><button type="button" id="clear-route">Очистить</button><div class="route-list" id="route-list"></div><a class="route-start is-locked" id="start-route" data-route-gate data-route-href="kizhi-muzey.html" aria-disabled="true" tabindex="-1">Начать маршрут</a></section>
     </section>
 
+
+    <!-- Залы музея (§6-quinquies, п.4): второй вход для тех, кто пришёл не за датой.
+         Состав залов собран из открытых страниц музея (MUSEUM_PUBLISHED, calendar-data.js);
+         неоткрытая страница в зал не встаёт — ложной ссылки здесь быть не может. -->
+    <section class="halls-act" id="zaly" aria-labelledby="zaly-title">
+      <div class="halls-head"><div><p class="eyebrow">Второй вход · по залам</p><h2 id="zaly-title">Залы музея</h2></div><p class="halls-lead">Календарь ведёт по датам, залы — по смыслу. Здесь собирается то, что уже открыто: выбери материал, тип постройки или разговор о городе.</p></div>
+      <div class="halls">
+        <article class="hall"><span class="hall-no">Зал 01 · материал</span><h3>Дерево</h3><p>Погост, терем и дворец: из дерева строили и то, что стоит века, и то, что приходится собирать заново.</p>
+          <ul class="hall-list">
+            <li><a href="kizhi-muzey.html">Кижи <span>что держит ансамбль</span></a></li>
+            <li><a href="dvorets-alekseya-mihaylovicha.html">Дворец Алексея Михайловича <span>что в новом старое</span></a></li>
+            <li><a href="terem-astashovo.html">Терем Асташово <span>как подняли умирающий терем</span></a></li>
+          </ul></article>
+        <article class="hall"><span class="hall-no">Зал 02 · материал</span><h3>Белый камень</h3><p>Два домонгольских храма и один вопрос: что осталось от замысла, когда резьба уцелела не вся.</p>
+          <ul class="hall-list">
+            <li><a href="pokrova-na-nerli.html">Покрова на Нерли <span>что скрыто под холмом</span></a></li>
+            <li><a href="georgievskiy-sobor-yuryev-polskiy.html">Георгиевский собор <span>можно ли вернуть рисунок</span></a></li>
+          </ul></article>
+        <article class="hall"><span class="hall-no">Зал 03 · город и село</span><h3>Улица и фасад</h3><p>Село, которое выглядит как город: фасад здесь — заявление, а не украшение.</p>
+          <ul class="hall-list">
+            <li><a href="vyatskoe.html">Вятское <span>когда село выглядит как город</span></a></li>
+          </ul></article>
+        <article class="hall"><span class="hall-no">Зал 04 · расчёт</span><h3>Башни и инженерия</h3><p>Зодчество, где решает расчёт: наклон, металл и точность, которую видно на глаз.</p>
+          <ul class="hall-list">
+            <li><a href="nevjanskaya-bashnya.html">Невьянская башня <span>почему башня наклонилась</span></a></li>
+          </ul></article>
+      </div>
+      <p class="halls-note">Залы пополняются: как только страница открыта, она встаёт в свой зал — по нему видно, что в музее уже можно смотреть.</p>
+    </section>
+
     <section class="school" id="school" aria-labelledby="school-title"><div class="school-shell"><header><p class="eyebrow">Экскурсии для класса</p><h2 id="school-title">Не лекция. Совместное расследование.</h2><p class="school-lead">Учитель выбирает длительность, выводит страницу на общий экран и ведёт класс через наблюдение, выбор и короткий вывод.</p><div class="school-print"><button type="button" data-print="teacher">Лист учителя</button><button type="button" data-print="student">Лист ученика</button></div></header><div><div class="school-switch" role="tablist" aria-label="Длительность школьного маршрута"><button type="button" role="tab" aria-selected="true" data-school="short">5–7 классы · 15 минут</button><button type="button" role="tab" aria-selected="false" data-school="long">8–11 классы · 35 минут</button></div><div class="school-panel" aria-live="polite"><span class="school-meta" id="school-meta">5–7 классы · общий экран · 15 минут</span><h3 id="school-question">Что меняется, когда мы подходим ближе?</h3><div class="school-steps"><div><b id="school-before-time">До просмотра · 2 мин</b><p id="school-before">Класс предполагает, что важнее всего в Кижах.</p></div><div><b id="school-during-time">В музее · 10 мин</b><p id="school-during">Четыре группы берут остров, ансамбль, дом и деталь.</p></div><div><b id="school-after-time">После · 3 мин</b><p id="school-after">Каждая группа называет одно архитектурное решение.</p></div></div><details><summary>Сценарий для учителя</summary><div class="teacher-script" id="teacher-script"><ol><li>Покажи первый кадр без объяснения и собери три версии класса.</li><li>Переключи четыре расстояния; каждой группе дай один масштаб.</li><li>Спроси: что исчезло бы, если оставить только фасад?</li></ol><p><b>Результат:</b> ученик различает ландшафт, ансамбль, здание и деталь и объясняет одну связь между ними.</p></div></details></div></div></div></section>
 
     <section class="calendar-act" id="calendar" aria-labelledby="calendar-title"><div><p class="eyebrow">365 архитектурных вопросов</p><h2 id="calendar-title">Календарь музея</h2><p>Открой дату — увидишь вопрос дня. Готовый выпуск ведёт в полную историю; будущий показывает замысел без ложной ссылки.</p><p class="calendar-note">365 дат · один новый способ смотреть каждый день</p></div><div class="calendar-shell"><div id="calbox"></div></div></section>
 
     <section class="end" id="next" aria-labelledby="next-title"><h2 id="next-title">Куда войдём <span>сегодня?</span></h2><div><p>Начни с трёх минут. Дальше музей сам предложит приблизиться, измерить или усомниться.</p><div class="end-links"><a href="kizhi-muzey.html">Открыть Кижи</a><a href="pokrova-na-nerli.html">Пройти к Покрову на Нерли</a><a href="../../index.html">Вернуться в город-музей</a><a href="mailto:arabelthera@gmail.com?subject=%D0%9C%D1%83%D0%B7%D0%B5%D0%B9%20%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%B9%20%D0%B0%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D1%8B">Поддержать проект</a></div></div></section>
+
+    <!-- Научный совет музея (§6-quater, канон 21.07.2026): на титульной — только фамилии-ссылки
+         на справки консультантов; пока эксперта нет — честная строка-приглашение.
+         Выдуманных имён быть не может: проект про правду не имеет права на фейковых консультантов. -->
+    <section class="council-act" id="sovet" aria-labelledby="sovet-title">
+      <div><p class="eyebrow">Кто отвечает за факты</p><h2 id="sovet-title">Научный совет музея</h2></div>
+      <div class="council-body">
+        <p><b>Ищем научного консультанта музея</b> — историка архитектуры, реставратора или музейного работника, готового проверять даты, атрибуции и меру реконструкции: где подлинное, где воссозданное, а где наша осторожная версия.</p>
+        <p>Фамилии членов совета встанут здесь, и каждая откроет отдельную справку: кто он, чем занимается и что именно проверил в музее. Пока совета нет, мы говорим об этом прямо и имён не выдумываем.</p>
+        <a class="council-go" href="mailto:arabelthera@gmail.com?subject=%D0%9D%D0%B0%D1%83%D1%87%D0%BD%D1%8B%D0%B9%20%D1%81%D0%BE%D0%B2%D0%B5%D1%82%20%D0%BC%D1%83%D0%B7%D0%B5%D1%8F%20%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%B9%20%D0%B0%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D1%8B">Стать научным консультантом музея</a>
+      </div>
+    </section>
   </main>
 
   <article class="print-sheet" id="teacher-sheet"><h2>Архитектура: маршрут учителя</h2><p><b>Цель:</b> ученик различает ландшафт, ансамбль, здание и деталь и объясняет одну связь между ними.</p><ol><li>Покажи Кижи без объяснения. Собери три версии: что держит ансамбль?</li><li>Раздели класс на четыре группы: ландшафт, ансамбль, здание, деталь.</li><li>Переключите пять расстояний и выпишите по одному наблюдению.</li><li>Спросите: что исчезнет, если оставить только фасад?</li><li>Каждая группа формулирует один вывод и называет визуальное доказательство.</li></ol></article>
   <article class="print-sheet" id="student-sheet"><h2>Архитектура: лист наблюдения</h2><p>Имя ____________________ Дата __________</p><ol><li>Издалека я вижу ____________________________________________</li><li>В ансамбле главное __________________________________________</li><li>Материал работает так _______________________________________</li><li>След человека заметен здесь _________________________________</li><li>Сохранилось / восстановлено / воссоздано: ___________________</li><li>Мой вывод: архитектура — это ________________________________</li></ol></article>
 
-  <footer class="foot"><strong>Музей русской архитектуры</strong><nav><a href="#today-calendar">Сегодня</a><a href="#reader">Пять вопросов</a><a href="#atlas">Истории</a><a href="#school">Школе</a><a href="#calendar">Календарь</a></nav><small>«Русская цивилизация» — продолжение музейного комплекса «Русский парк» в Переславле-Залесском. Самый ясный ежедневный способ научиться видеть архитектуру.</small></footer>
+  <footer class="foot"><strong>Музей русской архитектуры</strong><nav><a href="#today-calendar">Сегодня</a><a href="#reader">Пять вопросов</a><a href="#atlas">Истории</a><a href="#school">Школе</a><a href="#calendar">Календарь</a><a href="../../index.html">Город-музей</a></nav><small>«Русская цивилизация» — продолжение музейного комплекса «Русский парк» в Переславле-Залесском. Самый ясный ежедневный способ научиться видеть архитектуру.</small></footer>
 
   <script src="calendar-data.js"></script>
   <script src="../../assets/museum-page-runtime.js"></script>
@@ -243,5 +313,9 @@
   </script>
   <script src="../../assets/museum-calendar-month.js"></script>
   <script src="../../assets/analytics.js" defer></script>
+  <!-- Поддержка проекта — движком museum-support.js (§6-quinquies, п.7), не копией разметки:
+       движок сам ставит блок в первой трети и дубль в подвале. -->
+  <script>window.MUSEUM_SUPPORT={museum:'Музей русской архитектуры',page:'главной музея'};</script>
+  <script src="../../assets/museum-support.js" defer></script>
 </body>
 </html>
