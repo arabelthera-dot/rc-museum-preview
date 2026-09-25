@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "page_sha256": "252b4ebdbbe4e9751aecab3dc0f2fbddd682ea4d90ae2af594625544021b349d",
+  "page_sha256": "5e1c3f202969fb073f5796ef972bdb27773ae4ea996bf506d3ac01ece9b3a77a",
   "runner": "../../tools/checks/karikatura-2509/run-b6.mjs",
-  "created_at": "2026-09-25T03:40:00.882Z",
+  "created_at": "2026-09-25T04:24:34.369Z",
   "browser": "151.0.7922.173",
   "plan": "../../tools/checks/karikatura-2509/day02-plan.mjs",
   "inputs": {
-    "day-02jan-napoleon-slava-nos.html": "252b4ebdbbe4e9751aecab3dc0f2fbddd682ea4d90ae2af594625544021b349d",
+    "day-02jan-napoleon-slava-nos.html": "5e1c3f202969fb073f5796ef972bdb27773ae4ea996bf506d3ac01ece9b3a77a",
     "../../tools/checks/karikatura-2509/run-b6.mjs": "9102a2e45306a6add3e56fcbd8a460d4cf6a0ee8a625bf26bee8b9e6a3e5285a",
     "../../tools/checks/karikatura-2509/day02-plan.mjs": "f31ccaa7ca9547355298ec595f6f619f171022e79e5a3544e5c96d0e9ccdc40c",
     "../../assets/fonts.css": "6025405e45ebd2219a5716ff005bd18a234361b87151f483c5d749c9679d29a0",
@@ -24,29 +24,29 @@
     "../../assets/fonts/inter-UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
     "../../assets/fonts/playfairdisplay-nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2": "e0c764a8e9e1cce92163c55bac4b2ad6cd4cf8c696ce2289ab5c41565e65b7e2",
     "../../assets/fonts/inter-UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2": "71d5ee93cc1e9f1d520a3a8b66456de18c7879d8df09d57fcd2eaff75fef0075",
-    "../../assets/fonts/inter-UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2": "ca157063339ac4ad418f214f3abfed119b0798ab4d377386ce5c9e5a7a435ebd",
     "media/napoleon-myunhgauzen.jpg": "fd108701aacd493ac36beb050b6471b57e9b90060f8f0246ae452fc81f5a806d",
     "media/napoleon-ugoschenie-gim.jpg": "2b7936fc223b6b3387ba09b5a88e5c80c437b67695103bfa76b473eaa24d14c2",
     "media/napoleon-voroniy-sup.png": "5c85e35aec70780f8b0575302f01631871f7f7701a282c0ea94723b81fbddc2e",
     "media/napoleon-russkiy-stsevola.png": "c7a1b3d490c9723280559e2621197b78e2d700e1bfaaad9ed938d40dd757d132",
     "media/napoleon-antiki-auction.jpg": "db2564f4d859f2e65b0564bd3f65b4261bf7ed618700d0bd048081940e7cdd67",
     "media/general-frost-shaving-boney.jpg": "f7c5240b52b15489b3fc362bae20cbf4b38362ab8f3a9fc3ca90fbd2c6db6c0c",
+    "../../assets/fonts/inter-UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2": "ca157063339ac4ad418f214f3abfed119b0798ab4d377386ce5c9e5a7a435ebd",
     "../../video/registry.json": "e5f0ab9acaf2bc73e7bf5306a87d93bfae7341b270f4938b54afec7414618fa7",
     "media/azbuka-a.jpg": "49ecb0ee86c785e09db6f3ec989d8e02ca8a63d417b4209e672abc0d7dab8912",
     "media/azbuka-b.jpg": "c89ac8b0e4606b07222ee10573dbdc315885fbe6787a801a15900cc2c211ee8d",
     "media/azbuka-v.jpg": "aa9424745606365f9811fc567f9711df142ea3604c6a537dea66aa240d48ffb0",
     "media/azbuka-g.jpg": "312e9dddacf5d9b93955a445500b6ea27df3c51814304a2c19a0cad81a046621",
-    "../../tools/checks/karikatura-2509/day02/entry-390.png": "456507ad461b38b8706dfd3d3c72b50b4c58b674c768895d0d13ecbd904bf502",
-    "../../tools/checks/karikatura-2509/day02/entry-390.json": "0c9a25e443f592390b28a1f7c0f943fed2500b2a3813dc5a6aea6d742eabc9cb",
-    "../../tools/checks/karikatura-2509/day02/wrong-390.png": "99e4a94070e2d869be712b12730ee4e5caf9a2f65f66abfbcc08c4118911f27c",
-    "../../tools/checks/karikatura-2509/day02/wrong-390.json": "60144dbbfc87d9c066701f426059642659d6ced3ef33e8e9f8f0d4339fd40923",
-    "../../tools/checks/karikatura-2509/day02/reset-390.png": "63eef5b178241911def04208a120ec10e9a015089fff0159e57a876911d82bf2",
-    "../../tools/checks/karikatura-2509/day02/reset-390.json": "ba8a79b8d0ccd2c29cdd320bfa8c2069beffe19fcd3ceebc3548c30ac64856ea",
-    "../../tools/checks/karikatura-2509/day02/mobile-390.png": "5004b2fc66eef2b1e6cd40d5ea9ce5e729f1259a8e9e34b28ad310e6212c6f69",
-    "../../tools/checks/karikatura-2509/day02/mobile-390.json": "6ff10c88e5fbb29ea3dedd9d5e3bf2876659a36109e1ac1e49d32cff3f333c5f",
+    "../../tools/checks/karikatura-2509/day02-source-review/entry-390.png": "a46f1fbf5bb8b7225e2df1fa9d4fa99e99d2c3e465628b37be3aca07c3fc3645",
+    "../../tools/checks/karikatura-2509/day02-source-review/entry-390.json": "0c9a25e443f592390b28a1f7c0f943fed2500b2a3813dc5a6aea6d742eabc9cb",
+    "../../tools/checks/karikatura-2509/day02-source-review/wrong-390.png": "3ee7e96ccdf32b296868d584f4e1240c505628ac531c80b3abd7942043760b9a",
+    "../../tools/checks/karikatura-2509/day02-source-review/wrong-390.json": "60144dbbfc87d9c066701f426059642659d6ced3ef33e8e9f8f0d4339fd40923",
+    "../../tools/checks/karikatura-2509/day02-source-review/reset-390.png": "aa209aad6ea974600ec68b0e6afe5f5e53c50ecbc34766d93b1ce0367cd13171",
+    "../../tools/checks/karikatura-2509/day02-source-review/reset-390.json": "ba8a79b8d0ccd2c29cdd320bfa8c2069beffe19fcd3ceebc3548c30ac64856ea",
+    "../../tools/checks/karikatura-2509/day02-source-review/mobile-390.png": "ec0e4e6e8890397cb30df1b6695f132279f23461001ef5688235b2aa3b373b1c",
+    "../../tools/checks/karikatura-2509/day02-source-review/mobile-390.json": "6ff10c88e5fbb29ea3dedd9d5e3bf2876659a36109e1ac1e49d32cff3f333c5f",
     "media/azbuka-d.jpg": "cb26834ac3cc3d75b03202b6b5549681e27a91981dcae818247c50a5cea59c15",
-    "../../tools/checks/karikatura-2509/day02/mobile-1440.png": "30bb8709044a775fc42af7f590add16556e13a9c58b9a31b580a38793f9be6f9",
-    "../../tools/checks/karikatura-2509/day02/mobile-1440.json": "2fa1e29f59fae2dd92d3024a2f127ddf4a2c08ca2d0b98ab8eb8e281c50d3cc5",
+    "../../tools/checks/karikatura-2509/day02-source-review/mobile-1440.png": "1d2f2c2fd06fd8dca6ddad03e7f9a21e714c821d539ec8f8274ade1bfcb23bf8",
+    "../../tools/checks/karikatura-2509/day02-source-review/mobile-1440.json": "2fa1e29f59fae2dd92d3024a2f127ddf4a2c08ca2d0b98ab8eb8e281c50d3cc5",
     "media/napoleon-satan-moscow.png": "c93153378677e1c85bcb53bcba884638899a57e00939c5e97bb79a719a2a3c8c",
     "media/azbuka-e.jpg": "5bba53a61da31cdeb35cfc1ab20da0e2a3a8fb391c0851f6af3cdfe03007e003",
     "media/azbuka-zh.jpg": "413bf6f5dacd1b9949f5b91a9e88e9616c7881ad5a481f7b1226055b7f561d58",
@@ -75,16 +75,16 @@
     "media/azbuka-yu.jpg": "f50b5a3085b3c8b6477ba7d0f33f1b0bff2ddeb7da117ca6b54eb86386471ff7",
     "media/azbuka-ya.jpg": "c11b5a232895b82dde3e2cc4a5de0db90a9ef2a96136ee591308e2c9a62b46a5",
     "media/azbuka-yat.jpg": "3eea18c3825c8a284dfe522b0ccf138d64bcc67668724c2b08dada9cdd62ff8f",
-    "media/azbuka-fita.png": "0183255831a40691be6ceb9dcc86ce4e4158967655e2f8b36673535f33403545",
     "media/azbuka-izhitsa.png": "8f1374ad6a59b90a5db3853baba6331908f8e1723aad2ecbe45e7f36f859f674",
-    "../../tools/checks/karikatura-2509/day02/nojs-390.png": "02359e78e5e2edbeca3a267db74284509d6e3c4e31b821886841924aa28aac9c",
-    "../../tools/checks/karikatura-2509/day02/nojs-390.json": "e41df74bce4df4ed870c52198db3070db13cc867265177a78c3fdcfd798b63c0",
-    "../../tools/checks/karikatura-2509/day02/score-390.png": "e954437f745b996dbf3d4703e31d6859bfe71d4c1e44e4b765e0153eff0fd0aa",
-    "../../tools/checks/karikatura-2509/day02/score-390.json": "0f39320f10d2f22526c2dd229d066c94a4af2cdae2765e1e06c22d0f0a271a1b",
-    "../../tools/checks/karikatura-2509/day02/main-390.png": "f79bcad15bc92df5520e5c716bbc32f579366a7dab0a8722e97116b522d830aa",
-    "../../tools/checks/karikatura-2509/day02/main-390.json": "a2bbe89d7bb31ab0f37602666344d89164314b3920668ad1a2ed0083f7620c4b",
-    "../../tools/checks/karikatura-2509/day02/empty-390.png": "f390bd9769c103ab1d20c7ef43ad99a4ad4f040b02ae5089c80a86b009cf9fda",
-    "../../tools/checks/karikatura-2509/day02/empty-390.json": "b2468bbeebc4ccdb3fb66f0f9f9bec3a892bbc1bda94ff149dea72be9590af0c"
+    "media/azbuka-fita.png": "0183255831a40691be6ceb9dcc86ce4e4158967655e2f8b36673535f33403545",
+    "../../tools/checks/karikatura-2509/day02-source-review/nojs-390.png": "1252cdd53372c22eb43a9cd5779a35277fc01c587c08239490a50d65393cc566",
+    "../../tools/checks/karikatura-2509/day02-source-review/nojs-390.json": "e41df74bce4df4ed870c52198db3070db13cc867265177a78c3fdcfd798b63c0",
+    "../../tools/checks/karikatura-2509/day02-source-review/score-390.png": "db5c2db3a3c3a3f495a47994772925f2cc6d87800ecd6e0eb810601adada3d60",
+    "../../tools/checks/karikatura-2509/day02-source-review/score-390.json": "0f39320f10d2f22526c2dd229d066c94a4af2cdae2765e1e06c22d0f0a271a1b",
+    "../../tools/checks/karikatura-2509/day02-source-review/main-390.png": "94ce7ff48e426007cc390c014e349e3de9cdcbbcaa8ddb4b84af7affdec14040",
+    "../../tools/checks/karikatura-2509/day02-source-review/main-390.json": "a2bbe89d7bb31ab0f37602666344d89164314b3920668ad1a2ed0083f7620c4b",
+    "../../tools/checks/karikatura-2509/day02-source-review/empty-390.png": "eccb97362a4ab73bda9f744cc6ee4631605d2cef3d2512f69cb643b5970277ee",
+    "../../tools/checks/karikatura-2509/day02-source-review/empty-390.json": "b2468bbeebc4ccdb3fb66f0f9f9bec3a892bbc1bda94ff149dea72be9590af0c"
   },
   "scenarios": {
     "entry": [
@@ -94,7 +94,7 @@
         "automated": true,
         "width": 390,
         "javascript_enabled": true,
-        "evidence": "../../tools/checks/karikatura-2509/day02/entry-390.json"
+        "evidence": "../../tools/checks/karikatura-2509/day02-source-review/entry-390.json"
       }
     ],
     "wrong": [
@@ -104,7 +104,7 @@
         "automated": true,
         "width": 390,
         "javascript_enabled": true,
-        "evidence": "../../tools/checks/karikatura-2509/day02/wrong-390.json"
+        "evidence": "../../tools/checks/karikatura-2509/day02-source-review/wrong-390.json"
       }
     ],
     "reset": [
@@ -114,7 +114,7 @@
         "automated": true,
         "width": 390,
         "javascript_enabled": true,
-        "evidence": "../../tools/checks/karikatura-2509/day02/reset-390.json"
+        "evidence": "../../tools/checks/karikatura-2509/day02-source-review/reset-390.json"
       }
     ],
     "mobile": [
@@ -124,7 +124,7 @@
         "automated": true,
         "width": 390,
         "javascript_enabled": true,
-        "evidence": "../../tools/checks/karikatura-2509/day02/mobile-390.json"
+        "evidence": "../../tools/checks/karikatura-2509/day02-source-review/mobile-390.json"
       },
       {
         "test_id": "mobile-1440",
@@ -132,7 +132,7 @@
         "automated": true,
         "width": 1440,
         "javascript_enabled": true,
-        "evidence": "../../tools/checks/karikatura-2509/day02/mobile-1440.json"
+        "evidence": "../../tools/checks/karikatura-2509/day02-source-review/mobile-1440.json"
       }
     ],
     "nojs": [
@@ -142,7 +142,7 @@
         "automated": true,
         "width": 390,
         "javascript_enabled": false,
-        "evidence": "../../tools/checks/karikatura-2509/day02/nojs-390.json"
+        "evidence": "../../tools/checks/karikatura-2509/day02-source-review/nojs-390.json"
       }
     ],
     "score": [
@@ -152,7 +152,7 @@
         "automated": true,
         "width": 390,
         "javascript_enabled": true,
-        "evidence": "../../tools/checks/karikatura-2509/day02/score-390.json"
+        "evidence": "../../tools/checks/karikatura-2509/day02-source-review/score-390.json"
       }
     ],
     "main": [
@@ -162,7 +162,7 @@
         "automated": true,
         "width": 390,
         "javascript_enabled": true,
-        "evidence": "../../tools/checks/karikatura-2509/day02/main-390.json"
+        "evidence": "../../tools/checks/karikatura-2509/day02-source-review/main-390.json"
       }
     ],
     "empty": [
@@ -172,7 +172,7 @@
         "automated": true,
         "width": 390,
         "javascript_enabled": true,
-        "evidence": "../../tools/checks/karikatura-2509/day02/empty-390.json"
+        "evidence": "../../tools/checks/karikatura-2509/day02-source-review/empty-390.json"
       }
     ]
   },
