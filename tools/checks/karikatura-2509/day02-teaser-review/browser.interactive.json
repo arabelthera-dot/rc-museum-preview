@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "page_sha256": "dd3b691a5c549a5e70f654b8063b179d0b6415ff390df82c8e3736eb6099ee31",
+  "runner": "../run-b6.mjs",
+  "created_at": "2026-09-25T08:38:33.337Z",
+  "browser": "151.0.7922.173",
+  "plan": "../day02-plan.mjs",
+  "inputs": {
+    "../../../../muzei/karikatura/day-02jan-napoleon-slava-nos.html": "dd3b691a5c549a5e70f654b8063b179d0b6415ff390df82c8e3736eb6099ee31",
+    "../run-b6.mjs": "9102a2e45306a6add3e56fcbd8a460d4cf6a0ee8a625bf26bee8b9e6a3e5285a",
+    "../day02-plan.mjs": "f31ccaa7ca9547355298ec595f6f619f171022e79e5a3544e5c96d0e9ccdc40c",
+    "../../../../assets/fonts.css": "6025405e45ebd2219a5716ff005bd18a234361b87151f483c5d749c9679d29a0",
+    "../../../../assets/museum-theme.css": "17e21938d52a36326f08ddf5555b9414e5771b165582e35c58690f77307fa9b5",
+    "../../../../muzei/karikatura/video/day-02jan-napoleon-poster.jpg": "74b2de21169794c48882f4127d6a6e01eace97027416b3e883efd85fab568a78",
+    "../../../../muzei/karikatura/media/napoleon-nos-paris.jpg": "7734a0c590157d379deb9343b9cd61c1186ec154fe6bd3006cbfefecfb620250",
+    "../../../../muzei/karikatura/calendar-karikatura.js": "eaa2f108d641eb714155b3f8f8b7d6bd2bdbee6d7c11689aa1f824b066ac44b3",
+    "../../../../assets/museum-calendar-month.js": "e597a197c185ee065da25691ccb5c4cd538960f7642629c30198dc4ab81d59b3",
+    "../../../../assets/museum-chrome.js": "36e66b9e071643768f4a23f2fa9daf1918cef8815962afd2a5ef60b30670c74b",
+    "../../../../assets/museum-support.js": "b01f62ae2ec23f6e1329f6a2c2b2e9bc85e72545696d360a418fe0df040bbbcd",
+    "../../../../assets/museum-audioguide.js": "25ee813c11e79591f8a50895d65e0e52c230aa7abe5d604ee7ed335316b63caf",
+    "../../../../assets/museum-analytics-v2.js": "63c87a66c44c4631ac15a2308f3e74a87751eef8ea8762121ff514845d04651d",
+    "../../../../assets/museum-video.js": "de33b1a1c1ece4c2ab4ad7975d0fe20114183f19ca598c5461abe123c5c7d38f",
+    "../../../../assets/fonts/playfairdisplay-nuFiD-vYSZviVYUb_rj3ij__anPXDTjYgFE_.woff2": "c108681cba6a9820bff52f4a1a4a1d9edf356b347bd79b7c61e916028e8a8b54",
+    "../../../../assets/fonts/inter-UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+    "../../../../assets/fonts/playfairdisplay-nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2": "e0c764a8e9e1cce92163c55bac4b2ad6cd4cf8c696ce2289ab5c41565e65b7e2",
+    "../../../../assets/fonts/inter-UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2": "71d5ee93cc1e9f1d520a3a8b66456de18c7879d8df09d57fcd2eaff75fef0075",
+    "../../../../muzei/karikatura/media/napoleon-myunhgauzen.jpg": "fd108701aacd493ac36beb050b6471b57e9b90060f8f0246ae452fc81f5a806d",
+    "../../../../muzei/karikatura/media/napoleon-ugoschenie-gim.jpg": "2b7936fc223b6b3387ba09b5a88e5c80c437b67695103bfa76b473eaa24d14c2",
+    "../../../../muzei/karikatura/media/napoleon-voroniy-sup.png": "5c85e35aec70780f8b0575302f01631871f7f7701a282c0ea94723b81fbddc2e",
+    "../../../../muzei/karikatura/media/napoleon-russkiy-stsevola.png": "c7a1b3d490c9723280559e2621197b78e2d700e1bfaaad9ed938d40dd757d132",
+    "../../../../muzei/karikatura/media/napoleon-antiki-auction.jpg": "db2564f4d859f2e65b0564bd3f65b4261bf7ed618700d0bd048081940e7cdd67",
+    "../../../../muzei/karikatura/media/general-frost-shaving-boney.jpg": "f7c5240b52b15489b3fc362bae20cbf4b38362ab8f3a9fc3ca90fbd2c6db6c0c",
+    "../../../../assets/fonts/inter-UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2": "ca157063339ac4ad418f214f3abfed119b0798ab4d377386ce5c9e5a7a435ebd",
+    "../../../../video/registry.json": "e5f0ab9acaf2bc73e7bf5306a87d93bfae7341b270f4938b54afec7414618fa7",
+    "../../../../muzei/karikatura/media/azbuka-a.jpg": "49ecb0ee86c785e09db6f3ec989d8e02ca8a63d417b4209e672abc0d7dab8912",
+    "../../../../muzei/karikatura/media/azbuka-b.jpg": "c89ac8b0e4606b07222ee10573dbdc315885fbe6787a801a15900cc2c211ee8d",
+    "../../../../muzei/karikatura/media/azbuka-v.jpg": "aa9424745606365f9811fc567f9711df142ea3604c6a537dea66aa240d48ffb0",
+    "../../../../muzei/karikatura/media/azbuka-g.jpg": "312e9dddacf5d9b93955a445500b6ea27df3c51814304a2c19a0cad81a046621",
+    "entry-390.png": "e731984eda4abc14a10f12ea34c6b609615a023ca4b5f5f2941917279101c77f",
+    "entry-390.json": "0c9a25e443f592390b28a1f7c0f943fed2500b2a3813dc5a6aea6d742eabc9cb",
+    "wrong-390.png": "4ac67f89737205cd1e48447bff3427662086cb73ab212e6d9a60a186a7c9807d",
+    "wrong-390.json": "60144dbbfc87d9c066701f426059642659d6ced3ef33e8e9f8f0d4339fd40923",
+    "reset-390.png": "eac6081425739271bc1495c4b1bc9b97d69b066ea5ff428f22f3a86607053ec8",
+    "reset-390.json": "ba8a79b8d0ccd2c29cdd320bfa8c2069beffe19fcd3ceebc3548c30ac64856ea",
+    "mobile-390.png": "af24ee8842bb25f8a4cb72b3caf895d8d3b52df335db1a88bf02474ed6f36efa",
+    "mobile-390.json": "6ff10c88e5fbb29ea3dedd9d5e3bf2876659a36109e1ac1e49d32cff3f333c5f",
+    "../../../../muzei/karikatura/media/azbuka-d.jpg": "cb26834ac3cc3d75b03202b6b5549681e27a91981dcae818247c50a5cea59c15",
+    "mobile-1440.png": "e7cc5254a43db22c9b2f0523af6c69e58b3b53f37a5af9af741e0723b732b857",
+    "mobile-1440.json": "2fa1e29f59fae2dd92d3024a2f127ddf4a2c08ca2d0b98ab8eb8e281c50d3cc5",
+    "../../../../muzei/karikatura/media/napoleon-satan-moscow.png": "c93153378677e1c85bcb53bcba884638899a57e00939c5e97bb79a719a2a3c8c",
+    "../../../../muzei/karikatura/media/azbuka-e.jpg": "5bba53a61da31cdeb35cfc1ab20da0e2a3a8fb391c0851f6af3cdfe03007e003",
+    "../../../../muzei/karikatura/media/azbuka-zh.jpg": "413bf6f5dacd1b9949f5b91a9e88e9616c7881ad5a481f7b1226055b7f561d58",
+    "../../../../muzei/karikatura/media/azbuka-z.jpg": "5694263691033a8119f3d419b1b46a659c8ee386694526215c37d1b7495c1585",
+    "../../../../muzei/karikatura/media/azbuka-i.jpg": "8d677298da4006df884bd9b8a5ef256092317e2188d0fbbd6f9369108dacf867",
+    "../../../../muzei/karikatura/media/azbuka-k.jpg": "932d8b145fd563e412213ef32b33441f5a89b75d2e31f66d244bd75fba38c272",
+    "../../../../muzei/karikatura/media/azbuka-l.jpg": "b734911651adc40e02f1780d29d41a3344992955bbbde683de9f0df6f1f81b69",
+    "../../../../muzei/karikatura/media/azbuka-m.jpg": "71ebc8f3d4302f1c29057b81474b50ba943698cd037fe1bb412cc45479aa2904",
+    "../../../../muzei/karikatura/media/azbuka-n.jpg": "6ddc51a7a3b16ee79dfbad83f51a8784479e1068e8cd7d57a1a501c3276cbf62",
+    "../../../../muzei/karikatura/media/azbuka-o.jpg": "5bf92df70ce4843f28eda27004343cc42147e2d33bd75d2ef29cd7906df51fe7",
+    "../../../../muzei/karikatura/media/azbuka-p.jpg": "b8694be533c04b14e9c1af68520073f8898063d046f7e73b9bc777474aa98254",
+    "../../../../muzei/karikatura/media/azbuka-r.jpg": "3b610ce2274eaac7d89c4f0c3ec060fab9fbe7e50fc99a56f6d17bbc7bdef3d9",
+    "../../../../muzei/karikatura/media/azbuka-s.jpg": "f173e131a4c5177d3132847b9113416349faa900c920dd3527f8f3453b9ed7d8",
+    "../../../../muzei/karikatura/media/azbuka-t.jpg": "b0bd24727ae6bd11cffbccd8e6085ccce8bbc0dac41c61fd206f10fd0e9fbc87",
+    "../../../../muzei/karikatura/media/azbuka-u.jpg": "125b3d956a21978b08cb783713d1eba5c25931e7a4600d9f42d81d2334805dae",
+    "../../../../muzei/karikatura/media/azbuka-f.jpg": "71b7a3bd52eacdbc961e300b3d8b9e605fffb858a6372886d5d3ba090a39ebc3",
+    "../../../../muzei/karikatura/media/azbuka-kh.jpg": "a1eebe9ef2cc564ea6779768eceb6e41217eac1277a61e5e6f4759ed83a682dc",
+    "../../../../muzei/karikatura/media/azbuka-ts.jpg": "a7d7a830c72ff7f0faee672bc4a36ce14264142f100aefd00e1412296de50e69",
+    "../../../../muzei/karikatura/media/azbuka-ch.jpg": "a5dd0e6cf826502634dba45a3cb76caf660fe2f581fca44df234f3ab3caaaae6",
+    "../../../../muzei/karikatura/media/azbuka-sh.jpg": "45517aaf49ff096929319a9573e00fa8b1ebe9d65799d4a9116c7e344b567ed8",
+    "../../../../muzei/karikatura/media/azbuka-shch.jpg": "52697bd23a35b232e807dc50a3f0c1c0aed393063c73d87db909a03fba5b94f2",
+    "../../../../muzei/karikatura/media/azbuka-tverdy.jpg": "a8bb6a97e7b9f18befc07db3161bff0fb5f6eeba8929eceb5a2a3e6c4907007f",
+    "../../../../muzei/karikatura/media/azbuka-y.jpg": "9fe554bc472f0edeadc42a507ebf54ba65abea09adaf1b51b4d82c200e02a152",
+    "../../../../muzei/karikatura/media/azbuka-myagky.jpg": "c5631ffc5118b2a76f5bf7478179f36286b15d38fdea554f46e310579f90affa",
+    "../../../../muzei/karikatura/media/azbuka-eh.jpg": "0efd18093752d6efd0c2efbbffb9bc675bf236a39eb92f05ab1a00bf1924f3f2",
+    "../../../../muzei/karikatura/media/azbuka-yu.jpg": "f50b5a3085b3c8b6477ba7d0f33f1b0bff2ddeb7da117ca6b54eb86386471ff7",
+    "../../../../muzei/karikatura/media/azbuka-ya.jpg": "c11b5a232895b82dde3e2cc4a5de0db90a9ef2a96136ee591308e2c9a62b46a5",
+    "../../../../muzei/karikatura/media/azbuka-yat.jpg": "3eea18c3825c8a284dfe522b0ccf138d64bcc67668724c2b08dada9cdd62ff8f",
+    "../../../../muzei/karikatura/media/azbuka-fita.png": "0183255831a40691be6ceb9dcc86ce4e4158967655e2f8b36673535f33403545",
+    "../../../../muzei/karikatura/media/azbuka-izhitsa.png": "8f1374ad6a59b90a5db3853baba6331908f8e1723aad2ecbe45e7f36f859f674",
+    "nojs-390.png": "42aaa80165a769781744f6f117b8dea17ac5859f4cb7ccbcd9b75acc2cdb3472",
+    "nojs-390.json": "e41df74bce4df4ed870c52198db3070db13cc867265177a78c3fdcfd798b63c0",
+    "score-390.png": "4d45fad8bab558b3c8d7d446e770d3e619a6c30926064f0b5e4863acd8825fd9",
+    "score-390.json": "0f39320f10d2f22526c2dd229d066c94a4af2cdae2765e1e06c22d0f0a271a1b",
+    "main-390.png": "f98f9824527abb955a5b57b2e9829ead78aa3e49aa6fe0ccd6bee34cc27120f3",
+    "main-390.json": "a2bbe89d7bb31ab0f37602666344d89164314b3920668ad1a2ed0083f7620c4b",
+    "empty-390.png": "9f6a08af7cd0e2025efcea87fb94d3b5813e95c340d7b6e0dcb5308336b2f3b6",
+    "empty-390.json": "b2468bbeebc4ccdb3fb66f0f9f9bec3a892bbc1bda94ff149dea72be9590af0c"
+  },
+  "scenarios": {
+    "entry": [
+      {
+        "test_id": "entry-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "entry-390.json"
+      }
+    ],
+    "wrong": [
+      {
+        "test_id": "wrong-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "wrong-390.json"
+      }
+    ],
+    "reset": [
+      {
+        "test_id": "reset-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "reset-390.json"
+      }
+    ],
+    "mobile": [
+      {
+        "test_id": "mobile-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "mobile-390.json"
+      },
+      {
+        "test_id": "mobile-1440",
+        "status": "pass",
+        "automated": true,
+        "width": 1440,
+        "javascript_enabled": true,
+        "evidence": "mobile-1440.json"
+      }
+    ],
+    "nojs": [
+      {
+        "test_id": "nojs-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": false,
+        "evidence": "nojs-390.json"
+      }
+    ],
+    "score": [
+      {
+        "test_id": "score-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "score-390.json"
+      }
+    ],
+    "main": [
+      {
+        "test_id": "main-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "main-390.json"
+      }
+    ],
+    "empty": [
+      {
+        "test_id": "empty-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "empty-390.json"
+      }
+    ]
+  },
+  "errors": [],
+  "environment": {
+    "origin": "http://b6.local",
+    "network": "local inputs only"
+  }
+}
