@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "profile": "iskusstvo.home.v1",
+  "museum": "iskusstvo",
+  "required": {
+    "selectors": [
+      ".top",
+      ".b1",
+      ".b2",
+      ".b4",
+      ".crumbs",
+      ".cover-shot",
+      "#segodnya",
+      "#calendar",
+      "#calbox",
+      "#zaly",
+      ".council",
+      ".support"
+    ]
+  },
+  "collection": {
+    "enabled": false
+  },
+  "published_catalog": {
+    "enabled": false
+  },
+  "score": {
+    "enabled": false
+  },
+  "calendar": {
+    "enabled": true,
+    "selector": "#calbox",
+    "source": "calendar-art.js"
+  },
+  "acceptance": {
+    "support_engine": "museum-support.js"
+  },
+  "notes": [
+    "v1 (25.09.2026): главная приведена к обязательному минимуму museum-core §6-quinquies — обложка с документальным кадром открытого зала, экспонат дня #segodnya (данные берутся из calendar-art.js, повода на день нет — говорим прямо), календарь месяца #calbox, второй вход по залам #zaly, научный совет §6-quater, поддержка движком museum-support.js.",
+    "Профиль — слепок уже свёрстанной страницы и минимум не заменяет: обязательные блоки сверяет audit-pages.py по самой странице (docs/standards/museum-home.base.json).",
+    "Экспонат дня — только из window.MUSEUM_CALENDAR: ни одна строка не досочинена; при отсутствии записи на дату показывается честный текст движка MUSEUM_CALENDAR_EMPTY."
+  ]
+}

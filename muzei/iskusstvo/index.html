@@ -32,6 +32,17 @@ h2{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);
 .pics a:hover{border-color:var(--gold);opacity:1}
 .pics a b{display:block;color:var(--gold);font-size:13.5px;font-weight:normal;margin-bottom:3px}
 .council,.support{background:var(--panel);border:1px solid rgba(212,175,55,.2);border-radius:14px;padding:15px;font-size:13.5px;margin-top:14px}
+/* обложка: документальный кадр открытого зала (минимум главной §6-quinquies) */
+.cover-shot{margin:0 0 22px;text-align:center}
+.cover-shot img{width:100%;height:auto;display:block;border-radius:14px;border:1px solid var(--line)}
+.cover-shot figcaption{font-size:12.5px;opacity:.82;margin-top:8px;font-style:italic}
+.cover-shot .src{font-size:11.5px;opacity:.6;margin-top:4px;font-style:normal;word-break:break-all}
+/* экспонат дня: «сегодня в музее» */
+#segodnya .lbl{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold)}
+#segodnya h3{font-family:Georgia,serif;font-size:17px;font-weight:normal;margin-top:6px}
+#segodnya p{font-size:13.5px;margin-top:6px;opacity:.9}
+#segodnya a{display:inline-block;margin-top:9px;font-size:13px}
+.zaly-lead{font-size:13px;opacity:.75;margin:-4px 0 12px}
 footer{padding:22px 16px 60px;border-top:1px solid rgba(212,175,55,.2);text-align:center;font-size:12.5px;opacity:.85;margin-top:30px}
 footer .slog{font-style:italic;color:var(--gold);margin-bottom:6px}
 
@@ -105,20 +116,35 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:6px}
 </head>
 <body>
 <a class="backbtn" href="../../index.html"><span class="ar">←</span>В город-музей</a>
-<header>
-  <div class="b1">Первый цифровой музей достижений России</div>
+<header class="top">
+  <div class="b1">Русская цивилизация</div>
+  <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
   <h1>Русское искусство</h1>
-  <p>От иконы — до первой в мире абстракции. Галерея, в картины которой можно провалиться.</p>
+  <div class="b4">От иконы — до первой в мире абстракции. Галерея, в картины которой можно провалиться.</div>
 </header>
 <nav class="crumbs"><a href="../../index.html">Русская цивилизация</a> › <span>Русское искусство</span></nav>
 <main>
+  <figure class="cover-shot">
+    <img src="media/devyatyi-val-hero.jpg" width="1800" height="1189" alt="Иван Айвазовский, «Девятый вал», 1850 — полотно открытого зала музея">
+    <figcaption><b>Открытый зал · Айвазовский.</b> «Девятый вал», 1850. Холст, масло, 221 × 332 см. <a href="pic-aivazovsky-devyatyi-val.html">Войти в зал →</a></figcaption>
+    <div class="src">Изображение: скан полотна. Источники описания — rusmuseum.ru · ar.culture.ru · culture.ru</div>
+  </figure>
+
+  <section class="today" id="segodnya">
+    <span class="lbl">Экспонат дня · сегодня в музее</span>
+    <h3 id="segodnya-title">Сегодняшний повод</h3>
+    <p id="segodnya-text"></p>
+    <a id="segodnya-link" href="calendar.html">Календарь галереи — весь год →</a>
+  </section>
+
   <div class="today" id="calendar"><span class="lbl">Календарь музея · этот день в русском искусстве</span>
     <p style="font-size:13px;opacity:.75;margin-top:4px">У каждого дня свой повод — день рождения художника, дата картины, событие. Листайте стрелками, тапните по числу.</p>
     <div id="calbox"></div>
     <p style="font-size:13px;opacity:.7;margin-top:10px"><a href="calendar.html">Весь год целиком — 365 дней в календаре музея →</a></p>
   </div>
 
-  <h2>Анфилада залов</h2>
+  <h2 id="zaly">Анфилада залов — второй вход в музей</h2>
+  <p class="zaly-lead">Пришли не за датой? Идите по залам: двенадцать залов от иконы до XXI века, открыт пока один — Айвазовского.</p>
   <span class="hall soon"><span class="n">Зал 1</span><div class="t">Иконопись</div><div class="s">XV–XVII века · готовится</div></span>
   <span class="hall soon"><span class="n">Зал 2</span><div class="t">Портрет XVIII века</div><div class="s">готовится</div></span>
   <div class="hall open" id="aivazovsky"><span class="n">Зал 3 · ОТКРЫТ</span><div class="t">Айвазовский. Человек, который писал море по памяти</div><div class="s">Три картины — три разговора о человеке и стихии</div>
@@ -143,6 +169,27 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:6px}
 <script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
 <script src="../../assets/museum-calendar-month.js"></script>
 <script src="calendar-art.js"></script>
+<script>
+/* Экспонат дня: берём ровно то, что уже лежит в календаре музея (window.MUSEUM_CALENDAR),
+   — ничего не досочиняем. Нет повода на сегодня — говорим об этом прямо текстом движка. */
+(function(){
+  var d = new Date();
+  var key = ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2);
+  var item = (window.MUSEUM_CALENDAR || {})[key];
+  var t = document.getElementById('segodnya-title');
+  var p = document.getElementById('segodnya-text');
+  var a = document.getElementById('segodnya-link');
+  if (!t || !p || !a) return;
+  if (!item) {
+    t.textContent = 'Повод на сегодня ещё не привязан';
+    p.textContent = window.MUSEUM_CALENDAR_EMPTY || '';
+    return;
+  }
+  t.textContent = item.t + (item.y ? ' · ' + item.y : '');
+  p.textContent = item.d;
+  if (item.href) { a.href = item.href; a.textContent = item.link || ('Экспонат дня: ' + item.t + ' →'); }
+})();
+</script>
 <script>window.MUSEUM_SUPPORT={museum:'Русское искусство'};</script>
 <script src="../../assets/museum-support.js"></script>
   <!-- rc-analytics --><script defer src="../../assets/analytics.js"></script>
