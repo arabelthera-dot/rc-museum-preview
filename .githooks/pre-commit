@@ -42,4 +42,6 @@ fi
 
 "$PY" "$TOOLS/audit-precommit.py" || exit 1
 [ -f "$TOOLS/audit-structure.py" ] && { "$PY" "$TOOLS/audit-structure.py" --staged || exit 1; }
+# Турникет хуков (Сергей, 25.09.2026, пункт А): новый красный хук не проходит.
+[ -f "$TOOLS/hook-gate.py" ] && { "$PY" "$TOOLS/hook-gate.py" || exit 1; }
 exit 0
