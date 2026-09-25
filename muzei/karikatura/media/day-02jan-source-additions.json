@@ -1,0 +1,34 @@
+[
+  {
+    "object_id": "pushkin:ГР-83809",
+    "file": "media/azbuka-fita.png",
+    "sha256": "0183255831a40691be6ceb9dcc86ce4e4158967655e2f8b36673535f33403545",
+    "catalog": "https://russianprints.pushkinmuseum.art/printmakers/t/terebenev_ivan_ivanovich/fita.shtml",
+    "download": "https://russianprints.pushkinmuseum.art/files/2775_600.tiff",
+    "print_date": 1814,
+    "edition_date": 1815,
+    "engraver": {
+      "name": "И. И. Теребенев",
+      "certainty": "предположительно по каталогу"
+    },
+    "original_artist": "И. И. Теребенев",
+    "transform": "TIFF decoded to PNG, no crop/retouch",
+    "digital_reuse_rights": "pending; not cleared for publication"
+  },
+  {
+    "object_id": "pushkin:ГР-83810",
+    "file": "media/azbuka-izhitsa.png",
+    "sha256": "8f1374ad6a59b90a5db3853baba6331908f8e1723aad2ecbe45e7f36f859f674",
+    "catalog": "https://russianprints.pushkinmuseum.art/printmakers/t/terebenev_ivan_ivanovich/izhitsa.shtml",
+    "download": "https://russianprints.pushkinmuseum.art/files/2782_600.tiff",
+    "print_date": 1814,
+    "edition_date": 1815,
+    "engraver": {
+      "name": "И. И. Теребенев",
+      "certainty": "предположительно по каталогу"
+    },
+    "original_artist": "А. Г. Венецианов",
+    "transform": "TIFF decoded to PNG, no crop/retouch",
+    "digital_reuse_rights": "pending; not cleared for publication"
+  }
+]
