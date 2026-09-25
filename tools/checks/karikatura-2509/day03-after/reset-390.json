@@ -1,0 +1,52 @@
+{
+  "test_id": "reset-390",
+  "code": "reset",
+  "width": 390,
+  "javascript_enabled": true,
+  "url": "http://b6.local/muzei/karikatura/day-03jan-radakov-tri-linii.html",
+  "steps": [
+    "Complete main action",
+    "Reset using page control or browser new visit"
+  ],
+  "checks": [
+    {
+      "label": "Stop explanation visible",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    },
+    {
+      "label": "Main action reward",
+      "actual": 50,
+      "expected": 50,
+      "ok": true
+    },
+    {
+      "label": "Reset removes stop reward",
+      "actual": 0,
+      "expected": 0,
+      "ok": true
+    },
+    {
+      "label": "Range restored",
+      "actual": "0",
+      "expected": "0",
+      "ok": true
+    },
+    {
+      "label": "Stop explanation visible",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    },
+    {
+      "label": "Repeating after reset earns once",
+      "actual": 50,
+      "expected": 50,
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "screenshot": "reset-390.png",
+  "status": "pass"
+}

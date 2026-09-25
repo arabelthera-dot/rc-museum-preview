@@ -91,7 +91,7 @@
       <div class="history-frame"><p><b>Что здесь доказано, а что нет.</b> Композиция листа подтверждает отношение: перед нами сход, и одна фигура выделена ростом, одеждой и местом у своего дома. Имя, чин и губерния из картинки не выводятся — их даёт только музейная карточка. Искать в листе конкретное историческое лицо нельзя: перед нами обобщённая сцена деревенского схода.</p><p class="verify">Разметка: <b>проверено по листу</b> — рост, одежда, обувь, доска «СТАРОСТА», столбцы песни. <b>Описано в источнике</b> — толкование сцены как схода у дома старосты (аннотация собрания РГБ). <b>Наша гипотеза</b> — что зритель без подписи уверенно называет старосту: это предположение музея, а не факт.</p></div>
     </div></section>
 
-    <section class="act dark" id="quiz"><div class="wrap"><div class="actno">Викторина · 3 вопроса · 30 баллов</div><h2>Ты понял, как читается власть на листе?</h2><p class="lead">Три вопроса без подвоха. Проверь, что осталось в голове после дела.</p><div class="quiz" id="kvQuiz"></div><div class="resultcard" id="kvQuizResult" hidden></div></div></section>
+    <section class="act dark" id="quiz"><div class="wrap"><div class="actno">Викторина · 3 вопроса · 30 баллов</div><h2>Ты понял, как читается власть на листе?</h2><p class="lead">Три вопроса без подвоха. Проверь, что осталось в голове после дела.</p><p class="fine">До 100 баллов: первый выбор — 5, пять улик — по 8, проверка без доски — 20, три верных ответа — по 10, успешная отправка или копирование ссылки — 5. Повторные действия баллов не добавляют.</p><noscript><p class="fine">Для ответов на вопросы викторины нужен JavaScript. Включи его и обнови страницу. Историю, подписи к изображениям и объяснение приёма можно читать без JavaScript.</p></noscript><div class="quiz" id="kvQuiz"></div><div class="resultcard" id="kvQuizResult" hidden></div></div></section>
 
     <section class="act" id="share"><div class="wrap"><div class="actno">Поделись листом</div><h2>Кого назначил главным ты?</h2><p class="lead">Отправь лист тому, кто уверен, что иерархию видно с первого взгляда. Пусть попробует угадать до того, как прочитает разбор.</p><div class="share"><button class="btn" id="kvShare">⤴ Поделиться страницей</button><span class="fine" id="kvShareHint">Ссылка скопируется — отправь её в мессенджер.</span></div></div></section>
 
@@ -148,7 +148,7 @@
     {q:'О чём подпись под картинкой — шесть столбцов стихов?',o:['О деревенском сходе','О песне «Кудри вьются»','О выборах старосты'],a:1,e:'Это песня про кудри. Сход она не описывает — читать иерархию приходится по композиции.'},
     {q:'Что изменится, если закрыть доску «СТАРОСТА»?',o:['Вывод исчезнет полностью','Вывод станет слабее, но устоит','Станет ясно, что главный — не староста'],a:1,e:'Останутся рост, одежда, обувь, место у дома и взгляды. Их достаточно для догадки — но не для знания.'}
   ];
-  var AW={choice:15,clue:8,shift:20,quiz:10,share:5};
+  var AW={choice:5,clue:8,shift:20,quiz:10,share:5};
   var total=0,head=document.getElementById('headScore');
   function add(n){total+=n;if(head)head.textContent=total;}
   function el(id){return document.getElementById(id);}
@@ -205,7 +205,7 @@
   function finish(){
     if(S.clues.length<5||!S.shift)return;
     if(verdict)verdict.hidden=false;
-    el('kvAfter').textContent=S.boss?('Главный — '+NAMES[S.boss]+'. Вывод подтверждён уликами, кроме подписи.') : 'Фигура определена по композиции.';
+    el('kvAfter').textContent='Улики указывают на старика в кафтане с кушаком, впереди группы.'+(S.boss==='starosta'?' Твой первоначальный выбор совпал с выводом.':S.boss?' Первоначальный выбор нужно пересмотреть.':'');
     el('kvVerdictText').textContent='Власть на этом листе читается без имени: её держат рост, одежда, обувь, место у своего дома и направление взглядов. Подпись — песня про кудри — не помогает совсем. Значит, перед нами не портрет начальника, а язык власти: набор приёмов, которым карикатура показывает старшего, не называя его.';
   }
   // quiz
@@ -226,7 +226,7 @@
     b.classList.add(good?'good':'bad');
     if(!good){var ok=box.querySelectorAll('.quizopt')[QUIZ[i].a];if(ok)ok.classList.add('good');}
     var r=el('kvQ'+i);r.className='response show';r.innerHTML=(good?'<b>Верно.</b> ':'<b>Не совсем.</b> ')+QUIZ[i].e;
-    qDone++;if(good)qRight++;add(AW.quiz);
+    qDone++;if(good){qRight++;add(AW.quiz);}
     if(qDone===QUIZ.length){
       qres.hidden=false;
       qres.innerHTML='<b>Итог: '+qRight+' из '+QUIZ.length+'.</b><p>'+(qRight===QUIZ.length?'Ты научился отделять композицию от подписи — это и есть приём дня.':'Перечитай акт про пять улик: главное там — что подпись на этом листе о власти молчит.')+'</p>';
@@ -234,12 +234,14 @@
   });
   // share
   var sb=el('kvShare');
-  if(sb)sb.addEventListener('click',function(){
+  if(sb)sb.addEventListener('click',async function(){
     var url=location.href,t='Кто здесь главный, если убрать подпись? — Музей русской карикатуры';
-    if(navigator.share){navigator.share({title:t,url:url}).catch(function(){});}
-    else if(navigator.clipboard){navigator.clipboard.writeText(url).then(function(){el('kvShareHint').textContent='Ссылка скопирована.';});}
-    else{el('kvShareHint').textContent=url;}
-    if(!S.shared){S.shared=true;add(AW.share);}
+    try{
+      if(navigator.share){await navigator.share({title:t,url:url});el('kvShareHint').textContent='Передано в приложение отправки.';}
+      else if(navigator.clipboard){await navigator.clipboard.writeText(url);el('kvShareHint').textContent='Ссылка скопирована.';}
+      else{el('kvShareHint').textContent='Скопируй адрес страницы из строки браузера.';return;}
+      if(!S.shared){S.shared=true;add(AW.share);}
+    }catch(e){el('kvShareHint').textContent=e&&e.name==='AbortError'?'Отправка отменена.':'Не удалось отправить. Попробуй ещё раз.';}
   });
   // calendar
   var cal=el('kvCalendar'),OPEN={'01':'day-01jan-russian-bear.html','02':'day-02jan-napoleon-slava-nos.html','03':'day-03jan-radakov-tri-linii.html','04':'day-04jan-litografiya.html','05':'day-05jan-krokodil-first-issue.html','06':'day-06jan-who-is-in-charge.html'};
@@ -249,37 +251,20 @@
 })();
     </script>
 </main>
-  <footer><div class="wrap"><b>Русская цивилизация</b><p>Первый цифровой музей достижений России</p><p class="fine">Острее пера · Музей русской карикатуры · выпуск 5 января.</p></div></footer>
+  <footer><div class="wrap"><b>Русская цивилизация</b><p>Первый цифровой музей достижений России</p><p class="fine">Острее пера · Музей русской карикатуры · выпуск 6 января.</p></div></footer>
+  <script>window.MUSEUM_CHROME={museum:{title:'Острее пера',href:'index.html',homeLabel:'← Музей карикатуры'},share:{title:'Кто здесь главный, если убрать подпись?',text:'Пять улик на одном листе.'},all:{href:'../../index.html',label:'Все музеи'},city:'../../index.html',random:[]};</script>
   <script>
-    let printScore=0,quizScore=0,shareScore=0;const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
-    function updateScore(){const s=printScore+quizScore+shareScore;$('#score').textContent=s;$('#headScore').textContent=s;$('#rank').textContent=s>=90?'Редактор-исследователь: ты собрал номер, поймал границу смеха и выбрал свою обложку.':s>=50?'Внимательный читатель: ты собрал номер и понял, где проходила граница критики.':'Продолжай: собери номер, проверь себя и поделись обложкой.'}
-    const issueThemes=$$('#issueThemes .choice');let printDone=false;
-    function refreshIssue(){const on=issueThemes.filter(b=>b.classList.contains('on'));const allOk=on.length&&on.every(b=>b.dataset.ok==='1');$('#issueStatus').textContent=on.length===0?'Выбери три темы.':on.length<3?'Выбрано '+on.length+' из 3 — '+(allOk?'пока можно.':'внутри есть запретная тема.'):allOk?'Готово: три темы можно печатать.':'В номере есть запретная тема.'}
-    issueThemes.forEach(b=>b.onclick=()=>{b.classList.toggle('on');refreshIssue()});
-    $('#issueRun').onclick=()=>{if(printDone)return;const on=issueThemes.filter(b=>b.classList.contains('on'));if(on.length!==3){$('#issueStatus').textContent='Выбери ровно три темы.';return}if(!on.every(b=>b.dataset.ok==='1')){$('#issueResult').innerHTML='<b>Не вышло.</b> Ты поставил рядом запретную тему — личность вождя, партию или призыв против власти. Такой номер «Крокодил» не выпустил бы.';$('#issueResult').classList.add('show');$('#issueStatus').textContent='Попробуй снова.';return}printDone=true;printScore=50;$('#issueResult').innerHTML='<b>Номер собран — 50 баллов.</b> Быт можно, власть нельзя: три темы, которые редакция действительно могла поставить рядом.';$('#issueResult').classList.add('show');updateScore()};
-    $('#issueReset').onclick=()=>{printDone=false;printScore=0;issueThemes.forEach(b=>b.classList.remove('on'));$('#issueResult').classList.remove('show');$('#issueStatus').textContent='Выбери три темы.';updateScore()};
-    const questions=[['Когда вышел первый номер под названием «Крокодил»?',['1 января 1920 года','27 августа 1922 года','7 ноября 1917 года','9 мая 1945 года'],1,'Первый номер под названием «Крокодил» вышел 27 августа 1922 года как № 1 (13).'],['Кто нарисовал обложку первого номера?',['Алексей Радаков','Виктор Дени','Борис Ефимов','Иван Малютин'],3,'Обложку первого номера нарисовал Иван Малютин.'],['Что оставалось за границей сатиры?',['Бюрократия','Халтура на производстве','Личность вождей, партия и призывы против власти','Мещанский быт'],2,'За границей рисунка оставались личность вождей, партия и призывы против власти.']];
-    questions.forEach((q,i)=>{const a=document.createElement('article');a.className='q';a.innerHTML='<div class="eyebrow">Вопрос '+(i+1)+'</div><h3>'+q[0]+'</h3><div class="quizopts"></div><div class="fine answer" role="status" aria-live="polite"></div>';q[1].forEach((o,j)=>{const b=document.createElement('button');b.className='quizopt';b.type='button';b.textContent=o;b.onclick=()=>{if(a.dataset.done)return;a.dataset.done=1;b.classList.add(j===q[2]?'good':'bad');if(j!==q[2])a.querySelectorAll('.quizopt')[q[2]].classList.add('good');a.querySelector('.answer').textContent=(j===q[2]?'Верно. ':'Не совсем. Верный ответ выделен. ')+q[3];if(j===q[2]){quizScore+=10;updateScore()}};a.querySelector('.quizopts').appendChild(b)});$('#quizBox').appendChild(a)});
-    async function shareText(text){try{if(navigator.share){await navigator.share({title:'Музей карикатуры «Острее пера»',text:text,url:location.href})}else if(navigator.clipboard){await navigator.clipboard.writeText(location.href);return 'Ссылка скопирована.'}}catch(e){if(e&&e.name==='AbortError')return 'Отправка отменена.';return 'Не удалось отправить автоматически. Скопируй адрес страницы из строки браузера.'}return 'Окно отправки открыто.'}
-    const covers=$$('#coverPicker .cover');let coverPicked=false,coverSent=false;
-    covers.forEach(c=>c.onclick=()=>{covers.forEach(x=>x.classList.remove('on'));c.classList.add('on');coverPicked=true;$('#coverChosen').textContent='Ты выбрал(а) '+c.dataset.label+'. Теперь отправь её.'});
-    $('#shareCoverBtn').onclick=async()=>{if(!coverPicked){$('#coverHint').textContent='Сначала выбери обложку.';return}const on=document.querySelector('#coverPicker .cover.on');const msg='Смотри, какая обложка «Крокодила» ('+on.dataset.label+') — смех 1920-х в музее «Острее пера».';const r=await shareText(msg);$('#coverHint').textContent=r;if(!coverSent){coverSent=true;shareScore=20;updateScore()}};
-    $$('button').forEach(b=>b.type='button');
-    window.MUSEUM_CHROME={museum:{title:'Острее пера',href:'../../index.html',homeLabel:'← Все музеи'},share:{title:'«Крокодил»: как редакция собирала номер',text:'Сатирический журнал, который знал границу смеха.'},all:{href:'../../index.html',label:'Все музеи'},city:'../../index.html',random:[]};
-    window.addEventListener('pageshow',e=>{if(e.persisted)location.reload()});
-  </script>
-  <script>
-document.querySelectorAll('.carousel').forEach(function(car){var nav=car.parentElement.querySelector('.car-nav'),prev=nav.querySelector('.prev'),next=nav.querySelector('.next');function step(){var f=car.querySelector('figure');return f?f.getBoundingClientRect().width+16:300}prev.addEventListener('click',function(){car.scrollBy({left:-step(),behavior:'smooth'})});next.addEventListener('click',function(){car.scrollBy({left:step(),behavior:'smooth'})})});
+document.querySelectorAll('.carousel').forEach(function(car){var nav=car.parentElement.querySelector('.car-nav');if(!nav)return;var prev=nav.querySelector('.prev'),next=nav.querySelector('.next');if(!prev||!next)return;function step(){var f=car.querySelector('figure');return f?f.getBoundingClientRect().width+16:300}prev.addEventListener('click',function(){car.scrollBy({left:-step(),behavior:'smooth'})});next.addEventListener('click',function(){car.scrollBy({left:step(),behavior:'smooth'})})});
   </script>
   <script src="calendar-karikatura.js"></script>
   <script src="../../assets/museum-calendar-month.js"></script>
   <script>window.addEventListener('DOMContentLoaded',function(){var steps=(12-new Date().getMonth())%12;for(var i=0;i<steps;i++){var next=document.querySelector('#calbox .calnav[data-step="1"]');if(next)next.click()}var first=document.querySelector('#calbox .cday[data-k="01-05"]');if(first)first.click()});</script>
   <script src="../../assets/museum-chrome.js"></script>
-  <script>window.MUSEUM_SUPPORT={museum:'Острее пера',page:'страница «„Крокодил“: как редакция собирала номер»',peak:'#project-support'};</script>
+  <script>window.MUSEUM_SUPPORT={museum:'Острее пера',page:'страница «Кто здесь главный, если убрать подпись?»',peak:'#project-support'};</script>
   <script src="../../assets/museum-support.js"></script>
   <script src="../../assets/museum-audioguide.js"></script>
-  <script>window.RC_ANALYTICS_CONFIG={museum_id:'rc:museum:karikatura',issue_id:'rc:issue:karikatura:krokodil-first-issue',issue_version:'0.2.0',build_version:'redesign-cover2'};</script>
+  <script>window.RC_ANALYTICS_CONFIG={museum_id:'rc:museum:karikatura',issue_id:'rc:issue:karikatura:who-is-in-charge',issue_version:'0.2.0',build_version:'redesign-cover2'};</script>
   <script src="../../assets/museum-analytics-v2.js"></script>
   <script src="../../assets/museum-video.js"></script>
-  <script type="application/json" id="museum-score-manifest">{"maximum":100,"awards":[{"id":"main-action","max":50},{"id":"quiz","count":3,"each":10},{"id":"share","max":20}]}</script>
+  <script type="application/json" id="museum-score-manifest">{"maximum":100,"awards":[{"id":"initial-choice","max":5},{"id":"clues","count":5,"each":8},{"id":"hide-label","max":20},{"id":"quiz","count":3,"each":10},{"id":"share-success","max":5}]}</script>
 </body></html>

@@ -1,0 +1,33 @@
+{
+  "test_id": "mobile-390",
+  "code": "mobile",
+  "width": 390,
+  "javascript_enabled": true,
+  "url": "http://b6.local/muzei/karikatura/day-04jan-litografiya.html",
+  "steps": [
+    "Complete page-specific action and quiz"
+  ],
+  "checks": [
+    {
+      "label": "Four printed stages award completion",
+      "actual": 50,
+      "expected": 50,
+      "ok": true
+    },
+    {
+      "label": "Maximum at 390",
+      "actual": 100,
+      "expected": 100,
+      "ok": true
+    },
+    {
+      "label": "No horizontal overflow",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "screenshot": "mobile-390.png",
+  "status": "pass"
+}

@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "page_sha256": "4090058952562583ef082ef5ba2ffa3bc922f3fd53176d05c53ee5399c40824b",
+  "runner": "../run-b6.mjs",
+  "created_at": "2026-09-25T04:00:38.229Z",
+  "browser": "151.0.7922.173",
+  "plan": "../day05-plan.mjs",
+  "inputs": {
+    "../../../../muzei/karikatura/day-05jan-krokodil-first-issue.html": "4090058952562583ef082ef5ba2ffa3bc922f3fd53176d05c53ee5399c40824b",
+    "../run-b6.mjs": "9102a2e45306a6add3e56fcbd8a460d4cf6a0ee8a625bf26bee8b9e6a3e5285a",
+    "../day05-plan.mjs": "a91f8e534f9fbb64a88b0065dfc1e60c06b0f39a0dcb9e98b4e91e0e2e64a6d3",
+    "../remaining-plans.mjs": "a5aaf4f69003d9800d1c76bc5daeb4b16cf4c73a31732498067942c5d4149f4f",
+    "../../../../assets/fonts.css": "6025405e45ebd2219a5716ff005bd18a234361b87151f483c5d749c9679d29a0",
+    "../../../../assets/museum-theme.css": "17e21938d52a36326f08ddf5555b9414e5771b165582e35c58690f77307fa9b5",
+    "../../../../muzei/karikatura/media/krokodil-1922-no1.jpg": "5a76199d3ad151007ba78f3c2c6704de3950f3124b3c32114a281464c435be5c",
+    "../../../../muzei/karikatura/calendar-karikatura.js": "eaa2f108d641eb714155b3f8f8b7d6bd2bdbee6d7c11689aa1f824b066ac44b3",
+    "../../../../assets/museum-calendar-month.js": "e597a197c185ee065da25691ccb5c4cd538960f7642629c30198dc4ab81d59b3",
+    "../../../../assets/museum-chrome.js": "36e66b9e071643768f4a23f2fa9daf1918cef8815962afd2a5ef60b30670c74b",
+    "../../../../assets/museum-support.js": "b01f62ae2ec23f6e1329f6a2c2b2e9bc85e72545696d360a418fe0df040bbbcd",
+    "../../../../assets/museum-audioguide.js": "25ee813c11e79591f8a50895d65e0e52c230aa7abe5d604ee7ed335316b63caf",
+    "../../../../assets/museum-analytics-v2.js": "63c87a66c44c4631ac15a2308f3e74a87751eef8ea8762121ff514845d04651d",
+    "../../../../assets/museum-video.js": "de33b1a1c1ece4c2ab4ad7975d0fe20114183f19ca598c5461abe123c5c7d38f",
+    "../../../../assets/fonts/playfairdisplay-nuFiD-vYSZviVYUb_rj3ij__anPXDTjYgFE_.woff2": "c108681cba6a9820bff52f4a1a4a1d9edf356b347bd79b7c61e916028e8a8b54",
+    "../../../../assets/fonts/playfairdisplay-nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2": "e0c764a8e9e1cce92163c55bac4b2ad6cd4cf8c696ce2289ab5c41565e65b7e2",
+    "../../../../assets/fonts/inter-UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2": "71d5ee93cc1e9f1d520a3a8b66456de18c7879d8df09d57fcd2eaff75fef0075",
+    "../../../../muzei/karikatura/media/krokodil-1922-i-nomer.jpg": "57600db3e4a564302c3b2ecab53e36ee00b234228d9ca78934985e01318958c0",
+    "../../../../assets/fonts/inter-UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+    "../../../../muzei/karikatura/media/krokodil-1923-no43.jpg": "2a04b5d641a7debd348f64881c25b12023d62d2e40db075ea3e3ccb1350e9b8f",
+    "../../../../muzei/karikatura/media/krokodil-1924-no26.jpg": "7aad17ff9b2bbba90e20258abf2629555c9916352e14b7650f325a547e12afb7",
+    "../../../../muzei/karikatura/media/krokodil-1934-strashny-son.jpg": "e8080d06172973d9628e232f24eca97ebfda83e03b685df214037518709658ea",
+    "entry-390.png": "8da9b1d84292c367c02cfa915d885522a8ac39b5e1bfdb07ee65c9adc76aea2b",
+    "entry-390.json": "08752626c30fa992ffe2c64a1b240eee7358eda8302072c1e3949f12b7662894",
+    "wrong-390.png": "44056868289927088ace7d883316563f192a25ede8fdb57a60fb3554c03a4c2a",
+    "wrong-390.json": "587ece0fe939c98312d446b15f4ebe440af0502aa4004811855cf6198a6a2a0b",
+    "../../../../muzei/karikatura/media/krokodil-1922-moor-pereregistraciya.jpg": "a8f845fcdaa1eb23eec2959a3397f8525e33d18cfe745d5259ebf0e686c8b21e",
+    "../../../../muzei/karikatura/media/krokodil-1922-moor-zhivaya-cerkov.jpg": "6c697b09cbd503846c956a2c9ef14d21fd3923b9c9ff64dba2599f1fe25e0ca8",
+    "reset-390.png": "2d72fd5ab6fa4630f7f0f61ba53c59674b53527aae38faad54e34699c19ac7b3",
+    "reset-390.json": "3970d8238976a23f70dca877d4688584c89c2300ae51b742f18794b9eb5139a2",
+    "../../../../muzei/karikatura/media/krokodil-1925-no20.jpg": "f26007ebdb357fc327fdad6dfdd82ed271bd73272ba65f33438730e9bac53fd5",
+    "../../../../muzei/karikatura/media/krokodil-1925-no35.jpg": "6e5847d13e12e465025d64cd612d4f2374d16600acd96230ead8f6b162f6376c",
+    "../../../../muzei/karikatura/media/krokodil-1925-no41.jpg": "030d7d65fd0952f9153bda2ec627def1787c11bd1a0f6dbe63f0a0fe657900fd",
+    "../../../../muzei/karikatura/media/krokodil-1925-no48.jpg": "e96db0284011d82c6b682d5d854226055a55a9bb6225b4de85faea73145d6767",
+    "../../../../muzei/karikatura/media/krokodil-1926-no15.jpg": "e3688894d7e445ca12ddb22271ea4057534222b16ddf66c217bd4b28645ce1f3",
+    "../../../../muzei/karikatura/media/krokodil-1927-no04.jpg": "357f22067be1526d88acd02247156f91830df903fc4ab0496ef77cd59bb47d6f",
+    "../../../../muzei/karikatura/media/krokodil-1927-no08.jpg": "ff4ac55f99523b10adb97c4ca727ff6b3b3a47a46fe243e677455039e88cf8ce",
+    "../../../../muzei/karikatura/media/krokodil-1927-no09.jpg": "c6f879b2bb76418cad336d4529e1f6bdb93c15ebff430bd0ae9e018e418c970b",
+    "mobile-390.png": "0b88a462e5d80af7102220c2961d2ca304540846322641fcf5c9dbb0889cc150",
+    "mobile-390.json": "89942c08a387781caed5a7eb912e02bb02deb84f986389a599d1d8fd7c17d076",
+    "../../../../muzei/karikatura/media/krokodil-1929-redakciya.jpg": "2f9ed6151510535c2b3d7c5aae5eca40542aa804451bd7b1c46351dca4e50657",
+    "../../../../muzei/karikatura/media/krokodil-1924-esli-apparat.jpg": "95629fa949feb4c09176ecbd817a71e7e5d8991b4aa4486bfc7b4f36f7dccc9d",
+    "../../../../muzei/karikatura/media/krokodil-1924-delegat.jpg": "3e68be846293b7b495b4bdf8b71cee648deb83295cff4b4c984862a74cda313b",
+    "../../../../muzei/karikatura/media/krokodil-1926-provody.jpg": "744d6c8d15ff0116833497938e23717319f0c37fed9be84385488440faff7446",
+    "../../../../muzei/karikatura/media/krokodil-malyutin-blagodetel.jpg": "598035b1a3ba4894bdd4886bab78b3631a48dccb09c6e9997162e7f1e91feced",
+    "mobile-1440.png": "6b2e0d12e94c9bc317c548beb6e91208b6bacb87518d9c50c04d74fb0d242ea0",
+    "mobile-1440.json": "f94cf44b1ded386df7d73194f3543e2e6887178547f23c36d3eb38ceee845e43",
+    "../../../../muzei/karikatura/media/krokodil-malyutin-sueverny-narod.jpg": "d435d5cbca54cce158ef23f10fd6b9420a6c4dd676bde736c316ccd9b206c6e7",
+    "../../../../muzei/karikatura/media/krokodil-malyutin-verny-priznak.jpg": "13a7411a6e5cf84adcae3d2814d5a4c8a4f54ae7eea1d7508ea71da9010248d6",
+    "../../../../muzei/karikatura/media/krokodil-malyutin-ptitsa.jpg": "121da040647ab3ce52646755d4f9cdaf6ebd60585ff1b58263fa3d75e8415fff",
+    "../../../../muzei/karikatura/media/krokodil-malyutin-revizor-1926.jpg": "cc84f6200ed1330304b3d82bcef3c59b1958353bc21be442ceda450f83bb67bc",
+    "../../../../muzei/karikatura/media/krokodil-malyutin-khor-kalinych-1925.jpg": "06c755967839443c8d8c12742eaadb6df60ece3d25f195ebeb6236fce41d2f5a",
+    "../../../../muzei/karikatura/media/krokodil-vecher-afisha.jpg": "6979c6dcbc40a9272b0b7115fb78e019f63b67b7673bd08da901fd587ef4e812",
+    "nojs-390.png": "98d29df69f11cfc4177b82975cead1ab633294abb143c7bb6ac71ee6caa5c7d5",
+    "nojs-390.json": "6bc12eb6dbfcf03e8c1d87a51c9d1299fd8002f969179962641cb8fe69854c06",
+    "score-390.png": "caeff34f5782b8162bad631f9c52ad7491e6ac3fd6262710fe0123a592811967",
+    "score-390.json": "b7084d89b602043303604c310ea721f85d0fc57ee9810769b60878ecd5a66723",
+    "main-390.png": "2d72fd5ab6fa4630f7f0f61ba53c59674b53527aae38faad54e34699c19ac7b3",
+    "main-390.json": "eb2cd12f8f9c65ba0ed0597eb6d715bb2c847f37d82a849fa501447bfb609634",
+    "empty-390.png": "17d312bde4e3569c4bb1beed654bef22ec805072fe254eb29b7e87d580b070a9",
+    "empty-390.json": "da5e5b7e4c2d99473bb7507a871da226663d313061a9a23116ea082d92432859"
+  },
+  "scenarios": {
+    "entry": [
+      {
+        "test_id": "entry-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "entry-390.json"
+      }
+    ],
+    "wrong": [
+      {
+        "test_id": "wrong-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "wrong-390.json"
+      }
+    ],
+    "reset": [
+      {
+        "test_id": "reset-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "reset-390.json"
+      }
+    ],
+    "mobile": [
+      {
+        "test_id": "mobile-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "mobile-390.json"
+      },
+      {
+        "test_id": "mobile-1440",
+        "status": "pass",
+        "automated": true,
+        "width": 1440,
+        "javascript_enabled": true,
+        "evidence": "mobile-1440.json"
+      }
+    ],
+    "nojs": [
+      {
+        "test_id": "nojs-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": false,
+        "evidence": "nojs-390.json"
+      }
+    ],
+    "score": [
+      {
+        "test_id": "score-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "score-390.json"
+      }
+    ],
+    "main": [
+      {
+        "test_id": "main-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "main-390.json"
+      }
+    ],
+    "empty": [
+      {
+        "test_id": "empty-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "empty-390.json"
+      }
+    ]
+  },
+  "errors": [],
+  "environment": {
+    "origin": "http://b6.local",
+    "network": "local inputs only"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "test_id": "reset-390",
+  "code": "reset",
+  "width": 390,
+  "javascript_enabled": true,
+  "url": "http://b6.local/muzei/karikatura/day-06jan-who-is-in-charge.html",
+  "steps": [
+    "Complete main action",
+    "Reset using page control or browser new visit"
+  ],
+  "checks": [
+    {
+      "label": "Five evidence cards",
+      "actual": 5,
+      "expected": 5,
+      "ok": true
+    },
+    {
+      "label": "Hidden board changes image",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    },
+    {
+      "label": "Evidence-based verdict",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    },
+    {
+      "label": "Main action reward",
+      "actual": 65,
+      "expected": 65,
+      "ok": true
+    },
+    {
+      "label": "New visit resets session-only score",
+      "actual": 0,
+      "expected": 0,
+      "ok": true
+    },
+    {
+      "label": "Evidence cards reset",
+      "actual": 0,
+      "expected": 0,
+      "ok": true
+    },
+    {
+      "label": "Five evidence cards",
+      "actual": 5,
+      "expected": 5,
+      "ok": true
+    },
+    {
+      "label": "Hidden board changes image",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    },
+    {
+      "label": "Evidence-based verdict",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    },
+    {
+      "label": "Repeating after reset earns once",
+      "actual": 65,
+      "expected": 65,
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "screenshot": "reset-390.png",
+  "status": "pass"
+}

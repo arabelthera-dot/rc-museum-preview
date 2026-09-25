@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "page_sha256": "414217157e6a161c79ad81a8d4eff2c50c47438b299657502d8d9dbba65984fc",
+  "runner": "../run-b6.mjs",
+  "created_at": "2026-09-25T04:02:39.505Z",
+  "browser": "151.0.7922.173",
+  "plan": "../day03-plan-v2.mjs",
+  "inputs": {
+    "../../../../muzei/karikatura/day-03jan-radakov-tri-linii.html": "414217157e6a161c79ad81a8d4eff2c50c47438b299657502d8d9dbba65984fc",
+    "../run-b6.mjs": "9102a2e45306a6add3e56fcbd8a460d4cf6a0ee8a625bf26bee8b9e6a3e5285a",
+    "../day03-plan-v2.mjs": "ec55ece5d187c7879819521a6c07bcb7f8826d1db9fef9d2ccb22953b5e29a3f",
+    "../remaining-plans-v2.mjs": "450176d1b4acb4e21ef059063ed789a453fbd0d3153062867264ed17dea6977b",
+    "../../../../assets/fonts.css": "6025405e45ebd2219a5716ff005bd18a234361b87151f483c5d749c9679d29a0",
+    "../../../../assets/museum-theme.css": "17e21938d52a36326f08ddf5555b9414e5771b165582e35c58690f77307fa9b5",
+    "../../../../muzei/karikatura/media/radakov-strashny-son-moskvicha.jpg": "e8080d06172973d9628e232f24eca97ebfda83e03b685df214037518709658ea",
+    "../../../../muzei/karikatura/calendar-karikatura.js": "eaa2f108d641eb714155b3f8f8b7d6bd2bdbee6d7c11689aa1f824b066ac44b3",
+    "../../../../assets/museum-calendar-month.js": "e597a197c185ee065da25691ccb5c4cd538960f7642629c30198dc4ab81d59b3",
+    "../../../../assets/museum-chrome.js": "36e66b9e071643768f4a23f2fa9daf1918cef8815962afd2a5ef60b30670c74b",
+    "../../../../assets/museum-support.js": "b01f62ae2ec23f6e1329f6a2c2b2e9bc85e72545696d360a418fe0df040bbbcd",
+    "../../../../assets/museum-audioguide.js": "25ee813c11e79591f8a50895d65e0e52c230aa7abe5d604ee7ed335316b63caf",
+    "../../../../assets/museum-analytics-v2.js": "63c87a66c44c4631ac15a2308f3e74a87751eef8ea8762121ff514845d04651d",
+    "../../../../assets/museum-video.js": "de33b1a1c1ece4c2ab4ad7975d0fe20114183f19ca598c5461abe123c5c7d38f",
+    "../../../../assets/fonts/playfairdisplay-nuFiD-vYSZviVYUb_rj3ij__anPXDTjYgFE_.woff2": "c108681cba6a9820bff52f4a1a4a1d9edf356b347bd79b7c61e916028e8a8b54",
+    "../../../../assets/fonts/inter-UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+    "../../../../assets/fonts/playfairdisplay-nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2": "e0c764a8e9e1cce92163c55bac4b2ad6cd4cf8c696ce2289ab5c41565e65b7e2",
+    "../../../../assets/fonts/inter-UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2": "71d5ee93cc1e9f1d520a3a8b66456de18c7879d8df09d57fcd2eaff75fef0075",
+    "../../../../muzei/karikatura/media/radakov-provody-akvarel.jpg": "e581b4b1f292d58ea0262f78f07891c14f758fcba3765f198242de0c9d46664f",
+    "../../../../muzei/karikatura/media/radakov-provody-krokodil.jpg": "e0f248bcce3f6828ae59185b03b7731c0767ff97c23f8af0ecd7d37186977d22",
+    "../../../../muzei/karikatura/media/radakov-satirikon-1918-oblozhka.jpg": "57ee3ac58b28586999de1d65ba181b2bd151c95a74186c10e1a9d2c01964d780",
+    "../../../../muzei/karikatura/media/radakov-satirikon-1917-p4.jpg": "fc660fdb096c3b56d760c08bd2c31ce694fa05416a84c52e69ff8ab351932570",
+    "entry-390.png": "41130eb6489c4041a7973dbaaf2d97081d7749eb98cc7ffde75ae0c6314824f4",
+    "entry-390.json": "da448510bf455c3d0c319cf45c12ca2162959cd889bc0f3e786c0e0d35d9ef11",
+    "wrong-390.png": "efdcd8c7076ad75e250c9072ed832e6cafd25535611ed41afcddece1a5a854ff",
+    "wrong-390.json": "d7aab210f04971a1ceaf3bd3c7e43a300e970126f8e2eb684815fedfe92519dc",
+    "reset-390.png": "98e9502c8473a00bab8ce30b6b9b0ea785d9f8118f86c0660f386aa12265570e",
+    "reset-390.json": "2a888ff9361a4f2f470fadc31b6fff611aea706f1d58b5e7588be945e4bad416",
+    "../../../../muzei/karikatura/media/radakov-plakat-samoderzhavie.jpg": "bf2f4bd566b7975f67968d2b036fac76274bf89096151b12a08cc08ff39d9dea",
+    "../../../../muzei/karikatura/media/radakov-plakat-okno-tass.jpg": "daf3aee1f17d5e60469facc800fdab02069173a50978bebc0d20a425f2381fa8",
+    "mobile-390.png": "9bdfea3bdaa0005fa6d07afbffc70df5159a03d95a367d3d63f4404703241b08",
+    "mobile-390.json": "ec868c60f4230ccaccc5b7174114031d61832da3edfbec86d2c2a3660a04f114",
+    "../../../../muzei/karikatura/media/radakov-tsar-repka.jpg": "9ae2747b156fba5519e2f844d6c22c3ddb82005f6b188b0639c65b4eedfbb7d2",
+    "../../../../muzei/karikatura/media/radakov-sbornik.jpg": "87a3ed71e5a05276bebb703ab7bbd24ea6d44d9f9fe8f193ef3b180a0a371c96",
+    "../../../../muzei/karikatura/media/radakov-bezbozhnik-1929.jpg": "c7210d8524d12e4e248452ff3e59779e753b497c9e31fcb2092b3d8f8cac3778",
+    "../../../../muzei/karikatura/media/radakov-puritane.jpg": "30019bfe3c90a5a190deb91926def28593f57ed81ae511978b9ff60d8197fdfb",
+    "../../../../muzei/karikatura/media/radakov-christmas-jester.jpg": "016d51e21fedc604c4036a1d3662f31086f1753765db8859abf15ba96b0b6c12",
+    "../../../../muzei/karikatura/media/radakov-oblozhka-strashny-son.jpg": "f4a851fb4f9b217afcc70c22596558f096a2a2fee54d40320702ab47cbca8a51",
+    "../../../../muzei/karikatura/media/radakov-likbez-gramotnye.jpg": "d96ff2820a5476af49bf5982b0ae607661f1231984b0ed584c5587032d69137d",
+    "../../../../muzei/karikatura/media/radakov-likbez-slepoy.jpg": "6fc0b38f897965923a012d996b01b1e5d0b786c640079a9b58d9200375c49a04",
+    "../../../../muzei/karikatura/media/radakov-likbez-znanie.jpg": "b0d20c09c9005f525303865082d480ef484472fba2391e9951347800f7bc908e",
+    "../../../../muzei/karikatura/media/radakov-likbez-shkola.jpg": "35b779156e5104d709d47f6f74c1207afacf262a3eed956d03c0dec4b9568eb4",
+    "../../../../muzei/karikatura/media/radakov-likbez-verny-drug.jpg": "1eed72d1d88c09875de4b431b2eaa73db9be996c8fa3a89cecdc912c4a259eb0",
+    "mobile-1440.png": "15bf586a860c47812df61e82bc99eaa36c64022890b21a381add91d708a2b3d4",
+    "mobile-1440.json": "5a7a60d6d5871e43186098f73678b87c0175464884ef73991eca7a4389170bf6",
+    "../../../../muzei/karikatura/media/radakov-puritane-2.jpg": "5c7196200f2d36966a786ef6f747528b8a0ff3b6bdc45ad8f4a925419493b2bc",
+    "../../../../muzei/karikatura/media/radakov-likbez-zhizn.jpg": "98a64315f8c02c751b8fe05cde2516d3dabceb444f94b1bac53f1d650f078dae",
+    "nojs-390.png": "93d94873af69d92c4991b9afa22e45b7a573dab1fe7d2f66da5f79bc5c338cdc",
+    "nojs-390.json": "785f2375561bc549d7659dc0040abd6be1a3377ffaa9d3177d12fa1fd52dbbb7",
+    "score-390.png": "21b4c00c99753b6e996486a85698032cafd1cc08d03abe6bf0bf55d390aff1e0",
+    "score-390.json": "8b9092c287e73e709f88b5921460d6151a83087956bb88a7f16f4237297f900f",
+    "main-390.png": "76a4756e6e84ab949dc59f745c0c09a352cecb8833c43b62a065ee34a2b778cd",
+    "main-390.json": "03651d702d83c3c9ab1f95a1031a7422cd0760f7eb1705a68cc94f3b8888de9d",
+    "empty-390.png": "e82023b7f609014c92fb88a80ff60bb7a9b4da8afff0c0ef00ab3dea4c91c63e",
+    "empty-390.json": "fdb2e960624135d0a599ff7a7feb98d1f135454cb9efbd39de8c50307ca98de6"
+  },
+  "scenarios": {
+    "entry": [
+      {
+        "test_id": "entry-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "entry-390.json"
+      }
+    ],
+    "wrong": [
+      {
+        "test_id": "wrong-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "wrong-390.json"
+      }
+    ],
+    "reset": [
+      {
+        "test_id": "reset-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "reset-390.json"
+      }
+    ],
+    "mobile": [
+      {
+        "test_id": "mobile-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "mobile-390.json"
+      },
+      {
+        "test_id": "mobile-1440",
+        "status": "pass",
+        "automated": true,
+        "width": 1440,
+        "javascript_enabled": true,
+        "evidence": "mobile-1440.json"
+      }
+    ],
+    "nojs": [
+      {
+        "test_id": "nojs-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": false,
+        "evidence": "nojs-390.json"
+      }
+    ],
+    "score": [
+      {
+        "test_id": "score-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "score-390.json"
+      }
+    ],
+    "main": [
+      {
+        "test_id": "main-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "main-390.json"
+      }
+    ],
+    "empty": [
+      {
+        "test_id": "empty-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "empty-390.json"
+      }
+    ]
+  },
+  "errors": [],
+  "environment": {
+    "origin": "http://b6.local",
+    "network": "local inputs only"
+  }
+}

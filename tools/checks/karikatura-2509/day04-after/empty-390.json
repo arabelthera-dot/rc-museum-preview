@@ -1,0 +1,33 @@
+{
+  "test_id": "empty-390",
+  "code": "empty",
+  "width": 390,
+  "javascript_enabled": true,
+  "url": "http://b6.local/muzei/karikatura/day-04jan-litografiya.html",
+  "steps": [
+    "Inspect concrete activity contents"
+  ],
+  "checks": [
+    {
+      "label": "Four lithography stages",
+      "actual": 4,
+      "expected": 4,
+      "ok": true
+    },
+    {
+      "label": "One step earns no completion reward",
+      "actual": 0,
+      "expected": 0,
+      "ok": true
+    },
+    {
+      "label": "Promised quiz count",
+      "actual": 5,
+      "expected": 5,
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "screenshot": "empty-390.png",
+  "status": "pass"
+}

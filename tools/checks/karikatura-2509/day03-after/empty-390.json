@@ -1,0 +1,33 @@
+{
+  "test_id": "empty-390",
+  "code": "empty",
+  "width": 390,
+  "javascript_enabled": true,
+  "url": "http://b6.local/muzei/karikatura/day-03jan-radakov-tri-linii.html",
+  "steps": [
+    "Inspect concrete activity contents"
+  ],
+  "checks": [
+    {
+      "label": "Real drawing loaded",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    },
+    {
+      "label": "Canvas has image pixels",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    },
+    {
+      "label": "Promised quiz count",
+      "actual": 5,
+      "expected": 5,
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "screenshot": "empty-390.png",
+  "status": "pass"
+}

@@ -1,0 +1,39 @@
+{
+  "test_id": "score-390",
+  "code": "score",
+  "width": 390,
+  "javascript_enabled": true,
+  "url": "http://b6.local/muzei/karikatura/day-05jan-krokodil-first-issue.html",
+  "steps": [
+    "Earn all stated rewards"
+  ],
+  "checks": [
+    {
+      "label": "Issue assembled",
+      "actual": 50,
+      "expected": 50,
+      "ok": true
+    },
+    {
+      "label": "Cancelled share earns nothing",
+      "actual": 80,
+      "expected": 80,
+      "ok": true
+    },
+    {
+      "label": "Reachable maximum",
+      "actual": 100,
+      "expected": 100,
+      "ok": true
+    },
+    {
+      "label": "Repeat does not exceed maximum",
+      "actual": 100,
+      "expected": 100,
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "screenshot": "score-390.png",
+  "status": "pass"
+}

@@ -1,0 +1,45 @@
+{
+  "test_id": "main-390",
+  "code": "main",
+  "width": 390,
+  "javascript_enabled": true,
+  "url": "http://b6.local/muzei/karikatura/day-06jan-who-is-in-charge.html",
+  "steps": [
+    "Run subject-specific main action"
+  ],
+  "checks": [
+    {
+      "label": "Five evidence cards",
+      "actual": 5,
+      "expected": 5,
+      "ok": true
+    },
+    {
+      "label": "Hidden board changes image",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    },
+    {
+      "label": "Evidence-based verdict",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    },
+    {
+      "label": "Main action reward",
+      "actual": 65,
+      "expected": 65,
+      "ok": true
+    },
+    {
+      "label": "No duplicate main reward",
+      "actual": 65,
+      "expected": 65,
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "screenshot": "main-390.png",
+  "status": "pass"
+}

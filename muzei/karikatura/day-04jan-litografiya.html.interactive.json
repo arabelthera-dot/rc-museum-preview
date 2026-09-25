@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "page_sha256": "6c602b2d08dfb103d5539878c5a4762d337a954642689bd3e97bbdf2276b0abd",
+  "runner": "../../tools/checks/karikatura-2509/run-b6.mjs",
+  "created_at": "2026-09-25T04:03:08.154Z",
+  "browser": "151.0.7922.173",
+  "plan": "../../tools/checks/karikatura-2509/day04-plan-v2.mjs",
+  "inputs": {
+    "day-04jan-litografiya.html": "6c602b2d08dfb103d5539878c5a4762d337a954642689bd3e97bbdf2276b0abd",
+    "../../tools/checks/karikatura-2509/run-b6.mjs": "9102a2e45306a6add3e56fcbd8a460d4cf6a0ee8a625bf26bee8b9e6a3e5285a",
+    "../../tools/checks/karikatura-2509/day04-plan-v2.mjs": "77dba9b7518feb09b6aa4e5521dea65e1d46ae70e89afcf5b9dfca409d089eaa",
+    "../../tools/checks/karikatura-2509/remaining-plans-v2.mjs": "450176d1b4acb4e21ef059063ed789a453fbd0d3153062867264ed17dea6977b",
+    "../../assets/fonts.css": "6025405e45ebd2219a5716ff005bd18a234361b87151f483c5d749c9679d29a0",
+    "../../assets/museum-theme.css": "17e21938d52a36326f08ddf5555b9414e5771b165582e35c58690f77307fa9b5",
+    "media/lubok-medved-koza.png": "8cc5b0668854cde03313edb4cba0f7a118e6fc0aa4df95ee2ee342c2859f4b74",
+    "media/senefelder.jpg": "7e599139b70fcca75d590109f6df4905be49085ed80d02a0ae7599ac843a6dc4",
+    "calendar-karikatura.js": "eaa2f108d641eb714155b3f8f8b7d6bd2bdbee6d7c11689aa1f824b066ac44b3",
+    "../../assets/museum-calendar-month.js": "e597a197c185ee065da25691ccb5c4cd538960f7642629c30198dc4ab81d59b3",
+    "../../assets/museum-chrome.js": "36e66b9e071643768f4a23f2fa9daf1918cef8815962afd2a5ef60b30670c74b",
+    "../../assets/museum-support.js": "b01f62ae2ec23f6e1329f6a2c2b2e9bc85e72545696d360a418fe0df040bbbcd",
+    "../../assets/museum-audioguide.js": "25ee813c11e79591f8a50895d65e0e52c230aa7abe5d604ee7ed335316b63caf",
+    "../../assets/museum-analytics-v2.js": "63c87a66c44c4631ac15a2308f3e74a87751eef8ea8762121ff514845d04651d",
+    "../../assets/museum-video.js": "de33b1a1c1ece4c2ab4ad7975d0fe20114183f19ca598c5461abe123c5c7d38f",
+    "../../assets/fonts/playfairdisplay-nuFiD-vYSZviVYUb_rj3ij__anPXDTjYgFE_.woff2": "c108681cba6a9820bff52f4a1a4a1d9edf356b347bd79b7c61e916028e8a8b54",
+    "../../assets/fonts/inter-UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+    "../../assets/fonts/playfairdisplay-nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2": "e0c764a8e9e1cce92163c55bac4b2ad6cd4cf8c696ce2289ab5c41565e65b7e2",
+    "../../assets/fonts/inter-UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2": "71d5ee93cc1e9f1d520a3a8b66456de18c7879d8df09d57fcd2eaff75fef0075",
+    "media/lubok-farnos.jpg": "51c4b9eabd6cd9815f649e8aec54bb9b48ac2f70786555e88d2181da46f0ffa1",
+    "media/lubok-ersh.jpg": "6054100429ed2854374feb99b49e70089152a3b6d50773ac0284bfe650ed6e03",
+    "media/lubok-foma-erema.jpg": "c7f9f11e0b0f8de657b8af413a1867d1d6eb9d62c8ef224f159a86e0e5921047",
+    "media/lubok-bear-krylov.jpg": "a90a58cde52683aca18026b225f8326f8b090207818b7755b08d404c13258f77",
+    "../../tools/checks/karikatura-2509/day04-after/entry-390.png": "e5c2d36d864232507149f1ffdf1e65daea5ded92d03dac891dd479505f95e5ef",
+    "../../tools/checks/karikatura-2509/day04-after/entry-390.json": "90c30b217b3898c92215af7a55031f6febdd4b2b87053276e4539ecdb8b5023e",
+    "../../tools/checks/karikatura-2509/day04-after/wrong-390.png": "0cd2f3dcc7cbf8a058c6f404505fc22750386720f114e730ed34cbf8dc8faae2",
+    "../../tools/checks/karikatura-2509/day04-after/wrong-390.json": "c73b4f3e812296d6bd7d3951a64fdd86a75cb3334c4251d0dc45ee5847fbb54d",
+    "../../tools/checks/karikatura-2509/day04-after/reset-390.png": "47ab8759e2536cb5dda6ef3c8933006cc0490db71adb64d9c97847182a212899",
+    "../../tools/checks/karikatura-2509/day04-after/reset-390.json": "ce85734cca8a59a10d8ef60d524b1bac45210e68768be91fe8f03035512fa3bf",
+    "../../tools/checks/karikatura-2509/day04-after/mobile-390.png": "504823a01e676afe4a514cdf5605c91ce858ef0b4aa4cb1da2db4990353d402a",
+    "../../tools/checks/karikatura-2509/day04-after/mobile-390.json": "3984fd0b2aff007905ae92980c8d2a628f607b99dd6d34a0b7264773ceac872a",
+    "media/lubok-bear-wedding.jpg": "39fe979b26757e8f714f6c40f00eae8723b188dffba8de4df5c4305ea381e611",
+    "media/lubok-bova.jpg": "72bf74cbaa45823fed272e984110f277fa45757ba9303a641117c41b449e27b0",
+    "media/lubok-fools.jpg": "e7cb60fcc63020c830916d73a460b273e1ec5634188179a75f0de12ca49ef425",
+    "media/lubok-konek.jpg": "b55fcdb5accc234c41a7a5bfb5c5adfe13ab681e9a3966a85a41b9e1248fe470",
+    "media/lubok-kostroma.jpg": "1f8d9964f6b6f0f3f8ce38b7049b6e7e17d9bfb8fb1a01555873fb7cba8daeb0",
+    "media/bohm-khor.jpg": "0c0d1f59a2c883548d3d4fe4d6f61650f64c5f52b23b589c76df28635e30f9a6",
+    "media/senefelder-2.jpg": "d5f906f1c9c8c89614bdacb78a3ad8c12d7d8f3324de9d5c89192dd630b0ab85",
+    "../../tools/checks/karikatura-2509/day04-after/mobile-1440.png": "c18c35f135d97c7e13941e4d6b03865ef9a2d088082620845b7c3a6100ceef57",
+    "../../tools/checks/karikatura-2509/day04-after/mobile-1440.json": "d010d86f077a6c766faa4ff42baa6d3cd2cad24d91d80e207a347791131c438c",
+    "../../tools/checks/karikatura-2509/day04-after/nojs-390.png": "8f0c73a1a58cab8b2da736b963925d0907534be178f223c42cd7dcc324a3fad7",
+    "../../tools/checks/karikatura-2509/day04-after/nojs-390.json": "778cda431121db8e8151086f1c4460d40cc2b2437a9d80a4a57750681708af23",
+    "../../tools/checks/karikatura-2509/day04-after/score-390.png": "e5a2ca877b49c53f0b0e3c4bb68d59e260eb15871ec0cf53c4b37190b06f52a6",
+    "../../tools/checks/karikatura-2509/day04-after/score-390.json": "3635b01b2858f643d69869c9f6ee4a5e5e63024684954e993e53f9483c3ae954",
+    "../../tools/checks/karikatura-2509/day04-after/main-390.png": "48babb1fcaaa739ee1171ddea3bc2915f630b060efb04b8a205f995f79284b73",
+    "../../tools/checks/karikatura-2509/day04-after/main-390.json": "0f25b93d9d758119beccd35a111a1373446cc6bbf78f5c27488c8420aa7e5135",
+    "../../tools/checks/karikatura-2509/day04-after/empty-390.png": "f1f37847fc3062e71a609f780ea83a4358c3f3d24f9b85f5e893c1c6172957c7",
+    "../../tools/checks/karikatura-2509/day04-after/empty-390.json": "08471dac173372eae7916263b80c41869e6454916b2f0baa058363bb3c45e769"
+  },
+  "scenarios": {
+    "entry": [
+      {
+        "test_id": "entry-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "../../tools/checks/karikatura-2509/day04-after/entry-390.json"
+      }
+    ],
+    "wrong": [
+      {
+        "test_id": "wrong-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "../../tools/checks/karikatura-2509/day04-after/wrong-390.json"
+      }
+    ],
+    "reset": [
+      {
+        "test_id": "reset-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "../../tools/checks/karikatura-2509/day04-after/reset-390.json"
+      }
+    ],
+    "mobile": [
+      {
+        "test_id": "mobile-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "../../tools/checks/karikatura-2509/day04-after/mobile-390.json"
+      },
+      {
+        "test_id": "mobile-1440",
+        "status": "pass",
+        "automated": true,
+        "width": 1440,
+        "javascript_enabled": true,
+        "evidence": "../../tools/checks/karikatura-2509/day04-after/mobile-1440.json"
+      }
+    ],
+    "nojs": [
+      {
+        "test_id": "nojs-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": false,
+        "evidence": "../../tools/checks/karikatura-2509/day04-after/nojs-390.json"
+      }
+    ],
+    "score": [
+      {
+        "test_id": "score-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "../../tools/checks/karikatura-2509/day04-after/score-390.json"
+      }
+    ],
+    "main": [
+      {
+        "test_id": "main-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "../../tools/checks/karikatura-2509/day04-after/main-390.json"
+      }
+    ],
+    "empty": [
+      {
+        "test_id": "empty-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "../../tools/checks/karikatura-2509/day04-after/empty-390.json"
+      }
+    ]
+  },
+  "errors": [],
+  "environment": {
+    "origin": "http://b6.local",
+    "network": "local inputs only"
+  }
+}

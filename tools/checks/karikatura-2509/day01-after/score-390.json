@@ -1,0 +1,33 @@
+{
+  "test_id": "score-390",
+  "code": "score",
+  "width": 390,
+  "javascript_enabled": true,
+  "url": "http://b6.local/muzei/karikatura/day-01jan-russian-bear.html",
+  "steps": [
+    "Earn all stated rewards"
+  ],
+  "checks": [
+    {
+      "label": "Editorial choice changes headline",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    },
+    {
+      "label": "Reachable maximum",
+      "actual": 100,
+      "expected": 100,
+      "ok": true
+    },
+    {
+      "label": "Repeat does not exceed maximum",
+      "actual": 100,
+      "expected": 100,
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "screenshot": "score-390.png",
+  "status": "pass"
+}

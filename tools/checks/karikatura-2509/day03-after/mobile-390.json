@@ -1,0 +1,33 @@
+{
+  "test_id": "mobile-390",
+  "code": "mobile",
+  "width": 390,
+  "javascript_enabled": true,
+  "url": "http://b6.local/muzei/karikatura/day-03jan-radakov-tri-linii.html",
+  "steps": [
+    "Complete page-specific action and quiz"
+  ],
+  "checks": [
+    {
+      "label": "Stop explanation visible",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    },
+    {
+      "label": "Maximum at 390",
+      "actual": 100,
+      "expected": 100,
+      "ok": true
+    },
+    {
+      "label": "No horizontal overflow",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "screenshot": "mobile-390.png",
+  "status": "pass"
+}
