@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "page_sha256": "1af1f65f8fccc4b2ff8eacbf24943db48ce21574f8cf4589b48ed274cdc3a78d",
+  "runner": "../run-b6.mjs",
+  "created_at": "2026-09-25T12:54:31.438Z",
+  "browser": "151.0.7922.173",
+  "plan": "../day01-plan-v2.mjs",
+  "inputs": {
+    "../../../../muzei/karikatura/day-01jan-russian-bear.html": "1af1f65f8fccc4b2ff8eacbf24943db48ce21574f8cf4589b48ed274cdc3a78d",
+    "../run-b6.mjs": "9102a2e45306a6add3e56fcbd8a460d4cf6a0ee8a625bf26bee8b9e6a3e5285a",
+    "../day01-plan-v2.mjs": "29229ae60135f61129a3c1a475cc0832af9d1d93264b1f8ddab9100ea7b08690",
+    "../remaining-plans-v2.mjs": "450176d1b4acb4e21ef059063ed789a453fbd0d3153062867264ed17dea6977b",
+    "../../../../assets/fonts.css": "6025405e45ebd2219a5716ff005bd18a234361b87151f483c5d749c9679d29a0",
+    "../../../../assets/museum-theme.css": "17e21938d52a36326f08ddf5555b9414e5771b165582e35c58690f77307fa9b5",
+    "../../../../muzei/karikatura/media/russian-bear-1791-960.webp": "989d886a9eb4ee129208918bedb7bf87636751874eb76a79353807d9504028b9",
+    "../../../../muzei/karikatura/calendar-karikatura.js": "eaa2f108d641eb714155b3f8f8b7d6bd2bdbee6d7c11689aa1f824b066ac44b3",
+    "../../../../muzei/karikatura/media/russian-bear-1791.jpg": "f96f98e4225e9d357171a4c803fbffbc731742b352fa4732f01276489f78f4fe",
+    "../../../../assets/museum-calendar-month.js": "e597a197c185ee065da25691ccb5c4cd538960f7642629c30198dc4ab81d59b3",
+    "../../../../assets/museum-chrome.js": "36e66b9e071643768f4a23f2fa9daf1918cef8815962afd2a5ef60b30670c74b",
+    "../../../../assets/museum-support.js": "b01f62ae2ec23f6e1329f6a2c2b2e9bc85e72545696d360a418fe0df040bbbcd",
+    "../../../../assets/museum-audioguide.js": "25ee813c11e79591f8a50895d65e0e52c230aa7abe5d604ee7ed335316b63caf",
+    "../../../../assets/museum-analytics-v2.js": "63c87a66c44c4631ac15a2308f3e74a87751eef8ea8762121ff514845d04651d",
+    "../../../../muzei/karikatura/media/day-01jan-russian-bear-video-16x9.mp4": "738d1262ac4347b1dae75fc2d0cec97c1ed346e78e266dd057caa29cbd1c8eb4",
+    "../../../../assets/fonts/playfairdisplay-nuFiD-vYSZviVYUb_rj3ij__anPXDTjYgFE_.woff2": "c108681cba6a9820bff52f4a1a4a1d9edf356b347bd79b7c61e916028e8a8b54",
+    "../../../../assets/fonts/inter-UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+    "../../../../assets/fonts/playfairdisplay-nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2": "e0c764a8e9e1cce92163c55bac4b2ad6cd4cf8c696ce2289ab5c41565e65b7e2",
+    "../../../../assets/fonts/inter-UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2": "71d5ee93cc1e9f1d520a3a8b66456de18c7879d8df09d57fcd2eaff75fef0075",
+    "../../../../muzei/karikatura/media/bear-1791-gillray.jpg": "120070fc1425e43d148294cbfcd3eecc802cfc89cc5629aa092908bd10040cb2",
+    "../../../../muzei/karikatura/media/bear-1812-jack-frost.jpg": "31dc9031be91538c8be5bd6f1d58731fb0e3681fce913f8618ffc9df7aa8d1a1",
+    "../../../../muzei/karikatura/media/bear-1791-cruikshank.jpg": "ec168e35ee5f7f91da7da234c6e019dbe5938b6b65e239b9a9694b4a7500457f",
+    "../../../../muzei/karikatura/media/bear-1882-panslavismo.jpg": "e1cb9435ab8aedd96425c278df3309713960c93d2fb64e892028ca2fb18e66c7",
+    "../../../../muzei/karikatura/media/bear-1893-marianna.jpg": "2f96b9510d26c42d06532a85cfaaa6b15454d2c0f25b6415b5f63651da4d5a50",
+    "entry-390.png": "1ed3d2221c4b2f35444fa88f15e36be7046d00c476fa54b1ca2221229b5c8871",
+    "entry-390.json": "ed30756ce422ad3b63185f0f44c1775013f85ef5a50d7868848da262515530e8",
+    "wrong-390.png": "864afb330cda11881f23775673cbb66cf150f4f10b2627ba519cc202f644a8dd",
+    "wrong-390.json": "67bbda369c43182e5b699d12f41d1e17149f8885d35604d289c1bc45deb9308f",
+    "reset-390.png": "d4715669ee49b3c092e65f5df0c48f42db7bf8f457aeb23a6bd53482d376a6fb",
+    "reset-390.json": "b928e714f66b77d6a92d4f0a85be4b70cc90cd60b50435ca116a31a9542c4904",
+    "mobile-390.png": "1a09a0003abc6c32249bec2966326a53e618e76cca9c6ed575b6e665f8d4cc13",
+    "mobile-390.json": "2822173bdb6548c081e10c5899dfd8c8902ff5dd214c4ba32d653780867325b8",
+    "../../../../muzei/karikatura/media/russian-bear-1791-1600.webp": "d162249a2273a24c74ea1bf653987c5fe250654a6e46bb1c107afb48088ee5e7",
+    "../../../../muzei/karikatura/media/bear-1918-berryman.jpg": "19705f87c346d795b4a072199657431f3071ed980cb5d88f86f54392225ee348",
+    "mobile-1440.png": "a55957b88af7a2d871b51925da4a7e400c692768f80a098428a21f7e9322dd04",
+    "mobile-1440.json": "451595435a2b9c72460cabf2afceb17088dbbcbfb5193f5ad54e09f337d1ae44",
+    "../../../../muzei/karikatura/media/bear-1800-bruin-mediator.jpg": "46e37cadf517a7bfbe18a0feafe6d5e713117c7722192e98d46b087d38fdb5a2",
+    "../../../../muzei/karikatura/media/bear-1803-posrednik.jpg": "72ce7bb1f660f5a57c5e5a9b3f8f9342c5745bdc1ff0b699be34ead6e5b09724",
+    "../../../../muzei/karikatura/media/bear-1807-tilsit.jpg": "e767c8f324561dfe51db625ee2cf126f8415e6dedbaeec7a86058d9c23fc5992",
+    "../../../../muzei/karikatura/media/bear-1807-pultusk.jpg": "88cd5e06b1c4f415a96542519597737e7f5c12c3d03db1d4478fc074f88fa0c5",
+    "../../../../muzei/karikatura/media/bear-1812-bear-monkey-turkey.jpg": "9a43a9d6d3b81d2839b510f55214235f6552bba9a226925954e59c982e8feaf9",
+    "../../../../muzei/karikatura/media/bear-1812-corsican-bloodhound.jpg": "3a9ea330a34348304299cba84cd4f4b2a32e49a66b4f87d0d228442e0d155c15",
+    "../../../../muzei/karikatura/media/bear-1813-bruin-peace.jpg": "2e10dfc41ab1faf5bb5fb9108d95043389f571a1cbaba022dbd4bcc8323ee7f0",
+    "../../../../muzei/karikatura/media/bear-1878-great-game.jpg": "956a69508e291aa6638faf413f790113a48ad2f412daea77883bd4fbedd38ada",
+    "../../../../muzei/karikatura/media/bear-1898-interruption.jpg": "f54c23ebaed143724f14ad758408b862ea7f14f20af7445413795448abfb5523",
+    "../../../../muzei/karikatura/media/bear-1900-muscovite-caution.jpg": "1fa73043a3cf06e14ff4a6f1ab3d7a0856a713e9615400466d39921de941e523",
+    "../../../../muzei/karikatura/media/bear-1904-bluffing.jpg": "70e22629a065e05e1a5644f34214fcb3da5a1343492fd671d4d56a3aa86757ec",
+    "../../../../muzei/karikatura/media/bear-1904-house-of-cards.jpg": "3cbacf5d72dea662ef5387ccd11ad01d41bd1a4b3ffe29ed1a89da9e7595b968",
+    "../../../../muzei/karikatura/media/bear-1914-hunter-hunted.png": "a56a2c74921cd0707fa0a049cf7959ddefaa59ad34c00cacb6dc913837dbce76",
+    "../../../../muzei/karikatura/media/bear-1918-awake.jpg": "78177b3ff7480e6493b4f467bc7e18516899ba32ce57557dff6197d48bf95d98",
+    "../../../../muzei/karikatura/media/bear-1914-power-behind.png": "223e7e2acb7b61d7995841846e0ccb1b59ca682aa5ea1bf5b4b1f91f674cbd20",
+    "../../../../muzei/karikatura/media/bear-1918-regretting.jpg": "5b0c88a06b8af31a2440591bf34057b18139dcbc2996a3c4114631d7f6019785",
+    "nojs-390.png": "7eb4a8d4cf6369bf3bd02ca067437de181d368ba4091e3661b861e7348b02368",
+    "nojs-390.json": "74d661ffdffcd9ed22da8e23f19ed37ed82bb533f323bfb2cfd36cb582c97b4a",
+    "score-390.png": "7c0a47e4eabd65cc4629afa096873ffe9a3b60c383d7a4e625943148f79618af",
+    "score-390.json": "8be7e8eae606a84a1ad9f9e130c24016fe41ed53eceb23c736fac7775d2dd202",
+    "main-390.png": "f33c21d8805d175fc2b5cc4c808c37965efa35f60aefcc7c3137a3307b8d81e4",
+    "main-390.json": "d31447d01a12eca815d09aa7760594d0c2d2795a68d19e53bbfd15d46286defb",
+    "empty-390.png": "8900c47348dd434e59151af71a377e74b5657a87a72b459b88e3119fcaa425e2",
+    "empty-390.json": "2c6e3cd36499eaf6d8b21f8097794d8225f37fb9e6aafa7bc159a496025d4abd"
+  },
+  "scenarios": {
+    "entry": [
+      {
+        "test_id": "entry-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "entry-390.json"
+      }
+    ],
+    "wrong": [
+      {
+        "test_id": "wrong-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "wrong-390.json"
+      }
+    ],
+    "reset": [
+      {
+        "test_id": "reset-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "reset-390.json"
+      }
+    ],
+    "mobile": [
+      {
+        "test_id": "mobile-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "mobile-390.json"
+      },
+      {
+        "test_id": "mobile-1440",
+        "status": "pass",
+        "automated": true,
+        "width": 1440,
+        "javascript_enabled": true,
+        "evidence": "mobile-1440.json"
+      }
+    ],
+    "nojs": [
+      {
+        "test_id": "nojs-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": false,
+        "evidence": "nojs-390.json"
+      }
+    ],
+    "score": [
+      {
+        "test_id": "score-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "score-390.json"
+      }
+    ],
+    "main": [
+      {
+        "test_id": "main-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "main-390.json"
+      }
+    ],
+    "empty": [
+      {
+        "test_id": "empty-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "empty-390.json"
+      }
+    ]
+  },
+  "errors": [],
+  "environment": {
+    "origin": "http://b6.local",
+    "network": "local inputs only"
+  }
+}

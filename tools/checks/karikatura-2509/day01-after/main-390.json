@@ -1,0 +1,39 @@
+{
+  "test_id": "main-390",
+  "code": "main",
+  "width": 390,
+  "javascript_enabled": true,
+  "url": "http://b6.local/muzei/karikatura/day-01jan-russian-bear.html",
+  "steps": [
+    "Run subject-specific main action"
+  ],
+  "checks": [
+    {
+      "label": "Editorial choice changes headline",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    },
+    {
+      "label": "Main action reward",
+      "actual": 50,
+      "expected": 50,
+      "ok": true
+    },
+    {
+      "label": "No duplicate main reward",
+      "actual": 50,
+      "expected": 50,
+      "ok": true
+    },
+    {
+      "label": "Main reward restored",
+      "actual": 50,
+      "expected": 50,
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "screenshot": "main-390.png",
+  "status": "pass"
+}

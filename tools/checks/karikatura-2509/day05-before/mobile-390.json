@@ -1,0 +1,39 @@
+{
+  "test_id": "mobile-390",
+  "code": "mobile",
+  "width": 390,
+  "javascript_enabled": true,
+  "url": "http://b6.local/muzei/karikatura/day-05jan-krokodil-first-issue.html",
+  "steps": [
+    "Complete page-specific action and quiz"
+  ],
+  "checks": [
+    {
+      "label": "Issue assembled",
+      "actual": 50,
+      "expected": 50,
+      "ok": true
+    },
+    {
+      "label": "Cancelled share earns nothing",
+      "actual": 80,
+      "expected": 80,
+      "ok": true
+    },
+    {
+      "label": "Maximum at 390",
+      "actual": 100,
+      "expected": 100,
+      "ok": true
+    },
+    {
+      "label": "No horizontal overflow",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "screenshot": "mobile-390.png",
+  "status": "pass"
+}

@@ -1,0 +1,47 @@
+{
+  "test_id": "wrong-390",
+  "code": "wrong",
+  "width": 390,
+  "javascript_enabled": true,
+  "url": "http://b6.local/muzei/karikatura/day-02jan-napoleon-slava-nos.html",
+  "steps": [
+    "Choose frost-only wrong answer",
+    "Click disabled option as visitor",
+    "Reload locked answer"
+  ],
+  "checks": [
+    {
+      "label": "Wrong earns nothing",
+      "actual": 0,
+      "expected": 0,
+      "ok": true
+    },
+    {
+      "label": "Explanation gives both meanings",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    },
+    {
+      "label": "Answered options disabled",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    },
+    {
+      "label": "Locked repeat earns nothing",
+      "actual": 0,
+      "expected": 0,
+      "ok": true
+    },
+    {
+      "label": "Wrong remains wrong after reload",
+      "actual": 0,
+      "expected": 0,
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "screenshot": "wrong-390.png",
+  "status": "pass"
+}
