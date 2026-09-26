@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "page_sha256": "7fd19fc4a776633eeb1bb419af5cf3a805ed7d0cc543904e026c68ffbe924d4c",
+  "runner": "../../tools/b6/run-b6.mjs",
+  "created_at": "2026-09-26T04:41:40.410Z",
+  "browser": "151.0.7922.173",
+  "plan": "../../tools/b6/plans/exp-nikitin-1468.mjs",
+  "inputs": {
+    "exp-nikitin-1468.html": "7fd19fc4a776633eeb1bb419af5cf3a805ed7d0cc543904e026c68ffbe924d4c",
+    "../../tools/b6/run-b6.mjs": "9102a2e45306a6add3e56fcbd8a460d4cf6a0ee8a625bf26bee8b9e6a3e5285a",
+    "../../tools/b6/plans/exp-nikitin-1468.mjs": "0eede71c9080ac28436a7870b1d87ddced7a1af5a6ebf59bb21210527e13b926",
+    "nikitin/page.css": "ef7c793d8ed9ffee2d890c357617e8c805b6647d42a16a15f680bf4ba3713abf",
+    "nikitin/atlas-preview.jpg": "c3b5f640911ddf9f42f687821cb1dd35097c066c3b0f7e6f0dbae80283a2249f",
+    "nikitin/film-poster.jpg": "85a2d69b1d31bb13cf043b3f2af3da757681c305d73156929fbce29fe72d815c",
+    "vendor/openseadragon/openseadragon.min.js": "5f87c49684ab4434e435f3391bebdcb2f4e6ecd2918caa7b8ba3527965382012",
+    "../../assets/museum-choice-run.js": "ec5f2a60fd2fa1887ca4fa983bd9ed232494ce5eccd9ca5dae702429ac8185c5",
+    "nikitin/page.js": "0e1303eab876e93e3830b5a1d5a2df75e951f8a5b02639f18537ab1e82296952",
+    "nikitin/calendar.js": "64ed0fe530b8d19694506708f6da85063d9b537490b0c791dec88f406a943a88",
+    "../../assets/museum-calendar-month.js": "e597a197c185ee065da25691ccb5c4cd538960f7642629c30198dc4ab81d59b3",
+    "../../assets/museum-audioguide.js": "25ee813c11e79591f8a50895d65e0e52c230aa7abe5d604ee7ed335316b63caf",
+    "../../assets/museum-chrome.js": "36e66b9e071643768f4a23f2fa9daf1918cef8815962afd2a5ef60b30670c74b",
+    "../../assets/museum-support.js": "b01f62ae2ec23f6e1329f6a2c2b2e9bc85e72545696d360a418fe0df040bbbcd",
+    "../../assets/analytics.js": "e26d9783206ecb19a0796aaa4f89654ec178ff929af47d1ce36bfdd101783e20",
+    "nikitin/film.vtt": "76726c7f76681206f2ba181da8d9e407b6d12d576f74e7328e3be3a790186849",
+    "nikitin/volga.jpg": "29779a217ed939e750f2941591cdb3d72d56803b0558a89d549455c96f7e2ed3",
+    "nikitin/atlas-detail.jpg": "53e5844f20a465b8913ad78dc3a1778fd8ce6e4bd8508c7d1b1970847bb89fa4",
+    "nikitin/baku.jpg": "7201f08608f016b1cce5060423c9b8023bb4d25cfe74a514aa9858e3ee5dca15",
+    "nikitin/hormuz.jpg": "b269309c5ff2cac980386316692f62d303e7f1b7005a16ccec72ec71b577a145",
+    "nikitin/bidar.jpg": "71fa3a6e517ef02f41bd65907206749a70e52e142a7e03c434b9219f289fd3c7",
+    "nikitin/bidar-gate.jpg": "175591b5672038f0b79e87c638979191d3418d856cda73ed2cc3692cbbe5da16",
+    "nikitin/trabzon.jpg": "426e1d66d49357d0d5a024970805603fe88741a357bff1b6b06cbe373553d03e",
+    "nikitin/book.jpg": "ce068e8067702e5d9b4f0510c909880220c201bf2431dc197b0dc0b4fc3b2c7d",
+    "nikitin/hampi.jpg": "0cbfb0b6a42e4753966e342c75f5e0d7bf5e4ab7f8d0449cb810167e72b0f690",
+    "nikitin/baku-city.jpg": "4b2056443d20fbbcf18b3a7490d7f7b5426743e5465626f9e0c3583fabb975c4",
+    "nikitin/hormuz-red.jpg": "fea4495423ade59524b6a53fd9d849918c16b5a6766503e5043f1a3d51c022b6",
+    "nikitin/chaul.png": "5827606ab8f5336d48cbc98158142b73e8cfee1f0879ab7c92791727650d3d3f",
+    "../../../../../../tmp/b6-nikitin-run2/entry-390.png": "88d865b5cfe5fd8ea441c89c7b954e3054c4e150d12bc5f48f56945fcc514517",
+    "../../../../../../tmp/b6-nikitin-run2/entry-390.json": "760f75ee75c675eea3d7972ed439b312e80cd90049d10e76038f2f04cd401986",
+    "../../../../../../tmp/b6-nikitin-run2/wrong-390.png": "774078d91cb022c69dab3f17c52629bab59ad7df39b194742cf17673533e1ca3",
+    "../../../../../../tmp/b6-nikitin-run2/wrong-390.json": "e492427c9b5f62fdcd9428cfaaec86479c24ec035d80714f67918db428681121",
+    "../../../../../../tmp/b6-nikitin-run2/reset-390.png": "ec105cb7249e53a62ec611ee950ed7fc2f7efa034ceb20618d925edcd7454dd5",
+    "../../../../../../tmp/b6-nikitin-run2/reset-390.json": "a5a596328ad8dc2f409dcf6f6422b4db375a171e68de68094a5a05779be6c049",
+    "../../../../../../tmp/b6-nikitin-run2/mobile-390.png": "d2ddc7ae565d199e290969cddabce39f0691e78e7344324209110a3d145429f0",
+    "../../../../../../tmp/b6-nikitin-run2/mobile-390.json": "777abf44500d909c4630da9c302116dec9f1edc05a1881abcc87d42f3563f552",
+    "../../../../../../tmp/b6-nikitin-run2/mobile-1440.png": "448883cb325bdbc82f804aa0b161b26e9bbf97e217a942232273c8a37529601b",
+    "../../../../../../tmp/b6-nikitin-run2/mobile-1440.json": "3eae27f024c2588d81b2fa7fc7ff11c0c181c04b85f1625cd4d8a315b5942e1b",
+    "../../../../../../tmp/b6-nikitin-run2/nojs-390.png": "aaed0975871fe18dd785807200be8a3d9d1c43f2a755f8799250bed2f3214c18",
+    "../../../../../../tmp/b6-nikitin-run2/nojs-390.json": "02d7bad8c024007124469500326652082d9ea77e82783a2842839027321a73be",
+    "../../../../../../tmp/b6-nikitin-run2/score-390.png": "185e199f5bba89b5404fa024157b64f9637640ca91cc8123d19fd4e000fe9846",
+    "../../../../../../tmp/b6-nikitin-run2/score-390.json": "f8fca918155eb37f786eeebbef3ed55258c773402fb2bc9cbde7127cd550f4f6",
+    "../../../../../../tmp/b6-nikitin-run2/main-390.png": "a0546f3c2e97cac9b8c0ae1168e9d8e7ae37328a942b8da00cb6d70c32ce7c95",
+    "../../../../../../tmp/b6-nikitin-run2/main-390.json": "796fae5a711f4861c7c3727a0bba872175b7be17af652548b7ebc6aba3be5b03",
+    "../../../../../../tmp/b6-nikitin-run2/empty-390.png": "e5713cc420ce921b6fd63297322c695045ec1767466aacc27ce5ef5001ac1c33",
+    "../../../../../../tmp/b6-nikitin-run2/empty-390.json": "d301794fe7d61f0f82c07e5c57207c12587210ad5a7231a2175e1a0a132172fd"
+  },
+  "scenarios": {
+    "entry": [
+      {
+        "test_id": "entry-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "../../../../../../tmp/b6-nikitin-run2/entry-390.json"
+      }
+    ],
+    "wrong": [
+      {
+        "test_id": "wrong-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "../../../../../../tmp/b6-nikitin-run2/wrong-390.json"
+      }
+    ],
+    "reset": [
+      {
+        "test_id": "reset-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "../../../../../../tmp/b6-nikitin-run2/reset-390.json"
+      }
+    ],
+    "mobile": [
+      {
+        "test_id": "mobile-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "../../../../../../tmp/b6-nikitin-run2/mobile-390.json"
+      },
+      {
+        "test_id": "mobile-1440",
+        "status": "pass",
+        "automated": true,
+        "width": 1440,
+        "javascript_enabled": true,
+        "evidence": "../../../../../../tmp/b6-nikitin-run2/mobile-1440.json"
+      }
+    ],
+    "nojs": [
+      {
+        "test_id": "nojs-390",
+        "status": "fail",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": false,
+        "evidence": "../../../../../../tmp/b6-nikitin-run2/nojs-390.json"
+      }
+    ],
+    "score": [
+      {
+        "test_id": "score-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "../../../../../../tmp/b6-nikitin-run2/score-390.json"
+      }
+    ],
+    "main": [
+      {
+        "test_id": "main-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "../../../../../../tmp/b6-nikitin-run2/main-390.json"
+      }
+    ],
+    "empty": [
+      {
+        "test_id": "empty-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "../../../../../../tmp/b6-nikitin-run2/empty-390.json"
+      }
+    ]
+  },
+  "errors": [],
+  "environment": {
+    "origin": "http://b6.local",
+    "network": "local inputs only"
+  }
+}
