@@ -116,20 +116,20 @@
 <link rel="stylesheet" href="../../assets/museum-theme.css">
 <!-- rc-meta:start -->
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="description" content="Открытие Берингова пролива. Умирающий Пётр I написал приказ из трёх пунктов — и Россия открыла пролив между двумя континентами.">
+  <meta name="description" content="Открытие Берингова пролива. Умирающий Пётр I написал приказ из трёх пунктов — и Россия открыла пролив между Евразией и Северной Америкой.">
   <link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-06jan-bering.html">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Русская цивилизация">
   <meta property="og:locale" content="ru_RU">
   <meta property="og:title" content="Открытие Берингова пролива — Беринг — Русские первые в мире">
-  <meta property="og:description" content="Открытие Берингова пролива. Умирающий Пётр I написал приказ из трёх пунктов — и Россия открыла пролив между двумя континентами.">
+  <meta property="og:description" content="Открытие Берингова пролива. Умирающий Пётр I написал приказ из трёх пунктов — и Россия открыла пролив между Евразией и Северной Америкой.">
   <meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-06jan-bering.html">
   <meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/og/izobreteniya_day-06jan-bering.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Открытие Берингова пролива — Беринг — Русские первые в мире">
-  <meta name="twitter:description" content="Открытие Берингова пролива. Умирающий Пётр I написал приказ из трёх пунктов — и Россия открыла пролив между двумя континентами.">
+  <meta name="twitter:description" content="Открытие Берингова пролива. Умирающий Пётр I написал приказ из трёх пунктов — и Россия открыла пролив между Евразией и Северной Америкой.">
   <meta name="twitter:image" content="https://arabelthera-dot.github.io/rc-museum-preview/og/izobreteniya_day-06jan-bering.jpg">
   <meta name="theme-color" content="#1a1410">
   <link rel="icon" href="../../favicon.ico" sizes="any">
@@ -140,7 +140,7 @@
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Открытие Берингова пролива — Беринг — Русские первые в мире",
-  "description": "Открытие Берингова пролива. Умирающий Пётр I написал приказ из трёх пунктов — и Россия открыла пролив между двумя континентами.",
+  "description": "Открытие Берингова пролива. Умирающий Пётр I написал приказ из трёх пунктов — и Россия открыла пролив между Евразией и Северной Америкой.",
   "url": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-06jan-bering.html",
   "image": "https://arabelthera-dot.github.io/rc-museum-preview/og/izobreteniya_day-06jan-bering.jpg",
   "inLanguage": "ru-RU",
@@ -208,7 +208,7 @@
   <div class="date-chip">6 января · 1728</div>
   <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
   <h1>Открытие Берингова пролива</h1>
-  <p class="hook">Умирающий Пётр I написал приказ из трёх пунктов — и Россия открыла пролив между двумя континентами.</p>
+  <p class="hook">Умирающий Пётр I написал приказ из трёх пунктов — и Россия открыла пролив между Евразией и Северной Америкой.</p>
   <div style="display:flex;gap:12px;flex-wrap:wrap">
     <button class="btn gold" onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">Читать историю ↓</button>
     <button class="btn ghost" onclick="document.getElementById('video').scrollIntoView({behavior:'smooth'})">▶ Смотреть видео</button>
@@ -495,7 +495,7 @@
 <canvas id="bgCvs" style="width:100%;height:200px;cursor:crosshair"></canvas>
 </div>
 <div id="bgResult" style="text-align:center;font-size:15px;font-weight:600;min-height:22px;color:var(--gold-l)"></div>
-<div class="gm-score" style="text-align:center;margin-top:6px;font-size:13px;color:var(--muted)">Нажми на пролив между двумя континентами</div>
+<div class="gm-score" style="text-align:center;margin-top:6px;font-size:13px;color:var(--muted)">Нажми на пролив между Евразией и Северной Америкой</div>
 <script>(function(){
 const cv=document.getElementById('bgCvs');if(!cv)return;
 const ctx=cv.getContext('2d');let W,H,answered=false;
@@ -527,7 +527,7 @@ cv.addEventListener('click',function(e){if(answered)return;
   ctx.fillText('БЕРИНГОВ ПРОЛИВ',TARGET.x*W,TARGET.y*H-TARGET.r*W-6);
   const res=document.getElementById('bgResult');
   if(hit){res.textContent='✅ Точно! 86 км между Россией и Америкой. Беринг прошёл здесь в 1728 году.';res.style.color='#7ed4a0';if(typeof award==='function')award('gm_bering',15);}
-  else{res.textContent='❌ Мимо — пролив между двумя континентами, почти по центру карты.';res.style.color='#f08080';}});
+  else{res.textContent='❌ Мимо — пролив между Евразией и Северной Америкой, почти по центру карты.';res.style.color='#f08080';}});
 })();</script></div>
 <div class="gm" id="gm_quiz2">
   <h3>⏱ Игра 2 · Быстрый ответ</h3>
@@ -887,17 +887,14 @@ document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
 <!-- единая обвязка музеев: backbtn, «Поделиться», чипсы разделов,
      стрелки «пред/след», строка «Случайное · Все · В город-музей» -->
 <script>window.MUSEUM_CHROME={
-  museum:{title:'Что изобрели русские первыми в мире',href:'../izobreteniya/index.html'},
-  share:{title:'Открытие Берингова пролива — музей «Что изобрели русские первыми в мире»',
-         text:'Открытие Берингова пролива. Что Россия дала миру раньше всех — день за днём.'},
-  prev:{href:'../izobreteniya/day-05jan-shukhov.html',title:'5 января · Шухов'},
-  next:{href:'../izobreteniya/day-07jan-buran.html',title:'7 января · «Буран»'},
-  all:{href:'../izobreteniya/index.html',label:'Все изобретения'},
-  city:'../../index.html',
-  random:['../izobreteniya/day-01jan-cabletv.html','../izobreteniya/day-02jan-luna1.html','../izobreteniya/day-03jan-luna9.html','../izobreteniya/day-04jan-pilchikov.html','../izobreteniya/day-05jan-shukhov.html','../izobreteniya/day-06jan-bering.html','../izobreteniya/day-07jan-buran.html','../izobreteniya/day-08jan-icebreaker.html','../izobreteniya/day-09jan-blinov.html','../izobreteniya/day-30jan-kotelnikov.html','../izobreteniya/day-18mar-leonov.html','../izobreteniya/day-15may-mechnikov.html','../izobreteniya/day-16jun-tereshkova.html','../izobreteniya/day-26sep-pavlov.html','../izobreteniya/day-10nov-kalashnikov.html','../izobreteniya/day-25nov-pirogov.html','../izobreteniya/day-01dec-lobachevsky.html','../izobreteniya/day-14dec-laser.html']
+  museum:{title:'Русские первопроходцы',href:'index.html'},
+  share:{title:'Открытие Берингова пролива — музей «Русские первопроходцы»',
+         text:'Умирающий Пётр I написал приказ из трёх пунктов — и Россия открыла пролив между Евразией и Северной Америкой.'},
+  all:{href:'index.html',label:'Все экспедиции'},
+  city:'../../index.html'
 };</script>
 <script src="../../assets/museum-chrome.js"></script>
-<script>window.MUSEUM_SUPPORT={museum:'Что изобрели русские первыми в мире'};</script>
+<script>window.MUSEUM_SUPPORT={museum:'Русские первопроходцы'};</script>
 <script src="../../assets/museum-support.js"></script>
   <!-- rc-analytics --><script defer src="../../assets/analytics.js"></script>
 </body>
