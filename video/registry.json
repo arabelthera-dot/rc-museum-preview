@@ -1,7 +1,7 @@
 {
   "_": "СГЕНЕРИРОВАНО tools/video-sync.py из docs/video/REGISTRY.json. Руками не править.",
   "version": 2,
-  "updated": "2026-09-04",
+  "updated": "2026-09-26",
   "hosting": {
     "base": ""
   },
@@ -323,6 +323,38 @@
       "poster_vertical": {
         "file": "nesdayutsya/01jan-kolovrat/day-01jan-kolovrat-9x16-poster.jpg",
         "local": "muzei/ne-sdayutsya/video/day-01jan-kolovrat-9x16-poster.jpg",
+        "v": 1
+      }
+    },
+    "arhitektura/04jan-vyatskoe": {
+      "title": "Почему ярославское село выглядит как нарядный городской квартал?",
+      "note": "Документальные фотографии: Виталий Барсов, Blooming soul, Чуринъ, Vyatskoe — CC BY-SA 4.0. Генерация GenosAI не применялась. Голос и фонограмма синтезированы и раскрыты в паспорте выпуска.",
+      "horizontal": {
+        "file": "arhitektura/04jan-vyatskoe/day-04jan-vyatskoe.mp4",
+        "local": "muzei/arhitektura/video/day-04jan-vyatskoe.mp4",
+        "v": 1,
+        "w": 1920,
+        "h": 1080,
+        "sec": 85.95,
+        "mb": 21.1
+      },
+      "vertical": {
+        "file": "arhitektura/04jan-vyatskoe/day-04jan-vyatskoe-9x16.mp4",
+        "local": "muzei/arhitektura/video/day-04jan-vyatskoe-9x16.mp4",
+        "v": 1,
+        "w": 1080,
+        "h": 1920,
+        "sec": 44.74,
+        "mb": 13.0
+      },
+      "poster": {
+        "file": "arhitektura/04jan-vyatskoe/day-04jan-vyatskoe-poster.jpg",
+        "local": "muzei/arhitektura/video/day-04jan-vyatskoe-poster.jpg",
+        "v": 1
+      },
+      "poster_vertical": {
+        "file": "arhitektura/04jan-vyatskoe/day-04jan-vyatskoe-9x16-poster.jpg",
+        "local": "muzei/arhitektura/video/day-04jan-vyatskoe-9x16-poster.jpg",
         "v": 1
       }
     }
