@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Самоделка против стандартов — Русская цивилизация</title>
+<style>
+body{margin:0;background:#14100e;color:#f0e8d8;font:16px/1.5 Georgia,'PT Serif',serif}
+main{max-width:1100px;margin:0 auto;padding:20px 14px 48px}
+h1{font-size:clamp(22px,4.5vw,32px);line-height:1.2;margin:.3em 0}
+h2{font-size:20px;margin:1.6em 0 .5em;border-bottom:1px solid rgba(240,232,216,.25);padding-bottom:4px}
+.lead{opacity:.8;margin:0 0 12px}
+.kpi{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
+.kpi div{background:rgba(240,232,216,.07);border-radius:8px;padding:10px 14px;min-width:120px}
+.kpi b{display:block;font-size:26px;color:#e8c56b}
+.wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font:14px/1.4 system-ui,sans-serif}
+th,td{border-bottom:1px solid rgba(240,232,216,.15);padding:6px 8px;text-align:left;vertical-align:top}
+th{position:sticky;top:0;background:#1d1714}
+td.n{text-align:right;font-variant-numeric:tabular-nums}
+.red{color:#ff8a7a}.green{color:#9fd49a}.amber{color:#e8c56b}
+.empty{opacity:.6;font-style:italic}
+footer{margin-top:28px;font-size:13px;opacity:.65}
+</style>
+</head>
+<body>
+<main>
+<h1>Самоделка против стандартов</h1>
+<p class="lead">Каждая наша самоделка: есть ли мировой стандарт или готовая библиотека, и перешли ли мы на него.</p>
+<div class="kpi"><div><b>7</b>самоделок без оправдания</div><div><b>5</b>перешли на стандарт</div><div><b>2</b>своё оправдано</div><div><b>31</b>движков не разобрано</div></div>
+<h2>Таблица</h2>
+<div class="wrap"><table><thead><tr><th>Что</th><th>Наше</th><th>Стандарт / библиотека</th><th>Статус</th><th>Почему</th></tr></thead><tbody>
+<tr><td>Трёхмерные здания</td><td>rc-museum-preview/assets/kizhi-house-3d.js</td><td>three.js (библиотека); модели — glTF 2.0</td><td class="red">надо</td><td>рендер на three.js, но геометрия собрана кодом, а не моделью glTF: модель нельзя переиспользовать и открыть в стороннем просмотрщике</td></tr>
+<tr><td>Паспорт выпуска и предмета</td><td>rc-museum-production/*/passport/issue.json</td><td>Dublin Core / LIDO (описание музейного предмета)</td><td class="red">надо</td><td>своя схема полей без соответствия DC/LIDO — обмен с музеями и каталогами руками</td></tr>
+<tr><td>Права на кадр</td><td>images[].rights в паспорте, rights.json, *rights*.md</td><td>RightsStatements.org + IPTC Photo Metadata / лицензии CC</td><td class="red">надо</td><td>три разных формата записи прав; tools/audit-prava.py читает все, но единого поля статуса по RightsStatements нет</td></tr>
+<tr><td>Расшифровка аудиогида</td><td>rc-museum-preview/assets/museum-audioguide.js</td><td>WebVTT (W3C) через &lt;track&gt;</td><td class="red">надо</td><td>главы и расшифровка — свой массив в MUSEUM_AUDIOGUIDE; синхронизации текста со звуком и субтитров плеера нет</td></tr>
+<tr><td>Субтитры видео</td><td>rc-museum-preview/assets/museum-video.js</td><td>WebVTT (W3C) через &lt;track&gt;</td><td class="red">надо</td><td>в движке видео нет дорожки субтитров</td></tr>
+<tr><td>Языковые версии страницы</td><td>platform/scripts/lib/language-build.mjs</td><td>hreflang (link rel=alternate) + BCP 47</td><td class="red">надо</td><td>языковая сборка не ставит hreflang — поисковик не свяжет версии</td></tr>
+<tr><td>Очередь нарядов агентов</td><td>docs/agents/HANDOFF.md (таблица markdown)</td><td>трекер задач (GitHub Issues/Projects)</td><td class="red">надо</td><td>файл 1,2 МБ, чтение стоит сотни тысяч токенов, конфликты слияния; вопрос о переходе — оркестратору и Сергею</td></tr>
+<tr><td>Реестр источников материалов</td><td>docs/registries/sources.json</td><td>DCAT / Dublin Core для каталогов</td><td class="amber">оправдано</td><td>это реестр доступа к сайтам (отвечает ли, robots, способ добычи), а не каталог записей — DCAT описывает наборы данных, а не их доступность роботу</td></tr>
+<tr><td>Календарь дней музея</td><td>rc-museum-preview/assets/museum-calendar-month.js</td><td>iCalendar (RFC 5545)</td><td class="amber">оправдано</td><td>календарь — навигация по дням музея внутри сайта, а не события для импорта в календарь посетителя</td></tr>
+<tr><td>Разметка страницы для поиска</td><td>tools/seo-head.py</td><td>schema.org JSON-LD (VisualArtwork, CreativeWork, Event, Person)</td><td class="green">перешли</td><td>с 27.09 (schema-org-seo-2709) тип экспоната из паспорта</td></tr>
+<tr><td>Приближение картины</td><td>rc-museum-preview/assets/museum-deep-zoom.js</td><td>IIIF Image API 3 + OpenSeadragon</td><td class="green">перешли</td><td>с 27.09 (iiif-dvizhok-2709): свой только тонкий слой разметки и кнопок</td></tr>
+<tr><td>Нарезка тайлов</td><td>tools/iiif-tiles.mjs</td><td>IIIF level 0 через sharp/libvips</td><td class="green">перешли</td><td>нарезку делает libvips, у нас — вызов</td></tr>
+<tr><td>Аналитика</td><td>rc-museum-preview/assets/analytics.js</td><td>Яндекс.Метрика</td><td class="green">перешли</td><td>свой только список целей поверх Метрики</td></tr>
+<tr><td>Карта сайта</td><td>rc-museum-preview/sitemap.xml</td><td>sitemaps.org 0.9</td><td class="green">перешли</td><td></td></tr>
+</tbody></table></div>
+<h2>Движки assets/*.js, которых нет в таблице</h2>
+<div class="wrap"><table><thead><tr><th>Файл</th></tr></thead><tbody>
+<tr><td>city-scene.js</td></tr>
+<tr><td>georgievskiy-page.js</td></tr>
+<tr><td>kizhi-house-loader.js</td></tr>
+<tr><td>museum-analytics-v2.js</td></tr>
+<tr><td>museum-architecture-lab.js</td></tr>
+<tr><td>museum-architecture-observe.js</td></tr>
+<tr><td>museum-calendar-page.js</td></tr>
+<tr><td>museum-calendar-year.js</td></tr>
+<tr><td>museum-calendar.js</td></tr>
+<tr><td>museum-choice-run.js</td></tr>
+<tr><td>museum-choice-tale.js</td></tr>
+<tr><td>museum-chrome.js</td></tr>
+<tr><td>museum-fact-or-myth.js</td></tr>
+<tr><td>museum-find-word.js</td></tr>
+<tr><td>museum-firstlook.js</td></tr>
+<tr><td>museum-follow.js</td></tr>
+<tr><td>museum-lab.js</td></tr>
+<tr><td>museum-page-runtime.js</td></tr>
+<tr><td>museum-paper-theatre.js</td></tr>
+<tr><td>museum-quiz.js</td></tr>
+<tr><td>museum-scale.js</td></tr>
+<tr><td>museum-score.js</td></tr>
+<tr><td>museum-slovo-geroya.js</td></tr>
+<tr><td>museum-stack-builder.js</td></tr>
+<tr><td>museum-support.js</td></tr>
+<tr><td>museum-voice-lab.js</td></tr>
+<tr><td>nerl-page.js</td></tr>
+<tr><td>nevjanskaya-page.js</td></tr>
+<tr><td>rc-paths.js</td></tr>
+<tr><td>scrolltelling.js</td></tr>
+<tr><td>vyatskoe-page.js</td></tr>
+</tbody></table></div>
+<footer>Таблица — docs/registries/samodelki.json, скрипт — tools/schetchik-samodelki.py (наряд schetchik-samodelki-2709). Число «без оправдания» идёт в ежемесячный обзор архитектуры.</footer>
+</main>
+</body>
+</html>
