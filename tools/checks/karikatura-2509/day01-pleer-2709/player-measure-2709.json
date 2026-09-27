@@ -1,0 +1,15 @@
+{
+  "duration": 65.33,
+  "readyState": 4,
+  "currentSrc": "day-01jan-russian-bear.mp4",
+  "source_attr": "media/day-01jan-russian-bear.mp4",
+  "download": [
+    "media/day-01jan-russian-bear-9x16.mp4"
+  ],
+  "poster": "media/day-01jan-russian-bear-poster.jpg",
+  "poster_w": 1920,
+  "actno": "Вступительный ролик страницы · 1 минута 5 секунд",
+  "aborted": null,
+  "duration_rounded": 65.33,
+  "duration_ok_65_33": true
+}
