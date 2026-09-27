@@ -1,0 +1,238 @@
+[
+ {
+  "page": "muzei/izobreteniya/day-01dec-lobachevsky.html",
+  "texts": {
+   "text": 119,
+   "attr": 13,
+   "js": 838
+  },
+  "leftover_kinds": {
+   "регулярка (код, не текст)": 1
+  },
+  "visible_diff": 0,
+  "bytes_equal": true,
+  "ok": true
+ },
+ {
+  "page": "muzei/izobreteniya/day-01jan-cabletv.html",
+  "texts": {
+   "text": 158,
+   "attr": 14,
+   "js": 857
+  },
+  "leftover_kinds": {
+   "регулярка (код, не текст)": 1
+  },
+  "visible_diff": 0,
+  "bytes_equal": true,
+  "ok": true
+ },
+ {
+  "page": "muzei/izobreteniya/day-02jan-luna1.html",
+  "texts": {
+   "text": 156,
+   "attr": 9,
+   "js": 486
+  },
+  "leftover_kinds": {
+   "шаблон JS с ${…}": 2
+  },
+  "visible_diff": 0,
+  "bytes_equal": true,
+  "ok": false
+ },
+ {
+  "page": "muzei/izobreteniya/day-03feb-luna9.html",
+  "texts": {
+   "text": 166,
+   "attr": 8,
+   "js": 495
+  },
+  "leftover_kinds": {},
+  "visible_diff": 0,
+  "bytes_equal": true,
+  "ok": true
+ },
+ {
+  "page": "muzei/izobreteniya/day-04jan-pilchikov.html",
+  "texts": {
+   "text": 201,
+   "attr": 9,
+   "js": 525
+  },
+  "leftover_kinds": {
+   "шаблон JS с ${…}": 1
+  },
+  "visible_diff": 0,
+  "bytes_equal": true,
+  "ok": false
+ },
+ {
+  "page": "muzei/izobreteniya/day-05jan-shukhov.html",
+  "texts": {
+   "text": 310,
+   "attr": 20,
+   "js": 541
+  },
+  "leftover_kinds": {
+   "шаблон JS с ${…}": 1
+  },
+  "visible_diff": 0,
+  "bytes_equal": true,
+  "ok": false
+ },
+ {
+  "page": "muzei/izobreteniya/day-08jan-icebreaker.html",
+  "texts": {
+   "text": 192,
+   "attr": 8,
+   "js": 495
+  },
+  "leftover_kinds": {
+   "шаблон JS с ${…}": 1
+  },
+  "visible_diff": 0,
+  "bytes_equal": true,
+  "ok": false
+ },
+ {
+  "page": "muzei/izobreteniya/day-09jan-blinov.html",
+  "texts": {
+   "text": 196,
+   "attr": 8,
+   "js": 494
+  },
+  "leftover_kinds": {
+   "шаблон JS с ${…}": 1
+  },
+  "visible_diff": 0,
+  "bytes_equal": true,
+  "ok": false
+ },
+ {
+  "page": "muzei/izobreteniya/day-14dec-laser.html",
+  "texts": {
+   "text": 150,
+   "attr": 8,
+   "js": 485
+  },
+  "leftover_kinds": {},
+  "visible_diff": 0,
+  "bytes_equal": true,
+  "ok": true
+ },
+ {
+  "page": "muzei/izobreteniya/day-15may-mechnikov.html",
+  "texts": {
+   "text": 152,
+   "attr": 8,
+   "js": 485
+  },
+  "leftover_kinds": {},
+  "visible_diff": 0,
+  "bytes_equal": true,
+  "ok": true
+ },
+ {
+  "page": "muzei/izobreteniya/day-15nov-buran.html",
+  "texts": {
+   "text": 189,
+   "attr": 8,
+   "js": 494
+  },
+  "leftover_kinds": {
+   "шаблон JS с ${…}": 2
+  },
+  "visible_diff": 0,
+  "bytes_equal": true,
+  "ok": false
+ },
+ {
+  "page": "muzei/izobreteniya/day-16jun-tereshkova.html",
+  "texts": {
+   "text": 156,
+   "attr": 8,
+   "js": 489
+  },
+  "leftover_kinds": {},
+  "visible_diff": 0,
+  "bytes_equal": true,
+  "ok": true
+ },
+ {
+  "page": "muzei/izobreteniya/day-18mar-leonov.html",
+  "texts": {
+   "text": 155,
+   "attr": 8,
+   "js": 479
+  },
+  "leftover_kinds": {},
+  "visible_diff": 0,
+  "bytes_equal": true,
+  "ok": true
+ },
+ {
+  "page": "muzei/izobreteniya/day-25nov-pirogov.html",
+  "texts": {
+   "text": 152,
+   "attr": 8,
+   "js": 478
+  },
+  "leftover_kinds": {},
+  "visible_diff": 0,
+  "bytes_equal": true,
+  "ok": true
+ },
+ {
+  "page": "muzei/izobreteniya/day-26sep-pavlov.html",
+  "texts": {
+   "text": 128,
+   "attr": 8,
+   "js": 480
+  },
+  "leftover_kinds": {},
+  "visible_diff": 0,
+  "bytes_equal": true,
+  "ok": true
+ },
+ {
+  "page": "muzei/izobreteniya/day-30jan-kotelnikov.html",
+  "texts": {
+   "text": 175,
+   "attr": 17,
+   "js": 920
+  },
+  "leftover_kinds": {
+   "регулярка (код, не текст)": 1
+  },
+  "visible_diff": 0,
+  "bytes_equal": true,
+  "ok": true
+ },
+ {
+  "page": "muzei/izobreteniya/index.html",
+  "texts": {
+   "text": 67,
+   "attr": 9,
+   "js": 34
+  },
+  "leftover_kinds": {},
+  "visible_diff": 0,
+  "bytes_equal": true,
+  "ok": true
+ },
+ {
+  "page": "muzei/izobreteniya/calendar.html",
+  "texts": {
+   "text": 1360,
+   "attr": 378,
+   "js": 2
+  },
+  "leftover_kinds": {
+   "CSS content": 2
+  },
+  "visible_diff": 0,
+  "bytes_equal": true,
+  "ok": false
+ }
+]
