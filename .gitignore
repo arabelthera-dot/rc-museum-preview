@@ -1,3 +1,7 @@
 backup-wave2/
 *.bak-*
 .playwright-cli/
+
+# 27.09.2026 (№pycache-tablo-claude2-2709): кэш Python из tools/ — не история.
+__pycache__/
+*.py[cod]
