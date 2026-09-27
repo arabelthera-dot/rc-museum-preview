@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Песочница: приближение картины до мазка (IIIF) — Русская цивилизация</title>
+<style>
+  body{margin:0;background:#14100e;color:#f0e8d8;font:17px/1.55 Georgia,'PT Serif',serif}
+  main{max-width:960px;margin:0 auto;padding:20px 16px 48px}
+  h1{font-size:clamp(24px,5vw,34px);line-height:1.2;margin:.4em 0 .2em}
+  .lead{opacity:.85;margin:0 0 18px}
+  figcaption{font-size:14px;opacity:.8;margin-top:10px}
+  figcaption a{color:#e8c56b}
+  .note{font-size:14px;opacity:.7;margin-top:28px;border-top:1px solid rgba(240,232,216,.2);padding-top:12px}
+  [data-deep-zoom]>img{width:100%;height:auto;display:block}
+</style>
+</head>
+<body>
+<main>
+  <p class="lead">Песочница движка · стандарт №12 · не страница музея</p>
+  <h1>Достоевский у Перова — до мазка</h1>
+  <p class="lead">Разведите пальцы на картине или покрутите колесо: видны мазки на руках и на сюртуке.</p>
+  <figure data-deep-zoom data-iiif="perov-dostoevsky/info.json"
+          data-alt="Василий Перов. Портрет Фёдора Достоевского: писатель сидит, обхватив колено сцепленными руками">
+    <img src="perov-dostoevsky-preview.jpg" width="800" height="1000"
+         alt="Василий Перов. Портрет Фёдора Достоевского: писатель сидит, обхватив колено сцепленными руками">
+    <figcaption>Василий Перов (1833–1882), «Портрет Ф. М. Достоевского», 1872. Государственная Третьяковская галерея.
+      Цифровая копия 3200×4000 — Google Arts &amp; Culture, <a href="https://commons.wikimedia.org/wiki/File:Vasily_Perov_-_%D0%9F%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82_%D0%A4.%D0%9C.%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_-_Google_Art_Project.jpg" rel="noopener">Wikimedia Commons</a>.
+      Общественное достояние: автор умер в 1882 году.</figcaption>
+  </figure>
+  <p class="note">Тайлы — IIIF Image API 3, уровень 0, статические файлы (tools/iiif-tiles.mjs), библиотека —
+    OpenSeadragon 6.1.1 (BSD-3). Движок: assets/museum-deep-zoom.js, разметка — атрибут data-deep-zoom.</p>
+</main>
+<script src="../../assets/museum-deep-zoom.js" defer></script>
+</body>
+</html>
