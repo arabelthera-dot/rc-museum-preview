@@ -34,13 +34,16 @@ h2.t small{display:block;font-size:12px;color:var(--txt);opacity:.6;letter-spaci
 p.mb{margin-bottom:14px}
 .lead:first-letter{initial-letter:2;-webkit-initial-letter:2;color:var(--gold);padding-right:8px}
 /* ZOOM */
-#zoomwrap{position:relative;height:min(74vh,calc(100vw * .74));min-height:300px;background:#000;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-@media (min-width:900px){#zoomwrap{height:74vh}}
-#viewer{position:absolute;inset:0}
+/* высоту задаёт движок глубокого приближения (стандарт №12): щипок, кнопки + − ⌂ */
+#zoomwrap{position:relative;background:#000;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+#zoomwrap figure[data-deep-zoom]{margin:0}
+#zoomwrap figure[data-deep-zoom]>img{width:100%;height:auto;display:block}
+#zoomwrap figcaption{font-size:12.5px;line-height:1.5;color:var(--txt);opacity:.8;padding:10px 16px 13px;background:#0b0d11}
+#zoomwrap figcaption a{color:var(--gold)}
 .spark{width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;cursor:pointer;background:radial-gradient(circle,#ffdf70 0 60%,#c9a227 100%);border:2px solid rgba(11,13,17,.9);box-shadow:0 0 0 2px rgba(255,246,214,.95),0 0 16px 5px rgba(212,175,55,.8);display:flex;align-items:center;justify-content:center;color:#1a1508;font-size:14px;font-weight:bold;font-family:Georgia,serif;animation:pulse 2.2s infinite}
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.35)}}
 @media (prefers-reduced-motion:reduce){.spark{animation:none}}
-#zhint{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);z-index:15;background:rgba(18,21,28,.85);border:1px solid var(--line);border-radius:20px;padding:6px 15px;font-size:12px;white-space:nowrap;transition:opacity .6s;pointer-events:none}
+#zhint{position:absolute;top:10px;left:10px;z-index:15;background:rgba(18,21,28,.85);border:1px solid var(--line);border-radius:20px;padding:6px 15px;font-size:12px;white-space:nowrap;transition:opacity .6s;pointer-events:none}
 /* GAME */
 #gamebar{position:absolute;top:10px;left:10px;right:10px;z-index:25;display:none;justify-content:space-between;align-items:center;background:rgba(18,21,28,.92);border:1px solid var(--line);border-radius:12px;padding:8px 12px;font-size:13px}
 #gamebar .tm{color:var(--gold);font-size:16px;min-width:44px;text-align:right}
@@ -110,7 +113,6 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 #zbody h3{font-family:Georgia,serif;font-size:15.5px;color:var(--gold);margin-bottom:6px}
 #zbody p{font-size:14px;line-height:1.55}
 .ring.live{animation:pulse 2s infinite}
-.openseadragon-container .navigator{border-radius:6px!important}
 
 /* ── календарь музея (стандарт для всех музеев) ── */
 #calendar .calnav{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
@@ -212,7 +214,7 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
   <div class="inner">
     <span class="chip">1873 · Третьяковская галерея · 105 × 136 см</span>
     <h1>«<b>Радуга</b>»</h1>
-    <div class="hook">Найдите на этой картине радугу. С первого раза почти никто не находит.</div>
+    <div class="hook">Найдите на этой картине радугу — с первого раза её почти никто не замечает, а она есть.</div>
     <div class="down">тапните по полотну — рассмотреть вблизи ▾</div>
   </div>
 </div>
@@ -234,7 +236,7 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
   <div class="audio">
     <button id="agbtn" aria-label="Включить аудиогид">▶</button>
     <div class="meta"><b>Полный аудиогид · <span id="agdur">5 минут</span></b>Экскурсия по всей картине: что на полотне, где искать радугу, почему её так трудно найти, композиция, два названия, покупка Третьякова и путь от «Девятого вала».</div>
-    <audio id="agaudio" src="audio-guide-raduga-ru.mp3" preload="metadata" controls style="width:100%;margin:10px 0 0;border-radius:10px"></audio>
+    <audio id="agaudio" data-src="audio-guide-raduga-ru.mp3" preload="none" controls style="display:none;width:100%;margin:10px 0 0;border-radius:10px"></audio>
   </div>
   <div class="agnav">
     <span class="lbl">Перейти к главе:</span>
@@ -264,7 +266,11 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 </section>
 
 <div id="zoomwrap">
-  <div id="viewer"></div>
+  <figure data-deep-zoom data-image="media/raduga.jpg"
+          data-alt="Иван Айвазовский, «Радуга»: тонущий корабль, шлюпка с гребцами и радуга в водяной пыли">
+    <img src="media/raduga.jpg" alt="Иван Айвазовский, «Радуга»: тонущий корабль, шлюпка с гребцами и радуга в водяной пыли" width="1539" height="1200">
+    <figcaption>Иван Айвазовский, «Радуга», 1873. Государственная Третьяковская галерея, Москва. Воспроизведение 1539 × 1200 — файл проекта; общественное достояние: автор умер в 1900 году.</figcaption>
+  </figure>
   <div id="gamebar"><span id="gtask">Найдите: …</span><span class="tm" id="gtime">60</span></div>
   <div id="zhint">Щипок — приблизить · точки 1·2·3·4 — детали</div>
 </div>
@@ -304,7 +310,7 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
     <button class="chip">Как вы писали воду?</button>
   </div>
   <p class="mb" style="font-size:12.5px;opacity:.62;margin-top:11px">Ответы собраны из документированных высказываний, писем и воспоминаний современников. Это реконструкция голоса художника, а не запись его подлинной речи.</p>
-  <div id="chatrow"><input id="chatin" placeholder="Ваш вопрос художнику…"><button class="gbtn" id="chatgo">→</button></div>
+  <div id="chatrow"><input id="chatin" aria-label="Ваш вопрос художнику" placeholder="Ваш вопрос художнику…"><button class="gbtn" id="chatgo" aria-label="Отправить вопрос">→</button></div>
 </section>
 
 <section class="deep" id="razbor">
@@ -320,8 +326,8 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
   <p>Сравните с «Девятым валом» 1850 года: там — тёмный низ, пылающий верх, чёткий контраст, романтический эффект в чистом виде. Здесь — общий светлый ключ, полутона, размытые границы. Драма никуда не делась, но она больше не кричит. Так работает мастер, которому нечего доказывать в технике эффекта и который занялся другим — светом как средой.</p>
 
   <div class="cmp">
-    <figure><img src="media/devyatyi-val-hero.jpg" alt="Девятый вал, 1850"><figcaption><b>1850 · «Девятый вал»</b>Контраст: тьма внизу, солнце вверху. Надежда показана в упор.</figcaption></figure>
-    <figure><img src="media/raduga-hero.jpg" alt="Радуга, 1873"><figcaption><b>1873 · «Радуга»</b>Всё в одном светлом ключе. Надежду нужно найти самому.</figcaption></figure>
+    <figure><img src="media/devyatyi-val-hero.jpg" alt="Девятый вал, 1850"><figcaption><b>1850 · «Девятый вал»</b>Контраст: тьма внизу, солнце вверху. Надежда показана в упор. Полотно — Государственный Русский музей, Санкт-Петербург; общественное достояние: автор умер в 1900 году.</figcaption></figure>
+    <figure><img src="media/raduga-hero.jpg" alt="Радуга, 1873"><figcaption><b>1873 · «Радуга»</b>Всё в одном светлом ключе. Надежду нужно найти самому. Полотно — Государственная Третьяковская галерея, Москва; общественное достояние: автор умер в 1900 году.</figcaption></figure>
   </div>
 
   <div class="note"><b>Честно о качестве изображения.</b> Полотно небольшое, а музейного скана «Радуги» в высоком разрешении в открытом доступе нет: лучшее, что удалось найти, — 1539 × 1200 пикселей. Поэтому зум здесь не такой глубокий, как на «Девятом вале»: мазок вблизи виден мягко. Мы продолжаем искать скан лучшего качества и заменим его, как только он появится.</div>
@@ -390,28 +396,40 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 </footer>
 <div id="heart">❤<span class="lbl">Поддержать</span></div>
 
-<script src="vendor/openseadragon/openseadragon.min.js"></script>
+<script src="../../assets/museum-deep-zoom.js"></script>
 <script>
 var W=1539,H=1200,AR=H/W;
-var viewer=OpenSeadragon({id:"viewer",prefixUrl:"vendor/openseadragon/images/",
-  tileSources:{type:'image',url:'media/raduga.jpg',buildPyramid:false},
-  showNavigationControl:true,showNavigator:true,navigatorPosition:"TOP_RIGHT",navigatorSizeRatio:.15,navigatorBackground:"rgba(0,0,0,.55)",navigatorBorderColor:"rgba(212,175,55,.75)",navigatorDisplayRegionColor:"#d4af37",navigationControlAnchor:OpenSeadragon.ControlAnchor.BOTTOM_RIGHT,
-  gestureSettingsTouch:{pinchToZoom:true,flickEnabled:true},
-  maxZoomPixelRatio:2.6,visibilityRatio:1,minZoomLevel:.9,animationTime:1.1,springStiffness:7});
+var viewer=null;
+/* глубокое приближение — общий движок музея (стандарт №12): тайлы IIIF, щипок, «до мазка» */
+MuseumDeepZoom.init(document.querySelector('#zoomwrap [data-deep-zoom]')).then(function(v){
+  if(!v)return;
+  viewer=v;
+  if(v.world&&v.world.getItemCount())wireDeepZoom();else v.addOnceHandler('open',wireDeepZoom);
+});
 var sparks=[
  {x:.085,y:.56,n:"Радуга",z:3.3,t:"Вот она — радуга",d:"Не арка из учебника, а свечение прямо в водяной пыли: тёплый жёлтый переходит в холодный зелёный. Так радуга и выглядит в настоящий шторм — потому её и трудно найти."},
  {x:.44,y:.78,n:"Шлюпка",z:3.3,t:"Шлюпка: люди и багор",d:"Гребцы налегают на вёсла, один стоит в полный рост с багром. Лодка идёт по диагонали — к тонущему кораблю, а не прочь от него."},
  {x:.63,y:.52,n:"Корабль",z:2.9,t:"Корабль уже проиграл",d:"Мачты завалены, судно легло на борт. Айвазовский не показывает момент удара — только то, что осталось после."},
  {x:.195,y:.335,n:"Чайка",z:5.5,t:"Чайка",d:"Единственное существо на полотне, которому шторм не страшен. Белая точка у скал — проверьте себя, заметили ли вы её сразу."}];
 var sparkEls=[];
-viewer.addHandler('open',function(){sparks.forEach(function(s,i){var el=document.createElement('div');el.className='spark';el.textContent=i+1;new OpenSeadragon.MouseTracker({element:el,clickHandler:function(){showCard(s);}}).setTracking(true);viewer.addOverlay({element:el,location:new OpenSeadragon.Point(s.x,s.y*AR)});sparkEls.push(el);});});
+function wireDeepZoom(){
+  /* точки-детали: номер на полотне, клик — карточка с объяснением */
+  sparks.forEach(function(s,i){
+    var el=document.createElement('div');el.className='spark';el.textContent=i+1;
+    el.setAttribute('role','button');el.setAttribute('tabindex','0');
+    el.setAttribute('aria-label','Деталь '+(i+1)+': '+s.n);
+    el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();showCard(s);}});
+    new OpenSeadragon.MouseTracker({element:el,clickHandler:function(){showCard(s);}}).setTracking(true);
+    viewer.addOverlay({element:el,location:new OpenSeadragon.Point(s.x,s.y*AR)});sparkEls.push(el);
+  });
+}
 /* ── детали картины: объяснение ПОД полотном, наезд у каждой свой ── */
 var zbtns=document.getElementById('zbtns'),zct=document.getElementById('zct'),zcx=document.getElementById('zcx');
-var DEF_T='Четыре детали, которые легко пропустить',DEF_D='Нажмите номер — картина сама подъедет к нужному месту, вокруг детали загорится кольцо, а объяснение появится здесь. Мини-карта в углу показывает, какую часть полотна вы сейчас видите.';
+var DEF_T='Четыре детали, которые легко пропустить',DEF_D='Нажмите номер — картина сама подъедет к нужному месту, вокруг детали загорится кольцо, а объяснение появится здесь. Кнопка ⌂ в углу возвращает картину целиком.';
 var ringEl=null;
 function clearRing(){if(ringEl){try{viewer.removeOverlay(ringEl);}catch(e){}ringEl=null;}}
-function resetZoom(){clearRing();if(typeof g==='undefined'||!g.on){sparkEls.forEach(function(e){e.style.visibility='visible';});}document.querySelectorAll('.zb').forEach(function(b){b.classList.remove('on');});zct.textContent=DEF_T;zcx.textContent=DEF_D;viewer.viewport.goHome();}
-function showCard(s){
+function resetZoom(){if(!viewer)return;clearRing();if(typeof g==='undefined'||!g.on){sparkEls.forEach(function(e){e.style.visibility='visible';});}document.querySelectorAll('.zb').forEach(function(b){b.classList.remove('on');});zct.textContent=DEF_T;zcx.textContent=DEF_D;viewer.viewport.goHome();}
+function showCard(s){if(!viewer)return;
   var i=sparks.indexOf(s);
   zct.textContent='✦ '+s.t; zcx.textContent=s.d;
   document.querySelectorAll('.zb').forEach(function(b,j){b.classList.toggle('on',j===i);});
@@ -438,7 +456,7 @@ var targets=[{x:.085,y:.56,n:"радугу"},{x:.63,y:.52,n:"гибнущий к
 var g={on:false,found:[],t:60,timer:null};
 var gbar=document.getElementById('gamebar'),gtask=document.getElementById('gtask'),gtime=document.getElementById('gtime'),gres=document.getElementById('gres');
 document.getElementById('gstart').addEventListener('click',function(){
-  g.on=true;g.found=[];g.t=60;gres.style.display='none';
+  if(!viewer)return;g.on=true;g.found=[];g.t=60;gres.style.display='none';
   sparkEls.forEach(function(e){e.style.visibility='hidden';});clearRing();document.querySelectorAll('.zb').forEach(function(b){b.classList.remove('on');});
   gbar.style.display='flex';task();
   document.getElementById('zoomwrap').scrollIntoView({behavior:'smooth'});
@@ -447,7 +465,7 @@ document.getElementById('gstart').addEventListener('click',function(){
   g.timer=setInterval(function(){g.t--;gtime.textContent=g.t;if(g.t<=0)endGame(false);},1000);
 });
 function task(){var left=targets.filter(function(t,i){return g.found.indexOf(i)<0;});gtask.textContent='Найдите тапом: '+left.map(function(t){return t.n;}).join(', ');}
-viewer.addHandler('canvas-click',function(ev){
+function onCanvasClick(ev){
   if(!g.on||!ev.quick)return;
   var vp=viewer.viewport.pointFromPixel(ev.position),fx=vp.x,fy=vp.y/AR;
   targets.forEach(function(t,i){
@@ -459,7 +477,7 @@ viewer.addHandler('canvas-click',function(ev){
       if(g.found.length===targets.length)endGame(true);
     }
   });
-});
+}
 function endGame(win){
   g.on=false;clearInterval(g.timer);gbar.style.display='none';
   sparkEls.forEach(function(e){e.style.visibility='visible';});
@@ -517,8 +535,10 @@ heart.addEventListener('click',function(){document.querySelector('.support').scr
 
 /* ─ Аудиогид ─ */
 var agb=document.getElementById('agbtn'),aga=document.getElementById('agaudio');
-agb.addEventListener('click',function(){if(aga.paused){aga.play();agb.textContent='❚❚';}else{aga.pause();agb.textContent='▶';}});
-aga.addEventListener('play',function(){agb.textContent='❚❚';});
+/* файл грузится только при первом запуске: страница не тянет минуты звука зря */
+function agaEnsure(){if(!aga.getAttribute('src')){aga.setAttribute('src',aga.dataset.src);aga.load();}}
+agb.addEventListener('click',function(){if(aga.paused){agaEnsure();aga.play();agb.textContent='❚❚';}else{aga.pause();agb.textContent='▶';}});
+aga.addEventListener('play',function(){agb.textContent='❚❚';aga.style.display='block';});
 aga.addEventListener('pause',function(){agb.textContent='▶';});
 aga.addEventListener('ended',function(){agb.textContent='▶';});
 /* длительность берём из самого файла, чтобы подпись не разъезжалась при перезаписи */
@@ -529,7 +549,7 @@ aga.addEventListener('loadedmetadata',function(){
 });
 document.querySelectorAll('.agnav button').forEach(function(btn){
   btn.addEventListener('click',function(){
-    aga.currentTime=parseInt(btn.dataset.t,10); aga.play();
+    agaEnsure();aga.currentTime=parseInt(btn.dataset.t,10); aga.play();
     document.querySelectorAll('.agnav button').forEach(function(x){x.classList.remove('on');});
     btn.classList.add('on');
     aga.scrollIntoView({behavior:'smooth',block:'center'});
@@ -550,7 +570,7 @@ document.querySelector('.hero').addEventListener('click',function(){document.get
  function share(){
   var url=location.href.split('#')[0];
   var payload={title:'«Радуга» Айвазовского — музей «Русское искусство»',
-   text:'Найдите на этой картине радугу. С первого раза почти никто не находит.',url:url};
+   text:'Найдите на этой картине радугу — с первого раза её почти никто не замечает, а она есть.',url:url};
   if(navigator.share){navigator.share(payload).catch(function(){});return;}
   if(navigator.clipboard&&navigator.clipboard.writeText){
    navigator.clipboard.writeText(url).then(function(){hint('Ссылка скопирована');},function(){hint(url);});return;}

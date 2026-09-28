@@ -249,9 +249,12 @@ body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none}
 [data-museum="art"] .opt{background:rgba(255,255,255,.05)}
 [data-museum] .expl{border-left-color:var(--acc)}
 
-[data-museum="explorers"] .gbtn,[data-museum="art"] .gbtn,
-[data-museum="explorers"] .audio button,[data-museum="art"] .audio button{
+[data-museum="explorers"] .gbtn,
+[data-museum="explorers"] .audio button{
   background:var(--acc);color:#fff;box-shadow:none;border:none}
+/* тема искусства: акцент светлый (золото) — на нём читается только тёмный текст (WCAG 2.2 AA) */
+[data-museum="art"] .gbtn,[data-museum="art"] .audio button{
+  background:var(--acc);color:var(--ink);box-shadow:none;border:none}
 [data-museum="explorers"] .gbtn.sec,[data-museum="art"] .gbtn.sec{
   background:none;color:var(--acc);border:1px solid var(--line)}
 
@@ -282,9 +285,12 @@ body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none}
 [data-museum="explorers"] .support h2,[data-museum="explorers"] .support h3,
 [data-museum="explorers"] .support b,[data-museum="explorers"] .support strong{color:var(--acc)}
 /* главная кнопка — заливка акцентом, вторичная — контур: обе читаемы на любой теме */
-[data-museum="explorers"] .support button.gold,[data-museum="art"] .support button.gold,
-[data-museum="explorers"] .support [data-sup-share],[data-museum="art"] .support [data-sup-share]{
+[data-museum="explorers"] .support button.gold,
+[data-museum="explorers"] .support [data-sup-share]{
   background:var(--acc);color:#fff;border:1px solid var(--acc);border-radius:var(--radius)}
+/* тема искусства: золотая заливка — тёмный текст (WCAG 2.2 AA, 4.5:1) */
+[data-museum="art"] .support button.gold,[data-museum="art"] .support [data-sup-share]{
+  background:var(--acc);color:var(--ink);border:1px solid var(--acc);border-radius:var(--radius)}
 [data-museum="explorers"] .support [data-sup-more],[data-museum="art"] .support [data-sup-more],
 [data-museum="explorers"] .support a,[data-museum="art"] .support a{
   background:none;color:var(--acc);border:1px solid var(--acc);border-radius:var(--radius)}

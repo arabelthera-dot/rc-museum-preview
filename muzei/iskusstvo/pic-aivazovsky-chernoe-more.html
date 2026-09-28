@@ -36,13 +36,16 @@ p.mb{margin-bottom:14px}
 .lead:first-letter{initial-letter:2;-webkit-initial-letter:2;color:var(--gold);padding-right:8px}
 /* ZOOM */
 /* высота под пропорции полотна (3:2) — без чёрных полей сверху и снизу на телефоне */
-#zoomwrap{position:relative;height:min(74vh,calc(100vw * .68));min-height:300px;background:#000;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-@media (min-width:900px){#zoomwrap{height:74vh}}
-#viewer{position:absolute;inset:0}
+/* высоту задаёт движок глубокого приближения (стандарт №12): щипок, кнопки + − ⌂ */
+#zoomwrap{position:relative;background:#000;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+#zoomwrap figure[data-deep-zoom]{margin:0}
+#zoomwrap figure[data-deep-zoom]>img{width:100%;height:auto;display:block}
+#zoomwrap figcaption{font-size:12.5px;line-height:1.5;color:var(--txt);opacity:.8;padding:10px 16px 13px;background:#0b0d11}
+#zoomwrap figcaption a{color:var(--gold)}
 .spark{width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;cursor:pointer;background:radial-gradient(circle,#ffdf70 0 60%,#c9a227 100%);border:2px solid rgba(11,13,17,.9);box-shadow:0 0 0 2px rgba(255,246,214,.95),0 0 16px 5px rgba(212,175,55,.8);display:flex;align-items:center;justify-content:center;color:#1a1508;font-size:14px;font-weight:bold;font-family:Georgia,serif;animation:pulse 2.2s infinite}
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.35)}}
 @media (prefers-reduced-motion:reduce){.spark{animation:none}}
-#zhint{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);z-index:15;background:rgba(18,21,28,.85);border:1px solid var(--line);border-radius:20px;padding:6px 15px;font-size:12px;white-space:nowrap;transition:opacity .6s;pointer-events:none}
+#zhint{position:absolute;top:10px;left:10px;z-index:15;background:rgba(18,21,28,.85);border:1px solid var(--line);border-radius:20px;padding:6px 15px;font-size:12px;white-space:nowrap;transition:opacity .6s;pointer-events:none}
 /* GAME */
 #gamebar{position:absolute;top:10px;left:10px;right:10px;z-index:25;display:none;justify-content:space-between;align-items:center;background:rgba(18,21,28,.92);border:1px solid var(--line);border-radius:12px;padding:8px 12px;font-size:13px}
 #gamebar .tm{color:var(--gold);font-size:16px;min-width:44px;text-align:right}
@@ -135,7 +138,6 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 #zbody h3{font-family:Georgia,serif;font-size:15.5px;color:var(--gold);margin-bottom:6px}
 #zbody p{font-size:14px;line-height:1.55}
 .ring.live{animation:pulse 2s infinite}
-.openseadragon-container .navigator{border-radius:6px!important}
 
 /* ── календарь музея (стандарт для всех музеев) ── */
 #calendar .calnav{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
@@ -234,7 +236,7 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
   <div class="inner">
     <span class="chip">1881 · Третьяковская галерея · 149 × 208 см</span>
     <h1>«<b>Чёрное море</b>»</h1>
-    <div class="hook">Все говорят, что на этой картине ничего нет. Они просто не нашли корабль.</div>
+    <div class="hook">Все говорят, что на этой картине ничего нет, — они просто не нашли на ней корабль.</div>
     <div class="down">тапните по полотну — рассмотреть вблизи ▾</div>
   </div>
 </div>
@@ -257,7 +259,7 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
     <button id="agbtn" aria-label="Включить аудиогид">▶</button>
     <div class="meta"><b>Полный аудиогид · <span id="agdur">9 минут</span></b>Экскурсия по всей картине: что здесь на самом деле изображено, спрятанный корабль, приговор Крамского, два названия, как это написано, судьба полотна и место в мировой живописи.</div>
   </div>
-  <audio id="agaudio" src="audio-guide-chernoe-more-ru.mp3" preload="metadata" controls style="width:100%;margin:-6px 0 14px;border-radius:10px"></audio>
+  <audio id="agaudio" data-src="audio-guide-chernoe-more-ru.mp3" preload="none" controls style="display:none;width:100%;margin:-6px 0 14px;border-radius:10px"></audio>
   <div class="agnav">
     <span class="lbl">Перейти к главе:</span>
     <button data-t="0">Что на полотне</button>
@@ -286,7 +288,11 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 </section>
 
 <div id="zoomwrap">
-  <div id="viewer"></div>
+  <figure data-deep-zoom data-iiif="media/zum/chernoe-more/info.json"
+          data-alt="Иван Айвазовский, «Чёрное море»: почти чёрная вода, одинокая волна и низкий горизонт">
+    <img src="media/zum/chernoe-more/preview.jpg" alt="Иван Айвазовский, «Чёрное море»: почти чёрная вода, одинокая волна и низкий горизонт">
+    <figcaption>Иван Айвазовский, «Чёрное море», 1881. Государственная Третьяковская галерея, Москва. Скан 4000 × 2870 — Wikimedia Commons (Google Arts &amp; Culture), общественное достояние: автор умер в 1900 году. <a href="media/zum/chernoe-more/rights.json">Паспорт кадра</a>.</figcaption>
+  </figure>
   <div id="gamebar"><span id="gtask">Найдите: …</span><span class="tm" id="gtime">60</span></div>
   <div id="zhint">Щипок — приблизить · точки 1·2·3 — детали</div>
 </div>
@@ -330,7 +336,7 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
     <button class="chip">Как её купил Третьяков?</button>
   </div>
   <p class="mb" style="font-size:12.5px;opacity:.62;margin-top:11px">Ответы собраны из документированных высказываний, писем и воспоминаний современников. Это реконструкция голоса художника, а не запись его подлинной речи.</p>
-  <div id="chatrow"><input id="chatin" placeholder="Ваш вопрос художнику…"><button class="gbtn" id="chatgo">→</button></div>
+  <div id="chatrow"><input id="chatin" aria-label="Ваш вопрос художнику" placeholder="Ваш вопрос художнику…"><button class="gbtn" id="chatgo" aria-label="Отправить вопрос">→</button></div>
 </section>
 
 <section class="deep" id="razbor">
@@ -360,15 +366,15 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
   <div class="world">
     <figure>
       <img src="media/cmp-friedrich.jpg" alt="Каспар Давид Фридрих. Монах у моря, 1808–1810" loading="lazy">
-      <figcaption><b>Фридрих · «Монах у моря» · 1808–1810</b>Первая в европейской живописи картина, где почти ничего нет: полоса берега, полоса моря, огромное небо — и крошечная фигура монаха. Современников она возмутила: они не понимали, куда смотреть. Ровно тот же приём, что у Айвазовского, — только человек показан на берегу, а не в море.</figcaption>
+      <figcaption><b>Фридрих · «Монах у моря» · 1808–1810</b>Первая в европейской живописи картина, где почти ничего нет: полоса берега, полоса моря, огромное небо — и крошечная фигура монаха. Современников она возмутила: они не понимали, куда смотреть. Ровно тот же приём, что у Айвазовского, — только человек показан на берегу, а не в море. Полотно — музей Старая национальная галерея, Берлин; общественное достояние: Фридрих умер в 1840 году.</figcaption>
     </figure>
     <figure>
       <img src="media/cmp-whistler.jpg" alt="Джеймс Уистлер. Ноктюрн в синем и серебряном: Челси, 1871" loading="lazy">
-      <figcaption><b>Уистлер · «Ноктюрн в синем и серебряном: Челси» · 1871</b>Вода, туман и полоса берега, растворённые до почти чистого цвета; человеческая фигура — крошечная тень внизу. За другую картину этой же серии критик Джон Рёскин обвинил художника в том, что тот «швырнул банку краски в лицо публике», — дело дошло до суда. Живопись, отказавшаяся от предмета, платила за это скандалом.</figcaption>
+      <figcaption><b>Уистлер · «Ноктюрн в синем и серебряном: Челси» · 1871</b>Вода, туман и полоса берега, растворённые до почти чистого цвета; человеческая фигура — крошечная тень внизу. За другую картину этой же серии критик Джон Рёскин обвинил художника в том, что тот «швырнул банку краски в лицо публике», — дело дошло до суда. Живопись, отказавшаяся от предмета, платила за это скандалом. Полотно — галерея Тейт, Лондон; общественное достояние: Уистлер умер в 1903 году.</figcaption>
     </figure>
     <figure class="ours">
       <img src="media/chernoe-more-hero.jpg" alt="Иван Айвазовский. Чёрное море, 1881. Третьяковская галерея" loading="lazy">
-      <figcaption><b>Айвазовский · «Чёрное море» · 1881</b>Две полосы серого — и ни скандала, ни манифеста. Он не спорил с традицией и не строил теорий: просто написал море таким, каким оно выглядит, когда с ним ничего не происходит. И оставил на горизонте корабль — чтобы зритель понял размер того, на что смотрит.</figcaption>
+      <figcaption><b>Айвазовский · «Чёрное море» · 1881</b>Две полосы серого — и ни скандала, ни манифеста. Он не спорил с традицией и не строил теорий: просто написал море таким, каким оно выглядит, когда с ним ничего не происходит. И оставил на горизонте корабль — чтобы зритель понял размер того, на что смотрит. Полотно — Государственная Третьяковская галерея, Москва; общественное достояние: автор умер в 1900 году.</figcaption>
     </figure>
   </div>
   <p class="mb" style="margin-top:14px">Через семьдесят лет американец Марк Ротко будет писать огромные холсты из двух-трёх цветовых полос и говорить, что они о трагедии и восторге. Прямой связи между ними нет — Ротко шёл к полосам от идеи, Айвазовский смотрел на Чёрное море, которое видел с детства. Но если вы знаете Ротко, то, стоя перед этим полотном, поймёте его иначе. Работы Ротко под авторским правом, поэтому здесь мы их не показываем.</p>
@@ -438,23 +444,39 @@ footer .slog{font-style:italic;color:var(--gold);margin-bottom:8px}
 </footer>
 <div id="heart">❤<span class="lbl">Поддержать</span></div>
 
-<script src="vendor/openseadragon/openseadragon.min.js"></script>
+<script src="../../assets/museum-deep-zoom.js"></script>
 <script>
-var W=2048,H=1452,AR=H/W;
-var viewer=OpenSeadragon({id:"viewer",prefixUrl:"vendor/openseadragon/images/",tileSources:"media/tiles/chernoe-more.dzi",showNavigationControl:true,showNavigator:true,navigatorPosition:"TOP_RIGHT",navigatorSizeRatio:.15,navigatorBackground:"rgba(0,0,0,.55)",navigatorBorderColor:"rgba(212,175,55,.75)",navigatorDisplayRegionColor:"#d4af37",navigationControlAnchor:OpenSeadragon.ControlAnchor.BOTTOM_RIGHT,gestureSettingsTouch:{pinchToZoom:true,flickEnabled:true},maxZoomPixelRatio:2.2,visibilityRatio:1,minZoomLevel:.9,animationTime:1.1,springStiffness:7});
+var W=4000,H=2870,AR=H/W;   /* новый скан 4000 px: media/zum/chernoe-more */
+var viewer=null;
+/* глубокое приближение — общий движок музея (стандарт №12): тайлы IIIF, щипок, «до мазка» */
+MuseumDeepZoom.init(document.querySelector('#zoomwrap [data-deep-zoom]')).then(function(v){
+  if(!v)return;
+  viewer=v;
+  if(v.world&&v.world.getItemCount())wireDeepZoom();else v.addOnceHandler('open',wireDeepZoom);
+});
 var sparks=[
  {x:.390,y:.513,n:"Корабль",z:10.0,t:"Корабль. Он всё-таки есть",d:"Единственный человеческий след на полотне — двухмачтовый парусник на самой линии горизонта. Размером с ноготь на двухметровом холсте. Терпит он бедствие или справляется — Айвазовский не отвечает: слишком далеко."},
  {x:.410,y:.244,n:"Просвет в тучах",z:2.9,t:"Просвет, который решает всё",d:"Тучи ещё не сомкнулись. Именно этот разрыв в небе не даёт картине стать чёрной: свет падает на воду полосами и делает море живым, а не мёртвым."},
  {x:.311,y:.757,n:"Волна Айвазовского",z:4.5,t:"Та самая «волна Айвазовского»",d:"Гребень с прозрачным подсветом изнутри — фирменный приём мастера. Чистых белил здесь почти нет: свет проходит сквозь тонкие слои краски и возвращается наружу."}];
 var sparkEls=[];
-viewer.addHandler('open',function(){sparks.forEach(function(s,i){var el=document.createElement('div');el.className='spark';el.textContent=i+1;new OpenSeadragon.MouseTracker({element:el,clickHandler:function(){showCard(s);}}).setTracking(true);viewer.addOverlay({element:el,location:new OpenSeadragon.Point(s.x,s.y*AR)});sparkEls.push(el);});});
+function wireDeepZoom(){
+  /* точки-детали: номер на полотне, клик — карточка с объяснением */
+  sparks.forEach(function(s,i){
+    var el=document.createElement('div');el.className='spark';el.textContent=i+1;
+    el.setAttribute('role','button');el.setAttribute('tabindex','0');
+    el.setAttribute('aria-label','Деталь '+(i+1)+': '+s.n);
+    el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();showCard(s);}});
+    new OpenSeadragon.MouseTracker({element:el,clickHandler:function(){showCard(s);}}).setTracking(true);
+    viewer.addOverlay({element:el,location:new OpenSeadragon.Point(s.x,s.y*AR)});sparkEls.push(el);
+  });
+}
 /* ── детали картины: объяснение ПОД полотном, наезд у каждой свой ── */
 var zbtns=document.getElementById('zbtns'),zct=document.getElementById('zct'),zcx=document.getElementById('zcx');
-var DEF_T='Три детали, которые легко пропустить',DEF_D='Нажмите номер — картина сама подъедет к нужному месту, вокруг детали загорится кольцо, а объяснение появится здесь. Мини-карта в углу показывает, какую часть полотна вы сейчас видите.';
+var DEF_T='Три детали, которые легко пропустить',DEF_D='Нажмите номер — картина сама подъедет к нужному месту, вокруг детали загорится кольцо, а объяснение появится здесь. Кнопка ⌂ в углу возвращает картину целиком.';
 var ringEl=null;
 function clearRing(){if(ringEl){try{viewer.removeOverlay(ringEl);}catch(e){}ringEl=null;}}
-function resetZoom(){clearRing();if(typeof g==='undefined'||!g.on){sparkEls.forEach(function(e){e.style.visibility='visible';});}document.querySelectorAll('.zb').forEach(function(b){b.classList.remove('on');});zct.textContent=DEF_T;zcx.textContent=DEF_D;viewer.viewport.goHome();}
-function showCard(s){
+function resetZoom(){if(!viewer)return;clearRing();if(typeof g==='undefined'||!g.on){sparkEls.forEach(function(e){e.style.visibility='visible';});}document.querySelectorAll('.zb').forEach(function(b){b.classList.remove('on');});zct.textContent=DEF_T;zcx.textContent=DEF_D;viewer.viewport.goHome();}
+function showCard(s){if(!viewer)return;
   var i=sparks.indexOf(s);
   zct.textContent='✦ '+s.t; zcx.textContent=s.d;
   document.querySelectorAll('.zb').forEach(function(b,j){b.classList.toggle('on',j===i);});
@@ -481,7 +503,7 @@ var targets=[{x:.390,y:.513,n:"корабль на горизонте"},{x:.410,
 var g={on:false,found:[],t:60,timer:null};
 var gbar=document.getElementById('gamebar'),gtask=document.getElementById('gtask'),gtime=document.getElementById('gtime'),gres=document.getElementById('gres');
 document.getElementById('gstart').addEventListener('click',function(){
-  g.on=true;g.found=[];g.t=60;pts-=0;gres.style.display='none';
+  if(!viewer)return;g.on=true;g.found=[];g.t=60;pts-=0;gres.style.display='none';
   sparkEls.forEach(function(e){e.style.visibility='hidden';});clearRing();document.querySelectorAll('.zb').forEach(function(b){b.classList.remove('on');});
   gbar.style.display='flex';task();
   document.getElementById('zoomwrap').scrollIntoView({behavior:'smooth'});
@@ -489,7 +511,7 @@ document.getElementById('gstart').addEventListener('click',function(){
   g.timer=setInterval(function(){g.t--;gtime.textContent=g.t;if(g.t<=0)endGame(false);},1000);
 });
 function task(){var left=targets.filter(function(t,i){return g.found.indexOf(i)<0;});gtask.textContent='Найдите тапом: '+left.map(function(t){return t.n;}).join(', ');}
-viewer.addHandler('canvas-click',function(ev){
+function onCanvasClick(ev){
   if(!g.on||!ev.quick)return;
   var vp=viewer.viewport.pointFromPixel(ev.position),fx=vp.x,fy=vp.y/AR;
   targets.forEach(function(t,i){
@@ -501,7 +523,7 @@ viewer.addHandler('canvas-click',function(ev){
       if(g.found.length===targets.length)endGame(true);
     }
   });
-});
+}
 function endGame(win){
   g.on=false;clearInterval(g.timer);gbar.style.display='none';
   sparkEls.forEach(function(e){e.style.visibility='visible';});
@@ -560,8 +582,10 @@ document.getElementById('heart').addEventListener('click',function(){document.qu
 /* аудиогид */
 (function(){var b=document.getElementById('agbtn'),a=document.getElementById('agaudio');
  if(!b||!a)return;
- b.addEventListener('click',function(){if(a.paused){a.play();b.textContent='❚❚';}else{a.pause();b.textContent='▶';}});
- a.addEventListener('play',function(){b.textContent='❚❚';});
+ /* файл грузится только при первом запуске: страница не тянет минуты звука зря */
+ function agEnsure(){if(!a.getAttribute('src')){a.setAttribute('src',a.dataset.src);a.load();}}
+ b.addEventListener('click',function(){if(a.paused){agEnsure();a.play();b.textContent='❚❚';}else{a.pause();b.textContent='▶';}});
+ a.addEventListener('play',function(){b.textContent='❚❚';a.style.display='block';});
  a.addEventListener('pause',function(){b.textContent='▶';});
  a.addEventListener('ended',function(){b.textContent='▶';});
  /* длительность в подписи — из самого файла, чтобы не разъезжалась при перезаписи */
@@ -573,7 +597,7 @@ document.getElementById('heart').addEventListener('click',function(){document.qu
  /* переход к главе */
  document.querySelectorAll('.agnav button').forEach(function(btn){
    btn.addEventListener('click',function(){
-     a.currentTime=parseInt(btn.dataset.t,10);
+     agEnsure();a.currentTime=parseInt(btn.dataset.t,10);
      a.play();
      document.querySelectorAll('.agnav button').forEach(function(x){x.classList.remove('on');});
      btn.classList.add('on');
