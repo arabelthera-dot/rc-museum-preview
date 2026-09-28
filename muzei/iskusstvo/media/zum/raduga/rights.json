@@ -1,0 +1,21 @@
+{
+  "files": [
+    {
+      "file": "preview.jpg",
+      "tiles": "raduga/",
+      "object": "Иван Айвазовский. «Радуга». 1873. Холст, масло",
+      "holder": "Государственная Третьяковская галерея, Москва",
+      "author": "Иван Константинович Айвазовский (1817–1900); снимок — Güldem Üstün",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Russia_(Moscow,_Tretyanov_Gallery)_The_Rainbow,_a_famous_painting_of_Aiazovsky_(36515236431).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Russia_%28Moscow%2C_Tretyanov_Gallery%29_The_Rainbow%2C_a_famous_painting_of_Aiazovsky_%2836515236431%29.jpg",
+      "via": "Wikimedia Commons (снимок картины в зале)",
+      "license": "CC BY 2.0",
+      "basis": "Лицензия CC BY 2.0 (creativecommons.org/licenses/by/2.0): использование разрешено с указанием автора снимка — Güldem Üstün; сама картина — общественное достояние (автор умер в 1900)",
+      "sha1": "c54a70591af92a45af7996c85addeebd5825a3ea",
+      "sha256": "f98cad09589eb875be82cd2b4a30e750c2e4144b317a2872a264c3d0dd53df19",
+      "size": "4617×3276",
+      "checked_at": "2026-09-28",
+      "ai_modification": "not_applied"
+    }
+  ]
+}
