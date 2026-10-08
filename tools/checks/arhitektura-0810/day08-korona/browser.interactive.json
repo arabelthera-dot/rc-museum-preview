@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "page_sha256": "26424918013363bfb66d5801225485711bcc8614843be7af67cdaa08bac54be9",
+  "runner": "../../../b6/run-b6.mjs",
+  "created_at": "2026-10-08T07:39:01.700Z",
+  "browser": "151.0.7922.173",
+  "plan": "../../../b6/plans/arhitektura-08jan-dubrovicy.mjs",
+  "inputs": {
+    "../../../../muzei/arhitektura/dubrovicy.html": "26424918013363bfb66d5801225485711bcc8614843be7af67cdaa08bac54be9",
+    "../../../b6/run-b6.mjs": "9102a2e45306a6add3e56fcbd8a460d4cf6a0ee8a625bf26bee8b9e6a3e5285a",
+    "../../../b6/plans/arhitektura-08jan-dubrovicy.mjs": "d792fc6147ceef2d8f7d143186b812443123bbeac64d87cdb535b42023ef31bc",
+    "../../../../assets/museum-theme.css": "860c46ef384ae104f269d5c5557686352dd17123648e1da3eeb6a1ec7dbd8c28",
+    "../../../../assets/nevjanskaya-page.css": "86b775850b854765a0770a7b429cdcbae0410ee11154932bf1cc978158f6cf79",
+    "../../../../assets/dubrovicy-page.css": "6b9fa024253c70812f1bbcb27a4d35b71b814c7a4cc6b06827ec5eed34c9e9cc",
+    "../../../../muzei/arhitektura/media/dubrovicy/hero-480.webp": "dd4c198cd6677eef5ee7ba7a7ba997488c7d3216d6ebe6f64a712046d685674f",
+    "../../../../muzei/arhitektura/video/day-08jan-dubrovicy-poster.jpg": "056244f77704774b772fe7c0222917814a9818e0e5124b0d987e4f900e164d99",
+    "../../../../muzei/arhitektura/media/dubrovicy/siluet-kak-postroeno.webp": "54d9605ab5c95f2d87851fa986c5c4f3c28f299076560e24f26400e9d0afb521",
+    "../../../../assets/museum-video.js": "de33b1a1c1ece4c2ab4ad7975d0fe20114183f19ca598c5461abe123c5c7d38f",
+    "../../../../assets/museum-audioguide.js": "25ee813c11e79591f8a50895d65e0e52c230aa7abe5d604ee7ed335316b63caf",
+    "../../../../assets/museum-calendar-month.js": "e597a197c185ee065da25691ccb5c4cd538960f7642629c30198dc4ab81d59b3",
+    "../../../../assets/museum-support.js": "b01f62ae2ec23f6e1329f6a2c2b2e9bc85e72545696d360a418fe0df040bbbcd",
+    "../../../../assets/museum-chrome.js": "36e66b9e071643768f4a23f2fa9daf1918cef8815962afd2a5ef60b30670c74b",
+    "../../../../assets/museum-analytics-v2.js": "63c87a66c44c4631ac15a2308f3e74a87751eef8ea8762121ff514845d04651d",
+    "../../../../assets/museum-page-runtime.js": "a6f87bcfc48439dc180f76edeb39f3cbaf41a6c84578e455faf92736499a81b0",
+    "../../../../assets/dubrovicy-page.js": "0ed6d2a0c33f871b0121517cc8e0e669b8b39e2803ad03d6fbc7ae9757980e96",
+    "../../../../assets/analytics.js": "e26d9783206ecb19a0796aaa4f89654ec178ff929af47d1ce36bfdd101783e20",
+    "../../../../muzei/arhitektura/video/day-08jan-dubrovicy-ru.vtt": "018fd5e06dfe91a8a7b1d87a3a2745a8b0e28de094d61d582da592910dd09cc8",
+    "../../../../video/registry.json": "ac800dd0e8ac291e9f9fac54c7a5c8ee8b4a088d243c4e7e86a13dc4a8e97d02",
+    "../../../../muzei/arhitektura/media/dubrovicy/siluet-uslovno-bez-zaversheniya.webp": "d951fef3b25ea0df2be2a466b6206e3056ec30afe30f7258c18f06f99c904910",
+    "../../../../muzei/arhitektura/media/dubrovicy/detail.webp": "e2ebb542035f3648e4b3bbc8747595c9997cfb9394d815f10faa4ffc53d0e5b0",
+    "entry-390.png": "c879462518cc39c86e43f90c642c031d6dde22b15220aef725e33c3fea73c54b",
+    "entry-390.json": "768d81bb9d1186b87dee5b5a9537dfbb1d7108020728d961f30bcd7e05264b72",
+    "wrong-390.png": "dc939a0c97c0cd645a401236a06ca4285eb4b0e945bb00a59df41136f055754f",
+    "wrong-390.json": "2da03610d99317dea516222c2b86d18f422809680618e9506ebe8bf4736ec138",
+    "reset-390.png": "cba85cc0e35298c093a6d05d15f8e56001b5bc990f2a66a8898f3fe8c103989e",
+    "reset-390.json": "391e95f1df443019b979f1318ab503f9b6d3aec832f03f353e6c6bc670fa235b",
+    "mobile-390.png": "22c13ad22a4e23d1c9389addbd6a4a9d1b3fe952270faed0eb835762a2b0b4d1",
+    "mobile-390.json": "c33557ea376c0e84b914c9ba53a04c5648007f34c330865bc4b578ad930c9c75",
+    "../../../../muzei/arhitektura/media/dubrovicy/hero.webp": "8d5d103f55dd9d4ed51f467bfcebd3feaeaa7abc25aec85f8afc91ebfa9ad4be",
+    "../../../../muzei/arhitektura/media/dubrovicy/building.webp": "f27f723506c839546073f0bb2af7dcbe7d3355cb1bb076d2184673a0822845a5",
+    "mobile-1440.png": "542498da7f6ccce685efc94fee4a3b71571f47c1f61149daccfce6dda1c07322",
+    "mobile-1440.json": "c319670e86a49cb415b659d26533318cba86e02bf81630643983cde6bcf6a199",
+    "../../../../muzei/arhitektura/media/dubrovicy/ensemble.webp": "1820ccb1878dc72dd32b159e8f8895b0b1273068b902e9daf0577298ee172571",
+    "../../../../muzei/arhitektura/media/dubrovicy/landscape.webp": "a2abead70d7144238d4a103987e12d078da134044d610836ba3889cfcc962a2a",
+    "../../../../muzei/arhitektura/media/dubrovicy/ist-1790.webp": "41f5b31d669f634ebcf4fd6dd85576f6365be970140eb2d3b2162ab839e2e591",
+    "../../../../muzei/arhitektura/media/dubrovicy/ist-1900.webp": "d826b65128925bc6870901bd98c3ecda8333f220ec218eff127b8c331fd5fdcb",
+    "nojs-390.png": "349d74ea442bb497c452c13f7a05ee075f903ae77178480286dbcc7d0352cc02",
+    "nojs-390.json": "1a60bf52cb3ede1210fe34a58abd8defe825ffe8a176c0c6754a6c850433dc51",
+    "main-390.png": "b84884e1f1df7f7c2d40f222e6fa361ee4a0889aef28e3f7120b0640b813b3a2",
+    "main-390.json": "4d70a148b009fd75ccbd8371ffd4526cd04ff1f0d3fc08bd721512500b9c7d2a",
+    "empty-390.png": "be9bb36ff0ac24fd9369d2fce04b4056552e82d655dae19f3f8b83a97e033a7e",
+    "empty-390.json": "eb659623ec7aa8427c6f1a8d746732d4afbc781a9ef4e4d83dab4a8afc13fcdd"
+  },
+  "scenarios": {
+    "entry": [
+      {
+        "test_id": "entry-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "entry-390.json"
+      }
+    ],
+    "wrong": [
+      {
+        "test_id": "wrong-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "wrong-390.json"
+      }
+    ],
+    "reset": [
+      {
+        "test_id": "reset-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "reset-390.json"
+      }
+    ],
+    "mobile": [
+      {
+        "test_id": "mobile-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "mobile-390.json"
+      },
+      {
+        "test_id": "mobile-1440",
+        "status": "pass",
+        "automated": true,
+        "width": 1440,
+        "javascript_enabled": true,
+        "evidence": "mobile-1440.json"
+      }
+    ],
+    "nojs": [
+      {
+        "test_id": "nojs-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": false,
+        "evidence": "nojs-390.json"
+      }
+    ],
+    "score": [],
+    "main": [
+      {
+        "test_id": "main-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "main-390.json"
+      }
+    ],
+    "empty": [
+      {
+        "test_id": "empty-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "empty-390.json"
+      }
+    ]
+  },
+  "errors": [],
+  "environment": {
+    "origin": "http://b6.local",
+    "network": "local inputs only"
+  }
+}
