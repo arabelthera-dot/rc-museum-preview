@@ -1,0 +1,75 @@
+{
+  "test_id": "main-390",
+  "code": "main",
+  "width": 390,
+  "javascript_enabled": true,
+  "url": "http://b6.local/muzei/karikatura/day-13jan-myshi-kota.html",
+  "steps": [
+    "Run subject-specific main action"
+  ],
+  "checks": [
+    {
+      "label": "Three shelves filled",
+      "actual": 3,
+      "expected": 3,
+      "ok": true
+    },
+    {
+      "label": "Six statements placed and locked",
+      "actual": 6,
+      "expected": 6,
+      "ok": true
+    },
+    {
+      "label": "Six statement notes shown",
+      "actual": 6,
+      "expected": 6,
+      "ok": true
+    },
+    {
+      "label": "All-statements badge shown",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    },
+    {
+      "label": "Verdict names the legend",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    },
+    {
+      "label": "Three dossiers opened",
+      "actual": 3,
+      "expected": 3,
+      "ok": true
+    },
+    {
+      "label": "Main action reward",
+      "actual": 65,
+      "expected": 65,
+      "ok": true
+    },
+    {
+      "label": "Placed statements are disabled",
+      "actual": 6,
+      "expected": 6,
+      "ok": true
+    },
+    {
+      "label": "Used dossier controls are disabled",
+      "actual": 3,
+      "expected": 3,
+      "ok": true
+    },
+    {
+      "label": "No duplicate main reward",
+      "actual": 65,
+      "expected": 65,
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "screenshot": "main-390.png",
+  "status": "pass"
+}

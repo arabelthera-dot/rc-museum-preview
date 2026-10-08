@@ -1,0 +1,64 @@
+{
+  "test_id": "empty-390",
+  "code": "empty",
+  "width": 390,
+  "javascript_enabled": true,
+  "url": "http://b6.local/muzei/karikatura/day-13jan-myshi-kota.html",
+  "steps": [
+    "Inspect concrete activity contents",
+    "Try a statement from a foreign shelf"
+  ],
+  "checks": [
+    {
+      "label": "Six statements offered",
+      "actual": 6,
+      "expected": 6,
+      "ok": true
+    },
+    {
+      "label": "Shelves wait empty",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    },
+    {
+      "label": "No statement placed yet",
+      "actual": 0,
+      "expected": 0,
+      "ok": true
+    },
+    {
+      "label": "Three shelves offered",
+      "actual": 3,
+      "expected": 3,
+      "ok": true
+    },
+    {
+      "label": "No verdict yet",
+      "actual": false,
+      "expected": false,
+      "ok": true
+    },
+    {
+      "label": "Promised quiz count",
+      "actual": 3,
+      "expected": 3,
+      "ok": true
+    },
+    {
+      "label": "A foreign statement earns nothing",
+      "actual": 0,
+      "expected": 0,
+      "ok": true
+    },
+    {
+      "label": "Foreign statement is marked as a dead end",
+      "actual": 1,
+      "expected": 1,
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "screenshot": "empty-390.png",
+  "status": "pass"
+}
