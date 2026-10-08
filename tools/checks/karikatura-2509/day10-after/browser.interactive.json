@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "page_sha256": "602979f08240dc628e491d44830535e7dfa808192e6a64f8a67a807d1e55a2be",
+  "runner": "../run-b6.mjs",
+  "created_at": "2026-10-08T07:33:40.266Z",
+  "browser": "151.0.7922.173",
+  "plan": "../day10-plan.mjs",
+  "inputs": {
+    "../../../../muzei/karikatura/day-10jan-karta-1854.html": "602979f08240dc628e491d44830535e7dfa808192e6a64f8a67a807d1e55a2be",
+    "../run-b6.mjs": "9102a2e45306a6add3e56fcbd8a460d4cf6a0ee8a625bf26bee8b9e6a3e5285a",
+    "../day10-plan.mjs": "4ee2204731d48f931c245ba5a13b95791aa020d97baa0b0c6ac862ae192e7237",
+    "../../../../assets/fonts.css": "6025405e45ebd2219a5716ff005bd18a234361b87151f483c5d749c9679d29a0",
+    "../../../../assets/museum-theme.css": "860c46ef384ae104f269d5c5557686352dd17123648e1da3eeb6a1ec7dbd8c28",
+    "../../../../muzei/karikatura/media/onwhyn-comic-map-1854.jpg": "54c2539d6af0a0db9294528b07f059b586d8ebc10ef62f867ec1a6cb80ff1f97",
+    "../../../../muzei/karikatura/calendar-karikatura.js": "525ad659bfcca84c424b29764723767bfd1261b079b65e706ec00fd3a864b405",
+    "../../../../assets/museum-calendar-month.js": "e597a197c185ee065da25691ccb5c4cd538960f7642629c30198dc4ab81d59b3",
+    "../../../../assets/museum-chrome.js": "36e66b9e071643768f4a23f2fa9daf1918cef8815962afd2a5ef60b30670c74b",
+    "../../../../assets/museum-support.js": "b01f62ae2ec23f6e1329f6a2c2b2e9bc85e72545696d360a418fe0df040bbbcd",
+    "../../../../assets/museum-audioguide.js": "25ee813c11e79591f8a50895d65e0e52c230aa7abe5d604ee7ed335316b63caf",
+    "../../../../assets/museum-analytics-v2.js": "63c87a66c44c4631ac15a2308f3e74a87751eef8ea8762121ff514845d04651d",
+    "../../../../assets/museum-video.js": "de33b1a1c1ece4c2ab4ad7975d0fe20114183f19ca598c5461abe123c5c7d38f",
+    "../../../../assets/fonts/playfairdisplay-nuFiD-vYSZviVYUb_rj3ij__anPXDTjYgFE_.woff2": "c108681cba6a9820bff52f4a1a4a1d9edf356b347bd79b7c61e916028e8a8b54",
+    "../../../../assets/fonts/inter-UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+    "../../../../assets/fonts/playfairdisplay-nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2": "e0c764a8e9e1cce92163c55bac4b2ad6cd4cf8c696ce2289ab5c41565e65b7e2",
+    "../../../../assets/fonts/inter-UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2": "71d5ee93cc1e9f1d520a3a8b66456de18c7879d8df09d57fcd2eaff75fef0075",
+    "../../../../muzei/karikatura/media/berendsohn-komische-karte-1854.jpg": "590476313c80089c027ec51fa381b57c4ff204a315160de44f33e6a00db708e0",
+    "entry-390.png": "02652deb8910212fa20d75744af413a8294a682895f745486fb225b786df30b6",
+    "entry-390.json": "f0a9f190f55e417beef84a41923f5c45a8198ea8f3fd2659a5611e601a015608",
+    "wrong-390.png": "838becd3f42a39f3aa0dcccf5d6e9bd4a9fb990854ea0de5a058d1a051545da5",
+    "wrong-390.json": "c6ca03a57c326a003b966863e79648a8d4eafb2bc571886c649ed49dd670d98f",
+    "../../../../muzei/karikatura/media/lubok-solovki-1854.jpg": "1f13aece3b129ddbff19bb8055206f8d569ff74adaea029fae0a296345fe3c85",
+    "reset-390.png": "5e80bd50883ee0ae9fb612ff72bdcd138fb53f738c1e7dd3de3d2c3ff7d47171",
+    "reset-390.json": "7e43d2a6cb23d8ec1d3cf5c4f0b910ccbb46064f0897f7de4a128821121cb01c",
+    "mobile-390.png": "3197b273585cce44332478f0b87c67d1f078b7b0b475c125897ec8c339456afa",
+    "mobile-390.json": "71c57ae49aff43abb57d113565c43098158ca20cde9ab2a7864919ef4098a031",
+    "mobile-1440.png": "b9cd633c6711220606c6a39f7dcd3a0cd7c8f8c780858ab9ab189fae67fd3eb6",
+    "mobile-1440.json": "7bfefaa054df4dddf3b329e0d4001d3ea2bd3a3e50dd0402a6b2a0f5c802c906",
+    "nojs-390.png": "47edeb51d101b166eaf9ecbf8392ebc424b80e0e549809d8421aba997e211fd9",
+    "nojs-390.json": "ec0df170285ae72aa5cc2359f129bec7d9728ce4ed75cce2941dac4b2d949ca4",
+    "score-390.png": "cd6fa25b7e2492eb602f28d511158afeaa91e011cef00484a12c308421e14399",
+    "score-390.json": "e58e31ef061666c7b0ceb83624910e87560cc13e0ae258bf4e6231d06a6df25d",
+    "main-390.png": "d62913862aa22e35ab920451c6145bfa3cc55a5e20d4fb66b99a43c4c8401503",
+    "main-390.json": "d4ae038f0d07bb9f76cf860434ccb8589095a1885da24e128e483577ebaae85a",
+    "empty-390.png": "93496d8b02ef294304fe298bb19967e8eec0349bc4d2bb254a48529b325ba612",
+    "empty-390.json": "77508fc80030c3122188be315d25369539cca2441ce5e62e72555f676d47bbbf"
+  },
+  "scenarios": {
+    "entry": [
+      {
+        "test_id": "entry-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "entry-390.json"
+      }
+    ],
+    "wrong": [
+      {
+        "test_id": "wrong-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "wrong-390.json"
+      }
+    ],
+    "reset": [
+      {
+        "test_id": "reset-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "reset-390.json"
+      }
+    ],
+    "mobile": [
+      {
+        "test_id": "mobile-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "mobile-390.json"
+      },
+      {
+        "test_id": "mobile-1440",
+        "status": "pass",
+        "automated": true,
+        "width": 1440,
+        "javascript_enabled": true,
+        "evidence": "mobile-1440.json"
+      }
+    ],
+    "nojs": [
+      {
+        "test_id": "nojs-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": false,
+        "evidence": "nojs-390.json"
+      }
+    ],
+    "score": [
+      {
+        "test_id": "score-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "score-390.json"
+      }
+    ],
+    "main": [
+      {
+        "test_id": "main-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "main-390.json"
+      }
+    ],
+    "empty": [
+      {
+        "test_id": "empty-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "empty-390.json"
+      }
+    ]
+  },
+  "errors": [],
+  "environment": {
+    "origin": "http://b6.local",
+    "network": "local inputs only"
+  }
+}
