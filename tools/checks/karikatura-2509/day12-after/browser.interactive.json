@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "page_sha256": "0ceb5749bb5780ac2debf49b83a466432d548efa19952e10dc6b7206a5385f6c",
+  "runner": "../run-b6.mjs",
+  "created_at": "2026-10-08T07:56:36.113Z",
+  "browser": "151.0.7922.173",
+  "plan": "../day12-plan.mjs",
+  "inputs": {
+    "../../../../muzei/karikatura/day-12jan-tri-podpisi.html": "0ceb5749bb5780ac2debf49b83a466432d548efa19952e10dc6b7206a5385f6c",
+    "../run-b6.mjs": "9102a2e45306a6add3e56fcbd8a460d4cf6a0ee8a625bf26bee8b9e6a3e5285a",
+    "../day12-plan.mjs": "543042193802ff884eced9c0396754c5c98736ed152b5969e33feefc6f590060",
+    "../../../../assets/fonts.css": "6025405e45ebd2219a5716ff005bd18a234361b87151f483c5d749c9679d29a0",
+    "../../../../assets/museum-theme.css": "860c46ef384ae104f269d5c5557686352dd17123648e1da3eeb6a1ec7dbd8c28",
+    "../../../../muzei/karikatura/media/cruikshank-dung-cart-1813.jpg": "695c2ae2cad9fd4af26a56e5831d4f5dff0bddb2a1ae1d7e74ce66493062069d",
+    "../../../../muzei/karikatura/calendar-karikatura.js": "880357973de364e547057fe7e02861d33e93dadff61de28a6b4df2044fd950ae",
+    "../../../../assets/museum-calendar-month.js": "e597a197c185ee065da25691ccb5c4cd538960f7642629c30198dc4ab81d59b3",
+    "../../../../assets/museum-chrome.js": "36e66b9e071643768f4a23f2fa9daf1918cef8815962afd2a5ef60b30670c74b",
+    "../../../../assets/museum-support.js": "b01f62ae2ec23f6e1329f6a2c2b2e9bc85e72545696d360a418fe0df040bbbcd",
+    "../../../../assets/museum-audioguide.js": "25ee813c11e79591f8a50895d65e0e52c230aa7abe5d604ee7ed335316b63caf",
+    "../../../../assets/museum-analytics-v2.js": "63c87a66c44c4631ac15a2308f3e74a87751eef8ea8762121ff514845d04651d",
+    "../../../../assets/museum-video.js": "de33b1a1c1ece4c2ab4ad7975d0fe20114183f19ca598c5461abe123c5c7d38f",
+    "../../../../assets/fonts/playfairdisplay-nuFiD-vYSZviVYUb_rj3ij__anPXDTjYgFE_.woff2": "c108681cba6a9820bff52f4a1a4a1d9edf356b347bd79b7c61e916028e8a8b54",
+    "../../../../assets/fonts/inter-UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+    "../../../../assets/fonts/playfairdisplay-nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2": "e0c764a8e9e1cce92163c55bac4b2ad6cd4cf8c696ce2289ab5c41565e65b7e2",
+    "../../../../assets/fonts/inter-UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2": "71d5ee93cc1e9f1d520a3a8b66456de18c7879d8df09d57fcd2eaff75fef0075",
+    "../../../../assets/fonts/inter-UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2": "ca157063339ac4ad418f214f3abfed119b0798ab4d377386ce5c9e5a7a435ebd",
+    "entry-390.png": "0ee1927dff729d6baac85a4cd405493ea675ff5c7255ce910c5e232d85bf5451",
+    "entry-390.json": "f00e4ce331442b0d40c557338e14b7e19aa326ba3bc16bae0149f638632f5ec3",
+    "wrong-390.png": "0a422e2bea1c983aaec7771db15b737017054a12c4018c4d454df261ae8a9b19",
+    "wrong-390.json": "66a5cc6bc6fa08960b178dcdc5136c8f45bf288b5911991cb9cbd08747d7780e",
+    "../../../../muzei/karikatura/media/venetsianov-dolbila-1812.jpg": "e514cac23aec00950c7a39061e992161f87cc1ecd539fcee61dae560d9318de5",
+    "reset-390.png": "7ab1e0ab1594dfa753d5e94c378538b53f187070eb55f5a38397b3ae43351b0b",
+    "reset-390.json": "34e1a59597e8e3cdd9ee763e4e67cd67314f65b44f776e7019e17dfa696d308b",
+    "mobile-390.png": "6e9e8c8d4f3eeb3f139eefcc3a30d2d42d434d68f560955161610bf0824497ed",
+    "mobile-390.json": "0bd01cbf5eba5e226b5430ba1bb170bc0aead206668dfb45d3ec58baedf6f6bf",
+    "../../../../muzei/karikatura/media/cruikshank-chopping-blocks-1813.jpg": "fbf5a0aea3547556574652064da7d722b836000e248def295a9ce1f939f4c492",
+    "mobile-1440.png": "468dee9c94d7722942bc601333623707fbbdf8b42f66086969597bf4178fc9f9",
+    "mobile-1440.json": "371e3673e440feb4c043ef39d70631e1a2749311544f18e9dcc9f972354b0c90",
+    "nojs-390.png": "9a49a3a48c334804c75a05fca12f76a15ae34051f0b3afada40adb2961d2e727",
+    "nojs-390.json": "ab87181c9e2bb9aa836b30ac2c511d9de93e4cdda49a8581fa666435aa55806e",
+    "score-390.png": "0030f60e1c02f869f1b4cebe0bac1b8aeaf6e282ad21afe472fcc0742e325787",
+    "score-390.json": "adcbc8ad4fac683ecbfe5d04a5f3e5dbe5b5cc518d3a0684cdfe95c71051abdb",
+    "main-390.png": "7ab1e0ab1594dfa753d5e94c378538b53f187070eb55f5a38397b3ae43351b0b",
+    "main-390.json": "e7301cdee08f780a9944e277005ed2cd37ff102733524655581ff9903f582aaa",
+    "empty-390.png": "3daadfb308a2dfb68491c5f6cd61c7667ff6c6933ffbea2cfbab52da29be922b",
+    "empty-390.json": "8ddaf1630af3c4e5926fa8dc8b40c72e061e0e568a47b325f2a8c74c2dd9a69c"
+  },
+  "scenarios": {
+    "entry": [
+      {
+        "test_id": "entry-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "entry-390.json"
+      }
+    ],
+    "wrong": [
+      {
+        "test_id": "wrong-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "wrong-390.json"
+      }
+    ],
+    "reset": [
+      {
+        "test_id": "reset-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "reset-390.json"
+      }
+    ],
+    "mobile": [
+      {
+        "test_id": "mobile-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "mobile-390.json"
+      },
+      {
+        "test_id": "mobile-1440",
+        "status": "pass",
+        "automated": true,
+        "width": 1440,
+        "javascript_enabled": true,
+        "evidence": "mobile-1440.json"
+      }
+    ],
+    "nojs": [
+      {
+        "test_id": "nojs-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": false,
+        "evidence": "nojs-390.json"
+      }
+    ],
+    "score": [
+      {
+        "test_id": "score-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "score-390.json"
+      }
+    ],
+    "main": [
+      {
+        "test_id": "main-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "main-390.json"
+      }
+    ],
+    "empty": [
+      {
+        "test_id": "empty-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "empty-390.json"
+      }
+    ]
+  },
+  "errors": [],
+  "environment": {
+    "origin": "http://b6.local",
+    "network": "local inputs only"
+  }
+}

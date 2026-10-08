@@ -1,0 +1,64 @@
+{
+  "test_id": "empty-390",
+  "code": "empty",
+  "width": 390,
+  "javascript_enabled": true,
+  "url": "http://b6.local/muzei/karikatura/day-12jan-tri-podpisi.html",
+  "steps": [
+    "Inspect concrete activity contents",
+    "Try a phrase from a foreign version"
+  ],
+  "checks": [
+    {
+      "label": "Six phrases offered",
+      "actual": 6,
+      "expected": 6,
+      "ok": true
+    },
+    {
+      "label": "Sheet waits without a caption",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    },
+    {
+      "label": "No phrase placed yet",
+      "actual": 0,
+      "expected": 0,
+      "ok": true
+    },
+    {
+      "label": "Three versions offered",
+      "actual": 3,
+      "expected": 3,
+      "ok": true
+    },
+    {
+      "label": "No verdict yet",
+      "actual": false,
+      "expected": false,
+      "ok": true
+    },
+    {
+      "label": "Promised quiz count",
+      "actual": 3,
+      "expected": 3,
+      "ok": true
+    },
+    {
+      "label": "A foreign phrase earns nothing",
+      "actual": 0,
+      "expected": 0,
+      "ok": true
+    },
+    {
+      "label": "Foreign phrase is marked as a dead end",
+      "actual": 1,
+      "expected": 1,
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "screenshot": "empty-390.png",
+  "status": "pass"
+}

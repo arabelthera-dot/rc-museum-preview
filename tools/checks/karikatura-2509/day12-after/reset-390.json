@@ -1,0 +1,100 @@
+{
+  "test_id": "reset-390",
+  "code": "reset",
+  "width": 390,
+  "javascript_enabled": true,
+  "url": "http://b6.local/muzei/karikatura/day-12jan-tri-podpisi.html",
+  "steps": [
+    "Complete main action",
+    "Reset using browser new visit"
+  ],
+  "checks": [
+    {
+      "label": "Three versions assembled",
+      "actual": 3,
+      "expected": 3,
+      "ok": true
+    },
+    {
+      "label": "Six phrases placed and locked",
+      "actual": 6,
+      "expected": 6,
+      "ok": true
+    },
+    {
+      "label": "Six phrase notes shown",
+      "actual": 6,
+      "expected": 6,
+      "ok": true
+    },
+    {
+      "label": "All-versions badge shown",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    },
+    {
+      "label": "Verdict names the caption as the verdict",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    },
+    {
+      "label": "Three dossiers opened",
+      "actual": 3,
+      "expected": 3,
+      "ok": true
+    },
+    {
+      "label": "Main action reward",
+      "actual": 65,
+      "expected": 65,
+      "ok": true
+    },
+    {
+      "label": "Three versions assembled",
+      "actual": 3,
+      "expected": 3,
+      "ok": true
+    },
+    {
+      "label": "Six phrases placed and locked",
+      "actual": 6,
+      "expected": 6,
+      "ok": true
+    },
+    {
+      "label": "Six phrase notes shown",
+      "actual": 6,
+      "expected": 6,
+      "ok": true
+    },
+    {
+      "label": "All-versions badge shown",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    },
+    {
+      "label": "Verdict names the caption as the verdict",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    },
+    {
+      "label": "Three dossiers opened",
+      "actual": 3,
+      "expected": 3,
+      "ok": true
+    },
+    {
+      "label": "Repeating after reset earns once",
+      "actual": 65,
+      "expected": 65,
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "screenshot": "reset-390.png",
+  "status": "pass"
+}
