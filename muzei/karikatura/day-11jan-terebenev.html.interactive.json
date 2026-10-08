@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "page_sha256": "fc8796023d2915e4b1bc8fd2ae769f06123d5f15c8cc7666f6e920f1f5be55f3",
+  "runner": "../../tools/checks/karikatura-2509/run-b6.mjs",
+  "created_at": "2026-10-08T07:46:08.025Z",
+  "browser": "151.0.7922.173",
+  "plan": "../../tools/checks/karikatura-2509/day11-plan.mjs",
+  "inputs": {
+    "day-11jan-terebenev.html": "fc8796023d2915e4b1bc8fd2ae769f06123d5f15c8cc7666f6e920f1f5be55f3",
+    "../../tools/checks/karikatura-2509/run-b6.mjs": "9102a2e45306a6add3e56fcbd8a460d4cf6a0ee8a625bf26bee8b9e6a3e5285a",
+    "../../tools/checks/karikatura-2509/day11-plan.mjs": "ea6eece95a1b2694afc9688b63af81d154f2fc99d848f828c6017d9c3c260bba",
+    "../../assets/fonts.css": "6025405e45ebd2219a5716ff005bd18a234361b87151f483c5d749c9679d29a0",
+    "../../assets/museum-theme.css": "860c46ef384ae104f269d5c5557686352dd17123648e1da3eeb6a1ec7dbd8c28",
+    "media/terebenev-russky-stsevola-1813.jpg": "f2f44019a7b22a2c8762e895c473f38203da1ba010f4b3db92f38b4e8d52b568",
+    "calendar-karikatura.js": "2a1cd65743ddea8e622b121d6483d0f9cf52506135423501333e2712752fb9dc",
+    "../../assets/museum-calendar-month.js": "e597a197c185ee065da25691ccb5c4cd538960f7642629c30198dc4ab81d59b3",
+    "../../assets/museum-chrome.js": "36e66b9e071643768f4a23f2fa9daf1918cef8815962afd2a5ef60b30670c74b",
+    "../../assets/museum-support.js": "b01f62ae2ec23f6e1329f6a2c2b2e9bc85e72545696d360a418fe0df040bbbcd",
+    "../../assets/museum-audioguide.js": "25ee813c11e79591f8a50895d65e0e52c230aa7abe5d604ee7ed335316b63caf",
+    "../../assets/museum-analytics-v2.js": "63c87a66c44c4631ac15a2308f3e74a87751eef8ea8762121ff514845d04651d",
+    "../../assets/museum-video.js": "de33b1a1c1ece4c2ab4ad7975d0fe20114183f19ca598c5461abe123c5c7d38f",
+    "../../assets/fonts/playfairdisplay-nuFiD-vYSZviVYUb_rj3ij__anPXDTjYgFE_.woff2": "c108681cba6a9820bff52f4a1a4a1d9edf356b347bd79b7c61e916028e8a8b54",
+    "../../assets/fonts/inter-UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+    "../../assets/fonts/playfairdisplay-nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2": "e0c764a8e9e1cce92163c55bac4b2ad6cd4cf8c696ce2289ab5c41565e65b7e2",
+    "../../assets/fonts/inter-UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2": "71d5ee93cc1e9f1d520a3a8b66456de18c7879d8df09d57fcd2eaff75fef0075",
+    "../../tools/checks/karikatura-2509/day11-after/entry-390.png": "2f22e5a6e0f03961cb2cd7e3a59e485b1486c43e1333c318d1fff5436f584026",
+    "../../tools/checks/karikatura-2509/day11-after/entry-390.json": "847e55df8b1b99bcc0592874cabbcec7feb2b30e6a1e1251b81a15a7a81af1dd",
+    "../../tools/checks/karikatura-2509/day11-after/wrong-390.png": "1411520cff4f09cab1186b65e73b6d71fb75d93a2c0defb202be36e22d6fafba",
+    "../../tools/checks/karikatura-2509/day11-after/wrong-390.json": "ae30b2223c5e252b7913124bd12a89909a44eae108d3802ab3eba6c6870940b6",
+    "media/terebenev-voroniy-sup-1813.jpg": "9bda92972ab1e7c86089bbbde3ec90c7498c8126d51204526776f805f34c7a3c",
+    "../../tools/checks/karikatura-2509/day11-after/reset-390.png": "06d89c2fc22961a71db295a35caacbad4533690986ac1d82c66c76a2a49cd306",
+    "../../tools/checks/karikatura-2509/day11-after/reset-390.json": "4f94403582902d8487d850293a6b2acd4ba0e3bd1dddd265eac87acb5574be86",
+    "../../tools/checks/karikatura-2509/day11-after/mobile-390.png": "9b51a584d01353777dcf05f224737c78e77f12fecec62a869a82bdb82e2d7c68",
+    "../../tools/checks/karikatura-2509/day11-after/mobile-390.json": "494e91d8b64473fa2b393f0f7cdaf94ca8d19fa8c21c8aae2c3337bf8482b912",
+    "media/terebenev-azbuka-v-1814.jpg": "8116c1ea867302170bd41e243eb6d98dd1211d3e0df24138bd7063c13a932ba9",
+    "../../tools/checks/karikatura-2509/day11-after/mobile-1440.png": "a2959bc91c34f97c62a3c62fbcabdd1f50e2a8e53339e3ec27f6148ee81c6513",
+    "../../tools/checks/karikatura-2509/day11-after/mobile-1440.json": "58c5909c8444540763c07b589fa53a602d35e9e10b8409c5381a3805e52942f3",
+    "../../tools/checks/karikatura-2509/day11-after/nojs-390.png": "a567fe74f31de201ddff472daf5dae908080154457d4f3ec1bf964de05e2f7dd",
+    "../../tools/checks/karikatura-2509/day11-after/nojs-390.json": "993adbf43818833d338bcb5e2bd460cec3838ad99f2f2f5ca27137e9aa4f3425",
+    "../../tools/checks/karikatura-2509/day11-after/score-390.png": "c3a1957cfec2df7138592dc4373051f8913d1b87e87814a11888b4b03a737fc0",
+    "../../tools/checks/karikatura-2509/day11-after/score-390.json": "cc16c65f56b1112f71dcb6507628430284d292ccc36a9fc0a383d00510280cdd",
+    "../../tools/checks/karikatura-2509/day11-after/main-390.png": "06d89c2fc22961a71db295a35caacbad4533690986ac1d82c66c76a2a49cd306",
+    "../../tools/checks/karikatura-2509/day11-after/main-390.json": "37e5180352f49d2392b2058b926572446233caa5575d231082995e260f24081b",
+    "../../tools/checks/karikatura-2509/day11-after/empty-390.png": "e6f02ccfb7b6628bb2c71932abf0ec8017bcc207110320e6ef1d6985b55c94b2",
+    "../../tools/checks/karikatura-2509/day11-after/empty-390.json": "e7e9e7685da4f9a02d2ae2c638e69af92cb8c244d2b6b4a36306ed7a1cc0c5b1"
+  },
+  "scenarios": {
+    "entry": [
+      {
+        "test_id": "entry-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "../../tools/checks/karikatura-2509/day11-after/entry-390.json"
+      }
+    ],
+    "wrong": [
+      {
+        "test_id": "wrong-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "../../tools/checks/karikatura-2509/day11-after/wrong-390.json"
+      }
+    ],
+    "reset": [
+      {
+        "test_id": "reset-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "../../tools/checks/karikatura-2509/day11-after/reset-390.json"
+      }
+    ],
+    "mobile": [
+      {
+        "test_id": "mobile-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "../../tools/checks/karikatura-2509/day11-after/mobile-390.json"
+      },
+      {
+        "test_id": "mobile-1440",
+        "status": "pass",
+        "automated": true,
+        "width": 1440,
+        "javascript_enabled": true,
+        "evidence": "../../tools/checks/karikatura-2509/day11-after/mobile-1440.json"
+      }
+    ],
+    "nojs": [
+      {
+        "test_id": "nojs-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": false,
+        "evidence": "../../tools/checks/karikatura-2509/day11-after/nojs-390.json"
+      }
+    ],
+    "score": [
+      {
+        "test_id": "score-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "../../tools/checks/karikatura-2509/day11-after/score-390.json"
+      }
+    ],
+    "main": [
+      {
+        "test_id": "main-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "../../tools/checks/karikatura-2509/day11-after/main-390.json"
+      }
+    ],
+    "empty": [
+      {
+        "test_id": "empty-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "../../tools/checks/karikatura-2509/day11-after/empty-390.json"
+      }
+    ]
+  },
+  "errors": [],
+  "environment": {
+    "origin": "http://b6.local",
+    "network": "local inputs only"
+  }
+}
