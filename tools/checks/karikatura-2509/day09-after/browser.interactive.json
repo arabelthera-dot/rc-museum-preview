@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "page_sha256": "3eb7c263cf1c46f573737fd00865e1756210a5e1d53819ae9e5d4ec8fbf38c45",
+  "runner": "../run-b6.mjs",
+  "created_at": "2026-10-08T07:25:47.869Z",
+  "browser": "151.0.7922.173",
+  "plan": "../day09-plan.mjs",
+  "inputs": {
+    "../../../../muzei/karikatura/day-09jan-zhurnaly-1905.html": "3eb7c263cf1c46f573737fd00865e1756210a5e1d53819ae9e5d4ec8fbf38c45",
+    "../run-b6.mjs": "9102a2e45306a6add3e56fcbd8a460d4cf6a0ee8a625bf26bee8b9e6a3e5285a",
+    "../day09-plan.mjs": "9759e3aad54109f5a39f0bb788e33dad79ba2bfef899682a13ed2ce7bff58a64",
+    "../../../../assets/fonts.css": "6025405e45ebd2219a5716ff005bd18a234361b87151f483c5d749c9679d29a0",
+    "../../../../assets/museum-theme.css": "860c46ef384ae104f269d5c5557686352dd17123648e1da3eeb6a1ec7dbd8c28",
+    "../../../../muzei/karikatura/media/bilibin-zhupel-02-1905.jpg": "80de2506d9afce6e278dfe0dbb613d3f35158fc962c7467d283e15bdb8524e8d",
+    "../../../../muzei/karikatura/calendar-karikatura.js": "3640058cc3576d0334a205bcb67afcaa9770d219e04af34bfb07d34f8bdc1431",
+    "../../../../assets/museum-calendar-month.js": "e597a197c185ee065da25691ccb5c4cd538960f7642629c30198dc4ab81d59b3",
+    "../../../../assets/museum-chrome.js": "36e66b9e071643768f4a23f2fa9daf1918cef8815962afd2a5ef60b30670c74b",
+    "../../../../assets/museum-support.js": "b01f62ae2ec23f6e1329f6a2c2b2e9bc85e72545696d360a418fe0df040bbbcd",
+    "../../../../assets/museum-audioguide.js": "25ee813c11e79591f8a50895d65e0e52c230aa7abe5d604ee7ed335316b63caf",
+    "../../../../assets/museum-analytics-v2.js": "63c87a66c44c4631ac15a2308f3e74a87751eef8ea8762121ff514845d04651d",
+    "../../../../assets/museum-video.js": "de33b1a1c1ece4c2ab4ad7975d0fe20114183f19ca598c5461abe123c5c7d38f",
+    "../../../../assets/fonts/playfairdisplay-nuFiD-vYSZviVYUb_rj3ij__anPXDTjYgFE_.woff2": "c108681cba6a9820bff52f4a1a4a1d9edf356b347bd79b7c61e916028e8a8b54",
+    "../../../../assets/fonts/inter-UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+    "../../../../assets/fonts/inter-UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2": "71d5ee93cc1e9f1d520a3a8b66456de18c7879d8df09d57fcd2eaff75fef0075",
+    "../../../../assets/fonts/playfairdisplay-nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2": "e0c764a8e9e1cce92163c55bac4b2ad6cd4cf8c696ce2289ab5c41565e65b7e2",
+    "entry-390.png": "3080d9757d2199bd6555ed5ceccb08a48a18c8156671910897e4ac45910a4c3f",
+    "entry-390.json": "d9c20b35667c53d9d6005577552410724e0b4f55814bda1f729b025787092d9c",
+    "wrong-390.png": "4f0d6f769a7dbfc9c0078d2bfa1503e7aa948813ddc653a62cbd5dd72aa896ec",
+    "wrong-390.json": "be670030625d4a0cf0fc33c70fffa4be00cbc8aeffb8b34255ca8b4e3aa50dcd",
+    "../../../../muzei/karikatura/media/serov-soldatushki-1905.jpg": "59b0b3c435776c97644ad28f2ebfb52dc0fe0886bd4d16e52eda15c0931aa2b1",
+    "../../../../muzei/karikatura/media/shebuev-pulemet-manifest-1905.jpg": "c88d29ba8450e85be94772f8e74385339565d9ea2b525b92456d72800b7398c6",
+    "reset-390.png": "49d793a75e1d2dc61d6ae02c773e7159060c5226484f55c29555c972016b0819",
+    "reset-390.json": "8ddffd7f782945609de9d2eecfb7dd66b8d566d844edd3385d27912c27e56737",
+    "mobile-390.png": "435c2ae3a49a9a214cdbdc537371ba2ca96ed7652e7ab36f2bb61ce4881025e6",
+    "mobile-390.json": "725d0edd7d993db38e3c6fc8e7adede0aad877485d59f3558ff430a4a53fa52e",
+    "mobile-1440.png": "cd2fe91ff51e98c8159d27a0cecd2b283a0ff5dd1ef17f29ed41720506b442d8",
+    "mobile-1440.json": "c3afd21475d44699925a156e9dcb45c516ee2171e8a1b25f256f1cbeef16febf",
+    "nojs-390.png": "88ccc8198a5a525473d9d88cdc5c5ac239c647461dbbade5c773d3fb2d252940",
+    "nojs-390.json": "6a266d7d467e7795e97ce81a6cfdaf6be46f67dae3571ddf89ddb18246cd390a",
+    "score-390.png": "b767e8fb104e2cb720d190353f36d0d64a9f18a7ee216c4de926e9217470505c",
+    "score-390.json": "839a4c2fc0fc712025243b9f05809f185ebca883b5fc3f7b913c5f93e253a125",
+    "main-390.png": "49d793a75e1d2dc61d6ae02c773e7159060c5226484f55c29555c972016b0819",
+    "main-390.json": "84cf10c15995ebe22c3b080aaaea23b76581f9b1eb0c253ef4df59c7e0e7d5a6",
+    "empty-390.png": "0daf01e3c465f3c41f4a5d5759517a7e413c9b03939533b94889bf530aec3e16",
+    "empty-390.json": "7300311238f5253d4ba019c4bf3915883e401e909e1c00fd1edcfb44dbd58684"
+  },
+  "scenarios": {
+    "entry": [
+      {
+        "test_id": "entry-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "entry-390.json"
+      }
+    ],
+    "wrong": [
+      {
+        "test_id": "wrong-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "wrong-390.json"
+      }
+    ],
+    "reset": [
+      {
+        "test_id": "reset-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "reset-390.json"
+      }
+    ],
+    "mobile": [
+      {
+        "test_id": "mobile-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "mobile-390.json"
+      },
+      {
+        "test_id": "mobile-1440",
+        "status": "pass",
+        "automated": true,
+        "width": 1440,
+        "javascript_enabled": true,
+        "evidence": "mobile-1440.json"
+      }
+    ],
+    "nojs": [
+      {
+        "test_id": "nojs-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": false,
+        "evidence": "nojs-390.json"
+      }
+    ],
+    "score": [
+      {
+        "test_id": "score-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "score-390.json"
+      }
+    ],
+    "main": [
+      {
+        "test_id": "main-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "main-390.json"
+      }
+    ],
+    "empty": [
+      {
+        "test_id": "empty-390",
+        "status": "pass",
+        "automated": true,
+        "width": 390,
+        "javascript_enabled": true,
+        "evidence": "empty-390.json"
+      }
+    ]
+  },
+  "errors": [],
+  "environment": {
+    "origin": "http://b6.local",
+    "network": "local inputs only"
+  }
+}

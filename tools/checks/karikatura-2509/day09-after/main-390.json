@@ -1,0 +1,75 @@
+{
+  "test_id": "main-390",
+  "code": "main",
+  "width": 390,
+  "javascript_enabled": true,
+  "url": "http://b6.local/muzei/karikatura/day-09jan-zhurnaly-1905.html",
+  "steps": [
+    "Run subject-specific main action"
+  ],
+  "checks": [
+    {
+      "label": "Censor answers the first decision",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    },
+    {
+      "label": "Three editorial decisions made",
+      "actual": 3,
+      "expected": 3,
+      "ok": true
+    },
+    {
+      "label": "Three censor notes shown",
+      "actual": 3,
+      "expected": 3,
+      "ok": true
+    },
+    {
+      "label": "Seizure stamp shown on the issue",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    },
+    {
+      "label": "Three dossiers opened",
+      "actual": 3,
+      "expected": 3,
+      "ok": true
+    },
+    {
+      "label": "Verdict explains what the censor read",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    },
+    {
+      "label": "Main action reward",
+      "actual": 65,
+      "expected": 65,
+      "ok": true
+    },
+    {
+      "label": "Used decision buttons are disabled",
+      "actual": 3,
+      "expected": 3,
+      "ok": true
+    },
+    {
+      "label": "Used dossier controls are disabled",
+      "actual": 3,
+      "expected": 3,
+      "ok": true
+    },
+    {
+      "label": "No duplicate main reward",
+      "actual": 65,
+      "expected": 65,
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "screenshot": "main-390.png",
+  "status": "pass"
+}

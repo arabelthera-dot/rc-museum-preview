@@ -1,0 +1,100 @@
+{
+  "test_id": "reset-390",
+  "code": "reset",
+  "width": 390,
+  "javascript_enabled": true,
+  "url": "http://b6.local/muzei/karikatura/day-09jan-zhurnaly-1905.html",
+  "steps": [
+    "Complete main action",
+    "Reset using browser new visit"
+  ],
+  "checks": [
+    {
+      "label": "Censor answers the first decision",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    },
+    {
+      "label": "Three editorial decisions made",
+      "actual": 3,
+      "expected": 3,
+      "ok": true
+    },
+    {
+      "label": "Three censor notes shown",
+      "actual": 3,
+      "expected": 3,
+      "ok": true
+    },
+    {
+      "label": "Seizure stamp shown on the issue",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    },
+    {
+      "label": "Three dossiers opened",
+      "actual": 3,
+      "expected": 3,
+      "ok": true
+    },
+    {
+      "label": "Verdict explains what the censor read",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    },
+    {
+      "label": "Main action reward",
+      "actual": 65,
+      "expected": 65,
+      "ok": true
+    },
+    {
+      "label": "Censor answers the first decision",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    },
+    {
+      "label": "Three editorial decisions made",
+      "actual": 3,
+      "expected": 3,
+      "ok": true
+    },
+    {
+      "label": "Three censor notes shown",
+      "actual": 3,
+      "expected": 3,
+      "ok": true
+    },
+    {
+      "label": "Seizure stamp shown on the issue",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    },
+    {
+      "label": "Three dossiers opened",
+      "actual": 3,
+      "expected": 3,
+      "ok": true
+    },
+    {
+      "label": "Verdict explains what the censor read",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    },
+    {
+      "label": "Repeating after reset earns once",
+      "actual": 65,
+      "expected": 65,
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "screenshot": "reset-390.png",
+  "status": "pass"
+}
