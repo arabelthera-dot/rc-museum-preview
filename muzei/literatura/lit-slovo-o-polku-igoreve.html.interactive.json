@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "page_sha256": "468e6c94a5870df3788f54acc09f1786e423de6918a3b3e9345c48a2342b62db",
+  "page_sha256": "e2e02ab97d92822428b1b69e391b36f3a1a66b7aa1d1155e57164c2d63e5f332",
   "runner": "../../tools/b6/run-b6.mjs",
-  "created_at": "2026-10-08T06:20:52.745Z",
+  "created_at": "2026-10-08T06:31:31.023Z",
   "browser": "151.0.7922.173",
   "plan": "../../tools/checks/literatura-0810/slovo-plan.mjs",
   "inputs": {
-    "lit-slovo-o-polku-igoreve.html": "468e6c94a5870df3788f54acc09f1786e423de6918a3b3e9345c48a2342b62db",
+    "lit-slovo-o-polku-igoreve.html": "e2e02ab97d92822428b1b69e391b36f3a1a66b7aa1d1155e57164c2d63e5f332",
     "../../tools/b6/run-b6.mjs": "9102a2e45306a6add3e56fcbd8a460d4cf6a0ee8a625bf26bee8b9e6a3e5285a",
-    "../../tools/checks/literatura-0810/slovo-plan.mjs": "587bde40e3e95aa5f475b652be1eecc6456fc955ccf326c68069d22f9dbb54f7",
+    "../../tools/checks/literatura-0810/slovo-plan.mjs": "95e91033264a6cad5247b4a0c7468533015421dcfe635b20cc115725a52d1f02",
     "../../assets/fonts.css": "6025405e45ebd2219a5716ff005bd18a234361b87151f483c5d749c9679d29a0",
     "../../assets/museum-literatura.css": "c61af6100f347eca763bde21e186eed1e46b4f7595610697abd05e68e231773c",
     "../../assets/museum-theme.css": "860c46ef384ae104f269d5c5557686352dd17123648e1da3eeb6a1ec7dbd8c28",
@@ -33,24 +33,24 @@
     "../../assets/fonts/lora-0QIvMX1D_JOuMwf7I-NP.woff2": "0e523e4bc3c6308f002a3208ea2990cb4f64282d4fbb67c12f5726d13b66eef6",
     "media-slovo/plach-yaroslavny.jpg": "b1986e9a4b173babf9c364bc21313dc8a19ff2b798d7a22235ccc8a0ea63cd63",
     "hero-slovo-1800.jpg": "3e8376116fd44d8826d92b5a6574bf2578b4fea5f9566a97921dde050277361f",
-    "../../tools/checks/literatura-0810/day01-slovo/entry-390.png": "f5b7e0aa156066e305659ad290c4438e5b66e4f6dfe1e09d242a3ce7c1f0b986",
-    "../../tools/checks/literatura-0810/day01-slovo/entry-390.json": "ba28053b3021081658603b374d05ca2b38b509a0a90769fbc2ca6d698ad2fd31",
-    "../../tools/checks/literatura-0810/day01-slovo/wrong-390.png": "afba227a881c35487ed89916e887d1fae57ce6740f9544af990087d1aef3a214",
-    "../../tools/checks/literatura-0810/day01-slovo/wrong-390.json": "6e4dd49c3f2ee683b6445154419d62a11a09ad4eec4dbd306102d5a9e275011b",
-    "../../tools/checks/literatura-0810/day01-slovo/reset-390.png": "9d6028ab243261087addcd577ab35b33281ddd6c6b6caf16b8c78906c4f17da8",
-    "../../tools/checks/literatura-0810/day01-slovo/reset-390.json": "82c87898a80f807039b0bc160b1ef11de67a7878c58b24af74dd5c0213648333",
-    "../../tools/checks/literatura-0810/day01-slovo/mobile-390.png": "e036dc52e649b7a81f55e25306324f801479cd0e9bd94a0f56671a0d317c46c2",
-    "../../tools/checks/literatura-0810/day01-slovo/mobile-390.json": "c878f00e144e8ecbda022777743529fdf9d1c6c9db7a3de95dcb9ae3ad12b3f8",
-    "../../tools/checks/literatura-0810/day01-slovo/mobile-1440.png": "1300e8238a1b3dd569d55f2a4157df0545e64753dff42879fda2cb4de3f1e602",
-    "../../tools/checks/literatura-0810/day01-slovo/mobile-1440.json": "b8e04f5e022be687d29546b59ae729aa2d81922f35c048c6f7dc8d358b3b46be",
-    "../../tools/checks/literatura-0810/day01-slovo/nojs-390.png": "26ba99764607a12b63998007f9dc263246b38de4d0e13311487299e66c4edf74",
-    "../../tools/checks/literatura-0810/day01-slovo/nojs-390.json": "1efd091005854f744b1dd9fb51d86e9f05913542b2e0e6dbc23dfec72f2786f1",
-    "../../tools/checks/literatura-0810/day01-slovo/score-390.png": "b97b6acb6edc6864779615997b4efe40f4309602711b15d733048b9a62619119",
-    "../../tools/checks/literatura-0810/day01-slovo/score-390.json": "9c85f0b9ee2740d206084ef94e7e7b13c36c48dfd679120c9bdabedb849a0c73",
-    "../../tools/checks/literatura-0810/day01-slovo/main-390.png": "4de29ac912a4d348c51e8fe027b814d40bcd9ba9c1844a0c2519a0b626cafa7e",
-    "../../tools/checks/literatura-0810/day01-slovo/main-390.json": "73db54d9e9e71607a60c5fd296bb244e4258ce0c060c8c8c6f6bcc7ba3ecf702",
-    "../../tools/checks/literatura-0810/day01-slovo/empty-390.png": "b5c0d34d330d664bf93bdc01775d188b6a9cd65d35d832f722094aec9ddd4921",
-    "../../tools/checks/literatura-0810/day01-slovo/empty-390.json": "c76e1dfcadd8b0a3ef613d43d2ce0f11988f1a3a60ba9705fd1201e29ac73116"
+    "../../tools/checks/literatura-0810/day01-slovo-nojs/entry-390.png": "c6aa153cbb5ffa87576fbd7b5e6f914f2f35a7b47d0f4431d7fd99b205d202c2",
+    "../../tools/checks/literatura-0810/day01-slovo-nojs/entry-390.json": "ba28053b3021081658603b374d05ca2b38b509a0a90769fbc2ca6d698ad2fd31",
+    "../../tools/checks/literatura-0810/day01-slovo-nojs/wrong-390.png": "7c2e9bfea733ac34f51a680d225fa0d1e82ac92110489e2851fd2166717937b8",
+    "../../tools/checks/literatura-0810/day01-slovo-nojs/wrong-390.json": "6e4dd49c3f2ee683b6445154419d62a11a09ad4eec4dbd306102d5a9e275011b",
+    "../../tools/checks/literatura-0810/day01-slovo-nojs/reset-390.png": "37240f1b6918ecf7fe41fcdcac0fd8bb2a7d5596ef5f5d6dc7b28e3880511e53",
+    "../../tools/checks/literatura-0810/day01-slovo-nojs/reset-390.json": "82c87898a80f807039b0bc160b1ef11de67a7878c58b24af74dd5c0213648333",
+    "../../tools/checks/literatura-0810/day01-slovo-nojs/mobile-390.png": "95d8430b8e35c80b20a4c68ee2658452d985aab48cdb36b1721311610cc6974e",
+    "../../tools/checks/literatura-0810/day01-slovo-nojs/mobile-390.json": "c878f00e144e8ecbda022777743529fdf9d1c6c9db7a3de95dcb9ae3ad12b3f8",
+    "../../tools/checks/literatura-0810/day01-slovo-nojs/mobile-1440.png": "32735e1bfbffd699aaa1867c7d4ae810a86af655304e95eceafca94e690f2b74",
+    "../../tools/checks/literatura-0810/day01-slovo-nojs/mobile-1440.json": "b8e04f5e022be687d29546b59ae729aa2d81922f35c048c6f7dc8d358b3b46be",
+    "../../tools/checks/literatura-0810/day01-slovo-nojs/nojs-390.png": "5111e47f9ffe65d9ec6903d5edd3edc3267fadeb053a7459680ab6c654fd2967",
+    "../../tools/checks/literatura-0810/day01-slovo-nojs/nojs-390.json": "8e19b9a07674d26b9754f3df8471235ba80f333a1a940995186216311bf9f9f2",
+    "../../tools/checks/literatura-0810/day01-slovo-nojs/score-390.png": "5e354056e0d451728ca49857bc98284640d76688d0fb47071c2392562758f337",
+    "../../tools/checks/literatura-0810/day01-slovo-nojs/score-390.json": "9c85f0b9ee2740d206084ef94e7e7b13c36c48dfd679120c9bdabedb849a0c73",
+    "../../tools/checks/literatura-0810/day01-slovo-nojs/main-390.png": "aae71f176077f2835cbed232ab71adabdda7c5d7d1e7a7d07cdcd8c35d70e584",
+    "../../tools/checks/literatura-0810/day01-slovo-nojs/main-390.json": "73db54d9e9e71607a60c5fd296bb244e4258ce0c060c8c8c6f6bcc7ba3ecf702",
+    "../../tools/checks/literatura-0810/day01-slovo-nojs/empty-390.png": "56d8910a76d6bed6689b880a82351274e0a619811b199c18e6cee15ae6a7c1bd",
+    "../../tools/checks/literatura-0810/day01-slovo-nojs/empty-390.json": "c76e1dfcadd8b0a3ef613d43d2ce0f11988f1a3a60ba9705fd1201e29ac73116"
   },
   "scenarios": {
     "entry": [
@@ -60,7 +60,7 @@
         "automated": true,
         "width": 390,
         "javascript_enabled": true,
-        "evidence": "../../tools/checks/literatura-0810/day01-slovo/entry-390.json"
+        "evidence": "../../tools/checks/literatura-0810/day01-slovo-nojs/entry-390.json"
       }
     ],
     "wrong": [
@@ -70,7 +70,7 @@
         "automated": true,
         "width": 390,
         "javascript_enabled": true,
-        "evidence": "../../tools/checks/literatura-0810/day01-slovo/wrong-390.json"
+        "evidence": "../../tools/checks/literatura-0810/day01-slovo-nojs/wrong-390.json"
       }
     ],
     "reset": [
@@ -80,7 +80,7 @@
         "automated": true,
         "width": 390,
         "javascript_enabled": true,
-        "evidence": "../../tools/checks/literatura-0810/day01-slovo/reset-390.json"
+        "evidence": "../../tools/checks/literatura-0810/day01-slovo-nojs/reset-390.json"
       }
     ],
     "mobile": [
@@ -90,7 +90,7 @@
         "automated": true,
         "width": 390,
         "javascript_enabled": true,
-        "evidence": "../../tools/checks/literatura-0810/day01-slovo/mobile-390.json"
+        "evidence": "../../tools/checks/literatura-0810/day01-slovo-nojs/mobile-390.json"
       },
       {
         "test_id": "mobile-1440",
@@ -98,17 +98,17 @@
         "automated": true,
         "width": 1440,
         "javascript_enabled": true,
-        "evidence": "../../tools/checks/literatura-0810/day01-slovo/mobile-1440.json"
+        "evidence": "../../tools/checks/literatura-0810/day01-slovo-nojs/mobile-1440.json"
       }
     ],
     "nojs": [
       {
         "test_id": "nojs-390",
-        "status": "fail",
+        "status": "pass",
         "automated": true,
         "width": 390,
         "javascript_enabled": false,
-        "evidence": "../../tools/checks/literatura-0810/day01-slovo/nojs-390.json"
+        "evidence": "../../tools/checks/literatura-0810/day01-slovo-nojs/nojs-390.json"
       }
     ],
     "score": [
@@ -118,7 +118,7 @@
         "automated": true,
         "width": 390,
         "javascript_enabled": true,
-        "evidence": "../../tools/checks/literatura-0810/day01-slovo/score-390.json"
+        "evidence": "../../tools/checks/literatura-0810/day01-slovo-nojs/score-390.json"
       }
     ],
     "main": [
@@ -128,7 +128,7 @@
         "automated": true,
         "width": 390,
         "javascript_enabled": true,
-        "evidence": "../../tools/checks/literatura-0810/day01-slovo/main-390.json"
+        "evidence": "../../tools/checks/literatura-0810/day01-slovo-nojs/main-390.json"
       }
     ],
     "empty": [
@@ -138,7 +138,7 @@
         "automated": true,
         "width": 390,
         "javascript_enabled": true,
-        "evidence": "../../tools/checks/literatura-0810/day01-slovo/empty-390.json"
+        "evidence": "../../tools/checks/literatura-0810/day01-slovo-nojs/empty-390.json"
       }
     ]
   },

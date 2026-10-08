@@ -79,6 +79,10 @@ export const scenarios = {
     check('Эпизоды истории раскрываются без JavaScript', await page.locator('main details').count() >= 5, true);
     check('Вместо пустой викторины и развилки — текстовый эквивалент',
       (await page.locator('#games').innerText()).length > 400, true);
+    check('Текстовая викторина: пять вопросов с ответами',
+      await page.locator('#games-text details').count(), 5);
+    check('Текстовая развилка показывает историческую реальность',
+      (await page.locator('#games-text').innerText()).includes('Овлур помог ему бежать'), true);
   },
 
   async score({page, check, step}) {
