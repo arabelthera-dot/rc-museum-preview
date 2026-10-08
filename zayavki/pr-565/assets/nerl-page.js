@@ -1,0 +1,22 @@
+(function(){
+  'use strict';
+  const base='media/pokrova-na-nerli/';
+  const steps={
+    flood:{img:'ensemble.webp',alt:'Церковь среди пойменного луга и воды',title:'Пойма поставила условие',text:'Весенняя вода поднималась здесь более чем на три метра. Место у речных ворот было выразительным, но рискованным.',caption:'Ландшафт · пойма Нерли и Клязьмы. Фото: Pol33, CC BY-SA 4.0.'},
+    base:{img:'landscape.webp',alt:'Церковь на возвышении у воды',title:'Основание ушло ниже видимого холма',text:'Валунная кладка глубиной 1,6 м несёт около 3,7 м регулярного белокаменного цоколя. Общая высота основания — 5,3 м.',caption:'Основание · видимый холм скрывает каменную систему. Фото: kishjar?, CC BY 2.0.'},
+    church:{img:'building.webp',alt:'Церковь Покрова на Нерли целиком',title:'Холм превратил конструкцию в пьедестал',text:'Грунт скрыл белокаменный цоколь. Инженерная защита от воды стала частью композиции и подняла небольшой храм над лугом.',caption:'Здание · церковь Покрова на Нерли. Фото: A. Savin, FAL.'},
+    detail:{img:'detail.webp',alt:'Белокаменные членения и резьба фасада',title:'Пропорции продолжают движение вверх',text:'Узкие окна, полуколонны и высокий барабан усиливают вертикаль. Зрительная лёгкость начинается с тяжёлого основания.',caption:'Деталь · белокаменный фасад. Фото: Soghomon Matevosyan, CC BY-SA 4.0.'}
+  };
+  const order=['flood','base','church','detail'];
+  const buttons=[...document.querySelectorAll('[data-distance]')];
+  const img=document.querySelector('#distance-image'); const cap=document.querySelector('#distance-caption'); const out=document.querySelector('#distance-result');
+  const seen=new Set();
+  function show(key){const s=steps[key];if(!s||!img)return;img.src=base+s.img;img.alt=s.alt;cap.textContent=s.caption;out.innerHTML=`<strong>${s.title}</strong>${s.text}`;buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.distance===key)));seen.add(key);document.querySelector('#distance-progress').textContent=`Открыто ${seen.size} из 4 расстояний`;if(seen.size===4){document.querySelector('#distance-finish').hidden=false;document.dispatchEvent(new CustomEvent('museum:route-success'));window.rcGoal?.('rc_interactive_complete',{interactive:'nerl_four_distances'});}}
+  buttons.forEach(b=>b.addEventListener('click',()=>show(b.dataset.distance)));show('flood');
+  document.querySelectorAll('[data-route]').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('[data-route]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));document.querySelector(button.dataset.route==='short'?'#distance-lab':'#four-scales')?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});}));
+  const expected=['boulder','ashlar','earth','church'];let gameStep=0;const seq=document.querySelector('#layer-sequence');const feedback=document.querySelector('#layer-feedback');
+  const labels={boulder:'1,6 м валунов',ashlar:'3,7 м белого камня',earth:'плотная насыпь',church:'храм'};
+  document.querySelectorAll('[data-layer]').forEach(button=>button.addEventListener('click',()=>{const key=button.dataset.layer;if(key===expected[gameStep]){seq.insertAdjacentHTML('beforeend',`<span>${labels[key]}</span>`);button.disabled=true;gameStep++;feedback.innerHTML=gameStep===4?'<strong>Последовательность собрана.</strong> Сначала работает основание, затем насыпь превращает его в холм, и только после этого мы читаем лёгкий силуэт храма.':`<strong>Верно.</strong> Теперь выбери слой № ${gameStep+1}.`;if(gameStep===4)window.rcGoal?.('rc_game_complete',{game:'nerl_foundation_order'});}else{const hints={boulder:'Начни с того, что лежит на материковой глине.',ashlar:'Белокаменный цоколь опирается на валунную кладку.',earth:'Насыпь скрывает уже построенный цоколь.',church:'Храм завершает систему, а не начинает её.'};feedback.innerHTML=`<strong>Пока нет.</strong>${hints[key]}`;}}));
+  document.querySelector('#layer-reset')?.addEventListener('click',()=>{gameStep=0;seq.innerHTML='';feedback.textContent='Выбери первый конструктивный слой.';document.querySelectorAll('[data-layer]').forEach(b=>b.disabled=false);});
+  document.querySelectorAll('[data-quiz]').forEach(button=>button.addEventListener('click',()=>{const right=button.dataset.quiz==='together';document.querySelector('#quiz-feedback').innerHTML=right?'<strong>Верно.</strong> Основание решает инженерную задачу и одновременно усиливает архитектурный образ.':'<strong>Посмотри ещё раз.</strong> Здесь нельзя отделить защиту от воды от композиции холма и силуэта.';}));
+})();
