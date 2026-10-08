@@ -1,0 +1,114 @@
+{
+  "_meta": {
+    "schema": "kalendar-pobed card-schema",
+    "version": "1.0",
+    "fixed": "2026-09-05",
+    "source": "concept-v2-proekt.md §4 (утверждена 09.08, дополнена 01.09; поля seo_title, hero.provenance, battlemap.mode добавлены 01.09)",
+    "rule": "365 карточек собираются из шаблона, а не вёрстуются вручную; схема принимается вместе с эталоном 1 января",
+    "invariants": [
+      "witness публикуется только при заполненном scan или archive_ref",
+      "dual_view — только для карточек-флагманов",
+      "name_of_day обязательно для XX века; для ранних эпох — с пометкой источника",
+      "price обязательна; для дореволюционных эпох source — документ или исследование (§8)",
+      "battlemap.steps — от 4 до 6 шагов; mode: maneuver (стрелки, этапы) или scheme (точки-эпизоды на подложке)",
+      "seo_title собирается движком (дата + событие + шок-цифра), не вписывается руками"
+    ]
+  },
+  "date": { "type": "string", "required": true, "doc": "позиция в календаре" },
+  "title": { "type": "string", "required": true, "doc": "название карточки" },
+  "year": { "type": "integer", "required": true },
+  "epoch": { "type": "string", "required": true, "doc": "век/период — управляет доступностью блоков" },
+  "seo_title": { "type": "string", "required": false, "doc": "заголовок сниппета для поиска: дата + событие + шок-цифра; собирается движком, не вписывается руками" },
+  "hero": {
+    "type": "object", "required": true,
+    "fields": {
+      "image": { "type": "string", "required": true },
+      "caption": { "type": "string", "required": true },
+      "source": { "type": "string", "required": true },
+      "provenance": { "type": "string", "required": true, "enum": ["archive", "epoch_art", "reconstruction"], "doc": "маркировка изображения — аудитор проверяет её, а не угадывает" }
+    }
+  },
+  "shock": {
+    "type": "object", "required": true,
+    "fields": {
+      "value": { "type": "string", "required": true, "doc": "шок-цифра" },
+      "text": { "type": "string", "required": true },
+      "source": { "type": "string", "required": true }
+    }
+  },
+  "price": {
+    "type": "object", "required": true,
+    "fields": {
+      "value_ours": { "type": "string", "required": true, "doc": "наши потери/цена" },
+      "value_theirs": { "type": "string", "required": true, "doc": "цена врага" },
+      "qualitative": { "type": "string", "required": true, "doc": "качественная оценка цены" },
+      "source": { "type": "string", "required": true, "doc": "для дореволюционных эпох — документ или исследование (§8)" }
+    }
+  },
+  "witness": {
+    "type": "object", "required": false,
+    "fields": {
+      "audio": { "type": "string", "required": false },
+      "transcript": { "type": "string", "required": false },
+      "scan": { "type": "string", "required": false },
+      "archive_ref": { "type": "string", "required": false, "doc": "блок публикуется только при заполненном scan или archive_ref" }
+    }
+  },
+  "balance": {
+    "type": "array", "required": true,
+    "items": { "label": "string", "side": "string" },
+    "doc": "баланс сил"
+  },
+  "battlemap": {
+    "type": "object", "required": true,
+    "fields": {
+      "base_image": { "type": "string", "required": true },
+      "mode": { "type": "string", "required": true, "enum": ["maneuver", "scheme"], "doc": "манёвр (стрелки, этапы: прорыв, окружение, десант) или схема (точки-эпизоды на подложке: штурм крепости, оборона города)" },
+      "steps": {
+        "type": "array", "required": true, "minItems": 4, "maxItems": 6,
+        "items": { "point": "string", "arrow": "string", "caption": "string", "at": "string" }
+      }
+    }
+  },
+  "echo": {
+    "type": "array", "required": true,
+    "items": { "object": "string", "where": "string", "today": "string" },
+    "doc": "эхо победы: где сохранено, что осталось сегодня"
+  },
+  "partner_link": { "type": "string", "required": true, "doc": "по умолчанию поиск «Память народа»" },
+  "dual_view": {
+    "type": "object", "required": false,
+    "fields": {
+      "enabled": { "type": "boolean", "required": true },
+      "quote_ours": { "type": "string", "required": false },
+      "quote_theirs": { "type": "string", "required": false },
+      "source": { "type": "string", "required": false },
+      "symbols_cleared": { "type": "boolean", "required": false }
+    },
+    "doc": "только флагманы"
+  },
+  "name_of_day": {
+    "type": "object", "required": true,
+    "fields": {
+      "name": { "type": "string", "required": true, "doc": "фамилия/имя" },
+      "role": { "type": "string", "required": true, "doc": "звание-роль" },
+      "document": { "type": "string", "required": true, "doc": "документ-подтверждение" },
+      "three_paragraphs": { "type": "string", "required": true }
+    },
+    "doc": "обязательно для XX века, для ранних эпох — с пометкой источника"
+  },
+  "personal_hook": {
+    "type": "object", "required": true,
+    "fields": {
+      "event_date": { "type": "string", "required": true, "doc": "дата события для движка «победа в день рождения» (museum-birthday.js)" },
+      "reference_number": { "type": "string", "required": true, "doc": "опорная цифра для «масштаба от тебя» (museum-scale.js)" }
+    }
+  },
+  "fork": {
+    "type": "array", "required": false,
+    "items": { "option": "string", "outcome": "string" },
+    "doc": "развилка командира: 2–3 реальных решения + как было на самом деле (разметкой внутри карточки, логика в общем движке страницы)"
+  },
+  "tags": { "type": "array", "required": true, "items": "string", "doc": "театр военных действий, век, род войск" },
+  "sources": { "type": "array", "required": true, "items": "string", "doc": "список ссылок; Википедия для текста и фактов не используется" }
+}
