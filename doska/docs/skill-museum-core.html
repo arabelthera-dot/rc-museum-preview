@@ -4,11 +4,11 @@ header{padding:16px}h1{font-size:20px;margin:0 0 6px}.big{font-size:28px;font-we
 .wrap{overflow-x:auto}table{border-collapse:collapse;background:#fff}
 .board{min-width:1500px}
 th,td{border:1px solid #ddd5c4;padding:8px 10px;text-align:center;vertical-align:top}
-.board td{white-space:nowrap}
+.board td{white-space:nowrap}.board td.calc{white-space:normal;min-width:150px;max-width:190px}
 thead th{background:#2b2620;color:#f6e7c1;position:sticky;top:0;font-weight:600;font-size:13px;z-index:2}
-tbody th{text-align:left;position:sticky;left:0;background:#fff;max-width:220px;min-width:150px;white-space:normal;z-index:1}
+tbody th{text-align:left;position:sticky;left:0;background:#fff;max-width:220px;min-width:110px;white-space:normal;z-index:1}
 tbody th a{color:#1d1b16}
-.ok{background:#d8efd2}.go{background:#fff1c2}.no{color:#9a917f}.today{background:#cfe3ff;font-weight:700}
+.ok{background:#d8efd2}.go{background:#fff1c2}.st.today{background:#cfe3ff}.no{color:#9a917f}.today{background:#cfe3ff;font-weight:700}
 .bad{background:#f7c9c2}.bad .why{color:#9b1c10;font-weight:700;font-size:12px;display:block}
 .ag{color:#5a5242;font-size:13px}a{color:#0b4f8a}.n{font-size:18px;font-weight:700;text-decoration:none}
 .sub{display:block;font-size:12px;color:#5a5242}.five a{display:inline-block;min-width:22px;padding:2px 4px;margin:1px;
@@ -18,9 +18,9 @@ footer{padding:16px;color:#6b6352;font-size:13px}main{padding:0 16px 24px;max-wi
 section{background:#fff;border:1px solid #ddd5c4;border-radius:6px;padding:4px 14px 10px;margin:14px 0}
 section h2{font-size:18px}li{margin:4px 0}.st{font-size:12px;padding:1px 6px;border-radius:3px;margin-left:4px;display:inline-block}
 .st.ok{background:#d8efd2}.st.dead{background:#f7c9c2;color:#9b1c10;font-weight:700}.st.pend{background:#eee6d3}
-.st.reg{background:#efe9dc;color:#4b4434}.path{font:12px monospace;color:#7a705c}nav a{margin-right:10px}
+.st.reg{background:#efe9dc;color:#4b4434}.st.geo,.st.cert{background:#e4e4e4;color:#4d4d4d}.geo{background:#ececec}.path{font:12px monospace;color:#7a705c}nav a{margin-right:10px}
 .doc table{font-size:13px}.doc td,.doc th{text-align:left}.tw{overflow-x:auto}.doc pre,pre.front{white-space:pre-wrap;background:#f1ece0;padding:8px;font-size:12px}
-.doc{padding:0 16px 24px;max-width:960px}.src td{text-align:left;font-size:13px}.q{font-style:italic}</style></head><body><header><h1>Навык museum-core</h1><div>Опубликованная копия · 08.10.2026 12:28 МСК · <a href="https://arabelthera-dot.github.io/rc-museum-preview/doska/">← доска</a> · Загрузчик навыка (~/.claude/skills) и его канонический текст.</div></header><div class="doc"><p class="path">Исходник: ~/.claude/skills/museum-core/SKILL.md</p><pre class="front">name: museum-core
+.doc{padding:0 16px 24px;max-width:960px}.src td{text-align:left;font-size:13px}.q{font-style:italic}</style></head><body><header><h1>Навык museum-core</h1><div><a href="https://arabelthera-dot.github.io/rc-museum-preview/doska/">← назад, ко всей доске</a> · копия рабочего документа проекта · 08.10.2026 15:34 МСК · Загрузчик навыка (~/.claude/skills) и его канонический текст.</div></header><div class="doc"><p class="path">Исходник: ~/.claude/skills/museum-core/SKILL.md</p><pre class="front">name: museum-core
 description: Общий процесс и стандарты страниц музеев «Русской цивилизации»: порядок блоков, чеклист ДО работы, реестр движков assets/*.js, петля из трёх проходов, приёмка. Обязателен ВМЕСТЕ со скиллом конкретного музея перед любой работой над страницей музея, экспонатом, днём календаря.</pre>
 <h1 id="museum-core">museum-core</h1>
 <p>Канон этого скилла лежит в плоском файле (его же читает валидатор <code>python3 ~/workspace/tools/check-skills.py</code>). Прочитать указатель — он ведёт к оглавлению канона и файлу нужного этапа, не ко всему канону:</p>
