@@ -73,6 +73,8 @@ def main():
     os.chmod(key, 0o600)
     os.environ["GIT_SSH_COMMAND"] = f"ssh -i {key} -o StrictHostKeyChecking=accept-new"
     subprocess.run(["git", "clone", "-q", f"git@github.com:{PREV_REPO}.git", "site"], check=True)
+    git("config", "user.name", "pr-preview")
+    git("config", "user.email", "pr-preview@users.noreply.github.com")
     out = os.path.join("site", f"pr-{N}")
     shutil.rmtree(out, ignore_errors=True)
     pages = []
@@ -95,8 +97,7 @@ def main():
                     f'<title>Заявка №{N}</title><h1>Заявка №{N}: {pr["title"]}</h1><ul>{links}</ul>')
     git("add", "-A")
     if subprocess.run(["git", "diff", "--cached", "--quiet"], cwd="site").returncode:
-        git("-c", "user.name=pr-preview", "-c", "user.email=pr-preview@users.noreply.github.com",
-            "commit", "-qm", f"pr-{N}: {'обновлено' if pr['state'] == 'open' else 'заявка закрыта, удалено'}")
+        git("commit", "-qm", f"pr-{N}: {'обновлено' if pr['state'] == 'open' else 'заявка закрыта, удалено'}")
         for _ in range(5):  # соседние заявки пишут в то же репо параллельно
             if subprocess.run(["git", "push", "-q", "origin", "HEAD:main"], cwd="site").returncode == 0:
                 break
