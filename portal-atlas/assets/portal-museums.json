@@ -576,33 +576,6 @@
       ]
     },
     {
-      "museum_id": "rc:museum:pravoslavie",
-      "number": 22,
-      "slug": "pravoslavie",
-      "title_ru": "Русского православия",
-      "promise_ru": "Тысяча лет, за которые вера стала архитектурой, музыкой и календарём.",
-      "category_id": "istoriya",
-      "category_title_ru": "История и государство",
-      "public_path": "muzei/pravoslavie/index.html",
-      "status": "planned",
-      "status_label_ru": "Создаётся",
-      "availability_ru": "",
-      "search_terms_ru": [
-        "русского",
-        "православия",
-        "тысяча",
-        "лет",
-        "которые",
-        "вера",
-        "стала",
-        "архитектурой",
-        "музыкой",
-        "календарём",
-        "история",
-        "государство"
-      ]
-    },
-    {
       "museum_id": "rc:museum:kolokola",
       "number": 23,
       "slug": "kolokola",
