@@ -13,7 +13,7 @@ permissions:
   contents: read
   pull-requests: write
 concurrency:
-  group: pr-preview
+  group: pr-preview-${{ github.event.pull_request.number || inputs.pr }}
   cancel-in-progress: false
 jobs:
   preview:
