@@ -26,6 +26,8 @@ def git(*a, cwd="site"):
 
 
 def fix(page, val, changed):
+    if val.startswith("#") and len(val) > 1:  # якорь своей страницы: <base> увёл бы его на живой сайт
+        return f"{PREV}pr-{N}/{page}{val}"
     if SKIP.match(val.strip()) and not val.startswith("/rc-museum-preview/"):
         return val
     m = re.match(r"([^?#]*)(.*)", val.strip())
@@ -39,7 +41,7 @@ def fix(page, val, changed):
         if res.startswith(".."):
             return val
     if res in changed:
-        return posixpath.relpath(res, posixpath.dirname(page) or ".") + tail
+        return f"{PREV}pr-{N}/{res}{tail}"
     return LIVE + res + tail
 
 
@@ -58,7 +60,8 @@ def rewrite(page, html, changed):
     html = re.sub(r"\b(src|href|poster|data-src|srcset)=([\"'])(.*?)\2", attr, html, flags=re.I | re.S)
     html = re.sub(r"url\((['\"]?)([^'\")]+)\1\)",
                   lambda m: f"url({m.group(1)}{fix(page, m.group(2), changed)}{m.group(1)})", html)
-    return re.sub(r"<head([^>]*)>", r'<head\1><meta name="robots" content="noindex">', html, count=1, flags=re.I)
+    return re.sub(r"<head([^>]*)>", r'<head\1><meta name="robots" content="noindex">'
+                  f'<base href="{LIVE}{posixpath.dirname(page)}/">', html, count=1, flags=re.I)
 
 
 def main():
