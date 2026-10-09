@@ -17,11 +17,19 @@
    страницы (по умолчанию window.MUSEUM_CALENDAR_INITIAL). Загадка — по желанию, до строки:
      window.MUSEUM_RETURN = {riddle: {q: 'Вопрос', a: 'Ответ', src: 'Источник'}};
    Блок встаёт в <div id="return"> если он есть, иначе перед секцией календаря #calendar
-   (порядок слотов §6: … → календарь → «Куда дальше»). */
+   (порядок слотов §6: … → календарь → «Куда дальше»).
+
+   Недатированный музей (window.MUSEUM_CALENDAR.dated === false, «Русские не сдаются»):
+   ключ «ММ-ДД» там — месяц и номер единицы, а не дата. Подпись — «День 12 · Январь», как
+   в витрине календаря (museum-calendar-page.js); намёк «Завтра — день 13 · Январь» берёт
+   следующую единицу состава по порядку ключей. Писать «12 января» там, где даты нет, —
+   брак (строка museum-return-dated-false-0810). */
 (function () {
   var me = document.currentScript;
   var MONR = ['января','февраля','марта','апреля','мая','июня',
               'июля','августа','сентября','октября','ноября','декабря'];
+  var MON  = ['Январь','Февраль','Март','Апрель','Май','Июнь',
+              'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'];
   var DIM  = [31,29,31,30,31,30,31,31,30,31,30,31];
 
   var CSS = '' +
@@ -80,6 +88,20 @@
 
   function start() {
     var cal = window.MUSEUM_CALENDAR || {};
+    var dated = cal.dated !== false;
+    /* подпись дня: дата у датированного музея, номер единицы — у недатированного */
+    var label = function (key) {
+      var p = key.split('-');
+      return dated ? human(key) : 'День ' + (+p[1]) + ' · ' + MON[+p[0] - 1];
+    };
+    /* следующий день: календарный +1 или следующая единица состава (без круга года:
+       после последней единицы намёка нет — выдумывать «завтра» нельзя) */
+    var after = function (key) {
+      if (dated) return nextKey(key);
+      var ks = Object.keys(cal).filter(function (k) { return /^\d\d-\d\d$/.test(k); }).sort();
+      for (var i = 0; i < ks.length; i++) if (ks[i] > key) return ks[i];
+      return null;
+    };
     var cfg = window.MUSEUM_RETURN || {};
     var attr = function (n) { return me && me.getAttribute('data-' + n); };
     var museum = attr('museum') || cfg.museum || document.documentElement.getAttribute('data-museum');
@@ -102,10 +124,10 @@
     var opened = Object.keys(st.days).sort();
     var n = opened.length;
     var chips = opened.map(function (k) {
-      var t = cal[k] && cal[k].t ? cal[k].t : human(k);
-      var label = esc(human(k)) + ' · ' + esc(t);
-      if (k === day) return '<li><span class="rt-now" aria-current="page">' + label + '</span></li>';
-      return hrefs[k] ? '<li><a href="' + esc(hrefs[k]) + '">' + label + '</a></li>' : '<li><span>' + label + '</span></li>';
+      var t = cal[k] && cal[k].t ? cal[k].t : label(k);
+      var chip = esc(label(k)) + ' · ' + esc(t);
+      if (k === day) return '<li><span class="rt-now" aria-current="page">' + chip + '</span></li>';
+      return hrefs[k] ? '<li><a href="' + esc(hrefs[k]) + '">' + chip + '</a></li>' : '<li><span>' + chip + '</span></li>';
     }).join('');
     parts.push('<div class="rt-part"><div class="rt-lbl">Твои открытые дни</div>' +
       '<p>Открыто ' + n + ' ' + plural(n, 'день', 'дня', 'дней') +
@@ -114,10 +136,11 @@
 
     /* 2. Намёк на завтра — только из календаря. Поле tease (если задано) — короткий намёк
        без раскрытия; иначе заголовок дня. Хук d не повторяем: он для самой страницы дня. */
-    var nk = nextKey(day), nx = cal[nk];
+    var nk = after(day), nx = nk && cal[nk];
     if (nx && nx.t) {
       var tease = nx.tease ? esc(nx.tease) : '«' + esc(nx.t) + '»' + (nx.y ? ' <span>(' + esc(nx.y) + ')</span>' : '');
-      parts.push('<div class="rt-part"><div class="rt-lbl">Завтра, ' + esc(human(nk)) + '</div>' +
+      parts.push('<div class="rt-part"><div class="rt-lbl">' +
+        (dated ? 'Завтра, ' + esc(human(nk)) : 'Завтра — ' + esc(label(nk).replace('День', 'день'))) + '</div>' +
         '<p>' + tease + '</p></div>');
     }
 
