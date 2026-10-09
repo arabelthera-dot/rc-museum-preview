@@ -16,7 +16,12 @@
        bgImage:'brest-kirpich-kladka.jpg',   // реальное фото кирпичной стены (фон .sg-wall); нет — рисуется кирпич-градиент
        wall:[
          { text:'…', text2:'…', place:'…', note:'…', audio:'slovo-geroya-1.mp3' }
-       ]
+       ],
+       // необязательно: подписи для записей, которые не выцарапаны на стене
+       // (последние слова со слов очевидцев, газетный очерк). По умолчанию —
+       // «Надпись» / «Где найдено.» / «Кто автор.», как у Брестской крепости.
+       labels:{ num:'Запись', place:'Где хранится.', note:'Кто записал.' },
+       plainWall:true   // необязательно: ровный фон вместо кирпича
      };</script>
      <script src="../../assets/museum-slovo-geroya.js"></script>
 
@@ -29,7 +34,12 @@
   var host = document.getElementById('slovo-geroya');
   if(!host || host.querySelector('.sg-wall')) return;
 
-  var wallBg = CFG.bgImage
+  // plainWall:true — ровный тёмный фон без кирпичной кладки: для слов, записанных со слов
+  // очевидцев или в газете, а не выцарапанных на стене (день 8, Петрищево).
+  var wallBg = CFG.plainWall
+    ? 'radial-gradient(ellipse at 50% -20%, rgba(255,255,255,.05), transparent 62%),'
+      + 'linear-gradient(170deg,#1a2230 0%,#121925 55%,#0b111a 100%)'
+    : CFG.bgImage
     ? 'radial-gradient(ellipse at 50% -20%, rgba(255,255,255,.06), transparent 62%),'
       + 'linear-gradient(165deg, rgba(26,13,7,.62), rgba(12,7,4,.78)),'
       + 'url("' + CFG.bgImage + '") center/cover no-repeat'
@@ -71,12 +81,14 @@
   document.head.appendChild(styleEl);
 
   function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+  var L = CFG.labels || {};
+  var NUM = L.num || 'Надпись', PLACE = L.place || 'Где найдено.', NOTE = L.note || 'Кто автор.';
 
   var scratches = CFG.wall.map(function(item, i){
-    var body = '<span class="sg-num">Надпись ' + ['I','II','III','IV','V','VI'][i] + '</span>' + esc(item.text);
+    var body = '<span class="sg-num">' + esc(NUM) + ' ' + ['I','II','III','IV','V','VI'][i] + '</span>' + esc(item.text);
     if(item.text2) body += '\n' + esc(item.text2);
     return '<button class="sg-scratch" data-i="' + i + '" type="button" '
-      + 'aria-label="' + esc('Надпись ' + ['I','II','III','IV','V','VI'][i] + ': ' + item.text) + '">'
+      + 'aria-label="' + esc(NUM + ' ' + ['I','II','III','IV','V','VI'][i] + ': ' + item.text) + '">'
       + body.replace(/\n/g, '<br>') + '</button>';
   }).join('');
 
@@ -100,8 +112,8 @@
     var t = '<div class="sg-t">' + esc(item.text).replace(/\n/g, '<br>') + '</div>';
     if(item.text2) t += '<div class="sg-t">' + esc(item.text2).replace(/\n/g, '<br>') + '</div>';
     var meta = '';
-    if(item.place) meta += '<div class="sg-meta"><b>Где найдено.</b> ' + esc(item.place) + '</div>';
-    if(item.note) meta += '<div class="sg-meta"><b>Кто автор.</b> ' + esc(item.note) + '</div>';
+    if(item.place) meta += '<div class="sg-meta"><b>' + esc(PLACE) + '</b> ' + esc(item.place) + '</div>';
+    if(item.note) meta += '<div class="sg-meta"><b>' + esc(NOTE) + '</b> ' + esc(item.note) + '</div>';
     var audio = item.audio ? '<audio controls preload="none" src="' + esc(item.audio) + '"></audio>' : '';
     detail.innerHTML = t + meta + audio;
     detail.style.display = 'block';
