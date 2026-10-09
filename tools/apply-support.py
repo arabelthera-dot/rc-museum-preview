@@ -37,7 +37,6 @@ for f in glob.glob('izobreteniya/day-*.html'):
     CFG[f] = "museum:'%s'" % FULL
 for f in glob.glob('iskusstvo/pic-*.html'):
     CFG[f] = "museum:'Русское искусство'"
-CFG['iskusstvo/pic-aivazovsky-devyatyi-val-en.html'] = "museum:'Russian Art',lang:'en'"
 CFG['pervoprohodcy/exp-dezhnev-1648.html'] = "museum:'Русские первопроходцы',heartBound:true"
 # у Шухова блоки свёрстаны вручную — эталон, движок не нужен
 CFG.pop('izobreteniya/day-05jan-shukhov.html', None)
