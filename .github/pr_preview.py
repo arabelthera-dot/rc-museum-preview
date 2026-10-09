@@ -72,7 +72,7 @@ def main():
         f.write(os.environ["DEPLOY_KEY"].strip() + "\n")
     os.chmod(key, 0o600)
     os.environ["GIT_SSH_COMMAND"] = f"ssh -i {key} -o StrictHostKeyChecking=accept-new"
-    subprocess.run(["git", "clone", "-q", "--depth", "1", f"git@github.com:{PREV_REPO}.git", "site"], check=True)
+    subprocess.run(["git", "clone", "-q", f"git@github.com:{PREV_REPO}.git", "site"], check=True)
     out = os.path.join("site", f"pr-{N}")
     shutil.rmtree(out, ignore_errors=True)
     pages = []
@@ -97,7 +97,12 @@ def main():
     if subprocess.run(["git", "diff", "--cached", "--quiet"], cwd="site").returncode:
         git("-c", "user.name=pr-preview", "-c", "user.email=pr-preview@users.noreply.github.com",
             "commit", "-qm", f"pr-{N}: {'обновлено' if pr['state'] == 'open' else 'заявка закрыта, удалено'}")
-        git("push", "-q", "origin", "HEAD:main")
+        for _ in range(5):  # соседние заявки пишут в то же репо параллельно
+            if subprocess.run(["git", "push", "-q", "origin", "HEAD:main"], cwd="site").returncode == 0:
+                break
+            git("pull", "-q", "--rebase", "origin", "main")
+        else:
+            sys.exit("push не прошёл 5 раз")
     if pr["state"] != "open":
         return
     body = MARK + f"\n**Предпросмотр заявки** — страницы открываются с телефона до слияния (обновление ~1 мин после пуша):\n"
