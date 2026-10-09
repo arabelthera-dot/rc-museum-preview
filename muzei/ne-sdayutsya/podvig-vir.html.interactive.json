@@ -1,21 +1,21 @@
 {
   "schema_version": 1,
-  "page_sha256": "be4067ddb91a40392c50b8d40727caffcb2c90f1cb7c69de057b0147a2bd00f9",
+  "page_sha256": "3cced3953b2ced47d282f7df9ff841437c9c9e3c5535f0a2382c7923202d11dd",
   "runner": "../../tools/checks/nesdayutsya-2909/run-b6.mjs",
-  "created_at": "2026-10-09T13:02:43.873Z",
+  "created_at": "2026-10-09T13:04:34.404Z",
   "browser": "151.0.7922.173",
-  "plan": "../../tools/checks/nesdayutsya-2909/day13-plan.mjs",
+  "plan": "../../tools/checks/nesdayutsya-2909/day14-plan.mjs",
   "inputs": {
-    "podvig-rogozov.html": "be4067ddb91a40392c50b8d40727caffcb2c90f1cb7c69de057b0147a2bd00f9",
+    "podvig-vir.html": "3cced3953b2ced47d282f7df9ff841437c9c9e3c5535f0a2382c7923202d11dd",
     "../../tools/checks/nesdayutsya-2909/run-b6.mjs": "9102a2e45306a6add3e56fcbd8a460d4cf6a0ee8a625bf26bee8b9e6a3e5285a",
-    "../../tools/checks/nesdayutsya-2909/day13-plan.mjs": "1c7d629d75b740d2e2ad6842aeb9d63641b7a167780978b1b6e346b18cef1593",
+    "../../tools/checks/nesdayutsya-2909/day14-plan.mjs": "0604d7fb3b9d22e07841071e0721d51ac0b14030ef3db45fbb59ec26775a6855",
     "../../tools/checks/nesdayutsya-2909/plans.mjs": "739639f3b2368589794115ebb6099df6d57dda5441c68795dccc9840ab8e20d0",
     "../../assets/fonts.css": "6025405e45ebd2219a5716ff005bd18a234361b87151f483c5d749c9679d29a0",
     "nesdayutsya-style.css": "39e9893b4180f72b0d7e77d2999dc22c2761371749fc30f2e41187b23ce92fdc",
     "../../assets/museum-theme.css": "860c46ef384ae104f269d5c5557686352dd17123648e1da3eeb6a1ec7dbd8c28",
-    "rogozov-stanciya-2006.jpg": "01c7e4a18a680a8378a157b6a0b14fa90ae1702866778dd2c0d195ef5805771e",
-    "rogozov-oazis-1983.jpg": "59820ab7130aabf788b5d6a1f606e84ed1e6924c93b855cbd460ca4f013b8924",
-    "rogozov-novolazarevskaya-1982.jpg": "b6a8b2a7bccea21ebd043f781993750b85dcc9f26f921e293058772a571290e2",
+    "vir-isaakievskaya-1942.jpg": "f580e3cd7a3450cea9e2ced19cb82f30957cbb4c8b5e8d26861a0fa42a437f9e",
+    "vir-zdanie-2010.jpg": "937ed0352be89b4f9ef514bd25282a16b68840492e80ae695f5b98b2a4b25e51",
+    "vir-yashiki-ovsa.jpg": "4bdf87ea1f47835d1f1046917ce1ef3f21e333ddf1bd7a099f85e6369baf373e",
     "../../assets/museum-audioguide.js": "25ee813c11e79591f8a50895d65e0e52c230aa7abe5d604ee7ed335316b63caf",
     "../../assets/museum-score.js": "2182608307c7078473ece8453b34efa492a769f832ca5426169ff8eaddb59a2f",
     "../../assets/museum-quiz.js": "cbad871665abd09691bcb0095c4f6eb859ae2f52b7551de37eef4b2d505bdd17",
@@ -35,26 +35,26 @@
     "../../assets/fonts/ptserif-EJRVQgYoZZY2vCFuvAFSzr-tdg.woff2": "050aee25e3462f72c4d357ee964b8df1801e701bae8af275b697581a87c04a48",
     "../../assets/fonts/ptserif-EJRSQgYoZZY2vCFuvAnt66qSVys.woff2": "bf23a7a4eebedbb87d4084a69496b29815914a18e339a00f5dc73a03c9c9328f",
     "../../assets/fonts/jetbrainsmono-tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxDcwg.woff2": "83c005d49d8a6a50474c73a5a36ac0468076e9c4a29da7bdb14995d80560a5be",
-    "rogozov-marka-1956.jpg": "e354b9e669a4a82200beb7fd7b0096fa518e718e01b21ccc27e92a154cc4c068",
-    "rogozov-muzey-arktiki.jpg": "8d49c6a7100c1bb8de5cd75630812e9a70f41024b87470aab8f20eff442e4f83",
-    "../../tools/checks/nesdayutsya-2909/day13/entry-390.png": "1fe6f5057cb5006e996e47ef0adac5c526459c672563b92cacb45cfcb8528b12",
-    "../../tools/checks/nesdayutsya-2909/day13/entry-390.json": "6700622534d85aa1f62564bd08c6906188ecfc59e3745049319848c551613346",
-    "../../tools/checks/nesdayutsya-2909/day13/wrong-390.png": "55b7f94d8069056a8a813a6efb592f99c19c280446d0dac4f45f5283d7a9db55",
-    "../../tools/checks/nesdayutsya-2909/day13/wrong-390.json": "dfa490ec0cdd4323864d8fdc15aa26a5d37baab86307b7351b95ba499b651c38",
-    "../../tools/checks/nesdayutsya-2909/day13/reset-390.png": "c75f3e341538da370732c14dc2bd5fefd5c34486f16d5dfbea630583a31f27a3",
-    "../../tools/checks/nesdayutsya-2909/day13/reset-390.json": "1ec03066aa989625cb610fb3e7fec7b8817f10ef343bd221cc074240ae1afbca",
-    "../../tools/checks/nesdayutsya-2909/day13/mobile-390.png": "2a53ed3a0afe9c3af7d8b762f308691bb8392174362a7de663b7dba423b05ad6",
-    "../../tools/checks/nesdayutsya-2909/day13/mobile-390.json": "045580680029e60ae58e3c4c0aa08a432b8885326d90b1d0bb57882864955457",
-    "../../tools/checks/nesdayutsya-2909/day13/mobile-1440.png": "a907c929e15ee42a7285461d73c2efb45026215f9dd130ea1991f1fdcfa814e0",
-    "../../tools/checks/nesdayutsya-2909/day13/mobile-1440.json": "78069acb277d11159f3bde4e1c28e61304838fac18a56a35726945bd2031b5a0",
-    "../../tools/checks/nesdayutsya-2909/day13/nojs-390.png": "3503a638cac6c7fc59e8dccc80c654c8b6e42c57a2a953d36f24b265c621b878",
-    "../../tools/checks/nesdayutsya-2909/day13/nojs-390.json": "f3e10db2670a6f85753870bfc6e1eab7f3478ec14b5a4f2f7a41d10a871152c3",
-    "../../tools/checks/nesdayutsya-2909/day13/score-390.png": "921967c3bca6f6e48295ee4ed21ce5693cfabad34d282fc02eddf45f9c5dd3b8",
-    "../../tools/checks/nesdayutsya-2909/day13/score-390.json": "b56a6791c630b53e3b672aee221428d3e93a5046c686d2ee1b1b690b3c500e97",
-    "../../tools/checks/nesdayutsya-2909/day13/main-390.png": "5ba7d9f495e745c701e6d45698b82d637c4bf6dba6ab9e95b3d779500ccee2aa",
-    "../../tools/checks/nesdayutsya-2909/day13/main-390.json": "aa315c79b4ff3168c30d50bfd9a1386ce3ab261ec6353ec5dd712d6609d3a6c5",
-    "../../tools/checks/nesdayutsya-2909/day13/empty-390.png": "a6cd58c5be4dd9dfe0d5845986d8e9d5397eeaccc4f163665bff73ce706c9ecd",
-    "../../tools/checks/nesdayutsya-2909/day13/empty-390.json": "10826669380a76a978043b23a20bee873ceb14729d3a7eaaf6f1cb537887754a"
+    "vir-hranilishche.jpg": "b93376b2f25352e5261201de1bdd629f16c7bc35c8cae462d76ec2e8ea453f05",
+    "vir-gerbariy-ovsa.jpg": "404220fc62eab345ea958266125bc1444a66a54a1ec612dacd4f66b05a9cc0d5",
+    "../../tools/checks/nesdayutsya-2909/day14/entry-390.png": "feee79c76215f4e0980af39854be3c43bcd750c448a0dfe4e8d44ec3fdcedfa3",
+    "../../tools/checks/nesdayutsya-2909/day14/entry-390.json": "b8919c60307c1dd98aaabbbbd603921ef6f188db4327d06857efadc8a0ee117d",
+    "../../tools/checks/nesdayutsya-2909/day14/wrong-390.png": "316afa4e4857aaf907320329468f05e748e3ce78b5d850a0b16be731c22305cd",
+    "../../tools/checks/nesdayutsya-2909/day14/wrong-390.json": "512896c74c663da071f44231fe68aafcbd5f10bd99271f3483498f2ef41f38bd",
+    "../../tools/checks/nesdayutsya-2909/day14/reset-390.png": "51306320971f274a8aadd020226cc6b16c2798f09e27f1f14c16ddff29d3dbff",
+    "../../tools/checks/nesdayutsya-2909/day14/reset-390.json": "300a7cbdebb719289ef8473bf34a79d1049b5136e21e1e3a61a50467f7610fc1",
+    "../../tools/checks/nesdayutsya-2909/day14/mobile-390.png": "d5d6c0b64571218ec04ed1af0584365ce6c30c3e95537d5b1248f65af45d05e4",
+    "../../tools/checks/nesdayutsya-2909/day14/mobile-390.json": "bd809855cdbc83b925176efbd5e54fb60f7a7c100b41b5e5e42424f6d60fbf2e",
+    "../../tools/checks/nesdayutsya-2909/day14/mobile-1440.png": "53df0f5b4ace825a011f3509b409b142bde9042f84f45347e40a40f4a761f89b",
+    "../../tools/checks/nesdayutsya-2909/day14/mobile-1440.json": "ba753d1a1b023cf2cf6b396fe8bab83f7be6f50c43d9a0d52b27e90e290f5a00",
+    "../../tools/checks/nesdayutsya-2909/day14/nojs-390.png": "7591d306f2fc14a26428453aeec1758d7f2ef9dab3f791b3d89694935643ae9e",
+    "../../tools/checks/nesdayutsya-2909/day14/nojs-390.json": "209f7595ff629f3f4e816b912fb98b0b65c69e162058bba333486047b23d1fa4",
+    "../../tools/checks/nesdayutsya-2909/day14/score-390.png": "19324b3deba1d6203f77903604768331e157aa3f714b52b06429a24b9250b7e3",
+    "../../tools/checks/nesdayutsya-2909/day14/score-390.json": "056707ae368e9185860407f0f2d42146bbbe36dcf3801792e194b6cc8f4d712d",
+    "../../tools/checks/nesdayutsya-2909/day14/main-390.png": "35b198a99e177c8fe0a984dc1c82a6400447800b8c19e32a2367280e0fe9e734",
+    "../../tools/checks/nesdayutsya-2909/day14/main-390.json": "8e7a52f2524e4ddf58de8dd60adc39bed287625cc4147e6c4a493b22b3fab221",
+    "../../tools/checks/nesdayutsya-2909/day14/empty-390.png": "f718885516afc59122eaa04ff938700accdf836161c84b981a8beb8d472cbb4b",
+    "../../tools/checks/nesdayutsya-2909/day14/empty-390.json": "3788c3cb9c804319fa820bbf13e18958330fe378f685b2207ecf5014b5ace173"
   },
   "scenarios": {
     "entry": [
@@ -64,7 +64,7 @@
         "automated": true,
         "width": 390,
         "javascript_enabled": true,
-        "evidence": "../../tools/checks/nesdayutsya-2909/day13/entry-390.json"
+        "evidence": "../../tools/checks/nesdayutsya-2909/day14/entry-390.json"
       }
     ],
     "wrong": [
@@ -74,7 +74,7 @@
         "automated": true,
         "width": 390,
         "javascript_enabled": true,
-        "evidence": "../../tools/checks/nesdayutsya-2909/day13/wrong-390.json"
+        "evidence": "../../tools/checks/nesdayutsya-2909/day14/wrong-390.json"
       }
     ],
     "reset": [
@@ -84,7 +84,7 @@
         "automated": true,
         "width": 390,
         "javascript_enabled": true,
-        "evidence": "../../tools/checks/nesdayutsya-2909/day13/reset-390.json"
+        "evidence": "../../tools/checks/nesdayutsya-2909/day14/reset-390.json"
       }
     ],
     "mobile": [
@@ -94,7 +94,7 @@
         "automated": true,
         "width": 390,
         "javascript_enabled": true,
-        "evidence": "../../tools/checks/nesdayutsya-2909/day13/mobile-390.json"
+        "evidence": "../../tools/checks/nesdayutsya-2909/day14/mobile-390.json"
       },
       {
         "test_id": "mobile-1440",
@@ -102,7 +102,7 @@
         "automated": true,
         "width": 1440,
         "javascript_enabled": true,
-        "evidence": "../../tools/checks/nesdayutsya-2909/day13/mobile-1440.json"
+        "evidence": "../../tools/checks/nesdayutsya-2909/day14/mobile-1440.json"
       }
     ],
     "nojs": [
@@ -112,7 +112,7 @@
         "automated": true,
         "width": 390,
         "javascript_enabled": false,
-        "evidence": "../../tools/checks/nesdayutsya-2909/day13/nojs-390.json"
+        "evidence": "../../tools/checks/nesdayutsya-2909/day14/nojs-390.json"
       }
     ],
     "score": [
@@ -122,7 +122,7 @@
         "automated": true,
         "width": 390,
         "javascript_enabled": true,
-        "evidence": "../../tools/checks/nesdayutsya-2909/day13/score-390.json"
+        "evidence": "../../tools/checks/nesdayutsya-2909/day14/score-390.json"
       }
     ],
     "main": [
@@ -132,7 +132,7 @@
         "automated": true,
         "width": 390,
         "javascript_enabled": true,
-        "evidence": "../../tools/checks/nesdayutsya-2909/day13/main-390.json"
+        "evidence": "../../tools/checks/nesdayutsya-2909/day14/main-390.json"
       }
     ],
     "empty": [
@@ -142,7 +142,7 @@
         "automated": true,
         "width": 390,
         "javascript_enabled": true,
-        "evidence": "../../tools/checks/nesdayutsya-2909/day13/empty-390.json"
+        "evidence": "../../tools/checks/nesdayutsya-2909/day14/empty-390.json"
       }
     ]
   },
