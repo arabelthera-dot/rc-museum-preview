@@ -145,5 +145,17 @@ console.log('Режим 2: «Русские не сдаются» — год 365
     r.card.innerHTML.slice(0, 80));
 }
 
+console.log('Режим 3: графы «Механика» и «Источник» в карточке дня (museum-core §1-бис-3)');
+{
+  const full = { '01-01': { t: 'Экспонат', d: 'хук', mech: 'проводишь пальцем — проявляется подпись',
+                            src: 'Третьяковская галерея, карточка ж-123' } };
+  const r = render(full);
+  check('строка «Механика» с текстом механики', /Механика<\/span>проводишь пальцем/.test(r.card.innerHTML),
+    r.card.innerHTML.slice(0, 300));
+  check('строка «Источник» с текстом источника', /Источник<\/span>Третьяковская/.test(r.card.innerHTML));
+  const bare = render({ '01-01': { t: 'Экспонат', d: 'хук' } });
+  check('нет полей — нет строк, карточка как раньше', !/class="crow"/.test(bare.card.innerHTML));
+}
+
 console.log(fails ? '\nПРОВАЛЕНО проверок: ' + fails : '\nВсе проверки пройдены.');
 process.exit(fails ? 1 : 0);

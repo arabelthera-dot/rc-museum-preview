@@ -126,6 +126,18 @@
       return many;
     }
 
+    /* графы 4 и 5 стандарта витрины (museum-core §1-бис-3): что посетитель делает
+       руками и откуда факт. Поля дня mech и src переносит генератор музея из
+       утверждённой месячной таблицы; нет поля — строки нет, ничего не выдумываем.
+       Стиль строкой: страницы музеев свои, движок не требует от них новых правил. */
+    function row(label, v) {
+      if (!v) return '';
+      return '<div class="crow" style="margin-top:8px;font-size:13px;line-height:1.5">' +
+        '<span style="color:var(--gold,#c9a24a);opacity:.85;letter-spacing:1px;' +
+        'text-transform:uppercase;font-size:10.5px;margin-right:6px">' + label + '</span>' +
+        v + '</div>';
+    }
+
     function show(k, note) {
       var it = data[k];
       if (!it || !card) return;
@@ -138,6 +150,7 @@
       card.innerHTML = '<div class="cdate">' + (note ? note + ' · ' : '') + when + '</div>' +
         '<h3>' + it.t + (it.y ? ' <span class="caly">' + it.y + '</span>' : '') + '</h3>' +
         '<p>' + it.d + '</p>' +
+        row('Механика', it.mech) + row('Источник', it.src) +
         (it.href ? '<a href="' + it.href + '">' + (it.link || 'Открыть →') + '</a>' : '');
       card.style.display = 'block';
       if (host) {
