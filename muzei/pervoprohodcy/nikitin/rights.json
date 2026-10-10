@@ -10,6 +10,7 @@
     "description": "Map of the world by Venetian monk Fra Mauro. The image shows a reproduction made by W. Fraser made in 1806. The map is orientated with south at the top.",
     "id": "atlas",
     "file": "atlas-detail.jpg",
+    "preview_file": "atlas-preview.jpg",
     "sha256": "53e5844f20a465b8913ad78dc3a1778fd8ce6e4bd8508c7d1b1970847bb89fa4",
     "checked": "2026-09-08",
     "source": "https://commons.wikimedia.org/wiki/File%3AFra%20Mauro%20World%20Map%2C%20c.1450%20%281806%20copy%29.jpg",
