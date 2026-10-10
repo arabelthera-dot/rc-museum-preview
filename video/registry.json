@@ -1,7 +1,7 @@
 {
   "_": "СГЕНЕРИРОВАНО tools/video-sync.py из docs/video/REGISTRY.json. Руками не править.",
   "version": 2,
-  "updated": "2026-09-26",
+  "updated": "2026-10-10",
   "hosting": {
     "base": ""
   },
@@ -355,6 +355,38 @@
       "poster_vertical": {
         "file": "arhitektura/04jan-vyatskoe/day-04jan-vyatskoe-9x16-poster.jpg",
         "local": "muzei/arhitektura/video/day-04jan-vyatskoe-9x16-poster.jpg",
+        "v": 1
+      }
+    },
+    "arhitektura/08jan-dubrovicy": {
+      "title": "Почему над куполом храма в Дубровицах надета золотая корона?",
+      "note": "Документальные фотографии: Елена Нечипоренко, Goussew, Ludvig14, Никонико962, Dmitry Ivanov — CC BY-SA 4.0; гравюра С. Ф. Щедрина (1790-е) и фотография П. Павлова (около 1900 года) — общественное достояние. Образовательная схема завершения маркирована в кадре. Генерация GenosAI не применялась. Голос и фонограмма синтезированы и раскрыты в паспорте выпуска.",
+      "horizontal": {
+        "file": "arhitektura/08jan-dubrovicy/day-08jan-dubrovicy.mp4",
+        "local": "muzei/arhitektura/video/day-08jan-dubrovicy.mp4",
+        "v": 1,
+        "w": 1920,
+        "h": 1080,
+        "sec": 68.3,
+        "mb": 21.4
+      },
+      "vertical": {
+        "file": "arhitektura/08jan-dubrovicy/day-08jan-dubrovicy-9x16.mp4",
+        "local": "muzei/arhitektura/video/day-08jan-dubrovicy-9x16.mp4",
+        "v": 1,
+        "w": 1080,
+        "h": 1920,
+        "sec": 38.7,
+        "mb": 12.9
+      },
+      "poster": {
+        "file": "arhitektura/08jan-dubrovicy/day-08jan-dubrovicy-poster.jpg",
+        "local": "muzei/arhitektura/video/day-08jan-dubrovicy-poster.jpg",
+        "v": 1
+      },
+      "poster_vertical": {
+        "file": "arhitektura/08jan-dubrovicy/day-08jan-dubrovicy-9x16-poster.jpg",
+        "local": "muzei/arhitektura/video/day-08jan-dubrovicy-9x16-poster.jpg",
         "v": 1
       }
     }
