@@ -1,114 +1,144 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Документ media-paths-1409-otchet-2409.md</title><style>body{font:16px/1.55 system-ui,sans-serif;max-width:860px;margin:0 auto;padding:16px;color:#1f2328}table{border-collapse:collapse}td,th{border:1px solid #d8dee4;padding:4px 8px}pre,code{background:#f6f8fa;white-space:pre-wrap}h2{margin-top:2em;border-bottom:1px solid #d8dee4}li{margin:3px 0}.muted{color:#6e7781}</style></head><body><p><a href="https://arabelthera-dot.github.io/rc-museum-preview/control.html">← Таблица контроля</a></p><h1>Документ media-paths-1409-otchet-2409.md</h1><pre style='white-space:pre-wrap'># Отчёт: адреса медиа и паспортов карикатуры — закрытие (наряд media-paths-deepseek2-1409)
-
-Дата: 24.09.2026. Исполнитель: deepseek2 (Дипсик 2). Стандарт: museum-core@2026-09-18.2.
-
-## Что требовалось
-
-Поручение выдано 14.09, возвращено 16.09 и 24.09. Конечная формулировка приёмки
-(оркестратор, 24.09): **«сдать числом „проверено N адресов паспортов, 404 — 0“ по
-всем дням карикатуры»**, прогнав HEAD по всем медиа-URL музея.
-
-Канон адресов (ответ оркестратора 24.09, вариант А):
-
-- публичный адрес в паспорте (поля URL) — только живая витрина
-  `https://arabelthera-dot.github.io/rc-museum-preview/muzei/karikatura/…`;
-- исходный файл — `rc-museum-production/karikatura/day-*/sources/`, это не URL и в
-  публичные поля не пишется;
-- папку `rc-museum-production/karikatura/media/` не заводить.
-
-Канон подтверждён кодом, а не только словом: `tools/rc-page.py:266` собирает
-публичный адрес как `f&quot;{PREVIEW_URL}/muzei/{museum}/{slug}.html&quot;`.
-
-## Что было
-
-Машинная проверка на старте сессии: **проверено 10 адресов паспортов, 404 — 9**
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Документ media-paths-1409-otchet-2409.md</title><style>body{font:16px/1.55 system-ui,sans-serif;max-width:860px;margin:0 auto;padding:16px;color:#1f2328}table{border-collapse:collapse}td,th{border:1px solid #d8dee4;padding:4px 8px}pre,code{background:#f6f8fa;white-space:pre-wrap}h2{margin-top:2em;border-bottom:1px solid #d8dee4}li{margin:3px 0}.muted{color:#6e7781}</style></head><body><p><a href="https://arabelthera-dot.github.io/rc-museum-preview/control.html">← Таблица контроля</a></p><h1>Документ media-paths-1409-otchet-2409.md</h1><h1>Отчёт: адреса медиа и паспортов карикатуры — закрытие (наряд media-paths-deepseek2-1409)</h1>
+<p>Дата: 24.09.2026. Исполнитель: deepseek2 (Дипсик 2). Стандарт: museum-core@2026-09-18.2.</p>
+<h2>Что требовалось</h2>
+<p>Поручение выдано 14.09, возвращено 16.09 и 24.09. Конечная формулировка приёмки
+(оркестратор, 24.09): <strong>«сдать числом „проверено N адресов паспортов, 404 — 0“ по
+всем дням карикатуры»</strong>, прогнав HEAD по всем медиа-URL музея.</p>
+<p>Канон адресов (ответ оркестратора 24.09, вариант А):</p>
+<ul>
+<li>публичный адрес в паспорте (поля URL) — только живая витрина
+  <code>https://arabelthera-dot.github.io/rc-museum-preview/muzei/karikatura/…</code>;</li>
+<li>исходный файл — <code>rc-museum-production/karikatura/day-*/sources/</code>, это не URL и в
+  публичные поля не пишется;</li>
+<li>папку <code>rc-museum-production/karikatura/media/</code> не заводить.</li>
+</ul>
+<p>Канон подтверждён кодом, а не только словом: <code>tools/rc-page.py:266</code> собирает
+публичный адрес как <code>f"{PREVIEW_URL}/muzei/{museum}/{slug}.html"</code>.</p>
+<h2>Что было</h2>
+<p>Машинная проверка на старте сессии: <strong>проверено 10 адресов паспортов, 404 — 9</strong>
 (совпало с проверкой оркестратора). Все девять — адреса вида
-`…/rc-museum-preview/karikatura/…` без сегмента `muzei/`.
-
-## Что сделано
-
-### 1. Карта «день → файл» взята из двух независимых источников
-
-Не на глаз и не из имени папки. Источники совпали:
-
-- `href` витринного календаря `rc-museum-preview/muzei/karikatura/calendar-karikatura.js`;
-- `&lt;link rel=&quot;canonical&quot;&gt;` самих опубликованных страниц.
-
-| День | Паспорт (папка) | Опубликованная страница |
-|---|---|---|
-| 01.01 | day-01jan-russian-bear | day-01jan-russian-bear.html |
-| 02.01 | day-02jan-napoleon-russian-bath | day-02jan-napoleon-slava-nos.html |
-| 03.01 | day-03jan-remi-leonid-andreev | day-03jan-radakov-tri-linii.html |
-| 04.01 | day-04jan-lithography-speaks-louder | day-04jan-litografiya.html |
-| 05.01 | day-05jan-krokodil-first-issue | day-05jan-krokodil-first-issue.html |
-| 06.01 | day-06jan-who-is-in-charge | day-06jan-who-is-in-charge.html |
-| 07.01 | day-07jan-portrait-sharzh-caricature | страницы на витрине нет |
-
-Оговорка про 04.01: на витрине два файла. `day-04jan-russian-bear.html` — страница
-переноса («Страница перенесена»), содержательная — `day-04jan-litografiya.html`.
-Каноническим взят содержательный.
-
-### 2. Правка паспортов
-
-Коммит `9139f96` в `rc-museum-production` (main, запушен): 7 файлов,
+<code>…/rc-museum-preview/karikatura/…</code> без сегмента <code>muzei/</code>.</p>
+<h2>Что сделано</h2>
+<h3>1. Карта «день → файл» взята из двух независимых источников</h3>
+<p>Не на глаз и не из имени папки. Источники совпали:</p>
+<ul>
+<li><code>href</code> витринного календаря <code>rc-museum-preview/muzei/karikatura/calendar-karikatura.js</code>;</li>
+<li><code>&lt;link rel="canonical"&gt;</code> самих опубликованных страниц.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>День</th>
+<th>Паспорт (папка)</th>
+<th>Опубликованная страница</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01.01</td>
+<td>day-01jan-russian-bear</td>
+<td>day-01jan-russian-bear.html</td>
+</tr>
+<tr>
+<td>02.01</td>
+<td>day-02jan-napoleon-russian-bath</td>
+<td>day-02jan-napoleon-slava-nos.html</td>
+</tr>
+<tr>
+<td>03.01</td>
+<td>day-03jan-remi-leonid-andreev</td>
+<td>day-03jan-radakov-tri-linii.html</td>
+</tr>
+<tr>
+<td>04.01</td>
+<td>day-04jan-lithography-speaks-louder</td>
+<td>day-04jan-litografiya.html</td>
+</tr>
+<tr>
+<td>05.01</td>
+<td>day-05jan-krokodil-first-issue</td>
+<td>day-05jan-krokodil-first-issue.html</td>
+</tr>
+<tr>
+<td>06.01</td>
+<td>day-06jan-who-is-in-charge</td>
+<td>day-06jan-who-is-in-charge.html</td>
+</tr>
+<tr>
+<td>07.01</td>
+<td>day-07jan-portrait-sharzh-caricature</td>
+<td>страницы на витрине нет</td>
+</tr>
+</tbody>
+</table>
+<p>Оговорка про 04.01: на витрине два файла. <code>day-04jan-russian-bear.html</code> — страница
+переноса («Страница перенесена»), содержательная — <code>day-04jan-litografiya.html</code>.
+Каноническим взят содержательный.</p>
+<h3>2. Правка паспортов</h3>
+<p>Коммит <code>9139f96</code> в <code>rc-museum-production</code> (main, запушен): 7 файлов,
 11 вставок, 10 удалений — только адресные строки, форматирование JSON не
-переписывалось.
-
-- день 01.01: три адреса медиа + canonical → живой префикс;
-- дни 02.01, 03.01, 04.01: canonical → фактические имена файлов витрины;
-- дни 05.01, 06.01: canonical → тот же файл под живым префиксом;
-- день 07.01: canonical оставлен как **предполагаемый** адрес после публикации,
-  в `publication.blockers` добавлена пометка «не опубликовано» (HEAD 404,
-  проверено 24.09.2026). Адрес не выдуман: `href` у 07.01 в витринном календаре
-  отсутствует вовсе.
-
-Темы, тексты и состав дней не менялись — это правка записи, не пересборка.
-
-### 3. Проверка
-
-```
-$ python3 pilot-karikatura/tools/head-check-passports.py
+переписывалось.</p>
+<ul>
+<li>день 01.01: три адреса медиа + canonical → живой префикс;</li>
+<li>дни 02.01, 03.01, 04.01: canonical → фактические имена файлов витрины;</li>
+<li>дни 05.01, 06.01: canonical → тот же файл под живым префиксом;</li>
+<li>день 07.01: canonical оставлен как <strong>предполагаемый</strong> адрес после публикации,
+  в <code>publication.blockers</code> добавлена пометка «не опубликовано» (HEAD 404,
+  проверено 24.09.2026). Адрес не выдуман: <code>href</code> у 07.01 в витринном календаре
+  отсутствует вовсе.</li>
+</ul>
+<p>Темы, тексты и состав дней не менялись — это правка записи, не пересборка.</p>
+<h3>3. Проверка</h3>
+<pre><code>$ python3 pilot-karikatura/tools/head-check-passports.py
 ПРОВЕРЕНО (опубликованные) 9, 404 — 0; черновиков не проверялось: 1
-```
-
-```
-$ python3 pilot-karikatura/tools/head-check-showcase.py
+</code></pre>
+<pre><code>$ python3 pilot-karikatura/tools/head-check-showcase.py
 страниц и скриптов проверено: 10
 ПРОВЕРЕНО 155, 404 — 0
-```
-
-Вторая проверка — все ресурсы (css/js/медиа/шрифты) опубликованных страниц и
-скриптов витрины карикатуры, 155 адресов. Обе сдаются числом «404 — 0».
-
-## Находки, требующие решения владельца (не правил)
-
-**Темы двух паспортов не совпадают с опубликованными страницами своего дня.**
-
-| День | H1 паспорта | H1 опубликованной страницы |
-|---|---|---|
-| 02.01 | «Наполеон в русской бане» | «Пришёл за славой — ушёл с носом» |
-| 03.01 | «Ре-Ми: что ещё держит Андреева?» | «Как узнать человека по трём линиям» (Радаков) |
-| 05.01 | «„Крокодил“: как родился голос журнала» | «„Крокодил“: как редакция собирала номер» |
-
-Для 03.01 расхождение существенное: паспорт описывает художника Ре-Ми, а страница
-дня — Радакова. Мой же рабочий календарь `pilot-karikatura/calendar-karikatura.js`
-на 01-03 стоит на Радакове, то есть паспорт отстал от календаря.
-
-Адрес я привёл к живому (файл дня переехал — это ровно случай «файл переехал →
-поправить паспорт»), но **тему паспорта не переписывал**: смена темы дня — не
-адресная правка, а редакционное решение. Вопрос владельцу — в квитке строки.
-
-## Долг, который этим не закрывается
-
-**Права: 13 объектов из 225 с декларацией автора и прав, остальное NOT_CHECKED.**
+</code></pre>
+<p>Вторая проверка — все ресурсы (css/js/медиа/шрифты) опубликованных страниц и
+скриптов витрины карикатуры, 155 адресов. Обе сдаются числом «404 — 0».</p>
+<h2>Находки, требующие решения владельца (не правил)</h2>
+<p><strong>Темы двух паспортов не совпадают с опубликованными страницами своего дня.</strong></p>
+<table>
+<thead>
+<tr>
+<th>День</th>
+<th>H1 паспорта</th>
+<th>H1 опубликованной страницы</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>02.01</td>
+<td>«Наполеон в русской бане»</td>
+<td>«Пришёл за славой — ушёл с носом»</td>
+</tr>
+<tr>
+<td>03.01</td>
+<td>«Ре-Ми: что ещё держит Андреева?»</td>
+<td>«Как узнать человека по трём линиям» (Радаков)</td>
+</tr>
+<tr>
+<td>05.01</td>
+<td>«„Крокодил“: как родился голос журнала»</td>
+<td>«„Крокодил“: как редакция собирала номер»</td>
+</tr>
+</tbody>
+</table>
+<p>Для 03.01 расхождение существенное: паспорт описывает художника Ре-Ми, а страница
+дня — Радакова. Мой же рабочий календарь <code>pilot-karikatura/calendar-karikatura.js</code>
+на 01-03 стоит на Радакове, то есть паспорт отстал от календаря.</p>
+<p>Адрес я привёл к живому (файл дня переехал — это ровно случай «файл переехал →
+поправить паспорт»), но <strong>тему паспорта не переписывал</strong>: смена темы дня — не
+адресная правка, а редакционное решение. Вопрос владельцу — в квитке строки.</p>
+<h2>Долг, который этим не закрывается</h2>
+<p><strong>Права: 13 объектов из 225 с декларацией автора и прав, остальное NOT_CHECKED.</strong>
 Закрывается тиражом страниц дней, а не разовой правкой. Хеши не переписывались:
 расхождений SHA-256 по 442 узлам нет (разобрано 14.09), «расхождения» были нулевой
-заглушкой `0000…` при отсутствующем файле.
-
-## Инструменты
-
-`pilot-karikatura/tools/` (коммит `882aa503`): `head-check-passports.py`,
-`head-check-showcase.py`, `fix-passport-urls.py`. Первые две версии чекера витрины
-давали ложные 404 — резолвер не понимал `../../assets/` и считал запятую в имени
-файла Wikimedia разделителем srcset; в отчёт такие 404 не попали, в сдаче их нет.
-</pre></body></html>
+заглушкой <code>0000…</code> при отсутствующем файле.</p>
+<h2>Инструменты</h2>
+<p><code>pilot-karikatura/tools/</code> (коммит <code>882aa503</code>): <code>head-check-passports.py</code>,
+<code>head-check-showcase.py</code>, <code>fix-passport-urls.py</code>. Первые две версии чекера витрины
+давали ложные 404 — резолвер не понимал <code>../../assets/</code> и считал запятую в имени
+файла Wikimedia разделителем srcset; в отчёт такие 404 не попали, в сдаче их нет.</p></body></html>

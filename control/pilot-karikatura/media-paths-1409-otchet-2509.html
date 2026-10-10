@@ -1,97 +1,141 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Документ media-paths-1409-otchet-2509.md</title><style>body{font:16px/1.55 system-ui,sans-serif;max-width:860px;margin:0 auto;padding:16px;color:#1f2328}table{border-collapse:collapse}td,th{border:1px solid #d8dee4;padding:4px 8px}pre,code{background:#f6f8fa;white-space:pre-wrap}h2{margin-top:2em;border-bottom:1px solid #d8dee4}li{margin:3px 0}.muted{color:#6e7781}</style></head><body><p><a href="https://arabelthera-dot.github.io/rc-museum-preview/control.html">← Таблица контроля</a></p><h1>Документ media-paths-1409-otchet-2509.md</h1><pre style='white-space:pre-wrap'># Медиапути карикатуры — сдача наряда `media-paths-deepseek2-1409` (25.09.2026)
-
-Исполнитель: Дипсик 2 (`deepseek2`). Наряд выдан 14.09, возвраты 16.09 и 25.09.
-Сдача: ветка `deepseek2/media-paths-2509` в репозитории `rc-museum-production`, коммит `325c0d7` (запушена).
-Стандарты: museum-core@2026-09-18.2 · museum-karikatura@2026-09-05.1.
-
-## Числа сдачи
-
-| проверка | было (опись 13.09 / 25.09) | стало (25.09 после правок) |
-|---|---|---|
-| недоступных путей | 17 → 13 | **2** (оба — слоты снятой темы, см. группу Б) |
-| узлов в описи | 442 → 238 | 227 |
-| записи `issues` | 0 | 1 («External base URL; local references not resolved» — см. группу А) |
-| HEAD живой витрины | — | **проверено 157, 404 — 0** |
-| валидатор паспортов дней 02, 03, 05 | — | пройдено, 0 ошибок (2 предупреждения: права `pending`, уверенность утверждения) |
-| валидатор паспорта дня 06 | 2 ошибки | 2 ошибки (обе были ДО правки, проверено на версии из HEAD) |
-
-Опись: `python3 tools/media_dependencies.py --root . --museums karikatura --output …`;
-HEAD — по всем `media/…` страниц музея, всем файлам `muzei/karikatura/media/` и всем
-живым `source_url` паспортов; полный лог `/tmp/head-check-2509.txt`.
-
-## Группа А — 7 путей дня 01.01 (снимок страницы)
-
-Носитель — `rc-museum-production/karikatura/day-01jan-russian-bear/sources/museum-page-snapshot.html`:
-архивный снимок **живой** страницы витрины. Его ссылки `media/...` — адреса страницы,
-а не пути проекта внутри дня.
-
-Все семь объектов живы: 4 фото и озвучка лежат в `sources/` дня, те же имена — в витрине
-`rc-museum-preview/muzei/karikatura/media/`; оба ролика — в витрине и в `pilot-karikatura/media/`.
-
-Решение: в снимок вписан `&lt;base href=&quot;https://arabelthera-dot.github.io/rc-museum-preview/muzei/karikatura/&quot;&gt;`
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Документ media-paths-1409-otchet-2509.md</title><style>body{font:16px/1.55 system-ui,sans-serif;max-width:860px;margin:0 auto;padding:16px;color:#1f2328}table{border-collapse:collapse}td,th{border:1px solid #d8dee4;padding:4px 8px}pre,code{background:#f6f8fa;white-space:pre-wrap}h2{margin-top:2em;border-bottom:1px solid #d8dee4}li{margin:3px 0}.muted{color:#6e7781}</style></head><body><p><a href="https://arabelthera-dot.github.io/rc-museum-preview/control.html">← Таблица контроля</a></p><h1>Документ media-paths-1409-otchet-2509.md</h1><h1>Медиапути карикатуры — сдача наряда <code>media-paths-deepseek2-1409</code> (25.09.2026)</h1>
+<p>Исполнитель: Дипсик 2 (<code>deepseek2</code>). Наряд выдан 14.09, возвраты 16.09 и 25.09.
+Сдача: ветка <code>deepseek2/media-paths-2509</code> в репозитории <code>rc-museum-production</code>, коммит <code>325c0d7</code> (запушена).
+Стандарты: museum-core@2026-09-18.2 · museum-karikatura@2026-09-05.1.</p>
+<h2>Числа сдачи</h2>
+<table>
+<thead>
+<tr>
+<th>проверка</th>
+<th>было (опись 13.09 / 25.09)</th>
+<th>стало (25.09 после правок)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>недоступных путей</td>
+<td>17 → 13</td>
+<td><strong>2</strong> (оба — слоты снятой темы, см. группу Б)</td>
+</tr>
+<tr>
+<td>узлов в описи</td>
+<td>442 → 238</td>
+<td>227</td>
+</tr>
+<tr>
+<td>записи <code>issues</code></td>
+<td>0</td>
+<td>1 («External base URL; local references not resolved» — см. группу А)</td>
+</tr>
+<tr>
+<td>HEAD живой витрины</td>
+<td>—</td>
+<td><strong>проверено 157, 404 — 0</strong></td>
+</tr>
+<tr>
+<td>валидатор паспортов дней 02, 03, 05</td>
+<td>—</td>
+<td>пройдено, 0 ошибок (2 предупреждения: права <code>pending</code>, уверенность утверждения)</td>
+</tr>
+<tr>
+<td>валидатор паспорта дня 06</td>
+<td>2 ошибки</td>
+<td>2 ошибки (обе были ДО правки, проверено на версии из HEAD)</td>
+</tr>
+</tbody>
+</table>
+<p>Опись: <code>python3 tools/media_dependencies.py --root . --museums karikatura --output …</code>;
+HEAD — по всем <code>media/…</code> страниц музея, всем файлам <code>muzei/karikatura/media/</code> и всем
+живым <code>source_url</code> паспортов; полный лог <code>/tmp/head-check-2509.txt</code>.</p>
+<h2>Группа А — 7 путей дня 01.01 (снимок страницы)</h2>
+<p>Носитель — <code>rc-museum-production/karikatura/day-01jan-russian-bear/sources/museum-page-snapshot.html</code>:
+архивный снимок <strong>живой</strong> страницы витрины. Его ссылки <code>media/...</code> — адреса страницы,
+а не пути проекта внутри дня.</p>
+<p>Все семь объектов живы: 4 фото и озвучка лежат в <code>sources/</code> дня, те же имена — в витрине
+<code>rc-museum-preview/muzei/karikatura/media/</code>; оба ролика — в витрине и в <code>pilot-karikatura/media/</code>.</p>
+<p>Решение: в снимок вписан <code>&lt;base href="https://arabelthera-dot.github.io/rc-museum-preview/muzei/karikatura/"&gt;</code>
 и поясняющий комментарий. Опись видит внешний base и по своей же ветке не разворачивает
-такие ссылки в локальные пути — 7 ложных объектов сняты.
-
-**Честно о правке:** sha256 снимка изменился (`ff674b1ae0f9…` → `4a3229c0a7eb…`).
-Это правка архивного файла: добавлены 5 строк в `&lt;head&gt;`, байты самой страницы не тронуты.
-Побочный эффект — та самая 1 запись `issues`; это предусмотренное поведение инструмента,
+такие ссылки в локальные пути — 7 ложных объектов сняты.</p>
+<p><strong>Честно о правке:</strong> sha256 снимка изменился (<code>ff674b1ae0f9…</code> → <code>4a3229c0a7eb…</code>).
+Это правка архивного файла: добавлены 5 строк в <code>&lt;head&gt;</code>, байты самой страницы не тронуты.
+Побочный эффект — та самая 1 запись <code>issues</code>; это предусмотренное поведение инструмента,
 а не новый дефект. Если оркестратор хочет и её убрать, есть вариант: научить опись
-пропускать снимки (`*-snapshot.html`) — правка общего инструмента, не моя зона.
-
-## Группа В — 4 паспортных пути (дни 02, 03, 05, 06) — исправлено
-
-`local_path`/`path` объявляли `karikatura/media/&lt;файл&gt;`; по такому пути файла нет —
-он живёт только в витрине. Исправлено на `muzei/karikatura/media/&lt;файл&gt;` — форма,
-которую опись разворачивает в витрину.
-
-| день | файл | было | стало |
-|---|---|---|---|
-| 02.01 | `napoleon-nos-paris.jpg` | `karikatura/media/…` | `muzei/karikatura/media/…` |
-| 03.01 | `radakov-strashny-son-moskvicha.jpg` | `karikatura/media/…` | `muzei/karikatura/media/…` |
-| 05.01 | `krokodil-1922-no1.jpg` | `karikatura/media/…` | `muzei/karikatura/media/…` |
-| 06.01 | `day-06jan-who-is-in-charge-audioguide.mp3` | `karikatura/media/…` | `muzei/karikatura/media/…` |
-
-Хеши объявлений сверены с фактическими файлами: три совпали, байты не менялись
-(у mp3 хеша в объявлении нет). Права заново не подтверждались — пересборки не было.
-
-## Группа Б — 2 слота `_pending` (дни 04 и 07) — НЕ закрыты, нужна воля оркестратора
-
-`_pending/&lt;слаг&gt;-primary`, sha256 нулевой, файла нет и быть не может: у дня 04 «выбранная
+пропускать снимки (<code>*-snapshot.html</code>) — правка общего инструмента, не моя зона.</p>
+<h2>Группа В — 4 паспортных пути (дни 02, 03, 05, 06) — исправлено</h2>
+<p><code>local_path</code>/<code>path</code> объявляли <code>karikatura/media/&lt;файл&gt;</code>; по такому пути файла нет —
+он живёт только в витрине. Исправлено на <code>muzei/karikatura/media/&lt;файл&gt;</code> — форма,
+которую опись разворачивает в витрину.</p>
+<table>
+<thead>
+<tr>
+<th>день</th>
+<th>файл</th>
+<th>было</th>
+<th>стало</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>02.01</td>
+<td><code>napoleon-nos-paris.jpg</code></td>
+<td><code>karikatura/media/…</code></td>
+<td><code>muzei/karikatura/media/…</code></td>
+</tr>
+<tr>
+<td>03.01</td>
+<td><code>radakov-strashny-son-moskvicha.jpg</code></td>
+<td><code>karikatura/media/…</code></td>
+<td><code>muzei/karikatura/media/…</code></td>
+</tr>
+<tr>
+<td>05.01</td>
+<td><code>krokodil-1922-no1.jpg</code></td>
+<td><code>karikatura/media/…</code></td>
+<td><code>muzei/karikatura/media/…</code></td>
+</tr>
+<tr>
+<td>06.01</td>
+<td><code>day-06jan-who-is-in-charge-audioguide.mp3</code></td>
+<td><code>karikatura/media/…</code></td>
+<td><code>muzei/karikatura/media/…</code></td>
+</tr>
+</tbody>
+</table>
+<p>Хеши объявлений сверены с фактическими файлами: три совпали, байты не менялись
+(у mp3 хеша в объявлении нет). Права заново не подтверждались — пересборки не было.</p>
+<h2>Группа Б — 2 слота <code>_pending</code> (дни 04 и 07) — НЕ закрыты, нужна воля оркестратора</h2>
+<p><code>_pending/&lt;слаг&gt;-primary</code>, sha256 нулевой, файла нет и быть не может: у дня 04 «выбранная
 музейная репродукция не разрешена для публикации», у дня 07 файл не допущен, страница
-не опубликована.
-
-Обе записи — хвост **снятой темы**: папка и ID паспорта остались от темы до переименования.
-У дня 04 опубликована страница `day-04jan-litografiya.html`, а паспорт описывает
-`day-04jan-lithography-speaks-louder`; у дня 07 страницы в витрине нет вовсе. Это мой
-вопрос ❓`ds2-sled-zameny-2509` от 25.09 — ответа нет.
-
-- Придёт «чинить» → паспорт дня 04 перевыпускается под опубликованную тему с реальным
-  файлом, слот закрывается; у дня 07 закрытие зависит от того, будет ли тема опубликована.
-- Вариант В (оставить как есть): слот без файла должен стать законным состоянием — тогда
-  правка в `tools/validate-issue.mjs` (требует `local_path` у каждого изображения) и в описи
-  (пропускать объявления со статусом `pending`). Оба — общие инструменты, не моя зона.
-
-Даты шагов жизни дня я выдумывать не стал: журнал дня 06 должен опираться на факты сборки,
-а не на правдоподобную реконструкцию.
-
-## Попутная находка: паспорт дня 06 не проходит валидатор
-
-`tools/validate-issue.mjs` на `day-06jan-who-is-in-charge/passport/issue.json`:
-
-1. «История 4: нельзя перескочить через статус `script`» — в истории
-   `idea` → `research` → `research` → `preview`; пропущены `script`, `fact_check`,
-   `rights_check`, `design`, `build`.
-2. «источник 2: URL должен быть корректным HTTPS-адресом» —
-   `http://olden.rsl.ru/ru/s7/s381/s3816692/`.
-
-Обе ошибки были до моей правки (проверено прогоном на версии файла из HEAD), и обе —
+не опубликована.</p>
+<p>Обе записи — хвост <strong>снятой темы</strong>: папка и ID паспорта остались от темы до переименования.
+У дня 04 опубликована страница <code>day-04jan-litografiya.html</code>, а паспорт описывает
+<code>day-04jan-lithography-speaks-louder</code>; у дня 07 страницы в витрине нет вовсе. Это мой
+вопрос ❓<code>ds2-sled-zameny-2509</code> от 25.09 — ответа нет.</p>
+<ul>
+<li>Придёт «чинить» → паспорт дня 04 перевыпускается под опубликованную тему с реальным
+  файлом, слот закрывается; у дня 07 закрытие зависит от того, будет ли тема опубликована.</li>
+<li>Вариант В (оставить как есть): слот без файла должен стать законным состоянием — тогда
+  правка в <code>tools/validate-issue.mjs</code> (требует <code>local_path</code> у каждого изображения) и в описи
+  (пропускать объявления со статусом <code>pending</code>). Оба — общие инструменты, не моя зона.</li>
+</ul>
+<p>Даты шагов жизни дня я выдумывать не стал: журнал дня 06 должен опираться на факты сборки,
+а не на правдоподобную реконструкцию.</p>
+<h2>Попутная находка: паспорт дня 06 не проходит валидатор</h2>
+<p><code>tools/validate-issue.mjs</code> на <code>day-06jan-who-is-in-charge/passport/issue.json</code>:</p>
+<ol>
+<li>«История 4: нельзя перескочить через статус <code>script</code>» — в истории
+   <code>idea</code> → <code>research</code> → <code>research</code> → <code>preview</code>; пропущены <code>script</code>, <code>fact_check</code>,
+   <code>rights_check</code>, <code>design</code>, <code>build</code>.</li>
+<li>«источник 2: URL должен быть корректным HTTPS-адресом» —
+   <code>http://olden.rsl.ru/ru/s7/s381/s3816692/</code>.</li>
+</ol>
+<p>Обе ошибки были до моей правки (проверено прогоном на версии файла из HEAD), и обе —
 редакционные, не адресные. Выношу отдельной строкой-вопросом: чинить журнал дня 06
-целиком (это отдельный наряд) или сначала решить, чем шаг `script` подтверждается.
-
-## Чего я НЕ делал
-
-- Не переписывал хеши на новые байты и не подтверждал права заново.
-- Не трогал чужие музеи и общие инструменты (правок в `tools/` вне своей папки нет).
-- Долг прав остаётся открытым: в описи 25.09 декларации прав и автора есть у 16 узлов
-  из 227 (в описи 13.09 — 13 из 225). Закрывается тиражом страниц дней, не разовой правкой.
-</pre></body></html>
+целиком (это отдельный наряд) или сначала решить, чем шаг <code>script</code> подтверждается.</p>
+<h2>Чего я НЕ делал</h2>
+<ul>
+<li>Не переписывал хеши на новые байты и не подтверждал права заново.</li>
+<li>Не трогал чужие музеи и общие инструменты (правок в <code>tools/</code> вне своей папки нет).</li>
+<li>Долг прав остаётся открытым: в описи 25.09 декларации прав и автора есть у 16 узлов
+  из 227 (в описи 13.09 — 13 из 225). Закрывается тиражом страниц дней, не разовой правкой.</li>
+</ul></body></html>
