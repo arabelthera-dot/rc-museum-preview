@@ -38,12 +38,4 @@ if old:
     write(d, s.replace(old.group(0), '\n'))
     log.append('Дежнёв: ранний блок убран, id=support уходит на блок-пик')
 
-# ── 3. старый блок EN (дублировал финальный) ────────────────────────────────
-e = 'iskusstvo/pic-aivazovsky-devyatyi-val-en.html'
-s = read(e)
-old = re.search(r'[ \t]*<div class="support"><p>This museum is built.*?</div>\n', s, re.S)
-if old:
-    write(e, s.replace(old.group(0), ''))
-    log.append('EN: старый блок поддержки убран')
-
 print('\n'.join(log) if log else 'изменений нет')
