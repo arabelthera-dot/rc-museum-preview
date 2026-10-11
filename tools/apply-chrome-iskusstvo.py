@@ -3,7 +3,7 @@
 """Врезает единую обвязку (assets/museum-chrome.js) в страницы музея искусства.
 
 «Нить» — морская линия Айвазовского: «Девятый вал» → «Радуга» → «Чёрное море» → кольцом обратно.
-EN-версия получает свои подписи чипсов и кнопок. Скрипт идемпотентен.
+Скрипт идемпотентен.
 """
 import pathlib
 
@@ -22,7 +22,6 @@ RU = [
      'Море без корабля и без берега — картина, в которой Айвазовский убрал всё лишнее.'),
 ]
 
-EN = 'pic-aivazovsky-devyatyi-val-en.html'
 
 
 def esc(s):
@@ -61,20 +60,6 @@ def main():
         ) % (esc(title), esc(hook), prev_f, esc(prev_l), next_f, esc(next_l), random_list)
         print('%-40s %s' % (fname, insert(BASE / fname, block)))
 
-    en_block = (
-        "\n<!-- shared museum chrome: section chips, share, way-out row -->\n"
-        "<script>window.MUSEUM_CHROME={\n"
-        "  museum:{title:'Russian Art',href:'index.html',homeLabel:'← Museum'},\n"
-        "  share:{title:'The Ninth Wave — Aivazovsky · Russian Art museum',\n"
-        "         text:'The most famous wave in Russian painting — and the six men who survived it.'},\n"
-        "  all:{href:'pic-aivazovsky-devyatyi-val.html',label:'Русская версия'},\n"
-        "  city:'../index.html',\n"
-        "  labels:{'game':'Game','quiz':'Quiz','chat':'Interview'},\n"
-        "  t:{share:'Share this page',city:'To the city-museum'}\n"
-        "};</script>\n"
-        "<script src=\"../assets/museum-chrome.js\"></script>\n"
-    )
-    print('%-40s %s' % (EN, insert(BASE / EN, en_block)))
 
 
 if __name__ == '__main__':

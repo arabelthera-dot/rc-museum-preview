@@ -6,7 +6,7 @@
 Закрыта заявка — папка pr-N удаляется. Ссылка — комментарием в заявке.
 Выключатель: переменная репо PR_PREVIEW_OFF=1.
 """
-import json, os, posixpath, re, shutil, subprocess, sys, urllib.request
+import json, os, posixpath, re, shutil, subprocess, sys, urllib.parse, urllib.request
 
 REPO = os.environ.get("GITHUB_REPOSITORY", "arabelthera-dot/rc-museum-preview")
 LIVE = "https://arabelthera-dot.github.io/rc-museum-preview/"
@@ -86,7 +86,8 @@ def main():
         live = [f["filename"] for f in files if f["status"] != "removed"]
         changed = set(live)
         for p in live:
-            data = urllib.request.urlopen(f"https://raw.githubusercontent.com/{head}/{sha}/{p}", timeout=60).read()
+            url = f"https://raw.githubusercontent.com/{head}/{sha}/{urllib.parse.quote(p)}"
+            data = urllib.request.urlopen(url, timeout=60).read()
             dst = os.path.join(out, p)
             os.makedirs(os.path.dirname(dst), exist_ok=True)
             if p.endswith(".html"):
