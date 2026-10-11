@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="ru" data-museum="izobreteniya">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Линейное программирование, Леонид Канторович — Что изобрели русские первыми в мире, 19 января</title>
+<!--
+  Страница дня 19 января. Наряд stranicy-izob-0910 (claude2, 12.10.2026), карточка #762.
+  Форма — вариант А музея изобретений (Сергей 12.09.2026): лента ударов, подробности свёрнуты.
+  Паспорт выпуска: rc-museum-production/izobreteniya/day-19jan-kantorovich/passport/issue.json
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --dark:#060c17; --dark2:#0c1826; --surface:#111f33;
+    --card:rgba(255,255,255,.05); --card-b:rgba(255,255,255,.09);
+    --gold:#c9a84c; --gold-l:#e4c97a; --gold-g:rgba(201,168,76,.13);
+    --ink:#e8eef5; --muted:#7a9ab8; --line:rgba(255,255,255,.07);
+    --accent:#2d8cbf; --accent2:#1f6f8b;
+    /* legacy compat */
+    --paper:#0c1826; --paper2:#111f33;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Inter','Segoe UI',sans-serif;color:var(--ink);background:var(--dark);line-height:1.72}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.13;margin:0}
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent)}
+
+  /* ── ШАПКА ── */
+  header.top{background:rgba(6,12,23,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--card-b);color:#fff;position:sticky;top:0;z-index:30}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+  .logo svg{display:block;filter:drop-shadow(0 0 8px rgba(201,168,76,.4))}
+  .logo .lt{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:16px}
+  .logo .lt small{display:block;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-family:'Inter',sans-serif}
+  .score{background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:6px 16px;font-size:13px;color:var(--gold-l);cursor:pointer;font-family:'Inter',sans-serif}
+  .score-info{position:absolute;right:12px;top:66px;max-width:260px;background:#0e1c30;color:var(--ink);border:1px solid var(--card-b);border-radius:14px;padding:14px 16px;font-size:13px;line-height:1.6;box-shadow:0 20px 60px rgba(0,0,0,.6);display:none;z-index:40}
+  .score-info.show{display:block}
+
+  /* ── HERO — СТАНДАРТ (не менять): 3D-сцена сверху, текст отдельным блоком ниже ── */
+  .hero-scene{position:relative;height:52vh;min-height:300px;max-height:520px;overflow:hidden;background:linear-gradient(160deg,#0a1e3a 0%,#1a3a6a 55%,#0d2240 100%)}
+  .hero-scene canvas.scene,.hero-scene img.scene{width:100%;height:100%;display:block;object-fit:cover}
+  .scene-caption{background:#060d18;padding:11px 0 12px}
+  .scene-caption .wrap{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+  .scene-cap{font-size:13.5px;line-height:1.6;color:var(--muted);border-left:2px solid rgba(201,168,76,.4);padding-left:14px;flex:1 1 420px}
+  .scene-hint{flex:0 0 auto;font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.4px;color:#e4c97a;
+    background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.34);border-radius:24px;padding:7px 16px;font-weight:600}
+  .hero-lead{background:linear-gradient(180deg,#0c1826 0%,#060c17 100%);color:#fff;padding:28px 0 38px}
+  .hero-lead .museum{color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:12px;opacity:.9}
+  .hero-lead .who{font-family:'Inter',sans-serif;font-size:clamp(13px,3vw,15px);letter-spacing:.4px;color:var(--accent-l,#7dc8ff);margin-bottom:10px}
+  .hero-lead .who i{font-style:normal;color:#7893ab;font-weight:400}
+  .hero-lead h1{color:#fff;font-size:56px;font-weight:900;line-height:1.04;margin-bottom:16px}
+  .hero-lead .hook{color:#b8ccde;font-size:19px;max-width:580px;margin-bottom:28px;line-height:1.65;font-weight:400}
+  .hero-lead .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+  @media(max-width:680px){.hero-lead h1{font-size:34px}.hero-lead .hook{font-size:16px}
+    .hero-scene{height:34vh;min-height:230px;max-height:300px}
+    .scene-caption .wrap{flex-direction:column;gap:9px}
+    .scene-hint{order:-1;align-self:flex-start;font-size:11.5px;padding:6px 13px}
+    .scene-cap{font-size:12.8px;flex:1 1 auto}}
+  .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:16px;font-family:'Inter',sans-serif;letter-spacing:.5px}
+
+  /* ── НАВИГАЦИЯ ДНЯ ── */
+  .daynav{position:sticky;top:64px;z-index:25;background:rgba(6,12,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-b)}
+  .daynav .wrap{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+  .daynav::-webkit-scrollbar{display:none}
+  .daynav a{flex:0 0 auto;padding:14px 20px;font-size:11px;font-weight:700;font-family:'Inter',sans-serif;color:var(--muted);text-decoration:none;white-space:nowrap;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:.18s}
+  .daynav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+  /* ── СЕКЦИИ ── */
+  section.block{padding:64px 0;border-bottom:1px solid var(--line);scroll-margin-top:130px}
+  .kicker{font-size:10px;text-transform:uppercase;letter-spacing:3.5px;color:var(--gold);font-weight:700;font-family:'Inter',sans-serif;margin-bottom:8px}
+  section.block h2{font-size:34px;color:#fff;margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink)}
+  .pull{background:var(--gold-g);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 14px 14px 0;font-style:italic;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-size:20px;line-height:1.5;margin:26px 0}
+
+  /* ── КНОПКИ ── */
+  .btn{cursor:pointer;border:none;border-radius:12px;padding:14px 26px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;background:var(--accent2);color:#fff;transition:.18s;letter-spacing:.2px}
+  .btn:hover{filter:brightness(1.18)}
+  .btn.ghost{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid var(--card-b)}
+  .btn.ghost:hover{background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.2)}
+  .btn.gold{background:linear-gradient(135deg,var(--gold),#b8882b);color:#1a0f00;box-shadow:0 4px 20px rgba(201,168,76,.25)}
+  .btn.gold:hover{filter:brightness(1.1);box-shadow:0 6px 28px rgba(201,168,76,.4)}
+  .btn:active{transform:translateY(1px)}
+  .pulse{animation:pulse .9s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+
+  /* ── КАРТОЧКИ ── */
+  .card{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:20px 22px;margin:16px 0;backdrop-filter:blur(6px)}
+
+  /* ── КВИЗ ── */
+  .opt{display:block;width:100%;text-align:left;background:rgba(255,255,255,.04);border:1px solid var(--card-b);border-radius:12px;padding:13px 16px;margin:8px 0;cursor:pointer;font-size:15px;color:var(--ink);font-family:'Inter',sans-serif;transition:.16s}
+  .opt:hover{border-color:var(--accent);background:rgba(45,140,191,.08)}
+  .opt.correct{background:rgba(40,120,60,.18);border-color:#3f9b52;color:#7ed4a0;font-weight:600}
+  .opt.wrong{background:rgba(180,40,40,.13);border-color:#c0453f;color:#f08080}
+  .exp{margin-top:10px;font-size:14px;background:var(--gold-g);border-radius:10px;padding:12px 14px;display:none;color:var(--gold-l)}
+  .exp.show{display:block}
+
+  /* ── ИТОГ ДНЯ ── */
+  .day-result{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:22px 24px;max-width:460px}
+  .dr-rank{font-family:'Playfair Display',Georgia,serif;font-size:28px;color:var(--gold-l);font-weight:700}
+  .dr-score{font-size:16px;margin:4px 0 12px;color:var(--ink)}.dr-score span{color:var(--muted);font-size:14px}
+  .dr-bar{height:8px;background:rgba(255,255,255,.08);border-radius:6px;overflow:hidden}
+  .dr-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),var(--gold));transition:width .6s cubic-bezier(.2,.7,.2,1)}
+  .dr-note{margin-top:12px;font-size:14px;color:var(--muted)}
+
+  /* ── РЕКЛАМНЫЕ СЛОТЫ ── */
+  .ad-slot{position:relative;margin:26px 0;background:rgba(255,255,255,.02);border:1px dashed rgba(255,255,255,.1);border-radius:14px;min-height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px}
+  .ad-slot .lbl{position:absolute;top:7px;right:12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.15);font-family:'Inter',sans-serif}
+  .ad-slot .ph-txt{font-size:12px;max-width:80%;color:rgba(255,255,255,.18)}
+  .ad-slot.billboard{min-height:108px}
+  .adband{background:transparent;border-bottom:none}
+
+  footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
+  .crumbs{background:rgba(6,12,23,.6);border-bottom:1px solid var(--card-b);font-family:'Inter',sans-serif;font-size:12.5px}
+  .crumbs .wrap{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  .crumbs a{color:var(--gold-l);text-decoration:none;white-space:nowrap}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--muted);opacity:.6}
+  .crumbs .here{color:var(--muted);white-space:nowrap}
+
+
+  /* ── ШАПКА: четыре строки по museum-core §6-бис ── */
+  header.top{display:block;text-align:center;padding:10px 12px 8px;height:auto;position:relative}
+  header.top .b1{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:15px;letter-spacing:.5px;color:#fff}
+  header.top .b2{font-size:11px;color:var(--muted);margin-top:2px}
+  header.top .b3{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:6px}
+  header.top .b4{font-size:12.5px;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-style:italic}
+  header.top .score{position:absolute;right:12px;top:10px}
+  .daynav{top:0}
+  .hero-scene{background:#0e1c2c;height:38vh;min-height:250px;max-height:400px}
+  @media(max-width:680px){.hero-lead h1{font-size:31px}}
+  .hero-scene img.scene{object-fit:cover;object-position:50% 42%}
+  .date-origin{font-size:13px;color:#9fb4c8;margin:-6px 0 12px;max-width:62ch}
+  .hero-lead .hook{color:#c6d8e8;max-width:62ch}
+  .hero-under{background:linear-gradient(180deg,#060d18,#060c17);padding:4px 0 22px}
+  .stamp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(125,200,255,.28);margin-top:14px}
+  .stamp>div{padding:11px 12px;border-left:1px solid rgba(125,200,255,.16);min-width:0}
+  .stamp>div:first-child{border-left:0}
+  .stamp .v{font-size:clamp(15px,3.4vw,21px);font-weight:700;color:#8fd3ff;line-height:1.1;overflow-wrap:anywhere}
+  .stamp .k{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#8fa5b9;margin-top:5px}
+  @media(max-width:600px){.stamp{grid-template-columns:repeat(2,minmax(0,1fr))}.stamp>div:nth-child(3){border-left:0}.stamp>div:nth-child(n+3){border-top:1px solid rgba(125,200,255,.16)}}
+
+  /* ── ЛЕНТА УДАРОВ (museum-inventions, вариант А; museum-core §5-бис) ── */
+  .udary{list-style:none;margin:18px 0 0;padding:0;counter-reset:u}
+  .udary>li{border-top:1px solid var(--line);padding:4px 0}
+  .udary details>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:34px 1fr;gap:10px;padding:12px 0;font-size:17px;line-height:1.55;color:var(--ink)}
+  .udary details>summary::-webkit-details-marker{display:none}
+  .udary details>summary::before{counter-increment:u;content:counter(u);font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:20px;color:var(--gold);line-height:1.3}
+  .udary .more-lbl{display:block;grid-column:2;font-size:12.5px;color:var(--gold-l);letter-spacing:.3px;margin-top:4px}
+  .udary .more-lbl::after{content:' ▾'}
+  .udary details[open] .more-lbl::after{content:' ▴'}
+  .udary details[open] .more-lbl .o{display:none}
+  .udary details:not([open]) .more-lbl .c{display:none}
+  .udary summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+  .udary .det{margin:0 0 14px 44px;padding:12px 16px;background:rgba(255,255,255,.035);border-left:2px solid rgba(201,168,76,.45);border-radius:0 10px 10px 0;font-size:15px;color:#d5e0ea}
+  .udary .det p{margin:8px 0}
+  .udary .tag{display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1a0f00;background:var(--gold-l);border-radius:6px;padding:1px 7px;margin-right:6px}
+  .udary .find{border-left:3px solid var(--gold);padding-left:8px}
+  figure.fig{margin:18px 0}
+  figure.fig img{max-width:100%;height:auto;border-radius:10px;display:block}
+  figure.fig figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5}
+  .src-note{font-size:12px;color:#8fa5b9}
+
+  /* ── МОДЕЛЬ ДНЯ (главное предметное действие) ── */
+  .lab{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:18px 18px 20px;margin-top:14px}
+  .lab-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+  .lab-row .lbl{flex:0 0 100%;font-size:13px;color:var(--muted);letter-spacing:.3px}
+  .seg{cursor:pointer;border:1px solid var(--card-b);background:rgba(255,255,255,.04);color:var(--ink);border-radius:10px;padding:10px 14px;font:inherit;font-size:14.5px;min-height:44px}
+  .seg[aria-pressed="true"]{border-color:var(--gold);background:var(--gold-g);color:var(--gold-l);font-weight:600}
+  .seg:focus-visible,.btn:focus-visible,.opt:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .lab-stage{position:relative;margin-top:12px}
+  .lab-stage canvas{width:100%;height:auto;display:block;border-radius:10px;background:#1c2530}
+  .lab-cap{font-size:12px;color:#8fa5b9;margin-top:6px}
+  .lab-msg{margin-top:12px;font-size:15.5px;padding:12px 14px;border-radius:10px;background:rgba(255,255,255,.04);border-left:3px solid var(--card-b);min-height:48px}
+  .lab-msg.ok{border-left-color:#3f9b52;background:rgba(40,120,60,.14)}
+  .lab-msg.bad{border-left-color:#c0453f;background:rgba(180,40,40,.10)}
+  .lab-found{font-size:13px;color:var(--muted);margin-top:8px}
+  .lab-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .noscript-box{background:rgba(255,255,255,.04);border:1px dashed var(--card-b);border-radius:12px;padding:12px 16px;font-size:15px}
+
+  /* ── ГРАНИЦА ПЕРВЕНСТВА ── */
+  .border-box{background:rgba(45,140,191,.08);border:1px solid rgba(45,140,191,.3);border-radius:14px;padding:16px 18px}
+  .border-box b{color:#8fd3ff}
+  .ctx{width:100%;border-collapse:collapse;margin-top:14px;font-size:14.5px}
+  .ctx th,.ctx td{text-align:left;padding:9px 8px;border-top:1px solid var(--line);vertical-align:top}
+  .ctx th{color:var(--gold-l);font-weight:600;font-size:12.5px;letter-spacing:.5px}
+  .quiz-q{margin:18px 0 6px;font-weight:600}
+  .sources a{color:var(--gold-l)}
+  .sources li{margin:6px 0;font-size:14px;color:#c8d6e2}
+  @media(max-width:600px){header.top{padding:8px 64px 6px}header.top .score{top:8px;right:8px;padding:4px 10px;font-size:12px}header.top .b3{margin-top:3px}
+    .hero-scene{height:26vh;min-height:200px;max-height:260px}.date-origin{font-size:12px;margin:-8px 0 8px}.hero-lead{padding:18px 0 26px}.hero-lead .date-chip{margin-bottom:12px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+  /* ── МОДЕЛЬ ЗАГРУЗКИ СТАНКОВ (19 янв) ── */
+  .mtab{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+  .mrow{display:grid;grid-template-columns:minmax(150px,1.2fr) 2fr 92px;gap:12px;align-items:center}
+  .mrow .mname{font-size:14.5px}
+  .mrow .mname i{font-style:normal;color:var(--muted);font-size:13px}
+  .mrow input[type=range]{width:100%;accent-color:var(--gold);min-height:44px}
+  .mrow output{font-size:14px;color:var(--gold-l);text-align:right}
+  .mrow.off{opacity:.45}
+  .mult{margin-top:14px;padding:14px 16px;border-radius:12px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25)}
+  @media(max-width:560px){.mrow{grid-template-columns:1fr 70px}.mrow .mname{grid-column:1/-1}}
+</style>
+<meta name="description" content="Фанерный трест попросил молодого математика получше загрузить станки — а получил метод, из которого выросло линейное программирование. 19 января 1912 года родился Леонид Канторович.">
+<link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-19jan-kantorovich.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Русская цивилизация">
+<meta property="og:title" content="Линейное программирование: Леонид Канторович, 1939">
+<meta property="og:description" content="Фанерный трест попросил молодого математика получше загрузить станки — а получил метод, из которого выросло линейное программирование. 19 января 1912 года родился Леонид Канторович.">
+<meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-19jan-kantorovich.html">
+<meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-19jan-kantorovich-portret.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Линейное программирование: Леонид Канторович, 1939", "description": "Фанерный трест попросил молодого математика получше загрузить станки — а получил метод, из которого выросло линейное программирование. 19 января 1912 года родился Леонид Канторович.", "url": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-19jan-kantorovich.html", "inLanguage": "ru", "isPartOf": {"@type": "WebSite", "name": "Музей «Что изобрели русские первыми в мире»"}, "publisher": {"@type": "Organization", "name": "Русская цивилизация"}, "about": {"@type": "Person", "name": "Леонид Витальевич Канторович", "birthDate": "1912-01-19"}, "image": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-19jan-kantorovich-portret.jpg"}</script>
+</head>
+<body>
+
+<header class="top">
+  <div class="b1">Русская цивилизация</div>
+  <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
+  <div class="b3">Что изобрели русские первыми в мире</div>
+  <div class="b4">365 изобретений. Все русские. Все первые</div>
+  <div class="score" id="scoreBox" title="Баллы знаний за этот день">⭐ <span id="score">0</span> / 100</div>
+</header>
+
+<nav class="crumbs" aria-label="Хлебные крошки"><div class="wrap">
+  <a href="../../index.html">Русская цивилизация</a>
+  <span class="sep">›</span>
+  <a href="index.html">Что изобрели русские первыми в мире</a>
+  <span class="sep">›</span>
+  <span class="here">19 января · Канторович</span>
+</div></nav>
+
+<div class="hero-scene" id="hero" style="background:#0b1219">
+  <img class="scene" src="day-19jan-kantorovich-portret.jpg" style="object-fit:contain" data-source="https://commons.wikimedia.org/wiki/File:Leonid_Kantorovich_1976.jpg" data-license="CC BY 3.0" width="745" height="630" alt="Леонид Витальевич Канторович на прогулке, 1976 год, санаторий «Узкое» под Москвой" fetchpriority="high">
+</div>
+
+<div class="scene-caption">
+  <div class="wrap">
+    <div class="scene-cap">Леонид Канторович, 1976 год, санаторий «Узкое» под Москвой; из серии «Прогулки с академиком». Фото: Андрей Богданов, CC BY 3.0 (Wikimedia Commons, разрешение автора по тикету VRT 2010091410006969).</div>
+    <span class="scene-hint">Документ · фотография 1976 года</span>
+  </div>
+</div>
+
+<header class="hero-lead">
+  <div class="wrap">
+    <div class="date-chip">19 января · 1912</div>
+    <p class="date-origin">Привязка — день рождения: Леонид Канторович родился в Петербурге 19 января 1912 года (6 января по старому стилю).</p>
+    <div class="who">Леонид Витальевич Канторович <i>· математик, Ленинградский университет</i></div>
+    <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
+    <h1>Линейное программирование: Леонид Канторович, 1939</h1>
+    <p class="hook">Фанерный трест просил математика лучше загрузить станки — а получил метод, за который через 36 лет дали единственную советскую Нобелевскую по экономике.</p>
+    <div class="hero-btns">
+      <button class="btn gold" id="readBtn" type="button">Читать историю ↓</button>
+      <button class="btn ghost" id="listenBtn" type="button">🎧 Слушать аудиогид</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero-under">
+  <div class="wrap">
+    <div class="stamp">
+      <div><div class="v">1938</div><div class="k">задача Фанерного треста</div></div>
+      <div><div class="v">13.05.1939</div><div class="k">доклад в ЛГУ</div></div>
+      <div><div class="v">1000</div><div class="k">экземпляров брошюры</div></div>
+      <div><div class="v">1975</div><div class="k">Нобелевская премия</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="daynav" aria-label="Разделы дня">
+  <div class="wrap">
+    <a href="#story">Читать</a>
+    <a href="#audioguide">Слушать</a>
+    <a href="#games">Загрузи станки</a>
+    <a href="#pervenstvo">Первенство</a>
+    <a href="#quiz">Викторина</a>
+    <a href="#calendar">Календарь</a>
+  </div>
+</nav>
+
+<section class="block" id="audioguide"></section>
+
+<section class="block" id="story">
+  <div class="wrap">
+    <div class="kicker">История первенства · 13 ударов</div>
+    <h2>Задача про станки, которая оказалась про всё</h2>
+    <p style="color:var(--muted);max-width:62ch">Читается подряд. Нажми на удар — откроется подробный разбор с источниками.</p>
+    <ol class="udary">
+      <li><details><summary><span>Леонид Канторович родился в Петербурге 19 января 1912 года, а в 14 лет уже поступил на математический факультет Ленинградского университета.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Отец, врач Виталий Канторович, умер в 1922 году; сына растила мать. Университет Канторович окончил в 1930-м, в 1932 году стал профессором Ленинградского института инженеров гражданского строительства, а в 1934-м — профессором родного университета: ему было 22 года.</p>
+          <p class="src-note">Источники: автобиография Л. В. Канторовича на сайте Нобелевской премии (nobelprize.org); «Леонид Витальевич Канторович (1912–1986). Математик и экономист», «Математические структуры и моделирование», 2021 (cyberleninka.ru).</p>
+        </div></details></li>
+      <li><details><summary><span>Академик Лузин писал ему в 1934 году: «Талант — это слишком мало. Вы имеете право на большее».<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Письмо Николая Лузина, основателя московской математической школы, датировано 29 апреля 1934 года. До конца 1930-х Канторович был известен прежде всего работами по чистой математике — функциональному анализу и теории функций.</p>
+          <p class="src-note">Источник: «Леонид Витальевич Канторович (1912–1986). Математик и экономист», 2021 (cyberleninka.ru).</p>
+        </div></details></li>
+      <li><details><summary><span>Весной 1938 года к профессору пришли инженеры из лаборатории Всесоюзного фанерного треста: как распределить сырьё по станкам разной производительности, чтобы выпуск в заданном ассортименте был наибольшим?<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Сам Канторович называл это «случайным» поводом: «экономически это была задача распределения исходного сырья ради наибольшей производительности оборудования при некоторых ограничениях». Ассортимент был задан — значит, лишний выпуск одной продукции не спасал недостачу другой.</p>
+          <p class="src-note">Источники: автобиография Л. В. Канторовича (nobelprize.org, перевод с английского наш); А. А. Белых, «Экономические идеи Л. В. Канторовича и их восприятие в СССР и на Западе», AlterEconomics, 2024 (cyberleninka.ru).</p>
+        </div></details></li>
+      <li><details><summary><span>Математически это был поиск наибольшего значения линейной функции на многограннике — а перебрать его вершины было нельзя: их число огромно даже в очень простых задачах.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Школьный совет «сравни значения во всех вершинах» здесь не работал: у задачи с несколькими станками и материалами вершин тысячи и миллионы. Нужен был метод, который идёт к ответу, не перебирая всё подряд.</p>
+          <p class="src-note">Источник: автобиография Л. В. Канторовича (nobelprize.org).</p>
+        </div></details></li>
+      <li><details><summary><span>Канторович увидел, что у задачи треста та же математика, что у распределения работы станков, посевных площадей, раскроя материалов и перевозок.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Все эти вопросы сводились к одной группе — найти экстремум линейной функции при линейных ограничениях. С этого момента речь шла уже не о фанере, а о способе планировать любое производство.</p>
+          <p class="src-note">Источники: автобиография Л. В. Канторовича (nobelprize.org); А. А. Белых, AlterEconomics, 2024.</p>
+        </div></details></li>
+      <li><details><summary><span>Для решения он придумал «метод разрешающих множителей»: каждое ограничение получает свою числовую оценку.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>По словам самого Канторовича, метод вырос из идей функционального анализа. Оптимальному плану соответствует свой набор множителей — и, как он понял, у них есть не только технический, но и экономический смысл.</p>
+          <p class="src-note">Источники: автобиография Л. В. Канторовича (nobelprize.org); А. А. Белых, AlterEconomics, 2024.</p>
+        </div></details></li>
+      <li class="find"><details><summary><span>Для ресурса, которого в избытке, разрешающий множитель равен нулю — по сути, это цена дефицита, но в 1939 году объяснять это пришлось «на окраине приложения и полуэзоповским языком».<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p><span class="tag">Находка дня</span>Множитель показывает, насколько вырастет лучший результат, если дать чуть больше ресурса; лишнее ничего не прибавит — его оценка ноль. В конце 1930-х говорить о «ценах» в плановой экономике было рискованно: по словам Канторовича, в брошюре пришлось «максимально избегать термина „экономическое“», а смысл множителей спрятать в приложение. Позже Купманс заметил, что множители Канторовича соответствуют «эффективным ценам» западной экономической литературы.</p>
+          <p class="src-note">Источник: А. А. Белых, AlterEconomics, 2024 (цитаты — по книге «Леонид Витальевич Канторович: человек и учёный», 2002, с. 55).</p>
+        </div></details></li>
+      <li><details><summary><span>13 мая 1939 года Канторович выступил с докладом в Ленинградском университете перед представителями промышленных исследовательских институтов.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Работники промышленности, по протоколу, «единодушно проявили большой интерес к работе» и просили напечатать её поскорее. Председатель закрыл совещание словами, что всё услышанное «заслуживает того, чтобы провести это в жизнь».</p>
+          <p class="src-note">Источник: А. А. Белых, AlterEconomics, 2024.</p>
+        </div></details></li>
+      <li><details><summary><span>В том же 1939 году издательство ЛГУ выпустило брошюру «Математические методы организации и планирования производства» тиражом 1000 экземпляров.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>В первой сноске Канторович указал, что брошюра — стенограмма доклада 13 мая, сильно дополненная. В ней были постановка основных задач, их математическая форма, набросок метода решения и первое обсуждение экономического смысла; сам автор писал, что по существу там уже были главные идеи теории и алгоритмов линейного программирования.</p>
+          <p class="src-note">Источники: А. А. Белых, AlterEconomics, 2024; автобиография Л. В. Канторовича (nobelprize.org).</p>
+        </div></details></li>
+      <li><details><summary><span>На Западе о брошюре не знали много лет: американец Джордж Данциг пришёл к линейному программированию сам и в 1947 году дал свой симплекс-метод.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Канторович честно писал, что Купманс, Данциг и другие нашли эти результаты «своим путём», а об их работах он сам узнал только в середине 1950-х. Симплекс-метод стал главным рабочим инструментом линейного программирования в мире.</p>
+          <p class="src-note">Источники: автобиография Л. В. Канторовича (nobelprize.org); А. А. Белых, AlterEconomics, 2024.</p>
+        </div></details></li>
+      <li><details><summary><span>В 1960 году брошюру 1939 года по инициативе Тьяллинга Купманса перевели и напечатали в американском журнале Management Science.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>В предисловии Купманс назвал работу классической и отметил, что одна из рассмотренных Канторовичем задач — задача C — эквивалентна общей задаче линейного программирования. Данциг позже писал: «Если бы первые работы Канторовича были бы в должной мере оценены в момент их первой публикации, то, возможно, в настоящее время линейное программирование продвинулось бы значительно дальше».</p>
+          <p class="src-note">Источники: А. А. Белых, AlterEconomics, 2024 (Koopmans, Management Science, 1960, т. 6, № 4; Данциг, «Линейное программирование, его применения и обобщения», 1966, с. 29); автобиография Л. В. Канторовича (nobelprize.org).</p>
+        </div></details></li>
+      <li><details><summary><span>В 1948–1950 годах на Ленинградском вагоностроительном заводе под руководством Канторовича раскраивали стальные листы методами линейного программирования — и экономили металл.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Расчёты вёл геометр Виктор Залгаллер. Опыт завода вошёл в их общую книгу 1951 года — с систематическим изложением алгоритмов, где линейное программирование сочеталось с идеей динамического программирования, найденной независимо от американца Беллмана.</p>
+          <p class="src-note">Источник: автобиография Л. В. Канторовича (nobelprize.org).</p>
+        </div></details></li>
+      <li><details><summary><span>В 1975 году Канторович и Купманс разделили Нобелевскую премию по экономике «за вклад в теорию оптимального распределения ресурсов».<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Премия присуждена обоим поровну: Купманс в США в 1940-х годах пришёл к близким идеям независимо. Канторович остался единственным советским учёным, получившим Нобелевскую премию по экономике. А люди старшего поколения помнят ещё одно приложение его школы: в 1960-е в такси ввели плату за посадку и снизили плату за километр — по расчёту Канторовича и его учеников.</p>
+          <p class="src-note">Источники: сайт Нобелевской премии (nobelprize.org, «The Sveriges Riksbank Prize in Economic Sciences 1975»); «Леонид Витальевич Канторович (1912–1986). Математик и экономист», 2021 (cyberleninka.ru).</p>
+        </div></details></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block" id="games">
+  <div class="wrap">
+    <div class="kicker">Главное действие · модель</div>
+    <h2>Загрузи станки, как Канторович</h2>
+    <p style="max-width:62ch">Три станка делают две детали, А и Б. Изделие собирается из одной детали А и одной детали Б, поэтому лишние детали одного вида ничего не дают. Двигай ползунки — какую долю смены каждый станок работает на деталь А, остальное время он делает Б — и добейся наибольшего числа изделий.</p>
+    <div class="lab" id="lab">
+      <div class="mtab">
+        <div class="mrow" id="row0"><span class="mname">Станок 1 <i>· А 12, Б 8 за смену</i></span><input type="range" min="0" max="100" step="1" value="50" id="m0" aria-label="Станок 1: доля смены на деталь А, процентов"><output id="o0" for="m0">50% на А</output></div>
+        <div class="mrow" id="row1"><span class="mname">Станок 2 <i>· А 10, Б 10 за смену</i></span><input type="range" min="0" max="100" step="1" value="50" id="m1" aria-label="Станок 2: доля смены на деталь А, процентов"><output id="o1" for="m1">50% на А</output></div>
+        <div class="mrow" id="row2"><span class="mname">Станок 3 <i>· А 20, Б 10 за смену</i></span><input type="range" min="0" max="100" step="1" value="50" id="m2" aria-label="Станок 3: доля смены на деталь А, процентов"><output id="o2" for="m2">50% на А</output></div>
+      </div>
+      <div class="lab-btns">
+        <button class="btn ghost" type="button" id="pEq">План «всем поровну»</button>
+        <button class="btn ghost" type="button" id="pFast">План «каждому — что он делает быстрее»</button>
+        <button class="btn ghost" type="button" id="pBreak" aria-pressed="false">Станок 2 сломался</button>
+      </div>
+      <div class="lab-stage">
+        <canvas id="labCv" width="640" height="200" style="height:200px" role="img" aria-label="Столбцы выпуска деталей А и Б и число собранных изделий"></canvas>
+        <div class="lab-cap">Модель с условными числами, а не данные Фанерного треста: тот же тип задачи, что Канторович назвал «распределением работы оборудования». Изделий считается столько, сколько пар А+Б, дробная часть — среднее за смену.</div>
+      </div>
+      <div class="lab-msg" id="labMsg" aria-live="polite">Сейчас все станки делят смену пополам. Сколько изделий получится?</div>
+      <div class="lab-found" id="labFound">Найдено: лучше, чем «поровну» — нет; план без лишних деталей — нет; лучший план — нет; лучший план без станка 2 — нет.</div>
+      <div class="mult" id="mult" hidden>
+        <p style="margin-top:0"><b>Разрешающие множители этого плана.</b> В лучшем плане станок 3 работает на обе детали — значит, ему всё равно, что делать: 20 деталей А стоят для него столько же, сколько 10 деталей Б. Отсюда оценки: <b>А — 1, Б — 2</b>.</p>
+        <table class="ctx"><thead><tr><th scope="col">Станок</th><th scope="col">Смена на А даёт</th><th scope="col">Смена на Б даёт</th><th scope="col">Куда его ставить</th></tr></thead>
+          <tbody>
+            <tr><td>Станок 1</td><td>12 × 1 = 12</td><td>8 × 2 = 16</td><td>на Б целиком</td></tr>
+            <tr><td>Станок 2</td><td>10 × 1 = 10</td><td>10 × 2 = 20</td><td>на Б целиком</td></tr>
+            <tr><td>Станок 3</td><td>20 × 1 = 20</td><td>10 × 2 = 20</td><td>делит смену</td></tr>
+          </tbody></table>
+        <p style="margin-bottom:0">Станок 1 делает деталь А в полтора раза быстрее, чем Б, — и всё равно в лучшем плане он целиком на Б. Решает не то, что станок умеет лучше всего, а то, что он даёт по оценкам дефицита.</p>
+      </div>
+      <noscript><div class="noscript-box">Для модели нужен JavaScript. Текстовая версия опыта: план «всем поровну» даёт 14 изделий за смену, план «каждому — что он делает быстрее» — только 5, потому что почти всё время уходит на детали А. Лучший план — 18,7 изделия: станки 1 и 2 целиком на детали Б, станок 3 — около 93% смены на А. Если сломался станок 2, лучший план — 12 изделий: станок 1 на Б, станок 3 — 60% смены на А.</div></noscript>
+    </div>
+    <p class="src-note" style="margin-top:10px">Тип задачи и «разрешающие множители» — по автобиографии Л. В. Канторовича (nobelprize.org) и статье А. А. Белых (AlterEconomics, 2024); числа станков придуманы для модели и не взяты из брошюры 1939 года.</p>
+  </div>
+</section>
+
+<section class="block" id="pervenstvo">
+  <div class="wrap">
+    <div class="kicker">Проверка факта</div>
+    <h2>Что именно здесь первое в мире</h2>
+    <div class="border-box">
+      <p style="margin-top:0"><b>Граница первенства:</b> первая в мире постановка задач линейного программирования вместе с методом их решения — брошюра Л. В. Канторовича «Математические методы организации и планирования производства» (Изд-во ЛГУ, 1939, тираж 1000 экз.; доклад в ЛГУ 13 мая 1939 года). Тьяллинг Купманс, переводя её в 1960 году, отметил, что одна из задач брошюры эквивалентна общей задаче линейного программирования.</p>
+      <p style="margin-bottom:0"><b>Чего здесь нет:</b> симплекс-метод — главный рабочий алгоритм линейного программирования — дал американец Джордж Данциг в 1947 году, независимо от Канторовича. Сам Данциг в «The New Palgrave» датировал открытие линейного программирования 1947 годом, назвав работы Канторовича и фон Неймана важными более ранними достижениями. Американцы Чарнс и Купер в 1962 году упрекали брошюру в том, что точный алгоритм с множителями в ней не опубликован. Нобелевская премия 1975 года — общая с Купмансом.</p>
+    </div>
+    <table class="ctx">
+      <thead><tr><th scope="col">Документ или событие</th><th scope="col">Что</th><th scope="col">Когда</th></tr></thead>
+      <tbody>
+        <tr><td>Консультация для Фанерного треста</td><td>Распределение сырья по станкам ради наибольшего выпуска</td><td>весна 1938</td></tr>
+        <tr><td>Доклад в ЛГУ</td><td>Совещание представителей промышленных институтов</td><td>13.05.1939</td></tr>
+        <tr><td>Брошюра, Изд-во ЛГУ</td><td>«Математические методы организации и планирования производства», 1000 экз.</td><td>1939</td></tr>
+        <tr><td>Данциг, США</td><td>Симплекс-метод</td><td>1947</td></tr>
+        <tr><td>Management Science, т. 6, № 4</td><td>Английский перевод брошюры с предисловием Купманса</td><td>1960</td></tr>
+        <tr><td>Нобелевская премия по экономике</td><td>Канторович и Купманс, «за вклад в теорию оптимального распределения ресурсов»</td><td>1975</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block" id="quiz">
+  <div class="wrap">
+    <div class="kicker">Проверь себя · 5 вопросов</div>
+    <h2>Викторина</h2>
+    <p style="color:var(--muted);max-width:62ch">На каждый вопрос — одна попытка. После ответа покажем объяснение.</p>
+    <div id="quizBox"></div>
+    <noscript><div class="noscript-box">Для викторины нужен JavaScript. Ответы: 1 — распределить сырьё по станкам ради наибольшего выпуска; 2 — 13 мая 1939 года; 3 — ресурс в избытке; 4 — 1000 экземпляров; 5 — с Тьяллингом Купмансом.</div></noscript>
+  </div>
+</section>
+
+<section class="block" id="result">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Итог дня</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Модель, три находки в ней и викторина вместе дают 100 баллов. Прогресс не сохраняется: перезагрузка страницы начинает день заново.</p>
+    <div class="day-result">
+      <div class="dr-score" id="dayTxt">0 / 100 · звание: Гость дня</div>
+      <div class="dr-bar"><i id="dayBar" style="width:0%"></i></div>
+      <div class="dr-note">Найди лучший план загрузки станков и три подсказки по пути, ответь на вопросы викторины.</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="sources">
+  <div class="wrap">
+    <div class="kicker">Источники</div>
+    <h2>На чём стоит страница</h2>
+    <ul class="sources">
+      <li><a href="https://www.nobelprize.org/prizes/economic-sciences/1975/kantorovich/biographical/" rel="noopener" target="_blank">Нобелевская премия (nobelprize.org) · Leonid Vitaliyevich Kantorovich — Biographical</a> (автобиография, на английском): дата рождения, задача Фанерного треста 1938 года, метод разрешающих множителей, брошюра 1939 года, раскрой стальных листов 1948–1950, перевод в Management Science.</li>
+      <li><a href="https://www.nobelprize.org/prizes/economic-sciences/1975/summary/" rel="noopener" target="_blank">Нобелевская премия (nobelprize.org) · The Sveriges Riksbank Prize in Economic Sciences 1975</a> (на английском): премия поровну Канторовичу и Купмансу, формулировка «for their contributions to the theory of optimum allocation of resources».</li>
+      <li><a href="https://cyberleninka.ru/article/n/ekonomicheskie-idei-l-v-kantorovicha-i-ih-vospriyatie-v-sssr-i-na-zapade" rel="noopener" target="_blank">А. А. Белых · «Экономические идеи Л. В. Канторовича и их восприятие в СССР и на Западе», AlterEconomics, 2024, т. 21, № 1</a>: лаборатория Всесоюзного фанерного треста, доклад 13 мая 1939 года, тираж 1000 экз., предисловие Купманса, оценки Данцига, Чарнса и Купера, «полуэзоповский язык».</li>
+      <li><a href="https://cyberleninka.ru/article/n/leonid-vitalievich-kantorovich-1912-1986-matematik-i-ekonomist-k-110-letiyu-so-dnya-rozhdeniya" rel="noopener" target="_blank">«Леонид Витальевич Канторович (1912–1986). Математик и экономист (к 110-летию со дня рождения)», «Математические структуры и моделирование», 2021</a>: детство и учёба, письмо Лузина 1934 года, брошюра 1939 года, тарифы такси.</li>
+      <li>Изображение: <a href="https://commons.wikimedia.org/wiki/File:Leonid_Kantorovich_1976.jpg" rel="noopener" target="_blank">Леонид Канторович, 1976 год</a> — фото Андрея Богданова, Wikimedia Commons, CC BY 3.0 (разрешение автора подтверждено тикетом VRT 2010091410006969).</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="calendar">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Календарь изобретений</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Выбери любой день — узнаешь, что русские сделали первыми в мире. Листай месяцы стрелками.</p>
+    <div id="calbox"></div>
+  </div>
+</section>
+
+<section class="block kd" id="kuda-dalshe">
+  <div class="wrap">
+    <div class="kd-kicker">Куда дальше</div>
+    <h2>Музей продолжается</h2>
+    <div class="kd-grid">
+      <div class="kd-card main"><span class="kd-lbl">Следующий день</span><a href="day-30jan-kotelnikov.html">30 января — Ранцевый парашют Котельникова <span class="kd-arr">→</span></a>
+        <p>Парашют, который спасал лётчиков, в России сначала отклонили.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Предыдущий день</span><a href="day-16jan-soyuz45.html">16 января — Первая в мире стыковка кораблей «Союз-4/5» <span class="kd-arr">→</span></a>
+        <p>Переходного люка между кораблями ещё не придумали — переходили через открытый космос.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Весь музей</span><a href="index.html">Что изобрели русские первыми <span class="kd-arr">→</span></a>
+        <p>Все изобретения — по залам и по дням года.</p></div>
+      <div class="kd-card main"><span class="kd-lbl">Город-музей</span><a href="../../index.html">Русская цивилизация <span class="kd-arr">→</span></a>
+        <p>Все музеи проекта на одной карте.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>
+  Русская цивилизация · «Что изобрели русские первыми в мире»</div></footer>
+
+<section data-proof-block></section>
+<script type="application/json" data-proof>{"status":"found","claim_id":"rc:izobreteniya:kantorovich:claim-lp","ours":{"kind":"брошюра (первая публикация)","title":"Л. В. Канторович. Математические методы организации и планирования производства","number":"Л.: Изд-во Ленинградского государственного университета, 1939; тираж 1000 экз.; стенограмма доклада в ЛГУ 13 мая 1939 г.","date":"1939-05-13","holder":"Издательство ЛГУ; английский перевод — Management Science, 1960, т. 6, № 4","source_url":"https://cyberleninka.ru/article/n/ekonomicheskie-idei-l-v-kantorovicha-i-ih-vospriyatie-v-sssr-i-na-zapade"},"rival":{"name":"Джордж Данциг, США","doc_title":"симплекс-метод решения задач линейного программирования","date":"1947"},"gap_years":8}</script>
+<script src="../../assets/museum-proof.js"></script>
+
+<script>
+/* ── СЧЁТ ── шкала из 100 держит assets/museum-score.js; здесь только реестр наград.
+   лучший план 30 + три находки 3×10 + викторина 5×8 = 100. */
+window.MUSEUM_SCORE = {awards:{lab:30, why0:10, why1:10, why2:10, q:[5,8]},
+  ranks:[[100,'Главный плановик'],[70,'Инженер-расчётчик'],[40,'Мастер цеха'],[0,'Гость дня']]};
+</script>
+<script src="../../assets/museum-score.js"></script>
+<script>
+(function(){
+  var $ = function(id){return document.getElementById(id);};
+  $('readBtn').onclick = function(){ $('story').scrollIntoView({behavior:'smooth'}); };
+  $('listenBtn').onclick = function(){ $('audioguide').scrollIntoView({behavior:'smooth'}); };
+
+  /* ── ЗАГРУЗКА СТАНКОВ ── условная модель: станок i за смену делает A[i] деталей А или B[i] деталей Б,
+     доля смены на А задаётся ползунком. Изделий = min(всего А, всего Б). Лучшее значение считается
+     перебором тут же, а не вписано руками. */
+  var A=[12,10,20], B=[8,10,10];
+  var broken=false;
+  var sl=[$('m0'),$('m1'),$('m2')], out=[$('o0'),$('o1'),$('o2')];
+  var found={};
+  function totals(s){
+    var a=0,b=0;
+    for (var i=0;i<3;i++){ if (broken && i===1) continue; a+=A[i]*s[i]; b+=B[i]*(1-s[i]); }
+    return {a:a,b:b,sets:Math.min(a,b)};
+  }
+  function best(){
+    var m=0;
+    for (var x=0;x<=100;x++) for (var z=0;z<=100;z++){
+      var y = broken ? 0 : null;
+      if (broken){ var t=totals([x/100,0,z/100]); if (t.sets>m) m=t.sets; }
+      else for (y=0;y<=100;y+=5){ var t2=totals([x/100,y/100,z/100]); if (t2.sets>m) m=t2.sets; }
+    }
+    return m;
+  }
+  var BEST={normal:0,broken:0};
+  broken=false; BEST.normal=best(); broken=true; BEST.broken=best(); broken=false;
+  var EQ = totals([.5,.5,.5]).sets;
+  function fmt(v){ return (Math.round(v*10)/10).toString().replace('.',','); }
+  var cv=$('labCv'), cx=cv.getContext('2d'), W=640, H=200, last=null;
+  function fit(){
+    var w=Math.round(cv.clientWidth)||640, r=window.devicePixelRatio||1;
+    if (w===W && cv.width===Math.round(w*r)) return;
+    W=w; cv.width=Math.round(W*r); cv.height=Math.round(H*r); cx.setTransform(r,0,0,r,0,0);
+  }
+  window.addEventListener('resize', function(){ if (last) draw(last); });
+  function draw(t){
+    last=t; fit();
+    cx.fillStyle='#0b1622'; cx.fillRect(0,0,W,H);
+    var narrow=W<480, max=45, x0=narrow?86:120, wmax=W-x0-(narrow?46:60);
+    var rows=[['Детали А',t.a,'rgba(125,200,255,.85)'],['Детали Б',t.b,'rgba(228,201,122,.9)']];
+    cx.font='13px Inter, sans-serif'; cx.textAlign='left';
+    for (var r=0;r<2;r++){
+      var y=30+r*60, w=Math.min(1,rows[r][1]/max)*wmax, ws=Math.min(1,t.sets/max)*wmax;
+      cx.fillStyle='#8fa5b9'; cx.fillText(rows[r][0], 16, y+22);
+      cx.fillStyle=rows[r][2]; cx.fillRect(x0, y, ws, 32);
+      cx.fillStyle='rgba(200,80,70,.55)'; cx.fillRect(x0+ws, y, Math.max(0,w-ws), 32);
+      cx.fillStyle='#e8eef5'; cx.fillText(fmt(rows[r][1]), x0+Math.max(w,ws)+6, y+22);
+    }
+    cx.fillStyle='#e8eef5'; cx.font='600 15px Inter, sans-serif';
+    if (narrow){ cx.fillText('Изделий за смену: '+fmt(t.sets), 16, H-34); cx.font='13px Inter, sans-serif'; cx.fillStyle='#8fa5b9'; cx.fillText('лишние детали — красным', 16, H-14); }
+    else cx.fillText('Изделий за смену: '+fmt(t.sets)+'   ·   лишние детали — красным', 16, H-18);
+  }
+  function setFound(){
+    function yn(k){ return found[k] ? 'да' : 'нет'; }
+    $('labFound').textContent='Найдено: лучше, чем «поровну» — '+yn('why0')+'; план без лишних деталей — '+yn('why1')+'; лучший план — '+yn('lab')+'; лучший план без станка 2 — '+yn('why2')+'.';
+  }
+  function hit(k, pts){ if (!found[k]){ found[k]=1; award(k, pts); } setFound(); }
+  function msg(t, cls){ var m=$('labMsg'); m.className='lab-msg'+(cls?' '+cls:''); m.textContent=t; }
+  function update(note){
+    var s=sl.map(function(e){ return e.value/100; });
+    for (var i=0;i<3;i++) out[i].textContent = (broken && i===1) ? 'стоит' : sl[i].value+'% на А';
+    var t=totals(s); draw(t);
+    var bst = broken ? BEST.broken : BEST.normal;
+    var near = t.sets >= bst - 0.15;
+    if (broken){
+      if (near){ hit('why2',10); msg('Лучший план без станка 2: '+fmt(t.sets)+' изделия. Станок 1 по-прежнему целиком на Б, а станку 3 пришлось отдать детали Б больше смены, чем раньше: оценки дефицита сдвинулись, и план пересчитан.','ok'); }
+      else msg(note || ('Станок 2 стоит. Сейчас '+fmt(t.sets)+' изделия. Найди новый лучший план для двух оставшихся станков.'), '');
+      return;
+    }
+    if (t.sets > EQ + 0.05) hit('why0',10);
+    if (Math.abs(t.a-t.b) <= 0.5 && t.sets >= 10) hit('why1',10);
+    if (near){
+      hit('lab',30); $('mult').hidden=false;
+      msg('Лучший план: '+fmt(t.sets)+' изделия за смену. Станки 1 и 2 целиком на детали Б, станок 3 почти всю смену на А. Ниже — разрешающие множители, которые объясняют, почему так.','ok');
+      return;
+    }
+    if (note){ msg(note, ''); return; }
+    var extra = t.a > t.b ? 'лишних деталей А '+fmt(t.a-t.b) : (t.b > t.a ? 'лишних деталей Б '+fmt(t.b-t.a) : 'лишних деталей нет');
+    msg('Изделий за смену: '+fmt(t.sets)+'; '+extra+'. '+(Math.abs(t.a-t.b)<=0.5 ? 'Без лишних деталей — но это ещё не значит, что план лучший: попробуй переставить станки.' : 'Лишние детали — это время станков, потраченное впустую.'), '');
+  }
+  sl.forEach(function(e){ e.addEventListener('input', function(){ update(); }); });
+  function setPlan(v, note){ for (var i=0;i<3;i++) sl[i].value=v[i]; update(note); }
+  $('pEq').onclick=function(){ setPlan([50,50,50], 'План «всем поровну»: '+fmt(EQ)+' изделия, и много лишних деталей А. Можно лучше.'); };
+  $('pFast').onclick=function(){
+    var t=totals([1,.5,1]);
+    setPlan([100,50,100], 'План «каждому — что он делает быстрее»: станки 1 и 3 делают А быстрее, чем Б, — и вот результат: всего '+fmt(t.sets)+' изделий, деталей А гора, деталей Б не хватает. Решает не скорость станка, а дефицит.');
+    if (!broken) msg($('labMsg').textContent, 'bad');
+  };
+  $('pBreak').onclick=function(){
+    broken=!broken; this.setAttribute('aria-pressed', broken?'true':'false');
+    this.textContent = broken ? 'Починить станок 2' : 'Станок 2 сломался';
+    sl[1].disabled=broken; $('row1').classList.toggle('off', broken);
+    update(broken ? 'Станок 2 сломался. Лучший план для трёх станков больше не годится — найди новый.' : 'Станок 2 снова работает.');
+  };
+  update('Сейчас все станки делят смену пополам: '+fmt(EQ)+' изделия. Двигай ползунки.');
+
+  /* ── ВИКТОРИНА ── один ответ на вопрос; дистракторы сверены с источниками страницы. */
+  var Q = [
+    {q:'О чём на самом деле спросили Канторовича инженеры Фанерного треста в 1938 году?', o:['Как раскроить лист фанеры без обрезков','Как распределить сырьё по станкам, чтобы выпуск был наибольшим','Как рассчитать прочность клеёной фанеры'], a:1,
+     e:'Задача треста — распределить сырьё по станкам разной производительности ради наибольшего выпуска в заданном ассортименте. Раскрой стальных листов появился позже, в 1948–1950 годах.'},
+    {q:'Когда Канторович доложил свой метод в Ленинградском университете?', o:['13 мая 1939 года','В 1947 году','В 1975 году'], a:0,
+     e:'Доклад на совещании представителей промышленных институтов — 13 мая 1939 года; брошюра — его дополненная стенограмма.'},
+    {q:'Что означает нулевой разрешающий множитель у ресурса?', o:['Ресурс в избытке: лишняя единица ничего не прибавит','Ресурс бесплатный','Станок сломан'], a:0,
+     e:'Множитель показывает, насколько вырастет лучший результат от лишней единицы ресурса. Ресурса в избытке это не касается — его оценка ноль.'},
+    {q:'Каким тиражом вышла брошюра 1939 года?', o:['10 экземпляров','1000 экземпляров','100 000 экземпляров'], a:1,
+     e:'Брошюра «Математические методы организации и планирования производства» вышла в издательстве ЛГУ тиражом 1000 экземпляров.'},
+    {q:'С кем Канторович разделил Нобелевскую премию 1975 года?', o:['С Джорджем Данцигом','С Джоном фон Нейманом','С Тьяллингом Купмансом'], a:2,
+     e:'Премию по экономике 1975 года поровну получили Канторович и Купманс — «за вклад в теорию оптимального распределения ресурсов».'}
+  ];
+  var box = $('quizBox');
+  Q.forEach(function(it, qi){
+    var wrap = document.createElement('div');
+    var h = document.createElement('p'); h.className='quiz-q'; h.textContent=(qi+1)+'. '+it.q; wrap.appendChild(h);
+    var exp = document.createElement('div'); exp.className='exp'; exp.setAttribute('aria-live','polite');
+    var btns = it.o.map(function(txt, oi){
+      var b=document.createElement('button'); b.type='button'; b.className='opt'; b.textContent=txt;
+      b.onclick=function(){
+        if (wrap.dataset.done) return; wrap.dataset.done='1';
+        btns.forEach(function(x,xi){ x.disabled=true; if (xi===it.a) x.classList.add('correct'); });
+        if (oi===it.a){ award('q'+qi,8); exp.textContent='Верно. '+it.e; }
+        else { b.classList.add('wrong'); exp.textContent='Не совсем. '+it.e; }
+        exp.classList.add('show');
+      };
+      wrap.appendChild(b); return b;
+    });
+    wrap.appendChild(exp); box.appendChild(wrap);
+  });
+})();
+</script>
+<script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
+<script>window.MUSEUM_CHROME={
+  museum:{title:'Что изобрели русские первыми в мире',href:'index.html'},
+  share:{title:'Линейное программирование: Леонид Канторович — музей «Что изобрели русские первыми в мире»',
+         text:'Фанерный трест попросил математика получше загрузить станки — а получил линейное программирование, 1939 год. Что Россия дала миру раньше всех — день за днём.'},
+  prev:{href:'day-16jan-soyuz45.html',title:'16 января · «Союз-4/5»'},
+  next:{href:'day-30jan-kotelnikov.html',title:'30 января · Парашют'},
+  all:{href:'index.html',label:'Все изобретения'},
+  city:'../../index.html',
+  random:['day-01jan-cabletv.html','day-02jan-luna1.html','day-03jan-anosov.html','day-04jan-pilchikov.html','day-05jan-shukhov.html','day-06jan-orlov.html','day-08jan-icebreaker.html','day-09jan-blinov.html','day-10jan-britnev.html','day-11jan-kostovich.html','day-12jan-r7.html','day-13jan-k278.html','day-14jan-lira.html','day-15jan-kovalevskaya.html','day-16jan-soyuz45.html','day-19jan-kantorovich.html','day-30jan-kotelnikov.html','day-03feb-luna9.html','day-18mar-leonov.html','day-15may-mechnikov.html','day-16jun-tereshkova.html','day-26sep-pavlov.html','day-15nov-buran.html','day-25nov-pirogov.html','day-01dec-lobachevsky.html','day-14dec-laser.html']
+};</script>
+<script src="../../assets/museum-chrome.js"></script>
+<script>window.MUSEUM_SUPPORT={museum:'Что изобрели русские первыми в мире'};</script>
+<script src="../../assets/museum-support.js"></script>
+<script src="calendar-izobreteniya.js"></script>
+<script>window.MUSEUM_CALENDAR_INITIAL='01-19';</script>
+<script src="../../assets/museum-calendar-month.js"></script>
+<script>window.MUSEUM_RETURN={riddle:{q:"Почему в 1960-е таксистам стало выгодно брать и короткие поездки?",a:"Ввели плату за посадку и снизили плату за километр — тарифы рассчитали Канторович и его ученики.",src:"«Математические структуры и моделирование», 2021"}};</script>
+<script src="../../assets/museum-return.js" data-museum="izobreteniya" data-day="01-19"></script>
+<script defer src="../../assets/analytics.js"></script>
+
+
+
+<script>window.MUSEUM_AUDIOGUIDE={
+  audioSrc:"audio-guide-kantorovich-ru.mp3",
+  durationLabel:"2 минуты 15 секунд",
+  lead:"Голос ведёт по залу Леонида Канторовича: от вундеркинда в Ленинградском университете до задачи Фанерного треста, тонкой брошюры 1939 года и Нобелевской премии. Шесть остановок, на каждой — что искать глазами. Слушать можно фоном, пока читаешь статью ниже.",
+  stops:[
+    {t:0,mark:"0:00",title:"Профессор в двадцать два"},
+    {t:21,mark:"0:21",title:"Инженеры из Фанерного треста"},
+    {t:40,mark:"0:40",title:"Вершин слишком много"},
+    {t:62,mark:"1:02",title:"Цена дефицита"},
+    {t:90,mark:"1:30",title:"Тысяча экземпляров"},
+    {t:114,mark:"1:54",title:"Премия на двоих"}
+  ],
+  transcript:[
+    "<p>«Леонид Канторович родился в Петербурге 19 января 1912 года; в 14 лет поступил в университет, в 22 стал профессором».</p>",
+    "<p>«Весной 1938 года инженеры Фанерного треста спросили: как распределить сырьё по станкам, чтобы выпуск был наибольшим».</p>",
+    "<p>«Перебрать вершины многогранника нельзя — и та же математика стоит за посевами, раскроем и перевозками».</p>",
+    "<p>«Метод разрешающих множителей: у ресурса в избытке оценка ноль — по сути цена дефицита, объяснённая полуэзоповским языком».</p>",
+    "<p>«13 мая 1939 года — доклад; брошюра тиражом 1000 экземпляров. Данциг на Западе дал симплекс-метод в 1947-м».</p>",
+    "<p>«1975 год: Нобелевская премия по экономике на двоих — Канторовичу и Купмансу».</p>"
+  ],
+  note:"Озвучено синтезом речи — временно, до записи голосом автора музея."
+};</script>
+<script src="../../assets/museum-audioguide.js"></script>
+</body>
+</html>
