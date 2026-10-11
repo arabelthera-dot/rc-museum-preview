@@ -2,7 +2,7 @@
   "schema_version": 1,
   "page_sha256": "32dabeabb35d8a8d0ad70bed5eaa68c1361b0446ef0fb7c0fd5494a9cc26ff5d",
   "runner": "../../tools/b6/run-b6.mjs",
-  "created_at": "2026-10-09T22:47:00.932Z",
+  "created_at": "2026-10-11T12:11:02.276Z",
   "browser": "151.0.7922.173",
   "plan": "../../tools/checks/literatura-0810/pamyatnik-plan.mjs",
   "inputs": {
@@ -18,7 +18,7 @@
     "../../assets/museum-quiz.js": "cbad871665abd09691bcb0095c4f6eb859ae2f52b7551de37eef4b2d505bdd17",
     "../../assets/museum-chrome.js": "36e66b9e071643768f4a23f2fa9daf1918cef8815962afd2a5ef60b30670c74b",
     "../../assets/museum-support.js": "b01f62ae2ec23f6e1329f6a2c2b2e9bc85e72545696d360a418fe0df040bbbcd",
-    "calendar-literatura.js": "214fdc8b6ed35245757bbcf9830696caf6997ec766a5da13a9352f3cec0006d7",
+    "calendar-literatura.js": "c133d3f9fb0faacccb2223503361a761d7d9047abe863fab653e3e3d8fec3f91",
     "../../assets/museum-return.js": "b033bea947d64b73bf6fe770c4b43d204470c164e99ec9a5f5807834a82eb486",
     "../../assets/museum-calendar-month.js": "e597a197c185ee065da25691ccb5c4cd538960f7642629c30198dc4ab81d59b3",
     "../../assets/fonts/lora-0QIvMX1D_JOuMwr7Iw.woff2": "ddb8c66035104e233fc024669183aad3738b6daa16deee2ebb1241bd0f98ace1",
@@ -30,26 +30,26 @@
     "../../assets/fonts/lora-0QIvMX1D_JOuM3b7I-NP.woff2": "a8c4cb778ab6202d22bdea2ccc8d7e7caf802cfe0a7ce37df7b212f82341468f",
     "../../assets/fonts/lora-0QIvMX1D_JOuM2T7I-NP.woff2": "2df52199eac56e2ec7a735e609bb151bdab79422c3e73948f4b6580c66bb5a50",
     "media-pamyatnik/repin-pushkin-ekzamen-1911.jpg": "10505729a4beed7212f3733e59f24a0016438677a8a4d95387de75574ae3743d",
-    "../../tools/checks/literatura-0810/day07-derzhavin/entry-390.png": "bde416b55258f5da5697b73baae9c6cbc3d7a27b8857ad2e5039617a830d7ee5",
-    "../../tools/checks/literatura-0810/day07-derzhavin/entry-390.json": "e00db4aa5cf6c34c54d4884e306a17b773b67adecae973a09e42c33fc6bcb478",
-    "../../tools/checks/literatura-0810/day07-derzhavin/wrong-390.png": "6f129a7ca8fb4b94e23c1bc2f772d3598b3e6693ac9d1619c7590a8bb148ccc7",
-    "../../tools/checks/literatura-0810/day07-derzhavin/wrong-390.json": "54a5f52318c963249b091dad5d0080f7882479d13aeea84377d3e8126db83bd8",
+    "../../tools/checks/literatura-0810/rerun-0911-lit-derzhavin-pamyatnik/entry-390.png": "e66d52edfbd77330badd10336a58c04f06f8885bc91a1ffa186041d917cd0a0e",
+    "../../tools/checks/literatura-0810/rerun-0911-lit-derzhavin-pamyatnik/entry-390.json": "e00db4aa5cf6c34c54d4884e306a17b773b67adecae973a09e42c33fc6bcb478",
+    "../../tools/checks/literatura-0810/rerun-0911-lit-derzhavin-pamyatnik/wrong-390.png": "bea9857d4831d94d0d60fa24542fc1dfe3cb85c8b9bc4a4bca5aa4c3b5a85e76",
+    "../../tools/checks/literatura-0810/rerun-0911-lit-derzhavin-pamyatnik/wrong-390.json": "54a5f52318c963249b091dad5d0080f7882479d13aeea84377d3e8126db83bd8",
+    "../../tools/checks/literatura-0810/rerun-0911-lit-derzhavin-pamyatnik/reset-390.png": "7f514d02de4296debdc89f5e8fcbefd5bbb436d9ac1daa111486df1fde6feb1c",
+    "../../tools/checks/literatura-0810/rerun-0911-lit-derzhavin-pamyatnik/reset-390.json": "1e9c76414ca63e27b3532a215f051d0b0ada7ab0ce451db7f3622f7097f04bfd",
+    "../../tools/checks/literatura-0810/rerun-0911-lit-derzhavin-pamyatnik/mobile-390.png": "b41e48af86e11aee67199c138a939c6d952a4b6dd243b9f64d39b01b488dc84e",
+    "../../tools/checks/literatura-0810/rerun-0911-lit-derzhavin-pamyatnik/mobile-390.json": "c747de9e4e8d43cec66ce7f6ab965cbaf9afebce7252bfc4d335a0f9966276eb",
     "media-pamyatnik/ekaterina-progulka-borovikovsky-1794.jpg": "7f428a3b0b3c9cd532ba245802f632a43095031e7f8236a62c54e5de0d8a2123",
+    "../../tools/checks/literatura-0810/rerun-0911-lit-derzhavin-pamyatnik/mobile-1440.png": "af5dede1c4c6f8a5c13b73615ea25f395b8f3a64d96a14cf6dfb0d3a34a4040f",
+    "../../tools/checks/literatura-0810/rerun-0911-lit-derzhavin-pamyatnik/mobile-1440.json": "db4de0b57d0946f7ab6059c48c883d6dc1b73cf50ea26b9e9ab3698b80052697",
     "media-pamyatnik/derzhavin-borovikovsky.jpg": "701f10a553646ee9c33d118d22e9adb3844cd7d638fb1bcb5178c426d09cd8a0",
-    "../../tools/checks/literatura-0810/day07-derzhavin/reset-390.png": "8a7fee6254940fbfbc1ee2c07fec81c37e20b9d92259af0c5b22d738896b1641",
-    "../../tools/checks/literatura-0810/day07-derzhavin/reset-390.json": "1e9c76414ca63e27b3532a215f051d0b0ada7ab0ce451db7f3622f7097f04bfd",
-    "../../tools/checks/literatura-0810/day07-derzhavin/mobile-390.png": "2998959c21266e03ed5cae17a6675cced236038114861cc96ddce27dc1a57ce1",
-    "../../tools/checks/literatura-0810/day07-derzhavin/mobile-390.json": "c747de9e4e8d43cec66ce7f6ab965cbaf9afebce7252bfc4d335a0f9966276eb",
-    "../../tools/checks/literatura-0810/day07-derzhavin/mobile-1440.png": "7a78befcf5d64ab7d8180635d91b6e34a69fb5c1fea0d06580919a76310f7630",
-    "../../tools/checks/literatura-0810/day07-derzhavin/mobile-1440.json": "db4de0b57d0946f7ab6059c48c883d6dc1b73cf50ea26b9e9ab3698b80052697",
-    "../../tools/checks/literatura-0810/day07-derzhavin/nojs-390.png": "9ef1a2716db128d46e415a0ffeff409421e8bfedc173e1a6c4f06d9b5ebd4af8",
-    "../../tools/checks/literatura-0810/day07-derzhavin/nojs-390.json": "18b962396d6b3663ee54c0e3f286dfd9bb5b99bb3faa765250aa5808b7bd909a",
-    "../../tools/checks/literatura-0810/day07-derzhavin/score-390.png": "cee214605a6140ec629d787c69511b2e68850b763c9882c7a9038900adff23e7",
-    "../../tools/checks/literatura-0810/day07-derzhavin/score-390.json": "34fef5350adff36257fd286dd0586f3ee896d494b932f036119a477e834ab9f6",
-    "../../tools/checks/literatura-0810/day07-derzhavin/main-390.png": "2e89c611394c42c6edba7726037dde03fad2203121345463f2c32ef59d3f545a",
-    "../../tools/checks/literatura-0810/day07-derzhavin/main-390.json": "b917345940bd2a02d54564bc1e2e1a68cfd87ae65048aa244de6972a5c8cd9b4",
-    "../../tools/checks/literatura-0810/day07-derzhavin/empty-390.png": "5dd65ac299804767ed1da3da763a5887b121340420244f0ab3c1784aa1988a86",
-    "../../tools/checks/literatura-0810/day07-derzhavin/empty-390.json": "23aedb0731731032cd88c8f7aeef7fc3ed82fbf7b4a9c8a027b15f6c777c0299"
+    "../../tools/checks/literatura-0810/rerun-0911-lit-derzhavin-pamyatnik/nojs-390.png": "9ef1a2716db128d46e415a0ffeff409421e8bfedc173e1a6c4f06d9b5ebd4af8",
+    "../../tools/checks/literatura-0810/rerun-0911-lit-derzhavin-pamyatnik/nojs-390.json": "18b962396d6b3663ee54c0e3f286dfd9bb5b99bb3faa765250aa5808b7bd909a",
+    "../../tools/checks/literatura-0810/rerun-0911-lit-derzhavin-pamyatnik/score-390.png": "d8354dcc8c963f7bc1198b5d40d87791ea6ad68568d76d697f875438e7c697c0",
+    "../../tools/checks/literatura-0810/rerun-0911-lit-derzhavin-pamyatnik/score-390.json": "34fef5350adff36257fd286dd0586f3ee896d494b932f036119a477e834ab9f6",
+    "../../tools/checks/literatura-0810/rerun-0911-lit-derzhavin-pamyatnik/main-390.png": "00f37bf6403458d4b511727f3b63cf0f5ed913ed69001832f23c5ac9c016c6a6",
+    "../../tools/checks/literatura-0810/rerun-0911-lit-derzhavin-pamyatnik/main-390.json": "b917345940bd2a02d54564bc1e2e1a68cfd87ae65048aa244de6972a5c8cd9b4",
+    "../../tools/checks/literatura-0810/rerun-0911-lit-derzhavin-pamyatnik/empty-390.png": "8d9918b7b42471257fbf82f34cf4d8a7db55aa30a566228621a007013c6a2ebd",
+    "../../tools/checks/literatura-0810/rerun-0911-lit-derzhavin-pamyatnik/empty-390.json": "23aedb0731731032cd88c8f7aeef7fc3ed82fbf7b4a9c8a027b15f6c777c0299"
   },
   "scenarios": {
     "entry": [
@@ -59,7 +59,7 @@
         "automated": true,
         "width": 390,
         "javascript_enabled": true,
-        "evidence": "../../tools/checks/literatura-0810/day07-derzhavin/entry-390.json"
+        "evidence": "../../tools/checks/literatura-0810/rerun-0911-lit-derzhavin-pamyatnik/entry-390.json"
       }
     ],
     "wrong": [
@@ -69,7 +69,7 @@
         "automated": true,
         "width": 390,
         "javascript_enabled": true,
-        "evidence": "../../tools/checks/literatura-0810/day07-derzhavin/wrong-390.json"
+        "evidence": "../../tools/checks/literatura-0810/rerun-0911-lit-derzhavin-pamyatnik/wrong-390.json"
       }
     ],
     "reset": [
@@ -79,7 +79,7 @@
         "automated": true,
         "width": 390,
         "javascript_enabled": true,
-        "evidence": "../../tools/checks/literatura-0810/day07-derzhavin/reset-390.json"
+        "evidence": "../../tools/checks/literatura-0810/rerun-0911-lit-derzhavin-pamyatnik/reset-390.json"
       }
     ],
     "mobile": [
@@ -89,7 +89,7 @@
         "automated": true,
         "width": 390,
         "javascript_enabled": true,
-        "evidence": "../../tools/checks/literatura-0810/day07-derzhavin/mobile-390.json"
+        "evidence": "../../tools/checks/literatura-0810/rerun-0911-lit-derzhavin-pamyatnik/mobile-390.json"
       },
       {
         "test_id": "mobile-1440",
@@ -97,7 +97,7 @@
         "automated": true,
         "width": 1440,
         "javascript_enabled": true,
-        "evidence": "../../tools/checks/literatura-0810/day07-derzhavin/mobile-1440.json"
+        "evidence": "../../tools/checks/literatura-0810/rerun-0911-lit-derzhavin-pamyatnik/mobile-1440.json"
       }
     ],
     "nojs": [
@@ -107,7 +107,7 @@
         "automated": true,
         "width": 390,
         "javascript_enabled": false,
-        "evidence": "../../tools/checks/literatura-0810/day07-derzhavin/nojs-390.json"
+        "evidence": "../../tools/checks/literatura-0810/rerun-0911-lit-derzhavin-pamyatnik/nojs-390.json"
       }
     ],
     "score": [
@@ -117,7 +117,7 @@
         "automated": true,
         "width": 390,
         "javascript_enabled": true,
-        "evidence": "../../tools/checks/literatura-0810/day07-derzhavin/score-390.json"
+        "evidence": "../../tools/checks/literatura-0810/rerun-0911-lit-derzhavin-pamyatnik/score-390.json"
       }
     ],
     "main": [
@@ -127,7 +127,7 @@
         "automated": true,
         "width": 390,
         "javascript_enabled": true,
-        "evidence": "../../tools/checks/literatura-0810/day07-derzhavin/main-390.json"
+        "evidence": "../../tools/checks/literatura-0810/rerun-0911-lit-derzhavin-pamyatnik/main-390.json"
       }
     ],
     "empty": [
@@ -137,7 +137,7 @@
         "automated": true,
         "width": 390,
         "javascript_enabled": true,
-        "evidence": "../../tools/checks/literatura-0810/day07-derzhavin/empty-390.json"
+        "evidence": "../../tools/checks/literatura-0810/rerun-0911-lit-derzhavin-pamyatnik/empty-390.json"
       }
     ]
   },
