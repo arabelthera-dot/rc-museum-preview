@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="ru" data-museum="izobreteniya">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Четыре числа за такт: Пентковский и архитектура Pentium III — Что изобрели русские первыми в мире, 27 января</title>
+<!--
+  Страница дня 27 января. Наряд stranicy-izob-0910 (claude2, 12.10.2026), карточка #762.
+  Форма — вариант А музея изобретений (Сергей 12.09.2026): лента ударов, подробности свёрнуты.
+  Паспорт выпуска: rc-museum-production/izobreteniya/day-27jan-pentium/passport/issue.json
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --dark:#060c17; --dark2:#0c1826; --surface:#111f33;
+    --card:rgba(255,255,255,.05); --card-b:rgba(255,255,255,.09);
+    --gold:#c9a84c; --gold-l:#e4c97a; --gold-g:rgba(201,168,76,.13);
+    --ink:#e8eef5; --muted:#7a9ab8; --line:rgba(255,255,255,.07);
+    --accent:#2d8cbf; --accent2:#1f6f8b;
+    /* legacy compat */
+    --paper:#0c1826; --paper2:#111f33;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Inter','Segoe UI',sans-serif;color:var(--ink);background:var(--dark);line-height:1.72}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.13;margin:0}
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent)}
+
+  /* ── ШАПКА ── */
+  header.top{background:rgba(6,12,23,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--card-b);color:#fff;position:sticky;top:0;z-index:30}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+  .logo svg{display:block;filter:drop-shadow(0 0 8px rgba(201,168,76,.4))}
+  .logo .lt{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:16px}
+  .logo .lt small{display:block;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-family:'Inter',sans-serif}
+  .score{background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:6px 16px;font-size:13px;color:var(--gold-l);cursor:pointer;font-family:'Inter',sans-serif}
+  .score-info{position:absolute;right:12px;top:66px;max-width:260px;background:#0e1c30;color:var(--ink);border:1px solid var(--card-b);border-radius:14px;padding:14px 16px;font-size:13px;line-height:1.6;box-shadow:0 20px 60px rgba(0,0,0,.6);display:none;z-index:40}
+  .score-info.show{display:block}
+
+  /* ── HERO — СТАНДАРТ (не менять): 3D-сцена сверху, текст отдельным блоком ниже ── */
+  .hero-scene{position:relative;height:52vh;min-height:300px;max-height:520px;overflow:hidden;background:linear-gradient(160deg,#0a1e3a 0%,#1a3a6a 55%,#0d2240 100%)}
+  .hero-scene canvas.scene,.hero-scene img.scene{width:100%;height:100%;display:block;object-fit:cover}
+  .scene-caption{background:#060d18;padding:11px 0 12px}
+  .scene-caption .wrap{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+  .scene-cap{font-size:13.5px;line-height:1.6;color:var(--muted);border-left:2px solid rgba(201,168,76,.4);padding-left:14px;flex:1 1 420px}
+  .scene-hint{flex:0 0 auto;font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.4px;color:#e4c97a;
+    background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.34);border-radius:24px;padding:7px 16px;font-weight:600}
+  .hero-lead{background:linear-gradient(180deg,#0c1826 0%,#060c17 100%);color:#fff;padding:28px 0 38px}
+  .hero-lead .museum{color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:12px;opacity:.9}
+  .hero-lead .who{font-family:'Inter',sans-serif;font-size:clamp(13px,3vw,15px);letter-spacing:.4px;color:var(--accent-l,#7dc8ff);margin-bottom:10px}
+  .hero-lead .who i{font-style:normal;color:#7893ab;font-weight:400}
+  .hero-lead h1{color:#fff;font-size:56px;font-weight:900;line-height:1.04;margin-bottom:16px}
+  .hero-lead .hook{color:#b8ccde;font-size:19px;max-width:580px;margin-bottom:28px;line-height:1.65;font-weight:400}
+  .hero-lead .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+  @media(max-width:680px){.hero-lead h1{font-size:34px}.hero-lead .hook{font-size:16px}
+    .hero-scene{height:34vh;min-height:230px;max-height:300px}
+    .scene-caption .wrap{flex-direction:column;gap:9px}
+    .scene-hint{order:-1;align-self:flex-start;font-size:11.5px;padding:6px 13px}
+    .scene-cap{font-size:12.8px;flex:1 1 auto}}
+  .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:16px;font-family:'Inter',sans-serif;letter-spacing:.5px}
+
+  /* ── НАВИГАЦИЯ ДНЯ ── */
+  .daynav{position:sticky;top:64px;z-index:25;background:rgba(6,12,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-b)}
+  .daynav .wrap{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+  .daynav::-webkit-scrollbar{display:none}
+  .daynav a{flex:0 0 auto;padding:14px 20px;font-size:11px;font-weight:700;font-family:'Inter',sans-serif;color:var(--muted);text-decoration:none;white-space:nowrap;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:.18s}
+  .daynav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+  /* ── СЕКЦИИ ── */
+  section.block{padding:64px 0;border-bottom:1px solid var(--line);scroll-margin-top:130px}
+  .kicker{font-size:10px;text-transform:uppercase;letter-spacing:3.5px;color:var(--gold);font-weight:700;font-family:'Inter',sans-serif;margin-bottom:8px}
+  section.block h2{font-size:34px;color:#fff;margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink)}
+  .pull{background:var(--gold-g);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 14px 14px 0;font-style:italic;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-size:20px;line-height:1.5;margin:26px 0}
+
+  /* ── КНОПКИ ── */
+  .btn{cursor:pointer;border:none;border-radius:12px;padding:14px 26px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;background:var(--accent2);color:#fff;transition:.18s;letter-spacing:.2px}
+  .btn:hover{filter:brightness(1.18)}
+  .btn.ghost{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid var(--card-b)}
+  .btn.ghost:hover{background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.2)}
+  .btn.gold{background:linear-gradient(135deg,var(--gold),#b8882b);color:#1a0f00;box-shadow:0 4px 20px rgba(201,168,76,.25)}
+  .btn.gold:hover{filter:brightness(1.1);box-shadow:0 6px 28px rgba(201,168,76,.4)}
+  .btn:active{transform:translateY(1px)}
+  .pulse{animation:pulse .9s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+
+  /* ── КАРТОЧКИ ── */
+  .card{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:20px 22px;margin:16px 0;backdrop-filter:blur(6px)}
+
+  /* ── КВИЗ ── */
+  .opt{display:block;width:100%;text-align:left;background:rgba(255,255,255,.04);border:1px solid var(--card-b);border-radius:12px;padding:13px 16px;margin:8px 0;cursor:pointer;font-size:15px;color:var(--ink);font-family:'Inter',sans-serif;transition:.16s}
+  .opt:hover{border-color:var(--accent);background:rgba(45,140,191,.08)}
+  .opt.correct{background:rgba(40,120,60,.18);border-color:#3f9b52;color:#7ed4a0;font-weight:600}
+  .opt.wrong{background:rgba(180,40,40,.13);border-color:#c0453f;color:#f08080}
+  .exp{margin-top:10px;font-size:14px;background:var(--gold-g);border-radius:10px;padding:12px 14px;display:none;color:var(--gold-l)}
+  .exp.show{display:block}
+
+  /* ── ИТОГ ДНЯ ── */
+  .day-result{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:22px 24px;max-width:460px}
+  .dr-rank{font-family:'Playfair Display',Georgia,serif;font-size:28px;color:var(--gold-l);font-weight:700}
+  .dr-score{font-size:16px;margin:4px 0 12px;color:var(--ink)}.dr-score span{color:var(--muted);font-size:14px}
+  .dr-bar{height:8px;background:rgba(255,255,255,.08);border-radius:6px;overflow:hidden}
+  .dr-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),var(--gold));transition:width .6s cubic-bezier(.2,.7,.2,1)}
+  .dr-note{margin-top:12px;font-size:14px;color:var(--muted)}
+
+  /* ── РЕКЛАМНЫЕ СЛОТЫ ── */
+  .ad-slot{position:relative;margin:26px 0;background:rgba(255,255,255,.02);border:1px dashed rgba(255,255,255,.1);border-radius:14px;min-height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px}
+  .ad-slot .lbl{position:absolute;top:7px;right:12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.15);font-family:'Inter',sans-serif}
+  .ad-slot .ph-txt{font-size:12px;max-width:80%;color:rgba(255,255,255,.18)}
+  .ad-slot.billboard{min-height:108px}
+  .adband{background:transparent;border-bottom:none}
+
+  footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
+  .crumbs{background:rgba(6,12,23,.6);border-bottom:1px solid var(--card-b);font-family:'Inter',sans-serif;font-size:12.5px}
+  .crumbs .wrap{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  .crumbs a{color:var(--gold-l);text-decoration:none;white-space:nowrap}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--muted);opacity:.6}
+  .crumbs .here{color:var(--muted);white-space:nowrap}
+
+
+  /* ── ШАПКА: четыре строки по museum-core §6-бис ── */
+  header.top{display:block;text-align:center;padding:10px 12px 8px;height:auto;position:relative}
+  header.top .b1{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:15px;letter-spacing:.5px;color:#fff}
+  header.top .b2{font-size:11px;color:var(--muted);margin-top:2px}
+  header.top .b3{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:6px}
+  header.top .b4{font-size:12.5px;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-style:italic}
+  header.top .score{position:absolute;right:12px;top:10px}
+  .daynav{top:0}
+  .hero-scene{background:#0e1c2c;height:38vh;min-height:250px;max-height:400px}
+  @media(max-width:680px){.hero-lead h1{font-size:31px}}
+  .hero-scene img.scene{object-fit:cover;object-position:50% 42%}
+  .date-origin{font-size:13px;color:#9fb4c8;margin:-6px 0 12px;max-width:62ch}
+  .hero-lead .hook{color:#c6d8e8;max-width:62ch}
+  .hero-under{background:linear-gradient(180deg,#060d18,#060c17);padding:4px 0 22px}
+  .stamp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(125,200,255,.28);margin-top:14px}
+  .stamp>div{padding:11px 12px;border-left:1px solid rgba(125,200,255,.16);min-width:0}
+  .stamp>div:first-child{border-left:0}
+  .stamp .v{font-size:clamp(15px,3.4vw,21px);font-weight:700;color:#8fd3ff;line-height:1.1;overflow-wrap:anywhere}
+  .stamp .k{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#8fa5b9;margin-top:5px}
+  @media(max-width:600px){.stamp{grid-template-columns:repeat(2,minmax(0,1fr))}.stamp>div:nth-child(3){border-left:0}.stamp>div:nth-child(n+3){border-top:1px solid rgba(125,200,255,.16)}}
+
+  /* ── ЛЕНТА УДАРОВ (museum-inventions, вариант А; museum-core §5-бис) ── */
+  .udary{list-style:none;margin:18px 0 0;padding:0;counter-reset:u}
+  .udary>li{border-top:1px solid var(--line);padding:4px 0}
+  .udary details>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:34px 1fr;gap:10px;padding:12px 0;font-size:17px;line-height:1.55;color:var(--ink)}
+  .udary details>summary::-webkit-details-marker{display:none}
+  .udary details>summary::before{counter-increment:u;content:counter(u);font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:20px;color:var(--gold);line-height:1.3}
+  .udary .more-lbl{display:block;grid-column:2;font-size:12.5px;color:var(--gold-l);letter-spacing:.3px;margin-top:4px}
+  .udary .more-lbl::after{content:' ▾'}
+  .udary details[open] .more-lbl::after{content:' ▴'}
+  .udary details[open] .more-lbl .o{display:none}
+  .udary details:not([open]) .more-lbl .c{display:none}
+  .udary summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+  .udary .det{margin:0 0 14px 44px;padding:12px 16px;background:rgba(255,255,255,.035);border-left:2px solid rgba(201,168,76,.45);border-radius:0 10px 10px 0;font-size:15px;color:#d5e0ea}
+  .udary .det p{margin:8px 0}
+  .udary .tag{display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1a0f00;background:var(--gold-l);border-radius:6px;padding:1px 7px;margin-right:6px}
+  .udary .find{border-left:3px solid var(--gold);padding-left:8px}
+  figure.fig{margin:18px 0}
+  figure.fig img{max-width:100%;height:auto;border-radius:10px;display:block}
+  figure.fig figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5}
+  .src-note{font-size:12px;color:#8fa5b9}
+
+  /* ── МОДЕЛЬ ДНЯ (главное предметное действие) ── */
+  .lab{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:18px 18px 20px;margin-top:14px}
+  .lab-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+  .lab-row .lbl{flex:0 0 100%;font-size:13px;color:var(--muted);letter-spacing:.3px}
+  .seg{cursor:pointer;border:1px solid var(--card-b);background:rgba(255,255,255,.04);color:var(--ink);border-radius:10px;padding:10px 14px;font:inherit;font-size:14.5px;min-height:44px}
+  .seg[aria-pressed="true"]{border-color:var(--gold);background:var(--gold-g);color:var(--gold-l);font-weight:600}
+  .seg:focus-visible,.btn:focus-visible,.opt:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .lab-stage{position:relative;margin-top:12px}
+  .lab-stage canvas{width:100%;height:auto;display:block;border-radius:10px;background:#1c2530}
+  .lab-cap{font-size:12px;color:#8fa5b9;margin-top:6px}
+  .lab-msg{margin-top:12px;font-size:15.5px;padding:12px 14px;border-radius:10px;background:rgba(255,255,255,.04);border-left:3px solid var(--card-b);min-height:48px}
+  .lab-msg.ok{border-left-color:#3f9b52;background:rgba(40,120,60,.14)}
+  .lab-msg.bad{border-left-color:#c0453f;background:rgba(180,40,40,.10)}
+  .lab-found{font-size:13px;color:var(--muted);margin-top:8px}
+  .lab-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .noscript-box{background:rgba(255,255,255,.04);border:1px dashed var(--card-b);border-radius:12px;padding:12px 16px;font-size:15px}
+
+  /* ── ГРАНИЦА ПЕРВЕНСТВА ── */
+  .border-box{background:rgba(45,140,191,.08);border:1px solid rgba(45,140,191,.3);border-radius:14px;padding:16px 18px}
+  .border-box b{color:#8fd3ff}
+  .ctx{width:100%;border-collapse:collapse;margin-top:14px;font-size:14.5px}
+  .ctx th,.ctx td{text-align:left;padding:9px 8px;border-top:1px solid var(--line);vertical-align:top}
+  .ctx th{color:var(--gold-l);font-weight:600;font-size:12.5px;letter-spacing:.5px}
+  .quiz-q{margin:18px 0 6px;font-weight:600}
+  .sources a{color:var(--gold-l)}
+  .sources li{margin:6px 0;font-size:14px;color:#c8d6e2}
+  @media(max-width:600px){header.top{padding:8px 64px 6px}header.top .score{top:8px;right:8px;padding:4px 10px;font-size:12px}header.top .b3{margin-top:3px}
+    .hero-scene{height:26vh;min-height:200px;max-height:260px}.date-origin{font-size:12px;margin:-8px 0 8px}.hero-lead{padding:18px 0 26px}.hero-lead .date-chip{margin-bottom:12px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+  /* ── ПОЛЗУНКИ МОДЕЛИ (19, 21 янв) ── */
+  .mtab{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+  .mrow{display:grid;grid-template-columns:minmax(150px,1.2fr) 2fr 92px;gap:12px;align-items:center}
+  .mrow .mname{font-size:14.5px}
+  .mrow .mname i{font-style:normal;color:var(--muted);font-size:13px}
+  .mrow input[type=range]{width:100%;accent-color:var(--gold);min-height:44px}
+  .mrow output{font-size:14px;color:var(--gold-l);text-align:right}
+  .mrow.off{opacity:.45}
+  .mult{margin-top:14px;padding:14px 16px;border-radius:12px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25)}
+  @media(max-width:560px){.mrow{grid-template-columns:1fr 70px}.mrow .mname{grid-column:1/-1}}
+</style>
+<meta name="description" content="В. М. Пентковский строил «Эльбрусы» и Эль-90, а в Intel руководил разработкой архитектуры Pentium III и был одним из авторов набора SSE: четыре числа одной командой.">
+<link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-27jan-pentium.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Русская цивилизация">
+<meta property="og:title" content="Четыре числа за такт: Пентковский и архитектура Pentium III">
+<meta property="og:description" content="В. М. Пентковский строил «Эльбрусы» и Эль-90, а в Intel руководил разработкой архитектуры Pentium III и был одним из авторов набора SSE: четыре числа одной командой.">
+<meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-27jan-pentium.html">
+<meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-27jan-pentium.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Четыре числа за такт: Пентковский и архитектура Pentium III", "description": "В. М. Пентковский строил «Эльбрусы» и Эль-90, а в Intel руководил разработкой архитектуры Pentium III и был одним из авторов набора SSE: четыре числа одной командой.", "url": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-27jan-pentium.html", "inLanguage": "ru", "isPartOf": {"@type": "WebSite", "name": "Музей «Что изобрели русские первыми в мире»"}, "publisher": {"@type": "Organization", "name": "Русская цивилизация"}, "about": {"@type": "Person", "name": "Владимир Мстиславович Пентковский"}, "image": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-27jan-pentium.jpg"}</script>
+</head>
+<body>
+
+<header class="top">
+  <div class="b1">Русская цивилизация</div>
+  <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
+  <div class="b3">Что изобрели русские первыми в мире</div>
+  <div class="b4">365 изобретений. Все русские. Все первые</div>
+  <div class="score" id="scoreBox" title="Баллы знаний за этот день">⭐ <span id="score">0</span> / 100</div>
+</header>
+
+<nav class="crumbs" aria-label="Хлебные крошки"><div class="wrap">
+  <a href="../../index.html">Русская цивилизация</a>
+  <span class="sep">›</span>
+  <a href="index.html">Что изобрели русские первыми в мире</a>
+  <span class="sep">›</span>
+  <span class="here">27 января · Архитектура Pentium III</span>
+</div></nav>
+
+<div class="hero-scene" id="hero" style="background:#eef0ec">
+  <img class="scene" src="day-27jan-pentium.jpg" style="object-fit:contain" data-source="https://commons.wikimedia.org/wiki/File:Intel_Pentium_III_Katmai.jpg" data-license="CC BY-SA 3.0" width="1200" height="581" alt="Зелёная печатная плата процессора Pentium III: в центре квадратный корпус с синим кристаллом, справа две микросхемы кэш-памяти NEC, внизу ряд позолоченных контактов разъёма" fetchpriority="high">
+</div>
+
+<div class="scene-caption">
+  <div class="wrap">
+    <div class="scene-cap">Процессор Intel Pentium III (ядро Katmai, 500 МГц) на плате картриджа без кожуха: в центре — кристалл, по бокам — кэш второго уровня. Фото: Appaloosa, 2008, Викисклад, CC BY-SA 3.0.</div>
+    <span class="scene-hint">Предмет · процессор 1999 года</span>
+  </div>
+</div>
+
+<header class="hero-lead">
+  <div class="wrap">
+    <div class="date-chip">27 января · 1999</div>
+    <p class="date-origin">Дата условная: календарь музея отдал этот день Пентковскому, точного дня у события нет. Pentium III вышел в феврале 1999 года.</p>
+    <div class="who">Владимир Мстиславович Пентковский <i>· ИТМиВТ, Москва → Intel, Фолсом (Калифорния)</i></div>
+    <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
+    <h1>Четыре числа за такт: Пентковский и архитектура Pentium III</h1>
+    <p class="hook">Pentium назвали не в его честь, но в 1999 году журнал Intel написал прямо: архитектурой Pentium III руководил бывший разработчик «Эльбруса».</p>
+    <div class="hero-btns">
+      <button class="btn gold" id="readBtn" type="button">Читать историю ↓</button>
+      <button class="btn ghost" id="listenBtn" type="button">🎧 Слушать аудиогид</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero-under">
+  <div class="wrap">
+    <div class="stamp">
+      <div><div class="v">1986</div><div class="k">Пентковский возглавил разработку микропроцессора Эль-90</div></div>
+      <div><div class="v">70</div><div class="k">новых команд в наборе SSE</div></div>
+      <div><div class="v">4</div><div class="k">числа одной командой</div></div>
+      <div><div class="v">≈10 %</div><div class="k">площади кристалла стоил весь набор SSE</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="daynav" aria-label="Разделы дня">
+  <div class="wrap">
+    <a href="#story">Читать</a>
+    <a href="#audioguide">Слушать</a>
+    <a href="#games">Такты</a>
+    <a href="#pervenstvo">Первенство</a>
+    <a href="#quiz">Викторина</a>
+    <a href="#calendar">Календарь</a>
+  </div>
+</nav>
+
+<section class="wrap" id="dokument" data-proof-block></section>
+
+<section class="block" id="audioguide"></section>
+
+<section class="block" id="story">
+  <div class="wrap">
+    <div class="kicker">История вклада · 12 ударов</div>
+    <h2>Из «Эльбруса» в Pentium III</h2>
+    <p style="color:var(--muted);max-width:62ch">Читается подряд. Нажми на удар — откроется подробный разбор с источниками.</p>
+    <ol class="udary">
+      <li><details><summary><span>В 1970 году выпускник Физтеха Владимир Пентковский пришёл в Институт точной механики и вычислительной техники — туда, где строили «Эльбрусы».<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Он родился в 1946 году и окончил факультет радиотехники и кибернетики МФТИ. В ИТМиВТ Пентковский участвовал в разработке суперкомпьютеров «Эльбрус-1» и «Эльбрус-2» и в создании языка программирования высокого уровня Эль-76.</p>
+          <p class="src-note">Источник: программа мегагрантов Минобрнауки, «Пентковский Владимир Мстиславович» (megagrant.ru).</p>
+        </div></details></li>
+      <li><details><summary><span>«Эльбрус-1» появился в 1978 году, «Эльбрус-2» — в 1984-м; сложные команды Эль-76 машина сама разбирала на простые микрооперации.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <figure class="fig">
+            <img src="day-27jan-pentium-elbrus.jpg" data-source="https://commons.wikimedia.org/wiki/File:Moscow_Polytechnical_Museum,_Elbrus,_soviet_supercomputer_(4927170301).jpg" data-license="CC BY-SA 2.0" width="700" height="933" loading="lazy" alt="Музейный зал: высокие серые стойки советской вычислительной машины «Эльбрус» со снятыми стенками, перед ними пульт с маленьким монитором и табличка на подставке">
+            <figcaption>Стойки «Эльбруса» в Политехническом музее, Москва. Фото: Михаил Щербаков, 2010, Викисклад, CC BY-SA 2.0.</figcaption>
+          </figure>
+          <p>Американский эксперт по микропроцессорам Кит Дифендорф писал, что «Эльбрус» в 1978 году был процессором, выдающим две команды за такт, с исполнением вне очереди, переименованием регистров и исполнением по предположению. Главный архитектор «Эльбрусов» Борис Бабаян называл «Эльбрус-1» первым в мире суперскалярным компьютером. Это их оценки; музей их здесь не проверяет и первенство на них не строит.</p>
+          <p class="src-note">Источник: The Register, А. Фаткуллин, «Intel uses Russia military technologies», 7 июня 1999 (цитаты К. Дифендорфа и Б. А. Бабаяна).</p>
+        </div></details></li>
+      <li><details><summary><span>В 1986 году Пентковский возглавил разработку 32-разрядного микропроцессора Эль-90 для «Эльбруса-3».<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Техническое задание составили в 1987 году, первые образцы Эль-90 построили в 1990-м. В нём соединились идеи RISC и «Эльбруса-2»: около полумиллиона транзисторов, упрощённый набор команд, большинство которых исполнялось за такт. Две команды за такт, исполнение вне очереди и по предположению, предсказание переходов, переименование регистров и конвейерный блок плавающей точки.</p>
+          <p class="src-note">Источники: The Register, «Intel uses Russia military technologies» (1999); программа мегагрантов, «Пентковский Владимир Мстиславович».</p>
+        </div></details></li>
+      <li><details><summary><span>В 1990 году он взялся за преемника — Эль-91С, но из-за политических и экономических перемен в России финансирование прекратилось.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>«Из-за политических и экономических перемен в России финансирование прекратилось», — так в 1999 году The Register описал судьбу Эль-91С.</p>
+          <p class="src-note">Источник: The Register, «Intel uses Russia military technologies» (1999).</p>
+        </div></details></li>
+      <li><details><summary><span>С 1993 года Пентковский работал в Intel.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>В 1999 году журнал Intel подписывает его главным инженером (Principal Engineer) группы микропроцессоров в Фолсоме, Калифорния. Учёные степени он привёз из России: кандидат и доктор наук. В Intel он участвовал в разработке нескольких поколений процессоров.</p>
+          <p class="src-note">Источники: программа мегагрантов, «Пентковский Владимир Мстиславович»; Intel Technology Journal, Q2 1999, сведения об авторах.</p>
+        </div></details></li>
+      <li><details><summary><span>Первый Pentium Intel выпустила 22 марта 1993 года, и имя ему дали сотрудники Intel на конкурсе, а не в честь русского инженера.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Intel пришлось искать слово вместо «586»: в марте 1991 года суд решил, что номера вроде «386» и «486» нельзя защитить как товарный знак. Компания устроила конкурс среди сотрудников. Слова «Pentium» не предложил никто, но восемнадцать человек прислали варианты от греческого «пента» — «пять»: это пятое поколение x86. Легенда о том, что Pentium назван по фамилии Пентковского, документами не подтверждается: даже The Register в 1999 году писал лишь, что русский конструктор «мог бы» вдохновить это имя.</p>
+          <p class="src-note">Источники: Intel, «The Birth of Pentium» (хроника компании, 22 марта 1993); The Register, «Intel uses Russia military technologies» (1999), подзаголовок.</p>
+        </div></details></li>
+      <li><details><summary><span>К концу 1990-х компьютерам досталась новая работа: трёхмерная графика, видео, распознавание речи. Везде одно и то же действие над тысячами чисел подряд.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Вершина трёхмерной сцены записывается четырьмя числами — x, y, z и w. Чтобы повернуть сцену, каждую вершину умножают на одну и ту же матрицу преобразования. Алгоритмы таких программ «по природе параллельны»: одну последовательность действий можно одновременно применить ко многим числам. Ответ на это — SIMD, «одна команда — много данных».</p>
+          <p class="src-note">Источник: J. Keshava, V. Pentkovski, «Pentium III Processor Implementation Tradeoffs», Intel Technology Journal, Q2 1999.</p>
+        </div></details></li>
+      <li><details><summary><span>Pentium III получил новый набор команд — Internet SSE: 70 команд, и главные из них считают сразу четыре числа.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Одна команда SSE складывает или умножает четыре числа одинарной точности. Для них процессору добавили новые 128-битные регистры и отдельный регистр управления. По словам авторов, это второе крупное расширение набора команд x86 со времён 80386 и первое, которое добавило новое архитектурное состояние. Пентковский был одним из архитекторов основной группы, которая определила этот набор.</p>
+          <p class="src-note">Источники: Intel Technology Journal, Q2 1999, «Pentium III Processor Implementation Tradeoffs» и сведения об авторах; программа мегагрантов, «Пентковский Владимир Мстиславович».</p>
+        </div></details></li>
+      <li class="find"><details><summary><span>Pentium III выполнял 128-битную команду SSE двумя половинами на одних и тех же блоках, и среди четырёх авторов патента на этот приём стоит Пентковский.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <figure class="fig" style="max-width:460px">
+            <img src="day-27jan-pentium-patent.png" data-source="https://patents.google.com/patent/US6233671B1/en" data-license="Public domain" width="900" height="1129" loading="lazy" alt="Чертёж из патента: два операнда X и Y по четыре числа; сначала складываются младшие пары X1+Y1 и X0+Y0, ниже по стрелке времени — старшие X3+Y3 и X2+Y2, внизу собран результат из четырёх сумм">
+            <figcaption>Фиг. 3 патента США 6 233 671: команда ADD X, Y исполняется «со сдвигом» — сначала младшая половина, потом старшая, на той же схеме. Лист 3 из 11, выдан 15 мая 2001. Общественное достояние (документ правительства США).</figcaption>
+          </figure>
+          <p><span class="tag">Находка дня</span>Заявку «Staggering execution of an instruction by dividing a full-width macro instruction into at least two partial-width micro instructions» Intel подала 31 марта 1998 года; авторы — Мохаммад Абдалла, Джеймс Коук, Стив Фишер и Владимир Пентковский. Патент объясняет, зачем это нужно: если ставить четыре сложителя и четыре умножителя на полную ширину, то, пока работают одни, другие простаивают. Половинные блоки, через которые числа проходят дважды, загружены плотнее. В статье о Pentium III это записано одной фразой: декодер переводит 128-битную команду в пару 64-битных микроопераций.</p>
+          <p class="src-note">Источники: патент US 6 233 671 B1 (заявка 31.03.1998, выдан 15.05.2001), Google Patents; Intel Technology Journal, Q2 1999, «Pentium III Processor Implementation Tradeoffs».</p>
+        </div></details></li>
+      <li><details><summary><span>Сложитель и умножитель развели по разным портам, чтобы они работали одновременно, — и Pentium III на 550 МГц выдавал до 2,2 миллиарда операций с плавающей точкой в секунду.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <figure class="fig" style="max-width:420px">
+            <img src="day-27jan-pentium-kristall.jpg" data-source="https://commons.wikimedia.org/wiki/File:Intel@250nm@P6@Katmai@Pentium_III@SL35D_DSCx1_polysilicon_microscope_stitched@5x_(38241648116).jpg" data-license="CC0" width="757" height="900" loading="lazy" alt="Снимок кристалла под микроскопом: прямоугольник, плотно заполненный золотистыми и фиолетовыми блоками схем разного размера, с регулярными решётками кэш-памяти">
+            <figcaption>Кристалл Pentium III (Katmai, 250 нм) под микроскопом, верхние слои стравлены до поликремния. Фото: Fritzchens Fritz, 2017, Викисклад, CC0.</figcaption>
+          </figure>
+          <p>Новый умножитель на порту 0 переделали из старого, и он выдавал два числа за такт (у старого блока x87 — одно число за два такта). Новый сложитель поставили на порт 1. «По сути, мы назначили разные блоки (а значит, и разные команды) на порты 0 и 1, чтобы обеспечить полное пиковое исполнение на четыре числа», — пишут Кешава и Пентковский. Отдельный блок перестановок помогал быстро переложить данные из вида «x, y, z, w» в вид «все x, все y…».</p>
+          <p class="src-note">Источник: Intel Technology Journal, Q2 1999, «Pentium III Processor Implementation Tradeoffs».</p>
+        </div></details></li>
+      <li><details><summary><span>Весь набор SSE добавил к кристаллу около 10 % площади — такой бюджет ставили с самого начала.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Цели разработки — уложиться примерно в 10 % прибавки к размеру Pentium II и при этом поднять частоту хотя бы на ступень. Именно поэтому 128-битные команды пустили по старому 64-битному тракту: переделки свелись к декодеру и блокам исполнения. Об авторе этой работы журнал Intel пишет: «Владимир руководил разработкой архитектуры процессора Pentium III и анализом его производительности». А до того он руководил разработкой компиляторов и поддержки языков программирования для многопроцессорных «Эльбрусов».</p>
+          <p class="src-note">Источники: Intel Technology Journal, Q2 1999, «Pentium III Processor Implementation Tradeoffs» и «Architecture of a 3D Software Stack for Peak Pentium III Processor Performance», сведения об авторах.</p>
+        </div></details></li>
+      <li><details><summary><span>В 2010 году у Пентковского появилась работа и в России: по мегагранту в МФТИ открылась его лаборатория суперкомпьютерных технологий.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Лабораторию суперкомпьютерных технологий для биомедицины, фармакологии и малоразмерных структур создали 1 декабря 2010 года, и возглавил её Пентковский. Умер Владимир Мстиславович Пентковский 24 декабря 2012 года в Фолсоме.</p>
+          <p class="src-note">Источник: программа мегагрантов Минобрнауки, «Пентковский Владимир Мстиславович».</p>
+        </div></details></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block" id="theme-inventions">
+  <div class="wrap">
+    <div class="kicker">Вычислительная техника · Русские первенства</div>
+    <h2>Что ещё русские изобрели первыми в теме «вычислительная техника»</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Другие дни музея о вычислительных машинах и программах — по утверждённому календарю. Часть этих залов ещё готовится.</p>
+    <button class="btn ghost" type="button" id="themeInvBtn" data-label="Показать 12 первенств →" aria-expanded="false" aria-controls="themeInvBody">Показать 12 первенств →</button>
+    <div id="themeInvBody" hidden>
+      <ul class="theme-list">
+        <li><b>19 янв</b> <a href="day-19jan-kantorovich.html">Линейное программирование, Л. В. Канторович</a></li>
+        <li><b>25 янв</b> <a href="day-25jan-korsakov.html">Машины С. Н. Корсакова на перфокартах, 1832</a></li>
+        <li><b>7 фев</b> Первая в мире троичная ЭВМ «Сетунь»</li>
+        <li><b>18 мая</b> Прототип персонального компьютера и первый плоттер</li>
+        <li><b>6 июн</b> «Тетрис», А. Пажитнов, 1984</li>
+        <li><b>9 июн</b> «Каисса»: первый чемпион мира среди программ, 1974</li>
+        <li><b>24 авг</b> Кибернетика, проект ОГАС, ЭВМ «МИР»</li>
+        <li><b>13 сен</b> Гидроинтегратор — первая в мире аналоговая ЭВМ</li>
+        <li><b>23 сен</b> БЭСМ-6</li>
+        <li><b>2 ноя</b> Первая ЭВМ в континентальной Европе (МЭСМ)</li>
+        <li><b>8 дек</b> БЭСМ — одна из самых быстрых ЭВМ в мире (1953)</li>
+        <li><b>19 дек</b> ЭВМ «МИР» для инженеров</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="games">
+  <div class="wrap">
+    <div class="kicker">Главное действие · модель</div>
+    <h2>Четыре числа за такт</h2>
+    <p style="max-width:62ch">Ты проектируешь блок вычислений. Выбери, чем считать, — старым x87 по одному числу или командами SSE по четыре, — и как устроить блоки: на полную ширину или половинами со сдвигом, как в патенте 1998 года. Реши, где стоит сложитель. Запусти программу и посмотри, сколько тактов она займёт и сколько блоков простаивает. Сначала найди устройство Pentium III, потом проверь x87, общий порт и полную ширину.</p>
+    <div class="lab" id="lab">
+      <div class="lab-row" role="group" aria-label="Программа">
+        <span class="lbl">Программа</span>
+        <button class="seg" type="button" data-k="p" data-v="vert" aria-pressed="true">Повернуть 4 вершины 3D-сцены</button>
+        <button class="seg" type="button" data-k="p" data-v="pat" aria-pressed="false">Пример патента: ADD, ADD, MUL, ADD</button>
+      </div>
+      <div class="lab-row" role="group" aria-label="Чем считать">
+        <span class="lbl">Чем считать и какой ширины блоки</span>
+        <button class="seg" type="button" data-k="w" data-v="x87" aria-pressed="true">x87: по одному числу</button>
+        <button class="seg" type="button" data-k="w" data-v="full" aria-pressed="false">SSE, блоки на 4 числа</button>
+        <button class="seg" type="button" data-k="w" data-v="half" aria-pressed="false">SSE, блоки на 2 числа, вторая половина следом</button>
+      </div>
+      <div class="lab-row" role="group" aria-label="Где сложитель">
+        <span class="lbl">Где стоит сложитель</span>
+        <button class="seg" type="button" data-k="a" data-v="same" aria-pressed="true">На том же порту, что умножитель</button>
+        <button class="seg" type="button" data-k="a" data-v="sep" aria-pressed="false">На своём порту</button>
+      </div>
+      <div class="lab-btns">
+        <button class="btn gold" type="button" id="labGo">Запустить программу</button>
+        <button class="btn ghost" type="button" id="labP3">Как в Pentium III</button>
+      </div>
+      <div class="lab-stage">
+        <canvas id="labCv" width="640" height="260" style="height:260px" role="img" aria-label="Временная диаграмма: по горизонтали такты, по строкам порт 0 и порт 1; каждая команда — цветной брусок: умножение синее, сложение золотое"></canvas>
+        <div class="lab-cap">Модель условная: в ней одна команда выдаётся за такт, как в примере патента, и нет задержек на зависимости. Из документов — четыре числа на команду SSE, исполнение половинами на одной схеме (патент US 6 233 671), умножитель на порту 0 и сложитель на порту 1 (журнал Intel, 1999), x87 — умножение одного числа за два такта, сложение за такт (таблицы А. Фога).</div>
+      </div>
+      <div class="lab-msg" id="labMsg" aria-live="polite">Выбери, чем считать, и нажми «Запустить программу».</div>
+      <div class="lab-found" id="labFound">Найдено: устройство Pentium III — нет; x87 по одному числу — нет; общий порт — нет; полная ширина простаивает — нет.</div>
+      <noscript><div class="noscript-box">Для модели нужен JavaScript. Текстовая версия: поворот четырёх вершин — это 16 умножений и 12 сложений по четыре числа. На x87 по одному числу он занимает 176 тактов. Командами SSE на блоках полной ширины — 28 тактов, но восемь блоков загружены только наполовину. Половинные блоки со сдвигом и сложителем на своём порту, как в Pentium III, — 32 такта на четырёх блоках, загрузка 88 %. Если сложитель стоит на одном порту с умножителем, те же половинные блоки ждут друг друга — 56 тактов.</div></noscript>
+    </div>
+    <p class="src-note" style="margin-top:10px">Четыре числа одинарной точности на команду, 128-битная команда как пара 64-битных микроопераций, умножитель на порту 0 и сложитель на порту 1, у x87 одно число за два такта при умножении — J. Keshava, V. Pentkovski, Intel Technology Journal, Q2 1999. Пример ADD, ADD, MUL, ADD и исполнение со сдвигом — патент US 6 233 671 B1 (1998). Сложение x87 за такт — A. Fog, «Instruction tables», раздел Pentium II и III.</p>
+  </div>
+</section>
+
+<section class="block" id="pervenstvo">
+  <div class="wrap">
+    <div class="kicker">Проверка факта</div>
+    <h2>Что именно здесь наше</h2>
+    <div class="border-box">
+      <p style="margin-top:0"><b>Граница вклада:</b> это не мировое первенство, а работа инженера советской школы над мировым процессором. По документам Intel 1999 года В. М. Пентковский — один из архитекторов основной группы, определившей набор Internet SSE, и руководитель разработки архитектуры Pentium III и анализа его производительности. Он соавтор патента US 6 233 671 (заявка 31 марта 1998) на исполнение широкой команды половинами на одной схеме — так Pentium III и исполнял команды SSE. До Intel он участвовал в создании «Эльбрусов» и руководил разработкой микропроцессора Эль-90.</p>
+      <p style="margin-bottom:0"><b>Чего здесь нет:</b> первый Pentium выпущен в марте 1993 года — в год прихода Пентковского в Intel — и назван не в его честь; «Pentium Pro» в документах его работой не значится. Набор SSE определяла группа, а не один человек, а команды SIMD в x86 были и раньше — набор MMX, по словам того же журнала Intel, был первым крупным расширением. Слова о том, что суперскалярную архитектуру изобрели в «Эльбрусе», — оценка Б. А. Бабаяна и К. Дифендорфа; её нужно проверять отдельно, и эта страница на неё не опирается. «Главный архитектор Pentium» — негласное звание, а не должность в документах.</p>
+    </div>
+    <table class="ctx">
+      <thead><tr><th scope="col">Документ или событие</th><th scope="col">Что</th><th scope="col">Когда</th></tr></thead>
+      <tbody>
+        <tr><td>«Эльбрус-1», «Эльбрус-2», ИТМиВТ</td><td>Пентковский в разработке, язык Эль-76</td><td>1978, 1984</td></tr>
+        <tr><td>Микропроцессор Эль-90</td><td>Разработка под его руководством; образцы</td><td>1986–1990</td></tr>
+        <tr><td>Intel, первый Pentium</td><td>Выпуск; имя из конкурса сотрудников</td><td>22.03.1993</td></tr>
+        <tr><td>Патент US 6 233 671 (Абдалла, Коук, Фишер, Пентковский)</td><td>Исполнение команды половинами со сдвигом</td><td>заявка 31.03.1998</td></tr>
+        <tr><td>Pentium III</td><td>Первый процессор с Internet SSE</td><td>февраль 1999</td></tr>
+        <tr><td>Intel Technology Journal, Q2 1999</td><td>«Руководил разработкой архитектуры Pentium III»</td><td>1999</td></tr>
+        <tr><td>Мегагрант, МФТИ</td><td>Его лаборатория суперкомпьютерных технологий</td><td>1.12.2010</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block" id="quiz">
+  <div class="wrap">
+    <div class="kicker">Проверь себя · 5 вопросов</div>
+    <h2>Викторина</h2>
+    <p style="color:var(--muted);max-width:62ch">На каждый вопрос — одна попытка. После ответа покажем объяснение.</p>
+    <div id="quizBox"></div>
+    <noscript><div class="noscript-box">Для викторины нужен JavaScript. Ответы: 1 — возглавил разработку микропроцессора Эль-90; 2 — имя придумали на конкурсе сотрудников Intel; 3 — четыре числа; 4 — двумя 64-битными половинами на тех же блоках; 5 — что он руководил разработкой архитектуры Pentium III.</div></noscript>
+  </div>
+</section>
+
+<section class="block" id="result">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Итог дня</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Устройство Pentium III, три тупика модели (x87, общий порт, полная ширина) и викторина вместе дают 100 баллов. Прогресс не сохраняется: перезагрузка страницы начинает день заново.</p>
+    <div class="day-result">
+      <div class="dr-score" id="dayTxt">0 / 100 · звание: Гость дня</div>
+      <div class="dr-bar"><i id="dayBar" style="width:0%"></i></div>
+      <div class="dr-note">Найди устройство Pentium III, найди три тупика модели (x87, общий порт, полная ширина) и ответь на вопросы викторины.</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="sources">
+  <div class="wrap">
+    <div class="kicker">Источники</div>
+    <h2>На чём стоит страница</h2>
+    <ul class="sources">
+      <li><a href="https://bebop.cs.berkeley.edu/resources/arch-manuals/pentium-iii/keshava99-impltradeoffs.pdf" rel="noopener" target="_blank">Intel Technology Journal · J. Keshava, V. Pentkovski, «Pentium III Processor Implementation Tradeoffs»</a> — Q2 1999 (копия Калифорнийского университета в Беркли): 70 команд Internet SSE, четыре числа одинарной точности, 128-битная команда как пара 64-битных микроопераций, умножитель на порту 0 и сложитель на порту 1, 2,2 млрд операций в секунду на 550 МГц, около 10 % площади; сведения об авторе — «руководил разработкой архитектуры Pentium III».</li>
+      <li><a href="https://hsienhsinlee.github.io/MARS/pub/itj99.pdf" rel="noopener" target="_blank">Intel Technology Journal · P. Zagacki, D. Buch, E. Hsieh, D. Melaku, V. Pentkovski, H.-H. Lee, «Architecture of a 3D Software Stack for Peak Pentium III Processor Performance»</a> — Q2 1999 (копия соавтора): те же сведения об авторе, работа в Фолсоме, прежде — компиляторы и языки для «Эльбрусов».</li>
+      <li><a href="https://patents.google.com/patent/US6233671B1/en" rel="noopener" target="_blank">Патент США 6 233 671 B1 · «Staggering execution of an instruction by dividing a full-width macro instruction into at least two partial-width micro instructions»</a> — М. Абдалла, Дж. Коук, С. Фишер, В. Пентковский; Intel, заявка 31.03.1998, выдан 15.05.2001 (Google Patents): пример ADD, ADD, MUL, ADD, фиг. 2B и 3.</li>
+      <li><a href="https://megagrant.ru/labs/scientists/scientist_rus_112121/" rel="noopener" target="_blank">Программа мегагрантов Минобрнауки · «Пентковский Владимир Мстиславович»</a>: МФТИ, ИТМиВТ с 1970 года, «Эльбрус-1» и «Эльбрус-2», Эль-76, Эль-90 с 1986 года, Intel с 1993 года, SSE, лаборатория в МФТИ с 1 декабря 2010 года, смерть 24 декабря 2012 года в Фолсоме.</li>
+      <li><a href="https://www.theregister.com/1999/06/07/intel_uses_russia_military_technologies" rel="noopener" target="_blank">The Register · А. Фаткуллин, «Intel uses Russia military technologies»</a>, 7 июня 1999: Эль-90 (1986, ТЗ 1987, образцы 1990), его устройство, Эль-91С, оценки К. Дифендорфа и Б. А. Бабаяна, источник легенды об имени Pentium.</li>
+      <li><a href="https://timeline.intel.com/1993/the-birth-of-pentium" rel="noopener" target="_blank">Intel · «The Birth of Pentium»</a>: выпуск 22 марта 1993 года, имя из конкурса сотрудников, решение суда 1991 года о номерах.</li>
+      <li><a href="https://www.tomshardware.com/reviews/intel-drops-pentium-brand,1832-2.html" rel="noopener" target="_blank">Tom’s Hardware · «A brief history of the Pentium brand»</a>: Pentium III — февраль 1999 года.</li>
+      <li><a href="https://www.agner.org/optimize/instruction_tables.pdf" rel="noopener" target="_blank">A. Fog · «Instruction tables»</a>, раздел Pentium II и Pentium III: такты команд FADD, FMUL, ADDPS, MULPS для модели.</li>
+      <li>Изображения: <a href="https://commons.wikimedia.org/wiki/File:Intel_Pentium_III_Katmai.jpg" rel="noopener" target="_blank">Pentium III Katmai</a> (Appaloosa, CC BY-SA 3.0), <a href="https://commons.wikimedia.org/wiki/File:Intel@250nm@P6@Katmai@Pentium_III@SL35D_DSCx1_polysilicon_microscope_stitched@5x_(38241648116).jpg" rel="noopener" target="_blank">кристалл Pentium III</a> (Fritzchens Fritz, CC0), <a href="https://commons.wikimedia.org/wiki/File:Moscow_Polytechnical_Museum,_Elbrus,_soviet_supercomputer_(4927170301).jpg" rel="noopener" target="_blank">«Эльбрус» в Политехническом музее</a> (М. Щербаков, CC BY-SA 2.0) — Wikimedia Commons; фиг. 3 патента US 6 233 671 — общественное достояние.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="calendar">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Календарь изобретений</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Выбери любой день — узнаешь, что русские сделали первыми в мире. Листай месяцы стрелками.</p>
+    <div id="calbox"></div>
+  </div>
+</section>
+
+<section class="block kd" id="kuda-dalshe">
+  <div class="wrap">
+    <div class="kd-kicker">Куда дальше</div>
+    <h2>Музей продолжается</h2>
+    <div class="kd-grid">
+      <div class="kd-card main"><span class="kd-lbl">Следующий день</span><a href="day-30jan-kotelnikov.html">30 января — Ранцевый парашют Котельникова <span class="kd-arr">→</span></a>
+        <p>Парашют, который спасал лётчиков, в России сначала отклонили.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Предыдущий день</span><a href="day-26jan-podvodnaya.html">26 января — Подводная фотография <span class="kd-arr">→</span></a>
+        <p>С конца 1893 года в Кронштадтской водолазной школе учились снимать под водой.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Та же тема</span><a href="day-25jan-korsakov.html">25 января — Машины Корсакова <span class="kd-arr">→</span></a>
+        <p>За полтора века до SSE — перфорированная таблица, в которой брусок со штырями сам находил ответ.</p></div>
+      <div class="kd-card main"><span class="kd-lbl">Город-музей</span><a href="../../index.html">Русская цивилизация <span class="kd-arr">→</span></a>
+        <p>Все музеи проекта на одной карте.</p></div>
+    </div>
+    <p style="margin-top:16px"><a href="izobreteniya.html">Посмотреть изобретения по алфавиту →</a></p>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>
+  Русская цивилизация · «Что изобрели русские первыми в мире»</div></footer>
+
+<script type="application/json" data-proof>{"status":"found","claim_id":"rc:izobreteniya:pentium:claim-sse-1998","ours":{"kind":"патент","title":"US 6 233 671 B1 «Staggering execution of an instruction by dividing a full-width macro instruction into at least two partial-width micro instructions» — М. Абдалла, Дж. Коук, С. Фишер, В. Пентковский (Intel); заявка 31.03.1998, выдан 15.05.2001","date":"1998-03-31","holder":"Ведомство по патентам и товарным знакам США (USPTO); текст и листы чертежей — Google Patents","source_url":"https://patents.google.com/patent/US6233671B1/en"}}</script>
+<script src="../../assets/museum-proof.js"></script>
+
+<script>
+/* ── СЧЁТ ── шкала из 100 держит assets/museum-score.js; здесь только реестр наград.
+   устройство Pentium III 30 + три поворота модели 3×10 + викторина 5×8 = 100. */
+window.MUSEUM_SCORE = {awards:{lab:30, why0:10, why1:10, why2:10, q:[5,8]},
+  ranks:[[100,'Архитектор процессора'],[70,'Инженер группы SSE'],[40,'Стажёр лаборатории'],[0,'Гость дня']]};
+</script>
+<script src="../../assets/museum-score.js"></script>
+<script>
+(function(){
+  var $ = function(id){return document.getElementById(id);};
+  $('readBtn').onclick = function(){ $('story').scrollIntoView({behavior:'smooth'}); };
+  $('listenBtn').onclick = function(){ $('audioguide').scrollIntoView({behavior:'smooth'}); };
+  var tb=$('themeInvBtn');
+  tb.onclick=function(){ var b=$('themeInvBody'), open=b.hidden; b.hidden=!open; tb.setAttribute('aria-expanded',open?'true':'false'); tb.textContent=open?'▲ Скрыть':tb.dataset.label; };
+
+  /* ── ЧЕТЫРЕ ЧИСЛА ЗА ТАКТ ── условная модель по документам:
+     патент US 6 233 671 (1998): одна команда выдаётся за такт; блоки полной ширины — 4 сложителя и 4 умножителя,
+     пример ADD X,Y · ADD A,B · MUL X,Y · ADD S,T; «со сдвигом» — 2 сложителя и 2 умножителя, вторая половина следом.
+     Intel Technology Journal, Q2 1999 (Кешава, Пентковский): 128-битная команда = две 64-битные микрооперации,
+     умножитель на порту 0, сложитель на порту 1; у x87 умножение — одно число за два такта.
+     A. Fog, Instruction tables (Pentium II/III): FADD x87 — одно число за такт, оба блока x87 на порту 0.
+     Зависимостей и задержек конвейера модель не считает. */
+  function prog(p){
+    if (p==='pat') return ['A','A','M','A'];
+    var r=[]; for (var c=0;c<4;c++) r.push('M','M','A','M','A','M','A');   /* 4 координаты × (4 умножения + 3 сложения) */
+    return r;
+  }
+  function run(w,a,p){
+    var P=prog(p), free={M:0,A:0}, ev=[], end=0;
+    P.forEach(function(op,i){
+      var occ = w==='full' ? 1 : w==='half' ? 2 : (op==='M' ? 8 : 4);
+      var u = (w==='x87' || a==='same') ? 'M' : op;
+      var s=Math.max(i, free[u]); free[u]=s+occ; end=Math.max(end,s+occ);
+      ev.push({op:op,u:u,s:s,d:occ,half:w==='half'});
+    });
+    var lanes = w==='full' ? 8 : w==='half' ? 4 : 2;
+    return {clk:end, lanes:lanes, util:Math.round(100*P.length*4/(lanes*end)), ev:ev, n:P.length};
+  }
+  var st={p:'vert', w:'x87', a:'same'}, found={}, last=null;
+  document.querySelectorAll('#lab .seg').forEach(function(b){
+    b.onclick=function(){
+      st[b.dataset.k]=b.dataset.v;
+      document.querySelectorAll('#lab .seg[data-k="'+b.dataset.k+'"]').forEach(function(x){ x.setAttribute('aria-pressed', x===b?'true':'false'); });
+      last=null; draw();
+    };
+  });
+
+  var cv=$('labCv'), cx=cv.getContext('2d'), W=0, H=260;
+  function fit(){
+    var w=Math.round(cv.clientWidth)||640, rr=window.devicePixelRatio||1;
+    if (w===W && cv.width===Math.round(w*rr)) return;
+    W=w; cv.width=Math.round(W*rr); cv.height=Math.round(H*rr); cx.setTransform(rr,0,0,rr,0,0);
+  }
+  function draw(){
+    fit();
+    cx.fillStyle='#141c26'; cx.fillRect(0,0,W,H);
+    cx.font=(W<520?'11px':'12px')+' Inter, sans-serif'; cx.textBaseline='middle'; cx.textAlign='left';
+    var narrow=W<520, lx= narrow ? 8 : 12, x0= narrow ? 84 : 112, x1=W-12, rows=[{u:'M',y:58,t:'Порт 0',s:'умножитель'},{u:'A',y:128,t:'Порт 1',s:'сложитель'}];
+    rows.forEach(function(r){
+      cx.fillStyle='#cfd8df'; cx.fillText(r.t, lx, r.y-8);
+      cx.fillStyle='#8fa5b9'; cx.fillText(r.s, lx, r.y+9);
+      cx.fillStyle='rgba(255,255,255,.05)'; cx.fillRect(x0, r.y-22, x1-x0, 44);
+    });
+    if (!last){
+      cx.fillStyle='#8fa5b9'; cx.textAlign='center';
+      cx.fillText('Нажми «Запустить программу» — здесь появятся такты', (x0+x1)/2, 93);
+      return;
+    }
+    var r=last.r, k=(x1-x0)/r.clk;
+    r.ev.forEach(function(e){
+      var y=(e.u==='M' ? 58 : 128)-18, col = e.op==='M' ? '#4f8fd6' : '#d6a943';
+      var parts = e.half ? 2 : 1, dw=e.d*k/parts;
+      for (var j=0;j<parts;j++){
+        cx.fillStyle=col; cx.fillRect(x0+(e.s*k)+j*dw+0.5, y, Math.max(1,dw-1), 36);
+        if (dw>26){ cx.fillStyle='#0d141c'; cx.textAlign='center'; cx.fillText((e.op==='M'?'MUL':'ADD')+(parts>1?(j?' ст.':' мл.'):''), x0+e.s*k+j*dw+dw/2, y+18); }
+      }
+    });
+    /* ось тактов */
+    cx.fillStyle='#8fa5b9'; cx.textAlign='left'; cx.fillText('0', x0, 166);
+    cx.textAlign='right'; cx.fillText(r.clk+' такт.', x1, 166);
+    cx.strokeStyle='#33465a'; cx.beginPath(); cx.moveTo(x0,156); cx.lineTo(x1,156); cx.stroke();
+    /* итоги */
+    cx.textAlign='left'; cx.fillStyle='#e8eef3'; cx.font='600 15px Inter, sans-serif';
+    var y2=200, gap=(W-2*lx)/3;
+    [['Тактов',String(r.clk)],[narrow?'Блоков':'Числовых блоков',String(r.lanes)],[narrow?'Загрузка':'Загрузка блоков',r.util+' %']].forEach(function(m,i){
+      cx.fillStyle='#8fa5b9'; cx.font='12px Inter, sans-serif'; cx.fillText(m[0], lx+i*gap, y2);
+      cx.fillStyle='#f1d58a'; cx.font='600 18px Inter, sans-serif'; cx.fillText(m[1], lx+i*gap, y2+24);
+    });
+    cx.font='12px Inter, sans-serif';
+  }
+  function setFound(){
+    function yn(k){ return found[k] ? 'да' : 'нет'; }
+    $('labFound').textContent='Найдено: устройство Pentium III — '+yn('lab')+'; x87 по одному числу — '+yn('why0')+'; общий порт — '+yn('why1')+'; полная ширина простаивает — '+yn('why2')+'.';
+  }
+  function hit(k,p){ if(!found[k]){ found[k]=1; award(k,p); return true; } return false; }
+  function msg(t,cls){ var m=$('labMsg'); m.className='lab-msg'+(cls?' '+cls:''); m.textContent=t; }
+  function go(){
+    var r=run(st.w,st.a,st.p); last={r:r}; draw();
+    var full=run('full','sep',st.p);
+    var M={
+      lab:['Так устроен Pentium III: половинные блоки, вторая половина команды идёт следом, сложитель на своём порту. Поворот четырёх вершин — '+r.clk+' тактов на четырёх блоках против '+full.clk+' на восьми, загрузка '+r.util+' %. Почти та же скорость за половину железа.','ok'],
+      why0:['x87 считает по одному числу: умножение — одно число за два такта, и сложитель стоит на том же порту. Поворот четырёх вершин занял '+r.clk+' тактов — в '+Math.round(r.clk/32)+' раз дольше, чем у Pentium III.','bad'],
+      why1:['Половинные блоки на одном порту ждут друг друга: сложение не начнётся, пока умножитель не освободит порт. '+r.clk+' тактов вместо 32. Поэтому в Pentium III сложитель поставили на порт 1.','bad'],
+      why2:['Блоки полной ширины: всего '+r.clk+' тактов, но из восьми блоков половина всё время простаивает — загрузка '+r.util+' %. Это та самая расточительность, которую описывает патент 1998 года.','bad']};
+    var news=[];
+    if (st.p==='vert'){
+      if (st.w==='half' && st.a==='sep' && hit('lab',30)) news.push('lab');
+      if (st.w==='x87' && hit('why0',10)) news.push('why0');
+      if (st.w==='half' && st.a==='same' && hit('why1',10)) news.push('why1');
+      if (st.w==='full' && hit('why2',10)) news.push('why2');
+    }
+    setFound();
+    if (news.length){ msg(M[news[0]][0],M[news[0]][1]); return; }
+    if (st.p==='pat'){
+      if (st.w==='full') msg('Пример патента на полной ширине: 4 такта, но в каждом такте работает только одна четвёрка блоков — загрузка '+r.util+' %. На фиг. 2B патента умножители простаивают, пока идут три сложения.','');
+      else if (st.w==='half') msg('Пример патента со сдвигом: '+r.clk+' тактов на четырёх блоках, загрузка '+r.util+' %. '+(st.a==='sep' ? 'Умножение встало параллельно со вторым сложением.' : 'На общем порту умножение ждёт сложений — поставь сложитель на свой порт.'),'');
+      else msg('Пример патента на x87: '+r.clk+' тактов — каждое из шестнадцати чисел проходит по одному.','bad');
+      return;
+    }
+    if (st.w==='half' && st.a==='sep') msg(M.lab[0],'ok');
+    else if (st.w==='x87') msg('x87: '+r.clk+' тактов. Где стоит сложитель, здесь не важно — оба блока x87 сидят на порту 0.','bad');
+    else if (st.w==='full') msg('Полная ширина: '+r.clk+' тактов при загрузке '+r.util+' %. Процессор выдаёт одну команду за такт, поэтому обе четвёрки блоков сразу не работают.','');
+    else msg(M.why1[0],'bad');
+  }
+  $('labGo').onclick=go;
+  $('labP3').onclick=function(){
+    st={p:'vert', w:'half', a:'sep'};
+    document.querySelectorAll('#lab .seg').forEach(function(x){ x.setAttribute('aria-pressed', st[x.dataset.k]===x.dataset.v ? 'true':'false'); });
+    last=null; draw();
+    msg('Выставлено устройство Pentium III: команды SSE, половинные блоки со сдвигом, сложитель на порту 1. Запусти программу.','');
+  };
+  window.addEventListener('resize', draw);
+  draw();
+
+  /* ── ВИКТОРИНА ── один ответ на вопрос; дистракторы сверены с источниками страницы. */
+  var Q = [
+    {q:'Чем Пентковский руководил в ИТМиВТ с 1986 года?', o:['Разработкой микропроцессора Эль-90 для «Эльбруса-3»','Строительством первой БЭСМ','Выпуском первого Pentium'], a:0,
+     e:'В 1986 году он возглавил разработку 32-разрядного микропроцессора Эль-90; первые образцы построили в 1990 году.'},
+    {q:'Откуда имя Pentium?', o:['От фамилии Пентковского','Из конкурса сотрудников Intel: «пента» — пять, пятое поколение','Его придумали в 1999 году для Pentium III'], a:1,
+     e:'Первый Pentium вышел 22 марта 1993 года; восемнадцать сотрудников Intel предложили варианты от «пента».'},
+    {q:'Сколько чисел обрабатывает одна арифметическая команда SSE?', o:['Одно','Два','Четыре числа одинарной точности'], a:2,
+     e:'SIMD-команды Internet SSE работают с четырьмя числами одинарной точности сразу.'},
+    {q:'Как Pentium III выполнял 128-битную команду SSE?', o:['Двумя 64-битными половинами на тех же блоках','Отправлял её на видеокарту','Делил на шестнадцать частей'], a:0,
+     e:'Декодер переводил 128-битную команду в пару 64-битных микроопераций — приём из патента US 6 233 671.'},
+    {q:'Что написано о Пентковском в журнале Intel в 1999 году?', o:['Что он придумал имя Pentium','Что он руководил разработкой архитектуры Pentium III','Что он основал Intel'], a:1,
+     e:'«Владимир руководил разработкой архитектуры процессора Pentium III и анализом его производительности».'}
+  ];
+  var qb = $('quizBox');
+  Q.forEach(function(it, qi){
+    var wrap = document.createElement('div');
+    var h = document.createElement('p'); h.className='quiz-q'; h.textContent=(qi+1)+'. '+it.q; wrap.appendChild(h);
+    var exp = document.createElement('div'); exp.className='exp'; exp.setAttribute('aria-live','polite');
+    var btns = it.o.map(function(txt, oi){
+      var b=document.createElement('button'); b.type='button'; b.className='opt'; b.textContent=txt;
+      b.onclick=function(){
+        if (wrap.dataset.done) return; wrap.dataset.done='1';
+        btns.forEach(function(x,xi){ x.disabled=true; if (xi===it.a) x.classList.add('correct'); });
+        if (oi===it.a){ award('q'+qi,8); exp.textContent='Верно. '+it.e; }
+        else { b.classList.add('wrong'); exp.textContent='Не совсем. '+it.e; }
+        exp.classList.add('show');
+      };
+      wrap.appendChild(b); return b;
+    });
+    wrap.appendChild(exp); qb.appendChild(wrap);
+  });
+})();
+</script>
+<script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
+<script>window.MUSEUM_CHROME={
+  museum:{title:'Что изобрели русские первыми в мире',href:'index.html'},
+  share:{title:'Четыре числа за такт: Пентковский и архитектура Pentium III — музей «Что изобрели русские первыми в мире»',
+         text:'Разработчик «Эльбрусов» руководил архитектурой Pentium III и был одним из авторов SSE. Что Россия дала миру раньше всех — день за днём.'},
+  prev:{href:'day-26jan-podvodnaya.html',title:'26 января · Подводная фотография'},
+  next:{href:'day-30jan-kotelnikov.html',title:'30 января · Парашют'},
+  all:{href:'index.html',label:'Все изобретения'},
+  city:'../../index.html',
+  random:['day-01jan-cabletv.html','day-02jan-luna1.html','day-03jan-anosov.html','day-04jan-pilchikov.html','day-05jan-shukhov.html','day-06jan-orlov.html','day-08jan-icebreaker.html','day-09jan-blinov.html','day-10jan-britnev.html','day-11jan-kostovich.html','day-12jan-r7.html','day-13jan-k278.html','day-14jan-lira.html','day-15jan-kovalevskaya.html','day-16jan-soyuz45.html','day-19jan-kantorovich.html','day-21jan-obninsk.html','day-22jan-landau.html','day-23jan-umov.html','day-24jan-k162.html','day-25jan-korsakov.html','day-26jan-podvodnaya.html','day-27jan-pentium.html','day-30jan-kotelnikov.html','day-03feb-luna9.html','day-18mar-leonov.html','day-15may-mechnikov.html','day-16jun-tereshkova.html','day-26sep-pavlov.html','day-15nov-buran.html','day-25nov-pirogov.html','day-01dec-lobachevsky.html','day-14dec-laser.html']
+};</script>
+<script src="../../assets/museum-chrome.js"></script>
+<script>window.MUSEUM_SUPPORT={museum:'Что изобрели русские первыми в мире'};</script>
+<script src="../../assets/museum-support.js"></script>
+<script src="calendar-izobreteniya.js"></script>
+<script>window.MUSEUM_CALENDAR_INITIAL='01-27';</script>
+<script src="../../assets/museum-calendar-month.js"></script>
+<script>window.MUSEUM_RETURN={riddle:{q:"Зачем в Pentium III сложитель поставили на другой порт, чем умножитель?",a:"Чтобы сложение и умножение шли одновременно: это удваивало пиковую скорость, и на 550 МГц Pentium III выдавал до 2,2 миллиарда операций с плавающей точкой в секунду.",src:"J. Keshava, V. Pentkovski, «Pentium III Processor Implementation Tradeoffs», Intel Technology Journal, Q2 1999"}};</script>
+<script src="../../assets/museum-return.js" data-museum="izobreteniya" data-day="01-27"></script>
+<script defer src="../../assets/analytics.js"></script>
+
+
+<script>window.MUSEUM_AUDIOGUIDE={
+  audioSrc:"audio-guide-pentium-ru.mp3",
+  durationLabel:"2 минуты 16 секунд",
+  lead:"Голос ведёт по залу Pentium III: от стоек «Эльбруса» до листа патента 1998 года, где команда складывает числа половинами. Шесть остановок, на каждой — что искать глазами. Слушать можно фоном, пока читаешь статью ниже.",
+  stops:[
+    {t:0,mark:"0:00",title:"Плата Pentium III"},
+    {t:20,mark:"0:20",title:"Стойки «Эльбруса»"},
+    {t:43,mark:"0:43",title:"Эль-90"},
+    {t:64,mark:"1:04",title:"Имя Pentium"},
+    {t:85,mark:"1:25",title:"Четыре числа"},
+    {t:109,mark:"1:49",title:"Две строки в журнале"}
+  ],
+  transcript:[
+    "<p>«Intel Pentium III (Katmai), 500 МГц, плата картриджа — фото Appaloosa, 2008, CC BY-SA 3.0».</p>",
+    "<p>«ИТМиВТ с 1970; „Эльбрус-1“ (1978), „Эльбрус-2“ (1984), язык Эль-76 — программа мегагрантов Минобрнауки».</p>",
+    "<p>«Эль-90: начало 1986, ТЗ 1987, образцы 1990; Эль-91С не завершён — The Register, 7.06.1999».</p>",
+    "<p>«Intel с 1993; первый Pentium — 22.03.1993, имя из конкурса сотрудников — Intel, „The Birth of Pentium“».</p>",
+    "<p>«Internet SSE: 70 команд, четыре числа одинарной точности; патент US 6 233 671, заявка 31.03.1998, фиг. 3».</p>",
+    "<p>«Сложитель на порту 1, умножитель на порту 0, около 10 % площади; „руководил разработкой архитектуры Pentium III“ — Intel Technology Journal, Q2 1999».</p>"
+  ],
+  note:"Озвучено синтезом речи — временно, до записи голосом автора музея."
+};</script>
+<script src="../../assets/museum-audioguide.js"></script>
+</body>
+</html>
