@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="ru" data-museum="izobreteniya">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Вектор Умова, 1874 — Что изобрели русские первыми в мире, 23 января</title>
+<!--
+  Страница дня 23 января. Наряд stranicy-izob-0910 (claude2, 12.10.2026), карточка #762.
+  Форма — вариант А музея изобретений (Сергей 12.09.2026): лента ударов, подробности свёрнуты.
+  Паспорт выпуска: rc-museum-production/izobreteniya/day-23jan-umov/passport/issue.json
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --dark:#060c17; --dark2:#0c1826; --surface:#111f33;
+    --card:rgba(255,255,255,.05); --card-b:rgba(255,255,255,.09);
+    --gold:#c9a84c; --gold-l:#e4c97a; --gold-g:rgba(201,168,76,.13);
+    --ink:#e8eef5; --muted:#7a9ab8; --line:rgba(255,255,255,.07);
+    --accent:#2d8cbf; --accent2:#1f6f8b;
+    /* legacy compat */
+    --paper:#0c1826; --paper2:#111f33;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Inter','Segoe UI',sans-serif;color:var(--ink);background:var(--dark);line-height:1.72}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.13;margin:0}
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent)}
+
+  /* ── ШАПКА ── */
+  header.top{background:rgba(6,12,23,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--card-b);color:#fff;position:sticky;top:0;z-index:30}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+  .logo svg{display:block;filter:drop-shadow(0 0 8px rgba(201,168,76,.4))}
+  .logo .lt{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:16px}
+  .logo .lt small{display:block;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-family:'Inter',sans-serif}
+  .score{background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:6px 16px;font-size:13px;color:var(--gold-l);cursor:pointer;font-family:'Inter',sans-serif}
+  .score-info{position:absolute;right:12px;top:66px;max-width:260px;background:#0e1c30;color:var(--ink);border:1px solid var(--card-b);border-radius:14px;padding:14px 16px;font-size:13px;line-height:1.6;box-shadow:0 20px 60px rgba(0,0,0,.6);display:none;z-index:40}
+  .score-info.show{display:block}
+
+  /* ── HERO — СТАНДАРТ (не менять): 3D-сцена сверху, текст отдельным блоком ниже ── */
+  .hero-scene{position:relative;height:52vh;min-height:300px;max-height:520px;overflow:hidden;background:linear-gradient(160deg,#0a1e3a 0%,#1a3a6a 55%,#0d2240 100%)}
+  .hero-scene canvas.scene,.hero-scene img.scene{width:100%;height:100%;display:block;object-fit:cover}
+  .scene-caption{background:#060d18;padding:11px 0 12px}
+  .scene-caption .wrap{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+  .scene-cap{font-size:13.5px;line-height:1.6;color:var(--muted);border-left:2px solid rgba(201,168,76,.4);padding-left:14px;flex:1 1 420px}
+  .scene-hint{flex:0 0 auto;font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.4px;color:#e4c97a;
+    background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.34);border-radius:24px;padding:7px 16px;font-weight:600}
+  .hero-lead{background:linear-gradient(180deg,#0c1826 0%,#060c17 100%);color:#fff;padding:28px 0 38px}
+  .hero-lead .museum{color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:12px;opacity:.9}
+  .hero-lead .who{font-family:'Inter',sans-serif;font-size:clamp(13px,3vw,15px);letter-spacing:.4px;color:var(--accent-l,#7dc8ff);margin-bottom:10px}
+  .hero-lead .who i{font-style:normal;color:#7893ab;font-weight:400}
+  .hero-lead h1{color:#fff;font-size:56px;font-weight:900;line-height:1.04;margin-bottom:16px}
+  .hero-lead .hook{color:#b8ccde;font-size:19px;max-width:580px;margin-bottom:28px;line-height:1.65;font-weight:400}
+  .hero-lead .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+  @media(max-width:680px){.hero-lead h1{font-size:34px}.hero-lead .hook{font-size:16px}
+    .hero-scene{height:34vh;min-height:230px;max-height:300px}
+    .scene-caption .wrap{flex-direction:column;gap:9px}
+    .scene-hint{order:-1;align-self:flex-start;font-size:11.5px;padding:6px 13px}
+    .scene-cap{font-size:12.8px;flex:1 1 auto}}
+  .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:16px;font-family:'Inter',sans-serif;letter-spacing:.5px}
+
+  /* ── НАВИГАЦИЯ ДНЯ ── */
+  .daynav{position:sticky;top:64px;z-index:25;background:rgba(6,12,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-b)}
+  .daynav .wrap{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+  .daynav::-webkit-scrollbar{display:none}
+  .daynav a{flex:0 0 auto;padding:14px 20px;font-size:11px;font-weight:700;font-family:'Inter',sans-serif;color:var(--muted);text-decoration:none;white-space:nowrap;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:.18s}
+  .daynav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+  /* ── СЕКЦИИ ── */
+  section.block{padding:64px 0;border-bottom:1px solid var(--line);scroll-margin-top:130px}
+  .kicker{font-size:10px;text-transform:uppercase;letter-spacing:3.5px;color:var(--gold);font-weight:700;font-family:'Inter',sans-serif;margin-bottom:8px}
+  section.block h2{font-size:34px;color:#fff;margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink)}
+  .pull{background:var(--gold-g);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 14px 14px 0;font-style:italic;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-size:20px;line-height:1.5;margin:26px 0}
+
+  /* ── КНОПКИ ── */
+  .btn{cursor:pointer;border:none;border-radius:12px;padding:14px 26px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;background:var(--accent2);color:#fff;transition:.18s;letter-spacing:.2px}
+  .btn:hover{filter:brightness(1.18)}
+  .btn.ghost{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid var(--card-b)}
+  .btn.ghost:hover{background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.2)}
+  .btn.gold{background:linear-gradient(135deg,var(--gold),#b8882b);color:#1a0f00;box-shadow:0 4px 20px rgba(201,168,76,.25)}
+  .btn.gold:hover{filter:brightness(1.1);box-shadow:0 6px 28px rgba(201,168,76,.4)}
+  .btn:active{transform:translateY(1px)}
+  .pulse{animation:pulse .9s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+
+  /* ── КАРТОЧКИ ── */
+  .card{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:20px 22px;margin:16px 0;backdrop-filter:blur(6px)}
+
+  /* ── КВИЗ ── */
+  .opt{display:block;width:100%;text-align:left;background:rgba(255,255,255,.04);border:1px solid var(--card-b);border-radius:12px;padding:13px 16px;margin:8px 0;cursor:pointer;font-size:15px;color:var(--ink);font-family:'Inter',sans-serif;transition:.16s}
+  .opt:hover{border-color:var(--accent);background:rgba(45,140,191,.08)}
+  .opt.correct{background:rgba(40,120,60,.18);border-color:#3f9b52;color:#7ed4a0;font-weight:600}
+  .opt.wrong{background:rgba(180,40,40,.13);border-color:#c0453f;color:#f08080}
+  .exp{margin-top:10px;font-size:14px;background:var(--gold-g);border-radius:10px;padding:12px 14px;display:none;color:var(--gold-l)}
+  .exp.show{display:block}
+
+  /* ── ИТОГ ДНЯ ── */
+  .day-result{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:22px 24px;max-width:460px}
+  .dr-rank{font-family:'Playfair Display',Georgia,serif;font-size:28px;color:var(--gold-l);font-weight:700}
+  .dr-score{font-size:16px;margin:4px 0 12px;color:var(--ink)}.dr-score span{color:var(--muted);font-size:14px}
+  .dr-bar{height:8px;background:rgba(255,255,255,.08);border-radius:6px;overflow:hidden}
+  .dr-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),var(--gold));transition:width .6s cubic-bezier(.2,.7,.2,1)}
+  .dr-note{margin-top:12px;font-size:14px;color:var(--muted)}
+
+  /* ── РЕКЛАМНЫЕ СЛОТЫ ── */
+  .ad-slot{position:relative;margin:26px 0;background:rgba(255,255,255,.02);border:1px dashed rgba(255,255,255,.1);border-radius:14px;min-height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px}
+  .ad-slot .lbl{position:absolute;top:7px;right:12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.15);font-family:'Inter',sans-serif}
+  .ad-slot .ph-txt{font-size:12px;max-width:80%;color:rgba(255,255,255,.18)}
+  .ad-slot.billboard{min-height:108px}
+  .adband{background:transparent;border-bottom:none}
+
+  footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
+  .crumbs{background:rgba(6,12,23,.6);border-bottom:1px solid var(--card-b);font-family:'Inter',sans-serif;font-size:12.5px}
+  .crumbs .wrap{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  .crumbs a{color:var(--gold-l);text-decoration:none;white-space:nowrap}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--muted);opacity:.6}
+  .crumbs .here{color:var(--muted);white-space:nowrap}
+
+
+  /* ── ШАПКА: четыре строки по museum-core §6-бис ── */
+  header.top{display:block;text-align:center;padding:10px 12px 8px;height:auto;position:relative}
+  header.top .b1{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:15px;letter-spacing:.5px;color:#fff}
+  header.top .b2{font-size:11px;color:var(--muted);margin-top:2px}
+  header.top .b3{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:6px}
+  header.top .b4{font-size:12.5px;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-style:italic}
+  header.top .score{position:absolute;right:12px;top:10px}
+  .daynav{top:0}
+  .hero-scene{background:#0e1c2c;height:38vh;min-height:250px;max-height:400px}
+  @media(max-width:680px){.hero-lead h1{font-size:31px}}
+  .hero-scene img.scene{object-fit:cover;object-position:50% 42%}
+  .date-origin{font-size:13px;color:#9fb4c8;margin:-6px 0 12px;max-width:62ch}
+  .hero-lead .hook{color:#c6d8e8;max-width:62ch}
+  .hero-under{background:linear-gradient(180deg,#060d18,#060c17);padding:4px 0 22px}
+  .stamp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(125,200,255,.28);margin-top:14px}
+  .stamp>div{padding:11px 12px;border-left:1px solid rgba(125,200,255,.16);min-width:0}
+  .stamp>div:first-child{border-left:0}
+  .stamp .v{font-size:clamp(15px,3.4vw,21px);font-weight:700;color:#8fd3ff;line-height:1.1;overflow-wrap:anywhere}
+  .stamp .k{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#8fa5b9;margin-top:5px}
+  @media(max-width:600px){.stamp{grid-template-columns:repeat(2,minmax(0,1fr))}.stamp>div:nth-child(3){border-left:0}.stamp>div:nth-child(n+3){border-top:1px solid rgba(125,200,255,.16)}}
+
+  /* ── ЛЕНТА УДАРОВ (museum-inventions, вариант А; museum-core §5-бис) ── */
+  .udary{list-style:none;margin:18px 0 0;padding:0;counter-reset:u}
+  .udary>li{border-top:1px solid var(--line);padding:4px 0}
+  .udary details>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:34px 1fr;gap:10px;padding:12px 0;font-size:17px;line-height:1.55;color:var(--ink)}
+  .udary details>summary::-webkit-details-marker{display:none}
+  .udary details>summary::before{counter-increment:u;content:counter(u);font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:20px;color:var(--gold);line-height:1.3}
+  .udary .more-lbl{display:block;grid-column:2;font-size:12.5px;color:var(--gold-l);letter-spacing:.3px;margin-top:4px}
+  .udary .more-lbl::after{content:' ▾'}
+  .udary details[open] .more-lbl::after{content:' ▴'}
+  .udary details[open] .more-lbl .o{display:none}
+  .udary details:not([open]) .more-lbl .c{display:none}
+  .udary summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+  .udary .det{margin:0 0 14px 44px;padding:12px 16px;background:rgba(255,255,255,.035);border-left:2px solid rgba(201,168,76,.45);border-radius:0 10px 10px 0;font-size:15px;color:#d5e0ea}
+  .udary .det p{margin:8px 0}
+  .udary .tag{display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1a0f00;background:var(--gold-l);border-radius:6px;padding:1px 7px;margin-right:6px}
+  .udary .find{border-left:3px solid var(--gold);padding-left:8px}
+  figure.fig{margin:18px 0}
+  figure.fig img{max-width:100%;height:auto;border-radius:10px;display:block}
+  figure.fig figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5}
+  .src-note{font-size:12px;color:#8fa5b9}
+
+  /* ── МОДЕЛЬ ДНЯ (главное предметное действие) ── */
+  .lab{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:18px 18px 20px;margin-top:14px}
+  .lab-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+  .lab-row .lbl{flex:0 0 100%;font-size:13px;color:var(--muted);letter-spacing:.3px}
+  .seg{cursor:pointer;border:1px solid var(--card-b);background:rgba(255,255,255,.04);color:var(--ink);border-radius:10px;padding:10px 14px;font:inherit;font-size:14.5px;min-height:44px}
+  .seg[aria-pressed="true"]{border-color:var(--gold);background:var(--gold-g);color:var(--gold-l);font-weight:600}
+  .seg:focus-visible,.btn:focus-visible,.opt:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .lab-stage{position:relative;margin-top:12px}
+  .lab-stage canvas{width:100%;height:auto;display:block;border-radius:10px;background:#1c2530}
+  .lab-cap{font-size:12px;color:#8fa5b9;margin-top:6px}
+  .lab-msg{margin-top:12px;font-size:15.5px;padding:12px 14px;border-radius:10px;background:rgba(255,255,255,.04);border-left:3px solid var(--card-b);min-height:48px}
+  .lab-msg.ok{border-left-color:#3f9b52;background:rgba(40,120,60,.14)}
+  .lab-msg.bad{border-left-color:#c0453f;background:rgba(180,40,40,.10)}
+  .lab-found{font-size:13px;color:var(--muted);margin-top:8px}
+  .lab-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .noscript-box{background:rgba(255,255,255,.04);border:1px dashed var(--card-b);border-radius:12px;padding:12px 16px;font-size:15px}
+
+  /* ── ГРАНИЦА ПЕРВЕНСТВА ── */
+  .border-box{background:rgba(45,140,191,.08);border:1px solid rgba(45,140,191,.3);border-radius:14px;padding:16px 18px}
+  .border-box b{color:#8fd3ff}
+  .ctx{width:100%;border-collapse:collapse;margin-top:14px;font-size:14.5px}
+  .ctx th,.ctx td{text-align:left;padding:9px 8px;border-top:1px solid var(--line);vertical-align:top}
+  .ctx th{color:var(--gold-l);font-weight:600;font-size:12.5px;letter-spacing:.5px}
+  .quiz-q{margin:18px 0 6px;font-weight:600}
+  .sources a{color:var(--gold-l)}
+  .sources li{margin:6px 0;font-size:14px;color:#c8d6e2}
+  @media(max-width:600px){header.top{padding:8px 64px 6px}header.top .score{top:8px;right:8px;padding:4px 10px;font-size:12px}header.top .b3{margin-top:3px}
+    .hero-scene{height:26vh;min-height:200px;max-height:260px}.date-origin{font-size:12px;margin:-8px 0 8px}.hero-lead{padding:18px 0 26px}.hero-lead .date-chip{margin-bottom:12px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+  /* ── ПОЛЗУНКИ МОДЕЛИ (19, 21 янв) ── */
+  .mtab{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+  .mrow{display:grid;grid-template-columns:minmax(150px,1.2fr) 2fr 92px;gap:12px;align-items:center}
+  .mrow .mname{font-size:14.5px}
+  .mrow .mname i{font-style:normal;color:var(--muted);font-size:13px}
+  .mrow input[type=range]{width:100%;accent-color:var(--gold);min-height:44px}
+  .mrow output{font-size:14px;color:var(--gold-l);text-align:right}
+  .mrow.off{opacity:.45}
+  .mult{margin-top:14px;padding:14px 16px;border-radius:12px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25)}
+  @media(max-width:560px){.mrow{grid-template-columns:1fr 70px}.mrow .mname{grid-column:1/-1}}
+</style>
+<meta name="description" content="В 1874 году Николай Умов первым описал энергию как поток: у неё есть плотность в каждой точке и скорость, а поток равен их произведению.">
+<link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-23jan-umov.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Русская цивилизация">
+<meta property="og:title" content="Энергия течёт: вектор Умова, 1874">
+<meta property="og:description" content="В 1874 году Николай Умов первым описал энергию как поток: у неё есть плотность в каждой точке и скорость, а поток равен их произведению.">
+<meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-23jan-umov.html">
+<meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-23jan-umov-zeitschrift.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Энергия течёт: вектор Умова, 1874", "description": "В 1874 году Николай Умов первым описал энергию как поток: у неё есть плотность в каждой точке и скорость, а поток равен их произведению.", "url": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-23jan-umov.html", "inLanguage": "ru", "isPartOf": {"@type": "WebSite", "name": "Музей «Что изобрели русские первыми в мире»"}, "publisher": {"@type": "Organization", "name": "Русская цивилизация"}, "about": {"@type": "ScholarlyArticle", "name": "Уравнения движения энергии в телах", "author": {"@type": "Person", "name": "Николай Умов"}, "datePublished": "1874"}, "image": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-23jan-umov-zeitschrift.jpg"}</script>
+</head>
+<body>
+
+<header class="top">
+  <div class="b1">Русская цивилизация</div>
+  <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
+  <div class="b3">Что изобрели русские первыми в мире</div>
+  <div class="b4">365 изобретений. Все русские. Все первые</div>
+  <div class="score" id="scoreBox" title="Баллы знаний за этот день">⭐ <span id="score">0</span> / 100</div>
+</header>
+
+<nav class="crumbs" aria-label="Хлебные крошки"><div class="wrap">
+  <a href="../../index.html">Русская цивилизация</a>
+  <span class="sep">›</span>
+  <a href="index.html">Что изобрели русские первыми в мире</a>
+  <span class="sep">›</span>
+  <span class="here">23 января · Поток энергии, Умов</span>
+</div></nav>
+
+<div class="hero-scene" id="hero" style="background:#d9d3c4">
+  <img class="scene" src="day-23jan-umov-zeitschrift.jpg" style="object-fit:contain" data-source="https://archive.org/details/zeitschriftfurma1918unse/page/418/mode/1up" data-license="Public domain" width="1200" height="407" alt="Страница старого немецкого журнала: заголовок «Ableitung der Bewegungsgleichungen der Energie in continuirlichen Körpern», ниже «Von Nicolaus Umow, Docent an der Universität Odessa»" fetchpriority="high">
+</div>
+
+<div class="scene-caption">
+  <div class="wrap">
+    <div class="scene-cap">«Вывод уравнений движения энергии в сплошных телах» — статья Николая Умова, доцента Одесского университета, в немецком журнале Zeitschrift für Mathematik und Physik, т. 19, 1874, с. 418. Скан экземпляра Иллинойсского университета на archive.org; публикация 1874 года, автор умер в 1915 году — общественное достояние.</div>
+    <span class="scene-hint">Документ · журнальная статья 1874 года</span>
+  </div>
+</div>
+
+<header class="hero-lead">
+  <div class="wrap">
+    <div class="date-chip">23 января · 1846</div>
+    <p class="date-origin">Привязка — день рождения автора: Николай Умов родился 23 января 1846 года по старому стилю (4 февраля по новому) в Симбирске.</p>
+    <div class="who">Николай Умов <i>· физик, Новороссийский (Одесса) и Московский университеты</i></div>
+    <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
+    <h1>Энергия течёт: вектор Умова, 1874</h1>
+    <p class="hook">Умов первым описал энергию как поток с плотностью и скоростью — за десять лет до англичанина Пойнтинга, рядом с которым его имя теперь стоит в названии формулы.</p>
+    <div class="hero-btns">
+      <button class="btn gold" id="readBtn" type="button">Читать историю ↓</button>
+      <button class="btn ghost" id="listenBtn" type="button">🎧 Слушать аудиогид</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero-under">
+  <div class="wrap">
+    <div class="stamp">
+      <div><div class="v">1874</div><div class="k">«Уравнения движения энергии в телах»</div></div>
+      <div><div class="v">J · c</div><div class="k">поток = плотность × скорость</div></div>
+      <div><div class="v">1884</div><div class="k">Пойнтинг — для электромагнитного поля</div></div>
+      <div><div class="v">28,75 м/с</div><div class="k">медленнее энергия в воде не течёт</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="daynav" aria-label="Разделы дня">
+  <div class="wrap">
+    <a href="#story">Читать</a>
+    <a href="#audioguide">Слушать</a>
+    <a href="#games">Зажги лампу</a>
+    <a href="#pervenstvo">Первенство</a>
+    <a href="#quiz">Викторина</a>
+    <a href="#calendar">Календарь</a>
+  </div>
+</nav>
+
+<section class="wrap" id="dokument" data-proof-block></section>
+
+<section class="block" id="audioguide"></section>
+
+<section class="block" id="story">
+  <div class="wrap">
+    <div class="kicker">История первенства · 12 ударов</div>
+    <h2>Энергия, у которой есть скорость</h2>
+    <p style="color:var(--muted);max-width:62ch">Читается подряд. Нажми на удар — откроется подробный разбор с источниками.</p>
+    <ol class="udary">
+      <li><details><summary><span>Николай Умов родился 23 января 1846 года по старому стилю в Симбирске, в семье врача.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>По новому стилю — 4 февраля. Отец, Алексей Павлович, окончил медицинский факультет Казанского университета и был страстным натуралистом: собирал бабочек. В 1858 году семья переехала в Москву.</p>
+          <figure class="fig" style="max-width:300px">
+            <img src="day-23jan-umov-portret.jpg" data-source="https://commons.wikimedia.org/wiki/File:Das_Fotoalbum_f%C3%BCr_Weierstra%C3%9F_2_44_(Nikolay_Umov).jpg" data-license="Public domain" width="600" height="812" loading="lazy" alt="Овальный фотопортрет: молодой мужчина с густыми волнистыми волосами и бородой, в тёмном сюртуке и галстуке-бабочке, смотрит прямо">
+            <figcaption>Николай Умов. Фотография из альбома портретов математиков к 70-летию Карла Вейерштрасса, 1885; на той же странице альбома — Чебышёв, Буняковский, Бугаев. Общественное достояние.</figcaption>
+          </figure>
+          <p class="src-note">Источники: «Они оставили след в истории Одессы», очерк А. Креймера «Умов Николай Алексеевич» (odessa-memory.info); энциклопедия «Кругосвет», «Умов, Николай Алексеевич» (krugosvet.ru).</p>
+        </div></details></li>
+      <li><details><summary><span>В 1867 году он окончил Московский университет, а в 1871-м его позвали преподавать физику в Новороссийский университет в Одессе.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Жил он там поначалу бедно: университет дал две комнаты с условием «не иметь прислуги и не заводить кухни». Здесь Умов подружился с Ильёй Мечниковым и Иваном Сеченовым и отдал Одессе два десятилетия.</p>
+          <p class="src-note">Источники: «Кругосвет»; очерк А. Креймера (odessa-memory.info).</p>
+        </div></details></li>
+      <li><details><summary><span>Теоретическую физику Умов изучал сам — по книгам Ламе, Клебша и Клаузиуса: в русских университетах такого курса тогда не читали.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>«Самообразование во многом определило оригинальность суждений и идей Умова», — пишет «Кругосвет».</p>
+          <p class="src-note">Источник: «Кругосвет» (krugosvet.ru).</p>
+        </div></details></li>
+      <li><details><summary><span>В 1874 году вышла его докторская диссертация «Уравнения движения энергии в телах» — и в том же году её суть он напечатал по-немецки.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Немецкая статья «Ableitung der Bewegungsgleichungen der Energie in continuirlichen Körpern» — «Вывод уравнений движения энергии в сплошных телах» — вышла в журнале Zeitschrift für Mathematik und Physik, том 19, страницы 418–431, за подписью «Nicolaus Umow, Docent an der Universität Odessa». Её первая страница — в начале этого зала.</p>
+          <p class="src-note">Источники: физический факультет МГУ, «Н. А. Умов: наша история» (phys.msu.ru); «Кругосвет»; скан журнала 1874 года на archive.org. Очерк на odessa-memory.info называет годом защиты 1877 — на странице год по МГУ и «Кругосвету» и по самой публикации.</p>
+        </div></details></li>
+      <li><details><summary><span>Умов начал с того, чего до него никто не делал: назвал «плотностью энергии» количество энергии в единице объёма в каждой точке тела.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>В статье это звучит так: «Количество энергии, заключённое в элементе объёма, я буду обозначать J dx dy dz, а под J понимать плотность энергии в точке пространства». Энергию частицы тела он складывал из «живой силы» движения и потенциальной энергии упругости.</p>
+          <p class="src-note">Источник: N. Umow, Zeitschrift für Mathematik und Physik, 1874, т. 19, с. 418–419 (перевод наш); физфак МГУ: Умов «впервые ввёл понятие о скорости и направлении движения энергии, плотности энергии в данной точке среды».</p>
+        </div></details></li>
+      <li class="find"><details><summary><span>Умов первым стал считать энергию тем, что течёт, как жидкость: поток энергии через окошко равен её плотности, умноженной на скорость движения.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p><span class="tag">Находка дня</span>Закон движения энергии он вывел «из аналогичного случая сохранения количества вещества при движении сжимаемой жидкости»: энергия в одном месте может прибыть, только если убыла в соседнем. Количество энергии, которое за единицу времени проходит через единицу площади, у него — произведение J на скорость движения энергии. Это и есть вектор Умова.</p>
+          <p class="src-note">Источник: N. Umow, 1874, с. 418–420 и 430–431 (перевод наш); физфак МГУ; «Кругосвет».</p>
+        </div></details></li>
+      <li><details><summary><span>Для жидкостей Умов вывел, что энергия движется туда же, куда частицы, — поэтому поперечных колебаний в жидкости не бывает.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>«Направление движения энергии в жидких телах совпадает с направлением движения его частиц. Поэтому, например, в жидкости не могут возникать поперечные колебания, что общеизвестно», — пишет он. А поток энергии в жидкости у него равен скорости, умноженной на сумму давления и «живой силы».</p>
+          <p class="src-note">Источник: N. Umow, 1874, с. 427 (перевод наш).</p>
+        </div></details></li>
+      <li><details><summary><span>Он даже посчитал: в воде под давлением в одну атмосферу энергия не может двигаться медленнее 28,75 метра в секунду.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Это наименьшая скорость энергии в несжимаемой жидкости при заданном давлении: по Умову она растёт с давлением и падает с плотностью жидкости.</p>
+          <p class="src-note">Источник: N. Umow, 1874, с. 428 («Für n=1 haben wir für Wasser c = 28,752 Meter in 1″»).</p>
+        </div></details></li>
+      <li><details><summary><span>Сам Умов писал об упругих телах и жидкостях — на электричество и свет свои понятия он не распространил.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Это и есть честная граница первенства: общая мысль о плотности, скорости и потоке энергии — его, а частный случай электромагнитного поля разобрали позже другие.</p>
+          <p class="src-note">Источник: «Кругосвет»: «Сам Умов, однако, не обобщил эти понятия на другие виды энергии, кроме энергии в упругих телах».</p>
+        </div></details></li>
+      <li><details><summary><span>В 1884 году англичанин Джон Пойнтинг ввёл поток энергии электромагнитного поля — и формулу у нас зовут вектором Умова — Пойнтинга.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Пойнтинг описал вектором движение электромагнитной энергии — через десять лет после статьи Умова. Вектор Умова — Пойнтинга, по словам одесского очерка, «ныне знаком каждому первокурснику».</p>
+          <p class="src-note">Источники: физфак МГУ («вектор Умова — Пойнтинга»); «Кругосвет»; очерк А. Креймера (odessa-memory.info): вектор, «ныне знакомый каждому первокурснику».</p>
+        </div></details></li>
+      <li><details><summary><span>В 1893 году Умов вернулся в Москву, а после смерти Столетова в 1896-м возглавил кафедру физики Московского университета.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Вместе с Петром Лебедевым он готовил проект Физического института при университете и 17 лет избирался президентом Московского общества испытателей природы. Андрей Белый, слушавший его лекции, вспоминал, как Умов, «простерши руки», изрекал: «На часах вселенной ударит полночь…»</p>
+          <p class="src-note">Источники: «Кругосвет»; физфак МГУ (цитата из мемуаров А. Белого «На рубеже двух столетий»).</p>
+        </div></details></li>
+      <li><details><summary><span>В 1911 году Умов в знак протеста против министра просвещения Кассо ушёл из университета вместе с группой профессоров; умер он в январе 1915 года.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Скончался в ночь на 15 января 1915 года по старому стилю (28 января по новому), похоронен на Ваганьковском кладбище.</p>
+          <p class="src-note">Источники: «Кругосвет»; физфак МГУ; очерк А. Креймера (odessa-memory.info).</p>
+        </div></details></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block" id="games">
+  <div class="wrap">
+    <div class="kicker">Главное действие · модель</div>
+    <h2>Зажги лампу потоком энергии</h2>
+    <p style="max-width:62ch">Источник слева гонит волну по упругому шнуру, лампа справа горит от того, сколько энергии приходит к ней за секунду. Меняй плотность энергии в волне и скорость её бега: по Умову поток — это плотность, умноженная на скорость. Зажги лампу, а потом выключи источник и смотри, что будет.</p>
+    <div class="lab" id="lab">
+      <div class="mtab">
+        <div class="mrow"><span class="mname">Плотность энергии J <i>· в волне</i></span><input type="range" min="0" max="4" step="0.5" value="1" id="dens" aria-label="Плотность энергии в волне, условные единицы на метр"><output id="oDens" for="dens">1</output></div>
+        <div class="mrow"><span class="mname">Скорость энергии c <i>· м/с</i></span><input type="range" min="0" max="4" step="0.5" value="1" id="spd" aria-label="Скорость движения энергии по шнуру, метров в секунду"><output id="oSpd" for="spd">1 м/с</output></div>
+      </div>
+      <div class="lab-btns">
+        <button class="btn gold" type="button" id="labSrc">Выключить источник</button>
+        <button class="btn ghost" type="button" id="labReset">Начать заново</button>
+      </div>
+      <div class="lab-stage">
+        <canvas id="labCv" width="640" height="220" style="height:220px" role="img" aria-label="Упругий шнур длиной 8 метров: слева источник, справа лампа; по шнуру бежит волна, у лампы показан приходящий поток энергии"></canvas>
+        <div class="lab-cap">Модель, а не опыт Умова: единицы энергии условные, длина шнура 8 м. От Умова здесь только правило: поток энергии через точку равен плотности энергии, умноженной на скорость её движения, и энергия приходит к лампе не мгновенно, а со скоростью c.</div>
+      </div>
+      <div class="lab-msg" id="labMsg" aria-live="polite">Лампе нужен поток 4 единицы в секунду. Сейчас приходит 1 × 1 = 1.</div>
+      <div class="lab-found" id="labFound">Найдено: лампа горит — нет; энергия есть, а потока нет — нет; тот же поток другой парой J и c — нет; энергия ещё в пути — нет.</div>
+      <noscript><div class="noscript-box">Для модели нужен JavaScript. Текстовая версия опыта: лампе нужен поток 4 единицы в секунду. Плотность 1 при скорости 4 м/с даёт 1 × 4 = 4 — лампа горит; плотность 4 при скорости 1 м/с даёт те же 4. Если скорость 0, энергия в шнуре есть, но через лампу она не течёт — поток 0. Если выключить источник, лампа ещё горит, пока хвост волны бежит по шнуру: при 1 м/с — 8 секунд, при 4 м/с — 2 секунды.</div></noscript>
+    </div>
+    <p class="src-note" style="margin-top:10px">Правило «поток = плотность × скорость» — N. Umow, Zeitschrift für Mathematik und Physik, 1874, т. 19, с. 430–431. Числа модели условные.</p>
+  </div>
+</section>
+
+<section class="block" id="pervenstvo">
+  <div class="wrap">
+    <div class="kicker">Проверка факта</div>
+    <h2>Что именно здесь первое в мире</h2>
+    <div class="border-box">
+      <p style="margin-top:0"><b>Граница первенства:</b> первые в мире уравнения движения энергии: плотность энергии в точке, скорость и направление её движения и поток энергии как их произведение — для упругих тел и жидкостей. Н. А. Умов, «Уравнения движения энергии в телах», Одесса, 1874; по-немецки — Zeitschrift für Mathematik und Physik, т. 19, 1874, с. 418–431.</p>
+      <p style="margin-bottom:0"><b>Чего здесь нет:</b> поток энергии электромагнитного поля ввёл не Умов, а англичанин Джон Пойнтинг в 1884 году, и сам Умов свои понятия на электричество и свет не распространял. Сам закон сохранения энергии старше Умова — статья на него и опирается; первенство Умова в том, что энергия у него движется от точки к точке с определённой скоростью.</p>
+    </div>
+    <table class="ctx">
+      <thead><tr><th scope="col">Документ или событие</th><th scope="col">Что</th><th scope="col">Когда</th></tr></thead>
+      <tbody>
+        <tr><td>Н. А. Умов, докторская диссертация</td><td>«Уравнения движения энергии в телах», Одесса</td><td>1874</td></tr>
+        <tr><td>N. Umow, Zeitschrift für Mathematik und Physik 19, 418</td><td>Плотность и скорость энергии, поток — в упругих телах и жидкостях</td><td>1874</td></tr>
+        <tr><td>Дж. Пойнтинг</td><td>Поток энергии электромагнитного поля</td><td>1884</td></tr>
+        <tr><td>Учебники</td><td>Вектор Умова — Пойнтинга</td><td>сегодня</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block" id="quiz">
+  <div class="wrap">
+    <div class="kicker">Проверь себя · 5 вопросов</div>
+    <h2>Викторина</h2>
+    <p style="color:var(--muted);max-width:62ch">На каждый вопрос — одна попытка. После ответа покажем объяснение.</p>
+    <div id="quizBox"></div>
+    <noscript><div class="noscript-box">Для викторины нужен JavaScript. Ответы: 1 — 1874; 2 — плотность энергии, умноженная на скорость её движения; 3 — для электромагнитного поля; 4 — с сохранением количества вещества в движущейся жидкости; 5 — в знак протеста против министра Кассо.</div></noscript>
+  </div>
+</section>
+
+<section class="block" id="result">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Итог дня</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Модель, три находки в ней и викторина вместе дают 100 баллов. Прогресс не сохраняется: перезагрузка страницы начинает день заново.</p>
+    <div class="day-result">
+      <div class="dr-score" id="dayTxt">0 / 100 · звание: Гость дня</div>
+      <div class="dr-bar"><i id="dayBar" style="width:0%"></i></div>
+      <div class="dr-note">Зажги лампу, найди три поворота модели и ответь на вопросы викторины.</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="sources">
+  <div class="wrap">
+    <div class="kicker">Источники</div>
+    <h2>На чём стоит страница</h2>
+    <ul class="sources">
+      <li><a href="https://archive.org/details/zeitschriftfurma1918unse/page/418/mode/1up" rel="noopener" target="_blank">N. Umow · «Ableitung der Bewegungsgleichungen der Energie in continuirlichen Körpern», Zeitschrift für Mathematik und Physik, т. 19, 1874, с. 418–431</a> (на немецком; скан Иллинойсского университета, archive.org): плотность энергии J, скорость и поток энергии, аналогия с сохранением вещества, поток в жидкости, 28,752 м/с для воды.</li>
+      <li><a href="https://www.phys.msu.ru/rus/about/sovphys/ISSUES-2005/1(43)-2005/umov/" rel="noopener" target="_blank">Физический факультет МГУ · «Н. А. Умов: наша история»</a>: диссертация 1874 года и что в ней введено впервые, Пойнтинг 1884, «вектор Умова — Пойнтинга», кафедра после Столетова, воспоминания Андрея Белого.</li>
+      <li><a href="https://web.archive.org/web/20250420200127/https://www.krugosvet.ru/enc/nauka_i_tehnika/fizika/UMOV_NIKOLA_ALEKSEEVICH.html" rel="noopener" target="_blank">Энциклопедия «Кругосвет» · «Умов, Николай Алексеевич»</a> (копия web.archive.org: сайт из нашей сети 12.10 не открывался): дата рождения по двум стилям, Одесса 1871–1893, самообразование, диссертации, граница «не обобщил на другие виды энергии», Пойнтинг, Лебедев, уход в 1911 году.</li>
+      <li><a href="http://odessa-memory.info/ru/index.php?id=706" rel="noopener" target="_blank">«Они оставили след в истории Одессы» · А. Креймер, «Умов Николай Алексеевич (1846–1915)»</a>: семья, переезд в Москву, квартира в Одессе, Мечников и Сеченов, уход из университета, дата смерти.</li>
+      <li>Изображения: <a href="https://archive.org/details/zeitschriftfurma1918unse/page/418/mode/1up" rel="noopener" target="_blank">первая страница статьи Умова, 1874</a> — скан на archive.org, общественное достояние (публикация 1874 года, автор умер в 1915 году); <a href="https://commons.wikimedia.org/wiki/File:Das_Fotoalbum_f%C3%BCr_Weierstra%C3%9F_2_44_(Nikolay_Umov).jpg" rel="noopener" target="_blank">портрет Н. А. Умова из фотоальбома к 70-летию К. Вейерштрасса, 1885</a> — Wikimedia Commons, общественное достояние.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="calendar">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Календарь изобретений</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Выбери любой день — узнаешь, что русские сделали первыми в мире. Листай месяцы стрелками.</p>
+    <div id="calbox"></div>
+  </div>
+</section>
+
+<section class="block kd" id="kuda-dalshe">
+  <div class="wrap">
+    <div class="kd-kicker">Куда дальше</div>
+    <h2>Музей продолжается</h2>
+    <div class="kd-grid">
+      <div class="kd-card main"><span class="kd-lbl">Следующий день</span><a href="day-30jan-kotelnikov.html">30 января — Ранцевый парашют Котельникова <span class="kd-arr">→</span></a>
+        <p>Парашют, который спасал лётчиков, в России сначала отклонили.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Предыдущий день</span><a href="day-22jan-landau.html">22 января — Теория сверхтекучести Ландау <span class="kd-arr">→</span></a>
+        <p>Жидкий гелий сам ползёт вверх по стенке и убегает из чашки — Ландау объяснил почему.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Весь музей</span><a href="index.html">Что изобрели русские первыми <span class="kd-arr">→</span></a>
+        <p>Все изобретения — по залам и по дням года.</p></div>
+      <div class="kd-card main"><span class="kd-lbl">Город-музей</span><a href="../../index.html">Русская цивилизация <span class="kd-arr">→</span></a>
+        <p>Все музеи проекта на одной карте.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>
+  Русская цивилизация · «Что изобрели русские первыми в мире»</div></footer>
+
+<script type="application/json" data-proof>{"status":"found","claim_id":"rc:izobreteniya:umov:claim-potok","ours":{"kind":"журнальная статья (публикация докторской диссертации)","title":"N. Umow. Ableitung der Bewegungsgleichungen der Energie in continuirlichen Körpern","date":"1874","holder":"Zeitschrift für Mathematik und Physik, 1874, т. 19, с. 418–431; по-русски — «Уравнения движения энергии в телах», Одесса, 1874; скан — University of Illinois, archive.org","source_url":"https://archive.org/details/zeitschriftfurma1918unse/page/418/mode/1up"},"rival":{"name":"Джон Пойнтинг, Великобритания","doc_title":"поток энергии электромагнитного поля","date":"1884"},"gap_years":10}</script>
+<script src="../../assets/museum-proof.js"></script>
+
+<script>
+/* ── СЧЁТ ── шкала из 100 держит assets/museum-score.js; здесь только реестр наград.
+   лампа зажжена 30 + три поворота модели 3×10 + викторина 5×8 = 100. */
+window.MUSEUM_SCORE = {awards:{lab:30, why0:10, why1:10, why2:10, q:[5,8]},
+  ranks:[[100,'Профессор Умов'],[70,'Доцент Одесского университета'],[40,'Студент физмата'],[0,'Гость дня']]};
+</script>
+<script src="../../assets/museum-score.js"></script>
+<script>
+(function(){
+  var $ = function(id){return document.getElementById(id);};
+  $('readBtn').onclick = function(){ $('story').scrollIntoView({behavior:'smooth'}); };
+  $('listenBtn').onclick = function(){ $('audioguide').scrollIntoView({behavior:'smooth'}); };
+
+  /* ── ПОТОК ЭНЕРГИИ ── условная модель: шнур 8 м поделён на N ячеек, в каждой — плотность энергии J.
+     Ячейки сдвигаются вправо со скоростью c (м/с); источник слева пишет в первую ячейку текущую J, пока включён.
+     Поток у лампы = J последней ячейки × c (правило Умова, 1874). Лампе нужен поток NEED. */
+  var L=8, N=160, NEED=4;
+  var dens=$('dens'), spd=$('spd');
+  var cells=[], src=true, shift=0, found={}, firstLit=null, offAt=null, offLit=false;
+  function reset(){ cells=[]; for (var i=0;i<N;i++) cells.push(1); shift=0; }   // установившаяся волна J = 1
+  reset();
+  function J(){ return +dens.value; } function C(){ return +spd.value; }
+  function S(){ return cells[N-1]*C(); }
+  function fmt(v){ return (Math.round(v*10)/10).toString().replace('.',','); }
+  var cv=$('labCv'), cx=cv.getContext('2d'), W=0, H=220, phase=0;
+  function fit(){
+    var w=Math.round(cv.clientWidth)||640, r=window.devicePixelRatio||1;
+    if (w===W && cv.width===Math.round(w*r)) return;
+    W=w; cv.width=Math.round(W*r); cv.height=Math.round(H*r); cx.setTransform(r,0,0,r,0,0);
+  }
+  function draw(){
+    fit(); var narrow=W<480, s=S();
+    cx.fillStyle='#0b1622'; cx.fillRect(0,0,W,H);
+    cx.font=(narrow?'12px':'13px')+' Inter, sans-serif'; cx.textAlign='left';
+    var x0=38, x1=W-60, y=90, w=x1-x0;
+    /* источник */
+    cx.fillStyle= src ? 'rgba(228,201,122,.95)' : 'rgba(143,165,185,.5)'; cx.fillRect(8, y-22, 22, 44);
+    cx.fillStyle='#8fa5b9'; cx.fillText(src ? 'источник' : 'выключен', 4, y+40);
+    /* шнур: амплитуда ∝ √J ячейки, фаза бежит со скоростью c */
+    cx.strokeStyle='rgba(125,200,255,.95)'; cx.lineWidth=2.2; cx.beginPath();
+    for (var px=0; px<=w; px+=2){
+      var k=Math.min(N-1, Math.floor(px/w*N)), a=Math.sqrt(cells[k])*16;
+      var yy=y - a*Math.sin((px/w*L*2.2 - phase)*Math.PI);
+      if (px===0) cx.moveTo(x0+px,yy); else cx.lineTo(x0+px,yy);
+    }
+    cx.stroke();
+    /* лампа */
+    var glow=Math.min(1, s/NEED), lx=W-30;
+    cx.fillStyle='rgba(255,220,120,'+(0.1+0.85*glow)+')'; cx.beginPath(); cx.arc(lx, y, 16, 0, 7); cx.fill();
+    if (glow>=1){ cx.strokeStyle='rgba(255,220,120,.5)'; cx.lineWidth=2; cx.beginPath(); cx.arc(lx, y, 24, 0, 7); cx.stroke(); }
+    cx.fillStyle='#8fa5b9'; cx.fillText('лампа', lx-18, y+40);
+    /* подписи */
+    cx.fillStyle='#e8eef5';
+    cx.fillText('У лампы: J = '+fmt(cells[N-1])+' · c = '+fmt(C())+' м/с · поток = '+fmt(s)+' из '+NEED, 12, H-44);
+    cx.fillStyle='#8fa5b9';
+    var inCord=0; for (var i=0;i<N;i++) inCord+=cells[i]*L/N;
+    cx.fillText('В шнуре: '+fmt(inCord)+' ед. энергии · длина '+L+' м', 12, H-22);
+  }
+  function setFound(){
+    function yn(k){ return found[k] ? 'да' : 'нет'; }
+    $('labFound').textContent='Найдено: лампа горит — '+yn('lab')+'; энергия есть, а потока нет — '+yn('why0')+'; тот же поток другой парой J и c — '+yn('why1')+'; энергия ещё в пути — '+yn('why2')+'.';
+  }
+  function hit(k,p){ if(!found[k]){ found[k]=1; award(k,p); } setFound(); }
+  function msg(t,cls){ var m=$('labMsg'); m.className='lab-msg'+(cls?' '+cls:''); m.textContent=t; }
+  var lastMsgKey='';
+  function say(key,t,cls){ if (key!==lastMsgKey){ lastMsgKey=key; msg(t,cls); } }
+  function check(){
+    var s=S(), c=C(), jl=cells[N-1];
+    if (c===0 && J()>0 && src){ hit('why0',10); say('c0','Скорость 0: энергия в шнуре есть, а через лампу не течёт — поток = J × 0 = 0. По Умову мало иметь энергию, ей нужна скорость.','bad'); return; }
+    if (!src && offAt!==null){
+      if (s>=NEED*0.999){ offLit=true; say('off','Источник выключен, а лампа ещё горит: энергия, которая уже в шнуре, бежит к ней со скоростью '+fmt(c)+' м/с. Хвосту волны осталось пробежать до '+L+' м.','ok'); return; }
+      if (offLit && s<0.05){ hit('why2',10); say('dark','Лампа погасла через '+fmt((performance.now()-offAt)/1000)+' с после выключения источника — столько энергии нужно, чтобы пробежать шнур. Энергия не исчезла и не появилась: она двигалась.','ok'); return; }
+      if (!offLit && s<0.05) say('offdark','Источник выключен, но лампа не горела. Включи источник, зажги лампу и выключи снова.','');
+      return;
+    }
+    if (s>=NEED*0.999){
+      hit('lab',30);
+      var pair=fmt(jl)+'×'+fmt(c);
+      if (firstLit===null) firstLit=pair;
+      else if (pair!==firstLit) hit('why1',10);
+      say('lit'+pair,'Лампа горит: поток '+fmt(jl)+' × '+fmt(c)+' = '+fmt(s)+'. '+(pair!==firstLit ? 'Та же лампа, другая пара: густой медленный поток и редкий быстрый дают одно и то же.' : 'Попробуй зажечь её другой парой плотности и скорости.'),'ok');
+      return;
+    }
+    if (jl!==J() && c>0) { say('travel'+J()+c,'Новая плотность уже бежит по шнуру: у лампы пока старая. Энергии нужно время, чтобы добежать.',''); return; }
+    say('low'+J()+c,'У лампы поток '+fmt(jl)+' × '+fmt(c)+' = '+fmt(s)+', а нужно '+NEED+'. Подними плотность или скорость.','');
+  }
+  function update(){ $('oDens').textContent=fmt(J()); $('oSpd').textContent=fmt(C())+' м/с'; }
+  dens.addEventListener('input', update); spd.addEventListener('input', update);
+  $('labSrc').onclick=function(){
+    src=!src; this.textContent= src ? 'Выключить источник' : 'Включить источник';
+    if (!src){ offAt=performance.now(); offLit=S()>=NEED*0.999; lastMsgKey=''; } else { offAt=null; offLit=false; lastMsgKey=''; }
+  };
+  $('labReset').onclick=function(){ reset(); src=true; offAt=null; offLit=false; $('labSrc').textContent='Выключить источник'; dens.value=1; spd.value=1; update(); lastMsgKey=''; msg('Шнур успокоен, источник включён. Уже полученные баллы сохраняются и повторно не начисляются.',''); };
+  var lastT=0;
+  function tick(ts){
+    var dt=lastT ? Math.min(0.1,(ts-lastT)/1000) : 0; lastT=ts;
+    var c=C();
+    shift += c*dt/L*N;
+    while (shift>=1){ cells.pop(); cells.unshift(src ? J() : 0); shift-=1; }
+    phase += c*dt*2.2;
+    draw(); check(); requestAnimationFrame(tick);
+  }
+  update(); requestAnimationFrame(tick);
+
+  /* ── ВИКТОРИНА ── один ответ на вопрос; дистракторы сверены с источниками страницы. */
+  var Q = [
+    {q:'В каком году Умов опубликовал уравнения движения энергии?', o:['1874','1884','1905'], a:0,
+     e:'Докторская диссертация и немецкая статья — 1874 год; 1884-й — год работы Пойнтинга.'},
+    {q:'Что такое поток энергии по Умову?', o:['Плотность энергии, умноженная на скорость её движения','Сумма кинетической и потенциальной энергии','Работа, которую двигатель совершает за секунду'], a:0,
+     e:'Количество энергии, проходящее за единицу времени через единицу площади, у Умова — произведение плотности J на скорость энергии.'},
+    {q:'Для какого случая Пойнтинг в 1884 году ввёл поток энергии?', o:['Для упругих тел','Для электромагнитного поля','Для воды под давлением'], a:1,
+     e:'Упругие тела и жидкости разобрал Умов; Пойнтинг описал движение электромагнитной энергии.'},
+    {q:'С чем Умов сравнил закон движения энергии?', o:['С сохранением количества вещества в движущейся жидкости','С законом всемирного тяготения','С законом Ома'], a:0,
+     e:'Энергия в одном месте может прибыть, только если убыла в соседнем, — как вещество в сжимаемой жидкости.'},
+    {q:'Почему Умов ушёл из Московского университета в 1911 году?', o:['В знак протеста против министра просвещения Кассо','Вышел на пенсию','Вернулся в Одессу'], a:0,
+     e:'Он ушёл вместе с группой профессоров в знак протеста против действий министра Л. А. Кассо.'}
+  ];
+  var box = $('quizBox');
+  Q.forEach(function(it, qi){
+    var wrap = document.createElement('div');
+    var h = document.createElement('p'); h.className='quiz-q'; h.textContent=(qi+1)+'. '+it.q; wrap.appendChild(h);
+    var exp = document.createElement('div'); exp.className='exp'; exp.setAttribute('aria-live','polite');
+    var btns = it.o.map(function(txt, oi){
+      var b=document.createElement('button'); b.type='button'; b.className='opt'; b.textContent=txt;
+      b.onclick=function(){
+        if (wrap.dataset.done) return; wrap.dataset.done='1';
+        btns.forEach(function(x,xi){ x.disabled=true; if (xi===it.a) x.classList.add('correct'); });
+        if (oi===it.a){ award('q'+qi,8); exp.textContent='Верно. '+it.e; }
+        else { b.classList.add('wrong'); exp.textContent='Не совсем. '+it.e; }
+        exp.classList.add('show');
+      };
+      wrap.appendChild(b); return b;
+    });
+    wrap.appendChild(exp); box.appendChild(wrap);
+  });
+})();
+</script>
+<script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
+<script>window.MUSEUM_CHROME={
+  museum:{title:'Что изобрели русские первыми в мире',href:'index.html'},
+  share:{title:'Энергия течёт: вектор Умова — музей «Что изобрели русские первыми в мире»',
+         text:'В 1874 году Николай Умов первым описал энергию как поток с плотностью и скоростью. Что Россия дала миру раньше всех — день за днём.'},
+  prev:{href:'day-22jan-landau.html',title:'22 января · Сверхтекучесть'},
+  next:{href:'day-30jan-kotelnikov.html',title:'30 января · Парашют'},
+  all:{href:'index.html',label:'Все изобретения'},
+  city:'../../index.html',
+  random:['day-01jan-cabletv.html','day-02jan-luna1.html','day-03jan-anosov.html','day-04jan-pilchikov.html','day-05jan-shukhov.html','day-06jan-orlov.html','day-08jan-icebreaker.html','day-09jan-blinov.html','day-10jan-britnev.html','day-11jan-kostovich.html','day-12jan-r7.html','day-13jan-k278.html','day-14jan-lira.html','day-15jan-kovalevskaya.html','day-16jan-soyuz45.html','day-19jan-kantorovich.html','day-21jan-obninsk.html','day-22jan-landau.html','day-23jan-umov.html','day-30jan-kotelnikov.html','day-03feb-luna9.html','day-18mar-leonov.html','day-15may-mechnikov.html','day-16jun-tereshkova.html','day-26sep-pavlov.html','day-15nov-buran.html','day-25nov-pirogov.html','day-01dec-lobachevsky.html','day-14dec-laser.html']
+};</script>
+<script src="../../assets/museum-chrome.js"></script>
+<script>window.MUSEUM_SUPPORT={museum:'Что изобрели русские первыми в мире'};</script>
+<script src="../../assets/museum-support.js"></script>
+<script src="calendar-izobreteniya.js"></script>
+<script>window.MUSEUM_CALENDAR_INITIAL='01-23';</script>
+<script src="../../assets/museum-calendar-month.js"></script>
+<script>window.MUSEUM_RETURN={riddle:{q:"Почему в формулу потока энергии в наших учебниках вписаны две фамилии?",a:"Умов ввёл поток энергии для упругих тел и жидкостей в 1874 году, а Пойнтинг — для электромагнитного поля в 1884-м: формулу зовут вектором Умова — Пойнтинга.",src:"физфак МГУ; «Кругосвет»"}};</script>
+<script src="../../assets/museum-return.js" data-museum="izobreteniya" data-day="01-23"></script>
+<script defer src="../../assets/analytics.js"></script>
+
+<script>window.MUSEUM_AUDIOGUIDE={
+  audioSrc:"audio-guide-umov-ru.mp3",
+  durationLabel:"2 минуты 8 секунд",
+  lead:"Голос ведёт по залу Николая Умова: от одесской квартиры без кухни до журнальной страницы 1874 года, где энергия впервые потекла. Шесть остановок, на каждой — что искать глазами. Слушать можно фоном, пока читаешь статью ниже.",
+  stops:[
+    {t:0,mark:"0:00",title:"Страница 1874 года"},
+    {t:22,mark:"0:22",title:"Две комнаты в Одессе"},
+    {t:45,mark:"0:45",title:"Плотность энергии"},
+    {t:62,mark:"1:02",title:"Энергия течёт"},
+    {t:86,mark:"1:26",title:"Десять лет до Пойнтинга"},
+    {t:106,mark:"1:46",title:"Полночь вселенной"}
+  ],
+  transcript:[
+    "<p>«N. Umow, „Ableitung der Bewegungsgleichungen der Energie in continuirlichen Körpern“, Zeitschrift für Mathematik und Physik, т. 19, 1874, с. 418».</p>",
+    "<p>«23 января (4 февраля) 1846 года — рождение в Симбирске; Одесса с 1871 года; теоретическую физику изучал сам».</p>",
+    "<p>«Плотность энергии J — количество энергии в единице объёма в каждой точке».</p>",
+    "<p>«Энергия течёт, как вещество в жидкости: поток = плотность × скорость».</p>",
+    "<p>«Упругие тела и жидкости, 28,75 м/с в воде; Пойнтинг, 1884 — электромагнитное поле; вектор Умова — Пойнтинга».</p>",
+    "<p>«Кафедра после Столетова, воспоминания Андрея Белого, уход из университета в 1911 году».</p>"
+  ],
+  note:"Озвучено синтезом речи — временно, до записи голосом автора музея."
+};</script>
+<script src="../../assets/museum-audioguide.js"></script>
+</body>
+</html>
