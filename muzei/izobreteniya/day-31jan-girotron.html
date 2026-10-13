@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="ru" data-museum="izobreteniya">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Электроны по спирали: гиротрон Гапонова-Грехова — Что изобрели русские первыми в мире, 31 января</title>
+<!--
+  Страница дня 31 января. Наряд stranicy-izob-0910 (claude2, 13.10.2026), карточка #762.
+  Форма — вариант А музея изобретений (Сергей 12.09.2026): лента ударов, подробности свёрнуты.
+  Паспорт выпуска: rc-museum-production/izobreteniya/day-31jan-girotron/passport/issue.json
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --dark:#060c17; --dark2:#0c1826; --surface:#111f33;
+    --card:rgba(255,255,255,.05); --card-b:rgba(255,255,255,.09);
+    --gold:#c9a84c; --gold-l:#e4c97a; --gold-g:rgba(201,168,76,.13);
+    --ink:#e8eef5; --muted:#7a9ab8; --line:rgba(255,255,255,.07);
+    --accent:#2d8cbf; --accent2:#1f6f8b;
+    /* legacy compat */
+    --paper:#0c1826; --paper2:#111f33;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Inter','Segoe UI',sans-serif;color:var(--ink);background:var(--dark);line-height:1.72}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.13;margin:0}
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent)}
+
+  /* ── ШАПКА ── */
+  header.top{background:rgba(6,12,23,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--card-b);color:#fff;position:sticky;top:0;z-index:30}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+  .logo svg{display:block;filter:drop-shadow(0 0 8px rgba(201,168,76,.4))}
+  .logo .lt{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:16px}
+  .logo .lt small{display:block;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-family:'Inter',sans-serif}
+  .score{background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:6px 16px;font-size:13px;color:var(--gold-l);cursor:pointer;font-family:'Inter',sans-serif}
+  .score-info{position:absolute;right:12px;top:66px;max-width:260px;background:#0e1c30;color:var(--ink);border:1px solid var(--card-b);border-radius:14px;padding:14px 16px;font-size:13px;line-height:1.6;box-shadow:0 20px 60px rgba(0,0,0,.6);display:none;z-index:40}
+  .score-info.show{display:block}
+
+  /* ── HERO — СТАНДАРТ (не менять): 3D-сцена сверху, текст отдельным блоком ниже ── */
+  .hero-scene{position:relative;height:52vh;min-height:300px;max-height:520px;overflow:hidden;background:linear-gradient(160deg,#0a1e3a 0%,#1a3a6a 55%,#0d2240 100%)}
+  .hero-scene canvas.scene,.hero-scene img.scene{width:100%;height:100%;display:block;object-fit:cover}
+  .scene-caption{background:#060d18;padding:11px 0 12px}
+  .scene-caption .wrap{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+  .scene-cap{font-size:13.5px;line-height:1.6;color:var(--muted);border-left:2px solid rgba(201,168,76,.4);padding-left:14px;flex:1 1 420px}
+  .scene-hint{flex:0 0 auto;font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.4px;color:#e4c97a;
+    background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.34);border-radius:24px;padding:7px 16px;font-weight:600}
+  .hero-lead{background:linear-gradient(180deg,#0c1826 0%,#060c17 100%);color:#fff;padding:28px 0 38px}
+  .hero-lead .museum{color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:12px;opacity:.9}
+  .hero-lead .who{font-family:'Inter',sans-serif;font-size:clamp(13px,3vw,15px);letter-spacing:.4px;color:var(--accent-l,#7dc8ff);margin-bottom:10px}
+  .hero-lead .who i{font-style:normal;color:#7893ab;font-weight:400}
+  .hero-lead h1{color:#fff;font-size:56px;font-weight:900;line-height:1.04;margin-bottom:16px}
+  .hero-lead .hook{color:#b8ccde;font-size:19px;max-width:580px;margin-bottom:28px;line-height:1.65;font-weight:400}
+  .hero-lead .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+  @media(max-width:680px){.hero-lead h1{font-size:34px}.hero-lead .hook{font-size:16px}
+    .hero-scene{height:34vh;min-height:230px;max-height:300px}
+    .scene-caption .wrap{flex-direction:column;gap:9px}
+    .scene-hint{order:-1;align-self:flex-start;font-size:11.5px;padding:6px 13px}
+    .scene-cap{font-size:12.8px;flex:1 1 auto}}
+  .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:16px;font-family:'Inter',sans-serif;letter-spacing:.5px}
+
+  /* ── НАВИГАЦИЯ ДНЯ ── */
+  .daynav{position:sticky;top:64px;z-index:25;background:rgba(6,12,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-b)}
+  .daynav .wrap{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+  .daynav::-webkit-scrollbar{display:none}
+  .daynav a{flex:0 0 auto;padding:14px 20px;font-size:11px;font-weight:700;font-family:'Inter',sans-serif;color:var(--muted);text-decoration:none;white-space:nowrap;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:.18s}
+  .daynav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+  /* ── СЕКЦИИ ── */
+  section.block{padding:64px 0;border-bottom:1px solid var(--line);scroll-margin-top:130px}
+  .kicker{font-size:10px;text-transform:uppercase;letter-spacing:3.5px;color:var(--gold);font-weight:700;font-family:'Inter',sans-serif;margin-bottom:8px}
+  section.block h2{font-size:34px;color:#fff;margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink)}
+  .pull{background:var(--gold-g);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 14px 14px 0;font-style:italic;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-size:20px;line-height:1.5;margin:26px 0}
+
+  /* ── КНОПКИ ── */
+  .btn{cursor:pointer;border:none;border-radius:12px;padding:14px 26px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;background:var(--accent2);color:#fff;transition:.18s;letter-spacing:.2px}
+  .btn:hover{filter:brightness(1.18)}
+  .btn.ghost{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid var(--card-b)}
+  .btn.ghost:hover{background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.2)}
+  .btn.gold{background:linear-gradient(135deg,var(--gold),#b8882b);color:#1a0f00;box-shadow:0 4px 20px rgba(201,168,76,.25)}
+  .btn.gold:hover{filter:brightness(1.1);box-shadow:0 6px 28px rgba(201,168,76,.4)}
+  .btn:active{transform:translateY(1px)}
+  .pulse{animation:pulse .9s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+
+  /* ── КАРТОЧКИ ── */
+  .card{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:20px 22px;margin:16px 0;backdrop-filter:blur(6px)}
+
+  /* ── КВИЗ ── */
+  .opt{display:block;width:100%;text-align:left;background:rgba(255,255,255,.04);border:1px solid var(--card-b);border-radius:12px;padding:13px 16px;margin:8px 0;cursor:pointer;font-size:15px;color:var(--ink);font-family:'Inter',sans-serif;transition:.16s}
+  .opt:hover{border-color:var(--accent);background:rgba(45,140,191,.08)}
+  .opt.correct{background:rgba(40,120,60,.18);border-color:#3f9b52;color:#7ed4a0;font-weight:600}
+  .opt.wrong{background:rgba(180,40,40,.13);border-color:#c0453f;color:#f08080}
+  .exp{margin-top:10px;font-size:14px;background:var(--gold-g);border-radius:10px;padding:12px 14px;display:none;color:var(--gold-l)}
+  .exp.show{display:block}
+
+  /* ── ИТОГ ДНЯ ── */
+  .day-result{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:22px 24px;max-width:460px}
+  .dr-rank{font-family:'Playfair Display',Georgia,serif;font-size:28px;color:var(--gold-l);font-weight:700}
+  .dr-score{font-size:16px;margin:4px 0 12px;color:var(--ink)}.dr-score span{color:var(--muted);font-size:14px}
+  .dr-bar{height:8px;background:rgba(255,255,255,.08);border-radius:6px;overflow:hidden}
+  .dr-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),var(--gold));transition:width .6s cubic-bezier(.2,.7,.2,1)}
+  .dr-note{margin-top:12px;font-size:14px;color:var(--muted)}
+
+  /* ── РЕКЛАМНЫЕ СЛОТЫ ── */
+  .ad-slot{position:relative;margin:26px 0;background:rgba(255,255,255,.02);border:1px dashed rgba(255,255,255,.1);border-radius:14px;min-height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px}
+  .ad-slot .lbl{position:absolute;top:7px;right:12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.15);font-family:'Inter',sans-serif}
+  .ad-slot .ph-txt{font-size:12px;max-width:80%;color:rgba(255,255,255,.18)}
+  .ad-slot.billboard{min-height:108px}
+  .adband{background:transparent;border-bottom:none}
+
+  footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
+  .crumbs{background:rgba(6,12,23,.6);border-bottom:1px solid var(--card-b);font-family:'Inter',sans-serif;font-size:12.5px}
+  .crumbs .wrap{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  .crumbs a{color:var(--gold-l);text-decoration:none;white-space:nowrap}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--muted);opacity:.6}
+  .crumbs .here{color:var(--muted);white-space:nowrap}
+
+
+  /* ── ШАПКА: четыре строки по museum-core §6-бис ── */
+  header.top{display:block;text-align:center;padding:10px 12px 8px;height:auto;position:relative}
+  header.top .b1{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:15px;letter-spacing:.5px;color:#fff}
+  header.top .b2{font-size:11px;color:var(--muted);margin-top:2px}
+  header.top .b3{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:6px}
+  header.top .b4{font-size:12.5px;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-style:italic}
+  header.top .score{position:absolute;right:12px;top:10px}
+  .daynav{top:0}
+  .hero-scene{background:#0e1c2c;height:38vh;min-height:250px;max-height:400px}
+  @media(max-width:680px){.hero-lead h1{font-size:31px}}
+  .hero-scene img.scene{object-fit:cover;object-position:50% 42%}
+  .date-origin{font-size:13px;color:#9fb4c8;margin:-6px 0 12px;max-width:62ch}
+  .hero-lead .hook{color:#c6d8e8;max-width:62ch}
+  .hero-under{background:linear-gradient(180deg,#060d18,#060c17);padding:4px 0 22px}
+  .stamp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(125,200,255,.28);margin-top:14px}
+  .stamp>div{padding:11px 12px;border-left:1px solid rgba(125,200,255,.16);min-width:0}
+  .stamp>div:first-child{border-left:0}
+  .stamp .v{font-size:clamp(15px,3.4vw,21px);font-weight:700;color:#8fd3ff;line-height:1.1;overflow-wrap:anywhere}
+  .stamp .k{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#8fa5b9;margin-top:5px}
+  @media(max-width:600px){.stamp{grid-template-columns:repeat(2,minmax(0,1fr))}.stamp>div:nth-child(3){border-left:0}.stamp>div:nth-child(n+3){border-top:1px solid rgba(125,200,255,.16)}}
+
+  /* ── ЛЕНТА УДАРОВ (museum-inventions, вариант А; museum-core §5-бис) ── */
+  .udary{list-style:none;margin:18px 0 0;padding:0;counter-reset:u}
+  .udary>li{border-top:1px solid var(--line);padding:4px 0}
+  .udary details>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:34px 1fr;gap:10px;padding:12px 0;font-size:17px;line-height:1.55;color:var(--ink)}
+  .udary details>summary::-webkit-details-marker{display:none}
+  .udary details>summary::before{counter-increment:u;content:counter(u);font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:20px;color:var(--gold);line-height:1.3}
+  .udary .more-lbl{display:block;grid-column:2;font-size:12.5px;color:var(--gold-l);letter-spacing:.3px;margin-top:4px}
+  .udary .more-lbl::after{content:' ▾'}
+  .udary details[open] .more-lbl::after{content:' ▴'}
+  .udary details[open] .more-lbl .o{display:none}
+  .udary details:not([open]) .more-lbl .c{display:none}
+  .udary summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+  .udary .det{margin:0 0 14px 44px;padding:12px 16px;background:rgba(255,255,255,.035);border-left:2px solid rgba(201,168,76,.45);border-radius:0 10px 10px 0;font-size:15px;color:#d5e0ea}
+  .udary .det p{margin:8px 0}
+  .udary .tag{display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1a0f00;background:var(--gold-l);border-radius:6px;padding:1px 7px;margin-right:6px}
+  .udary .find{border-left:3px solid var(--gold);padding-left:8px}
+  figure.fig{margin:18px 0}
+  figure.fig img{max-width:100%;height:auto;border-radius:10px;display:block}
+  figure.fig figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5}
+  .src-note{font-size:12px;color:#8fa5b9}
+
+  /* ── МОДЕЛЬ ДНЯ (главное предметное действие) ── */
+  .lab{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:18px 18px 20px;margin-top:14px}
+  .lab-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+  .lab-row .lbl{flex:0 0 100%;font-size:13px;color:var(--muted);letter-spacing:.3px}
+  .seg{cursor:pointer;border:1px solid var(--card-b);background:rgba(255,255,255,.04);color:var(--ink);border-radius:10px;padding:10px 14px;font:inherit;font-size:14.5px;min-height:44px}
+  .seg[aria-pressed="true"]{border-color:var(--gold);background:var(--gold-g);color:var(--gold-l);font-weight:600}
+  .seg:focus-visible,.btn:focus-visible,.opt:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .lab-stage{position:relative;margin-top:12px}
+  .lab-stage canvas{width:100%;height:auto;display:block;border-radius:10px;background:#1c2530}
+  .lab-cap{font-size:12px;color:#8fa5b9;margin-top:6px}
+  .lab-msg{margin-top:12px;font-size:15.5px;padding:12px 14px;border-radius:10px;background:rgba(255,255,255,.04);border-left:3px solid var(--card-b);min-height:48px}
+  .lab-msg.ok{border-left-color:#3f9b52;background:rgba(40,120,60,.14)}
+  .lab-msg.bad{border-left-color:#c0453f;background:rgba(180,40,40,.10)}
+  .lab-found{font-size:13px;color:var(--muted);margin-top:8px}
+  .lab-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .noscript-box{background:rgba(255,255,255,.04);border:1px dashed var(--card-b);border-radius:12px;padding:12px 16px;font-size:15px}
+
+  /* ── ГРАНИЦА ПЕРВЕНСТВА ── */
+  .border-box{background:rgba(45,140,191,.08);border:1px solid rgba(45,140,191,.3);border-radius:14px;padding:16px 18px}
+  .border-box b{color:#8fd3ff}
+  .ctx{width:100%;border-collapse:collapse;margin-top:14px;font-size:14.5px}
+  .ctx th,.ctx td{text-align:left;padding:9px 8px;border-top:1px solid var(--line);vertical-align:top}
+  .ctx th{color:var(--gold-l);font-weight:600;font-size:12.5px;letter-spacing:.5px}
+  .quiz-q{margin:18px 0 6px;font-weight:600}
+  .sources a{color:var(--gold-l)}
+  .sources li{margin:6px 0;font-size:14px;color:#c8d6e2}
+  @media(max-width:600px){header.top{padding:8px 64px 6px}header.top .score{top:8px;right:8px;padding:4px 10px;font-size:12px}header.top .b3{margin-top:3px}
+    .hero-scene{height:26vh;min-height:200px;max-height:260px}.date-origin{font-size:12px;margin:-8px 0 8px}.hero-lead{padding:18px 0 26px}.hero-lead .date-chip{margin-bottom:12px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+  /* ── ПОЛЗУНКИ МОДЕЛИ (19, 21 янв) ── */
+  .mtab{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+  .mrow{display:grid;grid-template-columns:minmax(150px,1.2fr) 2fr 92px;gap:12px;align-items:center}
+  .mrow .mname{font-size:14.5px}
+  .mrow .mname i{font-style:normal;color:var(--muted);font-size:13px}
+  .mrow input[type=range]{width:100%;accent-color:var(--gold);min-height:44px}
+  .mrow output{font-size:14px;color:var(--gold-l);text-align:right}
+  .mrow.off{opacity:.45}
+  .mult{margin-top:14px;padding:14px 16px;border-radius:12px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25)}
+  @media(max-width:560px){.mrow{grid-template-columns:1fr 70px}.mrow .mname{grid-column:1/-1}}
+</style>
+<meta name="description" content="В статье 1965 года группа А. В. Гапонова из Горького описала, как сняла с закрученных в спираль электронов 6 и 190 ватт радиоволн, — так начался гиротрон для термоядерных установок.">
+<link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-31jan-girotron.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Русская цивилизация">
+<meta property="og:title" content="Электроны по спирали: гиротрон Гапонова-Грехова">
+<meta property="og:description" content="В статье 1965 года группа А. В. Гапонова из Горького описала, как сняла с закрученных в спираль электронов 6 и 190 ватт радиоволн, — так начался гиротрон для термоядерных установок.">
+<meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-31jan-girotron.html">
+<meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-31jan-girotron.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Электроны по спирали: гиротрон Гапонова-Грехова", "description": "В статье 1965 года группа А. В. Гапонова из Горького описала, как сняла с закрученных в спираль электронов 6 и 190 ватт радиоволн, — так начался гиротрон для термоядерных установок.", "url": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-31jan-girotron.html", "inLanguage": "ru", "isPartOf": {"@type": "WebSite", "name": "Музей «Что изобрели русские первыми в мире»"}, "publisher": {"@type": "Organization", "name": "Русская цивилизация"}, "about": {"@type": "Person", "name": "Андрей Викторович Гапонов-Грехов"}, "image": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-31jan-girotron.jpg"}</script>
+<style>
+  /* ── СХЕМА ГЕНЕРАТОРА ── */
+  .scheme{background:#f4f1ea;border-radius:10px;padding:8px}
+  .scheme svg{display:block;width:100%;height:auto}
+  .lab-read{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:10px}
+  .lab-read > div{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:8px 10px}
+  .lab-read .k{font-size:12px;color:var(--muted)}
+  .lab-read .v{font-size:17px;color:#f1d58a;font-weight:600}
+  @media (max-width:560px){ .lab-read{grid-template-columns:repeat(2,minmax(0,1fr))} }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="b1">Русская цивилизация</div>
+  <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
+  <div class="b3">Что изобрели русские первыми в мире</div>
+  <div class="b4">365 изобретений. Все русские. Все первые</div>
+  <div class="score" id="scoreBox" title="Баллы знаний за этот день">⭐ <span id="score">0</span> / 100</div>
+</header>
+
+<nav class="crumbs" aria-label="Хлебные крошки"><div class="wrap">
+  <a href="../../index.html">Русская цивилизация</a>
+  <span class="sep">›</span>
+  <a href="index.html">Что изобрели русские первыми в мире</a>
+  <span class="sep">›</span>
+  <span class="here">31 января · Гиротрон</span>
+</div></nav>
+
+<div class="hero-scene" id="hero" style="background:#e9e7e2">
+  <img class="scene" src="day-31jan-girotron.jpg" style="object-fit:contain" data-source="https://commons.wikimedia.org/wiki/File:W7-X_exhibit_gyrotrons.jpg" data-license="CC BY-SA 4.0" width="1200" height="800" alt="Четыре гиротрона в рост человека стоят в ряд у белой стены: высокий красный, голубой с круглым стальным баком, тёмный с красными коробками на стальном баке и серый с изогнутыми трубками охлаждения" fetchpriority="high">
+</div>
+
+<div class="scene-caption">
+  <div class="wrap">
+    <div class="scene-cap">Гиротроны в Институте физики плазмы Общества Макса Планка, Грайфсвальд (Германия). Фото I2ho7p, Викисклад, CC BY-SA 4.0.</div>
+    <span class="scene-hint">Предмет · приборы для нагрева плазмы</span>
+  </div>
+</div>
+
+<header class="hero-lead">
+  <div class="wrap">
+    <div class="date-chip">31 января · 1965</div>
+    <p class="date-origin">Дата условная: календарь музея отдал этот день гиротрону. Статья о первых опытах горьковской группы поступила в «Письма в ЖЭТФ» 9 сентября 1965 года.</p>
+    <div class="who">Андрей Викторович Гапонов-Грехов и его группа <i>· Научно-исследовательский радиофизический институт, Горький</i></div>
+    <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
+    <h1>Электроны по спирали: гиротрон Гапонова-Грехова</h1>
+    <p class="hook">В статье 1965 года горьковские физики сняли 190 ватт с электронов, закрученных в спираль, — а сегодня такие приборы по мегаватту монтируют в ИТЭР.</p>
+    <div class="hero-btns">
+      <button class="btn gold" id="readBtn" type="button">Читать историю ↓</button>
+      <button class="btn ghost" id="listenBtn" type="button">🎧 Слушать аудиогид</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero-under">
+  <div class="wrap">
+    <div class="stamp">
+      <div><div class="v">9.09.1965</div><div class="k">статья о первых опытах поступила в «Письма в ЖЭТФ»</div></div>
+      <div><div class="v">190 Вт</div><div class="k">на волне 1,2 см — больше не пустило охлаждение</div></div>
+      <div><div class="v">1964</div><div class="k">первый гиротрон испытан в Горьком — по обзору 2014 года</div></div>
+      <div><div class="v">1 МВт</div><div class="k">на 170 ГГц — гиротрон для ИТЭР</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="daynav" aria-label="Разделы дня">
+  <div class="wrap">
+    <a href="#story">Читать</a>
+    <a href="#audioguide">Слушать</a>
+    <a href="#games">Генератор</a>
+    <a href="#pervenstvo">Первенство</a>
+    <a href="#quiz">Викторина</a>
+    <a href="#calendar">Календарь</a>
+  </div>
+</nav>
+
+<section class="wrap" id="dokument" data-proof-block></section>
+
+<section class="block" id="audioguide"></section>
+
+<section class="block" id="story">
+  <div class="wrap">
+    <div class="kicker">История первенства · 12 ударов</div>
+    <h2>Из Горького — в термоядерные установки мира</h2>
+    <p style="color:var(--muted);max-width:62ch">Читается подряд. Нажми на удар — откроется подробный разбор с источниками.</p>
+    <ol class="udary">
+      <li><details><summary><span>Андрей Гапонов-Грехов родился 7 июня 1926 года в Москве, в семье физиков, а с 1933 года жил в Горьком.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <figure class="fig" style="max-width:300px">
+            <img src="day-31jan-girotron-portret.jpg" data-source="https://commons.wikimedia.org/wiki/File:Andrey_Gaponov-Grekhov_(1).jpg" data-license="CC BY-SA 3.0" width="353" height="529" loading="lazy" alt="Пожилой седой мужчина в очках, сером свитере с высоким воротом и коричневом пиджаке сидит в зале среди людей">
+            <figcaption>Андрей Викторович Гапонов-Грехов, 2010 год. Фото Артёма Коржиманова, Викисклад, CC BY-SA 3.0.</figcaption>
+          </figure>
+          <p>Его родители — физики Мария Тихоновна Грехова и Виктор Иванович Гапонов. В 1945 году его перевели на только что созданный радиофизический факультет Горьковского университета. Факультет основала и первой возглавила его мать. В аспирантуре он учился у академика А. А. Андронова. В 1955 году защитил кандидатскую — и ему сразу присудили степень доктора наук.</p>
+          <p class="src-note">Источник: ИПФ РАН, «Гапонов-Грехов Андрей Викторович, академик РАН» (страница памяти основателя института).</p>
+        </div></details></li>
+      <li><details><summary><span>В 1958–1961 годах он построил теорию: электроны, кружащие в магнитном поле, могут не поглощать радиоволну, а усиливать её.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Электрон в магнитном поле кружит, как грузик на нитке. Но частота его оборотов чуть-чуть зависит от энергии: чем быстрее электрон, тем он «тяжелее» и тем медленнее кружит. Из-за этой неравномерности поток таких «классических осцилляторов» может сгруппироваться и отдать свою энергию волне. В ИПФ РАН это называют так: теория индуцированного излучения классических нелинейных осцилляторов, новый принцип генерации и усиления волн.</p>
+          <p>Ту же мысль почти одновременно высказали Р. Твисс в Австралии (1958) и Ю. Шнайдер в США (1959).</p>
+          <p class="src-note">Источники: ИПФ РАН, страница памяти А. В. Гапонова-Грехова; G. S. Nusinovich, M. K. A. Thumm, M. I. Petelin, «The Gyrotron at 50: Historical Overview», Journal of Infrared, Millimeter, and Terahertz Waves, 2014 (список литературы: Twiss 1958, Schneider 1959, Gaponov 1959).</p>
+        </div></details></li>
+      <li><details><summary><span>Первыми такое излучение увидели в лампах с бегущей волной — в 1959–1960 годах, в Горьком и в США.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Статья 1965 года с этого и начинается: индуцированное излучение спиральных электронов сначала наблюдали в электронных усилителях и генераторах бегущей волны. Она ссылается на доклад Гапонова в Москве в июне 1959 года, на работу Р. Пантелла 1959 года и на статью И. И. Антакова, В. М. Бокова, Р. П. Васильева и А. В. Гапонова 1960 года.</p>
+          <p class="src-note">Источник: A. V. Gaponov, A. L. Gol'denberg, D. P. Grigor'ev, I. M. Orlova, T. B. Pankratova, M. I. Petelin, «Induced Synchrotron Radiation of Electrons in Cavity Resonators», JETP Letters, 1965, vol. 2, p. 267–269 (перевод статьи из «Писем в ЖЭТФ», т. 2, с. 430–435).</p>
+        </div></details></li>
+      <li><details><summary><span>Чтобы поднять мощность, нужно было больше «активной среды», и горьковчане перешли к «открытым» резонаторам большого объёма.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Опыт уже показал, что большую мощность можно получить и в обычных волноводах сечением порядка квадрата длины волны. Но дальше надо было наращивать объём «активной среды» — сечение электронного пучка. Поэтому авторы перешли к квазиоптическим резонаторам «открытого» типа. Глухих стенок со всех сторон у них нет, и сами они могут быть намного больше длины волны.</p>
+          <p class="src-note">Источник: статья А. В. Гапонова и соавторов в «Письмах в ЖЭТФ», 1965, т. 2, вып. 9, с. 430–435; прочитан английский перевод — «Induced Synchrotron Radiation of Electrons in Cavity Resonators», JETP Letters, vol. 2, p. 267.</p>
+        </div></details></li>
+      <li><details><summary><span>Пушка с коническим катодом закручивала электроны в тугую спираль, а плавно растущее магнитное поле раскручивало их ещё сильнее.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <figure class="fig">
+            <div class="scheme">
+              <svg viewBox="0 0 640 230" role="img" aria-label="Схема генератора 1965 года: слева конический катод и анод, вправо идёт спиральный электронный пучок через резонатор, сверху выход мощности, справа коллектор, вдоль всего — стрелка магнитного поля">
+                <rect x="0" y="0" width="640" height="230" fill="#f4f1ea"/>
+                <line x1="40" y1="30" x2="600" y2="30" stroke="#6b7c8f" stroke-width="2"/>
+                <polygon points="600,24 614,30 600,36" fill="#6b7c8f"/>
+                <text x="320" y="20" text-anchor="middle" font-size="14" fill="#33475b" font-family="Inter, sans-serif">B — постоянное магнитное поле растёт к резонатору</text>
+                <polygon points="30,118 80,92 80,144" fill="#8a6d3b"/>
+                <text x="42" y="174" font-size="13" fill="#33475b" font-family="Inter, sans-serif">1–2 катод</text>
+                <rect x="96" y="82" width="10" height="72" fill="#6b7c8f"/>
+                <text x="88" y="196" font-size="13" fill="#33475b" font-family="Inter, sans-serif">3 анод</text>
+                <rect x="250" y="70" width="210" height="96" rx="10" fill="none" stroke="#2f5d8a" stroke-width="3"/>
+                <text x="355" y="196" text-anchor="middle" font-size="13" fill="#33475b" font-family="Inter, sans-serif">4 резонатор</text>
+                <rect x="345" y="40" width="20" height="32" fill="#2f5d8a"/>
+                <text x="372" y="52" font-size="13" fill="#33475b" font-family="Inter, sans-serif">5 выход волны</text>
+                <path d="M520 70 h60 v96 h-60" fill="none" stroke="#6b7c8f" stroke-width="3"/>
+                <text x="530" y="196" font-size="13" fill="#33475b" font-family="Inter, sans-serif">6 коллектор</text>
+                <path d="M110 118 c10 -14 20 -14 30 0 s20 14 30 0 s18 -18 28 0 s18 18 28 0 s16 -24 24 0 s16 24 24 0 s14 -28 22 0 s14 28 22 0 s14 -28 22 0 s14 28 22 0 s14 -28 22 0 s14 28 22 0 s14 -28 22 0 s14 28 22 0 s14 -28 22 0 s14 28 22 0 s14 -28 22 0 s14 28 22 0 s14 -28 22 0" fill="none" stroke="#c0392b" stroke-width="2.2"/>
+                <text x="150" y="78" font-size="13" fill="#c0392b" font-family="Inter, sans-serif">спиральный пучок</text>
+              </svg>
+            </div>
+            <figcaption>Схема генератора по описанию и рисунку 1 статьи 1965 года: 1 — катод, 2 — излучающая поверхность, 3 — анод, 4 — резонатор, 5 — вывод мощности, 6 — коллектор, B — магнитное поле. Рисунок музея.</figcaption>
+          </figure>
+          <p>У катода электроны получают вращательную энергию от поперечной составляющей электрического поля. Поля в пушке и на пути пучка меняются плавно, поэтому сохраняется так называемый адиабатический инвариант. Итог простой: во сколько раз выросло магнитное поле, во столько же выросла энергия вращения электронов.</p>
+          <p class="src-note">Источник: Гапонов и др., Письма в ЖЭТФ, 1965, т. 2, с. 430–435, раздел «Электронный пучок» и рис. 1.</p>
+        </div></details></li>
+      <li><details><summary><span>Первый генератор — отрезок прямоугольного волновода длиной 20 сантиметров: поле 3200 эрстед, волна 3,4 сантиметра и 6 ватт при токе 80 миллиампер.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Пучок входил в резонатор с торца, через волновод, запредельный для этой волны, в максимум электрического поля. Второй, открытый конец резонатора переходил в широкий волновод, который одновременно выводил энергию и служил коллектором. Генерация шла на частоте вращения электронов. Напряжение пучка — 8 киловольт, вращательная скорость примерно втрое больше продольной. Итог — 6 ватт.</p>
+          <p class="src-note">Источник: Гапонов и др., Письма в ЖЭТФ, 1965, т. 2, с. 430–435, разделы «Резонаторы» и «Результаты».</p>
+        </div></details></li>
+      <li><details><summary><span>Второй генератор — «бочка», открытый резонатор: на удвоенной частоте вращения, при поле 4500 эрстед и волне 1,2 сантиметра он дал 190 ватт.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Здесь электроны работали на второй гармонике: волна в резонаторе колебалась вдвое чаще, чем они кружили. Энергию выводили волноводом через отверстие в боковой стенке. При токе 320 миллиампер и напряжении 19 киловольт «бочка» дала 190 ватт. График в статье показывает: мощность прибавлялась, когда вращение ускорялось, а продольное движение замедлялось. Росла она и с током — так пишут авторы.</p>
+          <p class="src-note">Источник: Гапонов и др., Письма в ЖЭТФ, 1965, т. 2, с. 430–435, рис. 3 и раздел «Результаты».</p>
+        </div></details></li>
+      <li class="find"><details><summary><span>На 190 ваттах рост мощности остановила не физика, а охлаждение генераторов.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p><span class="tag">Находка дня</span>В статье прямо сказано: дальнейшему росту мощности мешали трудности охлаждения генераторов, а в генераторе на основной частоте ещё и разряд в остаточном газе. Те же причины не дали поднять электронный КПД до предсказанных теорией 19 %. По числам самой статьи КПД вышел около 1 % у первого генератора и около 3 % у второго. Предел оказался инженерным, а не физическим. Отвод тепла остался трудностью и через полвека: выходное окно мегаваттных гиротронов ИТЭР делают из искусственного алмаза.</p>
+          <p class="src-note">Источник: Гапонов и др., Письма в ЖЭТФ, 1965, т. 2, с. 430–435 (статья поступила 9 сентября 1965 года). КПД посчитан музеем: 6 Вт ÷ (80 мА × 8 кВ) и 190 Вт ÷ (320 мА × 19 кВ).</p>
+        </div></details></li>
+      <li><details><summary><span>Излучение спиральных пучков в резонаторе раньше видели и другие, но горьковские опыты шли на большей мощности — так сказано в самой статье.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Статья ссылается на опыт Дж. Хиршфилда и Дж. Уочтела в США (Physical Review Letters, 1964) и И. Ботта (Physics Letters, 1965) и пишет, что горьковские эксперименты проведены при более высоком уровне мощности, чем у них. Обзор 2014 года писали физики-гиротронщики из США, Германии и России, в их числе соавтор статьи 1965 года М. И. Петелин. Место рождения первого гиротрона у них — Горький.</p>
+          <p class="src-note">Источники: Гапонов и др., Письма в ЖЭТФ, 1965, т. 2, с. 430–435 (ссылки 10 и 11); Nusinovich, Thumm, Petelin, «The Gyrotron at 50: Historical Overview», 2014.</p>
+        </div></details></li>
+      <li><details><summary><span>«До 1970-х годов гиротроны были просто красивыми научными приборами», — рассказывал в 2020 году директор ИПФ РАН Григорий Денисов; потом их предложили для нагрева плазмы.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <figure class="fig">
+            <img src="day-31jan-girotron-ipf.jpg" data-source="https://commons.wikimedia.org/wiki/File:Institute_of_Applied_Physics_RAS_(main_entrance).jpg" data-license="CC BY 4.0" width="1200" height="900" loading="lazy" alt="Многоэтажное светлое здание с длинным козырьком над входом, на козырьке надпись «ИПФ РАН», к стеклянным дверям ведут ступени с перилами">
+            <figcaption>Главный вход Института прикладной физики РАН имени А. В. Гапонова-Грехова, Нижний Новгород, 2023 год. Фото Артёма Коржиманова, Викисклад, CC BY 4.0.</figcaption>
+          </figure>
+          <p>Нагревать гиротронами плазму токамаков предложили в Курчатовском институте. Это и подтолкнуло разработку. В 1977 году из Радиофизического института выделился Институт прикладной физики АН СССР; его основал и до 2003 года возглавлял Гапонов-Грехов. Работы по мощным источникам микроволн, которыми он руководил, трижды получали Государственные премии СССР и России.</p>
+          <p class="src-note">Источники: «Страна Росатом», Н. Фетисова, О. Ганжур, «Первую плазму термоядерного реактора ИТЭР зажгут российские гиротроны», 9 сентября 2020; ИПФ РАН, страница памяти А. В. Гапонова-Грехова; «Страна Росатом», «Дойти до дейтерия: как меняется международный проект ИТЭР», 24 декабря 2024 (название института).</p>
+        </div></details></li>
+      <li><details><summary><span>В 1992 году нижегородцы основали фирму «Гиком» и первый гиротрон отдали за границу практически бесплатно — чтобы его увидели в работе.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Город, по воспоминанию Литвака, открыли для иностранцев в 1990 году, а в 1991-м финансирование науки «устремилось к нулю». Французская Thomson-CSF предлагала делать гиротроны вместе: прибор нижегородский, а на нём — её знак и 30 % выручки институту. Нижегородцы отказались и пошли сами: в «Гиком» вошли около тридцати человек, причастных к созданию гиротронов или к их применению, среди акционеров — Гапонов-Грехов. После пробной поставки они выиграли тендеры в Италии, Германии, Японии и США.</p>
+          <p class="src-note">Источник: «Троицкий вариант — Наука», А. Литвак, О. Орлова, «Как вышли в мир гиротроны из Горького», 8 марта 2016 (А. Г. Литвак — в 1992 году сооснователь и вице-президент «Гикома»).</p>
+        </div></details></li>
+      <li><details><summary><span>Для ИТЭР Россия делает восемь из 24 гиротронных систем по мегаватту, и первые четыре в конце 2024 года уже монтировали во Франции.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <figure class="fig" style="max-width:360px">
+            <img src="day-31jan-girotron-1mw.jpg" data-source="https://commons.wikimedia.org/wiki/File:Wendelstein_7-X,_Gyrotron,140Ghz,_1MW.jpg" data-license="CC BY-SA 4.0" width="960" height="1280" loading="lazy" alt="Высокий прибор в стальной клетке среди труб и шлангов: сверху чёрный цилиндр, ниже серый бак магнита на трёх ногах">
+            <figcaption>Мегаваттный гиротрон на 140 ГГц у стелларатора Wendelstein 7-X (прибор фирмы Thales). Фото Z6ehswhha5HGRTd, Викисклад, CC BY-SA 4.0.</figcaption>
+          </figure>
+          <p>Для ИТЭР нужен был гиротрон мощностью 1 мегаватт на частоте 170 гигагерц с КПД 50 % и импульсом в тысячу секунд. Самым трудным оказался КПД: к началу 2010-х российские разработчики вышли на нужные параметры, а КПД отечественных гиротронов — 55 %. Отвод тепла остался трудностью и через полвека: выходное окно делают из искусственного алмаза — его теплопроводность в пять раз выше, чем у меди, и диск, охлаждаемый по краю, остаётся холодным целиком. В новом плане ИТЭР работа на проектных параметрах начнётся в 2034 году, и гиротронов, по оценке «Росатома», понадобится 80 или даже 87 вместо 24.</p>
+          <p class="src-note">Источники: «Страна Росатом», «Первую плазму термоядерного реактора ИТЭР зажгут российские гиротроны», 2020; «Страна Росатом», «Дойти до дейтерия: как меняется международный проект ИТЭР», 24 декабря 2024; «Троицкий вариант — Наука», «Как вышли в мир гиротроны из Горького», 2016.</p>
+        </div></details></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block" id="theme-inventions">
+  <div class="wrap">
+    <div class="kicker">Физика · Русские первенства</div>
+    <h2>Что ещё русские изобрели первыми в теме «физика»</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Другие дни музея о физике и радиофизике — по утверждённому календарю. Часть этих залов ещё готовится.</p>
+    <button class="btn ghost" type="button" id="themeInvBtn" data-label="Показать 11 первенств →" aria-expanded="false" aria-controls="themeInvBody">Показать 11 первенств →</button>
+    <div id="themeInvBody" hidden>
+      <ul class="theme-list">
+        <li><b>4 янв</b> <a href="day-04jan-pilchikov.html">Первое в мире радиоуправление, Н. Д. Пильчиков</a></li>
+        <li><b>22 янв</b> <a href="day-22jan-landau.html">Теория сверхтекучести, Л. Д. Ландау</a></li>
+        <li><b>23 янв</b> <a href="day-23jan-umov.html">Вектор Умова — поток энергии</a></li>
+        <li><b>25 фев</b> Первый в мире токамак Т-1, Л. А. Арцимович, 1958</li>
+        <li><b>15 мар</b> Полупроводниковые гетероструктуры — основа лазерных диодов</li>
+        <li><b>26 мар</b> Первые опыты по радиолокации</li>
+        <li><b>23 мая</b> Плазменный двигатель СПД на «Метеоре-18», 1971</li>
+        <li><b>26 июн</b> Излучение Вавилова — Черенкова</li>
+        <li><b>11 июл</b> Лазер и мазер</li>
+        <li><b>15 окт</b> Электронный парамагнитный резонанс</li>
+        <li><b>14 дек</b> <a href="day-14dec-laser.html">Мазер и лазер: принцип квантовых генераторов</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="games">
+  <div class="wrap">
+    <div class="kicker">Главное действие · модель по статье 1965 года</div>
+    <h2>Настрой генератор, как в Горьком</h2>
+    <p style="max-width:62ch">Перед тобой два резонатора из статьи 1965 года. Подбери магнитное поле, закрутку пучка и режим — модель посчитает, с какой частотой кружат электроны и попадает ли их волна в резонатор. Сначала получи оба результата статьи, 6 и 190 ватт. Потом проверь три ловушки.</p>
+    <div class="lab" id="lab">
+      <div class="lab-row" role="group" aria-label="Резонатор">
+        <span class="lbl">Резонатор</span>
+        <button class="seg" type="button" data-k="r" data-v="A" aria-pressed="true">Волновод 20 см · ждёт волну 3,4 см</button>
+        <button class="seg" type="button" data-k="r" data-v="B" aria-pressed="false">Открытая «бочка» · ждёт волну 1,2 см</button>
+      </div>
+      <div class="lab-row" role="group" aria-label="Магнитное поле">
+        <span class="lbl">Магнитное поле</span>
+        <button class="seg" type="button" data-k="h" data-v="2500" aria-pressed="true">2500 Э</button>
+        <button class="seg" type="button" data-k="h" data-v="3200" aria-pressed="false">3200 Э</button>
+        <button class="seg" type="button" data-k="h" data-v="4500" aria-pressed="false">4500 Э</button>
+      </div>
+      <div class="lab-row" role="group" aria-label="Закрутка пучка">
+        <span class="lbl">Закрутка пучка</span>
+        <button class="seg" type="button" data-k="p" data-v="lo" aria-pressed="true">Слабая: вращение ≈ продольной скорости</button>
+        <button class="seg" type="button" data-k="p" data-v="hi" aria-pressed="false">Сильная: вращение ≈ 3 × продольной</button>
+      </div>
+      <div class="lab-row" role="group" aria-label="Ток и напряжение">
+        <span class="lbl">Ток и напряжение</span>
+        <button class="seg" type="button" data-k="m" data-v="m1" aria-pressed="true">80 мА · 8 кВ</button>
+        <button class="seg" type="button" data-k="m" data-v="m2" aria-pressed="false">320 мА · 19 кВ</button>
+        <button class="seg" type="button" data-k="m" data-v="m3" aria-pressed="false">Ещё больше тока и напряжения</button>
+      </div>
+      <div class="lab-btns">
+        <button class="btn gold" type="button" id="labGo">Включить</button>
+        <button class="btn ghost" type="button" id="labH">Как в статье</button>
+      </div>
+      <div class="lab-stage">
+        <canvas id="labCv" width="640" height="240" style="height:240px" role="img" aria-label="Схема: электронный пучок спиралью проходит через резонатор; при совпадении частот резонатор светится и на выходе показана мощность"></canvas>
+        <div class="lab-read" aria-live="polite">
+          <div><div class="k">Электроны кружат</div><div class="v" id="rdF">—</div></div>
+          <div><div class="k">Волна на 1-й гармонике</div><div class="v" id="rdL1">—</div></div>
+          <div><div class="k">Волна на 2-й гармонике</div><div class="v" id="rdL2">—</div></div>
+          <div><div class="k">Мощность по статье</div><div class="v" id="rdP">—</div></div>
+        </div>
+        <div class="lab-cap">Частота вращения электрона — 2,8 МГц на эрстед, делённые на релятивистский множитель 1 + U/511 кВ. Резонаторы, поля, токи, напряжения и мощности — из статьи Гапонова и соавторов, «Письма в ЖЭТФ», 1965. Где в статье числа нет, модель так и пишет.</div>
+      </div>
+      <div class="lab-msg" id="labMsg" aria-live="polite">Выбери резонатор, поле, закрутку и режим и нажми «Включить».</div>
+      <div class="lab-found" id="labFound">Найдено: генератор на 6 Вт — нет; генератор на 190 Вт — нет; ловушка «слабая закрутка» — нет; ловушка «мимо резонанса» — нет; ловушка «ещё больше мощности» — нет.</div>
+      <noscript><div class="noscript-box">Для модели нужен JavaScript. Текстовая версия: волновод 20 см, поле 3200 Э, сильная закрутка, 80 мА и 8 кВ — электроны кружат с частотой 8,82 ГГц, волна 3,4 см попадает в резонатор, мощность 6 Вт. Открытый резонатор, поле 4500 Э, сильная закрутка, 320 мА и 19 кВ — частота 12,14 ГГц, на второй гармонике волна 1,23 см, мощность 190 Вт. При другом поле волна не совпадает с резонатором. При слабой закрутке, по статье, растёт обычное поглощение, чисел нет. Дальше 190 Вт в 1965 году не пустило охлаждение.</div></noscript>
+    </div>
+    <p class="src-note" style="margin-top:10px">Резонаторы (волновод 20 см, мода TE<sub>011</sub>, λ = 3,4 см при 3200 Э; бочкообразный открытый резонатор, мода TE<sub>021</sub>, λ = 1,2 см при 4500 Э на второй гармонике), 6 Вт при 80 мА и 8 кВ, 190 Вт при 320 мА и 19 кВ, вращательная скорость примерно втрое больше продольной, рост поглощения при больших продольных скоростях, охлаждение и разряд как предел, теоретический КПД 19 % — A. V. Gaponov et al., JETP Letters, 1965, vol. 2, p. 267–269.</p>
+  </div>
+</section>
+
+<section class="block" id="pervenstvo">
+  <div class="wrap">
+    <div class="kicker">Проверка факта</div>
+    <h2>Что именно здесь наше</h2>
+    <div class="border-box">
+      <p style="margin-top:0"><b>Граница первенства:</b> гиротрон создала группа А. В. Гапонова в Научно-исследовательском радиофизическом институте в Горьком. Это прибор, в котором пушка закручивает электроны в спираль, растущее магнитное поле раскручивает их сильнее, а пучок отдаёт энергию резонатору большого объёма. Опыты описаны в «Письмах в ЖЭТФ» (статья поступила 9 сентября 1965 года): 6 и 190 ватт — больше, чем в опытах Хиршфилда — Уочтела и Ботта. Обзор 2014 года называет первым гиротроном прибор, испытанный в Горьком в 1964 году.</p>
+      <p style="margin-bottom:0"><b>Чего здесь нет:</b> сам принцип — излучение электронов, кружащих в магнитном поле, — предсказали почти одновременно трое: Р. Твисс в Австралии (1958), Ю. Шнайдер в США (1959) и А. В. Гапонов (1959). Излучение спирального пучка в резонаторе раньше наблюдали Дж. Хиршфилд и Дж. Уочтел в США (1964). Календарь называет гиротрон «первым в мире источником мегаваттных миллиметровых волн». Музей так не пишет: документа о первенстве именно в мегаваттах не нашлось.</p>
+    </div>
+    <table class="ctx">
+      <thead><tr><th scope="col">Документ или событие</th><th scope="col">Что</th><th scope="col">Когда</th></tr></thead>
+      <tbody>
+        <tr><td>Р. Твисс, Australian Journal of Physics</td><td>Теория циклотронного мазера (по обзору 2014 года)</td><td>1958</td></tr>
+        <tr><td>Ю. Шнайдер, Physical Review Letters; А. В. Гапонов, «Радиофизика»</td><td>Та же теория в США и в Горьком</td><td>1959</td></tr>
+        <tr><td>Р. Пантелл; И. И. Антаков и др.</td><td>Излучение в лампах с бегущей волной</td><td>1959–1960</td></tr>
+        <tr><td>Дж. Хиршфилд и Дж. Уочтел, Physical Review Letters</td><td>Излучение спирального пучка в резонаторе</td><td>1964</td></tr>
+        <tr><td>Горький (по обзору 2014 года)</td><td>Первый гиротрон испытан</td><td>1964</td></tr>
+        <tr><td>Гапонов и др., «Письма в ЖЭТФ»</td><td>Открытый резонатор, адиабатическая пушка, 6 и 190 Вт</td><td>поступила 9.09.1965</td></tr>
+        <tr><td>ИТЭР («Страна Росатом», 2020 и 2024)</td><td>24 системы по 1 МВт на 170 ГГц, восемь — из России; первые четыре монтируют</td><td>декабрь 2024</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block" id="quiz">
+  <div class="wrap">
+    <div class="kicker">Проверь себя · 5 вопросов</div>
+    <h2>Викторина</h2>
+    <p style="color:var(--muted);max-width:62ch">На каждый вопрос — одна попытка. После ответа покажем объяснение.</p>
+    <div id="quizBox"></div>
+    <noscript><div class="noscript-box">Для викторины нужен JavaScript. Ответы: 1 — магнитное поле; 2 — чтобы увеличить объём «активной среды» и мощность; 3 — охлаждение генераторов; 4 — Твисс и Шнайдер; 5 — восемь.</div></noscript>
+  </div>
+</section>
+
+<section class="block" id="result">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Итог дня</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Два генератора статьи, три ловушки модели и викторина вместе дают 100 баллов. Прогресс не сохраняется: перезагрузишь страницу — день начнётся заново.</p>
+    <div class="day-result">
+      <div class="dr-score" id="dayTxt">0 / 100 · звание: Гость дня</div>
+      <div class="dr-bar"><i id="dayBar" style="width:0%"></i></div>
+      <div class="dr-note">Получи в модели 6 и 190 ватт, как в 1965 году, проверь три ловушки (слабая закрутка, поле мимо резонанса, мощность выше 190 ватт) и ответь на вопросы викторины.</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="sources">
+  <div class="wrap">
+    <div class="kicker">Источники</div>
+    <h2>На чём стоит страница</h2>
+    <ul class="sources">
+      <li><a href="https://web.archive.org/web/20240520152729/http://www.jetpletters.ru/ps/1606/article_24633.pdf" rel="noopener" target="_blank">A. V. Gaponov, A. L. Gol'denberg, D. P. Grigor'ev, I. M. Orlova, T. B. Pankratova, M. I. Petelin · «Induced Synchrotron Radiation of Electrons in Cavity Resonators»</a>, JETP Letters, 1965, vol. 2, p. 267–269 — перевод статьи из «Писем в ЖЭТФ», т. 2, вып. 9, с. 430–435 (копия архива журнала в web.archive.org; русский оригинал не открывался): поступила 9 сентября 1965; схема генератора, резонаторы, пушка с коническим катодом, 6 и 190 Вт, охлаждение как предел, ссылки на Шнайдера, Пантелла, Хиршфилда и Уочтела, Ботта.</li>
+      <li><a href="https://link.springer.com/article/10.1007/s10762-014-0050-7" rel="noopener" target="_blank">G. S. Nusinovich, M. K. A. Thumm, M. I. Petelin · «The Gyrotron at 50: Historical Overview»</a>, Journal of Infrared, Millimeter, and Terahertz Waves, 2014 (открыты аннотация и список литературы): первый гиротрон изобретён, спроектирован и испытан в Горьком в 1964 году; Твисс 1958, Шнайдер 1959, Гапонов 1959, Гапонов — Петелин — Юлпатов 1967.</li>
+      <li><a href="https://www.ipfran.ru/institute/info/memory/gaponov-grekhov/details" rel="noopener" target="_blank">ИПФ РАН · «Гапонов-Грехов Андрей Викторович, академик РАН»</a>: рождение 7 июня 1926 в Москве, Горький с 1933, радиофак, Андронов, докторская степень 1955, теория 1958–1961 и мазеры на циклотронном резонансе, ИПФ с 1977, три Государственные премии.</li>
+      <li><a href="https://strana-rosatom.ru/2020/09/09/pervuju-plazmu-termoyadernogo-reaktor/" rel="noopener" target="_blank">«Страна Росатом» · Н. Фетисова, О. Ганжур, «Первую плазму термоядерного реактора ИТЭР зажгут российские гиротроны»</a>, 9 сентября 2020: изобретён в начале 1960-х в НИРФИ; слова Г. Г. Денисова; 24 системы ИТЭР, восемь российских; 1 МВт, 170 ГГц, КПД 55 %; алмазное окно; половина термоядерных установок мира.</li>
+      <li><a href="https://www.trv-science.ru/2016/03/kak-vyshli-v-mir-girotrony-iz-gorkogo/" rel="noopener" target="_blank">«Троицкий вариант — Наука» · А. Литвак, О. Орлова, «Как вышли в мир гиротроны из Горького»</a>, 8 марта 2016: приоритет группы Гапонова-Грехова; «Гиком» (1992), переговоры с Thomson-CSF, пробная поставка за рубеж и тендеры в Италии, Германии, Японии и США; больше половины термоядерных установок мира с нижегородскими гиротронами.</li>
+      <li><a href="https://strana-rosatom.ru/2024/12/24/dojti-do-dejteriya-kak-menyaetsya-mezhdu/" rel="noopener" target="_blank">«Страна Росатом» · «Дойти до дейтерия: как меняется международный проект ИТЭР»</a>, 24 декабря 2024: новая базовая линия (работа на проектных параметрах в 2034 году), первые четыре российских гиротронных комплекса монтируют в Кадараше, ещё четыре — в 2025 году; оценка 80–87 гиротронов вместо 24; Институт прикладной физики имени Гапонова-Грехова.</li>
+      <li>Изображения: <a href="https://commons.wikimedia.org/wiki/File:W7-X_exhibit_gyrotrons.jpg" rel="noopener" target="_blank">гиротроны в Грайфсвальде</a> (I2ho7p, CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Andrey_Gaponov-Grekhov_(1).jpg" rel="noopener" target="_blank">портрет А. В. Гапонова-Грехова</a> (А. Коржиманов, CC BY-SA 3.0), <a href="https://commons.wikimedia.org/wiki/File:Institute_of_Applied_Physics_RAS_(main_entrance).jpg" rel="noopener" target="_blank">вход ИПФ РАН</a> (А. Коржиманов, CC BY 4.0), <a href="https://commons.wikimedia.org/wiki/File:Wendelstein_7-X,_Gyrotron,140Ghz,_1MW.jpg" rel="noopener" target="_blank">гиротрон Wendelstein 7-X</a> (Z6ehswhha5HGRTd, CC BY-SA 4.0) — Викисклад; схема генератора — рисунок музея по статье 1965 года.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="calendar">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Календарь изобретений</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Выбери любой день — узнаешь, что русские сделали первыми в мире. Листай месяцы стрелками.</p>
+    <div id="calbox"></div>
+  </div>
+</section>
+
+<section class="block kd" id="kuda-dalshe">
+  <div class="wrap">
+    <div class="kd-kicker">Куда дальше</div>
+    <h2>Музей продолжается</h2>
+    <div class="kd-grid">
+      <div class="kd-card main"><span class="kd-lbl">Следующий день</span><a href="day-03feb-luna9.html">3 февраля — «Луна-9», первая мягкая посадка на Луну <span class="kd-arr">→</span></a>
+        <p>Первая лунная панорама, собранная из полос радиосигнала.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Предыдущий день</span><a href="day-30jan-kotelnikov.html">30 января — Ранцевый парашют Котельникова <span class="kd-arr">→</span></a>
+        <p>Парашют, который спасал лётчиков, в России сначала отклонили.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Та же тема</span><a href="day-14dec-laser.html">14 декабря — Мазер и лазер <span class="kd-arr">→</span></a>
+        <p>Ещё один генератор излучения, придуманный в СССР одновременно с Западом.</p></div>
+      <div class="kd-card main"><span class="kd-lbl">Город-музей</span><a href="../../index.html">Русская цивилизация <span class="kd-arr">→</span></a>
+        <p>Все музеи проекта на одной карте.</p></div>
+    </div>
+    <p style="margin-top:16px"><a href="izobreteniya.html">Посмотреть изобретения по алфавиту →</a></p>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>
+  Русская цивилизация · «Что изобрели русские первыми в мире»</div></footer>
+
+<script type="application/json" data-proof>{"status":"found","claim_id":"rc:izobreteniya:girotron:claim-girotron-1965","ours":{"kind":"научная публикация","title":"А. В. Гапонов, А. Л. Гольденберг, Д. П. Григорьев, И. М. Орлова, Т. Б. Панкратова, М. И. Петелин — статья в «Письмах в ЖЭТФ», 1965, т. 2, вып. 9, с. 430–435 (поступила 9 сентября 1965; англ. перевод «Induced Synchrotron Radiation of Electrons in Cavity Resonators»): открытый резонатор, адиабатическая пушка, 6 и 190 Вт","date":"1965-09-09","holder":"Письма в ЖЭТФ; копия архива журнала — web.archive.org","source_url":"https://web.archive.org/web/20240520152729/http://www.jetpletters.ru/ps/1606/article_24633.pdf"}}</script>
+<script src="../../assets/museum-proof.js"></script>
+
+<script>
+/* ── СЧЁТ ── шкала из 100 держит assets/museum-score.js; здесь только реестр наград.
+   два генератора статьи 2×15 + три ловушки модели 3×10 + викторина 5×8 = 100. */
+window.MUSEUM_SCORE = {awards:{g1:15, g2:15, why0:10, why1:10, why2:10, q:[5,8]},
+  ranks:[[100,'Радиофизик НИРФИ'],[70,'Лаборант группы Гапонова'],[40,'Студент радиофака'],[0,'Гость дня']]};
+</script>
+<script src="../../assets/museum-score.js"></script>
+<script>
+(function(){
+  var $ = function(id){return document.getElementById(id);};
+  $('readBtn').onclick = function(){ $('story').scrollIntoView({behavior:'smooth'}); };
+  $('listenBtn').onclick = function(){ $('audioguide').scrollIntoView({behavior:'smooth'}); };
+  var tb=$('themeInvBtn');
+  tb.onclick=function(){ var b=$('themeInvBody'), open=b.hidden; b.hidden=!open; tb.setAttribute('aria-expanded',open?'true':'false'); tb.textContent=open?'▲ Скрыть':tb.dataset.label; };
+
+  /* ── ГЕНЕРАТОР 1965 ── числа статьи Гапонова и др. (Письма в ЖЭТФ, 1965, т. 2, с. 430–435):
+     резонатор A — волновод 20 см, λ = 3,4 см при 3200 Э, основная частота; 6 Вт при 80 мА, 8 кВ, v⊥ ≈ 3v∥;
+     резонатор B — открытая «бочка», λ = 1,2 см при 4500 Э, вторая гармоника; 190 Вт при 320 мА, 19 кВ, v⊥ ≈ 3v∥.
+     Частота вращения fc = 2,7992 МГц/Э · H / γ, γ = 1 + U/511 кВ. Других мощностей модель не придумывает. */
+  var RES={A:{lam:3.4, name:'волновод 20 см'}, B:{lam:1.2, name:'открытая «бочка»'}};
+  var MODE={m1:{I:80,U:8}, m2:{I:320,U:19}, m3:{I:null,U:19}};
+  var st={r:'A', h:'2500', p:'lo', m:'m1'}, found={}, last=null;
+  function num(x,d){ return x.toFixed(d).replace('.',','); }
+  function calc(){
+    var U=MODE[st.m].U, g=1+U/511, fc=2.7992e-3*(+st.h)/g, l1=29.9792458/fc, l2=l1/2, R=RES[st.r].lam, n=0;
+    if (Math.round(l1*10)/10===R) n=1; else if (Math.round(l2*10)/10===R) n=2;
+    return {fc:fc, l1:l1, l2:l2, n:n, R:R};
+  }
+  document.querySelectorAll('#lab .seg').forEach(function(b){
+    b.onclick=function(){
+      st[b.dataset.k]=b.dataset.v;
+      document.querySelectorAll('#lab .seg[data-k="'+b.dataset.k+'"]').forEach(function(x){ x.setAttribute('aria-pressed', x===b?'true':'false'); });
+      last=null; read(null); draw();
+    };
+  });
+
+  var cv=$('labCv'), cx=cv.getContext('2d'), W=0, H=240;
+  function fit(){
+    var w=Math.round(cv.clientWidth)||640, rr=window.devicePixelRatio||1;
+    if (w===W && cv.width===Math.round(w*rr)) return;
+    W=w; cv.width=Math.round(W*rr); cv.height=Math.round(H*rr); cx.setTransform(rr,0,0,rr,0,0);
+  }
+  function draw(){
+    fit();
+    var narrow=W<520, f=(narrow?'11px':'13px')+' Inter, sans-serif';
+    cx.fillStyle='#141c26'; cx.fillRect(0,0,W,H);
+    cx.font=f; cx.textBaseline='middle';
+    var y=128, x0=narrow?18:30, x1=W-(narrow?18:30), rx0=x0+(x1-x0)*0.38, rx1=x0+(x1-x0)*0.72;
+    /* магнитное поле */
+    cx.strokeStyle='#5e7186'; cx.lineWidth=1.5; cx.beginPath(); cx.moveTo(x0,30); cx.lineTo(x1-8,30); cx.stroke();
+    cx.fillStyle='#5e7186'; cx.beginPath(); cx.moveTo(x1-8,25); cx.lineTo(x1,30); cx.lineTo(x1-8,35); cx.fill();
+    cx.fillStyle='#8fa5b9'; cx.textAlign='left'; cx.fillText('B = '+st.h+' Э', x0, 16);
+    /* пушка */
+    cx.fillStyle='#8a6d3b'; cx.beginPath(); cx.moveTo(x0,y); cx.lineTo(x0+34,y-24); cx.lineTo(x0+34,y+24); cx.fill();
+    cx.fillStyle='#8fa5b9'; cx.fillText('пушка', x0, y+44);
+    /* резонатор */
+    var gen = last && last.kind;
+    var glow = gen==='g1'||gen==='g2' ? '#f1d58a' : (gen==='why2' ? '#d4544d' : '#4f86b8');
+    if (gen==='g1'||gen==='g2'||gen==='why2'){ cx.fillStyle= gen==='why2' ? 'rgba(212,84,77,.18)' : 'rgba(241,213,138,.16)'; }
+    else cx.fillStyle='rgba(255,255,255,.04)';
+    cx.strokeStyle=glow; cx.lineWidth=3;
+    cx.beginPath();
+    if (st.r==='A'){ cx.rect(rx0,y-38,rx1-rx0,76); }
+    else { cx.ellipse((rx0+rx1)/2,y,(rx1-rx0)/2,48,0,0,Math.PI*2); }
+    cx.fill(); cx.stroke();
+    cx.fillStyle='#8fa5b9'; cx.textAlign='center';
+    cx.fillText(RES[st.r].name+' · ждёт '+num(RES[st.r].lam,1)+' см', (rx0+rx1)/2, y+66);
+    /* коллектор */
+    cx.strokeStyle='#5e7186'; cx.lineWidth=3; cx.beginPath(); cx.moveTo(x1-40,y-34); cx.lineTo(x1,y-34); cx.lineTo(x1,y+34); cx.lineTo(x1-40,y+34); cx.stroke();
+    /* спиральный пучок: шаг по закрутке, радиус растёт с полем (адиабатическое сжатие) */
+    var step = st.p==='hi' ? (narrow?9:11) : (narrow?26:32);
+    cx.strokeStyle='#e8735a'; cx.lineWidth=1.8; cx.beginPath();
+    for (var x=x0+36; x<=x1-6; x+=1){
+      var k=Math.min(1,(x-x0)/(rx0-x0)), a=6+16*k, ph=(x-x0)/step*Math.PI*2;
+      var yy=y+a*Math.sin(ph); if (x===x0+36) cx.moveTo(x,yy); else cx.lineTo(x,yy);
+    }
+    cx.stroke();
+    /* выход волны */
+    if (gen==='g1'||gen==='g2'||gen==='why2'){
+      var mx=(rx0+rx1)/2;
+      cx.strokeStyle=glow; cx.lineWidth=2;
+      for (var i=0;i<3;i++){ cx.beginPath(); cx.arc(mx, y-56-i*10, 10+i*8, Math.PI*1.15, Math.PI*1.85); cx.stroke(); }
+      cx.fillStyle=glow; cx.textAlign='center'; cx.font='600 '+(narrow?'14px':'17px')+' Inter, sans-serif';
+      cx.fillText(gen==='g1'?'6 Вт':(gen==='g2'?'190 Вт':'перегрев'), mx+(narrow?58:84), y-70);
+      cx.font=f;
+    } else if (last){
+      cx.fillStyle='#8fa5b9'; cx.textAlign='center';
+      cx.fillText(last.kind==='why1'?'частоты не совпали — тишина':'генерации по статье не видно', (rx0+rx1)/2, y-62);
+    } else {
+      cx.fillStyle='#8fa5b9'; cx.textAlign='center';
+      cx.fillText('Нажми «Включить»', (rx0+rx1)/2, y-62);
+    }
+  }
+  function read(c){
+    $('rdF').textContent = c ? num(c.fc,2)+' ГГц' : '—';
+    $('rdL1').textContent = c ? num(c.l1,2)+' см' : '—';
+    $('rdL2').textContent = c ? num(c.l2,2)+' см' : '—';
+    $('rdP').textContent = c ? c.P : '—';
+  }
+  function setFound(){
+    function yn(k){ return found[k] ? 'да' : 'нет'; }
+    $('labFound').textContent='Найдено: генератор на 6 Вт — '+yn('g1')+'; генератор на 190 Вт — '+yn('g2')+'; ловушка «слабая закрутка» — '+yn('why0')+'; ловушка «мимо резонанса» — '+yn('why1')+'; ловушка «ещё больше мощности» — '+yn('why2')+'.';
+  }
+  function hit(k,p){ if(!found[k]){ found[k]=1; award(k,p); return true; } return false; }
+  function msg(t,cls){ var m=$('labMsg'); m.className='lab-msg'+(cls?' '+cls:''); m.textContent=t; }
+  function go(){
+    var c=calc(), kind, text, cls;
+    if (!c.n){
+      kind='why1'; cls='bad'; c.P='нет генерации';
+      text='Электроны кружат с частотой '+num(c.fc,2)+' ГГц: их волна — '+num(c.l1,2)+' см на основной частоте и '+num(c.l2,2)+' см на второй гармонике, а резонатор ждёт '+num(c.R,1)+' см. Не совпало — генерации нет. Частоту задаёт не только поле, но и напряжение: чем быстрее электрон, тем он «тяжелее» и тем медленнее кружит. Поэтому при 3200 Э и 19 кВ волна уже 3,47 см.';
+    } else if (st.p==='lo'){
+      kind='why0'; cls='bad'; c.P='нет в статье';
+      text='Частоты совпали ('+(c.n===1?'на основной частоте':'на второй гармонике')+'), но пучок закручен слабо. По статье, когда электроны летят вдоль прибора слишком быстро, заметным становится обычное «линейное» поглощение. Мощность прибавлялась, когда вращение ускорялось, продольное движение замедлялось, а ток рос. Числа для такой закрутки в статье нет — модель его не придумывает.';
+    } else if (st.m==='m3'){
+      kind='why2'; cls='bad'; c.P='предел 1965 года';
+      text='На этом в 1965 году и остановились. В статье сказано: дальнейшему росту мощности мешали трудности охлаждения генераторов, а в генераторе на основной частоте ещё и разряд в остаточном газе. Электронный КПД так и не дошёл до предсказанных теорией 19 %. Предел был инженерным, а не физическим.';
+    } else if (st.r==='A' && st.m==='m1'){
+      kind='g1'; cls='ok'; c.P='6 Вт';
+      text='Как в статье: волновод 20 см, поле 3200 Э, 80 мА и 8 кВ, вращение втрое быстрее продольного движения. Электроны кружат с частотой 8,82 ГГц — волна 3,40 см ложится в резонатор, и генератор даёт 6 ватт. КПД около 0,9 %: 6 Вт из 640 Вт пучка.';
+    } else if (st.r==='B' && st.m==='m2'){
+      kind='g2'; cls='ok'; c.P='190 Вт';
+      text='Как в статье: открытая «бочка», поле 4500 Э, 320 мА и 19 кВ. Электроны кружат с частотой 12,14 ГГц, а волна в резонаторе колеблется вдвое чаще — вторая гармоника, 1,23 см. Генератор даёт 190 ватт, КПД около 3,1 %: 190 Вт из 6080 Вт пучка.';
+    } else {
+      kind='none'; cls=''; c.P='нет в статье';
+      text= st.r==='B' ? 'Частоты совпали на второй гармонике, но для 80 мА и 8 кВ в открытом резонаторе в статье числа нет: график мощности начинается с 12 кВ. Модель мощность не придумывает.'
+                       : 'Частоты совпали, но для такого режима в статье числа нет. Модель мощность не придумывает.';
+    }
+    last={kind:kind}; read(c); draw();
+    var news=[];
+    if (kind!=='none' && hit(kind, (kind==='g1'||kind==='g2')?15:10)) news.push(kind);
+    setFound();
+    msg(text, cls);
+  }
+  $('labGo').onclick=go;
+  $('labH').onclick=function(){
+    st = found.g1 ? {r:'B', h:'4500', p:'hi', m:'m2'} : {r:'A', h:'3200', p:'hi', m:'m1'};
+    document.querySelectorAll('#lab .seg').forEach(function(x){ x.setAttribute('aria-pressed', st[x.dataset.k]===x.dataset.v ? 'true':'false'); });
+    last=null; read(null); draw();
+    msg(st.r==='A' ? 'Выставлен первый генератор статьи: волновод, 3200 Э, сильная закрутка, 80 мА и 8 кВ. Нажми «Включить».' : 'Выставлен второй генератор статьи: открытая «бочка», 4500 Э, сильная закрутка, 320 мА и 19 кВ. Нажми «Включить».','');
+  };
+  window.addEventListener('resize', draw);
+  draw();
+
+  /* ── ВИКТОРИНА ── один ответ на вопрос; дистракторы сверены с источниками страницы. */
+  var Q = [
+    {q:'Что заставляет электроны в гиротроне двигаться по спирали?', o:['Электрическое поле катода','Постоянное магнитное поле','Стенки резонатора'], a:1,
+     e:'Электрон в магнитном поле кружит; вместе с движением вдоль прибора получается спираль. Поле в 3200 эрстед задаёт частоту 8,8 ГГц.'},
+    {q:'Зачем горьковчане перешли к «открытым» резонаторам?', o:['Чтобы увеличить объём «активной среды» и мощность','Так было дешевле','Чтобы видеть электроны глазами'], a:0,
+     e:'Статья 1965 года: рост мощности требует большего сечения пучка, а значит — «открытых» квазиоптических резонаторов.'},
+    {q:'Что остановило рост мощности на 190 ваттах в 1965 году?', o:['Нехватка электронов','Охлаждение генераторов','Запрет начальства'], a:1,
+     e:'Авторы статьи 1965 года пишут, что дальнейшему росту мощности мешали трудности охлаждения генераторов.'},
+    {q:'Кто ещё в 1958–1959 годах предсказал излучение кружащих в магнитном поле электронов?', o:['Р. Твисс и Ю. Шнайдер','А. Эйнштейн и Н. Бор','Ч. Таунс и А. Прохоров'], a:0,
+     e:'Твисс (Австралия, 1958), Шнайдер (США, 1959) и Гапонов (1959) пришли к одной мысли почти одновременно.'},
+    {q:'Сколько гиротронных систем для ИТЭР поставит Россия?', o:['Две','Восемь','Двадцать четыре'], a:1,
+     e:'Из 24 гиротронных систем ИТЭР восемь — российские; первые четыре в конце 2024 года монтировали во Франции («Страна Росатом», 2024).'}
+  ];
+  var qb = $('quizBox');
+  Q.forEach(function(it, qi){
+    var wrap = document.createElement('div');
+    var h = document.createElement('p'); h.className='quiz-q'; h.textContent=(qi+1)+'. '+it.q; wrap.appendChild(h);
+    var exp = document.createElement('div'); exp.className='exp'; exp.setAttribute('aria-live','polite');
+    var btns = it.o.map(function(txt, oi){
+      var b=document.createElement('button'); b.type='button'; b.className='opt'; b.textContent=txt;
+      b.onclick=function(){
+        if (wrap.dataset.done) return; wrap.dataset.done='1';
+        btns.forEach(function(x,xi){ x.disabled=true; if (xi===it.a) x.classList.add('correct'); });
+        if (oi===it.a){ award('q'+qi,8); exp.textContent='Верно. '+it.e; }
+        else { b.classList.add('wrong'); exp.textContent='Не совсем. '+it.e; }
+        exp.classList.add('show');
+      };
+      wrap.appendChild(b); return b;
+    });
+    wrap.appendChild(exp); qb.appendChild(wrap);
+  });
+})();
+</script>
+<script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
+<script>window.MUSEUM_CHROME={
+  museum:{title:'Что изобрели русские первыми в мире',href:'index.html'},
+  share:{title:'Электроны по спирали: гиротрон Гапонова-Грехова — музей «Что изобрели русские первыми в мире»',
+         text:'В статье 1965 года горьковские физики описали, как сняли 190 ватт с электронов, закрученных в спираль. Что Россия дала миру раньше всех — день за днём.'},
+  prev:{href:'day-30jan-kotelnikov.html',title:'30 января · Парашют'},
+  next:{href:'day-03feb-luna9.html',title:'3 февраля · «Луна-9»'},
+  all:{href:'index.html',label:'Все изобретения'},
+  city:'../../index.html',
+  random:['day-01jan-cabletv.html','day-02jan-luna1.html','day-03jan-anosov.html','day-04jan-pilchikov.html','day-05jan-shukhov.html','day-06jan-orlov.html','day-08jan-icebreaker.html','day-09jan-blinov.html','day-10jan-britnev.html','day-11jan-kostovich.html','day-12jan-r7.html','day-13jan-k278.html','day-14jan-lira.html','day-15jan-kovalevskaya.html','day-16jan-soyuz45.html','day-19jan-kantorovich.html','day-21jan-obninsk.html','day-22jan-landau.html','day-23jan-umov.html','day-24jan-k162.html','day-25jan-korsakov.html','day-26jan-podvodnaya.html','day-27jan-pentium.html','day-28jan-havkin.html','day-30jan-kotelnikov.html','day-31jan-girotron.html','day-03feb-luna9.html','day-18mar-leonov.html','day-15may-mechnikov.html','day-16jun-tereshkova.html','day-26sep-pavlov.html','day-15nov-buran.html','day-25nov-pirogov.html','day-01dec-lobachevsky.html','day-14dec-laser.html']
+};</script>
+<script src="../../assets/museum-chrome.js"></script>
+<script>window.MUSEUM_SUPPORT={museum:'Что изобрели русские первыми в мире'};</script>
+<script src="../../assets/museum-support.js"></script>
+<script src="calendar-izobreteniya.js"></script>
+<script>window.MUSEUM_CALENDAR_INITIAL='01-31';</script>
+<script src="../../assets/museum-calendar-month.js"></script>
+<script>window.MUSEUM_RETURN={riddle:{q:"Почему горьковский генератор 1965 года остановился на 190 ваттах?",a:"Мощность росла с закруткой пучка и током, но, как пишут авторы, дальнейшему росту мешали трудности охлаждения генераторов. КПД вышел около 3 % вместо предсказанных теорией 19 %.",src:"A. V. Gaponov et al., «Induced Synchrotron Radiation of Electrons in Cavity Resonators», JETP Letters, 1965, vol. 2 (перевод статьи из «Писем в ЖЭТФ»)"}};</script>
+<script src="../../assets/museum-return.js" data-museum="izobreteniya" data-day="01-31"></script>
+<script defer src="../../assets/analytics.js"></script>
+<script>window.MUSEUM_AUDIOGUIDE={
+  audioSrc:"audio-guide-girotron-ru.mp3",
+  durationLabel:"1 минута 52 секунд",
+  lead:"Голос ведёт по залу гиротрона: от приборов в немецком Грайфсвальде до горьковской статьи тысяча девятьсот шестьдесят пятого года и термоядерного реактора ИТЭР. Шесть остановок, на каждой — что искать глазами. Слушать можно фоном, пока читаешь статью ниже.",
+  stops:[
+    {t:0,mark:"0:00",title:"Приборы в Грайфсвальде"},
+    {t:19,mark:"0:19",title:"Горький, радиофак"},
+    {t:37,mark:"0:37",title:"Электрон как грузик на нитке"},
+    {t:56,mark:"0:56",title:"Пушка и спираль"},
+    {t:75,mark:"1:15",title:"Сто девяносто ватт"},
+    {t:92,mark:"1:32",title:"Восемь гиротронов для ИТЭР"}
+  ],
+  transcript:[
+    "<p>Collection of gyrotrons at the Max Planck institute of Plasma Physics in Greifswald — фото I2ho7p, Викисклад, CC BY-SA 4.0.</p>",
+    "<p>«Родился 7 июня 1926 г. в Москве» — ИПФ РАН, страница памяти А. В. Гапонова-Грехова; там же: Горький с 1933 года, радиофизический факультет, основанный М. Т. Греховой.</p>",
+    "<p>Факты: теория индуцированного излучения классических нелинейных осцилляторов, 1958–1961 — ИПФ РАН; Р. Твисс 1958, Ю. Шнайдер 1959 — обзор The Gyrotron at 50, 2014.</p>",
+    "<p>Факты: конический катод, адиабатический инвариант, рост энергии вращения вместе с полем — статья Гапонова и соавторов, Письма в ЖЭТФ, 1965, т. 2 (английский перевод, рис. 1).</p>",
+    "<p>Факты: 6 Вт при 80 мА и 8 кВ, 190 Вт при 320 мА и 19 кВ, предел — охлаждение генераторов — та же статья, поступила 9 сентября 1965.</p>",
+    "<p>Факты: 24 гиротронные системы ИТЭР, восемь — из России, 1 МВт — «Страна Росатом», 2020; первые четыре комплекса монтируют в Кадараше — «Страна Росатом», 24 декабря 2024.</p>"
+  ],
+  note:"Озвучено синтезом речи — временно, до записи голосом автора музея."
+};</script>
+<script src="../../assets/museum-audioguide.js"></script>
+</body>
+</html>
