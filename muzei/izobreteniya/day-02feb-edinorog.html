@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="ru" data-museum="izobreteniya">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>«Одиночка», ставшая «единорогом»: орудие Данилова и Мартынова — Что изобрели русские первыми в мире, 2 февраля</title>
+<!--
+  Страница дня 2 февраля. Наряд stranicy-izob-0910 (claude2, 13.10.2026), карточка #762.
+  Форма — вариант А музея изобретений (Сергей 12.09.2026): лента ударов, подробности свёрнуты.
+  Паспорт выпуска: rc-museum-production/izobreteniya/day-02feb-edinorog/passport/issue.json
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --dark:#060c17; --dark2:#0c1826; --surface:#111f33;
+    --card:rgba(255,255,255,.05); --card-b:rgba(255,255,255,.09);
+    --gold:#c9a84c; --gold-l:#e4c97a; --gold-g:rgba(201,168,76,.13);
+    --ink:#e8eef5; --muted:#7a9ab8; --line:rgba(255,255,255,.07);
+    --accent:#2d8cbf; --accent2:#1f6f8b;
+    /* legacy compat */
+    --paper:#0c1826; --paper2:#111f33;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Inter','Segoe UI',sans-serif;color:var(--ink);background:var(--dark);line-height:1.72}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.13;margin:0}
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent)}
+
+  /* ── ШАПКА ── */
+  header.top{background:rgba(6,12,23,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--card-b);color:#fff;position:sticky;top:0;z-index:30}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+  .logo svg{display:block;filter:drop-shadow(0 0 8px rgba(201,168,76,.4))}
+  .logo .lt{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:16px}
+  .logo .lt small{display:block;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-family:'Inter',sans-serif}
+  .score{background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:6px 16px;font-size:13px;color:var(--gold-l);cursor:pointer;font-family:'Inter',sans-serif}
+  .score-info{position:absolute;right:12px;top:66px;max-width:260px;background:#0e1c30;color:var(--ink);border:1px solid var(--card-b);border-radius:14px;padding:14px 16px;font-size:13px;line-height:1.6;box-shadow:0 20px 60px rgba(0,0,0,.6);display:none;z-index:40}
+  .score-info.show{display:block}
+
+  /* ── HERO — СТАНДАРТ (не менять): 3D-сцена сверху, текст отдельным блоком ниже ── */
+  .hero-scene{position:relative;height:52vh;min-height:300px;max-height:520px;overflow:hidden;background:linear-gradient(160deg,#0a1e3a 0%,#1a3a6a 55%,#0d2240 100%)}
+  .hero-scene canvas.scene,.hero-scene img.scene{width:100%;height:100%;display:block;object-fit:cover}
+  .scene-caption{background:#060d18;padding:11px 0 12px}
+  .scene-caption .wrap{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+  .scene-cap{font-size:13.5px;line-height:1.6;color:var(--muted);border-left:2px solid rgba(201,168,76,.4);padding-left:14px;flex:1 1 420px}
+  .scene-hint{flex:0 0 auto;font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.4px;color:#e4c97a;
+    background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.34);border-radius:24px;padding:7px 16px;font-weight:600}
+  .hero-lead{background:linear-gradient(180deg,#0c1826 0%,#060c17 100%);color:#fff;padding:28px 0 38px}
+  .hero-lead .museum{color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:12px;opacity:.9}
+  .hero-lead .who{font-family:'Inter',sans-serif;font-size:clamp(13px,3vw,15px);letter-spacing:.4px;color:var(--accent-l,#7dc8ff);margin-bottom:10px}
+  .hero-lead .who i{font-style:normal;color:#7893ab;font-weight:400}
+  .hero-lead h1{color:#fff;font-size:56px;font-weight:900;line-height:1.04;margin-bottom:16px}
+  .hero-lead .hook{color:#b8ccde;font-size:19px;max-width:580px;margin-bottom:28px;line-height:1.65;font-weight:400}
+  .hero-lead .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+  @media(max-width:680px){.hero-lead h1{font-size:34px}.hero-lead .hook{font-size:16px}
+    .hero-scene{height:34vh;min-height:230px;max-height:300px}
+    .scene-caption .wrap{flex-direction:column;gap:9px}
+    .scene-hint{order:-1;align-self:flex-start;font-size:11.5px;padding:6px 13px}
+    .scene-cap{font-size:12.8px;flex:1 1 auto}}
+  .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:16px;font-family:'Inter',sans-serif;letter-spacing:.5px}
+
+  /* ── НАВИГАЦИЯ ДНЯ ── */
+  .daynav{position:sticky;top:64px;z-index:25;background:rgba(6,12,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-b)}
+  .daynav .wrap{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+  .daynav::-webkit-scrollbar{display:none}
+  .daynav a{flex:0 0 auto;padding:14px 20px;font-size:11px;font-weight:700;font-family:'Inter',sans-serif;color:var(--muted);text-decoration:none;white-space:nowrap;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:.18s}
+  .daynav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+  /* ── СЕКЦИИ ── */
+  section.block{padding:64px 0;border-bottom:1px solid var(--line);scroll-margin-top:130px}
+  .kicker{font-size:10px;text-transform:uppercase;letter-spacing:3.5px;color:var(--gold);font-weight:700;font-family:'Inter',sans-serif;margin-bottom:8px}
+  section.block h2{font-size:34px;color:#fff;margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink)}
+  .pull{background:var(--gold-g);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 14px 14px 0;font-style:italic;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-size:20px;line-height:1.5;margin:26px 0}
+
+  /* ── КНОПКИ ── */
+  .btn{cursor:pointer;border:none;border-radius:12px;padding:14px 26px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;background:var(--accent2);color:#fff;transition:.18s;letter-spacing:.2px}
+  .btn:hover{filter:brightness(1.18)}
+  .btn.ghost{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid var(--card-b)}
+  .btn.ghost:hover{background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.2)}
+  .btn.gold{background:linear-gradient(135deg,var(--gold),#b8882b);color:#1a0f00;box-shadow:0 4px 20px rgba(201,168,76,.25)}
+  .btn.gold:hover{filter:brightness(1.1);box-shadow:0 6px 28px rgba(201,168,76,.4)}
+  .btn:active{transform:translateY(1px)}
+  .pulse{animation:pulse .9s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+
+  /* ── КАРТОЧКИ ── */
+  .card{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:20px 22px;margin:16px 0;backdrop-filter:blur(6px)}
+
+  /* ── КВИЗ ── */
+  .opt{display:block;width:100%;text-align:left;background:rgba(255,255,255,.04);border:1px solid var(--card-b);border-radius:12px;padding:13px 16px;margin:8px 0;cursor:pointer;font-size:15px;color:var(--ink);font-family:'Inter',sans-serif;transition:.16s}
+  .opt:hover{border-color:var(--accent);background:rgba(45,140,191,.08)}
+  .opt.correct{background:rgba(40,120,60,.18);border-color:#3f9b52;color:#7ed4a0;font-weight:600}
+  .opt.wrong{background:rgba(180,40,40,.13);border-color:#c0453f;color:#f08080}
+  .exp{margin-top:10px;font-size:14px;background:var(--gold-g);border-radius:10px;padding:12px 14px;display:none;color:var(--gold-l)}
+  .exp.show{display:block}
+
+  /* ── ИТОГ ДНЯ ── */
+  .day-result{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:22px 24px;max-width:460px}
+  .dr-rank{font-family:'Playfair Display',Georgia,serif;font-size:28px;color:var(--gold-l);font-weight:700}
+  .dr-score{font-size:16px;margin:4px 0 12px;color:var(--ink)}.dr-score span{color:var(--muted);font-size:14px}
+  .dr-bar{height:8px;background:rgba(255,255,255,.08);border-radius:6px;overflow:hidden}
+  .dr-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),var(--gold));transition:width .6s cubic-bezier(.2,.7,.2,1)}
+  .dr-note{margin-top:12px;font-size:14px;color:var(--muted)}
+
+  /* ── РЕКЛАМНЫЕ СЛОТЫ ── */
+  .ad-slot{position:relative;margin:26px 0;background:rgba(255,255,255,.02);border:1px dashed rgba(255,255,255,.1);border-radius:14px;min-height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px}
+  .ad-slot .lbl{position:absolute;top:7px;right:12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.15);font-family:'Inter',sans-serif}
+  .ad-slot .ph-txt{font-size:12px;max-width:80%;color:rgba(255,255,255,.18)}
+  .ad-slot.billboard{min-height:108px}
+  .adband{background:transparent;border-bottom:none}
+
+  footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
+  .crumbs{background:rgba(6,12,23,.6);border-bottom:1px solid var(--card-b);font-family:'Inter',sans-serif;font-size:12.5px}
+  .crumbs .wrap{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  .crumbs a{color:var(--gold-l);text-decoration:none;white-space:nowrap}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--muted);opacity:.6}
+  .crumbs .here{color:var(--muted);white-space:nowrap}
+
+
+  /* ── ШАПКА: четыре строки по museum-core §6-бис ── */
+  header.top{display:block;text-align:center;padding:10px 12px 8px;height:auto;position:relative}
+  header.top .b1{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:15px;letter-spacing:.5px;color:#fff}
+  header.top .b2{font-size:11px;color:var(--muted);margin-top:2px}
+  header.top .b3{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:6px}
+  header.top .b4{font-size:12.5px;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-style:italic}
+  header.top .score{position:absolute;right:12px;top:10px}
+  .daynav{top:0}
+  .hero-scene{background:#0e1c2c;height:38vh;min-height:250px;max-height:400px}
+  @media(max-width:680px){.hero-lead h1{font-size:31px}}
+  .hero-scene img.scene{object-fit:cover;object-position:50% 42%}
+  .date-origin{font-size:13px;color:#9fb4c8;margin:-6px 0 12px;max-width:62ch}
+  .hero-lead .hook{color:#c6d8e8;max-width:62ch}
+  .hero-under{background:linear-gradient(180deg,#060d18,#060c17);padding:4px 0 22px}
+  .stamp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(125,200,255,.28);margin-top:14px}
+  .stamp>div{padding:11px 12px;border-left:1px solid rgba(125,200,255,.16);min-width:0}
+  .stamp>div:first-child{border-left:0}
+  .stamp .v{font-size:clamp(15px,3.4vw,21px);font-weight:700;color:#8fd3ff;line-height:1.1;overflow-wrap:anywhere}
+  .stamp .k{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#8fa5b9;margin-top:5px}
+  @media(max-width:600px){.stamp{grid-template-columns:repeat(2,minmax(0,1fr))}.stamp>div:nth-child(3){border-left:0}.stamp>div:nth-child(n+3){border-top:1px solid rgba(125,200,255,.16)}}
+
+  /* ── ЛЕНТА УДАРОВ (museum-inventions, вариант А; museum-core §5-бис) ── */
+  .udary{list-style:none;margin:18px 0 0;padding:0;counter-reset:u}
+  .udary>li{border-top:1px solid var(--line);padding:4px 0}
+  .udary details>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:34px 1fr;gap:10px;padding:12px 0;font-size:17px;line-height:1.55;color:var(--ink)}
+  .udary details>summary::-webkit-details-marker{display:none}
+  .udary details>summary::before{counter-increment:u;content:counter(u);font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:20px;color:var(--gold);line-height:1.3}
+  .udary .more-lbl{display:block;grid-column:2;font-size:12.5px;color:var(--gold-l);letter-spacing:.3px;margin-top:4px}
+  .udary .more-lbl::after{content:' ▾'}
+  .udary details[open] .more-lbl::after{content:' ▴'}
+  .udary details[open] .more-lbl .o{display:none}
+  .udary details:not([open]) .more-lbl .c{display:none}
+  .udary summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+  .udary .det{margin:0 0 14px 44px;padding:12px 16px;background:rgba(255,255,255,.035);border-left:2px solid rgba(201,168,76,.45);border-radius:0 10px 10px 0;font-size:15px;color:#d5e0ea}
+  .udary .det p{margin:8px 0}
+  .udary .tag{display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1a0f00;background:var(--gold-l);border-radius:6px;padding:1px 7px;margin-right:6px}
+  .udary .find{border-left:3px solid var(--gold);padding-left:8px}
+  figure.fig{margin:18px 0}
+  figure.fig img{max-width:100%;height:auto;border-radius:10px;display:block}
+  figure.fig figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5}
+  .src-note{font-size:12px;color:#8fa5b9}
+
+  /* ── МОДЕЛЬ ДНЯ (главное предметное действие) ── */
+  .lab{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:18px 18px 20px;margin-top:14px}
+  .lab-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+  .lab-row .lbl{flex:0 0 100%;font-size:13px;color:var(--muted);letter-spacing:.3px}
+  .seg{cursor:pointer;border:1px solid var(--card-b);background:rgba(255,255,255,.04);color:var(--ink);border-radius:10px;padding:10px 14px;font:inherit;font-size:14.5px;min-height:44px}
+  .seg[aria-pressed="true"]{border-color:var(--gold);background:var(--gold-g);color:var(--gold-l);font-weight:600}
+  .seg:focus-visible,.btn:focus-visible,.opt:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .lab-stage{position:relative;margin-top:12px}
+  .lab-stage canvas{width:100%;height:auto;display:block;border-radius:10px;background:#1c2530}
+  .lab-cap{font-size:12px;color:#8fa5b9;margin-top:6px}
+  .lab-msg{margin-top:12px;font-size:15.5px;padding:12px 14px;border-radius:10px;background:rgba(255,255,255,.04);border-left:3px solid var(--card-b);min-height:48px}
+  .lab-msg.ok{border-left-color:#3f9b52;background:rgba(40,120,60,.14)}
+  .lab-msg.bad{border-left-color:#c0453f;background:rgba(180,40,40,.10)}
+  .lab-found{font-size:13px;color:var(--muted);margin-top:8px}
+  .lab-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .noscript-box{background:rgba(255,255,255,.04);border:1px dashed var(--card-b);border-radius:12px;padding:12px 16px;font-size:15px}
+
+  /* ── ГРАНИЦА ПЕРВЕНСТВА ── */
+  .border-box{background:rgba(45,140,191,.08);border:1px solid rgba(45,140,191,.3);border-radius:14px;padding:16px 18px}
+  .border-box b{color:#8fd3ff}
+  .ctx{width:100%;border-collapse:collapse;margin-top:14px;font-size:14.5px}
+  .ctx th,.ctx td{text-align:left;padding:9px 8px;border-top:1px solid var(--line);vertical-align:top}
+  .ctx th{color:var(--gold-l);font-weight:600;font-size:12.5px;letter-spacing:.5px}
+  .quiz-q{margin:18px 0 6px;font-weight:600}
+  .sources a{color:var(--gold-l)}
+  .sources li{margin:6px 0;font-size:14px;color:#c8d6e2}
+  @media(max-width:600px){header.top{padding:8px 64px 6px}header.top .score{top:8px;right:8px;padding:4px 10px;font-size:12px}header.top .b3{margin-top:3px}
+    .hero-scene{height:26vh;min-height:200px;max-height:260px}.date-origin{font-size:12px;margin:-8px 0 8px}.hero-lead{padding:18px 0 26px}.hero-lead .date-chip{margin-bottom:12px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+  /* ── ПОЛЗУНКИ МОДЕЛИ (19, 21 янв) ── */
+  .mtab{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+  .mrow{display:grid;grid-template-columns:minmax(150px,1.2fr) 2fr 92px;gap:12px;align-items:center}
+  .mrow .mname{font-size:14.5px}
+  .mrow .mname i{font-style:normal;color:var(--muted);font-size:13px}
+  .mrow input[type=range]{width:100%;accent-color:var(--gold);min-height:44px}
+  .mrow output{font-size:14px;color:var(--gold-l);text-align:right}
+  .mrow.off{opacity:.45}
+  .mult{margin-top:14px;padding:14px 16px;border-radius:12px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25)}
+  @media(max-width:560px){.mrow{grid-template-columns:1fr 70px}.mrow .mname{grid-column:1/-1}}
+</style>
+<meta name="description" content="Фейерверкер М. В. Данилов подсмотрел во французской книге мортирки с каморой-конусом, и вместе с М. Г. Мартыновым они отлили «одиночку»: она стреляла ядром, гранатой и картечью.">
+<link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-02feb-edinorog.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Русская цивилизация">
+<meta property="og:title" content="«Одиночка», ставшая «единорогом»: орудие Данилова и Мартынова">
+<meta property="og:description" content="Фейерверкер М. В. Данилов подсмотрел во французской книге мортирки с каморой-конусом, и вместе с М. Г. Мартыновым они отлили «одиночку»: она стреляла ядром, гранатой и картечью.">
+<meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-02feb-edinorog.html">
+<meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-02feb-edinorog.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "«Одиночка», ставшая «единорогом»: орудие Данилова и Мартынова", "description": "Фейерверкер М. В. Данилов подсмотрел во французской книге мортирки с каморой-конусом, и вместе с М. Г. Мартыновым они отлили «одиночку»: она стреляла ядром, гранатой и картечью.", "url": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-02feb-edinorog.html", "inLanguage": "ru", "isPartOf": {"@type": "WebSite", "name": "Музей «Что изобрели русские первыми в мире»"}, "publisher": {"@type": "Organization", "name": "Русская цивилизация"}, "about": {"@type": "Thing", "name": "Единорог (артиллерийское орудие)"}, "image": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-02feb-edinorog.jpg"}</script>
+<style>
+  /* ── ПРОБА НА ВЫБОРГСКОЙ СТОРОНЕ ── */
+  .shot-log{list-style:none;padding:0;margin:10px 0 0;display:grid;gap:6px}
+  .shot-log li{background:rgba(255,255,255,.035);border-left:3px solid var(--card-b);border-radius:8px;padding:8px 10px;font-size:14.5px}
+  .shot-log li .t{display:block;font-size:12px;color:var(--muted);letter-spacing:.3px}
+  .shot-log li.ok{border-left-color:#3f9b52}
+  .shot-log li.no{border-left-color:#c0453f}
+  .gun-card{background:rgba(255,255,255,.03);border:1px solid var(--card-b);border-radius:10px;padding:10px 12px;margin-top:10px;font-size:14.5px}
+  .gun-card b{color:#f1d58a}
+  .verdict{margin-top:16px;padding:12px 14px;border:1px dashed var(--card-b);border-radius:12px}
+  .verdict label{display:flex;gap:10px;align-items:flex-start;padding:7px 0;font-size:15px;cursor:pointer}
+  .verdict input{margin-top:4px;width:18px;height:18px;accent-color:#c9a84c;flex:0 0 auto}
+  blockquote.doc{margin:12px 0;padding:10px 14px;border-left:3px solid var(--gold);background:rgba(255,255,255,.03);border-radius:0 10px 10px 0;font-size:15px;line-height:1.6}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="b1">Русская цивилизация</div>
+  <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
+  <div class="b3">Что изобрели русские первыми в мире</div>
+  <div class="b4">365 изобретений. Все русские. Все первые</div>
+  <div class="score" id="scoreBox" title="Баллы знаний за этот день">⭐ <span id="score">0</span> / 100</div>
+</header>
+
+<nav class="crumbs" aria-label="Хлебные крошки"><div class="wrap">
+  <a href="../../index.html">Русская цивилизация</a>
+  <span class="sep">›</span>
+  <a href="index.html">Что изобрели русские первыми в мире</a>
+  <span class="sep">›</span>
+  <span class="here">2 февраля · «Единорог»</span>
+</div></nav>
+
+<div class="hero-scene" id="hero" style="background:#2a2a24">
+  <img class="scene" src="day-02feb-edinorog.jpg" data-source="https://commons.wikimedia.org/wiki/File:245-%D0%BC%D0%BC_%D0%BE%D1%81%D0%B0%D0%B4%D0%BD%D1%8B%D0%B9_%D0%B5%D0%B4%D0%B8%D0%BD%D0%BE%D1%80%D0%BE%D0%B3.jpg" data-license="CC BY-SA 1.0" width="1280" height="730" alt="Тёмный бронзовый ствол старинного орудия лежит на подставках в музейном зале; сверху на стволе литая фигура зверя, перед стволом — банник с меховой щёткой" fetchpriority="high">
+</div>
+
+<div class="scene-caption">
+  <div class="wrap">
+    <div class="scene-cap">Ствол 2-пудового (245-мм) осадного единорога, вторая половина XVIII века. Военно-исторический музей артиллерии, инженерных войск и войск связи, Санкт-Петербург. Фото George Shuklin, Викисклад, CC BY-SA 1.0.</div>
+    <span class="scene-hint">Предмет · бронзовый ствол</span>
+  </div>
+</div>
+
+<header class="hero-lead">
+  <div class="wrap">
+    <div class="date-chip">2 февраля · 1757</div>
+    <p class="date-origin">Точного дня, когда отлили первый «единорог», документы не сохранили: Данилов, будущий майор, рассказывает о пробах в абзаце о 1756 годе, а образец орудия датируют 1757 годом. В календаре музея ему отдано 2 февраля.</p>
+    <div class="who">Михаил Васильевич Данилов и Матвей Григорьевич Мартынов <i>· артиллеристы-фейерверкеры, Петербург</i></div>
+    <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
+    <h1>«Одиночка», ставшая «единорогом»: орудие Данилова и Мартынова</h1>
+    <p class="hook">Фейерверкер Михаил Данилов подсмотрел во французской книге мортирки с каморой-конусом — и в 1757 году у России было орудие, бившее ядром, гранатой и картечью.</p>
+    <div class="hero-btns">
+      <button class="btn gold" id="readBtn" type="button">Читать историю ↓</button>
+      <button class="btn ghost" id="listenBtn" type="button">🎧 Слушать аудиогид</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero-under">
+  <div class="wrap">
+    <div class="stamp">
+      <div><div class="v">1707</div><div class="k">чертёж мортирок с каморой-конусом в книге Сен-Реми</div></div>
+      <div><div class="v">1757</div><div class="k">образец «единорога» в русской артиллерии</div></div>
+      <div><div class="v">3 снаряда</div><div class="k">ядро, граната и картечь из одного ствола</div></div>
+      <div><div class="v">до 1860-х</div><div class="k">единороги оставались на вооружении, в том числе на флоте</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="daynav" aria-label="Разделы дня">
+  <div class="wrap">
+    <a href="#story">Читать</a>
+    <a href="#audioguide">Слушать</a>
+    <a href="#games">Проба</a>
+    <a href="#pervenstvo">Первенство</a>
+    <a href="#quiz">Викторина</a>
+    <a href="#calendar">Календарь</a>
+  </div>
+</nav>
+
+<section class="wrap" id="dokument" data-proof-block></section>
+
+<section class="block" id="audioguide"></section>
+
+<section class="block" id="story">
+  <div class="wrap">
+    <div class="kicker">История первенства · 12 ударов</div>
+    <h2>От чертежа в книге — к орудию на сто лет</h2>
+    <p style="color:var(--muted);max-width:62ch">Читается подряд. Нажми на удар — откроется подробный разбор с источниками.</p>
+    <ol class="udary">
+      <li><details><summary><span>В 1756 году граф П. И. Шувалов стал генерал-фельдцейхмейстером — начальником всей русской артиллерии.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>«Граф был человек замыслов великих и предприимчивый», — пишет о нём артиллерист Михаил Данилов. Шувалов вёл артиллерию в годы Семилетней войны с Пруссией. При нём армия получала одно новое орудие за другим. Самым долгоживущим из них оказался «единорог».</p>
+          <p class="src-note">Источники: «Записки артиллерии майора М. В. Данилова, написанные им в 1771 году» («Русский архив», 1883, кн. 2, вып. 3); А. В. Громов, «О подражаниях „шуваловской“ артиллерии в западноевропейских странах», Сборник исследований и материалов ВИМАИВиВС, вып. XIII, 2024.</p>
+        </div></details></li>
+      <li><details><summary><span>Ещё до этого Шувалов придумал «секретную гаубицу»: дуло у неё было не круглое, а сплюснутое, и стреляла она одной дробью.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <blockquote class="doc">«…в которой было дуло не круглое, а продолговатое, подобно сжатому до половины круглому кольцу; а как оное орудие стреляло широко одной дробою, то гоубицу назвали секретною и дула никому не давали смотреть, заслоняли его медными закрышками и замыкали замком».</blockquote>
+          <p>Расчёт гаубицы давал особую присягу: никому не показывать дуло, «хотя уже многие его знали», — усмехается Данилов. Слабое место орудия называет историк Артиллерийского музея А. В. Громов: из-за широкого раструба для картечи оно не могло стрелять ни ядрами, ни зажигательными снарядами.</p>
+          <p class="src-note">Источники: «Записки» М. В. Данилова; А. В. Громов, Сборник ВИМАИВиВС, вып. XIII, 2024.</p>
+        </div></details></li>
+      <li><details><summary><span>Новый начальник требовал от офицеров изобретений: «кто может что показать». Обер-фейерверкер Михаил Данилов тоже решил предложить что-нибудь новое.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>«По вступлении графа в артиллерию появились многие прожекты, дельные и негодные», — вспоминает Данилов. Он родился около 1722 года и в 1743 году окончил Артиллерийскую школу. В 1756 году его произвели в обер-фейерверкеры — на место его приятеля, фейерверкера Матвея Григорьевича Мартынова.</p>
+          <p class="src-note">Источник: «Записки» М. В. Данилова.</p>
+        </div></details></li>
+      <li><details><summary><span>Единорог начался с чужого чертежа: Данилов увидел во французской книге Сен-Реми мортирки с каморой конусом.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <blockquote class="doc">«Однажды усмотрел я в „Записках артиллерийских“ Сен-Реми (в первом томе) на чертеже сплошь четыре мортирки напечатаны, каморы у них были конусом, а запор сделан на середине один, и названы оные мортиры батарейками».</blockquote>
+          <p>Камора — узкая часть канала у казны, куда кладут порох. Книга француза Пьера Сюрирея де Сен-Реми «Mémoires d’artillerie» вышла вторым изданием в Париже в 1707 году. Данилов читал её в русском переводе: первый том Академия наук выпустила в 1732 году. В первом томе к странице 279 есть лист: «мортиры, отлитые вместе на одной цапфе, с общим запалом», — пять стволов по 6 дюймов и четыре по 8. Сен-Реми приводит письмо о пробе 1703 года: связку из пяти мортир испытали, а затем заказали ещё одну, из четырёх стволов по 8 дюймов. Данилов вспоминал о четырёх.</p>
+          <figure class="fig" style="max-width:360px">
+            <img src="day-02feb-edinorog-saint-remy.jpg" data-source="https://archive.org/details/memoires-dartillerie-vol-1-1707/page/n497/mode/1up" data-license="Public domain" width="1000" height="1390" loading="lazy" alt="Гравюра XVIII века: две колоды из сросшихся мортир — сверху пять стволов, снизу четыре; каждый ствол книзу сужается конусом, внизу общий запал, отмеченный буквой E; подписи по-французски">
+            <figcaption>«Mortiers fondus ensemble sur un mesme tourillon» — мортиры, отлитые вместе, с общим запалом E. П. Сюрирей де Сен-Реми, «Mémoires d’artillerie», т. 1, Париж, 1707, лист к с. 279. Internet Archive, общественное достояние.</figcaption>
+          </figure>
+          <p class="src-note">Источники: «Записки» М. В. Данилова; Сен-Реми, «Мемории или Записки артиллерийския», т. 1, СПб., 1732 (Президентская библиотека); P. Surirey de Saint-Remy, «Mémoires d’artillerie», t. 1, Paris, 1707, p. 279–280 и лист (Internet Archive).</p>
+        </div></details></li>
+      <li><details><summary><span>Мартынов одобрил идею. Отлили «батарейку» из четырёх мортирок под трёхфунтовое ядро — и на пробе от выстрела лафет разнесло в щепки.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <blockquote class="doc">«…а как стали пробовать, то от выстрела лафет, который был на колесах, под мортирками весь раздробился в мелкие штуки».</blockquote>
+          <p>Почему лафет не выдержал, Данилов не пишет. Запор у мортирок был «на середине один», на все четыре ствола.</p>
+          <p class="src-note">Источник: «Записки» М. В. Данилова.</p>
+        </div></details></li>
+      <li><details><summary><span>После многих проб оставили два ствола — «близнят». На полигоне они годились. Их наделали множество и послали в армию, а там бросили как бесполезные.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Пробы шли на Выборгской стороне Петербурга. «Близнят» с лафетами отправили «в тогдашнюю войну против короля прусского», и, честно признаёт Данилов, там они были «брошены или найдены бесполезными». Английские историки, пишет Громов, тоже полностью отвергают ценность «близнят».</p>
+          <p class="src-note">Источники: «Записки» М. В. Данилова; А. В. Громов, Сборник ВИМАИВиВС, вып. XIII, 2024 (о «близнятах» системы Шувалова).</p>
+        </div></details></li>
+      <li><details><summary><span>Тогда отлили один ствол того же калибра — «одиночку». Она стреляла картечью, гранатой и ядром попеременно.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <blockquote class="doc">«Наконец вылита была такого ж калибра и названа „одиночка“, которая стреляла картечью, гранатой и ядром попеременно; оная „одиночка“ имела в себе камору конусом, отчего стреляла далеко, потому графу Шувалову показалась».</blockquote>
+          <p>В те годы орудия различали прежде всего по снарядам: пушка била ядрами, гаубица — гранатами. Единорог, длинная гаубица с конической каморой, стрелял и тем и другим. И ещё картечью.</p>
+          <p class="src-note">Источники: «Записки» М. В. Данилова; Е. И. Юркевич, «О шуваловских единорогах и грибовалевских гаубицах», 2002.</p>
+        </div></details></li>
+      <li><details><summary><span>Шувалов велел лить такие стволы всё крупнее — и с тех пор их стали звать «единорогами».<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <blockquote class="doc">«Он приказал вылить калибром на шестифунтовую гранату, потом и до пятипудовой бомбы дошло, и названы оные были от того времени „единорогами“. Увенчал граф своей графской короной оные „единороги“, произшедшие от выдумки случайной моей с Мартыновым».</blockquote>
+          <p>Корона на стволах — графская, а выдумка, напоминает Данилов, его с Мартыновым. И добавляет, что единороги «по всей справедливости гораздо полезнее секретной гоубицы».</p>
+          <figure class="fig" style="max-width:520px">
+            <img src="day-02feb-edinorog-sytin.jpg" data-source="https://commons.wikimedia.org/wiki/File:%D0%A0%D0%B8%D1%81%D1%83%D0%BD%D0%BE%D0%BA_%D0%BA_%D1%81%D1%82%D0%B0%D1%82%D1%8C%D0%B5_%C2%AB%D0%95%D0%B4%D0%B8%D0%BD%D0%BE%D1%80%D0%BE%D0%B3%C2%BB._%D0%92%D0%BE%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F_%D1%8D%D0%BD%D1%86%D0%B8%D0%BA%D0%BB%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F_%D0%A1%D1%8B%D1%82%D0%B8%D0%BD%D0%B0_(%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,_1911-1915).jpg" data-license="Public domain" width="1007" height="499" loading="lazy" alt="Старая чёрно-белая фотография: лёгкое орудие на двухколёсном лафете, сцепленное с передком на двух колёсах; ствол длинный и тонкий">
+            <figcaption>Четвертьпудовый единорог на лафете с передком. Иллюстрация к статье «Единорог», «Военная энциклопедия» И. Д. Сытина, т. 9, 1912. Викисклад, общественное достояние.</figcaption>
+          </figure>
+          <p class="src-note">Источник: «Записки» М. В. Данилова.</p>
+        </div></details></li>
+      <li><details><summary><span>Союзники попросили новинку себе: в Вену отправили 13 секретных гаубиц и 10 единорогов разных калибров.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Австрийская императрица в 1758 году просила орудия, чертежи с объяснениями и русских канониров для показательных стрельб. Орудия испытали летом 1759 года у Обергасинга под Веной. До сих пор в Военно-историческом музее Вены хранится русский четвертьпудовый единорог, отлитый в Петербурге в 1757 году. Франция от подарка отказалась. Людовик XV запретил своим дипломатам принимать орудие — «чтобы не поощрять гордость мсье Шувалова».</p>
+          <p class="src-note">Источник: А. В. Громов, Сборник ВИМАИВиВС, вып. XIII, 2024 (по «Истории отечественной артиллерии», т. 1, кн. 2, 1960; каталогам венского Цейхгауза 1846 и Военного музея 1899).</p>
+        </div></details></li>
+      <li><details><summary><span>Копировали ли единорог в Европе? Историк Артиллерийского музея проверил и не нашёл ни одной западноевропейской копии времён Семилетней войны.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Саксонская «гранатная пушка» полковника Гойера, которую считали копией единорога, имела обычную гаубичную камору. Наполеон в 1811 году писал, что хочет, «чтобы эти гаубицы были прусскими гаубицами или единорогами, которые стреляют дальше, чем обычные гаубицы». Значит, отличал одни от других. Длинные французские гаубицы, описанные в 1831 году, — «по форме напоминающие единороги», но с цилиндрической каморой. Всерьёз европейцы заинтересовались единорогами, пишет Громов, только в эпоху наполеоновских войн.</p>
+          <p class="src-note">Источник: А. В. Громов, Сборник ВИМАИВиВС, вып. XIII, 2024, с. 13–33.</p>
+        </div></details></li>
+      <li><details><summary><span>Сама коническая камора не была новинкой. Новым было орудие, которое одно заменяло и пушку, и гаубицу.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Конусом камору делали у мортир Сен-Реми, на гаубице В. Д. Корчмина 1707 года, у прусских полевых орудий полковника Хольцмана 1740–1744 годов. «Сама по себе коническая камора ещё не делала из орудия единорог», — подчёркивает Громов. Пруссаки отказались от своих камор уже в 1759 году: картузы от перевозки теряли форму и не всегда входили в камору. Единорог же устоял: камора и длина ствола оказались соразмерны.</p>
+          <p class="src-note">Источники: А. В. Громов, Сборник ВИМАИВиВС, вып. XIII, 2024 (по Шарнхорсту, 1806); Е. И. Юркевич, 2002.</p>
+        </div></details></li>
+      <li><details><summary><span>Единороги служили около ста лет: в 1805 году с них сняли все украшения, кроме фризов, в 1838-м изменили форму казны, на флоте они стояли до 1860-х.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Главный признак единорога, коническая камора, сохранялся и во второй половине XVIII века, и в первой половине XIX, пишет историк Е. И. Юркевич. Громов добавляет, что единорог использовался и на флоте «вплоть до 60-х гг. XIX в.». А Данилов вышел в отставку в 1759 году и в 1771-м, укрывшись от московской чумы в сельце Семенково Рузского уезда, написал свои «Записки».</p>
+          <p class="src-note">Источники: Е. И. Юркевич, 2002; А. В. Громов, Сборник ВИМАИВиВС, вып. XIII, 2024; «Записки» М. В. Данилова.</p>
+        </div></details></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block" id="theme-inventions">
+  <div class="wrap">
+    <div class="kicker">Оружие и артиллерия · Русские первенства</div>
+    <h2>Что ещё русские изобрели первыми в теме «оружие и артиллерия»</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Другие дни музея об оружии — по утверждённому календарю. Часть этих залов ещё готовится.</p>
+    <button class="btn ghost" type="button" id="themeInvBtn" data-label="Показать 7 первенств →" aria-expanded="false" aria-controls="themeInvBody">Показать 7 первенств →</button>
+    <div id="themeInvBody" hidden>
+      <ul class="theme-list">
+        <li><b>23 фев</b> Реактивные снаряды залпового огня «Катюша»</li>
+        <li><b>8 апр</b> Гусеничный вездеход А. А. Пороховщикова</li>
+        <li><b>10 апр</b> Оптический прицел для артиллерии, А. К. Нартов</li>
+        <li><b>14 апр</b> Трёхлинейная винтовка Мосина</li>
+        <li><b>29 апр</b> Пистолет-пулемёт ППШ, Г. С. Шпагин</li>
+        <li><b>27 мая</b> Серийные безэкипажные танки — телетанки</li>
+        <li><b>12 июл</b> Первое в мире орудие на конвейере — ЗИС-3</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="games">
+  <div class="wrap">
+    <div class="kicker">Главное действие · пробы по «Запискам» Данилова</div>
+    <h2>Проба на Выборгской стороне</h2>
+    <p style="max-width:62ch">Перед тобой четыре орудия из «Записок» Михаила Данилова: секретная гаубица графа и три пробы самого Данилова с Мартыновым. Выбери орудие и стреляй картечью, гранатой и ядром. Каждый итог пересказывает запись Данилова или статью историка Артиллерийского музея. Испытай все четыре и реши, чем «одиночка» понравилась графу.</p>
+    <div class="lab" id="lab">
+      <div class="lab-row" role="group" aria-label="Орудие">
+        <span class="lbl">Орудие</span>
+        <button class="seg" type="button" data-g="0" aria-pressed="true">Секретная гаубица</button>
+        <button class="seg" type="button" data-g="1" aria-pressed="false">«Батарейка» · 4 мортирки</button>
+        <button class="seg" type="button" data-g="2" aria-pressed="false">«Близнята» · 2 ствола</button>
+        <button class="seg" type="button" data-g="3" aria-pressed="false">«Одиночка»</button>
+      </div>
+      <div class="lab-row" role="group" aria-label="Снаряд">
+        <span class="lbl">Снаряд</span>
+        <button class="seg ch" type="button" data-c="kart">Картечь</button>
+        <button class="seg ch" type="button" data-c="gran">Граната</button>
+        <button class="seg ch" type="button" data-c="yadro">Ядро</button>
+      </div>
+      <div class="lab-stage">
+        <canvas id="labCv" width="640" height="240" style="height:240px" role="img" aria-label="Схема орудия сбоку: стволы, камора у казны и полёт снаряда после пробного выстрела"></canvas>
+        <div class="gun-card" id="gunCard" aria-live="polite"></div>
+        <ul class="shot-log" id="shotLog" aria-live="polite"></ul>
+        <div class="lab-cap">Итоги проб — пересказ «Записок» М. В. Данилова (1771) и статьи А. В. Громова (Сборник ВИМАИВиВС, вып. XIII, 2024). Где Данилов не называет снаряд, модель так и пишет. Схема орудий и дальности условные: чисел о дальности в источниках нет.</div>
+      </div>
+      <div class="lab-msg" id="labMsg" aria-live="polite">Выбери орудие и нажми любой снаряд.</div>
+      <div class="lab-found" id="labFound">Испытано орудий: 0 из 4.</div>
+      <div class="verdict" id="verdict">
+        <p style="margin:0 0 6px;font-weight:600">Чем «одиночка» понравилась графу Шувалову? Отметь всё, что верно, и нажми «Проверить».</p>
+        <label><input type="checkbox" value="a"> Одна стреляла картечью, гранатой и ядром</label>
+        <label><input type="checkbox" value="b"> Камора конусом — и стреляла далеко</label>
+        <label><input type="checkbox" value="c"> Дуло было сплюснутым, «секретным»</label>
+        <label><input type="checkbox" value="d"> Четыре ствола давали четыре выстрела разом</label>
+        <label><input type="checkbox" value="e"> Её придумал сам граф</label>
+        <div class="lab-btns"><button class="btn gold" type="button" id="verdictGo">Проверить</button></div>
+      </div>
+      <noscript><div class="noscript-box">Для модели нужен JavaScript. Текстовая версия: секретная гаубица Шувалова била только дробью, широким веером: ни ядрами, ни другими снарядами она стрелять не могла. У «батарейки» из четырёх мортирок на пробе от выстрела разбило лафет. «Близнята» из двух стволов на пробе годились, но в армии их бросили. «Одиночка» с каморой конусом стреляла картечью, гранатой и ядром попеременно, а камора конусом давала дальность — потому графу и понравилась.</div></noscript>
+    </div>
+    <p class="src-note" style="margin-top:10px">Секретная гаубица, «батарейка», «близнята», «одиночка» и их пробы — «Записки Михаила Васильевича Данилова, артиллерии майора, написанные им в 1771 году»; почему секретная гаубица не стреляла ядрами — А. В. Громов, «О подражаниях „шуваловской“ артиллерии в западноевропейских странах», Сборник исследований и материалов ВИМАИВиВС, вып. XIII, 2024.</p>
+  </div>
+</section>
+
+<section class="block" id="pervenstvo">
+  <div class="wrap">
+    <div class="kicker">Проверка факта</div>
+    <h2>Что именно здесь наше</h2>
+    <div class="border-box">
+      <p style="margin-top:0"><b>Граница первенства:</b> «единорог» — длинная гаубица с конической каморой. Одно и то же орудие стреляло и ядром, и гранатой, и картечью. Его придумали в 1756–1757 годах артиллеристы Михаил Данилов и Матвей Мартынов: Данилов сам рассказал об этом в «Записках» 1771 года. Образец орудия датируют 1757 годом; русский четвертьпудовый единорог того же года хранится в Вене. Историк Артиллерийского музея А. В. Громов проверил «копии» единорога в Саксонии, Пруссии, Австрии и Франции и не нашёл ни одной за годы Семилетней войны. Европейцы стали ссылаться на русские единороги только в эпоху наполеоновских войн.</p>
+      <p style="margin-bottom:0"><b>Чего здесь нет:</b> коническую камору Данилов не изобрёл. Он сам взял её с чертежа Сен-Реми, а Громов называет и более ранние: гаубицу В. Д. Корчмина 1707 года и прусские орудия Хольцмана 1740–1744 годов. Лили такие орудия по приказу графа Шувалова и увенчивали его графской короной. Поэтому их часто зовут «шуваловскими». В календаре музея сказано: «в Европе так научились только через сто лет», а соавтор назван «С. А. Мартыновым». Здесь мы этого не повторяем: в «Записках» Мартынов — Матвей Григорьевич, а срока «через сто лет» источники страницы не дают.</p>
+    </div>
+    <table class="ctx">
+      <thead><tr><th scope="col">Документ или событие</th><th scope="col">Что</th><th scope="col">Когда</th></tr></thead>
+      <tbody>
+        <tr><td>П. Сюрирей де Сен-Реми, «Mémoires d’artillerie», т. 1</td><td>Мортиры, отлитые вместе на одной цапфе</td><td>2-е изд. 1707</td></tr>
+        <tr><td>В. Д. Корчмин</td><td>Гаубица с конической каморой</td><td>1707</td></tr>
+        <tr><td>Э. Ф. фон Хольцман, Пруссия</td><td>Полевые орудия, часть — с конической каморой</td><td>1740–1744</td></tr>
+        <tr><td>П. И. Шувалов</td><td>«Секретная» гаубица</td><td>1753</td></tr>
+        <tr><td>М. В. Данилов и М. Г. Мартынов</td><td>«Батарейка», «близнята», «одиночка» — единорог</td><td>1756–1757</td></tr>
+        <tr><td>Пробы у Обергасинга под Веной</td><td>13 секретных гаубиц и 10 единорогов</td><td>лето 1759</td></tr>
+        <tr><td>Маркиз де Караман, «Le Spectateur militaire»</td><td>Длинные французские гаубицы, «по форме напоминающие единороги», камора цилиндрическая</td><td>1831</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block" id="quiz">
+  <div class="wrap">
+    <div class="kicker">Проверь себя · 5 вопросов</div>
+    <h2>Викторина</h2>
+    <p style="color:var(--muted);max-width:62ch">На каждый вопрос — одна попытка. После ответа покажем объяснение.</p>
+    <div id="quizBox"></div>
+    <noscript><div class="noscript-box">Для викторины нужен JavaScript. Ответы: 1 — «Записки артиллерийские» Сен-Реми; 2 — лафет раздробился; 3 — по зверю с герба Шувалова; 4 — картечью, гранатой и ядром; 5 — ни одной копии.</div></noscript>
+  </div>
+</section>
+
+<section class="block" id="result">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Итог дня</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Четыре испытанных орудия, верный вывод и викторина вместе дают 100 баллов. Прогресс не сохраняется: перезагрузишь страницу — день начнётся заново.</p>
+    <div class="day-result">
+      <div class="dr-score" id="dayTxt">0 / 100 · звание: Гость дня</div>
+      <div class="dr-bar"><i id="dayBar" style="width:0%"></i></div>
+      <div class="dr-note">Испытай все четыре орудия, реши, чем «одиночка» понравилась графу, и ответь на вопросы викторины.</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="sources">
+  <div class="wrap">
+    <div class="kicker">Источники</div>
+    <h2>На чём стоит страница</h2>
+    <ul class="sources">
+      <li><a href="https://www.prlib.ru/item/971799" rel="noopener" target="_blank">«Записки артиллерии майора Елисаветинских времён М. В. Данилова»</a>, «Русский архив», 1883, кн. 2, вып. 3 (Президентская библиотека; написаны в 1771 году): детство, Артиллерийская школа 1743 года, секретная гаубица Шувалова, чертёж Сен-Реми, «батарейка», «близнята», «одиночка», название «единорог», отставка 1759 года, Семенково.</li>
+      <li><a href="https://www.prlib.ru/item/1089946" rel="noopener" target="_blank">Сен-Реми · «Мемории или Записки артиллерийския», т. 1</a>, СПб.: Академия наук, 1732 (Президентская библиотека) — русский перевод, который читал Данилов.</li>
+      <li><a href="https://museum-artillery.ru/assets/files/sbornik-vimaivivs-13-web.pdf" rel="noopener" target="_blank">А. В. Громов · «О подражаниях „шуваловской“ артиллерии в западноевропейских странах»</a>, Сборник исследований и материалов ВИМАИВиВС, вып. XIII, СПб., 2024, с. 13–33: орудия для Вены и пробы у Обергасинга 1759 года, единорог 1757 года в Вене, саксонская «гранатная пушка», орудия Хольцмана, гаубица Корчмина, Наполеон 1811 года, французские гаубицы 1831 года, единороги на флоте до 1860-х.</li>
+      <li><a href="https://syw-cwg.narod.ru/art_02.html" rel="noopener" target="_blank">Е. И. Юркевич · «О шуваловских единорогах и грибовалевских гаубицах»</a>, сборник конференции «Кровь. Порох. Лавры. Войны России в эпоху барокко (1700–1762 гг.)», СПб., 2002: единорог — длинная гаубица с конической каморой, перемены 1760-х, 1805 и 1838 годов.</li>
+      <li><a href="https://archive.org/details/memoires-dartillerie-vol-1-1707/page/n497/mode/1up" rel="noopener" target="_blank">P. Surirey de Saint-Remy · «Mémoires d’artillerie», t. 1</a>, Paris, 1707, p. 279–280 и лист «Mortiers fondus ensemble sur un mesme tourillon» (Internet Archive): мортиры на одной цапфе с общим запалом, проба 1703 года.</li>
+      <li>Изображения: <a href="https://commons.wikimedia.org/wiki/File:245-%D0%BC%D0%BC_%D0%BE%D1%81%D0%B0%D0%B4%D0%BD%D1%8B%D0%B9_%D0%B5%D0%B4%D0%B8%D0%BD%D0%BE%D1%80%D0%BE%D0%B3.jpg" rel="noopener" target="_blank">ствол 2-пудового осадного единорога</a> (George Shuklin, CC BY-SA 1.0), <a href="https://commons.wikimedia.org/wiki/File:%D0%A0%D0%B8%D1%81%D1%83%D0%BD%D0%BE%D0%BA_%D0%BA_%D1%81%D1%82%D0%B0%D1%82%D1%8C%D0%B5_%C2%AB%D0%95%D0%B4%D0%B8%D0%BD%D0%BE%D1%80%D0%BE%D0%B3%C2%BB._%D0%92%D0%BE%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F_%D1%8D%D0%BD%D1%86%D0%B8%D0%BA%D0%BB%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F_%D0%A1%D1%8B%D1%82%D0%B8%D0%BD%D0%B0_(%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,_1911-1915).jpg" rel="noopener" target="_blank">рисунок к статье «Единорог», «Военная энциклопедия» Сытина</a> (общественное достояние) — Викисклад; лист Сен-Реми — Internet Archive, общественное достояние; схема в модели — рисунок музея.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="calendar">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Календарь изобретений</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Выбери любой день — узнаешь, что русские сделали первыми в мире. Листай месяцы стрелками.</p>
+    <div id="calbox"></div>
+  </div>
+</section>
+
+<section class="block kd" id="kuda-dalshe">
+  <div class="wrap">
+    <div class="kd-kicker">Куда дальше</div>
+    <h2>Музей продолжается</h2>
+    <div class="kd-grid">
+      <div class="kd-card main"><span class="kd-lbl">Следующий день</span><a href="day-03feb-luna9.html">3 февраля — «Луна-9», первая мягкая посадка на Луну <span class="kd-arr">→</span></a>
+        <p>Первая лунная панорама, собранная из полос радиосигнала.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Предыдущий день</span><a href="day-01feb-bekhterev.html">1 февраля — Бехтерев и одеревенелость позвоночника <span class="kd-arr">→</span></a>
+        <p>Пятеро больных из статьи 1892 года и «особая форма заболевания».</p></div>
+      <div class="kd-card"><span class="kd-lbl">Военная техника</span><a href="day-24jan-k162.html">24 января — подводная лодка К-162 <span class="kd-arr">→</span></a>
+        <p>Ещё один день о военной технике в музее.</p></div>
+      <div class="kd-card main"><span class="kd-lbl">Город-музей</span><a href="../../index.html">Русская цивилизация <span class="kd-arr">→</span></a>
+        <p>Все музеи проекта на одной карте.</p></div>
+    </div>
+    <p style="margin-top:16px"><a href="izobreteniya.html">Посмотреть изобретения по алфавиту →</a></p>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>
+  Русская цивилизация · «Что изобрели русские первыми в мире»</div></footer>
+
+<script type="application/json" data-proof>{"status":"found","claim_id":"rc:izobreteniya:edinorog:claim-odinochka-1757","ours":{"kind":"мемуары изобретателя","title":"«Записки артиллерии майора Елисаветинских времён М. В. Данилова» (написаны в 1771 году): «батарейка» по чертежу Сен-Реми, «близнята» и «одиночка» с каморой конусом, которая «стреляла картечью, гранатой и ядром попеременно»; граф Шувалов велел лить такие орудия крупнее, и их назвали «единорогами»","date":"1771","holder":"«Русский архив», 1883, кн. 2, вып. 3 — Президентская библиотека","source_url":"https://www.prlib.ru/item/971799"}}</script>
+<script src="../../assets/museum-proof.js"></script>
+
+<script>
+/* ── СЧЁТ ── шкала из 100 держит assets/museum-score.js; здесь только реестр наград.
+   четыре испытанных орудия 4×10 + верный вывод 20 + викторина 5×8 = 100. */
+window.MUSEUM_SCORE = {awards:{p:[4,10], g1:20, q:[5,8]},
+  ranks:[[100,'Генерал-фельдцейхмейстер'],[70,'Обер-фейерверкер'],[40,'Канонир'],[0,'Гость дня']]};
+</script>
+<script src="../../assets/museum-score.js"></script>
+<script>
+(function(){
+  var $ = function(id){return document.getElementById(id);};
+  $('readBtn').onclick = function(){ $('story').scrollIntoView({behavior:'smooth'}); };
+  $('listenBtn').onclick = function(){ $('audioguide').scrollIntoView({behavior:'smooth'}); };
+  var tb=$('themeInvBtn');
+  tb.onclick=function(){ var b=$('themeInvBody'), open=b.hidden; b.hidden=!open; tb.setAttribute('aria-expanded',open?'true':'false'); tb.textContent=open?'▲ Скрыть':tb.dataset.label; };
+
+  /* ── ПРОБА НА ВЫБОРГСКОЙ СТОРОНЕ ── итоги — пересказ «Записок» М. В. Данилова (1771);
+     почему секретная гаубица не брала ядра — А. В. Громов, Сборник ВИМАИВиВС, вып. XIII, 2024, с. 20.
+     У «батарейки» и «близнят» Данилов снаряд не называет: у них итог один при любом заряде (all), проба — один выстрел.
+     n — число стволов на схеме, cone — камора конусом, flare — раструб секретной гаубицы. Дальности на схеме условные. */
+  var CH={kart:'картечь', gran:'граната', yadro:'ядро'};
+  var G=[
+    {name:'Секретная гаубица', n:1, flare:true,
+     card:'<b>Секретная гаубица графа Шувалова.</b> Дуло «не круглое, а продолговатое, подобно сжатому до половины круглому кольцу». Его прятали под медной крышкой на замке, а расчёт давал присягу никому его не показывать.',
+     r:{kart:[1,'Дробь легла широким веером: гаубица «стреляла широко одной дробою».'],
+        gran:[0,'Не годится: из-за широкого раструба для картечи эта гаубица не могла стрелять другими снарядами.'],
+        yadro:[0,'Не годится: ядрами эта гаубица стрелять не могла — раструб был сделан для картечи.']}},
+    {name:'«Батарейка»', n:4, cone:true, short:true,
+     card:'<b>«Батарейка» Данилова и Мартынова.</b> Четыре мортирки «сплошь», каморы конусом, «запор сделан на середине один», калибр — на трёхфунтовое ядро. Мысль Данилов взял с чертежа Сен-Реми.',
+     all:[0,'На пробе от выстрела «лафет, который был на колесах, под мортирками весь раздробился в мелкие штуки». Проба окончена. Каким снарядом стреляли, Данилов не пишет.']},
+    {name:'«Близнята»', n:2, cone:true, short:true,
+     card:'<b>«Близнята».</b> «По многим пробам» от батарейки оставили два ствола того же калибра.',
+     all:[1,'Пробу на Выборгской стороне прошли — «оказались годными». Их наделали «премножество» и отправили на войну с прусским королём — а там они «брошены или найдены бесполезными». Каким снарядом пробовали, Данилов не пишет.']},
+    {name:'«Одиночка»', n:1, cone:true,
+     card:'<b>«Одиночка».</b> Один ствол того же калибра, камора конусом.',
+     r:{kart:[1,'Картечь: «одиночка» стреляла картечью.'],
+        gran:[1,'Граната: «одиночка» стреляла и гранатой.'],
+        yadro:[1,'Ядро: стреляла и ядром — «попеременно» с картечью и гранатой. Камора конусом, «отчего стреляла далеко».']}}
+  ];
+  var cur=0, last=null, shot=G.map(function(){return {};}), found={};
+  function msg(t,cls){ var m=$('labMsg'); m.className='lab-msg'+(cls?' '+cls:''); m.textContent=t; }
+  function nDone(){ var n=0; for (var i=0;i<4;i++) if (found['p'+i]) n++; return n; }
+  function setFound(){ $('labFound').textContent='Испытано орудий: '+nDone()+' из 4.'+(nDone()===4?' Теперь реши, чем «одиночка» понравилась графу.':''); }
+  function left(i){ return G[i].all ? (Object.keys(shot[i]).length?0:1) : 3-Object.keys(shot[i]).length; }
+  function card(){ $('gunCard').innerHTML=G[cur].card; }
+  document.querySelectorAll('[data-g]').forEach(function(b){
+    b.onclick=function(){
+      cur=+b.dataset.g; last=null;
+      document.querySelectorAll('[data-g]').forEach(function(x){ x.setAttribute('aria-pressed', x===b?'true':'false'); });
+      card(); draw();
+      var l=left(cur);
+      msg(l ? G[cur].name+': осталось проб — '+l+'.' : G[cur].name+': проба уже окончена, итог — в журнале ниже.');
+    };
+  });
+  document.querySelectorAll('[data-c]').forEach(function(b){
+    b.onclick=function(){
+      var g=G[cur], c=b.dataset.c;
+      if (g.all && Object.keys(shot[cur]).length){ last=null; draw(); msg(g.name+': проба уже окончена — '+(g.all[0]?'орудие отправили в армию.':'лафет разбит.'),'bad'); return; }
+      var res = g.all || g.r[c], again = shot[cur][c];
+      shot[cur][c]=1; last={c:c, ok:res[0]}; draw();
+      if (!again){
+        var li=document.createElement('li'); li.className=res[0]?'ok':'no';
+        li.innerHTML='<span class="t">'+g.name+' · '+(g.all?'снаряд не назван':CH[c])+'</span>'; li.appendChild(document.createTextNode(res[1]));
+        $('shotLog').insertBefore(li,$('shotLog').firstChild);
+      }
+      var l=left(cur);
+      if (!l && !found['p'+cur]){
+        found['p'+cur]=1; award('p'+cur,10); setFound();
+        msg(g.name+': проба окончена. '+(nDone()<4?'Переходи к следующему орудию.':'Все четыре испытаны — теперь вывод.'),'ok');
+      } else msg(res[1]+(l?' Осталось проб: '+l+'.':''), res[0]?'ok':'bad');
+    };
+  });
+  function setFoundInit(){ setFound(); }
+
+  var cv=$('labCv'), cx=cv.getContext('2d');
+  function draw(){
+    var dpr=window.devicePixelRatio||1, W=cv.clientWidth||640, H=240;
+    cv.width=Math.round(W*dpr); cv.height=Math.round(H*dpr); cx.setTransform(dpr,0,0,dpr,0,0);
+    var narrow=W<480, g=G[cur], gy=H-34;
+    cx.clearRect(0,0,W,H); cx.font=(narrow?'11px':'13px')+' Inter, sans-serif';
+    cx.strokeStyle='#3c4d61'; cx.lineWidth=2; cx.beginPath(); cx.moveTo(0,gy); cx.lineTo(W,gy); cx.stroke();
+    /* стволы */
+    var x0=narrow?18:30, len=(g.short? .17 : .3)*W, bh=narrow?14:18, gap=4, tot=g.n*bh+(g.n-1)*gap, y0=gy-46-tot, mx=x0+len;
+    var broken = cur===1 && last;
+    for (var i=0;i<g.n;i++){
+      var y=y0+i*(bh+gap);
+      cx.fillStyle='#6b6a4e'; cx.strokeStyle='#b9a66a'; cx.lineWidth=1.5; cx.beginPath();
+      if (g.flare){ cx.moveTo(x0,y+3); cx.lineTo(mx,y-6); cx.lineTo(mx,y+bh+6); cx.lineTo(x0,y+bh-3); }
+      else { cx.moveTo(x0,y); cx.lineTo(mx,y+1); cx.lineTo(mx,y+bh-1); cx.lineTo(x0,y+bh); }
+      cx.closePath(); cx.fill(); cx.stroke();
+      /* камора у казны: конус у трёх проб; у секретной гаубицы устройство каморы на схеме не показано */
+      if (g.cone){ cx.fillStyle='#1a2533'; cx.beginPath(); cx.moveTo(x0+4,y+bh/2-2); cx.lineTo(x0+len*.28,y+3); cx.lineTo(mx,y+3); cx.lineTo(mx,y+bh-3); cx.lineTo(x0+len*.28,y+bh-3); cx.lineTo(x0+4,y+bh/2+2); cx.closePath(); cx.fill(); }
+      else { cx.fillStyle='#1a2533'; cx.beginPath(); cx.moveTo(x0+len*.2,y+bh/2-2); cx.lineTo(mx,y-3); cx.lineTo(mx,y+bh+3); cx.lineTo(x0+len*.2,y+bh/2+2); cx.closePath(); cx.fill(); }
+    }
+    /* лафет: у «батарейки» после выстрела — обломки */
+    cx.strokeStyle= broken ? '#c0453f' : '#8a6a44'; cx.lineWidth=4;
+    if (broken){ for (var k=0;k<7;k++){ var px=x0+k*len/7; cx.beginPath(); cx.moveTo(px,gy-6-(k%3)*5); cx.lineTo(px+len/10,gy-2-(k%2)*7); cx.stroke(); } }
+    else { cx.beginPath(); cx.moveTo(x0+len*.1,y0+tot); cx.lineTo(x0+len*.45,gy-14); cx.lineTo(x0+len*.9,y0+tot); cx.stroke();
+      cx.lineWidth=2.5; cx.beginPath(); cx.arc(x0+len*.45,gy-14,13,0,Math.PI*2); cx.stroke(); }
+    /* выстрел */
+    var my=y0+tot/2;
+    if (last && !broken){
+      if (!last.ok){
+        cx.strokeStyle='#e0574f'; cx.lineWidth=3; var cxp=mx+26; cx.beginPath(); cx.moveTo(cxp-9,my-9); cx.lineTo(cxp+9,my+9); cx.moveTo(cxp+9,my-9); cx.lineTo(cxp-9,my+9); cx.stroke();
+      } else if (last.c==='kart' && G[cur].r){
+        var spread = cur===0 ? 1.0 : .45, reach = cur===0 ? .5 : .62;
+        cx.fillStyle='#f1d58a';
+        for (var j=0;j<40;j++){ var t=(j%10+1)/10, a=(((j*7)%40)/39-.5)*spread; cx.beginPath(); cx.arc(mx+t*(W*reach-mx)*Math.cos(a), Math.min(gy-3, my+t*(W*reach-mx)*Math.sin(a)), 2,0,Math.PI*2); cx.fill(); }
+      } else {
+        var far = G[cur].all ? .62 : (last.c==='yadro' ? .9 : .8), tx=W*far;
+        cx.setLineDash([4,5]); cx.strokeStyle='#f1d58a'; cx.lineWidth=1.8; cx.beginPath(); cx.moveTo(mx,my);
+        cx.quadraticCurveTo((mx+tx)/2, my-110, tx, gy); cx.stroke(); cx.setLineDash([]);
+        cx.fillStyle= last.c==='gran' && G[cur].r ? '#e0574f' : '#f1d58a'; cx.beginPath(); cx.arc(tx,gy-5,5,0,Math.PI*2); cx.fill();
+        if (last.c==='gran' && G[cur].r){ cx.strokeStyle='#e0574f'; cx.lineWidth=2; for (var s=0;s<8;s++){ var an=s*Math.PI/4; cx.beginPath(); cx.moveTo(tx+8*Math.cos(an),gy-5+8*Math.sin(an)); cx.lineTo(tx+15*Math.cos(an),gy-5+15*Math.sin(an)); cx.stroke(); } }
+      }
+    }
+    cx.fillStyle='#8fa5b9'; cx.textAlign='left'; cx.fillText(g.name+(g.n>1?' · стволов: '+g.n:''), narrow?10:16, 16);
+    cx.textAlign='right'; cx.fillStyle='#f1d58a';
+    var lab = !last ? 'выбери снаряд' : (G[cur].all ? (last.ok?'на пробе годны':'лафет разбит') : (last.ok ? CH[last.c]+' — есть выстрел' : CH[last.c]+' — нельзя'));
+    cx.fillText(lab, W-(narrow?10:16), 16);
+  }
+  window.addEventListener('resize', draw);
+  card(); draw(); setFoundInit();
+
+  /* ── ВЫВОД ── a и b — слова Данилова об «одиночке»; c — секретная гаубица, d — батарейка, e — имя дал граф, придумали Данилов и Мартынов. */
+  $('verdictGo').onclick=function(){
+    var v={}; document.querySelectorAll('#verdict input').forEach(function(x){ v[x.value]=x.checked; });
+    if (nDone()<4){ msg('Сначала испытай все четыре орудия: пока готово '+nDone()+' из 4.','bad'); return; }
+    var notes=[];
+    if (v.c) notes.push('сплюснутое «секретное» дуло было у гаубицы графа, а не у «одиночки»');
+    if (v.d) notes.push('четыре ствола — это «батарейка», и её лафет не выдержал выстрела');
+    if (v.e) notes.push('граф велел лить такие орудия и увенчал их своей короной, а придумали их Данилов и Мартынов: единороги, пишет Данилов, произошли «от выдумки случайной моей с Мартыновым»');
+    if (!v.a || !v.b) notes.push('Данилов называет обе причины: «одиночка» стреляла картечью, гранатой и ядром попеременно, а камора конусом давала дальность');
+    if (notes.length){ msg('Не совсем: '+notes.join('; ')+'.','bad'); return; }
+    if (!found.g1){ found.g1=1; award('g1',20); }
+    msg('Верно. Одно орудие стреляло всеми тремя зарядами, а камора конусом давала дальность — «потому графу Шувалову показалась». Секретная гаубица била только дробью, у батарейки разбило лафет, близнят в армии бросили.','ok');
+  };
+
+  /* ── ВИКТОРИНА ── один ответ на вопрос; дистракторы сверены с источниками страницы. */
+  var Q = [
+    {q:'В какой книге Данилов увидел мортирки с каморой конусом?', o:['В «Записках артиллерийских» француза Сен-Реми','В «Арифметике» Магницкого','В уставе Петра Первого'], a:0,
+     e:'Чертёж был в первом томе «Записок артиллерийских» П. Сюрирея де Сен-Реми. Данилов читал книгу в русском переводе: первый том Академия наук выпустила в 1732 году.'},
+    {q:'Что случилось на первой пробе «батарейки» из четырёх мортирок?', o:['Разорвало один ствол','Лафет раздробился в мелкие щепки','Ядро не долетело до цели'], a:1,
+     e:'«От выстрела лафет, который был на колесах, под мортирками весь раздробился в мелкие штуки», — пишет Данилов.'},
+    {q:'Как Данилов назвал орудие в один ствол, из которого выросли единороги?', o:['«Близнята»','«Одиночка»','«Батарейка»'], a:1,
+     e:'Название дал граф Шувалов — по фантастическому зверю со своего герба. Один ствол назывался иначе — «одиночка».'},
+    {q:'Чем стреляла «одиночка»?', o:['Только дробью, широким веером','Картечью, гранатой и ядром попеременно','Только бомбами в пять пудов'], a:1,
+     e:'«Одиночка» «стреляла картечью, гранатой и ядром попеременно». Только дробью била секретная гаубица графа.'},
+    {q:'Что нашёл историк А. В. Громов, проверив «копии» единорога в Европе времён Семилетней войны?', o:['Саксонская пушка — точная копия единорога','Ни одной западноевропейской копии','Пруссаки скопировали трофейные единороги'], a:1,
+     e:'Саксонская «гранатная пушка» имела обычную гаубичную камору, а пруссаки не стали копировать даже трофейные секретные гаубицы. Настоящие копии единорогов — например, османские — появились позже, при Екатерине II и Александре I.'}
+  ];
+  var qb = $('quizBox');
+  Q.forEach(function(it, qi){
+    var wrap = document.createElement('div');
+    var h = document.createElement('p'); h.className='quiz-q'; h.textContent=(qi+1)+'. '+it.q; wrap.appendChild(h);
+    var exp = document.createElement('div'); exp.className='exp'; exp.setAttribute('aria-live','polite');
+    var btns = it.o.map(function(txt, oi){
+      var b=document.createElement('button'); b.type='button'; b.className='opt'; b.textContent=txt;
+      b.onclick=function(){
+        if (wrap.dataset.done) return; wrap.dataset.done='1';
+        btns.forEach(function(x,xi){ x.disabled=true; if (xi===it.a) x.classList.add('correct'); });
+        if (oi===it.a){ award('q'+qi,8); exp.textContent='Верно. '+it.e; }
+        else { b.classList.add('wrong'); exp.textContent='Не совсем. '+it.e; }
+        exp.classList.add('show');
+      };
+      wrap.appendChild(b); return b;
+    });
+    wrap.appendChild(exp); qb.appendChild(wrap);
+  });
+})();
+</script>
+<script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
+<script>window.MUSEUM_CHROME={
+  museum:{title:'Что изобрели русские первыми в мире',href:'index.html'},
+  share:{title:'«Одиночка», ставшая «единорогом»: орудие Данилова и Мартынова — музей «Что изобрели русские первыми в мире»',
+         text:'В 1757 году два артиллериста отлили орудие, которое одно стреляло ядром, гранатой и картечью, — «единорог». Что Россия дала миру раньше всех — день за днём.'},
+  prev:{href:'day-01feb-bekhterev.html',title:'1 февраля · Бехтерев'},
+  next:{href:'day-03feb-luna9.html',title:'3 февраля · «Луна-9»'},
+  all:{href:'index.html',label:'Все изобретения'},
+  city:'../../index.html',
+  random:['day-01jan-cabletv.html','day-02jan-luna1.html','day-03jan-anosov.html','day-04jan-pilchikov.html','day-05jan-shukhov.html','day-06jan-orlov.html','day-08jan-icebreaker.html','day-09jan-blinov.html','day-10jan-britnev.html','day-11jan-kostovich.html','day-12jan-r7.html','day-13jan-k278.html','day-14jan-lira.html','day-15jan-kovalevskaya.html','day-16jan-soyuz45.html','day-19jan-kantorovich.html','day-21jan-obninsk.html','day-22jan-landau.html','day-23jan-umov.html','day-24jan-k162.html','day-25jan-korsakov.html','day-26jan-podvodnaya.html','day-27jan-pentium.html','day-28jan-havkin.html','day-30jan-kotelnikov.html','day-31jan-girotron.html','day-01feb-bekhterev.html','day-02feb-edinorog.html','day-03feb-luna9.html','day-18mar-leonov.html','day-15may-mechnikov.html','day-16jun-tereshkova.html','day-26sep-pavlov.html','day-15nov-buran.html','day-25nov-pirogov.html','day-01dec-lobachevsky.html','day-14dec-laser.html']
+};</script>
+<script src="../../assets/museum-chrome.js"></script>
+<script>window.MUSEUM_SUPPORT={museum:'Что изобрели русские первыми в мире'};</script>
+<script src="../../assets/museum-support.js"></script>
+<script src="calendar-izobreteniya.js"></script>
+<script>window.MUSEUM_CALENDAR_INITIAL='02-02';</script>
+<script src="../../assets/museum-calendar-month.js"></script>
+<script>window.MUSEUM_RETURN={riddle:{q:"Сколько стволов было у первой пробы, из которой вырос единорог?",a:"Четыре: «батарейка» из четырёх мортирок по чертежу Сен-Реми. На пробе её лафет раздробился от выстрела. Потом оставили два ствола — «близнят», и лишь затем отлили один — «одиночку». Из неё и выросли единороги.",src:"«Записки артиллерии майора М. В. Данилова, написанные им в 1771 году» («Русский архив», 1883, кн. 2, вып. 3)"}};</script>
+<script src="../../assets/museum-return.js" data-museum="izobreteniya" data-day="02-02"></script>
+<script defer src="../../assets/analytics.js"></script>
+
+
+
+<script>window.MUSEUM_AUDIOGUIDE={
+  audioSrc:"audio-guide-edinorog-ru.mp3",
+  durationLabel:"2 минуты 10 секунд",
+  lead:"Голос ведёт по залу «единорога»: от бронзового ствола в Артиллерийском музее до чертежа во французской книге и пробных стрельб на Выборгской стороне. Шесть остановок, на каждой — что искать глазами. Слушать можно фоном, пока читаешь историю ниже.",
+  stops:[
+    {t:0,mark:"0:00",title:"Ствол в начале зала"},
+    {t:20,mark:"0:20",title:"Секретная гаубица"},
+    {t:38,mark:"0:38",title:"Чертёж в книге"},
+    {t:59,mark:"0:59",title:"Четыре ствола, два, один"},
+    {t:81,mark:"1:21",title:"Имя от графа"},
+    {t:106,mark:"1:46",title:"Сто лет службы"}
+  ],
+  transcript:[
+    "<p>Ствол 2-пудового (245-мм) осадного единорога, вторая половина XVIII века, Военно-исторический музей артиллерии, инженерных войск и войск связи — фото George Shuklin, Викисклад, CC BY-SA 1.0.</p>",
+    "<p>Факты: Шувалов — генерал-фельдцейхмейстер с 1756 года; «секретная» гаубица с продолговатым дулом, медные закрышки на замке, стрельба «одной дробою» — «Записки» М. В. Данилова (1771; «Русский архив», 1883).</p>",
+    "<p>Факты: «на чертеже сплошь четыре мортирки… каморы у них были конусом» — «Записки» М. В. Данилова; лист «Mortiers fondus ensemble sur un mesme tourillon» — P. Surirey de Saint-Remy, «Mémoires d’artillerie», t. 1, Paris, 1707 (Internet Archive).</p>",
+    "<p>Факты: «батарейка», «близнята», «одиночка», стрельба «картечью, гранатой и ядром попеременно» — «Записки» М. В. Данилова.</p>",
+    "<p>Факты: приказ лить орудия крупнее, название «единороги», графская корона на стволах — «Записки» М. В. Данилова («Русский архив», 1883, кн. 2, вып. 3); рисунок «Единорог», «Военная энциклопедия» И. Д. Сытина, т. 9, 1912 — Викисклад, общественное достояние.</p>",
+    "<p>Факты: по просьбе Австрии 1758 года в Вену отправлены 13 секретных гаубиц и 10 единорогов, испытания у Обергасинга летом 1759 года; западноевропейских копий времён Семилетней войны нет; на флоте единороги — до 1860-х — А. В. Громов, Сборник исследований и материалов ВИМАИВиВС, вып. XIII, 2024.</p>"
+  ],
+  note:"Озвучено синтезом речи — временно, до записи голосом автора музея."
+};</script>
+<script src="../../assets/museum-audioguide.js"></script>
+</body>
+</html>
