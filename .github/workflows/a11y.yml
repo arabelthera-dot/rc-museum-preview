@@ -28,7 +28,12 @@ jobs:
         run: |
           if [ -n "$PR" ]; then
             gh api "repos/${{ github.repository }}/pulls/$PR/files" --paginate \
-              --jq '.[] | select(.status != "removed") | .filename | select(endswith(".html"))' > pages.txt
+              --jq '.[] | select(.status != "removed") | .filename' > files.txt
+            grep '\.html$' files.txt > pages.txt || true
+            # заявка правит саму проверку — гоняем её на пяти главных страницах музеев
+            if grep -qE '^(\.github/workflows/a11y\.yml|tools/ci/a11y-axe\.mjs)$' files.txt; then
+              git ls-files 'muzei/*/index.html' | head -5 >> pages.txt
+            fi
           else
             git ls-files 'muzei/*.html' > pages.txt
           fi
