@@ -9,6 +9,8 @@ name: perf
 # Страницы делятся на куски по 12 (матрица GitHub Actions): ручной замер всех страниц музеев
 # одной задачей шёл ~1,5 ч и упирался в потолок 30 мин (run 38417358405, 13.10).
 # Заглушки «Музей создаётся» не мерим. Таблица страниц (LCP, вес, CLS) — в сводке задачи.
+# Сервер замера — штатный у Lighthouse CI (collect.staticDistDir в lighthouserc.json): сжимает
+# ответы, как GitHub Pages; голый python -m http.server без сжатия завышал вес и LCP (13.10).
 # Выключатель — переменная репо PERF_CHECK_OFF=1.
 on:
   pull_request:
@@ -52,7 +54,7 @@ jobs:
           [ -s pages.txt ] && { xargs grep -L "$ZAGLUSHKA" < pages.txt > gotovye.txt || true; mv gotovye.txt pages.txt; }
           echo "страниц: $(wc -l < pages.txt)"
           # куски по 12 страниц: [{"n":1,"urls":"--url=… --url=…"}, …]; пусто — []
-          echo "kuski=$(jq -Rnc '[inputs | select(length > 0) | "--url=http://localhost:8765/" + .]
+          echo "kuski=$(jq -Rnc '[inputs | select(length > 0) | "--url=http://localhost/" + .]
             | [range(0; length; 12) as $i | {n: ($i / 12 + 1), urls: (.[$i:$i+12] | join(" "))}]' pages.txt)" >> "$GITHUB_OUTPUT"
   perf:
     needs: spisok
@@ -71,8 +73,6 @@ jobs:
           node-version: 22
       - name: проверка
         run: |
-          python3 -m http.server 8765 >/dev/null 2>&1 &
-          sleep 1
           npx --yes @lhci/cli@0.14 collect --config=tools/ci/lighthouserc.json ${{ matrix.kusok.urls }}
           npx --yes @lhci/cli@0.14 assert --config=tools/ci/lighthouserc.json
       - name: отчёты
@@ -94,7 +94,7 @@ jobs:
               kb = a["total-byte-weight"]["numericValue"] / 1024
               cls = a["cumulative-layout-shift"]["numericValue"]
               bad = lcp > 2.5 or kb > 2048 or cls > 0.1
-              path = r["url"].split(":8765/", 1)[-1]
+              path = r["url"].split("localhost", 1)[-1].split("/", 1)[-1]
               print(f"| {path} | {lcp:.1f} | {kb:.0f} | {cls:.2f} | {'🔴' if bad else '🟢'} |")
           PY
       - uses: actions/upload-artifact@v4
