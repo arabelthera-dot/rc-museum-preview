@@ -1,0 +1,48 @@
+name: a11y
+# Доступность страниц, которые меняет заявка — axe-core через Playwright (мировой стандарт,
+# замена самодельного tools/a11y.py, опись самоделок 12.10). Скрипт — tools/ci/a11y-axe.mjs.
+# Красный крестик видно в заявке, слияние он не держит, пока проверку не сделали обязательной.
+# Выключатель — переменная репо A11Y_CHECK_OFF=1.
+on:
+  pull_request:
+    paths: ['**.html', '.github/workflows/a11y.yml', 'tools/ci/a11y-axe.mjs']
+  workflow_dispatch:
+permissions:
+  contents: read
+  pull-requests: read
+concurrency:
+  group: a11y-${{ github.event.pull_request.number || github.run_id }}
+  cancel-in-progress: true
+jobs:
+  a11y:
+    if: vars.A11Y_CHECK_OFF != '1'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: страницы заявки
+        id: pages
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          if [ -n "$PR" ]; then
+            gh api "repos/${{ github.repository }}/pulls/$PR/files" --paginate \
+              --jq '.[] | select(.status != "removed") | .filename | select(endswith(".html"))' > pages.txt
+          else
+            git ls-files 'muzei/*.html' > pages.txt
+          fi
+          echo "страниц: $(wc -l < pages.txt)"
+          echo "list=$(tr '\n' ' ' < pages.txt)" >> "$GITHUB_OUTPUT"
+      - uses: actions/setup-node@v4
+        if: steps.pages.outputs.list != ''
+        with:
+          node-version: 22
+      - name: playwright и axe
+        if: steps.pages.outputs.list != ''
+        run: |
+          npm i --no-save --no-audit --no-fund playwright@1.48 @axe-core/playwright@4
+          npx playwright install --with-deps chromium
+      - name: проверка
+        if: steps.pages.outputs.list != ''
+        run: node tools/ci/a11y-axe.mjs ${{ steps.pages.outputs.list }}
