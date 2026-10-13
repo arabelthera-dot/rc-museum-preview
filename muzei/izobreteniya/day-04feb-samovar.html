@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="ru" data-museum="izobreteniya">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Самовар: от уральской таможни до фабрики Лисицыных — Что изобрели русские первыми в мире, 4 февраля</title>
+<!--
+  Страница дня 4 февраля. Наряд stranicy-izob-0910 (claude2, 13.10.2026), карточка #762.
+  Форма — вариант А музея изобретений (Сергей 12.09.2026): лента ударов, подробности свёрнуты.
+  Паспорт выпуска: rc-museum-production/izobreteniya/day-04feb-samovar/passport/issue.json
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --dark:#060c17; --dark2:#0c1826; --surface:#111f33;
+    --card:rgba(255,255,255,.05); --card-b:rgba(255,255,255,.09);
+    --gold:#c9a84c; --gold-l:#e4c97a; --gold-g:rgba(201,168,76,.13);
+    --ink:#e8eef5; --muted:#7a9ab8; --line:rgba(255,255,255,.07);
+    --accent:#2d8cbf; --accent2:#1f6f8b;
+    /* legacy compat */
+    --paper:#0c1826; --paper2:#111f33;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Inter','Segoe UI',sans-serif;color:var(--ink);background:var(--dark);line-height:1.72}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.13;margin:0}
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent)}
+
+  /* ── ШАПКА ── */
+  header.top{background:rgba(6,12,23,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--card-b);color:#fff;position:sticky;top:0;z-index:30}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+  .logo svg{display:block;filter:drop-shadow(0 0 8px rgba(201,168,76,.4))}
+  .logo .lt{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:16px}
+  .logo .lt small{display:block;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-family:'Inter',sans-serif}
+  .score{background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:6px 16px;font-size:13px;color:var(--gold-l);cursor:pointer;font-family:'Inter',sans-serif}
+  .score-info{position:absolute;right:12px;top:66px;max-width:260px;background:#0e1c30;color:var(--ink);border:1px solid var(--card-b);border-radius:14px;padding:14px 16px;font-size:13px;line-height:1.6;box-shadow:0 20px 60px rgba(0,0,0,.6);display:none;z-index:40}
+  .score-info.show{display:block}
+
+  /* ── HERO — СТАНДАРТ (не менять): 3D-сцена сверху, текст отдельным блоком ниже ── */
+  .hero-scene{position:relative;height:52vh;min-height:300px;max-height:520px;overflow:hidden;background:linear-gradient(160deg,#0a1e3a 0%,#1a3a6a 55%,#0d2240 100%)}
+  .hero-scene canvas.scene,.hero-scene img.scene{width:100%;height:100%;display:block;object-fit:cover}
+  .scene-caption{background:#060d18;padding:11px 0 12px}
+  .scene-caption .wrap{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+  .scene-cap{font-size:13.5px;line-height:1.6;color:var(--muted);border-left:2px solid rgba(201,168,76,.4);padding-left:14px;flex:1 1 420px}
+  .scene-hint{flex:0 0 auto;font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.4px;color:#e4c97a;
+    background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.34);border-radius:24px;padding:7px 16px;font-weight:600}
+  .hero-lead{background:linear-gradient(180deg,#0c1826 0%,#060c17 100%);color:#fff;padding:28px 0 38px}
+  .hero-lead .museum{color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:12px;opacity:.9}
+  .hero-lead .who{font-family:'Inter',sans-serif;font-size:clamp(13px,3vw,15px);letter-spacing:.4px;color:var(--accent-l,#7dc8ff);margin-bottom:10px}
+  .hero-lead .who i{font-style:normal;color:#7893ab;font-weight:400}
+  .hero-lead h1{color:#fff;font-size:56px;font-weight:900;line-height:1.04;margin-bottom:16px}
+  .hero-lead .hook{color:#b8ccde;font-size:19px;max-width:580px;margin-bottom:28px;line-height:1.65;font-weight:400}
+  .hero-lead .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+  @media(max-width:680px){.hero-lead h1{font-size:34px}.hero-lead .hook{font-size:16px}
+    .hero-scene{height:34vh;min-height:230px;max-height:300px}
+    .scene-caption .wrap{flex-direction:column;gap:9px}
+    .scene-hint{order:-1;align-self:flex-start;font-size:11.5px;padding:6px 13px}
+    .scene-cap{font-size:12.8px;flex:1 1 auto}}
+  .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:16px;font-family:'Inter',sans-serif;letter-spacing:.5px}
+
+  /* ── НАВИГАЦИЯ ДНЯ ── */
+  .daynav{position:sticky;top:64px;z-index:25;background:rgba(6,12,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-b)}
+  .daynav .wrap{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+  .daynav::-webkit-scrollbar{display:none}
+  .daynav a{flex:0 0 auto;padding:14px 20px;font-size:11px;font-weight:700;font-family:'Inter',sans-serif;color:var(--muted);text-decoration:none;white-space:nowrap;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:.18s}
+  .daynav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+  /* ── СЕКЦИИ ── */
+  section.block{padding:64px 0;border-bottom:1px solid var(--line);scroll-margin-top:130px}
+  .kicker{font-size:10px;text-transform:uppercase;letter-spacing:3.5px;color:var(--gold);font-weight:700;font-family:'Inter',sans-serif;margin-bottom:8px}
+  section.block h2{font-size:34px;color:#fff;margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink)}
+  .pull{background:var(--gold-g);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 14px 14px 0;font-style:italic;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-size:20px;line-height:1.5;margin:26px 0}
+
+  /* ── КНОПКИ ── */
+  .btn{cursor:pointer;border:none;border-radius:12px;padding:14px 26px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;background:var(--accent2);color:#fff;transition:.18s;letter-spacing:.2px}
+  .btn:hover{filter:brightness(1.18)}
+  .btn.ghost{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid var(--card-b)}
+  .btn.ghost:hover{background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.2)}
+  .btn.gold{background:linear-gradient(135deg,var(--gold),#b8882b);color:#1a0f00;box-shadow:0 4px 20px rgba(201,168,76,.25)}
+  .btn.gold:hover{filter:brightness(1.1);box-shadow:0 6px 28px rgba(201,168,76,.4)}
+  .btn:active{transform:translateY(1px)}
+  .pulse{animation:pulse .9s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+
+  /* ── КАРТОЧКИ ── */
+  .card{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:20px 22px;margin:16px 0;backdrop-filter:blur(6px)}
+
+  /* ── КВИЗ ── */
+  .opt{display:block;width:100%;text-align:left;background:rgba(255,255,255,.04);border:1px solid var(--card-b);border-radius:12px;padding:13px 16px;margin:8px 0;cursor:pointer;font-size:15px;color:var(--ink);font-family:'Inter',sans-serif;transition:.16s}
+  .opt:hover{border-color:var(--accent);background:rgba(45,140,191,.08)}
+  .opt.correct{background:rgba(40,120,60,.18);border-color:#3f9b52;color:#7ed4a0;font-weight:600}
+  .opt.wrong{background:rgba(180,40,40,.13);border-color:#c0453f;color:#f08080}
+  .exp{margin-top:10px;font-size:14px;background:var(--gold-g);border-radius:10px;padding:12px 14px;display:none;color:var(--gold-l)}
+  .exp.show{display:block}
+
+  /* ── ИТОГ ДНЯ ── */
+  .day-result{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:22px 24px;max-width:460px}
+  .dr-rank{font-family:'Playfair Display',Georgia,serif;font-size:28px;color:var(--gold-l);font-weight:700}
+  .dr-score{font-size:16px;margin:4px 0 12px;color:var(--ink)}.dr-score span{color:var(--muted);font-size:14px}
+  .dr-bar{height:8px;background:rgba(255,255,255,.08);border-radius:6px;overflow:hidden}
+  .dr-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),var(--gold));transition:width .6s cubic-bezier(.2,.7,.2,1)}
+  .dr-note{margin-top:12px;font-size:14px;color:var(--muted)}
+
+  /* ── РЕКЛАМНЫЕ СЛОТЫ ── */
+  .ad-slot{position:relative;margin:26px 0;background:rgba(255,255,255,.02);border:1px dashed rgba(255,255,255,.1);border-radius:14px;min-height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px}
+  .ad-slot .lbl{position:absolute;top:7px;right:12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.15);font-family:'Inter',sans-serif}
+  .ad-slot .ph-txt{font-size:12px;max-width:80%;color:rgba(255,255,255,.18)}
+  .ad-slot.billboard{min-height:108px}
+  .adband{background:transparent;border-bottom:none}
+
+  footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
+  .crumbs{background:rgba(6,12,23,.6);border-bottom:1px solid var(--card-b);font-family:'Inter',sans-serif;font-size:12.5px}
+  .crumbs .wrap{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  .crumbs a{color:var(--gold-l);text-decoration:none;white-space:nowrap}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--muted);opacity:.6}
+  .crumbs .here{color:var(--muted);white-space:nowrap}
+
+
+  /* ── ШАПКА: четыре строки по museum-core §6-бис ── */
+  header.top{display:block;text-align:center;padding:10px 12px 8px;height:auto;position:relative}
+  header.top .b1{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:15px;letter-spacing:.5px;color:#fff}
+  header.top .b2{font-size:11px;color:var(--muted);margin-top:2px}
+  header.top .b3{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:6px}
+  header.top .b4{font-size:12.5px;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-style:italic}
+  header.top .score{position:absolute;right:12px;top:10px}
+  .daynav{top:0}
+  .hero-scene{background:#0e1c2c;height:38vh;min-height:250px;max-height:400px}
+  @media(max-width:680px){.hero-lead h1{font-size:31px}}
+  .hero-scene img.scene{object-fit:cover;object-position:50% 42%}
+  .date-origin{font-size:13px;color:#9fb4c8;margin:-6px 0 12px;max-width:62ch}
+  .hero-lead .hook{color:#c6d8e8;max-width:62ch}
+  .hero-under{background:linear-gradient(180deg,#060d18,#060c17);padding:4px 0 22px}
+  .stamp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(125,200,255,.28);margin-top:14px}
+  .stamp>div{padding:11px 12px;border-left:1px solid rgba(125,200,255,.16);min-width:0}
+  .stamp>div:first-child{border-left:0}
+  .stamp .v{font-size:clamp(15px,3.4vw,21px);font-weight:700;color:#8fd3ff;line-height:1.1;overflow-wrap:anywhere}
+  .stamp .k{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#8fa5b9;margin-top:5px}
+  @media(max-width:600px){.stamp{grid-template-columns:repeat(2,minmax(0,1fr))}.stamp>div:nth-child(3){border-left:0}.stamp>div:nth-child(n+3){border-top:1px solid rgba(125,200,255,.16)}}
+
+  /* ── ЛЕНТА УДАРОВ (museum-inventions, вариант А; museum-core §5-бис) ── */
+  .udary{list-style:none;margin:18px 0 0;padding:0;counter-reset:u}
+  .udary>li{border-top:1px solid var(--line);padding:4px 0}
+  .udary details>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:34px 1fr;gap:10px;padding:12px 0;font-size:17px;line-height:1.55;color:var(--ink)}
+  .udary details>summary::-webkit-details-marker{display:none}
+  .udary details>summary::before{counter-increment:u;content:counter(u);font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:20px;color:var(--gold);line-height:1.3}
+  .udary .more-lbl{display:block;grid-column:2;font-size:12.5px;color:var(--gold-l);letter-spacing:.3px;margin-top:4px}
+  .udary .more-lbl::after{content:' ▾'}
+  .udary details[open] .more-lbl::after{content:' ▴'}
+  .udary details[open] .more-lbl .o{display:none}
+  .udary details:not([open]) .more-lbl .c{display:none}
+  .udary summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+  .udary .det{margin:0 0 14px 44px;padding:12px 16px;background:rgba(255,255,255,.035);border-left:2px solid rgba(201,168,76,.45);border-radius:0 10px 10px 0;font-size:15px;color:#d5e0ea}
+  .udary .det p{margin:8px 0}
+  .udary .tag{display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1a0f00;background:var(--gold-l);border-radius:6px;padding:1px 7px;margin-right:6px}
+  .udary .find{border-left:3px solid var(--gold);padding-left:8px}
+  figure.fig{margin:18px 0}
+  figure.fig img{max-width:100%;height:auto;border-radius:10px;display:block}
+  figure.fig figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5}
+  .src-note{font-size:12px;color:#8fa5b9}
+
+  /* ── МОДЕЛЬ ДНЯ (главное предметное действие) ── */
+  .lab{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:18px 18px 20px;margin-top:14px}
+  .lab-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+  .lab-row .lbl{flex:0 0 100%;font-size:13px;color:var(--muted);letter-spacing:.3px}
+  .seg{cursor:pointer;border:1px solid var(--card-b);background:rgba(255,255,255,.04);color:var(--ink);border-radius:10px;padding:10px 14px;font:inherit;font-size:14.5px;min-height:44px}
+  .seg[aria-pressed="true"]{border-color:var(--gold);background:var(--gold-g);color:var(--gold-l);font-weight:600}
+  .seg:focus-visible,.btn:focus-visible,.opt:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .lab-stage{position:relative;margin-top:12px}
+  .lab-stage canvas{width:100%;height:auto;display:block;border-radius:10px;background:#1c2530}
+  .lab-cap{font-size:12px;color:#8fa5b9;margin-top:6px}
+  .lab-msg{margin-top:12px;font-size:15.5px;padding:12px 14px;border-radius:10px;background:rgba(255,255,255,.04);border-left:3px solid var(--card-b);min-height:48px}
+  .lab-msg.ok{border-left-color:#3f9b52;background:rgba(40,120,60,.14)}
+  .lab-msg.bad{border-left-color:#c0453f;background:rgba(180,40,40,.10)}
+  .lab-found{font-size:13px;color:var(--muted);margin-top:8px}
+  .lab-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .noscript-box{background:rgba(255,255,255,.04);border:1px dashed var(--card-b);border-radius:12px;padding:12px 16px;font-size:15px}
+
+  /* ── ГРАНИЦА ПЕРВЕНСТВА ── */
+  .border-box{background:rgba(45,140,191,.08);border:1px solid rgba(45,140,191,.3);border-radius:14px;padding:16px 18px}
+  .border-box b{color:#8fd3ff}
+  .ctx{width:100%;border-collapse:collapse;margin-top:14px;font-size:14.5px}
+  .ctx th,.ctx td{text-align:left;padding:9px 8px;border-top:1px solid var(--line);vertical-align:top}
+  .ctx th{color:var(--gold-l);font-weight:600;font-size:12.5px;letter-spacing:.5px}
+  .quiz-q{margin:18px 0 6px;font-weight:600}
+  .sources a{color:var(--gold-l)}
+  .sources li{margin:6px 0;font-size:14px;color:#c8d6e2}
+  @media(max-width:600px){header.top{padding:8px 64px 6px}header.top .score{top:8px;right:8px;padding:4px 10px;font-size:12px}header.top .b3{margin-top:3px}
+    .hero-scene{height:26vh;min-height:200px;max-height:260px}.date-origin{font-size:12px;margin:-8px 0 8px}.hero-lead{padding:18px 0 26px}.hero-lead .date-chip{margin-bottom:12px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+  /* ── ПОЛЗУНКИ МОДЕЛИ (19, 21 янв) ── */
+  .mtab{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+  .mrow{display:grid;grid-template-columns:minmax(150px,1.2fr) 2fr 92px;gap:12px;align-items:center}
+  .mrow .mname{font-size:14.5px}
+  .mrow .mname i{font-style:normal;color:var(--muted);font-size:13px}
+  .mrow input[type=range]{width:100%;accent-color:var(--gold);min-height:44px}
+  .mrow output{font-size:14px;color:var(--gold-l);text-align:right}
+  .mrow.off{opacity:.45}
+  .mult{margin-top:14px;padding:14px 16px;border-radius:12px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25)}
+  @media(max-width:560px){.mrow{grid-template-columns:1fr 70px}.mrow .mname{grid-column:1/-1}}
+</style>
+<meta name="description" content="Самый ранний известный самовар описала Екатеринбургская таможня в феврале 1740 года, а в 1778 году братья Иван и Назар Лисицыны открыли первую самоварную фабрику в Туле.">
+<link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-04feb-samovar.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Русская цивилизация">
+<meta property="og:title" content="Самовар: от уральской таможни до фабрики Лисицыных">
+<meta property="og:description" content="Самый ранний известный самовар описала Екатеринбургская таможня в феврале 1740 года, а в 1778 году братья Иван и Назар Лисицыны открыли первую самоварную фабрику в Туле.">
+<meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-04feb-samovar.html">
+<meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-04feb-samovar.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Самовар: от уральской таможни до фабрики Лисицыных", "description": "Самый ранний известный самовар описала Екатеринбургская таможня в феврале 1740 года, а в 1778 году братья Иван и Назар Лисицыны открыли первую самоварную фабрику в Туле.", "url": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-04feb-samovar.html", "inLanguage": "ru", "isPartOf": {"@type": "WebSite", "name": "Музей «Что изобрели русские первыми в мире»"}, "publisher": {"@type": "Organization", "name": "Русская цивилизация"}, "about": {"@type": "Thing", "name": "Самовар"}, "image": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-04feb-samovar.jpg"}</script>
+<style>
+  /* ── РАЗРЕЗ САМОВАРА ── */
+  .part-card{background:rgba(255,255,255,.03);border:1px solid var(--card-b);border-radius:10px;padding:10px 12px;margin-top:10px;font-size:14.5px;min-height:3.2em}
+  .part-card b{color:#f1d58a}
+  .act-log{list-style:none;padding:0;margin:10px 0 0;display:grid;gap:6px}
+  .act-log li{background:rgba(255,255,255,.035);border-left:3px solid var(--card-b);border-radius:8px;padding:8px 10px;font-size:14.5px}
+  .act-log li.ok{border-left-color:#3f9b52}
+  .act-log li.no{border-left-color:#c0453f}
+  .thermo{height:10px;border-radius:6px;background:rgba(255,255,255,.07);overflow:hidden;margin-top:8px}
+  .thermo i{display:block;height:100%;width:0;background:linear-gradient(90deg,#4a8fc9,#e0a04f,#e0574f);transition:width .2s}
+  .verdict{margin-top:16px;padding:12px 14px;border:1px dashed var(--card-b);border-radius:12px}
+  .verdict label{display:flex;gap:10px;align-items:flex-start;padding:7px 0;font-size:15px;cursor:pointer}
+  .verdict input{margin-top:4px;width:18px;height:18px;accent-color:#c9a84c;flex:0 0 auto}
+  blockquote.doc{margin:12px 0;padding:10px 14px;border-left:3px solid var(--gold);background:rgba(255,255,255,.03);border-radius:0 10px 10px 0;font-size:15px;line-height:1.6}
+  #hero img.scene{object-fit:contain;object-position:50% 50%}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="b1">Русская цивилизация</div>
+  <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
+  <div class="b3">Что изобрели русские первыми в мире</div>
+  <div class="b4">365 изобретений. Все русские. Все первые</div>
+  <div class="score" id="scoreBox" title="Баллы знаний за этот день">⭐ <span id="score">0</span> / 100</div>
+</header>
+
+<nav class="crumbs" aria-label="Хлебные крошки"><div class="wrap">
+  <a href="../../index.html">Русская цивилизация</a>
+  <span class="sep">›</span>
+  <a href="index.html">Что изобрели русские первыми в мире</a>
+  <span class="sep">›</span>
+  <span class="here">4 февраля · Самовар</span>
+</div></nav>
+
+<div class="hero-scene" id="hero" style="background:#e9e4da">
+  <img class="scene" src="day-04feb-samovar.jpg" data-source="https://commons.wikimedia.org/wiki/File:Empire_samovar.jpg" data-license="CC BY-SA 3.0" width="960" height="1444" alt="Высокий самовар в форме античной вазы: две изогнутые ручки, кран спереди, литые накладки на корпусе, внизу — поддон на ножках в виде лап" fetchpriority="high">
+</div>
+
+<div class="scene-caption">
+  <div class="wrap">
+    <div class="scene-cap">Самовар в форме античной вазы, русский ампир, начало XIX века. По описанию на Викискладе — Государственный исторический музей, Москва. Фото shakko, CC BY-SA 3.0.</div>
+    <span class="scene-hint">Предмет · самовар-ваза</span>
+  </div>
+</div>
+
+<header class="hero-lead">
+  <div class="wrap">
+    <div class="date-chip">4 февраля · 1778</div>
+    <p class="date-origin">Точного дня, когда открылась фабрика братьев Лисицыных, документы не называют: известен только 1778 год. В календаре музея ей отдано 4 февраля.</p>
+    <div class="who">Иван и Назар Лисицыны <i>· тульские мастера медной посуды</i>; иргинские котельники Осокиных <i>· Урал</i></div>
+    <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
+    <h1>Самовар: от уральской таможни до фабрики Лисицыных</h1>
+    <p class="hook">Братья Лисицыны в 1778 году открыли в Туле первую самоварную фабрику — мастерскую около пятнадцати метров длиной и кузницу с двумя горнами во дворе.</p>
+    <div class="hero-btns">
+      <button class="btn gold" id="readBtn" type="button">Читать историю ↓</button>
+      <button class="btn ghost" id="listenBtn" type="button">🎧 Слушать аудиогид</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero-under">
+  <div class="wrap">
+    <div class="stamp">
+      <div><div class="v">1740</div><div class="k">самовар в описи Екатеринбургской таможни — самое раннее известное упоминание</div></div>
+      <div><div class="v">1778</div><div class="k">братья Лисицыны открывают первую самоварную фабрику в Туле</div></div>
+      <div><div class="v">26 рабочих</div><div class="k">у Лисицыных в 1803 году</div></div>
+      <div><div class="v">28 фабрик</div><div class="k">делали самовары в Туле в 1850 году</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="daynav" aria-label="Разделы дня">
+  <div class="wrap">
+    <a href="#story">Читать</a>
+    <a href="#audioguide">Слушать</a>
+    <a href="#games">Разрез</a>
+    <a href="#pervenstvo">Первенство</a>
+    <a href="#quiz">Викторина</a>
+    <a href="#calendar">Календарь</a>
+  </div>
+</nav>
+
+<section class="wrap" id="dokument" data-proof-block></section>
+
+<section class="block" id="audioguide"></section>
+
+<section class="block" id="story">
+  <div class="wrap">
+    <div class="kicker">История первенства · 12 ударов</div>
+    <h2>От медного кипятильника на Урале — к тульской фабрике</h2>
+    <p style="color:var(--muted);max-width:62ch">Читается подряд. Нажми на удар — откроется подробный разбор с источниками.</p>
+    <ol class="udary">
+      <li><details><summary><span>До самовара горячее питьё на Руси грели в сбитеннике — медном сосуде для сбитня, напитка на мёду.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>«На Руси до самовара был чайник-сбитенник. Потом самовары и чай сбитень вытеснили», — рассказывает заведующий тульским музеем самоваров Сергей Чернов. Где появился сам принцип водогрея, спорят: называют английскую чайную урну, похожие устройства античности, Китай с его чайными церемониями, кочевые степные народы. Но форма и название «самовар», по словам специалистов, сложились в России.</p>
+          <figure class="fig" style="max-width:360px">
+            <img src="day-04feb-samovar-sbitennik.jpg" data-source="https://commons.wikimedia.org/wiki/File:%D0%A1%D0%B1%D0%B8%D1%82%D0%B5%D0%BD%D0%BD%D0%B8%D0%BA.png" data-license="CC BY-SA 3.0" width="960" height="1121" loading="lazy" alt="Пузатый медный сосуд с носиком и откидной ручкой; сверху торчит короткая широкая труба, внизу — подставка-поддон">
+            <figcaption>Сбитенник, конец XVIII века, Россия. Медь, выколотка, литьё. Музей «Тульские самовары». Фото А. Ю. Румеги, Викисклад, CC BY-SA 3.0.</figcaption>
+          </figure>
+          <p class="src-note">Источник: Е. Шулепова, «Почему Тула не претендует на звание родины самовара», «Российская газета», 30.09.2026 (слова С. Чернова).</p>
+        </div></details></li>
+      <li><details><summary><span>Самый ранний известный самовар сделали не в Туле, а на Урале: в феврале 1740 года его описала Екатеринбургская таможня.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>7 февраля 1740 года на таможню в Екатеринбурге привезли товары купцов Иргинского завода — с Чусовской Курьинской пристани Акинфия Демидова. Везли их «неуказной дорогой», и груз изъяли. В нём были «6 кадей меда, 6 кулей орехов и медный самовар».</p>
+          <p class="src-note">Источник: Н. С. Корепанов, «Иргинский завод — родина русского самовара», сборник «Россия и Западная Европа: взаимодействие индустриальных культур. 1700–1950 гг.», Екатеринбург, 1996, т. 1, с. 191–196 (по документу ГАСО, ф. 24, оп. 1, д. 903, л. 710).</p>
+        </div></details></li>
+      <li><details><summary><span>Таможенники записали самовар с весом и ценой: медный, лужёный, 16 фунтов, 4 рубля 80 копеек.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <blockquote class="doc">«Самовар с прибором медный, луженый, весом 16 фунтов, заводской собственной работы ценою в 4 рубля 80 копеек».</blockquote>
+          <p>16 фунтов — около 6,5 килограмма. «Заводской собственной работы» значит, что самовар сделали на самом Иргинском заводе. В ноябре 1744 года этот самовар, «луженый на обе стороны», всё ещё лежал на таможне, и им заинтересовалась Тобольская губернская канцелярия.</p>
+          <p class="src-note">Источник: Н. С. Корепанов, 1996 (ГАСО, ф. 24, оп. 1, д. 903, л. 710; д. 1036, л. 1022).</p>
+        </div></details></li>
+      <li><details><summary><span>Эту запись нашёл свердловский историк Анатолий Козлов, а разобрал её в 1996 году Николай Корепанов.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Документ первым обнаружил доктор исторических наук А. Г. Козлов (1925–1984) незадолго до смерти. О находке написал журналист Ю. В. Липатников в журнале «Уральский следопыт» (1985, № 2). В 1996 году историк Н. С. Корепанов разобрал находку в докладе на конференции в Нижнем Тагиле. В том же 1996 году в России отмечали 250-летие самовара: за точку отсчёта, по предположению Корепанова, взяли два самовара в описи Онежского монастыря 1746 года, а родиной первых самоваров называли Тулу.</p>
+          <p class="src-note">Источник: Н. С. Корепанов, 1996, с примечаниями.</p>
+        </div></details></li>
+      <li><details><summary><span>Иргинский завод купцов Осокиных стоял в Кунгурском уезде. Медную посуду там начали делать в 1729 году.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Право построить завод двоюродные братья Пётр и Гаврила Осокины получили в феврале 1728 года. Первую медь Иргинский завод дал в декабре того же года. Котельник Степан Логинов, присланный в 1730 году от Казанского бергамта, шесть лет учил ремеслу девятерых учеников. В описи изделий за 1730–1734 годы — котлы, кунганы, кружки, лохани, чайники. Самовара в ней ещё нет.</p>
+          <p class="src-note">Источник: Н. С. Корепанов, 1996 (ГАСО, ф. 24, оп. 1, д. 575).</p>
+        </div></details></li>
+      <li><details><summary><span>Зачем иргинцам самовар? Историк предполагает: как походный кипятильник, которому не нужны ни печь, ни костёр.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Жители завода были почти сплошь старообрядцами из Нижегородской губернии. В 1736 году, во время башкирского восстания, мастеровые Иргинского завода почти всем составом ушли в Кунгур записываться в «вольницу» — казачьи сотни против повстанцев. «Остаётся предположить, что тогда и родилась идея удобного в походных условиях, компактного, автономного кипятильника, не зависящего ни от печки, ни от костра», — пишет Корепанов. Это гипотеза, а не факт из документа.</p>
+          <p class="src-note">Источник: Н. С. Корепанов, 1996.</p>
+        </div></details></li>
+      <li><details><summary><span>Самовар ехал на таможню вместе с мёдом, а не с чаем: мёд был основой сбитня.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>«Раскольники не могли использовать своё изделие для чаепития», — замечает Корепанов: в 1740 году самовар попал в Екатеринбург «вместе с медом — основой для варки сбитня». Чайным прибором самовар стал позже.</p>
+          <p class="src-note">Источник: Н. С. Корепанов, 1996.</p>
+        </div></details></li>
+      <li><details><summary><span>Вскоре самовары появились и у Демидовых: на их Суксунском заводе в 1740-е годы работала самоварная мастерская, а с 1750 года самовары делали уже фабрично.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Связать Иргу и Суксун, по Корепанову, мог Родион Набатов. Он был приказчиком у Осокиных, а в 1741 году перешёл на службу к Акинфию Демидову. «Может быть, именно Акинфий Демидов первым реально оценил изобретение иргинских мастеров», — пишет историк. В начале XIX века Суксунский завод и местные кустари делали до 60 тысяч самоваров в год.</p>
+          <p class="src-note">Источники: Н. С. Корепанов, 1996; «Откуда есть пошёл русский самовар», «Наука и жизнь».</p>
+        </div></details></li>
+      <li><details><summary><span>Тула взялась за самовары позже Урала. Оружейникам там разрешали делать на продажу и мирные вещи.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Казённые оружейники Тулы, «казюки», получили право делать «партикулярные» изделия для вольной продажи. Самовары в конце XVIII века были делом новым и прибыльным: фабрики для них работали только в Суксуне, Нижнем Тагиле и Москве. «Туляки самовары начали делать лет на 10 позже, чем уральцы», — говорит Сергей Чернов. Отец будущих фабрикантов, оружейник Фёдор Иванович Лисицын, с детства учил сыновей делать медную посуду.</p>
+          <p class="src-note">Источники: Л. В. Бритенкова, «Лисицыны. Первые самовары в Туле», Музей самоваров и бульоток; «Самовар братьев Лисицыных», там же, 2024; «Российская газета», 30.09.2026.</p>
+        </div></details></li>
+      <li><details><summary><span>В 1778 году Иван и Назар Лисицыны открыли первую в Туле самоварную фабрику — при жилом доме.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Помещение было длиной около 15 метров и шириной чуть больше 5,5 метра. Кузница с двумя горнами, для пайки самоваров и для литья, стояла отдельно во дворе. «Фабрикой-то назовёшь с трудом», — пишет историк Людмила Бритенкова. В 1823 году фабрика перешла к сыну Назара Никите. Он писал:</p>
+          <blockquote class="doc">«Показанная фабрика построена в 1778 году с дозволения начальства покойным родителем моим Тульским купцом Назаром Федоровичем Лисицыным на собственный капитал и земле, а по смерти его досталась по наследству мне».</blockquote>
+          <p class="src-note">Источники: Л. В. Бритенкова, «Тульские самоварные фабриканты — продолжатели дела Суксунского завода Демидовых», «Тульский краеведческий альманах», 2012, № 9; «Самовар братьев Лисицыных», Музей самоваров и бульоток, 2024.</p>
+        </div></details></li>
+      <li><details><summary><span>В 1803 году у Лисицыных было 26 наёмных рабочих, а их самовары продавали от Нижнего Новгорода до Бухары.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Фабрика делала не больше 650 самоваров в год, и только половина продавалась в Туле. В Нижнем Новгороде у Лисицыных была своя лавка в Гостином дворе. В музее-заповеднике Бухары хранится самовар с клеймом «Иван Лисицын в Туле. 1810 год». До начала 1810-х годов братья работали вместе, потом разделились, и у каждого появилось своё клеймо. Фабрика прожила почти сто лет, до конца 1860-х.</p>
+          <p class="src-note">Источники: Л. В. Бритенкова, «Лисицыны. Первые самовары в Туле»; «Самовар братьев Лисицыных», Музей самоваров и бульоток, 2024.</p>
+        </div></details></li>
+      <li><details><summary><span>Примеру Лисицыных последовали другие туляки: в 1803 году в Туле было 8 самоварных фабрик, в 1850-м — 28.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>В 1785 году открылась фабрика Морозова, через два года — Фёдора Попова, в 1796 году — Михаила Медведева, потом Дементия Маликова. В 1850 году 28 тульских фабрик выпускали вместе 120 тысяч самоваров в год. Сначала тульские самовары походили на уральские, потом появились свои формы — «бочонок», «жёлудь»; всего в Туле делали больше 150 видов самоваров. А к концу XIX века уже суксунский мастер Дмитрий Утемов ставил на свои самовары клеймо «Утемов в Туле».</p>
+          <p class="src-note">Источники: Л. В. Бритенкова, «Тульские самоварные фабриканты — продолжатели дела Суксунского завода Демидовых», «Тульский краеведческий альманах», 2012, № 9; Л. В. Бритенкова, «Лисицыны. Первые самовары в Туле»; «Откуда есть пошёл русский самовар», «Наука и жизнь».</p>
+        </div></details></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block" id="theme-inventions">
+  <div class="wrap">
+    <div class="kicker">Дом, свет и тепло · Русские первенства</div>
+    <h2>Что ещё русские изобрели первыми в теме «дом, свет и тепло»</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Другие дни музея о том, что светит и греет, — по утверждённому календарю. Часть этих залов ещё готовится.</p>
+    <button class="btn ghost" type="button" id="themeInvBtn" data-label="Показать 4 первенства →" aria-expanded="false" aria-controls="themeInvBody">Показать 4 первенства →</button>
+    <div id="themeInvBody" hidden>
+      <ul class="theme-list">
+        <li><b>24 мар</b> Люминесценция и лампы дневного света, С. И. Вавилов</li>
+        <li><b>10 мая</b> Светодиод, «свечение Лосева», О. В. Лосев</li>
+        <li><b>14 сен</b> Дуговые электрические лампы, «свеча Яблочкова»</li>
+        <li><b>18 окт</b> Лампа накаливания, А. Н. Лодыгин</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="games">
+  <div class="wrap">
+    <div class="kicker">Главное действие · разрез самовара</div>
+    <h2>Где горит уголь и куда идёт тяга</h2>
+    <p style="max-width:62ch">Перед тобой самовар в разрезе. Сначала найди на нём шесть частей: где лежит топливо, где входит воздух, куда падает зола. Потом растопи его по правилам — древесным углём и дровами — и посмотри, как по-разному прогреется вода.</p>
+    <div class="lab" id="lab">
+      <div class="lab-stage">
+        <canvas id="labCv" width="360" height="330" style="height:330px;cursor:pointer" role="img" aria-label="Самовар в разрезе: корпус с водой, в центре труба-жаровня с решёткой внизу, под ней шейка с отверстиями и поддон; после растопки показаны огонь, путь воздуха и прогрев воды"></canvas>
+        <div class="part-card" id="partCard" aria-live="polite"></div>
+        <div class="lab-cap">Части самовара — по статье «Устройство самовара», порядок растопки — по Л. В. Бритенковой (обе — Музей самоваров и бульоток). Как греется вода на угле и на дровах — по статье А. Низовцева «Самовар с точки зрения теплотехники» («Наука и жизнь», 2001, № 12). Рисунок и цвета нагрева условные: температуру на разной высоте самовара источники в числах не дают.</div>
+      </div>
+      <div class="lab-msg" id="findMsg" aria-live="polite"></div>
+      <div class="lab-btns"><button class="btn ghost" type="button" id="hintBtn">Подсказка: показать часть</button></div>
+      <div class="lab-found" id="labFound">Найдено частей: 0 из 6.</div>
+
+      <h3 style="margin:22px 0 6px">Растопи самовар</h3>
+      <div class="lab-row" role="group" aria-label="Топливо">
+        <span class="lbl">Топливо</span>
+        <button class="seg" type="button" data-f="ugol" aria-pressed="true">Древесный уголь</button>
+        <button class="seg" type="button" data-f="drova" aria-pressed="false">Дрова и щепа</button>
+      </div>
+      <div class="lab-row" role="group" aria-label="Действия">
+        <span class="lbl">Действие</span>
+        <button class="seg" type="button" data-s="voda">Налить воду</button>
+        <button class="seg" type="button" data-s="zaglushka">Снять заглушку</button>
+        <button class="seg" type="button" data-s="ogon">Разжечь в кувшине</button>
+        <button class="seg" type="button" data-s="truba">Надеть трубу</button>
+      </div>
+      <div class="thermo" title="Вода у крышки"><i id="thTop"></i></div>
+      <div class="thermo" title="Вода у крана"><i id="thBot"></i></div>
+      <div class="lab-cap" style="margin-top:4px">Верхняя полоса — вода у крышки, нижняя — вода у крана.</div>
+      <ul class="act-log" id="actLog" aria-live="polite"></ul>
+      <div class="lab-msg" id="labMsg" aria-live="polite">Выбери топливо и начни с первого действия.</div>
+      <div class="lab-found" id="fuelFound">Испытано топливо: 0 из 2.</div>
+      <noscript><div class="noscript-box">Для модели нужен JavaScript. Текстовая версия: топливо кладут в кувшин — трубу-жаровню в центре самовара — на решётку внизу. Воздух входит через поддувала — отверстия в шейке, — проходит сквозь решётку и уходит вверх по трубе. Зола падает на донышко; его открывают и чистят. Заглушка на верху жаровни гасит огонь, поэтому её снимают. Растапливают так: наливают воду, разжигают щепку над кувшином и бросают её внутрь, подкладывают щепки, надевают вытяжную трубу. На угле самое горячее место — внизу, вода перемешивается и прогревается вся, КПД не меньше 70%. На дровах сильнее греется верх трубы, вода у крышки горячая, а у крана может быть чуть тёплой, КПД около 15%.</div></noscript>
+    </div>
+    <p class="src-note" style="margin-top:10px">Части самовара — «Устройство самовара», Музей самоваров и бульоток; порядок растопки и запрет оставлять угли без воды — Л. В. Бритенкова, «Как топить жаровой (угольный, дровяной) самовар», Музей самоваров и бульоток; нагрев на угле и на дровах, КПД — А. Низовцев, «Самовар с точки зрения теплотехники», «Наука и жизнь», 2001, № 12.</p>
+  </div>
+</section>
+
+<section class="block" id="pervenstvo">
+  <div class="wrap">
+    <div class="kicker">Проверка факта</div>
+    <h2>Что именно здесь наше</h2>
+    <div class="border-box">
+      <p style="margin-top:0"><b>Граница первенства:</b> самовар — русский водогрей с топкой внутри. Труба-жаровня стоит посреди воды, а топливо горит на решётке у её дна. Самое раннее известное упоминание — опись Екатеринбургской таможни 1740 года: медный лужёный самовар «заводской собственной работы» Иргинского завода на Урале. В 1740-е годы самовары делали на Суксунском заводе Демидовых, с 1750 года — фабрично. В 1778 году братья Иван и Назар Лисицыны открыли первую самоварную фабрику в Туле. По данным «Российской газеты», специалисты считают, что форма и название «самовар» сложились в России.</p>
+      <p style="margin-bottom:0"><b>Чего здесь нет:</b> сам принцип водогрея старше самовара — называют английскую чайную урну, похожие устройства античности, Китай с его чайными церемониями. Лисицыны самовар не изобрели — уральцы делали его раньше. В календаре музея сказано, что самовар кипятит воду «вдвое быстрее плиты». Этого числа источники страницы не дают, поэтому здесь его нет. Они говорят о другом: на угле самовар отдаёт воде не меньше 70% тепла.</p>
+    </div>
+    <table class="ctx">
+      <thead><tr><th scope="col">Документ или событие</th><th scope="col">Что</th><th scope="col">Когда</th></tr></thead>
+      <tbody>
+        <tr><td>Иргинский завод Осокиных</td><td>Начало меднокотельного дела; в описи 1730–1734 годов — котлы, кунганы, чайники, самовара нет</td><td>1729–1734</td></tr>
+        <tr><td>Екатеринбургская таможня</td><td>«Самовар с прибором медный, луженый… заводской собственной работы»</td><td>7 февраля 1740</td></tr>
+        <tr><td>Тобольская губернская канцелярия</td><td>Интерес к тому же самовару, «луженому на обе стороны»</td><td>ноябрь 1744</td></tr>
+        <tr><td>Онежский монастырь</td><td>Два самовара в описи имущества</td><td>1746</td></tr>
+        <tr><td>Суксунский завод Демидовых</td><td>Самоварная мастерская, затем фабричное производство</td><td>1740-е; с 1750</td></tr>
+        <tr><td>Иван и Назар Лисицыны</td><td>Первая самоварная фабрика в Туле</td><td>1778</td></tr>
+        <tr><td>Тула</td><td>8 самоварных фабрик; у Лисицыных — 26 наёмных рабочих</td><td>1803</td></tr>
+        <tr><td>Тула</td><td>28 фабрик, 120 тысяч самоваров в год</td><td>1850</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block" id="quiz">
+  <div class="wrap">
+    <div class="kicker">Проверь себя · 5 вопросов</div>
+    <h2>Викторина</h2>
+    <p style="color:var(--muted);max-width:62ch">На каждый вопрос — одна попытка. После ответа покажем объяснение.</p>
+    <div id="quizBox"></div>
+    <noscript><div class="noscript-box">Для викторины нужен JavaScript. Ответы: 1 — Екатеринбургская таможня, 1740; 2 — мёд и орехи; 3 — 26; 4 — чтобы к огню проходил воздух; 5 — ставили клеймо «в Туле».</div></noscript>
+  </div>
+</section>
+
+<section class="block" id="result">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Итог дня</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Шесть найденных частей, два растопленных самовара и викторина вместе дают 100 баллов. Прогресс не сохраняется: перезагрузишь страницу — день начнётся заново.</p>
+    <div class="day-result">
+      <div class="dr-score" id="dayTxt">0 / 100 · звание: Гость дня</div>
+      <div class="dr-bar"><i id="dayBar" style="width:0%"></i></div>
+      <div class="dr-note">Найди шесть частей самовара, растопи его углём и дровами и ответь на вопросы викторины.</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="sources">
+  <div class="wrap">
+    <div class="kicker">Источники</div>
+    <h2>На чём стоит страница</h2>
+    <ul class="sources">
+      <li><a href="https://book.uraic.ru/elib/authors/korepanov/sait3/samov.htm" rel="noopener" target="_blank">Н. С. Корепанов · «Иргинский завод — родина русского самовара»</a>, «Россия и Западная Европа: взаимодействие индустриальных культур. 1700–1950 гг.», материалы международной конференции (Нижний Тагил, 1996), Екатеринбург, 1996, т. 1, с. 191–196 (электронная библиотека «Урал»): самовар в описи Екатеринбургской таможни 7 февраля 1740 года (ГАСО, ф. 24, оп. 1, д. 903, л. 710), Иргинский завод, котельники, Набатов, находка А. Г. Козлова.</li>
+      <li><a href="https://tagil-press.ru/publications/28782/ot-suksunskogo-zavoda-demidovyh-do-tulskih-samovarnyh-fabrik" rel="noopener" target="_blank">Л. В. Бритенкова · «Тульские самоварные фабриканты — продолжатели дела Суксунского завода Демидовых»</a>, «Тульский краеведческий альманах», 2012, № 9, с. 45–51: Лисицыны и их фабрика 1778 года, тульские фабрики 1803 и 1850 годов, клеймо Утемова.</li>
+      <li><a href="https://www.samovarmuseum.ru/mastera-samovarschiki/lisitsini-pervie-samovary-v-tule/" rel="noopener" target="_blank">Л. В. Бритенкова · «Лисицыны. Первые самовары в Туле»</a>, Музей самоваров и бульоток: «казюки», 26 рабочих в 1803 году, «бочонок» и «жёлудь», клеймо Утемова.</li>
+      <li><a href="https://www.samovarmuseum.ru/news/samovar-bratev-lisiczynyh/" rel="noopener" target="_blank">«Самовар братьев Лисицыных»</a>, новости Музея самоваров и бульоток, 26.01.2024: слова Никиты Лисицына, 650 самоваров в год, самовар 1810 года в Бухаре.</li>
+      <li><a href="https://www.samovarmuseum.ru/ustrojstvo-samovara/" rel="noopener" target="_blank">«Устройство самовара»</a> и <a href="https://www.samovarmuseum.ru/o-samovarah-i-bulotkah/kak-topit-zharovoj-ugolnyj-drovyanoj-samovar/" rel="noopener" target="_blank">Л. В. Бритенкова · «Как топить жаровой (угольный, дровяной) самовар»</a>, Музей самоваров и бульоток: части самовара и порядок растопки.</li>
+      <li><a href="https://www.nkj.ru/archive/articles/7531/" rel="noopener" target="_blank">А. Низовцев · «Самовар с точки зрения теплотехники»</a>, «Наука и жизнь», 2001, № 12: самовар как водонагреватель, нагрев воды на угле и на дровах, КПД.</li>
+      <li><a href="https://www.nkj.ru/open/29954/" rel="noopener" target="_blank">О. Воробьёва · «Откуда есть пошёл русский самовар»</a>, «Наука и жизнь», 19.11.2016: Суксун, до 60 тысяч самоваров в год в начале XIX века, больше 150 тульских видов.</li>
+      <li><a href="https://rg.ru/2026/09/30/reg-cfo/samovar-eto-vam-ne-chajnaia-urna.html" rel="noopener" target="_blank">Е. Шулепова · «Почему Тула не претендует на звание родины самовара»</a>, «Российская газета», 30.09.2026: слова С. Чернова о сбитеннике, Урале и Туле.</li>
+      <li>Изображения: <a href="https://commons.wikimedia.org/wiki/File:Empire_samovar.jpg" rel="noopener" target="_blank">самовар в форме античной вазы, Государственный исторический музей</a> (shakko, CC BY-SA 3.0) и <a href="https://commons.wikimedia.org/wiki/File:%D0%A1%D0%B1%D0%B8%D1%82%D0%B5%D0%BD%D0%BD%D0%B8%D0%BA.png" rel="noopener" target="_blank">сбитенник, музей «Тульские самовары»</a> (А. Ю. Румега, CC BY-SA 3.0) — Викисклад; разрез в модели — рисунок музея.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="calendar">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Календарь изобретений</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Выбери любой день — узнаешь, что русские сделали первыми в мире. Листай месяцы стрелками.</p>
+    <div id="calbox"></div>
+  </div>
+</section>
+
+<section class="block kd" id="kuda-dalshe">
+  <div class="wrap">
+    <div class="kd-kicker">Куда дальше</div>
+    <h2>Музей продолжается</h2>
+    <div class="kd-grid">
+      <div class="kd-card main"><span class="kd-lbl">Следующий день</span><a href="day-18mar-leonov.html">18 марта — Первый выход человека в открытый космос <span class="kd-arr">→</span></a>
+        <p>Раздувшийся скафандр не пускал его обратно в корабль — Леонов стравил кислород и вошёл в шлюз головой вперёд.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Предыдущий день</span><a href="day-03feb-luna9.html">3 февраля — «Луна-9», первая мягкая посадка на Луну <span class="kd-arr">→</span></a>
+        <p>Первая лунная панорама, собранная из полос радиосигнала.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Металл и ремесло</span><a href="day-03jan-anosov.html">3 января — булат Аносова <span class="kd-arr">→</span></a>
+        <p>Ещё один день о металле и мастерах в музее.</p></div>
+      <div class="kd-card main"><span class="kd-lbl">Город-музей</span><a href="../../index.html">Русская цивилизация <span class="kd-arr">→</span></a>
+        <p>Все музеи проекта на одной карте.</p></div>
+    </div>
+    <p style="margin-top:16px"><a href="izobreteniya.html">Посмотреть изобретения по алфавиту →</a></p>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>
+  Русская цивилизация · «Что изобрели русские первыми в мире»</div></footer>
+
+<script type="application/json" data-proof>{"status":"found","claim_id":"rc:izobreteniya:samovar:claim-irgin-1740","ours":{"kind":"таможенная опись","title":"Опись товаров Иргинского завода на Екатеринбургской таможне, 7 февраля 1740 года: «Самовар с прибором медный, луженый, весом 16 фунтов, заводской собственной работы ценою в 4 рубля 80 копеек» — самое раннее известное упоминание самовара","date":"1740-02-07","holder":"Государственный архив Свердловской области, ф. 24, оп. 1, д. 903, л. 710 — по публикации Н. С. Корепанова, 1996","source_url":"https://book.uraic.ru/elib/authors/korepanov/sait3/samov.htm"}}</script>
+<script src="../../assets/museum-proof.js"></script>
+
+<script>
+/* ── СЧЁТ ── шкала из 100 держит assets/museum-score.js; здесь только реестр наград.
+   шесть частей 6×5 + растопка углём 15 + растопка дровами 15 + викторина 5×8 = 100. */
+window.MUSEUM_SCORE = {awards:{p:[6,5], g1:15, g2:15, q:[5,8]},
+  ranks:[[100,'Самоварных дел мастер'],[70,'Котельник'],[40,'Подмастерье'],[0,'Гость дня']]};
+</script>
+<script src="../../assets/museum-score.js"></script>
+<script>
+(function(){
+  var $ = function(id){return document.getElementById(id);};
+  $('readBtn').onclick = function(){ $('story').scrollIntoView({behavior:'smooth'}); };
+  $('listenBtn').onclick = function(){ $('audioguide').scrollIntoView({behavior:'smooth'}); };
+  var tb=$('themeInvBtn');
+  tb.onclick=function(){ var b=$('themeInvBody'), open=b.hidden; b.hidden=!open; tb.setAttribute('aria-expanded',open?'true':'false'); tb.textContent=open?'▲ Скрыть':tb.dataset.label; };
+
+  /* ── РАЗРЕЗ САМОВАРА ── части — «Устройство самовара» (Музей самоваров и бульоток);
+     растопка — она же, «Как топить жаровой самовар»; нагрев на угле и дровах, КПД — А. Низовцев, «Наука и жизнь», 2001, № 12.
+     Рисунок в условной системе 360×330, масштабируется по ширине холста. */
+  var PARTS=[
+    {id:'kuvshin', name:'кувшин, или труба-жаровня', card:'<b>Кувшин, или труба-жаровня.</b> Полость для топлива внутри, в центре корпуса. Её стенка греет воду, налитую в тулово.'},
+    {id:'reshetka', name:'решётка', card:'<b>Решётка.</b> Лежит в нижней части кувшина. На неё кладут топливо, а сквозь прорези к огню идёт воздух.'},
+    {id:'poddu', name:'поддувала', card:'<b>Поддувала.</b> Отверстия в верхней части шейки, часто узорные. Через них проходит воздух, нужный для горения в жаровне.'},
+    {id:'donyshko', name:'донышко', card:'<b>Донышко.</b> Там, где шейка соединяется с поддоном. Сюда падают зола и угольки; донышко открывают и чистят.'},
+    {id:'tulovo', name:'тулово', card:'<b>Тулово.</b> Корпус самовара. В него наливают воду для кипячения.'},
+    {id:'zaglushka', name:'заглушка', card:'<b>Заглушка.</b> Колпачок на верхнем отверстии жаровни. Она перекрывает ток воздуха по трубе и гасит огонь, поэтому, чтобы самовар горел, её снимают.'}
+  ];
+  var OTHER={kran:'кран — через него кипяток разливают по чашкам', poddon:'поддон — основание самовара с ножками', kryshka:'крышка с конфоркой — подставкой для заварочного чайника', truba:'вытяжная труба'};
+  var found={}, want=0, hint=null;
+  var st={voda:false, zagl:true, ogon:false, truba:false, fuel:'ugol', heat:0, done:{}};
+
+  var cv=$('labCv'), cx=cv.getContext('2d'), K=1, OX=0;
+  function nFound(){ var n=0; PARTS.forEach(function(p,i){ if(found['p'+i]) n++; }); return n; }
+  function findMsg(t,cls){ var m=$('findMsg'); m.className='lab-msg'+(cls?' '+cls:''); m.textContent=t; }
+  function msg(t,cls){ var m=$('labMsg'); m.className='lab-msg'+(cls?' '+cls:''); m.textContent=t; }
+  function ask(){
+    if (want<PARTS.length) findMsg('Найди на разрезе: '+PARTS[want].name+'. Нажми на это место на рисунке.');
+    else findMsg('Все шесть частей найдены. Теперь растопи самовар.','ok');
+    $('labFound').textContent='Найдено частей: '+nFound()+' из 6.';
+  }
+
+  function hit(x,y){
+    if (st.truba && x>=172&&x<=188&&y>=0&&y<20) return 'truba';
+    if (st.zagl && x>=166&&x<=194&&y>=18&&y<36) return 'zaglushka';
+    if (!st.zagl && x>=284&&x<=322&&y>=280&&y<306) return 'zaglushka';
+    if (x>=158&&x<=202&&y>=220&&y<234) return 'reshetka';
+    if (x>=156&&x<=204&&y>=250&&y<262) return 'donyshko';
+    if (y>=234&&y<262&&x>=130&&x<=230) return 'poddu';
+    if (x>=158&&x<=202&&y>=36&&y<220) return 'kuvshin';
+    if (x>=268&&x<=306&&y>=192&&y<=218) return 'kran';
+    if (x>=110&&x<=250&&y>=262&&y<=304) return 'poddon';
+    if (x>=118&&x<=242&&y>=54&&y<72) return 'kryshka';
+    if (x>=90&&x<=270&&y>=70&&y<232) return 'tulovo';
+    return null;
+  }
+  cv.addEventListener('click',function(e){
+    var r=cv.getBoundingClientRect(), x=(e.clientX-r.left-OX)/K, y=(e.clientY-r.top)/K, h=hit(x,y);
+    if (!h) return;
+    var i=-1; PARTS.forEach(function(p,j){ if(p.id===h) i=j; });
+    if (i>=0) $('partCard').innerHTML=PARTS[i].card;
+    else $('partCard').innerHTML='<b>Это '+OTHER[h]+'.</b>';
+    if (want>=PARTS.length){ draw(); return; }
+    if (h===PARTS[want].id){
+      if (!found['p'+want]){ found['p'+want]=1; award('p'+want,5); }
+      hint=null; want++; ask(); draw();
+      if (want<PARTS.length) findMsg('Верно! Дальше: '+PARTS[want].name+'.','ok');
+    } else {
+      findMsg('Это '+(i>=0?PARTS[i].name:OTHER[h].split(' — ')[0])+'. А ищем: '+PARTS[want].name+'.','bad');
+      draw();
+    }
+  });
+  $('hintBtn').onclick=function(){ if (want<PARTS.length){ hint=PARTS[want].id; draw(); findMsg('Подсвечено: '+PARTS[want].name+'. Нажми на подсветку.'); } };
+
+  /* ── РАСТОПКА ── порядок по Бритенковой: вода → (заглушку долой) → огонь в кувшине → вытяжная труба.
+     Итог по Низовцеву: уголь — жар внизу, вода перемешивается, КПД не менее 70%; дрова — жар вверху, у крана чуть тёплая, КПД около 15%. */
+  var timer=null;
+  var FUEL={ugol:'древесный уголь', drova:'дрова и щепа'};
+  var RES={
+    ugol:'Уголь горит у решётки, внизу: здесь самая высокая температура. Горячая вода поднимается, холодная опускается на её место — вода перемешивается и прогревается вся. КПД самовара на угле — не меньше 70%: столько тепла уходит в воду.',
+    drova:'Дрова сильнее всего греют трубу вверху, где она сужается. Горячая вода так и остаётся у крышки и не перемешивается: самовар шипит, а из крана может течь чуть тёплая вода. КПД на дровах — в лучшем случае около 15%.'
+  };
+  function log(t,ok){ var li=document.createElement('li'); li.className=ok?'ok':'no'; li.textContent=t; $('actLog').insertBefore(li,$('actLog').firstChild); }
+  function nFuel(){ return (st.done.ugol?1:0)+(st.done.drova?1:0); }
+  function reset(){ clearInterval(timer); st.voda=false; st.zagl=true; st.ogon=false; st.truba=false; st.heat=0; bars(); draw(); }
+  function bars(){
+    var top=st.heat, bot= st.fuel==='ugol' ? st.heat : st.heat*.3;
+    $('thTop').style.width=Math.round(top*100)+'%'; $('thBot').style.width=Math.round(bot*100)+'%';
+  }
+  document.querySelectorAll('[data-f]').forEach(function(b){
+    b.onclick=function(){
+      st.fuel=b.dataset.f;
+      document.querySelectorAll('[data-f]').forEach(function(x){ x.setAttribute('aria-pressed', x===b?'true':'false'); });
+      reset(); msg('Новый самовар, топливо — '+FUEL[st.fuel]+'. Начни с первого действия.');
+    };
+  });
+  document.querySelectorAll('[data-s]').forEach(function(b){
+    b.onclick=function(){
+      var s=b.dataset.s;
+      if (st.truba){ msg('Этот самовар уже растоплен. Выбери топливо — начнём заново.'); return; }
+      if (s==='voda'){
+        if (st.voda){ msg('Вода уже налита.'); return; }
+        st.voda=true; log('Налили воду в тулово.',1); msg('Вода в тулове. Что дальше?','ok');
+      } else if (s==='zaglushka'){
+        if (!st.zagl){ msg('Заглушка уже снята.'); return; }
+        st.zagl=false; log('Сняли заглушку с жаровни.',1); msg('Верх жаровни открыт.','ok');
+      } else if (s==='ogon'){
+        if (st.ogon){ msg('Огонь уже горит. Что дальше?'); return; }
+        if (!st.voda){ log('Разжечь без воды нельзя.',0); msg('Рано: сначала наливают воду. Самовар с тлеющими углями в кувшине без воды оставлять нельзя.','bad'); return; }
+        if (st.zagl){ log('Огонь погас под заглушкой.',0); msg('Огонь гаснет: заглушка закрывает верх жаровни и не пускает воздух по трубе. Её надо снять.','bad'); return; }
+        st.ogon=true; log(st.fuel==='ugol'?'Закрыли решётку кусками угля, опустили в трубу горящую лучину, досыпали угля.':'Разожгли щепку над кувшином, бросили на дно, подложили щепок на полкувшина.',1);
+        msg('В кувшине горит. Последний шаг?','ok');
+      } else if (s==='truba'){
+        if (!st.ogon){ log('Труба на холодном самоваре.',0); msg('Рано: вытяжную трубу надевают, когда в кувшине уже горит.','bad'); return; }
+        st.truba=true; log('Надели вытяжную трубу — пошла тяга.',1);
+        var f=st.fuel; clearInterval(timer);
+        timer=setInterval(function(){
+          st.heat=Math.min(1,st.heat+.05); bars(); draw();
+          if (st.heat>=1){ clearInterval(timer);
+            log(RES[f],f==='ugol');
+            if (!st.done[f]){ st.done[f]=1; award(f==='ugol'?'g1':'g2',15); }
+            $('fuelFound').textContent='Испытано топливо: '+nFuel()+' из 2.'+(nFuel()<2?' Теперь попробуй '+(st.done.ugol?'дрова.':'уголь.'):'');
+            msg(RES[f], f==='ugol'?'ok':'bad');
+          }
+        },90);
+        msg('Тяга пошла: воздух входит через поддувала, проходит сквозь решётку и уходит вверх по трубе.','ok');
+      }
+      draw();
+    };
+  });
+
+  function draw(){
+    var dpr=window.devicePixelRatio||1, W=cv.clientWidth||360, H=330;
+    cv.width=Math.round(W*dpr); cv.height=Math.round(H*dpr);
+    K=Math.min(W/360,1.25); OX=(W-360*K)/2;
+    cx.setTransform(dpr*K,0,0,dpr*K,dpr*OX,0); cx.clearRect(-OX/K,0,W/K,H/K);
+    var hl=function(id){ return hint===id; };
+    var metal='#b0773f', edge='#e2b27a';
+    function poly(pts,fill,stroke){ cx.beginPath(); cx.moveTo(pts[0],pts[1]); for(var i=2;i<pts.length;i+=2) cx.lineTo(pts[i],pts[i+1]); cx.closePath(); if(fill){cx.fillStyle=fill;cx.fill();} if(stroke){cx.strokeStyle=stroke;cx.lineWidth=1.5;cx.stroke();} }
+    /* тулово */
+    cx.fillStyle=hl('tulovo')?'#6a4a2a':'#4a3420'; cx.strokeStyle=edge; cx.lineWidth=2;
+    cx.beginPath(); cx.moveTo(100,70); cx.lineTo(260,70); cx.quadraticCurveTo(272,150,260,232); cx.lineTo(100,232); cx.quadraticCurveTo(88,150,100,70); cx.closePath(); cx.fill(); cx.stroke();
+    /* вода и нагрев */
+    if (st.voda){
+      var t=st.heat;
+      for (var yy=80; yy<232; yy+=4){
+        var rel=(232-yy)/152, h;
+        if (st.fuel==='ugol') h=t; else h=Math.max(0, t*(rel*1.6-.3));
+        h=Math.min(1,h);
+        var r=Math.round(60+h*170), g=Math.round(120-h*40), bl=Math.round(200-h*150);
+        cx.fillStyle='rgba('+r+','+g+','+bl+',.85)';
+        cx.fillRect(98,yy,58,4); cx.fillRect(204,yy,58,4);
+      }
+      if (st.fuel==='ugol' && t>.2){
+        cx.strokeStyle='rgba(255,255,255,.6)'; cx.lineWidth=1.5;
+        [[210,250],[150,110]].forEach(function(p){
+          cx.beginPath(); cx.moveTo(p[0],210); cx.lineTo(p[0],100); cx.lineTo(p[1],100); cx.lineTo(p[1],210); cx.stroke();
+          var up=p[0]; cx.beginPath(); cx.moveTo(up-4,108); cx.lineTo(up,100); cx.lineTo(up+4,108); cx.stroke();
+          var dn=p[1]; cx.beginPath(); cx.moveTo(dn-4,202); cx.lineTo(dn,210); cx.lineTo(dn+4,202); cx.stroke();
+        });
+      }
+    }
+    /* крышка, ручки */
+    poly([118,70,242,70,232,56,128,56], hl('kryshka')?'#7a5a3a':metal, edge);
+    cx.strokeStyle=edge; cx.lineWidth=3;
+    cx.beginPath(); cx.arc(92,100,14,Math.PI*.5,Math.PI*1.5); cx.stroke();
+    cx.beginPath(); cx.arc(268,100,14,-Math.PI*.5,Math.PI*.5); cx.stroke();
+    /* кран */
+    poly([266,196,300,196,300,214,294,214,294,204,266,204], metal, edge);
+    /* кувшин */
+    cx.fillStyle=hl('kuvshin')?'#3a3a3a':'#1d1d1d'; cx.strokeStyle=edge; cx.lineWidth=2;
+    cx.beginPath(); cx.moveTo(170,36); cx.lineTo(190,36); cx.lineTo(190,72); cx.lineTo(202,84); cx.lineTo(202,226); cx.lineTo(158,226); cx.lineTo(158,84); cx.lineTo(170,72); cx.closePath(); cx.fill(); cx.stroke();
+    /* огонь */
+    if (st.ogon){
+      if (st.fuel==='ugol'){
+        for (var c=0;c<9;c++){ cx.fillStyle=c%2?'#e0574f':'#f0a040'; cx.beginPath(); cx.arc(164+(c%5)*8, 216-(c>4?8:0), 5,0,Math.PI*2); cx.fill(); }
+        cx.fillStyle='rgba(240,120,60,.35)'; cx.fillRect(160,170,40,48);
+      } else {
+        cx.fillStyle='rgba(240,140,60,.25)'; cx.fillRect(160,120,40,98);
+        cx.fillStyle='#f0a040'; for (var f2=0;f2<4;f2++){ cx.beginPath(); cx.moveTo(164+f2*9,220); cx.lineTo(168+f2*9,150-f2*6); cx.lineTo(172+f2*9,220); cx.fill(); }
+        cx.fillStyle='rgba(224,87,79,.75)'; cx.fillRect(160,78,40,24); cx.fillRect(172,40,16,34);
+      }
+    }
+    /* решётка */
+    cx.strokeStyle=hl('reshetka')?'#fff':'#c9a84c'; cx.lineWidth=2;
+    cx.beginPath(); cx.moveTo(158,227); cx.lineTo(202,227); cx.stroke();
+    for (var g2=162; g2<200; g2+=7){ cx.beginPath(); cx.moveTo(g2,223); cx.lineTo(g2,231); cx.stroke(); }
+    /* шейка с поддувалами */
+    poly([150,234,210,234,230,262,130,262], hl('poddu')?'#7a5a3a':metal, edge);
+    cx.fillStyle='#120c06'; [154,170,190,206].forEach(function(x){ cx.beginPath(); cx.ellipse(x,243,4,5,0,0,Math.PI*2); cx.fill(); });
+    /* донышко */
+    cx.fillStyle=hl('donyshko')?'#d0d0d0':'#6b6b6b'; cx.fillRect(158,252,44,8);
+    /* поддон и ножки */
+    poly([126,262,234,262,248,280,112,280], metal, edge);
+    cx.fillStyle=metal; [120,170,190,240].forEach(function(x){ cx.fillRect(x-4,280,8,22); });
+    /* заглушка или вытяжная труба */
+    /* снятая заглушка лежит рядом с самоваром */
+    var zx=st.zagl?166:290, zy=st.zagl?24:290;
+    cx.fillStyle=hl('zaglushka')?'#e0c080':'#c9a84c'; cx.fillRect(zx,zy,28,12); cx.beginPath(); cx.arc(zx+14,zy-2,5,0,Math.PI*2); cx.fill();
+    if (st.truba){ cx.fillStyle='#555'; cx.fillRect(172,0,16,36); }
+    /* тяга */
+    if (st.ogon && !st.zagl){
+      cx.strokeStyle='#8fd0ff'; cx.lineWidth=2; cx.setLineDash([5,4]);
+      [[120,246,156,240],[240,246,204,240]].forEach(function(a){ cx.beginPath(); cx.moveTo(a[0],a[1]); cx.lineTo(a[2],a[3]); cx.stroke(); });
+      cx.beginPath(); cx.moveTo(180,236); cx.lineTo(180,st.truba?4:30); cx.stroke(); cx.setLineDash([]);
+      cx.beginPath(); cx.moveTo(174,st.truba?14:40); cx.lineTo(180,st.truba?4:30); cx.lineTo(186,st.truba?14:40); cx.stroke();
+    }
+    /* найденные части — подписи */
+    cx.font='11px Inter, sans-serif'; cx.fillStyle='#f1d58a';
+    var LBL={kuvshin:[206,150,'left'],reshetka:[206,222,'left'],poddu:[234,250,'left'],donyshko:[126,258,'right'],tulovo:[96,140,'right'],zaglushka:st.zagl?[198,28,'left']:[286,276,'left']};
+    PARTS.forEach(function(p,i){ if(found['p'+i]){ var l=LBL[p.id]; cx.textAlign=l[2]; cx.fillText(p.id==='kuvshin'?'кувшин':p.name, l[0], l[1]); } });
+    cx.textAlign='left';
+  }
+  window.addEventListener('resize', draw);
+  ask(); draw(); bars();
+
+  /* ── ВИКТОРИНА ── один ответ на вопрос; дистракторы сверены с источниками страницы. */
+  var Q = [
+    {q:'Где нашли самое раннее известное упоминание самовара?', o:['В описи Екатеринбургской таможни, 1740','На фабрике Лисицыных в Туле, 1778','В описи Онежского монастыря, 1746'], a:0,
+     e:'7 февраля 1740 года таможня в Екатеринбурге описала медный самовар Иргинского завода. Онежская опись 1746 года — позже, а фабрика Лисицыных открылась только в 1778 году.'},
+    {q:'Что везли на таможню вместе с иргинским самоваром?', o:['Чай из Китая','Мёд и орехи','Порох и ядра'], a:1,
+     e:'«6 кадей меда, 6 кулей орехов и медный самовар». Мёд был основой сбитня — чайным прибором самовар стал позже.'},
+    {q:'Сколько наёмных рабочих было у Лисицыных в 1803 году?', o:['26','260','6'], a:0,
+     e:'В 1803 году у Лисицыных было 26 наёмных рабочих. Позже их фабрика делала не больше 650 самоваров в год.'},
+    {q:'Зачем в шейке самовара отверстия-поддувала?', o:['Чтобы выпускать пар','Чтобы к огню проходил воздух','Чтобы сливать остатки воды'], a:1,
+     e:'Через поддувала проходит воздух, нужный для горения в жаровне. Пар выходит через паровички — отверстия в крышке. Воду сливают через кран.'},
+    {q:'Что делали уральские самоварщики через сто лет после первой тульской фабрики?', o:['Закрыли все свои заводы','Ставили на свои самовары клеймо «в Туле»','Купили фабрику Лисицыных'], a:1,
+     e:'Тульский самовар стал маркой: суксунский мастер Дмитрий Утемов ставил клеймо «Утемов в Туле».'}
+  ];
+  var qb = $('quizBox');
+  Q.forEach(function(it, qi){
+    var wrap = document.createElement('div');
+    var h = document.createElement('p'); h.className='quiz-q'; h.textContent=(qi+1)+'. '+it.q; wrap.appendChild(h);
+    var exp = document.createElement('div'); exp.className='exp'; exp.setAttribute('aria-live','polite');
+    var btns = it.o.map(function(txt, oi){
+      var b=document.createElement('button'); b.type='button'; b.className='opt'; b.textContent=txt;
+      b.onclick=function(){
+        if (wrap.dataset.done) return; wrap.dataset.done='1';
+        btns.forEach(function(x,xi){ x.disabled=true; if (xi===it.a) x.classList.add('correct'); });
+        if (oi===it.a){ award('q'+qi,8); exp.textContent='Верно. '+it.e; }
+        else { b.classList.add('wrong'); exp.textContent='Не совсем. '+it.e; }
+        exp.classList.add('show');
+      };
+      wrap.appendChild(b); return b;
+    });
+    wrap.appendChild(exp); qb.appendChild(wrap);
+  });
+})();
+</script>
+<script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
+<script>window.MUSEUM_CHROME={
+  museum:{title:'Что изобрели русские первыми в мире',href:'index.html'},
+  share:{title:'Самовар: от уральской таможни до фабрики Лисицыных — музей «Что изобрели русские первыми в мире»',
+         text:'Самый ранний известный самовар записала Екатеринбургская таможня в 1740 году, а в 1778-м в Туле открылась первая самоварная фабрика. Что Россия дала миру раньше всех — день за днём.'},
+  prev:{href:'day-03feb-luna9.html',title:'3 февраля · «Луна-9»'},
+  next:{href:'day-18mar-leonov.html',title:'18 марта · Леонов'},
+  all:{href:'index.html',label:'Все изобретения'},
+  city:'../../index.html',
+  random:['day-01jan-cabletv.html','day-02jan-luna1.html','day-03jan-anosov.html','day-04jan-pilchikov.html','day-05jan-shukhov.html','day-06jan-orlov.html','day-08jan-icebreaker.html','day-09jan-blinov.html','day-10jan-britnev.html','day-11jan-kostovich.html','day-12jan-r7.html','day-13jan-k278.html','day-14jan-lira.html','day-15jan-kovalevskaya.html','day-16jan-soyuz45.html','day-19jan-kantorovich.html','day-21jan-obninsk.html','day-22jan-landau.html','day-23jan-umov.html','day-24jan-k162.html','day-25jan-korsakov.html','day-26jan-podvodnaya.html','day-27jan-pentium.html','day-28jan-havkin.html','day-30jan-kotelnikov.html','day-31jan-girotron.html','day-01feb-bekhterev.html','day-02feb-edinorog.html','day-03feb-luna9.html','day-04feb-samovar.html','day-18mar-leonov.html','day-15may-mechnikov.html','day-16jun-tereshkova.html','day-26sep-pavlov.html','day-15nov-buran.html','day-25nov-pirogov.html','day-01dec-lobachevsky.html','day-14dec-laser.html']
+};</script>
+<script src="../../assets/museum-chrome.js"></script>
+<script>window.MUSEUM_SUPPORT={museum:'Что изобрели русские первыми в мире'};</script>
+<script src="../../assets/museum-support.js"></script>
+<script src="calendar-izobreteniya.js"></script>
+<script>window.MUSEUM_CALENDAR_INITIAL='02-04';</script>
+<script src="../../assets/museum-calendar-month.js"></script>
+<script>window.MUSEUM_RETURN={riddle:{q:"Что везли на Екатеринбургскую таможню в 1740 году вместе с самым ранним известным самоваром?",a:"Шесть кадей мёда и шесть кулей орехов. Мёд был основой сбитня — горячего питья, которое до самовара грели в сбитеннике. Чайным прибором самовар стал позже.",src:"Н. С. Корепанов, «Иргинский завод — родина русского самовара», 1996 (ГАСО, ф. 24, оп. 1, д. 903, л. 710)"}};</script>
+<script src="../../assets/museum-return.js" data-museum="izobreteniya" data-day="02-04"></script>
+<script defer src="../../assets/analytics.js"></script>
+
+
+
+<script>window.MUSEUM_AUDIOGUIDE={
+  audioSrc:"audio-guide-samovar-ru.mp3",
+  durationLabel:"2 минуты 25 секунд",
+  lead:"Голос ведёт по залу самовара: от медного сбитенника до таможенной описи 1740 года, тульской фабрики Лисицыных и трубы, внутри которой горит уголь. Шесть остановок, на каждой — что искать глазами. Слушать можно фоном, пока читаешь историю ниже.",
+  stops:[
+    {t:0,mark:"0:00",title:"Самовар-ваза"},
+    {t:20,mark:"0:20",title:"Опись на таможне"},
+    {t:48,mark:"0:48",title:"Котельники Иргинского завода"},
+    {t:73,mark:"1:13",title:"Суксун и Демидовы"},
+    {t:91,mark:"1:31",title:"Фабрика Лисицыных"},
+    {t:114,mark:"1:54",title:"Огонь внутри воды"}
+  ],
+  transcript:[
+    "<p>Самовар в форме античной вазы, русский ампир, начало XIX века (по описанию на Викискладе — Государственный исторический музей) — фото shakko, Викисклад, CC BY-SA 3.0; сбитенник — С. Чернов, «Российская газета», 30.09.2026.</p>",
+    "<p>Факты: опись Екатеринбургской таможни 7 февраля 1740 года (ГАСО, ф. 24, оп. 1, д. 903, л. 710) — Н. С. Корепанов, «Иргинский завод — родина русского самовара», 1996.</p>",
+    "<p>Факты: меднокотельное производство на Иргине с 1729 года, котельник С. Логинов и девять учеников, гипотеза о походном кипятильнике — Н. С. Корепанов, 1996.</p>",
+    "<p>Факты: самоварная мастерская Суксунского завода в 1740-е, фабричное производство с 1750 года — Н. С. Корепанов, 1996; до 60 тысяч самоваров в год — О. Воробьёва, «Откуда есть пошёл русский самовар», «Наука и жизнь».</p>",
+    "<p>Факты: фабрика 1778 года, помещение около 15 м, кузница с двумя горнами, 26 рабочих в 1803 году — Л. В. Бритенкова, «Тульские самоварные фабриканты — продолжатели дела Суксунского завода Демидовых», «Тульский краеведческий альманах», 2012, № 9; Музей самоваров и бульоток.</p>",
+    "<p>Факты: кувшин, решётка, поддувала — «Устройство самовара», Музей самоваров и бульоток; нагрев на угле, КПД не менее 70% — А. Низовцев, «Самовар с точки зрения теплотехники», «Наука и жизнь», 2001, № 12.</p>"
+  ],
+  note:"Озвучено синтезом речи — временно, до записи голосом автора музея."
+};</script>
+<script src="../../assets/museum-audioguide.js"></script>
+</body>
+</html>
