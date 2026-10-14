@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="ru" data-museum="izobreteniya">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Мёртвая петля Нестерова: круг в небе над Киевом — Что изобрели русские первыми в мире, 15 февраля</title>
+<!--
+  Страница дня 15 февраля. Наряд stranicy-izob-0910 (claude2, 14.10.2026), карточка #762.
+  Форма — вариант А музея изобретений (Сергей 12.09.2026): лента ударов, подробности свёрнуты.
+  Паспорт выпуска: rc-museum-production/izobreteniya/day-15feb-nesterov/passport/issue.json
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --dark:#060c17; --dark2:#0c1826; --surface:#111f33;
+    --card:rgba(255,255,255,.05); --card-b:rgba(255,255,255,.09);
+    --gold:#c9a84c; --gold-l:#e4c97a; --gold-g:rgba(201,168,76,.13);
+    --ink:#e8eef5; --muted:#7a9ab8; --line:rgba(255,255,255,.07);
+    --accent:#2d8cbf; --accent2:#1f6f8b;
+    /* legacy compat */
+    --paper:#0c1826; --paper2:#111f33;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Inter','Segoe UI',sans-serif;color:var(--ink);background:var(--dark);line-height:1.72}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.13;margin:0}
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent)}
+
+  /* ── ШАПКА ── */
+  header.top{background:rgba(6,12,23,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--card-b);color:#fff;position:sticky;top:0;z-index:30}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+  .logo svg{display:block;filter:drop-shadow(0 0 8px rgba(201,168,76,.4))}
+  .logo .lt{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:16px}
+  .logo .lt small{display:block;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-family:'Inter',sans-serif}
+  .score{background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:6px 16px;font-size:13px;color:var(--gold-l);cursor:pointer;font-family:'Inter',sans-serif}
+  .score-info{position:absolute;right:12px;top:66px;max-width:260px;background:#0e1c30;color:var(--ink);border:1px solid var(--card-b);border-radius:14px;padding:14px 16px;font-size:13px;line-height:1.6;box-shadow:0 20px 60px rgba(0,0,0,.6);display:none;z-index:40}
+  .score-info.show{display:block}
+
+  /* ── HERO — СТАНДАРТ (не менять): 3D-сцена сверху, текст отдельным блоком ниже ── */
+  .hero-scene{position:relative;height:52vh;min-height:300px;max-height:520px;overflow:hidden;background:linear-gradient(160deg,#0a1e3a 0%,#1a3a6a 55%,#0d2240 100%)}
+  .hero-scene canvas.scene,.hero-scene img.scene{width:100%;height:100%;display:block;object-fit:cover}
+  .scene-caption{background:#060d18;padding:11px 0 12px}
+  .scene-caption .wrap{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+  .scene-cap{font-size:13.5px;line-height:1.6;color:var(--muted);border-left:2px solid rgba(201,168,76,.4);padding-left:14px;flex:1 1 420px}
+  .scene-hint{flex:0 0 auto;font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.4px;color:#e4c97a;
+    background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.34);border-radius:24px;padding:7px 16px;font-weight:600}
+  .hero-lead{background:linear-gradient(180deg,#0c1826 0%,#060c17 100%);color:#fff;padding:28px 0 38px}
+  .hero-lead .museum{color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:12px;opacity:.9}
+  .hero-lead .who{font-family:'Inter',sans-serif;font-size:clamp(13px,3vw,15px);letter-spacing:.4px;color:var(--accent-l,#7dc8ff);margin-bottom:10px}
+  .hero-lead .who i{font-style:normal;color:#7893ab;font-weight:400}
+  .hero-lead h1{color:#fff;font-size:56px;font-weight:900;line-height:1.04;margin-bottom:16px}
+  .hero-lead .hook{color:#b8ccde;font-size:19px;max-width:580px;margin-bottom:28px;line-height:1.65;font-weight:400}
+  .hero-lead .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+  @media(max-width:680px){.hero-lead h1{font-size:34px}.hero-lead .hook{font-size:16px}
+    .hero-scene{height:34vh;min-height:230px;max-height:300px}
+    .scene-caption .wrap{flex-direction:column;gap:9px}
+    .scene-hint{order:-1;align-self:flex-start;font-size:11.5px;padding:6px 13px}
+    .scene-cap{font-size:12.8px;flex:1 1 auto}}
+  .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:16px;font-family:'Inter',sans-serif;letter-spacing:.5px}
+
+  /* ── НАВИГАЦИЯ ДНЯ ── */
+  .daynav{position:sticky;top:64px;z-index:25;background:rgba(6,12,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-b)}
+  .daynav .wrap{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+  .daynav::-webkit-scrollbar{display:none}
+  .daynav a{flex:0 0 auto;padding:14px 20px;font-size:11px;font-weight:700;font-family:'Inter',sans-serif;color:var(--muted);text-decoration:none;white-space:nowrap;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:.18s}
+  .daynav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+  /* ── СЕКЦИИ ── */
+  section.block{padding:64px 0;border-bottom:1px solid var(--line);scroll-margin-top:130px}
+  .kicker{font-size:10px;text-transform:uppercase;letter-spacing:3.5px;color:var(--gold);font-weight:700;font-family:'Inter',sans-serif;margin-bottom:8px}
+  section.block h2{font-size:34px;color:#fff;margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink)}
+  .pull{background:var(--gold-g);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 14px 14px 0;font-style:italic;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-size:20px;line-height:1.5;margin:26px 0}
+
+  /* ── КНОПКИ ── */
+  .btn{cursor:pointer;border:none;border-radius:12px;padding:14px 26px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;background:var(--accent2);color:#fff;transition:.18s;letter-spacing:.2px}
+  .btn:hover{filter:brightness(1.18)}
+  .btn.ghost{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid var(--card-b)}
+  .btn.ghost:hover{background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.2)}
+  .btn.gold{background:linear-gradient(135deg,var(--gold),#b8882b);color:#1a0f00;box-shadow:0 4px 20px rgba(201,168,76,.25)}
+  .btn.gold:hover{filter:brightness(1.1);box-shadow:0 6px 28px rgba(201,168,76,.4)}
+  .btn:active{transform:translateY(1px)}
+  .pulse{animation:pulse .9s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+
+  /* ── КАРТОЧКИ ── */
+  .card{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:20px 22px;margin:16px 0;backdrop-filter:blur(6px)}
+
+  /* ── КВИЗ ── */
+  .opt{display:block;width:100%;text-align:left;background:rgba(255,255,255,.04);border:1px solid var(--card-b);border-radius:12px;padding:13px 16px;margin:8px 0;cursor:pointer;font-size:15px;color:var(--ink);font-family:'Inter',sans-serif;transition:.16s}
+  .opt:hover{border-color:var(--accent);background:rgba(45,140,191,.08)}
+  .opt.correct{background:rgba(40,120,60,.18);border-color:#3f9b52;color:#7ed4a0;font-weight:600}
+  .opt.wrong{background:rgba(180,40,40,.13);border-color:#c0453f;color:#f08080}
+  .exp{margin-top:10px;font-size:14px;background:var(--gold-g);border-radius:10px;padding:12px 14px;display:none;color:var(--gold-l)}
+  .exp.show{display:block}
+
+  /* ── ИТОГ ДНЯ ── */
+  .day-result{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:22px 24px;max-width:460px}
+  .dr-rank{font-family:'Playfair Display',Georgia,serif;font-size:28px;color:var(--gold-l);font-weight:700}
+  .dr-score{font-size:16px;margin:4px 0 12px;color:var(--ink)}.dr-score span{color:var(--muted);font-size:14px}
+  .dr-bar{height:8px;background:rgba(255,255,255,.08);border-radius:6px;overflow:hidden}
+  .dr-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),var(--gold));transition:width .6s cubic-bezier(.2,.7,.2,1)}
+  .dr-note{margin-top:12px;font-size:14px;color:var(--muted)}
+
+  /* ── РЕКЛАМНЫЕ СЛОТЫ ── */
+  .ad-slot{position:relative;margin:26px 0;background:rgba(255,255,255,.02);border:1px dashed rgba(255,255,255,.1);border-radius:14px;min-height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px}
+  .ad-slot .lbl{position:absolute;top:7px;right:12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.15);font-family:'Inter',sans-serif}
+  .ad-slot .ph-txt{font-size:12px;max-width:80%;color:rgba(255,255,255,.18)}
+  .ad-slot.billboard{min-height:108px}
+  .adband{background:transparent;border-bottom:none}
+
+  footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
+  .crumbs{background:rgba(6,12,23,.6);border-bottom:1px solid var(--card-b);font-family:'Inter',sans-serif;font-size:12.5px}
+  .crumbs .wrap{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  .crumbs a{color:var(--gold-l);text-decoration:none;white-space:nowrap}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--muted);opacity:.6}
+  .crumbs .here{color:var(--muted);white-space:nowrap}
+
+
+  /* ── ШАПКА: четыре строки по museum-core §6-бис ── */
+  header.top{display:block;text-align:center;padding:10px 12px 8px;height:auto;position:relative}
+  header.top .b1{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:15px;letter-spacing:.5px;color:#fff}
+  header.top .b2{font-size:11px;color:var(--muted);margin-top:2px}
+  header.top .b3{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:6px}
+  header.top .b4{font-size:12.5px;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-style:italic}
+  header.top .score{position:absolute;right:12px;top:10px}
+  .daynav{top:0}
+  .hero-scene{background:#0e1c2c;height:38vh;min-height:250px;max-height:400px}
+  @media(max-width:680px){.hero-lead h1{font-size:31px}}
+  .hero-scene img.scene{object-fit:cover;object-position:50% 42%}
+  .date-origin{font-size:13px;color:#9fb4c8;margin:-6px 0 12px;max-width:62ch}
+  .hero-lead .hook{color:#c6d8e8;max-width:62ch}
+  .hero-under{background:linear-gradient(180deg,#060d18,#060c17);padding:4px 0 22px}
+  .stamp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(125,200,255,.28);margin-top:14px}
+  .stamp>div{padding:11px 12px;border-left:1px solid rgba(125,200,255,.16);min-width:0}
+  .stamp>div:first-child{border-left:0}
+  .stamp .v{font-size:clamp(15px,3.4vw,21px);font-weight:700;color:#8fd3ff;line-height:1.1;overflow-wrap:anywhere}
+  .stamp .k{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#8fa5b9;margin-top:5px}
+  @media(max-width:600px){.stamp{grid-template-columns:repeat(2,minmax(0,1fr))}.stamp>div:nth-child(3){border-left:0}.stamp>div:nth-child(n+3){border-top:1px solid rgba(125,200,255,.16)}}
+
+  /* ── ЛЕНТА УДАРОВ (museum-inventions, вариант А; museum-core §5-бис) ── */
+  .udary{list-style:none;margin:18px 0 0;padding:0;counter-reset:u}
+  .udary>li{border-top:1px solid var(--line);padding:4px 0}
+  .udary details>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:34px 1fr;gap:10px;padding:12px 0;font-size:17px;line-height:1.55;color:var(--ink)}
+  .udary details>summary::-webkit-details-marker{display:none}
+  .udary details>summary::before{counter-increment:u;content:counter(u);font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:20px;color:var(--gold);line-height:1.3}
+  .udary .more-lbl{display:block;grid-column:2;font-size:12.5px;color:var(--gold-l);letter-spacing:.3px;margin-top:4px}
+  .udary .more-lbl::after{content:' ▾'}
+  .udary details[open] .more-lbl::after{content:' ▴'}
+  .udary details[open] .more-lbl .o{display:none}
+  .udary details:not([open]) .more-lbl .c{display:none}
+  .udary summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+  .udary .det{margin:0 0 14px 44px;padding:12px 16px;background:rgba(255,255,255,.035);border-left:2px solid rgba(201,168,76,.45);border-radius:0 10px 10px 0;font-size:15px;color:#d5e0ea}
+  .udary .det p{margin:8px 0}
+  .udary .tag{display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1a0f00;background:var(--gold-l);border-radius:6px;padding:1px 7px;margin-right:6px}
+  .udary .find{border-left:3px solid var(--gold);padding-left:8px}
+  figure.fig{margin:18px 0}
+  figure.fig img{max-width:100%;height:auto;border-radius:10px;display:block}
+  figure.fig figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5}
+  .src-note{font-size:12px;color:#8fa5b9}
+
+  /* ── МОДЕЛЬ ДНЯ (главное предметное действие) ── */
+  .lab{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:18px 18px 20px;margin-top:14px}
+  .lab-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+  .lab-row .lbl{flex:0 0 100%;font-size:13px;color:var(--muted);letter-spacing:.3px}
+  .seg{cursor:pointer;border:1px solid var(--card-b);background:rgba(255,255,255,.04);color:var(--ink);border-radius:10px;padding:10px 14px;font:inherit;font-size:14.5px;min-height:44px}
+  .seg[aria-pressed="true"]{border-color:var(--gold);background:var(--gold-g);color:var(--gold-l);font-weight:600}
+  .seg:focus-visible,.btn:focus-visible,.opt:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .lab-stage{position:relative;margin-top:12px}
+  .lab-stage canvas{width:100%;height:auto;display:block;border-radius:10px;background:#1c2530}
+  .lab-cap{font-size:12px;color:#8fa5b9;margin-top:6px}
+  .lab-msg{margin-top:12px;font-size:15.5px;padding:12px 14px;border-radius:10px;background:rgba(255,255,255,.04);border-left:3px solid var(--card-b);min-height:48px}
+  .lab-msg.ok{border-left-color:#3f9b52;background:rgba(40,120,60,.14)}
+  .lab-msg.bad{border-left-color:#c0453f;background:rgba(180,40,40,.10)}
+  .lab-found{font-size:13px;color:var(--muted);margin-top:8px}
+  .lab-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .noscript-box{background:rgba(255,255,255,.04);border:1px dashed var(--card-b);border-radius:12px;padding:12px 16px;font-size:15px}
+
+  /* ── ГРАНИЦА ПЕРВЕНСТВА ── */
+  .border-box{background:rgba(45,140,191,.08);border:1px solid rgba(45,140,191,.3);border-radius:14px;padding:16px 18px}
+  .border-box b{color:#8fd3ff}
+  .ctx{width:100%;border-collapse:collapse;margin-top:14px;font-size:14.5px}
+  .ctx th,.ctx td{text-align:left;padding:9px 8px;border-top:1px solid var(--line);vertical-align:top}
+  .ctx th{color:var(--gold-l);font-weight:600;font-size:12.5px;letter-spacing:.5px}
+  .quiz-q{margin:18px 0 6px;font-weight:600}
+  .sources a{color:var(--gold-l)}
+  .sources li{margin:6px 0;font-size:14px;color:#c8d6e2}
+  @media(max-width:600px){header.top{padding:8px 64px 6px}header.top .score{top:8px;right:8px;padding:4px 10px;font-size:12px}header.top .b3{margin-top:3px}
+    .hero-scene{height:26vh;min-height:200px;max-height:260px}.date-origin{font-size:12px;margin:-8px 0 8px}.hero-lead{padding:18px 0 26px}.hero-lead .date-chip{margin-bottom:12px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+  /* ── ПОЛЗУНКИ МОДЕЛИ (19, 21 янв) ── */
+  .mtab{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+  .mrow{display:grid;grid-template-columns:minmax(150px,1.2fr) 2fr 92px;gap:12px;align-items:center}
+  .mrow .mname{font-size:14.5px}
+  .mrow .mname i{font-style:normal;color:var(--muted);font-size:13px}
+  .mrow input[type=range]{width:100%;accent-color:var(--gold);min-height:44px}
+  .mrow output{font-size:14px;color:var(--gold-l);text-align:right}
+  .mrow.off{opacity:.45}
+  .mult{margin-top:14px;padding:14px 16px;border-radius:12px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25)}
+  @media(max-width:560px){.mrow{grid-template-columns:1fr 70px}.mrow .mname{grid-column:1/-1}}
+</style>
+<meta name="description" content="27 августа 1913 года над Сырецким аэродромом в Киеве Пётр Нестеров первым в мире описал на самолёте полный круг в вертикальной плоскости. Протокол, его статья и схема петли.">
+<link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-15feb-nesterov.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Русская цивилизация">
+<meta property="og:title" content="Мёртвая петля Нестерова: круг в небе над Киевом">
+<meta property="og:description" content="27 августа 1913 года над Сырецким аэродромом в Киеве Пётр Нестеров первым в мире описал на самолёте полный круг в вертикальной плоскости. Протокол, его статья и схема петли.">
+<meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-15feb-nesterov.html">
+<meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-15feb-nesterov.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Мёртвая петля Нестерова: круг в небе над Киевом", "description": "27 августа 1913 года над Сырецким аэродромом в Киеве Пётр Нестеров первым в мире описал на самолёте полный круг в вертикальной плоскости. Протокол, его статья и схема петли.", "url": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-15feb-nesterov.html", "inLanguage": "ru", "isPartOf": {"@type": "WebSite", "name": "Музей «Что изобрели русские первыми в мире»"}, "publisher": {"@type": "Organization", "name": "Русская цивилизация"}, "about": {"@type": "Person", "name": "Пётр Николаевич Нестеров"}, "image": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-15feb-nesterov.jpg"}</script>
+<style>
+  /* ── ПЕТЛЯ НЕСТЕРОВА: АНЕРОИД В КАРМАНЕ (15 фев) ── */
+  .loopsky{width:100%;max-width:760px;height:auto;aspect-ratio:760/460;display:block;margin:10px 0 4px;background:linear-gradient(#1d2a3a,#2b3b4f);border-radius:10px}
+  .lctl{display:grid;gap:10px;max-width:760px;margin-top:8px}
+  .lrow{display:grid;grid-template-columns:230px 1fr 80px;gap:10px;align-items:center}
+  .lrow label{font-size:15px}
+  .lrow input[type=range]{width:100%;accent-color:var(--gold);min-height:44px}
+  .lrow output{font-size:14px;color:var(--gold-l);text-align:right}
+  .lfuel{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  .lfuel .seg.on{border-color:#3f9b52;background:rgba(63,155,82,.18)}
+  .lgo{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+  .lstat{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;max-width:760px;margin-top:10px}
+  .lstat div{border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:8px 10px;background:rgba(255,255,255,.03)}
+  .lstat b{display:block;font-size:18px;color:var(--gold-l)}
+  .lstat span{font-size:13px;color:var(--muted)}
+  .chrono{display:grid;gap:8px;max-width:760px;margin-top:8px}
+  .chrono .seg{text-align:left;width:100%}
+  .chrono .seg.right{border-color:#3f9b52;background:rgba(63,155,82,.18)}
+  .chrono .seg.wrongpick{border-color:#c0573f;background:rgba(192,87,63,.15)}
+  .chrono .n{display:inline-block;min-width:1.6em;color:var(--gold-l);font-weight:700}
+  blockquote.doc{margin:12px 0;padding:10px 14px;border-left:3px solid var(--gold);background:rgba(255,255,255,.03);border-radius:0 10px 10px 0;font-size:15px;line-height:1.6}
+  figure.side{max-width:460px;margin:12px 0}
+  figure.side img{width:100%;height:auto;border-radius:8px;background:#f3ead6}
+  figure.side figcaption{font-size:13.5px;color:var(--muted);margin-top:6px;line-height:1.45}
+  #hero{background:#e9e6df}
+  #hero img.scene{object-fit:contain;object-position:50% 30%}
+  @media(max-width:560px){.lrow{grid-template-columns:1fr 70px}.lrow label{grid-column:1/-1}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="b1">Русская цивилизация</div>
+  <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
+  <div class="b3">Что изобрели русские первыми в мире</div>
+  <div class="b4">365 изобретений. Все русские. Все первые</div>
+  <div class="score" id="scoreBox" title="Баллы знаний за этот день">⭐ <span id="score">0</span> / 100</div>
+</header>
+
+<nav class="crumbs" aria-label="Хлебные крошки"><div class="wrap">
+  <a href="../../index.html">Русская цивилизация</a>
+  <span class="sep">›</span>
+  <a href="index.html">Что изобрели русские первыми в мире</a>
+  <span class="sep">›</span>
+  <span class="here">15 февраля · Петля Нестерова</span>
+</div></nav>
+
+<div class="hero-scene" id="hero">
+  <img class="scene" src="day-15feb-nesterov.jpg" data-source="https://commons.wikimedia.org/wiki/File:Pyotr_Nesterov_kievskaya_mysl_1913_50.jpg" data-license="Public domain" data-author="неизвестен; «Киевская мысль», 1913" width="600" height="828" alt="Фотопортрет в овальной рамке: молодой офицер с короткой стрижкой и усами, в кителе с погонами и орденами на груди" fetchpriority="high">
+</div>
+
+<div class="scene-caption">
+  <div class="wrap">
+    <div class="scene-cap">Пётр Николаевич Нестеров. Портрет из иллюстрированного приложения к газете «Киевская мысль», № 50, 29 ноября 1913 года, с. 400. Фотограф неизвестен; Викисклад, общественное достояние.</div>
+    <span class="scene-hint">Нестеров · 1913</span>
+  </div>
+</div>
+
+<header class="hero-lead">
+  <div class="wrap">
+    <div class="date-chip">15 февраля · 1913</div>
+    <p class="date-origin">Пётр Николаевич Нестеров родился 15 (27) февраля 1887 года в Нижнем Новгороде; 15 февраля — дата по старому стилю. Петлю он сделал 27 августа (9 сентября) 1913 года.</p>
+    <div class="who">Пётр Николаевич Нестеров <i>· военный лётчик</i></div>
+    <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
+    <h1>Мёртвая петля Нестерова: круг в небе над Киевом</h1>
+    <p class="hook">27 августа 1913 года Нестеров первым в мире замкнул мёртвую петлю, на 12 дней раньше Пегу, и, по его словам, рискнул лишь анероидом за 13 рублей 50 копеек.</p>
+    <div class="hero-btns">
+      <button class="btn gold" id="readBtn" type="button">Читать историю ↓</button>
+      <button class="btn ghost" id="listenBtn" type="button">🎧 Слушать аудиогид</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero-under">
+  <div class="wrap">
+    <div class="stamp">
+      <div><div class="v">1000 м</div><div class="k">с этой высоты Нестеров выключил мотор и пошёл вниз почти отвесно</div></div>
+      <div><div class="v">600 м</div><div class="k">здесь выровнял «Ньюпор», открыл бензин и повёл его вверх, на спину</div></div>
+      <div><div class="v">6–8 с</div><div class="k">весь поворот в вертикальной плоскости — по протоколу 27 августа 1913 года</div></div>
+      <div><div class="v">12 дней</div><div class="k">спустя, 21 сентября 1913 года, петлю сделал француз Адольф Пегу</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="daynav" aria-label="Разделы дня">
+  <div class="wrap">
+    <a href="#story">Читать</a>
+    <a href="#audioguide">Слушать</a>
+    <a href="#games">Петля</a>
+    <a href="#pervenstvo">Первенство</a>
+    <a href="#quiz">Викторина</a>
+    <a href="#calendar">Календарь</a>
+  </div>
+</nav>
+
+<section class="wrap" id="dokument" data-proof-block></section>
+
+<section class="block" id="audioguide"></section>
+
+<section class="block" id="story">
+  <div class="wrap">
+    <div class="kicker">История первенства · 12 ударов</div>
+    <h2>От нижегородского планера — к кругу в небе над Киевом</h2>
+    <p style="color:var(--muted);max-width:62ch">Читается подряд. Нажми на удар — откроется подробный разбор с источниками.</p>
+    <ol class="udary">
+      <li><details><summary><span>Пётр Нестеров родился в Нижнем Новгороде 15 февраля 1887 года по старому стилю, учился в кадетском корпусе и в Михайловском артиллерийском училище.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>С 1906 по 1909 год он служил артиллеристом во Владивостоке. Потом, в 1909–1910 годах, его прикомандировали к воздухоплавательной роте под городом.</p>
+          <p class="src-note">Источник: Е. Ф. Бурче, «Пётр Николаевич Нестеров» (М.: Молодая гвардия, 1955, серия «Жизнь замечательных людей»), «Основные даты жизни и деятельности П. Н. Нестерова».</p>
+        </div></details></li>
+      <li><details><summary><span>Летом 1911 года в Нижнем Новгороде Нестеров вместе с П. П. Соколовым построил планер, летал на нём и начал проектировать свой самолёт.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Осенью того же года его зачислили в Офицерскую воздухоплавательную школу. 28 сентября 1912 года в Гатчине он сдал экзамен на пилота-авиатора, а 5 октября — на военного лётчика.</p>
+          <p class="src-note">Источники: Е. Ф. Бурче, «Пётр Николаевич Нестеров» (1955), «Основные даты…»; В. П. Захаров, «Первый военный аэродром» (М.: Воениздат, 1988), глава «Асы первой мировой».</p>
+        </div></details></li>
+      <li><details><summary><span>В 1912 году Нестеров защищал свой проект в воздухоплавательном комитете. Он доказывал, что поворачивать самолёт нужно с креном, а крен тогда считали опасным.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Сам он писал так: «Против теории управления мне ничего не могли возразить, так как она была ясна, но я проповедывал крены, которые считались тогда опасными». Денег на самолёт ему не дали. Его направили учиться летать и предсказали, что тогда он свои взгляды переменит.</p>
+          <p class="src-note">Источник: П. Н. Нестеров, «Как я совершил мёртвую петлю», «С.-Петербургская газета», 4 и 5 сентября 1913 года; текст — в приложении к книге Е. Ф. Бурче (1955).</p>
+        </div></details></li>
+      <li><details><summary><span>Взглядов он не переменил. Нестеров был уверен: большинство аварий случается оттого, что лётчика учат «инстинктивному» управлению, — и задумал мёртвую петлю как последнее доказательство.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Чтобы доказать свою правоту, он делал виражи с креном до 85°, нарочно сваливал самолёт на крыло и выравнивал его. Мёртвую петлю Нестеров задумал как последнее доказательство: поворот самолёта одним рулём глубины.</p>
+          <p class="src-note">Источник: П. Н. Нестеров, «Как я совершил мёртвую петлю», «С.-Петербургская газета», 4 и 5 сентября 1913 года (по приложению к книге Е. Ф. Бурче, 1955).</p>
+        </div></details></li>
+      <li><details><summary><span>Весной 1913 года Нестеров принял XI корпусной авиационный отряд в Киеве, а к концу лета отряд получил новый «Ньюпор» сборки московского завода «Дукс».<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Исполнять обязанности начальника отряда он начал 26 апреля 1913 года. Петлю он откладывал, пока ждал новый аппарат, «который я мог бы по-своему урегулировать», и налетал на нём не больше 10 часов.</p>
+          <p class="src-note">Источники: Е. Ф. Бурче, «Пётр Николаевич Нестеров» (1955), «Основные даты…» и гл. VI; П. Н. Нестеров, «Как я совершил мёртвую петлю» (1913).</p>
+        </div></details></li>
+      <li><details><summary><span>27 августа 1913 года, вечером, Нестеров привязался ремнём к сиденью, поднялся на 1000 метров, закрыл бензин и пошёл вниз почти отвесно.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Примерно на 600 метрах он начал выравнивать самолёт, а когда нос прошёл горизонт, снова открыл бензин. «Мотор очень хорошо заработал, аппарат полез в небо и начал ложиться на спину». Левую руку Нестеров всё время держал на бензиновом кране.</p>
+          <figure class="side">
+            <img src="day-15feb-nesterov-skhema.jpg" data-source="https://commons.wikimedia.org/wiki/File:Nesterov%27s_loop.png" data-license="Public domain" data-author="П. Н. Нестеров" width="580" height="770" loading="lazy" alt="Рисунок от руки на пожелтевшей бумаге: линия полёта отвесно уходит вниз, описывает круг и спиралью спускается к трём ангарам на земле; надписи «высота 1000–900 метров», «без мотора», «с мотором», «600–700 метров»">
+            <figcaption>Схема мёртвой петли, нарисованная рукой Нестерова в 1913 году: подписи «высота 1000–900 метров», «без мотора», «с мотором», «600–700 метров». Ниже — спиральный спуск к ангарам. Репродукция из книги, Викисклад, общественное достояние.</figcaption>
+          </figure>
+          <p class="src-note">Источники: П. Н. Нестеров, «Как я совершил мёртвую петлю» (1913); В. П. Захаров, «Первый военный аэродром» (1988), глава «Асы первой мировой» — о собственноручной схеме с расчётной высотой.</p>
+        </div></details></li>
+      <li><details><summary><span>Анероид, прибор для измерения высоты, Нестеров оставил в кармане куртки нарочно: если петля выйдет неправильной, вверх ногами он выпадет. Анероид не выпал.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>«Но... я решил „рискнуть“ им для большей убедительности. Вот, собственно говоря, все, чем я рискнул, т. е. на 13 руб. 50 коп. казенным имуществом». Анероид не выпал. Инструменты в открытых ящиках остались на местах, бензин и масло прижимало ко дну бака — то есть кверху, — и мотор работал всю верхнюю половину петли.</p>
+          <p class="src-note">Источник: П. Н. Нестеров, «Как я совершил мёртвую петлю», «С.-Петербургская газета», 4 и 5 сентября 1913 года (по приложению к книге Е. Ф. Бурче, 1955).</p>
+        </div></details></li>
+      <li><details><summary><span>В тот же вечер полёт записали в протокол. Весь поворот в вертикальной плоскости «проведен без перегибов плавной кривой в течение 6–8 секунд».<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Протокол подписали командир 3-й авиационной роты подполковник Боресков, спортивный комиссар Императорского Всероссийского аэроклуба штабс-капитан Орлов и военный лётчик поручик Есипов. В Петербург ушла телеграмма за подписями десяти свидетелей: Нестеров «описал полный круг в вертикальной плоскости, после чего спланировал к ангарам».</p>
+          <blockquote class="doc">«27 Августа 1913 г., в шесть часов десять минут вечера поручик Нестеров, поднявшись на ньюпоре на высоту 1000 метров, остановив мотор, начал планировать почти вертикально вниз. На высоте 600–800 метров от поверхности земли летчик включил мотор, выровнял рулем глубины аэроплан, поставил его носом кверху, повернул на спину и, опять переведя в вертикальное положение носом вниз и замкнув таким образом кривую в вертикальной плоскости, выключил мотор и нормальным планирующим спуском аттерировал на стартовой площадке того же Сырецкого военного аэродрома».</blockquote>
+          <p class="src-note">Источники: протокол 27 августа 1913 года и телеграмма свидетелей — по книге Е. Ф. Бурче (1955), приложение и гл. VI; телеграмма — также В. П. Захаров, «Первый военный аэродром» (1988).</p>
+        </div></details></li>
+      <li><details><summary><span>Начальство приняло петлю холодно. Профессор полковник Найденов предлагал в газете, «поблагодарив за храбрость», посадить Нестерова на 30 суток под арест, а 31 августа 1913 года его произвели в штабс-капитаны.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Генерал Шишкевич из Генерального штаба заявил в печати, что такие опыты военных лётчиков «бесполезны». В газетах писали, что он «рисковал собой и казенным аппаратом без разрешения начальства». Нестеров ответил в своей статье: за ним ни в школе, ни в отряде не числится ни одной поломки, «если не считать недавнюю поломку кромки крыла при встрече на земле с другим аппаратом».</p>
+          <p class="src-note">Источники: Е. Ф. Бурче, «Пётр Николаевич Нестеров» (1955), гл. VI и «Основные даты…»; П. Н. Нестеров, «Как я совершил мёртвую петлю» (1913).</p>
+        </div></details></li>
+      <li><details><summary><span>Француз Адольф Пегу сделал петлю 21 сентября 1913 года — через 12 дней после Нестерова, чей полёт по новому стилю пришёлся на 9 сентября. Ещё раньше, 2 сентября, Пегу пролетел частью вниз головой, но его фигура была похожа на букву S, а не на замкнутый круг.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Нестеров сам объяснил разницу: в его петле центробежная сила прижимала лётчика к сиденью, а у Пегу центробежная сила «выбрасывала его из аппарата», бензин вытекал, и мотор работать не мог. 13 мая 1914 года, когда в газетах первую петлю стали приписывать французу, Совет Киевского общества воздухоплавания постановил огласить даты полётов Пегу.</p>
+          <p class="src-note">Источники: письмо Совета Киевского общества воздухоплавания (13 мая 1914) и П. Н. Нестеров, «Как я совершил мёртвую петлю» (1913) — по книге Е. Ф. Бурче (1955), гл. VI и приложение; В. П. Захаров, «Первый военный аэродром» (1988).</p>
+        </div></details></li>
+      <li><details><summary><span>26 ноября 1913 года Киевское общество воздухоплавания наградило Нестерова золотой медалью — «за первое в мире удачное решение, с риском для жизни, вопроса об управлении аэропланами при вертикальных кренах».<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Научно-технический комитет общества написал в отзыве: до полёта Нестерова вопрос об управлении самолётом в вертикальных положениях «оставался открытым; многие даже сомневались в возможности решения его». 14 мая 1914 года в Политехническом музее в Москве Нестеров выступил с докладом о своей петле. Его биограф Е. Ф. Бурче пишет, что на этом заседании Пегу публично признал его первенство.</p>
+          <p class="src-note">Источники: свидетельство Киевского общества воздухоплавания и отзыв его Научно-технического комитета — приложение к книге Е. Ф. Бурче (1955); там же «Основные даты…»; В. П. Захаров, «Первый военный аэродром» (1988).</p>
+        </div></details></li>
+      <li><details><summary><span>26 августа 1914 года, на фронте под Львовом, Нестеров первым в истории сбил вражеский самолёт тараном и сам погиб.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>По акту расследования, он давно говорил, что можно сбить неприятельский аппарат ударом сверху колёсами своего самолёта и остаться в живых. Его «Моран» врезался мотором в австрийский «Альбатрос»; Нестеров выпал из самолёта и погиб. Похоронили Нестерова в Киеве, на Аскольдовой могиле. Петлю, которую он сделал первым, называют его именем.</p>
+          <p class="src-note">Источники: «Акт расследования по обстоятельствам геройской кончины начальника XI корпусного авиационного отряда штабс-капитана Нестерова» и «Основные даты…» — по книге Е. Ф. Бурче (1955); Центральный музей ВВС, «В 1913 году П. Н. Нестеров впервые выполнил мёртвую петлю».</p>
+        </div></details></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block" id="theme-inventions">
+  <div class="wrap">
+    <div class="kicker">Воздух · Русские первенства</div>
+    <h2>Что ещё русские первыми сделали в воздухе</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Другие дни музея о полётах и воздушных машинах — по утверждённому календарю. Часть этих залов ещё готовится.</p>
+    <button class="btn ghost" type="button" id="themeInvBtn" data-label="Показать 3 первенства →" aria-expanded="false" aria-controls="themeInvBody">Показать 3 первенства →</button>
+    <div id="themeInvBody" hidden>
+      <ul class="theme-list">
+        <li><b>11 янв</b> <a href="day-11jan-kostovich.html">Первый в мире бензиновый двигатель для дирижабля</a></li>
+        <li><b>30 янв</b> <a href="day-30jan-kotelnikov.html">Ранцевый парашют Котельникова</a></li>
+        <li><b>10 фев</b> <a href="day-10feb-aerosani.html">Аэросани: пропеллер на снегу</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="block" id="games">
+  <div class="wrap">
+    <div class="kicker">Главное действие · порядок из протокола 27 августа 1913 года</div>
+    <h2>Петля: анероид в кармане</h2>
+    <p style="max-width:62ch">Нестеров оставил анероид в кармане куртки нарочно. Если петля выйдет неправильной, вверх ногами прибор выпадет. Повтори его порядок действий: закрыть бензин и пикировать, выровнять, на выходе из пикирования открыть бензин и вести самолёт вверх, на спину. Выбери высоты и посмотри, что будет наверху петли.</p>
+    <div class="lab" id="lab">
+      <canvas class="loopsky" id="sky" width="760" height="460" role="img" aria-label="Траектория самолёта: пикирование, петля и выход в планирование; внизу — земля"></canvas>
+      <div class="lctl">
+        <div class="lrow"><label for="h0">Закрыть бензин и пикировать с высоты</label><input type="range" id="h0" min="300" max="1200" step="50" value="800"><output id="h0o" for="h0">800 м</output></div>
+        <div class="lrow"><label for="hp">Начать выравнивание на высоте</label><input type="range" id="hp" min="50" max="1150" step="50" value="750"><output id="hpo" for="hp">750 м</output></div>
+        <div class="lfuel" role="group" aria-label="Бензин на выходе из пикирования"><span>На выходе из пикирования:</span>
+          <button class="seg on" type="button" id="fuelOn" aria-pressed="true">открыть бензин</button>
+          <button class="seg" type="button" id="fuelOff" aria-pressed="false">лететь без мотора</button></div>
+        <div class="lgo"><button class="btn gold" type="button" id="fly">Лететь</button></div>
+      </div>
+      <div class="lstat" aria-live="polite">
+        <div><b id="sN">—</b><span>прижим к сиденью наверху петли (1 — как на земле)</span></div>
+        <div><b id="sT">—</b><span>длится петля</span></div>
+        <div><b id="sY">—</b><span>ниже всего за полёт</span></div>
+      </div>
+      <div class="lab-msg" id="mMsg" aria-live="polite">Выбери высоты и нажми «Лететь».</div>
+      <div class="lab-cap">Из протокола 27 августа 1913 года и статьи Нестерова взяты высоты (1000 и около 600 метров) и порядок действий: мотор выключен в пикировании и снова включён на выходе из него. Остальные числа модели условные и подобраны для наглядности, в документах 1913 года их нет: скорость сваливания 18 м/с, предельная скорость пикирования 70 м/с, наибольшая скорость с мотором 30 м/с, лётчик тянет ручку до трёхкратной перегрузки. Прижим меньше единицы — лётчика и анероид прижимает слабее, чем на земле.</div>
+      <noscript><div class="noscript-box">Для модели нужен JavaScript. Текстовая версия. Если пикировать всего 50 метров и не открыть бензин, самолёт не дотягивает до верхней точки и сползает на хвост. С бензином петля замкнётся, но прижим наверху будет слабее веса. Если не открыть бензин на выходе из пикирования, наверху петли прижим к сиденью слабее веса. Если начать выравнивание на 200 метрах или ниже, на выходе из петли не остаётся запаса высоты. С числами протокола (1000 м, выравнивание на 600 м, бензин открыт) петля замыкается примерно за 10 секунд, и наверху лётчика прижимает к сиденью.</div></noscript>
+
+      <h3 style="margin:22px 0 6px">Лето и осень 1913 года: расставь по порядку</h3>
+      <p style="max-width:62ch;margin:0 0 6px;color:var(--muted)">Даты — по новому стилю, как в письме Киевского общества воздухоплавания от 13 мая 1914 года. Нажимай события от самого раннего к самому позднему.</p>
+      <div class="chrono" id="chrono" role="group" aria-label="События 1913 года"></div>
+      <div class="lab-msg" id="hMsg" aria-live="polite">Какое событие было первым?</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="pervenstvo">
+  <div class="wrap">
+    <div class="kicker">Проверка факта</div>
+    <h2>Что именно здесь наше</h2>
+    <div class="border-box">
+      <p style="margin-top:0"><b>Граница первенства:</b> Нестеров первым в мире описал на самолёте полный круг в вертикальной плоскости — мёртвую петлю. Это было 27 августа (9 сентября) 1913 года на Сырецком военном аэродроме в Киеве. Полёт записан в протокол за подписью спортивного комиссара Императорского Всероссийского аэроклуба. Француз Пегу сделал петлю через 12 дней, 21 сентября 1913 года.</p>
+      <p><b>Чего здесь нет:</b> вниз головой Пегу пролетел раньше Нестерова — 2 сентября 1913 года, но его фигура была похожа на букву S, а не на замкнутый круг. Петлю Нестеров делал не на полном газу: на 1000 метрах он выключал мотор и разгонялся пикированием. Самолёт не его конструкции: «Ньюпор» сборки московского завода «Дукс».</p>
+    </div>
+    <table class="ctx">
+      <thead><tr><th scope="col">Кто</th><th scope="col">Что сделал</th><th scope="col">Когда</th></tr></thead>
+      <tbody>
+        <tr><td>А. Пегу, Франция</td><td>Прыжок с парашютом Боннэ из самолёта в Бюке</td><td>19 августа 1913 (по новому стилю)</td></tr>
+        <tr><td>А. Пегу, Франция</td><td>Фигура, похожая на букву S, частью вниз головой</td><td>2 сентября 1913</td></tr>
+        <tr><td>П. Н. Нестеров, Киев</td><td>Полный круг в вертикальной плоскости на «Ньюпоре»; протокол и телеграмма свидетелей</td><td>9 сентября 1913 (27 августа по старому стилю)</td></tr>
+        <tr><td>А. Пегу, Франция</td><td>Первая замкнутая кривая в вертикальной плоскости, затем серии петель</td><td>21 сентября 1913</td></tr>
+        <tr><td>Киевское общество воздухоплавания</td><td>Золотая медаль Нестерову «за первое в мире удачное решение» вопроса об управлении при вертикальных кренах</td><td>26 ноября 1913 (по старому стилю)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block" id="quiz">
+  <div class="wrap">
+    <div class="kicker">Проверь себя · 5 вопросов</div>
+    <h2>Викторина</h2>
+    <p style="color:var(--muted);max-width:62ch">На каждый вопрос — одна попытка. После ответа покажем объяснение.</p>
+    <div id="quizBox"></div>
+    <noscript><div class="noscript-box">Для викторины нужен JavaScript. Ответы: 1 — 1000 метров; 2 — анероидом на 13 рублей 50 копеек; 3 — 6–8 секунд; 4 — фигуру, похожую на букву S; 5 — за управление аэропланом при вертикальных кренах.</div></noscript>
+  </div>
+</section>
+
+<section class="block" id="result">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Итог дня</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Модель петли, хронология 1913 года и викторина вместе дают 100 баллов. Прогресс не сохраняется: перезагрузишь страницу — день начнётся заново.</p>
+    <div class="day-result">
+      <div class="dr-score" id="dayTxt">0 / 100 · звание: Гость дня</div>
+      <div class="dr-bar"><i id="dayBar" style="width:0%"></i></div>
+      <div class="dr-note">Замкни петлю, сорви её двумя способами — нехваткой скорости и нехваткой высоты, повтори числа протокола, расставь события 1913 года и ответь на вопросы викторины.</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="sources">
+  <div class="wrap">
+    <div class="kicker">Источники</div>
+    <h2>На чём стоит страница</h2>
+    <ul class="sources">
+      <li><a href="https://web.archive.org/web/2024/http://avia.lib.ru/bibl/1005/07.html" rel="noopener" target="_blank">Е. Ф. Бурче · «Пётр Николаевич Нестеров» — приложения</a> (М.: Молодая гвардия, 1955, серия «Жизнь замечательных людей»; электронная копия «Авиабиблиотеки» по Wayback Machine): основные даты жизни; протокол 27 августа 1913 года; отзыв Научно-технического комитета и свидетельство о золотой медали Киевского общества воздухоплавания; статья П. Н. Нестерова «Как я совершил мёртвую петлю» («С.-Петербургская газета», 4 и 5 сентября 1913); акт расследования о гибели.</li>
+      <li><a href="https://web.archive.org/web/2024/http://avia.lib.ru/bibl/1005/03.html" rel="noopener" target="_blank">Е. Ф. Бурче · «Пётр Николаевич Нестеров», глава VI «Мёртвая петля»</a> (та же книга): телеграмма десяти свидетелей, отклики Шишкевича и Найденова, письмо Киевского общества воздухоплавания от 13 мая 1914 года с датами полётов Пегу, вечер 14 мая 1914 года в Политехническом музее.</li>
+      <li><a href="https://web.archive.org/web/2024/http://militera.lib.ru/h/zaharov_vp/05.html" rel="noopener" target="_blank">В. П. Захаров · «Первый военный аэродром», глава «Асы первой мировой»</a> (М.: Воениздат, 1988; копия «Военной литературы» по Wayback Machine): Гатчина, экзамены 1912 года, собственноручная схема петли, «Киевлянин» о полёте, телеграмма свидетелей, золотая медаль, полёты Пегу.</li>
+      <li><a href="https://cmvvs.ru/muzejnaya-deyatelnost/znamenatelnye-daty/9-sentyabrya.html" rel="noopener" target="_blank">«В 1913 году П. Н. Нестеров впервые выполнил мёртвую петлю»</a>, Центральный музей Военно-воздушных сил: дата 9 сентября 1913 года, Сырецкое поле, «Ньюпор-4», начало высшего пилотажа, бои 1914 года.</li>
+      <li>Изображения: <a href="https://commons.wikimedia.org/wiki/File:Pyotr_Nesterov_kievskaya_mysl_1913_50.jpg" rel="noopener" target="_blank">портрет П. Н. Нестерова</a> из приложения к газете «Киевская мысль», № 50, 29 ноября 1913 года — общественное достояние; <a href="https://commons.wikimedia.org/wiki/File:Nesterov%27s_loop.png" rel="noopener" target="_blank">схема мёртвой петли</a>, нарисованная П. Н. Нестеровым (1913), репродукция из книги — общественное достояние; подпись книги под рисунком обрезана.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="calendar">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Календарь изобретений</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Выбери любой день — узнаешь, что русские сделали первыми в мире. Листай месяцы стрелками.</p>
+    <div id="calbox"></div>
+  </div>
+</section>
+
+<section class="block kd" id="kuda-dalshe">
+  <div class="wrap">
+    <div class="kd-kicker">Куда дальше</div>
+    <h2>Музей продолжается</h2>
+    <div class="kd-grid">
+      <div class="kd-card main"><span class="kd-lbl">Следующий день</span><a href="day-18mar-leonov.html">18 марта — Первый выход человека в открытый космос <span class="kd-arr">→</span></a>
+        <p>Раздувшийся скафандр не пускал Леонова обратно в корабль — он стравил кислород и вошёл в шлюз головой вперёд.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Предыдущий день</span><a href="day-12feb-lenz.html">12 февраля — Правило Ленца: ток, который спорит с движением <span class="kd-arr">→</span></a>
+        <p>Одно правило вместо двух: индукционный ток мешает движению, которое его вызвало.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Купол для лётчика</span><a href="day-30jan-kotelnikov.html">30 января — Парашют Котельникова <span class="kd-arr">→</span></a>
+        <p>Ранцевый парашют для лётчика придумал не инженер, а актёр драматического театра.</p></div>
+      <div class="kd-card main"><span class="kd-lbl">Город-музей</span><a href="../../index.html">Русская цивилизация <span class="kd-arr">→</span></a>
+        <p>Все музеи проекта на одной карте.</p></div>
+    </div>
+    <p style="margin-top:16px"><a href="izobreteniya.html">Посмотреть изобретения по алфавиту →</a></p>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>
+  Русская цивилизация · «Что изобрели русские первыми в мире»</div></footer>
+
+<script type="application/json" data-proof>{"status":"found","claim_id":"rc:izobreteniya:nesterov:claim-pervaya-petlya-1913","ours":{"kind":"протокол полёта","title":"Протокол 27 августа 1913 года: поручик П. Н. Нестеров на «Ньюпоре» с высоты 1000 метров описал петлю, «замкнув таким образом кривую в вертикальной плоскости», над Сырецким военным аэродромом в Киеве","date":"27 августа (9 сентября) 1913, 18 ч 10 мин; подписали: командир 3-й авиационной роты подполковник Боресков, спортивный комиссар ИВАК штабс-капитан Орлов, поручик Есипов","holder":"Текст опубликован в приложении к книге Е. Ф. Бурче «Пётр Николаевич Нестеров» (М.: Молодая гвардия, 1955); электронная копия «Авиабиблиотеки»","source_url":"https://web.archive.org/web/2024/http://avia.lib.ru/bibl/1005/07.html"},"rival":{"name":"А. Пегу, Франция","date":"8 (21) сентября 1913","doc_title":"Первый полёт Пегу по замкнутой кривой в вертикальной плоскости в Бюке — по письму Совета Киевского общества воздухоплавания от 13 мая 1914 года (Е. Ф. Бурче, 1955, гл. VI)"}}</script>
+<script src="../../assets/museum-proof.js"></script>
+
+<script>
+/* ── СЧЁТ ── шкала из 100 держит assets/museum-score.js; здесь только реестр наград.
+   модель: первая петля 20 + без бензина 10 + без запаса высоты 10 + числа протокола 10;
+   хронология 4×5; викторина 5×6 = 100. */
+window.MUSEUM_SCORE = {awards:{m0:20, m1:10, m2:10, m3:10, h:[4,5], q:[5,6]},
+  ranks:[[100,'Ученик Нестерова'],[70,'Лётчик XI отряда'],[40,'Зритель на Сырце'],[0,'Гость дня']]};
+</script>
+<script src="../../assets/museum-score.js"></script>
+<script>
+(function(){
+  var $ = function(id){return document.getElementById(id);};
+  $('readBtn').onclick = function(){ $('story').scrollIntoView({behavior:'smooth'}); };
+  $('listenBtn').onclick = function(){ $('audioguide').scrollIntoView({behavior:'smooth'}); };
+  var tb=$('themeInvBtn');
+  tb.onclick=function(){ var b=$('themeInvBody'), open=b.hidden; b.hidden=!open; tb.setAttribute('aria-expanded',open?'true':'false'); tb.textContent=open?'▲ Скрыть':tb.dataset.label; };
+  function msg(id,t,cls){ var m=$(id); m.className='lab-msg'+(cls?' '+cls:''); m.textContent=t; }
+
+  /* ── ПЕТЛЯ ── порядок действий — протокол 27.08.1913 и статья Нестерова: 1000 м, мотор выключен, почти отвесное
+     пикирование, на ~600 м выравнивание и бензин открыт, когда нос прошёл горизонт; петля, бензин закрыт, планирование.
+     Числа самолёта условные (подпись модели): vs 18 м/с, предельная в пикировании 70 м/с, с мотором 30 м/с, перегрузка до 3. */
+  function sim(H0, Hp, fuel){
+    var g=9.81, vs=18, vt=70, vmax=30, k=g/(vt*vt), aT=k*vmax*vmax, np=3, dt=0.02, R=Math.PI/180;
+    var x=0, y=H0, v=26, gam=0, t=0, phase='dive', path=[[0,H0,0,0]], nTop=null, minY=y, t0=0, tLoop=0, fail=null;
+    for (var i=0;i<20000;i++){
+      var n, c=Math.cos(gam), eng=false;
+      if (phase==='dive'){ n = gam>-80*R ? 0 : c; if (y<=Hp){ phase='loop'; t0=t; } }
+      else if (phase==='loop'){ eng = fuel && gam>-10*R; n=Math.min(np,(v/vs)*(v/vs));
+        if (nTop===null && gam>=Math.PI) nTop=n;
+        if (v<8 && gam<Math.PI){ fail='tail'; }
+        if (gam>=3*Math.PI/2+20*R){ phase='out'; tLoop=t-t0; } }
+      else { n=Math.min(np,(v/vs)*(v/vs)); if (gam>=2*Math.PI) break; }
+      v += ((eng?aT:0) - k*v*v - g*Math.sin(gam))*dt;
+      gam += (n - c)*g/Math.max(v,1)*dt;
+      x += v*Math.cos(gam)*dt; y += v*Math.sin(gam)*dt; t += dt;
+      minY=Math.min(minY,y);
+      if (i%4===0) path.push([x,y,phase==='loop'?1:(phase==='out'?3:0),gam]);
+      if (fail){ /* хвостом вниз: самолёт проседает ещё на 80 м */ path.push([x,y-80,2,gam]); minY=Math.min(minY,y-80); break; }
+      if (y<=0){ fail='ground'; minY=0; path.push([x,0,2,gam]); break; }
+    }
+    return {path:path, fail:fail, nTop:nTop, minY:Math.round(minY), tLoop:tLoop};
+  }
+
+  var cv=$('sky'), ctx=cv.getContext('2d'), fuel=true, busy=false, mDone={}, anim=null;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function size(){ var w=cv.clientWidth||760, d=window.devicePixelRatio||1; cv.width=Math.round(w*d); cv.height=Math.round(w*460/760*d); }
+  function W(){ return cv.width; } function Hh(){ return cv.height; }
+  /* слева — весь полёт в одном масштабе по обеим осям; справа — петля крупно, тоже без искажения */
+  var Y1=1250, box=null;
+  function L(p){ var h=Hh(), s=h*0.8/Y1; return [ h*0.04+(p[0]+60)*s, h*0.9-p[1]*s ]; }
+  function fitBox(path){
+    var q=path.filter(function(p){ return p[2]>0; }); if (!q.length) q=path;
+    var x0=1e9,x1=-1e9,y0=1e9,y1=-1e9; q.forEach(function(p){ x0=Math.min(x0,p[0]); x1=Math.max(x1,p[0]); y0=Math.min(y0,p[1]); y1=Math.max(y1,p[1]); });
+    var w=W(), h=Hh(), ox=w*0.37, bw=w*0.6, bh=h*0.74, s=Math.min(bw/Math.max(60,x1-x0), bh/Math.max(60,y1-y0));
+    box={s:s, cx:(x0+x1)/2, cy:(y0+y1)/2, ox:ox+bw/2, oy:h*0.1+bh/2};
+  }
+  function Z(p){ return [ box.ox+(p[0]-box.cx)*box.s, box.oy-(p[1]-box.cy)*box.s ]; }
+  function base(){
+    var d=window.devicePixelRatio||1, w=W(), h=Hh(), lw=w*0.34; ctx.clearRect(0,0,w,h);
+    ctx.font=(11*d)+'px system-ui,sans-serif'; ctx.lineWidth=1*d;
+    ctx.fillStyle='rgba(0,0,0,.2)'; ctx.fillRect(lw,0,w-lw,h);
+    ctx.strokeStyle='rgba(233,220,192,.15)'; ctx.fillStyle='rgba(233,220,192,.55)';
+    [250,500,750,1000].forEach(function(m){ var y=L([0,m])[1]; ctx.beginPath(); ctx.moveTo(0,y); ctx.lineTo(lw,y); ctx.stroke(); ctx.fillText(m+' м',4*d,y-3*d); });
+    var gy=L([0,0])[1]; ctx.fillStyle='#4b5a3c'; ctx.fillRect(0,gy,lw,h-gy);
+    ctx.fillStyle='rgba(233,220,192,.85)'; ctx.fillText('весь полёт',4*d,h-6*d);
+    ctx.fillText('петля крупно, масштаб без искажений',lw+8*d,h-6*d);
+    if (box){ var g=Z([0,0])[1]; if (g<h){ ctx.fillStyle='#4b5a3c'; ctx.fillRect(lw,g,w-lw,h-g); }
+      var bar=50*box.s; ctx.strokeStyle='rgba(233,220,192,.7)'; ctx.beginPath(); ctx.moveTo(w-12*d-bar,14*d); ctx.lineTo(w-12*d,14*d); ctx.stroke();
+      ctx.fillStyle='rgba(233,220,192,.8)'; ctx.fillText('50 м',w-12*d-bar,28*d); }
+  }
+  function seg(f,path,upto){
+    var d=window.devicePixelRatio||1; ctx.lineWidth=2.5*d; ctx.lineCap='round';
+    for (var i=1;i<upto && i<path.length;i++){
+      var a=f(path[i-1]), b=f(path[i]); ctx.strokeStyle= path[i][2]===1 ? '#e0a23a' : (path[i][2]===2 ? '#c0573f' : '#e9dcc0');
+      ctx.beginPath(); ctx.moveTo(a[0],a[1]); ctx.lineTo(b[0],b[1]); ctx.stroke();
+    }
+    var e=f(path[Math.min(upto,path.length)-1]); ctx.fillStyle='#fff'; ctx.beginPath(); ctx.arc(e[0],e[1],3.5*d,0,7); ctx.fill();
+  }
+  function drawPath(path, upto){
+    var d=window.devicePixelRatio||1, lw=W()*0.34;
+    ctx.save(); ctx.beginPath(); ctx.rect(0,0,lw,Hh()); ctx.clip(); seg(L,path,upto); ctx.restore();
+    if (!box) return;
+    ctx.save(); ctx.beginPath(); ctx.rect(lw,0,W()-lw,Hh()); ctx.clip(); seg(Z,path,upto);
+    var tp=null; for (var i=0;i<Math.min(upto,path.length);i++){ if (path[i][2]===1 && path[i][3]>=Math.PI){ tp=path[i]; break; } }
+    if (tp){ var z=Z(tp); ctx.strokeStyle='#7fb0e0'; ctx.lineWidth=2*d; ctx.beginPath(); ctx.arc(z[0],z[1],8*d,0,7); ctx.stroke();
+      ctx.fillStyle='#7fb0e0'; ctx.font=(12*d)+'px system-ui,sans-serif'; ctx.textAlign=(z[0]>W()*0.8?'right':'left');
+      ctx.fillText('верх петли',z[0]+(ctx.textAlign==='right'?-12:12)*d,z[1]-10*d); ctx.textAlign='left'; }
+    ctx.restore();
+  }
+  size(); base();
+  window.addEventListener('resize',function(){ size(); if (last) fitBox(last.path); base(); if (last) drawPath(last.path,last.path.length); });
+
+  var h0=$('h0'), hp=$('hp'), last=null;
+  function sync(src){
+    var a=+h0.value, b=+hp.value;
+    if (b>a-50){ if (src===h0) { b=a-50; hp.value=b; } else { a=Math.min(1200,b+50); h0.value=a; } }
+    $('h0o').textContent=h0.value+' м'; $('hpo').textContent=hp.value+' м';
+  }
+  h0.oninput=function(){ sync(h0); }; hp.oninput=function(){ sync(hp); };
+  function setFuel(on){ fuel=on; $('fuelOn').classList.toggle('on',on); $('fuelOff').classList.toggle('on',!on);
+    $('fuelOn').setAttribute('aria-pressed',on?'true':'false'); $('fuelOff').setAttribute('aria-pressed',on?'false':'true'); }
+  $('fuelOn').onclick=function(){ setFuel(true); }; $('fuelOff').onclick=function(){ setFuel(false); };
+
+  function verdict(r,a,b){
+    var n=r.nTop, ok=!r.fail && n!==null && n>=1 && r.minY>=50;
+    $('sN').textContent = n===null ? '—' : n.toFixed(1).replace('.',',');
+    $('sT').textContent = r.tLoop ? r.tLoop.toFixed(1).replace('.',',')+' с' : '—';
+    $('sY').textContent = Math.max(0,r.minY)+' м';
+    if (r.fail==='ground' || (!r.fail && r.minY<50)){
+      if (!mDone.m2){ mDone.m2=1; award('m2',10); }
+      msg('mMsg', (r.fail==='ground' ? 'Самолёт задел бы землю.' : 'До земли оставалось всего '+r.minY+' м.')+' Петля съедает высоту, а Нестеров пикировал, «следя за высотой, чтобы иметь запас высоты на случай неудачи». Начни выравнивание выше.','bad');
+      return;
+    }
+    if (r.fail==='tail'){
+      if (!mDone.m1){ mDone.m1=1; award('m1',10); }
+      msg('mMsg','Скорость кончилась на подъёме: самолёт не дотянул до верхней точки и пошёл хвостом вниз. Пикирования было мало, а мотор молчал — нужен разгон.','bad');
+      return;
+    }
+    if (!ok){
+      if (!mDone.m1){ mDone.m1=1; award('m1',10); }
+      msg('mMsg','Петля замкнулась, но наверху прижим всего '+n.toFixed(1).replace('.',',')+' — слабее веса. Анероид мог выскользнуть из кармана. '+(fuel?'Разгонись пикированием подольше.':'Без мотора самолёт теряет на подъёме слишком много скорости. Нестеров открыл бензин, когда нос прошёл горизонт.'),'bad');
+      return;
+    }
+    var proto = (a===1000 && b===600 && fuel);
+    if (!mDone.m0){ mDone.m0=1; award('m0',20); }
+    if (proto && !mDone.m3){ mDone.m3=1; award('m3',10); }
+    msg('mMsg','Петля замкнута. Наверху прижим '+n.toFixed(1).replace('.',',')+' — лётчика прижимает к сиденью, анероид остался в кармане, как у Нестерова. '+
+      (proto ? 'Это порядок протокола 27 августа 1913 года: 1000 метров, выравнивание около 600, мотор на выходе из пикирования. В модели петля длится '+r.tLoop.toFixed(0)+' с; Нестеров писал о «10-секундном полёте», протокол — 6–8 секунд.'
+             : (mDone.m3 ? '' : 'Теперь повтори числа протокола: 1000 метров, выравнивание на 600, бензин открыт.')),'ok');
+  }
+
+  $('fly').onclick=function(){
+    if (busy) return;
+    var a=+h0.value, b=+hp.value, r=sim(a,b,fuel); last=r;
+    if (anim) cancelAnimationFrame(anim);
+    fitBox(r.path);
+    if (reduce){ base(); drawPath(r.path,r.path.length); verdict(r,a,b); return; }
+    busy=true; var i=1, step=Math.max(2,Math.ceil(r.path.length/180));
+    (function fr(){ base(); drawPath(r.path,i); i+=step;
+      if (i<r.path.length) anim=requestAnimationFrame(fr); else { base(); drawPath(r.path,r.path.length); busy=false; verdict(r,a,b); } })();
+  };
+
+  /* ── ХРОНОЛОГИЯ ── письмо Совета Киевского общества воздухоплавания, 13 мая 1914 (Бурче, 1955, гл. VI); новый стиль. */
+  var E=[
+    {o:2,t:'Нестеров замыкает круг в вертикальной плоскости над Сырецким аэродромом в Киеве',d:'9 сентября 1913 (27 августа по старому стилю)'},
+    {o:0,t:'Пегу прыгает с парашютом Боннэ из своего самолёта в Бюке',d:'19 августа 1913'},
+    {o:3,t:'Пегу впервые описывает в Бюке замкнутую кривую в вертикальной плоскости',d:'21 сентября 1913'},
+    {o:1,t:'Пегу описывает в воздухе фигуру, похожую на букву S, частью вниз головой',d:'2 сентября 1913'}
+  ], hNext=0;
+  E.forEach(function(e,i){
+    var b=document.createElement('button'); b.type='button'; b.className='seg'; b.innerHTML='<span class="n"></span>'; b.appendChild(document.createTextNode(e.t));
+    b.onclick=function(){
+      if (e.done) return;
+      if (e.o!==hNext){ b.classList.add('wrongpick'); setTimeout(function(){ b.classList.remove('wrongpick'); },700);
+        msg('hMsg','Не сейчас: было событие раньше этого.','bad'); return; }
+      e.done=true; b.classList.add('right'); b.disabled=true; b.querySelector('.n').textContent=(hNext+1)+'.';
+      b.appendChild(document.createTextNode(' — '+e.d)); award('h'+i,5); hNext++;
+      msg('hMsg', hNext<4 ? 'Верно. Что дальше?' : 'Порядок восстановлен. Вниз головой Пегу полетел раньше, но его фигура была только похожа на букву S. Замкнутый круг первым описал Нестеров, за 12 дней до Пегу. Путаницу в газетах добавляли два календаря: по старому стилю петля Нестерова — 27 августа, а Пегу — 8 сентября.','ok');
+    };
+    $('chrono').appendChild(b);
+  });
+
+  /* ── ВИКТОРИНА ── */
+  var Q = [
+    {q:'С какой высоты Нестеров начал пикирование перед петлёй?', o:['1000 метров','600 метров','3000 метров'], a:0,
+     e:'С 1000 метров, с выключенным мотором; на 600–800 метрах он включил мотор и пошёл вверх.'},
+    {q:'Чем, по словам самого Нестерова, он рискнул в этом полёте?', o:['Анероидом на 13 рублей 50 копеек','Новым самолётом','Ничем'], a:0,
+     e:'Анероидом в кармане куртки: «Вот, собственно говоря, все, чем я рискнул, т. е. на 13 руб. 50 коп. казенным имуществом».'},
+    {q:'Сколько, по протоколу, длился весь поворот в вертикальной плоскости?', o:['Около минуты','6–8 секунд','2 секунды'], a:1,
+     e:'6–8 секунд: поворот «проведен без перегибов плавной кривой». Сам Нестеров писал о «10-секундном полёте».'},
+    {q:'Что сделал Адольф Пегу 2 сентября 1913 года?', o:['Первую мёртвую петлю','Фигуру, похожую на букву S, частью вниз головой','Воздушный таран'], a:1,
+     e:'Фигуру S. Замкнутую кривую в вертикальной плоскости Пегу описал только 21 сентября, через 12 дней после Нестерова.'},
+    {q:'За что Киевское общество воздухоплавания дало Нестерову золотую медаль?', o:['За перелёт Киев — Гатчина','За первый воздушный таран','За первое в мире решение вопроса об управлении аэропланом при вертикальных кренах'], a:2,
+     e:'«За первое в мире удачное решение, с риском для жизни, вопроса об управлении аэропланами при вертикальных кренах» — постановление 26 ноября 1913 года.'}
+  ];
+  var qb = $('quizBox');
+  Q.forEach(function(it, qi){
+    var wrap = document.createElement('div');
+    var h = document.createElement('p'); h.className='quiz-q'; h.textContent=(qi+1)+'. '+it.q; wrap.appendChild(h);
+    var exp = document.createElement('div'); exp.className='exp'; exp.setAttribute('aria-live','polite');
+    var btns = it.o.map(function(txt, oi){
+      var b=document.createElement('button'); b.type='button'; b.className='opt'; b.textContent=txt;
+      b.onclick=function(){
+        if (wrap.dataset.done) return; wrap.dataset.done='1';
+        btns.forEach(function(x,xi){ x.disabled=true; if (xi===it.a) x.classList.add('correct'); });
+        if (oi===it.a){ award('q'+qi,6); exp.textContent='Верно. '+it.e; }
+        else { b.classList.add('wrong'); exp.textContent='Не совсем. '+it.e; }
+        exp.classList.add('show');
+      };
+      wrap.appendChild(b); return b;
+    });
+    wrap.appendChild(exp); qb.appendChild(wrap);
+  });
+})();
+</script>
+<script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
+<script>window.MUSEUM_CHROME={
+  museum:{title:'Что изобрели русские первыми в мире',href:'index.html'},
+  share:{title:'Мёртвая петля Нестерова: круг в небе над Киевом — музей «Что изобрели русские первыми в мире»',
+         text:'27 августа 1913 года над Сырецким аэродромом в Киеве Пётр Нестеров первым в мире описал на самолёте полный круг в вертикальной плоскости — мёртвую петлю. Что Россия дала миру раньше всех — день за днём.'},
+  prev:{href:'day-12feb-lenz.html',title:'12 февраля · Ленц'},
+  next:{href:'day-18mar-leonov.html',title:'18 марта · Леонов'},
+  all:{href:'index.html',label:'Все изобретения'},
+  city:'../../index.html',
+  random:['day-01jan-cabletv.html','day-02jan-luna1.html','day-03jan-anosov.html','day-04jan-pilchikov.html','day-05jan-shukhov.html','day-06jan-orlov.html','day-08jan-icebreaker.html','day-09jan-blinov.html','day-10jan-britnev.html','day-11jan-kostovich.html','day-12jan-r7.html','day-13jan-k278.html','day-14jan-lira.html','day-15jan-kovalevskaya.html','day-16jan-soyuz45.html','day-19jan-kantorovich.html','day-21jan-obninsk.html','day-22jan-landau.html','day-23jan-umov.html','day-24jan-k162.html','day-25jan-korsakov.html','day-26jan-podvodnaya.html','day-27jan-pentium.html','day-28jan-havkin.html','day-30jan-kotelnikov.html','day-31jan-girotron.html','day-01feb-bekhterev.html','day-02feb-edinorog.html','day-03feb-luna9.html','day-04feb-samovar.html','day-05feb-boldyrev.html','day-06feb-zelinsky.html','day-07feb-setun.html','day-08feb-mendeleev.html','day-09feb-chizhevsky.html','day-10feb-aerosani.html','day-12feb-lenz.html','day-15feb-nesterov.html','day-18mar-leonov.html','day-15may-mechnikov.html','day-16jun-tereshkova.html','day-26sep-pavlov.html','day-15nov-buran.html','day-25nov-pirogov.html','day-01dec-lobachevsky.html','day-14dec-laser.html']
+};</script>
+<script src="../../assets/museum-chrome.js"></script>
+<script>window.MUSEUM_SUPPORT={museum:'Что изобрели русские первыми в мире'};</script>
+<script src="../../assets/museum-support.js"></script>
+<script src="calendar-izobreteniya.js"></script>
+<script>window.MUSEUM_CALENDAR_INITIAL='02-15';</script>
+<script src="../../assets/museum-calendar-month.js"></script>
+<script>window.MUSEUM_RETURN={riddle:{q:"Какой прибор Нестеров нарочно оставил в кармане куртки, уходя в мёртвую петлю, и зачем?",a:"Анероид — прибор для определения высоты. Если бы петля вышла неправильной, вверх ногами он выпал бы из кармана. Анероид остался на месте.",src:"П. Н. Нестеров, «Как я совершил мёртвую петлю», «С.-Петербургская газета», 4 и 5 сентября 1913 года (по приложению к книге Е. Ф. Бурче «Пётр Николаевич Нестеров», 1955)"}};</script>
+<script src="../../assets/museum-return.js" data-museum="izobreteniya" data-day="02-15"></script>
+<script defer src="../../assets/analytics.js"></script>
+
+
+
+
+
+
+
+
+
+<script>window.MUSEUM_AUDIOGUIDE={
+  audioSrc:"audio-guide-nesterov-ru.mp3",
+  durationLabel:"3 минуты 9 секунд",
+  lead:"Голос ведёт по залу Петра Нестерова: портрет у входа, спор о кренах, вечер 27 августа 1913 года над Киевом, анероид в кармане, протокол и то, что было после. Шесть остановок, на каждой — что искать глазами. Слушать можно фоном, пока читаешь историю ниже.",
+  stops:[
+    {t:0,mark:"0:00",title:"Портрет из газеты"},
+    {t:28,mark:"0:28",title:"Спор о кренах"},
+    {t:65,mark:"1:05",title:"Вечер над Сырецким полем"},
+    {t:96,mark:"1:36",title:"Анероид в кармане"},
+    {t:125,mark:"2:05",title:"Протокол и газеты"},
+    {t:153,mark:"2:33",title:"Двенадцать дней"}
+  ],
+  transcript:[
+    "<p>Факты: портрет — иллюстрированное приложение к газете «Киевская мысль», № 50, 29 ноября 1913 года; дата рождения — Е. Ф. Бурче, «Пётр Николаевич Нестеров» (1955), «Основные даты…».</p>",
+    "<p>Факты: планер 1911 года, проект и комитет 1912 года, крены до 85° — П. Н. Нестеров, «Как я совершил мёртвую петлю», «С.-Петербургская газета», 4 и 5 сентября 1913 года; Е. Ф. Бурче (1955), «Основные даты…».</p>",
+    "<p>Факты: полёт 27 августа 1913 года — протокол 27 августа 1913 года и статья П. Н. Нестерова (приложение к книге Е. Ф. Бурче, 1955); схема петли — Викисклад, «Nesterov's loop.png»; В. П. Захаров, «Первый военный аэродром» (1988).</p>",
+    "<p>Факты: анероид, «13 руб. 50 коп. казенным имуществом», инструменты и мотор — П. Н. Нестеров, «Как я совершил мёртвую петлю» (1913).</p>",
+    "<p>Факты: протокол (6–8 секунд, подписи) — приложение к книге Е. Ф. Бурче (1955); слова полковника Найденова и производство в штабс-капитаны 31 августа 1913 года — Е. Ф. Бурче (1955), гл. VI и «Основные даты…».</p>",
+    "<p>Факты: даты полётов Пегу — письмо Совета Киевского общества воздухоплавания от 13 мая 1914 года (Е. Ф. Бурче, 1955, гл. VI); золотая медаль — свидетельство Киевского общества воздухоплавания; таран 26 августа 1914 года — акт расследования и «Основные даты…» (Е. Ф. Бурче, 1955).</p>"
+  ],
+  note:"Озвучено синтезом речи — временно, до записи голосом автора музея."
+};</script>
+<script src="../../assets/museum-audioguide.js"></script>
+</body>
+</html>
