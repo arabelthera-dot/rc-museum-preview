@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="ru" data-museum="izobreteniya">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Солнце и толпа: Чижевский сверяет историю с солнечными пятнами — Что изобрели русские первыми в мире, 9 февраля</title>
+<!--
+  Страница дня 9 февраля. Наряд stranicy-izob-0910 (claude2, 14.10.2026), карточка #762.
+  Форма — вариант А музея изобретений (Сергей 12.09.2026): лента ударов, подробности свёрнуты.
+  Паспорт выпуска: rc-museum-production/izobreteniya/day-09feb-chizhevsky/passport/issue.json
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --dark:#060c17; --dark2:#0c1826; --surface:#111f33;
+    --card:rgba(255,255,255,.05); --card-b:rgba(255,255,255,.09);
+    --gold:#c9a84c; --gold-l:#e4c97a; --gold-g:rgba(201,168,76,.13);
+    --ink:#e8eef5; --muted:#7a9ab8; --line:rgba(255,255,255,.07);
+    --accent:#2d8cbf; --accent2:#1f6f8b;
+    /* legacy compat */
+    --paper:#0c1826; --paper2:#111f33;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Inter','Segoe UI',sans-serif;color:var(--ink);background:var(--dark);line-height:1.72}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.13;margin:0}
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent)}
+
+  /* ── ШАПКА ── */
+  header.top{background:rgba(6,12,23,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--card-b);color:#fff;position:sticky;top:0;z-index:30}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+  .logo svg{display:block;filter:drop-shadow(0 0 8px rgba(201,168,76,.4))}
+  .logo .lt{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:16px}
+  .logo .lt small{display:block;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-family:'Inter',sans-serif}
+  .score{background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:6px 16px;font-size:13px;color:var(--gold-l);cursor:pointer;font-family:'Inter',sans-serif}
+  .score-info{position:absolute;right:12px;top:66px;max-width:260px;background:#0e1c30;color:var(--ink);border:1px solid var(--card-b);border-radius:14px;padding:14px 16px;font-size:13px;line-height:1.6;box-shadow:0 20px 60px rgba(0,0,0,.6);display:none;z-index:40}
+  .score-info.show{display:block}
+
+  /* ── HERO — СТАНДАРТ (не менять): 3D-сцена сверху, текст отдельным блоком ниже ── */
+  .hero-scene{position:relative;height:52vh;min-height:300px;max-height:520px;overflow:hidden;background:linear-gradient(160deg,#0a1e3a 0%,#1a3a6a 55%,#0d2240 100%)}
+  .hero-scene canvas.scene,.hero-scene img.scene{width:100%;height:100%;display:block;object-fit:cover}
+  .scene-caption{background:#060d18;padding:11px 0 12px}
+  .scene-caption .wrap{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+  .scene-cap{font-size:13.5px;line-height:1.6;color:var(--muted);border-left:2px solid rgba(201,168,76,.4);padding-left:14px;flex:1 1 420px}
+  .scene-hint{flex:0 0 auto;font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.4px;color:#e4c97a;
+    background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.34);border-radius:24px;padding:7px 16px;font-weight:600}
+  .hero-lead{background:linear-gradient(180deg,#0c1826 0%,#060c17 100%);color:#fff;padding:28px 0 38px}
+  .hero-lead .museum{color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:12px;opacity:.9}
+  .hero-lead .who{font-family:'Inter',sans-serif;font-size:clamp(13px,3vw,15px);letter-spacing:.4px;color:var(--accent-l,#7dc8ff);margin-bottom:10px}
+  .hero-lead .who i{font-style:normal;color:#7893ab;font-weight:400}
+  .hero-lead h1{color:#fff;font-size:56px;font-weight:900;line-height:1.04;margin-bottom:16px}
+  .hero-lead .hook{color:#b8ccde;font-size:19px;max-width:580px;margin-bottom:28px;line-height:1.65;font-weight:400}
+  .hero-lead .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+  @media(max-width:680px){.hero-lead h1{font-size:34px}.hero-lead .hook{font-size:16px}
+    .hero-scene{height:34vh;min-height:230px;max-height:300px}
+    .scene-caption .wrap{flex-direction:column;gap:9px}
+    .scene-hint{order:-1;align-self:flex-start;font-size:11.5px;padding:6px 13px}
+    .scene-cap{font-size:12.8px;flex:1 1 auto}}
+  .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:16px;font-family:'Inter',sans-serif;letter-spacing:.5px}
+
+  /* ── НАВИГАЦИЯ ДНЯ ── */
+  .daynav{position:sticky;top:64px;z-index:25;background:rgba(6,12,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-b)}
+  .daynav .wrap{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+  .daynav::-webkit-scrollbar{display:none}
+  .daynav a{flex:0 0 auto;padding:14px 20px;font-size:11px;font-weight:700;font-family:'Inter',sans-serif;color:var(--muted);text-decoration:none;white-space:nowrap;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:.18s}
+  .daynav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+  /* ── СЕКЦИИ ── */
+  section.block{padding:64px 0;border-bottom:1px solid var(--line);scroll-margin-top:130px}
+  .kicker{font-size:10px;text-transform:uppercase;letter-spacing:3.5px;color:var(--gold);font-weight:700;font-family:'Inter',sans-serif;margin-bottom:8px}
+  section.block h2{font-size:34px;color:#fff;margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink)}
+  .pull{background:var(--gold-g);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 14px 14px 0;font-style:italic;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-size:20px;line-height:1.5;margin:26px 0}
+
+  /* ── КНОПКИ ── */
+  .btn{cursor:pointer;border:none;border-radius:12px;padding:14px 26px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;background:var(--accent2);color:#fff;transition:.18s;letter-spacing:.2px}
+  .btn:hover{filter:brightness(1.18)}
+  .btn.ghost{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid var(--card-b)}
+  .btn.ghost:hover{background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.2)}
+  .btn.gold{background:linear-gradient(135deg,var(--gold),#b8882b);color:#1a0f00;box-shadow:0 4px 20px rgba(201,168,76,.25)}
+  .btn.gold:hover{filter:brightness(1.1);box-shadow:0 6px 28px rgba(201,168,76,.4)}
+  .btn:active{transform:translateY(1px)}
+  .pulse{animation:pulse .9s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+
+  /* ── КАРТОЧКИ ── */
+  .card{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:20px 22px;margin:16px 0;backdrop-filter:blur(6px)}
+
+  /* ── КВИЗ ── */
+  .opt{display:block;width:100%;text-align:left;background:rgba(255,255,255,.04);border:1px solid var(--card-b);border-radius:12px;padding:13px 16px;margin:8px 0;cursor:pointer;font-size:15px;color:var(--ink);font-family:'Inter',sans-serif;transition:.16s}
+  .opt:hover{border-color:var(--accent);background:rgba(45,140,191,.08)}
+  .opt.correct{background:rgba(40,120,60,.18);border-color:#3f9b52;color:#7ed4a0;font-weight:600}
+  .opt.wrong{background:rgba(180,40,40,.13);border-color:#c0453f;color:#f08080}
+  .exp{margin-top:10px;font-size:14px;background:var(--gold-g);border-radius:10px;padding:12px 14px;display:none;color:var(--gold-l)}
+  .exp.show{display:block}
+
+  /* ── ИТОГ ДНЯ ── */
+  .day-result{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:22px 24px;max-width:460px}
+  .dr-rank{font-family:'Playfair Display',Georgia,serif;font-size:28px;color:var(--gold-l);font-weight:700}
+  .dr-score{font-size:16px;margin:4px 0 12px;color:var(--ink)}.dr-score span{color:var(--muted);font-size:14px}
+  .dr-bar{height:8px;background:rgba(255,255,255,.08);border-radius:6px;overflow:hidden}
+  .dr-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),var(--gold));transition:width .6s cubic-bezier(.2,.7,.2,1)}
+  .dr-note{margin-top:12px;font-size:14px;color:var(--muted)}
+
+  /* ── РЕКЛАМНЫЕ СЛОТЫ ── */
+  .ad-slot{position:relative;margin:26px 0;background:rgba(255,255,255,.02);border:1px dashed rgba(255,255,255,.1);border-radius:14px;min-height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px}
+  .ad-slot .lbl{position:absolute;top:7px;right:12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.15);font-family:'Inter',sans-serif}
+  .ad-slot .ph-txt{font-size:12px;max-width:80%;color:rgba(255,255,255,.18)}
+  .ad-slot.billboard{min-height:108px}
+  .adband{background:transparent;border-bottom:none}
+
+  footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
+  .crumbs{background:rgba(6,12,23,.6);border-bottom:1px solid var(--card-b);font-family:'Inter',sans-serif;font-size:12.5px}
+  .crumbs .wrap{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  .crumbs a{color:var(--gold-l);text-decoration:none;white-space:nowrap}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--muted);opacity:.6}
+  .crumbs .here{color:var(--muted);white-space:nowrap}
+
+
+  /* ── ШАПКА: четыре строки по museum-core §6-бис ── */
+  header.top{display:block;text-align:center;padding:10px 12px 8px;height:auto;position:relative}
+  header.top .b1{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:15px;letter-spacing:.5px;color:#fff}
+  header.top .b2{font-size:11px;color:var(--muted);margin-top:2px}
+  header.top .b3{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:6px}
+  header.top .b4{font-size:12.5px;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-style:italic}
+  header.top .score{position:absolute;right:12px;top:10px}
+  .daynav{top:0}
+  .hero-scene{background:#0e1c2c;height:38vh;min-height:250px;max-height:400px}
+  @media(max-width:680px){.hero-lead h1{font-size:31px}}
+  .hero-scene img.scene{object-fit:cover;object-position:50% 42%}
+  .date-origin{font-size:13px;color:#9fb4c8;margin:-6px 0 12px;max-width:62ch}
+  .hero-lead .hook{color:#c6d8e8;max-width:62ch}
+  .hero-under{background:linear-gradient(180deg,#060d18,#060c17);padding:4px 0 22px}
+  .stamp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(125,200,255,.28);margin-top:14px}
+  .stamp>div{padding:11px 12px;border-left:1px solid rgba(125,200,255,.16);min-width:0}
+  .stamp>div:first-child{border-left:0}
+  .stamp .v{font-size:clamp(15px,3.4vw,21px);font-weight:700;color:#8fd3ff;line-height:1.1;overflow-wrap:anywhere}
+  .stamp .k{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#8fa5b9;margin-top:5px}
+  @media(max-width:600px){.stamp{grid-template-columns:repeat(2,minmax(0,1fr))}.stamp>div:nth-child(3){border-left:0}.stamp>div:nth-child(n+3){border-top:1px solid rgba(125,200,255,.16)}}
+
+  /* ── ЛЕНТА УДАРОВ (museum-inventions, вариант А; museum-core §5-бис) ── */
+  .udary{list-style:none;margin:18px 0 0;padding:0;counter-reset:u}
+  .udary>li{border-top:1px solid var(--line);padding:4px 0}
+  .udary details>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:34px 1fr;gap:10px;padding:12px 0;font-size:17px;line-height:1.55;color:var(--ink)}
+  .udary details>summary::-webkit-details-marker{display:none}
+  .udary details>summary::before{counter-increment:u;content:counter(u);font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:20px;color:var(--gold);line-height:1.3}
+  .udary .more-lbl{display:block;grid-column:2;font-size:12.5px;color:var(--gold-l);letter-spacing:.3px;margin-top:4px}
+  .udary .more-lbl::after{content:' ▾'}
+  .udary details[open] .more-lbl::after{content:' ▴'}
+  .udary details[open] .more-lbl .o{display:none}
+  .udary details:not([open]) .more-lbl .c{display:none}
+  .udary summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+  .udary .det{margin:0 0 14px 44px;padding:12px 16px;background:rgba(255,255,255,.035);border-left:2px solid rgba(201,168,76,.45);border-radius:0 10px 10px 0;font-size:15px;color:#d5e0ea}
+  .udary .det p{margin:8px 0}
+  .udary .tag{display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1a0f00;background:var(--gold-l);border-radius:6px;padding:1px 7px;margin-right:6px}
+  .udary .find{border-left:3px solid var(--gold);padding-left:8px}
+  figure.fig{margin:18px 0}
+  figure.fig img{max-width:100%;height:auto;border-radius:10px;display:block}
+  figure.fig figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5}
+  .src-note{font-size:12px;color:#8fa5b9}
+
+  /* ── МОДЕЛЬ ДНЯ (главное предметное действие) ── */
+  .lab{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:18px 18px 20px;margin-top:14px}
+  .lab-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+  .lab-row .lbl{flex:0 0 100%;font-size:13px;color:var(--muted);letter-spacing:.3px}
+  .seg{cursor:pointer;border:1px solid var(--card-b);background:rgba(255,255,255,.04);color:var(--ink);border-radius:10px;padding:10px 14px;font:inherit;font-size:14.5px;min-height:44px}
+  .seg[aria-pressed="true"]{border-color:var(--gold);background:var(--gold-g);color:var(--gold-l);font-weight:600}
+  .seg:focus-visible,.btn:focus-visible,.opt:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .lab-stage{position:relative;margin-top:12px}
+  .lab-stage canvas{width:100%;height:auto;display:block;border-radius:10px;background:#1c2530}
+  .lab-cap{font-size:12px;color:#8fa5b9;margin-top:6px}
+  .lab-msg{margin-top:12px;font-size:15.5px;padding:12px 14px;border-radius:10px;background:rgba(255,255,255,.04);border-left:3px solid var(--card-b);min-height:48px}
+  .lab-msg.ok{border-left-color:#3f9b52;background:rgba(40,120,60,.14)}
+  .lab-msg.bad{border-left-color:#c0453f;background:rgba(180,40,40,.10)}
+  .lab-found{font-size:13px;color:var(--muted);margin-top:8px}
+  .lab-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .noscript-box{background:rgba(255,255,255,.04);border:1px dashed var(--card-b);border-radius:12px;padding:12px 16px;font-size:15px}
+
+  /* ── ГРАНИЦА ПЕРВЕНСТВА ── */
+  .border-box{background:rgba(45,140,191,.08);border:1px solid rgba(45,140,191,.3);border-radius:14px;padding:16px 18px}
+  .border-box b{color:#8fd3ff}
+  .ctx{width:100%;border-collapse:collapse;margin-top:14px;font-size:14.5px}
+  .ctx th,.ctx td{text-align:left;padding:9px 8px;border-top:1px solid var(--line);vertical-align:top}
+  .ctx th{color:var(--gold-l);font-weight:600;font-size:12.5px;letter-spacing:.5px}
+  .quiz-q{margin:18px 0 6px;font-weight:600}
+  .sources a{color:var(--gold-l)}
+  .sources li{margin:6px 0;font-size:14px;color:#c8d6e2}
+  @media(max-width:600px){header.top{padding:8px 64px 6px}header.top .score{top:8px;right:8px;padding:4px 10px;font-size:12px}header.top .b3{margin-top:3px}
+    .hero-scene{height:26vh;min-height:200px;max-height:260px}.date-origin{font-size:12px;margin:-8px 0 8px}.hero-lead{padding:18px 0 26px}.hero-lead .date-chip{margin-bottom:12px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+  /* ── ПОЛЗУНКИ МОДЕЛИ (19, 21 янв) ── */
+  .mtab{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+  .mrow{display:grid;grid-template-columns:minmax(150px,1.2fr) 2fr 92px;gap:12px;align-items:center}
+  .mrow .mname{font-size:14.5px}
+  .mrow .mname i{font-style:normal;color:var(--muted);font-size:13px}
+  .mrow input[type=range]{width:100%;accent-color:var(--gold);min-height:44px}
+  .mrow output{font-size:14px;color:var(--gold-l);text-align:right}
+  .mrow.off{opacity:.45}
+  .mult{margin-top:14px;padding:14px 16px;border-radius:12px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25)}
+  @media(max-width:560px){.mrow{grid-template-columns:1fr 70px}.mrow .mname{grid-column:1/-1}}
+</style>
+<meta name="description" content="К 1922 году Александр Чижевский сверил войны и восстания 72 стран за 2400 лет с циклом солнечных пятен. Как он считал, кто его разгромил и что из этого выросло.">
+<link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-09feb-chizhevsky.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Русская цивилизация">
+<meta property="og:title" content="Солнце и толпа: Чижевский сверяет историю с солнечными пятнами">
+<meta property="og:description" content="К 1922 году Александр Чижевский сверил войны и восстания 72 стран за 2400 лет с циклом солнечных пятен. Как он считал, кто его разгромил и что из этого выросло.">
+<meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-09feb-chizhevsky.html">
+<meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-09feb-chizhevsky.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Солнце и толпа: Чижевский сверяет историю с солнечными пятнами", "description": "К 1922 году Александр Чижевский сверил войны и восстания 72 стран за 2400 лет с циклом солнечных пятен. Как он считал, кто его разгромил и что из этого выросло.", "url": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-09feb-chizhevsky.html", "inLanguage": "ru", "isPartOf": {"@type": "WebSite", "name": "Музей «Что изобрели русские первыми в мире»"}, "publisher": {"@type": "Organization", "name": "Русская цивилизация"}, "about": {"@type": "Person", "name": "Александр Леонидович Чижевский"}, "image": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-09feb-chizhevsky.jpg"}</script>
+<style>
+  /* ── СОЛНЕЧНЫЙ ЦИКЛ И РЕВОЛЮЦИИ (9 фев) ── */
+  .strip{width:100%;max-width:760px;height:auto;display:block;margin:10px 0 4px;background:rgba(255,255,255,.03);border-radius:10px}
+  .strip .ax{stroke:#8a7a5a;stroke-width:1}
+  .strip .tk{fill:#a9a294;font-size:11px}
+  .strip .sun{fill:none;stroke:#e0a23a;stroke-width:2}
+  .strip .band3{fill:rgba(224,162,58,.13)}
+  .strip .band1{fill:rgba(120,140,170,.12)}
+  .strip .ev{fill:#e06a4f;stroke:#fff;stroke-width:1}
+  .strip .ev.alt{fill:#7fb0e0}
+  .strip .evl{fill:#f3e6c8;font-size:11px}
+  .evcards{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;max-width:760px}
+  .evcards .seg{flex:1 1 150px;text-align:left}
+  .evcards .seg.done{border-color:#3f9b52;background:rgba(63,155,82,.15)}
+  .phase-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;max-width:640px;margin-top:10px}
+  .phase{font:inherit;border-radius:10px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.035);color:var(--ink);padding:8px;cursor:pointer;text-align:center;line-height:1.3}
+  .phase b{display:block;font-size:22px;color:var(--gold-l);font-variant-numeric:tabular-nums;min-height:28px}
+  .phase small{display:block;font-size:12.5px;color:var(--muted)}
+  .phase .bar{height:6px;border-radius:3px;background:#e0a23a;margin-top:6px;width:0;transition:width .6s ease}
+  .phase.on{outline:2px solid var(--gold);outline-offset:1px}
+  .phase.ok{border-color:#3f9b52;background:rgba(63,155,82,.12)}
+  .nums{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+  .nums .seg{min-width:70px}
+  .nums .seg.used{opacity:.35}
+  .dates{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+  .dates .seg.done{border-color:#3f9b52;background:rgba(63,155,82,.15)}
+  blockquote.doc{margin:12px 0;padding:10px 14px;border-left:3px solid var(--gold);background:rgba(255,255,255,.03);border-radius:0 10px 10px 0;font-size:15px;line-height:1.6}
+  figure.coin{max-width:300px;margin:12px 0}
+  figure.coin img{width:100%;height:auto;border-radius:50%;background:#111}
+  #hero img.scene{object-fit:cover;object-position:50% 50%}
+  @media(max-width:560px){.phase-row{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="b1">Русская цивилизация</div>
+  <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
+  <div class="b3">Что изобрели русские первыми в мире</div>
+  <div class="b4">365 изобретений. Все русские. Все первые</div>
+  <div class="score" id="scoreBox" title="Баллы знаний за этот день">⭐ <span id="score">0</span> / 100</div>
+</header>
+
+<nav class="crumbs" aria-label="Хлебные крошки"><div class="wrap">
+  <a href="../../index.html">Русская цивилизация</a>
+  <span class="sep">›</span>
+  <a href="index.html">Что изобрели русские первыми в мире</a>
+  <span class="sep">›</span>
+  <span class="here">9 февраля · Гелиобиология Чижевского</span>
+</div></nav>
+
+<div class="hero-scene" id="hero" style="background:#1a1208">
+  <img class="scene" src="day-09feb-chizhevsky.jpg" data-source="https://commons.wikimedia.org/wiki/File:Sunspots_1302_Sep_2011.jpg" data-license="Public domain" data-author="NASA/SDO/HMI" width="1280" height="1280" alt="Оранжевый диск Солнца крупным планом; у края — тёмная группа солнечных пятен с размытой серой каймой" fetchpriority="high">
+</div>
+
+<div class="scene-caption">
+  <div class="wrap">
+    <div class="scene-cap">Группа солнечных пятен 1302, сентябрь 2011 года. Снимок космической обсерватории SDO (NASA); Викисклад, общественное достояние.</div>
+    <span class="scene-hint">Солнце · пятна</span>
+  </div>
+</div>
+
+<header class="hero-lead">
+  <div class="wrap">
+    <div class="date-chip">9 февраля · 1924</div>
+    <p class="date-origin">Александр Леонидович Чижевский родился 7 февраля (26 января по старому стилю) 1897 года. В 1924 году в Калуге вышла его книга «Физические факторы исторического процесса».</p>
+    <div class="who">Александр Леонидович Чижевский <i>· историк, биофизик</i></div>
+    <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
+    <h1>Солнце и толпа: Чижевский сверяет историю с солнечными пятнами</h1>
+    <p class="hook">К 1922 году калужский историк Александр Чижевский сверил войны и восстания 72 стран за 2400 лет с солнечными пятнами — и решил, что Солнце будит толпу.</p>
+    <div class="hero-btns">
+      <button class="btn gold" id="readBtn" type="button">Читать историю ↓</button>
+      <button class="btn ghost" id="listenBtn" type="button">🎧 Слушать аудиогид</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero-under">
+  <div class="wrap">
+    <div class="stamp">
+      <div><div class="v">1915</div><div class="k">первый доклад в Калуге: «Периодическое влияние Солнца на биосферу Земли»</div></div>
+      <div><div class="v">72</div><div class="k">страны и народа, история от 500 года до н. э. до 1914-го</div></div>
+      <div><div class="v">60 %</div><div class="k">событий, по его подсчёту, приходится на три года солнечного максимума</div></div>
+      <div><div class="v">1931</div><div class="k">постановление Совнаркома: лаборатория ионификации Чижевского</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="daynav" aria-label="Разделы дня">
+  <div class="wrap">
+    <a href="#story">Читать</a>
+    <a href="#audioguide">Слушать</a>
+    <a href="#games">Солнце и даты</a>
+    <a href="#pervenstvo">Первенство</a>
+    <a href="#quiz">Викторина</a>
+    <a href="#calendar">Календарь</a>
+  </div>
+</nav>
+
+<section class="wrap" id="dokument" data-proof-block></section>
+
+<section class="block" id="audioguide"></section>
+
+<section class="block" id="story">
+  <div class="wrap">
+    <div class="kicker">История первенства · 12 ударов</div>
+    <h2>От калужского доклада — к науке о Солнце и жизни</h2>
+    <p style="color:var(--muted);max-width:62ch">Читается подряд. Нажми на удар — откроется подробный разбор с источниками.</p>
+    <ol class="udary">
+      <li><details><summary><span>В октябре 1915 года восемнадцатилетний Александр Чижевский прочёл в Калуге доклад «Периодическое влияние Солнца на биосферу Земли».<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Это были, по словам члена-корреспондента АН СССР О. Г. Газенко, «только смелые догадки, опирающиеся на сравнительно ограниченное число фактов и наблюдений». Сам Чижевский писал, что в 1915–1916 годах начал систематически изучать, как электрические и магнитные возмущения во внешней среде влияют на эпидемии.</p>
+          <p>В том же 1915 году он стал слушателем Московского коммерческого института — и параллельно учился в Московском археологическом институте.</p>
+          <p class="src-note">Источники: О. Г. Газенко, предисловие, и предисловие автора к книге А. Л. Чижевского «Земное эхо солнечных бурь» (М.: Мысль, 1976); М. Н. Лившиц, «Творческий путь А. Л. Чижевского», публикация РГАНТД.</p>
+        </div></details></li>
+      <li><details><summary><span>Летом 1916 года он ушёл добровольцем на Галицийский фронт, получил Георгиевский крест и после контузии вернулся к учёбе.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Чижевский служил вольноопределяющимся бомбардиром. В мае 1917 года он окончил полный курс Московского археологического института, в 1918-м защитил диссертацию, а в 1922-м стал профессором. Историк по образованию, он продолжал учиться на физико-математическом и медицинском факультетах Московского университета.</p>
+          <p class="src-note">Источник: РГАНТД, «Учёный, мыслитель, философ…» — вступительная статья и статья М. Н. Лившица «Творческий путь А. Л. Чижевского».</p>
+        </div></details></li>
+      <li><details><summary><span>Чижевский взял историю 72 стран и народов от 500 года до нашей эры до 1914 года. И выписал годы, когда массы людей поднимались на войну или восстание.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Всего 2414 лет. Главное внимание он уделял началу события — году, когда массы впервые поднялись; вторым моментом отмечал высшее напряжение, если его можно было точно определить. Рядом он ставил годы максимумов и минимумов солнечных пятен: для XVII–XX веков — по наблюдениям в телескоп, для II–XVI веков — по историческим упоминаниям, а древность просто делил на равные одиннадцатилетние отрезки.</p>
+          <p class="src-note">Источник: A. L. Tchijevsky, «Physical Factors of the Historical Process», перевод и изложение В. П. де Смитта, доклад в Американском метеорологическом обществе в декабре 1926 года (перепечатка: Cycles, январь 1971).</p>
+        </div></details></li>
+      <li><details><summary><span>Солнечный цикл длится в среднем одиннадцать лет. Чижевский разделил его на четыре периода и подсчитал, что на три года максимума приходится 60 процентов всех событий.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Его периоды: минимум возбудимости — три года, нарастание — два, максимум — три, спад — три. За пятьсот лет, с XV по XX век, события у него распределились так: 5 процентов в минимуме, 20 — в нарастании, 60 — в максимуме и 15 — на спаде.</p>
+          <p>В минимуме, писал он, массы миролюбивы и равнодушны к политике. В максимуме легко поднимаются по первому слову вожака.</p>
+          <p class="src-note">Источник: А. Л. Чижевский, «Физические факторы исторического процесса» (Калуга, 1924), английское резюме брошюры и изложение В. П. де Смитта (Cycles, январь 1971).</p>
+        </div></details></li>
+      <li><details><summary><span>В его списке революций есть 1789, 1830, 1848, 1870, 1905 и 1917 годы. Все они легли рядом с максимумами солнечных пятен.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Чижевский называл максимум главным периодом цикла: на него, по его подсчётам, приходятся величайшие революции и войны.</p>
+          <p>Пики солнечного цикла по современной таблице Королевской обсерватории Бельгии: 1788, 1829, 1848, 1870, 1906 и 1917 годы.</p>
+          <p class="src-note">Источники: изложение В. П. де Смитта (Cycles, январь 1971), список «Insurrections and Revolutions»; SILSO, Королевская обсерватория Бельгии, таблица минимумов и максимумов солнечных циклов.</p>
+        </div></details></li>
+      <li><details><summary><span>Книга «Физические факторы исторического процесса» вышла в Калуге в 1924 году, всего 72 страницы. Резюме к книге Чижевский подписал в ноябре 1922 года.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Это был краткий очерк, а полное исследование Чижевский называл основами историометрии. В его защиту выступил калужский друг Чижевского Константин Циолковский. В газете «Коммуна» (№ 77, 4 апреля 1924 года) он писал:</p>
+          <blockquote class="doc">«Все эти обобщения и смелые мысли высказываются автором в научной литературе впервые, что придаёт им большую ценность и возбуждает интерес…»</blockquote>
+          <p class="src-note">Источники: английское резюме брошюры 1924 года (Cycles, январь 1971) с подписью «November, 1922» и калужским адресом; О. Г. Газенко, предисловие к «Земному эху солнечных бурь» (1976), с цитатой К. Э. Циолковского.</p>
+        </div></details></li>
+      <li><details><summary><span>В том же году журнал «Под знаменем марксизма» назвал книгу никчёмной. Рецензент И. Орлов показал, как подобрать дату, чтобы событие попало в максимум.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Орлов взял Французскую революцию. Её самые бурные годы, 1793-й и рядом, лежат не на максимуме солнечных пятен. Но если взять начало, 1789 год, максимум находится. Так же, писал он, всякая война совпадёт с максимумом — не началом, так серединой или концом:</p>
+          <blockquote class="doc">«События, совпавшие с минимумом пятен, можно просто игнорировать».</blockquote>
+          <p>Если в одной стране в максимум ничего не произошло, «можно взять другую страну, третью, десятую». Вывод рецензента: он счёл «не лишним указать на полную никчемность подобных „ученых изысканий“».</p>
+          <p class="src-note">Источник: И. Орлов, рецензия на книгу А. Л. Чижевского «Физические факторы исторического процесса», «Под знаменем марксизма», 1924, № 8–9, с. 314–315 (скан Internet Archive).</p>
+        </div></details></li>
+      <li><details><summary><span>Особой темой Чижевского были эпидемии. Про азиатскую холеру он смог напечатать только сжатый очерк в той же калужской книге.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Доклад «Влияние периодической деятельности Солнца на возникновение и развитие эпидемий» он прочёл в Калуге в 1922 году, но, по его словам, работа «осталась неопубликованной по не зависящим от автора обстоятельствам». Статьи о холере, гриппе и возвратном тифе вышли в 1927–1928 годах в Берлине, в «Русско-немецком медицинском журнале». Книгу «Эпидемические катастрофы и периодическая деятельность Солнца» напечатали в Москве в 1930 году — тиражом 300 экземпляров.</p>
+          <p class="src-note">Источник: предисловие автора и предисловие О. Г. Газенко к книге А. Л. Чижевского «Земное эхо солнечных бурь» (М.: Мысль, 1976).</p>
+        </div></details></li>
+      <li><details><summary><span>В декабре 1926 года его исследование услышали в Филадельфии: доклад вместо Чижевского прочёл профессор Колумбийского университета Владимир де Смитт.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Это был, по словам Чижевского, годичный съезд Американской ассоциации содействия развитию науки. В перепечатке 1971 года сказано иначе: доклад прозвучал в Американском метеорологическом обществе. В январе 1927 года де Смитт повторил доклад в Нью-Йорке, в Академии наук. Его английское изложение книги 1924 года потом перепечатывали — в 1971 году с примечанием редакции: убедительного доказательства ни за, ни против связи пятен с поведением людей пока нет.</p>
+          <p class="src-note">Источники: предисловие автора к «Земному эху солнечных бурь» (1976); Cycles, январь 1971, примечание редакции к «Physical Factors of the Historical Process».</p>
+        </div></details></li>
+      <li><details><summary><span>Параллельно Чижевский изучал, как действуют на животных заряженные частицы воздуха — аэроионы. В 1931 году Совнарком учредил для него лабораторию ионификации.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Центральная научно-исследовательская лаборатория ионификации работала в 1931–1937 годах. Чижевский утверждал, что для жизни мало молекулярного кислорода — нужна и доля отрицательно заряженных ионов. В 1933 году его опыты показали, что направленный поток аэроионов осаждает из воздуха пыль и микробы. Отсюда выросли ионизаторы и аэроионотерапия.</p>
+          <p class="src-note">Источник: РГАНТД, «Учёный, мыслитель, философ…» — вступительная статья и статья М. Н. Лившица.</p>
+        </div></details></li>
+      <li><details><summary><span>В сентябре 1939 года Первый международный конгресс по биологической физике и биологической космологии в Нью-Йорке избрал Чижевского одним из почётных президентов.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>В меморандуме конгресса о его трудах сказано:</p>
+          <blockquote class="doc">«Гениальные по новизне идей, по ширине охвата, по смелости синтеза и глубине анализа труды поставили профессора Чижевского во главе биофизиков мира…»</blockquote>
+          <p class="src-note">Источник: М. Н. Лившиц, «Творческий путь А. Л. Чижевского», публикация РГАНТД.</p>
+        </div></details></li>
+      <li><details><summary><span>В 1942 году Чижевского осудили по ложному обвинению на восемь лет. Реабилитировали полностью в 1962-м, за два года до смерти.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>И в ссылке, и после неё он продолжал исследования. Умер 20 декабря 1964 года. В 1975 году секция Академии наук СССР в постановлении о влиянии космических факторов на земные процессы признала его заслугу: он первым высказал «идею о тесной зависимости явлений, происходящих в биосфере, от космических факторов».</p>
+          <p class="src-note">Источник: РГАНТД, «Учёный, мыслитель, философ…» (с цитатой постановления 1975 года).</p>
+        </div></details></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block" id="theme-inventions">
+  <div class="wrap">
+    <div class="kicker">Наука о живом · Русские первенства</div>
+    <h2>Что ещё русские первыми сделали в медицине и биологии</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Другие дни музея о болезнях, эпидемиях и защите человека — по утверждённому календарю. Часть этих залов ещё готовится.</p>
+    <button class="btn ghost" type="button" id="themeInvBtn" data-label="Показать 3 первенства →" aria-expanded="false" aria-controls="themeInvBody">Показать 3 первенства →</button>
+    <div id="themeInvBody" hidden>
+      <ul class="theme-list">
+        <li><b>28 янв</b> <a href="day-28jan-havkin.html">Вакцины Хавкина от холеры и чумы</a></li>
+        <li><b>1 фев</b> <a href="day-01feb-bekhterev.html">Бехтерев и одеревенелость позвоночника</a></li>
+        <li><b>6 фев</b> <a href="day-06feb-zelinsky.html">Угольный противогаз Зелинского</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="games">
+  <div class="wrap">
+    <div class="kicker">Главное действие · совмещение графиков</div>
+    <h2>Наложи революции на солнечный цикл</h2>
+    <p style="max-width:62ch">Оранжевая линия — солнечные циклы с 1775 по 1923 год по современной таблице максимумов и минимумов. Положи на неё шесть революций из списка Чижевского и посмотри, в какой период цикла попадёт каждая. Потом повтори проверку его рецензента и разложи по периодам проценты самого Чижевского.</p>
+    <div class="lab" id="lab">
+      <h3 style="margin:8px 0 6px">1. Шесть революций</h3>
+      <p style="max-width:62ch;margin:0 0 6px;color:var(--muted)">Нажми на карточку — точка ляжет на свой год. Светлая полоса — три года солнечного максимума, голубая — три года минимума.</p>
+      <div class="evcards" id="evCards" role="group" aria-label="Революции из списка Чижевского"></div>
+      <svg class="strip" id="strip" viewBox="0 0 760 236" role="img" aria-label="Кривая солнечных циклов 1775–1923 годов с отметками событий"></svg>
+      <div class="lab-msg" id="rMsg" aria-live="polite">Выбери первую революцию.</div>
+
+      <h3 style="margin:18px 0 6px">2. Проверка Орлова</h3>
+      <p style="max-width:62ch;margin:0 0 6px;color:var(--muted)">Рецензент 1924 года спросил: а какую дату брать? Положи на кривую обе даты Французской революции.</p>
+      <div class="dates" id="dates" role="group" aria-label="Две даты Французской революции"></div>
+      <div class="lab-msg" id="oMsg" aria-live="polite">Сначала положи на кривую все шесть революций.</div>
+
+      <h3 style="margin:18px 0 6px">3. Проценты Чижевского</h3>
+      <p style="max-width:62ch;margin:0 0 6px;color:var(--muted)">По его подсчёту за пятьсот лет события делятся между четырьмя периодами цикла. Выбери период, потом число.</p>
+      <div class="phase-row" id="phases" role="group" aria-label="Четыре периода солнечного цикла"></div>
+      <div class="nums" id="nums" role="group" aria-label="Проценты"></div>
+      <div class="lab-msg" id="dMsg" aria-live="polite">Выбери период.</div>
+
+      <div class="lab-cap">Пики и спады циклов — SILSO, Королевская обсерватория Бельгии (сглаженное число пятен); высота кривой — число пятен в пике. Максимум и минимум в модели — по полтора года в обе стороны от пика и спада, как три года у Чижевского; нарастание — вся восходящая ветвь между полосами минимума и максимума, спад — нисходящая. Список революций и проценты 5/20/60/15 — А. Л. Чижевский в изложении В. П. де Смитта; даты 1789 и 1793 и сам приём проверки — рецензия И. Орлова, 1924.</div>
+      <noscript><div class="noscript-box">Для модели нужен JavaScript. Текстовая версия. Пики солнечных циклов: 1788, 1805, 1816, 1829, 1837, 1848, 1860, 1870, 1883, 1894, 1906, 1917; спады: 1784, 1798, 1810, 1823, 1833, 1843, 1855, 1867, 1878, 1890, 1902, 1913, 1923. Революции из списка Чижевского 1789, 1830, 1848, 1870, 1905 и 1917 годов лежат в пределах полутора лет от пика. Разгар Французской революции, 1793 год, — на спаде. Проценты Чижевского: минимум 5, нарастание 20, максимум 60, спад 15.</div></noscript>
+    </div>
+    <p class="src-note" style="margin-top:10px">Модель показывает, как Чижевский сопоставлял даты, а не доказывает связь Солнца с историей: такая связь наукой не установлена.</p>
+  </div>
+</section>
+
+<section class="block" id="pervenstvo">
+  <div class="wrap">
+    <div class="kicker">Проверка факта</div>
+    <h2>Что именно здесь наше</h2>
+    <div class="border-box">
+      <p style="margin-top:0"><b>Граница первенства:</b> Чижевский превратил вопрос, зависит ли живой мир Земли от солнечных циклов, в программу исследований — по его словам, с 1915 года («В 1915 г. я впервые поставил вопрос»), на статистике эпидемий, смертности и массовых событий. В 1975 году секция Академии наук СССР признала, что он первым высказал «идею о тесной зависимости явлений, происходящих в биосфере, от космических факторов». Из его опытов с заряженными частицами воздуха выросла аэроионификация.</p>
+      <p><b>Чего здесь нет:</b> мысль, что болезни зависят от состояния воздуха и атмосферного электричества, высказывали и до него — сам Чижевский называет Араго, по теории которого на холерные эпидемии влияют химические агенты воздуха, и Фарадея, связывавшего холеру с атмосферным электричеством. Связь солнечных пятен с войнами и революциями наука не подтвердила. Уже в 1924 году рецензент упрекал Чижевского в подборе дат, а в 1971 году редакция американского журнала, перепечатавшего его работу, писала, что убедительного доказательства нет ни за, ни против.</p>
+      <p style="margin-bottom:0">Публикация архива РГАНТД сообщает, что в 1942 году он был «осужден по ложному обвинению на 8 лет», а в 1962 году полностью реабилитирован.</p>
+    </div>
+    <figure class="coin">
+      <img src="day-09feb-chizhevsky-moneta.jpg" data-source="https://commons.wikimedia.org/wiki/File:RR5110-0017R_100-летие_со_дня_рождения_А.Л._Чижевского.gif" data-license="Public domain" width="730" height="728" loading="lazy" alt="Серебристая монета: погрудный портрет молодого мужчины, подпёршего подбородок рукой, рядом звёзды, солнце в затмении, галактика и человек под деревом; внизу надпись «А. Л. Чижевский 1897–1964», лира, лист бумаги, кисть и перо">
+      <figcaption>Монета Банка России «100-летие со дня рождения А. Л. Чижевского», 2 рубля, 1997 год, реверс. Викисклад; денежные знаки не охраняются авторским правом.</figcaption>
+    </figure>
+    <table class="ctx">
+      <thead><tr><th scope="col">Кто</th><th scope="col">Что сделал</th><th scope="col">Когда</th></tr></thead>
+      <tbody>
+        <tr><td>Д. Араго, Франция</td><td>Теория влияния химических агентов воздушной среды на холерные эпидемии (по Чижевскому)</td><td>годы жизни 1786–1853 (по Чижевскому)</td></tr>
+        <tr><td>М. Фарадей, Англия</td><td>Мысль о влиянии атмосферного электричества на холерные заболевания (по Чижевскому)</td><td>XIX век</td></tr>
+        <tr><td>Э. Хантингтон, США</td><td>Книга «Earth and Sun. An hypothesis…» о Солнце и климате (в списке литературы Чижевского)</td><td>1923</td></tr>
+        <tr><td>А. Л. Чижевский</td><td>Доклад о влиянии Солнца на биосферу; статистика эпидемий и массовых событий по солнечным циклам</td><td>1915; 1922–1924</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block" id="quiz">
+  <div class="wrap">
+    <div class="kicker">Проверь себя · 5 вопросов</div>
+    <h2>Викторина</h2>
+    <p style="color:var(--muted);max-width:62ch">На каждый вопрос — одна попытка. После ответа покажем объяснение.</p>
+    <div id="quizBox"></div>
+    <noscript><div class="noscript-box">Для викторины нужен JavaScript. Ответы: 1 — на четыре; 2 — 60 процентов; 3 — Владимир де Смитт; 4 — 1793; 5 — поток аэроионов осаждает пыль и микробы.</div></noscript>
+  </div>
+</section>
+
+<section class="block" id="result">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Итог дня</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Революции на кривой, проверка Орлова, проценты Чижевского и викторина вместе дают 100 баллов. Прогресс не сохраняется: перезагрузишь страницу — день начнётся заново.</p>
+    <div class="day-result">
+      <div class="dr-score" id="dayTxt">0 / 100 · звание: Гость дня</div>
+      <div class="dr-bar"><i id="dayBar" style="width:0%"></i></div>
+      <div class="dr-note">Положи на кривую шесть революций, обе даты Французской революции, разложи четыре процента и ответь на вопросы викторины.</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="sources">
+  <div class="wrap">
+    <div class="kicker">Источники</div>
+    <h2>На чём стоит страница</h2>
+    <ul class="sources">
+      <li><a href="https://archive.org/details/chizhevskii-zemnoe-ekho" rel="noopener" target="_blank">А. Л. Чижевский · «Земное эхо солнечных бурь»</a>, 2-е изд. (М.: Мысль, 1976; скан Internet Archive): предисловие О. Г. Газенко (доклад 1915 года, отзыв К. Э. Циолковского, книга 1930 года), предисловие автора (доклад 1922 года, книга 1924 года, доклады в Филадельфии и Нью-Йорке, статьи 1927–1928 годов), раздел об Араго и Фарадее.</li>
+      <li><a href="https://archive.org/details/chizhevsky-alexandr-leonidovich-1926-physical-factors-of-the-historical-process-17-p." rel="noopener" target="_blank">A. L. Tchijevsky · «Physical Factors of the Historical Process»</a>, перевод и изложение В. П. де Смитта (Cycles, январь 1971; скан Internet Archive) с английским резюме брошюры «Физические факторы исторического процесса» (Калуга, 1924, 72 с.): 72 страны, 500 год до н. э. — 1914, четыре периода цикла, 5/20/60/15 процентов, список революций.</li>
+      <li><a href="https://archive.org/details/UBM_1924" rel="noopener" target="_blank">«Под знаменем марксизма», 1924, № 8–9</a> (скан Internet Archive): И. Орлов, рецензия на книгу А. Л. Чижевского, с. 314–315.</li>
+      <li><a href="https://rgantd.ru/arh-docs/lyudi/uchenyy-myslitel-filosof-k-115-letiyu-vydayushchegosya-rossiyskogo-uchenogo-a-l-chizhevskogo/" rel="noopener" target="_blank">«Учёный, мыслитель, философ…»</a>, Российский государственный архив научно-технической документации: биография, статья М. Н. Лившица «Творческий путь А. Л. Чижевского» (лаборатория ионификации, опыты 1933 года, конгресс 1939 года, постановление 1975 года), осуждение 1942 года и реабилитация 1962 года.</li>
+      <li><a href="https://www.sidc.be/SILSO/cyclesminmax" rel="noopener" target="_blank">SILSO · «Solar Cycles Min/Max»</a>, Королевская обсерватория Бельгии: даты минимумов и максимумов солнечных циклов 1–16 и сглаженное число пятен.</li>
+      <li>Изображения: <a href="https://commons.wikimedia.org/wiki/File:Sunspots_1302_Sep_2011.jpg" rel="noopener" target="_blank">группа солнечных пятен 1302</a>, NASA/SDO/HMI, 2011 — общественное достояние; <a href="https://commons.wikimedia.org/wiki/File:RR5110-0017R_100-летие_со_дня_рождения_А.Л._Чижевского.gif" rel="noopener" target="_blank">монета Банка России</a>, 1997 — общественное достояние (денежный знак).</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="calendar">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Календарь изобретений</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Выбери любой день — узнаешь, что русские сделали первыми в мире. Листай месяцы стрелками.</p>
+    <div id="calbox"></div>
+  </div>
+</section>
+
+<section class="block kd" id="kuda-dalshe">
+  <div class="wrap">
+    <div class="kd-kicker">Куда дальше</div>
+    <h2>Музей продолжается</h2>
+    <div class="kd-grid">
+      <div class="kd-card main"><span class="kd-lbl">Следующий день</span><a href="day-18mar-leonov.html">18 марта — Первый выход человека в открытый космос <span class="kd-arr">→</span></a>
+        <p>Раздувшийся скафандр не пускал его обратно в корабль — Леонов стравил кислород и вошёл в шлюз головой вперёд.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Предыдущий день</span><a href="day-08feb-mendeleev.html">8 февраля — Пустые клетки Менделеева: элементы, описанные до открытия <span class="kd-arr">→</span></a>
+        <p>Менделеев оставил в таблице места под вопросом — и описал вещества, которых никто не видел.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Холера и наука</span><a href="day-28jan-havkin.html">28 января — вакцины Хавкина <span class="kd-arr">→</span></a>
+        <p>Против холеры, которую Чижевский сверял с Солнцем, Хавкин создал вакцину.</p></div>
+      <div class="kd-card main"><span class="kd-lbl">Город-музей</span><a href="../../index.html">Русская цивилизация <span class="kd-arr">→</span></a>
+        <p>Все музеи проекта на одной карте.</p></div>
+    </div>
+    <p style="margin-top:16px"><a href="izobreteniya.html">Посмотреть изобретения по алфавиту →</a></p>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>
+  Русская цивилизация · «Что изобрели русские первыми в мире»</div></footer>
+
+<script type="application/json" data-proof>{"status":"found","claim_id":"rc:izobreteniya:chizhevsky:claim-solnce-biosfera-1915-1924","ours":{"kind":"брошюра со статистикой массовых событий по циклам солнечных пятен","title":"А. Л. Чижевский, «Физические факторы исторического процесса» — 72 страны, 500 год до н. э. — 1914, четыре периода солнечного цикла, 60 % событий в максимуме","date":"Калуга, 1924 (резюме подписано в ноябре 1922; первый доклад — октябрь 1915)","holder":"Резюме брошюры и изложение В. П. де Смитта — Cycles, январь 1971, скан Internet Archive; доклад 1915 года — по предисловию О. Г. Газенко к «Земному эху солнечных бурь» (1976)","source_url":"https://archive.org/details/chizhevsky-alexandr-leonidovich-1926-physical-factors-of-the-historical-process-17-p."},"rival":{"name":"Э. Хантингтон, США","date":"1923","doc_title":"книга «Earth and Sun. An hypothesis…» (Нью-Хейвен: Yale University Press, 1923) — о Солнце и климате; есть в списке литературы Чижевского"}}</script>
+<script src="../../assets/museum-proof.js"></script>
+
+<script>
+/* ── СЧЁТ ── шкала из 100 держит assets/museum-score.js; здесь только реестр наград.
+   шесть революций 6×5 + две даты Орлова 2×10 + четыре процента 4×5 + викторина 5×6 = 100. */
+window.MUSEUM_SCORE = {awards:{r:[6,5], o:[2,10], d:[4,5], q:[5,6]},
+  ranks:[[100,'Историометрист'],[70,'Наблюдатель Солнца'],[40,'Читатель Чижевского'],[0,'Гость дня']]};
+</script>
+<script src="../../assets/museum-score.js"></script>
+<script>
+(function(){
+  var $ = function(id){return document.getElementById(id);};
+  $('readBtn').onclick = function(){ $('story').scrollIntoView({behavior:'smooth'}); };
+  $('listenBtn').onclick = function(){ $('audioguide').scrollIntoView({behavior:'smooth'}); };
+  var tb=$('themeInvBtn');
+  tb.onclick=function(){ var b=$('themeInvBody'), open=b.hidden; b.hidden=!open; tb.setAttribute('aria-expanded',open?'true':'false'); tb.textContent=open?'▲ Скрыть':tb.dataset.label; };
+  function msg(id,t,cls){ var m=$(id); m.className='lab-msg'+(cls?' '+cls:''); m.textContent=t; }
+  var NS='http://www.w3.org/2000/svg';
+  function el(n,a,txt){ var e=document.createElementNS(NS,n); for(var k in a) e.setAttribute(k,a[k]); if(txt) e.textContent=txt; return e; }
+
+  /* ── СОЛНЕЧНЫЕ ЦИКЛЫ 3–16 ── SILSO, Королевская обсерватория Бельгии (Solar Cycles Min/Max):
+     эпоха (год + доля по месяцу) и сглаженное число пятен в минимуме и максимуме. */
+  var EXT=[
+    {t:1775.4,n:12,k:0},{t:1778.4,n:264.2,k:1},{t:1784.7,n:15.9,k:0},{t:1788.1,n:235.3,k:1},{t:1798.3,n:5.3,k:0},{t:1805.1,n:82,k:1},
+    {t:1810.5,n:0,k:0},{t:1816.4,n:81.2,k:1},{t:1823.4,n:0.1,k:0},{t:1829.9,n:119.2,k:1},{t:1833.9,n:12.2,k:0},{t:1837.2,n:244.9,k:1},
+    {t:1843.5,n:17.6,k:0},{t:1848.1,n:219.9,k:1},{t:1855.9,n:6,k:0},{t:1860.1,n:186.2,k:1},{t:1867.2,n:9.9,k:0},{t:1870.6,n:234,k:1},
+    {t:1878.9,n:3.7,k:0},{t:1883.9,n:124.4,k:1},{t:1890.2,n:8.3,k:0},{t:1894.0,n:146.5,k:1},{t:1902.0,n:4.5,k:0},{t:1906.1,n:107.1,k:1},
+    {t:1913.5,n:2.5,k:0},{t:1917.6,n:175.7,k:1},{t:1923.6,n:9.3,k:0}
+  ];
+  var X0=1775, X1=1925, W=760, L=30, R=10, TOP=34, BOT=186; /* viewBox 760×236 */
+  function X(t){ return L+(t-X0)/(X1-X0)*(W-L-R); }
+  function Y(n){ return BOT-n/270*(BOT-TOP); }
+  /* Периоды по Чижевскому: максимум и минимум — по три года (здесь ±1,5 года от эпохи SILSO),
+     нарастание — перед максимумом, спад — после. Это упрощение модели, оговорено в подписи. */
+  var PH=['минимум','нарастание','максимум','спад'];
+  function phase(t){
+    for (var i=0;i<EXT.length;i++){ if (Math.abs(t-EXT[i].t)<=1.5) return EXT[i].k?2:0; }
+    for (i=0;i<EXT.length-1;i++){ if (t>EXT[i].t && t<EXT[i+1].t) return EXT[i+1].k?1:3; }
+    return 3;
+  }
+  function nearMax(t){ var b=null; EXT.forEach(function(e){ if(e.k && (!b || Math.abs(e.t-t)<Math.abs(b.t-t))) b=e; }); return b; }
+  var svg=$('strip');
+  EXT.forEach(function(e){ svg.appendChild(el('rect',{x:X(e.t-1.5),y:TOP-8,width:X(e.t+1.5)-X(e.t-1.5),height:BOT-TOP+8,'class':e.k?'band3':'band1'})); });
+  svg.appendChild(el('line',{x1:L,y1:BOT,x2:W-R,y2:BOT,'class':'ax'}));
+  for (var yr=1780; yr<=1920; yr+=20){ svg.appendChild(el('line',{x1:X(yr),y1:BOT,x2:X(yr),y2:BOT+5,'class':'ax'})); svg.appendChild(el('text',{x:X(yr),y:BOT+18,'text-anchor':'middle','class':'tk'},String(yr))); }
+  var d='';
+  for (var i=0;i<EXT.length-1;i++){
+    var a=EXT[i], b=EXT[i+1];
+    for (var s=0;s<=12;s++){ var f=s/12, t=a.t+(b.t-a.t)*f, n=a.n+(b.n-a.n)*(1-Math.cos(Math.PI*f))/2; d+=(d?' L':'M')+X(t).toFixed(1)+' '+Y(n).toFixed(1); }
+  }
+  svg.appendChild(el('path',{d:d,'class':'sun'}));
+  svg.appendChild(el('text',{x:L,y:16,'class':'tk'},'число солнечных пятен (SILSO) · полосы: максимум и минимум'));
+  var layer=el('g',{}); svg.appendChild(layer);
+  function mark(t,label,alt){
+    var x=X(t), ph=phase(t);
+    layer.appendChild(el('line',{x1:x,y1:TOP-4,x2:x,y2:BOT,stroke:alt?'#7fb0e0':'#e06a4f','stroke-dasharray':'3 3'}));
+    layer.appendChild(el('circle',{cx:x,cy:TOP-4,r:6,'class':'ev'+(alt?' alt':'')}));
+    layer.appendChild(el('text',{x:x,y:BOT+(alt?46:32),'text-anchor':'middle','class':'evl'},label));
+    return ph;
+  }
+
+  /* ── 1. ШЕСТЬ РЕВОЛЮЦИЙ ── список «Insurrections and Revolutions» Чижевского (изложение В. П. де Смитта, 1926/1971).
+     Год события берётся серединой года (+0,5): Чижевский считал по годам. */
+  var EV=[
+    {y:1789,s:'1789 — революция во Франции'},
+    {y:1830,s:'1830 — Июльская революция'},
+    {y:1848,s:'1848 — Февральская революция и всеевропейский кризис'},
+    {y:1870,s:'1870 — Парижская коммуна (год по списку Чижевского; сама Коммуна — весна 1871-го)'},
+    {y:1905,s:'1905 — революция в России'},
+    {y:1917,s:'1917 — революция в России'}
+  ];
+  var placed=0, evBtns=[];
+  [3,0,5,1,4,2].forEach(function(k){
+    var e=EV[k], b=document.createElement('button'); b.type='button'; b.className='seg'; b.textContent=e.s;
+    b.onclick=function(){
+      if (e.done) return; e.done=true; b.classList.add('done'); b.disabled=true;
+      var t=e.y+0.5, ph=mark(t,String(e.y)), m=nearMax(t), gap=Math.abs(t-m.t);
+      award('r'+k,5); placed++;
+      var tail=placed<6?' Осталось '+(6-placed)+'.':' Все шесть — в максимуме. Так выглядел довод Чижевского. Теперь проверка Орлова.';
+      msg('rMsg',e.y+': ближайший пик цикла — '+String(m.t).replace('.',',')+' года, в '+gap.toFixed(1).replace('.',',')+' года от события. Период: '+PH[ph]+'.'+tail,'good');
+      if (placed===6) msg('oMsg','Положи на кривую обе даты Французской революции.');
+    };
+    evBtns.push(b); $('evCards').appendChild(b);
+  });
+
+  /* ── 2. ПРОВЕРКА ОРЛОВА ── рецензия «Под знаменем марксизма», 1924, № 8–9: начало революции — 1789, годы «величайшего размаха» — около 1793. */
+  var DT=[
+    {y:1789,s:'1789 — начало: так считал Чижевский',e:'Начало революции ложится в максимум: пик цикла — начало 1788 года.'},
+    {y:1793,s:'1793 — разгар: так спросил Орлов',e:'Разгар революции — на спаде цикла, через пять лет после пика. Какую дату взять — решает тот, кто считает.'}
+  ];
+  var oDone=0;
+  DT.forEach(function(e,i){
+    var b=document.createElement('button'); b.type='button'; b.className='seg'; b.textContent=e.s;
+    b.onclick=function(){
+      if (placed<6){ msg('oMsg','Сначала положи на кривую все шесть революций.','bad'); return; }
+      if (e.done) return; e.done=true; b.classList.add('done'); b.disabled=true;
+      var ph=mark(e.y+0.5,i?'1793':'',true); award('o'+i,10); oDone++;
+      msg('oMsg',e.y+': период — '+PH[ph]+'. '+e.e+(oDone===2?' Сам Чижевский главное внимание уделял году, когда массы впервые поднялись.':''),oDone===2?'good':'');
+    };
+    $('dates').appendChild(b);
+  });
+
+  /* ── 3. ПРОЦЕНТЫ ── «Физические факторы исторического процесса» (1924): по данным XV–XX веков
+     минимум 5 %, нарастание 20 %, максимум 60 %, спад 15 %; длительности 3, 2, 3 и 3 года. */
+  var PC=[{n:'I · минимум',y:'3 года',v:5},{n:'II · нарастание',y:'2 года',v:20},{n:'III · максимум',y:'3 года',v:60},{n:'IV · спад',y:'3 года',v:15}];
+  var pSel=-1, pDone=0, pBtns=[], nBtns={};
+  PC.forEach(function(p,i){
+    var b=document.createElement('button'); b.type='button'; b.className='phase';
+    b.innerHTML='<b></b><small>'+p.n+'</small><small>'+p.y+'</small><div class="bar"></div>';
+    b.setAttribute('aria-label','Период '+p.n+', '+p.y);
+    b.onclick=function(){ if (p.done) return; pBtns.forEach(function(x){x.classList.remove('on');}); pSel=i; b.classList.add('on'); msg('dMsg','Период «'+p.n+'». Теперь выбери число.'); };
+    pBtns.push(b); $('phases').appendChild(b);
+  });
+  [60,5,15,20].forEach(function(v){
+    var b=document.createElement('button'); b.type='button'; b.className='seg'; b.textContent=v+' %';
+    b.onclick=function(){
+      if (b.disabled) return;
+      if (pSel<0){ msg('dMsg','Сначала выбери период.','bad'); return; }
+      var p=PC[pSel];
+      if (p.v!==v){ msg('dMsg','У Чижевского на этот период приходится другая доля. Подсказка: больше всего событий — в максимуме, меньше всего — в минимуме.','bad'); return; }
+      p.done=true; var pb=pBtns[pSel]; pb.classList.remove('on'); pb.classList.add('ok'); pb.querySelector('b').textContent=v+' %'; pb.querySelector('.bar').style.width=v+'%';
+      b.disabled=true; b.classList.add('used'); award('d'+pSel,5); pSel=-1; pDone++;
+      msg('dMsg',pDone<4?'Верно. Дальше.':'Всё на месте: 5, 20, 60 и 15 процентов. Три года максимума — больше половины событий. Убедительного доказательства нет ни за, ни против — так в 1971 году написала редакция журнала Cycles.','good');
+    };
+    nBtns[v]=b; $('nums').appendChild(b);
+  });
+
+  /* ── ВИКТОРИНА ── */
+  var Q = [
+    {q:'На сколько периодов Чижевский делил солнечный цикл?', o:['На два','На четыре','На одиннадцать'], a:1,
+     e:'Минимум, нарастание, максимум и спад — три, два, три и три года.'},
+    {q:'Какую долю событий он насчитал в трёх годах максимума?', o:['15 процентов','60 процентов','5 процентов'], a:1,
+     e:'По его подсчёту за XV–XX века — 60 процентов.'},
+    {q:'Кто прочёл доклад о работах Чижевского в Филадельфии в 1926 году?', o:['Константин Циолковский','Владимир де Смитт','И. Орлов'], a:1,
+     e:'Профессор Колумбийского университета Владимир де Смитт. Он же перевёл и изложил книгу 1924 года.'},
+    {q:'Какую дату Французской революции рецензент Орлов противопоставил 1789 году?', o:['1793','1799','1815'], a:0,
+     e:'Годы «величайшего размаха» революции, около 1793-го, лежат не на максимуме солнечных пятен.'},
+    {q:'Что показали опыты Чижевского с аэроионами в 1933 году?', o:['Поток аэроионов осаждает пыль и микробы','Аэроионы гасят солнечные пятна','Аэроионы ускоряют рост кристаллов'], a:0,
+     e:'Направленный поток аэроионов очищает воздух помещения от пыли и микроорганизмов.'}
+  ];
+  var qb = $('quizBox');
+  Q.forEach(function(it, qi){
+    var wrap = document.createElement('div');
+    var h = document.createElement('p'); h.className='quiz-q'; h.textContent=(qi+1)+'. '+it.q; wrap.appendChild(h);
+    var exp = document.createElement('div'); exp.className='exp'; exp.setAttribute('aria-live','polite');
+    var btns = it.o.map(function(txt, oi){
+      var b=document.createElement('button'); b.type='button'; b.className='opt'; b.textContent=txt;
+      b.onclick=function(){
+        if (wrap.dataset.done) return; wrap.dataset.done='1';
+        btns.forEach(function(x,xi){ x.disabled=true; if (xi===it.a) x.classList.add('correct'); });
+        if (oi===it.a){ award('q'+qi,6); exp.textContent='Верно. '+it.e; }
+        else { b.classList.add('wrong'); exp.textContent='Не совсем. '+it.e; }
+        exp.classList.add('show');
+      };
+      wrap.appendChild(b); return b;
+    });
+    wrap.appendChild(exp); qb.appendChild(wrap);
+  });
+})();
+</script>
+<script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
+<script>window.MUSEUM_CHROME={
+  museum:{title:'Что изобрели русские первыми в мире',href:'index.html'},
+  share:{title:'Солнце и толпа: Чижевский сверяет историю с солнечными пятнами — музей «Что изобрели русские первыми в мире»',
+         text:'Александр Чижевский сверил войны и восстания 72 стран за 2400 лет с циклом солнечных пятен и с 1915 года искал, как Солнце влияет на всё живое на Земле. Что Россия дала миру раньше всех — день за днём.'},
+  prev:{href:'day-08feb-mendeleev.html',title:'8 февраля · Менделеев'},
+  next:{href:'day-18mar-leonov.html',title:'18 марта · Леонов'},
+  all:{href:'index.html',label:'Все изобретения'},
+  city:'../../index.html',
+  random:['day-01jan-cabletv.html','day-02jan-luna1.html','day-03jan-anosov.html','day-04jan-pilchikov.html','day-05jan-shukhov.html','day-06jan-orlov.html','day-08jan-icebreaker.html','day-09jan-blinov.html','day-10jan-britnev.html','day-11jan-kostovich.html','day-12jan-r7.html','day-13jan-k278.html','day-14jan-lira.html','day-15jan-kovalevskaya.html','day-16jan-soyuz45.html','day-19jan-kantorovich.html','day-21jan-obninsk.html','day-22jan-landau.html','day-23jan-umov.html','day-24jan-k162.html','day-25jan-korsakov.html','day-26jan-podvodnaya.html','day-27jan-pentium.html','day-28jan-havkin.html','day-30jan-kotelnikov.html','day-31jan-girotron.html','day-01feb-bekhterev.html','day-02feb-edinorog.html','day-03feb-luna9.html','day-04feb-samovar.html','day-05feb-boldyrev.html','day-06feb-zelinsky.html','day-07feb-setun.html','day-08feb-mendeleev.html','day-09feb-chizhevsky.html','day-18mar-leonov.html','day-15may-mechnikov.html','day-16jun-tereshkova.html','day-26sep-pavlov.html','day-15nov-buran.html','day-25nov-pirogov.html','day-01dec-lobachevsky.html','day-14dec-laser.html']
+};</script>
+<script src="../../assets/museum-chrome.js"></script>
+<script>window.MUSEUM_SUPPORT={museum:'Что изобрели русские первыми в мире'};</script>
+<script src="../../assets/museum-support.js"></script>
+<script src="calendar-izobreteniya.js"></script>
+<script>window.MUSEUM_CALENDAR_INITIAL='02-09';</script>
+<script src="../../assets/museum-calendar-month.js"></script>
+<script>window.MUSEUM_RETURN={riddle:{q:"Какую долю всех массовых событий Чижевский насчитал в трёх годах солнечного максимума?",a:"60 процентов — по его подсчёту за XV–XX века. На минимум пришлось 5 процентов.",src:"А. Л. Чижевский, «Физические факторы исторического процесса», Калуга, 1924 (изложение В. П. де Смитта)"}};</script>
+<script src="../../assets/museum-return.js" data-museum="izobreteniya" data-day="02-09"></script>
+<script defer src="../../assets/analytics.js"></script>
+
+
+
+
+
+
+
+
+
+<script>window.MUSEUM_AUDIOGUIDE={
+  audioSrc:"audio-guide-chizhevsky-ru.mp3",
+  durationLabel:"2 минуты 54 секунд",
+  lead:"Голос ведёт по залу Александра Чижевского: солнечные пятна у входа и калужский доклад восемнадцатилетнего историка, семьдесят две страны и четыре периода цикла, рецензия, разгромившая книгу, эпидемии и аэроионы, конгресс в Нью-Йорке и приговор. Шесть остановок, на каждой — что искать глазами. Слушать можно фоном, пока читаешь историю ниже.",
+  stops:[
+    {t:0,mark:"0:00",title:"Пятна у входа"},
+    {t:26,mark:"0:26",title:"Семьдесят две страны"},
+    {t:53,mark:"0:53",title:"Революции на кривой"},
+    {t:82,mark:"1:22",title:"Проверка Орлова"},
+    {t:116,mark:"1:56",title:"Эпидемии и аэроионы"},
+    {t:144,mark:"2:24",title:"Приговор и признание"}
+  ],
+  transcript:[
+    "<p>Снимок солнечных пятен — NASA/SDO/HMI, 2011, Викисклад, общественное достояние; доклад 1915 года — О. Г. Газенко, предисловие к книге А. Л. Чижевского «Земное эхо солнечных бурь», 1976.</p>",
+    "<p>Факты: 72 страны, 500 год до н. э. — 1914, четыре периода, 60 и 5 процентов — А. Л. Чижевский, «Физические факторы исторического процесса», Калуга, 1924, в изложении В. П. де Смитта (Cycles, январь 1971).</p>",
+    "<p>Факты: список революций — изложение В. П. де Смитта; пики солнечных циклов — SILSO, Королевская обсерватория Бельгии; 72 страницы книги — английское резюме брошюры 1924 года.</p>",
+    "<p>Факты: рецензия И. Орлова — «Под знаменем марксизма», 1924, № 8–9, с. 314–315.</p>",
+    "<p>Факты: эпидемии и доклад в Филадельфии — предисловие автора к «Земному эху солнечных бурь», 1976; лаборатория ионификации 1931 года и опыты 1933 года — РГАНТД, «Учёный, мыслитель, философ…».</p>",
+    "<p>Факты: конгресс 1939 года, осуждение 1942 года, реабилитация 1962 года, постановление 1975 года — РГАНТД; монета — Банк России, 1997, Викисклад.</p>"
+  ],
+  note:"Озвучено синтезом речи — временно, до записи голосом автора музея."
+};</script>
+<script src="../../assets/museum-audioguide.js"></script>
+</body>
+</html>
