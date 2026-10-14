@@ -58,10 +58,10 @@
         "12": "calendar-december.html"
       },
       "title_strip": [
-        "\\s*\\[У\\]",
+        "\\s*\\[[КРИУ](?:\\s[^\\]]*)?\\]",
         "\\s*·\\s*`.*$"
       ],
-      "title_strip_note": "как в опубликованном calendar-data.js: метка [У] и хвост «· `slug` · источник» на сайт не идут, [К] остаётся",
+      "title_strip_note": "метки [К]/[Р]/[И]/[У] и хвост «· `slug` · источник» на сайт не идут (решение 14.10)",
       "data": "muzei/arhitektura/calendar-data.js"
     },
     {
@@ -82,13 +82,13 @@
         "12": "calendar-december.html"
       },
       "title_strip": [
-        "\\s*\\[[ИУ]\\]",
+        "\\s*\\[[КРИУ](?:\\s[^\\]]*)?\\]",
         "\\s*[—;]\\s*флагман месяца.*$"
       ],
       "hook_strip": [
         "\\s*[—;]\\s*флагман месяца.*$"
       ],
-      "title_strip_note": "метки источника [И]/[У] стоят только в октябре–декабре (92 дня) и служебная пометка «флагман месяца…» — на сайт не идут, чтобы год читался одинаково; та же пометка в хуке 6 флагманов — hook_strip",
+      "title_strip_note": "метки [К]/[Р]/[И]/[У] на сайт не идут (решение 14.10); служебная пометка «флагман месяца…» в названии и хуке — тоже",
       "data": "muzei/kalendar-pobed/calendar-pobed.js",
       "data_title": "Календарь побед"
     },
@@ -109,7 +109,27 @@
         "11": "noyabr-30-peresborka-5050.html",
         "12": "dekabr-31-peresborka-5050.html"
       },
-      "data": "muzei/literatura/calendar-literatura.js"
+      "approved_override": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "11",
+        "12"
+      ],
+      "approved_override_source": "реестр russian-civilization/docs/approvals/calendar-approvals.json: файлы *-peresborka-5050 всех 12 месяцев, Сергей 08.10.2026 «Я по всем музеям на все 365 дней утвердил дни календаря»; в html стоит «на утверждение», отметки нет",
+      "title_strip": [
+        "\\s*\\[[КРИУ](?:\\s[^\\]]*)?\\]"
+      ],
+      "title_strip_note": "метки [К]/[Р]/[И]/[У] на сайт не идут (решение 14.10)",
+      "data": "muzei/literatura/calendar-literatura.js",
+      "data_title": ""
     }
   ],
   "excluded": {
