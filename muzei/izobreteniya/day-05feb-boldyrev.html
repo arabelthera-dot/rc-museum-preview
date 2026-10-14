@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="ru" data-museum="izobreteniya">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Плёнка Болдырева: донской казак против стеклянного негатива — Что изобрели русские первыми в мире, 5 февраля</title>
+<!--
+  Страница дня 5 февраля. Наряд stranicy-izob-0910 (claude2, 13.10.2026), карточка #762.
+  Форма — вариант А музея изобретений (Сергей 12.09.2026): лента ударов, подробности свёрнуты.
+  Паспорт выпуска: rc-museum-production/izobreteniya/day-05feb-boldyrev/passport/issue.json
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --dark:#060c17; --dark2:#0c1826; --surface:#111f33;
+    --card:rgba(255,255,255,.05); --card-b:rgba(255,255,255,.09);
+    --gold:#c9a84c; --gold-l:#e4c97a; --gold-g:rgba(201,168,76,.13);
+    --ink:#e8eef5; --muted:#7a9ab8; --line:rgba(255,255,255,.07);
+    --accent:#2d8cbf; --accent2:#1f6f8b;
+    /* legacy compat */
+    --paper:#0c1826; --paper2:#111f33;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Inter','Segoe UI',sans-serif;color:var(--ink);background:var(--dark);line-height:1.72}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.13;margin:0}
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent)}
+
+  /* ── ШАПКА ── */
+  header.top{background:rgba(6,12,23,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--card-b);color:#fff;position:sticky;top:0;z-index:30}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+  .logo svg{display:block;filter:drop-shadow(0 0 8px rgba(201,168,76,.4))}
+  .logo .lt{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:16px}
+  .logo .lt small{display:block;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-family:'Inter',sans-serif}
+  .score{background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:6px 16px;font-size:13px;color:var(--gold-l);cursor:pointer;font-family:'Inter',sans-serif}
+  .score-info{position:absolute;right:12px;top:66px;max-width:260px;background:#0e1c30;color:var(--ink);border:1px solid var(--card-b);border-radius:14px;padding:14px 16px;font-size:13px;line-height:1.6;box-shadow:0 20px 60px rgba(0,0,0,.6);display:none;z-index:40}
+  .score-info.show{display:block}
+
+  /* ── HERO — СТАНДАРТ (не менять): 3D-сцена сверху, текст отдельным блоком ниже ── */
+  .hero-scene{position:relative;height:52vh;min-height:300px;max-height:520px;overflow:hidden;background:linear-gradient(160deg,#0a1e3a 0%,#1a3a6a 55%,#0d2240 100%)}
+  .hero-scene canvas.scene,.hero-scene img.scene{width:100%;height:100%;display:block;object-fit:cover}
+  .scene-caption{background:#060d18;padding:11px 0 12px}
+  .scene-caption .wrap{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+  .scene-cap{font-size:13.5px;line-height:1.6;color:var(--muted);border-left:2px solid rgba(201,168,76,.4);padding-left:14px;flex:1 1 420px}
+  .scene-hint{flex:0 0 auto;font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.4px;color:#e4c97a;
+    background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.34);border-radius:24px;padding:7px 16px;font-weight:600}
+  .hero-lead{background:linear-gradient(180deg,#0c1826 0%,#060c17 100%);color:#fff;padding:28px 0 38px}
+  .hero-lead .museum{color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:12px;opacity:.9}
+  .hero-lead .who{font-family:'Inter',sans-serif;font-size:clamp(13px,3vw,15px);letter-spacing:.4px;color:var(--accent-l,#7dc8ff);margin-bottom:10px}
+  .hero-lead .who i{font-style:normal;color:#7893ab;font-weight:400}
+  .hero-lead h1{color:#fff;font-size:56px;font-weight:900;line-height:1.04;margin-bottom:16px}
+  .hero-lead .hook{color:#b8ccde;font-size:19px;max-width:580px;margin-bottom:28px;line-height:1.65;font-weight:400}
+  .hero-lead .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+  @media(max-width:680px){.hero-lead h1{font-size:34px}.hero-lead .hook{font-size:16px}
+    .hero-scene{height:34vh;min-height:230px;max-height:300px}
+    .scene-caption .wrap{flex-direction:column;gap:9px}
+    .scene-hint{order:-1;align-self:flex-start;font-size:11.5px;padding:6px 13px}
+    .scene-cap{font-size:12.8px;flex:1 1 auto}}
+  .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:16px;font-family:'Inter',sans-serif;letter-spacing:.5px}
+
+  /* ── НАВИГАЦИЯ ДНЯ ── */
+  .daynav{position:sticky;top:64px;z-index:25;background:rgba(6,12,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-b)}
+  .daynav .wrap{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+  .daynav::-webkit-scrollbar{display:none}
+  .daynav a{flex:0 0 auto;padding:14px 20px;font-size:11px;font-weight:700;font-family:'Inter',sans-serif;color:var(--muted);text-decoration:none;white-space:nowrap;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:.18s}
+  .daynav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+  /* ── СЕКЦИИ ── */
+  section.block{padding:64px 0;border-bottom:1px solid var(--line);scroll-margin-top:130px}
+  .kicker{font-size:10px;text-transform:uppercase;letter-spacing:3.5px;color:var(--gold);font-weight:700;font-family:'Inter',sans-serif;margin-bottom:8px}
+  section.block h2{font-size:34px;color:#fff;margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink)}
+  .pull{background:var(--gold-g);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 14px 14px 0;font-style:italic;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-size:20px;line-height:1.5;margin:26px 0}
+
+  /* ── КНОПКИ ── */
+  .btn{cursor:pointer;border:none;border-radius:12px;padding:14px 26px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;background:var(--accent2);color:#fff;transition:.18s;letter-spacing:.2px}
+  .btn:hover{filter:brightness(1.18)}
+  .btn.ghost{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid var(--card-b)}
+  .btn.ghost:hover{background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.2)}
+  .btn.gold{background:linear-gradient(135deg,var(--gold),#b8882b);color:#1a0f00;box-shadow:0 4px 20px rgba(201,168,76,.25)}
+  .btn.gold:hover{filter:brightness(1.1);box-shadow:0 6px 28px rgba(201,168,76,.4)}
+  .btn:active{transform:translateY(1px)}
+  .pulse{animation:pulse .9s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+
+  /* ── КАРТОЧКИ ── */
+  .card{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:20px 22px;margin:16px 0;backdrop-filter:blur(6px)}
+
+  /* ── КВИЗ ── */
+  .opt{display:block;width:100%;text-align:left;background:rgba(255,255,255,.04);border:1px solid var(--card-b);border-radius:12px;padding:13px 16px;margin:8px 0;cursor:pointer;font-size:15px;color:var(--ink);font-family:'Inter',sans-serif;transition:.16s}
+  .opt:hover{border-color:var(--accent);background:rgba(45,140,191,.08)}
+  .opt.correct{background:rgba(40,120,60,.18);border-color:#3f9b52;color:#7ed4a0;font-weight:600}
+  .opt.wrong{background:rgba(180,40,40,.13);border-color:#c0453f;color:#f08080}
+  .exp{margin-top:10px;font-size:14px;background:var(--gold-g);border-radius:10px;padding:12px 14px;display:none;color:var(--gold-l)}
+  .exp.show{display:block}
+
+  /* ── ИТОГ ДНЯ ── */
+  .day-result{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:22px 24px;max-width:460px}
+  .dr-rank{font-family:'Playfair Display',Georgia,serif;font-size:28px;color:var(--gold-l);font-weight:700}
+  .dr-score{font-size:16px;margin:4px 0 12px;color:var(--ink)}.dr-score span{color:var(--muted);font-size:14px}
+  .dr-bar{height:8px;background:rgba(255,255,255,.08);border-radius:6px;overflow:hidden}
+  .dr-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),var(--gold));transition:width .6s cubic-bezier(.2,.7,.2,1)}
+  .dr-note{margin-top:12px;font-size:14px;color:var(--muted)}
+
+  /* ── РЕКЛАМНЫЕ СЛОТЫ ── */
+  .ad-slot{position:relative;margin:26px 0;background:rgba(255,255,255,.02);border:1px dashed rgba(255,255,255,.1);border-radius:14px;min-height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px}
+  .ad-slot .lbl{position:absolute;top:7px;right:12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.15);font-family:'Inter',sans-serif}
+  .ad-slot .ph-txt{font-size:12px;max-width:80%;color:rgba(255,255,255,.18)}
+  .ad-slot.billboard{min-height:108px}
+  .adband{background:transparent;border-bottom:none}
+
+  footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
+  .crumbs{background:rgba(6,12,23,.6);border-bottom:1px solid var(--card-b);font-family:'Inter',sans-serif;font-size:12.5px}
+  .crumbs .wrap{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  .crumbs a{color:var(--gold-l);text-decoration:none;white-space:nowrap}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--muted);opacity:.6}
+  .crumbs .here{color:var(--muted);white-space:nowrap}
+
+
+  /* ── ШАПКА: четыре строки по museum-core §6-бис ── */
+  header.top{display:block;text-align:center;padding:10px 12px 8px;height:auto;position:relative}
+  header.top .b1{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:15px;letter-spacing:.5px;color:#fff}
+  header.top .b2{font-size:11px;color:var(--muted);margin-top:2px}
+  header.top .b3{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:6px}
+  header.top .b4{font-size:12.5px;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-style:italic}
+  header.top .score{position:absolute;right:12px;top:10px}
+  .daynav{top:0}
+  .hero-scene{background:#0e1c2c;height:38vh;min-height:250px;max-height:400px}
+  @media(max-width:680px){.hero-lead h1{font-size:31px}}
+  .hero-scene img.scene{object-fit:cover;object-position:50% 42%}
+  .date-origin{font-size:13px;color:#9fb4c8;margin:-6px 0 12px;max-width:62ch}
+  .hero-lead .hook{color:#c6d8e8;max-width:62ch}
+  .hero-under{background:linear-gradient(180deg,#060d18,#060c17);padding:4px 0 22px}
+  .stamp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(125,200,255,.28);margin-top:14px}
+  .stamp>div{padding:11px 12px;border-left:1px solid rgba(125,200,255,.16);min-width:0}
+  .stamp>div:first-child{border-left:0}
+  .stamp .v{font-size:clamp(15px,3.4vw,21px);font-weight:700;color:#8fd3ff;line-height:1.1;overflow-wrap:anywhere}
+  .stamp .k{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#8fa5b9;margin-top:5px}
+  @media(max-width:600px){.stamp{grid-template-columns:repeat(2,minmax(0,1fr))}.stamp>div:nth-child(3){border-left:0}.stamp>div:nth-child(n+3){border-top:1px solid rgba(125,200,255,.16)}}
+
+  /* ── ЛЕНТА УДАРОВ (museum-inventions, вариант А; museum-core §5-бис) ── */
+  .udary{list-style:none;margin:18px 0 0;padding:0;counter-reset:u}
+  .udary>li{border-top:1px solid var(--line);padding:4px 0}
+  .udary details>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:34px 1fr;gap:10px;padding:12px 0;font-size:17px;line-height:1.55;color:var(--ink)}
+  .udary details>summary::-webkit-details-marker{display:none}
+  .udary details>summary::before{counter-increment:u;content:counter(u);font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:20px;color:var(--gold);line-height:1.3}
+  .udary .more-lbl{display:block;grid-column:2;font-size:12.5px;color:var(--gold-l);letter-spacing:.3px;margin-top:4px}
+  .udary .more-lbl::after{content:' ▾'}
+  .udary details[open] .more-lbl::after{content:' ▴'}
+  .udary details[open] .more-lbl .o{display:none}
+  .udary details:not([open]) .more-lbl .c{display:none}
+  .udary summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+  .udary .det{margin:0 0 14px 44px;padding:12px 16px;background:rgba(255,255,255,.035);border-left:2px solid rgba(201,168,76,.45);border-radius:0 10px 10px 0;font-size:15px;color:#d5e0ea}
+  .udary .det p{margin:8px 0}
+  .udary .tag{display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1a0f00;background:var(--gold-l);border-radius:6px;padding:1px 7px;margin-right:6px}
+  .udary .find{border-left:3px solid var(--gold);padding-left:8px}
+  figure.fig{margin:18px 0}
+  figure.fig img{max-width:100%;height:auto;border-radius:10px;display:block}
+  figure.fig figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5}
+  .src-note{font-size:12px;color:#8fa5b9}
+
+  /* ── МОДЕЛЬ ДНЯ (главное предметное действие) ── */
+  .lab{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:18px 18px 20px;margin-top:14px}
+  .lab-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+  .lab-row .lbl{flex:0 0 100%;font-size:13px;color:var(--muted);letter-spacing:.3px}
+  .seg{cursor:pointer;border:1px solid var(--card-b);background:rgba(255,255,255,.04);color:var(--ink);border-radius:10px;padding:10px 14px;font:inherit;font-size:14.5px;min-height:44px}
+  .seg[aria-pressed="true"]{border-color:var(--gold);background:var(--gold-g);color:var(--gold-l);font-weight:600}
+  .seg:focus-visible,.btn:focus-visible,.opt:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .lab-stage{position:relative;margin-top:12px}
+  .lab-stage canvas{width:100%;height:auto;display:block;border-radius:10px;background:#1c2530}
+  .lab-cap{font-size:12px;color:#8fa5b9;margin-top:6px}
+  .lab-msg{margin-top:12px;font-size:15.5px;padding:12px 14px;border-radius:10px;background:rgba(255,255,255,.04);border-left:3px solid var(--card-b);min-height:48px}
+  .lab-msg.ok{border-left-color:#3f9b52;background:rgba(40,120,60,.14)}
+  .lab-msg.bad{border-left-color:#c0453f;background:rgba(180,40,40,.10)}
+  .lab-found{font-size:13px;color:var(--muted);margin-top:8px}
+  .lab-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .noscript-box{background:rgba(255,255,255,.04);border:1px dashed var(--card-b);border-radius:12px;padding:12px 16px;font-size:15px}
+
+  /* ── ГРАНИЦА ПЕРВЕНСТВА ── */
+  .border-box{background:rgba(45,140,191,.08);border:1px solid rgba(45,140,191,.3);border-radius:14px;padding:16px 18px}
+  .border-box b{color:#8fd3ff}
+  .ctx{width:100%;border-collapse:collapse;margin-top:14px;font-size:14.5px}
+  .ctx th,.ctx td{text-align:left;padding:9px 8px;border-top:1px solid var(--line);vertical-align:top}
+  .ctx th{color:var(--gold-l);font-weight:600;font-size:12.5px;letter-spacing:.5px}
+  .quiz-q{margin:18px 0 6px;font-weight:600}
+  .sources a{color:var(--gold-l)}
+  .sources li{margin:6px 0;font-size:14px;color:#c8d6e2}
+  @media(max-width:600px){header.top{padding:8px 64px 6px}header.top .score{top:8px;right:8px;padding:4px 10px;font-size:12px}header.top .b3{margin-top:3px}
+    .hero-scene{height:26vh;min-height:200px;max-height:260px}.date-origin{font-size:12px;margin:-8px 0 8px}.hero-lead{padding:18px 0 26px}.hero-lead .date-chip{margin-bottom:12px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+  /* ── ПОЛЗУНКИ МОДЕЛИ (19, 21 янв) ── */
+  .mtab{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+  .mrow{display:grid;grid-template-columns:minmax(150px,1.2fr) 2fr 92px;gap:12px;align-items:center}
+  .mrow .mname{font-size:14.5px}
+  .mrow .mname i{font-style:normal;color:var(--muted);font-size:13px}
+  .mrow input[type=range]{width:100%;accent-color:var(--gold);min-height:44px}
+  .mrow output{font-size:14px;color:var(--gold-l);text-align:right}
+  .mrow.off{opacity:.45}
+  .mult{margin-top:14px;padding:14px 16px;border-radius:12px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25)}
+  @media(max-width:560px){.mrow{grid-template-columns:1fr 70px}.mrow .mname{grid-column:1/-1}}
+</style>
+<meta name="description" content="В 1878 году донской казак и фотограф Иван Болдырев сделал прозрачную гибкую плёнку вместо стеклянной пластинки и в 1882 году показал её в Москве. Фабрики для неё не нашлось.">
+<link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-05feb-boldyrev.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Русская цивилизация">
+<meta property="og:title" content="Плёнка Болдырева: донской казак против стеклянного негатива">
+<meta property="og:description" content="В 1878 году донской казак и фотограф Иван Болдырев сделал прозрачную гибкую плёнку вместо стеклянной пластинки и в 1882 году показал её в Москве. Фабрики для неё не нашлось.">
+<meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-05feb-boldyrev.html">
+<meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-05feb-boldyrev.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Плёнка Болдырева: донской казак против стеклянного негатива", "description": "В 1878 году донской казак и фотограф Иван Болдырев сделал прозрачную гибкую плёнку вместо стеклянной пластинки и в 1882 году показал её в Москве. Фабрики для неё не нашлось.", "url": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-05feb-boldyrev.html", "inLanguage": "ru", "isPartOf": {"@type": "WebSite", "name": "Музей «Что изобрели русские первыми в мире»"}, "publisher": {"@type": "Organization", "name": "Русская цивилизация"}, "about": {"@type": "Person", "name": "Иван Васильевич Болдырев"}, "image": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-05feb-boldyrev.jpg"}</script>
+<style>
+  /* ── ИСПЫТАНИЕ ПЛЁНКИ ── */
+  .neg-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px}
+  .neg-card{background:rgba(255,255,255,.03);border:1px solid var(--card-b);border-radius:12px;padding:12px;text-align:center}
+  .neg-card h4{margin:0 0 8px;font-size:15px;color:#f1d58a;font-weight:600}
+  .neg{position:relative;margin:0 auto 10px;width:100%;max-width:240px;aspect-ratio:960/750;border-radius:4px;overflow:hidden;transition:transform .5s ease}
+  .neg img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1) invert(1) contrast(1.1)}
+  .neg.glass{box-shadow:0 0 0 3px rgba(190,220,230,.55)}
+  .neg.film{box-shadow:0 0 0 3px rgba(201,168,76,.55);background:#c9a84c}
+  .neg.film img{opacity:.92;mix-blend-mode:normal}
+  .neg .crack{position:absolute;inset:0;display:none}
+  .neg.broken .crack{display:block}
+  .neg.broken img{opacity:.55}
+  .neg.bent{transform:perspective(500px) rotateY(28deg) skewY(-4deg)}
+  .neg.wet{filter:saturate(.8) brightness(.95)}
+  .neg.hot{box-shadow:0 0 0 3px #e0574f}
+  .neg.damp{box-shadow:0 0 0 3px #4a8fc9}
+  .neg-state{font-size:14px;color:var(--muted);min-height:2.6em}
+  .act-log{list-style:none;padding:0;margin:10px 0 0;display:grid;gap:6px}
+  .act-log li{background:rgba(255,255,255,.035);border-left:3px solid var(--card-b);border-radius:8px;padding:8px 10px;font-size:14.5px}
+  .act-log li.ok{border-left-color:#3f9b52}
+  .act-log li.no{border-left-color:#c0453f}
+  .tests{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
+  .test{background:rgba(255,255,255,.03);border:1px solid var(--card-b);border-radius:10px;padding:10px;font-size:14px}
+  .test b{display:block;color:#f1d58a;margin-bottom:6px}
+  .test .seg{width:100%;margin:4px 0}
+  .test .tst{font-size:13px;color:var(--muted);min-height:2.4em;margin-top:4px}
+  .test.done{border-color:#3f9b52}
+  .tl{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+  .tl .seg{flex:1 1 200px;text-align:left}
+  .tl .seg.ok{border-color:#3f9b52;background:rgba(63,155,82,.15)}
+  .tl-line{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:6px}
+  .tl-line li{background:rgba(255,255,255,.035);border-left:3px solid #c9a84c;border-radius:8px;padding:7px 10px;font-size:14.5px}
+  .tl-line li b{color:#f1d58a;margin-right:6px}
+  blockquote.doc{margin:12px 0;padding:10px 14px;border-left:3px solid var(--gold);background:rgba(255,255,255,.03);border-radius:0 10px 10px 0;font-size:15px;line-height:1.6}
+  #hero img.scene{object-fit:contain;object-position:50% 50%}
+  @media(max-width:560px){.neg-row{grid-template-columns:1fr}.tests{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="b1">Русская цивилизация</div>
+  <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
+  <div class="b3">Что изобрели русские первыми в мире</div>
+  <div class="b4">365 изобретений. Все русские. Все первые</div>
+  <div class="score" id="scoreBox" title="Баллы знаний за этот день">⭐ <span id="score">0</span> / 100</div>
+</header>
+
+<nav class="crumbs" aria-label="Хлебные крошки"><div class="wrap">
+  <a href="../../index.html">Русская цивилизация</a>
+  <span class="sep">›</span>
+  <a href="index.html">Что изобрели русские первыми в мире</a>
+  <span class="sep">›</span>
+  <span class="here">5 февраля · Плёнка Болдырева</span>
+</div></nav>
+
+<div class="hero-scene" id="hero" style="background:#e6e1d6">
+  <img class="scene" src="day-05feb-boldyrev.jpg" data-source="https://commons.wikimedia.org/wiki/File:Boldyrev_ivan_vasilevich.jpg" data-license="Public domain" width="559" height="800" alt="Бородатый мужчина в котелке и длинном пиджаке сидит на каменной ограде и что-то записывает в блокнот" fetchpriority="high">
+</div>
+
+<div class="scene-caption">
+  <div class="wrap">
+    <div class="scene-cap">Иван Васильевич Болдырев. Фото М. П. Дмитриева, 1890. Отпечаток хранится в Государственном музее-заповеднике М. А. Шолохова (по Госкаталогу РФ). Викисклад, общественное достояние.</div>
+    <span class="scene-hint">Человек · фотограф-изобретатель</span>
+  </div>
+</div>
+
+<header class="hero-lead">
+  <div class="wrap">
+    <div class="date-chip">5 февраля · 1878</div>
+    <p class="date-origin">Дня изобретения документы не называют: известен только 1878 год, когда Болдырев сел за свою плёнку. В календаре музея ей отдано 5 февраля.</p>
+    <div class="who">Иван Васильевич Болдырев <i>· донской казак, фотограф-самоучка, изобретатель</i></div>
+    <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
+    <h1>Плёнка Болдырева: донской казак против стеклянного негатива</h1>
+    <p class="hook">Донской казак Болдырев почти год варил массу для прозрачной гибкой плёнки вместо стекла — за одиннадцать лет до фабричной плёнки Истмена.</p>
+    <div class="hero-btns">
+      <button class="btn gold" id="readBtn" type="button">Читать историю ↓</button>
+      <button class="btn ghost" id="listenBtn" type="button">🎧 Слушать аудиогид</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero-under">
+  <div class="wrap">
+    <div class="stamp">
+      <div><div class="v">1878</div><div class="k">Болдырев почти год готовит массу для плёнки вместо стекла</div></div>
+      <div><div class="v">1880</div><div class="k">показывает плёночные негативы и снимки с них фотографам Технического общества</div></div>
+      <div><div class="v">№ 328</div><div class="k">его номер среди экспонентов Всероссийской выставки 1882 года в Москве</div></div>
+      <div><div class="v">1889</div><div class="k">Истмен в США начинает фабричный выпуск плёнки из целлулоида</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="daynav" aria-label="Разделы дня">
+  <div class="wrap">
+    <a href="#story">Читать</a>
+    <a href="#audioguide">Слушать</a>
+    <a href="#games">Испытание</a>
+    <a href="#pervenstvo">Первенство</a>
+    <a href="#quiz">Викторина</a>
+    <a href="#calendar">Календарь</a>
+  </div>
+</nav>
+
+<section class="wrap" id="dokument" data-proof-block></section>
+
+<section class="block" id="audioguide"></section>
+
+<section class="block" id="story">
+  <div class="wrap">
+    <div class="kicker">История первенства · 12 ударов</div>
+    <h2>От стеклянной пластинки — к плёнке, которую не боится вода</h2>
+    <p style="color:var(--muted);max-width:62ch">Читается подряд. Нажми на удар — откроется подробный разбор с источниками.</p>
+    <ol class="udary">
+      <li><details><summary><span>Иван Болдырев родился в 1850 году в станице Терновской на Дону, в бедной казачьей семье. Грамоте он выучился поздно.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Мать рано умерла, отец ушёл на службу, и мальчик жил у деда: с шести лет пас скотину. Читать и писать его научил отец, вернувшийся в 1864 году. Подростком Болдырев разбирал и собирал часы, а потом стал зарабатывать их починкой. Фотографии учился в Новочеркасске, а в начале 1870-х уехал в Петербург. Там он работал помощником и ретушёром в ателье Альфреда Лоренса и вольнослушателем ходил в Академию художеств.</p>
+          <p class="src-note">Источники: Росфото, выставка «Фотограф-изобретатель Иван Болдырев» (2008–2009, подготовлена при участии Е. В. Бархатовой); О. Майдельман, «Как казак-изобретатель фирму Kodak обошел», «Нация», 26.12.2024.</p>
+        </div></details></li>
+      <li><details><summary><span>В 1875–1876 годах он снимал станицы на Дону, и критик Владимир Стасов купил эти снимки для Публичной библиотеки.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Цимлянская, Кумшацкая, Есауловская: базар, сход казаков, стрижка овец, проводы на службу. Стасов писал, что «Казак-стрелок» «по позе, по выражению… напоминает знаменитую картину Перова „Птицелов“», а вся серия «представляет целую галерею оригинальных и изящных картин». Серия вошла в собрание Императорской публичной библиотеки — сегодня это Российская национальная библиотека.</p>
+          <figure class="fig">
+            <img src="day-05feb-boldyrev-strelok.jpg" data-source="https://commons.wikimedia.org/wiki/File:%D0%94%D0%BE%D0%BD%D1%81%D0%BA%D0%BE%D0%B9_%D0%BA%D0%B0%D0%B7%D0%B0%D0%BA-%D1%81%D1%82%D1%80%D0%B5%D0%BB%D0%BE%D0%BA,_%D1%81%D0%B5%D0%BC%D0%B8%D0%B4%D0%B5%D1%81%D1%8F%D1%82%D0%B8_%D0%BF%D1%8F%D1%82%D0%B8_%D0%BB%D0%B5%D1%82._1875-1876.jpg" data-license="Public domain" width="960" height="750" loading="lazy" alt="Старый казак с седой бородой, в длинном кафтане и фуражке, стоит на берегу реки с ружьём и смотрит вдаль из-под ладони">
+            <figcaption>И. В. Болдырев. «Донской казак-стрелок», 1875–1876. Российская национальная библиотека. Викисклад, общественное достояние.</figcaption>
+          </figure>
+          <p class="src-note">Источники: Е. Бархатова, «Донские сюжеты Ивана Болдырева», «Наше наследие», 1989, № 4; О. Майдельман, «Нация», 2024.</p>
+        </div></details></li>
+      <li><details><summary><span>Негатив тогда снимали на стеклянную пластинку — хрупкую и неудобную в дороге. Заменить стекло пытались многие.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Пластинки пробовали делать из каучука, гуммиарабика, желатина и даже из столярного клея с жидким стеклом. В фотографическом отделе Русского технического общества Леон Варнерке заявлял о «чувствительной негативной ткани». Болдырев знал об этих опытах и считал, что ни один материал не годится.</p>
+          <p class="src-note">Источники: Е. Бархатова, «Наше наследие», 1989, № 4; О. Майдельман, «Нация», 2024.</p>
+        </div></details></li>
+      <li><details><summary><span>В 1878 году Болдырев почти год просидел в комнате над массой для плёнки, которая заменила бы стекло.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Позже он вспоминал об этом в брошюре о своих изобретениях:</p>
+          <blockquote class="doc">«В 1878 году мне пришлось около года просиживать в комнате целые дни и ночи над приготовлением массы, из которой получалась бы пленка, соответствующая стеклу».</blockquote>
+          <p>Из чего он варил эту массу, источники страницы не говорят. Сам Болдырев называл свою плёнку «смоловидной», то есть похожей на смолу.</p>
+          <p class="src-note">Источник: О. Майдельман, «Нация», 2024 (цитата из брошюры И. В. Болдырева); Е. Бархатова, «Наше наследие», 1989, № 4.</p>
+        </div></details></li>
+      <li><details><summary><span>Болдырев снял за этой работой сам себя. Надпись на снимке сделал Стасов.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Убогая комната, стол прикрыт рваной газетой, на нём склянки с реактивами стоят рядом с чайником, за столом — Болдырев. На снимке надпись рукой Стасова: «Ив. Вас. Болдырев за изобретением смоловидной плёнки-пластинки. 1878 год». Снимок хранится в Российской национальной библиотеке; он показан выше, в блоке «Документ».</p>
+          <p class="src-note">Источники: Е. Бархатова, «Наше наследие», 1989, № 4; Росфото, 2008–2009.</p>
+        </div></details></li>
+      <li><details><summary><span>Плёнка вышла прозрачной и гибкой. Изобретатель писал, что её не портят ни жара, ни сырость, ни сутки в воде.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Болдырев описал свою плёнку в брошюре, которая вышла в 1883 году:</p>
+          <blockquote class="doc">«…не изменяется ни от высокой температуры, ни от сырости и положенная с негативным изображением на сутки в воду… была так же прозрачна и эластична…»</blockquote>
+          <p>Это слова самого изобретателя. Отчёта о независимых испытаниях с цифрами источники не приводят.</p>
+          <p class="src-note">Источники: Е. Бархатова, «Наше наследие», 1989, № 4; Росфото, 2008–2009 (брошюра 1883 года).</p>
+        </div></details></li>
+      <li><details><summary><span>В 1880 году Болдырев показал плёночные негативы и снимки с них фотографическому отделу Технического общества. Отдел об этом нигде не написал.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <blockquote class="doc">«Несмотря на то, что негативные пленки и напечатанные с них позитивы я в 1880 году показал и объяснил заседанию V-го отдела, отдел почему-то не позаботился даже пропечатать об этом, вследствие чего никто не мог прочесть относительно моих пленок».</blockquote>
+          <p>V отдел Императорского Русского технического общества, отдел светописи, объединял лучших фотографов страны. Двумя годами раньше Болдырев показывал там свой объектив — и тоже не получил признания.</p>
+          <p class="src-note">Источники: О. Майдельман, «Нация», 2024 (слова Болдырева); Е. Бархатова, «Наше наследие», 1989, № 4.</p>
+        </div></details></li>
+      <li><details><summary><span>В 1882 году Болдырев выставил плёнку на Всероссийской художественно-промышленной выставке в Москве. В каталоге он записан под номером 328.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>В разделе «Фотография» указателя экспонентов записано: «328. Болдырев И. В., Спб. Фотографический аппарат с принадлежностями». Плёнку в этом списке отдельно не назвали. Но, по словам Росфото, Болдырев показал около пятидесяти снимков и свои изобретения, среди них — смоловидную плёнку.</p>
+          <figure class="fig">
+            <img src="day-05feb-boldyrev-katalog.jpg" data-source="https://archive.org/details/01006803991" data-license="Public domain" width="960" height="188" loading="lazy" alt="Строка старинного каталога с дореформенной орфографией: раздел «Фотография», номер 328, Болдырев И. В., Санкт-Петербург, фотографический аппарат с принадлежностями">
+            <figcaption>«Иллюстрированное описание Всероссийской художественно-промышленной выставки в Москве 1882 года», № 12, с. 95. Скан — Internet Archive, общественное достояние.</figcaption>
+          </figure>
+          <p class="src-note">Источники: «Иллюстрированное описание Всероссийской художественно-промышленной выставки в Москве 1882 года», № 12, с. 95; Росфото, 2008–2009.</p>
+        </div></details></li>
+      <li><details><summary><span>Жюри дало ему бронзовую медаль — за снимки, а не за плёнку.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Награда была «за фотографические снимки, сделанные особыми, придуманными экспонентом способами и приёмами». В списке бронзовых медалистов выставки он стоит во второй группе, среди научно-учебных экспонатов. Сами «принадлежности», ради которых Болдырев приехал, жюри никак не отметило. Знаток фотографии В. И. Срезневский писал в журнале «Фотограф», что плёнка — «выдумка, бесспорно, достойная внимания и полезная». Ценным изобретением он её не считал.</p>
+          <p class="src-note">Источники: Президентская библиотека, «Иван Васильевич Болдырев»; «Иллюстрированное описание…», № 25–26, с. 199; Е. Бархатова, «Наше наследие», 1989, № 4; О. Майдельман, «Нация», 2024.</p>
+        </div></details></li>
+      <li><details><summary><span>Плёнку успешно испытали в военно-учебном ведомстве, и её одобрил Дмитрий Менделеев.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Испытания прошли в Учёной комиссии педагогического музея военно-учебных заведений. Менделеев, который и сам увлекался фотографией, отозвался о плёнке одобрительно. Но промышленники ею не заинтересовались, а поддержки Технического общества Болдырев так и не получил.</p>
+          <p class="src-note">Источники: Е. Бархатова, «Наше наследие», 1989, № 4; Росфото, 2008–2009.</p>
+        </div></details></li>
+      <li><details><summary><span>Взять привилегию и открыть фабрику Болдыреву было не на что. Об этом он прямо написал в брошюре 1886 года.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <blockquote class="doc">«Теперь оставалось бы только пользоваться изобретением смоловидной пленки для практического применения ее в широких размерах и сохранить честь изобретения за Россией… К сожалению, я лично не обладаю достаточными средствами для того, чтобы повести дело приготовления пленок фабричным путем».</blockquote>
+          <p>Привилегией в России тогда называли патент, и за неё платили пошлину. Привилегию Болдыреву советовали взять ещё на объектив, но денег на пошлину у него не нашлось. В брошюре 1886 года он подробно описал плёнку — этого никто не заметил.</p>
+          <p class="src-note">Источники: О. Майдельман, «Нация», 2024 (брошюра 1886 года); Президентская библиотека; Е. Бархатова, «Наше наследие», 1989, № 4.</p>
+        </div></details></li>
+      <li><details><summary><span>В 1889 году американская фирма Истмена стала выпускать на фабрике прозрачную плёнку из целлулоида. Русские фотографы покупали привозную.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Двумя годами раньше, в 1887 году, американец Ганнибал Гудвин предложил прозрачную гибкую плёнку из нитроцеллюлозы. В 1889 году журнал «Фотографический вестник» обещал своим читателям американскую плёнку Карбута, «прозрачную как слеза», и бумагу Истмена. По словам Бархатовой, плёнка Болдырева почти на десять лет опередила плёнку «Истмен-Кодак».</p>
+          <p class="src-note">Источники: ГМИИ им. А. С. Пушкина, «Негатив на фотоплёнке (пластик)»; Е. Бархатова, «Наше наследие», 1989, № 4.</p>
+        </div></details></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block" id="theme-inventions">
+  <div class="wrap">
+    <div class="kicker">Фото и кино · Русские первенства</div>
+    <h2>Что ещё русские изобрели первыми в теме «фото и кино»</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Другие дни музея о фотографии и съёмке — по утверждённому календарю. Часть этих залов ещё готовится.</p>
+    <button class="btn ghost" type="button" id="themeInvBtn" data-label="Показать 7 первенств →" aria-expanded="false" aria-controls="themeInvBody">Показать 7 первенств →</button>
+    <div id="themeInvBody" hidden>
+      <ul class="theme-list">
+        <li><b>26 янв</b> <a href="day-26jan-podvodnaya.html">Подводная фотография в Кронштадте</a></li>
+        <li><b>19 фев</b> Цветная фотография России, С. М. Прокудин-Горский</li>
+        <li><b>20 авг</b> Стереокино без очков, С. П. Иванов, 1941</li>
+        <li><b>27 авг</b> Киноаппарат раньше Люмьеров, И. А. Тимченко, 1893</li>
+        <li><b>20 сен</b> Аэрофотоаппарат и аэрофотосъёмка</li>
+        <li><b>7 окт</b> Первые в мире снимки обратной стороны Луны («Луна-3»)</li>
+        <li><b>22 окт</b> «Венера-9»: первые в мире снимки поверхности другой планеты</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="games">
+  <div class="wrap">
+    <div class="kicker">Главное действие · испытание плёнки</div>
+    <h2>Стекло или плёнка: что довезёт негатив</h2>
+    <p style="max-width:62ch">Перед тобой негатив донского снимка Болдырева — в двух видах: на стеклянной пластинке и на его плёнке. Сначала отправь оба в дорогу. Потом проведи с плёнкой три испытания из брошюры изобретателя. После каждого проверь её на просвет и на изгиб. В конце расставь даты по порядку.</p>
+    <div class="lab" id="lab">
+      <h3 style="margin:8px 0 6px">1. Дорога</h3>
+      <div class="neg-row">
+        <div class="neg-card">
+          <h4>Стеклянная пластинка</h4>
+          <div class="neg glass" id="negGlass"><img src="day-05feb-boldyrev-strelok.jpg" alt="" aria-hidden="true">
+            <svg class="crack" viewBox="0 0 100 78" preserveAspectRatio="none" aria-hidden="true"><path d="M48 0 L52 22 L40 38 L55 52 L47 78 M52 22 L78 30 L100 26 M40 38 L12 46 L0 60 M55 52 L80 64" stroke="#fff" stroke-width="1.2" fill="none"/></svg></div>
+          <div class="neg-state" id="stGlass" aria-live="polite">Негатив на стекле. Тяжёлый, хрупкий.</div>
+          <button class="seg" type="button" id="goGlass">Отправить в дорогу</button>
+        </div>
+        <div class="neg-card">
+          <h4>Плёнка Болдырева</h4>
+          <div class="neg film" id="negFilm"><img src="day-05feb-boldyrev-strelok.jpg" alt="" aria-hidden="true"></div>
+          <div class="neg-state" id="stFilm" aria-live="polite">Негатив на прозрачной гибкой плёнке.</div>
+          <button class="seg" type="button" id="goFilm">Отправить в дорогу</button>
+        </div>
+      </div>
+      <div class="lab-msg" id="roadMsg" aria-live="polite">Отправь в дорогу оба негатива.</div>
+
+      <h3 style="margin:22px 0 6px">2. Испытания из брошюры</h3>
+      <p style="max-width:62ch;margin:0 0 6px;color:var(--muted)">Брошюра говорит о трёх испытаниях: жара, сырость, сутки в воде. Проведи каждое, а потом осмотри плёнку двумя способами.</p>
+      <div class="tests" id="tests"></div>
+      <ul class="act-log" id="actLog" aria-live="polite"></ul>
+      <div class="lab-msg" id="labMsg" aria-live="polite">Выбери испытание.</div>
+      <div class="lab-found" id="testFound">Пройдено испытаний: 0 из 3.</div>
+
+      <h3 style="margin:22px 0 6px">3. Две даты на шкале — и все остальные</h3>
+      <p style="max-width:62ch;margin:0 0 6px;color:var(--muted)">Нажимай события по порядку, от самого раннего к самому позднему.</p>
+      <div class="tl" id="tlBox" role="group" aria-label="События для шкалы"></div>
+      <ol class="tl-line" id="tlLine"></ol>
+      <div class="lab-msg" id="tlMsg" aria-live="polite">С чего всё началось?</div>
+      <div class="lab-cap">Слова о жаре, сырости и сутках в воде взяты из брошюры Болдырева (по Е. Бархатовой). Даты — по Е. Бархатовой, Росфото и ГМИИ им. А. С. Пушкина. Удар в дороге и вид негативов условны: модель показывает, чем плёнка удобнее стекла, но это не замер.</div>
+      <noscript><div class="noscript-box">Для модели нужен JavaScript. Текстовая версия: стеклянная пластинка хрупкая и в дороге может разбиться, плёнка гнётся и остаётся целой. По словам Болдырева, его плёнка «не изменяется ни от высокой температуры, ни от сырости», а пролежав сутки в воде, остаётся «так же прозрачна и эластична». По порядку: 1875–1876 — донские снимки на стекле; 1878 — масса для плёнки; 1880 — показ в V отделе Технического общества; 1882 — Всероссийская выставка в Москве; 1887 — плёнка Гудвина из нитроцеллюлозы; 1889 — фабричная плёнка Истмена из целлулоида.</div></noscript>
+    </div>
+    <p class="src-note" style="margin-top:10px">Свойства плёнки — брошюра И. В. Болдырева 1883 года по статье Е. Бархатовой «Донские сюжеты Ивана Болдырева» («Наше наследие», 1989, № 4); показ 1880 года — слова Болдырева по О. Майдельман («Нация», 2024); выставка 1882 года — Росфото и указатель экспонентов; Гудвин и Истмен — ГМИИ им. А. С. Пушкина.</p>
+  </div>
+</section>
+
+<section class="block" id="pervenstvo">
+  <div class="wrap">
+    <div class="kicker">Проверка факта</div>
+    <h2>Что именно здесь наше</h2>
+    <div class="border-box">
+      <p style="margin-top:0"><b>Граница первенства:</b> в 1878 году Иван Болдырев сделал прозрачную гибкую «смоловидную плёнку-пластинку» — основу для негатива вместо стекла. В 1880 году он показал плёночные негативы и снимки с них фотографическому отделу Русского технического общества. В 1882 году он выставил плёнку в Москве, а описал её в брошюрах 1883 и 1886 годов. Прозрачная гибкая плёнка Гудвина появилась в 1887 году, фабричная плёнка Истмена — в 1889-м. По оценке историка фотографии Е. Бархатовой, плёнка Болдырева почти на десять лет опередила плёнку «Истмен-Кодак».</p>
+      <p style="margin-bottom:0"><b>Чего здесь нет:</b> заменить стекло пытались и до Болдырева, и рядом с ним — делали пластинки из каучука, желатина, гуммиарабика, а Леон Варнерке заявлял о «чувствительной негативной ткани». Привилегии Болдырев не получил, фабричного выпуска не было. Связи между его плёнкой и плёнкой Истмена источники не показывают. В календаре музея плёнка названа «рулонной», но источники страницы говорят о плёнке-пластинке, а о рулоне молчат. Поэтому здесь рулона нет.</p>
+    </div>
+    <table class="ctx">
+      <thead><tr><th scope="col">Документ или событие</th><th scope="col">Что</th><th scope="col">Когда</th></tr></thead>
+      <tbody>
+        <tr><td>Донская серия Болдырева</td><td>Снимки станиц на стеклянных негативах; Стасов покупает их для Публичной библиотеки</td><td>1875–1876</td></tr>
+        <tr><td>Автопортрет с надписью Стасова</td><td>«За изобретением смоловидной плёнки-пластинки»</td><td>1878</td></tr>
+        <tr><td>V отдел Русского технического общества</td><td>Показ плёночных негативов и снимков с них, без публикации</td><td>1880</td></tr>
+        <tr><td>Всероссийская выставка в Москве</td><td>Экспонент № 328, «фотографический аппарат с принадлежностями»; бронзовая медаль за снимки</td><td>1882</td></tr>
+        <tr><td>Брошюры Болдырева</td><td>Описание изобретений, в том числе плёнки</td><td>1883, 1886</td></tr>
+        <tr><td>Г. Гудвин, США</td><td>Прозрачная гибкая плёнка из нитроцеллюлозы</td><td>1887</td></tr>
+        <tr><td>Дж. Истмен, США</td><td>Фабричный выпуск плёнки из целлулоида</td><td>1889</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block" id="quiz">
+  <div class="wrap">
+    <div class="kicker">Проверь себя · 5 вопросов</div>
+    <h2>Викторина</h2>
+    <p style="color:var(--muted);max-width:62ch">На каждый вопрос — одна попытка. После ответа покажем объяснение.</p>
+    <div id="quizBox"></div>
+    <noscript><div class="noscript-box">Для викторины нужен JavaScript. Ответы: 1 — стеклянную пластинку; 2 — сутки в воде; 3 — на Всероссийской выставке в Москве; 4 — за снимки, сделанные особыми способами; 5 — не было средств.</div></noscript>
+  </div>
+</section>
+
+<section class="block" id="result">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Итог дня</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Дорога, три испытания, шкала дат и викторина вместе дают 100 баллов. Прогресс не сохраняется: перезагрузишь страницу — день начнётся заново.</p>
+    <div class="day-result">
+      <div class="dr-score" id="dayTxt">0 / 100 · звание: Гость дня</div>
+      <div class="dr-bar"><i id="dayBar" style="width:0%"></i></div>
+      <div class="dr-note">Отправь в дорогу оба негатива, проведи три испытания плёнки, расставь даты и ответь на вопросы викторины.</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="sources">
+  <div class="wrap">
+    <div class="kicker">Источники</div>
+    <h2>На чём стоит страница</h2>
+    <ul class="sources">
+      <li><a href="https://sarkel61.ru/istoriya/donskie_syuzhety_ivana_boldyreva_e_barhatova/" rel="noopener" target="_blank">Е. Бархатова · «Донские сюжеты Ивана Болдырева»</a>, «Наше наследие», 1989, № 4 (10), с. 136–143 (перепечатка на сайте «Саркел»): автопортрет с надписью Стасова, слова Болдырева о плёнке из брошюры 1883 года, выставка 1882 года, Срезневский, испытание в военно-учебном ведомстве, отзыв Менделеева, брошюра 1886 года, американская плёнка в 1889 году.</li>
+      <li><a href="https://rosphoto.org/events/ivan-boldyrev-photographer-and-inventor/" rel="noopener" target="_blank">«Фотограф-изобретатель Иван Болдырев»</a>, выставка Росфото, 27.12.2008–15.02.2009, подготовлена с Е. В. Бархатовой (РНБ): биография, брошюра 1883 года, смоловидная плёнка на выставке 1882 года, Лондон 1885 года.</li>
+      <li><a href="https://www.prlib.ru/Great_Russia/outstanding_scientists_XIX/Boldyrev" rel="noopener" target="_blank">«Иван Васильевич Болдырев (1850 – ?)»</a>, Президентская библиотека, проект «Великая Россия»: бронзовая медаль 1882 года и её формулировка, привилегия и пошлина.</li>
+      <li><a href="https://nationmagazine.ru/people/kak-kazak-izobretatel-firmu-kodak-oboshel/" rel="noopener" target="_blank">О. Майдельман · «Как казак-изобретатель фирму Kodak обошел»</a>, «Нация», 26.12.2024: детство, опыты с каучуком и желатином, слова Болдырева о 1878 и 1880 годах, отзыв Срезневского, брошюра 1886 года.</li>
+      <li><a href="https://archive.org/details/01006803991" rel="noopener" target="_blank">«Иллюстрированное описание Всероссийской художественно-промышленной выставки в Москве 1882 года»</a>, № 12, с. 95 (экспонент № 328) и № 25–26, с. 199 (бронзовые медали, II группа) — скан в Internet Archive.</li>
+      <li><a href="https://pushkinmuseum.art/exposition_collection/collections/phototech/film_negative/index.php" rel="noopener" target="_blank">«Негатив на фотоплёнке (пластик)»</a>, ГМИИ им. А. С. Пушкина, «Онлайн-словарь фотографических техник»: плёнка Гудвина 1887 года, фабричная плёнка Истмена 1889 года.</li>
+      <li>Изображения — Викисклад, общественное достояние: <a href="https://commons.wikimedia.org/wiki/File:Boldyrev_ivan_vasilevich.jpg" rel="noopener" target="_blank">портрет Болдырева работы М. П. Дмитриева, 1890</a>; <a href="https://commons.wikimedia.org/wiki/File:Ivan_Boldyrev_avtoportret_2.jpg" rel="noopener" target="_blank">автопортрет 1878 года</a> (РНБ, файл Росфото); <a href="https://commons.wikimedia.org/wiki/File:%D0%94%D0%BE%D0%BD%D1%81%D0%BA%D0%BE%D0%B9_%D0%BA%D0%B0%D0%B7%D0%B0%D0%BA-%D1%81%D1%82%D1%80%D0%B5%D0%BB%D0%BE%D0%BA,_%D1%81%D0%B5%D0%BC%D0%B8%D0%B4%D0%B5%D1%81%D1%8F%D1%82%D0%B8_%D0%BF%D1%8F%D1%82%D0%B8_%D0%BB%D0%B5%D1%82._1875-1876.jpg" rel="noopener" target="_blank">«Донской казак-стрелок»</a> (РНБ). Строка каталога 1882 года — Internet Archive, общественное достояние.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="calendar">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Календарь изобретений</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Выбери любой день — узнаешь, что русские сделали первыми в мире. Листай месяцы стрелками.</p>
+    <div id="calbox"></div>
+  </div>
+</section>
+
+<section class="block kd" id="kuda-dalshe">
+  <div class="wrap">
+    <div class="kd-kicker">Куда дальше</div>
+    <h2>Музей продолжается</h2>
+    <div class="kd-grid">
+      <div class="kd-card main"><span class="kd-lbl">Следующий день</span><a href="day-18mar-leonov.html">18 марта — Первый выход человека в открытый космос <span class="kd-arr">→</span></a>
+        <p>Раздувшийся скафандр не пускал его обратно в корабль — Леонов стравил кислород и вошёл в шлюз головой вперёд.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Предыдущий день</span><a href="day-04feb-samovar.html">4 февраля — Самовар: от уральской таможни до фабрики Лисицыных <span class="kd-arr">→</span></a>
+        <p>Медный самовар в таможенной описи 1740 года и тульская фабрика братьев Лисицыных.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Тоже фотография</span><a href="day-26jan-podvodnaya.html">26 января — подводная фотография в Кронштадте <span class="kd-arr">→</span></a>
+        <p>Ещё один день музея о том, как снимали там, где раньше не снимал никто.</p></div>
+      <div class="kd-card main"><span class="kd-lbl">Город-музей</span><a href="../../index.html">Русская цивилизация <span class="kd-arr">→</span></a>
+        <p>Все музеи проекта на одной карте.</p></div>
+    </div>
+    <p style="margin-top:16px"><a href="izobreteniya.html">Посмотреть изобретения по алфавиту →</a></p>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>
+  Русская цивилизация · «Что изобрели русские первыми в мире»</div></footer>
+
+<script type="application/json" data-proof>{"status":"found","claim_id":"rc:izobreteniya:boldyrev:claim-plenka-1878","ours":{"kind":"автопортрет с надписью В. В. Стасова","title":"«Ив. Вас. Болдырев за изобретением смоловидной плёнки-пластинки. 1878 год» — надпись рукой В. В. Стасова на снимке, где изобретатель сидит за столом с реактивами","date":"1878","holder":"Российская национальная библиотека — по публикации Е. Бархатовой («Наше наследие», 1989, № 4) и выставке Росфото 2008–2009 годов","source_url":"https://rosphoto.org/events/ivan-boldyrev-photographer-and-inventor/","scan":"day-05feb-boldyrev-avtoportret.jpg","scan_credit":"И. В. Болдырев. Автопортрет за изобретением смоловидной плёнки-пластинки, 1878. РНБ; файл Росфото на Викискладе, общественное достояние."},"rival":{"name":"Г. Гудвин, США","date":"1887","doc_title":"прозрачная гибкая плёнка из нитроцеллюлозы"}}</script>
+<script src="../../assets/museum-proof.js"></script>
+
+<script>
+/* ── СЧЁТ ── шкала из 100 держит assets/museum-score.js; здесь только реестр наград.
+   дорога 15 + три испытания 3×10 + шкала дат 15 + викторина 5×8 = 100. */
+window.MUSEUM_SCORE = {awards:{g1:15, t:[3,10], tl:15, q:[5,8]},
+  ranks:[[100,'Светописец'],[70,'Изобретатель'],[40,'Ученик фотографа'],[0,'Гость дня']]};
+</script>
+<script src="../../assets/museum-score.js"></script>
+<script>
+(function(){
+  var $ = function(id){return document.getElementById(id);};
+  $('readBtn').onclick = function(){ $('story').scrollIntoView({behavior:'smooth'}); };
+  $('listenBtn').onclick = function(){ $('audioguide').scrollIntoView({behavior:'smooth'}); };
+  var tb=$('themeInvBtn');
+  tb.onclick=function(){ var b=$('themeInvBody'), open=b.hidden; b.hidden=!open; tb.setAttribute('aria-expanded',open?'true':'false'); tb.textContent=open?'▲ Скрыть':tb.dataset.label; };
+
+  /* ── 1. ДОРОГА ── стекло хрупкое и неудобное в дороге (Бархатова, «Наше наследие», 1989);
+     удар в пути условный: модель показывает разницу материалов, а не случай из жизни. */
+  var road={glass:false, film:false};
+  function roadMsg(t,cls){ var m=$('roadMsg'); m.className='lab-msg'+(cls?' '+cls:''); m.textContent=t; }
+  function roadDone(){
+    if (road.glass && road.film){ award('g1',15); roadMsg('Стекло разбилось, плёнка согнулась и доехала. Ради этого Болдырев и искал замену стеклу. Теперь проверь плёнку его испытаниями.','ok'); }
+    else roadMsg(road.glass?'Теперь отправь в дорогу плёнку.':'Теперь отправь в дорогу стеклянную пластинку.');
+  }
+  $('goGlass').onclick=function(){
+    if (road.glass){ roadMsg('Эта пластинка уже разбита. Склеить негатив нельзя.'); return; }
+    road.glass=true; $('negGlass').classList.add('broken');
+    $('stGlass').textContent='Удар в дороге — и стекло треснуло. Снимок пропал.';
+    this.disabled=true; roadDone();
+  };
+  $('goFilm').onclick=function(){
+    if (road.film){ roadMsg('Плёнка уже доехала целой.'); return; }
+    road.film=true; var n=$('negFilm'); n.classList.add('bent');
+    setTimeout(function(){ n.classList.remove('bent'); },700);
+    $('stFilm').textContent='От удара плёнка прогнулась — и выпрямилась. Снимок цел.';
+    this.disabled=true; roadDone();
+  };
+
+  /* ── 2. ИСПЫТАНИЯ ── по словам Болдырева (брошюра 1883 года, цит. по Бархатовой): плёнка «не изменяется
+     ни от высокой температуры, ни от сырости и положенная с негативным изображением на сутки в воду…
+     была так же прозрачна и эластична». Каждое испытание засчитывается после двух осмотров. */
+  var TESTS=[
+    {id:'zhara', name:'Жара', act:'Подержать в тепле', cls:'hot', did:'Плёнку подержали в тепле.'},
+    {id:'syrost', name:'Сырость', act:'Оставить в сыром месте', cls:'damp', did:'Плёнку оставили в сыром месте.'},
+    {id:'voda', name:'Сутки в воде', act:'Положить в воду на сутки', cls:'wet', did:'Плёнку с негативом положили в воду на сутки.'}
+  ];
+  var tst={}, cur=null;
+  function msg(t,cls){ var m=$('labMsg'); m.className='lab-msg'+(cls?' '+cls:''); m.textContent=t; }
+  function log(t,ok){ var li=document.createElement('li'); li.className=ok?'ok':'no'; li.textContent=t; $('actLog').insertBefore(li,$('actLog').firstChild); }
+  function nDone(){ var n=0; TESTS.forEach(function(t,i){ if(tst[i]&&tst[i].done) n++; }); return n; }
+  function clearFx(){ var n=$('negFilm'); TESTS.forEach(function(t){ n.classList.remove(t.cls); }); }
+  TESTS.forEach(function(t,i){
+    var box=document.createElement('div'); box.className='test'; box.id='test-'+t.id;
+    box.innerHTML='<b>'+t.name+'</b>';
+    var a=document.createElement('button'); a.type='button'; a.className='seg'; a.textContent=t.act;
+    var p=document.createElement('button'); p.type='button'; p.className='seg'; p.textContent='Посмотреть на просвет';
+    var e=document.createElement('button'); e.type='button'; e.className='seg'; e.textContent='Согнуть';
+    var s=document.createElement('div'); s.className='tst'; s.setAttribute('aria-live','polite'); s.textContent='Ещё не испытано.';
+    box.appendChild(a); box.appendChild(p); box.appendChild(e); box.appendChild(s);
+    $('tests').appendChild(box);
+    tst[i]={act:false, look:false, bend:false, done:false};
+    function check(){
+      var r=tst[i];
+      s.textContent=(r.act?'Испытание проведено.':'Ещё не испытано.')+(r.look?' Прозрачна.':'')+(r.bend?' Гнётся.':'');
+      if (r.act && r.look && r.bend && !r.done){
+        r.done=true; box.classList.add('done'); award('t'+i,10);
+        log(t.name+': плёнка осталась прозрачной и гибкой.',1);
+        $('testFound').textContent='Пройдено испытаний: '+nDone()+' из 3.';
+        msg(nDone()<3?'Испытание «'+t.name.toLowerCase()+'» пройдено. Остались другие.':'Все три испытания пройдены: «так же прозрачна и эластична», как писал Болдырев.','ok');
+      }
+    }
+    a.onclick=function(){
+      if (tst[i].act){ msg('Это испытание уже проведено. Осмотри плёнку.'); return; }
+      tst[i].act=true; cur=i; clearFx(); $('negFilm').classList.add(t.cls);
+      log(t.did,1); msg('Теперь осмотри плёнку: на просвет и на изгиб.'); check();
+    };
+    p.onclick=function(){
+      if (!tst[i].act){ log('Осмотр до испытания ничего не покажет.',0); msg('Рано: сначала проведи испытание «'+t.name.toLowerCase()+'».','bad'); return; }
+      if (!tst[i].look){ tst[i].look=true; log(t.name+': на просвет негатив так же прозрачен.',1); }
+      clearFx(); check();
+    };
+    e.onclick=function(){
+      if (!tst[i].act){ log('Сгибать плёнку до испытания рано.',0); msg('Рано: сначала проведи испытание «'+t.name.toLowerCase()+'».','bad'); return; }
+      if (!tst[i].bend){ tst[i].bend=true; log(t.name+': плёнка гнётся и не трескается.',1); }
+      var n=$('negFilm'); n.classList.add('bent'); setTimeout(function(){ n.classList.remove('bent'); },700);
+      check();
+    };
+  });
+
+  /* ── 3. ШКАЛА ── даты: Бархатова 1989; Майдельман 2024; Росфото; ГМИИ им. А. С. Пушкина. */
+  var TL=[
+    {y:'1875–1876', t:'Болдырев снимает донские станицы на стеклянные негативы'},
+    {y:'1878', t:'Почти год готовит массу для плёнки вместо стекла'},
+    {y:'1880', t:'Показывает плёночные негативы V отделу Технического общества'},
+    {y:'1882', t:'Выставляет плёнку на Всероссийской выставке в Москве'},
+    {y:'1887', t:'Гудвин в США предлагает плёнку из нитроцеллюлозы'},
+    {y:'1889', t:'Истмен начинает фабричный выпуск плёнки из целлулоида'}
+  ];
+  var order=[3,0,5,1,4,2], next=0;
+  function tlMsg(t,cls){ var m=$('tlMsg'); m.className='lab-msg'+(cls?' '+cls:''); m.textContent=t; }
+  order.forEach(function(k){
+    var b=document.createElement('button'); b.type='button'; b.className='seg'; b.textContent=TL[k].t;
+    b.onclick=function(){
+      if (b.disabled) return;
+      if (k===next){
+        b.disabled=true; b.classList.add('ok');
+        var li=document.createElement('li'); li.innerHTML='<b>'+TL[k].y+'</b>'; li.appendChild(document.createTextNode(TL[k].t)); $('tlLine').appendChild(li);
+        next++;
+        if (next===TL.length){ award('tl',15); tlMsg('Шкала собрана. От плёнки Болдырева до плёнки Гудвина — девять лет, до фабрики Истмена — одиннадцать.','ok'); }
+        else tlMsg('Верно. Что было дальше?','ok');
+      } else {
+        tlMsg('Это было позже. Сначала найди событие, которое случилось раньше.','bad');
+      }
+    };
+    $('tlBox').appendChild(b);
+  });
+
+  /* ── ВИКТОРИНА ── один ответ на вопрос; дистракторы сверены с источниками страницы. */
+  var Q = [
+    {q:'Что Болдырев хотел заменить своей плёнкой?', o:['Стеклянную пластинку негатива','Фотографическую бумагу для отпечатков','Объектив фотоаппарата'], a:0,
+     e:'Негатив тогда снимали на стекло — хрупкое и неудобное в дороге. Болдырев искал массу, «из которой получалась бы пленка, соответствующая стеклу».'},
+    {q:'Какое испытание, по словам изобретателя, выдержала плёнка?', o:['Огонь свечи','Сутки в воде','Удар молотка'], a:1,
+     e:'Положенная с негативом на сутки в воду, плёнка осталась «так же прозрачна и эластична». Об огне и ударах Болдырев не писал.'},
+    {q:'Где в 1882 году Болдырев выставил плёнку?', o:['На Всемирной выставке в Париже','На Всероссийской выставке в Москве','На выставке изобретений в Лондоне'], a:1,
+     e:'На Всероссийской художественно-промышленной выставке в Москве он был экспонентом № 328. В Лондоне Болдырев участвовал позже, в 1885 году, и заочно.'},
+    {q:'За что Болдырев получил бронзовую медаль выставки 1882 года?', o:['За плёнку вместо стекла','За снимки, сделанные особыми придуманными им способами','За лучший фотографический магазин'], a:1,
+     e:'Медаль дали «за фотографические снимки, сделанные особыми, придуманными экспонентом способами и приёмами». Саму плёнку жюри не отметило.'},
+    {q:'Почему Болдырев не наладил выпуск плёнки?', o:['Ему запретили власти','Плёнка не выдержала проверки','У него не было средств'], a:2,
+     e:'«Я лично не обладаю достаточными средствами для того, чтобы повести дело приготовления пленок фабричным путем», — писал он в 1886 году.'}
+  ];
+  var qb = $('quizBox');
+  Q.forEach(function(it, qi){
+    var wrap = document.createElement('div');
+    var h = document.createElement('p'); h.className='quiz-q'; h.textContent=(qi+1)+'. '+it.q; wrap.appendChild(h);
+    var exp = document.createElement('div'); exp.className='exp'; exp.setAttribute('aria-live','polite');
+    var btns = it.o.map(function(txt, oi){
+      var b=document.createElement('button'); b.type='button'; b.className='opt'; b.textContent=txt;
+      b.onclick=function(){
+        if (wrap.dataset.done) return; wrap.dataset.done='1';
+        btns.forEach(function(x,xi){ x.disabled=true; if (xi===it.a) x.classList.add('correct'); });
+        if (oi===it.a){ award('q'+qi,8); exp.textContent='Верно. '+it.e; }
+        else { b.classList.add('wrong'); exp.textContent='Не совсем. '+it.e; }
+        exp.classList.add('show');
+      };
+      wrap.appendChild(b); return b;
+    });
+    wrap.appendChild(exp); qb.appendChild(wrap);
+  });
+})();
+</script>
+<script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
+<script>window.MUSEUM_CHROME={
+  museum:{title:'Что изобрели русские первыми в мире',href:'index.html'},
+  share:{title:'Плёнка Болдырева: донской казак против стеклянного негатива — музей «Что изобрели русские первыми в мире»',
+         text:'В 1878 году донской казак Иван Болдырев сделал прозрачную гибкую плёнку вместо стекла — за годы до плёнки Истмена. Что Россия дала миру раньше всех — день за днём.'},
+  prev:{href:'day-04feb-samovar.html',title:'4 февраля · Самовар'},
+  next:{href:'day-18mar-leonov.html',title:'18 марта · Леонов'},
+  all:{href:'index.html',label:'Все изобретения'},
+  city:'../../index.html',
+  random:['day-01jan-cabletv.html','day-02jan-luna1.html','day-03jan-anosov.html','day-04jan-pilchikov.html','day-05jan-shukhov.html','day-06jan-orlov.html','day-08jan-icebreaker.html','day-09jan-blinov.html','day-10jan-britnev.html','day-11jan-kostovich.html','day-12jan-r7.html','day-13jan-k278.html','day-14jan-lira.html','day-15jan-kovalevskaya.html','day-16jan-soyuz45.html','day-19jan-kantorovich.html','day-21jan-obninsk.html','day-22jan-landau.html','day-23jan-umov.html','day-24jan-k162.html','day-25jan-korsakov.html','day-26jan-podvodnaya.html','day-27jan-pentium.html','day-28jan-havkin.html','day-30jan-kotelnikov.html','day-31jan-girotron.html','day-01feb-bekhterev.html','day-02feb-edinorog.html','day-03feb-luna9.html','day-04feb-samovar.html','day-05feb-boldyrev.html','day-18mar-leonov.html','day-15may-mechnikov.html','day-16jun-tereshkova.html','day-26sep-pavlov.html','day-15nov-buran.html','day-25nov-pirogov.html','day-01dec-lobachevsky.html','day-14dec-laser.html']
+};</script>
+<script src="../../assets/museum-chrome.js"></script>
+<script>window.MUSEUM_SUPPORT={museum:'Что изобрели русские первыми в мире'};</script>
+<script src="../../assets/museum-support.js"></script>
+<script src="calendar-izobreteniya.js"></script>
+<script>window.MUSEUM_CALENDAR_INITIAL='02-05';</script>
+<script src="../../assets/museum-calendar-month.js"></script>
+<script>window.MUSEUM_RETURN={riddle:{q:"Что, по словам Болдырева, случилось с его плёнкой, когда её с негативом положили на сутки в воду?",a:"Ничего: она осталась «так же прозрачна и эластична». Так Болдырев описал свою смоловидную плёнку в брошюре 1883 года.",src:"Е. Бархатова, «Донские сюжеты Ивана Болдырева», «Наше наследие», 1989, № 4"}};</script>
+<script src="../../assets/museum-return.js" data-museum="izobreteniya" data-day="02-05"></script>
+<script defer src="../../assets/analytics.js"></script>
+
+
+
+
+
+<script>window.MUSEUM_AUDIOGUIDE={
+  audioSrc:"audio-guide-boldyrev-ru.mp3",
+  durationLabel:"2 минуты 37 секунд",
+  lead:"Голос ведёт по залу Ивана Болдырева: донские станицы, комната, где он варил массу для плёнки, московская выставка 1882 года и американская плёнка, которая пришла позже. Шесть остановок, на каждой — что искать глазами. Слушать можно фоном, пока читаешь историю ниже.",
+  stops:[
+    {t:0,mark:"0:00",title:"Человек в котелке"},
+    {t:26,mark:"0:26",title:"Казак-стрелок"},
+    {t:53,mark:"0:53",title:"Комната с реактивами"},
+    {t:79,mark:"1:19",title:"Сутки в воде"},
+    {t:106,mark:"1:46",title:"Строка номер триста двадцать восемь"},
+    {t:131,mark:"2:11",title:"Плёнка из-за океана"}
+  ],
+  transcript:[
+    "<p>Портрет И. В. Болдырева работы М. П. Дмитриева, 1890 (Государственный музей-заповедник М. А. Шолохова, по Госкаталогу РФ) — Викисклад, общественное достояние; биография — Росфото, 2008–2009; О. Майдельман, «Нация», 2024.</p>",
+    "<p>Факты: донская серия 1875–1876 годов, отзыв Стасова, «Казак-стрелок» — Е. Бархатова, «Донские сюжеты Ивана Болдырева», «Наше наследие», 1989, № 4; О. Майдельман, «Нация», 2024.</p>",
+    "<p>Факты: 1878 год, автопортрет с надписью Стасова (РНБ) — Е. Бархатова, 1989; слова о массе «соответствующей стеклу» — О. Майдельман, 2024.</p>",
+    "<p>Факты: жара, сырость, сутки в воде — брошюра И. В. Болдырева 1883 года по Е. Бархатовой; показ 1880 года — О. Майдельман, 2024.</p>",
+    "<p>Факты: экспонент № 328, бронзовая медаль — «Иллюстрированное описание Всероссийской художественно-промышленной выставки в Москве 1882 года», № 12 и № 25–26; Президентская библиотека; Срезневский, Менделеев — Е. Бархатова, 1989.</p>",
+    "<p>Факты: брошюра 1886 года — О. Майдельман, 2024; плёнка Гудвина 1887 и Истмена 1889 — ГМИИ им. А. С. Пушкина; «Фотографический вестник» 1889 года — Е. Бархатова, 1989.</p>"
+  ],
+  note:"Озвучено синтезом речи — временно, до записи голосом автора музея."
+};</script>
+<script src="../../assets/museum-audioguide.js"></script>
+</body>
+</html>
