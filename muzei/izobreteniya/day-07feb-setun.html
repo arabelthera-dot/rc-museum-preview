@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="ru" data-museum="izobreteniya">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>«Сетунь» Брусенцова: машина, которая считала тремя знаками — Что изобрели русские первыми в мире, 7 февраля</title>
+<!--
+  Страница дня 7 февраля. Наряд stranicy-izob-0910 (claude2, 14.10.2026), карточка #762.
+  Форма — вариант А музея изобретений (Сергей 12.09.2026): лента ударов, подробности свёрнуты.
+  Паспорт выпуска: rc-museum-production/izobreteniya/day-07feb-setun/passport/issue.json
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --dark:#060c17; --dark2:#0c1826; --surface:#111f33;
+    --card:rgba(255,255,255,.05); --card-b:rgba(255,255,255,.09);
+    --gold:#c9a84c; --gold-l:#e4c97a; --gold-g:rgba(201,168,76,.13);
+    --ink:#e8eef5; --muted:#7a9ab8; --line:rgba(255,255,255,.07);
+    --accent:#2d8cbf; --accent2:#1f6f8b;
+    /* legacy compat */
+    --paper:#0c1826; --paper2:#111f33;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Inter','Segoe UI',sans-serif;color:var(--ink);background:var(--dark);line-height:1.72}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.13;margin:0}
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent)}
+
+  /* ── ШАПКА ── */
+  header.top{background:rgba(6,12,23,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--card-b);color:#fff;position:sticky;top:0;z-index:30}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+  .logo svg{display:block;filter:drop-shadow(0 0 8px rgba(201,168,76,.4))}
+  .logo .lt{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:16px}
+  .logo .lt small{display:block;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-family:'Inter',sans-serif}
+  .score{background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:6px 16px;font-size:13px;color:var(--gold-l);cursor:pointer;font-family:'Inter',sans-serif}
+  .score-info{position:absolute;right:12px;top:66px;max-width:260px;background:#0e1c30;color:var(--ink);border:1px solid var(--card-b);border-radius:14px;padding:14px 16px;font-size:13px;line-height:1.6;box-shadow:0 20px 60px rgba(0,0,0,.6);display:none;z-index:40}
+  .score-info.show{display:block}
+
+  /* ── HERO — СТАНДАРТ (не менять): 3D-сцена сверху, текст отдельным блоком ниже ── */
+  .hero-scene{position:relative;height:52vh;min-height:300px;max-height:520px;overflow:hidden;background:linear-gradient(160deg,#0a1e3a 0%,#1a3a6a 55%,#0d2240 100%)}
+  .hero-scene canvas.scene,.hero-scene img.scene{width:100%;height:100%;display:block;object-fit:cover}
+  .scene-caption{background:#060d18;padding:11px 0 12px}
+  .scene-caption .wrap{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+  .scene-cap{font-size:13.5px;line-height:1.6;color:var(--muted);border-left:2px solid rgba(201,168,76,.4);padding-left:14px;flex:1 1 420px}
+  .scene-hint{flex:0 0 auto;font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.4px;color:#e4c97a;
+    background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.34);border-radius:24px;padding:7px 16px;font-weight:600}
+  .hero-lead{background:linear-gradient(180deg,#0c1826 0%,#060c17 100%);color:#fff;padding:28px 0 38px}
+  .hero-lead .museum{color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:12px;opacity:.9}
+  .hero-lead .who{font-family:'Inter',sans-serif;font-size:clamp(13px,3vw,15px);letter-spacing:.4px;color:var(--accent-l,#7dc8ff);margin-bottom:10px}
+  .hero-lead .who i{font-style:normal;color:#7893ab;font-weight:400}
+  .hero-lead h1{color:#fff;font-size:56px;font-weight:900;line-height:1.04;margin-bottom:16px}
+  .hero-lead .hook{color:#b8ccde;font-size:19px;max-width:580px;margin-bottom:28px;line-height:1.65;font-weight:400}
+  .hero-lead .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+  @media(max-width:680px){.hero-lead h1{font-size:34px}.hero-lead .hook{font-size:16px}
+    .hero-scene{height:34vh;min-height:230px;max-height:300px}
+    .scene-caption .wrap{flex-direction:column;gap:9px}
+    .scene-hint{order:-1;align-self:flex-start;font-size:11.5px;padding:6px 13px}
+    .scene-cap{font-size:12.8px;flex:1 1 auto}}
+  .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:16px;font-family:'Inter',sans-serif;letter-spacing:.5px}
+
+  /* ── НАВИГАЦИЯ ДНЯ ── */
+  .daynav{position:sticky;top:64px;z-index:25;background:rgba(6,12,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-b)}
+  .daynav .wrap{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+  .daynav::-webkit-scrollbar{display:none}
+  .daynav a{flex:0 0 auto;padding:14px 20px;font-size:11px;font-weight:700;font-family:'Inter',sans-serif;color:var(--muted);text-decoration:none;white-space:nowrap;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:.18s}
+  .daynav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+  /* ── СЕКЦИИ ── */
+  section.block{padding:64px 0;border-bottom:1px solid var(--line);scroll-margin-top:130px}
+  .kicker{font-size:10px;text-transform:uppercase;letter-spacing:3.5px;color:var(--gold);font-weight:700;font-family:'Inter',sans-serif;margin-bottom:8px}
+  section.block h2{font-size:34px;color:#fff;margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink)}
+  .pull{background:var(--gold-g);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 14px 14px 0;font-style:italic;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-size:20px;line-height:1.5;margin:26px 0}
+
+  /* ── КНОПКИ ── */
+  .btn{cursor:pointer;border:none;border-radius:12px;padding:14px 26px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;background:var(--accent2);color:#fff;transition:.18s;letter-spacing:.2px}
+  .btn:hover{filter:brightness(1.18)}
+  .btn.ghost{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid var(--card-b)}
+  .btn.ghost:hover{background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.2)}
+  .btn.gold{background:linear-gradient(135deg,var(--gold),#b8882b);color:#1a0f00;box-shadow:0 4px 20px rgba(201,168,76,.25)}
+  .btn.gold:hover{filter:brightness(1.1);box-shadow:0 6px 28px rgba(201,168,76,.4)}
+  .btn:active{transform:translateY(1px)}
+  .pulse{animation:pulse .9s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+
+  /* ── КАРТОЧКИ ── */
+  .card{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:20px 22px;margin:16px 0;backdrop-filter:blur(6px)}
+
+  /* ── КВИЗ ── */
+  .opt{display:block;width:100%;text-align:left;background:rgba(255,255,255,.04);border:1px solid var(--card-b);border-radius:12px;padding:13px 16px;margin:8px 0;cursor:pointer;font-size:15px;color:var(--ink);font-family:'Inter',sans-serif;transition:.16s}
+  .opt:hover{border-color:var(--accent);background:rgba(45,140,191,.08)}
+  .opt.correct{background:rgba(40,120,60,.18);border-color:#3f9b52;color:#7ed4a0;font-weight:600}
+  .opt.wrong{background:rgba(180,40,40,.13);border-color:#c0453f;color:#f08080}
+  .exp{margin-top:10px;font-size:14px;background:var(--gold-g);border-radius:10px;padding:12px 14px;display:none;color:var(--gold-l)}
+  .exp.show{display:block}
+
+  /* ── ИТОГ ДНЯ ── */
+  .day-result{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:22px 24px;max-width:460px}
+  .dr-rank{font-family:'Playfair Display',Georgia,serif;font-size:28px;color:var(--gold-l);font-weight:700}
+  .dr-score{font-size:16px;margin:4px 0 12px;color:var(--ink)}.dr-score span{color:var(--muted);font-size:14px}
+  .dr-bar{height:8px;background:rgba(255,255,255,.08);border-radius:6px;overflow:hidden}
+  .dr-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),var(--gold));transition:width .6s cubic-bezier(.2,.7,.2,1)}
+  .dr-note{margin-top:12px;font-size:14px;color:var(--muted)}
+
+  /* ── РЕКЛАМНЫЕ СЛОТЫ ── */
+  .ad-slot{position:relative;margin:26px 0;background:rgba(255,255,255,.02);border:1px dashed rgba(255,255,255,.1);border-radius:14px;min-height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px}
+  .ad-slot .lbl{position:absolute;top:7px;right:12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.15);font-family:'Inter',sans-serif}
+  .ad-slot .ph-txt{font-size:12px;max-width:80%;color:rgba(255,255,255,.18)}
+  .ad-slot.billboard{min-height:108px}
+  .adband{background:transparent;border-bottom:none}
+
+  footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
+  .crumbs{background:rgba(6,12,23,.6);border-bottom:1px solid var(--card-b);font-family:'Inter',sans-serif;font-size:12.5px}
+  .crumbs .wrap{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  .crumbs a{color:var(--gold-l);text-decoration:none;white-space:nowrap}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--muted);opacity:.6}
+  .crumbs .here{color:var(--muted);white-space:nowrap}
+
+
+  /* ── ШАПКА: четыре строки по museum-core §6-бис ── */
+  header.top{display:block;text-align:center;padding:10px 12px 8px;height:auto;position:relative}
+  header.top .b1{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:15px;letter-spacing:.5px;color:#fff}
+  header.top .b2{font-size:11px;color:var(--muted);margin-top:2px}
+  header.top .b3{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:6px}
+  header.top .b4{font-size:12.5px;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-style:italic}
+  header.top .score{position:absolute;right:12px;top:10px}
+  .daynav{top:0}
+  .hero-scene{background:#0e1c2c;height:38vh;min-height:250px;max-height:400px}
+  @media(max-width:680px){.hero-lead h1{font-size:31px}}
+  .hero-scene img.scene{object-fit:cover;object-position:50% 42%}
+  .date-origin{font-size:13px;color:#9fb4c8;margin:-6px 0 12px;max-width:62ch}
+  .hero-lead .hook{color:#c6d8e8;max-width:62ch}
+  .hero-under{background:linear-gradient(180deg,#060d18,#060c17);padding:4px 0 22px}
+  .stamp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(125,200,255,.28);margin-top:14px}
+  .stamp>div{padding:11px 12px;border-left:1px solid rgba(125,200,255,.16);min-width:0}
+  .stamp>div:first-child{border-left:0}
+  .stamp .v{font-size:clamp(15px,3.4vw,21px);font-weight:700;color:#8fd3ff;line-height:1.1;overflow-wrap:anywhere}
+  .stamp .k{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#8fa5b9;margin-top:5px}
+  @media(max-width:600px){.stamp{grid-template-columns:repeat(2,minmax(0,1fr))}.stamp>div:nth-child(3){border-left:0}.stamp>div:nth-child(n+3){border-top:1px solid rgba(125,200,255,.16)}}
+
+  /* ── ЛЕНТА УДАРОВ (museum-inventions, вариант А; museum-core §5-бис) ── */
+  .udary{list-style:none;margin:18px 0 0;padding:0;counter-reset:u}
+  .udary>li{border-top:1px solid var(--line);padding:4px 0}
+  .udary details>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:34px 1fr;gap:10px;padding:12px 0;font-size:17px;line-height:1.55;color:var(--ink)}
+  .udary details>summary::-webkit-details-marker{display:none}
+  .udary details>summary::before{counter-increment:u;content:counter(u);font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:20px;color:var(--gold);line-height:1.3}
+  .udary .more-lbl{display:block;grid-column:2;font-size:12.5px;color:var(--gold-l);letter-spacing:.3px;margin-top:4px}
+  .udary .more-lbl::after{content:' ▾'}
+  .udary details[open] .more-lbl::after{content:' ▴'}
+  .udary details[open] .more-lbl .o{display:none}
+  .udary details:not([open]) .more-lbl .c{display:none}
+  .udary summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+  .udary .det{margin:0 0 14px 44px;padding:12px 16px;background:rgba(255,255,255,.035);border-left:2px solid rgba(201,168,76,.45);border-radius:0 10px 10px 0;font-size:15px;color:#d5e0ea}
+  .udary .det p{margin:8px 0}
+  .udary .tag{display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1a0f00;background:var(--gold-l);border-radius:6px;padding:1px 7px;margin-right:6px}
+  .udary .find{border-left:3px solid var(--gold);padding-left:8px}
+  figure.fig{margin:18px 0}
+  figure.fig img{max-width:100%;height:auto;border-radius:10px;display:block}
+  figure.fig figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5}
+  .src-note{font-size:12px;color:#8fa5b9}
+
+  /* ── МОДЕЛЬ ДНЯ (главное предметное действие) ── */
+  .lab{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:18px 18px 20px;margin-top:14px}
+  .lab-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+  .lab-row .lbl{flex:0 0 100%;font-size:13px;color:var(--muted);letter-spacing:.3px}
+  .seg{cursor:pointer;border:1px solid var(--card-b);background:rgba(255,255,255,.04);color:var(--ink);border-radius:10px;padding:10px 14px;font:inherit;font-size:14.5px;min-height:44px}
+  .seg[aria-pressed="true"]{border-color:var(--gold);background:var(--gold-g);color:var(--gold-l);font-weight:600}
+  .seg:focus-visible,.btn:focus-visible,.opt:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .lab-stage{position:relative;margin-top:12px}
+  .lab-stage canvas{width:100%;height:auto;display:block;border-radius:10px;background:#1c2530}
+  .lab-cap{font-size:12px;color:#8fa5b9;margin-top:6px}
+  .lab-msg{margin-top:12px;font-size:15.5px;padding:12px 14px;border-radius:10px;background:rgba(255,255,255,.04);border-left:3px solid var(--card-b);min-height:48px}
+  .lab-msg.ok{border-left-color:#3f9b52;background:rgba(40,120,60,.14)}
+  .lab-msg.bad{border-left-color:#c0453f;background:rgba(180,40,40,.10)}
+  .lab-found{font-size:13px;color:var(--muted);margin-top:8px}
+  .lab-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .noscript-box{background:rgba(255,255,255,.04);border:1px dashed var(--card-b);border-radius:12px;padding:12px 16px;font-size:15px}
+
+  /* ── ГРАНИЦА ПЕРВЕНСТВА ── */
+  .border-box{background:rgba(45,140,191,.08);border:1px solid rgba(45,140,191,.3);border-radius:14px;padding:16px 18px}
+  .border-box b{color:#8fd3ff}
+  .ctx{width:100%;border-collapse:collapse;margin-top:14px;font-size:14.5px}
+  .ctx th,.ctx td{text-align:left;padding:9px 8px;border-top:1px solid var(--line);vertical-align:top}
+  .ctx th{color:var(--gold-l);font-weight:600;font-size:12.5px;letter-spacing:.5px}
+  .quiz-q{margin:18px 0 6px;font-weight:600}
+  .sources a{color:var(--gold-l)}
+  .sources li{margin:6px 0;font-size:14px;color:#c8d6e2}
+  @media(max-width:600px){header.top{padding:8px 64px 6px}header.top .score{top:8px;right:8px;padding:4px 10px;font-size:12px}header.top .b3{margin-top:3px}
+    .hero-scene{height:26vh;min-height:200px;max-height:260px}.date-origin{font-size:12px;margin:-8px 0 8px}.hero-lead{padding:18px 0 26px}.hero-lead .date-chip{margin-bottom:12px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+  /* ── ПОЛЗУНКИ МОДЕЛИ (19, 21 янв) ── */
+  .mtab{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+  .mrow{display:grid;grid-template-columns:minmax(150px,1.2fr) 2fr 92px;gap:12px;align-items:center}
+  .mrow .mname{font-size:14.5px}
+  .mrow .mname i{font-style:normal;color:var(--muted);font-size:13px}
+  .mrow input[type=range]{width:100%;accent-color:var(--gold);min-height:44px}
+  .mrow output{font-size:14px;color:var(--gold-l);text-align:right}
+  .mrow.off{opacity:.45}
+  .mult{margin-top:14px;padding:14px 16px;border-radius:12px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25)}
+  @media(max-width:560px){.mrow{grid-template-columns:1fr 70px}.mrow .mname{grid-column:1/-1}}
+</style>
+<meta name="description" content="В 1958 году в МГУ заработала «Сетунь» — первая в мире электронная вычислительная машина на троичном коде: плюс, ноль и минус. Её выпускали серийно, построили 50 машин.">
+<link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-07feb-setun.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Русская цивилизация">
+<meta property="og:title" content="«Сетунь» Брусенцова: машина, которая считала тремя знаками">
+<meta property="og:description" content="В 1958 году в МГУ заработала «Сетунь» — первая в мире электронная вычислительная машина на троичном коде: плюс, ноль и минус. Её выпускали серийно, построили 50 машин.">
+<meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-07feb-setun.html">
+<meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-07feb-setun.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "«Сетунь» Брусенцова: машина, которая считала тремя знаками", "description": "В 1958 году в МГУ заработала «Сетунь» — первая в мире электронная вычислительная машина на троичном коде: плюс, ноль и минус. Её выпускали серийно, построили 50 машин.", "url": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-07feb-setun.html", "inLanguage": "ru", "isPartOf": {"@type": "WebSite", "name": "Музей «Что изобрели русские первыми в мире»"}, "publisher": {"@type": "Organization", "name": "Русская цивилизация"}, "about": {"@type": "Person", "name": "Николай Петрович Брусенцов"}, "image": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-07feb-setun.jpg"}</script>
+<style>
+  /* ── КЛЮЧИ, ВЕСЫ И ШКАЛА (7 фев) ── */
+  .tasks{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+  .tasks .seg{flex:1 1 120px}
+  .tasks .seg.on{border-color:var(--gold);background:rgba(201,168,76,.15)}
+  .tasks .seg.done{border-color:#3f9b52;background:rgba(63,155,82,.15)}
+  .panel{margin-top:12px;display:grid;grid-template-columns:repeat(6,1fr);gap:8px;max-width:560px}
+  .trit{display:grid;gap:6px;justify-items:center;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:8px 4px}
+  .trit .w{font-size:12px;color:var(--muted)}
+  .lamps{display:flex;gap:6px}
+  .lamps i{width:16px;height:16px;border-radius:50%;background:#2a2f36;border:1px solid #555;display:block;transition:background .2s,box-shadow .2s}
+  .lamps i.p{background:#e8c34a;box-shadow:0 0 8px #e8c34a}
+  .lamps i.m{background:#e06a4f;box-shadow:0 0 8px #e06a4f}
+  .key{display:grid;gap:3px;width:100%}
+  .key button{font:inherit;font-size:15px;padding:3px 0;border-radius:6px;border:1px solid rgba(255,255,255,.18);background:transparent;color:var(--ink);cursor:pointer}
+  .key button.on{background:var(--gold);color:#1a1a1a;border-color:var(--gold)}
+  .readout{margin-top:10px;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px;max-width:640px}
+  .readout div{background:rgba(255,255,255,.035);border-radius:8px;padding:8px 10px;font-size:14.5px}
+  .readout b{display:block;font-size:20px;color:var(--gold-l);font-variant-numeric:tabular-nums;letter-spacing:.04em}
+  .scale{position:relative;max-width:560px;height:150px;margin-top:12px}
+  .scale .beam{position:absolute;left:10%;right:10%;top:40px;height:6px;background:#8a7a5a;border-radius:3px;transition:transform .6s ease;transform-origin:50% 50%}
+  .scale .post{position:absolute;left:50%;top:40px;width:6px;margin-left:-3px;height:100px;background:#6b5d43}
+  .scale .pan{position:absolute;top:58px;width:34%;min-height:64px;border:2px solid #8a7a5a;border-top:none;border-radius:0 0 40px 40px;display:flex;flex-wrap:wrap;gap:4px;justify-content:center;align-content:flex-end;padding:6px;transition:transform .6s ease}
+  .scale .pan.l{left:2%}
+  .scale .pan.r{right:2%}
+  .scale .pan span{font-size:12.5px;padding:2px 6px;border-radius:6px;background:#c9a84c;color:#1a1a1a}
+  .scale .pan span.load{background:#34587a;color:#fff}
+  .wts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:8px;max-width:560px}
+  .wts .wt{display:grid;gap:4px;text-align:center;font-size:14px}
+  .wts .wt .key{grid-template-columns:repeat(3,1fr)}
+  .tl{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+  .tl .seg{flex:1 1 200px;text-align:left}
+  .tl .seg.ok{border-color:#3f9b52;background:rgba(63,155,82,.15)}
+  .tl-line{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:6px}
+  .tl-line li{background:rgba(255,255,255,.035);border-left:3px solid #c9a84c;border-radius:8px;padding:7px 10px;font-size:14.5px}
+  .tl-line li b{color:#f1d58a;margin-right:6px}
+  blockquote.doc{margin:12px 0;padding:10px 14px;border-left:3px solid var(--gold);background:rgba(255,255,255,.03);border-radius:0 10px 10px 0;font-size:15px;line-height:1.6}
+  table.code{border-collapse:collapse;margin:10px 0;font-size:14.5px}
+  table.code td,table.code th{border:1px solid rgba(255,255,255,.12);padding:4px 10px;text-align:center}
+  #hero img.scene{object-fit:contain;object-position:50% 25%}
+  @media(max-width:560px){.panel{grid-template-columns:repeat(3,1fr)}.wts{grid-template-columns:1fr 1fr}.scale{height:140px}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="b1">Русская цивилизация</div>
+  <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
+  <div class="b3">Что изобрели русские первыми в мире</div>
+  <div class="b4">365 изобретений. Все русские. Все первые</div>
+  <div class="score" id="scoreBox" title="Баллы знаний за этот день">⭐ <span id="score">0</span> / 100</div>
+</header>
+
+<nav class="crumbs" aria-label="Хлебные крошки"><div class="wrap">
+  <a href="../../index.html">Русская цивилизация</a>
+  <span class="sep">›</span>
+  <a href="index.html">Что изобрели русские первыми в мире</a>
+  <span class="sep">›</span>
+  <span class="here">7 февраля · Троичная ЭВМ «Сетунь»</span>
+</div></nav>
+
+<div class="hero-scene" id="hero" style="background:#8f8c86">
+  <img class="scene" src="day-07feb-setun.jpg" data-source="https://commons.wikimedia.org/wiki/File:%D0%9F%D0%B8%D0%BE%D0%BD%D0%B5%D1%80_%D1%81%D0%BE%D0%B2%D0%B5%D1%82%D1%81%D0%BA%D0%BE%D0%B9_%D0%B2%D1%8B%D1%87%D0%B8%D1%81%D0%BB%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B9_%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B8_%D0%9D.%D0%9F.%D0%91%D1%80%D1%83%D1%81%D0%B5%D0%BD%D1%86%D0%BE%D0%B2,_10.2009.jpg" data-license="CC BY-SA 4.0" data-author="Nadir of Moscow" width="897" height="1350" alt="Чёрно-белый портрет: пожилой мужчина с седыми зачёсанными назад волосами, в тёмном костюме в полоску и свитере с высоким воротом, сидит на стуле, сцепив руки; на лацкане — значок в виде звезды" fetchpriority="high">
+</div>
+
+<div class="scene-caption">
+  <div class="wrap">
+    <div class="scene-cap">Николай Петрович Брусенцов, главный конструктор «Сетуни», в октябре 2009 года. Фото: Nadir of Moscow, Викисклад, лицензия CC BY-SA 4.0.</div>
+    <span class="scene-hint">Человек · главный конструктор</span>
+  </div>
+</div>
+
+<header class="hero-lead">
+  <div class="wrap">
+    <div class="date-chip">7 февраля · 1959</div>
+    <p class="date-origin">7 февраля 1925 года родился Николай Петрович Брусенцов. Его троичная машина «Сетунь» выполнила первые тесты в декабре 1958 года, а к концу 1959-го получила программы и пошла в работу.</p>
+    <div class="who">Николай Петрович Брусенцов <i>· инженер, заведующий отделом электроники Вычислительного центра МГУ</i></div>
+    <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
+    <h1>«Сетунь» Брусенцова: машина, которая считала тремя знаками</h1>
+    <p class="hook">В 1958 году в Московском университете заработала вычислительная машина, которая считала не нулями и единицами, а тремя знаками — плюсом, нулём и минусом.</p>
+    <div class="hero-btns">
+      <button class="btn gold" id="readBtn" type="button">Читать историю ↓</button>
+      <button class="btn ghost" id="listenBtn" type="button">🎧 Слушать аудиогид</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero-under">
+  <div class="wrap">
+    <div class="stamp">
+      <div><div class="v">1958</div><div class="k">«Сетунь» выполняет первые тест-программы в Вычислительном центре МГУ</div></div>
+      <div><div class="v">24</div><div class="k">команды — весь набор машины; три запасных кода так и не понадобились</div></div>
+      <div><div class="v">27,5 тыс.</div><div class="k">рублей — цена «Сетуни», по словам её создателя, рекордно низкая</div></div>
+      <div><div class="v">50</div><div class="k">машин построили, считая опытный и выставочный образцы; 46 — с заводскими номерами</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="daynav" aria-label="Разделы дня">
+  <div class="wrap">
+    <a href="#story">Читать</a>
+    <a href="#audioguide">Слушать</a>
+    <a href="#games">Ключи и весы</a>
+    <a href="#pervenstvo">Первенство</a>
+    <a href="#quiz">Викторина</a>
+    <a href="#calendar">Календарь</a>
+  </div>
+</nav>
+
+<section class="wrap" id="dokument" data-proof-block></section>
+
+<section class="block" id="audioguide"></section>
+
+<section class="block" id="story">
+  <div class="wrap">
+    <div class="kicker">История первенства · 12 ударов</div>
+    <h2>От ферритового колечка — к машине на трёх знаках</h2>
+    <p style="color:var(--muted);max-width:62ch">Читается подряд. Нажми на удар — откроется подробный разбор с источниками.</p>
+    <ol class="udary">
+      <li><details><summary><span>Осенью 1955 года Московский университет остался без обещанной вычислительной машины. Академик Соболев сказал: «Может, оно и к лучшему» — и предложил построить свою.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Университету собирались передать машину М-2, которую построили в лаборатории И. С. Брука. Под неё кафедра вычислительной математики даже освободила комнату 1313 в главном здании на Ленинских горах. Молодой инженер Николай Брусенцов помогал её отлаживать. Но осенью 1955 года выяснилось, что М-2 в МГУ не отдадут. Брусенцов вспоминал слова заведующего кафедрой Сергея Львовича Соболева:</p>
+          <blockquote class="doc">«Может, оно и к лучшему… создадим свою малую машину для университетов и исследовательских лабораторий, недорогую, надёжную, простую в освоении и использовании».</blockquote>
+          <p class="src-note">Источник: Н. П. Брусенцов, «Из истории создания троичных цифровых машин в МГУ» (Виртуальный компьютерный музей).</p>
+        </div></details></li>
+      <li><details><summary><span>Ламповая машина для этого не годилась, а транзисторов почти не было. Брусенцов взял магнитные элементы — ферритовые колечки с диодами — и переделал их так, чтобы они передавали три значения.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>По просьбе Соболева Брусенцова отправили стажёром в лабораторию Л. И. Гутенмахера. Там строили машину ЛЭМ-1 на феррит-диодных элементах: каждый состоял из пар ферритовых колечек диаметром 4 мм и диодов. Брусенцов увидел в этой схеме магнитный усилитель и упростил её. В каждой паре колечек оба стали рабочими. А когда к паре добавили второй диод и вторую пару входных обмоток, ячейка смогла передавать два разных импульса — или ни одного. Это и есть три значения сигнала.</p>
+          <p class="src-note">Источник: Н. П. Брусенцов, «Из истории создания троичных цифровых машин в МГУ».</p>
+        </div></details></li>
+      <li><details><summary><span>7 января 1956 года, на первом заседании семинара, Брусенцов предложил строить троичную машину. Семинар воспринял это «экстравагантное предложение» с интересом.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Семинар собрал Соболев. Приходили К. А. Семендяев, М. Р. Шура-Бура, И. С. Березин, Е. А. Жоголев, программисты и инженеры вычислительного центра. Решили строить машину на магнитных элементах, а троичный вариант разрабатывать как альтернативу. Научного руководителя у семинара не было: любое предложение надо было доказывать. Сохранилась тетрадь с подписями участников всех 39 заседаний 1956–1958 годов.</p>
+          <p class="src-note">Источник: Н. П. Брусенцов, «Из истории создания троичных цифровых машин в МГУ».</p>
+        </div></details></li>
+      <li><details><summary><span>Цифры «Сетуни» — плюс, ноль и минус. Знак числа виден по его старшей ненулевой цифре, а чтобы сменить знак, достаточно поменять все плюсы на минусы, а минусы на плюсы.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Это троичная симметричная, или уравновешенная, система счисления. Разряды весят 1, 3, 9, 27 и так далее, а цифра в разряде равна 1, 0 или −1. Числа удобно записывать знаками:</p>
+          <table class="code"><thead><tr><th scope="col">Число</th><th scope="col">13</th><th scope="col">7</th><th scope="col">6</th><th scope="col">−6</th></tr></thead>
+            <tbody><tr><th scope="row">Троичная запись</th><td>+++</td><td>+−+</td><td>+−0</td><td>−+0</td></tr></tbody></table>
+          <p>В двоичной машине для отрицательных чисел нужен особый разряд знака и дополнительный или обратный код. В троичной симметричной системе этого нет. Число округляют, просто отбрасывая младшие разряды, и ошибки округления в среднем гасят друг друга.</p>
+          <p class="src-note">Источники: Н. П. Брусенцов, Х. Рамиль Альварес, «Троичные ЭВМ „Сетунь“ и „Сетунь 70“» (SORUCOM-2006); Н. П. Брусенцов и др., «Малая автоматическая цифровая машина „Сетунь“», «Вестник Московского университета», 1962.</p>
+        </div></details></li>
+      <li><details><summary><span>К концу 1956 года выбор был сделан: машина будет троичной. Троичная ячейка сложнее двоичной, но вся машина из таких ячеек выходила проще.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Для сравнения в отделе собрали даже макет двоичного арифметического устройства. Но с каждой новой схемой перевес троичной техники становился всё виднее. Брусенцов писал:</p>
+          <blockquote class="doc">«Оказалось, что усложнённость (пусть даже вдвое) трита по сравнению с битом более чем возмещается простотой и естественностью “верхних этажей”, гармоничностью троичной архитектуры в целом».</blockquote>
+          <p class="src-note">Источник: Н. П. Брусенцов, «Из истории создания троичных цифровых машин в МГУ».</p>
+        </div></details></li>
+      <li><details><summary><span>Каждый рабочий день в отделе начинался с «зарядки»: все сотрудники получали по пять ферритовых колечек и обычной иголкой наматывали на каждое по 52 витка.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Колечко было из феррита К-132, внешний диаметр — 3 мм. Сначала наматывали самую трудоёмкую, выходную обмотку из провода толщиной 0,1 мм. Остальные обмотки доделывали техники. Борис Малиновский записал со слов Брусенцова, что колечки получал каждый, «не исключая заведующего». Готовую ячейку — платку 40 на 60 мм — проверяли на стенде. Перед этим колечки и диоды сортировали по группам, и потому брака почти не было. В январе 1956 года в отделе работали заведующий и четыре техника. Опытный образец машины построили восемь выпускников МЭИ и МГУ и двенадцать техников и лаборантов.</p>
+          <p class="src-note">Источники: Н. П. Брусенцов, «Из истории создания троичных цифровых машин в МГУ»; Н. П. Брусенцов, Х. Рамиль Альварес, SORUCOM-2006; Б. Н. Малиновский, «История вычислительной техники в лицах» (1995).</p>
+        </div></details></li>
+      <li><details><summary><span>В декабре 1958 года собранная машина выполнила первые тест-программы. В те же дни Брусенцова на конференции в Киеве попросили рассказать о ней. Глушков потребовал, чтобы доклад был уже на следующий день.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Конференция «Новые разработки в области вычислительной математики и вычислительной техники» шла в Киеве 1–3 декабря 1958 года. Заведующий вычислительным центром МГУ И. С. Березин рассказал о машине В. М. Глушкову. Тот потребовал доклада:</p>
+          <blockquote class="doc">«Вот Вам бумага. Нарисуйте схему. Завтра же будет Ваш доклад».</blockquote>
+          <p>С декабря 1958 года машина работала в опытной эксплуатации. Имя «Сетунь» для неё предложил М. Р. Шура-Бура.</p>
+          <p class="src-note">Источник: Н. П. Брусенцов, «Из истории создания троичных цифровых машин в МГУ».</p>
+        </div></details></li>
+      <li><details><summary><span>В «Сетуни» было 3500 магнитных усилителей и всего 37 электронных ламп. С тем же магнитным барабаном, что у ламповой «Урал-1», она считала в 30–40 раз быстрее.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Кроме усилителей в машине было 330 транзисторов и 10 реле. Она потребляла 2,5 кВА и занимала 25–30 квадратных метров. Двоичная ламповая «Урал-1» потребляла 10 кВт, занимала 75 квадратных метров и выполняла 100 операций в секунду. «Сетунь» с таким же барабаном выполняла в среднем 3–4 тысячи операций в секунду. Главная причина — небольшая быстрая память на ферритовых сердечниках: машина брала с барабана сразу целую страницу. Всех команд у машины было 24. Свой принцип Брусенцов называл так: «Чем естественней и проще, тем лучше».</p>
+          <p class="src-note">Источники: Н. П. Брусенцов и др., «Вестник Московского университета», 1962; Н. П. Брусенцов, «Из истории создания троичных цифровых машин в МГУ»; Виртуальный компьютерный музей, «Урал-1».</p>
+        </div></details></li>
+      <li><details><summary><span>Осенью 1959 года Госкомитет по радиоэлектронике внёс «Сетунь» в список разработок, которые надо прекратить. Видеть её там и не собирались.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Денег на «Сетунь» этот комитет никогда не выделял. Соболев спросил на коллегии, видел ли кто-нибудь машину. Брусенцов приводит ответ директора СКБ-245 В. В. Александрова:</p>
+          <blockquote class="doc">«Нам видеть её и знать о ней не надо — должны быть бумаги с авторитетными подписями и печатями».</blockquote>
+          <p>После заседания Соболев пошёл в ЦК КПСС. К вечеру на машину приехали посмотреть, и вскоре решили её испытать.</p>
+          <p class="src-note">Источник: Н. П. Брусенцов, «Из истории создания троичных цифровых машин в МГУ».</p>
+        </div></details></li>
+      <li><details><summary><span>В апреле 1960 года машину испытала комиссия из четырнадцати человек. За 138 часов работы в «Сетуни» не заменили ни одной детали.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Испытания начались 11 апреля 1960 года. Машина решала пять задач, на каждую уходило от 10 минут до 5 часов. Несколько суток машина работала день и ночь. Из 16 сбоев 9 пришлись на устройства ввода и вывода, а 2 — на барабан, у которого растянулся приводной ремень. В акте от 29 апреля 1960 года комиссия назвала «Сетунь»</p>
+          <blockquote class="doc">«…первым действующим образцом универсальной вычислительной машины на безламповых элементах, создание которой является определённым достижением в вычислительной технике».</blockquote>
+          <p>Комиссия предложила выпускать машину серийно, и Совет министров СССР поручил это Казанскому заводу математических машин.</p>
+          <p class="src-note">Источник: Н. П. Брусенцов, «Из истории создания троичных цифровых машин в МГУ» (текст акта Междуведомственной комиссии).</p>
+        </div></details></li>
+      <li><details><summary><span>В декабре 1962 года казанский завод собрал за месяц семь «Сетуней», а в 1965-м выпуск остановили. Всего построили 50 машин.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>В 1964 году завод поставил 21 машину, в 1965-м — ещё пять. Заявки на «Сетунь» шли, в том числе из-за границы, но выпуск прекратили. Логические ячейки делал Астраханский завод, по 3 рубля 50 копеек за штуку. Вся машина стоила 27,5 тысячи рублей. Из 50 машин 46 имели заводские номера. Они работали от Ашхабада до Якутска, в вузах, институтах и на заводах. В Гидрометцентре на «Сетуни» считали краткосрочный прогноз погоды.</p>
+          <p class="src-note">Источники: Н. П. Брусенцов, «Из истории создания троичных цифровых машин в МГУ»; Н. П. Брусенцов, Х. Рамиль Альварес, SORUCOM-2006; Виртуальный компьютерный музей, «МЦВМ „Сетунь“».</p>
+        </div></details></li>
+      <li><details><summary><span>Опытная «Сетунь» работала в МГУ до 1973 года, а потом её уничтожили — исправную. От неё остался только пульт: его передали в Политехнический музей.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Во внутренних устройствах опытного образца за все годы заменили только три ячейки в первый год, больше ремонта не понадобилось. Брусенцов и Рамиль Альварес называют срок его службы в 17 лет. В хронике лаборатории записано, что машину выключили для демонтажа в июне 1973 года.</p>
+          <p>Чехословакия хотела выпускать «Сетунь» на заводе Яна Швермы в Брно — триста машин уже в первый год. Документацию ей не передали. Брусенцов пишет, что А. Н. Косыгина уверили: «это золото мы должны взять сами». В 1970 году лаборатория Брусенцова построила новую троичную машину, «Сетунь 70».</p>
+          <p class="src-note">Источники: Н. П. Брусенцов, «Из истории создания троичных цифровых машин в МГУ»; Н. П. Брусенцов, Х. Рамиль Альварес, SORUCOM-2006; Ю. С. Владимирова, «Троичные вычислительные машины и связанные с ними исследования в МГУ» (факультет ВМК МГУ, 2023).</p>
+        </div></details></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block" id="theme-inventions">
+  <div class="wrap">
+    <div class="kicker">Вычисления · Русские первенства</div>
+    <h2>Что ещё русские первыми сделали в вычислениях</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Другие дни музея о счёте, машинах и программах — по утверждённому календарю. Часть этих залов ещё готовится.</p>
+    <button class="btn ghost" type="button" id="themeInvBtn" data-label="Показать 3 первенства →" aria-expanded="false" aria-controls="themeInvBody">Показать 3 первенства →</button>
+    <div id="themeInvBody" hidden>
+      <ul class="theme-list">
+        <li><b>19 янв</b> <a href="day-19jan-kantorovich.html">Линейное программирование Канторовича</a></li>
+        <li><b>25 янв</b> <a href="day-25jan-korsakov.html">Машины Корсакова на перфокартах</a></li>
+        <li><b>27 янв</b> <a href="day-27jan-pentium.html">Пентковский и архитектура Pentium III</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="games">
+  <div class="wrap">
+    <div class="kicker">Главное действие · троичные ключи и весы</div>
+    <h2>Набери число тремя знаками</h2>
+    <p style="max-width:62ch">Перед тобой шесть троичных разрядов, как на стенде «Сетуни» для ВДНХ: у каждого ключ на три положения и пара лампочек. Набери пять чисел из списка. Потом взвесь три груза четырьмя гирями — это та же троичная запись, только на весах. В конце расставь даты по порядку.</p>
+    <div class="lab" id="lab">
+      <h3 style="margin:8px 0 6px">1. Шесть разрядов: 243, 81, 27, 9, 3, 1</h3>
+      <div class="tasks" id="tasks" role="group" aria-label="Числа, которые надо набрать"></div>
+      <div class="panel" id="panel" role="group" aria-label="Троичные разряды"></div>
+      <div style="margin-top:10px;display:flex;flex-wrap:wrap;gap:8px">
+        <button class="seg" type="button" id="negBtn">Сменить знак: плюсы ↔ минусы</button>
+        <button class="seg" type="button" id="clrBtn">Все ключи в ноль</button>
+      </div>
+      <div class="readout">
+        <div>Троичная запись<b id="roT">000000</b></div>
+        <div>Число<b id="roD">0</b></div>
+        <div>Двоичная запись того же числа<b id="roB">0</b></div>
+      </div>
+      <div class="lab-msg" id="nMsg" aria-live="polite">Переключай ключи: плюс, ноль или минус.</div>
+
+      <h3 style="margin:22px 0 6px">2. Весы и четыре гири: 1, 3, 9 и 27 кг</h3>
+      <p style="max-width:62ch;margin:0 0 6px;color:var(--muted)">Груз лежит на левой чаше. Каждую гирю можно положить к грузу, оставить в стороне или поставить на правую чашу. Гиря напротив груза — это плюс, рядом с грузом — минус.</p>
+      <div class="tasks" id="loads" role="group" aria-label="Грузы"></div>
+      <div class="scale" aria-hidden="true">
+        <div class="post"></div><div class="beam" id="beam"></div>
+        <div class="pan l" id="panL"></div><div class="pan r" id="panR"></div>
+      </div>
+      <div class="wts" id="wts" role="group" aria-label="Гири"></div>
+      <div class="lab-msg" id="wMsg" aria-live="polite">Выбери груз.</div>
+
+      <h3 style="margin:22px 0 6px">3. Три знака на шкале времени</h3>
+      <p style="max-width:62ch;margin:0 0 6px;color:var(--muted)">Нажимай события по порядку, от самого раннего к самому позднему.</p>
+      <div class="tl" id="tlBox" role="group" aria-label="События для шкалы"></div>
+      <ol class="tl-line" id="tlLine"></ol>
+      <div class="lab-msg" id="tlMsg" aria-live="polite">С чего всё началось?</div>
+      <div class="lab-cap">Ключи и лампочки — по описанию демонстрационного стенда «Сетуни»: троичный сумматор на шесть разрядов с трёхпозиционными ключами и световой индикацией парами лампочек. Записи 13 = +++, 7 = +−+, −6 = −+0 — из статьи Н. П. Брусенцова и Х. Рамиля Альвареса. Задача о гирях — по статье В. В. Шилова о Томасе Фаулере. Двоичная запись дана для сравнения: в двоичной машине у отрицательного числа нужен ещё и знак.</div>
+      <noscript><div class="noscript-box">Для модели нужен JavaScript. Текстовая версия. Разряды весят 243, 81, 27, 9, 3 и 1; цифра в разряде — плюс, ноль или минус. 13 = +++, −6 = −+0, 100 = ++−0+ (81 + 27 − 9 + 1), −40 = −−−−, 364 = ++++++. Чтобы сменить знак, все плюсы меняют на минусы и наоборот. Гири 1, 3, 9 и 27 кг взвешивают любой груз от 1 до 40 кг: 33 кг = 27 + 9 − 3 (гиря 3 кг лежит рядом с грузом), 20 кг = 27 − 9 + 3 − 1, 40 кг = 27 + 9 + 3 + 1. По порядку: 1840 — деревянная троичная машина Фаулера в Лондоне; 1950 — статья Шеннона о симметричной записи чисел; 7 января 1956 — первое заседание семинара; декабрь 1958 — первые тесты «Сетуни»; апрель 1960 — испытания комиссии; декабрь 1962 — семь машин за месяц в Казани; 1970 — «Сетунь 70».</div></noscript>
+    </div>
+    <p class="src-note" style="margin-top:10px">Стенд с ключами и лампочками, испытания 1960 года, выпуск в Казани — Н. П. Брусенцов, «Из истории создания троичных цифровых машин в МГУ»; запись чисел знаками и статья Шеннона 1950 года — Н. П. Брусенцов, Х. Рамиль Альварес, «Троичные ЭВМ „Сетунь“ и „Сетунь 70“» (SORUCOM-2006); задача о гирях и машина Фаулера — В. В. Шилов, «Уравновешенная троичная система счисления и Томас Фаулер» (Виртуальный компьютерный музей).</p>
+  </div>
+</section>
+
+<section class="block" id="pervenstvo">
+  <div class="wrap">
+    <div class="kicker">Проверка факта</div>
+    <h2>Что именно здесь наше</h2>
+    <div class="border-box">
+      <p style="margin-top:0"><b>Граница первенства:</b> «Сетунь» — первая в мире действующая электронная вычислительная машина, построенная на троичном симметричном коде с цифрами плюс, ноль и минус. Она выполнила первые тесты в декабре 1958 года в Вычислительном центре МГУ. И это единственная троичная ЭВМ, которую выпускали серийно: её выпускали в 1961–1965 годах, а всего, считая опытный и выставочный образцы, построили 50 машин, 46 из них с заводскими номерами. Создатели описали машину в «Вестнике Московского университета» в 1962 году.</p>
+      <p><b>Чего здесь нет:</b> саму троичную систему с цифрами −1, 0 и +1 придумали задолго до МГУ. Ещё в 1840 году англичанин Томас Фаулер показал в Лондоне деревянную механическую счётную машину на этой системе. В 1950 году математик Клод Шеннон описал её достоинства в журнальной статье.</p>
+      <p>Акт комиссии 1960 года называет «Сетунь» первой машиной «на безламповых элементах». Факультет ВМК МГУ уточняет: первой отечественной. Это первенство среди советских машин, а не мировое.</p>
+      <p style="margin-bottom:0">Календарь музея говорит, что «Сетунь» вышла «экономичнее ровесниц». Источники это подтверждают — по цене, потребляемой мощности и площади. Но экономию дал не один троичный код — ещё магнитные элементы и быстрая память на ферритах. А троичная ячейка, по словам самого Брусенцова, сложнее двоичной — «пусть даже вдвое».</p>
+    </div>
+    <figure class="fig">
+      <img src="day-07feb-setun-fauler.jpg" data-source="https://commons.wikimedia.org/wiki/File:Description_of_a_Calculating_Machine_Invented_by_Mr._Thomas_Fowler,_of_Torrington_in_Devonshire._(IA_paper-doi-10_1098_rspl_1837_0130).pdf" data-license="Public domain" width="1020" height="541" loading="lazy" alt="Страница старой английской книги, набранная мелким шрифтом: заголовок «Description of a Calculating Machine invented by Mr. Thomas Fowler» и абзац, где упомянуты цифры −1, 0 и +1">
+      <figcaption>Краткое изложение описания машины Томаса Фаулера, составленного Августом де Морганом, в трудах Лондонского королевского общества. В тексте сказано, что машина считает «в троичной системе», где каждая цифра — «−1, 0 или +1», а для перевода чисел нужны таблицы. Викисклад, общественное достояние.</figcaption>
+    </figure>
+    <table class="ctx">
+      <thead><tr><th scope="col">Кто и что</th><th scope="col">Как считала машина</th><th scope="col">Когда</th></tr></thead>
+      <tbody>
+        <tr><td>Т. Фаулер, Англия</td><td>Деревянная механическая машина на троичной системе: умножение и деление, числа переводят по таблицам</td><td>1840</td></tr>
+        <tr><td>К. Шеннон, США</td><td>Статья о симметричной записи чисел — теория, без машины</td><td>1950</td></tr>
+        <tr><td>«Урал-1», Пенза</td><td>Двоичная, на лампах: 100 операций в секунду, 10 кВт, 75 м²</td><td>разработка закончена в 1955</td></tr>
+        <tr><td>«Сетунь», МГУ</td><td>Троичная, на магнитных элементах: 3–4 тысячи операций в секунду с тем же барабаном, 2,5 кВА, 25–30 м²</td><td>декабрь 1958; серия 1961–1965</td></tr>
+        <tr><td>«Сетунь 70», МГУ</td><td>Троичная, новой архитектуры: два стека, программы без трансляции</td><td>апрель 1970</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block" id="quiz">
+  <div class="wrap">
+    <div class="kicker">Проверь себя · 5 вопросов</div>
+    <h2>Викторина</h2>
+    <p style="color:var(--muted);max-width:62ch">На каждый вопрос — одна попытка. После ответа покажем объяснение.</p>
+    <div id="quizBox"></div>
+    <noscript><div class="noscript-box">Для викторины нужен JavaScript. Ответы: 1 — плюс, ноль и минус; 2 — поменять все плюсы на минусы и наоборот; 3 — наматывали витки на ферритовые колечки; 4 — ни одной детали; 5 — 50 машин.</div></noscript>
+  </div>
+</section>
+
+<section class="block" id="result">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Итог дня</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Ключи, весы, шкала дат и викторина вместе дают 100 баллов. Прогресс не сохраняется: перезагрузишь страницу — день начнётся заново.</p>
+    <div class="day-result">
+      <div class="dr-score" id="dayTxt">0 / 100 · звание: Гость дня</div>
+      <div class="dr-bar"><i id="dayBar" style="width:0%"></i></div>
+      <div class="dr-note">Набери пять чисел на троичных ключах, взвесь три груза, расставь даты и ответь на вопросы викторины.</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="sources">
+  <div class="wrap">
+    <div class="kicker">Источники</div>
+    <h2>На чём стоит страница</h2>
+    <ul class="sources">
+      <li><a href="https://web.archive.org/web/20260208053452/https://www.computer-museum.ru/histussr/setun_hist.htm" rel="noopener" target="_blank">Н. П. Брусенцов · «Из истории создания троичных цифровых машин в МГУ»</a>, «Историко-математические исследования», вторая серия, вып. 10 (45), 2005 (Виртуальный компьютерный музей, копия web.archive.org): М-2 и слова Соболева, феррит-диодные элементы, семинар 7 января 1956 года, «зарядка» с намоткой, конференция в Киеве, коллегия ГКРЭ, испытания и акт 1960 года, выпуск в Казани, Чехословакия, 50 машин.</li>
+      <li><a href="https://web.archive.org/web/20251204084405/https://www.computer-museum.ru/histussr/setun_b.htm" rel="noopener" target="_blank">Н. П. Брусенцов, Х. Рамиль Альварес · «Троичные ЭВМ „Сетунь“ и „Сетунь 70“»</a>, материалы конференции SORUCOM-2006 (Виртуальный компьютерный музей): троичный симметричный код, статья Шеннона 1950 года, состав коллектива, цена машины и ячейки, 17 лет работы опытного образца.</li>
+      <li><a href="https://web.archive.org/web/20260403141027/https://www.computer-museum.ru/histussr/setun2.htm" rel="noopener" target="_blank">Н. П. Брусенцов, Е. А. Жоголев, В. В. Веригин, С. П. Маслов, А. М. Тишулина · «Малая автоматическая цифровая машина „Сетунь“»</a>, «Вестник Московского университета», серия 1, 1962, № 4, с. 3–12: требования к машине, 3500 магнитных усилителей, 37 ламп, потребляемая мощность и площадь.</li>
+      <li><a href="https://web.archive.org/web/20250616072527/https://www.computer-museum.ru/histussr/12-6.htm" rel="noopener" target="_blank">«МЦВМ „Сетунь“»</a>, Виртуальный компьютерный музей: годы выпуска, число машин, заводы-изготовители.</li>
+      <li><a href="https://web.archive.org/web/20260411172409/https://computer-museum.ru/precomp/fauler.htm" rel="noopener" target="_blank">В. В. Шилов · «Уравновешенная троичная система счисления и Томас Фаулер»</a>, Виртуальный компьютерный музей: машина Фаулера 1840 года, задача о гирях.</li>
+      <li><a href="https://web.archive.org/web/20251107152521/https://www.computer-museum.ru/histussr/ural1.htm" rel="noopener" target="_blank">«Электронная цифровая вычислительная машина „Урал-1“»</a>, Виртуальный компьютерный музей: скорость, мощность и площадь двоичной ламповой машины.</li>
+      <li><a href="https://web.archive.org/web/20250716141838/http://lib.ru/MEMUARY/MALINOWSKIJ/8.htm" rel="noopener" target="_blank">Б. Н. Малиновский · «История вычислительной техники в лицах», глава «Брусенцов и др.»</a> (Киев: КИТ, 1995; электронная версия lib.ru, копия web.archive.org): рассказ Брусенцова об утренней «зарядке» с намоткой.</li>
+      <li><a href="https://persons.iis.nsk.su/files/persons/pages/rustep08feb23vladimirova.pdf" rel="noopener" target="_blank">Ю. С. Владимирова · «Троичные вычислительные машины и связанные с ними исследования в МГУ»</a>, доклад, факультет ВМК МГУ, 2023 (сайт «Персоналии» ИСИ СО РАН): хроника «Сетуни» — первая задача в декабре 1958 года, выпуск в Казани в 1961–1965 годах, всего 50 машин, выключение опытного образца в июне 1973 года.</li>
+      <li><a href="https://web.archive.org/web/20251205234553/https://cs.msu.ru/persons/17" rel="noopener" target="_blank">«Брусенцов Николай Петрович»</a>, факультет ВМК МГУ: даты жизни, должности, «единственная в мире троичная ЭВМ».</li>
+      <li>Изображения: <a href="https://commons.wikimedia.org/wiki/File:%D0%9F%D0%B8%D0%BE%D0%BD%D0%B5%D1%80_%D1%81%D0%BE%D0%B2%D0%B5%D1%82%D1%81%D0%BA%D0%BE%D0%B9_%D0%B2%D1%8B%D1%87%D0%B8%D1%81%D0%BB%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B9_%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B8_%D0%9D.%D0%9F.%D0%91%D1%80%D1%83%D1%81%D0%B5%D0%BD%D1%86%D0%BE%D0%B2,_10.2009.jpg" rel="noopener" target="_blank">портрет Н. П. Брусенцова</a>, октябрь 2009 — фото Nadir of Moscow, лицензия CC BY-SA 4.0; <a href="https://commons.wikimedia.org/wiki/File:Description_of_a_Calculating_Machine_Invented_by_Mr._Thomas_Fowler,_of_Torrington_in_Devonshire._(IA_paper-doi-10_1098_rspl_1837_0130).pdf" rel="noopener" target="_blank">изложение доклада де Моргана о машине Фаулера</a>, Лондонское королевское общество — общественное достояние.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="calendar">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Календарь изобретений</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Выбери любой день — узнаешь, что русские сделали первыми в мире. Листай месяцы стрелками.</p>
+    <div id="calbox"></div>
+  </div>
+</section>
+
+<section class="block kd" id="kuda-dalshe">
+  <div class="wrap">
+    <div class="kd-kicker">Куда дальше</div>
+    <h2>Музей продолжается</h2>
+    <div class="kd-grid">
+      <div class="kd-card main"><span class="kd-lbl">Следующий день</span><a href="day-18mar-leonov.html">18 марта — Первый выход человека в открытый космос <span class="kd-arr">→</span></a>
+        <p>Раздувшийся скафандр не пускал его обратно в корабль — Леонов стравил кислород и вошёл в шлюз головой вперёд.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Предыдущий день</span><a href="day-06feb-zelinsky.html">6 февраля — Угольный противогаз Зелинского: берёзовый уголь против боевого газа <span class="kd-arr">→</span></a>
+        <p>Химик насыпал берёзовый уголь в платок и вошёл в комнату, полную сернистого газа.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Машины до компьютеров</span><a href="day-25jan-korsakov.html">25 января — машины Корсакова <span class="kd-arr">→</span></a>
+        <p>Ещё в 1832 году Семён Корсаков искал сведения с помощью машин и перфокарт.</p></div>
+      <div class="kd-card main"><span class="kd-lbl">Город-музей</span><a href="../../index.html">Русская цивилизация <span class="kd-arr">→</span></a>
+        <p>Все музеи проекта на одной карте.</p></div>
+    </div>
+    <p style="margin-top:16px"><a href="izobreteniya.html">Посмотреть изобретения по алфавиту →</a></p>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>
+  Русская цивилизация · «Что изобрели русские первыми в мире»</div></footer>
+
+<script type="application/json" data-proof>{"status":"found","claim_id":"rc:izobreteniya:setun:claim-troichnaya-evm-1958","ours":{"kind":"статья создателей машины в научном журнале","title":"«Малая автоматическая цифровая машина “Сетунь”» — Н. П. Брусенцов, Е. А. Жоголев, В. В. Веригин, С. П. Маслов, А. М. Тишулина: описание машины, построенной с использованием троичной системы счисления (числа и команды — троичным кодом с цифрами 1, 0, −1)","date":"1962 (машина работает с декабря 1958)","holder":"«Вестник Московского университета», серия 1, 1962, № 4, с. 3–12; текст — в Виртуальном компьютерном музее","source_url":"https://web.archive.org/web/20260403141027/https://www.computer-museum.ru/histussr/setun2.htm"},"rival":{"name":"Томас Фаулер, Англия: деревянная механическая счётная машина","date":"1840","doc_title":"троичная система с цифрами −1, 0, +1, без электроники; описание А. де Моргана для Королевского общества"}}</script>
+<script src="../../assets/museum-proof.js"></script>
+
+<script>
+/* ── СЧЁТ ── шкала из 100 держит assets/museum-score.js; здесь только реестр наград.
+   пять чисел на ключах 5×6 + три груза на весах 3×8 + шкала дат 16 + викторина 5×6 = 100. */
+window.MUSEUM_SCORE = {awards:{n:[5,6], w:[3,8], tl:16, q:[5,6]},
+  ranks:[[100,'Троичный программист'],[70,'Наладчик'],[40,'Техник с иголкой'],[0,'Гость дня']]};
+</script>
+<script src="../../assets/museum-score.js"></script>
+<script>
+(function(){
+  var $ = function(id){return document.getElementById(id);};
+  $('readBtn').onclick = function(){ $('story').scrollIntoView({behavior:'smooth'}); };
+  $('listenBtn').onclick = function(){ $('audioguide').scrollIntoView({behavior:'smooth'}); };
+  var tb=$('themeInvBtn');
+  tb.onclick=function(){ var b=$('themeInvBody'), open=b.hidden; b.hidden=!open; tb.setAttribute('aria-expanded',open?'true':'false'); tb.textContent=open?'▲ Скрыть':tb.dataset.label; };
+  function sym(d){ return d>0?'+':(d<0?'−':'0'); }
+
+  /* ── 1. КЛЮЧИ ── шесть разрядов с весами 3^5…3^0, цифры −1, 0, +1 (Брусенцов, Рамиль Альварес, SORUCOM-2006).
+     Стенд для ВДНХ: сумматор на шесть разрядов, трёхпозиционные ключи, индикация парами лампочек (Брусенцов, «Из истории…»).
+     Награда за каждое число из списка — когда на ключах набрано именно оно. */
+  var W=[243,81,27,9,3,1], D=[0,0,0,0,0,0], keyBtns=[], lampEls=[];
+  var T=[
+    {v:13,  e:'13 = +++: девять плюс три плюс один. Эту запись приводит сам Брусенцов.'},
+    {v:-6,  e:'−6 = −+0: минус девять плюс три. Знак числа — его старшая ненулевая цифра, здесь минус.'},
+    {v:100, e:'100 = ++−0+: 81 + 27 − 9 + 1. Цифры 2 здесь нет, поэтому 18 записывают как 27 − 9.'},
+    {v:-40, e:'−40 = −−−−: все четыре младших разряда на минусе. Это зеркало числа 40 = ++++.'},
+    {v:364, e:'364 = ++++++ — самое большое число на шести разрядах. Самое маленькое — −364, все минусы.'}
+  ];
+  var tDone=T.map(function(){return false;}), tBtns=[];
+  function nDone(){ return tDone.filter(Boolean).length; }
+  T.forEach(function(t,i){
+    var b=document.createElement('button'); b.type='button'; b.className='seg'; b.textContent=String(t.v).replace('-','−');
+    b.onclick=function(){ nMsg('Набери на ключах '+b.textContent+'.'); };
+    $('tasks').appendChild(b); tBtns.push(b);
+  });
+  W.forEach(function(w,i){
+    var cell=document.createElement('div'); cell.className='trit';
+    var wl=document.createElement('div'); wl.className='w'; wl.textContent='×'+w; cell.appendChild(wl);
+    var lamps=document.createElement('div'); lamps.className='lamps'; lamps.innerHTML='<i></i><i></i>'; cell.appendChild(lamps); lampEls.push(lamps);
+    var key=document.createElement('div'); key.className='key'; key.setAttribute('role','group'); key.setAttribute('aria-label','Разряд '+w);
+    var bs=[];
+    [1,0,-1].forEach(function(d){
+      var b=document.createElement('button'); b.type='button'; b.textContent=sym(d); b.setAttribute('aria-label','Разряд '+w+': '+(d>0?'плюс':(d<0?'минус':'ноль')));
+      b.onclick=function(){ D[i]=d; draw(); check(); };
+      key.appendChild(b); bs.push(b);
+    });
+    keyBtns.push(bs); cell.appendChild(key); $('panel').appendChild(cell);
+  });
+  function val(){ var s=0; for (var i=0;i<6;i++) s+=D[i]*W[i]; return s; }
+  function draw(){
+    for (var i=0;i<6;i++){
+      keyBtns[i].forEach(function(b,k){ b.classList.toggle('on',[1,0,-1][k]===D[i]); });
+      var L=lampEls[i].children; L[0].className=D[i]>0?'p':''; L[1].className=D[i]<0?'m':'';
+    }
+    var v=val();
+    $('roT').textContent=D.map(sym).join('');
+    $('roD').textContent=String(v).replace('-','−');
+    $('roB').textContent=(v<0?'−':'')+Math.abs(v).toString(2);
+  }
+  function nMsg(t,cls){ var m=$('nMsg'); m.className='lab-msg'+(cls?' '+cls:''); m.textContent=t; }
+  function check(){
+    var v=val(), hit=-1;
+    T.forEach(function(t,i){ if (t.v===v) hit=i; });
+    if (hit<0){ nMsg('На ключах '+String(v).replace('-','−')+'. Переключай дальше.'); return; }
+    if (tDone[hit]){ nMsg('Это число уже набрано. '+T[hit].e,'ok'); return; }
+    tDone[hit]=true; tBtns[hit].classList.add('done'); award('n'+hit,6);
+    var n=nDone();
+    nMsg(T[hit].e+(n<5?' Набрано чисел: '+n+' из 5.':' Все пять чисел набраны. Заметь: ни одному отрицательному числу не понадобился отдельный знак.'),'ok');
+  }
+  $('negBtn').onclick=function(){ for (var i=0;i<6;i++) D[i]=-D[i]; draw(); check(); };
+  $('clrBtn').onclick=function(){ D=[0,0,0,0,0,0]; draw(); nMsg('Все ключи в ноль.'); };
+  draw();
+
+  /* ── 2. ВЕСЫ ── задача о гирях 1, 3, 9, 27 для грузов от 1 до 40 кг (Шилов, «Уравновешенная троичная система счисления и Томас Фаулер»).
+     Гиря на правой чаше — плюс, рядом с грузом — минус, в стороне — ноль. */
+  var G=[27,9,3,1], S=[0,0,0,0], gBtns=[];
+  var LD=[
+    {v:33, e:'33 = 27 + 9 − 3: гири 27 и 9 кг напротив груза, гиря 3 кг рядом с ним. Это пример из статьи о Фаулере. В троичной записи — ++−0.'},
+    {v:20, e:'20 = 27 − 9 + 3 − 1. В троичной записи — +−+−: ни одного нуля.'},
+    {v:40, e:'40 = 27 + 9 + 3 + 1, все гири напротив груза. Больше четырьмя гирями не взвесить: 40 = ++++.'}
+  ];
+  var cur=-1, lDone=LD.map(function(){return false;}), lBtns=[];
+  function wMsg(t,cls){ var m=$('wMsg'); m.className='lab-msg'+(cls?' '+cls:''); m.textContent=t; }
+  LD.forEach(function(l,i){
+    var b=document.createElement('button'); b.type='button'; b.className='seg'; b.textContent='Груз '+l.v+' кг';
+    b.onclick=function(){ cur=i; S=[0,0,0,0]; lBtns.forEach(function(x){ x.classList.remove('on'); }); b.classList.add('on'); wDraw(); wMsg('На левой чаше груз '+l.v+' кг. Расставь гири.'); };
+    $('loads').appendChild(b); lBtns.push(b);
+  });
+  G.forEach(function(g,i){
+    var box=document.createElement('div'); box.className='wt'; box.innerHTML='<b>'+g+' кг</b>';
+    var key=document.createElement('div'); key.className='key'; key.setAttribute('role','group'); key.setAttribute('aria-label','Гиря '+g+' кг');
+    var bs=[];
+    [[-1,'к грузу'],[0,'в стороне'],[1,'напротив']].forEach(function(p){
+      var b=document.createElement('button'); b.type='button'; b.textContent=sym(p[0]); b.title=p[1]; b.setAttribute('aria-label','Гиря '+g+' кг — '+p[1]);
+      b.onclick=function(){ if (cur<0){ wMsg('Сначала выбери груз.'); return; } S[i]=p[0]; wDraw(); wCheck(); };
+      key.appendChild(b); bs.push(b);
+    });
+    gBtns.push(bs); box.appendChild(key); $('wts').appendChild(box);
+  });
+  function wDraw(){
+    var L=$('panL'), R=$('panR'); L.innerHTML=''; R.innerHTML='';
+    if (cur>=0){ var s=document.createElement('span'); s.className='load'; s.textContent=LD[cur].v+' кг'; L.appendChild(s); }
+    var left=(cur>=0?LD[cur].v:0), right=0;
+    G.forEach(function(g,i){
+      gBtns[i].forEach(function(b,k){ b.classList.toggle('on',[-1,0,1][k]===S[i]); });
+      if (S[i]!==0){ var s=document.createElement('span'); s.textContent=g; (S[i]>0?R:L).appendChild(s); if (S[i]>0) right+=g; else left+=g; }
+    });
+    var tilt=Math.max(-12,Math.min(12,(right-left)/3));
+    $('beam').style.transform='rotate('+tilt+'deg)';
+    L.style.transform='translateY('+(-tilt*2)+'px)'; R.style.transform='translateY('+(tilt*2)+'px)';
+    return right-left;
+  }
+  function wCheck(){
+    var d=wDraw(), l=LD[cur];
+    if (d!==0){ wMsg(d>0?'Правая чаша тяжелее на '+d+' кг.':'Левая чаша тяжелее на '+(-d)+' кг.'); return; }
+    if (lDone[cur]){ wMsg('Равновесие. '+l.e,'ok'); return; }
+    lDone[cur]=true; lBtns[cur].classList.add('done'); award('w'+cur,8);
+    var n=lDone.filter(Boolean).length;
+    wMsg('Равновесие! '+l.e+(n<3?' Выбери следующий груз.':' Все три груза взвешены. Гиря у груза вычитается, гиря напротив прибавляется — так же «Сетунь» складывала плюсы и минусы.'),'ok');
+  }
+  wDraw();
+
+  /* ── 3. ШКАЛА ── Фаулер, май 1840 — Шилов; Шеннон, 1950 — Брусенцов, Рамиль Альварес, SORUCOM-2006;
+     семинар 7.01.1956, первые тесты 12.1958, испытания 04.1960, семь машин 12.1962, «Сетунь 70» 04.1970 — Брусенцов, «Из истории…». */
+  var TL=[
+    {y:'1840', t:'Томас Фаулер показывает в Лондоне деревянную троичную машину'},
+    {y:'1950', t:'Клод Шеннон пишет статью о симметричной записи чисел'},
+    {y:'7 января 1956', t:'Брусенцов предлагает семинару строить троичную машину'},
+    {y:'декабрь 1958', t:'«Сетунь» выполняет первые тест-программы'},
+    {y:'апрель 1960', t:'Комиссия испытывает машину 138 часов'},
+    {y:'декабрь 1962', t:'Казанский завод собирает семь «Сетуней» за месяц'},
+    {y:'1970', t:'Лаборатория Брусенцова строит «Сетунь 70»'}
+  ];
+  var order=[4,1,6,0,3,5,2], next=0;
+  function tlMsg(t,cls){ var m=$('tlMsg'); m.className='lab-msg'+(cls?' '+cls:''); m.textContent=t; }
+  order.forEach(function(k){
+    var b=document.createElement('button'); b.type='button'; b.className='seg'; b.textContent=TL[k].t;
+    b.onclick=function(){
+      if (b.disabled) return;
+      if (k===next){
+        b.disabled=true; b.classList.add('ok');
+        var li=document.createElement('li'); li.innerHTML='<b>'+TL[k].y+'</b>'; li.appendChild(document.createTextNode(TL[k].t)); $('tlLine').appendChild(li);
+        next++;
+        if (next===TL.length){ award('tl',16); tlMsg('Шкала собрана. Троичную систему знали больше ста лет, но электронную машину на ней первыми построили в МГУ — и выпускали её серийно.','ok'); }
+        else tlMsg('Верно. Что было дальше?','ok');
+      } else {
+        tlMsg('Это было позже. Сначала найди событие, которое случилось раньше.','bad');
+      }
+    };
+    $('tlBox').appendChild(b);
+  });
+
+  /* ── ВИКТОРИНА ── один ответ на вопрос; дистракторы сверены с источниками страницы. */
+  var Q = [
+    {q:'Какими тремя цифрами считала «Сетунь»?', o:['0, 1 и 2','Плюс, ноль и минус','1, 2 и 3'], a:1,
+     e:'«Сетунь» работала в троичной симметричной системе: цифры 1, 0 и −1. Их удобно писать знаками: плюс, ноль, минус.'},
+    {q:'Как в троичной симметричной записи сменить знак числа?', o:['Дописать впереди минус','Поменять все плюсы на минусы и наоборот','Прибавить единицу'], a:1,
+     e:'Смена знака — это замена всех плюсов на минусы и всех минусов на плюсы. Особого разряда знака не нужно.'},
+    {q:'С чего начинался каждый рабочий день в отделе Брусенцова?', o:['С проверки ламп','С собрания у Соболева','С намотки витков на ферритовые колечки'], a:2,
+     e:'Брусенцов называл это «зарядкой»: каждый сотрудник получал пять колечек и наматывал на каждое 52 витка обычной иголкой.'},
+    {q:'Сколько деталей заменили в «Сетуни» за 138 часов испытаний в апреле 1960 года?', o:['Ни одной','Три ячейки','Все лампы'], a:0,
+     e:'За время испытаний в машине не заменили ни одной детали. Большая часть сбоев пришлась на устройства ввода и вывода.'},
+    {q:'Сколько «Сетуней» построили всего?', o:['Одну','50','Больше тысячи'], a:1,
+     e:'С опытным и выставочным образцами — 50 машин, из них 46 с заводскими номерами. В 1965 году выпуск прекратили.'}
+  ];
+  var qb = $('quizBox');
+  Q.forEach(function(it, qi){
+    var wrap = document.createElement('div');
+    var h = document.createElement('p'); h.className='quiz-q'; h.textContent=(qi+1)+'. '+it.q; wrap.appendChild(h);
+    var exp = document.createElement('div'); exp.className='exp'; exp.setAttribute('aria-live','polite');
+    var btns = it.o.map(function(txt, oi){
+      var b=document.createElement('button'); b.type='button'; b.className='opt'; b.textContent=txt;
+      b.onclick=function(){
+        if (wrap.dataset.done) return; wrap.dataset.done='1';
+        btns.forEach(function(x,xi){ x.disabled=true; if (xi===it.a) x.classList.add('correct'); });
+        if (oi===it.a){ award('q'+qi,6); exp.textContent='Верно. '+it.e; }
+        else { b.classList.add('wrong'); exp.textContent='Не совсем. '+it.e; }
+        exp.classList.add('show');
+      };
+      wrap.appendChild(b); return b;
+    });
+    wrap.appendChild(exp); qb.appendChild(wrap);
+  });
+})();
+</script>
+<script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
+<script>window.MUSEUM_CHROME={
+  museum:{title:'Что изобрели русские первыми в мире',href:'index.html'},
+  share:{title:'«Сетунь» Брусенцова: машина, которая считала тремя знаками — музей «Что изобрели русские первыми в мире»',
+         text:'В 1958 году в МГУ заработала «Сетунь» Николая Брусенцова — первая в мире электронная вычислительная машина, которая считала тремя знаками. Что Россия дала миру раньше всех — день за днём.'},
+  prev:{href:'day-06feb-zelinsky.html',title:'6 февраля · Противогаз Зелинского'},
+  next:{href:'day-07feb-setun.html',title:'7 февраля · «Сетунь»'},
+  all:{href:'index.html',label:'Все изобретения'},
+  city:'../../index.html',
+  random:['day-01jan-cabletv.html','day-02jan-luna1.html','day-03jan-anosov.html','day-04jan-pilchikov.html','day-05jan-shukhov.html','day-06jan-orlov.html','day-08jan-icebreaker.html','day-09jan-blinov.html','day-10jan-britnev.html','day-11jan-kostovich.html','day-12jan-r7.html','day-13jan-k278.html','day-14jan-lira.html','day-15jan-kovalevskaya.html','day-16jan-soyuz45.html','day-19jan-kantorovich.html','day-21jan-obninsk.html','day-22jan-landau.html','day-23jan-umov.html','day-24jan-k162.html','day-25jan-korsakov.html','day-26jan-podvodnaya.html','day-27jan-pentium.html','day-28jan-havkin.html','day-30jan-kotelnikov.html','day-31jan-girotron.html','day-01feb-bekhterev.html','day-02feb-edinorog.html','day-03feb-luna9.html','day-04feb-samovar.html','day-05feb-boldyrev.html','day-06feb-zelinsky.html','day-07feb-setun.html','day-18mar-leonov.html','day-15may-mechnikov.html','day-16jun-tereshkova.html','day-26sep-pavlov.html','day-15nov-buran.html','day-25nov-pirogov.html','day-01dec-lobachevsky.html','day-14dec-laser.html']
+};</script>
+<script src="../../assets/museum-chrome.js"></script>
+<script>window.MUSEUM_SUPPORT={museum:'Что изобрели русские первыми в мире'};</script>
+<script src="../../assets/museum-support.js"></script>
+<script src="calendar-izobreteniya.js"></script>
+<script>window.MUSEUM_CALENDAR_INITIAL='02-07';</script>
+<script src="../../assets/museum-calendar-month.js"></script>
+<script>window.MUSEUM_RETURN={riddle:{q:"Сколько ферритовых колечек получал каждый сотрудник отдела Брусенцова на утреннюю «зарядку» и сколько витков на каждое наматывал?",a:"Пять колечек по 52 витка — обычной иголкой. Из таких колечек и диодов собрали логические ячейки «Сетуни».",src:"Н. П. Брусенцов, «Из истории создания троичных цифровых машин в МГУ», 2005"}};</script>
+<script src="../../assets/museum-return.js" data-museum="izobreteniya" data-day="02-07"></script>
+<script defer src="../../assets/analytics.js"></script>
+
+
+
+
+
+
+
+<script>window.MUSEUM_AUDIOGUIDE={
+  audioSrc:"audio-guide-setun-ru.mp3",
+  durationLabel:"2 минуты 58 секунд",
+  lead:"Голос ведёт по залу Николая Брусенцова: портрет главного конструктора, ферритовые колечки и утренняя «зарядка», три знака вместо двух, «чёрный список» и испытания 1960 года, пятьдесят машин и уничтоженный опытный образец. Шесть остановок, на каждой — что искать глазами. Слушать можно фоном, пока читаешь историю ниже.",
+  stops:[
+    {t:0,mark:"0:00",title:"Портрет у входа"},
+    {t:30,mark:"0:30",title:"Своя машина"},
+    {t:60,mark:"1:00",title:"Утренняя зарядка"},
+    {t:85,mark:"1:25",title:"Три знака"},
+    {t:114,mark:"1:54",title:"Без бумаг с печатями"},
+    {t:142,mark:"2:22",title:"Пятьдесят машин"}
+  ],
+  transcript:[
+    "<p>Портрет Н. П. Брусенцова, октябрь 2009 — фото Nadir of Moscow, Викисклад, CC BY-SA 4.0; даты жизни — факультет ВМК МГУ; декабрь 1958 года — Н. П. Брусенцов, «Из истории создания троичных цифровых машин в МГУ».</p>",
+    "<p>Факты: М-2, слова С. Л. Соболева, ЛЭМ-1 и феррит-диодные элементы — Н. П. Брусенцов, «Из истории создания троичных цифровых машин в МГУ».</p>",
+    "<p>Факты: «зарядка» с намоткой — Н. П. Брусенцов, «Из истории…», и Б. Н. Малиновский, «История вычислительной техники в лицах», 1995; 3500 магнитных усилителей и 37 ламп — Н. П. Брусенцов и др., «Вестник Московского университета», 1962, № 4.</p>",
+    "<p>Факты: троичный симметричный код, 13 = +++, смена знака — Н. П. Брусенцов, Х. Рамиль Альварес, «Троичные ЭВМ “Сетунь” и “Сетунь 70”», SORUCOM-2006.</p>",
+    "<p>Факты: коллегия ГКРЭ осенью 1959 года, испытания в апреле 1960 года — Н. П. Брусенцов, «Из истории…».</p>",
+    "<p>Факты: 50 машин, выпуск до 1965 года, пульт в Политехническом музее — Н. П. Брусенцов, «Из истории…»; машина Фаулера 1840 года — В. В. Шилов, «Уравновешенная троичная система счисления и Томас Фаулер»; опытный образец выключен в июне 1973 года — Ю. С. Владимирова, ВМК МГУ, 2023.</p>"
+  ],
+  note:"Озвучено синтезом речи — временно, до записи голосом автора музея."
+};</script>
+<script src="../../assets/museum-audioguide.js"></script>
+</body>
+</html>

@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="ru" data-museum="izobreteniya">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Особая форма заболевания: Бехтерев и одеревенелость позвоночника — Что изобрели русские первыми в мире, 1 февраля</title>
+<!--
+  Страница дня 1 февраля. Наряд stranicy-izob-0910 (claude2, 13.10.2026), карточка #762.
+  Форма — вариант А музея изобретений (Сергей 12.09.2026): лента ударов, подробности свёрнуты.
+  Паспорт выпуска: rc-museum-production/izobreteniya/day-01feb-bekhterev/passport/issue.json
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --dark:#060c17; --dark2:#0c1826; --surface:#111f33;
+    --card:rgba(255,255,255,.05); --card-b:rgba(255,255,255,.09);
+    --gold:#c9a84c; --gold-l:#e4c97a; --gold-g:rgba(201,168,76,.13);
+    --ink:#e8eef5; --muted:#7a9ab8; --line:rgba(255,255,255,.07);
+    --accent:#2d8cbf; --accent2:#1f6f8b;
+    /* legacy compat */
+    --paper:#0c1826; --paper2:#111f33;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Inter','Segoe UI',sans-serif;color:var(--ink);background:var(--dark);line-height:1.72}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.13;margin:0}
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent)}
+
+  /* ── ШАПКА ── */
+  header.top{background:rgba(6,12,23,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--card-b);color:#fff;position:sticky;top:0;z-index:30}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+  .logo svg{display:block;filter:drop-shadow(0 0 8px rgba(201,168,76,.4))}
+  .logo .lt{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:16px}
+  .logo .lt small{display:block;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-family:'Inter',sans-serif}
+  .score{background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:6px 16px;font-size:13px;color:var(--gold-l);cursor:pointer;font-family:'Inter',sans-serif}
+  .score-info{position:absolute;right:12px;top:66px;max-width:260px;background:#0e1c30;color:var(--ink);border:1px solid var(--card-b);border-radius:14px;padding:14px 16px;font-size:13px;line-height:1.6;box-shadow:0 20px 60px rgba(0,0,0,.6);display:none;z-index:40}
+  .score-info.show{display:block}
+
+  /* ── HERO — СТАНДАРТ (не менять): 3D-сцена сверху, текст отдельным блоком ниже ── */
+  .hero-scene{position:relative;height:52vh;min-height:300px;max-height:520px;overflow:hidden;background:linear-gradient(160deg,#0a1e3a 0%,#1a3a6a 55%,#0d2240 100%)}
+  .hero-scene canvas.scene,.hero-scene img.scene{width:100%;height:100%;display:block;object-fit:cover}
+  .scene-caption{background:#060d18;padding:11px 0 12px}
+  .scene-caption .wrap{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+  .scene-cap{font-size:13.5px;line-height:1.6;color:var(--muted);border-left:2px solid rgba(201,168,76,.4);padding-left:14px;flex:1 1 420px}
+  .scene-hint{flex:0 0 auto;font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.4px;color:#e4c97a;
+    background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.34);border-radius:24px;padding:7px 16px;font-weight:600}
+  .hero-lead{background:linear-gradient(180deg,#0c1826 0%,#060c17 100%);color:#fff;padding:28px 0 38px}
+  .hero-lead .museum{color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:12px;opacity:.9}
+  .hero-lead .who{font-family:'Inter',sans-serif;font-size:clamp(13px,3vw,15px);letter-spacing:.4px;color:var(--accent-l,#7dc8ff);margin-bottom:10px}
+  .hero-lead .who i{font-style:normal;color:#7893ab;font-weight:400}
+  .hero-lead h1{color:#fff;font-size:56px;font-weight:900;line-height:1.04;margin-bottom:16px}
+  .hero-lead .hook{color:#b8ccde;font-size:19px;max-width:580px;margin-bottom:28px;line-height:1.65;font-weight:400}
+  .hero-lead .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+  @media(max-width:680px){.hero-lead h1{font-size:34px}.hero-lead .hook{font-size:16px}
+    .hero-scene{height:34vh;min-height:230px;max-height:300px}
+    .scene-caption .wrap{flex-direction:column;gap:9px}
+    .scene-hint{order:-1;align-self:flex-start;font-size:11.5px;padding:6px 13px}
+    .scene-cap{font-size:12.8px;flex:1 1 auto}}
+  .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:16px;font-family:'Inter',sans-serif;letter-spacing:.5px}
+
+  /* ── НАВИГАЦИЯ ДНЯ ── */
+  .daynav{position:sticky;top:64px;z-index:25;background:rgba(6,12,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-b)}
+  .daynav .wrap{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+  .daynav::-webkit-scrollbar{display:none}
+  .daynav a{flex:0 0 auto;padding:14px 20px;font-size:11px;font-weight:700;font-family:'Inter',sans-serif;color:var(--muted);text-decoration:none;white-space:nowrap;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:.18s}
+  .daynav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+  /* ── СЕКЦИИ ── */
+  section.block{padding:64px 0;border-bottom:1px solid var(--line);scroll-margin-top:130px}
+  .kicker{font-size:10px;text-transform:uppercase;letter-spacing:3.5px;color:var(--gold);font-weight:700;font-family:'Inter',sans-serif;margin-bottom:8px}
+  section.block h2{font-size:34px;color:#fff;margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink)}
+  .pull{background:var(--gold-g);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 14px 14px 0;font-style:italic;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-size:20px;line-height:1.5;margin:26px 0}
+
+  /* ── КНОПКИ ── */
+  .btn{cursor:pointer;border:none;border-radius:12px;padding:14px 26px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;background:var(--accent2);color:#fff;transition:.18s;letter-spacing:.2px}
+  .btn:hover{filter:brightness(1.18)}
+  .btn.ghost{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid var(--card-b)}
+  .btn.ghost:hover{background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.2)}
+  .btn.gold{background:linear-gradient(135deg,var(--gold),#b8882b);color:#1a0f00;box-shadow:0 4px 20px rgba(201,168,76,.25)}
+  .btn.gold:hover{filter:brightness(1.1);box-shadow:0 6px 28px rgba(201,168,76,.4)}
+  .btn:active{transform:translateY(1px)}
+  .pulse{animation:pulse .9s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+
+  /* ── КАРТОЧКИ ── */
+  .card{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:20px 22px;margin:16px 0;backdrop-filter:blur(6px)}
+
+  /* ── КВИЗ ── */
+  .opt{display:block;width:100%;text-align:left;background:rgba(255,255,255,.04);border:1px solid var(--card-b);border-radius:12px;padding:13px 16px;margin:8px 0;cursor:pointer;font-size:15px;color:var(--ink);font-family:'Inter',sans-serif;transition:.16s}
+  .opt:hover{border-color:var(--accent);background:rgba(45,140,191,.08)}
+  .opt.correct{background:rgba(40,120,60,.18);border-color:#3f9b52;color:#7ed4a0;font-weight:600}
+  .opt.wrong{background:rgba(180,40,40,.13);border-color:#c0453f;color:#f08080}
+  .exp{margin-top:10px;font-size:14px;background:var(--gold-g);border-radius:10px;padding:12px 14px;display:none;color:var(--gold-l)}
+  .exp.show{display:block}
+
+  /* ── ИТОГ ДНЯ ── */
+  .day-result{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:22px 24px;max-width:460px}
+  .dr-rank{font-family:'Playfair Display',Georgia,serif;font-size:28px;color:var(--gold-l);font-weight:700}
+  .dr-score{font-size:16px;margin:4px 0 12px;color:var(--ink)}.dr-score span{color:var(--muted);font-size:14px}
+  .dr-bar{height:8px;background:rgba(255,255,255,.08);border-radius:6px;overflow:hidden}
+  .dr-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),var(--gold));transition:width .6s cubic-bezier(.2,.7,.2,1)}
+  .dr-note{margin-top:12px;font-size:14px;color:var(--muted)}
+
+  /* ── РЕКЛАМНЫЕ СЛОТЫ ── */
+  .ad-slot{position:relative;margin:26px 0;background:rgba(255,255,255,.02);border:1px dashed rgba(255,255,255,.1);border-radius:14px;min-height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px}
+  .ad-slot .lbl{position:absolute;top:7px;right:12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.15);font-family:'Inter',sans-serif}
+  .ad-slot .ph-txt{font-size:12px;max-width:80%;color:rgba(255,255,255,.18)}
+  .ad-slot.billboard{min-height:108px}
+  .adband{background:transparent;border-bottom:none}
+
+  footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
+  .crumbs{background:rgba(6,12,23,.6);border-bottom:1px solid var(--card-b);font-family:'Inter',sans-serif;font-size:12.5px}
+  .crumbs .wrap{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  .crumbs a{color:var(--gold-l);text-decoration:none;white-space:nowrap}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--muted);opacity:.6}
+  .crumbs .here{color:var(--muted);white-space:nowrap}
+
+
+  /* ── ШАПКА: четыре строки по museum-core §6-бис ── */
+  header.top{display:block;text-align:center;padding:10px 12px 8px;height:auto;position:relative}
+  header.top .b1{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:15px;letter-spacing:.5px;color:#fff}
+  header.top .b2{font-size:11px;color:var(--muted);margin-top:2px}
+  header.top .b3{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:6px}
+  header.top .b4{font-size:12.5px;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-style:italic}
+  header.top .score{position:absolute;right:12px;top:10px}
+  .daynav{top:0}
+  .hero-scene{background:#0e1c2c;height:38vh;min-height:250px;max-height:400px}
+  @media(max-width:680px){.hero-lead h1{font-size:31px}}
+  .hero-scene img.scene{object-fit:cover;object-position:50% 42%}
+  .date-origin{font-size:13px;color:#9fb4c8;margin:-6px 0 12px;max-width:62ch}
+  .hero-lead .hook{color:#c6d8e8;max-width:62ch}
+  .hero-under{background:linear-gradient(180deg,#060d18,#060c17);padding:4px 0 22px}
+  .stamp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(125,200,255,.28);margin-top:14px}
+  .stamp>div{padding:11px 12px;border-left:1px solid rgba(125,200,255,.16);min-width:0}
+  .stamp>div:first-child{border-left:0}
+  .stamp .v{font-size:clamp(15px,3.4vw,21px);font-weight:700;color:#8fd3ff;line-height:1.1;overflow-wrap:anywhere}
+  .stamp .k{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#8fa5b9;margin-top:5px}
+  @media(max-width:600px){.stamp{grid-template-columns:repeat(2,minmax(0,1fr))}.stamp>div:nth-child(3){border-left:0}.stamp>div:nth-child(n+3){border-top:1px solid rgba(125,200,255,.16)}}
+
+  /* ── ЛЕНТА УДАРОВ (museum-inventions, вариант А; museum-core §5-бис) ── */
+  .udary{list-style:none;margin:18px 0 0;padding:0;counter-reset:u}
+  .udary>li{border-top:1px solid var(--line);padding:4px 0}
+  .udary details>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:34px 1fr;gap:10px;padding:12px 0;font-size:17px;line-height:1.55;color:var(--ink)}
+  .udary details>summary::-webkit-details-marker{display:none}
+  .udary details>summary::before{counter-increment:u;content:counter(u);font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:20px;color:var(--gold);line-height:1.3}
+  .udary .more-lbl{display:block;grid-column:2;font-size:12.5px;color:var(--gold-l);letter-spacing:.3px;margin-top:4px}
+  .udary .more-lbl::after{content:' ▾'}
+  .udary details[open] .more-lbl::after{content:' ▴'}
+  .udary details[open] .more-lbl .o{display:none}
+  .udary details:not([open]) .more-lbl .c{display:none}
+  .udary summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+  .udary .det{margin:0 0 14px 44px;padding:12px 16px;background:rgba(255,255,255,.035);border-left:2px solid rgba(201,168,76,.45);border-radius:0 10px 10px 0;font-size:15px;color:#d5e0ea}
+  .udary .det p{margin:8px 0}
+  .udary .tag{display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1a0f00;background:var(--gold-l);border-radius:6px;padding:1px 7px;margin-right:6px}
+  .udary .find{border-left:3px solid var(--gold);padding-left:8px}
+  figure.fig{margin:18px 0}
+  figure.fig img{max-width:100%;height:auto;border-radius:10px;display:block}
+  figure.fig figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5}
+  .src-note{font-size:12px;color:#8fa5b9}
+
+  /* ── МОДЕЛЬ ДНЯ (главное предметное действие) ── */
+  .lab{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:18px 18px 20px;margin-top:14px}
+  .lab-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+  .lab-row .lbl{flex:0 0 100%;font-size:13px;color:var(--muted);letter-spacing:.3px}
+  .seg{cursor:pointer;border:1px solid var(--card-b);background:rgba(255,255,255,.04);color:var(--ink);border-radius:10px;padding:10px 14px;font:inherit;font-size:14.5px;min-height:44px}
+  .seg[aria-pressed="true"]{border-color:var(--gold);background:var(--gold-g);color:var(--gold-l);font-weight:600}
+  .seg:focus-visible,.btn:focus-visible,.opt:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .lab-stage{position:relative;margin-top:12px}
+  .lab-stage canvas{width:100%;height:auto;display:block;border-radius:10px;background:#1c2530}
+  .lab-cap{font-size:12px;color:#8fa5b9;margin-top:6px}
+  .lab-msg{margin-top:12px;font-size:15.5px;padding:12px 14px;border-radius:10px;background:rgba(255,255,255,.04);border-left:3px solid var(--card-b);min-height:48px}
+  .lab-msg.ok{border-left-color:#3f9b52;background:rgba(40,120,60,.14)}
+  .lab-msg.bad{border-left-color:#c0453f;background:rgba(180,40,40,.10)}
+  .lab-found{font-size:13px;color:var(--muted);margin-top:8px}
+  .lab-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .noscript-box{background:rgba(255,255,255,.04);border:1px dashed var(--card-b);border-radius:12px;padding:12px 16px;font-size:15px}
+
+  /* ── ГРАНИЦА ПЕРВЕНСТВА ── */
+  .border-box{background:rgba(45,140,191,.08);border:1px solid rgba(45,140,191,.3);border-radius:14px;padding:16px 18px}
+  .border-box b{color:#8fd3ff}
+  .ctx{width:100%;border-collapse:collapse;margin-top:14px;font-size:14.5px}
+  .ctx th,.ctx td{text-align:left;padding:9px 8px;border-top:1px solid var(--line);vertical-align:top}
+  .ctx th{color:var(--gold-l);font-weight:600;font-size:12.5px;letter-spacing:.5px}
+  .quiz-q{margin:18px 0 6px;font-weight:600}
+  .sources a{color:var(--gold-l)}
+  .sources li{margin:6px 0;font-size:14px;color:#c8d6e2}
+  @media(max-width:600px){header.top{padding:8px 64px 6px}header.top .score{top:8px;right:8px;padding:4px 10px;font-size:12px}header.top .b3{margin-top:3px}
+    .hero-scene{height:26vh;min-height:200px;max-height:260px}.date-origin{font-size:12px;margin:-8px 0 8px}.hero-lead{padding:18px 0 26px}.hero-lead .date-chip{margin-bottom:12px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+  /* ── ПОЛЗУНКИ МОДЕЛИ (19, 21 янв) ── */
+  .mtab{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+  .mrow{display:grid;grid-template-columns:minmax(150px,1.2fr) 2fr 92px;gap:12px;align-items:center}
+  .mrow .mname{font-size:14.5px}
+  .mrow .mname i{font-style:normal;color:var(--muted);font-size:13px}
+  .mrow input[type=range]{width:100%;accent-color:var(--gold);min-height:44px}
+  .mrow output{font-size:14px;color:var(--gold-l);text-align:right}
+  .mrow.off{opacity:.45}
+  .mult{margin-top:14px;padding:14px 16px;border-radius:12px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25)}
+  @media(max-width:560px){.mrow{grid-template-columns:1fr 70px}.mrow .mname{grid-column:1/-1}}
+</style>
+<meta name="description" content="В 1892 году казанский профессор В. М. Бехтерев описал пятерых больных с неподвижным согнутым позвоночником как особую форму болезни — её и сегодня зовут болезнью Бехтерева.">
+<link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-01feb-bekhterev.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Русская цивилизация">
+<meta property="og:title" content="Особая форма заболевания: Бехтерев и одеревенелость позвоночника">
+<meta property="og:description" content="В 1892 году казанский профессор В. М. Бехтерев описал пятерых больных с неподвижным согнутым позвоночником как особую форму болезни — её и сегодня зовут болезнью Бехтерева.">
+<meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-01feb-bekhterev.html">
+<meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-01feb-bekhterev.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Особая форма заболевания: Бехтерев и одеревенелость позвоночника", "description": "В 1892 году казанский профессор В. М. Бехтерев описал пятерых больных с неподвижным согнутым позвоночником как особую форму болезни — её и сегодня зовут болезнью Бехтерева.", "url": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-01feb-bekhterev.html", "inLanguage": "ru", "isPartOf": {"@type": "WebSite", "name": "Музей «Что изобрели русские первыми в мире»"}, "publisher": {"@type": "Organization", "name": "Русская цивилизация"}, "about": {"@type": "Person", "name": "Владимир Михайлович Бехтерев"}, "image": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-01feb-bekhterev.jpg"}</script>
+<style>
+  /* ── ПРИЁМ ДОКТОРА БЕХТЕРЕВА ── */
+  .pat-card{background:rgba(255,255,255,.03);border:1px solid var(--card-b);border-radius:10px;padding:10px 12px;margin-top:10px;font-size:14.5px}
+  .pat-card b{color:#f1d58a}
+  .exam-log{list-style:none;padding:0;margin:10px 0 0;display:grid;gap:6px}
+  .exam-log li{background:rgba(255,255,255,.035);border-left:3px solid var(--card-b);border-radius:8px;padding:8px 10px;font-size:14.5px}
+  .exam-log li .t{display:block;font-size:12px;color:var(--muted);letter-spacing:.3px}
+  .exam-log li.new{border-left-color:var(--gold)}
+  .verdict{margin-top:16px;padding:12px 14px;border:1px dashed var(--card-b);border-radius:12px}
+  .verdict label{display:flex;gap:10px;align-items:flex-start;padding:7px 0;font-size:15px;cursor:pointer}
+  .verdict input{margin-top:4px;width:18px;height:18px;accent-color:#c9a84c;flex:0 0 auto}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="b1">Русская цивилизация</div>
+  <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
+  <div class="b3">Что изобрели русские первыми в мире</div>
+  <div class="b4">365 изобретений. Все русские. Все первые</div>
+  <div class="score" id="scoreBox" title="Баллы знаний за этот день">⭐ <span id="score">0</span> / 100</div>
+</header>
+
+<nav class="crumbs" aria-label="Хлебные крошки"><div class="wrap">
+  <a href="../../index.html">Русская цивилизация</a>
+  <span class="sep">›</span>
+  <a href="index.html">Что изобрели русские первыми в мире</a>
+  <span class="sep">›</span>
+  <span class="here">1 февраля · Бехтерев</span>
+</div></nav>
+
+<div class="hero-scene" id="hero" style="background:#d8cdb2">
+  <img class="scene" src="day-01feb-bekhterev.jpg" style="object-fit:contain" data-source="https://commons.wikimedia.org/wiki/File:Bekhterev_by_Repin.jpg" data-license="Public domain" width="711" height="1000" alt="Живописный портрет: седобородый мужчина в светлом военном кителе с погонами сидит, положив руку на резной подлокотник кресла; за ним светлый зал с фонтаном" fetchpriority="high">
+</div>
+
+<div class="scene-caption">
+  <div class="wrap">
+    <div class="scene-cap">И. Е. Репин. Портрет В. М. Бехтерева, 1913 год. Государственный Русский музей. Викисклад, общественное достояние.</div>
+    <span class="scene-hint">Предмет · портрет учёного</span>
+  </div>
+</div>
+
+<header class="hero-lead">
+  <div class="wrap">
+    <div class="date-chip">1 февраля · 1857</div>
+    <p class="date-origin">1 февраля (20 января по старому стилю) 1857 года родился Владимир Бехтерев. Статья об «одеревенелости позвоночника» вышла в 1892 году.</p>
+    <div class="who">Владимир Михайлович Бехтерев <i>· невропатолог и психиатр, Казанский университет</i></div>
+    <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
+    <h1>Особая форма заболевания: Бехтерев и одеревенелость позвоночника</h1>
+    <p class="hook">В 1892 году казанский профессор описал пятерых больных, чей позвоночник застыл дугой и почти не болел, — и болезнь до сих пор носит его имя.</p>
+    <div class="hero-btns">
+      <button class="btn gold" id="readBtn" type="button">Читать историю ↓</button>
+      <button class="btn ghost" id="listenBtn" type="button">🎧 Слушать аудиогид</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero-under">
+  <div class="wrap">
+    <div class="stamp">
+      <div><div class="v">1892</div><div class="k">статья в журнале «Врач», № 36</div></div>
+      <div><div class="v">5 больных</div><div class="k">и пять общих признаков болезни</div></div>
+      <div><div class="v">1.07.1893</div><div class="k">та же статья по-немецки, с поправкой автора</div></div>
+      <div><div class="v">1897–1898</div><div class="k">описания Штрюмпеля и Мари</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="daynav" aria-label="Разделы дня">
+  <div class="wrap">
+    <a href="#story">Читать</a>
+    <a href="#audioguide">Слушать</a>
+    <a href="#games">Приём</a>
+    <a href="#pervenstvo">Первенство</a>
+    <a href="#quiz">Викторина</a>
+    <a href="#calendar">Календарь</a>
+  </div>
+</nav>
+
+<section class="wrap" id="dokument" data-proof-block></section>
+
+<section class="block" id="audioguide"></section>
+
+<section class="block" id="story">
+  <div class="wrap">
+    <div class="kicker">История первенства · 12 ударов</div>
+    <h2>От карты мозга — к «особой форме заболевания»</h2>
+    <p style="color:var(--muted);max-width:62ch">Читается подряд. Нажми на удар — откроется подробный разбор с источниками.</p>
+    <ol class="udary">
+      <li><details><summary><span>Владимир Бехтерев родился 1 февраля 1857 года (20 января по старому стилю) в селе Сарали Вятской губернии, в семье станового пристава.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Отец рано умер, семья жила в Вятке. В 1873 году, окончив семь классов Вятской гимназии, Бехтерев поступил в Медико-хирургическую академию в Петербурге. В 1878 году окончил её, и его оставили при кафедре душевных болезней, в клинике профессора И. П. Мержеевского. Музей истории медицины Кировской области оговаривается: точная дата рождения неизвестна, но большинство источников принимает именно эту.</p>
+          <p class="src-note">Источник: Виртуальный музей истории медицины Кировской области, «Владимир Михайлович Бехтерев» (раздел «Персоналии»).</p>
+        </div></details></li>
+      <li><details><summary><span>В 1884–1885 годах он шестнадцать месяцев учился в клиниках и лабораториях Берлина, Лейпцига, Парижа, Мюнхена и Вены.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Он смотрел больных у К. Вестфаля и Ж. Шарко, работал у Э. Дюбуа-Реймона, в лаборатории П. Флексига и в институте К. Людвига, слушал семинар по экспериментальной психологии В. Вундта, бывал у Б. Гуддена и Т. Мейнерта. Только за 1885 год у него вышло 17 работ, пять из них — на немецком языке.</p>
+          <p class="src-note">Источник: «Новости украинской психиатрии», «Памяти академика В. М. Бехтерева (к 155-летию со дня рождения)».</p>
+        </div></details></li>
+      <li><details><summary><span>С осени 1885 года 28-летний Бехтерев возглавил кафедру душевных болезней Казанского университета и устроил при ней лабораторию.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Кафедру пришлось создавать заново. Экстраординарным профессором его назначили 3 октября 1885 года, а руководил он ею до октября 1893-го. Биографы пишут, что казанская лаборатория экспериментальной психологии стала второй в Европе после лаборатории Вундта в Лейпциге (1879). Первым делом Бехтерев взялся за строение мозга: без морфологии мозга, писал он, «нельзя обойтись ни одному невропатологу и всякому вообще врачу, претендующему на правильное понимание нервных заболеваний».</p>
+          <p class="src-note">Источники: Ярославский государственный медицинский университет, страница о В. М. Бехтереве; «Новости украинской психиатрии», статья к 155-летию; Музей истории медицины Кировской области.</p>
+        </div></details></li>
+      <li><details><summary><span>Он описал несколько ядер в стволе мозга; одно из них, верхнее вестибулярное ядро продолговатого мозга, так и называют — «ядро Бехтерева».<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Ещё до Казани Бехтерев изучал органы равновесия и написал работу «Образование наших представлений о пространстве». Среди описанных им участков — ядра в покрышке моста, «полоска Бехтерева» в коре у основания гиппокампа, центральный покрышечный путь. Он нашёл и зону вкуса в коре.</p>
+          <p class="src-note">Источники: Ярославский государственный медицинский университет, страница о В. М. Бехтереве; «Новости украинской психиатрии», «Слово об академике В. М. Бехтереве (к 165-летию со дня рождения)».</p>
+        </div></details></li>
+      <li><details><summary><span>Кору мозга он сравнивал с картой, где краски участков смешиваются по краям, — а не с мозаикой из отдельных кусков.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>В статье «Физиология двигательной области мозговой коры» (1887) Бехтерев писал: «Кора мозга, быть может, и уподобляется карте, разрисованной отдельными красками по отдельным участкам, но так, что соседние краски, понятно, смешиваются между собой…». У каждой зоны коры своя работа, но резких границ между ними нет. Позже эту мысль развил И. П. Павлов в учении о проекционных и ассоциативных полях коры.</p>
+          <p class="src-note">Источник: «Новости украинской психиатрии», «Памяти академика В. М. Бехтерева (к 155-летию со дня рождения)».</p>
+        </div></details></li>
+      <li><details><summary><span>Его книгу «Проводящие пути спинного и головного мозга» издали в Германии по-немецки, а немецкий анатом Копш, по словам биографов, сказал: мозг прекрасно знают только двое — Бог и Бехтерев.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <figure class="fig" style="max-width:320px">
+            <img src="day-01feb-bekhterev-leitungsbahnen.jpg" data-source="https://commons.wikimedia.org/wiki/File:Bechterew_leitungsbahnen_1894.jpg" data-license="Public domain" width="840" height="1198" loading="lazy" alt="Титульный лист старой книги на немецком: «Die Leitungsbahnen im Gehirn und Rückenmark», автор W. von Bechterew, профессор Казанского университета, Лейпциг, 1894">
+            <figcaption>Титульный лист первого немецкого издания «Проводящих путей», Лейпциг, 1894 год. Викисклад, общественное достояние.</figcaption>
+          </figure>
+          <p>Книга вышла в 1893 году, немецкий перевод — в Лейпциге в 1894-м; на титуле сказано, что перевод сделан при участии автора. В 1896–1898 годах её дополнили и издали в двух томах: Бехтерев проследил ход пучков в центральной нервной системе и состав белого вещества спинного мозга. В 1900 году за двухтомник Академия наук присудила премию имени К. М. Бэра; награду Бехтереву вручили 29 декабря вместе с И. П. Павловым. Слова «Знают прекрасно устройство мозга только двое: Бог и Бехтерев» биографы приписывают немецкому профессору Ф. Копшу.</p>
+          <p class="src-note">Источники: Ярославский государственный медицинский университет; «Новости украинской психиатрии», статьи к 155- и 165-летию; титульный лист издания 1894 года (Викисклад).</p>
+        </div></details></li>
+      <li><details><summary><span>В 1892 году журнал «Врач» напечатал его статью «Одеревенелость позвоночника с искривлением его как особая форма заболевания».<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Статья начинается с того, что в последние годы автор наблюдал болезнь, при которой позвоночник выгибается назад и становится неподвижным, а нервная система страдает. В литературе по нервным болезням он не нашёл подробного описания такого своеобразного страдания — и решил описать своих больных сам. Трое из них лечились у него дома. Номер журнала, 36-й за 1892 год, Бехтерев сам назвал в немецкой публикации.</p>
+          <p class="src-note">Источник: W. v. Bechterew, «Steifigkeit der Wirbelsäule und ihre Verkrümmung als besondere Erkrankungsform», Neurologisches Centralblatt, 1893, № 13 (1 июля), с. 426–434 — немецкая публикация той же статьи, сноска на с. 433: «Wratsch, 1892, Nr. 36».</p>
+        </div></details></li>
+      <li><details><summary><span>Первой была 56-летняя женщина, второй — 52-летняя, третьим — 39-летний составитель поездов: у всех спина медленно сгибалась годами.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Первую больную мучила тяжесть в затылке; ей стало трудно держать голову, которая всё время клонилась вперёд. Вторая пришла в августе 1890 года из-за сердцебиения и бессонницы, а горб заметила больше десяти лет назад. Третий восемнадцать лет, с 1870 по 1888 год, составлял поезда и часто работал согнувшись; его осмотрели 12 мая 1891 года. Похожее искривление было у матерей всех троих, а у первой — ещё у сестры и дочери. Двое не раз падали и ушибали спину.</p>
+          <p class="src-note">Источник: Bechterew, Neurologisches Centralblatt, 1893, с. 426–431, наблюдения I–III.</p>
+        </div></details></li>
+      <li><details><summary><span>Сравнив пять случаев, Бехтерев выписал пять общих признаков: неподвижность без заметной боли, дугу в верхней части спины, слабость мышц, онемение кожи и покалывания.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>К трём больным он добавил двух, которых видел раньше. Один, душевнобольной, сгорбился так, что подбородок почти касался груди. Другой страдал ещё и дрожательным параличом. Тяжесть была разной, но Бехтерев не сомневался, что болезнь одна. Вот что было у всех: малая подвижность позвоночника без заметной боли при постукивании и сгибании; дуга назад в верхнегрудном отделе, голова подана вперёд и опущена; слабость мышц туловища, шеи и конечностей; сниженная чувствительность кожи спины; покалывания и боли. У второй больной голова, по его словам, поворачивалась, как флюгер на неподвижной оси.</p>
+          <p class="src-note">Источник: Bechterew, Neurologisches Centralblatt, 1893, с. 428 и 431–432.</p>
+        </div></details></li>
+      <li class="find"><details><summary><span>Через год Бехтерев сам поправил себя: болезнь начинается в самом позвоночнике, а не в ткани вокруг оболочки спинного мозга.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p><span class="tag">Находка дня</span>В немецкой публикации 1893 года есть сноска. В русской статье, признаётся автор, он ошибочно считал началом болезни хроническое воспаление соединительной ткани вокруг оболочки спинного мозга. Теперь он пишет иначе: это самостоятельный хронический процесс в самом позвоночнике, который ведёт к сращению позвонков — анкилозу, а воспаление ткани вокруг оболочки он оставил лишь как вероятное сопутствующее. Этот процесс сращивает позвонки и давит на корешки нервов — отсюда, по Бехтереву, неподвижность, покалывания и боли, слабость мышц. Сам он сравнил его со spondylitis deformans; сегодня болезнь называют анкилозирующим спондилитом.</p>
+          <p class="src-note">Источник: Bechterew, Neurologisches Centralblatt, 1893, с. 433 (основной текст и сноска).</p>
+        </div></details></li>
+      <li><details><summary><span>Болезнь известна с древности, но первыми её описаниями считают статьи Бехтерева, А. Штрюмпеля (1897) и П. Мари (1898).<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <figure class="fig" style="max-width:300px">
+            <img src="day-01feb-bekhterev-spine.jpg" data-source="https://commons.wikimedia.org/wiki/File:0510_Spondylitis_ankylosans_(morbus_bechterew)_anagoria.JPG" data-license="CC BY 3.0" width="600" height="1396" loading="lazy" alt="Скелет туловища на чёрном фоне: позвоночник от таза до шеи сросся в один сплошной столб, верх его изогнут вперёд, рёбра приросли к нему">
+            <figcaption>Позвоночник со сросшимися позвонками, окрестности Хайльбронна, начало VI века. Земельный музей Вюртемберга, Штутгарт. Фото Anagoria, Викисклад, CC BY 3.0.</figcaption>
+          </figure>
+          <p>Сросшиеся позвоночники находят у египетских мумий. В 1559 году Р. Коломбо описал два таких скелета, в 1693 году Б. Коннор — ещё один. В середине XIX века появились отдельные клинические описания. Немецкий врач А. Штрюмпель ещё в учебнике 1884 года мимоходом упомянул болезнь, при которой без болей срастаются позвоночник и тазобедренные суставы, — он видел два таких случая. В 1897 году он описал её отдельно, а П. Мари — в 1898-м. Название «болезнь Бехтерева» до сих пор в ходу и за пределами России.</p>
+          <p class="src-note">Источники: А. Г. Бочкова, НИИ ревматологии РАМН, «Анкилозирующий спондилит» (раздел «История открытия»); A. Strümpell, Lehrbuch der speciellen Pathologie und Therapie der inneren Krankheiten, Bd. 2, Leipzig, 1884 (глава о хроническом суставном ревматизме); обзор «A brief human history of ankylosing spondylitis», Surgical Neurology International, 2022.</p>
+        </div></details></li>
+      <li><details><summary><span>В 1893 году Бехтерев переехал в Петербург, в 1907-м основал Психоневрологический институт, а умер в Москве 24 декабря 1927 года.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>В Военно-медицинской академии он возглавил кафедру душевных и нервных болезней и начал создавать первую в России нейрохирургическую операционную. В 1903–1907 годах вышел его семитомник «Основы учения о функциях мозга». Психоневрологический институт он задумал под девизом «познать человека комплексно»; к 1916 году там училось больше семи тысяч студентов. В декабре 1927 года Бехтерев председательствовал на I Всесоюзном съезде невропатологов и психиатров в Москве, а 24 декабря, на третий день съезда, умер.</p>
+          <p class="src-note">Источники: «Новости украинской психиатрии», статья к 155-летию; Ярославский государственный медицинский университет; Музей истории медицины Кировской области.</p>
+        </div></details></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block" id="theme-inventions">
+  <div class="wrap">
+    <div class="kicker">Медицина · Русские первенства</div>
+    <h2>Что ещё русские изобрели первыми в теме «медицина»</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Другие дни музея о медицине — по утверждённому календарю. Часть этих залов ещё готовится.</p>
+    <button class="btn ghost" type="button" id="themeInvBtn" data-label="Показать 13 первенств →" aria-expanded="false" aria-controls="themeInvBody">Показать 13 первенств →</button>
+    <div id="themeInvBody" hidden>
+      <ul class="theme-list">
+        <li><b>7 янв</b> Первое в мире коронарное шунтирование, В. И. Колесов, 1964</li>
+        <li><b>28 янв</b> <a href="day-28jan-havkin.html">Вакцины Хавкина от холеры и чумы</a></li>
+        <li><b>21 фев</b> Первая в России станция прививок от бешенства, Н. Ф. Гамалея</li>
+        <li><b>6 мар</b> Первый в мире обезболивающий наркоз на поле боя</li>
+        <li><b>6 апр</b> Антисептическая и полостная хирургия</li>
+        <li><b>30 апр</b> Аппарат искусственного кровообращения — автожектор</li>
+        <li><b>15 мая</b> <a href="day-15may-mechnikov.html">Учение об иммунитете, фагоцитоз, И. И. Мечников</a></li>
+        <li><b>5 июл</b> Первый в мире институт переливания крови, 1926</li>
+        <li><b>10 сен</b> Дефибриллятор</li>
+        <li><b>28 окт</b> Открытие вирусов</li>
+        <li><b>1 ноя</b> Первое в мире массовое применение живой вакцины от полиомиелита</li>
+        <li><b>25 ноя</b> <a href="day-25nov-pirogov.html">Военно-полевая хирургия и наркоз, Н. И. Пирогов</a></li>
+        <li><b>23 дек</b> Первый в мире врач, предложивший противочумные прививки</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="games">
+  <div class="wrap">
+    <div class="kicker">Главное действие · пять больных из статьи 1892 года</div>
+    <h2>Приём доктора Бехтерева</h2>
+    <p style="max-width:62ch">Перед тобой пятеро больных из статьи. Выбери больного и осмотри его шестью способами, как в статье: сбоку, наклоны, лёжа, постукивание, дыхание, кожа спины. Каждый ответ пересказывает запись самого Бехтерева по немецкой публикации 1893 года. Осмотри всех пятерых и реши, что у них общее.</p>
+    <div class="lab" id="lab">
+      <div class="lab-row" role="group" aria-label="Больной">
+        <span class="lbl">Больной</span>
+        <button class="seg" type="button" data-p="0" aria-pressed="true">I · женщина, 56 лет</button>
+        <button class="seg" type="button" data-p="1" aria-pressed="false">II · женщина, 52 года</button>
+        <button class="seg" type="button" data-p="2" aria-pressed="false">III · составитель поездов, 39 лет</button>
+        <button class="seg" type="button" data-p="3" aria-pressed="false">IV · душевнобольной</button>
+        <button class="seg" type="button" data-p="4" aria-pressed="false">V · с дрожательным параличом</button>
+      </div>
+      <div class="lab-row" role="group" aria-label="Осмотр">
+        <span class="lbl">Осмотр</span>
+        <button class="seg ex" type="button" data-t="side">Посмотреть сбоку</button>
+        <button class="seg ex" type="button" data-t="bend">Попросить наклониться</button>
+        <button class="seg ex" type="button" data-t="lie">Уложить и разогнуть</button>
+        <button class="seg ex" type="button" data-t="tap">Постучать по позвоночнику</button>
+        <button class="seg ex" type="button" data-t="breath">Посмотреть, как дышит</button>
+        <button class="seg ex" type="button" data-t="skin">Проверить кожу спины</button>
+      </div>
+      <div class="lab-stage">
+        <canvas id="labCv" width="640" height="260" style="height:260px" role="img" aria-label="Силуэт больного сбоку: позвоночник изогнут дугой; при осмотре подсвечивается место, которое проверяет врач"></canvas>
+        <div class="pat-card" id="patCard" aria-live="polite"></div>
+        <ul class="exam-log" id="examLog" aria-live="polite"></ul>
+        <div class="lab-cap">Все ответы — пересказ записей В. М. Бехтерева о пяти больных (Neurologisches Centralblatt, 1893, с. 426–432, немецкая публикация статьи из «Врача», 1892). Где в статье записи нет, модель так и пишет. Силуэт — условный рисунок музея.</div>
+      </div>
+      <div class="lab-msg" id="labMsg" aria-live="polite">Выбери больного и нажми любой способ осмотра.</div>
+      <div class="lab-found" id="labFound">Осмотрено полностью: 0 из 5.</div>
+      <div class="verdict" id="verdict">
+        <p style="margin:0 0 6px;font-weight:600">Что было у всех пятерых? Отметь всё, что верно, и нажми «Проверить».</p>
+        <label><input type="checkbox" value="a"> Позвоночник выгнут дугой назад, голова подана вперёд</label>
+        <label><input type="checkbox" value="b"> Позвоночник малоподвижен или совсем неподвижен</label>
+        <label><input type="checkbox" value="c"> Постукивание по позвоночнику почти не вызывает боли</label>
+        <label><input type="checkbox" value="d"> Если лечь, горб выпрямляется</label>
+        <label><input type="checkbox" value="e"> Грудь не дышит — дышит живот</label>
+        <label><input type="checkbox" value="f"> Такая же болезнь была у родных</label>
+        <div class="lab-btns"><button class="btn gold" type="button" id="verdictGo">Проверить</button></div>
+      </div>
+      <noscript><div class="noscript-box">Для модели нужен JavaScript. Текстовая версия: у всех пятерых больных позвоночник выгнут назад в верхней части, голова подана вперёд; позвоночник малоподвижен или неподвижен; постукивание болей почти не вызывает (у второй и третьего — боль лишь в одном месте); дышат одним животом; чувствительность кожи спины снижена. У троих, расспрошенных о родных, искривление было у матерей. Лёжа горб не выпрямлялся у первых трёх; о двух других записи нет.</div></noscript>
+    </div>
+    <p class="src-note" style="margin-top:10px">Пять наблюдений, возраст, профессия, даты осмотров, данные осмотра и пять общих признаков — W. v. Bechterew, «Steifigkeit der Wirbelsäule und ihre Verkrümmung als besondere Erkrankungsform», Neurologisches Centralblatt, 1893, № 13, с. 426–434; русская статья — «Врач», 1892, № 36.</p>
+  </div>
+</section>
+
+<section class="block" id="pervenstvo">
+  <div class="wrap">
+    <div class="kicker">Проверка факта</div>
+    <h2>Что именно здесь наше</h2>
+    <div class="border-box">
+      <p style="margin-top:0"><b>Граница первенства:</b> В. М. Бехтерев выделил эту болезнь в отдельной статье — так и назвал её: «особая форма заболевания». Он описал пять наблюдений и выделил пять общих признаков: неподвижность позвоночника без заметной боли, дугу назад, слабость мышц, онемение и боли по ходу нервов. Статья вышла в журнале «Врач» в 1892 году (№ 36), а 1 июля 1893 года — по-немецки, в «Neurologisches Centralblatt». Это раньше описаний А. Штрюмпеля (1897) и П. Мари (1898). Сама болезнь носит его имя.</p>
+      <p style="margin-bottom:0"><b>Чего здесь нет:</b> Сросшийся позвоночник первым увидел не Бехтерев: такие скелеты описали Р. Коломбо (1559) и Б. Коннор (1693), а в середине XIX века были отдельные клинические описания. Штрюмпель в учебнике 1884 года в нескольких строках упомянул безболезненное сращение позвоночника и тазобедренных суставов. Причину болезни Бехтерев видел в наследственности и травме; по НИИ ревматологии, истинная причина до сих пор не ясна. В календаре музея сказано: «семь участков мозга носят его имя» и «спорил с Фрейдом на равных». Здесь мы этого не повторяем: открытые источники не дают ни счёта «семь», ни документа о споре.</p>
+    </div>
+    <table class="ctx">
+      <thead><tr><th scope="col">Документ или событие</th><th scope="col">Что</th><th scope="col">Когда</th></tr></thead>
+      <tbody>
+        <tr><td>Р. Коломбо, «Анатомия»</td><td>Два скелета со сросшимся позвоночником</td><td>1559</td></tr>
+        <tr><td>Б. Коннор</td><td>Скелет: крестец, поясничные и грудные позвонки срослись в одну кость</td><td>1693</td></tr>
+        <tr><td>А. Штрюмпель, учебник, т. 2</td><td>Упоминание в нескольких строках, два случая</td><td>1884</td></tr>
+        <tr><td>В. М. Бехтерев, «Врач», № 36</td><td>«Одеревенелость позвоночника… как особая форма заболевания»: пять больных, пять признаков</td><td>1892</td></tr>
+        <tr><td>Он же, Neurologisches Centralblatt, № 13</td><td>Немецкая публикация с поправкой: процесс в самом позвоночнике</td><td>1.07.1893</td></tr>
+        <tr><td>А. Штрюмпель; П. Мари</td><td>Описания болезни</td><td>1897; 1898</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block" id="quiz">
+  <div class="wrap">
+    <div class="kicker">Проверь себя · 5 вопросов</div>
+    <h2>Викторина</h2>
+    <p style="color:var(--muted);max-width:62ch">На каждый вопрос — одна попытка. После ответа покажем объяснение.</p>
+    <div id="quizBox"></div>
+    <noscript><div class="noscript-box">Для викторины нужен JavaScript. Ответы: 1 — «Врач»; 2 — почти никакой боли; 3 — где сидит болезнь: в самом позвоночнике; 4 — Штрюмпель и Мари; 5 — Бог и Бехтерев.</div></noscript>
+  </div>
+</section>
+
+<section class="block" id="result">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Итог дня</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Пять осмотренных больных, верный вывод и викторина вместе дают 100 баллов. Прогресс не сохраняется: перезагрузишь страницу — день начнётся заново.</p>
+    <div class="day-result">
+      <div class="dr-score" id="dayTxt">0 / 100 · звание: Гость дня</div>
+      <div class="dr-bar"><i id="dayBar" style="width:0%"></i></div>
+      <div class="dr-note">Осмотри каждого из пяти больных всеми шестью способами, отметь, что было у всех, и ответь на вопросы викторины.</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="sources">
+  <div class="wrap">
+    <div class="kicker">Источники</div>
+    <h2>На чём стоит страница</h2>
+    <ul class="sources">
+      <li><a href="https://archive.org/details/1893_NZ_12" rel="noopener" target="_blank">W. v. Bechterew · «Steifigkeit der Wirbelsäule und ihre Verkrümmung als besondere Erkrankungsform»</a>, Neurologisches Centralblatt, 1893, № 13 (1 июля), с. 426–434 (годовой том в Internet Archive, скан Калифорнийского университета) — немецкая публикация статьи «Одеревенелость позвоночника с искривлением его как особая форма заболевания» («Врач», 1892, № 36; русский оригинал не открывался): пять наблюдений, пять общих признаков, сноска с поправкой автора.</li>
+      <li><a href="https://rheumatolog.ru/patient/about_rz/zabolevaniya/ankilozirujushhij_spondilit/" rel="noopener" target="_blank">А. Г. Бочкова, НИИ ревматологии РАМН · «Анкилозирующий спондилит»</a>, раздел «История открытия»: Коломбо 1559, Коннор 1693, описания Бехтерева, Штрюмпеля (1897) и Мари (1898) — первые; название «болезнь Бехтерева».</li>
+      <li><a href="https://archive.org/details/lehrbuchderspeci02strm" rel="noopener" target="_blank">A. Strümpell · Lehrbuch der speciellen Pathologie und Therapie der inneren Krankheiten</a>, Bd. 2, Leipzig: F. C. W. Vogel, 1884 (Internet Archive, библиотека Countway): глава о хроническом суставном ревматизме — безболезненное сращение позвоночника и тазобедренных суставов, два одинаковых случая.</li>
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9345125/" rel="noopener" target="_blank">«A brief human history of ankylosing spondylitis: A scoping review»</a>, Surgical Neurology International, 2022: до 1893 года симптомы считали формой ревматоидного артрита, Бехтерев выделил отдельную болезнь; Штрюмпель 1897, Мари 1898.</li>
+      <li><a href="http://www.psychiatry.ua/articles/paper406.htm" rel="noopener" target="_blank">«Новости украинской психиатрии» · «Памяти академика В. М. Бехтерева (к 155-летию со дня рождения)»</a>: стажировка 1884–1885, 17 работ 1885 года, Казань, лаборатория, цитата о карте коры (1887), статья во «Враче», премия Бэра 1900, Петербург, «Основы учения о функциях мозга».</li>
+      <li><a href="http://www.psychiatry.ua/articles/paper476.htm" rel="noopener" target="_blank">«Новости украинской психиатрии» · «Слово об академике В. М. Бехтереве (к 165-летию со дня рождения)»</a>: список описанных им структур мозга, слова Ф. Копша «Бог и Бехтерев».</li>
+      <li><a href="https://muzeum.medkirov.ru/site/bekhterev" rel="noopener" target="_blank">Виртуальный музей истории медицины Кировской области · «Владимир Михайлович Бехтерев»</a>: рождение 20 января (1 февраля) 1857 в Сарали, Вятская гимназия, академия 1873–1878, Казань 1885–1893, Психоневрологический институт, съезд 1927 года.</li>
+      <li><a href="https://www.ysmu.ru/history-medicine/bekhterev-vladimir-mikhaylovich-1857-1927/" rel="noopener" target="_blank">Ярославский государственный медицинский университет · страница о В. М. Бехтереве</a>: назначение в Казань 3 октября 1885, «ядро Бехтерева» — верхнее вестибулярное ядро, зона вкуса, «Проводящие пути», Психоневрологический институт (1907).</li>
+      <li>Изображения: <a href="https://commons.wikimedia.org/wiki/File:Bekhterev_by_Repin.jpg" rel="noopener" target="_blank">И. Е. Репин, портрет В. М. Бехтерева, 1913</a> (общественное достояние), <a href="https://commons.wikimedia.org/wiki/File:Bechterew_leitungsbahnen_1894.jpg" rel="noopener" target="_blank">титульный лист «Die Leitungsbahnen…», 1894</a> (общественное достояние), <a href="https://commons.wikimedia.org/wiki/File:0510_Spondylitis_ankylosans_(morbus_bechterew)_anagoria.JPG" rel="noopener" target="_blank">позвоночник VI века из Штутгарта</a> (Anagoria, CC BY 3.0) — Викисклад; силуэт в модели — рисунок музея.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="calendar">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Календарь изобретений</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Выбери любой день — узнаешь, что русские сделали первыми в мире. Листай месяцы стрелками.</p>
+    <div id="calbox"></div>
+  </div>
+</section>
+
+<section class="block kd" id="kuda-dalshe">
+  <div class="wrap">
+    <div class="kd-kicker">Куда дальше</div>
+    <h2>Музей продолжается</h2>
+    <div class="kd-grid">
+      <div class="kd-card main"><span class="kd-lbl">Следующий день</span><a href="day-02feb-edinorog.html">2 февраля — «Единорог» Данилова и Мартынова <span class="kd-arr">→</span></a>
+        <p>Четыре ствола, потом два, потом один: как пробы на Выборгской стороне дали орудие на сто лет.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Предыдущий день</span><a href="day-31jan-girotron.html">31 января — Гиротрон Гапонова-Грехова <span class="kd-arr">→</span></a>
+        <p>Электроны по спирали: из Горького — в термоядерные установки мира.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Та же тема</span><a href="day-28jan-havkin.html">28 января — Вакцины Хавкина <span class="kd-arr">→</span></a>
+        <p>Ещё один врач, который начал с наблюдения и довёл его до метода.</p></div>
+      <div class="kd-card main"><span class="kd-lbl">Город-музей</span><a href="../../index.html">Русская цивилизация <span class="kd-arr">→</span></a>
+        <p>Все музеи проекта на одной карте.</p></div>
+    </div>
+    <p style="margin-top:16px"><a href="izobreteniya.html">Посмотреть изобретения по алфавиту →</a></p>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>
+  Русская цивилизация · «Что изобрели русские первыми в мире»</div></footer>
+
+<script type="application/json" data-proof>{"status":"found","claim_id":"rc:izobreteniya:bekhterev:claim-osobaya-forma-1892","ours":{"kind":"научная публикация","title":"В. М. Бехтерев, «Одеревенелость позвоночника с искривлением его как особая форма заболевания» — Врач, 1892, № 36; немецкая публикация автора: «Steifigkeit der Wirbelsäule und ihre Verkrümmung als besondere Erkrankungsform», Neurologisches Centralblatt, 1893, № 13 (1 июля), с. 426–434: пять больных, пять общих признаков","date":"1892","holder":"Neurologisches Centralblatt, 1893 — скан годового тома в Internet Archive (Калифорнийский университет)","source_url":"https://archive.org/details/1893_NZ_12"}}</script>
+<script src="../../assets/museum-proof.js"></script>
+
+<script>
+/* ── СЧЁТ ── шкала из 100 держит assets/museum-score.js; здесь только реестр наград.
+   пять осмотренных больных 5×6 + верный вывод 30 + викторина 5×8 = 100. */
+window.MUSEUM_SCORE = {awards:{p:[5,6], g1:30, q:[5,8]},
+  ranks:[[100,'Профессор Казанской клиники'],[70,'Ординатор Бехтерева'],[40,'Студент-медик'],[0,'Гость дня']]};
+</script>
+<script src="../../assets/museum-score.js"></script>
+<script>
+(function(){
+  var $ = function(id){return document.getElementById(id);};
+  $('readBtn').onclick = function(){ $('story').scrollIntoView({behavior:'smooth'}); };
+  $('listenBtn').onclick = function(){ $('audioguide').scrollIntoView({behavior:'smooth'}); };
+  var tb=$('themeInvBtn');
+  tb.onclick=function(){ var b=$('themeInvBody'), open=b.hidden; b.hidden=!open; tb.setAttribute('aria-expanded',open?'true':'false'); tb.textContent=open?'▲ Скрыть':tb.dataset.label; };
+
+  /* ── ПРИЁМ ДОКТОРА БЕХТЕРЕВА ── записи о пяти больных — пересказ статьи
+     Bechterew, Neurologisches Centralblatt, 1893, № 13, с. 426–432 (русская статья — «Врач», 1892, № 36).
+     k — условная крутизна дуги для рисунка (по словам статьи: от «лёгкой» I до «тяжёлой» V);
+     pain — уровень местной боли при постукивании (номер грудного позвонка), skin — полоса онемения [от, до]. */
+  var TESTS={side:'Сбоку', bend:'Наклоны', lie:'Лёжа', tap:'Постукивание', breath:'Дыхание', skin:'Кожа спины'};
+  var P=[
+    {name:'I · пациентка Ш., 56 лет', k:.55, pain:0, skin:[1,6],
+     about:'Жалуется на тяжесть в затылке и шее и на то, что всё труднее держать голову: она клонится вперёд. Горбилась с юности, в последние годы горб растёт. Искривление было у матери, сестры и дочери.',
+     r:{side:'Горб, выпуклый назад, в нижнем шейном и верхнем грудном отделе; голова сильно подана вперёд и слегка опущена.',
+        bend:'В грудном отделе позвоночник поразительно мало подвижен: повороты, сгибание и разгибание крайне ограничены. Шея в стороны поворачивается довольно свободно.',
+        lie:'Лёжа горб не выравнивается.',
+        tap:'Давление и постукивание по позвоночнику болей не вызывают; сама спина не болит.',
+        breath:'Дыхание только брюшное: плоская грудь почти не участвует.',
+        skin:'Болевая чувствительность в лопаточных областях спины слегка снижена.'}},
+    {name:'II · пациентка М., 52 года', k:.8, pain:4, skin:[1,4],
+     about:'Пришла в начале августа 1890 года из-за сердцебиения и бессонницы. Горб заметила больше десяти лет назад, дважды падала и ушибала спину. Искривление было у матери и тёти.',
+     r:{side:'Крутая дуга назад в верхнем грудном отделе; голова выдвинута вперёд, шея кажется короче, подбородок опущен.',
+        bend:'Верхняя половина грудного и нижний шейный отдел почти неподвижны. Голова поворачивается почти только в верхнем суставе шеи — как флюгер на неподвижной оси.',
+        lie:'Разогнуть позвоночник нельзя ни при каких условиях, даже лёжа.',
+        tap:'Сама спина не болит; лёгкая боль — только при сильном постукивании в области четвёртого грудного позвонка, остальные позвонки безболезненны.',
+        breath:'Дыхание только брюшное: грудная клетка почти не участвует.',
+        skin:'На спине на уровне первых четырёх грудных нервов снижена всякая чувствительность, и болевая тоже.'}},
+    {name:'III · пациент Х., 39 лет, составитель поездов', k:.7, pain:11.5, skin:[2,17],
+     about:'С 1870 по 1888 год составлял поезда, часто работал согнувшись, несколько раз падал и ушибал спину. Осмотрен 12 мая 1891 года. Мать за последние 15 лет тоже сгорбилась.',
+     r:{side:'Заметный горб в области лопаток; голова подана вперёд и опущена, поясница уплощена.',
+        bend:'Позвоночник не сгибается ни назад, ни вперёд, ни вправо, ни влево: больной может лишь слегка наклонить корпус.',
+        lie:'Лёжа разогнуть позвоночник не удаётся.',
+        tap:'Постукивание почти безболезненно; лишь на уровне 11–12-го грудного позвонка сильный удар даёт отчётливую боль в глубине.',
+        breath:'Дыхание только брюшное: грудная клетка неподвижна даже при глубоком вдохе.',
+        skin:'Нет болевой и тактильной чувствительности на спине — от уровня второго грудного до нижних поясничных нервов.'}},
+    {name:'IV · душевнобольной', k:1, pain:0, skin:[0,17],
+     about:'Наблюдался раньше, подробных записей Бехтерев не сохранил. Расспросить его о прошлом было нельзя. Позже больной умер от туберкулёза лёгких.',
+     r:{side:'Горб в шейном и лопаточном отделе такой, что подбородок почти касался груди.',
+        bend:'Позвоночник совершенно неподвижен: больной не мог повернуть ни туловище, ни голову и не мог её поднять.',
+        lie:null,
+        tap:'Позвоночник совсем не болит.',
+        breath:'Грудная клетка в дыхании не участвует; дышит только диафрагма.',
+        skin:'Почти по всему телу чувствительность значительно снижена — особенно на шее, спине и по бокам груди.'}},
+    {name:'V · больной с дрожательным параличом', k:.9, pain:0, skin:[1,12],
+     about:'Наблюдался раньше; у него был ещё и дрожательный паралич. Подробных записей Бехтерев не сохранил, причина болезни осталась неизвестной.',
+     r:{side:'Очень заметный горб в грудном и шейном отделе; голова опущена, взгляд в пол.',
+        bend:'Поразительная неподвижность: не мог наклонить или повернуть туловище и поднять голову.',
+        lie:null,
+        tap:'Ни при постукивании, ни при попытке согнуться позвонки не болят.',
+        breath:'Дыхание только брюшное.',
+        skin:'Отчётливо снижена чувствительность, главным образом на спине; часто покалывания на спине, груди, в руках.'}}
+  ];
+  var cur=0, lastT=null, seen=P.map(function(){return {};}), found={};
+  function msg(t,cls){ var m=$('labMsg'); m.className='lab-msg'+(cls?' '+cls:''); m.textContent=t; }
+  function nDone(){ var n=0; for (var i=0;i<5;i++) if (found['p'+i]) n++; return n; }
+  function setFound(){ $('labFound').textContent='Осмотрено полностью: '+nDone()+' из 5.'+(nDone()===5?' Теперь отметь, что было у всех.':''); }
+  function card(){
+    var p=P[cur]; $('patCard').innerHTML='';
+    var b=document.createElement('b'); b.textContent=p.name+'. '; $('patCard').appendChild(b);
+    $('patCard').appendChild(document.createTextNode(p.about));
+    var log=$('examLog'); log.innerHTML='';
+    Object.keys(TESTS).forEach(function(t){
+      if (!seen[cur][t]) return;
+      var li=document.createElement('li'); if (t===lastT) li.className='new';
+      var s=document.createElement('span'); s.className='t'; s.textContent=TESTS[t]; li.appendChild(s);
+      li.appendChild(document.createTextNode(P[cur].r[t] || 'В статье об этом записи нет — модель её не придумывает.'));
+      log.appendChild(li);
+    });
+    document.querySelectorAll('#lab .ex').forEach(function(x){ x.setAttribute('aria-pressed', seen[cur][x.dataset.t] ? 'true':'false'); });
+  }
+  document.querySelectorAll('#lab .seg[data-p]').forEach(function(b){
+    b.onclick=function(){
+      cur=+b.dataset.p; lastT=null;
+      document.querySelectorAll('#lab .seg[data-p]').forEach(function(x){ x.setAttribute('aria-pressed', x===b?'true':'false'); });
+      card(); draw();
+      var left=Object.keys(TESTS).filter(function(t){return !seen[cur][t];}).length;
+      msg(left ? (cur<2?'Больная ':'Больной ')+P[cur].name.split(' · ')[0]+'. Осталось осмотров: '+left+' из 6.' : (cur<2?'Эта больная осмотрена полностью.':'Этот больной осмотрен полностью.'),'');
+    };
+  });
+  document.querySelectorAll('#lab .ex').forEach(function(b){
+    b.onclick=function(){
+      var t=b.dataset.t; lastT=t; seen[cur][t]=1; card(); draw();
+      var left=Object.keys(TESTS).filter(function(x){return !seen[cur][x];}).length;
+      if (!left && !found['p'+cur]){
+        found['p'+cur]=1; award('p'+cur,6); setFound();
+        msg((cur<2?'Больная ':'Больной ')+P[cur].name.split(' · ')[0]+(cur<2?' осмотрена':' осмотрен')+' полностью, как в статье. '+(nDone()<5?'Переходи к следующему.':'Все пятеро осмотрены — теперь сделай вывод ниже.'),'ok');
+      } else if (left) msg('Записано. Осталось осмотров у этого больного: '+left+' из 6.','');
+      else msg(cur<2?'Эта больная уже осмотрена полностью.':'Этот больной уже осмотрен полностью.','');
+    };
+  });
+
+  var cv=$('labCv'), cx=cv.getContext('2d'), W=0, H=260;
+  function fit(){
+    var w=Math.round(cv.clientWidth)||640, rr=window.devicePixelRatio||1;
+    if (w===W && cv.width===Math.round(w*rr)) return;
+    W=w; cv.width=Math.round(W*rr); cv.height=Math.round(H*rr); cx.setTransform(rr,0,0,rr,0,0);
+  }
+  /* точка позвоночника: t=0 — крестец, t=1 — основание шеи; дуга назад (влево) с вершиной в верхнегрудном отделе */
+  function sp(t,k,ox,oy,L){ return {x: ox - k*L*0.42*Math.exp(-Math.pow((t-0.7)/0.24,2)), y: oy - t*L}; }
+  function lvl(n){ return n<=12 ? 0.95-(n-1)*0.045 : Math.max(0.05, 0.45-(n-12)*0.08); }
+  function draw(){
+    fit();
+    var narrow=W<520, f=(narrow?'11px':'13px')+' Inter, sans-serif', p=P[cur], k=p.k;
+    cx.fillStyle='#141c26'; cx.fillRect(0,0,W,H); cx.font=f; cx.textBaseline='middle';
+    var lying = lastT==='lie' && p.r.lie, L=narrow?120:140, ox=W*0.5, oy=H-62;
+    cx.save();
+    if (lying){ cx.translate(W*0.5,H*0.62); cx.rotate(-Math.PI/2); cx.translate(-ox,-oy+L*0.5); }
+    var tp=sp(1,k,ox,oy,L), hx=tp.x+(18+34*k), hy=tp.y+(6+30*k);
+    /* кожа спины: полоса онемения */
+    if (lastT==='skin'){
+      cx.strokeStyle='rgba(120,170,230,.55)'; cx.lineWidth=16; cx.lineCap='round'; cx.beginPath();
+      for (var n=p.skin[0]; n<=p.skin[1]; n+=0.25){ var q=sp(lvl(Math.max(1,n)),k,ox,oy,L); if (n===p.skin[0]) cx.moveTo(q.x-8,q.y); else cx.lineTo(q.x-8,q.y); }
+      cx.stroke(); cx.lineCap='butt';
+    }
+    /* ноги, таз, позвоночник, шея, голова */
+    cx.strokeStyle='#8fa5b9'; cx.lineWidth=5; cx.beginPath(); cx.moveTo(ox,oy); cx.lineTo(ox+6,oy+28); cx.lineTo(ox,oy+56); cx.stroke();
+    cx.strokeStyle='#e8d6b0'; cx.lineWidth=6; cx.beginPath();
+    for (var i=0;i<=40;i++){ var q=sp(i/40,k,ox,oy,L); if(!i) cx.moveTo(q.x,q.y); else cx.lineTo(q.x,q.y); }
+    cx.lineTo(hx-10,hy+4); cx.stroke();
+    cx.fillStyle='#e8d6b0'; cx.beginPath(); cx.arc(hx,hy+8,13,0,Math.PI*2); cx.fill();
+    /* грудь и живот спереди */
+    var ch=sp(0.62,k,ox,oy,L), bl=sp(0.2,k,ox,oy,L);
+    cx.strokeStyle= lastT==='breath' ? '#6c7a89' : 'rgba(143,165,185,.5)'; cx.lineWidth=2; cx.beginPath(); cx.ellipse(ox+26,ch.y,16,24,0,0,Math.PI*2); cx.stroke();
+    if (lastT==='breath'){
+      cx.strokeStyle='#f1d58a'; cx.lineWidth=2.5;
+      for (var j=0;j<3;j++){ cx.beginPath(); cx.arc(ox+18,bl.y,14+j*7,-0.9,0.9); cx.stroke(); }
+    }
+    /* постукивание: метки по позвоночнику, красная — где больно */
+    if (lastT==='tap'){
+      for (var v=1; v<=17; v++){ var q2=sp(lvl(v),k,ox,oy,L), hot=p.pain && Math.abs(v-p.pain)<1;
+        cx.fillStyle= hot ? '#e0574f' : '#5fae6e'; cx.beginPath(); cx.arc(q2.x-10,q2.y,hot?5:3,0,Math.PI*2); cx.fill(); }
+    }
+    /* наклоны: стрелки и запрет */
+    if (lastT==='bend'){
+      var mid=sp(0.6,k,ox,oy,L); cx.strokeStyle='#e0574f'; cx.lineWidth=2.5;
+      [[-1,0],[1,0]].forEach(function(d){ cx.beginPath(); cx.moveTo(mid.x+d[0]*24,mid.y); cx.lineTo(mid.x+d[0]*54,mid.y); cx.stroke(); });
+      cx.beginPath(); cx.moveTo(mid.x-6,mid.y-6); cx.lineTo(mid.x+6,mid.y+6); cx.moveTo(mid.x+6,mid.y-6); cx.lineTo(mid.x-6,mid.y+6); cx.stroke();
+    }
+    /* сбоку: дуга-мерка у горба */
+    if (lastT==='side'){
+      var a=sp(0.45,k,ox,oy,L), c2=sp(0.95,k,ox,oy,L);
+      cx.setLineDash([5,5]); cx.strokeStyle='#f1d58a'; cx.lineWidth=1.5; cx.beginPath(); cx.moveTo(a.x,a.y); cx.lineTo(c2.x,c2.y); cx.stroke(); cx.setLineDash([]);
+    }
+    cx.restore();
+    if (lying){ var fl=H*0.62+Math.round(k*L*0.42)+6; cx.strokeStyle='#5e7186'; cx.lineWidth=2; cx.beginPath(); cx.moveTo(W*0.12,fl); cx.lineTo(W*0.88,fl); cx.stroke(); }
+    cx.fillStyle='#8fa5b9'; cx.textAlign='left'; cx.fillText(p.name, narrow?10:16, 16);
+    cx.textAlign='right';
+    var lab = !lastT ? 'выбери осмотр' : (lastT==='lie' && !p.r.lie ? 'лёжа — записи нет' :
+      {side:'дуга назад', bend:'не гнётся', lie:'лёжа дуга осталась', tap: p.pain ? 'боль лишь в одном месте' : 'боли нет', breath:'дышит живот', skin:'онемение кожи'}[lastT]);
+    cx.fillStyle='#f1d58a'; cx.fillText(lab, W-(narrow?10:16), 16);
+  }
+  window.addEventListener('resize', draw);
+  card(); draw(); setFound();
+
+  /* ── ВЫВОД ── у всех пятерых по записям: a, b, c, e; d и f — ловушки. */
+  $('verdictGo').onclick=function(){
+    var v={}; document.querySelectorAll('#verdict input').forEach(function(x){ v[x.value]=x.checked; });
+    if (nDone()<5){ msg('Сначала осмотри всех пятерых полностью: пока готово '+nDone()+' из 5.','bad'); return; }
+    var notes=[];
+    if (v.d) notes.push('лёжа горб не выпрямлялся у первых трёх больных, а о двух других записи нет');
+    if (v.f) notes.push('о родных расспросили только троих — у четвёртого и пятого прошлое неизвестно');
+    if (!v.a || !v.b || !v.c) notes.push('дуга назад, неподвижность и почти безболезненное постукивание были у всех пятерых — это первые признаки в списке Бехтерева');
+    if (!v.e) notes.push('посмотри ещё раз на дыхание: у всех пятерых грудь не дышала, дышал только живот');
+    if (notes.length){ msg('Не совсем: '+notes.join('; ')+'.','bad'); return; }
+    if (!found.g1){ found.g1=1; award('g1',30); }
+    msg('Верно. У всех пятерых позвоночник застыл дугой, почти не гнулся и почти не болел при постукивании, а грудь не дышала. Любопытно: дыхание животом Бехтерев записал у каждого, но в итоговый список пяти признаков не вписал. В список вошли неподвижность без заметной боли, дуга назад, слабость мышц, онемение кожи и покалывания.','ok');
+  };
+
+  /* ── ВИКТОРИНА ── один ответ на вопрос; дистракторы сверены с источниками страницы. */
+  var Q = [
+    {q:'В каком журнале в 1892 году вышла статья Бехтерева об «одеревенелости позвоночника»?', o:['«Неврологический вестник»','«Врач»','«Русская мысль»'], a:1,
+     e:'Статья вышла во «Враче», № 36 за 1892 год — номер Бехтерев назвал сам в немецкой публикации. «Неврологический вестник» он начал издавать только в 1893 году.'},
+    {q:'Что показало постукивание по позвоночнику у больных Бехтерева?', o:['Сильную боль по всему позвоночнику','Почти никакой боли','Звон, как у пустой бочки'], a:1,
+     e:'Неподвижность без заметной боли при постукивании и сгибании — первый из пяти признаков в статье. У двоих больных боль была лишь в одном месте.'},
+    {q:'Что Бехтерев поправил в немецкой публикации 1893 года?', o:['Возраст больных','Где начинается болезнь: в самом позвоночнике, а не в ткани вокруг оболочки спинного мозга','Название журнала'], a:1,
+     e:'В сноске он пишет, что в русской статье ошибочно считал началом болезни воспаление ткани вокруг оболочки спинного мозга.'},
+    {q:'Кто описал ту же болезнь в 1897 и 1898 годах?', o:['А. Штрюмпель и П. Мари','Ж. Шарко и З. Фрейд','В. Вундт и П. Флексиг'], a:0,
+     e:'Описания Бехтерева, Штрюмпеля (1897) и Мари (1898) НИИ ревматологии относит к первым описаниям анкилозирующего спондилита.'},
+    {q:'Кто, по словам немецкого профессора Ф. Копша, прекрасно знает устройство мозга?', o:['Павлов и Бехтерев','Бог и Бехтерев','Шарко и Бехтерев'], a:1,
+     e:'«Знают прекрасно устройство мозга только двое: Бог и Бехтерев» — так, по словам биографов, оценил его Копш.'}
+  ];
+  var qb = $('quizBox');
+  Q.forEach(function(it, qi){
+    var wrap = document.createElement('div');
+    var h = document.createElement('p'); h.className='quiz-q'; h.textContent=(qi+1)+'. '+it.q; wrap.appendChild(h);
+    var exp = document.createElement('div'); exp.className='exp'; exp.setAttribute('aria-live','polite');
+    var btns = it.o.map(function(txt, oi){
+      var b=document.createElement('button'); b.type='button'; b.className='opt'; b.textContent=txt;
+      b.onclick=function(){
+        if (wrap.dataset.done) return; wrap.dataset.done='1';
+        btns.forEach(function(x,xi){ x.disabled=true; if (xi===it.a) x.classList.add('correct'); });
+        if (oi===it.a){ award('q'+qi,8); exp.textContent='Верно. '+it.e; }
+        else { b.classList.add('wrong'); exp.textContent='Не совсем. '+it.e; }
+        exp.classList.add('show');
+      };
+      wrap.appendChild(b); return b;
+    });
+    wrap.appendChild(exp); qb.appendChild(wrap);
+  });
+})();
+</script>
+<script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
+<script>window.MUSEUM_CHROME={
+  museum:{title:'Что изобрели русские первыми в мире',href:'index.html'},
+  share:{title:'Особая форма заболевания: Бехтерев и одеревенелость позвоночника — музей «Что изобрели русские первыми в мире»',
+         text:'В 1892 году казанский профессор Бехтерев описал пятерых больных с застывшим дугой позвоночником — и болезнь носит его имя. Что Россия дала миру раньше всех — день за днём.'},
+  prev:{href:'day-31jan-girotron.html',title:'31 января · Гиротрон'},
+  next:{href:'day-02feb-edinorog.html',title:'2 февраля · «Единорог»'},
+  all:{href:'index.html',label:'Все изобретения'},
+  city:'../../index.html',
+  random:['day-01jan-cabletv.html','day-02jan-luna1.html','day-03jan-anosov.html','day-04jan-pilchikov.html','day-05jan-shukhov.html','day-06jan-orlov.html','day-08jan-icebreaker.html','day-09jan-blinov.html','day-10jan-britnev.html','day-11jan-kostovich.html','day-12jan-r7.html','day-13jan-k278.html','day-14jan-lira.html','day-15jan-kovalevskaya.html','day-16jan-soyuz45.html','day-19jan-kantorovich.html','day-21jan-obninsk.html','day-22jan-landau.html','day-23jan-umov.html','day-24jan-k162.html','day-25jan-korsakov.html','day-26jan-podvodnaya.html','day-27jan-pentium.html','day-28jan-havkin.html','day-30jan-kotelnikov.html','day-31jan-girotron.html','day-01feb-bekhterev.html','day-02feb-edinorog.html','day-03feb-luna9.html','day-18mar-leonov.html','day-15may-mechnikov.html','day-16jun-tereshkova.html','day-26sep-pavlov.html','day-15nov-buran.html','day-25nov-pirogov.html','day-01dec-lobachevsky.html','day-14dec-laser.html']
+};</script>
+<script src="../../assets/museum-chrome.js"></script>
+<script>window.MUSEUM_SUPPORT={museum:'Что изобрели русские первыми в мире'};</script>
+<script src="../../assets/museum-support.js"></script>
+<script src="calendar-izobreteniya.js"></script>
+<script>window.MUSEUM_CALENDAR_INITIAL='02-01';</script>
+<script src="../../assets/museum-calendar-month.js"></script>
+<script>window.MUSEUM_RETURN={riddle:{q:"Какой признак Бехтерев записал у всех пятерых больных, но не вписал в итоговый список?",a:"Дыхание одним животом: грудная клетка у всех пятерых в дыхании почти не участвовала. В список вошли неподвижность позвоночника без заметной боли, дуга назад, слабость мышц, онемение кожи и покалывания.",src:"W. v. Bechterew, Neurologisches Centralblatt, 1893, № 13, с. 426–434 (немецкая публикация статьи из «Врача», 1892, № 36)"}};</script>
+<script src="../../assets/museum-return.js" data-museum="izobreteniya" data-day="02-01"></script>
+<script defer src="../../assets/analytics.js"></script>
+
+<script>window.MUSEUM_AUDIOGUIDE={
+  audioSrc:"audio-guide-bekhterev-ru.mp3",
+  durationLabel:"1 минута 50 секунд",
+  lead:"Голос ведёт по залу Владимира Бехтерева: от портрета кисти Репина до казанской клиники и пятерых больных из статьи тысяча восемьсот девяносто второго года. Шесть остановок, на каждой — что искать глазами. Слушать можно фоном, пока читаешь статью ниже.",
+  stops:[
+    {t:0,mark:"0:00",title:"Портрет кисти Репина"},
+    {t:21,mark:"0:21",title:"Карта мозга"},
+    {t:37,mark:"0:37",title:"Бог и Бехтерев"},
+    {t:54,mark:"0:54",title:"Пятеро больных"},
+    {t:71,mark:"1:11",title:"Поправка в сноске"},
+    {t:89,mark:"1:29",title:"Болезнь Бехтерева"}
+  ],
+  transcript:[
+    "<p>И. Е. Репин. Портрет В. М. Бехтерева, 1913 — Государственный Русский музей; файл Викисклада, общественное достояние.</p>",
+    "<p>Факты: рождение 20 января (1 февраля) 1857 в Вятской губернии — Музей истории медицины Кировской области; кафедра в Казани с 1885 года, «ядро Бехтерева» — верхнее вестибулярное ядро — Ярославский государственный медицинский университет.</p>",
+    "<p>Факты: «Die Leitungsbahnen im Gehirn und Rückenmark», Лейпциг, 1894 — титульный лист (Викисклад); слова Ф. Копша «Знают прекрасно устройство мозга только двое: Бог и Бехтерев» — «Новости украинской психиатрии», статья к 165-летию.</p>",
+    "<p>Факты: «Одеревенелость позвоночника с искривлением его как особая форма заболевания», «Врач», 1892, № 36; пять наблюдений и пять общих признаков — немецкая публикация, Neurologisches Centralblatt, 1893, № 13, с. 426–434.</p>",
+    "<p>Факты: поправка о процессе в самом позвоночнике и сращении позвонков — там же, с. 433, текст и сноска.</p>",
+    "<p>Факты: позвоночник начала VI века, Земельный музей Вюртемберга (фото Anagoria, CC BY 3.0); описания Бехтерева, Штрюмпеля (1897) и Мари (1898) — первые, название «болезнь Бехтерева» — А. Г. Бочкова, НИИ ревматологии РАМН.</p>"
+  ],
+  note:"Озвучено синтезом речи — временно, до записи голосом автора музея."
+};</script>
+<script src="../../assets/museum-audioguide.js"></script>
+</body>
+</html>
