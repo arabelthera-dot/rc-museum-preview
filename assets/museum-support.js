@@ -224,7 +224,40 @@
   var DOCH = Math.max(doc.documentElement.scrollHeight, body.scrollHeight, 1);
   var peakHolder = null, peakEl = null;
 
+  /* Блок, который посетитель уже видит, не двигаем никогда: перестановка на экране — это сдвиг
+     вёрстки, Lighthouse считает его в CLS (календарь «Русские не сдаются» — 0,7 из 1,2, 14.10).
+     Сдвиги за краем экрана в CLS не идут — там переставлять можно. Правило общее для всех
+     страниц: сначала переставляем, до отрисовки проверяем, и если новое место тоже на экране —
+     возвращаем как было (в пределах одного кадра сдвига нет). */
+  function onScreen(el){
+    var r = el.getBoundingClientRect();
+    return r.bottom > 0 && r.top < window.innerHeight;
+  }
+  function frozen(){ return !!(peakHolder && peakHolder.parentNode && onScreen(peakHolder)); }
+
   function placePeak(){
+    /* место размечено в вёрстке (<div data-support-slot>) — блок встаёт туда один раз и больше
+       не двигается: перестановка после дорисовки сетки календаря давала сдвиг вёрстки
+       (CLS 0,26 на календаре костюма, 14.10). Резерв высоты слота — в CSS страницы. */
+    var slot = doc.querySelector('[data-support-slot]');
+    if(slot){
+      if(!peakEl){
+        peakEl = peakBlock();
+        if(!doc.getElementById('support')) peakEl.id = 'support';
+        slot.appendChild(peakEl);
+      }
+      return;
+    }
+    if(frozen()) return;                           /* блок на экране — стоит, где стоит */
+    var wasHost = peakHolder && peakHolder.parentNode, wasNext = wasHost ? peakHolder.nextSibling : null;
+    placeOnce();
+    /* новое место оказалось на экране — возвращаем на старое, пока кадр не отрисован */
+    if(wasHost && peakHolder && peakHolder.parentNode && onScreen(peakHolder)){
+      wasHost.insertBefore(peakHolder, wasNext && wasNext.parentNode === wasHost ? wasNext : null);
+    }
+  }
+
+  function placeOnce(){
     DOCH = Math.max(doc.documentElement.scrollHeight, body.scrollHeight, 1);
     var others = [].slice.call(doc.querySelectorAll('.support')).filter(function(e){ return e !== peakEl; });
     if(others.some(function(e){ return topOf(e) < DOCH * 0.40; })){   /* уже есть ручной блок вверху */
