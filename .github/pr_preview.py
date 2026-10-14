@@ -4,6 +4,8 @@
 Файлы заявки кладутся в rc-preview-pr/pr-N/ с той же раскладкой папок; ссылки на файлы,
 которых в заявке нет (общие движки, картинки, соседние страницы), переписываются на живой сайт.
 Закрыта заявка — папка pr-N удаляется. Ссылка — комментарием в заявке.
+Служебное (tools/, docs/, .github/ — скриншоты проверок до 4 тыс. на заявку) и файлы больше MAX_FILE
+не копируются: сборка Pages падает на артефакте больше 1 ГБ (14.10.2026: 10,8 ГБ, 99% — tools/checks).
 Выключатель: переменная репо PR_PREVIEW_OFF=1.
 """
 import json, os, posixpath, re, shutil, subprocess, sys, urllib.parse, urllib.request
@@ -14,6 +16,8 @@ PREV_REPO = "arabelthera-dot/rc-preview-pr"
 PREV = "https://arabelthera-dot.github.io/rc-preview-pr/"
 MARK = "<!-- pr-preview -->"
 N = os.environ["PR"].strip()
+NOT_SITE = ("tools/", "docs/", ".github/")
+MAX_FILE = 20 * 2**20
 SKIP = re.compile(r"^(#|[a-z][a-z0-9+.-]*:|//|\{|\$|$)", re.I)
 
 
@@ -83,11 +87,14 @@ def main():
     pages = []
     if pr["state"] == "open":
         head, sha = pr["head"]["repo"]["full_name"], pr["head"]["sha"]
-        live = [f["filename"] for f in files if f["status"] != "removed"]
+        live = [f["filename"] for f in files if f["status"] != "removed" and not f["filename"].startswith(NOT_SITE)]
         changed = set(live)
         for p in live:
             url = f"https://raw.githubusercontent.com/{head}/{sha}/{urllib.parse.quote(p)}"
             data = urllib.request.urlopen(url, timeout=60).read()
+            if len(data) > MAX_FILE:
+                print(f"пропущен, {len(data) // 2**20} МБ > {MAX_FILE // 2**20}: {p}")
+                continue
             dst = os.path.join(out, p)
             os.makedirs(os.path.dirname(dst), exist_ok=True)
             if p.endswith(".html"):
