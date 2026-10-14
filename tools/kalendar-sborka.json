@@ -1,0 +1,121 @@
+{
+  "_comment": "Сборка календаря сайта из утверждённых таблиц control/pilot-<музей>. Месяц утверждён, если в тексте файла есть отметка (approval_markers) или он перечислен в approved_override. Используется tools/kalendar-sborka.py.",
+  "approval_markers": [
+    "УТВЕРЖДЁН",
+    "утверждены Сергеем",
+    "утверждён Сергеем"
+  ],
+  "museums": [
+    {
+      "slug": "iskusstvo",
+      "tables": "control/pilot-iskusstvo",
+      "months": {
+        "01": "calendar-january.html",
+        "02": "calendar-february.html",
+        "03": "calendar-march.html",
+        "04": "calendar-april.html",
+        "05": "calendar-may.html",
+        "06": "calendar-june.html",
+        "07": "calendar-july.html",
+        "08": "calendar-august.html",
+        "09": "calendar-september.html",
+        "10": "calendar-october.html",
+        "11": "calendar-november.html",
+        "12": "calendar-december.html"
+      },
+      "approved_override": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "11",
+        "12"
+      ],
+      "approved_override_source": "реестр russian-civilization/docs/approvals/calendar-approvals.json: 12 месяцев, Сергей 08.10.2026 «Я по всем музеям на все 365 дней утвердил дни календаря»; в html мая–декабря отметки нет",
+      "data": "muzei/iskusstvo/calendar-art.js"
+    },
+    {
+      "slug": "arhitektura",
+      "tables": "control/pilot-arhitektura",
+      "months": {
+        "01": "calendar-january.html",
+        "02": "calendar-february.html",
+        "03": "calendar-march.html",
+        "04": "calendar-april.html",
+        "05": "calendar-may.html",
+        "06": "calendar-june.html",
+        "07": "calendar-july.html",
+        "08": "calendar-august.html",
+        "09": "calendar-september.html",
+        "10": "calendar-october.html",
+        "11": "calendar-november.html",
+        "12": "calendar-december.html"
+      },
+      "title_strip": [
+        "\\s*\\[У\\]",
+        "\\s*·\\s*`.*$"
+      ],
+      "title_strip_note": "как в опубликованном calendar-data.js: метка [У] и хвост «· `slug` · источник» на сайт не идут, [К] остаётся",
+      "data": "muzei/arhitektura/calendar-data.js"
+    },
+    {
+      "slug": "kalendar-pobed",
+      "tables": "control/pilot-kalendar-pobed",
+      "months": {
+        "01": "calendar-january.html",
+        "02": "calendar-february.html",
+        "03": "calendar-march.html",
+        "04": "calendar-april.html",
+        "05": "calendar-may.html",
+        "06": "calendar-june.html",
+        "07": "calendar-july.html",
+        "08": "calendar-august.html",
+        "09": "calendar-september.html",
+        "10": "calendar-october.html",
+        "11": "calendar-november.html",
+        "12": "calendar-december.html"
+      },
+      "title_strip": [
+        "\\s*\\[[ИУ]\\]",
+        "\\s*[—;]\\s*флагман месяца.*$"
+      ],
+      "hook_strip": [
+        "\\s*[—;]\\s*флагман месяца.*$"
+      ],
+      "title_strip_note": "метки источника [И]/[У] стоят только в октябре–декабре (92 дня) и служебная пометка «флагман месяца…» — на сайт не идут, чтобы год читался одинаково; та же пометка в хуке 6 флагманов — hook_strip",
+      "data": "muzei/kalendar-pobed/calendar-pobed.js",
+      "data_title": "Календарь побед"
+    },
+    {
+      "slug": "literatura",
+      "tables": "control/pilot-literatura",
+      "months": {
+        "01": "yanvar-31-peresborka-5050.html",
+        "02": "fevral-28-peresborka-5050.html",
+        "03": "mart-31-peresborka-5050.html",
+        "04": "aprel-30-peresborka-5050.html",
+        "05": "may-31-peresborka-5050.html",
+        "06": "iyun-30-peresborka-5050.html",
+        "07": "iyul-31-peresborka-5050.html",
+        "08": "avgust-31-peresborka-5050.html",
+        "09": "sentyabr-30-peresborka-5050.html",
+        "10": "oktyabr-31-peresborka-5050.html",
+        "11": "noyabr-30-peresborka-5050.html",
+        "12": "dekabr-31-peresborka-5050.html"
+      },
+      "data": "muzei/literatura/calendar-literatura.js"
+    }
+  ],
+  "excluded": {
+    "nesdayutsya": "calendar-NN-<месяц>.html без markdown-таблицы в <pre> (0 строк «|») — формат другой, нужен свой разборщик",
+    "izobreteniya": "*-na-utverzhdenie.html — таблицы замен («Было → почему уходит | Предлагаю»), а не полный месяц; на сайте calendar-izobreteniya.js уже 365 ключей",
+    "pervoprohodcy": "первая колонка — порядковый № экспоната, не дата «1 янв»; на сайте calendar-pervoprohodcy.js 371 ключ",
+    "karikatura": "таблицы датные (Дата|Экспонат|Хук), но в первой сборке не включён по наряду; в реестре утверждений март и май записаны дважды — сначала развести дубли"
+  }
+}
