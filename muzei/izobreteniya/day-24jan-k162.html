@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="ru" data-museum="izobreteniya">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Подлодка К-162, 1970 — Что изобрели русские первыми в мире, 24 января</title>
+<!--
+  Страница дня 24 января. Наряд stranicy-izob-0910 (claude2, 12.10.2026), карточка #762.
+  Форма — вариант А музея изобретений (Сергей 12.09.2026): лента ударов, подробности свёрнуты.
+  Паспорт выпуска: rc-museum-production/izobreteniya/day-24jan-k162/passport/issue.json
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --dark:#060c17; --dark2:#0c1826; --surface:#111f33;
+    --card:rgba(255,255,255,.05); --card-b:rgba(255,255,255,.09);
+    --gold:#c9a84c; --gold-l:#e4c97a; --gold-g:rgba(201,168,76,.13);
+    --ink:#e8eef5; --muted:#7a9ab8; --line:rgba(255,255,255,.07);
+    --accent:#2d8cbf; --accent2:#1f6f8b;
+    /* legacy compat */
+    --paper:#0c1826; --paper2:#111f33;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Inter','Segoe UI',sans-serif;color:var(--ink);background:var(--dark);line-height:1.72}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.13;margin:0}
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent)}
+
+  /* ── ШАПКА ── */
+  header.top{background:rgba(6,12,23,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--card-b);color:#fff;position:sticky;top:0;z-index:30}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+  .logo svg{display:block;filter:drop-shadow(0 0 8px rgba(201,168,76,.4))}
+  .logo .lt{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:16px}
+  .logo .lt small{display:block;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-family:'Inter',sans-serif}
+  .score{background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:6px 16px;font-size:13px;color:var(--gold-l);cursor:pointer;font-family:'Inter',sans-serif}
+  .score-info{position:absolute;right:12px;top:66px;max-width:260px;background:#0e1c30;color:var(--ink);border:1px solid var(--card-b);border-radius:14px;padding:14px 16px;font-size:13px;line-height:1.6;box-shadow:0 20px 60px rgba(0,0,0,.6);display:none;z-index:40}
+  .score-info.show{display:block}
+
+  /* ── HERO — СТАНДАРТ (не менять): 3D-сцена сверху, текст отдельным блоком ниже ── */
+  .hero-scene{position:relative;height:52vh;min-height:300px;max-height:520px;overflow:hidden;background:linear-gradient(160deg,#0a1e3a 0%,#1a3a6a 55%,#0d2240 100%)}
+  .hero-scene canvas.scene,.hero-scene img.scene{width:100%;height:100%;display:block;object-fit:cover}
+  .scene-caption{background:#060d18;padding:11px 0 12px}
+  .scene-caption .wrap{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+  .scene-cap{font-size:13.5px;line-height:1.6;color:var(--muted);border-left:2px solid rgba(201,168,76,.4);padding-left:14px;flex:1 1 420px}
+  .scene-hint{flex:0 0 auto;font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.4px;color:#e4c97a;
+    background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.34);border-radius:24px;padding:7px 16px;font-weight:600}
+  .hero-lead{background:linear-gradient(180deg,#0c1826 0%,#060c17 100%);color:#fff;padding:28px 0 38px}
+  .hero-lead .museum{color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:12px;opacity:.9}
+  .hero-lead .who{font-family:'Inter',sans-serif;font-size:clamp(13px,3vw,15px);letter-spacing:.4px;color:var(--accent-l,#7dc8ff);margin-bottom:10px}
+  .hero-lead .who i{font-style:normal;color:#7893ab;font-weight:400}
+  .hero-lead h1{color:#fff;font-size:56px;font-weight:900;line-height:1.04;margin-bottom:16px}
+  .hero-lead .hook{color:#b8ccde;font-size:19px;max-width:580px;margin-bottom:28px;line-height:1.65;font-weight:400}
+  .hero-lead .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+  @media(max-width:680px){.hero-lead h1{font-size:34px}.hero-lead .hook{font-size:16px}
+    .hero-scene{height:34vh;min-height:230px;max-height:300px}
+    .scene-caption .wrap{flex-direction:column;gap:9px}
+    .scene-hint{order:-1;align-self:flex-start;font-size:11.5px;padding:6px 13px}
+    .scene-cap{font-size:12.8px;flex:1 1 auto}}
+  .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:16px;font-family:'Inter',sans-serif;letter-spacing:.5px}
+
+  /* ── НАВИГАЦИЯ ДНЯ ── */
+  .daynav{position:sticky;top:64px;z-index:25;background:rgba(6,12,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-b)}
+  .daynav .wrap{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+  .daynav::-webkit-scrollbar{display:none}
+  .daynav a{flex:0 0 auto;padding:14px 20px;font-size:11px;font-weight:700;font-family:'Inter',sans-serif;color:var(--muted);text-decoration:none;white-space:nowrap;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:.18s}
+  .daynav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+  /* ── СЕКЦИИ ── */
+  section.block{padding:64px 0;border-bottom:1px solid var(--line);scroll-margin-top:130px}
+  .kicker{font-size:10px;text-transform:uppercase;letter-spacing:3.5px;color:var(--gold);font-weight:700;font-family:'Inter',sans-serif;margin-bottom:8px}
+  section.block h2{font-size:34px;color:#fff;margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink)}
+  .pull{background:var(--gold-g);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 14px 14px 0;font-style:italic;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-size:20px;line-height:1.5;margin:26px 0}
+
+  /* ── КНОПКИ ── */
+  .btn{cursor:pointer;border:none;border-radius:12px;padding:14px 26px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;background:var(--accent2);color:#fff;transition:.18s;letter-spacing:.2px}
+  .btn:hover{filter:brightness(1.18)}
+  .btn.ghost{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid var(--card-b)}
+  .btn.ghost:hover{background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.2)}
+  .btn.gold{background:linear-gradient(135deg,var(--gold),#b8882b);color:#1a0f00;box-shadow:0 4px 20px rgba(201,168,76,.25)}
+  .btn.gold:hover{filter:brightness(1.1);box-shadow:0 6px 28px rgba(201,168,76,.4)}
+  .btn:active{transform:translateY(1px)}
+  .pulse{animation:pulse .9s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+
+  /* ── КАРТОЧКИ ── */
+  .card{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:20px 22px;margin:16px 0;backdrop-filter:blur(6px)}
+
+  /* ── КВИЗ ── */
+  .opt{display:block;width:100%;text-align:left;background:rgba(255,255,255,.04);border:1px solid var(--card-b);border-radius:12px;padding:13px 16px;margin:8px 0;cursor:pointer;font-size:15px;color:var(--ink);font-family:'Inter',sans-serif;transition:.16s}
+  .opt:hover{border-color:var(--accent);background:rgba(45,140,191,.08)}
+  .opt.correct{background:rgba(40,120,60,.18);border-color:#3f9b52;color:#7ed4a0;font-weight:600}
+  .opt.wrong{background:rgba(180,40,40,.13);border-color:#c0453f;color:#f08080}
+  .exp{margin-top:10px;font-size:14px;background:var(--gold-g);border-radius:10px;padding:12px 14px;display:none;color:var(--gold-l)}
+  .exp.show{display:block}
+
+  /* ── ИТОГ ДНЯ ── */
+  .day-result{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:22px 24px;max-width:460px}
+  .dr-rank{font-family:'Playfair Display',Georgia,serif;font-size:28px;color:var(--gold-l);font-weight:700}
+  .dr-score{font-size:16px;margin:4px 0 12px;color:var(--ink)}.dr-score span{color:var(--muted);font-size:14px}
+  .dr-bar{height:8px;background:rgba(255,255,255,.08);border-radius:6px;overflow:hidden}
+  .dr-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),var(--gold));transition:width .6s cubic-bezier(.2,.7,.2,1)}
+  .dr-note{margin-top:12px;font-size:14px;color:var(--muted)}
+
+  /* ── РЕКЛАМНЫЕ СЛОТЫ ── */
+  .ad-slot{position:relative;margin:26px 0;background:rgba(255,255,255,.02);border:1px dashed rgba(255,255,255,.1);border-radius:14px;min-height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px}
+  .ad-slot .lbl{position:absolute;top:7px;right:12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.15);font-family:'Inter',sans-serif}
+  .ad-slot .ph-txt{font-size:12px;max-width:80%;color:rgba(255,255,255,.18)}
+  .ad-slot.billboard{min-height:108px}
+  .adband{background:transparent;border-bottom:none}
+
+  footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
+  .crumbs{background:rgba(6,12,23,.6);border-bottom:1px solid var(--card-b);font-family:'Inter',sans-serif;font-size:12.5px}
+  .crumbs .wrap{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  .crumbs a{color:var(--gold-l);text-decoration:none;white-space:nowrap}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--muted);opacity:.6}
+  .crumbs .here{color:var(--muted);white-space:nowrap}
+
+
+  /* ── ШАПКА: четыре строки по museum-core §6-бис ── */
+  header.top{display:block;text-align:center;padding:10px 12px 8px;height:auto;position:relative}
+  header.top .b1{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:15px;letter-spacing:.5px;color:#fff}
+  header.top .b2{font-size:11px;color:var(--muted);margin-top:2px}
+  header.top .b3{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:6px}
+  header.top .b4{font-size:12.5px;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-style:italic}
+  header.top .score{position:absolute;right:12px;top:10px}
+  .daynav{top:0}
+  .hero-scene{background:#0e1c2c;height:38vh;min-height:250px;max-height:400px}
+  @media(max-width:680px){.hero-lead h1{font-size:31px}}
+  .hero-scene img.scene{object-fit:cover;object-position:50% 42%}
+  .date-origin{font-size:13px;color:#9fb4c8;margin:-6px 0 12px;max-width:62ch}
+  .hero-lead .hook{color:#c6d8e8;max-width:62ch}
+  .hero-under{background:linear-gradient(180deg,#060d18,#060c17);padding:4px 0 22px}
+  .stamp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(125,200,255,.28);margin-top:14px}
+  .stamp>div{padding:11px 12px;border-left:1px solid rgba(125,200,255,.16);min-width:0}
+  .stamp>div:first-child{border-left:0}
+  .stamp .v{font-size:clamp(15px,3.4vw,21px);font-weight:700;color:#8fd3ff;line-height:1.1;overflow-wrap:anywhere}
+  .stamp .k{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#8fa5b9;margin-top:5px}
+  @media(max-width:600px){.stamp{grid-template-columns:repeat(2,minmax(0,1fr))}.stamp>div:nth-child(3){border-left:0}.stamp>div:nth-child(n+3){border-top:1px solid rgba(125,200,255,.16)}}
+
+  /* ── ЛЕНТА УДАРОВ (museum-inventions, вариант А; museum-core §5-бис) ── */
+  .udary{list-style:none;margin:18px 0 0;padding:0;counter-reset:u}
+  .udary>li{border-top:1px solid var(--line);padding:4px 0}
+  .udary details>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:34px 1fr;gap:10px;padding:12px 0;font-size:17px;line-height:1.55;color:var(--ink)}
+  .udary details>summary::-webkit-details-marker{display:none}
+  .udary details>summary::before{counter-increment:u;content:counter(u);font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:20px;color:var(--gold);line-height:1.3}
+  .udary .more-lbl{display:block;grid-column:2;font-size:12.5px;color:var(--gold-l);letter-spacing:.3px;margin-top:4px}
+  .udary .more-lbl::after{content:' ▾'}
+  .udary details[open] .more-lbl::after{content:' ▴'}
+  .udary details[open] .more-lbl .o{display:none}
+  .udary details:not([open]) .more-lbl .c{display:none}
+  .udary summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+  .udary .det{margin:0 0 14px 44px;padding:12px 16px;background:rgba(255,255,255,.035);border-left:2px solid rgba(201,168,76,.45);border-radius:0 10px 10px 0;font-size:15px;color:#d5e0ea}
+  .udary .det p{margin:8px 0}
+  .udary .tag{display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1a0f00;background:var(--gold-l);border-radius:6px;padding:1px 7px;margin-right:6px}
+  .udary .find{border-left:3px solid var(--gold);padding-left:8px}
+  figure.fig{margin:18px 0}
+  figure.fig img{max-width:100%;height:auto;border-radius:10px;display:block}
+  figure.fig figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5}
+  .src-note{font-size:12px;color:#8fa5b9}
+
+  /* ── МОДЕЛЬ ДНЯ (главное предметное действие) ── */
+  .lab{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:18px 18px 20px;margin-top:14px}
+  .lab-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+  .lab-row .lbl{flex:0 0 100%;font-size:13px;color:var(--muted);letter-spacing:.3px}
+  .seg{cursor:pointer;border:1px solid var(--card-b);background:rgba(255,255,255,.04);color:var(--ink);border-radius:10px;padding:10px 14px;font:inherit;font-size:14.5px;min-height:44px}
+  .seg[aria-pressed="true"]{border-color:var(--gold);background:var(--gold-g);color:var(--gold-l);font-weight:600}
+  .seg:focus-visible,.btn:focus-visible,.opt:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .lab-stage{position:relative;margin-top:12px}
+  .lab-stage canvas{width:100%;height:auto;display:block;border-radius:10px;background:#1c2530}
+  .lab-cap{font-size:12px;color:#8fa5b9;margin-top:6px}
+  .lab-msg{margin-top:12px;font-size:15.5px;padding:12px 14px;border-radius:10px;background:rgba(255,255,255,.04);border-left:3px solid var(--card-b);min-height:48px}
+  .lab-msg.ok{border-left-color:#3f9b52;background:rgba(40,120,60,.14)}
+  .lab-msg.bad{border-left-color:#c0453f;background:rgba(180,40,40,.10)}
+  .lab-found{font-size:13px;color:var(--muted);margin-top:8px}
+  .lab-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .noscript-box{background:rgba(255,255,255,.04);border:1px dashed var(--card-b);border-radius:12px;padding:12px 16px;font-size:15px}
+
+  /* ── ГРАНИЦА ПЕРВЕНСТВА ── */
+  .border-box{background:rgba(45,140,191,.08);border:1px solid rgba(45,140,191,.3);border-radius:14px;padding:16px 18px}
+  .border-box b{color:#8fd3ff}
+  .ctx{width:100%;border-collapse:collapse;margin-top:14px;font-size:14.5px}
+  .ctx th,.ctx td{text-align:left;padding:9px 8px;border-top:1px solid var(--line);vertical-align:top}
+  .ctx th{color:var(--gold-l);font-weight:600;font-size:12.5px;letter-spacing:.5px}
+  .quiz-q{margin:18px 0 6px;font-weight:600}
+  .sources a{color:var(--gold-l)}
+  .sources li{margin:6px 0;font-size:14px;color:#c8d6e2}
+  @media(max-width:600px){header.top{padding:8px 64px 6px}header.top .score{top:8px;right:8px;padding:4px 10px;font-size:12px}header.top .b3{margin-top:3px}
+    .hero-scene{height:26vh;min-height:200px;max-height:260px}.date-origin{font-size:12px;margin:-8px 0 8px}.hero-lead{padding:18px 0 26px}.hero-lead .date-chip{margin-bottom:12px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+  /* ── ПОЛЗУНКИ МОДЕЛИ (19, 21 янв) ── */
+  .mtab{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+  .mrow{display:grid;grid-template-columns:minmax(150px,1.2fr) 2fr 92px;gap:12px;align-items:center}
+  .mrow .mname{font-size:14.5px}
+  .mrow .mname i{font-style:normal;color:var(--muted);font-size:13px}
+  .mrow input[type=range]{width:100%;accent-color:var(--gold);min-height:44px}
+  .mrow output{font-size:14px;color:var(--gold-l);text-align:right}
+  .mrow.off{opacity:.45}
+  .mult{margin-top:14px;padding:14px 16px;border-radius:12px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25)}
+  @media(max-width:560px){.mrow{grid-template-columns:1fr 70px}.mrow .mname{grid-column:1/-1}}
+</style>
+<meta name="description" content="18 декабря 1970 года титановая подлодка К-162 прошла под водой со скоростью 44,7 узла — 82,78 км/ч. Рекорд скорости подводного хода не побит до сих пор.">
+<link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-24jan-k162.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Русская цивилизация">
+<meta property="og:title" content="Быстрее всех под водой: К-162, 1970">
+<meta property="og:description" content="18 декабря 1970 года титановая подлодка К-162 прошла под водой со скоростью 44,7 узла — 82,78 км/ч. Рекорд скорости подводного хода не побит до сих пор.">
+<meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-24jan-k162.html">
+<meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-24jan-k162.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Быстрее всех под водой: К-162, 1970", "description": "18 декабря 1970 года титановая подлодка К-162 прошла под водой со скоростью 44,7 узла — 82,78 км/ч. Рекорд скорости подводного хода не побит до сих пор.", "url": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-24jan-k162.html", "inLanguage": "ru", "isPartOf": {"@type": "WebSite", "name": "Музей «Что изобрели русские первыми в мире»"}, "publisher": {"@type": "Organization", "name": "Русская цивилизация"}, "about": {"@type": "Thing", "name": "Атомная подводная лодка К-162 проекта 661 «Анчар»"}, "image": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-24jan-k162.jpg"}</script>
+</head>
+<body>
+
+<header class="top">
+  <div class="b1">Русская цивилизация</div>
+  <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
+  <div class="b3">Что изобрели русские первыми в мире</div>
+  <div class="b4">365 изобретений. Все русские. Все первые</div>
+  <div class="score" id="scoreBox" title="Баллы знаний за этот день">⭐ <span id="score">0</span> / 100</div>
+</header>
+
+<nav class="crumbs" aria-label="Хлебные крошки"><div class="wrap">
+  <a href="../../index.html">Русская цивилизация</a>
+  <span class="sep">›</span>
+  <a href="index.html">Что изобрели русские первыми в мире</a>
+  <span class="sep">›</span>
+  <span class="here">24 января · Подлодка К-162</span>
+</div></nav>
+
+<div class="hero-scene" id="hero" style="background:#5a6f86">
+  <img class="scene" src="day-24jan-k162.jpg" data-source="https://commons.wikimedia.org/wiki/File:DN-ST-84-01579-Papa_class_submarine_1983.JPEG" data-license="Public domain" width="1200" height="783" alt="Чёрная подводная лодка идёт в надводном положении: длинный корпус в пене, над ним — прямоугольное ограждение рубки с мачтами, на мостике несколько человек" fetchpriority="high">
+</div>
+
+<div class="scene-caption">
+  <div class="wrap">
+    <div class="scene-cap">Та самая лодка: К-222 (до 1978 года — К-162) в Атлантике, 26 октября 1983 года. Снимок фотографа ВМС США PH2 D. Beech, архив Министерства обороны США (DN-ST-84-01579); работа военнослужащего США при исполнении — общественное достояние.</div>
+    <span class="scene-hint">Предмет · фото 1983 года</span>
+  </div>
+</div>
+
+<header class="hero-lead">
+  <div class="wrap">
+    <div class="date-chip">24 января · 1970</div>
+    <p class="date-origin">Дата условная: в календаре рекорд стоит на 24 января, а сам он поставлен 18 декабря 1970 года в Баренцевом море.</p>
+    <div class="who">К-162, проект 661 «Анчар» <i>· ЦКБ-16 (ныне «Малахит»), построена на Севмаше</i></div>
+    <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
+    <h1>Быстрее всех под водой: К-162, 1970</h1>
+    <p class="hook">На полном ходу вода сорвала с К-162 дверь рубки и выгнула палубу, а через год лодка прошла под водой 44,7 узла — этот рекорд не побит до сих пор.</p>
+    <div class="hero-btns">
+      <button class="btn gold" id="readBtn" type="button">Читать историю ↓</button>
+      <button class="btn ghost" id="listenBtn" type="button">🎧 Слушать аудиогид</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero-under">
+  <div class="wrap">
+    <div class="stamp">
+      <div><div class="v">44,7 уз</div><div class="k">82,78 км/ч под водой, 18.12.1970</div></div>
+      <div><div class="v">97 %</div><div class="k">мощности реакторов на рекордном галсе</div></div>
+      <div><div class="v">38 уз</div><div class="k">столько требовало задание</div></div>
+      <div><div class="v">100 дБ</div><div class="k">шум в центральном посту выше 35 узлов</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="daynav" aria-label="Разделы дня">
+  <div class="wrap">
+    <a href="#story">Читать</a>
+    <a href="#audioguide">Слушать</a>
+    <a href="#games">Мерная линия</a>
+    <a href="#pervenstvo">Первенство</a>
+    <a href="#quiz">Викторина</a>
+    <a href="#calendar">Календарь</a>
+  </div>
+</nav>
+
+<section class="wrap" id="dokument" data-proof-block></section>
+
+<section class="block" id="audioguide"></section>
+
+<section class="block" id="story">
+  <div class="wrap">
+    <div class="kicker">История первенства · 12 ударов</div>
+    <h2>Лодка, которую строили из титана</h2>
+    <p style="color:var(--muted);max-width:62ch">Читается подряд. Нажми на удар — откроется подробный разбор с источниками.</p>
+    <ol class="udary">
+      <li><details><summary><span>В декабре 1959 года правительство поручило ЦКБ-16 создать скоростную подводную лодку нового поколения — с титановым корпусом и пуском крылатых ракет из-под воды.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Постановление ЦК КПСС и Совета министров называлось «О создании новой скоростной подводной лодки, новых типов энергетических установок и научно-исследовательских, опытно-конструкторских и проектных работ для подводных лодок». Главным конструктором назначили Николая Исанина, позже его сменил Николай Шульженко.</p>
+          <p class="src-note">Источники: «Советская субмарина К-162 установила рекорд скорости» (rus.team); «Книга рекордов Вооружённых сил РФ», Минобороны России (главный конструктор Н. Н. Исанин).</p>
+        </div></details></li>
+      <li><details><summary><span>Лодку строили против авианосцев: она должна была подойти к ним быстро и ударить ракетами «Аметист», не всплывая.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Противокорабельную ракету П-70 «Аметист» для неё начали проектировать в 1960 году. Ракете хватало около 80 километров, поэтому лодке и нужна была скорость: выйти на дистанцию удара раньше, чем её найдут.</p>
+          <p class="src-note">Источники: rus.team («для нанесения ракетных и торпедных ударов по авианосным соединениям противника»); «Подлодка с титановым корпусом проекта 661 „Анчар“» (shipshub.com).</p>
+        </div></details></li>
+      <li><details><summary><span>Конструкторам запретили брать готовые приборы и решения с других лодок: всё на «Анчаре» придумывали заново.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Решение растянуло сроки и удорожило работу, зато корабль получился ни на что не похожим. Над ним трудились больше 400 организаций.</p>
+          <p class="src-note">Источники: Севмаш через sudostroenie.info («Конструкторам официально запретили использовать „традиционные“ технические решения»; «более 400 организаций»); rus.team.</p>
+        </div></details></li>
+      <li><details><summary><span>Корпус сделали из титанового сплава — впервые в мировом подводном кораблестроении.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <figure class="fig">
+            <img src="day-24jan-k162-korma.jpg" data-source="https://commons.wikimedia.org/wiki/File:Papa_class_submarine.jpg" data-license="Public domain" width="900" height="574" loading="lazy" alt="Подводная лодка в надводном положении, вид сзади слева: длинный тёмный корпус и рубка, за кормой пенный след">
+            <figcaption>К-222 (бывшая К-162), вид с кормы, 26 октября 1983 года. Фото PH2 D. Beech, ВМС США (DN-ST-84-01576) — общественное достояние.</figcaption>
+          </figure>
+          <p>Титан прочен, лёгок и не магнитится. Первые корпусные конструкции из него Севмаш начал делать в 1962 году; по сути, параллельно с лодкой рождалась новая отрасль металлургии.</p>
+          <p class="src-note">Источники: rus.team («титана, который впервые применялся в мировом подводном кораблестроении»); Севмаш через sudostroenie.info («строительство атомохода из титанового сплава»); shipshub.com.</p>
+        </div></details></li>
+      <li><details><summary><span>Титан варили в аргоне, а цех на время стройки превратился в лабораторию: стены отмыли и выкрасили в светлое, рабочие ходили в белых робах.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Сварка шла вольфрамовыми электродами в среде аргона, часть узлов — в герметичных камерах, где сварщики работали в подобии водолазных костюмов. Скопившийся у пола аргон однажды стоил жизни рабочим, готовившимся к сварке в цистерне, — после этого ввели контроль состава воздуха.</p>
+          <p class="src-note">Источники: Севмаш через sudostroenie.info (светлые стены, белые робы, строжайший контроль); deepstorm.ru, историческая справка К-162 (сварка в аргоне, несчастный случай).</p>
+        </div></details></li>
+      <li><details><summary><span>Заложили лодку 28 декабря 1963 года, спустили на воду 21 декабря 1968-го, а приёмный акт подписали 31 декабря 1969 года.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Заводской номер 501, цех № 42 Северного машиностроительного предприятия в Северодвинске. Построена была всего одна лодка проекта 661. За цену её прозвали «Золотой рыбкой».</p>
+          <p class="src-note">Источники: deepstorm.ru; rus.team; Севмаш через sudostroenie.info («По проекту 661 была построена всего одна лодка»; «Золотая рыбка»).</p>
+        </div></details></li>
+      <li><details><summary><span>На государственных испытаниях в декабре 1969 года лодка при 80 % мощности реакторов дала 42 узла — вместо 38 по заданию.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>После всплытия оказалось, что за 12 часов полного хода вода сорвала входную дверь ограждения рубки, три лючка в надстройке и обтекатель аварийного буя, а плоская палуба надстройки стала выпуклой.</p>
+          <p class="src-note">Источники: rus.team («42 узла, вместо спецификационных 38 узлов»); deepstorm.ru (повреждения после 12-часового полного хода).</p>
+        </div></details></li>
+      <li><details><summary><span>18 декабря 1970 года комиссия решилась дать максимальный ход: для этого заблокировали аварийную защиту турбин и перевели их на ручное управление.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Манёвр согласовали председатель комиссии контр-адмирал Фёдор Маслов, главный конструктор Николай Шульженко и ответственный сдатчик Кузьма Палкин. На пост управления турбинами встал инженер Кировского завода Александр Скворцов. Командовал лодкой Юрий Голубков.</p>
+          <p class="src-note">Источники: deepstorm.ru; rus.team.</p>
+        </div></details></li>
+      <li class="find"><details><summary><span>При мощности реакторов 97 % лодка прошла под водой со скоростью 44,7 узла — 82,78 км/ч — на глубине 100 метров.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p><span class="tag">Находка дня</span>Лишние 17 % мощности сверх испытательных 80 % дали всего 2,7 узла: сопротивление воды растёт быстрее скорости. «Книга рекордов Вооружённых сил» Минобороны записала: «Подводная лодка К-162 проекта на испытаниях 18 декабря 1970 года установила мировой рекорд скорости подводного хода — 44,7 узлов. До настоящего времени этот рекорд не превзойден».</p>
+          <p class="src-note">Источники: «Книга рекордов ВС РФ», статья «Самая быстроходная в мире атомная подводная лодка» (record.mil.ru, копия web.archive.org); deepstorm.ru; rus.team; Севмаш через sudostroenie.info.</p>
+        </div></details></li>
+      <li><details><summary><span>Скорость мерили приборами самой лодки: подтвердить её на мерной линии гидрографическими судами в 1971 году не дал шторм.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Заход на Мотовскую мерную линию хотели приурочить к открытию съезда КПСС, но суда не вышли в море, а потом донесение отменили. В том же выходе при 100 % мощности сделали два галса и получили 44,85 узла, на третьем не справились с управлением турбинами и прекратили опасный режим. В документах остались 44,7.</p>
+          <p class="src-note">Источник: deepstorm.ru, историческая справка К-162 (февраль — март 1971 года).</p>
+        </div></details></li>
+      <li><details><summary><span>Платой за скорость стал шум: выше 35 узлов вода ревела о корпус так, что в центральном посту было до 100 децибел, и лодка теряла скрытность.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>«Лодка при такой скорости мало что „слышит“, при этом сама шумит очень сильно», — объяснил эксперт Андрей Фролов. Поэтому следующие лодки проектировали тише и дешевле ценой хода: прямым развитием стал проект 670 «Скат».</p>
+          <p class="src-note">Источники: rus.team (шумы «до 100 децибел», «лишал лодку скрытности», проект 670); Радио Sputnik, 05.07.2018 (А. Фролов).</p>
+        </div></details></li>
+      <li><details><summary><span>Осенью 1971 года в Атлантике К-162 шла за американским авианосцем «Саратога», и оторваться от неё он не смог.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Поход длился с 25 сентября по 4 декабря 1971 года; на борту было 129 человек вместо 83 по штату. В 1978 году лодка получила номер К-222, в 1989-м её вывели из состава флота. Рубку легендарного корабля Севмаш собирается поставить в Северодвинске как памятник.</p>
+          <p class="src-note">Источники: deepstorm.ru («преследуя ударный авианосец США „Саратога“»); shipshub.com (авианосец шёл полным ходом, около 30 узлов); Севмаш через sudostroenie.info (рубка — памятный объект).</p>
+        </div></details></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block" id="theme-inventions">
+  <div class="wrap">
+    <div class="kicker">Море и подводный флот · Русские первенства</div>
+    <h2>Что ещё русские изобрели первыми в теме «море и подводный флот»</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Другие дни музея о кораблях и подводных лодках — по утверждённому календарю. Ссылки ведут на уже открытые залы.</p>
+    <button class="btn ghost" type="button" id="themeInvBtn" data-label="Показать 12 первенств →" aria-expanded="false" aria-controls="themeInvBody">Показать 12 первенств →</button>
+    <div id="themeInvBody" hidden>
+      <ul class="theme-list">
+        <li><b>8 янв</b> <a href="day-08jan-icebreaker.html">«Ермак», первый в мире арктический ледокол</a></li>
+        <li><b>10 янв</b> <a href="day-10jan-britnev.html">Первый в мире ледокол «Пайлот»</a></li>
+        <li><b>13 янв</b> <a href="day-13jan-k278.html">К-278: рекорд глубины для подводной лодки — 1027 метров</a></li>
+        <li><b>14 янв</b> <a href="day-14jan-lira.html">Подлодки проекта 705 «Лира» — самые быстрые серийные</a></li>
+        <li><b>10 мар</b> Подводный минный заградитель «Краб», М. П. Налётов, 1912</li>
+        <li><b>7 апр</b> Первая в мире подводная лодка «Дельфин» с двигателем внутреннего сгорания</li>
+        <li><b>13 апр</b> Первая в мире глубоководная морская мина</li>
+        <li><b>20 апр</b> Первый в мире рейс атомного ледокола «Ленин» по Северному морскому пути</li>
+        <li><b>22 июн</b> Торпедная атака минных катеров, С. О. Макаров, 1878</li>
+        <li><b>8 июл</b> Первое в мире серийное судно на подводных крыльях «Ракета»</li>
+        <li><b>14 июл</b> Первый в мире корабль быстрее 30 узлов — миноносец «Сокол»</li>
+        <li><b>27 сен</b> Первая в мире подводная электрическая мина Якоби</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="games">
+  <div class="wrap">
+    <div class="kicker">Главное действие · модель</div>
+    <h2>Гонка на мерной линии</h2>
+    <p style="max-width:62ch">Ты на посту управления турбинами К-162, глубина 100 метров. Над тобой полным ходом идёт авианосец. Прибавляй мощность реакторов и догони его, а потом попробуй взять рекорд 44,7 узла. Следи за двумя табло: скорость и что слышит гидроакустик.</p>
+    <div class="lab" id="lab">
+      <div class="mtab">
+        <div class="mrow"><span class="mname">Мощность реакторов <i>· % от полной</i></span><input type="range" min="0" max="100" step="1" value="40" id="pwr" aria-label="Мощность реакторов, процентов от полной"><output id="oPwr" for="pwr">40 %</output></div>
+      </div>
+      <div class="lab-btns">
+        <button class="btn gold" type="button" id="labGuard">Защита турбин: автомат</button>
+        <button class="btn ghost" type="button" id="labReset">Начать заново</button>
+      </div>
+      <div class="lab-stage">
+        <canvas id="labCv" width="640" height="240" style="height:240px" role="img" aria-label="Разрез моря: на поверхности идёт авианосец со скоростью 30 узлов, на глубине 100 метров — подводная лодка; показаны скорость лодки, отрыв от авианосца и шум"></canvas>
+        <div class="lab-cap">Модель, а не запись испытаний. Из документов в ней три точки: 38 узлов по заданию, 42 узла при 80 % мощности (1969) и 44,7 узла при 97 % (1970), а также шум выше 35 узлов. Между ними скорость считается по правилу «мощность растёт как куб скорости», порог защиты турбин 80 % и скорость авианосца 30 узлов — условные.</div>
+      </div>
+      <div class="lab-msg" id="labMsg" aria-live="polite">Мощность 40 %. Лодка набирает ход — догони авианосец, который идёт 30 узлов.</div>
+      <div class="lab-found" id="labFound">Найдено: рекорд 44,7 — нет; обогнал авианосец — нет; защита турбин — нет; лодка оглохла — нет.</div>
+      <noscript><div class="noscript-box">Для модели нужен JavaScript. Текстовая версия: при 40 % мощности лодка идёт около 33 узлов и уже обгоняет авианосец (30 узлов). При 80 % — 42 узла, как на испытаниях 1969 года. Выше 80 % в автомате срабатывает защита турбин: чтобы идти дальше, её блокируют и управляют турбинами вручную. При 97 % — 44,7 узла, рекорд 1970 года: мощность выросла на 17 пунктов, а скорость — всего на 2,7 узла. Выше 35 узлов поток воды ревёт о корпус, и гидроакустик лодки ничего не слышит.</div></noscript>
+    </div>
+    <p class="src-note" style="margin-top:10px">Точки модели: 42 узла при 80 % и 38 узлов по заданию — rus.team; 44,7 узла при 97 % на глубине 100 м, блокировка защиты турбин — «Книга рекордов ВС РФ», deepstorm.ru; шум выше 35 узлов — rus.team; авианосец «полным ходом (30 узлов)» — shipshub.com.</p>
+  </div>
+</section>
+
+<section class="block" id="pervenstvo">
+  <div class="wrap">
+    <div class="kicker">Проверка факта</div>
+    <h2>Что именно здесь первое в мире</h2>
+    <div class="border-box">
+      <p style="margin-top:0"><b>Граница первенства:</b> наибольшая скорость подводного хода, достигнутая подводной лодкой, — 44,7 узла (82,78 км/ч) у атомной лодки К-162 проекта 661 на испытаниях 18 декабря 1970 года на глубине 100 м; запись «Книги рекордов Вооружённых сил Российской Федерации»: «До настоящего времени этот рекорд не превзойден». Вторая граница — первый в мировом подводном кораблестроении корпус из титанового сплава.</p>
+      <p style="margin-bottom:0"><b>Чего здесь нет:</b> скорость измерена приборами самой лодки — независимый замер гидрографическими судами в 1971 году сорвался из-за шторма. 44,85 узла при 100 % мощности в документы не вошли. Рекорд — опытной лодки в единственном экземпляре: самые быстрые <i>серийные</i> лодки — тоже советские, проекта 705 «Лира» (зал 14 января).</p>
+    </div>
+    <table class="ctx">
+      <thead><tr><th scope="col">Документ или событие</th><th scope="col">Что</th><th scope="col">Когда</th></tr></thead>
+      <tbody>
+        <tr><td>Постановление ЦК КПСС и Совета министров</td><td>Скоростная подводная лодка нового поколения</td><td>декабрь 1959</td></tr>
+        <tr><td>Приёмный акт К-162</td><td>Лодка вступила в строй; на испытаниях 42 узла при 80 % мощности</td><td>31.12.1969</td></tr>
+        <tr><td>Испытания К-162</td><td>44,7 узла под водой при 97 % мощности</td><td>18.12.1970</td></tr>
+        <tr><td>«Книга рекордов ВС РФ», Минобороны России</td><td>«Самая быстроходная в мире атомная подводная лодка»</td><td>2018</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block" id="quiz">
+  <div class="wrap">
+    <div class="kicker">Проверь себя · 5 вопросов</div>
+    <h2>Викторина</h2>
+    <p style="color:var(--muted);max-width:62ch">На каждый вопрос — одна попытка. После ответа покажем объяснение.</p>
+    <div id="quizBox"></div>
+    <noscript><div class="noscript-box">Для викторины нужен JavaScript. Ответы: 1 — 44,7 узла; 2 — из титанового сплава; 3 — заблокировали аварийную защиту турбин и управляли ими вручную; 4 — громкий шум лишал её скрытности; 5 — одна.</div></noscript>
+  </div>
+</section>
+
+<section class="block" id="result">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Итог дня</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Рекорд в модели, три находки в ней и викторина вместе дают 100 баллов. Прогресс не сохраняется: перезагрузка страницы начинает день заново.</p>
+    <div class="day-result">
+      <div class="dr-score" id="dayTxt">0 / 100 · звание: Гость дня</div>
+      <div class="dr-bar"><i id="dayBar" style="width:0%"></i></div>
+      <div class="dr-note">Возьми рекорд 44,7 узла, найди три поворота модели и ответь на вопросы викторины.</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="sources">
+  <div class="wrap">
+    <div class="kicker">Источники</div>
+    <h2>На чём стоит страница</h2>
+    <ul class="sources">
+      <li><a href="https://web.archive.org/web/20181010075509/http://record.mil.ru/view/135.html" rel="noopener" target="_blank">Министерство обороны России · «Книга рекордов Вооружённых сил РФ», «Самая быстроходная в мире атомная подводная лодка»</a> (копия web.archive.org от 10.10.2018: страница record.mil.ru с 2019 года не открывается): К-162 проекта 661, главный конструктор Н. Н. Исанин, 18 декабря 1970 года, 44,7 узла, «до настоящего времени этот рекорд не превзойден».</li>
+      <li><a href="https://sudostroenie.info/novosti/46659.html" rel="noopener" target="_blank">Sudostroenie.info · «День в истории: 55 лет назад АПЛ К-162 установила рекорд подводной скорости»</a>, 18.12.2025, по сообщению пресс-службы Севмаша: 44,7 узла, КБ «Малахит», запрет на традиционные решения, титан, белый цех, приёмный акт 31.12.1969, одна лодка, «Золотая рыбка», рубка как памятный объект.</li>
+      <li><a href="https://web.archive.org/web/20260101062055/http://www.deepstorm.ru/DeepStorm.files/45-92/nsrs/661/k-162/k-162.htm" rel="noopener" target="_blank">deepstorm.ru · «Подводная лодка К-18, К-162, К-222. Проект 661», историческая справка</a> (копия web.archive.org: сайт из нашей сети 12.10 не открывался): закладка, спуск, акт, повреждения на испытаниях 1969 года, блокировка защиты турбин, 97 % и 44,7 узла на 100 м, 1971 год — шторм на мерной линии и 44,85 узла, поход за «Саратогой», К-222.</li>
+      <li><a href="https://rus.team/events/sovetskaya-submarina-k-162-ustanovila-rekord-skorosti" rel="noopener" target="_blank">rus.team · «Советская субмарина К-162 установила рекорд скорости»</a>: постановление 1959 года, ЦКБ-16, Исанин и Шульженко, «Аметист», запрет на освоенные приборы, титан впервые в мировом подводном кораблестроении, 42 узла при 80 % вместо 38, шум до 100 дБ выше 35 узлов, проект 670.</li>
+      <li><a href="https://shipshub.com/ru/article/1244-2.html" rel="noopener" target="_blank">Shipshub · «Подлодка с титановым корпусом проекта 661 „Анчар“»</a>: задача против авианосцев, дальность ракет, титан, эпизод с авианосцем «Саратога» и его полный ход 30 узлов.</li>
+      <li><a href="https://radiosputnik.ru/20180705/1524008242.html" rel="noopener" target="_blank">Радио Sputnik · «Эксперт: благодаря советской подлодке К-162 мы многое для себя уяснили»</a>, 05.07.2018: рекорд по «Книге рекордов» Минобороны, мнение А. Фролова о шуме и «испытательном стенде».</li>
+      <li>Изображения: <a href="https://commons.wikimedia.org/wiki/File:DN-ST-84-01579-Papa_class_submarine_1983.JPEG" rel="noopener" target="_blank">К-222 в Атлантике, 26.10.1983, DN-ST-84-01579</a> и <a href="https://commons.wikimedia.org/wiki/File:Papa_class_submarine.jpg" rel="noopener" target="_blank">вид с кормы, DN-ST-84-01576</a> — фото PH2 D. Beech, ВМС США; Wikimedia Commons, общественное достояние (работа военнослужащего США при исполнении обязанностей).</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="calendar">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Календарь изобретений</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Выбери любой день — узнаешь, что русские сделали первыми в мире. Листай месяцы стрелками.</p>
+    <div id="calbox"></div>
+  </div>
+</section>
+
+<section class="block kd" id="kuda-dalshe">
+  <div class="wrap">
+    <div class="kd-kicker">Куда дальше</div>
+    <h2>Музей продолжается</h2>
+    <div class="kd-grid">
+      <div class="kd-card main"><span class="kd-lbl">Следующий день</span><a href="day-25jan-korsakov.html">25 января — Машины Корсакова <span class="kd-arr">→</span></a>
+        <p>В 1832 году перфокарты впервые стали хранить сведения и искать по ним.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Предыдущий день</span><a href="day-23jan-umov.html">23 января — Вектор Умова <span class="kd-arr">→</span></a>
+        <p>Умов первым описал энергию как поток с плотностью и скоростью.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Та же нить</span><a href="day-14jan-lira.html">14 января — Подлодки «Лира» <span class="kd-arr">→</span></a>
+        <p>Самые быстрые серийные подводные лодки — тоже титановые.</p></div>
+      <div class="kd-card main"><span class="kd-lbl">Город-музей</span><a href="../../index.html">Русская цивилизация <span class="kd-arr">→</span></a>
+        <p>Все музеи проекта на одной карте.</p></div>
+    </div>
+    <p style="margin-top:16px"><a href="izobreteniya.html">Посмотреть изобретения по алфавиту →</a></p>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>
+  Русская цивилизация · «Что изобрели русские первыми в мире»</div></footer>
+
+<script type="application/json" data-proof>{"status":"found","claim_id":"rc:izobreteniya:k162:claim-record","ours":{"kind":"запись «Книги рекордов Вооружённых сил РФ»","title":"Самая быстроходная в мире атомная подводная лодка: К-162 проекта 661, 44,7 узла","date":"1970-12-18","holder":"Министерство обороны Российской Федерации, record.mil.ru; копия web.archive.org от 10.10.2018","source_url":"https://web.archive.org/web/20181010075509/http://record.mil.ru/view/135.html"}}</script>
+<script src="../../assets/museum-proof.js"></script>
+
+<script>
+/* ── СЧЁТ ── шкала из 100 держит assets/museum-score.js; здесь только реестр наград.
+   рекорд в модели 30 + три поворота модели 3×10 + викторина 5×8 = 100. */
+window.MUSEUM_SCORE = {awards:{lab:30, why0:10, why1:10, why2:10, q:[5,8]},
+  ranks:[[100,'Командир К-162'],[70,'Сдаточный механик'],[40,'Курсант-подводник'],[0,'Гость дня']]};
+</script>
+<script src="../../assets/museum-score.js"></script>
+<script>
+(function(){
+  var $ = function(id){return document.getElementById(id);};
+  $('readBtn').onclick = function(){ $('story').scrollIntoView({behavior:'smooth'}); };
+  $('listenBtn').onclick = function(){ $('audioguide').scrollIntoView({behavior:'smooth'}); };
+  var tb=$('themeInvBtn');
+  tb.onclick=function(){ var b=$('themeInvBody'), open=b.hidden; b.hidden=!open; tb.setAttribute('aria-expanded',open?'true':'false'); tb.textContent=open?'▲ Скрыть':tb.dataset.label; };
+
+  /* ── МЕРНАЯ ЛИНИЯ ── условная модель хода.
+     Скорость v(P) = 44,7·(P/97)^(1/3) узла: мощность растёт как куб скорости. Проверка по документам:
+     v(80) = 41,9 ≈ 42 узла (испытания 1969), v(97) = 44,7 (рекорд 18.12.1970).
+     Защита турбин в автомате не пускает выше GUARD %. Шум: выше 35 узлов гидроакустик глохнет.
+     Авианосец идёт CARRIER узлов; отрыв = интеграл (v − CARRIER) по времени, в условных кабельтовых. */
+  var REC=44.7, GUARD=80, CARRIER=30, DEAF=35;
+  var pwr=$('pwr'), manual=false, v=0, gap=-3, found={}, lastMsgKey='', trip=0;
+  function target(p){ return p<=0 ? 0 : REC*Math.pow(p/97,1/3); }
+  function P(){ var p=+pwr.value; return (!manual && p>GUARD) ? GUARD : p; }
+  function fmt(x,d){ var k=Math.pow(10,d==null?1:d); return (Math.round(x*k)/k).toString().replace('.',','); }
+  function hearing(s){ return s<=20 ? 1 : s>=DEAF ? 0 : 1-(s-20)/(DEAF-20); }
+  var cv=$('labCv'), cx=cv.getContext('2d'), W=0, H=240, wave=0;
+  function fit(){
+    var w=Math.round(cv.clientWidth)||640, r=window.devicePixelRatio||1;
+    if (w===W && cv.width===Math.round(w*r)) return;
+    W=w; cv.width=Math.round(W*r); cv.height=Math.round(H*r); cx.setTransform(r,0,0,r,0,0);
+  }
+  function draw(){
+    fit(); var narrow=W<480;
+    var g=cx.createLinearGradient(0,0,0,H); g.addColorStop(0,'#1b3550'); g.addColorStop(0.25,'#123047'); g.addColorStop(1,'#07131f');
+    cx.fillStyle='#24384d'; cx.fillRect(0,0,W,46); cx.fillStyle=g; cx.fillRect(0,46,W,H-46);
+    /* поверхность */
+    cx.strokeStyle='rgba(180,210,235,.6)'; cx.lineWidth=1.5; cx.beginPath();
+    for (var x=0;x<=W;x+=4){ var y=46+2*Math.sin((x+wave*CARRIER)/18); if(!x) cx.moveTo(x,y); else cx.lineTo(x,y); } cx.stroke();
+    /* авианосец — в центре кадра; лодка смещена на отрыв */
+    var mid=W*0.5, lim=W*0.5-72, px=Math.max(-lim, Math.min(lim, gap*W*0.06));
+    cx.fillStyle='#9fb0c0'; cx.fillRect(mid-60,30,120,14); cx.fillRect(mid+10,18,16,12);
+    cx.fillStyle='#8fa5b9'; cx.font=(narrow?'11px':'12px')+' Inter, sans-serif'; cx.textAlign='center';
+    cx.fillText('авианосец · '+CARRIER+' уз', mid, 14);
+    /* лодка на 100 м */
+    var sy=150, sx=mid+px;
+    cx.fillStyle= v>=REC-0.05 ? '#e4c97a' : '#2b2f33'; cx.strokeStyle='rgba(200,220,240,.55)'; cx.lineWidth=1.2;
+    cx.beginPath(); cx.ellipse(sx,sy,64,11,0,0,7); cx.fill(); cx.stroke();
+    cx.fillRect(sx-8,sy-21,30,11);
+    /* след: длина ∝ скорость */
+    cx.strokeStyle='rgba(125,200,255,'+(0.15+Math.min(.6,v/REC*.6))+')'; cx.lineWidth=2;
+    for (var i=0;i<3;i++){ cx.beginPath(); cx.moveTo(sx-66,sy-5+i*5); cx.lineTo(sx-66-v*(narrow?2:3.2)*(1-i*.2),sy-5+i*5); cx.stroke(); }
+    cx.fillStyle='#8fa5b9'; cx.fillText('К-162 · глубина 100 м', sx, sy+30);
+    /* табло */
+    cx.textAlign='left'; cx.font=(narrow?'12px':'13px')+' Inter, sans-serif';
+    cx.fillStyle='#e8eef5';
+    cx.fillText('Скорость: '+fmt(v)+' уз ('+fmt(v*1.852,0)+' км/ч) · мощность '+P()+' %'+(manual?' · ручное управление':''), 10, H-36);
+    var hr=hearing(v);
+    cx.fillStyle='#8fa5b9'; cx.fillText('Гидроакустик слышит:', 10, H-14);
+    var bx=narrow?140:160, bw=Math.max(60,W-bx-20);
+    cx.fillStyle='rgba(255,255,255,.12)'; cx.fillRect(bx,H-25,bw,12);
+    cx.fillStyle= hr>0.5 ? '#3f9b52' : hr>0 ? '#d8a23a' : '#c0453f'; cx.fillRect(bx,H-25,bw*Math.max(hr,0.02),12);
+    if (hr===0){ cx.fillStyle='#ffd0c8'; cx.fillText('ничего — шум обтекания', bx+6, H-15); }
+  }
+  function setFound(){
+    function yn(k){ return found[k] ? 'да' : 'нет'; }
+    $('labFound').textContent='Найдено: рекорд 44,7 — '+yn('lab')+'; обогнал авианосец — '+yn('why0')+'; защита турбин — '+yn('why1')+'; лодка оглохла — '+yn('why2')+'.';
+  }
+  function hit(k,p){ if(!found[k]){ found[k]=1; award(k,p); } setFound(); }
+  function msg(t,cls){ var m=$('labMsg'); m.className='lab-msg'+(cls?' '+cls:''); m.textContent=t; }
+  function say(key,t,cls){ if (key!==lastMsgKey){ lastMsgKey=key; msg(t,cls); } }
+  function check(){
+    var want=+pwr.value;
+    if (!manual && want>GUARD){
+      if (!trip) trip=performance.now();
+      hit('why1',10);
+      say('guard','Сработала защита турбин: в автомате выше '+GUARD+' % не пускает. Так было и 18 декабря 1970 года — чтобы дать полный ход, защиту заблокировали и встали на ручное управление. Нажми «Защита турбин».','bad');
+      return;
+    }
+    /* каждая находка засчитывается в любом порядке действий: сначала новая, потом текущее состояние */
+    var rec=v>=REC-0.05, ahead=gap>0 && v>CARRIER, deaf=v>DEAF && hearing(v)===0;
+    var M={rec:['Рекорд: '+fmt(REC)+' узла — '+fmt(REC*1.852,2)+' км/ч на глубине 100 м. От 80 % до 97 % мощность выросла на 17 пунктов, а скорость — только на 2,7 узла: вода сопротивляется всё сильнее.','ok'],
+      ahead:['Лодка под водой обогнала авианосец, идущий '+CARRIER+' узлов полным ходом. Теперь попробуй взять рекорд 44,7 узла.','ok'],
+      deaf:['Выше '+DEAF+' узлов поток ревёт о корпус — в центральном посту до 100 децибел. Гидроакустик ничего не слышит, а саму лодку слышно издалека: скорость съела скрытность.','']};
+    if (rec && !found.lab){ hit('lab',30); say('rec',M.rec[0],M.rec[1]); return; }
+    if (ahead && !found.why0){ hit('why0',10); say('ahead',M.ahead[0],M.ahead[1]); return; }
+    if (deaf && !found.why2){ hit('why2',10); say('deaf',M.deaf[0],M.deaf[1]); return; }
+    if (rec){ say('rec',M.rec[0],M.rec[1]); return; }
+    if (deaf){ say('deaf',M.deaf[0],M.deaf[1]); return; }
+    if (ahead){ say('ahead',M.ahead[0],M.ahead[1]); return; }
+    if (v<CARRIER-0.5 && want>0) { say('slow'+Math.round(target(P())),'Мощность '+P()+' % даёт около '+fmt(target(P()))+' узла — авианосец уходит. Прибавь мощность.',''); return; }
+    if (want===0) { say('zero','Реакторы на нуле: лодка теряет ход.',''); return; }
+    say('chase','Ход '+fmt(v)+' узла: догоняешь авианосец. Подожди, пока лодка поравняется с ним.','');
+  }
+  function update(){ $('oPwr').textContent=pwr.value+' %'; }
+  pwr.addEventListener('input', update);
+  $('labGuard').onclick=function(){
+    manual=!manual; this.textContent= manual ? 'Защита турбин: заблокирована, ручное' : 'Защита турбин: автомат';
+    lastMsgKey='';
+    if (manual){ hit('why1',10); msg('Защита заблокирована, турбинами управляешь вручную — как инженер Кировского завода Александр Скворцов в 1970 году. Теперь можно выше '+GUARD+' %.',''); }
+  };
+  $('labReset').onclick=function(){ manual=false; v=0; gap=-3; trip=0; pwr.value=40; update(); $('labGuard').textContent='Защита турбин: автомат'; lastMsgKey=''; msg('Лодка остановлена, защита в автомате. Уже полученные баллы сохраняются и повторно не начисляются.',''); };
+  var lastT=0;
+  function tick(ts){
+    var dt=lastT ? Math.min(0.1,(ts-lastT)/1000) : 0; lastT=ts;
+    var t=target(P());
+    v += (t-v)*Math.min(1, dt/1.2);           /* разгон: постоянная времени 1,2 с */
+    if (Math.abs(t-v)<0.02) v=t;
+    gap += (v-CARRIER)*dt*0.25;
+    gap = Math.max(-7, Math.min(7, gap));
+    wave += dt*3;
+    draw(); check(); requestAnimationFrame(tick);
+  }
+  update(); requestAnimationFrame(tick);
+
+  /* ── ВИКТОРИНА ── один ответ на вопрос; дистракторы сверены с источниками страницы. */
+  var Q = [
+    {q:'Какую скорость под водой показала К-162 18 декабря 1970 года?', o:['38 узлов','44,7 узла','60 узлов'], a:1,
+     e:'44,7 узла — 82,78 км/ч на глубине 100 м; 38 узлов требовало задание.'},
+    {q:'Из чего был сделан корпус К-162?', o:['Из алюминиевого сплава','Из титанового сплава','Из корабельной стали'], a:1,
+     e:'Титан впервые в мировом подводном кораблестроении — отсюда и прозвище «Золотая рыбка».'},
+    {q:'Что пришлось сделать с турбинами, чтобы дать рекордный ход?', o:['Заблокировать аварийную защиту и управлять ими вручную','Поставить третью турбину','Всплыть на поверхность'], a:0,
+     e:'Защиту заблокировали, на пост управления турбинами встал инженер Кировского завода Александр Скворцов.'},
+    {q:'Почему следующие лодки не стали делать такими же быстрыми?', o:['Громкий шум на большой скорости лишал лодку скрытности','Титан запретили','Скорость не измерили'], a:0,
+     e:'Выше 35 узлов в центральном посту было до 100 децибел; дальше строили тише и дешевле ценой хода.'},
+    {q:'Сколько лодок проекта 661 построили?', o:['Одну','Семнадцать','Пять'], a:0,
+     e:'К-162 осталась единственной; семнадцать — это стальные лодки проекта 670.'}
+  ];
+  var box = $('quizBox');
+  Q.forEach(function(it, qi){
+    var wrap = document.createElement('div');
+    var h = document.createElement('p'); h.className='quiz-q'; h.textContent=(qi+1)+'. '+it.q; wrap.appendChild(h);
+    var exp = document.createElement('div'); exp.className='exp'; exp.setAttribute('aria-live','polite');
+    var btns = it.o.map(function(txt, oi){
+      var b=document.createElement('button'); b.type='button'; b.className='opt'; b.textContent=txt;
+      b.onclick=function(){
+        if (wrap.dataset.done) return; wrap.dataset.done='1';
+        btns.forEach(function(x,xi){ x.disabled=true; if (xi===it.a) x.classList.add('correct'); });
+        if (oi===it.a){ award('q'+qi,8); exp.textContent='Верно. '+it.e; }
+        else { b.classList.add('wrong'); exp.textContent='Не совсем. '+it.e; }
+        exp.classList.add('show');
+      };
+      wrap.appendChild(b); return b;
+    });
+    wrap.appendChild(exp); box.appendChild(wrap);
+  });
+})();
+</script>
+<script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
+<script>window.MUSEUM_CHROME={
+  museum:{title:'Что изобрели русские первыми в мире',href:'index.html'},
+  share:{title:'Быстрее всех под водой: К-162 — музей «Что изобрели русские первыми в мире»',
+         text:'18 декабря 1970 года титановая подлодка К-162 прошла под водой 44,7 узла — рекорд не побит. Что Россия дала миру раньше всех — день за днём.'},
+  prev:{href:'day-23jan-umov.html',title:'23 января · Вектор Умова'},
+  next:{href:'day-25jan-korsakov.html',title:'25 января · Машины Корсакова'},
+  all:{href:'index.html',label:'Все изобретения'},
+  city:'../../index.html',
+  random:['day-01jan-cabletv.html','day-02jan-luna1.html','day-03jan-anosov.html','day-04jan-pilchikov.html','day-05jan-shukhov.html','day-06jan-orlov.html','day-08jan-icebreaker.html','day-09jan-blinov.html','day-10jan-britnev.html','day-11jan-kostovich.html','day-12jan-r7.html','day-13jan-k278.html','day-14jan-lira.html','day-15jan-kovalevskaya.html','day-16jan-soyuz45.html','day-19jan-kantorovich.html','day-21jan-obninsk.html','day-22jan-landau.html','day-23jan-umov.html','day-24jan-k162.html','day-30jan-kotelnikov.html','day-03feb-luna9.html','day-18mar-leonov.html','day-15may-mechnikov.html','day-16jun-tereshkova.html','day-26sep-pavlov.html','day-15nov-buran.html','day-25nov-pirogov.html','day-01dec-lobachevsky.html','day-14dec-laser.html']
+};</script>
+<script src="../../assets/museum-chrome.js"></script>
+<script>window.MUSEUM_SUPPORT={museum:'Что изобрели русские первыми в мире'};</script>
+<script src="../../assets/museum-support.js"></script>
+<script src="calendar-izobreteniya.js"></script>
+<script>window.MUSEUM_CALENDAR_INITIAL='01-24';</script>
+<script src="../../assets/museum-calendar-month.js"></script>
+<script>window.MUSEUM_RETURN={riddle:{q:"Почему рекорд К-162 записан как 44,7 узла, хотя через год лодка прошла 44,85?",a:"44,85 узла получили при 100 % мощности на двух галсах, но на третьем не справились с турбинами и режим прекратили, а независимый замер на мерной линии сорвал шторм. В документах остались 44,7 узла 18 декабря 1970 года.",src:"deepstorm.ru; «Книга рекордов ВС РФ»"}};</script>
+<script src="../../assets/museum-return.js" data-museum="izobreteniya" data-day="01-24"></script>
+<script defer src="../../assets/analytics.js"></script>
+
+
+<script>window.MUSEUM_AUDIOGUIDE={
+  audioSrc:"audio-guide-k162-ru.mp3",
+  durationLabel:"2 минуты 5 секунд",
+  lead:"Голос ведёт по залу подлодки К-162: от задания на титановую лодку до рекордного галса 18 декабря 1970 года и похода за авианосцем. Шесть остановок, на каждой — что искать глазами. Слушать можно фоном, пока читаешь статью ниже.",
+  stops:[
+    {t:0,mark:"0:00",title:"Чёрная лодка в Атлантике"},
+    {t:21,mark:"0:21",title:"Задание тысяча девятьсот пятьдесят девятого"},
+    {t:40,mark:"0:40",title:"Золотая рыбка"},
+    {t:61,mark:"1:01",title:"Сорванная дверь"},
+    {t:78,mark:"1:18",title:"Сорок четыре и семь"},
+    {t:102,mark:"1:42",title:"Цена скорости"}
+  ],
+  transcript:[
+    "<p>«К-222 (до 1978 года — К-162) в Атлантике, 26 октября 1983 года; фото PH2 D. Beech, ВМС США».</p>",
+    "<p>«Постановление декабря 1959 года: скоростная лодка, ЦКБ-16, ракеты „Аметист“, запрет на традиционные решения».</p>",
+    "<p>«Титановый корпус впервые в мировом подводном кораблестроении; сварка в аргоне; одна лодка, „Золотая рыбка“».</p>",
+    "<p>«Государственные испытания 1969 года: 42 узла при 80 % мощности вместо 38; повреждения после 12 часов полного хода».</p>",
+    "<p>«18 декабря 1970 года: защита турбин заблокирована, 97 % мощности, 44,7 узла (82,78 км/ч) на глубине 100 м».</p>",
+    "<p>«Шум до 100 дБ выше 35 узлов; поход 1971 года за авианосцем „Саратога“».</p>"
+  ],
+  note:"Озвучено синтезом речи — временно, до записи голосом автора музея."
+};</script>
+<script src="../../assets/museum-audioguide.js"></script>
+</body>
+</html>
