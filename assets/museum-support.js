@@ -225,6 +225,18 @@
   var peakHolder = null, peakEl = null;
 
   function placePeak(){
+    /* место размечено в вёрстке (<div data-support-slot>) — блок встаёт туда один раз и больше
+       не двигается: перестановка после дорисовки сетки календаря давала сдвиг вёрстки
+       (CLS 0,26 на календаре костюма, 14.10). Резерв высоты слота — в CSS страницы. */
+    var slot = doc.querySelector('[data-support-slot]');
+    if(slot){
+      if(!peakEl){
+        peakEl = peakBlock();
+        if(!doc.getElementById('support')) peakEl.id = 'support';
+        slot.appendChild(peakEl);
+      }
+      return;
+    }
     DOCH = Math.max(doc.documentElement.scrollHeight, body.scrollHeight, 1);
     var others = [].slice.call(doc.querySelectorAll('.support')).filter(function(e){ return e !== peakEl; });
     if(others.some(function(e){ return topOf(e) < DOCH * 0.40; })){   /* уже есть ручной блок вверху */
