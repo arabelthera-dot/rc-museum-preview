@@ -98,7 +98,7 @@ def main():
         links = "".join(f'<li><a href="{p}">{p}</a></li>' for p in pages)
         with open(os.path.join(out, "index.html"), "w") as f:
             f.write(f'<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex">'
-                    f'<title>Заявка №{N}</title><h1>Заявка №{N}: {pr["title"]}</h1><ul>{links}</ul>')
+                    f'<meta name="rc-sha" content="{sha}"><title>Заявка №{N}</title><h1>Заявка №{N}: {pr["title"]}</h1><ul>{links}</ul>')
     git("add", "-A")
     if subprocess.run(["git", "diff", "--cached", "--quiet"], cwd="site").returncode:
         git("commit", "-qm", f"pr-{N}: {'обновлено' if pr['state'] == 'open' else 'заявка закрыта, удалено'}")
