@@ -31,7 +31,12 @@ jobs:
     outputs:
       kuski: ${{ steps.pages.outputs.kuski }}
     steps:
+      # списку нужны только .html: репо ~5 ГБ, полное скачивание то влезало в 5 мин, то нет
+      # (run 38763878321, 15.10 — отмена на checkout); sparse-checkout качает лишь эти файлы
       - uses: actions/checkout@v4
+        with:
+          sparse-checkout: '*.html'
+          sparse-checkout-cone-mode: false
       - name: страницы заявки
         id: pages
         env:
