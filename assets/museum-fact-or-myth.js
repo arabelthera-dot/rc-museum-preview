@@ -11,6 +11,8 @@
        mount: 'factOrMyth',
        title: 'Факт или миф?',
        lead:  '...',                    // 1–2 фразы ввода
+       mechanic: 'M-23',                // метка для аналитики; без неё — 'M-97'
+                                        // (день 30 — M-23 «Правда или миф» на этом же движке)
        items: [
          {
            text: 'Утверждение, которое обычно повторяют о подвиге...',
@@ -81,7 +83,7 @@
       html += '<button type="button" class="fm-reset">Пройти заново</button>';
       mount.innerHTML = html;
       mount.querySelector('.fm-reset').addEventListener('click', function () { idx = 0; render(); });
-      if (typeof window.rcEvent === 'function') { try { window.rcEvent('rc_game', { mechanic: 'M-97' }); } catch (e) {} }
+      if (typeof window.rcEvent === 'function') { try { window.rcEvent('rc_game', { mechanic: cfg.mechanic || 'M-97' }); } catch (e) {} }
     }
 
     render();
