@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "museum_id": "rc:museum:sport",
+  "issue_id": "rc:issue:sport:day-01jan-ledyanye-gory",
+  "content_family_id": "rc:family:sport:ledyanye-gory",
+  "version": "0.1.0",
+  "identity": {
+    "title_ru": "Ледяные горы на Святки и Масленицу, XIX век",
+    "slug": "day-01jan-ledyanye-gory",
+    "calendar_slot": "01-01",
+    "museum_name_ru": "Музей русского спорта «Сильнее обстоятельств»",
+    "language": "ru",
+    "summary_ru": "Москвичи и петербуржцы строили ледяные горы на Москве-реке и Неве — и в Европе аттракцион до сих пор зовут «русскими горками»."
+  },
+  "lifecycle": {
+    "current": "research",
+    "history": [
+      {"status": "idea", "at": "2026-10-15T00:00:00Z", "actor": "arabelthera-dot", "note_ru": "День 01-01 из календаря года, утверждённого Сергеем 15.10.2026: [У], народная забава, механика M-47 «Шторка было/стало»."},
+      {"status": "research", "at": "2026-10-15T00:00:00Z", "actor": "arabelthera-dot", "note_ru": "Основной источник — И. Снегирёв, «Русские простонародные праздники и суеверные обряды», 1837–1839 (prlib.ru/news/1855946). Остальные фишки — к сверке по русским источникам."}
+    ]
+  },
+  "mode": "new-type",
+  "mechanic": "M-47",
+  "date_mark": "[У]"
+}
