@@ -24,6 +24,13 @@
      };</script>
      <script src="../../assets/museum-stranica-imeni.js"></script>
 
+   Поля и подписи настраиваются (день 29, «Молодая гвардия»: школа, подполье, судьба вместо призыва
+   и места похорон); без них — как в первой реализации:
+     fields:[['born','Родился'],['called','Призыв'],['buried','Похоронен'],['award','Награда']],
+     search:['name','born','buried','called'], searchLabel, placeholder, listLabel,
+     meta:'Карточка · № {n} в списке книги', linkText:'страница книги'.
+   У человека может быть свой url — тогда ссылка в карточке ведёт на его страницу в источнике.
+
    Нет секции, конфига или .si-box, либо список уже стоит — движок ничего не делает.
    Баллов не даёт: счёт страницы ведёт викторина (#quiz).
 */
@@ -70,19 +77,22 @@
   function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
   function norm(s){ return String(s||'').toLowerCase().replace(/ё/g,'е'); }
 
+  var FIELDS = CFG.fields || [['born','Родился'], ['called','Призыв'], ['buried','Похоронен'], ['award','Награда']];
+  var SEARCH = CFG.search || ['name', 'born', 'buried', 'called'];
+
   var P = CFG.people.slice().sort(function(a, b){ return a.name.localeCompare(b.name, 'ru'); });
   var total = P.length, seen = {}, seenCount = 0, cur = -1;
 
   var search = document.createElement('div');
   search.className = 'si-search';
-  search.innerHTML = '<label for="siQuery">Найти по фамилии, городу или области</label>'
-    + '<input id="siQuery" type="search" autocomplete="off" placeholder="Например: Псков или Иванов">';
+  search.innerHTML = '<label for="siQuery">' + esc(CFG.searchLabel || 'Найти по фамилии, городу или области') + '</label>'
+    + '<input id="siQuery" type="search" autocomplete="off" placeholder="' + esc(CFG.placeholder || 'Например: Псков или Иванов') + '">';
   var count = document.createElement('p');
   count.className = 'si-count';
   count.setAttribute('aria-live', 'polite');
   var list = document.createElement('ul');
   list.className = 'si-list';
-  list.setAttribute('aria-label', 'Имена погибших, по алфавиту');
+  list.setAttribute('aria-label', CFG.listLabel || 'Имена погибших, по алфавиту');
   var buttons = P.map(function(p, i){
     var li = document.createElement('li');
     var b = document.createElement('button');
@@ -93,7 +103,7 @@
     b.addEventListener('click', function(){ show(i); });
     li.appendChild(b);
     list.appendChild(li);
-    p._hay = norm([p.name, p.born, p.buried, p.called].join(' '));
+    p._hay = norm(SEARCH.map(function(k){ return p[k]; }).join(' '));
     return b;
   });
   var card = document.createElement('div');
@@ -127,13 +137,13 @@
     if(cur >= 0) buttons[cur].setAttribute('aria-pressed', 'false');
     cur = i;
     buttons[i].setAttribute('aria-pressed', 'true');
-    card.innerHTML = '<div class="si-meta">Карточка · № ' + p.n + ' в списке книги</div>'
+    var url = p.url || CFG.url;
+    card.innerHTML = '<div class="si-meta">' + esc((CFG.meta || 'Карточка · № {n} в списке книги').replace('{n}', p.n)) + '</div>'
       + '<h3>' + esc(p.name) + '</h3>'
       + '<p class="si-role">' + esc(p.rank) + (p.role ? ' · ' + esc(p.role) : '') + '</p>'
-      + '<dl>' + row('Родился', p.born) + row('Призыв', p.called) + row('Похоронен', p.buried)
-      + row('Награда', p.award) + '</dl>'
+      + '<dl>' + FIELDS.map(function(f){ return row(f[1], p[f[0]]); }).join('') + '</dl>'
       + '<div class="si-src">Источник: ' + esc(CFG.source)
-      + (CFG.url ? ' — <a href="' + esc(CFG.url) + '" target="_blank" rel="noopener">страница книги</a>' : '') + '.</div>';
+      + (url ? ' — <a href="' + esc(url) + '" target="_blank" rel="noopener">' + esc(CFG.linkText || 'страница книги') + '</a>' : '') + '.</div>';
     card.hidden = false;
     if(!seen[i]){
       seen[i] = true;
