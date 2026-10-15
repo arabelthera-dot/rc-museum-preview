@@ -25,6 +25,15 @@ if [ -z "$TOOLS" ]; then
   exit 1
 fi
 
+# --- Сторож заплаток (Сергей, 15.10.2026): вид — только в общем assets/*.css -----
+# Тот же tools/ci/stil-guard.py, что в заявке: стоп ДО коммита, а не после.
+stil_files=$(git diff --cached --name-only --diff-filter=AM | grep -E '^(index\.html|muzei/.*\.html)$')
+if [ -n "$stil_files" ] && [ -f "$repo_root/tools/ci/stil-guard.py" ]; then
+  "$PY" "$repo_root/tools/ci/stil-guard.py" check origin/main $stil_files || {
+    echo "╳ КОММИТ ОСТАНОВЛЕН: заплатка в стилях страницы. Правило вида — в общий assets/*.css."
+    exit 1; }
+fi
+
 # --- Сторож зон: чужой музей не коммитится (Сергей, 01.09.2026) --------------
 # Стоит ПЕРВЫМ: сначала «твоя ли это работа», потом «по стандарту ли она сделана».
 for d in "$RC_TOOLS" \
