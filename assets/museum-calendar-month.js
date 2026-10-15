@@ -68,6 +68,17 @@
     return many;
   }
 
+  /* Страница дня без MUSEUM_CALENDAR_INITIAL открывает свою дату по имени файла:
+     day-01jan-….html → «01-01». Иначе 1 января в октябре открывалось на октябре (15.10.2026). */
+  function dayFromPath() {
+    var EN = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
+    var m = /(?:^|\/)day-(\d{1,2})([a-z]{3})[^\/]*$/.exec(location.pathname || '');
+    if (!m) return null;
+    var mi = EN.indexOf(m[2]), d = parseInt(m[1], 10);
+    if (mi < 0 || d < 1 || d > DIM[mi]) return null;
+    return pad(mi + 1) + '-' + pad(d);
+  }
+
   function start() {
     var box = document.getElementById('calbox');
     if (!box) return;
@@ -87,7 +98,10 @@
        Это нужно на странице дня: обещание «нажми 1 января» не должно требовать
        от посетителя семь раз листать календарь от августа. */
     var initial = /^\d{2}-\d{2}$/.test(window.MUSEUM_CALENDAR_INITIAL || '')
-      ? window.MUSEUM_CALENDAR_INITIAL : null;
+      ? window.MUSEUM_CALENDAR_INITIAL : dayFromPath();
+    /* дата из имени файла: старые выпуски листали стрелку скриптом «до января» —
+       такие программные клики (isTrusted=false) здесь не двигают месяц. */
+    var fromPath = !window.MUSEUM_CALENDAR_INITIAL && !!initial;
     var view = initial ? parseInt(initial.slice(0, 2), 10) - 1 : tm;
     var sel = initial;      // выбранный день, ключ ММ-ДД
 
@@ -149,7 +163,8 @@
           ' из 365 — каждый готовый повод для ролика и поста</div>';
 
       box.querySelectorAll('.calnav').forEach(function (b) {
-        b.addEventListener('click', function () {
+        b.addEventListener('click', function (e) {
+          if (fromPath && e && e.isTrusted === false) return;
           view = (view + parseInt(b.dataset.step, 10) + 12) % 12;
           sel = null;
           render();
