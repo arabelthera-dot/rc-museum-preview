@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="ru" data-museum="izobreteniya">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Себе первому: вакцины Хавкина от холеры и чумы — Что изобрели русские первыми в мире, 28 января</title>
+<!--
+  Страница дня 28 января. Наряд stranicy-izob-0910 (claude2, 13.10.2026), карточка #762.
+  Форма — вариант А музея изобретений (Сергей 12.09.2026): лента ударов, подробности свёрнуты.
+  Паспорт выпуска: rc-museum-production/izobreteniya/day-28jan-havkin/passport/issue.json
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --dark:#060c17; --dark2:#0c1826; --surface:#111f33;
+    --card:rgba(255,255,255,.05); --card-b:rgba(255,255,255,.09);
+    --gold:#c9a84c; --gold-l:#e4c97a; --gold-g:rgba(201,168,76,.13);
+    --ink:#e8eef5; --muted:#7a9ab8; --line:rgba(255,255,255,.07);
+    --accent:#2d8cbf; --accent2:#1f6f8b;
+    /* legacy compat */
+    --paper:#0c1826; --paper2:#111f33;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Inter','Segoe UI',sans-serif;color:var(--ink);background:var(--dark);line-height:1.72}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.13;margin:0}
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent)}
+
+  /* ── ШАПКА ── */
+  header.top{background:rgba(6,12,23,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--card-b);color:#fff;position:sticky;top:0;z-index:30}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+  .logo svg{display:block;filter:drop-shadow(0 0 8px rgba(201,168,76,.4))}
+  .logo .lt{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:16px}
+  .logo .lt small{display:block;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-family:'Inter',sans-serif}
+  .score{background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:6px 16px;font-size:13px;color:var(--gold-l);cursor:pointer;font-family:'Inter',sans-serif}
+  .score-info{position:absolute;right:12px;top:66px;max-width:260px;background:#0e1c30;color:var(--ink);border:1px solid var(--card-b);border-radius:14px;padding:14px 16px;font-size:13px;line-height:1.6;box-shadow:0 20px 60px rgba(0,0,0,.6);display:none;z-index:40}
+  .score-info.show{display:block}
+
+  /* ── HERO — СТАНДАРТ (не менять): 3D-сцена сверху, текст отдельным блоком ниже ── */
+  .hero-scene{position:relative;height:52vh;min-height:300px;max-height:520px;overflow:hidden;background:linear-gradient(160deg,#0a1e3a 0%,#1a3a6a 55%,#0d2240 100%)}
+  .hero-scene canvas.scene,.hero-scene img.scene{width:100%;height:100%;display:block;object-fit:cover}
+  .scene-caption{background:#060d18;padding:11px 0 12px}
+  .scene-caption .wrap{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+  .scene-cap{font-size:13.5px;line-height:1.6;color:var(--muted);border-left:2px solid rgba(201,168,76,.4);padding-left:14px;flex:1 1 420px}
+  .scene-hint{flex:0 0 auto;font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.4px;color:#e4c97a;
+    background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.34);border-radius:24px;padding:7px 16px;font-weight:600}
+  .hero-lead{background:linear-gradient(180deg,#0c1826 0%,#060c17 100%);color:#fff;padding:28px 0 38px}
+  .hero-lead .museum{color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:12px;opacity:.9}
+  .hero-lead .who{font-family:'Inter',sans-serif;font-size:clamp(13px,3vw,15px);letter-spacing:.4px;color:var(--accent-l,#7dc8ff);margin-bottom:10px}
+  .hero-lead .who i{font-style:normal;color:#7893ab;font-weight:400}
+  .hero-lead h1{color:#fff;font-size:56px;font-weight:900;line-height:1.04;margin-bottom:16px}
+  .hero-lead .hook{color:#b8ccde;font-size:19px;max-width:580px;margin-bottom:28px;line-height:1.65;font-weight:400}
+  .hero-lead .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+  @media(max-width:680px){.hero-lead h1{font-size:34px}.hero-lead .hook{font-size:16px}
+    .hero-scene{height:34vh;min-height:230px;max-height:300px}
+    .scene-caption .wrap{flex-direction:column;gap:9px}
+    .scene-hint{order:-1;align-self:flex-start;font-size:11.5px;padding:6px 13px}
+    .scene-cap{font-size:12.8px;flex:1 1 auto}}
+  .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:16px;font-family:'Inter',sans-serif;letter-spacing:.5px}
+
+  /* ── НАВИГАЦИЯ ДНЯ ── */
+  .daynav{position:sticky;top:64px;z-index:25;background:rgba(6,12,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-b)}
+  .daynav .wrap{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+  .daynav::-webkit-scrollbar{display:none}
+  .daynav a{flex:0 0 auto;padding:14px 20px;font-size:11px;font-weight:700;font-family:'Inter',sans-serif;color:var(--muted);text-decoration:none;white-space:nowrap;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:.18s}
+  .daynav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+  /* ── СЕКЦИИ ── */
+  section.block{padding:64px 0;border-bottom:1px solid var(--line);scroll-margin-top:130px}
+  .kicker{font-size:10px;text-transform:uppercase;letter-spacing:3.5px;color:var(--gold);font-weight:700;font-family:'Inter',sans-serif;margin-bottom:8px}
+  section.block h2{font-size:34px;color:#fff;margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink)}
+  .pull{background:var(--gold-g);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 14px 14px 0;font-style:italic;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-size:20px;line-height:1.5;margin:26px 0}
+
+  /* ── КНОПКИ ── */
+  .btn{cursor:pointer;border:none;border-radius:12px;padding:14px 26px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;background:var(--accent2);color:#fff;transition:.18s;letter-spacing:.2px}
+  .btn:hover{filter:brightness(1.18)}
+  .btn.ghost{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid var(--card-b)}
+  .btn.ghost:hover{background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.2)}
+  .btn.gold{background:linear-gradient(135deg,var(--gold),#b8882b);color:#1a0f00;box-shadow:0 4px 20px rgba(201,168,76,.25)}
+  .btn.gold:hover{filter:brightness(1.1);box-shadow:0 6px 28px rgba(201,168,76,.4)}
+  .btn:active{transform:translateY(1px)}
+  .pulse{animation:pulse .9s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+
+  /* ── КАРТОЧКИ ── */
+  .card{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:20px 22px;margin:16px 0;backdrop-filter:blur(6px)}
+
+  /* ── КВИЗ ── */
+  .opt{display:block;width:100%;text-align:left;background:rgba(255,255,255,.04);border:1px solid var(--card-b);border-radius:12px;padding:13px 16px;margin:8px 0;cursor:pointer;font-size:15px;color:var(--ink);font-family:'Inter',sans-serif;transition:.16s}
+  .opt:hover{border-color:var(--accent);background:rgba(45,140,191,.08)}
+  .opt.correct{background:rgba(40,120,60,.18);border-color:#3f9b52;color:#7ed4a0;font-weight:600}
+  .opt.wrong{background:rgba(180,40,40,.13);border-color:#c0453f;color:#f08080}
+  .exp{margin-top:10px;font-size:14px;background:var(--gold-g);border-radius:10px;padding:12px 14px;display:none;color:var(--gold-l)}
+  .exp.show{display:block}
+
+  /* ── ИТОГ ДНЯ ── */
+  .day-result{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:22px 24px;max-width:460px}
+  .dr-rank{font-family:'Playfair Display',Georgia,serif;font-size:28px;color:var(--gold-l);font-weight:700}
+  .dr-score{font-size:16px;margin:4px 0 12px;color:var(--ink)}.dr-score span{color:var(--muted);font-size:14px}
+  .dr-bar{height:8px;background:rgba(255,255,255,.08);border-radius:6px;overflow:hidden}
+  .dr-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),var(--gold));transition:width .6s cubic-bezier(.2,.7,.2,1)}
+  .dr-note{margin-top:12px;font-size:14px;color:var(--muted)}
+
+  /* ── РЕКЛАМНЫЕ СЛОТЫ ── */
+  .ad-slot{position:relative;margin:26px 0;background:rgba(255,255,255,.02);border:1px dashed rgba(255,255,255,.1);border-radius:14px;min-height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px}
+  .ad-slot .lbl{position:absolute;top:7px;right:12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.15);font-family:'Inter',sans-serif}
+  .ad-slot .ph-txt{font-size:12px;max-width:80%;color:rgba(255,255,255,.18)}
+  .ad-slot.billboard{min-height:108px}
+  .adband{background:transparent;border-bottom:none}
+
+  footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
+  .crumbs{background:rgba(6,12,23,.6);border-bottom:1px solid var(--card-b);font-family:'Inter',sans-serif;font-size:12.5px}
+  .crumbs .wrap{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  .crumbs a{color:var(--gold-l);text-decoration:none;white-space:nowrap}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--muted);opacity:.6}
+  .crumbs .here{color:var(--muted);white-space:nowrap}
+
+
+  /* ── ШАПКА: четыре строки по museum-core §6-бис ── */
+  header.top{display:block;text-align:center;padding:10px 12px 8px;height:auto;position:relative}
+  header.top .b1{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:15px;letter-spacing:.5px;color:#fff}
+  header.top .b2{font-size:11px;color:var(--muted);margin-top:2px}
+  header.top .b3{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:6px}
+  header.top .b4{font-size:12.5px;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-style:italic}
+  header.top .score{position:absolute;right:12px;top:10px}
+  .daynav{top:0}
+  .hero-scene{background:#0e1c2c;height:38vh;min-height:250px;max-height:400px}
+  @media(max-width:680px){.hero-lead h1{font-size:31px}}
+  .hero-scene img.scene{object-fit:cover;object-position:50% 42%}
+  .date-origin{font-size:13px;color:#9fb4c8;margin:-6px 0 12px;max-width:62ch}
+  .hero-lead .hook{color:#c6d8e8;max-width:62ch}
+  .hero-under{background:linear-gradient(180deg,#060d18,#060c17);padding:4px 0 22px}
+  .stamp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(125,200,255,.28);margin-top:14px}
+  .stamp>div{padding:11px 12px;border-left:1px solid rgba(125,200,255,.16);min-width:0}
+  .stamp>div:first-child{border-left:0}
+  .stamp .v{font-size:clamp(15px,3.4vw,21px);font-weight:700;color:#8fd3ff;line-height:1.1;overflow-wrap:anywhere}
+  .stamp .k{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#8fa5b9;margin-top:5px}
+  @media(max-width:600px){.stamp{grid-template-columns:repeat(2,minmax(0,1fr))}.stamp>div:nth-child(3){border-left:0}.stamp>div:nth-child(n+3){border-top:1px solid rgba(125,200,255,.16)}}
+
+  /* ── ЛЕНТА УДАРОВ (museum-inventions, вариант А; museum-core §5-бис) ── */
+  .udary{list-style:none;margin:18px 0 0;padding:0;counter-reset:u}
+  .udary>li{border-top:1px solid var(--line);padding:4px 0}
+  .udary details>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:34px 1fr;gap:10px;padding:12px 0;font-size:17px;line-height:1.55;color:var(--ink)}
+  .udary details>summary::-webkit-details-marker{display:none}
+  .udary details>summary::before{counter-increment:u;content:counter(u);font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:20px;color:var(--gold);line-height:1.3}
+  .udary .more-lbl{display:block;grid-column:2;font-size:12.5px;color:var(--gold-l);letter-spacing:.3px;margin-top:4px}
+  .udary .more-lbl::after{content:' ▾'}
+  .udary details[open] .more-lbl::after{content:' ▴'}
+  .udary details[open] .more-lbl .o{display:none}
+  .udary details:not([open]) .more-lbl .c{display:none}
+  .udary summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+  .udary .det{margin:0 0 14px 44px;padding:12px 16px;background:rgba(255,255,255,.035);border-left:2px solid rgba(201,168,76,.45);border-radius:0 10px 10px 0;font-size:15px;color:#d5e0ea}
+  .udary .det p{margin:8px 0}
+  .udary .tag{display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1a0f00;background:var(--gold-l);border-radius:6px;padding:1px 7px;margin-right:6px}
+  .udary .find{border-left:3px solid var(--gold);padding-left:8px}
+  figure.fig{margin:18px 0}
+  figure.fig img{max-width:100%;height:auto;border-radius:10px;display:block}
+  figure.fig figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5}
+  .src-note{font-size:12px;color:#8fa5b9}
+
+  /* ── МОДЕЛЬ ДНЯ (главное предметное действие) ── */
+  .lab{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:18px 18px 20px;margin-top:14px}
+  .lab-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+  .lab-row .lbl{flex:0 0 100%;font-size:13px;color:var(--muted);letter-spacing:.3px}
+  .seg{cursor:pointer;border:1px solid var(--card-b);background:rgba(255,255,255,.04);color:var(--ink);border-radius:10px;padding:10px 14px;font:inherit;font-size:14.5px;min-height:44px}
+  .seg[aria-pressed="true"]{border-color:var(--gold);background:var(--gold-g);color:var(--gold-l);font-weight:600}
+  .seg:focus-visible,.btn:focus-visible,.opt:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .lab-stage{position:relative;margin-top:12px}
+  .lab-stage canvas{width:100%;height:auto;display:block;border-radius:10px;background:#1c2530}
+  .lab-cap{font-size:12px;color:#8fa5b9;margin-top:6px}
+  .lab-msg{margin-top:12px;font-size:15.5px;padding:12px 14px;border-radius:10px;background:rgba(255,255,255,.04);border-left:3px solid var(--card-b);min-height:48px}
+  .lab-msg.ok{border-left-color:#3f9b52;background:rgba(40,120,60,.14)}
+  .lab-msg.bad{border-left-color:#c0453f;background:rgba(180,40,40,.10)}
+  .lab-found{font-size:13px;color:var(--muted);margin-top:8px}
+  .lab-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .noscript-box{background:rgba(255,255,255,.04);border:1px dashed var(--card-b);border-radius:12px;padding:12px 16px;font-size:15px}
+
+  /* ── ГРАНИЦА ПЕРВЕНСТВА ── */
+  .border-box{background:rgba(45,140,191,.08);border:1px solid rgba(45,140,191,.3);border-radius:14px;padding:16px 18px}
+  .border-box b{color:#8fd3ff}
+  .ctx{width:100%;border-collapse:collapse;margin-top:14px;font-size:14.5px}
+  .ctx th,.ctx td{text-align:left;padding:9px 8px;border-top:1px solid var(--line);vertical-align:top}
+  .ctx th{color:var(--gold-l);font-weight:600;font-size:12.5px;letter-spacing:.5px}
+  .quiz-q{margin:18px 0 6px;font-weight:600}
+  .sources a{color:var(--gold-l)}
+  .sources li{margin:6px 0;font-size:14px;color:#c8d6e2}
+  @media(max-width:600px){header.top{padding:8px 64px 6px}header.top .score{top:8px;right:8px;padding:4px 10px;font-size:12px}header.top .b3{margin-top:3px}
+    .hero-scene{height:26vh;min-height:200px;max-height:260px}.date-origin{font-size:12px;margin:-8px 0 8px}.hero-lead{padding:18px 0 26px}.hero-lead .date-chip{margin-bottom:12px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+  /* ── ПОЛЗУНКИ МОДЕЛИ (19, 21 янв) ── */
+  .mtab{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+  .mrow{display:grid;grid-template-columns:minmax(150px,1.2fr) 2fr 92px;gap:12px;align-items:center}
+  .mrow .mname{font-size:14.5px}
+  .mrow .mname i{font-style:normal;color:var(--muted);font-size:13px}
+  .mrow input[type=range]{width:100%;accent-color:var(--gold);min-height:44px}
+  .mrow output{font-size:14px;color:var(--gold-l);text-align:right}
+  .mrow.off{opacity:.45}
+  .mult{margin-top:14px;padding:14px 16px;border-radius:12px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25)}
+  @media(max-width:560px){.mrow{grid-template-columns:1fr 70px}.mrow .mname{grid-column:1/-1}}
+</style>
+<meta name="description" content="18 июля 1892 года В. А. Хавкин ввёл себе свою вакцину от холеры, в 1893–1895 годах привил в Индии 42 179 человек, а в январе 1897-го проверил первую прививку от чумы в бомбейской тюрьме.">
+<link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-28jan-havkin.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Русская цивилизация">
+<meta property="og:title" content="Себе первому: вакцины Хавкина от холеры и чумы">
+<meta property="og:description" content="18 июля 1892 года В. А. Хавкин ввёл себе свою вакцину от холеры, в 1893–1895 годах привил в Индии 42 179 человек, а в январе 1897-го проверил первую прививку от чумы в бомбейской тюрьме.">
+<meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-28jan-havkin.html">
+<meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-28jan-havkin.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Себе первому: вакцины Хавкина от холеры и чумы", "description": "18 июля 1892 года В. А. Хавкин ввёл себе свою вакцину от холеры, в 1893–1895 годах привил в Индии 42 179 человек, а в январе 1897-го проверил первую прививку от чумы в бомбейской тюрьме.", "url": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-28jan-havkin.html", "inLanguage": "ru", "isPartOf": {"@type": "WebSite", "name": "Музей «Что изобрели русские первыми в мире»"}, "publisher": {"@type": "Organization", "name": "Русская цивилизация"}, "about": {"@type": "Person", "name": "Владимир Аронович Хавкин"}, "image": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-28jan-havkin.jpg"}</script>
+<style>
+  /* ── РАЗВИЛКА (М-15) ── */
+  .fork{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:16px 18px;margin-top:14px}
+  .fork .opt{display:block;width:100%;text-align:left}
+  .fork-real{margin-top:12px;font-size:15px;padding:12px 14px;border-radius:10px;background:rgba(201,168,76,.08);border-left:3px solid var(--gold)}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="b1">Русская цивилизация</div>
+  <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
+  <div class="b3">Что изобрели русские первыми в мире</div>
+  <div class="b4">365 изобретений. Все русские. Все первые</div>
+  <div class="score" id="scoreBox" title="Баллы знаний за этот день">⭐ <span id="score">0</span> / 100</div>
+</header>
+
+<nav class="crumbs" aria-label="Хлебные крошки"><div class="wrap">
+  <a href="../../index.html">Русская цивилизация</a>
+  <span class="sep">›</span>
+  <a href="index.html">Что изобрели русские первыми в мире</a>
+  <span class="sep">›</span>
+  <span class="here">28 января · Вакцины Хавкина</span>
+</div></nav>
+
+<div class="hero-scene" id="hero" style="background:#ecebe6">
+  <img class="scene" src="day-28jan-havkin.jpg" style="object-fit:contain" data-source="https://commons.wikimedia.org/wiki/File:Anti-cholera_inoculation,_Calcutta,_1894_Wellcome_L0037329.jpg" data-license="CC BY 4.0" width="1200" height="827" alt="Чёрно-белый снимок под навесом из жердей: за столом с микроскопом и склянками стоят врачи, в центре сидит человек в тёмном костюме и делает укол девочке, вокруг толпятся мужчины, женщины с детьми сидят на земле" fetchpriority="high">
+</div>
+
+<div class="scene-caption">
+  <div class="wrap">
+    <div class="scene-cap">«Введение противохолерной прививки в Калькутте, март 1894 года». Под снимком подписаны врачи города и «Mr. W. M. Haffkine». Wellcome Collection, Викисклад, CC BY 4.0.</div>
+    <span class="scene-hint">Предмет · фотография 1894 года</span>
+  </div>
+</div>
+
+<header class="hero-lead">
+  <div class="wrap">
+    <div class="date-chip">28 января · 1892 / 1897</div>
+    <p class="date-origin">Дата условная: календарь музея отдал этот день Хавкину. В эти дни 1897 года в бомбейской тюрьме Байкулла шла чума, и 30 января там испытали его прививку.</p>
+    <div class="who">Владимир Аронович Хавкин <i>· Одесса → Институт Пастера, Париж → Калькутта и Бомбей</i></div>
+    <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
+    <h1>Себе первому: вакцины Хавкина от холеры и чумы</h1>
+    <p class="hook">Свою вакцину от холеры Владимир Хавкин 18 июля 1892 года сначала ввёл себе, в дозе больше, чем давал животным, — и описал в научном журнале, как у него поднялась температура.</p>
+    <div class="hero-btns">
+      <button class="btn gold" id="readBtn" type="button">Читать историю ↓</button>
+      <button class="btn ghost" id="listenBtn" type="button">🎧 Слушать аудиогид</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero-under">
+  <div class="wrap">
+    <div class="stamp">
+      <div><div class="v">18.07.1892</div><div class="k">Хавкин ввёл себе первую вакцину от холеры</div></div>
+      <div><div class="v">42 179</div><div class="k">человек привито от холеры в Индии в 1893–1895 годах</div></div>
+      <div><div class="v">154</div><div class="k">заключённых-добровольца привились от чумы 30 января 1897 года</div></div>
+      <div><div class="v">≈2,9 млн</div><div class="k">доз противочумной вакцины разослала его лаборатория к маю 1902 года</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="daynav" aria-label="Разделы дня">
+  <div class="wrap">
+    <a href="#story">Читать</a>
+    <a href="#audioguide">Слушать</a>
+    <a href="#games">Байкулла</a>
+    <a href="#pervenstvo">Первенство</a>
+    <a href="#quiz">Викторина</a>
+    <a href="#calendar">Календарь</a>
+  </div>
+</nav>
+
+<section class="wrap" id="dokument" data-proof-block></section>
+
+<section class="block" id="audioguide"></section>
+
+<section class="block" id="story">
+  <div class="wrap">
+    <div class="kicker">История первенства · 12 ударов</div>
+    <h2>Из Одессы — в Париж, Калькутту и Бомбей</h2>
+    <p style="color:var(--muted);max-width:62ch">Читается подряд. Нажми на удар — откроется подробный разбор с источниками.</p>
+    <ol class="udary">
+      <li><details><summary><span>Владимир Хавкин родился 15 марта 1860 года в Одессе и учился в Новороссийском университете у Ильи Мечникова.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <figure class="fig" style="max-width:340px">
+            <img src="day-28jan-havkin-portret.jpg" data-source="https://commons.wikimedia.org/wiki/File:Waldemar_Mordecai_Wolffe_Haffkine._Photograph._Wellcome_V0026503.jpg" data-license="CC BY 4.0" width="678" height="1000" loading="lazy" alt="Портретная фотография: мужчина средних лет с зачёсанными набок тёмными волосами, в тёмном сюртуке, белом воротничке и галстуке, смотрит прямо в объектив">
+            <figcaption>Владимир Аронович Хавкин. Фотопортрет из собрания Wellcome Collection, Викисклад, CC BY 4.0.</figcaption>
+          </figure>
+          <p>Детство он провёл в Бердянске, где отец учительствовал в еврейской школе. В университете Хавкин ходил в кружок народовольцев, после 1 марта 1881 года сидел в тюрьме и был отчислен. Доучиться ему позволили через три года: в 1884-м он сдал экзамены и получил степень кандидата естественных наук.</p>
+          <p class="src-note">Источники: журнал «Родина», Н. Амонбеков, «Создателя первых вакцин против чумы и холеры на Родине не ценили» (2020); «Коммерсантъ», С. Петухов, «Революционер в микробиологии» (2017); РИО, М. Малунова, «Владимир Аронович Хавкин. Самый неизвестный учёный России» (2021).</p>
+        </div></details></li>
+      <li><details><summary><span>Под полицейским надзором достойной работы в России не нашлось: он служил музейным препаратором за гроши, и в 1889 году Хавкин стал помощником библиотекаря в Институте Пастера в Париже.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Сначала, в 1888 году, Мечников позвал его в Лозанну, на место приват-доцента, а на следующий год Хавкин перебрался за учителем в Париж. Должность помощника библиотекаря была скромной, но давала главное — место рядом с лабораториями, где учились делать прививки.</p>
+          <p class="src-note">Источники: РИО, «Владимир Аронович Хавкин. Самый неизвестный учёный России»; «Коммерсантъ», «Революционер в микробиологии».</p>
+        </div></details></li>
+      <li><details><summary><span>К лету 1892 года он получил две вакцины от холеры — ослабленный микроб и усиленный — и проверил их на морских свинках, кроликах и голубях.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Свои опыты Хавкин доложил Парижскому биологическому обществу 9 и 16 июля 1892 года (морские свинки; кролики и голуби). Холерный вибрион он держал в заданной силе: ослабленный — для первой прививки, усиленный проходами через морских свинок — для второй, через шесть дней. Так Дженнер держал оспенную вакцину, передавая её от телёнка к телёнку, и Хавкин потом подчёркивал это родство: вакцина — это микроб, которому задали силу и не дают её потерять.</p>
+          <p class="src-note">Источники: W.-M. Haffkine, «Le choléra asiatique chez le cobaye» и «Le choléra asiatique chez le lapin et chez le pigeon», Comptes rendus de la Société de biologie, 1892; W. M. Haffkine, «A Lecture on Vaccination against Cholera», 18 декабря 1895 (Indian Medical Gazette, март 1896).</p>
+        </div></details></li>
+      <li class="find"><details><summary><span>18 июля 1892 года Хавкин ввёл себе под кожу левого бока первую вакцину в дозе больше той, что защищала животных, а 24 июля — вторую.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <figure class="fig">
+            <img src="day-28jan-havkin-1892.jpg" data-source="https://archive.org/details/comptesrendusdes1892soci/page/n755/mode/1up" data-license="Public domain" width="900" height="710" loading="lazy" alt="Страница французского научного журнала: номер 740, заголовок «Inoculation de vaccins anticholériques à l’homme», подпись W.-M. Haffkine, ниже абзац, который начинается словами «Le 18 courant, je me suis injecté»">
+            <figcaption>Стр. 740 «Отчётов Парижского биологического общества» за 1892 год, заседание 30 июля: «Прививка противохолерных вакцин человеку». Скан из Internet Archive, общественное достояние.</figcaption>
+          </figure>
+          <p><span class="tag">Находка дня</span>Свою заметку Хавкин начинает с себя: «18-го числа сего месяца я ввёл себе в подкожную клетчатку левого бока дозу первой противохолерной вакцины, превышающую ту, что достаточна для прививки названных животных». Недомогание длилось сутки, температура поднялась с 36,6 до 37,5 градуса, кишечник не пострадал. После второй вакцины 24 июля жар дошёл до 38,6 и прошёл за двадцать восемь часов. Заметку прочли на заседании 30 июля 1892 года.</p>
+          <p class="src-note">Источник: W.-M. Haffkine, «Inoculation de vaccins anticholériques à l’homme», Comptes rendus des séances de la Société de biologie, 9e série, t. 4, séance du 30 juillet 1892, p. 740–741.</p>
+        </div></details></li>
+      <li><details><summary><span>Следом вызвались трое из России: врач Явейн из Петербурга, врач Тамамшев из Тифлиса и агроном Вильбушевич из Москвы.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Явейну, который был «на 17 килограммов тяжелее» самого Хавкина, 22 июля досталась та же доза, что и ему, а Тамамшеву и Вильбушевичу 25 июля — четыре пятых дозы. У всех были жар, боль и припухлость на месте укола, и всё прошло за несколько дней. Вывод заметки: прививка обеих вакцин «не представляет ни малейшей опасности для здоровья», и Хавкин надеялся, что через шесть дней после неё человек будет защищён от холеры.</p>
+          <p class="src-note">Источник: W.-M. Haffkine, «Inoculation de vaccins anticholériques à l’homme», Comptes rendus de la Société de biologie, 30 juillet 1892, p. 740–741.</p>
+        </div></details></li>
+      <li><details><summary><span>Испанец Хайме Ферран тут же напомнил, что прививал от холеры тысячи людей ещё в 1885 году, но сам Хавкин видел разницу в том, что именно вводят.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>В том же томе «Отчётов» за 1892 год напечатана записка Феррана из Барселоны: он просит Хавкина не забыть его «права на приоритет» и пишет, что «тысячи людей были привиты в 1885 году». В лекции 1895 года Хавкин отвечал: Ферран вводил вибрионы, взятые у больных холерой, как когда-то прививали саму оспу, а в Индии он вводит вакцину, приготовленную по Дженнеру и Пастеру. Опыты Феррана остановило испанское правительство, а комиссии Испании, Англии, Франции, России и Бельгии их не одобрили.</p>
+          <p class="src-note">Источники: J. Ferran, «À propos de la communication de M. Haffkine, sur le choléra asiatique», Comptes rendus de la Société de biologie, 1892; W. M. Haffkine, «A Lecture on Vaccination against Cholera» (1895).</p>
+        </div></details></li>
+      <li><details><summary><span>Россия испытывать прививку не разрешила, а Британия разрешила — в Индии. С апреля 1893 по июль 1895 года Хавкин привил 42 179 человек.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>По словам самого Хавкина, правительственная комиссия в России отказала ему, сославшись в том числе на неудачу Феррана; журнал «Родина» добавляет, что мешала и «революционная» репутация доктора. За двадцать девять месяцев в Индии Хавкин сделал больше 70 тысяч уколов — британским офицерам и солдатам, индийским сипаям, рабочим чайных плантаций, жителям Калькутты — «без единого случая вреда». Прививали только тех, кого удавалось уговорить: «никакого давления со стороны властей».</p>
+          <p class="src-note">Источники: W. M. Haffkine, «A Lecture on Vaccination against Cholera» (1895); «Родина», «Создателя первых вакцин против чумы и холеры на Родине не ценили».</p>
+        </div></details></li>
+      <li><details><summary><span>В Калькутте в каждом доме прививали только часть семьи, и с 11-го по 459-й день после прививки среди непривитых умерли 34 человека из 263, среди привитых — один из 137.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Хавкин нарочно прививал только часть полка, тюрьмы, плантации или семьи: остальные жили в тех же условиях — с ними и сравнивали. Холера пришла в 36 калькуттских домов. После первых десяти дней она была в 26 из них, и там привитые болели в 19 раз реже и умирали в 17 раз реже, а единственным умершим из привитых был ребёнок, которого не привели на второй укол. Роберт Кох, открывший холерный вибрион, сказал Хавкину, что считает защиту доказанной.</p>
+          <p class="src-note">Источник: W. M. Haffkine, «A Lecture on Vaccination against Cholera» (1895), раздел «Indian Experiences».</p>
+        </div></details></li>
+      <li><details><summary><span>В октябре 1896 года Хавкин приехал в Бомбей, где началась чума, и сделал для неё новую вакцину — из убитых нагреванием чумных палочек.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Холерный способ здесь не годился. Чумную палочку Хавкин растил месяц в бульоне, на поверхности которого плавали капли топлёного масла гхи: микробы росли под каплями «сталактитами», их стряхивали на дно, и масло давало новый урожай. Потом палочки убивали часом нагрева до 70 градусов. По рассказам биографов, первым прививку от чумы Хавкин и на этот раз проверил на себе. Прививки начались 10 января 1897 года.</p>
+          <p class="src-note">Источники: W. M. Haffkine, «Remarks on the Plague Prophylactic Fluid», British Medical Journal, 12 июня 1897; Summarised Report on the Bombay Plague Research Laboratory for the years 1896–1902; РИО, «Владимир Аронович Хавкин. Самый неизвестный учёный России».</p>
+        </div></details></li>
+      <li><details><summary><span>23 января 1897 года чума вспыхнула в бомбейской тюрьме Байкулла, и 30 января 154 заключённых-добровольца получили прививку, а остальные — нет.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <figure class="fig" style="max-width:520px">
+            <img src="day-28jan-havkin-1897.jpg" data-source="https://archive.org/details/b30476902" data-license="Public domain" width="900" height="1148" loading="lazy" alt="Фрагмент страницы английского журнала: абзац о вспышке чумы в тюрьме Байкулла, ниже таблица по дням — заболевшие и умершие среди непривитых и среди привитых, под ней итог: 12 случаев, 6 смертей против 2 случаев без смертей">
+            <figcaption>British Medical Journal, 12 июня 1897, стр. 1461: таблица Хавкина по тюрьме Байкулла. Скан оттиска из библиотеки Wellcome, Internet Archive, общественное достояние.</figcaption>
+          </figure>
+          <p>В тюрьме было 345 человек. С 23 по 29 января заболели девять, пятеро умерли; утром 30 января — ещё шесть случаев. Днём привились 154 человека из тех же камер. Трое из них умерли: у одного бубон был уже при уколе, у двоих вздулся в тот же вечер. А дальше, с первого дня после прививки и до конца вспышки, среди непривитых (в среднем 173 человека) было 12 случаев и 6 смертей, среди привитых (148) — 2 случая и ни одной смерти.</p>
+          <p class="src-note">Источник: W. M. Haffkine, «Remarks on the Plague Prophylactic Fluid», British Medical Journal, 1897, vol. 1, p. 1461–1462.</p>
+        </div></details></li>
+      <li><details><summary><span>Медицинский журнал Индии в марте 1897 года назвал Хавкина первооткрывателем защиты от двух самых страшных болезней.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>«Открыватель предохранительных средств против двух самых страшных из всех болезней займёт место среди величайших благодетелей человечества», — писала Indian Medical Gazette. С 10 января 1897 по 31 мая 1901 года бомбейская лаборатория Хавкина отправила 2 380 288 доз противочумной вакцины — по Индии и в Африку, Австралию, Европу и Америку, а за следующий год ещё 486 753. С 1925 года бывшая лаборатория носит его имя: Институт Хавкина в Мумбаи.</p>
+          <p class="src-note">Источники: «M. Haffkine», Indian Medical Gazette, март 1897; Summarised Report on the Bombay Plague Research Laboratory for the years 1896–1902; «Родина», «Создателя первых вакцин против чумы и холеры на Родине не ценили».</p>
+        </div></details></li>
+      <li><details><summary><span>«В России это самый неизвестный человек, в Англии же его давно прозвали великим филантропом», — писал о Хавкине Чехов в 1899 году.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Чехов писал это Суворину: прививки от чумы уже есть, и «мы ими, кстати сказать, обязаны русскому доктору Хавкину». Двумя годами раньше он жалел, что «Хавкин в России не популярен». Сам Хавкин прожил в Индии больше пятнадцати лет, стал британским подданным, в 1926 году приезжал в Одессу, а умер в 1930 году в Лозанне. «Работа в Индии заняла лучшие годы моей жизни», — писал он незадолго до смерти.</p>
+          <p class="src-note">Источники: «Родина», «Создателя первых вакцин против чумы и холеры на Родине не ценили» (письма А. П. Чехова А. С. Суворину, 1897 и 1899); РИО, «Владимир Аронович Хавкин. Самый неизвестный учёный России».</p>
+        </div></details></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block" id="theme-inventions">
+  <div class="wrap">
+    <div class="kicker">Медицина · Русские первенства</div>
+    <h2>Что ещё русские изобрели первыми в теме «медицина»</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Другие дни музея о медицине — по утверждённому календарю. Часть этих залов ещё готовится.</p>
+    <button class="btn ghost" type="button" id="themeInvBtn" data-label="Показать 12 первенств →" aria-expanded="false" aria-controls="themeInvBody">Показать 12 первенств →</button>
+    <div id="themeInvBody" hidden>
+      <ul class="theme-list">
+        <li><b>7 янв</b> Первое в мире коронарное шунтирование, В. И. Колесов, 1964</li>
+        <li><b>21 фев</b> Первая в России станция прививок от бешенства, Н. Ф. Гамалея</li>
+        <li><b>6 мар</b> Первый в мире обезболивающий наркоз на поле боя</li>
+        <li><b>6 апр</b> Антисептическая и полостная хирургия</li>
+        <li><b>30 апр</b> Аппарат искусственного кровообращения — автожектор</li>
+        <li><b>15 мая</b> <a href="day-15may-mechnikov.html">Учение об иммунитете, фагоцитоз, И. И. Мечников</a></li>
+        <li><b>5 июл</b> Первый в мире институт переливания крови, 1926</li>
+        <li><b>10 сен</b> Дефибриллятор</li>
+        <li><b>28 окт</b> Открытие вирусов</li>
+        <li><b>1 ноя</b> Первое в мире массовое применение живой вакцины от полиомиелита</li>
+        <li><b>25 ноя</b> <a href="day-25nov-pirogov.html">Военно-полевая хирургия и наркоз, Н. И. Пирогов</a></li>
+        <li><b>23 дек</b> Первый в мире врач, предложивший противочумные прививки</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="games">
+  <div class="wrap">
+    <div class="kicker">Главное действие · развилка и модель</div>
+    <h2>Байкулла, 30 января 1897 года</h2>
+    <div class="fork" id="fork" role="group" aria-label="Развилка судьбы, июль 1892 года">
+      <p style="margin-top:0"><b>Развилка судьбы · Париж, июль 1892 года.</b> Обе вакцины защищают морских свинок, кроликов и голубей. Людям их не вводил ещё никто. Что ты сделаешь на месте Хавкина?</p>
+      <button class="opt" type="button" data-f="0">Введу себе — и запишу всё, что почувствую</button>
+      <button class="opt" type="button" data-f="1">Найду добровольца: пусть первым будет другой</button>
+      <button class="opt" type="button" data-f="2">Подожду ещё год опытов на животных</button>
+      <div class="fork-real" id="forkReal" hidden aria-live="polite"><b>Как было на самом деле.</b> 18 июля 1892 года Хавкин ввёл первую вакцину себе, в дозе больше, чем давал животным. После этого, 22 и 25 июля, первую вакцину получили трое добровольцев из России: врачи Явейн и Тамамшев и агроном Вильбушевич, а 24 июля Хавкин ввёл себе вторую. 30 июля заметку обо всех четырёх прививках прочли в Парижском биологическом обществе.</div>
+    </div>
+    <p style="max-width:62ch;margin-top:22px">Через пять лет — чума. Ты в бомбейской тюрьме Байкулла: с 23 января болеют и умирают заключённые, у Хавкина есть новая прививка. Реши, кого прививать, с какого часа считать и с кем сравнивать, и запусти счёт по таблице, которую Хавкин напечатал в 1897 году. Сначала найди способ, который действительно доказывает, что прививка работает, потом проверь три ловушки.</p>
+    <div class="lab" id="lab">
+      <div class="lab-row" role="group" aria-label="Кого прививать">
+        <span class="lbl">Кого прививать 30 января</span>
+        <button class="seg" type="button" data-k="w" data-v="vol" aria-pressed="true">154 добровольца из тех же камер</button>
+        <button class="seg" type="button" data-k="w" data-v="all" aria-pressed="false">Всех 345 заключённых</button>
+      </div>
+      <div class="lab-row" role="group" aria-label="С какого часа считать">
+        <span class="lbl">С какого часа считать случаи</span>
+        <button class="seg" type="button" data-k="f" data-v="eve" aria-pressed="true">Сразу после укола, с вечера 30 января</button>
+        <button class="seg" type="button" data-k="f" data-v="next" aria-pressed="false">С утра 31 января</button>
+      </div>
+      <div class="lab-row" role="group" aria-label="С кем сравнивать">
+        <span class="lbl">С кем сравнивать привитых</span>
+        <button class="seg" type="button" data-k="c" data-v="city" aria-pressed="true">Со всем Бомбеем</button>
+        <button class="seg" type="button" data-k="c" data-v="jail" aria-pressed="false">С непривитыми в той же тюрьме</button>
+      </div>
+      <div class="lab-btns">
+        <button class="btn gold" type="button" id="labGo">Посчитать</button>
+        <button class="btn ghost" type="button" id="labH">Как у Хавкина</button>
+      </div>
+      <div class="lab-stage">
+        <canvas id="labCv" width="640" height="280" style="height:280px" role="img" aria-label="Лента дней с 23 января по 6 февраля 1897 года: строка непривитых и строка привитых; каждый заболевший — кружок, закрашенный красным, если человек умер, и пустой, если выздоровел"></canvas>
+        <div class="lab-cap">Цифры по дням — из таблицы Хавкина в British Medical Journal, 12 июня 1897. Средняя численность после прививки — 173 непривитых и 148 привитых. Других данных модель не придумывает: где у Хавкина цифр нет, она так и говорит.</div>
+      </div>
+      <div class="lab-msg" id="labMsg" aria-live="polite">Выбери, кого прививать, с какого часа считать и с кем сравнивать, и нажми «Посчитать».</div>
+      <div class="lab-found" id="labFound">Найдено: доказательство Байкуллы — нет; ловушка «считать с укола» — нет; ловушка «сравнить с городом» — нет; ловушка «привить всех» — нет.</div>
+      <noscript><div class="noscript-box">Для модели нужен JavaScript. Текстовая версия: 30 января 1897 года в тюрьме Байкулла привились 154 добровольца. Если считать с утра 31 января, у непривитых (в среднем 173 человека) было 12 случаев чумы и 6 смертей, у привитых (148) — 2 случая без смертей. Если считать с вечера 30 января, к привитым добавятся трое, у кого болезнь уже шла, — все трое умерли. Сравнить с городом нельзя: точных цифр по Бомбею у Хавкина не было. Если привить всех, сравнивать не с кем.</div></noscript>
+    </div>
+    <p class="src-note" style="margin-top:10px">Вспышка с 23 января, 345 заключённых, прививка 154 добровольцев днём 30 января, случаи по дням, средняя численность 173 и 148, действие прививки через 12–14 часов, грубая оценка «примерно в 20 раз меньше» для 11 362 привитых в Бомбее — W. M. Haffkine, «Remarks on the Plague Prophylactic Fluid», British Medical Journal, 1897, vol. 1, p. 1461–1462. Сравнение с непривитыми «в тех же условиях» — его же лекция 1895 года.</p>
+  </div>
+</section>
+
+<section class="block" id="pervenstvo">
+  <div class="wrap">
+    <div class="kicker">Проверка факта</div>
+    <h2>Что именно здесь наше</h2>
+    <div class="border-box">
+      <p style="margin-top:0"><b>Граница первенства:</b> В. А. Хавкин первым ввёл человеку — себе, 18 июля 1892 года, — холерную вакцину, приготовленную по Дженнеру и Пастеру: ослабленный и усиленный микроб заданной силы. Запись об этом напечатана в «Отчётах Парижского биологического общества» (стр. 740). В Индии в 1893–1895 годах он первым проверил холерную прививку на десятках тысяч людей, сравнивая их с непривитыми, которые жили в тех же условиях. Его противочумная вакцина из убитых палочек — первая прививка от чумы, которую применили к людям: с 10 января 1897 года, с испытанием в тюрьме Байкулла 30 января.</p>
+      <p style="margin-bottom:0"><b>Чего здесь нет:</b> прививать людей от холеры первым начал испанец Хайме Ферран в 1885 году — живыми вибрионами от больных; его опыты остановили, но в 1892 году он заявил о своём приоритете, споря и с Н. Ф. Гамалеей о сходных работах 1888 года. Мысль прививать от чумы старше Хавкина: музей отдаёт её Д. С. Самойловичу, врачу чумной Москвы 1771 года, — это день 23 декабря. Вакцины Хавкин сделал в Институте Пастера и в Британской Индии; Россия испытывать их не разрешила.</p>
+    </div>
+    <table class="ctx">
+      <thead><tr><th scope="col">Документ или событие</th><th scope="col">Что</th><th scope="col">Когда</th></tr></thead>
+      <tbody>
+        <tr><td>Ферран, Испания</td><td>Прививки людям живыми вибрионами от больных</td><td>1885</td></tr>
+        <tr><td>Хавкин, Парижское биологическое общество</td><td>Две холерные вакцины на животных</td><td>9 и 16.07.1892</td></tr>
+        <tr><td>Заметка «Прививка противохолерных вакцин человеку»</td><td>Первая доза — себе; затем трое добровольцев</td><td>18.07.1892, заседание 30.07.1892</td></tr>
+        <tr><td>Индия, лекция Хавкина в Лондоне</td><td>42 179 привитых, сравнение с непривитыми</td><td>апрель 1893 — июль 1895</td></tr>
+        <tr><td>Бомбей, противочумная вакцина</td><td>Прививки начаты</td><td>10.01.1897</td></tr>
+        <tr><td>Тюрьма Байкулла, British Medical Journal</td><td>154 привитых: 2 случая без смертей против 12 случаев и 6 смертей</td><td>30.01.1897, напечатано 12.06.1897</td></tr>
+        <tr><td>Отчёт бомбейской лаборатории</td><td>2 380 288 доз противочумной вакцины</td><td>к 31.05.1901</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block" id="quiz">
+  <div class="wrap">
+    <div class="kicker">Проверь себя · 5 вопросов</div>
+    <h2>Викторина</h2>
+    <p style="color:var(--muted);max-width:62ch">На каждый вопрос — одна попытка. После ответа покажем объяснение.</p>
+    <div id="quizBox"></div>
+    <noscript><div class="noscript-box">Для викторины нужен JavaScript. Ответы: 1 — ввёл себе первую вакцину от холеры; 2 — Ферран вводил вибрионы от больных, а Хавкин — вакцину заданной силы; 3 — чтобы сравнить с непривитыми в тех же условиях; 4 — ни одного; 5 — Антон Павлович Чехов.</div></noscript>
+  </div>
+</section>
+
+<section class="block" id="result">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Итог дня</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Доказательство Байкуллы, три ловушки модели и викторина вместе дают 100 баллов. Прогресс не сохраняется: перезагрузка страницы начинает день заново.</p>
+    <div class="day-result">
+      <div class="dr-score" id="dayTxt">0 / 100 · звание: Гость дня</div>
+      <div class="dr-bar"><i id="dayBar" style="width:0%"></i></div>
+      <div class="dr-note">Найди, как Хавкин доказал действие прививки в Байкулле, проверь три ловушки (счёт с укола, сравнение с городом, прививка всем) и ответь на вопросы викторины.</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="sources">
+  <div class="wrap">
+    <div class="kicker">Источники</div>
+    <h2>На чём стоит страница</h2>
+    <ul class="sources">
+      <li><a href="https://archive.org/details/comptesrendusdes1892soci/page/n755/mode/1up" rel="noopener" target="_blank">Comptes rendus des séances de la Société de biologie · 1892, 9e série, t. 4</a> (Internet Archive): W.-M. Haffkine, «Le choléra asiatique chez le cobaye», «Le choléra asiatique chez le lapin et chez le pigeon» и «Inoculation de vaccins anticholériques à l’homme» (заседание 30 июля, стр. 740–741) — прививка себе 18 и 24 июля, добровольцы Явейн, Тамамшев, Вильбушевич; там же записка J. Ferran о приоритете.</li>
+      <li><a href="https://europepmc.org/article/PMC/PMC5146060" rel="noopener" target="_blank">W. M. Haffkine · «A Lecture on Vaccination against Cholera»</a>, прочитана в Лондоне 18 декабря 1895, Indian Medical Gazette, март 1896 (Europe PMC): разница с методом Феррана, отказ комиссии в России, Индия с апреля 1893 по июль 1895, 42 179 привитых, калькуттские дома, мнение Р. Коха.</li>
+      <li><a href="https://archive.org/details/b30476902" rel="noopener" target="_blank">W. M. Haffkine · «Remarks on the Plague Prophylactic Fluid»</a>, British Medical Journal, 12 июня 1897, vol. 1, p. 1461–1462 (оттиск библиотеки Wellcome, Internet Archive): приготовление вакцины, тюрьма Байкулла, 11 362 привитых с 10 января по 6 мая 1897.</li>
+      <li><a href="https://europepmc.org/article/PMC/PMC5148293" rel="noopener" target="_blank">Indian Medical Gazette · «M. Haffkine»</a>, март 1897 (Europe PMC): «открыватель предохранительных средств против двух самых страшных из всех болезней».</li>
+      <li><a href="https://archive.org/details/india.history.resource.34618" rel="noopener" target="_blank">Summarised Report on the Bombay Plague Research Laboratory for the years 1896–1902</a> (Internet Archive): 2 380 288 доз с 10 января 1897 по 31 мая 1901, ещё 486 753 за следующий год, страны рассылки.</li>
+      <li><a href="https://rodina-history.ru/2020/09/20/sozdatelia-pervyh-vakcin-protiv-chumy-i-holery-na-rodine-ne-cenili.html" rel="noopener" target="_blank">Журнал «Родина» · Н. Амонбеков, «Создателя первых вакцин против чумы и холеры на Родине не ценили»</a>, 20 сентября 2020: дата рождения, Новороссийский университет, отказ России, письма Чехова Суворину, институт имени Хавкина с 1925 года.</li>
+      <li><a href="https://historyrussia.org/tsekh-istorikov/vladimir-aronovich-khavkin-samyj-neizvestnyj-uchjonyj-rossii.html" rel="noopener" target="_blank">Российское историческое общество · М. Малунова, «Владимир Аронович Хавкин. Самый неизвестный учёный России»</a>, 2021: Бердянск, народовольцы, Лозанна и Париж, приезд в Бомбей в октябре 1896, британское подданство, приезд в Одессу в 1926 году.</li>
+      <li><a href="https://www.kommersant.ru/doc/3243454" rel="noopener" target="_blank">«Коммерсантъ» · С. Петухов, «Революционер в микробиологии»</a>, 15 марта 2017: арест после 1 марта 1881 года, Лозанна и Париж, проверка вакцин на себе.</li>
+      <li>Изображения: <a href="https://commons.wikimedia.org/wiki/File:Anti-cholera_inoculation,_Calcutta,_1894_Wellcome_L0037329.jpg" rel="noopener" target="_blank">прививка от холеры в Калькутте, март 1894</a> и <a href="https://commons.wikimedia.org/wiki/File:Waldemar_Mordecai_Wolffe_Haffkine._Photograph._Wellcome_V0026503.jpg" rel="noopener" target="_blank">портрет В. А. Хавкина</a> — Wellcome Collection, Викисклад, CC BY 4.0; стр. 740 «Comptes rendus» 1892 и стр. 1461 British Medical Journal 1897 — сканы Internet Archive, общественное достояние.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="calendar">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Календарь изобретений</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Выбери любой день — узнаешь, что русские сделали первыми в мире. Листай месяцы стрелками.</p>
+    <div id="calbox"></div>
+  </div>
+</section>
+
+<section class="block kd" id="kuda-dalshe">
+  <div class="wrap">
+    <div class="kd-kicker">Куда дальше</div>
+    <h2>Музей продолжается</h2>
+    <div class="kd-grid">
+      <div class="kd-card main"><span class="kd-lbl">Следующий день</span><a href="day-30jan-kotelnikov.html">30 января — Ранцевый парашют Котельникова <span class="kd-arr">→</span></a>
+        <p>Парашют, который спасал лётчиков, в России сначала отклонили.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Предыдущий день</span><a href="day-27jan-pentium.html">27 января — Архитектура Pentium III <span class="kd-arr">→</span></a>
+        <p>Разработчик «Эльбрусов» руководил в Intel архитектурой Pentium III.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Та же тема</span><a href="day-15may-mechnikov.html">15 мая — Мечников и учение об иммунитете <span class="kd-arr">→</span></a>
+        <p>Учитель Хавкина по Новороссийскому университету и Институту Пастера.</p></div>
+      <div class="kd-card main"><span class="kd-lbl">Город-музей</span><a href="../../index.html">Русская цивилизация <span class="kd-arr">→</span></a>
+        <p>Все музеи проекта на одной карте.</p></div>
+    </div>
+    <p style="margin-top:16px"><a href="izobreteniya.html">Посмотреть изобретения по алфавиту →</a></p>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>
+  Русская цивилизация · «Что изобрели русские первыми в мире»</div></footer>
+
+<script type="application/json" data-proof>{"status":"found","claim_id":"rc:izobreteniya:havkin:claim-cholera-1892","ours":{"kind":"научная публикация","title":"W.-M. Haffkine, «Inoculation de vaccins anticholériques à l’homme» — Comptes rendus des séances de la Société de biologie, 9e série, t. 4, p. 740–741 (заседание 30 июля 1892): прививка себе 18 и 24 июля 1892","date":"1892-07-30","holder":"Société de biologie, Париж; скан тома — Internet Archive","source_url":"https://archive.org/details/comptesrendusdes1892soci/page/n755/mode/1up"}}</script>
+<script src="../../assets/museum-proof.js"></script>
+
+<script>
+/* ── СЧЁТ ── шкала из 100 держит assets/museum-score.js; здесь только реестр наград.
+   доказательство Байкуллы 30 + три ловушки модели 3×10 + викторина 5×8 = 100. */
+window.MUSEUM_SCORE = {awards:{lab:30, why0:10, why1:10, why2:10, q:[5,8]},
+  ranks:[[100,'Бактериолог лаборатории'],[70,'Помощник Хавкина'],[40,'Доброволец'],[0,'Гость дня']]};
+</script>
+<script src="../../assets/museum-score.js"></script>
+<script>
+(function(){
+  var $ = function(id){return document.getElementById(id);};
+  $('readBtn').onclick = function(){ $('story').scrollIntoView({behavior:'smooth'}); };
+  $('listenBtn').onclick = function(){ $('audioguide').scrollIntoView({behavior:'smooth'}); };
+  var tb=$('themeInvBtn');
+  tb.onclick=function(){ var b=$('themeInvBody'), open=b.hidden; b.hidden=!open; tb.setAttribute('aria-expanded',open?'true':'false'); tb.textContent=open?'▲ Скрыть':tb.dataset.label; };
+
+  /* ── РАЗВИЛКА 1892 (М-15) ── без баллов: выбор и рассказ о том, как было. */
+  document.querySelectorAll('#fork .opt').forEach(function(b){
+    b.onclick=function(){
+      document.querySelectorAll('#fork .opt').forEach(function(x){ x.classList.toggle('correct', x.dataset.f==='0'); x.classList.toggle('wrong', x===b && x.dataset.f!=='0'); });
+      $('forkReal').hidden=false;
+    };
+  });
+
+  /* ── БАЙКУЛЛА ── только числа таблицы Хавкина (BMJ, 12.06.1897, с. 1461):
+     до прививки (23–29 янв.) 9 случаев, 5 смертей; утро 30 янв. 6 случаев, 3 смерти;
+     вечер 30 янв., среди привитых 3 случая, все смертельные;
+     после прививки по дням: непривитые 31.01 2/1, 01.02 1/1, 02.02 1/1, 04.02 1/1, 05.02 2/1, 06.02 5/1 (итого 12/6, в среднем 173 чел.);
+     привитые 31.01 1/0, 06.02 1/0 (итого 2/0, в среднем 148 чел.). Цифр по городу и по «всем привитым» у Хавкина нет. */
+  var DAYS=['23–29','30 утро','30 вечер','31','1 фев','2','3','4','5','6'];
+  var DAYS_N=['≤29','30у','30в','31','1.II','2','3','4','5','6'];
+  var NON=[[9,5],[6,3],[0,0],[2,1],[1,1],[1,1],[0,0],[1,1],[2,1],[5,1]];
+  var INO=[[0,0],[0,0],[3,3],[1,0],[0,0],[0,0],[0,0],[0,0],[0,0],[1,0]];
+  function sum(arr,from){ var c=0,d=0; for (var i=from;i<arr.length;i++){ c+=arr[i][0]; d+=arr[i][1]; } return [c,d]; }
+  function pct(a,n){ return (Math.round(1000*a/n)/10).toString().replace('.',',')+' %'; }
+  var st={w:'vol', f:'eve', c:'city'}, found={}, last=null;
+  document.querySelectorAll('#lab .seg').forEach(function(b){
+    b.onclick=function(){
+      st[b.dataset.k]=b.dataset.v;
+      document.querySelectorAll('#lab .seg[data-k="'+b.dataset.k+'"]').forEach(function(x){ x.setAttribute('aria-pressed', x===b?'true':'false'); });
+      last=null; draw();
+    };
+  });
+
+  var cv=$('labCv'), cx=cv.getContext('2d'), W=0, H=280;
+  function fit(){
+    var w=Math.round(cv.clientWidth)||640, rr=window.devicePixelRatio||1;
+    if (w===W && cv.width===Math.round(w*rr)) return;
+    W=w; cv.width=Math.round(W*rr); cv.height=Math.round(H*rr); cx.setTransform(rr,0,0,rr,0,0);
+  }
+  function dots(n,d,x,y,w){
+    var r=Math.max(3,Math.min(6,w/7)), per=Math.max(1,Math.floor((w-2)/(2*r+2)));
+    for (var i=0;i<n;i++){
+      var cxp=x+r+1+(i%per)*(2*r+2), cyp=y-((Math.floor(i/per))*(2*r+2));
+      cx.beginPath(); cx.arc(cxp,cyp,r,0,Math.PI*2);
+      if (i<d){ cx.fillStyle='#d4544d'; cx.fill(); } else { cx.strokeStyle='#e8eef3'; cx.lineWidth=1.5; cx.stroke(); }
+    }
+  }
+  function draw(){
+    fit();
+    cx.fillStyle='#141c26'; cx.fillRect(0,0,W,H);
+    var narrow=W<520, f=(narrow?'11px':'12px')+' Inter, sans-serif';
+    cx.font=f; cx.textBaseline='middle'; cx.textAlign='left';
+    var lx= narrow ? 8 : 12, x0= narrow ? 84 : 118, x1=W-10, cw=(x1-x0)/DAYS.length;
+    var rows=[{t:'Не привиты',s:st.c==='city'?'весь Бомбей':'та же тюрьма',y:70},{t:'Привиты',s:st.w==='all'?'все 345':'154 добровольца',y:140}];
+    rows.forEach(function(r){
+      cx.fillStyle='#cfd8df'; cx.fillText(r.t, lx, r.y-8);
+      cx.fillStyle='#8fa5b9'; cx.fillText(r.s, lx, r.y+9);
+      cx.fillStyle='rgba(255,255,255,.05)'; cx.fillRect(x0, r.y-30, x1-x0, 52);
+    });
+    /* шкала дней */
+    var from = st.f==='eve' ? 2 : 3;
+    DAYS.forEach(function(d,i){
+      var x=x0+i*cw;
+      if (i<from){ cx.fillStyle='rgba(0,0,0,.28)'; cx.fillRect(x,40,cw,120); }
+      cx.fillStyle= i<from ? '#5e7186' : '#8fa5b9'; cx.textAlign='center';
+      cx.font=(narrow?'9px':'11px')+' Inter, sans-serif';
+      cx.fillText(narrow ? DAYS_N[i] : d, x+cw/2, 178);
+    });
+    cx.font=f; cx.textAlign='left'; cx.fillStyle='#8fa5b9';
+    cx.fillText(narrow?'янв.–фев. 1897, у — утро, в — вечер':'январь — февраль 1897 →', x0, 196);
+    if (!last){
+      cx.fillStyle='#8fa5b9'; cx.textAlign='center';
+      cx.fillText('Нажми «Посчитать» — здесь появятся случаи по дням', (x0+x1)/2, 105);
+      return;
+    }
+    /* кружки: красный — умер, пустой — выздоровел */
+    DAYS.forEach(function(d,i){
+      var x=x0+i*cw+2;
+      if (st.c==='jail' && st.w==='vol') dots(NON[i][0],NON[i][1],x,rows[0].y+12,cw-4);
+      else if (i<2) dots(NON[i][0],NON[i][1],x,rows[0].y+12,cw-4);
+      if (st.w==='vol') dots(INO[i][0],INO[i][1],x,rows[1].y+12,cw-4);
+    });
+    if (st.c==='city' || st.w==='all'){
+      cx.fillStyle='#f1d58a'; cx.textAlign='center';
+      cx.fillText(st.w==='all' ? 'непривитых не осталось — сравнивать не с кем' : 'по городу точных цифр нет', x0+(2+(DAYS.length-2)/2)*cw, rows[0].y);
+    }
+    if (st.w==='all'){ cx.fillStyle='#f1d58a'; cx.textAlign='center'; cx.fillText('?', x0+(2+(DAYS.length-2)/2)*cw, rows[1].y); }
+    /* итоги */
+    var r=last.r, y2=228, gap=(W-2*lx)/2;
+    [[narrow?'Не привиты':'Непривитые, с выбранного часа',r.non],[narrow?'Привиты':'Привитые, с выбранного часа',r.ino]].forEach(function(m,i){
+      cx.textAlign='left'; cx.fillStyle='#8fa5b9'; cx.font='12px Inter, sans-serif'; cx.fillText(m[0], lx+i*gap, y2);
+      cx.fillStyle='#f1d58a'; cx.font='600 '+(narrow?'14px':'17px')+' Inter, sans-serif'; cx.fillText(m[1], lx+i*gap, y2+24);
+    });
+    cx.font=f;
+  }
+  function setFound(){
+    function yn(k){ return found[k] ? 'да' : 'нет'; }
+    $('labFound').textContent='Найдено: доказательство Байкуллы — '+yn('lab')+'; ловушка «считать с укола» — '+yn('why0')+'; ловушка «сравнить с городом» — '+yn('why1')+'; ловушка «привить всех» — '+yn('why2')+'.';
+  }
+  function hit(k,p){ if(!found[k]){ found[k]=1; award(k,p); return true; } return false; }
+  function msg(t,cls){ var m=$('labMsg'); m.className='lab-msg'+(cls?' '+cls:''); m.textContent=t; }
+  function go(){
+    var from = st.f==='eve' ? 2 : 3, n=sum(NON,from), i=sum(INO,from), r={};
+    r.non = (st.w==='all') ? 'нет никого' : (st.c==='city' ? 'цифр нет' : n[0]+' случ., '+n[1]+' смерт.');
+    r.ino = (st.w==='all') ? 'неизвестно' : i[0]+' случ., '+i[1]+' смерт.';
+    last={r:r}; draw();
+    var M={
+      lab:['Так и доказал Хавкин: добровольцы из тех же камер, счёт с утра 31 января, сравнение с соседями. У 173 непривитых — 12 случаев чумы и 6 смертей ('+pct(6,173)+'), у 148 привитых — 2 случая и ни одной смерти. Люди жили в одних условиях, и разницу дала прививка.','ok'],
+      why0:['С вечера 30 января у привитых 5 случаев и 3 смерти — будто прививка не помогла. Но эти трое заболели в тот же день: у одного бубон был уже при уколе, у двоих вздулся через несколько часов. По Хавкину, прививка начинает действовать часов через 12–14, а чума зреет от двух до семи дней. Считать надо со следующего утра.','bad'],
+      why1:['Со всем Бомбеем сравнить нельзя: точных цифр по горожанам у Хавкина не было. Для 11 362 привитых в городе он дал лишь грубую оценку — пострадали «примерно в двадцать раз меньше». Точное сравнение — только с теми, кто живёт в тех же условиях.','bad'],
+      why2:['Если привить всех 345, сравнивать не с кем: вспышка могла пойти на спад и сама. Поэтому Хавкин и в Индии, и в Байкулле прививал часть людей одного полка, тюрьмы, дома, а остальные служили мерой сравнения.','bad']};
+    var news=[];
+    if (st.w==='vol' && st.f==='next' && st.c==='jail' && hit('lab',30)) news.push('lab');
+    if (st.w==='vol' && st.f==='eve' && st.c==='jail' && hit('why0',10)) news.push('why0');
+    if (st.w==='vol' && st.c==='city' && hit('why1',10)) news.push('why1');
+    if (st.w==='all' && hit('why2',10)) news.push('why2');
+    setFound();
+    if (news.length){ msg(M[news[0]][0],M[news[0]][1]); return; }
+    if (st.w==='all') msg(M.why2[0],'bad');
+    else if (st.c==='city') msg(M.why1[0],'bad');
+    else if (st.f==='eve') msg(M.why0[0],'bad');
+    else msg(M.lab[0],'ok');
+  }
+  $('labGo').onclick=go;
+  $('labH').onclick=function(){
+    st={w:'vol', f:'next', c:'jail'};
+    document.querySelectorAll('#lab .seg').forEach(function(x){ x.setAttribute('aria-pressed', st[x.dataset.k]===x.dataset.v ? 'true':'false'); });
+    last=null; draw();
+    msg('Выставлено, как у Хавкина: 154 добровольца, счёт с утра 31 января, сравнение с непривитыми той же тюрьмы. Нажми «Посчитать».','');
+  };
+  window.addEventListener('resize', draw);
+  draw();
+
+  /* ── ВИКТОРИНА ── один ответ на вопрос; дистракторы сверены с источниками страницы. */
+  var Q = [
+    {q:'Что Хавкин сделал 18 июля 1892 года?', o:['Привил от холеры полк в Калькутте','Ввёл себе первую вакцину от холеры','Открыл холерный вибрион'], a:1,
+     e:'«18-го числа я ввёл себе в подкожную клетчатку левого бока дозу первой противохолерной вакцины» — заметка в «Отчётах Парижского биологического общества», заседание 30 июля 1892.'},
+    {q:'Чем, по словам Хавкина, его прививка отличалась от прививок Феррана 1885 года?', o:['Ферран вводил вибрионы от больных, а Хавкин — вакцину заданной силы','Ферран прививал только животных','Ничем: это был один и тот же метод'], a:0,
+     e:'В лекции 1895 года Хавкин сравнивал опыты Феррана с прививкой самой оспы, а свой метод — с вакциной Дженнера и Пастера.'},
+    {q:'Зачем Хавкин в Индии прививал только часть полка, тюрьмы или семьи?', o:['Не хватало вакцины','Чтобы сравнить с непривитыми, которые жили в тех же условиях','Так требовал закон'], a:1,
+     e:'Так видно, что делает сама прививка: в калькуттских домах привитые умирали от холеры в 17 раз реже непривитых соседей.'},
+    {q:'Сколько привитых умерло от чумы в тюрьме Байкулла с первого дня после прививки?', o:['Ни одного','Шесть','Половина'], a:0,
+     e:'У 148 привитых — 2 случая и ни одной смерти; у 173 непривитых — 12 случаев и 6 смертей (British Medical Journal, 1897).'},
+    {q:'Кто написал о Хавкине: «В России это самый неизвестный человек»?', o:['Илья Мечников','Луи Пастер','Антон Павлович Чехов'], a:2,
+     e:'Чехов — в письме Суворину 1899 года: в Англии Хавкина «давно прозвали великим филантропом».'}
+  ];
+  var qb = $('quizBox');
+  Q.forEach(function(it, qi){
+    var wrap = document.createElement('div');
+    var h = document.createElement('p'); h.className='quiz-q'; h.textContent=(qi+1)+'. '+it.q; wrap.appendChild(h);
+    var exp = document.createElement('div'); exp.className='exp'; exp.setAttribute('aria-live','polite');
+    var btns = it.o.map(function(txt, oi){
+      var b=document.createElement('button'); b.type='button'; b.className='opt'; b.textContent=txt;
+      b.onclick=function(){
+        if (wrap.dataset.done) return; wrap.dataset.done='1';
+        btns.forEach(function(x,xi){ x.disabled=true; if (xi===it.a) x.classList.add('correct'); });
+        if (oi===it.a){ award('q'+qi,8); exp.textContent='Верно. '+it.e; }
+        else { b.classList.add('wrong'); exp.textContent='Не совсем. '+it.e; }
+        exp.classList.add('show');
+      };
+      wrap.appendChild(b); return b;
+    });
+    wrap.appendChild(exp); qb.appendChild(wrap);
+  });
+})();
+</script>
+<script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
+<script>window.MUSEUM_CHROME={
+  museum:{title:'Что изобрели русские первыми в мире',href:'index.html'},
+  share:{title:'Себе первому: вакцины Хавкина от холеры и чумы — музей «Что изобрели русские первыми в мире»',
+         text:'Хавкин ввёл свою вакцину от холеры сначала себе, а через пять лет сделал прививку от чумы. Что Россия дала миру раньше всех — день за днём.'},
+  prev:{href:'day-27jan-pentium.html',title:'27 января · Архитектура Pentium III'},
+  next:{href:'day-30jan-kotelnikov.html',title:'30 января · Парашют'},
+  all:{href:'index.html',label:'Все изобретения'},
+  city:'../../index.html',
+  random:['day-01jan-cabletv.html','day-02jan-luna1.html','day-03jan-anosov.html','day-04jan-pilchikov.html','day-05jan-shukhov.html','day-06jan-orlov.html','day-08jan-icebreaker.html','day-09jan-blinov.html','day-10jan-britnev.html','day-11jan-kostovich.html','day-12jan-r7.html','day-13jan-k278.html','day-14jan-lira.html','day-15jan-kovalevskaya.html','day-16jan-soyuz45.html','day-19jan-kantorovich.html','day-21jan-obninsk.html','day-22jan-landau.html','day-23jan-umov.html','day-24jan-k162.html','day-25jan-korsakov.html','day-26jan-podvodnaya.html','day-27jan-pentium.html','day-28jan-havkin.html','day-30jan-kotelnikov.html','day-03feb-luna9.html','day-18mar-leonov.html','day-15may-mechnikov.html','day-16jun-tereshkova.html','day-26sep-pavlov.html','day-15nov-buran.html','day-25nov-pirogov.html','day-01dec-lobachevsky.html','day-14dec-laser.html']
+};</script>
+<script src="../../assets/museum-chrome.js"></script>
+<script>window.MUSEUM_SUPPORT={museum:'Что изобрели русские первыми в мире'};</script>
+<script src="../../assets/museum-support.js"></script>
+<script src="calendar-izobreteniya.js"></script>
+<script>window.MUSEUM_CALENDAR_INITIAL='01-28';</script>
+<script src="../../assets/museum-calendar-month.js"></script>
+<script>window.MUSEUM_RETURN={riddle:{q:"Зачем Хавкин в тюрьме Байкулла привил только добровольцев, а не всех 345 заключённых?",a:"Добровольцы из тех же камер жили в тех же условиях, что и непривитые, — так видно, что делает сама прививка. С первого дня после укола у 173 непривитых было 12 случаев чумы и 6 смертей, у 148 привитых — 2 случая и ни одной смерти.",src:"W. M. Haffkine, «Remarks on the Plague Prophylactic Fluid», British Medical Journal, 12 июня 1897"}};</script>
+<script src="../../assets/museum-return.js" data-museum="izobreteniya" data-day="01-28"></script>
+<script defer src="../../assets/analytics.js"></script>
+
+
+
+
+<script>window.MUSEUM_AUDIOGUIDE={
+  audioSrc:"audio-guide-havkin-ru.mp3",
+  durationLabel:"2 минуты 4 секунд",
+  lead:"Голос ведёт по залу Хавкина: от калькуттского навеса тысяча восемьсот девяносто четвёртого года до таблицы бомбейской тюрьмы, где проверяли прививку от чумы. Шесть остановок, на каждой — что искать глазами. Слушать можно фоном, пока читаешь статью ниже.",
+  stops:[
+    {t:0,mark:"0:00",title:"Навес в Калькутте"},
+    {t:21,mark:"0:21",title:"Одесса и Париж"},
+    {t:40,mark:"0:40",title:"Страница семьсот сорок"},
+    {t:61,mark:"1:01",title:"Сорок две тысячи"},
+    {t:80,mark:"1:20",title:"Тюрьма Байкулла"},
+    {t:102,mark:"1:42",title:"Самый неизвестный человек"}
+  ],
+  transcript:[
+    "<p>«Introduction of Anti-cholera Inoculation in Calcutta in March 1894» — Wellcome Collection, CC BY 4.0.</p>",
+    "<p>«Одесса, 15 марта 1860; Новороссийский университет, И. И. Мечников; Институт Пастера с 1889 — журнал „Родина“, 2020; РИО, 2021».</p>",
+    "<p>«Le 18 courant, je me suis injecté… une dose du premier vaccin anticholérique» — Comptes rendus de la Société de biologie, 30 июля 1892, стр. 740.</p>",
+    "<p>«42 179 человек, апрель 1893 — июль 1895; Калькутта: 263 непривитых — 34 смерти, 137 привитых — 1» — W. M. Haffkine, лекция 18 декабря 1895.</p>",
+    "<p>«Byculla, 30 января 1897: 154 привитых; 12 случаев, 6 смертей против 2 случаев без смертей» — British Medical Journal, 12 июня 1897.</p>",
+    "<p>«2 380 288 доз к 31 мая 1901, ещё 486 753 за год» — отчёт бомбейской лаборатории 1896–1902; письмо А. П. Чехова А. С. Суворину, 1899.</p>"
+  ],
+  note:"Озвучено синтезом речи — временно, до записи голосом автора музея."
+};</script>
+<script src="../../assets/museum-audioguide.js"></script>
+</body>
+</html>

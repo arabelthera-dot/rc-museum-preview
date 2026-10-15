@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="ru" data-museum="izobreteniya">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Машины Корсакова на перфокартах, 1832 — Что изобрели русские первыми в мире, 25 января</title>
+<!--
+  Страница дня 25 января. Наряд stranicy-izob-0910 (claude2, 12.10.2026), карточка #762.
+  Форма — вариант А музея изобретений (Сергей 12.09.2026): лента ударов, подробности свёрнуты.
+  Паспорт выпуска: rc-museum-production/izobreteniya/day-25jan-korsakov/passport/issue.json
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --dark:#060c17; --dark2:#0c1826; --surface:#111f33;
+    --card:rgba(255,255,255,.05); --card-b:rgba(255,255,255,.09);
+    --gold:#c9a84c; --gold-l:#e4c97a; --gold-g:rgba(201,168,76,.13);
+    --ink:#e8eef5; --muted:#7a9ab8; --line:rgba(255,255,255,.07);
+    --accent:#2d8cbf; --accent2:#1f6f8b;
+    /* legacy compat */
+    --paper:#0c1826; --paper2:#111f33;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Inter','Segoe UI',sans-serif;color:var(--ink);background:var(--dark);line-height:1.72}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.13;margin:0}
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent)}
+
+  /* ── ШАПКА ── */
+  header.top{background:rgba(6,12,23,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--card-b);color:#fff;position:sticky;top:0;z-index:30}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+  .logo svg{display:block;filter:drop-shadow(0 0 8px rgba(201,168,76,.4))}
+  .logo .lt{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:16px}
+  .logo .lt small{display:block;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-family:'Inter',sans-serif}
+  .score{background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:6px 16px;font-size:13px;color:var(--gold-l);cursor:pointer;font-family:'Inter',sans-serif}
+  .score-info{position:absolute;right:12px;top:66px;max-width:260px;background:#0e1c30;color:var(--ink);border:1px solid var(--card-b);border-radius:14px;padding:14px 16px;font-size:13px;line-height:1.6;box-shadow:0 20px 60px rgba(0,0,0,.6);display:none;z-index:40}
+  .score-info.show{display:block}
+
+  /* ── HERO — СТАНДАРТ (не менять): 3D-сцена сверху, текст отдельным блоком ниже ── */
+  .hero-scene{position:relative;height:52vh;min-height:300px;max-height:520px;overflow:hidden;background:linear-gradient(160deg,#0a1e3a 0%,#1a3a6a 55%,#0d2240 100%)}
+  .hero-scene canvas.scene,.hero-scene img.scene{width:100%;height:100%;display:block;object-fit:cover}
+  .scene-caption{background:#060d18;padding:11px 0 12px}
+  .scene-caption .wrap{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+  .scene-cap{font-size:13.5px;line-height:1.6;color:var(--muted);border-left:2px solid rgba(201,168,76,.4);padding-left:14px;flex:1 1 420px}
+  .scene-hint{flex:0 0 auto;font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.4px;color:#e4c97a;
+    background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.34);border-radius:24px;padding:7px 16px;font-weight:600}
+  .hero-lead{background:linear-gradient(180deg,#0c1826 0%,#060c17 100%);color:#fff;padding:28px 0 38px}
+  .hero-lead .museum{color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:12px;opacity:.9}
+  .hero-lead .who{font-family:'Inter',sans-serif;font-size:clamp(13px,3vw,15px);letter-spacing:.4px;color:var(--accent-l,#7dc8ff);margin-bottom:10px}
+  .hero-lead .who i{font-style:normal;color:#7893ab;font-weight:400}
+  .hero-lead h1{color:#fff;font-size:56px;font-weight:900;line-height:1.04;margin-bottom:16px}
+  .hero-lead .hook{color:#b8ccde;font-size:19px;max-width:580px;margin-bottom:28px;line-height:1.65;font-weight:400}
+  .hero-lead .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+  @media(max-width:680px){.hero-lead h1{font-size:34px}.hero-lead .hook{font-size:16px}
+    .hero-scene{height:34vh;min-height:230px;max-height:300px}
+    .scene-caption .wrap{flex-direction:column;gap:9px}
+    .scene-hint{order:-1;align-self:flex-start;font-size:11.5px;padding:6px 13px}
+    .scene-cap{font-size:12.8px;flex:1 1 auto}}
+  .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:16px;font-family:'Inter',sans-serif;letter-spacing:.5px}
+
+  /* ── НАВИГАЦИЯ ДНЯ ── */
+  .daynav{position:sticky;top:64px;z-index:25;background:rgba(6,12,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-b)}
+  .daynav .wrap{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+  .daynav::-webkit-scrollbar{display:none}
+  .daynav a{flex:0 0 auto;padding:14px 20px;font-size:11px;font-weight:700;font-family:'Inter',sans-serif;color:var(--muted);text-decoration:none;white-space:nowrap;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:.18s}
+  .daynav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+  /* ── СЕКЦИИ ── */
+  section.block{padding:64px 0;border-bottom:1px solid var(--line);scroll-margin-top:130px}
+  .kicker{font-size:10px;text-transform:uppercase;letter-spacing:3.5px;color:var(--gold);font-weight:700;font-family:'Inter',sans-serif;margin-bottom:8px}
+  section.block h2{font-size:34px;color:#fff;margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink)}
+  .pull{background:var(--gold-g);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 14px 14px 0;font-style:italic;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-size:20px;line-height:1.5;margin:26px 0}
+
+  /* ── КНОПКИ ── */
+  .btn{cursor:pointer;border:none;border-radius:12px;padding:14px 26px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;background:var(--accent2);color:#fff;transition:.18s;letter-spacing:.2px}
+  .btn:hover{filter:brightness(1.18)}
+  .btn.ghost{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid var(--card-b)}
+  .btn.ghost:hover{background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.2)}
+  .btn.gold{background:linear-gradient(135deg,var(--gold),#b8882b);color:#1a0f00;box-shadow:0 4px 20px rgba(201,168,76,.25)}
+  .btn.gold:hover{filter:brightness(1.1);box-shadow:0 6px 28px rgba(201,168,76,.4)}
+  .btn:active{transform:translateY(1px)}
+  .pulse{animation:pulse .9s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+
+  /* ── КАРТОЧКИ ── */
+  .card{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:20px 22px;margin:16px 0;backdrop-filter:blur(6px)}
+
+  /* ── КВИЗ ── */
+  .opt{display:block;width:100%;text-align:left;background:rgba(255,255,255,.04);border:1px solid var(--card-b);border-radius:12px;padding:13px 16px;margin:8px 0;cursor:pointer;font-size:15px;color:var(--ink);font-family:'Inter',sans-serif;transition:.16s}
+  .opt:hover{border-color:var(--accent);background:rgba(45,140,191,.08)}
+  .opt.correct{background:rgba(40,120,60,.18);border-color:#3f9b52;color:#7ed4a0;font-weight:600}
+  .opt.wrong{background:rgba(180,40,40,.13);border-color:#c0453f;color:#f08080}
+  .exp{margin-top:10px;font-size:14px;background:var(--gold-g);border-radius:10px;padding:12px 14px;display:none;color:var(--gold-l)}
+  .exp.show{display:block}
+
+  /* ── ИТОГ ДНЯ ── */
+  .day-result{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:22px 24px;max-width:460px}
+  .dr-rank{font-family:'Playfair Display',Georgia,serif;font-size:28px;color:var(--gold-l);font-weight:700}
+  .dr-score{font-size:16px;margin:4px 0 12px;color:var(--ink)}.dr-score span{color:var(--muted);font-size:14px}
+  .dr-bar{height:8px;background:rgba(255,255,255,.08);border-radius:6px;overflow:hidden}
+  .dr-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),var(--gold));transition:width .6s cubic-bezier(.2,.7,.2,1)}
+  .dr-note{margin-top:12px;font-size:14px;color:var(--muted)}
+
+  /* ── РЕКЛАМНЫЕ СЛОТЫ ── */
+  .ad-slot{position:relative;margin:26px 0;background:rgba(255,255,255,.02);border:1px dashed rgba(255,255,255,.1);border-radius:14px;min-height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px}
+  .ad-slot .lbl{position:absolute;top:7px;right:12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.15);font-family:'Inter',sans-serif}
+  .ad-slot .ph-txt{font-size:12px;max-width:80%;color:rgba(255,255,255,.18)}
+  .ad-slot.billboard{min-height:108px}
+  .adband{background:transparent;border-bottom:none}
+
+  footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
+  .crumbs{background:rgba(6,12,23,.6);border-bottom:1px solid var(--card-b);font-family:'Inter',sans-serif;font-size:12.5px}
+  .crumbs .wrap{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  .crumbs a{color:var(--gold-l);text-decoration:none;white-space:nowrap}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--muted);opacity:.6}
+  .crumbs .here{color:var(--muted);white-space:nowrap}
+
+
+  /* ── ШАПКА: четыре строки по museum-core §6-бис ── */
+  header.top{display:block;text-align:center;padding:10px 12px 8px;height:auto;position:relative}
+  header.top .b1{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:15px;letter-spacing:.5px;color:#fff}
+  header.top .b2{font-size:11px;color:var(--muted);margin-top:2px}
+  header.top .b3{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:6px}
+  header.top .b4{font-size:12.5px;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-style:italic}
+  header.top .score{position:absolute;right:12px;top:10px}
+  .daynav{top:0}
+  .hero-scene{background:#0e1c2c;height:38vh;min-height:250px;max-height:400px}
+  @media(max-width:680px){.hero-lead h1{font-size:31px}}
+  .hero-scene img.scene{object-fit:cover;object-position:50% 42%}
+  .date-origin{font-size:13px;color:#9fb4c8;margin:-6px 0 12px;max-width:62ch}
+  .hero-lead .hook{color:#c6d8e8;max-width:62ch}
+  .hero-under{background:linear-gradient(180deg,#060d18,#060c17);padding:4px 0 22px}
+  .stamp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(125,200,255,.28);margin-top:14px}
+  .stamp>div{padding:11px 12px;border-left:1px solid rgba(125,200,255,.16);min-width:0}
+  .stamp>div:first-child{border-left:0}
+  .stamp .v{font-size:clamp(15px,3.4vw,21px);font-weight:700;color:#8fd3ff;line-height:1.1;overflow-wrap:anywhere}
+  .stamp .k{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#8fa5b9;margin-top:5px}
+  @media(max-width:600px){.stamp{grid-template-columns:repeat(2,minmax(0,1fr))}.stamp>div:nth-child(3){border-left:0}.stamp>div:nth-child(n+3){border-top:1px solid rgba(125,200,255,.16)}}
+
+  /* ── ЛЕНТА УДАРОВ (museum-inventions, вариант А; museum-core §5-бис) ── */
+  .udary{list-style:none;margin:18px 0 0;padding:0;counter-reset:u}
+  .udary>li{border-top:1px solid var(--line);padding:4px 0}
+  .udary details>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:34px 1fr;gap:10px;padding:12px 0;font-size:17px;line-height:1.55;color:var(--ink)}
+  .udary details>summary::-webkit-details-marker{display:none}
+  .udary details>summary::before{counter-increment:u;content:counter(u);font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:20px;color:var(--gold);line-height:1.3}
+  .udary .more-lbl{display:block;grid-column:2;font-size:12.5px;color:var(--gold-l);letter-spacing:.3px;margin-top:4px}
+  .udary .more-lbl::after{content:' ▾'}
+  .udary details[open] .more-lbl::after{content:' ▴'}
+  .udary details[open] .more-lbl .o{display:none}
+  .udary details:not([open]) .more-lbl .c{display:none}
+  .udary summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+  .udary .det{margin:0 0 14px 44px;padding:12px 16px;background:rgba(255,255,255,.035);border-left:2px solid rgba(201,168,76,.45);border-radius:0 10px 10px 0;font-size:15px;color:#d5e0ea}
+  .udary .det p{margin:8px 0}
+  .udary .tag{display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1a0f00;background:var(--gold-l);border-radius:6px;padding:1px 7px;margin-right:6px}
+  .udary .find{border-left:3px solid var(--gold);padding-left:8px}
+  figure.fig{margin:18px 0}
+  figure.fig img{max-width:100%;height:auto;border-radius:10px;display:block}
+  figure.fig figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5}
+  .src-note{font-size:12px;color:#8fa5b9}
+
+  /* ── МОДЕЛЬ ДНЯ (главное предметное действие) ── */
+  .lab{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:18px 18px 20px;margin-top:14px}
+  .lab-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+  .lab-row .lbl{flex:0 0 100%;font-size:13px;color:var(--muted);letter-spacing:.3px}
+  .seg{cursor:pointer;border:1px solid var(--card-b);background:rgba(255,255,255,.04);color:var(--ink);border-radius:10px;padding:10px 14px;font:inherit;font-size:14.5px;min-height:44px}
+  .seg[aria-pressed="true"]{border-color:var(--gold);background:var(--gold-g);color:var(--gold-l);font-weight:600}
+  .seg:focus-visible,.btn:focus-visible,.opt:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .lab-stage{position:relative;margin-top:12px}
+  .lab-stage canvas{width:100%;height:auto;display:block;border-radius:10px;background:#1c2530}
+  .lab-cap{font-size:12px;color:#8fa5b9;margin-top:6px}
+  .lab-msg{margin-top:12px;font-size:15.5px;padding:12px 14px;border-radius:10px;background:rgba(255,255,255,.04);border-left:3px solid var(--card-b);min-height:48px}
+  .lab-msg.ok{border-left-color:#3f9b52;background:rgba(40,120,60,.14)}
+  .lab-msg.bad{border-left-color:#c0453f;background:rgba(180,40,40,.10)}
+  .lab-found{font-size:13px;color:var(--muted);margin-top:8px}
+  .lab-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .noscript-box{background:rgba(255,255,255,.04);border:1px dashed var(--card-b);border-radius:12px;padding:12px 16px;font-size:15px}
+
+  /* ── ГРАНИЦА ПЕРВЕНСТВА ── */
+  .border-box{background:rgba(45,140,191,.08);border:1px solid rgba(45,140,191,.3);border-radius:14px;padding:16px 18px}
+  .border-box b{color:#8fd3ff}
+  .ctx{width:100%;border-collapse:collapse;margin-top:14px;font-size:14.5px}
+  .ctx th,.ctx td{text-align:left;padding:9px 8px;border-top:1px solid var(--line);vertical-align:top}
+  .ctx th{color:var(--gold-l);font-weight:600;font-size:12.5px;letter-spacing:.5px}
+  .quiz-q{margin:18px 0 6px;font-weight:600}
+  .sources a{color:var(--gold-l)}
+  .sources li{margin:6px 0;font-size:14px;color:#c8d6e2}
+  @media(max-width:600px){header.top{padding:8px 64px 6px}header.top .score{top:8px;right:8px;padding:4px 10px;font-size:12px}header.top .b3{margin-top:3px}
+    .hero-scene{height:26vh;min-height:200px;max-height:260px}.date-origin{font-size:12px;margin:-8px 0 8px}.hero-lead{padding:18px 0 26px}.hero-lead .date-chip{margin-bottom:12px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+  /* ── ПОЛЗУНКИ МОДЕЛИ (19, 21 янв) ── */
+  .mtab{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+  .mrow{display:grid;grid-template-columns:minmax(150px,1.2fr) 2fr 92px;gap:12px;align-items:center}
+  .mrow .mname{font-size:14.5px}
+  .mrow .mname i{font-style:normal;color:var(--muted);font-size:13px}
+  .mrow input[type=range]{width:100%;accent-color:var(--gold);min-height:44px}
+  .mrow output{font-size:14px;color:var(--gold-l);text-align:right}
+  .mrow.off{opacity:.45}
+  .mult{margin-top:14px;padding:14px 16px;border-radius:12px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25)}
+  @media(max-width:560px){.mrow{grid-template-columns:1fr 70px}.mrow .mname{grid-column:1/-1}}
+  /* ── ШТЫРИ ГОМЕОСКОПА (25 янв) ── */
+  .pins{display:grid;grid-template-columns:repeat(auto-fill,minmax(44px,1fr));gap:6px;margin:4px 0 12px}
+  .pin{min-height:44px;border-radius:10px;border:1px solid var(--card-b);background:var(--card);color:var(--ink);font:600 14px Inter,sans-serif;cursor:pointer}
+  .pin.on{background:var(--gold);color:#1a1405;border-color:var(--gold-l)}
+  .pin:focus-visible{outline:2px solid var(--gold-l);outline-offset:2px}
+</style>
+<meta name="description" content="В 1832 году Семён Корсаков описал машины, которые искали ответ в перфорированной таблице: брусок со штырями сам падал на нужное лекарство. Академия наук отказала.">
+<link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-25jan-korsakov.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Русская цивилизация">
+<meta property="og:title" content="Машина, которая ищет: перфокарты Корсакова, 1832">
+<meta property="og:description" content="В 1832 году Семён Корсаков описал машины, которые искали ответ в перфорированной таблице: брусок со штырями сам падал на нужное лекарство. Академия наук отказала.">
+<meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-25jan-korsakov.html">
+<meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-25jan-korsakov.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Машина, которая ищет: перфокарты Корсакова, 1832", "description": "В 1832 году Семён Корсаков описал машины, которые искали ответ в перфорированной таблице: брусок со штырями сам падал на нужное лекарство. Академия наук отказала.", "url": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-25jan-korsakov.html", "inLanguage": "ru", "isPartOf": {"@type": "WebSite", "name": "Музей «Что изобрели русские первыми в мире»"}, "publisher": {"@type": "Organization", "name": "Русская цивилизация"}, "about": {"@type": "Person", "name": "Семён Николаевич Корсаков"}, "image": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-25jan-korsakov.jpg"}</script>
+</head>
+<body>
+
+<header class="top">
+  <div class="b1">Русская цивилизация</div>
+  <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
+  <div class="b3">Что изобрели русские первыми в мире</div>
+  <div class="b4">365 изобретений. Все русские. Все первые</div>
+  <div class="score" id="scoreBox" title="Баллы знаний за этот день">⭐ <span id="score">0</span> / 100</div>
+</header>
+
+<nav class="crumbs" aria-label="Хлебные крошки"><div class="wrap">
+  <a href="../../index.html">Русская цивилизация</a>
+  <span class="sep">›</span>
+  <a href="index.html">Что изобрели русские первыми в мире</a>
+  <span class="sep">›</span>
+  <span class="here">25 января · Машины Корсакова</span>
+</div></nav>
+
+<div class="hero-scene" id="hero" style="background:#ece6d8">
+  <img class="scene" src="day-25jan-korsakov.jpg" style="object-fit:contain" data-source="https://commons.wikimedia.org/wiki/File:Korsakov_punch_card.JPG" data-license="Public domain" width="541" height="612" alt="Гравюра: таблица из плотной бумаги, разделённая на восемь столбцов с буквами от A до H и тридцать одну пронумерованную строку; в столбцах вразброс чернеют прямоугольные вырезанные отверстия" fetchpriority="high">
+</div>
+
+<div class="scene-caption">
+  <div class="wrap">
+    <div class="scene-cap">Перфорированная таблица Корсакова: столбцы A–H — лекарства, строки 1–31 — симптомы, чёрное — вырезанное отверстие. Гравюра из его брошюры «Aperçu d'un procédé nouveau d'investigation au moyen de machines à comparer les idées», Санкт-Петербург, 1832; общественное достояние.</div>
+    <span class="scene-hint">Документ · гравюра 1832 года</span>
+  </div>
+</div>
+
+<header class="hero-lead">
+  <div class="wrap">
+    <div class="date-chip">25 января · 1832</div>
+    <p class="date-origin">Дата — день рождения изобретателя: Семён Корсаков родился 14 января 1787 года по старому стилю, 25-го по новому. Машины он представил осенью 1832 года.</p>
+    <div class="who">Семён Николаевич Корсаков <i>· коллежский советник Министерства внутренних дел, Санкт-Петербург</i></div>
+    <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
+    <h1>Машина, которая ищет: перфокарты Корсакова, 1832</h1>
+    <p class="hook">Академики написали, что Корсаков потратил слишком много разума, чтобы научить других обходиться без разума, а его брусок со штырями сам находил лекарство.</p>
+    <div class="hero-btns">
+      <button class="btn gold" id="readBtn" type="button">Читать историю ↓</button>
+      <button class="btn ghost" id="listenBtn" type="button">🎧 Слушать аудиогид</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero-under">
+  <div class="wrap">
+    <div class="stamp">
+      <div><div class="v">1832</div><div class="k">брошюра и прошение в Академию наук</div></div>
+      <div><div class="v">5</div><div class="k">«интеллектуальных машин» в брошюре</div></div>
+      <div><div class="v">24.10</div><div class="k">1832 года комиссия Академии отказала</div></div>
+      <div><div class="v">55 лет</div><div class="k">до табулятора Холлерита (1887)</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="daynav" aria-label="Разделы дня">
+  <div class="wrap">
+    <a href="#story">Читать</a>
+    <a href="#audioguide">Слушать</a>
+    <a href="#games">Гомеоскоп</a>
+    <a href="#pervenstvo">Первенство</a>
+    <a href="#quiz">Викторина</a>
+    <a href="#calendar">Календарь</a>
+  </div>
+</nav>
+
+<section class="wrap" id="dokument" data-proof-block></section>
+
+<section class="block" id="audioguide"></section>
+
+<section class="block" id="story">
+  <div class="wrap">
+    <div class="kicker">История первенства · 12 ударов</div>
+    <h2>Знаки, у которых есть толщина</h2>
+    <p style="color:var(--muted);max-width:62ch">Читается подряд. Нажми на удар — откроется подробный разбор с источниками.</p>
+    <ol class="udary">
+      <li><details><summary><span>Семён Корсаков родился в 1787 году в Херсоне, в семье главного строителя города, воевал в 1812 году и прошёл заграничный поход.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Отец, инженер-полковник Николай Корсаков, с 1784 года руководил строительством Херсона и умер в 1788-м под Очаковым. После войны сын служил в статистическом управлении Министерства внутренних дел в Петербурге в чине коллежского советника, позже — чиновником по особым поручениям. Вышел в отставку действительным статским советником и умер в 1853 году в подмосковном имении Тарусово.</p>
+          <p class="src-note">Источники: А. С. Михайлов, «Изобретения С. Н. Корсакова» (МИФИ, 2009); М. С. Дроздова, «Семён Николаевич Корсаков (1787–1853)» (rushomeopat.ru) — дата рождения 14 января 1787 года.</p>
+        </div></details></li>
+      <li><details><summary><span>Корсаков заметил то, что знает каждый, кто работал с большими таблицами: разум охватывает за раз лишь несколько признаков, а память теряет детали.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>В брошюре он перечислил три слабости: «Наш разум может сам по себе одновременно охватить лишь небольшое количество деталей»; сравнивать мы умеем только два предмета за раз; а память «не является безошибочной». Механическая память, писал он, ошибаться не может, «а ее работоспособность никогда не замедляется».</p>
+          <p class="src-note">Источник: С. Н. Корсаков, «Начертание нового способа исследования при помощи машин, сравнивающих идеи» (1832), перевод под ред. А. С. Михайлова, МИФИ, 2009, с. 7–8.</p>
+        </div></details></li>
+      <li><details><summary><span>Его идея: записывать признаки не чернилами, а знаками, у которых есть длина, ширина и толщина, чтобы с ними могла работать механика.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>«Письмо, так же как и любые другие графические средства, обращается к нашему разуму только через глаза, оно недоступно воздействию механических средств», — объяснял Корсаков. Если же выразить идеи знаками «с реальной материальной основой, длиной, шириной и толщиной», эти знаки «будут служить для разрешения чисто интеллектуальных задач».</p>
+          <p class="src-note">Источник: Корсаков, «Начертание…», перевод МИФИ, 2009, с. 7.</p>
+        </div></details></li>
+      <li><details><summary><span>Таким знаком стало отверстие: в листе плотной бумаги столбцы — лекарства, строки — симптомы, а дырка на пересечении значит «помогает при этом симптоме».<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>«Детали этих идей выражены посредством вырезанных квадратных отверстий», а одинаковые признаки всех идей стоят на одной строке и обозначаются её номером. В примере Корсакова лекарство A помогает при симптомах 1, 4, 5, 9, 16, 17, 21, 23 и 25, лекарство B — при 2, 4, 6, 11, 13, 15, 16, 19, 20, 22, 24, 27 и 30. Названия лекарств подписаны на краях рамки.</p>
+          <p class="src-note">Источник: Корсаков, «Начертание…», перевод МИФИ, 2009, с. 11–14 (описание рис. 1 и 2).</p>
+        </div></details></li>
+      <li><details><summary><span>Для поиска служил гомеоскоп — деревянный брусок во всю высоту таблицы, проткнутый штырями, по одному на каждую её строку.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Штыри с закруглёнными концами длиннее бруска; нажатием их выдвигают вниз. Для больного выдвигают штыри его симптомов: в примере брошюры это 4, 6, 8, 9, 11, 15, 17, 18, 19, 27 и 31. «Таким образом идея болезни выражается прибором посредством выступающих остриёв».</p>
+          <p class="src-note">Источник: Корсаков, «Начертание…», перевод МИФИ, 2009, с. 13–14.</p>
+        </div></details></li>
+      <li><details><summary><span>Брусок ведут по таблице слева направо: где под каждым выдвинутым штырём окажется отверстие, он падает, и машина останавливается сама.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>«Кусок дерева, из которого сделан гомеоскоп, ничем более не удерживаемый, упадёт, все острия войдут в отверстия и устройство остановится само по себе». В примере брусок доходит до столбца E. «Сколько бы ни было различных симптомов, 31 или многие сотни», нужное лекарство находится «без малейшего напряжения ума или памяти».</p>
+          <p class="src-note">Источник: Корсаков, «Начертание…», перевод МИФИ, 2009, с. 14.</p>
+        </div></details></li>
+      <li><details><summary><span>Машин Корсаков придумал пять: два прямолинейных гомеоскопа, плоский гомеоскоп, идеоскоп и простой компаратор.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <figure class="fig">
+            <img src="day-25jan-korsakov-gomeoskop.jpg" data-source="https://commons.wikimedia.org/wiki/File:Linear_Homeoscope.png" data-license="Public domain" width="500" height="314" loading="lazy" alt="Лист чертежей: слева брусок со штырями в перспективе и сбоку, в центре таблица со столбцами A–H и чёрными отверстиями, справа брусок с подвижными штырями и схемы рычагов">
+            <figcaption>Лист чертежей из брошюры 1832 года: прямолинейный гомеоскоп с неподвижными частями (I, II), таблица (III) и гомеоскоп с подвижными частями (V–X). Общественное достояние.</figcaption>
+          </figure>
+          <p>Гомеоскоп с подвижными частями вдобавок показывал, какие признаки совпали, а какие нет. Плоский гомеоскоп работал с тысячами признаков. Идеоскоп сравнивал сотни идей сразу и выдавал четыре ответа: общее, лишнее, недостающее и то, чего нет ни у одной из двух; он учитывал и важность признаков. Простой компаратор сравнивал две идеи без заготовленной таблицы.</p>
+          <p class="src-note">Источники: Корсаков, «Начертание…», перевод МИФИ, 2009, с. 9–10; А. Ю. Нитусов, «Семен Корсаков и „машина для сравнения идей“» (Виртуальный компьютерный музей, computer-museum.ru).</p>
+        </div></details></li>
+      <li><details><summary><span>В 1832 году он издал в Петербурге брошюру на французском языке — «Начертание нового способа исследования при помощи машин, сравнивающих идеи».<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>По-французски она называлась «Aperçu d'un procédé nouveau d'investigation au moyen de machines à comparer les idées»: 22 страницы и 2 листа чертежей. «Равно как телескоп и микроскоп придают дополнительную силу нашим глазам, интеллектуальные машины безгранично расширят возможности нашей мысли», — писал Корсаков. Оригинал хранится в Российской государственной библиотеке.</p>
+          <p class="src-note">Источники: Михайлов, предисловие и «Изобретения С. Н. Корсакова» (МИФИ, 2009, с. 4–5, 27); Нитусов (computer-museum.ru).</p>
+        </div></details></li>
+      <li><details><summary><span>11 сентября 1832 года Корсаков представил свой способ Академии наук и сам отказался от привилегии — исключительного права на изобретение.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Письмо непременному секретарю Академии П. Н. Фуссу: «Я надеюсь, милостивый государь, что Академия сумеет оценить побуждение, заставляющее меня добровольно отказаться от преимуществ исключительной привилегии». Он просил оценить не машины, а принцип: «назначить комиссию для рассмотрения принципа, лежащего в основе результатов».</p>
+          <p class="src-note">Источник: Михайлов, «Изобретения С. Н. Корсакова» (МИФИ, 2009, с. 28–29), по публикации М. И. Радовского (1961): Архив АН СССР, ф. 1, оп. 3, № 80, л. 478.</p>
+        </div></details></li>
+      <li><details><summary><span>24 октября 1832 года комиссия академиков под председательством Михаила Остроградского решила, что пользы наукам от метода нет.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>В комиссию входили А. Я. Купфер, Е. И. Паррот и Ф. Ф. Брандт. Математика, физика и химия, по их мнению, «не могут извлечь из них никакой пользы, потому что сущность этих наук нельзя свести к таблицам», а таблица для целой науки «имела бы огромные размеры». Заключение кончалось иронией: «Г-н Корсаков потратил слишком много разума на то, чтобы научить других обходиться без разума».</p>
+          <p class="src-note">Источники: Михайлов (МИФИ, 2009, с. 28–30): Архив АН СССР, ф. 1, оп. 2, 1832, № 573, лл. 4–6; Нитусов (computer-museum.ru).</p>
+        </div></details></li>
+      <li class="find"><details><summary><span>Академики написали, что столь механический метод лечения уничтожил бы у врачей всякую способность мыслить.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p><span class="tag">Находка дня</span>Разобрали подробно только самую простую машину — гомеоскоп на примере подбора лекарства по симптомам. Главную мысль комиссия поняла точно: облегчить разуму сравнение множества понятий и получить верный ответ чисто механической операцией. Но выбор лекарства машиной показался ей опасным для самих врачей. Спор, можно ли доверить машине поиск ответа, начался в Петербурге в 1832 году.</p>
+          <p class="src-note">Источник: Михайлов, «Изобретения С. Н. Корсакова» (МИФИ, 2009, с. 29–30), разбор заключения комиссии от 24 октября 1832 года по публикации Радовского.</p>
+        </div></details></li>
+      <li><details><summary><span>Перфокарты были и раньше, у ткацкого станка Жаккара, но там они управляли узором; Корсаков первым поручил им хранить сведения и искать по ним.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Бэббидж в проекте аналитической машины (1833–1836) взял перфокарты для счёта, Холлерит в табуляторах 1887 года — для переписи населения. Сам Корсаков составлял на своих таблицах справочник лекарств по гомеопатии. Машины забыли больше чем на век: архивные документы Академии опубликовал М. И. Радовский в 1961 году, значение их показал Г. Н. Поваров в 1982-м, а брошюру перевели на русский только в 2009 году.</p>
+          <p class="src-note">Источники: Нитусов (computer-museum.ru: «Корсаков использовал перфокарты для классификации, Беббидж — для счета, а позже Герман Холлерит — для того и другого»); Михайлов (МИФИ, 2009, с. 31–32).</p>
+        </div></details></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block" id="theme-inventions">
+  <div class="wrap">
+    <div class="kicker">Вычисления и информатика · Русские первенства</div>
+    <h2>Что ещё русские изобрели первыми в теме «вычисления и информатика»</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Другие дни музея о счётных машинах, ЭВМ и программах — по утверждённому календарю. Ссылки ведут на уже открытые залы.</p>
+    <button class="btn ghost" type="button" id="themeInvBtn" data-label="Показать 11 первенств →" aria-expanded="false" aria-controls="themeInvBody">Показать 11 первенств →</button>
+    <div id="themeInvBody" hidden>
+      <ul class="theme-list">
+        <li><b>18 янв</b> Арифмометр Однера, Петербург, 1874</li>
+        <li><b>19 янв</b> <a href="day-19jan-kantorovich.html">Линейное программирование, Л. В. Канторович</a></li>
+        <li><b>7 фев</b> Первая в мире троичная ЭВМ «Сетунь», Н. П. Брусенцов, 1959</li>
+        <li><b>18 мая</b> Прототип персонального компьютера и первый плоттер, А. А. Горохов</li>
+        <li><b>6 июн</b> «Тетрис», А. Пажитнов, 1984</li>
+        <li><b>24 авг</b> Кибернетика, проект ОГАС, ЭВМ «МИР», В. М. Глушков</li>
+        <li><b>13 сен</b> Гидроинтегратор — первая в мире аналоговая ЭВМ</li>
+        <li><b>23 сен</b> ЭВМ для экономических расчётов «БЭСМ-6»</li>
+        <li><b>2 ноя</b> Первая ЭВМ в континентальной Европе (МЭСМ)</li>
+        <li><b>8 дек</b> БЭСМ — одна из самых быстрых ЭВМ в мире (1953)</li>
+        <li><b>19 дек</b> «МИР» — советская персональная ЭВМ для инженеров</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="games">
+  <div class="wrap">
+    <div class="kicker">Главное действие · модель</div>
+    <h2>Найди лекарство гомеоскопом</h2>
+    <p style="max-width:62ch">Перед тобой таблица Корсакова: восемь лекарств A–H и 31 симптом. У больного из брошюры симптомы 4, 6, 8, 9, 11, 15, 17, 18, 19, 27 и 31. Выдвинь эти штыри на бруске и веди его по таблице — где он упадёт, там и лекарство. Потом попробуй без штырей, с другим набором и с таким, которого нет ни у одного лекарства.</p>
+    <div class="lab" id="lab">
+      <div class="pins" id="pins" role="group" aria-label="Штыри бруска: выдвинуть штырь симптома"></div>
+      <div class="lab-btns">
+        <button class="btn gold" type="button" id="labGo">Вести брусок →</button>
+        <button class="btn ghost" type="button" id="labCase">Больной из брошюры</button>
+        <button class="btn ghost" type="button" id="labClear">Убрать все штыри</button>
+      </div>
+      <div class="lab-stage">
+        <canvas id="labCv" width="640" height="300" style="height:300px" role="img" aria-label="Перфорированная таблица: восемь столбцов-лекарств A–H и 31 строка-симптом с чёрными отверстиями; поверх таблицы движется брусок с выдвинутыми штырями"></canvas>
+        <div class="lab-cap">Модель по примеру брошюры 1832 года. Из документа в ней столбцы A и B (симптомы перечислены Корсаковым), набор симптомов больного и то, что брусок останавливается на столбце E. Отверстия в остальных столбцах условные.</div>
+      </div>
+      <div class="lab-msg" id="labMsg" aria-live="polite">Выдвинь штыри симптомов и нажми «Вести брусок».</div>
+      <div class="lab-found" id="labFound">Найдено: лекарство больного — нет; пустой брусок — нет; ответа нет — нет; два подходящих — нет.</div>
+      <noscript><div class="noscript-box">Для модели нужен JavaScript. Текстовая версия: на бруске выдвинуты штыри 4, 6, 8, 9, 11, 15, 17, 18, 19, 27 и 31. Брусок идёт по столбцам A, B, C, D — под каким-нибудь штырём нет отверстия, и он скользит дальше. На столбце E под каждым штырём оказывается отверстие: брусок падает, лекарство найдено. Если не выдвинуть ни одного штыря, брусок падает на первом же столбце. Если выбрать симптомы, которых вместе нет ни у одного лекарства, брусок пройдёт всю таблицу. Если подходят два лекарства, он упадёт на первом из них.</div></noscript>
+    </div>
+    <p class="src-note" style="margin-top:10px">Устройство таблицы и гомеоскопа, столбцы A и B, симптомы больного и остановка на столбце E — С. Н. Корсаков, «Начертание нового способа исследования…» (1832), перевод МИФИ, 2009, с. 11–14.</p>
+  </div>
+</section>
+
+<section class="block" id="pervenstvo">
+  <div class="wrap">
+    <div class="kicker">Проверка факта</div>
+    <h2>Что именно здесь первое в мире</h2>
+    <div class="border-box">
+      <p style="margin-top:0"><b>Граница первенства:</b> первое известное применение перфорированных карт для хранения сведений и поиска по ним — «машины для сравнения идей» С. Н. Корсакова, напечатанные в брошюре 1832 года и представленные Петербургской академии наук 11–13 сентября 1832 года. Историки вычислительной техники называют их первым в мире устройством обработки информации на перфокартах, на 55 лет раньше табулятора Холлерита.</p>
+      <p style="margin-bottom:0"><b>Чего здесь нет:</b> перфокарту как таковую изобрёл не Корсаков: карты управляли ткацким станком Жаккара с начала XIX века, а предложил их для станков ещё Вокансон в XVIII веке. Считать на перфокартах Корсаков не предлагал — это замысел Бэббиджа. Сами машины Корсакова не сохранились: до нас дошли брошюра с чертежами и документы Академии.</p>
+    </div>
+    <table class="ctx">
+      <thead><tr><th scope="col">Документ или событие</th><th scope="col">Что</th><th scope="col">Когда</th></tr></thead>
+      <tbody>
+        <tr><td>Письмо С. Корсакова П. Н. Фуссу</td><td>Прошение рассмотреть способ; отказ от привилегии</td><td>11.09.1832</td></tr>
+        <tr><td>«Сообщение о новом методе исследования»</td><td>Описание способа для Академии наук</td><td>13.09.1832</td></tr>
+        <tr><td>Брошюра «Aperçu d'un procédé nouveau d'investigation…»</td><td>Пять машин и два листа чертежей</td><td>1832</td></tr>
+        <tr><td>Заключение комиссии Академии наук</td><td>Отказ: метод «нельзя свести» к наукам</td><td>24.10.1832</td></tr>
+        <tr><td>М. И. Радовский, «Историко-математические исследования», вып. XIV</td><td>Публикация архивных документов</td><td>1961</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block" id="quiz">
+  <div class="wrap">
+    <div class="kicker">Проверь себя · 5 вопросов</div>
+    <h2>Викторина</h2>
+    <p style="color:var(--muted);max-width:62ch">На каждый вопрос — одна попытка. После ответа покажем объяснение.</p>
+    <div id="quizBox"></div>
+    <noscript><div class="noscript-box">Для викторины нужен JavaScript. Ответы: 1 — лекарство помогает при этом симптоме; 2 — когда под каждым выдвинутым штырём оказалось отверстие; 3 — отказала: пользы наукам не нашла; 4 — от привилегии, исключительного права на изобретение; 5 — они хранили сведения для поиска, а не управляли станком.</div></noscript>
+  </div>
+</section>
+
+<section class="block" id="result">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Итог дня</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Лекарство больного, три поворота модели и викторина вместе дают 100 баллов. Прогресс не сохраняется: перезагрузка страницы начинает день заново.</p>
+    <div class="day-result">
+      <div class="dr-score" id="dayTxt">0 / 100 · звание: Гость дня</div>
+      <div class="dr-bar"><i id="dayBar" style="width:0%"></i></div>
+      <div class="dr-note">Найди лекарство больному из брошюры, открой три поворота модели и ответь на вопросы викторины.</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="sources">
+  <div class="wrap">
+    <div class="kicker">Источники</div>
+    <h2>На чём стоит страница</h2>
+    <ul class="sources">
+      <li><a href="https://raai.robofob.ru/library/books/korsakov/korsakov_book.pdf" rel="noopener" target="_blank">С. Н. Корсаков · «Начертание нового способа исследования при помощи машин, сравнивающих идеи»</a> — перевод брошюры 1832 года с французского под ред. А. С. Михайлова, МИФИ, 2009 (электронная версия на сайте Российской ассоциации искусственного интеллекта): три слабости разума, знаки с толщиной, пять машин, таблица и гомеоскоп, пример с лекарствами и остановкой на столбце E. В той же книге — статья А. С. Михайлова «Изобретения С. Н. Корсакова»: биография, пять документов Академии наук по публикации М. И. Радовского, состав комиссии, заключение 24 октября 1832 года, повторное открытие.</li>
+      <li><a href="https://web.archive.org/web/20241004143231/https://computer-museum.ru/precomp/korsakov.htm" rel="noopener" target="_blank">Виртуальный компьютерный музей · А. Ю. Нитусов, «Семен Корсаков и „машина для сравнения идей“»</a> (копия web.archive.org: computer-museum.ru из нашей сети 12.10 не открывался): первое в мире устройство обработки информации на перфокартах, пять машин, комиссия Остроградского и её резолюция, сравнение с Бэббиджем и Холлеритом.</li>
+      <li><a href="https://inf.1sept.ru/article.php?id=200900805" rel="noopener" target="_blank">«Информатика» («Первое сентября») · А. Нитусов, «Семен Корсаков и его „машина для сравнения идей“»</a>, № 8/2009: тот же очерк в учительской газете.</li>
+      <li><a href="https://rushomeopat.ru/patients/homeopathy/semen-korsakov.html" rel="noopener" target="_blank">«Российский гомеопатический журнал» · М. С. Дроздова, «Семён Николаевич Корсаков (1787–1853)»</a>: родился в Херсоне 14 января 1787 года.</li>
+      <li>Изображения: <a href="https://commons.wikimedia.org/wiki/File:Korsakov_punch_card.JPG" rel="noopener" target="_blank">гомеоскопическая перфорированная таблица</a> и <a href="https://commons.wikimedia.org/wiki/File:Linear_Homeoscope.png" rel="noopener" target="_blank">лист чертежей прямолинейных гомеоскопов</a> — гравюры из брошюры С. Н. Корсакова, Санкт-Петербург, 1832; Wikimedia Commons, общественное достояние (автор умер в 1853 году).</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="calendar">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Календарь изобретений</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Выбери любой день — узнаешь, что русские сделали первыми в мире. Листай месяцы стрелками.</p>
+    <div id="calbox"></div>
+  </div>
+</section>
+
+<section class="block kd" id="kuda-dalshe">
+  <div class="wrap">
+    <div class="kd-kicker">Куда дальше</div>
+    <h2>Музей продолжается</h2>
+    <div class="kd-grid">
+      <div class="kd-card main"><span class="kd-lbl">Следующий день</span><a href="day-26jan-podvodnaya.html">26 января — Подводная фотография <span class="kd-arr">→</span></a>
+        <p>С конца 1893 года в Кронштадтской водолазной школе учились снимать под водой.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Предыдущий день</span><a href="day-24jan-k162.html">24 января — Подлодка К-162 <span class="kd-arr">→</span></a>
+        <p>Титановая лодка прошла под водой 44,7 узла — рекорд не побит.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Та же нить</span><a href="day-19jan-kantorovich.html">19 января — Линейное программирование <span class="kd-arr">→</span></a>
+        <p>Ещё один русский способ доверить выбор расчёту, а не догадке.</p></div>
+      <div class="kd-card main"><span class="kd-lbl">Город-музей</span><a href="../../index.html">Русская цивилизация <span class="kd-arr">→</span></a>
+        <p>Все музеи проекта на одной карте.</p></div>
+    </div>
+    <p style="margin-top:16px"><a href="izobreteniya.html">Посмотреть изобретения по алфавиту →</a></p>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>
+  Русская цивилизация · «Что изобрели русские первыми в мире»</div></footer>
+
+<script type="application/json" data-proof>{"status":"found","claim_id":"rc:izobreteniya:korsakov:claim-perfokarty-poisk","ours":{"kind":"печатная брошюра изобретателя с чертежами","title":"S. Karsakof, «Aperçu d'un procédé nouveau d'investigation au moyen de machines à comparer les idées» — пять машин поиска по перфорированным таблицам","date":"1832","holder":"Российская государственная библиотека (оригинал); перевод: МИФИ, 2009, под ред. А. С. Михайлова","source_url":"https://raai.robofob.ru/library/books/korsakov/korsakov_book.pdf"}}</script>
+<script src="../../assets/museum-proof.js"></script>
+
+<script>
+/* ── СЧЁТ ── шкала из 100 держит assets/museum-score.js; здесь только реестр наград.
+   лекарство больного 30 + три поворота модели 3×10 + викторина 5×8 = 100. */
+window.MUSEUM_SCORE = {awards:{lab:30, why0:10, why1:10, why2:10, q:[5,8]},
+  ranks:[[100,'Коллежский советник'],[70,'Составитель таблиц'],[40,'Ученик статистика'],[0,'Гость дня']]};
+</script>
+<script src="../../assets/museum-score.js"></script>
+<script>
+(function(){
+  var $ = function(id){return document.getElementById(id);};
+  $('readBtn').onclick = function(){ $('story').scrollIntoView({behavior:'smooth'}); };
+  $('listenBtn').onclick = function(){ $('audioguide').scrollIntoView({behavior:'smooth'}); };
+  var tb=$('themeInvBtn');
+  tb.onclick=function(){ var b=$('themeInvBody'), open=b.hidden; b.hidden=!open; tb.setAttribute('aria-expanded',open?'true':'false'); tb.textContent=open?'▲ Скрыть':tb.dataset.label; };
+
+  /* ── ГОМЕОСКОП ── таблица 8 столбцов × 31 строка.
+     A и B — дословно из брошюры (с. 13–14); E содержит все симптомы больного из брошюры
+     (4, 6, 8, 9, 11, 15, 17, 18, 19, 27, 31) — брусок «доходит до столбца EE»; 8 и 18 есть только у E,
+     поэтому A–D он проходит. Остальные столбцы условные. Брусок падает на ПЕРВОМ столбце,
+     где под каждым выдвинутым штырём есть отверстие. */
+  var ROWS=31, NAMES=['A','B','C','D','E','F','G','H'];
+  var COLS=[
+    [1,4,5,9,16,17,21,23,25],
+    [2,4,6,11,13,15,16,19,20,22,24,27,30],
+    [1,4,5,6,9,17,21,22,26,28,30],
+    [1,3,5,11,12,13,14,16,19,21,25,26,29],
+    [4,6,8,9,11,12,15,17,18,19,27,28,31],
+    [1,4,5,15,16,17,20,21,22,25,28,31],
+    [1,3,6,11,15,16,19,22,23,26,27,30],
+    [4,5,9,11,13,15,17,20,21,25,29]
+  ].map(function(c){ var s={}; c.forEach(function(r){s[r]=1;}); return s; });
+  var CASE=[4,6,8,9,11,15,17,18,19,27,31];
+  var pins={}, found={}, run=null, barX=-1, dropCol=-1, through=false;
+  var box=$('pins');
+  for (var r=1;r<=ROWS;r++){ (function(r){
+    var b=document.createElement('button'); b.type='button'; b.className='pin'; b.textContent=r;
+    b.setAttribute('aria-pressed','false'); b.setAttribute('aria-label','Штырь симптома '+r);
+    b.onclick=function(){ if (run) return; pins[r]=!pins[r]; sync(); reset(); };
+    box.appendChild(b);
+  })(r); }
+  function list(){ var a=[]; for (var r=1;r<=ROWS;r++) if (pins[r]) a.push(r); return a; }
+  function sync(){ var bs=box.children; for (var i=0;i<bs.length;i++){ var on=!!pins[i+1]; bs[i].classList.toggle('on',on); bs[i].setAttribute('aria-pressed',on?'true':'false'); } }
+  function fits(c,a){ for (var i=0;i<a.length;i++) if (!COLS[c][a[i]]) return false; return true; }
+  function sameCase(a){ return a.length===CASE.length && CASE.every(function(r,i){return a[i]===r;}); }
+  function reset(){ barX=-1; dropCol=-1; through=false; draw(); }
+
+  var cv=$('labCv'), cx=cv.getContext('2d'), W=0, H=300;
+  function fit(){
+    var w=Math.round(cv.clientWidth)||640, rr=window.devicePixelRatio||1;
+    if (w===W && cv.width===Math.round(w*rr)) return;
+    W=w; cv.width=Math.round(W*rr); cv.height=Math.round(H*rr); cx.setTransform(rr,0,0,rr,0,0);
+  }
+  function geo(){ var L=26, T=22, cw=(W-L-8)/8, rh=(H-T-10)/ROWS; return {L:L,T:T,cw:cw,rh:rh}; }
+  function draw(){
+    fit(); var g=geo(), a=list();
+    cx.fillStyle='#ece6d8'; cx.fillRect(0,0,W,H);
+    cx.font='12px Inter, sans-serif'; cx.textAlign='center'; cx.textBaseline='middle';
+    for (var c=0;c<8;c++){
+      var x0=g.L+c*g.cw;
+      cx.fillStyle= c===dropCol ? 'rgba(201,168,76,.35)' : (c%2 ? 'rgba(0,0,0,.03)' : 'rgba(0,0,0,0)'); cx.fillRect(x0,g.T,g.cw,H-g.T-10);
+      cx.fillStyle='#2a2a2a'; cx.fillText(NAMES[c], x0+g.cw/2, 11);
+      for (var r=1;r<=ROWS;r++) if (COLS[c][r]){ cx.fillStyle='#1d1d1d'; cx.fillRect(x0+g.cw*0.3, g.T+(r-1)*g.rh+g.rh*0.18, g.cw*0.4, Math.max(2,g.rh*0.64)); }
+    }
+    cx.strokeStyle='rgba(0,0,0,.18)'; cx.lineWidth=1;
+    for (var r2=0;r2<=ROWS;r2++){ var y=g.T+r2*g.rh; cx.beginPath(); cx.moveTo(g.L,y); cx.lineTo(W-8,y); cx.stroke(); }
+    cx.fillStyle='#555'; cx.font=(g.rh<8?'8px':'9px')+' Inter, sans-serif';
+    for (var r3=1;r3<=ROWS;r3+=(g.rh<8?2:1)) cx.fillText(r3, 12, g.T+(r3-0.5)*g.rh);
+    if (barX>=0){
+      var bx=g.L+barX*g.cw+g.cw/2, bw=Math.max(14,g.cw*0.55);
+      cx.fillStyle= dropCol>=0 ? 'rgba(201,168,76,.85)' : 'rgba(120,80,40,.55)';
+      cx.fillRect(bx-bw/2, g.T-4, bw, H-g.T-6);
+      var ci=Math.round(barX), on=Math.abs(barX-ci)<0.08;
+      a.forEach(function(r){
+        var hole=on && COLS[ci] && COLS[ci][r];
+        cx.fillStyle= hole ? '#2f8f46' : '#b2382f';
+        cx.beginPath(); cx.arc(bx, g.T+(r-0.5)*g.rh, Math.max(2.5,Math.min(5,g.rh*0.42)), 0, 7); cx.fill();
+      });
+    }
+  }
+  function setFound(){
+    function yn(k){ return found[k] ? 'да' : 'нет'; }
+    $('labFound').textContent='Найдено: лекарство больного — '+yn('lab')+'; пустой брусок — '+yn('why0')+'; ответа нет — '+yn('why1')+'; два подходящих — '+yn('why2')+'.';
+  }
+  function hit(k,p){ if(!found[k]){ found[k]=1; award(k,p); return true; } return false; }
+  function msg(t,cls){ var m=$('labMsg'); m.className='lab-msg'+(cls?' '+cls:''); m.textContent=t; }
+  function finish(a){
+    /* все находки засчитываются в любом порядке; сообщение — о самой новой, иначе о текущем результате */
+    var all=[]; for (var c=0;c<8;c++) if (fits(c,a)) all.push(NAMES[c]);
+    var M={
+      lab:['Брусок упал на столбец E: это лекарство помогает при всех 11 симптомах больного. Так и в брошюре 1832 года — «без малейшего напряжения ума или памяти».','ok'],
+      why0:['Ни одного штыря — и брусок упал на первом же столбце. Пустой вопрос подходит к любому ответу: машине нужны признаки.',''],
+      why1:['Брусок прошёл всю таблицу и не упал: лекарства с таким набором симптомов в ней нет. Комиссия Академии упрекала Корсакова как раз в этом — для настоящей медицины таблица вышла бы огромной.',''],
+      why2:['Подходят столбцы '+all.join(', ')+', но брусок упал на первом, '+all[0]+'. Чтобы различить лекарства, нужен ещё один признак. Показать сразу все совпадения умели другие машины Корсакова.','']};
+    var news=[];
+    if (dropCol===4 && sameCase(a) && hit('lab',30)) news.push('lab');
+    if (!a.length && dropCol===0 && hit('why0',10)) news.push('why0');
+    if (through && hit('why1',10)) news.push('why1');
+    if (a.length && all.length>=2 && hit('why2',10)) news.push('why2');
+    setFound();
+    var k = news.length ? news[0] :
+      (dropCol===4 && sameCase(a)) ? 'lab' : !a.length ? 'why0' : through ? 'why1' : all.length>=2 ? 'why2' : null;
+    if (k) msg(M[k][0],M[k][1]);
+    else msg('Брусок упал на столбец '+NAMES[dropCol]+': это лекарство помогает при всех выбранных симптомах ('+a.join(', ')+').','ok');
+  }
+  function go(){
+    if (run) return;
+    var a=list(); barX=0; dropCol=-1; through=false; var last=0;
+    msg('Брусок идёт по таблице…','');
+    function step(ts){
+      var dt= last ? Math.min(0.05,(ts-last)/1000) : 0; last=ts;
+      var prev=barX; barX+=dt*1.6;
+      for (var c=Math.ceil(prev-1e-9); c<=Math.floor(barX); c++){
+        if (c>7) break;
+        if (fits(c,a)){ barX=c; dropCol=c; draw(); run=null; finish(a); return; }
+      }
+      if (barX>7.6){ barX=7.6; through=true; draw(); run=null; finish(a); return; }
+      draw(); run=requestAnimationFrame(step);
+    }
+    /* первый столбец проверяем сразу: брусок ставят на A */
+    if (fits(0,a)){ dropCol=0; draw(); finish(a); return; }
+    run=requestAnimationFrame(step);
+  }
+  $('labGo').onclick=go;
+  $('labCase').onclick=function(){ if (run) return; pins={}; CASE.forEach(function(r){pins[r]=true;}); sync(); reset(); msg('Выдвинуты штыри 4, 6, 8, 9, 11, 15, 17, 18, 19, 27 и 31 — симптомы больного из брошюры. Веди брусок.',''); };
+  $('labClear').onclick=function(){ if (run) return; pins={}; sync(); reset(); msg('Все штыри убраны. Уже полученные баллы сохраняются и повторно не начисляются.',''); };
+  window.addEventListener('resize', draw);
+  draw();
+
+  /* ── ВИКТОРИНА ── один ответ на вопрос; дистракторы сверены с источниками страницы. */
+  var Q = [
+    {q:'Что означало отверстие в таблице Корсакова?', o:['Номер страницы справочника','Лекарство помогает при этом симптоме','Строка пропущена'], a:1,
+     e:'Столбцы — лекарства, строки — симптомы; вырезанное отверстие на пересечении значит «помогает».'},
+    {q:'Когда гомеоскоп останавливался?', o:['Когда доходил до конца таблицы','Когда под каждым выдвинутым штырём оказывалось отверстие','Когда звенел колокольчик'], a:1,
+     e:'Брусок, «ничем более не удерживаемый», падал, и все острия входили в отверстия.'},
+    {q:'Как ответила Академия наук в октябре 1832 года?', o:['Дала премию','Отказала: пользы наукам не нашла','Купила машины для госпиталей'], a:1,
+     e:'Комиссия Остроградского решила, что сущность наук «нельзя свести к таблицам», и съязвила про «слишком много разума».'},
+    {q:'От чего Корсаков добровольно отказался?', o:['От привилегии — исключительного права на изобретение','От чина коллежского советника','От французского языка брошюры'], a:0,
+     e:'В письме П. Н. Фуссу 11 сентября 1832 года он отказался «от преимуществ исключительной привилегии».'},
+    {q:'Чем перфокарты Корсакова отличались от карт ткацкого станка Жаккара?', o:['Они были металлическими','Они хранили сведения для поиска, а не управляли станком','Они были круглыми'], a:1,
+     e:'У Жаккара карты задавали узор ткани, у Корсакова — хранили признаки, по которым машина искала ответ.'}
+  ];
+  var qb = $('quizBox');
+  Q.forEach(function(it, qi){
+    var wrap = document.createElement('div');
+    var h = document.createElement('p'); h.className='quiz-q'; h.textContent=(qi+1)+'. '+it.q; wrap.appendChild(h);
+    var exp = document.createElement('div'); exp.className='exp'; exp.setAttribute('aria-live','polite');
+    var btns = it.o.map(function(txt, oi){
+      var b=document.createElement('button'); b.type='button'; b.className='opt'; b.textContent=txt;
+      b.onclick=function(){
+        if (wrap.dataset.done) return; wrap.dataset.done='1';
+        btns.forEach(function(x,xi){ x.disabled=true; if (xi===it.a) x.classList.add('correct'); });
+        if (oi===it.a){ award('q'+qi,8); exp.textContent='Верно. '+it.e; }
+        else { b.classList.add('wrong'); exp.textContent='Не совсем. '+it.e; }
+        exp.classList.add('show');
+      };
+      wrap.appendChild(b); return b;
+    });
+    wrap.appendChild(exp); qb.appendChild(wrap);
+  });
+})();
+</script>
+<script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
+<script>window.MUSEUM_CHROME={
+  museum:{title:'Что изобрели русские первыми в мире',href:'index.html'},
+  share:{title:'Машина, которая ищет: перфокарты Корсакова — музей «Что изобрели русские первыми в мире»',
+         text:'В 1832 году Семён Корсаков описал машины, искавшие ответ по перфорированной таблице. Что Россия дала миру раньше всех — день за днём.'},
+  prev:{href:'day-24jan-k162.html',title:'24 января · Подлодка К-162'},
+  next:{href:'day-26jan-podvodnaya.html',title:'26 января · Подводная фотография'},
+  all:{href:'index.html',label:'Все изобретения'},
+  city:'../../index.html',
+  random:['day-01jan-cabletv.html','day-02jan-luna1.html','day-03jan-anosov.html','day-04jan-pilchikov.html','day-05jan-shukhov.html','day-06jan-orlov.html','day-08jan-icebreaker.html','day-09jan-blinov.html','day-10jan-britnev.html','day-11jan-kostovich.html','day-12jan-r7.html','day-13jan-k278.html','day-14jan-lira.html','day-15jan-kovalevskaya.html','day-16jan-soyuz45.html','day-19jan-kantorovich.html','day-21jan-obninsk.html','day-22jan-landau.html','day-23jan-umov.html','day-24jan-k162.html','day-25jan-korsakov.html','day-26jan-podvodnaya.html','day-30jan-kotelnikov.html','day-03feb-luna9.html','day-18mar-leonov.html','day-15may-mechnikov.html','day-16jun-tereshkova.html','day-26sep-pavlov.html','day-15nov-buran.html','day-25nov-pirogov.html','day-01dec-lobachevsky.html','day-14dec-laser.html']
+};</script>
+<script src="../../assets/museum-chrome.js"></script>
+<script>window.MUSEUM_SUPPORT={museum:'Что изобрели русские первыми в мире'};</script>
+<script src="../../assets/museum-support.js"></script>
+<script src="calendar-izobreteniya.js"></script>
+<script>window.MUSEUM_CALENDAR_INITIAL='01-25';</script>
+<script src="../../assets/museum-calendar-month.js"></script>
+<script>window.MUSEUM_RETURN={riddle:{q:"Почему академики в 1832 году сочли машину Корсакова вредной для врачей?",a:"Комиссия Академии наук написала, что столь механический метод лечения — подбор лекарства по симптомам машиной — уничтожил бы у врачей всякую способность мыслить.",src:"Заключение комиссии 24.10.1832 по публикации М. И. Радовского; А. С. Михайлов, МИФИ, 2009"}};</script>
+<script src="../../assets/museum-return.js" data-museum="izobreteniya" data-day="01-25"></script>
+<script defer src="../../assets/analytics.js"></script>
+
+
+
+<script>window.MUSEUM_AUDIOGUIDE={
+  audioSrc:"audio-guide-korsakov-ru.mp3",
+  durationLabel:"2 минуты 4 секунд",
+  lead:"Голос ведёт по залу машин Семёна Корсакова: от листа с вырезанными отверстиями до отказа Академии наук осенью 1832 года. Шесть остановок, на каждой — что искать глазами. Слушать можно фоном, пока читаешь статью ниже.",
+  stops:[
+    {t:0,mark:"0:00",title:"Лист с дырками"},
+    {t:21,mark:"0:21",title:"Знаки с толщиной"},
+    {t:44,mark:"0:44",title:"Брусок со штырями"},
+    {t:63,mark:"1:03",title:"Брусок падает"},
+    {t:83,mark:"1:23",title:"Отказ Академии"},
+    {t:104,mark:"1:44",title:"Первые перфокарты для поиска"}
+  ],
+  transcript:[
+    "<p>«Гомеоскопическая перфорированная таблица: столбцы A–H, строки 1–31; гравюра из брошюры С. Н. Корсакова, Санкт-Петербург, 1832».</p>",
+    "<p>«Три слабости разума и „знаки с длиной, шириной и толщиной“ — брошюра 1832 года, с. 7–8 перевода».</p>",
+    "<p>«Таблица: лекарства по столбцам, симптомы по строкам; гомеоскоп — брусок со штырями; симптомы больного 4, 6, 8, 9, 11, 15, 17, 18, 19, 27, 31».</p>",
+    "<p>«Брусок падает, когда под каждым штырём отверстие; в примере — столбец E».</p>",
+    "<p>«Письмо П. Н. Фуссу 11.09.1832, отказ от привилегии; заключение комиссии М. В. Остроградского 24.10.1832».</p>",
+    "<p>«Перфокарты для хранения и поиска сведений — на 55 лет раньше табулятора Холлерита (1887); документы Академии опубликованы в 1961 году».</p>"
+  ],
+  note:"Озвучено синтезом речи — временно, до записи голосом автора музея."
+};</script>
+<script src="../../assets/museum-audioguide.js"></script>
+</body>
+</html>

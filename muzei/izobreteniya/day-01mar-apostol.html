@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="ru" data-museum="izobreteniya">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>«Апостол»: чёрное на красном — Что изобрели русские первыми в мире, 1 марта</title>
+<!--
+  Страница дня 1 марта. Наряд stranicy-izob-0910 (claude2, 15.10.2026), карточка #762.
+  Форма — вариант А музея изобретений (Сергей 12.09.2026): лента ударов, подробности свёрнуты.
+  Паспорт выпуска: rc-museum-production/izobreteniya/day-01mar-apostol/passport/issue.json
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --dark:#060c17; --dark2:#0c1826; --surface:#111f33;
+    --card:rgba(255,255,255,.05); --card-b:rgba(255,255,255,.09);
+    --gold:#c9a84c; --gold-l:#e4c97a; --gold-g:rgba(201,168,76,.13);
+    --ink:#e8eef5; --muted:#7a9ab8; --line:rgba(255,255,255,.07);
+    --accent:#2d8cbf; --accent2:#1f6f8b;
+    /* legacy compat */
+    --paper:#0c1826; --paper2:#111f33;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Inter','Segoe UI',sans-serif;color:var(--ink);background:var(--dark);line-height:1.72}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.13;margin:0}
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent)}
+
+  /* ── ШАПКА ── */
+  header.top{background:rgba(6,12,23,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--card-b);color:#fff;position:sticky;top:0;z-index:30}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+  .logo svg{display:block;filter:drop-shadow(0 0 8px rgba(201,168,76,.4))}
+  .logo .lt{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:16px}
+  .logo .lt small{display:block;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-family:'Inter',sans-serif}
+  .score{background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:6px 16px;font-size:13px;color:var(--gold-l);cursor:pointer;font-family:'Inter',sans-serif}
+  .score-info{position:absolute;right:12px;top:66px;max-width:260px;background:#0e1c30;color:var(--ink);border:1px solid var(--card-b);border-radius:14px;padding:14px 16px;font-size:13px;line-height:1.6;box-shadow:0 20px 60px rgba(0,0,0,.6);display:none;z-index:40}
+  .score-info.show{display:block}
+
+  /* ── HERO — СТАНДАРТ (не менять): 3D-сцена сверху, текст отдельным блоком ниже ── */
+  .hero-scene{position:relative;height:52vh;min-height:300px;max-height:520px;overflow:hidden;background:linear-gradient(160deg,#0a1e3a 0%,#1a3a6a 55%,#0d2240 100%)}
+  .hero-scene canvas.scene,.hero-scene img.scene{width:100%;height:100%;display:block;object-fit:cover}
+  .scene-caption{background:#060d18;padding:11px 0 12px}
+  .scene-caption .wrap{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+  .scene-cap{font-size:13.5px;line-height:1.6;color:var(--muted);border-left:2px solid rgba(201,168,76,.4);padding-left:14px;flex:1 1 420px}
+  .scene-hint{flex:0 0 auto;font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.4px;color:#e4c97a;
+    background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.34);border-radius:24px;padding:7px 16px;font-weight:600}
+  .hero-lead{background:linear-gradient(180deg,#0c1826 0%,#060c17 100%);color:#fff;padding:28px 0 38px}
+  .hero-lead .museum{color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:12px;opacity:.9}
+  .hero-lead .who{font-family:'Inter',sans-serif;font-size:clamp(13px,3vw,15px);letter-spacing:.4px;color:var(--accent-l,#7dc8ff);margin-bottom:10px}
+  .hero-lead .who i{font-style:normal;color:#7893ab;font-weight:400}
+  .hero-lead h1{color:#fff;font-size:56px;font-weight:900;line-height:1.04;margin-bottom:16px}
+  .hero-lead .hook{color:#b8ccde;font-size:19px;max-width:580px;margin-bottom:28px;line-height:1.65;font-weight:400}
+  .hero-lead .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+  @media(max-width:680px){.hero-lead h1{font-size:34px}.hero-lead .hook{font-size:16px}
+    .hero-scene{height:34vh;min-height:230px;max-height:300px}
+    .scene-caption .wrap{flex-direction:column;gap:9px}
+    .scene-hint{order:-1;align-self:flex-start;font-size:11.5px;padding:6px 13px}
+    .scene-cap{font-size:12.8px;flex:1 1 auto}}
+  .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:16px;font-family:'Inter',sans-serif;letter-spacing:.5px}
+
+  /* ── НАВИГАЦИЯ ДНЯ ── */
+  .daynav{position:sticky;top:64px;z-index:25;background:rgba(6,12,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-b)}
+  .daynav .wrap{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+  .daynav::-webkit-scrollbar{display:none}
+  .daynav a{flex:0 0 auto;padding:14px 20px;font-size:11px;font-weight:700;font-family:'Inter',sans-serif;color:var(--muted);text-decoration:none;white-space:nowrap;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:.18s}
+  .daynav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+  /* ── СЕКЦИИ ── */
+  section.block{padding:64px 0;border-bottom:1px solid var(--line);scroll-margin-top:130px}
+  .kicker{font-size:10px;text-transform:uppercase;letter-spacing:3.5px;color:var(--gold);font-weight:700;font-family:'Inter',sans-serif;margin-bottom:8px}
+  section.block h2{font-size:34px;color:#fff;margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink)}
+  .pull{background:var(--gold-g);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 14px 14px 0;font-style:italic;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-size:20px;line-height:1.5;margin:26px 0}
+
+  /* ── КНОПКИ ── */
+  .btn{cursor:pointer;border:none;border-radius:12px;padding:14px 26px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;background:var(--accent2);color:#fff;transition:.18s;letter-spacing:.2px}
+  .btn:hover{filter:brightness(1.18)}
+  .btn.ghost{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid var(--card-b)}
+  .btn.ghost:hover{background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.2)}
+  .btn.gold{background:linear-gradient(135deg,var(--gold),#b8882b);color:#1a0f00;box-shadow:0 4px 20px rgba(201,168,76,.25)}
+  .btn.gold:hover{filter:brightness(1.1);box-shadow:0 6px 28px rgba(201,168,76,.4)}
+  .btn:active{transform:translateY(1px)}
+  .pulse{animation:pulse .9s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+
+  /* ── КАРТОЧКИ ── */
+  .card{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:20px 22px;margin:16px 0;backdrop-filter:blur(6px)}
+
+  /* ── КВИЗ ── */
+  .opt{display:block;width:100%;text-align:left;background:rgba(255,255,255,.04);border:1px solid var(--card-b);border-radius:12px;padding:13px 16px;margin:8px 0;cursor:pointer;font-size:15px;color:var(--ink);font-family:'Inter',sans-serif;transition:.16s}
+  .opt:hover{border-color:var(--accent);background:rgba(45,140,191,.08)}
+  .opt.correct{background:rgba(40,120,60,.18);border-color:#3f9b52;color:#7ed4a0;font-weight:600}
+  .opt.wrong{background:rgba(180,40,40,.13);border-color:#c0453f;color:#f08080}
+  .exp{margin-top:10px;font-size:14px;background:var(--gold-g);border-radius:10px;padding:12px 14px;display:none;color:var(--gold-l)}
+  .exp.show{display:block}
+
+  /* ── ИТОГ ДНЯ ── */
+  .day-result{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:22px 24px;max-width:460px}
+  .dr-rank{font-family:'Playfair Display',Georgia,serif;font-size:28px;color:var(--gold-l);font-weight:700}
+  .dr-score{font-size:16px;margin:4px 0 12px;color:var(--ink)}.dr-score span{color:var(--muted);font-size:14px}
+  .dr-bar{height:8px;background:rgba(255,255,255,.08);border-radius:6px;overflow:hidden}
+  .dr-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),var(--gold));transition:width .6s cubic-bezier(.2,.7,.2,1)}
+  .dr-note{margin-top:12px;font-size:14px;color:var(--muted)}
+
+  /* ── РЕКЛАМНЫЕ СЛОТЫ ── */
+  .ad-slot{position:relative;margin:26px 0;background:rgba(255,255,255,.02);border:1px dashed rgba(255,255,255,.1);border-radius:14px;min-height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px}
+  .ad-slot .lbl{position:absolute;top:7px;right:12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.15);font-family:'Inter',sans-serif}
+  .ad-slot .ph-txt{font-size:12px;max-width:80%;color:rgba(255,255,255,.18)}
+  .ad-slot.billboard{min-height:108px}
+  .adband{background:transparent;border-bottom:none}
+
+  footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
+  .crumbs{background:rgba(6,12,23,.6);border-bottom:1px solid var(--card-b);font-family:'Inter',sans-serif;font-size:12.5px}
+  .crumbs .wrap{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  .crumbs a{color:var(--gold-l);text-decoration:none;white-space:nowrap}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--muted);opacity:.6}
+  .crumbs .here{color:var(--muted);white-space:nowrap}
+
+
+  /* ── ШАПКА: четыре строки по museum-core §6-бис ── */
+  header.top{display:block;text-align:center;padding:10px 12px 8px;height:auto;position:relative}
+  header.top .b1{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:15px;letter-spacing:.5px;color:#fff}
+  header.top .b2{font-size:11px;color:var(--muted);margin-top:2px}
+  header.top .b3{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:6px}
+  header.top .b4{font-size:12.5px;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-style:italic}
+  header.top .score{position:absolute;right:12px;top:10px}
+  .daynav{top:0}
+  .hero-scene{background:#0e1c2c;height:38vh;min-height:250px;max-height:400px}
+  @media(max-width:680px){.hero-lead h1{font-size:31px}}
+  .hero-scene img.scene{object-fit:cover;object-position:50% 42%}
+  .date-origin{font-size:13px;color:#9fb4c8;margin:-6px 0 12px;max-width:62ch}
+  .hero-lead .hook{color:#c6d8e8;max-width:62ch}
+  .hero-under{background:linear-gradient(180deg,#060d18,#060c17);padding:4px 0 22px}
+  .stamp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(125,200,255,.28);margin-top:14px}
+  .stamp>div{padding:11px 12px;border-left:1px solid rgba(125,200,255,.16);min-width:0}
+  .stamp>div:first-child{border-left:0}
+  .stamp .v{font-size:clamp(15px,3.4vw,21px);font-weight:700;color:#8fd3ff;line-height:1.1;overflow-wrap:anywhere}
+  .stamp .k{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#8fa5b9;margin-top:5px}
+  @media(max-width:600px){.stamp{grid-template-columns:repeat(2,minmax(0,1fr))}.stamp>div:nth-child(3){border-left:0}.stamp>div:nth-child(n+3){border-top:1px solid rgba(125,200,255,.16)}}
+
+  /* ── ЛЕНТА УДАРОВ (museum-inventions, вариант А; museum-core §5-бис) ── */
+  .udary{list-style:none;margin:18px 0 0;padding:0;counter-reset:u}
+  .udary>li{border-top:1px solid var(--line);padding:4px 0}
+  .udary details>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:34px 1fr;gap:10px;padding:12px 0;font-size:17px;line-height:1.55;color:var(--ink)}
+  .udary details>summary::-webkit-details-marker{display:none}
+  .udary details>summary::before{counter-increment:u;content:counter(u);font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:20px;color:var(--gold);line-height:1.3}
+  .udary .more-lbl{display:block;grid-column:2;font-size:12.5px;color:var(--gold-l);letter-spacing:.3px;margin-top:4px}
+  .udary .more-lbl::after{content:' ▾'}
+  .udary details[open] .more-lbl::after{content:' ▴'}
+  .udary details[open] .more-lbl .o{display:none}
+  .udary details:not([open]) .more-lbl .c{display:none}
+  .udary summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+  .udary .det{margin:0 0 14px 44px;padding:12px 16px;background:rgba(255,255,255,.035);border-left:2px solid rgba(201,168,76,.45);border-radius:0 10px 10px 0;font-size:15px;color:#d5e0ea}
+  .udary .det p{margin:8px 0}
+  .udary .tag{display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1a0f00;background:var(--gold-l);border-radius:6px;padding:1px 7px;margin-right:6px}
+  .udary .find{border-left:3px solid var(--gold);padding-left:8px}
+  figure.fig{margin:18px 0}
+  figure.fig img{max-width:100%;height:auto;border-radius:10px;display:block}
+  figure.fig figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5}
+  .src-note{font-size:12px;color:#8fa5b9}
+
+  /* ── МОДЕЛЬ ДНЯ (главное предметное действие) ── */
+  .lab{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:18px 18px 20px;margin-top:14px}
+  .lab-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+  .lab-row .lbl{flex:0 0 100%;font-size:13px;color:var(--muted);letter-spacing:.3px}
+  .seg{cursor:pointer;border:1px solid var(--card-b);background:rgba(255,255,255,.04);color:var(--ink);border-radius:10px;padding:10px 14px;font:inherit;font-size:14.5px;min-height:44px}
+  .seg[aria-pressed="true"]{border-color:var(--gold);background:var(--gold-g);color:var(--gold-l);font-weight:600}
+  .seg:focus-visible,.btn:focus-visible,.opt:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .lab-stage{position:relative;margin-top:12px}
+  .lab-stage canvas{width:100%;height:auto;display:block;border-radius:10px;background:#1c2530}
+  .lab-cap{font-size:12px;color:#8fa5b9;margin-top:6px}
+  .lab-msg{margin-top:12px;font-size:15.5px;padding:12px 14px;border-radius:10px;background:rgba(255,255,255,.04);border-left:3px solid var(--card-b);min-height:48px}
+  .lab-msg.ok{border-left-color:#3f9b52;background:rgba(40,120,60,.14)}
+  .lab-msg.bad{border-left-color:#c0453f;background:rgba(180,40,40,.10)}
+  .lab-found{font-size:13px;color:var(--muted);margin-top:8px}
+  .lab-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .noscript-box{background:rgba(255,255,255,.04);border:1px dashed var(--card-b);border-radius:12px;padding:12px 16px;font-size:15px}
+
+  /* ── ГРАНИЦА ПЕРВЕНСТВА ── */
+  .border-box{background:rgba(45,140,191,.08);border:1px solid rgba(45,140,191,.3);border-radius:14px;padding:16px 18px}
+  .border-box b{color:#8fd3ff}
+  .ctx{width:100%;border-collapse:collapse;margin-top:14px;font-size:14.5px}
+  .ctx th,.ctx td{text-align:left;padding:9px 8px;border-top:1px solid var(--line);vertical-align:top}
+  .ctx th{color:var(--gold-l);font-weight:600;font-size:12.5px;letter-spacing:.5px}
+  .quiz-q{margin:18px 0 6px;font-weight:600}
+  .sources a{color:var(--gold-l)}
+  .sources li{margin:6px 0;font-size:14px;color:#c8d6e2}
+  @media(max-width:600px){header.top{padding:8px 64px 6px}header.top .score{top:8px;right:8px;padding:4px 10px;font-size:12px}header.top .b3{margin-top:3px}
+    .hero-scene{height:26vh;min-height:200px;max-height:260px}.date-origin{font-size:12px;margin:-8px 0 8px}.hero-lead{padding:18px 0 26px}.hero-lead .date-chip{margin-bottom:12px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+  /* ── ПОЛЗУНКИ МОДЕЛИ (19, 21 янв) ── */
+  .mtab{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+  .mrow{display:grid;grid-template-columns:minmax(150px,1.2fr) 2fr 92px;gap:12px;align-items:center}
+  .mrow .mname{font-size:14.5px}
+  .mrow .mname i{font-style:normal;color:var(--muted);font-size:13px}
+  .mrow input[type=range]{width:100%;accent-color:var(--gold);min-height:44px}
+  .mrow output{font-size:14px;color:var(--gold-l);text-align:right}
+  .mrow.off{opacity:.45}
+  .mult{margin-top:14px;padding:14px 16px;border-radius:12px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25)}
+  @media(max-width:560px){.mrow{grid-template-columns:1fr 70px}.mrow .mname{grid-column:1/-1}}
+</style>
+<meta name="description" content="1 марта 1564 года Фёдоров и Мстиславец закончили «Апостол» — первую точно датированную московскую книгу. Красное в ней печатали раньше чёрного, с одной формы в два яруса.">
+<link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-01mar-apostol.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Русская цивилизация">
+<meta property="og:title" content="«Апостол»: чёрное на красном">
+<meta property="og:description" content="1 марта 1564 года Фёдоров и Мстиславец закончили «Апостол» — первую точно датированную московскую книгу. Красное в ней печатали раньше чёрного, с одной формы в два яруса.">
+<meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-01mar-apostol.html">
+<meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-01mar-apostol.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "«Апостол»: чёрное на красном", "description": "1 марта 1564 года Фёдоров и Мстиславец закончили «Апостол» — первую точно датированную московскую книгу. Красное в ней печатали раньше чёрного, с одной формы в два яруса.", "url": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-01mar-apostol.html", "inLanguage": "ru", "isPartOf": {"@type": "WebSite", "name": "Музей «Что изобрели русские первыми в мире»"}, "publisher": {"@type": "Organization", "name": "Русская цивилизация"}, "about": {"@type": "Book", "name": "Апостол (Москва, 1564)"}, "image": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-01mar-apostol.jpg"}</script>
+<style>
+  /* ── «АПОСТОЛ»: ЧЁРНОЕ НА КРАСНОМ (1 мар) ── */
+  .prcv{width:100%;max-width:760px;height:auto;aspect-ratio:760/320;display:block;margin:10px 0 4px;background:#efe6d2;border-radius:10px}
+  .lctl{display:grid;gap:12px;max-width:760px;margin-top:8px}
+  .lopts{display:flex;flex-wrap:wrap;gap:8px}
+  .lopts .seg.on{border-color:#3f9b52;background:rgba(63,155,82,.18)}
+  .lfuel{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  .lfuel input[type=range]{flex:1;min-width:180px;max-width:360px}
+  .lfuel output{min-width:92px;font-weight:700;color:var(--gold-l)}
+  .lstat{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;max-width:760px;margin-top:10px}
+  .lstat div{border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:8px 10px;background:rgba(255,255,255,.03)}
+  .lstat b{display:block;font-size:18px;color:var(--gold-l)}
+  .lstat span{font-size:13px;color:var(--muted)}
+  .steps{display:grid;gap:6px;max-width:760px;margin:8px 0 0;padding:0;list-style:none}
+  .steps li{border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:6px 10px;font-size:14px;color:var(--muted)}
+  .steps li.cur{border-color:#c9a24a;color:inherit}
+  .steps li.done{border-color:#3f9b52;color:inherit}
+  .frags{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;max-width:760px;margin-top:8px}
+  .frag{border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:8px;background:rgba(255,255,255,.03)}
+  .frag canvas{width:100%;height:auto;aspect-ratio:220/120;display:block;border-radius:6px;background:#efe6d2}
+  .frag .lopts{margin-top:6px}
+  .frag .seg.right{border-color:#3f9b52;background:rgba(63,155,82,.18)}
+  .chrono{display:grid;gap:8px;max-width:760px;margin-top:8px}
+  .chrono .seg{text-align:left;width:100%}
+  .chrono .seg.right{border-color:#3f9b52;background:rgba(63,155,82,.18)}
+  .chrono .n{display:inline-block;min-width:1.6em;color:var(--gold-l);font-weight:700}
+  .seg.wrongpick{border-color:#c0573f;background:rgba(192,87,63,.15)}
+  blockquote.doc{margin:12px 0;padding:10px 14px;border-left:3px solid var(--gold);background:rgba(255,255,255,.03);border-radius:0 10px 10px 0;font-size:15px;line-height:1.6}
+  #hero img.scene{object-position:50% 35%}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="b1">Русская цивилизация</div>
+  <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
+  <div class="b3">Что изобрели русские первыми в мире</div>
+  <div class="b4">365 изобретений. Все русские. Все первые</div>
+  <div class="score" id="scoreBox" title="Баллы знаний за этот день">⭐ <span id="score">0</span> / 100</div>
+</header>
+
+<nav class="crumbs" aria-label="Хлебные крошки"><div class="wrap">
+  <a href="../../index.html">Русская цивилизация</a>
+  <span class="sep">›</span>
+  <a href="index.html">Что изобрели русские первыми в мире</a>
+  <span class="sep">›</span>
+  <span class="here">1 марта · «Апостол»</span>
+</div></nav>
+
+<div class="hero-scene" id="hero">
+  <img class="scene" src="day-01mar-apostol.jpg" data-source="https://commons.wikimedia.org/wiki/File:Apostol_1564_Frontispis.jpg" data-license="Public domain" data-author="Иван Фёдоров, Пётр Мстиславец, 1564" width="1200" height="881" alt="Разворот старопечатной книги: слева гравюра — евангелист Лука в арке с колоннами пишет в книге, справа страница с резной заставкой, строкой красной вязи, крупным инициалом и чёрным текстом, внизу — красная строка" fetchpriority="high">
+</div>
+
+<div class="scene-caption">
+  <div class="wrap">
+    <div class="scene-cap">«Апостол», Москва, 1564: гравюра с евангелистом Лукой и первая страница текста. Экземпляр ГПНТБ СО РАН. Викисклад, общественное достояние.</div>
+    <span class="scene-hint">Найди красную вязь над текстом</span>
+  </div>
+</div>
+
+<header class="hero-lead">
+  <div class="wrap">
+    <div class="date-chip">1 марта · 1564</div>
+    <p class="date-origin">Дату назвали сами печатники в послесловии книги: «марта въ 1 день» 7072 года от сотворения мира. Это 1 марта 1564 года по старому стилю.</p>
+    <div class="who">Иван Фёдоров и Пётр Мстиславец <i>· Печатный двор, Москва</i></div>
+    <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
+    <h1>«Апостол»: чёрное на красном</h1>
+    <p class="hook">1 марта 1564 года Фёдоров и Мстиславец закончили «Апостол», напечатав две краски с одной формы, — за границей для этого набирали две.</p>
+    <div class="hero-btns">
+      <button class="btn gold" id="readBtn" type="button">Читать историю ↓</button>
+      <button class="btn ghost" id="listenBtn" type="button">🎧 Слушать аудиогид</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero-under">
+  <div class="wrap">
+    <div class="stamp">
+      <div><div class="v">почти 11 месяцев</div><div class="k">печатали «Апостол»: с 19 апреля 1563 года по 1 марта 1564 года</div></div>
+      <div><div class="v">268</div><div class="k">листов в книге</div></div>
+      <div><div class="v">1 форма</div><div class="k">вместо двух — для страницы в две краски</div></div>
+      <div><div class="v">62</div><div class="k">экземпляра «Апостола» учтено в библиографии</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="daynav" aria-label="Разделы дня">
+  <div class="wrap">
+    <a href="#story">Читать</a>
+    <a href="#audioguide">Слушать</a>
+    <a href="#games">Печатня</a>
+    <a href="#pervenstvo">Первенство</a>
+    <a href="#quiz">Викторина</a>
+    <a href="#calendar">Календарь</a>
+  </div>
+</nav>
+
+<section class="wrap" id="dokument" data-proof-block></section>
+
+<section class="block" id="audioguide"></section>
+
+<section class="block" id="story">
+  <div class="wrap">
+    <div class="kicker">История первенства · 12 ударов</div>
+    <h2>Одна форма вместо двух: секрет, который выдала сдвинутая строка</h2>
+    <p style="color:var(--muted);max-width:62ch">Читается подряд. Нажми на удар — откроется подробный разбор с источниками.</p>
+    <ol class="udary">
+      <li><details><summary><span>До середины XVI века книги на Руси переписывали от руки. Переписчики ошибались, и в книгах накапливались искажения.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Царь Иван IV и митрополит Макарий велели строить новые церкви в Москве и в недавно завоёванной Казани и покупать для них «святые книги» на торгу. Многие из купленных рукописей оказались с ошибками несведущих переписчиков.</p>
+          <p class="src-note">Источники: А. Чернов, «Апостол», Блог Исторического музея (2020); «„Апостол“ — первая русская печатная книга Ивана Федорова», «Научная Россия» (2023).</p>
+        </div></details></li>
+      <li><details><summary><span>Об этом рассказывает послесловие самой книги: годных книг на торгу нашлось мало, и царь стал думать, как наладить печатание.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>В переводе на современный язык: «Но среди них мало нашлось пригодных — все оказались испорчены переписчиками, невежественными и несведущими в науках. Тогда он начал размышлять, как бы наладить печатание книг, чтобы впредь святые книги издавались в исправленном виде». Послесловие, скорее всего, написал сам Иван Фёдоров.</p>
+          <p class="src-note">Источники: «„Апостол“ — первая русская печатная книга Ивана Федорова», «Научная Россия» (2023); «Апостол. Москва, 1564», raruss.ru.</p>
+        </div></details></li>
+      <li><details><summary><span>Печатать в Москве начали раньше «Апостола». Но первые книги выходили без года, места и имени печатника.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Их выпускала так называемая Анонимная типография в середине 1550-х годов. Книговеды насчитывают у неё не меньше семи книг без выходных данных. Значит, у Ивана Фёдорова в Москве были предшественники, но их имён книги не сохранили.</p>
+          <p class="src-note">Источники: «Апостол», НЭБ — Книжные памятники (экземпляр РГБ); «Апостол. Москва, 1564», raruss.ru.</p>
+        </div></details></li>
+      <li><details><summary><span>19 апреля 1563 года дьякон Иван Фёдоров и Пётр Тимофеев Мстиславец начали печатать «Апостол» в новой типографии, устроенной на средства царской казны.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>«Апостол» — это Деяния и Послания апостолов. Книгу читали и на службе, и дома: текст разбит на зачала, то есть на чтения одного дня. Отбирая тексты из рукописей, первопечатники работали ещё и как редакторы.</p>
+          <p class="src-note">Источник: «Апостол», НЭБ — Книжные памятники (экземпляр РГБ).</p>
+        </div></details></li>
+      <li><details><summary><span>Закончили работу 1 марта 1564 года. В послесловии стоит: «совершени же быша в лето 7072 марта въ 1 день».<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Год 7072 от сотворения мира — это 1564 год от Рождества Христова. На всю книгу ушло почти 11 месяцев. Сколько вышло экземпляров, неизвестно: книговеды называют от 600 до 2000.</p>
+          <p class="src-note">Источники: «Апостол», Москва, 1564, послесловие (экземпляр ГПНТБ СО РАН, цифровая копия); «Апостол», НЭБ — Книжные памятники; «Апостол. Москва, 1564», raruss.ru.</p>
+        </div></details></li>
+      <li><details><summary><span>Послесловие назвало имена печатников, год, место и причину издания. «Апостол» стал первой точно датированной книгой, напечатанной в Москве.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Титульного листа в книге ещё нет — все выходные данные стоят в конце. Само послесловие книговеды называют первым печатным публицистическим текстом в истории русской литературы.</p>
+          <p class="src-note">Источники: «Апостол», НЭБ — Книжные памятники; «Апостол. Москва, 1564», raruss.ru.</p>
+        </div></details></li>
+      <li><details><summary><span>Красное рядом с чёрным давалось Москве тяжело: в Анонимной типографии с каждой красной литеры стирали чёрную краску и красили её заново — медленно и с помарками.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>В «Апостоле» красным напечатаны заголовки вязью и инициалы, чёрным — основной текст. В книге 268 листов, гравюра с евангелистом Лукой, 48 гравированных заставок, 22 инициала и 24 строки красной заголовочной вязи. Гравюру с Лукой отпечатали с двух досок.</p>
+          <p class="src-note">Источник: «Апостол. Москва, 1564», raruss.ru.</p>
+        </div></details></li>
+      <li><details><summary><span>За границей в две краски печатали с двух наборных форм: сначала лист оттискивали чёрным с одной формы, потом красным — с другой.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Так описывает печать с двух форм raruss.ru. Если лист при второй накладке ложился неточно, красная краска оказывалась поверх чёрной. Бывал и другой способ: в Майнцской Псалтири 1457 года части инициалов вырезали отдельно для каждой краски, складывали и печатали все краски за один оттиск.</p>
+          <p class="src-note">Источники: «Апостол. Москва, 1564», raruss.ru; С. Ю. Агишев, «Гутенберг», Православная энциклопедия, т. 13.</p>
+        </div></details></li>
+      <li><details><summary><span>По реконструкции книговедов, Фёдоров печатал в две краски с одной формы. Красные литеры приподнимали на брусочках, оттискивали красным, потом вынимали и печатали по тому же листу чёрным.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Получалась двухъярусная наборная форма. Так её восстанавливают книговеды В. В. Попов и А. А. Сидоров; реконструкция предположительная. Впервые способ применили в анонимной «Триоди», и Сидоров приписал его изобретение Фёдорову. Способ экономил материал — вторая форма не нужна — и давал меньше помарок, чем прежняя московская манера: там с красных литер стирали чёрную краску и красили их заново.</p>
+          <p class="src-note">Источник: «Апостол. Москва, 1564», raruss.ru (по исследованиям В. В. Попова и А. А. Сидорова).</p>
+        </div></details></li>
+      <li><details><summary><span>Там, где лист при второй накладке сдвинулся, видно, какая краска сверху: в зарубежных книгах красное лежит на чёрном, а в «Апостоле» — чёрное на красном.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Краска второго оттиска ложится поверх первой. Поэтому сдвинутая строка выдаёт порядок печати — в «Апостоле» это наглядно видно. Попробуй сам в модели ниже.</p>
+          <p class="src-note">Источник: «Апостол. Москва, 1564», raruss.ru.</p>
+        </div></details></li>
+      <li><details><summary><span>Академик Д. С. Лихачёв писал, что в «Апостоле» не найдено ни одной опечатки и ни одной типографской погрешности.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>«До сих пор не найдено ни одной типографской погрешности (плохих оттисков, непрочно закрепленных строк, нестойкой типографской краски) и ни одной опечатки, без которых не только в России, но и в Западной Европе не обходилось во все последующие века книгопечатания ни одно издание». Шрифт сделали по образцу московского полуустава XVI века.</p>
+          <p class="src-note">Источники: «„Апостол“ — первая русская печатная книга Ивана Федорова», «Научная Россия» (2023); А. Чернов, «Апостол», Блог Исторического музея (2020).</p>
+        </div></details></li>
+      <li><details><summary><span>Печатников обвинили в ереси, и они уехали в Великое княжество Литовское. В 1568 году Печатный двор сожгли, но «Апостол» уцелел: в библиографии учтено 62 экземпляра.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Позже Фёдоров писал (в переводе на современный язык), что уехать пришлось из-за преследований «не от самого государя, а от многих начальников и духовных властей и учителей», которые «по зависти» обвиняли их в ереси. Экземпляр «Апостола» хранит и Исторический музей — в 1910 году его передали в дар из библиотеки библиофилов Рогожиных.</p>
+          <p class="src-note">Источники: «Апостол. Москва, 1564», raruss.ru; А. Чернов, «Апостол», Блог Исторического музея (2020).</p>
+        </div></details></li>
+    </ol>
+  </div>
+</section>
+<section class="block" id="theme-inventions">
+  <div class="wrap">
+    <div class="kicker">Печать и изображение · Русские первенства</div>
+    <h2>Что ещё русские первыми придумали для печати и изображения</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Другие дни музея о печати и изображении.</p>
+    <button class="btn ghost" type="button" id="themeInvBtn" data-label="Показать 2 первенства →" aria-expanded="false" aria-controls="themeInvBody">Показать 2 первенства →</button>
+    <div id="themeInvBody" hidden>
+      <ul class="theme-list">
+        <li><b>6 янв</b> <a href="day-06jan-orlov.html">Орловская печать: несколько красок за один прогон</a></li>
+        <li><b>5 фев</b> <a href="day-05feb-boldyrev.html">Гибкая плёнка Болдырева</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="games">
+  <div class="wrap">
+    <div class="kicker">Главное действие · по исследованиям В. В. Попова и А. А. Сидорова (raruss.ru), реконструкция предположительная, модель условная</div>
+    <h2>Печатня: красное раньше чёрного</h2>
+    <p style="max-width:62ch">Напечатай один и тот же двухцветный лист тремя способами: как в московской Анонимной типографии, как Иван Фёдоров и как в зарубежных типографиях. Потом сдвинь лист при второй накладке и посмотри, какая краска легла сверху.</p>
+    <div class="lab">
+      <div class="lopts" role="group" aria-label="Способ печати">
+        <button class="seg" type="button" id="mAnon">Анонимная типография: одна форма, один оттиск</button>
+        <button class="seg on" type="button" id="mFed">Фёдоров: одна форма в два яруса</button>
+        <button class="seg" type="button" id="mEur">За границей: две формы</button>
+      </div>
+      <ol class="steps" id="steps" aria-label="Шаги печати"></ol>
+      <div class="lopts" style="margin-top:10px">
+        <button class="btn gold" type="button" id="pStep">Следующий шаг ▶</button>
+        <button class="btn ghost" type="button" id="pAll">Напечатать лист целиком</button>
+      </div>
+      <canvas class="prcv" id="press" width="760" height="320" role="img" aria-label="Лист бумаги: сверху строка чёрного текста, под ней красная строка вязи, слева красный крупный инициал, справа строки чёрного текста. При сдвиге листа красное и чёрное заходят друг на друга, и видно, какая краска сверху."></canvas>
+      <div class="lctl">
+        <div class="lfuel"><label for="pS">Сдвиг листа при второй накладке</label><input type="range" id="pS" min="0" max="3" step="0.5" value="0"><output id="oS" for="pS">0 мм</output></div>
+      </div>
+      <div class="lstat">
+        <div><b id="sForms">1</b><span>сколько наборных форм на лист</span></div>
+        <div><b id="sPass">2</b><span>сколько оттисков на лист</span></div>
+        <div><b id="sHand">не нужно</b><span>стирать и перекрашивать красные литеры</span></div>
+        <div><b id="sTop">—</b><span>что лежит сверху там, где краски заходят друг на друга</span></div>
+      </div>
+      <div class="lab-msg" id="pMsg" aria-live="polite">Выбран способ Фёдорова. Нажимай «Следующий шаг» и смотри, что происходит с листом.</div>
+      <div class="lab-cap">Порядок печати — по raruss.ru, где пересказаны исследования В. В. Попова и А. А. Сидорова: в зарубежных типографиях печатали с двух форм, сначала чёрной краской, потом красной; Фёдоров — с одной двухъярусной формы, сначала красной, потом чёрной; в анонимных московских книгах — одним оттиском с одной формы, а с красных литер перед этим стирали чёрную краску. Как именно работала форма Фёдорова, известно предположительно. Лист условный: верхняя строка придумана для наглядности, ниже — начало «Деяний» в современном написании; размеры и сдвиг тоже условные.</div>
+      <noscript><div class="noscript-box">Для модели нужен JavaScript. Текстовая версия. Анонимная типография: одна форма, один оттиск, но перед ним с красных литер стирают чёрную краску и красят их киноварью — работа кропотливая, на листе бывают помарки. Фёдоров: одна форма в два яруса, два оттиска — сначала красный с поднятых литер, потом чёрный; при сдвиге листа чёрное ложится на красное. За границей: две формы, два оттиска — сначала чёрный, потом красный; при сдвиге красное ложится на чёрное.</div></noscript>
+
+      <h3 style="margin:22px 0 6px">Чей это лист?</h3>
+      <p style="max-width:62ch;margin:0 0 6px">Перед тобой три условных фрагмента со сдвинутой второй накладкой. По тому, какая краска сверху, определи, кто печатал.</p>
+      <div class="frags" id="frags"></div>
+      <div class="lab-msg" id="fMsg" aria-live="polite">Присмотрись к местам, где красное и чёрное заходят друг на друга.</div>
+
+      <h3 style="margin:22px 0 6px">1457–1568: расставь по порядку</h3>
+      <p style="max-width:62ch;margin:0 0 6px;color:var(--muted)">Нажимай события от самого раннего к самому позднему.</p>
+      <div class="chrono" id="chrono" role="group" aria-label="События 1457–1568 годов"></div>
+      <div class="lab-msg" id="hMsg" aria-live="polite">Какое событие было первым?</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="pervenstvo">
+  <div class="wrap">
+    <div class="kicker">Проверка факта</div>
+    <h2>Что именно здесь наше</h2>
+    <div class="border-box">
+      <p style="margin-top:0"><b>Граница первенства:</b> «Апостол» 1564 года — первая точно датированная книга, напечатанная в Москве: в послесловии названы печатники, год, место и причина издания. Наш технический приём — двухцветная печать с одной наборной формы в два яруса: сначала красный оттиск с приподнятых литер, потом чёрный. По raruss.ru, это оригинальный способ, не такой, как за границей, где печатали с двух форм, сначала чёрным, потом красным; технику восстанавливают предположительно, по исследованиям В. В. Попова и А. А. Сидорова. Впервые способ применили в анонимной «Триоди»; Сидоров приписал его Фёдорову.</p>
+      <p><b>Чего здесь нет:</b> «Апостол» — не первая печатная книга: Иоганн Гутенберг закончил 42-строчную Библию к 1455 году. И не первая книга с датой и именами печатников: так в 1457 году вышла Майнцская Псалтирь Иоганна Фуста и Петера Шёффера; в ней рубрики и заглавные буквы впервые напечатаны красной и синей краской. И не первая книга, напечатанная в Москве: до неё были книги Анонимной типографии 1550-х годов. Реконструкция двухъярусной формы — предположительная.</p>
+    </div>
+    <table class="ctx">
+      <thead><tr><th scope="col">Что</th><th scope="col">Чем было</th><th scope="col">Когда</th></tr></thead>
+      <tbody>
+        <tr><td>Гутенберг, Майнц</td><td>42-строчная Библия без даты и имени печатника</td><td>к 1455</td></tr>
+        <tr><td>Фуст и Шёффер, Майнц</td><td>Псалтирь с датой и именами печатников, все краски за один оттиск</td><td>1457</td></tr>
+        <tr><td>Анонимная типография, Москва</td><td>Книги без года, места и имени печатника</td><td>середина 1550-х</td></tr>
+        <tr><td>Фёдоров и Мстиславец, Москва</td><td>«Апостол»: послесловие с датой и именами, красное раньше чёрного</td><td>1564</td></tr>
+        <tr><td>Печатный двор, Москва</td><td>Сожжён</td><td>1568</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block" id="quiz">
+  <div class="wrap">
+    <div class="kicker">Проверь себя · 5 вопросов</div>
+    <h2>Викторина</h2>
+    <p style="color:var(--muted);max-width:62ch">На каждый вопрос — одна попытка. После ответа покажем объяснение.</p>
+    <div id="quizBox"></div>
+    <noscript><div class="noscript-box">Для викторины нужен JavaScript. Ответы: 1 — 1 марта 7072 года; 2 — красной; 3 — одна, в два яруса; 4 — книги без года, места и имени печатника; 5 — из-за преследований и обвинений в ереси.</div></noscript>
+  </div>
+</section>
+
+<section class="block" id="result">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Итог дня</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Печатня, фрагменты, хронология и викторина вместе дают 100 баллов. Прогресс не сохраняется: перезагрузишь страницу — день начнётся заново.</p>
+    <div class="day-result">
+      <div class="dr-score" id="dayTxt">0 / 100 · звание: Гость дня</div>
+      <div class="dr-bar"><i id="dayBar" style="width:0%"></i></div>
+      <div class="dr-note">Напечатай лист тремя способами. Сдвинь лист у Фёдорова и за границей — сравни, какая краска сверху. Определи три фрагмента, расставь события по порядку и ответь на вопросы викторины.</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="sources">
+  <div class="wrap">
+    <div class="kicker">Источники</div>
+    <h2>На чём стоит страница</h2>
+    <ul class="sources">
+      <li><a href="https://www.spsl.nsc.ru/rbook/%D0%98%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%98%D0%B2%D0%B0%D0%BD%D0%B0%20%D0%A4%D0%B5%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D0%B0/%D0%90%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%BB-%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5%20%D0%B8%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5/index.html" rel="noopener" target="_blank">«Апостол», Москва, 1564 — цифровая копия экземпляра ГПНТБ СО РАН</a> (Музей книги ГПНТБ СО РАН): послесловие с датой начала и окончания работы и именами печатников.</li>
+      <li><a href="https://kp.rusneb.ru/item/material/apostol-1-20" rel="noopener" target="_blank">«Апостол»</a>, НЭБ — Книжные памятники, экземпляр РГБ: первая точно датированная книга, напечатанная в Москве; Анонимная типография 1550-х; 19 (29) апреля 1563 — 1 (11) марта 1564; 268 листов; структура книги.</li>
+      <li><a href="http://www.raruss.ru/slavonic/slav3/1340-apostol-fedorov.html" rel="noopener" target="_blank">«Апостол. Москва, 1564»</a>, raruss.ru («Раритетные издания»): двухпрогонная печать с одной двухъярусной формы по исследованиям В. В. Попова и А. А. Сидорова, сравнение с зарубежным способом, 62 экземпляра, тираж, Анонимная типография, слова Фёдорова о преследованиях.</li>
+      <li><a href="https://scientificrussia.ru/articles/apostol-pervaa-russkaa-pecatnaa-kniga-ivana-fedorova-2" rel="noopener" target="_blank">«„Апостол“ — первая русская печатная книга Ивана Федорова»</a>, «Научная Россия», 2023: послесловие в переводе на современный язык, отзыв Д. С. Лихачёва.</li>
+      <li><a href="https://blog.mediashm.ru/?p=2285" rel="noopener" target="_blank">А. Чернов · «Апостол»</a>, Блог Исторического музея, 2020: экземпляр ГИМ, шрифт по полууставу, отъезд печатников, пожар Печатного двора в 1568 году.</li>
+      <li><a href="https://www.pravenc.ru/text/168436.html" rel="noopener" target="_blank">С. Ю. Агишев · «Гутенберг»</a>, Православная энциклопедия, т. 13: 42-строчная Библия, Майнцская псалтирь 1457 года.</li>
+      <li>Изображение: <a href="https://commons.wikimedia.org/wiki/File:Apostol_1564_Frontispis.jpg" rel="noopener" target="_blank">разворот «Апостола» 1564 года с гравюрой</a> (экземпляр ГПНТБ СО РАН), Викисклад — общественное достояние: книга издана в 1564 году.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="calendar">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Календарь изобретений</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Выбери любой день — узнаешь, что русские сделали первыми в мире. Листай месяцы стрелками.</p>
+    <div id="calbox"></div>
+  </div>
+</section>
+
+<section class="block kd" id="kuda-dalshe">
+  <div class="wrap">
+    <div class="kd-kicker">Куда дальше</div>
+    <h2>Музей продолжается</h2>
+    <div class="kd-grid">
+      <div class="kd-card main"><span class="kd-lbl">Следующий день</span><a href="day-18mar-leonov.html">18 марта — Первый выход человека в открытый космос <span class="kd-arr">→</span></a>
+        <p>Раздувшийся скафандр не пускал Леонова обратно в корабль — он стравил кислород и вошёл в шлюз головой вперёд.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Предыдущий день</span><a href="day-28feb-zhuravsky.html">28 февраля — Журавский: сосчитанный мост <span class="kd-arr">→</span></a>
+        <p>Журавский первым сосчитал, сколько тянет каждый тяж фермы Гау, — у опор сильнее, чем в середине.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Ещё о печати</span><a href="day-06jan-orlov.html">6 января — Орловская печать <span class="kd-arr">→</span></a>
+        <p>Несколько красок за один прогон.</p></div>
+      <div class="kd-card main"><span class="kd-lbl">Город-музей</span><a href="../../index.html">Русская цивилизация <span class="kd-arr">→</span></a>
+        <p>Все музеи проекта на одной карте.</p></div>
+    </div>
+    <p style="margin-top:16px"><a href="izobreteniya.html">Посмотреть изобретения по алфавиту →</a></p>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>
+  Русская цивилизация · «Что изобрели русские первыми в мире»</div></footer>
+
+<script type="application/json" data-proof>{"status": "found", "claim_id": "rc:izobreteniya:apostol:claim-apostol-1564", "ours": {"kind": "печатная книга", "title": "«Апостол», Москва — послесловие печатников: начали печатать 19 апреля 7071 года, «совершени же быша в лето 7072 марта въ 1 день»; названы Иван Фёдоров и Пётр Тимофеев Мстиславец", "date": "1564-03-01", "holder": "Печатный двор, Москва; экземпляр ГПНТБ СО РАН, цифровая копия Музея книги ГПНТБ СО РАН", "source_url": "https://www.spsl.nsc.ru/rbook/%D0%98%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%98%D0%B2%D0%B0%D0%BD%D0%B0%20%D0%A4%D0%B5%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D0%B0/%D0%90%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%BB-%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5%20%D0%B8%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5/index.html", "scan": "day-01mar-apostol-posleslovie.jpg", "scan_credit": "Послесловие «Апостола» 1564 года: строки с датами начала и окончания работы. Экземпляр ГПНТБ СО РАН, общественное достояние."}, "rival": {"name": "Иоганн Фуст и Петер Шёффер, Майнц", "date": "1457", "doc_title": "Псалтирь — первая книга с датой и именами печатников; рубрики и заглавные буквы красной и синей краской, все краски за один оттиск (Православная энциклопедия, т. 13)"}}</script>
+<script src="../../assets/museum-proof.js"></script>
+
+<script>
+/* ── СЧЁТ ── шкала из 100 держит assets/museum-score.js; здесь только реестр наград.
+   модель: печатня 4×10 и фрагменты 1×10; хронология 4×5; викторина 5×6 = 100. */
+window.MUSEUM_SCORE = {awards:{m0:10, m1:10, m2:10, m3:10, m4:10, h:[4,5], q:[5,6]},
+  ranks:[[100,'Справщик Печатного двора'],[70,'Тередорщик у стана'],[40,'Ученик первопечатника'],[0,'Гость дня']]};
+</script>
+<script src="../../assets/museum-score.js"></script>
+<script>
+(function(){
+  var $ = function(id){return document.getElementById(id);};
+  $('readBtn').onclick = function(){ $('story').scrollIntoView({behavior:'smooth'}); };
+  $('listenBtn').onclick = function(){ $('audioguide').scrollIntoView({behavior:'smooth'}); };
+  var tb=$('themeInvBtn');
+  tb.onclick=function(){ var b=$('themeInvBody'), open=b.hidden; b.hidden=!open; tb.setAttribute('aria-expanded',open?'true':'false'); tb.textContent=open?'▲ Скрыть':tb.dataset.label; };
+  function msg(id,t,cls){ var m=$(id); m.className='lab-msg'+(cls?' '+cls:''); m.textContent=t; }
+  function mm(x){ return String(x).replace('.',',')+' мм'; }
+  var mDone={};
+  function aw(k){ if (!mDone[k]){ mDone[k]=1; award(k,10); } }
+
+  /* ── ПЕЧАТНЯ ── raruss.ru (по исследованиям В. В. Попова и А. А. Сидорова):
+     анонимные книги — одна форма, один оттиск, с красных литер стирают чёрную краску и красят киноварью;
+     Фёдоров — одна форма в два яруса: красный оттиск с поднятых литер, ярус вынимают, чёрный оттиск по тому же листу;
+     за границей — две формы: сначала чёрная, потом красная. Краска второго оттиска ложится сверху. */
+  var RED='#b3261e', BLACK='#1d1a17';
+  var M={
+    anon:{name:'способ Анонимной типографии',forms:1,passes:1,hand:'все',
+      steps:['Набрать всю страницу на одной форме','Накатать всю форму чёрной краской','Стереть чёрную краску с красных литер','Покрасить красные литеры киноварью','Один оттиск: обе краски сразу'],
+      layers:[]},
+    fed:{name:'способ Фёдорова',forms:1,passes:2,hand:'не нужно',
+      steps:['Набрать всю страницу на одной форме','Приподнять красные литеры на брусочки — верхний ярус','Накатать верхний ярус киноварью','Оттиск 1 — красный','Вынуть верхний ярус, накатать нижний чёрной краской','Оттиск 2 — чёрный, по тому же листу'],
+      layers:[[3,'red'],[5,'black']]},
+    eur:{name:'зарубежный способ',forms:2,passes:2,hand:'не нужно',
+      steps:['Набрать основной текст на первой форме','Набрать красные места на второй форме','Накатать первую форму чёрной краской','Оттиск 1 — чёрный','Накатать вторую форму красной краской, наложить тот же лист','Оттиск 2 — красный'],
+      layers:[[3,'black'],[5,'red']]}
+  };
+  var mode='fed', step=-1, shift=0, seen={}, shiftSeen={};
+  var cv=$('press'), ctx=cv.getContext('2d');
+  function size(c,W,H){ var w=c.clientWidth||W, d=window.devicePixelRatio||1; c.width=Math.round(w*d); c.height=Math.round(w*H/W*d); }
+  /* лист: строка чёрного текста, под ней красная вязь, красный инициал и чёрные строки рядом */
+  var SERIF='Georgia,"Times New Roman",serif';
+  function ink(c,u,color,dx,dy,smudge){
+    c.save(); c.translate(dx*u,dy*u); c.fillStyle=color; c.textBaseline='alphabetic';
+    if (color===BLACK){
+      c.font=(26*u)+'px '+SERIF;
+      c.fillText('…и Иоанна Крестителя, яко же писано есть.',40*u,52*u);
+      c.fillText('ервое убо слово сотворих о всех,',138*u,138*u);
+      c.fillText('о Феофиле, яже начат Иисус',138*u,176*u);
+      c.fillText('творити же и учити, донегоже дне,',138*u,214*u);
+      c.fillText('в оньже заповедав апостолом.',40*u,262*u);
+    } else {
+      c.font='bold '+(32*u)+'px '+SERIF;
+      c.fillText('ДЕЯНИЯ  СВЯТЫХ  АПОСТОЛ',150*u,94*u);
+      c.font='bold '+(118*u)+'px '+SERIF;
+      c.fillText('П',44*u,224*u);
+    }
+    if (smudge){ c.globalAlpha=0.55; c.fillStyle=color===BLACK?BLACK:RED;
+      var P=color===BLACK?[[60,110,7],[118,206,5],[300,98,4],[520,92,6]]:[[180,136,5],[420,175,4],[640,100,6]];
+      P.forEach(function(p){ c.beginPath(); c.ellipse(p[0]*u,p[1]*u,p[2]*u,p[2]*0.6*u,0.6,0,7); c.fill(); }); }
+    c.restore();
+  }
+  function sheet(c,u,w,h,first,second,dxy,smudge){
+    c.clearRect(0,0,w,h); c.fillStyle='#efe6d2'; c.fillRect(0,0,w,h);
+    if (first) ink(c,u,first==='red'?RED:BLACK,0,0,smudge);
+    if (second) ink(c,u,second==='red'?RED:BLACK,dxy[0],dxy[1],smudge);
+  }
+  function printed(){ /* какие слои уже на листе */
+    var m=M[mode], out=[];
+    if (mode==='anon'){ if (step>=4){ out.push('red','black'); } return out; }
+    m.layers.forEach(function(L){ if (step>=L[0]) out.push(L[1]); }); return out;
+  }
+  function draw(){
+    var w=cv.width, h=cv.height, u=w/760, p=printed(), sh=mode==='anon'?0:shift;
+    sheet(ctx,u,w,h,p[0],p[1],[sh*4,sh*10],mode==='anon'&&p.length===2);
+  }
+  function stats(){
+    var m=M[mode], done=step>=m.steps.length-1;
+    $('sForms').textContent=m.forms; $('sPass').textContent=m.passes; $('sHand').textContent=m.hand;
+    $('sTop').textContent= !done ? '—' : (mode==='anon' ? 'не заходят: один оттиск' : (shift>0 ? (m.layers[1][1]==='black'?'чёрное на красном':'красное на чёрном') : 'не заходят: лист лёг точно'));
+    var ol=$('steps'); ol.innerHTML='';
+    m.steps.forEach(function(t,i){ var li=document.createElement('li'); li.textContent=(i+1)+'. '+t; if (i<=step) li.className='done'; else if (i===step+1) li.className='cur'; ol.appendChild(li); });
+  }
+  function finish(){
+    if (mode==='anon'){ seen.anon=1; aw('m0');
+      msg('pMsg','Лист готов за один оттиск, но перед ним каждую красную литеру пришлось очистить от чёрной краски и покрасить киноварью. Работа кропотливая, и на листе остались помарки. Теперь напечатай так, как Фёдоров.','ok'); return; }
+    if (mode==='fed'){ seen.fed=1; aw('m1');
+      msg('pMsg','Готово: одна форма, два оттиска, и ничего не надо стирать с литер. Красное легло первым, чёрное — вторым. Сдвинь лист при второй накладке и посмотри, что окажется сверху.','ok'); }
+    if (mode==='eur'){ seen.eur=1; aw('m2');
+      msg('pMsg','Готово: тот же лист, но понадобились две наборные формы. Чёрное легло первым, красное — вторым. Сдвинь лист и сравни со способом Фёдорова.','ok'); }
+    checkShift();
+  }
+  function checkShift(){
+    if (mode==='anon' || step<M[mode].steps.length-1 || shift<1.5) return;
+    shiftSeen[mode]=1;
+    var both=shiftSeen.fed&&shiftSeen.eur;
+    if (both) aw('m3');
+    if (mode==='fed') msg('pMsg','Видишь? Сдвинутые чёрные строки легли поверх красной вязи и инициала: чёрное на красном. Так выглядит сдвиг в «Апостоле». '+(both?'Оба способа сравнены — переходи к фрагментам.':'Теперь напечатай лист зарубежным способом и сдвинь его тоже.'),'ok');
+    else msg('pMsg','Здесь наоборот: сдвинутая красная вязь легла поверх чёрных строк — красное на чёрном, как в зарубежных книгах. '+(both?'Оба способа сравнены — переходи к фрагментам.':'Теперь напечатай лист как Фёдоров и сдвинь его тоже.'),'ok');
+  }
+  function setMode(k){ mode=k; step=-1; ['mAnon','mFed','mEur'].forEach(function(id){ $(id).classList.toggle('on',id==='m'+k.charAt(0).toUpperCase()+k.slice(1)); });
+    $('pS').disabled=(k==='anon'); stats(); draw();
+    msg('pMsg', k==='anon' ? 'Анонимная типография: один оттиск, сдвигать нечего. Нажимай «Следующий шаг».' : 'Выбран '+M[k].name+'. Нажимай «Следующий шаг».',''); }
+  $('mAnon').onclick=function(){ setMode('anon'); };
+  $('mFed').onclick=function(){ setMode('fed'); };
+  $('mEur').onclick=function(){ setMode('eur'); };
+  $('pStep').onclick=function(){ var n=M[mode].steps.length;
+    if (step>=n-1){ step=-1; stats(); draw(); msg('pMsg','Новый лист. Нажимай «Следующий шаг».',''); return; }
+    step++; stats(); draw();
+    if (step===n-1) finish(); else msg('pMsg','Шаг '+(step+1)+': '+M[mode].steps[step]+'.',''); };
+  $('pAll').onclick=function(){ step=M[mode].steps.length-1; stats(); draw(); finish(); };
+  $('pS').oninput=function(){ shift=+this.value; $('oS').textContent=mm(shift); stats(); draw();
+    if (mode!=='anon' && step<M[mode].steps.length-1 && shift>0) msg('pMsg','Сдвиг сработает на второй накладке — сначала напечатай лист.','');
+    else if (shift<1.5 && step>=M[mode].steps.length-1 && mode!=='anon') msg('pMsg','Сдвиг пока мал. Сдвинь лист сильнее — на 1,5 мм и больше.','');
+    else checkShift(); };
+
+  /* ── ЧЕЙ ЛИСТ ── условные фрагменты: второй слой сдвинут */
+  var F=[{s:'black',d:[6,14]},{s:'red',d:[-4,12]},{s:'black',d:[8,-12]}], fOk={};
+  F.forEach(function(f,i){
+    var box=document.createElement('div'); box.className='frag';
+    var c=document.createElement('canvas'); c.width=220; c.height=120; c.setAttribute('role','img');
+    c.setAttribute('aria-label','Фрагмент '+'АБВ'.charAt(i)+': красная вязь и чёрные строки со сдвигом второй накладки; '+(f.s==='black'?'чёрные буквы лежат поверх красных':'красные буквы лежат поверх чёрных'));
+    box.appendChild(c);
+    var lo=document.createElement('div'); lo.className='lopts';
+    [['black','Фёдоров'],['red','За границей']].forEach(function(o){
+      var b=document.createElement('button'); b.type='button'; b.className='seg'; b.textContent=o[1];
+      b.onclick=function(){ if (fOk[i]) return;
+        if (o[0]===f.s){ fOk[i]=1; b.classList.add('right'); var n=Object.keys(fOk).length;
+          msg('fMsg', n<3 ? 'Верно: '+(f.s==='black'?'чёрное лежит на красном — печатали красное первым, как Фёдоров.':'красное лежит на чёрном — красное печатали вторым, как за границей.')+' Осталось '+(3-n)+'.' : 'Все три определены. По сдвинутым строкам и видно, в каком порядке печатали «Апостол».','ok');
+          if (n===3) aw('m4'); }
+        else { b.classList.add('wrongpick'); setTimeout(function(){ b.classList.remove('wrongpick'); },700);
+          msg('fMsg','Не так. Найди место, где буквы двух красок заходят друг на друга: чьи буквы видны целиком, та краска легла последней.','bad'); } };
+      lo.appendChild(b); });
+    box.appendChild(lo); $('frags').appendChild(box); f.c=c;
+  });
+  function drawF(){ F.forEach(function(f){ var c=f.c; size(c,220,120); var x=c.getContext('2d'), u=c.width/220*0.9;
+    x.save(); x.clearRect(0,0,c.width,c.height); x.fillStyle='#efe6d2'; x.fillRect(0,0,c.width,c.height);
+    x.translate(-90*u,-20*u); var first=f.s==='black'?'red':'black';
+    ink(x,u,first==='red'?RED:BLACK,0,0,false); ink(x,u,f.s==='red'?RED:BLACK,f.d[0],f.d[1],false); x.restore(); }); }
+
+  function resize(){ size(cv,760,320); draw(); drawF(); }
+  window.addEventListener('resize',resize); resize(); stats();
+
+  /* ── ХРОНОЛОГИЯ ── */
+  var E=[
+    {o:3,t:'Печатный двор в Москве сожжён',d:'1568'},
+    {o:0,t:'Фуст и Шёффер выпускают в Майнце Псалтирь с датой и своими именами',d:'1457'},
+    {o:2,t:'Фёдоров и Мстиславец заканчивают «Апостол»',d:'1 марта 1564'},
+    {o:1,t:'Анонимная типография в Москве печатает книги без года и имени печатника',d:'середина 1550-х'}
+  ], hNext=0;
+  E.forEach(function(e,i){
+    var b=document.createElement('button'); b.type='button'; b.className='seg'; b.innerHTML='<span class="n"></span>'; b.appendChild(document.createTextNode(e.t));
+    b.onclick=function(){
+      if (e.done) return;
+      if (e.o!==hNext){ b.classList.add('wrongpick'); setTimeout(function(){ b.classList.remove('wrongpick'); },700);
+        msg('hMsg','Не сейчас: есть событие раньше этого.','bad'); return; }
+      e.done=true; b.classList.add('right'); b.disabled=true; b.querySelector('.n').textContent=(hNext+1)+'.';
+      b.appendChild(document.createTextNode(' — '+e.d)); award('h'+i,5); hNext++;
+      msg('hMsg', hNext<4 ? 'Верно. Что дальше?' : 'Порядок восстановлен. Майнцская Псалтирь старше «Апостола» на сто с лишним лет, а безымянные московские книги — примерно на десять лет. Наше в «Апостоле» — первая московская книга с датой и именами печатников и свой способ двухцветной печати.','ok');
+    };
+    $('chrono').appendChild(b);
+  });
+
+  /* ── ВИКТОРИНА ── */
+  var Q = [
+    {q:'Какую дату окончания работы назвали печатники в послесловии «Апостола»?', o:['1 марта 7072 года','19 апреля 7071 года','1 января 7073 года'], a:0,
+     e:'«Совершени же быша в лето 7072 марта въ 1 день» — это 1 марта 1564 года. А 19 апреля 7071 года, то есть 1563-го, работу начали.'},
+    {q:'Какой краской Фёдоров делал первый оттиск двухцветной страницы?', o:['Чёрной','Красной','Синей'], a:1,
+     e:'Красной: сначала оттискивали приподнятые красные литеры, потом — чёрный текст по тому же листу.'},
+    {q:'Сколько наборных форм нужно было Фёдорову для страницы в две краски?', o:['Одна, в два яруса','Две','Три'], a:0,
+     e:'Одна: красные литеры приподнимали на брусочках, после красного оттиска их вынимали. За границей брали две формы.'},
+    {q:'Что печатали в Москве до «Апостола»?', o:['Ничего','Книги без года, места и имени печатника','Газеты'], a:1,
+     e:'Книги так называемой Анонимной типографии середины 1550-х годов — без выходных данных.'},
+    {q:'Почему Фёдоров и Мстиславец уехали из Москвы?', o:['Их позвал польский король','Из-за преследований и обвинений в ереси','Типография разорилась'], a:1,
+     e:'Фёдоров писал о преследованиях «не от самого государя, а от многих начальников и духовных властей и учителей», которые обвиняли печатников в ереси.'}
+  ];
+  var qb = $('quizBox');
+  Q.forEach(function(it, qi){
+    var wrap = document.createElement('div');
+    var h = document.createElement('p'); h.className='quiz-q'; h.textContent=(qi+1)+'. '+it.q; wrap.appendChild(h);
+    var exp = document.createElement('div'); exp.className='exp'; exp.setAttribute('aria-live','polite');
+    var btns = it.o.map(function(txt, oi){
+      var b=document.createElement('button'); b.type='button'; b.className='opt'; b.textContent=txt;
+      b.onclick=function(){
+        if (wrap.dataset.done) return; wrap.dataset.done='1';
+        btns.forEach(function(x,xi){ x.disabled=true; if (xi===it.a) x.classList.add('correct'); });
+        if (oi===it.a){ award('q'+qi,6); exp.textContent='Верно. '+it.e; }
+        else { b.classList.add('wrong'); exp.textContent='Не совсем. '+it.e; }
+        exp.classList.add('show');
+      };
+      wrap.appendChild(b); return b;
+    });
+    wrap.appendChild(exp); qb.appendChild(wrap);
+  });
+})();
+</script>
+<script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
+<script>window.MUSEUM_CHROME={
+  museum:{title:'Что изобрели русские первыми в мире',href:'index.html'},
+  share:{title:'«Апостол»: чёрное на красном — музей «Что изобрели русские первыми в мире»',
+         text:'1 марта 1564 года Фёдоров и Мстиславец закончили «Апостол» — первую точно датированную московскую книгу. Красное в ней печатали раньше чёрного, с одной формы в два яруса. Что Россия дала миру раньше всех — день за днём.'},
+  prev:{href:'day-28feb-zhuravsky.html',title:'28 февраля · Журавский'},
+  next:{href:'day-18mar-leonov.html',title:'18 марта · Леонов'},
+  all:{href:'index.html',label:'Все изобретения'},
+  city:'../../index.html',
+  random:['day-01jan-cabletv.html','day-02jan-luna1.html','day-03jan-anosov.html','day-04jan-pilchikov.html','day-05jan-shukhov.html','day-06jan-orlov.html','day-08jan-icebreaker.html','day-09jan-blinov.html','day-10jan-britnev.html','day-11jan-kostovich.html','day-12jan-r7.html','day-13jan-k278.html','day-14jan-lira.html','day-15jan-kovalevskaya.html','day-16jan-soyuz45.html','day-19jan-kantorovich.html','day-21jan-obninsk.html','day-22jan-landau.html','day-23jan-umov.html','day-24jan-k162.html','day-25jan-korsakov.html','day-26jan-podvodnaya.html','day-27jan-pentium.html','day-28jan-havkin.html','day-30jan-kotelnikov.html','day-31jan-girotron.html','day-01feb-bekhterev.html','day-02feb-edinorog.html','day-03feb-luna9.html','day-04feb-samovar.html','day-05feb-boldyrev.html','day-06feb-zelinsky.html','day-07feb-setun.html','day-08feb-mendeleev.html','day-09feb-chizhevsky.html','day-10feb-aerosani.html','day-12feb-lenz.html','day-15feb-nesterov.html','day-17feb-pirotsky.html','day-18feb-dokuchaev.html','day-20feb-mir.html','day-25feb-tokamak.html','day-27feb-filatov.html','day-28feb-zhuravsky.html','day-01mar-apostol.html','day-18mar-leonov.html','day-15may-mechnikov.html','day-16jun-tereshkova.html','day-26sep-pavlov.html','day-15nov-buran.html','day-25nov-pirogov.html','day-01dec-lobachevsky.html','day-14dec-laser.html']
+};</script>
+<script src="../../assets/museum-chrome.js"></script>
+<script>window.MUSEUM_SUPPORT={museum:'Что изобрели русские первыми в мире'};</script>
+<script src="../../assets/museum-support.js"></script>
+<script src="calendar-izobreteniya.js"></script>
+<script>window.MUSEUM_CALENDAR_INITIAL='03-01';</script>
+<script src="../../assets/museum-calendar-month.js"></script>
+<script>window.MUSEUM_RETURN={riddle:{q:"Как по старой книге узнать, какую краску положили на лист первой?",a:"Найти строку, где лист при второй накладке сдвинулся: краска второго оттиска лежит сверху. В «Апостоле» 1564 года чёрное лежит на красном, в зарубежных книгах — красное на чёрном.",src:"«Апостол. Москва, 1564», raruss.ru (по исследованиям В. В. Попова и А. А. Сидорова)"}};</script>
+<script src="../../assets/museum-return.js" data-museum="izobreteniya" data-day="03-01"></script>
+<script defer src="../../assets/analytics.js"></script>
+
+
+
+
+
+
+
+
+
+<script>window.MUSEUM_AUDIOGUIDE={
+  audioSrc:"audio-guide-apostol-ru.mp3",
+  durationLabel:"2 минуты 50 секунд",
+  lead:"Голос ведёт по залу «Апостола»: разворот с евангелистом Лукой, рукописи с ошибками, безымянные московские книги, послесловие с датой, печать в две краски и судьба печатников. Шесть остановок, на каждой — что искать глазами.",
+  stops:[
+    {t:0,mark:"0:00",title:"Разворот с Лукой"},
+    {t:35,mark:"0:35",title:"Книги с ошибками"},
+    {t:64,mark:"1:04",title:"Дата в послесловии"},
+    {t:92,mark:"1:32",title:"Чёрное на красном"},
+    {t:124,mark:"2:04",title:"Ни одной опечатки"},
+    {t:145,mark:"2:25",title:"Отъезд из Москвы"}
+  ],
+  transcript:[
+    "<p>Факты: разворот «Апостола» 1564 года, экземпляр ГПНТБ СО РАН — Викисклад; 19 апреля 1563 — 1 марта 1564 — НЭБ, «Книжные памятники».</p>",
+    "<p>Факты: ошибки переписчиков, послесловие в переводе на современный язык — «Научная Россия», 2023; Блог Исторического музея, 2020; Анонимная типография 1550-х — НЭБ и raruss.ru.</p>",
+    "<p>Факты: «совершени же быша в лето 7072 марта въ 1 день» — послесловие, экземпляр ГПНТБ СО РАН; первая точно датированная книга, напечатанная в Москве — НЭБ.</p>",
+    "<p>Факты: двухъярусная форма, красное раньше чёрного, зарубежная печать с двух форм — raruss.ru по исследованиям В. В. Попова и А. А. Сидорова.</p>",
+    "<p>Факты: отзыв Д. С. Лихачёва — «Научная Россия», 2023; Майнцская псалтирь 1457 года — Православная энциклопедия, т. 13, «Гутенберг».</p>",
+    "<p>Факты: отъезд печатников и слова Фёдорова о преследованиях, 62 экземпляра — raruss.ru; пожар Печатного двора в 1568 году — Блог Исторического музея.</p>"
+  ],
+  note:"Озвучено синтезом речи — временно, до записи голосом автора музея."
+};</script>
+<script src="../../assets/museum-audioguide.js"></script>
+</body>
+</html>
