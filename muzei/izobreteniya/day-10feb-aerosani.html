@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="ru" data-museum="izobreteniya">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Пропеллер на снегу: как в России появились аэросани — Что изобрели русские первыми в мире, 10 февраля</title>
+<!--
+  Страница дня 10 февраля. Наряд stranicy-izob-0910 (claude2, 14.10.2026), карточка #762.
+  Форма — вариант А музея изобретений (Сергей 12.09.2026): лента ударов, подробности свёрнуты.
+  Паспорт выпуска: rc-museum-production/izobreteniya/day-10feb-aerosani/passport/issue.json
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --dark:#060c17; --dark2:#0c1826; --surface:#111f33;
+    --card:rgba(255,255,255,.05); --card-b:rgba(255,255,255,.09);
+    --gold:#c9a84c; --gold-l:#e4c97a; --gold-g:rgba(201,168,76,.13);
+    --ink:#e8eef5; --muted:#7a9ab8; --line:rgba(255,255,255,.07);
+    --accent:#2d8cbf; --accent2:#1f6f8b;
+    /* legacy compat */
+    --paper:#0c1826; --paper2:#111f33;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Inter','Segoe UI',sans-serif;color:var(--ink);background:var(--dark);line-height:1.72}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.13;margin:0}
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent)}
+
+  /* ── ШАПКА ── */
+  header.top{background:rgba(6,12,23,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--card-b);color:#fff;position:sticky;top:0;z-index:30}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+  .logo svg{display:block;filter:drop-shadow(0 0 8px rgba(201,168,76,.4))}
+  .logo .lt{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:16px}
+  .logo .lt small{display:block;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-family:'Inter',sans-serif}
+  .score{background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:6px 16px;font-size:13px;color:var(--gold-l);cursor:pointer;font-family:'Inter',sans-serif}
+  .score-info{position:absolute;right:12px;top:66px;max-width:260px;background:#0e1c30;color:var(--ink);border:1px solid var(--card-b);border-radius:14px;padding:14px 16px;font-size:13px;line-height:1.6;box-shadow:0 20px 60px rgba(0,0,0,.6);display:none;z-index:40}
+  .score-info.show{display:block}
+
+  /* ── HERO — СТАНДАРТ (не менять): 3D-сцена сверху, текст отдельным блоком ниже ── */
+  .hero-scene{position:relative;height:52vh;min-height:300px;max-height:520px;overflow:hidden;background:linear-gradient(160deg,#0a1e3a 0%,#1a3a6a 55%,#0d2240 100%)}
+  .hero-scene canvas.scene,.hero-scene img.scene{width:100%;height:100%;display:block;object-fit:cover}
+  .scene-caption{background:#060d18;padding:11px 0 12px}
+  .scene-caption .wrap{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+  .scene-cap{font-size:13.5px;line-height:1.6;color:var(--muted);border-left:2px solid rgba(201,168,76,.4);padding-left:14px;flex:1 1 420px}
+  .scene-hint{flex:0 0 auto;font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.4px;color:#e4c97a;
+    background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.34);border-radius:24px;padding:7px 16px;font-weight:600}
+  .hero-lead{background:linear-gradient(180deg,#0c1826 0%,#060c17 100%);color:#fff;padding:28px 0 38px}
+  .hero-lead .museum{color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:12px;opacity:.9}
+  .hero-lead .who{font-family:'Inter',sans-serif;font-size:clamp(13px,3vw,15px);letter-spacing:.4px;color:var(--accent-l,#7dc8ff);margin-bottom:10px}
+  .hero-lead .who i{font-style:normal;color:#7893ab;font-weight:400}
+  .hero-lead h1{color:#fff;font-size:56px;font-weight:900;line-height:1.04;margin-bottom:16px}
+  .hero-lead .hook{color:#b8ccde;font-size:19px;max-width:580px;margin-bottom:28px;line-height:1.65;font-weight:400}
+  .hero-lead .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+  @media(max-width:680px){.hero-lead h1{font-size:34px}.hero-lead .hook{font-size:16px}
+    .hero-scene{height:34vh;min-height:230px;max-height:300px}
+    .scene-caption .wrap{flex-direction:column;gap:9px}
+    .scene-hint{order:-1;align-self:flex-start;font-size:11.5px;padding:6px 13px}
+    .scene-cap{font-size:12.8px;flex:1 1 auto}}
+  .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:16px;font-family:'Inter',sans-serif;letter-spacing:.5px}
+
+  /* ── НАВИГАЦИЯ ДНЯ ── */
+  .daynav{position:sticky;top:64px;z-index:25;background:rgba(6,12,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-b)}
+  .daynav .wrap{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+  .daynav::-webkit-scrollbar{display:none}
+  .daynav a{flex:0 0 auto;padding:14px 20px;font-size:11px;font-weight:700;font-family:'Inter',sans-serif;color:var(--muted);text-decoration:none;white-space:nowrap;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:.18s}
+  .daynav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+  /* ── СЕКЦИИ ── */
+  section.block{padding:64px 0;border-bottom:1px solid var(--line);scroll-margin-top:130px}
+  .kicker{font-size:10px;text-transform:uppercase;letter-spacing:3.5px;color:var(--gold);font-weight:700;font-family:'Inter',sans-serif;margin-bottom:8px}
+  section.block h2{font-size:34px;color:#fff;margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink)}
+  .pull{background:var(--gold-g);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 14px 14px 0;font-style:italic;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-size:20px;line-height:1.5;margin:26px 0}
+
+  /* ── КНОПКИ ── */
+  .btn{cursor:pointer;border:none;border-radius:12px;padding:14px 26px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;background:var(--accent2);color:#fff;transition:.18s;letter-spacing:.2px}
+  .btn:hover{filter:brightness(1.18)}
+  .btn.ghost{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid var(--card-b)}
+  .btn.ghost:hover{background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.2)}
+  .btn.gold{background:linear-gradient(135deg,var(--gold),#b8882b);color:#1a0f00;box-shadow:0 4px 20px rgba(201,168,76,.25)}
+  .btn.gold:hover{filter:brightness(1.1);box-shadow:0 6px 28px rgba(201,168,76,.4)}
+  .btn:active{transform:translateY(1px)}
+  .pulse{animation:pulse .9s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+
+  /* ── КАРТОЧКИ ── */
+  .card{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:20px 22px;margin:16px 0;backdrop-filter:blur(6px)}
+
+  /* ── КВИЗ ── */
+  .opt{display:block;width:100%;text-align:left;background:rgba(255,255,255,.04);border:1px solid var(--card-b);border-radius:12px;padding:13px 16px;margin:8px 0;cursor:pointer;font-size:15px;color:var(--ink);font-family:'Inter',sans-serif;transition:.16s}
+  .opt:hover{border-color:var(--accent);background:rgba(45,140,191,.08)}
+  .opt.correct{background:rgba(40,120,60,.18);border-color:#3f9b52;color:#7ed4a0;font-weight:600}
+  .opt.wrong{background:rgba(180,40,40,.13);border-color:#c0453f;color:#f08080}
+  .exp{margin-top:10px;font-size:14px;background:var(--gold-g);border-radius:10px;padding:12px 14px;display:none;color:var(--gold-l)}
+  .exp.show{display:block}
+
+  /* ── ИТОГ ДНЯ ── */
+  .day-result{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:22px 24px;max-width:460px}
+  .dr-rank{font-family:'Playfair Display',Georgia,serif;font-size:28px;color:var(--gold-l);font-weight:700}
+  .dr-score{font-size:16px;margin:4px 0 12px;color:var(--ink)}.dr-score span{color:var(--muted);font-size:14px}
+  .dr-bar{height:8px;background:rgba(255,255,255,.08);border-radius:6px;overflow:hidden}
+  .dr-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),var(--gold));transition:width .6s cubic-bezier(.2,.7,.2,1)}
+  .dr-note{margin-top:12px;font-size:14px;color:var(--muted)}
+
+  /* ── РЕКЛАМНЫЕ СЛОТЫ ── */
+  .ad-slot{position:relative;margin:26px 0;background:rgba(255,255,255,.02);border:1px dashed rgba(255,255,255,.1);border-radius:14px;min-height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px}
+  .ad-slot .lbl{position:absolute;top:7px;right:12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.15);font-family:'Inter',sans-serif}
+  .ad-slot .ph-txt{font-size:12px;max-width:80%;color:rgba(255,255,255,.18)}
+  .ad-slot.billboard{min-height:108px}
+  .adband{background:transparent;border-bottom:none}
+
+  footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
+  .crumbs{background:rgba(6,12,23,.6);border-bottom:1px solid var(--card-b);font-family:'Inter',sans-serif;font-size:12.5px}
+  .crumbs .wrap{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  .crumbs a{color:var(--gold-l);text-decoration:none;white-space:nowrap}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--muted);opacity:.6}
+  .crumbs .here{color:var(--muted);white-space:nowrap}
+
+
+  /* ── ШАПКА: четыре строки по museum-core §6-бис ── */
+  header.top{display:block;text-align:center;padding:10px 12px 8px;height:auto;position:relative}
+  header.top .b1{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:15px;letter-spacing:.5px;color:#fff}
+  header.top .b2{font-size:11px;color:var(--muted);margin-top:2px}
+  header.top .b3{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:6px}
+  header.top .b4{font-size:12.5px;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-style:italic}
+  header.top .score{position:absolute;right:12px;top:10px}
+  .daynav{top:0}
+  .hero-scene{background:#0e1c2c;height:38vh;min-height:250px;max-height:400px}
+  @media(max-width:680px){.hero-lead h1{font-size:31px}}
+  .hero-scene img.scene{object-fit:cover;object-position:50% 42%}
+  .date-origin{font-size:13px;color:#9fb4c8;margin:-6px 0 12px;max-width:62ch}
+  .hero-lead .hook{color:#c6d8e8;max-width:62ch}
+  .hero-under{background:linear-gradient(180deg,#060d18,#060c17);padding:4px 0 22px}
+  .stamp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(125,200,255,.28);margin-top:14px}
+  .stamp>div{padding:11px 12px;border-left:1px solid rgba(125,200,255,.16);min-width:0}
+  .stamp>div:first-child{border-left:0}
+  .stamp .v{font-size:clamp(15px,3.4vw,21px);font-weight:700;color:#8fd3ff;line-height:1.1;overflow-wrap:anywhere}
+  .stamp .k{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#8fa5b9;margin-top:5px}
+  @media(max-width:600px){.stamp{grid-template-columns:repeat(2,minmax(0,1fr))}.stamp>div:nth-child(3){border-left:0}.stamp>div:nth-child(n+3){border-top:1px solid rgba(125,200,255,.16)}}
+
+  /* ── ЛЕНТА УДАРОВ (museum-inventions, вариант А; museum-core §5-бис) ── */
+  .udary{list-style:none;margin:18px 0 0;padding:0;counter-reset:u}
+  .udary>li{border-top:1px solid var(--line);padding:4px 0}
+  .udary details>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:34px 1fr;gap:10px;padding:12px 0;font-size:17px;line-height:1.55;color:var(--ink)}
+  .udary details>summary::-webkit-details-marker{display:none}
+  .udary details>summary::before{counter-increment:u;content:counter(u);font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:20px;color:var(--gold);line-height:1.3}
+  .udary .more-lbl{display:block;grid-column:2;font-size:12.5px;color:var(--gold-l);letter-spacing:.3px;margin-top:4px}
+  .udary .more-lbl::after{content:' ▾'}
+  .udary details[open] .more-lbl::after{content:' ▴'}
+  .udary details[open] .more-lbl .o{display:none}
+  .udary details:not([open]) .more-lbl .c{display:none}
+  .udary summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+  .udary .det{margin:0 0 14px 44px;padding:12px 16px;background:rgba(255,255,255,.035);border-left:2px solid rgba(201,168,76,.45);border-radius:0 10px 10px 0;font-size:15px;color:#d5e0ea}
+  .udary .det p{margin:8px 0}
+  .udary .tag{display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1a0f00;background:var(--gold-l);border-radius:6px;padding:1px 7px;margin-right:6px}
+  .udary .find{border-left:3px solid var(--gold);padding-left:8px}
+  figure.fig{margin:18px 0}
+  figure.fig img{max-width:100%;height:auto;border-radius:10px;display:block}
+  figure.fig figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5}
+  .src-note{font-size:12px;color:#8fa5b9}
+
+  /* ── МОДЕЛЬ ДНЯ (главное предметное действие) ── */
+  .lab{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:18px 18px 20px;margin-top:14px}
+  .lab-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+  .lab-row .lbl{flex:0 0 100%;font-size:13px;color:var(--muted);letter-spacing:.3px}
+  .seg{cursor:pointer;border:1px solid var(--card-b);background:rgba(255,255,255,.04);color:var(--ink);border-radius:10px;padding:10px 14px;font:inherit;font-size:14.5px;min-height:44px}
+  .seg[aria-pressed="true"]{border-color:var(--gold);background:var(--gold-g);color:var(--gold-l);font-weight:600}
+  .seg:focus-visible,.btn:focus-visible,.opt:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .lab-stage{position:relative;margin-top:12px}
+  .lab-stage canvas{width:100%;height:auto;display:block;border-radius:10px;background:#1c2530}
+  .lab-cap{font-size:12px;color:#8fa5b9;margin-top:6px}
+  .lab-msg{margin-top:12px;font-size:15.5px;padding:12px 14px;border-radius:10px;background:rgba(255,255,255,.04);border-left:3px solid var(--card-b);min-height:48px}
+  .lab-msg.ok{border-left-color:#3f9b52;background:rgba(40,120,60,.14)}
+  .lab-msg.bad{border-left-color:#c0453f;background:rgba(180,40,40,.10)}
+  .lab-found{font-size:13px;color:var(--muted);margin-top:8px}
+  .lab-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .noscript-box{background:rgba(255,255,255,.04);border:1px dashed var(--card-b);border-radius:12px;padding:12px 16px;font-size:15px}
+
+  /* ── ГРАНИЦА ПЕРВЕНСТВА ── */
+  .border-box{background:rgba(45,140,191,.08);border:1px solid rgba(45,140,191,.3);border-radius:14px;padding:16px 18px}
+  .border-box b{color:#8fd3ff}
+  .ctx{width:100%;border-collapse:collapse;margin-top:14px;font-size:14.5px}
+  .ctx th,.ctx td{text-align:left;padding:9px 8px;border-top:1px solid var(--line);vertical-align:top}
+  .ctx th{color:var(--gold-l);font-weight:600;font-size:12.5px;letter-spacing:.5px}
+  .quiz-q{margin:18px 0 6px;font-weight:600}
+  .sources a{color:var(--gold-l)}
+  .sources li{margin:6px 0;font-size:14px;color:#c8d6e2}
+  @media(max-width:600px){header.top{padding:8px 64px 6px}header.top .score{top:8px;right:8px;padding:4px 10px;font-size:12px}header.top .b3{margin-top:3px}
+    .hero-scene{height:26vh;min-height:200px;max-height:260px}.date-origin{font-size:12px;margin:-8px 0 8px}.hero-lead{padding:18px 0 26px}.hero-lead .date-chip{margin-bottom:12px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+  /* ── ПОЛЗУНКИ МОДЕЛИ (19, 21 янв) ── */
+  .mtab{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+  .mrow{display:grid;grid-template-columns:minmax(150px,1.2fr) 2fr 92px;gap:12px;align-items:center}
+  .mrow .mname{font-size:14.5px}
+  .mrow .mname i{font-style:normal;color:var(--muted);font-size:13px}
+  .mrow input[type=range]{width:100%;accent-color:var(--gold);min-height:44px}
+  .mrow output{font-size:14px;color:var(--gold-l);text-align:right}
+  .mrow.off{opacity:.45}
+  .mult{margin-top:14px;padding:14px 16px;border-radius:12px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25)}
+  @media(max-width:560px){.mrow{grid-template-columns:1fr 70px}.mrow .mname{grid-column:1/-1}}
+</style>
+<meta name="description" content="Около 1904 года инженер Неждановский поставил мотор с воздушным винтом на раму с лыжами. Как сани с пропеллером стали заводской машиной, гоночной и военной.">
+<link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-10feb-aerosani.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Русская цивилизация">
+<meta property="og:title" content="Пропеллер на снегу: как в России появились аэросани">
+<meta property="og:description" content="Около 1904 года инженер Неждановский поставил мотор с воздушным винтом на раму с лыжами. Как сани с пропеллером стали заводской машиной, гоночной и военной.">
+<meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-10feb-aerosani.html">
+<meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-10feb-aerosani.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Пропеллер на снегу: как в России появились аэросани", "description": "Около 1904 года инженер Неждановский поставил мотор с воздушным винтом на раму с лыжами. Как сани с пропеллером стали заводской машиной, гоночной и военной.", "url": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-10feb-aerosani.html", "inLanguage": "ru", "isPartOf": {"@type": "WebSite", "name": "Музей «Что изобрели русские первыми в мире»"}, "publisher": {"@type": "Organization", "name": "Русская цивилизация"}, "about": {"@type": "Thing", "name": "Аэросани"}, "image": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-10feb-aerosani.jpg"}</script>
+<style>
+  /* ── АЭРОСАНИ: ТЯГА, ВЕС, СНЕГ (10 фев) ── */
+  .sled-pick{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+  .sled-pick .seg.on{outline:2px solid var(--gold);outline-offset:1px}
+  .sled-pick .seg.done{border-color:#3f9b52;background:rgba(63,155,82,.15)}
+  .gauge{max-width:640px;margin:12px 0 4px}
+  .gauge .row{display:grid;grid-template-columns:170px 1fr 74px;gap:10px;align-items:center;margin:6px 0;font-size:14.5px}
+  .gauge .track{position:relative;height:14px;border-radius:7px;background:rgba(255,255,255,.07);overflow:visible}
+  .gauge .fill{position:absolute;left:0;top:0;bottom:0;border-radius:7px;background:#e0a23a;transition:width .4s ease}
+  .gauge .fill.bad{background:#c0573f}
+  .gauge .fill.ok{background:#3f9b52}
+  .gauge .tick{position:absolute;top:-4px;bottom:-4px;width:2px;background:#f3e6c8}
+  .gauge .tick span{position:absolute;top:-18px;left:-20px;width:44px;text-align:center;font-size:11px;color:#f3e6c8}
+  .gauge output{font-variant-numeric:tabular-nums;color:var(--gold-l);text-align:right}
+  .ctl{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .ctl .seg{min-width:44px}
+  .ctl .cnt{min-width:150px;font-size:14.5px;color:var(--ink)}
+  .rng{display:grid;grid-template-columns:170px 1fr 74px;gap:10px;align-items:center;max-width:640px;margin-top:8px;font-size:14.5px}
+  .rng input[type=range]{width:100%;accent-color:var(--gold);min-height:44px}
+  .rng output{color:var(--gold-l);text-align:right;font-variant-numeric:tabular-nums}
+  .sledview{width:100%;max-width:640px;height:auto;display:block;margin:10px 0 4px;background:rgba(255,255,255,.03);border-radius:10px}
+  .sledview .snow{fill:#dfe7ef}
+  .sledview .body{fill:#8a6a3a}
+  .sledview .ski{stroke:#e9dcc0;stroke-width:4;stroke-linecap:round}
+  .sledview .prop{fill:#e9dcc0}
+  .sledview .pas{fill:#c9a84c}
+  .sledview .lbl{fill:#a9a294;font-size:12px}
+  blockquote.doc{margin:12px 0;padding:10px 14px;border-left:3px solid var(--gold);background:rgba(255,255,255,.03);border-radius:0 10px 10px 0;font-size:15px;line-height:1.6}
+  figure.side{max-width:320px;margin:12px 0}
+  figure.side img{width:100%;height:auto;border-radius:10px;background:#e8e2d4}
+  figure.side figcaption{font-size:13.5px;color:var(--muted);margin-top:6px;line-height:1.45}
+  #hero{background:#e8e4da}
+  #hero img.scene{object-fit:contain;object-position:50% 50%}
+  @media(max-width:560px){.gauge .row,.rng{grid-template-columns:1fr 64px}.gauge .row>span:first-child,.rng>label{grid-column:1/-1}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="b1">Русская цивилизация</div>
+  <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
+  <div class="b3">Что изобрели русские первыми в мире</div>
+  <div class="b4">365 изобретений. Все русские. Все первые</div>
+  <div class="score" id="scoreBox" title="Баллы знаний за этот день">⭐ <span id="score">0</span> / 100</div>
+</header>
+
+<nav class="crumbs" aria-label="Хлебные крошки"><div class="wrap">
+  <a href="../../index.html">Русская цивилизация</a>
+  <span class="sep">›</span>
+  <a href="index.html">Что изобрели русские первыми в мире</a>
+  <span class="sep">›</span>
+  <span class="here">10 февраля · Аэросани</span>
+</div></nav>
+
+<div class="hero-scene" id="hero">
+  <img class="scene" src="day-10feb-aerosani.jpg" data-source="https://commons.wikimedia.org/wiki/File:Воздухоплавательный_институт_Д._П._Рябушинского_6.jpg" data-license="Public domain" data-author="неизвестен" width="709" height="834" alt="Чёрно-белый снимок: на снежном поле стоит низкая деревянная рама на двух длинных лыжах, над ней на наклонных стойках — мотор и большой двухлопастный винт; за полем — лес и дом на холме" fetchpriority="high">
+</div>
+
+<div class="scene-caption">
+  <div class="wrap">
+    <div class="scene-cap">«Воздухоплавательный институт Д. П. Рябушинского. Сани, приводимые в движение воздушным винтом». Кучино, 1904–1910; книга «На рубеже двух веков», приложение к «Московскому листку», 1910. Фотограф неизвестен; Викисклад, общественное достояние.</div>
+    <span class="scene-hint">Кучино · сани с винтом</span>
+  </div>
+</div>
+
+<header class="hero-lead">
+  <div class="wrap">
+    <div class="date-chip">10 февраля · 1904</div>
+    <p class="date-origin">Точной даты рождения у аэросаней нет, и даже год источники называют разный: 1903–1904, 1904, 1907 или 1908. День в календаре музея условный.</p>
+    <div class="who">С. С. Неждановский, Ю. А. Меллер, А. Д. Докучаев, И. И. Сикорский <i>· инженеры и изобретатели</i></div>
+    <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
+    <h1>Пропеллер на снегу: как в России появились аэросани</h1>
+    <p class="hook">Около 1904 года в Кучине под Москвой инженер Сергей Неждановский поставил мотор с воздушным винтом на раму с двумя лыжами — и сани без лошади пошли по снегу.</p>
+    <div class="hero-btns">
+      <button class="btn gold" id="readBtn" type="button">Читать историю ↓</button>
+      <button class="btn ghost" id="listenBtn" type="button">🎧 Слушать аудиогид</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero-under">
+  <div class="wrap">
+    <div class="stamp">
+      <div><div class="v">1904</div><div class="k">сани с воздушным винтом в Кучине под Москвой</div></div>
+      <div><div class="v">3,5 л. с.</div><div class="k">мотор первых заводских аэросаней «Дукса», 1907–1908</div></div>
+      <div><div class="v">1910</div><div class="k">Сикорский сажает винт прямо на вал двигателя</div></div>
+      <div><div class="v">24</div><div class="k">аэросани для фронта, 1915–1916</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="daynav" aria-label="Разделы дня">
+  <div class="wrap">
+    <a href="#story">Читать</a>
+    <a href="#audioguide">Слушать</a>
+    <a href="#games">Тяга и снег</a>
+    <a href="#pervenstvo">Первенство</a>
+    <a href="#quiz">Викторина</a>
+    <a href="#calendar">Календарь</a>
+  </div>
+</nav>
+
+<section class="wrap" id="dokument" data-proof-block></section>
+
+<section class="block" id="audioguide"></section>
+
+<section class="block" id="story">
+  <div class="wrap">
+    <div class="kicker">История первенства · 12 ударов</div>
+    <h2>От стенда в Кучине — к заводским и фронтовым аэросаням</h2>
+    <p style="color:var(--muted);max-width:62ch">Читается подряд. Нажми на удар — откроется подробный разбор с источниками.</p>
+    <ol class="udary">
+      <li><details><summary><span>Около 1904 года в Аэродинамическом институте в Кучине под Москвой инженер Сергей Неждановский поставил двигатель внутреннего сгорания с воздушным винтом на прямоугольную раму с двумя лыжами.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Неждановский изучал там, как работает воздушный винт. Мотор с пропеллером на лыжах был сначала стендом для этих опытов. Президентская библиотека датирует сани 1903–1904 годами, историк М. Б. Саукке — 1904 годом.</p>
+          <p class="src-note">Источники: Президентская библиотека, «Сергей Сергеевич Неждановский (1850–1940)»; М. Б. Саукке, «Аэросани в России» (публикация сайта «Семейная история» о КБ А. Н. Туполева).</p>
+        </div></details></li>
+      <li><details><summary><span>В 1905 году журнал «Воздухоплаватель» написал о новинке как о «санях с воздушным винтом для передвижения по снегу».<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Так заметку пересказывают Президентская библиотека и М. Б. Саукке. Сам номер журнала в открытом доступе мы не нашли, поэтому слова в кавычках даны по их пересказу.</p>
+          <p class="src-note">Источники: Президентская библиотека, «Сергей Сергеевич Неждановский (1850–1940)»; М. Б. Саукке, «Аэросани в России» (публикация сайта «Семейная история» о КБ А. Н. Туполева).</p>
+        </div></details></li>
+      <li><details><summary><span>Снимок саней из Кучинского института напечатали в 1910 году: рама на двух лыжах, над ней мотор и большой двухлопастный винт.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Подпись в книге «На рубеже двух веков», приложении к газете «Московский листок», — «Воздухоплавательный институт Д. П. Рябушинского. Сани, приводимые в движение воздушным винтом». Кто построил сани на снимке, подпись не сообщает. Этот снимок стоит у входа в зал.</p>
+          <p class="src-note">Источник: «На рубеже двух веков (XIX—XX)», бесплатная премия к газете «Московский листок» за 1910 год (М., 1910); скан на Викискладе.</p>
+        </div></details></li>
+      <li><details><summary><span>Неждановский заметил, что скорость и проходимость его саней сильно меняются в зависимости от того, какой лежит снег, и сел за расчёты.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Аэросани он оставил другим. В 1916 году Неждановский запатентовал моторные сани другого устройства — с «лыжно-цепным» движителем, близкие к современному снегоходу.</p>
+          <p class="src-note">Источник: Президентская библиотека, «Сергей Сергеевич Неждановский (1850–1940)».</p>
+        </div></details></li>
+      <li><details><summary><span>В 1907 году на московском заводе «Дукс» построили и испытали «лыжный автомобиль» Ю. А. Меллера и А. Д. Докучаева.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Это были лёгкие деревянные санки на полозьях из обычных беговых лыж. Спереди — руль, который поворачивал вынесенный вперёд конёк. Сзади — мотор «Дион Бутон» воздушного охлаждения мощностью 3,5 лошадиные силы. Через два шкива и ремень он вращал двухлопастный винт. По насту санки шли со скоростью до 16 километров в час.</p>
+          <p class="src-note">Источник: М. Б. Саукке, «Аэросани в России» (публикация сайта «Семейная история» о КБ А. Н. Туполева).</p>
+        </div></details></li>
+      <li><details><summary><span>В мае 1908 года машину «Дукса» под названием «аэросани» показали на первой Московской автомобильной выставке.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Энциклопедия 1926 года тоже ведёт счёт с 1908 года:</p>
+          <blockquote class="doc">«Первые А. были построены у нас в России в 1908 из автомобильного шасси, при чем колеса были заменены лыжами, мотор снабжался тянущим или толкающим винтом, движение к-рого происходило от мотора через цепь. Однако, такая конструкция оказалась слишком тяжелой и не получила распространения на практике».</blockquote>
+          <p>У Саукке винт «Дукса» вращает ремень, у энциклопедии — цепь. Источники расходятся и в этом.</p>
+          <p class="src-note">Источники: М. Б. Саукке, «Аэросани в России» (публикация сайта «Семейная история» о КБ А. Н. Туполева); «Аэросани», Большая советская энциклопедия, 1-е изд., т. 4 (М., 1926), стб. 224–226, автор статьи — М. Петров.</p>
+        </div></details></li>
+      <li><details><summary><span>Зимой 1910 года об аэросанях киевского студента Игоря Сикорского написала газета «Утро России»: «Сани с тремя седоками легко и быстро двигались».<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Сикорский строил сани вместе с другим студентом Киевского политехнического института, Ф. И. Былинкиным. Мотор «Анзани» в 30 лошадиных сил давал до 74,7 километра в час. Главное новшество — винт сидел прямо на валу двигателя, без ремня и цепи. Позже, с толкающим винтом, эта схема стала в аэросанях почти единственной.</p>
+          <figure class="side">
+            <img src="day-10feb-aerosani-sikorsky.jpg" data-source="https://commons.wikimedia.org/wiki/File:Sikorsky_I.I._1914._Karl_Bulla.jpg" data-license="Public domain" data-author="Карл Булла" width="640" height="1061" loading="lazy" alt="Молодой мужчина в тёмном костюме и котелке стоит в полный рост, руки за спиной">
+            <figcaption>Игорь Сикорский в 1914 году. Фото Карла Буллы; Викисклад, общественное достояние.</figcaption>
+          </figure>
+          <p class="src-note">Источники: «Утро России», январь 1910 года, телеграмма «Киев, 25-го января» (перепечатка starosti.ru); М. Б. Саукке, «Аэросани в России» (публикация сайта «Семейная история» о КБ А. Н. Туполева).</p>
+        </div></details></li>
+      <li><details><summary><span>В 1910 году студент технического училища А. С. Кузин запатентовал аэросани с несущим кузовом. Они первыми среди русских саней свободно шли по снежной целине.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Кузов у Кузина сам держал нагрузку, как фюзеляж самолёта, и опирался на четыре лыжи в трёх точках: так на неровной дороге в нём меньше напряжений. Мотор «Анзани» в 10 лошадиных сил через цепь вращал винт; скорость — около 53,4 километра в час.</p>
+          <p class="src-note">Источник: М. Б. Саукке, «Аэросани в России» (публикация сайта «Семейная история» о КБ А. Н. Туполева).</p>
+        </div></details></li>
+      <li><details><summary><span>В феврале 1911 года в окрестностях Царского Села прошёл первый аэросанный пробег, в январе 1912-го в Москве — второй, и жюри возглавлял Н. Е. Жуковский.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Первый пробег устроило Российское автомобильное общество. Он показал, что аэросани годятся не только для наезженной дороги, но и для рыхлого снега. Второй прошёл по Петербургскому шоссе по почину Русского общества воздухоплавания и первого Российского автомобильного клуба.</p>
+          <p class="src-note">Источник: М. Б. Саукке, «Аэросани в России» (публикация сайта «Семейная история» о КБ А. Н. Туполева).</p>
+        </div></details></li>
+      <li><details><summary><span>В 1912 году Русско-Балтийский вагонный завод в Риге по заказу военного министерства начал строить аэросани партией.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Это были первые серийные аэросани. Завод не стал ставить винт на автомобильное шасси, как «Дукс», а сделал машину специально для снега: авиационный мотор сзади, винт на валу двигателя в ограждении, кузов на четырёх лыжах с поворотной передней парой.</p>
+          <p class="src-note">Источник: М. Б. Саукке, «Аэросани в России» (публикация сайта «Семейная история» о КБ А. Н. Туполева).</p>
+        </div></details></li>
+      <li><details><summary><span>В Первую мировую немецкая армия получила больше десяти типов аэросаней. 18 сентября 1915 года русский Главный комитет по снабжению армии Всероссийского земского союза решил строить свои.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Комитет выслушал профессора Н. Р. Бриллинга и дал деньги. Конструкцию разработал А. С. Кузин. В 1915–1916 годах построили серию из 24 аэросаней, часть из них вооружили пулемётами. Сани возили связь, грузы и раненых.</p>
+          <p class="src-note">Источник: М. Б. Саукке, «Аэросани в России» (публикация сайта «Семейная история» о КБ А. Н. Туполева).</p>
+        </div></details></li>
+      <li><details><summary><span>В 1919 году Жуковский и ЦАГИ создали комиссию по постройке аэросаней. В марте 1921 года её сани «Бека» шли по льду Финского залива к Кронштадту.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Комиссию назвали КОМПАС. Трое саней «Бека» Бриллинга и Кузина подвозили наступающим частям боеприпасы. Двое провалились в проруби, третьи вошли в Кронштадт и получили орден Красного Знамени. К 1924 году, по энциклопедии 1926 года, у нас появились цельнометаллические аэросани из кольчугалюминия.</p>
+          <p class="src-note">Источники: М. Б. Саукке, «Аэросани в России» (публикация сайта «Семейная история» о КБ А. Н. Туполева); «Аэросани», Большая советская энциклопедия, 1-е изд., т. 4 (М., 1926), стб. 224–226, автор статьи — М. Петров.</p>
+        </div></details></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block" id="theme-inventions">
+  <div class="wrap">
+    <div class="kicker">Снег и лёд · Русские первенства</div>
+    <h2>Что ещё русские первыми придумали для зимы и бездорожья</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Другие дни музея о машинах для снега, льда и тяжёлых дорог — по утверждённому календарю. Часть этих залов ещё готовится.</p>
+    <button class="btn ghost" type="button" id="themeInvBtn" data-label="Показать 4 первенства →" aria-expanded="false" aria-controls="themeInvBody">Показать 4 первенства →</button>
+    <div id="themeInvBody" hidden>
+      <ul class="theme-list">
+        <li><b>8 янв</b> <a href="day-08jan-icebreaker.html">Первый в мире арктический ледокол «Ермак»</a></li>
+        <li><b>9 янв</b> <a href="day-09jan-blinov.html">Гусеничный ход Блинова — «бесконечные рельсы»</a></li>
+        <li><b>10 янв</b> <a href="day-10jan-britnev.html">Первый в мире ледокол Бритнева</a></li>
+        <li><b>11 янв</b> <a href="day-11jan-kostovich.html">Бензиновый двигатель Костовича для дирижабля</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="block" id="games">
+  <div class="wrap">
+    <div class="kicker">Главное действие · расчёт по энциклопедии 1926 года</div>
+    <h2>Тронутся ли сани? Тяга, вес и снег</h2>
+    <p style="max-width:62ch">В 1926 году Большая советская энциклопедия дала инженерное правило для аэросаней: тяга винта на месте, делённая на вес саней, — «качество саней» — должна быть не меньше 0,28. Там же — тяга с одной лошадиной силы, трение лыж по снегу и предельное давление на снег. Проверь этими числами настоящие сани 1920-х и первые санки «Дукса».</p>
+    <div class="lab" id="lab">
+      <h3 style="margin:8px 0 6px">1. Нагрузи сани, как в таблице энциклопедии</h3>
+      <p style="max-width:62ch;margin:0 0 6px;color:var(--muted)">Выбери сани. Тяга винта посчитана по таблице: качество пустых саней × их вес. Сажай седоков (условно по 75 кг с поклажей), пока качество не опустится до табличного для гружёных саней, и нажми «Сверить».</p>
+      <div class="sled-pick" id="sledPick" role="group" aria-label="Сани из энциклопедии 1926 года"></div>
+      <svg class="sledview" id="sledView" viewBox="0 0 640 150" role="img" aria-label="Схема саней с седоками"></svg>
+      <div class="ctl">
+        <button class="seg" type="button" id="pasMinus" aria-label="Убрать седока">−</button>
+        <span class="cnt" id="pasCnt">Седоков: 0</span>
+        <button class="seg" type="button" id="pasPlus" aria-label="Посадить седока">+</button>
+        <button class="btn ghost" type="button" id="loadChk">Сверить с энциклопедией</button>
+      </div>
+      <div class="gauge" aria-live="polite">
+        <div class="row"><span>Тяга винта на месте</span><div class="track"><div class="fill" id="gT"></div></div><output id="oT">—</output></div>
+        <div class="row"><span>Вес саней с седоками</span><div class="track"><div class="fill" id="gG"></div></div><output id="oG">—</output></div>
+        <div class="row"><span>Качество саней</span><div class="track"><div class="fill" id="gK"></div><i class="tick" style="left:35%"><span>0,28</span></i></div><output id="oK">—</output></div>
+      </div>
+      <div class="lab-msg" id="sMsg" aria-live="polite">Выбери сани.</div>
+
+      <h3 style="margin:18px 0 6px">2. Правило 0,28</h3>
+      <p style="max-width:62ch;margin:0 0 6px;color:var(--muted)">Сколько седоков возьмут сани «НРБ», если качество не должно падать ниже 0,28? Поставь это число седоков выше и нажми «Проверить правило».</p>
+      <div class="ctl"><button class="btn ghost" type="button" id="ruleChk">Проверить правило</button></div>
+      <div class="lab-msg" id="gMsg" aria-live="polite">Сначала нагрузи по таблице и те и другие сани.</div>
+
+      <h3 style="margin:18px 0 6px">3. Санки «Дукса», 1908</h3>
+      <p style="max-width:62ch;margin:0 0 6px;color:var(--muted)">Мотор — 3,5 лошадиной силы. Энциклопедия считает тягу 3 кг, в лучших случаях 4 кг с одной лошадиной силы. Посади одного человека — вес самих санок даже не считаем — и подбери трение лыж по снегу, при котором сани тронутся.</p>
+      <div class="rng"><label for="mu">Трение лыж по снегу</label><input type="range" id="mu" min="1" max="300" value="200" step="1" aria-describedby="dMsg"><output id="oMu">0,200</output></div>
+      <div class="ctl"><button class="btn ghost" type="button" id="duxGo">Запустить мотор</button></div>
+      <div class="lab-msg" id="dMsg" aria-live="polite">Энциклопедия: трение снега меняется от 0,3 до 0,001 — смотря какой снег.</div>
+
+      <h3 style="margin:18px 0 6px">4. Чтобы не провалиться</h3>
+      <p style="max-width:62ch;margin:0 0 6px;color:var(--muted)">Энциклопедия ставит предел: на квадратный метр снега — не больше 600 кг. Больше — и сани провалятся. Подбери самую маленькую площадь лыж для гружёных саней «НРБ». Сами сани — 550 кг, с четырьмя седоками — 850.</p>
+      <div class="rng"><label for="area">Площадь лыж</label><input type="range" id="area" min="6" max="20" value="10" step="1" aria-describedby="pMsg"><output id="oA">1,0 м²</output></div>
+      <div class="ctl"><button class="btn ghost" type="button" id="areaChk">Проверить</button></div>
+      <div class="lab-msg" id="pMsg" aria-live="polite">Давление: 850 кг на 1,0 м² — 850 кг/м².</div>
+
+      <div class="lab-cap">Числа — статья «Аэросани» в Большой советской энциклопедии (т. 4, 1926): сани «НРБ» (мотор «Сальмсон» 100 л. с., 550 кг, качество пустых 0,49, гружёных 0,32) и «АНТ» (мотор «Люцифер» 100 л. с., 525 кг, 0,61 и 0,388); качество не меньше 0,28; тяга 3–4 кг с 1 л. с.; трение снега от 0,3 до 0,001; давление не больше 600 кг/м². Мотор «Дукса» 3,5 л. с. — по М. Б. Саукке. Вес седока 75 кг и правило «сани трогаются, когда тяга больше трения» — упрощения модели.</div>
+      <noscript><div class="noscript-box">Для модели нужен JavaScript. Текстовая версия. Тяга «НРБ» — 0,49 × 550 ≈ 270 кг; с четырьмя седоками по 75 кг сани весят 850 кг, качество 0,32 — как в таблице энциклопедии. У «АНТ» тяга 0,61 × 525 ≈ 320 кг, с четырьмя седоками 825 кг и качество 0,388. По правилу 0,28 «НРБ» возьмёт пять седоков (925 кг, 0,29), шестой опустит качество до 0,27. Мотор «Дукса» 3,5 л. с. даёт 10,5–14 кг тяги; с одним седоком качество не больше 0,19 — сани трогаются, только если трение лыж меньше 0,14 (в лучшем случае меньше 0,19). Для гружёных «НРБ» (850 кг) нужно не меньше 1,5 м² лыж: 567 кг/м².</div></noscript>
+    </div>
+    <p class="src-note" style="margin-top:10px">Модель показывает инженерное правило 1920-х годов, а не расчёт конкретной машины: настоящий вес санок «Дукса» и их тяга нигде не записаны.</p>
+  </div>
+</section>
+
+<section class="block" id="pervenstvo">
+  <div class="wrap">
+    <div class="kicker">Проверка факта</div>
+    <h2>Что именно здесь наше</h2>
+    <div class="border-box">
+      <p style="margin-top:0"><b>Граница первенства:</b> сани, которые по снегу толкает или тянет воздушный винт, первыми построили в России. Самые ранние из известных — стенд С. С. Неждановского в Кучине (около 1904 года); о нём мы знаем по поздним пересказам. Первые заводские — «лыжный автомобиль» завода «Дукс» (1907–1908). Энциклопедия 1926 года пишет: «Первые А. были построены у нас в России в 1908», а заграничные попытки «не привели к каким-либо определенным результатам». Первые серийные аэросани — партия Русско-Балтийского завода, 1912.</p>
+      <p><b>Чего здесь нет:</b> моторных машин для снега без винта. Паровой гусеничный лесовоз с лыжами для управления американец Элвин Ломбард построил в 1901 году — раньше саней Неждановского. Не наша и сама идея ехать по снегу без лошади. Буеры, парусные сани на коньках, известны во многих странах. И последнее. Год рождения аэросаней источники называют разный, а заметку «Воздухоплавателя» 1905 года мы знаем только в пересказе.</p>
+      <p style="margin-bottom:0">Энциклопедия 1926 года о санях Неждановского в Кучине не пишет и ведёт счёт с 1908 года.</p>
+    </div>
+    <table class="ctx">
+      <thead><tr><th scope="col">Кто</th><th scope="col">Что сделал</th><th scope="col">Когда</th></tr></thead>
+      <tbody>
+        <tr><td>Э. Ломбард, США</td><td>Паровой гусеничный лесовоз, впереди лыжи для управления; без воздушного винта</td><td>1901</td></tr>
+        <tr><td>С. С. Неждановский, Кучино</td><td>Мотор с воздушным винтом на раме с двумя лыжами — по поздним пересказам; заметка «Воздухоплавателя» 1905 года</td><td>1903–1904</td></tr>
+        <tr><td>Ю. А. Меллер, А. Д. Докучаев, завод «Дукс»</td><td>«Лыжный автомобиль» с винтом, мотор 3,5 л. с.; выставка в Москве под названием «аэросани»</td><td>1907; май 1908</td></tr>
+        <tr><td>И. И. Сикорский, Ф. И. Былинкин, Киев</td><td>Аэросани с винтом прямо на валу мотора, 30 л. с.</td><td>1910</td></tr>
+        <tr><td>Русско-Балтийский вагонный завод, Рига</td><td>Первые серийные аэросани по заказу военного министерства</td><td>1912</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block" id="quiz">
+  <div class="wrap">
+    <div class="kicker">Проверь себя · 5 вопросов</div>
+    <h2>Викторина</h2>
+    <p style="color:var(--muted);max-width:62ch">На каждый вопрос — одна попытка. После ответа покажем объяснение.</p>
+    <div id="quizBox"></div>
+    <noscript><div class="noscript-box">Для викторины нужен JavaScript. Ответы: 1 — воздушный винт; 2 — на заводе «Дукс» в Москве; 3 — винт прямо на валу двигателя; 4 — не меньше 0,28; 5 — Русско-Балтийский вагонный завод.</div></noscript>
+  </div>
+</section>
+
+<section class="block" id="result">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Итог дня</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Двое саней по таблице, правило 0,28, санки «Дукса», лыжи и викторина вместе дают 100 баллов. Прогресс не сохраняется: перезагрузишь страницу — день начнётся заново.</p>
+    <div class="day-result">
+      <div class="dr-score" id="dayTxt">0 / 100 · звание: Гость дня</div>
+      <div class="dr-bar"><i id="dayBar" style="width:0%"></i></div>
+      <div class="dr-note">Нагрузи сани «НРБ» и «АНТ» по таблице, найди предел по правилу 0,28, сдвинь санки «Дукса», подбери лыжи и ответь на вопросы викторины.</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="sources">
+  <div class="wrap">
+    <div class="kicker">Источники</div>
+    <h2>На чём стоит страница</h2>
+    <ul class="sources">
+      <li><a href="https://archive.org/details/1-04_20251214" rel="noopener" target="_blank">«Аэросани», Большая советская энциклопедия</a>, 1-е изд., т. 4 (М., 1926), стб. 224–226, автор — М. Петров (скан Internet Archive): первые аэросани 1908 года, заграничные попытки, качество саней 0,28, тяга с лошадиной силы, трение снега, давление на снег, сани «НРБ» и «АНТ».</li>
+      <li><a href="https://www.prlib.ru/Great_Russia/outstanding_scientists_XIX/Nezhdanovsky" rel="noopener" target="_blank">«Сергей Сергеевич Неждановский (1850–1940)»</a>, Президентская библиотека: сани с воздушным винтом в Кучине (1903–1904), заметка «Воздухоплавателя» (1905), патент на моторные сани (1916).</li>
+      <li><a href="https://web.archive.org/web/2025/http://www.famhist.ru/famhist/tupol_n/0004b895.htm" rel="noopener" target="_blank">М. Б. Саукке · «Аэросани в России»</a> (сайт «Семейная история», копия Wayback Machine): «Дукс» 1907–1908, Кузин и Сикорский 1910, пробеги 1911–1912, Русско-Балтийский завод 1912, сани Всероссийского земского союза 1915–1916, КОМПАС и Кронштадт 1921.</li>
+      <li><a href="https://web.archive.org/web/20130722155255/http://starosti.ru/article.php?id=22560" rel="noopener" target="_blank">«Утро России», январь 1910 года</a> (по старому стилю; перепечатка starosti.ru, копия Wayback Machine): телеграмма из Киева об аэросанях студента Сикорского.</li>
+      <li><a href="https://web.archive.org/web/20140201212730/http://www.popmech.ru/article/1438-snegohodyi-ot-aviatorov/" rel="noopener" target="_blank">Н. Корзинов · «Снегоходы от авиаторов: наши сани едут сами»</a>, «Популярная механика», апрель 2007 (копия Wayback Machine): лесовоз Ломбарда 1901 года, «Дукс», Сикорский.</li>
+      <li>Изображения: <a href="https://commons.wikimedia.org/wiki/File:Воздухоплавательный_институт_Д._П._Рябушинского_6.jpg" rel="noopener" target="_blank">сани Кучинского института</a>, «На рубеже двух веков», 1910 — общественное достояние; <a href="https://commons.wikimedia.org/wiki/File:Sikorsky_I.I._1914._Karl_Bulla.jpg" rel="noopener" target="_blank">И. И. Сикорский</a>, фото К. Буллы, 1914 — общественное достояние.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="calendar">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Календарь изобретений</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Выбери любой день — узнаешь, что русские сделали первыми в мире. Листай месяцы стрелками.</p>
+    <div id="calbox"></div>
+  </div>
+</section>
+
+<section class="block kd" id="kuda-dalshe">
+  <div class="wrap">
+    <div class="kd-kicker">Куда дальше</div>
+    <h2>Музей продолжается</h2>
+    <div class="kd-grid">
+      <div class="kd-card main"><span class="kd-lbl">Следующий день</span><a href="day-12feb-lenz.html">12 февраля — Правило Ленца: ток, который спорит с движением <span class="kd-arr">→</span></a>
+        <p>Одно правило вместо двух: индукционный ток всегда мешает движению, которое его вызвало.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Предыдущий день</span><a href="day-09feb-chizhevsky.html">9 февраля — Солнце и толпа: Чижевский сверяет историю с солнечными пятнами <span class="kd-arr">→</span></a>
+        <p>Войны и восстания 72 стран за 2400 лет Чижевский сверил с солнечными пятнами — и получил разгромную рецензию.</p></div>
+      <div class="kd-card"><span class="kd-lbl">По снегу без колёс</span><a href="day-09jan-blinov.html">9 января — гусеничный ход Блинова <span class="kd-arr">→</span></a>
+        <p>Другой русский ответ бездорожью: «бесконечные рельсы» вместо колёс.</p></div>
+      <div class="kd-card main"><span class="kd-lbl">Город-музей</span><a href="../../index.html">Русская цивилизация <span class="kd-arr">→</span></a>
+        <p>Все музеи проекта на одной карте.</p></div>
+    </div>
+    <p style="margin-top:16px"><a href="izobreteniya.html">Посмотреть изобретения по алфавиту →</a></p>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>
+  Русская цивилизация · «Что изобрели русские первыми в мире»</div></footer>
+
+<script type="application/json" data-proof>{"status":"found","claim_id":"rc:izobreteniya:aerosani:claim-aerosani-rossiya-1904-1908","ours":{"kind":"энциклопедическая статья о первых аэросанях","title":"«Аэросани», Большая советская энциклопедия, т. 4 — «Первые А. были построены у нас в России в 1908»; за границей попытки «не привели к каким-либо определенным результатам»","date":"1926","holder":"М., 1926 (сани Неждановского в Кучине — около 1904, по Президентской библиотеке и М. Б. Саукке; «Дукс» — 1907–1908). Скан Internet Archive, 1-е издание БСЭ, т. 4, стб. 224–226; снимок саней Кучинского института — книга «На рубеже двух веков» (М., 1910), Викисклад","source_url":"https://archive.org/details/1-04_20251214"},"rival":{"name":"Э. Ломбард, США","date":"1901","doc_title":"паровой гусеничный лесовоз с лыжами для управления — моторная машина для снега, но без воздушного винта («Популярная механика», 2007)"}}</script>
+<script src="../../assets/museum-proof.js"></script>
+
+<script>
+/* ── СЧЁТ ── шкала из 100 держит assets/museum-score.js; здесь только реестр наград.
+   двое саней по таблице 2×15 + правило 0,28 15 + санки «Дукса» 10 + лыжи 15 + викторина 5×6 = 100. */
+window.MUSEUM_SCORE = {awards:{s:[2,15], g:15, d:10, p:15, q:[5,6]},
+  ranks:[[100,'Аэросанный инженер'],[70,'Механик пробега'],[40,'Пассажир аэросаней'],[0,'Гость дня']]};
+</script>
+<script src="../../assets/museum-score.js"></script>
+<script>
+(function(){
+  var $ = function(id){return document.getElementById(id);};
+  $('readBtn').onclick = function(){ $('story').scrollIntoView({behavior:'smooth'}); };
+  $('listenBtn').onclick = function(){ $('audioguide').scrollIntoView({behavior:'smooth'}); };
+  var tb=$('themeInvBtn');
+  tb.onclick=function(){ var b=$('themeInvBody'), open=b.hidden; b.hidden=!open; tb.setAttribute('aria-expanded',open?'true':'false'); tb.textContent=open?'▲ Скрыть':tb.dataset.label; };
+  function msg(id,t,cls){ var m=$(id); m.className='lab-msg'+(cls?' '+cls:''); m.textContent=t; }
+  function f(x,n){ return x.toFixed(n).replace('.',','); }
+  var NS='http://www.w3.org/2000/svg';
+  function el(n,a){ var e=document.createElementNS(NS,n); for(var k in a) e.setAttribute(k,a[k]); return e; }
+
+  /* ── САНИ ИЗ ЭНЦИКЛОПЕДИИ ── БСЭ, 1-е изд., т. 4 (1926), «Аэросани»: вес пустых саней и «качество»
+     (тяга винта на месте / вес) пустых и гружёных. Тяга = качество пустых × вес пустых. */
+  var SL=[
+    {n:'«НРБ» · мотор «Сальмсон» 100 л. с. · 550 кг',s:'НРБ',G0:550,K0:0.49,K1:0.32,x:' Энциклопедия и называет эти сани четырёхместными.'},
+    {n:'«АНТ» · мотор «Люцифер» 100 л. с. · 525 кг',s:'АНТ',G0:525,K0:0.61,K1:0.388,x:' У металлических саней ЦАГИ тяга выше, и тот же груз им легче.'}
+  ];
+  var PAS=75, cur=-1, pas=0, sBtns=[];
+  SL.forEach(function(s,i){
+    s.T=s.K0*s.G0;
+    var b=document.createElement('button'); b.type='button'; b.className='seg'; b.textContent=s.n;
+    b.onclick=function(){ cur=i; pas=0; sBtns.forEach(function(x){x.classList.remove('on');}); b.classList.add('on'); draw(); msg('sMsg','Сани «'+s.s+'»: тяга '+f(s.T,0)+' кг. В таблице качество гружёных саней — '+String(s.K1).replace('.',',')+'. Сажай седоков.'); };
+    sBtns.push(b); $('sledPick').appendChild(b);
+  });
+  function state(){ var s=SL[cur], G=s.G0+PAS*pas; return {s:s,G:G,K:s.T/G}; }
+  function draw(){
+    var v=$('sledView'); while(v.firstChild) v.removeChild(v.firstChild);
+    v.appendChild(el('rect',{x:0,y:128,width:640,height:22,'class':'snow'}));
+    v.appendChild(el('line',{x1:120,y1:122,x2:470,y2:122,'class':'ski'}));
+    v.appendChild(el('path',{d:'M470 122 q14 0 20 -12','class':'ski',fill:'none'}));
+    v.appendChild(el('rect',{x:140,y:84,width:300,height:34,rx:6,'class':'body'}));
+    v.appendChild(el('rect',{x:120,y:40,width:10,height:80,'class':'body'}));
+    v.appendChild(el('ellipse',{cx:125,cy:42,rx:8,ry:36,'class':'prop'}));
+    for (var i=0;i<pas;i++){ var x=170+i*38; v.appendChild(el('circle',{cx:x,cy:70,r:12,'class':'pas'})); }
+    var t=el('text',{x:630,y:18,'text-anchor':'end','class':'lbl'}); t.textContent=cur<0?'выбери сани':'сани '+SL[cur].s+' · седоков: '+pas; v.appendChild(t);
+    if (cur<0){ $('pasCnt').textContent='Седоков: 0'; return; }
+    var st=state();
+    $('pasCnt').textContent='Седоков: '+pas;
+    $('oT').textContent=f(st.s.T,0)+' кг'; $('gT').style.width=Math.min(100,st.s.T/400*100)+'%';
+    $('oG').textContent=f(st.G,0)+' кг'; $('gG').style.width=Math.min(100,st.G/1100*100)+'%';
+    $('oK').textContent=f(st.K,3); var g=$('gK'); g.style.width=Math.min(100,st.K/0.8*100)+'%'; g.className='fill'+(st.K<0.28?' bad':' ok');
+  }
+  draw();
+  $('pasPlus').onclick=function(){ if(cur<0){ msg('sMsg','Сначала выбери сани.','bad'); return; } if(pas<7){ pas++; draw(); } };
+  $('pasMinus').onclick=function(){ if(cur<0){ msg('sMsg','Сначала выбери сани.','bad'); return; } if(pas>0){ pas--; draw(); } };
+  var sDone=0;
+  $('loadChk').onclick=function(){
+    if (cur<0){ msg('sMsg','Сначала выбери сани.','bad'); return; }
+    var st=state(), s=st.s;
+    if (Math.abs(st.K-s.K1)<0.01){
+      if (!s.done){ s.done=true; sBtns[cur].classList.add('done'); award('s'+cur,15); sDone++; }
+      msg('sMsg','Сходится: '+pas+' седока, '+f(st.G,0)+' кг, качество '+f(st.K,3)+' — в таблице '+String(s.K1).replace('.',',')+'.'+s.x+(sDone<2?' Теперь другие сани.':' Двое саней сверены. Дальше правило 0,28.'),'good');
+      if (sDone===2) msg('gMsg','Выбери сани «НРБ», поставь число седоков и проверь правило.');
+    } else if (st.K>s.K1) msg('sMsg','Качество '+f(st.K,3)+' — выше, чем у гружёных саней в таблице. Сажай ещё.','bad');
+    else msg('sMsg','Качество '+f(st.K,3)+' — уже ниже табличного '+String(s.K1).replace('.',',')+'. Многовато седоков.','bad');
+  };
+
+  /* ── ПРАВИЛО 0,28 ── БСЭ: «отношение тяги винта на месте к весу саней было не меньше 0,28»;
+     у хороших конструкций 0,32–0,36. Для «НРБ»: 269,5 / 0,28 = 962,5 кг — пять седоков. */
+  var gDone=false;
+  $('ruleChk').onclick=function(){
+    if (sDone<2){ msg('gMsg','Сначала нагрузи по таблице и те и другие сани.','bad'); return; }
+    if (cur!==0){ msg('gMsg','Это правило проверяем на санях «НРБ» — выбери их выше.','bad'); return; }
+    var st=state(), next=SL[0].T/(st.G+PAS);
+    if (st.K<0.28){ msg('gMsg','Качество '+f(st.K,3)+' — ниже 0,28: правило энциклопедии нарушено.','bad'); return; }
+    if (next>=0.28){ msg('gMsg','Качество '+f(st.K,3)+' — правило соблюдено, но и следующий седок его не нарушит. Найди предел.','bad'); return; }
+    if (!gDone){ gDone=true; award('g',15); }
+    msg('gMsg','Предел — '+pas+' седоков: '+f(st.G,0)+' кг, качество '+f(st.K,3)+'. Шестой опустит его до '+f(next,3)+'. А в таблице «НРБ» — четырёхместные: с четырьмя седоками качество 0,32, как у хороших конструкций (0,32–0,36).','good');
+  };
+
+  /* ── САНКИ «ДУКСА» ── мотор 3,5 л. с. (М. Б. Саукке); тяга 3 кг, в лучших случаях 4 кг с 1 л. с. (БСЭ);
+     трение снега 0,3–0,001 (БСЭ). Один седок 75 кг, вес санок не считаем. Трогаются, если тяга больше трения. */
+  var DT=3.5*3, DTB=3.5*4, DG=75, dDone=false;
+  function mu(){ return $('mu').value/1000; }
+  $('mu').oninput=function(){ $('oMu').textContent=f(mu(),3); };
+  $('duxGo').onclick=function(){
+    var m=mu(), fr=m*DG;
+    if (DT>fr){
+      if (!dDone){ dDone=true; award('d',10); }
+      msg('dMsg','Тронулись: тяга '+f(DT,1)+' кг больше трения '+f(fr,1)+' кг. Качество санок с седоком — '+f(DT/DG,2)+' даже без веса самих санок, вдвое ниже правила 0,28. Такие сани едут только по очень скользкому снегу — недаром о них пишут: «по насту».','good');
+    } else if (DTB>fr) msg('dMsg','Стоят: трение '+f(fr,1)+' кг больше тяги '+f(DT,1)+' кг. Только в лучшем случае, при 4 кг с силы ('+f(DTB,0)+' кг), сани сдвинулись бы. Сделай снег скользче.','bad');
+    else msg('dMsg','Стоят: трение '+f(fr,1)+' кг, а тяга мотора в 3,5 силы — '+f(DT,1)+' кг, в лучшем случае '+f(DTB,0)+' кг. Сделай снег скользче.','bad');
+  };
+
+  /* ── ДАВЛЕНИЕ НА СНЕГ ── БСЭ: не больше 600 кг/м². Гружёные «НРБ»: 550 + 4×75 = 850 кг → не меньше 1,42 м², шаг 0,1. */
+  var PG=850, pDone=false;
+  function area(){ return $('area').value/10; }
+  function pShow(){ var a=area(); $('oA').textContent=f(a,1)+' м²'; msg('pMsg','Давление: '+PG+' кг на '+f(a,1)+' м² — '+f(PG/a,0)+' кг/м².'); }
+  $('area').oninput=pShow;
+  $('areaChk').onclick=function(){
+    var a=area(), p=PG/a;
+    if (p>600){ msg('pMsg',f(p,0)+' кг/м² — больше 600: на целине сани провалятся. Нужны лыжи побольше.','bad'); return; }
+    if (PG/(a-0.1)<=600){ msg('pMsg',f(p,0)+' кг/м² — держит, но и лыжи поменьше удержат. А лишняя площадь — лишний вес.','bad'); return; }
+    if (!pDone){ pDone=true; award('p',15); }
+    msg('pMsg','Самые маленькие лыжи — '+f(a,1)+' м²: '+f(p,0)+' кг/м². При 1,4 м² было бы '+f(PG/1.4,0)+' — уже больше 600. По энциклопедии, при таком давлении сани не проваливаются на целине.','good');
+  };
+
+  /* ── ВИКТОРИНА ── */
+  var Q = [
+    {q:'Что двигает аэросани по снегу?', o:['Гусеница','Воздушный винт','Колёса с шипами'], a:1,
+     e:'Мотор вращает воздушный винт — пропеллер, как у самолёта.'},
+    {q:'Где в 1907 году построили и испытали «лыжный автомобиль» Меллера и Докучаева?', o:['В Киевском политехническом институте','На Русско-Балтийском заводе','На заводе «Дукс» в Москве'], a:2,
+     e:'В мае 1908 года машину «Дукса» под названием «аэросани» показали на первой Московской автомобильной выставке.'},
+    {q:'Что нового было в аэросанях Сикорского и Былинкина в 1910 году?', o:['Винт прямо на валу двигателя','Паровой котёл','Гусеницы вместо лыж'], a:0,
+     e:'Без ремня и цепи. Позже, с толкающим винтом, эта схема стала в аэросанях почти единственной.'},
+    {q:'Каким, по энциклопедии 1926 года, должно быть «качество саней» — тяга винта, делённая на вес?', o:['Не больше 0,1','Не меньше 0,28','Не меньше 1'], a:1,
+     e:'Не меньше 0,28; у хороших конструкций — 0,32–0,36.'},
+    {q:'Какой завод в 1912 году начал строить аэросани партией по заказу военного министерства?', o:['Русско-Балтийский вагонный завод','Завод «Дукс»','Обуховский завод'], a:0,
+     e:'Русско-Балтийский вагонный завод в Риге. Это были первые серийные аэросани.'}
+  ];
+  var qb = $('quizBox');
+  Q.forEach(function(it, qi){
+    var wrap = document.createElement('div');
+    var h = document.createElement('p'); h.className='quiz-q'; h.textContent=(qi+1)+'. '+it.q; wrap.appendChild(h);
+    var exp = document.createElement('div'); exp.className='exp'; exp.setAttribute('aria-live','polite');
+    var btns = it.o.map(function(txt, oi){
+      var b=document.createElement('button'); b.type='button'; b.className='opt'; b.textContent=txt;
+      b.onclick=function(){
+        if (wrap.dataset.done) return; wrap.dataset.done='1';
+        btns.forEach(function(x,xi){ x.disabled=true; if (xi===it.a) x.classList.add('correct'); });
+        if (oi===it.a){ award('q'+qi,6); exp.textContent='Верно. '+it.e; }
+        else { b.classList.add('wrong'); exp.textContent='Не совсем. '+it.e; }
+        exp.classList.add('show');
+      };
+      wrap.appendChild(b); return b;
+    });
+    wrap.appendChild(exp); qb.appendChild(wrap);
+  });
+})();
+</script>
+<script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
+<script>window.MUSEUM_CHROME={
+  museum:{title:'Что изобрели русские первыми в мире',href:'index.html'},
+  share:{title:'Пропеллер на снегу: как в России появились аэросани — музей «Что изобрели русские первыми в мире»',
+         text:'Около 1904 года инженер Неждановский поставил мотор с воздушным винтом на раму с лыжами — так в России появились аэросани. Что Россия дала миру раньше всех — день за днём.'},
+  prev:{href:'day-09feb-chizhevsky.html',title:'9 февраля · Чижевский'},
+  next:{href:'day-12feb-lenz.html',title:'12 февраля · Ленц'},
+  all:{href:'index.html',label:'Все изобретения'},
+  city:'../../index.html',
+  random:['day-01jan-cabletv.html','day-02jan-luna1.html','day-03jan-anosov.html','day-04jan-pilchikov.html','day-05jan-shukhov.html','day-06jan-orlov.html','day-08jan-icebreaker.html','day-09jan-blinov.html','day-10jan-britnev.html','day-11jan-kostovich.html','day-12jan-r7.html','day-13jan-k278.html','day-14jan-lira.html','day-15jan-kovalevskaya.html','day-16jan-soyuz45.html','day-19jan-kantorovich.html','day-21jan-obninsk.html','day-22jan-landau.html','day-23jan-umov.html','day-24jan-k162.html','day-25jan-korsakov.html','day-26jan-podvodnaya.html','day-27jan-pentium.html','day-28jan-havkin.html','day-30jan-kotelnikov.html','day-31jan-girotron.html','day-01feb-bekhterev.html','day-02feb-edinorog.html','day-03feb-luna9.html','day-04feb-samovar.html','day-05feb-boldyrev.html','day-06feb-zelinsky.html','day-07feb-setun.html','day-08feb-mendeleev.html','day-09feb-chizhevsky.html','day-10feb-aerosani.html','day-12feb-lenz.html','day-18mar-leonov.html','day-15may-mechnikov.html','day-16jun-tereshkova.html','day-26sep-pavlov.html','day-15nov-buran.html','day-25nov-pirogov.html','day-01dec-lobachevsky.html','day-14dec-laser.html']
+};</script>
+<script src="../../assets/museum-chrome.js"></script>
+<script>window.MUSEUM_SUPPORT={museum:'Что изобрели русские первыми в мире'};</script>
+<script src="../../assets/museum-support.js"></script>
+<script src="calendar-izobreteniya.js"></script>
+<script>window.MUSEUM_CALENDAR_INITIAL='02-10';</script>
+<script src="../../assets/museum-calendar-month.js"></script>
+<script>window.MUSEUM_RETURN={riddle:{q:"Каким, по энциклопедии 1926 года, должно быть «качество» аэросаней — тяга винта на месте, делённая на вес?",a:"Не меньше 0,28; у хороших конструкций — 0,32–0,36.",src:"«Аэросани», Большая советская энциклопедия, 1-е изд., т. 4, 1926"}};</script>
+<script src="../../assets/museum-return.js" data-museum="izobreteniya" data-day="02-10"></script>
+<script defer src="../../assets/analytics.js"></script>
+
+
+
+
+
+
+
+
+
+<script>window.MUSEUM_AUDIOGUIDE={
+  audioSrc:"audio-guide-aerosani-ru.mp3",
+  durationLabel:"2 минуты 48 секунд",
+  lead:"Голос ведёт по залу аэросаней: рама с винтом на снимке у входа, заметка тысяча девятьсот пятого года, санки завода «Дукс» на московской выставке, киевские сани Сикорского, первые пробеги и серия, фронт и лёд у Кронштадта. Шесть остановок, на каждой — что искать глазами. Слушать можно фоном, пока читаешь историю ниже.",
+  stops:[
+    {t:0,mark:"0:00",title:"Рама на двух лыжах"},
+    {t:29,mark:"0:29",title:"Сани с воздушным винтом"},
+    {t:59,mark:"0:59",title:"Санки «Дукса»"},
+    {t:85,mark:"1:25",title:"Винт на валу мотора"},
+    {t:112,mark:"1:52",title:"Пробеги и серия"},
+    {t:138,mark:"2:18",title:"Фронт и лёд"}
+  ],
+  transcript:[
+    "<p>Снимок саней Кучинского института — «На рубеже двух веков», приложение к «Московскому листку», 1910, Викисклад, общественное достояние; сани Неждановского около 1904 года — Президентская библиотека и М. Б. Саукке.</p>",
+    "<p>Факты: заметка «Воздухоплавателя» 1905 года (в пересказе), стенд и расчёты Неждановского — Президентская библиотека, «Сергей Сергеевич Неждановский»; М. Б. Саукке, «Аэросани в России».</p>",
+    "<p>Факты: «Дукс» 1907 года, мотор 3,5 л. с., ремень, 16 км/ч, выставка мая 1908 года — М. Б. Саукке, «Аэросани в России»; 1908 год — Большая советская энциклопедия, т. 4, 1926.</p>",
+    "<p>Факты: телеграмма из Киева — «Утро России», январь 1910 года; Былинкин и винт на валу мотора — М. Б. Саукке; портрет — фото К. Буллы, 1914, Викисклад.</p>",
+    "<p>Факты: Кузин 1910 года, пробеги 1911 и 1912 годов, серия Русско-Балтийского завода 1912 года — М. Б. Саукке, «Аэросани в России».</p>",
+    "<p>Факты: немецкие аэросани, решение 18 сентября 1915 года, 24 аэросани, КОМПАС 1919 года и Кронштадт 1921 года — М. Б. Саукке; правило 0,28 — Большая советская энциклопедия, т. 4, 1926.</p>"
+  ],
+  note:"Озвучено синтезом речи — временно, до записи голосом автора музея."
+};</script>
+<script src="../../assets/museum-audioguide.js"></script>
+</body>
+</html>

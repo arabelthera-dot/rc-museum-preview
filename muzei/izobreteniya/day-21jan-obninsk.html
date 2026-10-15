@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="ru" data-museum="izobreteniya">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Первая в мире АЭС, отдавшая ток в сеть, Обнинск — Что изобрели русские первыми в мире, 21 января</title>
+<!--
+  Страница дня 21 января. Наряд stranicy-izob-0910 (claude2, 12.10.2026), карточка #762.
+  Форма — вариант А музея изобретений (Сергей 12.09.2026): лента ударов, подробности свёрнуты.
+  Паспорт выпуска: rc-museum-production/izobreteniya/day-21jan-obninsk/passport/issue.json
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --dark:#060c17; --dark2:#0c1826; --surface:#111f33;
+    --card:rgba(255,255,255,.05); --card-b:rgba(255,255,255,.09);
+    --gold:#c9a84c; --gold-l:#e4c97a; --gold-g:rgba(201,168,76,.13);
+    --ink:#e8eef5; --muted:#7a9ab8; --line:rgba(255,255,255,.07);
+    --accent:#2d8cbf; --accent2:#1f6f8b;
+    /* legacy compat */
+    --paper:#0c1826; --paper2:#111f33;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Inter','Segoe UI',sans-serif;color:var(--ink);background:var(--dark);line-height:1.72}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.13;margin:0}
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent)}
+
+  /* ── ШАПКА ── */
+  header.top{background:rgba(6,12,23,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--card-b);color:#fff;position:sticky;top:0;z-index:30}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+  .logo svg{display:block;filter:drop-shadow(0 0 8px rgba(201,168,76,.4))}
+  .logo .lt{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:16px}
+  .logo .lt small{display:block;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-family:'Inter',sans-serif}
+  .score{background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:6px 16px;font-size:13px;color:var(--gold-l);cursor:pointer;font-family:'Inter',sans-serif}
+  .score-info{position:absolute;right:12px;top:66px;max-width:260px;background:#0e1c30;color:var(--ink);border:1px solid var(--card-b);border-radius:14px;padding:14px 16px;font-size:13px;line-height:1.6;box-shadow:0 20px 60px rgba(0,0,0,.6);display:none;z-index:40}
+  .score-info.show{display:block}
+
+  /* ── HERO — СТАНДАРТ (не менять): 3D-сцена сверху, текст отдельным блоком ниже ── */
+  .hero-scene{position:relative;height:52vh;min-height:300px;max-height:520px;overflow:hidden;background:linear-gradient(160deg,#0a1e3a 0%,#1a3a6a 55%,#0d2240 100%)}
+  .hero-scene canvas.scene,.hero-scene img.scene{width:100%;height:100%;display:block;object-fit:cover}
+  .scene-caption{background:#060d18;padding:11px 0 12px}
+  .scene-caption .wrap{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+  .scene-cap{font-size:13.5px;line-height:1.6;color:var(--muted);border-left:2px solid rgba(201,168,76,.4);padding-left:14px;flex:1 1 420px}
+  .scene-hint{flex:0 0 auto;font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.4px;color:#e4c97a;
+    background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.34);border-radius:24px;padding:7px 16px;font-weight:600}
+  .hero-lead{background:linear-gradient(180deg,#0c1826 0%,#060c17 100%);color:#fff;padding:28px 0 38px}
+  .hero-lead .museum{color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:12px;opacity:.9}
+  .hero-lead .who{font-family:'Inter',sans-serif;font-size:clamp(13px,3vw,15px);letter-spacing:.4px;color:var(--accent-l,#7dc8ff);margin-bottom:10px}
+  .hero-lead .who i{font-style:normal;color:#7893ab;font-weight:400}
+  .hero-lead h1{color:#fff;font-size:56px;font-weight:900;line-height:1.04;margin-bottom:16px}
+  .hero-lead .hook{color:#b8ccde;font-size:19px;max-width:580px;margin-bottom:28px;line-height:1.65;font-weight:400}
+  .hero-lead .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+  @media(max-width:680px){.hero-lead h1{font-size:34px}.hero-lead .hook{font-size:16px}
+    .hero-scene{height:34vh;min-height:230px;max-height:300px}
+    .scene-caption .wrap{flex-direction:column;gap:9px}
+    .scene-hint{order:-1;align-self:flex-start;font-size:11.5px;padding:6px 13px}
+    .scene-cap{font-size:12.8px;flex:1 1 auto}}
+  .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:16px;font-family:'Inter',sans-serif;letter-spacing:.5px}
+
+  /* ── НАВИГАЦИЯ ДНЯ ── */
+  .daynav{position:sticky;top:64px;z-index:25;background:rgba(6,12,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-b)}
+  .daynav .wrap{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+  .daynav::-webkit-scrollbar{display:none}
+  .daynav a{flex:0 0 auto;padding:14px 20px;font-size:11px;font-weight:700;font-family:'Inter',sans-serif;color:var(--muted);text-decoration:none;white-space:nowrap;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:.18s}
+  .daynav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+  /* ── СЕКЦИИ ── */
+  section.block{padding:64px 0;border-bottom:1px solid var(--line);scroll-margin-top:130px}
+  .kicker{font-size:10px;text-transform:uppercase;letter-spacing:3.5px;color:var(--gold);font-weight:700;font-family:'Inter',sans-serif;margin-bottom:8px}
+  section.block h2{font-size:34px;color:#fff;margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink)}
+  .pull{background:var(--gold-g);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 14px 14px 0;font-style:italic;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-size:20px;line-height:1.5;margin:26px 0}
+
+  /* ── КНОПКИ ── */
+  .btn{cursor:pointer;border:none;border-radius:12px;padding:14px 26px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;background:var(--accent2);color:#fff;transition:.18s;letter-spacing:.2px}
+  .btn:hover{filter:brightness(1.18)}
+  .btn.ghost{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid var(--card-b)}
+  .btn.ghost:hover{background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.2)}
+  .btn.gold{background:linear-gradient(135deg,var(--gold),#b8882b);color:#1a0f00;box-shadow:0 4px 20px rgba(201,168,76,.25)}
+  .btn.gold:hover{filter:brightness(1.1);box-shadow:0 6px 28px rgba(201,168,76,.4)}
+  .btn:active{transform:translateY(1px)}
+  .pulse{animation:pulse .9s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+
+  /* ── КАРТОЧКИ ── */
+  .card{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:20px 22px;margin:16px 0;backdrop-filter:blur(6px)}
+
+  /* ── КВИЗ ── */
+  .opt{display:block;width:100%;text-align:left;background:rgba(255,255,255,.04);border:1px solid var(--card-b);border-radius:12px;padding:13px 16px;margin:8px 0;cursor:pointer;font-size:15px;color:var(--ink);font-family:'Inter',sans-serif;transition:.16s}
+  .opt:hover{border-color:var(--accent);background:rgba(45,140,191,.08)}
+  .opt.correct{background:rgba(40,120,60,.18);border-color:#3f9b52;color:#7ed4a0;font-weight:600}
+  .opt.wrong{background:rgba(180,40,40,.13);border-color:#c0453f;color:#f08080}
+  .exp{margin-top:10px;font-size:14px;background:var(--gold-g);border-radius:10px;padding:12px 14px;display:none;color:var(--gold-l)}
+  .exp.show{display:block}
+
+  /* ── ИТОГ ДНЯ ── */
+  .day-result{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:22px 24px;max-width:460px}
+  .dr-rank{font-family:'Playfair Display',Georgia,serif;font-size:28px;color:var(--gold-l);font-weight:700}
+  .dr-score{font-size:16px;margin:4px 0 12px;color:var(--ink)}.dr-score span{color:var(--muted);font-size:14px}
+  .dr-bar{height:8px;background:rgba(255,255,255,.08);border-radius:6px;overflow:hidden}
+  .dr-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),var(--gold));transition:width .6s cubic-bezier(.2,.7,.2,1)}
+  .dr-note{margin-top:12px;font-size:14px;color:var(--muted)}
+
+  /* ── РЕКЛАМНЫЕ СЛОТЫ ── */
+  .ad-slot{position:relative;margin:26px 0;background:rgba(255,255,255,.02);border:1px dashed rgba(255,255,255,.1);border-radius:14px;min-height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px}
+  .ad-slot .lbl{position:absolute;top:7px;right:12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.15);font-family:'Inter',sans-serif}
+  .ad-slot .ph-txt{font-size:12px;max-width:80%;color:rgba(255,255,255,.18)}
+  .ad-slot.billboard{min-height:108px}
+  .adband{background:transparent;border-bottom:none}
+
+  footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
+  .crumbs{background:rgba(6,12,23,.6);border-bottom:1px solid var(--card-b);font-family:'Inter',sans-serif;font-size:12.5px}
+  .crumbs .wrap{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  .crumbs a{color:var(--gold-l);text-decoration:none;white-space:nowrap}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--muted);opacity:.6}
+  .crumbs .here{color:var(--muted);white-space:nowrap}
+
+
+  /* ── ШАПКА: четыре строки по museum-core §6-бис ── */
+  header.top{display:block;text-align:center;padding:10px 12px 8px;height:auto;position:relative}
+  header.top .b1{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:15px;letter-spacing:.5px;color:#fff}
+  header.top .b2{font-size:11px;color:var(--muted);margin-top:2px}
+  header.top .b3{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:6px}
+  header.top .b4{font-size:12.5px;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-style:italic}
+  header.top .score{position:absolute;right:12px;top:10px}
+  .daynav{top:0}
+  .hero-scene{background:#0e1c2c;height:38vh;min-height:250px;max-height:400px}
+  @media(max-width:680px){.hero-lead h1{font-size:31px}}
+  .hero-scene img.scene{object-fit:cover;object-position:50% 42%}
+  .date-origin{font-size:13px;color:#9fb4c8;margin:-6px 0 12px;max-width:62ch}
+  .hero-lead .hook{color:#c6d8e8;max-width:62ch}
+  .hero-under{background:linear-gradient(180deg,#060d18,#060c17);padding:4px 0 22px}
+  .stamp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(125,200,255,.28);margin-top:14px}
+  .stamp>div{padding:11px 12px;border-left:1px solid rgba(125,200,255,.16);min-width:0}
+  .stamp>div:first-child{border-left:0}
+  .stamp .v{font-size:clamp(15px,3.4vw,21px);font-weight:700;color:#8fd3ff;line-height:1.1;overflow-wrap:anywhere}
+  .stamp .k{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#8fa5b9;margin-top:5px}
+  @media(max-width:600px){.stamp{grid-template-columns:repeat(2,minmax(0,1fr))}.stamp>div:nth-child(3){border-left:0}.stamp>div:nth-child(n+3){border-top:1px solid rgba(125,200,255,.16)}}
+
+  /* ── ЛЕНТА УДАРОВ (museum-inventions, вариант А; museum-core §5-бис) ── */
+  .udary{list-style:none;margin:18px 0 0;padding:0;counter-reset:u}
+  .udary>li{border-top:1px solid var(--line);padding:4px 0}
+  .udary details>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:34px 1fr;gap:10px;padding:12px 0;font-size:17px;line-height:1.55;color:var(--ink)}
+  .udary details>summary::-webkit-details-marker{display:none}
+  .udary details>summary::before{counter-increment:u;content:counter(u);font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:20px;color:var(--gold);line-height:1.3}
+  .udary .more-lbl{display:block;grid-column:2;font-size:12.5px;color:var(--gold-l);letter-spacing:.3px;margin-top:4px}
+  .udary .more-lbl::after{content:' ▾'}
+  .udary details[open] .more-lbl::after{content:' ▴'}
+  .udary details[open] .more-lbl .o{display:none}
+  .udary details:not([open]) .more-lbl .c{display:none}
+  .udary summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+  .udary .det{margin:0 0 14px 44px;padding:12px 16px;background:rgba(255,255,255,.035);border-left:2px solid rgba(201,168,76,.45);border-radius:0 10px 10px 0;font-size:15px;color:#d5e0ea}
+  .udary .det p{margin:8px 0}
+  .udary .tag{display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1a0f00;background:var(--gold-l);border-radius:6px;padding:1px 7px;margin-right:6px}
+  .udary .find{border-left:3px solid var(--gold);padding-left:8px}
+  figure.fig{margin:18px 0}
+  figure.fig img{max-width:100%;height:auto;border-radius:10px;display:block}
+  figure.fig figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5}
+  .src-note{font-size:12px;color:#8fa5b9}
+
+  /* ── МОДЕЛЬ ДНЯ (главное предметное действие) ── */
+  .lab{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:18px 18px 20px;margin-top:14px}
+  .lab-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+  .lab-row .lbl{flex:0 0 100%;font-size:13px;color:var(--muted);letter-spacing:.3px}
+  .seg{cursor:pointer;border:1px solid var(--card-b);background:rgba(255,255,255,.04);color:var(--ink);border-radius:10px;padding:10px 14px;font:inherit;font-size:14.5px;min-height:44px}
+  .seg[aria-pressed="true"]{border-color:var(--gold);background:var(--gold-g);color:var(--gold-l);font-weight:600}
+  .seg:focus-visible,.btn:focus-visible,.opt:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .lab-stage{position:relative;margin-top:12px}
+  .lab-stage canvas{width:100%;height:auto;display:block;border-radius:10px;background:#1c2530}
+  .lab-cap{font-size:12px;color:#8fa5b9;margin-top:6px}
+  .lab-msg{margin-top:12px;font-size:15.5px;padding:12px 14px;border-radius:10px;background:rgba(255,255,255,.04);border-left:3px solid var(--card-b);min-height:48px}
+  .lab-msg.ok{border-left-color:#3f9b52;background:rgba(40,120,60,.14)}
+  .lab-msg.bad{border-left-color:#c0453f;background:rgba(180,40,40,.10)}
+  .lab-found{font-size:13px;color:var(--muted);margin-top:8px}
+  .lab-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .noscript-box{background:rgba(255,255,255,.04);border:1px dashed var(--card-b);border-radius:12px;padding:12px 16px;font-size:15px}
+
+  /* ── ГРАНИЦА ПЕРВЕНСТВА ── */
+  .border-box{background:rgba(45,140,191,.08);border:1px solid rgba(45,140,191,.3);border-radius:14px;padding:16px 18px}
+  .border-box b{color:#8fd3ff}
+  .ctx{width:100%;border-collapse:collapse;margin-top:14px;font-size:14.5px}
+  .ctx th,.ctx td{text-align:left;padding:9px 8px;border-top:1px solid var(--line);vertical-align:top}
+  .ctx th{color:var(--gold-l);font-weight:600;font-size:12.5px;letter-spacing:.5px}
+  .quiz-q{margin:18px 0 6px;font-weight:600}
+  .sources a{color:var(--gold-l)}
+  .sources li{margin:6px 0;font-size:14px;color:#c8d6e2}
+  @media(max-width:600px){header.top{padding:8px 64px 6px}header.top .score{top:8px;right:8px;padding:4px 10px;font-size:12px}header.top .b3{margin-top:3px}
+    .hero-scene{height:26vh;min-height:200px;max-height:260px}.date-origin{font-size:12px;margin:-8px 0 8px}.hero-lead{padding:18px 0 26px}.hero-lead .date-chip{margin-bottom:12px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+  /* ── ПОЛЗУНКИ МОДЕЛИ (19, 21 янв) ── */
+  .mtab{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+  .mrow{display:grid;grid-template-columns:minmax(150px,1.2fr) 2fr 92px;gap:12px;align-items:center}
+  .mrow .mname{font-size:14.5px}
+  .mrow .mname i{font-style:normal;color:var(--muted);font-size:13px}
+  .mrow input[type=range]{width:100%;accent-color:var(--gold);min-height:44px}
+  .mrow output{font-size:14px;color:var(--gold-l);text-align:right}
+  .mrow.off{opacity:.45}
+  .mult{margin-top:14px;padding:14px 16px;border-radius:12px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25)}
+  @media(max-width:560px){.mrow{grid-template-columns:1fr 70px}.mrow .mname{grid-column:1/-1}}
+</style>
+<meta name="description" content="Ток от атома первыми получили американцы — на четыре лампочки, а в общую сеть атомное электричество первым отдал Обнинск 27 июня 1954 года.">
+<link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-21jan-obninsk.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Русская цивилизация">
+<meta property="og:title" content="Первая в мире АЭС, отдавшая ток в общую сеть: Обнинск, 1954">
+<meta property="og:description" content="Ток от атома первыми получили американцы — на четыре лампочки, а в общую сеть атомное электричество первым отдал Обнинск 27 июня 1954 года.">
+<meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-21jan-obninsk.html">
+<meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-21jan-obninsk-marka.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Первая в мире АЭС, отдавшая ток в общую сеть: Обнинск, 1954", "description": "Ток от атома первыми получили американцы — на четыре лампочки, а в общую сеть атомное электричество первым отдал Обнинск 27 июня 1954 года.", "url": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-21jan-obninsk.html", "inLanguage": "ru", "isPartOf": {"@type": "WebSite", "name": "Музей «Что изобрели русские первыми в мире»"}, "publisher": {"@type": "Organization", "name": "Русская цивилизация"}, "about": {"@type": "Event", "name": "Пуск Обнинской атомной электростанции", "startDate": "1954-06-27"}, "image": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-21jan-obninsk-marka.jpg"}</script>
+</head>
+<body>
+
+<header class="top">
+  <div class="b1">Русская цивилизация</div>
+  <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
+  <div class="b3">Что изобрели русские первыми в мире</div>
+  <div class="b4">365 изобретений. Все русские. Все первые</div>
+  <div class="score" id="scoreBox" title="Баллы знаний за этот день">⭐ <span id="score">0</span> / 100</div>
+</header>
+
+<nav class="crumbs" aria-label="Хлебные крошки"><div class="wrap">
+  <a href="../../index.html">Русская цивилизация</a>
+  <span class="sep">›</span>
+  <a href="index.html">Что изобрели русские первыми в мире</a>
+  <span class="sep">›</span>
+  <span class="here">21 января · Обнинская АЭС</span>
+</div></nav>
+
+<div class="hero-scene" id="hero" style="background:#0b1219">
+  <img class="scene" src="day-21jan-obninsk-marka.jpg" style="object-fit:contain" data-source="https://commons.wikimedia.org/wiki/File:Stamp_of_USSR_1862.jpg" data-license="Public domain" width="1000" height="700" alt="Почтовая марка СССР «Атомная энергия — на службе народу» с изображением здания первой в мире атомной электростанции Академии наук СССР" fetchpriority="high">
+</div>
+
+<div class="scene-caption">
+  <div class="wrap">
+    <div class="scene-cap">Марка СССР «Атомная энергия — на службе народу», 25 копеек (каталог ЦФА № 1862): «Здание первой в мире атомной электростанции Академии наук СССР». На марке — год 1955, выпуск серии — 1956. Государственный знак почтовой оплаты — общественное достояние.</div>
+    <span class="scene-hint">Предмет · почтовая марка 1956 года</span>
+  </div>
+</div>
+
+<header class="hero-lead">
+  <div class="wrap">
+    <div class="date-chip">21 января · 1903</div>
+    <p class="date-origin">Привязка — день рождения научного руководителя работ: Игорь Курчатов родился 21 января 1903 года (8 января по старому стилю) — так в официальных документах; по воспоминаниям брата — 30 декабря 1902 года.</p>
+    <div class="who">Игорь Курчатов, Дмитрий Блохинцев, Николай Доллежаль <i>· создатели Обнинской АЭС</i></div>
+    <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
+    <h1>Первая в мире АЭС, отдавшая ток в общую сеть: Обнинск, 1954</h1>
+    <p class="hook">Ток от атома первыми получили американцы — на четыре лампочки, а в общую сеть атомное электричество первым отдал Обнинск 27 июня 1954 года.</p>
+    <div class="hero-btns">
+      <button class="btn gold" id="readBtn" type="button">Читать историю ↓</button>
+      <button class="btn ghost" id="listenBtn" type="button">🎧 Слушать аудиогид</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero-under">
+  <div class="wrap">
+    <div class="stamp">
+      <div><div class="v">16.05.1950</div><div class="k">постановление о станции</div></div>
+      <div><div class="v">27.06.1954</div><div class="k">ток в сеть «Мосэнерго»</div></div>
+      <div><div class="v">5 МВт</div><div class="k">электрическая мощность</div></div>
+      <div><div class="v">29.04.2002</div><div class="k">станция остановлена</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="daynav" aria-label="Разделы дня">
+  <div class="wrap">
+    <a href="#story">Читать</a>
+    <a href="#audioguide">Слушать</a>
+    <a href="#games">Включи в сеть</a>
+    <a href="#pervenstvo">Первенство</a>
+    <a href="#quiz">Викторина</a>
+    <a href="#calendar">Календарь</a>
+  </div>
+</nav>
+
+<section class="block" id="audioguide"></section>
+
+<section class="block" id="story">
+  <div class="wrap">
+    <div class="kicker">История первенства · 13 ударов</div>
+    <h2>«Атом мирный» под Обнинском</h2>
+    <p style="color:var(--muted);max-width:62ch">Читается подряд. Нажми на удар — откроется подробный разбор с источниками.</p>
+    <ol class="udary">
+      <li><details><summary><span>Игорь Курчатов родился 21 января 1903 года в посёлке Симский Завод Уфимской губернии — так записано официально.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>По старому стилю это 8 января. Младший брат вспоминал другую дату — 30 декабря 1902 года, но недавние изыскания историков говорят в пользу официальной: Курчатов родился 8 (21) января и был крещён 12 (25) января 1903 года. Сегодня на месте посёлка — город Сим Челябинской области.</p>
+          <p class="src-note">Источники: Президентская библиотека, «Игорь Васильевич Курчатов (1903–1960)» (prlib.ru); «Вокруг света», биография И. В. Курчатова (vokrugsveta.ru).</p>
+        </div></details></li>
+      <li><details><summary><span>Ещё в разгар работы над атомной бомбой Курчатов и Пётр Капица писали правительству о мирном применении внутриатомной энергии — прежде всего в энергетике.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Мирная станция с самого начала шла бок о бок с оружейной программой: те же люди, те же институты, тот же уран-графитовый опыт промышленных реакторов.</p>
+          <p class="src-note">Источник: А. Замостьянов, «Энергия мира: как была запущена первая на планете АЭС», «Известия», 2024 (iz.ru).</p>
+        </div></details></li>
+      <li><details><summary><span>В ноябре 1949 года реактор будущей станции впервые обсудили Курчатов, Анатолий Александров, Николай Доллежаль и Борис Поздняков.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Курчатов был научным руководителем атомного проекта, Александров — директором Института физических проблем, Доллежаль — директором НИИхиммаша, Поздняков — учёным секретарём научно-технического совета отрасли. В феврале 1950 года Курчатов и Доллежаль доложили варианты атомной электростанции правительству.</p>
+          <p class="src-note">Источники: РИА Новости, справка «Обнинская АЭС», 26.06.2024 (ria.ru); «Известия», 2024.</p>
+        </div></details></li>
+      <li><details><summary><span>16 мая 1950 года вышло постановление правительства: построить под нынешним Обнинском опытную установку — агрегат «АМ».<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Официально — «экспериментальная установка полупромышленного типа». Позже буквы «АМ» стали расшифровывать как «Атом Мирный».</p>
+          <p class="src-note">Источники: РИА Новости, 2024; «Известия», 2024.</p>
+        </div></details></li>
+      <li><details><summary><span>Лабораторию, которая строила станцию, возглавил физик Дмитрий Блохинцев, а первый ковш земли на площадке зачерпнули в сентябре 1951 года.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>На Блохинцева легла и львиная доля ответственности за строительство. Позже он писал: «В атомном реакторе происходит множество сложных процессов, которые, не будучи точно учтены, способны превратить самый увлекательный проект в пустой клочок бумаги».</p>
+          <p class="src-note">Источники: «Известия», 2024; РИА Новости, 2024.</p>
+        </div></details></li>
+      <li><details><summary><span>Главная трудность — твэл: вода в нём шла внутри трубки, а уран лежал снаружи, и всё это должно было выдерживать высокую температуру.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Промышленные реакторы для наработки оружейного материала у страны уже были, но энергетическому реактору нужна горячая вода под давлением. Пришлось искать сплавы, которые выдерживают такую температуру, не ржавеют и не поглощают слишком много нейтронов.</p>
+          <p class="src-note">Источник: РИА Новости, 2024.</p>
+        </div></details></li>
+      <li><details><summary><span>Реактор АМ давал около 30 мегаватт тепла, а в сеть из них уходило 5 мегаватт электричества.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Уран-графитовый канальный реактор с водяным охлаждением стал прообразом более мощных канальных реакторов, в том числе РБМК. Шестую часть тепла удавалось превратить в электричество — для опытной станции 1950-х это нормальная цена.</p>
+          <p class="src-note">Источники: «Коммерсантъ», 2026 (kommersant.ru); World Nuclear Association, «Outline History of Nuclear Energy» (world-nuclear.org, на английском).</p>
+        </div></details></li>
+      <li><details><summary><span>За две недели до пуска Курчатов поселился в Обнинске и каждый день проводил оперативки.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Научным руководителем работ по реактору был Курчатов, а собирали установку в Физико-энергетическом институте в Обнинске.</p>
+          <p class="src-note">Источник: «Известия», 2024.</p>
+        </div></details></li>
+      <li class="find"><details><summary><span>Ток мало было выработать: генератор Обнинской станции сначала синхронизировали с сетью «Мосэнерго» — и только тогда атомное электричество пошло в общую сеть.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p><span class="tag">Находка дня</span>Вечером 26 июня 1954 года пар перевели на турбину, и генератор синхронизировали с сетью «Мосэнерго». Это ключевой шаг: генератор должен вращаться ровно в такт сети, иначе защита отключит его в момент включения. Именно этим Обнинск отличается от американского опыта 1951 года — там ток от атома питал лампочки на самой установке, а не общую сеть.</p>
+          <p class="src-note">Источники: РИА Новости, 2024 («генератор синхронизирован с сетью Мосэнерго»); «Известия», 2024.</p>
+        </div></details></li>
+      <li><details><summary><span>27 июня 1954 года станция встала под промышленную нагрузку, а Курчатов поздравил всех знаменитым «С лёгким паром!».<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Электричество пошло потребителям — промышленности и сельскому хозяйству окрестных районов. Рядом с Курчатовым принимал поздравления академик Анатолий Александров, который всю жизнь считал этот день началом эры мирного атома.</p>
+          <p class="src-note">Источники: «Известия», 2024; РИА Новости, 2024.</p>
+        </div></details></li>
+      <li><details><summary><span>Американцы получили ток от атома раньше: 20 декабря 1951 года реактор EBR-I в Айдахо зажёг четыре лампочки по 200 ватт.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Директор Аргоннской лаборатории Уолтер Зинн записал в журнале: «Электричество течёт от атомной энергии. По грубой оценке — 45 кВт». Это было первое полезное электричество от атома в мире — но опытный реактор не работал как электростанция для общей сети.</p>
+          <p class="src-note">Источники: «Коммерсантъ», «Первая в мире АЭС: история строительства в деревне Пяткино», 2026 (kommersant.ru); American Nuclear Society, «60 years ago in Idaho», 2011 (ans.org); OSTI, «The Birth of Nuclear-Generated Electricity» (osti.gov); World Nuclear Association (world-nuclear.org). Все — на английском, перевод цитаты наш.</p>
+        </div></details></li>
+      <li><details><summary><span>Первая английская станция Калдер-Холл заработала только в 1956 году, зато сразу на 50 мегаватт.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Калдер-Холл стала первой атомной станцией промышленного масштаба. Обнинск со своими пятью мегаваттами был опытной станцией — но первой, которая отдала атомное электричество в общую сеть.</p>
+          <p class="src-note">Источник: World Nuclear Association (world-nuclear.org).</p>
+        </div></details></li>
+      <li><details><summary><span>29 апреля 2002 года Обнинскую АЭС остановили по экономическим соображениям — без единой аварии, на 18 лет позже запланированного срока.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Здание стало музеем атомной энергетики; в июне 2008 года закончился демонтаж, и реактор «АМ» привели в ядерно-безопасное состояние. World Nuclear Association пишет, что электричество АМ-1 давал до 1959 года, а дальше работал как исследовательский реактор и для наработки изотопов, — российские источники говорят о работе станции до 2002 года.</p>
+          <p class="src-note">Источники: «Российская газета», 20.08.2019 (rg.ru); «Известия», 2024; РИА Новости, 2024; World Nuclear Association.</p>
+        </div></details></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block" id="games">
+  <div class="wrap">
+    <div class="kicker">Главное действие · модель</div>
+    <h2>Включи Обнинск в сеть</h2>
+    <p style="max-width:62ch">Чтобы отдать ток в общую сеть, генератор должен вращаться ровно в такт с ней — 50 оборотов в секунду. Сначала подбери пар на турбину и замкни выключатель на сеть. Если получилось — добавь пара и выведи станцию на полную мощность.</p>
+    <div class="lab" id="lab">
+      <div class="mtab">
+        <div class="mrow"><span class="mname">Пар на турбину <i>· задвижка</i></span><input type="range" min="0" max="100" step="1" value="60" id="steam" aria-label="Открытие задвижки пара на турбину, процентов"><output id="oSteam" for="steam">60%</output></div>
+      </div>
+      <div class="lab-btns">
+        <button class="btn gold" type="button" id="labGo">Замкнуть выключатель на сеть</button>
+        <button class="btn ghost" type="button" id="labReset">Отключить и начать заново</button>
+      </div>
+      <div class="lab-stage">
+        <canvas id="labCv" width="640" height="220" style="height:220px" role="img" aria-label="Частота генератора против частоты сети и мощность станции на одной шкале с лампочками EBR-I"></canvas>
+        <div class="lab-cap">Модель, а не телеметрия Обнинской АЭС: частота и мощность считаются по упрощённой схеме; исторические только 5 МВт электричества, около 30 МВт тепла и 4 лампочки по 200 Вт у EBR-I.</div>
+      </div>
+      <div class="lab-msg" id="labMsg" aria-live="polite">Генератор не подключён. Подбери пар и замкни выключатель.</div>
+      <div class="lab-found" id="labFound">Найдено: включение «в такт» — нет; генератор отстал от сети — нет; генератор обогнал сеть — нет; полная мощность 5 МВт — нет.</div>
+      <noscript><div class="noscript-box">Для модели нужен JavaScript. Текстовая версия опыта: до подключения пар раскручивает генератор — частота растёт. Выключатель срабатывает только при частоте около 50 Гц; если генератор отстаёт, сеть дёргает его за собой, если обгоняет — бросок тока, и в обоих случаях защита отключает его. После подключения частоту держит сеть, а пар уже меняет не скорость, а мощность: 5 МВт электричества — это 25 000 лампочек по 200 Вт против четырёх лампочек EBR-I.</div></noscript>
+    </div>
+    <p class="src-note" style="margin-top:10px">Синхронизация с сетью «Мосэнерго» — по справке РИА Новости (2024); мощность 30 МВт тепла и 5 МВт электричества — по World Nuclear Association; лампочки EBR-I — по American Nuclear Society. Числа частоты в модели условные.</p>
+  </div>
+</section>
+
+<section class="block" id="pervenstvo">
+  <div class="wrap">
+    <div class="kicker">Проверка факта</div>
+    <h2>Что именно здесь первое в мире</h2>
+    <div class="border-box">
+      <p style="margin-top:0"><b>Граница первенства:</b> первая в мире атомная электростанция, отдавшая электричество в общую энергосеть: Обнинск, генератор синхронизирован с сетью «Мосэнерго» 26 июня 1954 года, промышленная нагрузка — с 27 июня 1954 года; 5 МВт электрической мощности.</p>
+      <p style="margin-bottom:0"><b>Чего здесь нет:</b> первое электричество от атома получили в США — реактор EBR-I 20 декабря 1951 года зажёг четыре лампочки по 200 ватт, но общую сеть не питал. Первая атомная станция промышленного масштаба — английская Калдер-Холл (1956, 50 МВт). Документ первенства — сообщение о пуске в «Правде» 1 июля 1954 года и архивные материалы Росатома — этим ходом открыть не удалось; блок «Документ» поэтому не показывается.</p>
+    </div>
+    <table class="ctx">
+      <thead><tr><th scope="col">Документ или событие</th><th scope="col">Что</th><th scope="col">Когда</th></tr></thead>
+      <tbody>
+        <tr><td>Постановление правительства СССР</td><td>Построить опытный агрегат «АМ» под Обнинском</td><td>16.05.1950</td></tr>
+        <tr><td>EBR-I, Айдахо, США</td><td>Первое электричество от атома: четыре лампочки</td><td>20.12.1951</td></tr>
+        <tr><td>Обнинская АЭС</td><td>Генератор синхронизирован с сетью «Мосэнерго»</td><td>26.06.1954</td></tr>
+        <tr><td>Обнинская АЭС</td><td>Промышленная нагрузка, ток потребителям</td><td>27.06.1954</td></tr>
+        <tr><td>Калдер-Холл, Великобритания</td><td>Первая АЭС промышленного масштаба, 50 МВт</td><td>1956</td></tr>
+        <tr><td>Обнинская АЭС</td><td>Остановлена, стала музеем</td><td>29.04.2002</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block" id="quiz">
+  <div class="wrap">
+    <div class="kicker">Проверь себя · 5 вопросов</div>
+    <h2>Викторина</h2>
+    <p style="color:var(--muted);max-width:62ch">На каждый вопрос — одна попытка. После ответа покажем объяснение.</p>
+    <div id="quizBox"></div>
+    <noscript><div class="noscript-box">Для викторины нужен JavaScript. Ответы: 1 — «Атом мирный»; 2 — четыре лампочки; 3 — частота генератора должна совпасть с частотой сети; 4 — 27 июня 1954 года; 5 — 5 МВт.</div></noscript>
+  </div>
+</section>
+
+<section class="block" id="result">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Итог дня</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Модель, три находки в ней и викторина вместе дают 100 баллов. Прогресс не сохраняется: перезагрузка страницы начинает день заново.</p>
+    <div class="day-result">
+      <div class="dr-score" id="dayTxt">0 / 100 · звание: Гость дня</div>
+      <div class="dr-bar"><i id="dayBar" style="width:0%"></i></div>
+      <div class="dr-note">Включи станцию в сеть, найди обе ошибки включения и выведи станцию на полную мощность, ответь на вопросы викторины.</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="sources">
+  <div class="wrap">
+    <div class="kicker">Источники</div>
+    <h2>На чём стоит страница</h2>
+    <ul class="sources">
+      <li><a href="https://ria.ru/20240626/aes-1955282581.html" rel="noopener" target="_blank">РИА Новости · справка «Обнинская АЭС», 26.06.2024</a>: совещание 1949 года, постановление 16 мая 1950 года, твэл, синхронизация с сетью «Мосэнерго» 26 июня 1954 года, пуск 27 июня, остановка 29 апреля 2002 года.</li>
+      <li><a href="https://iz.ru/1710404/arsenii-zamostianov/energiia-mira-kak-byla-zapushchena-pervaia-na-planete-aes" rel="noopener" target="_blank">А. Замостьянов · «Энергия мира: как была запущена первая на планете АЭС», «Известия», 2024</a>: записки Курчатова и Капицы, Блохинцев, сентябрь 1951 года, «С лёгким паром!», промышленная нагрузка 27 июня, сеть «Мосэнерго».</li>
+      <li><a href="https://www.kommersant.ru/doc/8634916" rel="noopener" target="_blank">«Коммерсантъ» · «Первая в мире АЭС: история строительства в деревне Пяткино», 2026</a>: 30 МВт тепла и 5 МВт электричества, пуск 26–27 июня 1954 года, работа до 2002 года, EBR-I и четыре лампочки 1951 года.</li>
+      <li><a href="https://rg.ru/2019/08/20/reg-cfo/v-obninske-provodiatsia-ekskursii-na-pervoj-v-mire-atomnoj-elektrostancii.html" rel="noopener" target="_blank">«Российская газета» · «В Обнинске проводятся экскурсии на первой в мире атомной электростанции», 20.08.2019</a>: остановка 29 апреля 2002 года по экономическим соображениям, музей.</li>
+      <li><a href="https://www.prlib.ru/Great_Russia/outstanding_scientists_XX/Kurchatov" rel="noopener" target="_blank">Президентская библиотека · «Игорь Васильевич Курчатов (1903–1960)»</a>: дата рождения 8 (21) января 1903 года и версия брата.</li>
+      <li><a href="https://www.vokrugsveta.ru/history/borec-za-mir-sozdavshii-atomnoe-oruzhie-biografiya-sovetskogo-fizika-igorya-kurchatova-id6296683/" rel="noopener" target="_blank">«Вокруг света» · биография И. В. Курчатова</a>: спор о дате рождения, крещение 12 (25) января 1903 года.</li>
+      <li><a href="https://world-nuclear.org/information-library/current-and-future-generation/outline-history-of-nuclear-energy" rel="noopener" target="_blank">World Nuclear Association · «Outline History of Nuclear Energy»</a> (на английском): EBR-I, АМ-1 — 30 МВт тепла и 5 МВт электричества, Калдер-Холл.</li>
+      <li><a href="https://www.ans.org/news/article-888/60-years-ago-in-idaho/" rel="noopener" target="_blank">American Nuclear Society · «60 years ago in Idaho», 2011</a> (на английском): четыре лампочки по 200 Вт, запись Зинна «45 kw».</li>
+      <li><a href="https://www.osti.gov/biblio/12143" rel="noopener" target="_blank">OSTI · «The Birth of Nuclear-Generated Electricity»</a> (на английском): EBR-I, первое полезное электричество от атома 20 декабря 1951 года.</li>
+      <li>Изображение: <a href="https://commons.wikimedia.org/wiki/File:Stamp_of_USSR_1862.jpg" rel="noopener" target="_blank">марка СССР «Атомная энергия — на службе народу», 25 коп. (ЦФА № 1862)</a> — Wikimedia Commons, общественное достояние (государственный знак почтовой оплаты).</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="calendar">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Календарь изобретений</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Выбери любой день — узнаешь, что русские сделали первыми в мире. Листай месяцы стрелками.</p>
+    <div id="calbox"></div>
+  </div>
+</section>
+
+<section class="block kd" id="kuda-dalshe">
+  <div class="wrap">
+    <div class="kd-kicker">Куда дальше</div>
+    <h2>Музей продолжается</h2>
+    <div class="kd-grid">
+      <div class="kd-card main"><span class="kd-lbl">Следующий день</span><a href="day-22jan-landau.html">22 января — Теория сверхтекучести Ландау <span class="kd-arr">→</span></a>
+        <p>Жидкий гелий сам ползёт вверх по стенке и убегает из чашки — Ландау объяснил почему.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Предыдущий день</span><a href="day-19jan-kantorovich.html">19 января — Линейное программирование Канторовича <span class="kd-arr">→</span></a>
+        <p>Фанерный трест попросил получше загрузить станки — а получил новую науку.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Весь музей</span><a href="index.html">Что изобрели русские первыми <span class="kd-arr">→</span></a>
+        <p>Все изобретения — по залам и по дням года.</p></div>
+      <div class="kd-card main"><span class="kd-lbl">Город-музей</span><a href="../../index.html">Русская цивилизация <span class="kd-arr">→</span></a>
+        <p>Все музеи проекта на одной карте.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>
+  Русская цивилизация · «Что изобрели русские первыми в мире»</div></footer>
+
+<section data-proof-block></section>
+<script type="application/json" data-proof>{"status":"not_found","claim_id":"rc:izobreteniya:obninsk:claim-grid","searched":["«Правда», 1.07.1954, сообщение о пуске: страницы prlib.ru/history/619342 и spec.tass.ru не открылись из среды (таймаут), текст не сверен","atomarhiv.ru, публикация архива Росатома first_npp.pdf: недоступна (таймаут)","strana-rosatom.ru, 21.05.2024, рассекреченный документ о пуске: недоступен (отказ соединения), web.archive.org закрыт","statearchive.ru (ГАРФ), книга о первой АЭС: недоступна","постановление СМ СССР 16.05.1950: известно по пересказу РИА Новости, текст не открыт; это решение о строительстве, а не документ первенства"]}</script>
+<script src="../../assets/museum-proof.js"></script>
+
+<script>
+/* ── СЧЁТ ── шкала из 100 держит assets/museum-score.js; здесь только реестр наград.
+   включение в такт 30 + две ошибки включения и полная мощность 3×10 + викторина 5×8 = 100. */
+window.MUSEUM_SCORE = {awards:{lab:30, why0:10, why1:10, why2:10, q:[5,8]},
+  ranks:[[100,'Главный инженер АЭС'],[70,'Начальник смены'],[40,'Дежурный электрик'],[0,'Гость дня']]};
+</script>
+<script src="../../assets/museum-score.js"></script>
+<script>
+(function(){
+  var $ = function(id){return document.getElementById(id);};
+  $('readBtn').onclick = function(){ $('story').scrollIntoView({behavior:'smooth'}); };
+  $('listenBtn').onclick = function(){ $('audioguide').scrollIntoView({behavior:'smooth'}); };
+
+  /* ── ВКЛЮЧЕНИЕ В СЕТЬ ── условная модель: до подключения пар задаёт частоту генератора (f = 0,6 Гц на 1% задвижки),
+     после подключения частоту держит сеть (50 Гц), а пар задаёт электрическую мощность (до 5 МВт при 100%).
+     Тепло реактора = электричество × 6 (30 МВт тепла на 5 МВт электричества, World Nuclear Association). */
+  var GRID=50, TOL=0.3, BULB_KW=0.2, EBR_BULBS=4;
+  var steam=$('steam'), oSteam=$('oSteam');
+  var on=false, found={};
+  function freq(){ return steam.value*0.6; }
+  function mw(){ return on ? steam.value/100*5 : 0; }
+  function fmt(v,d){ return (Math.round(v*Math.pow(10,d||0))/Math.pow(10,d||0)).toString().replace('.',','); }
+  var cv=$('labCv'), cx=cv.getContext('2d'), W=640, H=220, last=0;
+  function fit(){
+    var w=Math.round(cv.clientWidth)||640, r=window.devicePixelRatio||1;
+    if (w===W && cv.width===Math.round(w*r)) return;
+    W=w; cv.width=Math.round(W*r); cv.height=Math.round(H*r); cx.setTransform(r,0,0,r,0,0);
+  }
+  window.addEventListener('resize', function(){ draw(); });
+  function draw(){
+    fit(); var narrow=W<480;
+    cx.fillStyle='#0b1622'; cx.fillRect(0,0,W,H);
+    cx.font=(narrow?'12px':'13px')+' Inter, sans-serif'; cx.textAlign='left';
+    /* стрелки частоты: генератор и сеть */
+    var f = on ? GRID : freq(), x0=16, w=W-32, y=34;
+    cx.fillStyle='#8fa5b9'; cx.fillText(on ? 'Частота: генератор в такт с сетью' : 'Частота генератора и сети, Гц', x0, y-12);
+    cx.fillStyle='rgba(255,255,255,.08)'; cx.fillRect(x0, y, w, 14);
+    function mark(v,col,lbl,dy){ var x=x0+Math.min(1,v/60)*w; cx.fillStyle=col; cx.fillRect(x-2,y-4,4,22); cx.fillText(lbl, Math.min(x-10, W-110), y+34+dy); }
+    mark(GRID,'rgba(228,201,122,.95)','сеть 50',0);
+    mark(f, on?'rgba(110,200,120,.95)':'rgba(125,200,255,.95)', 'генератор '+fmt(f,1), 16);
+    /* мощность: Обнинск против EBR-I в лампочках по 200 Вт, логарифмическая шкала */
+    var yb=H-64, bulbs = mw()*1000/BULB_KW;
+    function lg(n){ return n<=0 ? 0 : Math.log(n)/Math.log(10)/5; }   // 1 … 100 000 лампочек
+    cx.fillStyle='#8fa5b9'; cx.fillText('Лампочек по 200 Вт (шкала логарифмическая)', x0, yb-10);
+    cx.fillStyle='rgba(228,201,122,.9)'; cx.fillRect(x0, yb, Math.max(2,lg(EBR_BULBS)*w), 12);
+    cx.fillStyle='#e8eef5'; cx.fillText('EBR-I, 1951: 4', x0+lg(EBR_BULBS)*w+6, yb+11);
+    cx.fillStyle='rgba(110,200,120,.9)'; cx.fillRect(x0, yb+22, Math.max(2,lg(bulbs)*w), 12);
+    var lbl='Обнинск: '+(on? Math.round(bulbs).toLocaleString('ru-RU') : 'не в сети'), lw=cx.measureText(lbl).width, bx=x0+lg(bulbs)*w;
+    if (bx+6+lw <= W-4){ cx.fillStyle='#e8eef5'; cx.fillText(lbl, bx+6, yb+33); }
+    else { cx.fillStyle='#0b1622'; cx.fillText(lbl, x0+6, yb+32); }
+  }
+  function setFound(){
+    function yn(k){ return found[k] ? 'да' : 'нет'; }
+    $('labFound').textContent='Найдено: включение «в такт» — '+yn('lab')+'; генератор отстал от сети — '+yn('why0')+'; генератор обогнал сеть — '+yn('why1')+'; полная мощность 5 МВт — '+yn('why2')+'.';
+  }
+  function hit(k,p){ if(!found[k]){ found[k]=1; award(k,p); } setFound(); }
+  function msg(t,cls){ var m=$('labMsg'); m.className='lab-msg'+(cls?' '+cls:''); m.textContent=t; }
+  function update(){
+    oSteam.textContent=steam.value+'%';
+    draw();
+    if (!on){ msg('Генератор не подключён: частота '+fmt(freq(),1)+' Гц, у сети — 50 Гц. '+(Math.abs(freq()-GRID)<=TOL ? 'Сейчас в такт — можно замыкать.' : 'Подбери пар так, чтобы частоты совпали.'), ''); return; }
+    var p=mw(), heat=p*6;
+    if (steam.value>=100){ hit('why2',10); msg('Полная мощность: 5 МВт в сеть «Мосэнерго» из примерно 30 МВт тепла реактора. Это 25 000 лампочек по 200 Вт — против четырёх лампочек EBR-I в 1951 году.','ok'); return; }
+    msg('В сети. Частоту теперь держит сеть, а пар меняет мощность: '+fmt(p,2)+' МВт электричества, около '+fmt(heat,1)+' МВт тепла реактора.','ok');
+  }
+  steam.addEventListener('input', update);
+  $('labGo').onclick=function(){
+    if (on){ msg('Генератор уже в сети. Добавляй пар, чтобы поднять мощность.',''); return; }
+    var f=freq();
+    if (Math.abs(f-GRID)<=TOL){ on=true; hit('lab',30); update(); msg('Включено в такт: '+fmt(f,1)+' Гц против 50 Гц сети. Как 26 июня 1954 года — генератор синхронизирован с сетью «Мосэнерго». Теперь добавь пара.','ok'); return; }
+    if (f<GRID){ hit('why0',10); msg('Защита отключила генератор: он отставал ('+fmt(f,1)+' Гц против 50). Сеть рывком потянула его за собой, как мотор, — включать можно только в такт.','bad'); }
+    else { hit('why1',10); msg('Защита отключила генератор: он обгонял сеть ('+fmt(f,1)+' Гц против 50). Бросок тока в момент включения — включать можно только в такт.','bad'); }
+    draw();
+  };
+  $('labReset').onclick=function(){ on=false; steam.value=60; update(); msg('Генератор отключён от сети, задвижка — 60%. Уже полученные баллы сохраняются и повторно не начисляются.',''); };
+  update();
+
+  /* ── ВИКТОРИНА ── один ответ на вопрос; дистракторы сверены с источниками страницы. */
+  var Q = [
+    {q:'Как стали расшифровывать название реактора «АМ»?', o:['«Атомный мотор»','«Атом Мирный»','«Агрегат малый»'], a:1,
+     e:'В постановлении 1950 года стояло просто «агрегат „АМ“», а расшифровка «Атом Мирный» появилась позже.'},
+    {q:'Что питал ток от американского реактора EBR-I 20 декабря 1951 года?', o:['Целый город','Четыре лампочки по 200 ватт','Сеть штата Айдахо'], a:1,
+     e:'Это было первое полезное электричество от атома, но общую сеть EBR-I не питал.'},
+    {q:'Что нужно сделать, прежде чем включить генератор в общую сеть?', o:['Прогреть реактор до красна','Синхронизировать генератор с сетью по частоте','Отключить сеть на время включения'], a:1,
+     e:'Генератор должен вращаться в такт с сетью; иначе защита отключит его в момент включения.'},
+    {q:'Когда Обнинская АЭС встала под промышленную нагрузку?', o:['27 июня 1954 года','20 декабря 1951 года','В 1956 году'], a:0,
+     e:'Вечером 26 июня генератор синхронизировали с сетью «Мосэнерго», а 27 июня станция стала давать ток потребителям.'},
+    {q:'Какой была электрическая мощность Обнинской АЭС?', o:['5 мегаватт','50 мегаватт','500 мегаватт'], a:0,
+     e:'5 МВт электричества при примерно 30 МВт тепла реактора; 50 МВт — это английская Калдер-Холл 1956 года.'}
+  ];
+  var box = $('quizBox');
+  Q.forEach(function(it, qi){
+    var wrap = document.createElement('div');
+    var h = document.createElement('p'); h.className='quiz-q'; h.textContent=(qi+1)+'. '+it.q; wrap.appendChild(h);
+    var exp = document.createElement('div'); exp.className='exp'; exp.setAttribute('aria-live','polite');
+    var btns = it.o.map(function(txt, oi){
+      var b=document.createElement('button'); b.type='button'; b.className='opt'; b.textContent=txt;
+      b.onclick=function(){
+        if (wrap.dataset.done) return; wrap.dataset.done='1';
+        btns.forEach(function(x,xi){ x.disabled=true; if (xi===it.a) x.classList.add('correct'); });
+        if (oi===it.a){ award('q'+qi,8); exp.textContent='Верно. '+it.e; }
+        else { b.classList.add('wrong'); exp.textContent='Не совсем. '+it.e; }
+        exp.classList.add('show');
+      };
+      wrap.appendChild(b); return b;
+    });
+    wrap.appendChild(exp); box.appendChild(wrap);
+  });
+})();
+</script>
+<script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
+<script>window.MUSEUM_CHROME={
+  museum:{title:'Что изобрели русские первыми в мире',href:'index.html'},
+  share:{title:'Первая в мире АЭС, отдавшая ток в общую сеть — музей «Что изобрели русские первыми в мире»',
+         text:'Обнинск, 27 июня 1954 года: атомное электричество впервые пошло в общую сеть. Что Россия дала миру раньше всех — день за днём.'},
+  prev:{href:'day-19jan-kantorovich.html',title:'19 января · Канторович'},
+  next:{href:'day-22jan-landau.html',title:'22 января · Сверхтекучесть'},
+  all:{href:'index.html',label:'Все изобретения'},
+  city:'../../index.html',
+  random:['day-01jan-cabletv.html','day-02jan-luna1.html','day-03jan-anosov.html','day-04jan-pilchikov.html','day-05jan-shukhov.html','day-06jan-orlov.html','day-08jan-icebreaker.html','day-09jan-blinov.html','day-10jan-britnev.html','day-11jan-kostovich.html','day-12jan-r7.html','day-13jan-k278.html','day-14jan-lira.html','day-15jan-kovalevskaya.html','day-16jan-soyuz45.html','day-19jan-kantorovich.html','day-21jan-obninsk.html','day-22jan-landau.html','day-30jan-kotelnikov.html','day-03feb-luna9.html','day-18mar-leonov.html','day-15may-mechnikov.html','day-16jun-tereshkova.html','day-26sep-pavlov.html','day-15nov-buran.html','day-25nov-pirogov.html','day-01dec-lobachevsky.html','day-14dec-laser.html']
+};</script>
+<script src="../../assets/museum-chrome.js"></script>
+<script>window.MUSEUM_SUPPORT={museum:'Что изобрели русские первыми в мире'};</script>
+<script src="../../assets/museum-support.js"></script>
+<script src="calendar-izobreteniya.js"></script>
+<script>window.MUSEUM_CALENDAR_INITIAL='01-21';</script>
+<script src="../../assets/museum-calendar-month.js"></script>
+<script>window.MUSEUM_RETURN={riddle:{q:"Почему Курчатов поздравил всех со словами «С лёгким паром!»?",a:"Станцию пустили, когда пар от атомного реактора впервые пошёл на турбину — 26 июня 1954 года.",src:"«Известия», 2024"}};</script>
+<script src="../../assets/museum-return.js" data-museum="izobreteniya" data-day="01-21"></script>
+<script defer src="../../assets/analytics.js"></script>
+
+
+
+<script>window.MUSEUM_AUDIOGUIDE={
+  audioSrc:"audio-guide-obninsk-ru.mp3",
+  durationLabel:"2 минут",
+  lead:"Голос ведёт по залу первой в мире атомной электростанции, отдавшей ток в общую сеть: от записок Курчатова до вечера 26 июня 1954 года в Обнинске. Шесть остановок, на каждой — что искать глазами. Слушать можно фоном, пока читаешь статью ниже.",
+  stops:[
+    {t:0,mark:"0:00",title:"Марка с колоннами"},
+    {t:19,mark:"0:19",title:"Агрегат АМ"},
+    {t:43,mark:"0:43",title:"Трубка с водой"},
+    {t:60,mark:"1:00",title:"В такт с сетью"},
+    {t:80,mark:"1:20",title:"С лёгким паром"},
+    {t:94,mark:"1:34",title:"Четыре лампочки"}
+  ],
+  transcript:[
+    "<p>«Марка СССР: здание первой в мире атомной электростанции Академии наук СССР в Обнинске».</p>",
+    "<p>«21 января — день рождения Курчатова; 16 мая 1950 года — постановление построить агрегат „АМ“, „Атом мирный“».</p>",
+    "<p>«Стройку возглавил Блохинцев; твэл — вода внутри трубки, уран снаружи; около 30 МВт тепла и 5 МВт электричества».</p>",
+    "<p>«26 июня 1954 года генератор синхронизировали с сетью „Мосэнерго“ — включать можно только в такт».</p>",
+    "<p>«27 июня — промышленная нагрузка; Курчатов: „С лёгким паром!“».</p>",
+    "<p>«EBR-I в 1951-м зажёг четыре лампочки, Калдер-Холл заработала в 1956-м; Обнинская АЭС остановлена 29 апреля 2002 года и стала музеем».</p>"
+  ],
+  note:"Озвучено синтезом речи — временно, до записи голосом автора музея."
+};</script>
+<script src="../../assets/museum-audioguide.js"></script>
+</body>
+</html>
