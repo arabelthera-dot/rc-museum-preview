@@ -21,43 +21,45 @@
               'июля','августа','сентября','октября','ноября','декабря'];
   var DIM  = [31,29,31,30,31,30,31,31,30,31,30,31];
 
+  /* Цвета — переменные темы (15.10): тёмная тема берёт значения по умолчанию,
+     светлая задаёт --cal-accent/--cal-text/--cal-on-accent/--cal-dim/--cal-soft/--cal-mid в своём файле вида. */
   var CSS = '' +
     '#calbox .calhead{display:flex;align-items:center;justify-content:space-between;gap:10px;' +
       'border-bottom:1px solid rgba(212,175,55,.25);padding-bottom:9px}' +
-    '#calbox .calmname{font-family:Georgia,serif;font-size:17px;color:var(--gold);flex:1;text-align:center}' +
-    '#calbox .calmname i{display:block;font-style:normal;font-size:11.5px;opacity:.5;color:var(--txt);margin-top:2px}' +
+    '#calbox .calmname{font-family:Georgia,serif;font-size:17px;color:var(--cal-accent,var(--gold));flex:1;text-align:center}' +
+    '#calbox .calmname i{display:block;font-style:normal;font-size:11.5px;opacity:var(--cal-soft,.5);color:var(--cal-text,var(--txt));margin-top:2px}' +
     '#calbox .calnav{flex:none;width:38px;height:38px;border-radius:50%;cursor:pointer;' +
-      'background:rgba(233,227,211,.06);border:1px solid rgba(212,175,55,.3);color:var(--gold);' +
+      'background:rgba(233,227,211,.06);border:1px solid rgba(212,175,55,.3);color:var(--cal-accent,var(--gold));' +
       'font-size:18px;line-height:1;display:flex;align-items:center;justify-content:center}' +
     '#calbox .calnav:hover{background:rgba(212,175,55,.14)}' +
     /* minmax(0,1fr), а не 1fr: в узком контейнере (например в карточке на титульной музея)
        1fr считается по контенту и колонки разъезжаются — ловил 30.07 на титульной искусства */
     '#calbox .calgrid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin:12px 0 0}' +
     '#calbox .cday{position:relative;aspect-ratio:1/1;border-radius:10px;cursor:pointer;' +
-      'background:rgba(233,227,211,.04);border:1px solid rgba(233,227,211,.10);color:var(--txt);' +
-      'font-family:Georgia,serif;font-size:14px;opacity:.4;padding:0}' +
-    '#calbox .cday.full{opacity:1;cursor:pointer;color:var(--gold);' +
+      'background:rgba(233,227,211,.04);border:1px solid rgba(233,227,211,.10);color:var(--cal-text,var(--txt));' +
+      'font-family:Georgia,serif;font-size:14px;opacity:var(--cal-dim,.4);padding:0}' +
+    '#calbox .cday.full{opacity:1;cursor:pointer;color:var(--cal-accent,var(--gold));' +
       'background:rgba(212,175,55,.12);border-color:rgba(212,175,55,.45)}' +
     '#calbox .cday.full:hover{background:rgba(212,175,55,.22)}' +
     '#calbox .cday.full::after{content:"";position:absolute;left:50%;bottom:5px;width:4px;height:4px;' +
-      'margin-left:-2px;border-radius:50%;background:var(--gold)}' +
+      'margin-left:-2px;border-radius:50%;background:var(--cal-accent,var(--gold))}' +
     /* выбранный и сегодняшний день читаются всегда, даже если запись ещё не заведена */
-    '#calbox .cday.on{opacity:1;background:var(--gold);color:#151310;border-color:var(--gold)}' +
+    '#calbox .cday.on{opacity:1;background:var(--cal-accent,var(--gold));color:var(--cal-on-accent,#151310);border-color:var(--cal-accent,var(--gold))}' +
     '#calbox .cday.today{opacity:.85}' +
-    '#calbox .cday.on::after{background:#151310}' +
+    '#calbox .cday.on::after{background:var(--cal-on-accent,#151310)}' +
     '#calbox .cday.today{box-shadow:0 0 0 2px rgba(212,175,55,.55)}' +
     '#calbox .calcard{margin-top:14px;background:rgba(233,227,211,.05);' +
       'border:1px solid rgba(233,227,211,.14);border-radius:12px;padding:13px 15px}' +
     '#calbox .calcard .cdate{font-size:12px;letter-spacing:.06em;text-transform:uppercase;' +
-      'color:var(--gold);opacity:.85;margin-bottom:5px}' +
+      'color:var(--cal-accent,var(--gold));opacity:var(--cal-mid,.85);margin-bottom:5px}' +
     '#calbox .calcard h3{font-family:Georgia,serif;font-size:16px;margin:0 0 6px;font-weight:400}' +
-    '#calbox .calcard h3 span{font-size:13px;opacity:.55}' +
-    '#calbox .calcard p{font-size:13px;line-height:1.55;margin:0;opacity:.85}' +
+    '#calbox .calcard h3 span{font-size:13px;opacity:var(--cal-soft,.55)}' +
+    '#calbox .calcard p{font-size:13px;line-height:1.55;margin:0;opacity:var(--cal-mid,.85)}' +
     '#calbox .calcard a{display:inline-block;margin-top:8px;font-size:13px}' +
     '#calbox .calcard.empty h3{opacity:.7}' +
     '#calbox .caljump{background:none;border:none;padding:0;margin-top:8px;cursor:pointer;' +
-      'color:var(--gold);font-size:13px;text-decoration:underline;font-family:inherit}' +
-    '#calbox .calfoot{font-size:12px;opacity:.5;margin-top:10px;text-align:center}';
+      'color:var(--cal-accent,var(--gold));font-size:13px;text-decoration:underline;font-family:inherit}' +
+    '#calbox .calfoot{font-size:12px;opacity:var(--cal-soft,.5);margin-top:10px;text-align:center}';
 
   function pad(n) { return (n < 10 ? '0' : '') + n; }
   function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;'); }
