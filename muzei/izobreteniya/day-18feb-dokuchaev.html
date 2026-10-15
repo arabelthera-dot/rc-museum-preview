@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="ru" data-museum="izobreteniya">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Докучаев: чернозём — природное тело — Что изобрели русские первыми в мире, 18 февраля</title>
+<!--
+  Страница дня 18 февраля. Наряд stranicy-izob-0910 (claude2, 15.10.2026), карточка #762.
+  Форма — вариант А музея изобретений (Сергей 12.09.2026): лента ударов, подробности свёрнуты.
+  Паспорт выпуска: rc-museum-production/izobreteniya/day-18feb-dokuchaev/passport/issue.json
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --dark:#060c17; --dark2:#0c1826; --surface:#111f33;
+    --card:rgba(255,255,255,.05); --card-b:rgba(255,255,255,.09);
+    --gold:#c9a84c; --gold-l:#e4c97a; --gold-g:rgba(201,168,76,.13);
+    --ink:#e8eef5; --muted:#7a9ab8; --line:rgba(255,255,255,.07);
+    --accent:#2d8cbf; --accent2:#1f6f8b;
+    /* legacy compat */
+    --paper:#0c1826; --paper2:#111f33;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Inter','Segoe UI',sans-serif;color:var(--ink);background:var(--dark);line-height:1.72}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.13;margin:0}
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent)}
+
+  /* ── ШАПКА ── */
+  header.top{background:rgba(6,12,23,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--card-b);color:#fff;position:sticky;top:0;z-index:30}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+  .logo svg{display:block;filter:drop-shadow(0 0 8px rgba(201,168,76,.4))}
+  .logo .lt{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:16px}
+  .logo .lt small{display:block;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-family:'Inter',sans-serif}
+  .score{background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:6px 16px;font-size:13px;color:var(--gold-l);cursor:pointer;font-family:'Inter',sans-serif}
+  .score-info{position:absolute;right:12px;top:66px;max-width:260px;background:#0e1c30;color:var(--ink);border:1px solid var(--card-b);border-radius:14px;padding:14px 16px;font-size:13px;line-height:1.6;box-shadow:0 20px 60px rgba(0,0,0,.6);display:none;z-index:40}
+  .score-info.show{display:block}
+
+  /* ── HERO — СТАНДАРТ (не менять): 3D-сцена сверху, текст отдельным блоком ниже ── */
+  .hero-scene{position:relative;height:52vh;min-height:300px;max-height:520px;overflow:hidden;background:linear-gradient(160deg,#0a1e3a 0%,#1a3a6a 55%,#0d2240 100%)}
+  .hero-scene canvas.scene,.hero-scene img.scene{width:100%;height:100%;display:block;object-fit:cover}
+  .scene-caption{background:#060d18;padding:11px 0 12px}
+  .scene-caption .wrap{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+  .scene-cap{font-size:13.5px;line-height:1.6;color:var(--muted);border-left:2px solid rgba(201,168,76,.4);padding-left:14px;flex:1 1 420px}
+  .scene-hint{flex:0 0 auto;font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.4px;color:#e4c97a;
+    background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.34);border-radius:24px;padding:7px 16px;font-weight:600}
+  .hero-lead{background:linear-gradient(180deg,#0c1826 0%,#060c17 100%);color:#fff;padding:28px 0 38px}
+  .hero-lead .museum{color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:12px;opacity:.9}
+  .hero-lead .who{font-family:'Inter',sans-serif;font-size:clamp(13px,3vw,15px);letter-spacing:.4px;color:var(--accent-l,#7dc8ff);margin-bottom:10px}
+  .hero-lead .who i{font-style:normal;color:#7893ab;font-weight:400}
+  .hero-lead h1{color:#fff;font-size:56px;font-weight:900;line-height:1.04;margin-bottom:16px}
+  .hero-lead .hook{color:#b8ccde;font-size:19px;max-width:580px;margin-bottom:28px;line-height:1.65;font-weight:400}
+  .hero-lead .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+  @media(max-width:680px){.hero-lead h1{font-size:34px}.hero-lead .hook{font-size:16px}
+    .hero-scene{height:34vh;min-height:230px;max-height:300px}
+    .scene-caption .wrap{flex-direction:column;gap:9px}
+    .scene-hint{order:-1;align-self:flex-start;font-size:11.5px;padding:6px 13px}
+    .scene-cap{font-size:12.8px;flex:1 1 auto}}
+  .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:16px;font-family:'Inter',sans-serif;letter-spacing:.5px}
+
+  /* ── НАВИГАЦИЯ ДНЯ ── */
+  .daynav{position:sticky;top:64px;z-index:25;background:rgba(6,12,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-b)}
+  .daynav .wrap{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+  .daynav::-webkit-scrollbar{display:none}
+  .daynav a{flex:0 0 auto;padding:14px 20px;font-size:11px;font-weight:700;font-family:'Inter',sans-serif;color:var(--muted);text-decoration:none;white-space:nowrap;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:.18s}
+  .daynav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+  /* ── СЕКЦИИ ── */
+  section.block{padding:64px 0;border-bottom:1px solid var(--line);scroll-margin-top:130px}
+  .kicker{font-size:10px;text-transform:uppercase;letter-spacing:3.5px;color:var(--gold);font-weight:700;font-family:'Inter',sans-serif;margin-bottom:8px}
+  section.block h2{font-size:34px;color:#fff;margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink)}
+  .pull{background:var(--gold-g);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 14px 14px 0;font-style:italic;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-size:20px;line-height:1.5;margin:26px 0}
+
+  /* ── КНОПКИ ── */
+  .btn{cursor:pointer;border:none;border-radius:12px;padding:14px 26px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;background:var(--accent2);color:#fff;transition:.18s;letter-spacing:.2px}
+  .btn:hover{filter:brightness(1.18)}
+  .btn.ghost{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid var(--card-b)}
+  .btn.ghost:hover{background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.2)}
+  .btn.gold{background:linear-gradient(135deg,var(--gold),#b8882b);color:#1a0f00;box-shadow:0 4px 20px rgba(201,168,76,.25)}
+  .btn.gold:hover{filter:brightness(1.1);box-shadow:0 6px 28px rgba(201,168,76,.4)}
+  .btn:active{transform:translateY(1px)}
+  .pulse{animation:pulse .9s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+
+  /* ── КАРТОЧКИ ── */
+  .card{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:20px 22px;margin:16px 0;backdrop-filter:blur(6px)}
+
+  /* ── КВИЗ ── */
+  .opt{display:block;width:100%;text-align:left;background:rgba(255,255,255,.04);border:1px solid var(--card-b);border-radius:12px;padding:13px 16px;margin:8px 0;cursor:pointer;font-size:15px;color:var(--ink);font-family:'Inter',sans-serif;transition:.16s}
+  .opt:hover{border-color:var(--accent);background:rgba(45,140,191,.08)}
+  .opt.correct{background:rgba(40,120,60,.18);border-color:#3f9b52;color:#7ed4a0;font-weight:600}
+  .opt.wrong{background:rgba(180,40,40,.13);border-color:#c0453f;color:#f08080}
+  .exp{margin-top:10px;font-size:14px;background:var(--gold-g);border-radius:10px;padding:12px 14px;display:none;color:var(--gold-l)}
+  .exp.show{display:block}
+
+  /* ── ИТОГ ДНЯ ── */
+  .day-result{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:22px 24px;max-width:460px}
+  .dr-rank{font-family:'Playfair Display',Georgia,serif;font-size:28px;color:var(--gold-l);font-weight:700}
+  .dr-score{font-size:16px;margin:4px 0 12px;color:var(--ink)}.dr-score span{color:var(--muted);font-size:14px}
+  .dr-bar{height:8px;background:rgba(255,255,255,.08);border-radius:6px;overflow:hidden}
+  .dr-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),var(--gold));transition:width .6s cubic-bezier(.2,.7,.2,1)}
+  .dr-note{margin-top:12px;font-size:14px;color:var(--muted)}
+
+  /* ── РЕКЛАМНЫЕ СЛОТЫ ── */
+  .ad-slot{position:relative;margin:26px 0;background:rgba(255,255,255,.02);border:1px dashed rgba(255,255,255,.1);border-radius:14px;min-height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px}
+  .ad-slot .lbl{position:absolute;top:7px;right:12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.15);font-family:'Inter',sans-serif}
+  .ad-slot .ph-txt{font-size:12px;max-width:80%;color:rgba(255,255,255,.18)}
+  .ad-slot.billboard{min-height:108px}
+  .adband{background:transparent;border-bottom:none}
+
+  footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
+  .crumbs{background:rgba(6,12,23,.6);border-bottom:1px solid var(--card-b);font-family:'Inter',sans-serif;font-size:12.5px}
+  .crumbs .wrap{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  .crumbs a{color:var(--gold-l);text-decoration:none;white-space:nowrap}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--muted);opacity:.6}
+  .crumbs .here{color:var(--muted);white-space:nowrap}
+
+
+  /* ── ШАПКА: четыре строки по museum-core §6-бис ── */
+  header.top{display:block;text-align:center;padding:10px 12px 8px;height:auto;position:relative}
+  header.top .b1{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:15px;letter-spacing:.5px;color:#fff}
+  header.top .b2{font-size:11px;color:var(--muted);margin-top:2px}
+  header.top .b3{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:6px}
+  header.top .b4{font-size:12.5px;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-style:italic}
+  header.top .score{position:absolute;right:12px;top:10px}
+  .daynav{top:0}
+  .hero-scene{background:#0e1c2c;height:38vh;min-height:250px;max-height:400px}
+  @media(max-width:680px){.hero-lead h1{font-size:31px}}
+  .hero-scene img.scene{object-fit:cover;object-position:50% 42%}
+  .date-origin{font-size:13px;color:#9fb4c8;margin:-6px 0 12px;max-width:62ch}
+  .hero-lead .hook{color:#c6d8e8;max-width:62ch}
+  .hero-under{background:linear-gradient(180deg,#060d18,#060c17);padding:4px 0 22px}
+  .stamp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(125,200,255,.28);margin-top:14px}
+  .stamp>div{padding:11px 12px;border-left:1px solid rgba(125,200,255,.16);min-width:0}
+  .stamp>div:first-child{border-left:0}
+  .stamp .v{font-size:clamp(15px,3.4vw,21px);font-weight:700;color:#8fd3ff;line-height:1.1;overflow-wrap:anywhere}
+  .stamp .k{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#8fa5b9;margin-top:5px}
+  @media(max-width:600px){.stamp{grid-template-columns:repeat(2,minmax(0,1fr))}.stamp>div:nth-child(3){border-left:0}.stamp>div:nth-child(n+3){border-top:1px solid rgba(125,200,255,.16)}}
+
+  /* ── ЛЕНТА УДАРОВ (museum-inventions, вариант А; museum-core §5-бис) ── */
+  .udary{list-style:none;margin:18px 0 0;padding:0;counter-reset:u}
+  .udary>li{border-top:1px solid var(--line);padding:4px 0}
+  .udary details>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:34px 1fr;gap:10px;padding:12px 0;font-size:17px;line-height:1.55;color:var(--ink)}
+  .udary details>summary::-webkit-details-marker{display:none}
+  .udary details>summary::before{counter-increment:u;content:counter(u);font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:20px;color:var(--gold);line-height:1.3}
+  .udary .more-lbl{display:block;grid-column:2;font-size:12.5px;color:var(--gold-l);letter-spacing:.3px;margin-top:4px}
+  .udary .more-lbl::after{content:' ▾'}
+  .udary details[open] .more-lbl::after{content:' ▴'}
+  .udary details[open] .more-lbl .o{display:none}
+  .udary details:not([open]) .more-lbl .c{display:none}
+  .udary summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+  .udary .det{margin:0 0 14px 44px;padding:12px 16px;background:rgba(255,255,255,.035);border-left:2px solid rgba(201,168,76,.45);border-radius:0 10px 10px 0;font-size:15px;color:#d5e0ea}
+  .udary .det p{margin:8px 0}
+  .udary .tag{display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1a0f00;background:var(--gold-l);border-radius:6px;padding:1px 7px;margin-right:6px}
+  .udary .find{border-left:3px solid var(--gold);padding-left:8px}
+  figure.fig{margin:18px 0}
+  figure.fig img{max-width:100%;height:auto;border-radius:10px;display:block}
+  figure.fig figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5}
+  .src-note{font-size:12px;color:#8fa5b9}
+
+  /* ── МОДЕЛЬ ДНЯ (главное предметное действие) ── */
+  .lab{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:18px 18px 20px;margin-top:14px}
+  .lab-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+  .lab-row .lbl{flex:0 0 100%;font-size:13px;color:var(--muted);letter-spacing:.3px}
+  .seg{cursor:pointer;border:1px solid var(--card-b);background:rgba(255,255,255,.04);color:var(--ink);border-radius:10px;padding:10px 14px;font:inherit;font-size:14.5px;min-height:44px}
+  .seg[aria-pressed="true"]{border-color:var(--gold);background:var(--gold-g);color:var(--gold-l);font-weight:600}
+  .seg:focus-visible,.btn:focus-visible,.opt:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .lab-stage{position:relative;margin-top:12px}
+  .lab-stage canvas{width:100%;height:auto;display:block;border-radius:10px;background:#1c2530}
+  .lab-cap{font-size:12px;color:#8fa5b9;margin-top:6px}
+  .lab-msg{margin-top:12px;font-size:15.5px;padding:12px 14px;border-radius:10px;background:rgba(255,255,255,.04);border-left:3px solid var(--card-b);min-height:48px}
+  .lab-msg.ok{border-left-color:#3f9b52;background:rgba(40,120,60,.14)}
+  .lab-msg.bad{border-left-color:#c0453f;background:rgba(180,40,40,.10)}
+  .lab-found{font-size:13px;color:var(--muted);margin-top:8px}
+  .lab-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .noscript-box{background:rgba(255,255,255,.04);border:1px dashed var(--card-b);border-radius:12px;padding:12px 16px;font-size:15px}
+
+  /* ── ГРАНИЦА ПЕРВЕНСТВА ── */
+  .border-box{background:rgba(45,140,191,.08);border:1px solid rgba(45,140,191,.3);border-radius:14px;padding:16px 18px}
+  .border-box b{color:#8fd3ff}
+  .ctx{width:100%;border-collapse:collapse;margin-top:14px;font-size:14.5px}
+  .ctx th,.ctx td{text-align:left;padding:9px 8px;border-top:1px solid var(--line);vertical-align:top}
+  .ctx th{color:var(--gold-l);font-weight:600;font-size:12.5px;letter-spacing:.5px}
+  .quiz-q{margin:18px 0 6px;font-weight:600}
+  .sources a{color:var(--gold-l)}
+  .sources li{margin:6px 0;font-size:14px;color:#c8d6e2}
+  @media(max-width:600px){header.top{padding:8px 64px 6px}header.top .score{top:8px;right:8px;padding:4px 10px;font-size:12px}header.top .b3{margin-top:3px}
+    .hero-scene{height:26vh;min-height:200px;max-height:260px}.date-origin{font-size:12px;margin:-8px 0 8px}.hero-lead{padding:18px 0 26px}.hero-lead .date-chip{margin-bottom:12px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+  /* ── ПОЛЗУНКИ МОДЕЛИ (19, 21 янв) ── */
+  .mtab{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+  .mrow{display:grid;grid-template-columns:minmax(150px,1.2fr) 2fr 92px;gap:12px;align-items:center}
+  .mrow .mname{font-size:14.5px}
+  .mrow .mname i{font-style:normal;color:var(--muted);font-size:13px}
+  .mrow input[type=range]{width:100%;accent-color:var(--gold);min-height:44px}
+  .mrow output{font-size:14px;color:var(--gold-l);text-align:right}
+  .mrow.off{opacity:.45}
+  .mult{margin-top:14px;padding:14px 16px;border-radius:12px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25)}
+  @media(max-width:560px){.mrow{grid-template-columns:1fr 70px}.mrow .mname{grid-column:1/-1}}
+</style>
+<meta name="description" content="В 1879 году Докучаев первым определил почву как природное тело — дело организмов, породы, климата и рельефа, — а не пахотный слой, как учили агрономы. Документ, разрез, Париж.">
+<link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-18feb-dokuchaev.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Русская цивилизация">
+<meta property="og:title" content="Докучаев: чернозём — природное тело">
+<meta property="og:description" content="В 1879 году Докучаев первым определил почву как природное тело — дело организмов, породы, климата и рельефа, — а не пахотный слой, как учили агрономы. Документ, разрез, Париж.">
+<meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-18feb-dokuchaev.html">
+<meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-18feb-dokuchaev.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Докучаев: чернозём — природное тело", "description": "В 1879 году Докучаев первым определил почву как природное тело — дело организмов, породы, климата и рельефа, — а не пахотный слой, как учили агрономы. Документ, разрез, Париж.", "url": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-18feb-dokuchaev.html", "inLanguage": "ru", "isPartOf": {"@type": "WebSite", "name": "Музей «Что изобрели русские первыми в мире»"}, "publisher": {"@type": "Organization", "name": "Русская цивилизация"}, "about": {"@type": "Person", "name": "Василий Васильевич Докучаев"}, "image": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-18feb-dokuchaev.jpg"}</script>
+<style>
+  /* ── ДОКУЧАЕВ: РАЗРЕЗ СЕВЕР — СТЕПЬ (18 фев) ── */
+  .soilcv{width:100%;max-width:760px;height:auto;aspect-ratio:760/340;display:block;margin:10px 0 4px;background:linear-gradient(#2c3a48,#3a4b5c);border-radius:10px}
+  .lctl{display:grid;gap:10px;max-width:760px;margin-top:8px}
+  .lfuel{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  .lfuel>span{min-width:150px;font-size:15px}
+  .lfuel .seg.on{border-color:#3f9b52;background:rgba(63,155,82,.18)}
+  .lgo{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+  .lstat{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;max-width:760px;margin-top:10px}
+  .lstat div{border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:8px 10px;background:rgba(255,255,255,.03)}
+  .lstat b{display:block;font-size:18px;color:var(--gold-l)}
+  .lstat span{font-size:13px;color:var(--muted)}
+  .chrono{display:grid;gap:8px;max-width:760px;margin-top:8px}
+  .chrono .seg{text-align:left;width:100%}
+  .chrono .seg.right{border-color:#3f9b52;background:rgba(63,155,82,.18)}
+  .chrono .seg.wrongpick{border-color:#c0573f;background:rgba(192,87,63,.15)}
+  .chrono .n{display:inline-block;min-width:1.6em;color:var(--gold-l);font-weight:700}
+  blockquote.doc{margin:12px 0;padding:10px 14px;border-left:3px solid var(--gold);background:rgba(255,255,255,.03);border-radius:0 10px 10px 0;font-size:15px;line-height:1.6}
+  figure.side{max-width:460px;margin:12px 0}
+  figure.side img{width:100%;height:auto;border-radius:8px;background:#f3ead6}
+  figure.side figcaption{font-size:13.5px;color:var(--muted);margin-top:6px;line-height:1.45}
+  #hero{background:#e9e6df}
+  #hero img.scene{object-fit:contain;object-position:50% 30%}
+  @media(max-width:560px){.lfuel>span{min-width:100%}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="b1">Русская цивилизация</div>
+  <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
+  <div class="b3">Что изобрели русские первыми в мире</div>
+  <div class="b4">365 изобретений. Все русские. Все первые</div>
+  <div class="score" id="scoreBox" title="Баллы знаний за этот день">⭐ <span id="score">0</span> / 100</div>
+</header>
+
+<nav class="crumbs" aria-label="Хлебные крошки"><div class="wrap">
+  <a href="../../index.html">Русская цивилизация</a>
+  <span class="sep">›</span>
+  <a href="index.html">Что изобрели русские первыми в мире</a>
+  <span class="sep">›</span>
+  <span class="here">18 февраля · Чернозём Докучаева</span>
+</div></nav>
+
+<div class="hero-scene" id="hero">
+  <img class="scene" src="day-18feb-dokuchaev.jpg" data-source="https://commons.wikimedia.org/wiki/File:Dokuchaev_1888.jpg" data-license="Public domain" data-author="К. Шапиро, 1888" width="552" height="677" alt="Старая фотография: мужчина средних лет с высоким лбом и длинной густой бородой, в тёмном пиджаке, смотрит вбок" fetchpriority="high">
+</div>
+
+<div class="scene-caption">
+  <div class="wrap">
+    <div class="scene-cap">Василий Васильевич Докучаев. Фотография К. Шапиро, февраль 1888 года. Викисклад, общественное достояние.</div>
+    <span class="scene-hint">Докучаев · 1888</span>
+  </div>
+</div>
+
+<header class="hero-lead">
+  <div class="wrap">
+    <div class="date-chip">18 февраля · 1879</div>
+    <p class="date-origin">Василий Васильевич Докучаев родился 17 февраля (1 марта) 1846 года — по старому стилю за день до даты этой страницы. Отчёт о чернозёме, где он впервые определил почву как природное тело, вышел в 1879 году.</p>
+    <div class="who">Василий Васильевич Докучаев <i>· геолог и почвовед</i></div>
+    <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
+    <h1>Докучаев: чернозём — природное тело</h1>
+    <p class="hook">В 1879 году Докучаев первым определил почву как природное тело — дело организмов, породы, климата и рельефа, — а не пахотный слой, как учили агрономы.</p>
+    <div class="hero-btns">
+      <button class="btn gold" id="readBtn" type="button">Читать историю ↓</button>
+      <button class="btn ghost" id="listenBtn" type="button">🎧 Слушать аудиогид</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero-under">
+  <div class="wrap">
+    <div class="stamp">
+      <div><div class="v">4 агента</div><div class="k">организмы, материнская порода, климат и рельеф — в определении почвы 1879 года</div></div>
+      <div><div class="v">1½–2 фута</div><div class="k">средняя толщина чернозёма, по отчёту 1879 года; почвы севера редко толще 5–6 дюймов</div></div>
+      <div><div class="v">1883</div><div class="k">вышла книга «Русский чернозём» — докторская диссертация Докучаева</div></div>
+      <div><div class="v">1 куб. сажень</div><div class="k">монолит воронежского чернозёма на Всемирной выставке в Париже 1900 года</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="daynav" aria-label="Разделы дня">
+  <div class="wrap">
+    <a href="#story">Читать</a>
+    <a href="#audioguide">Слушать</a>
+    <a href="#games">Разрез</a>
+    <a href="#pervenstvo">Первенство</a>
+    <a href="#quiz">Викторина</a>
+    <a href="#calendar">Календарь</a>
+  </div>
+</nav>
+
+<section class="wrap" id="dokument" data-proof-block></section>
+
+<section class="block" id="audioguide"></section>
+
+<section class="block" id="story">
+  <div class="wrap">
+    <div class="kicker">История первенства · 12 ударов</div>
+    <h2>От речки Качни — к чернозёму на Всемирной выставке</h2>
+    <p style="color:var(--muted);max-width:62ch">Читается подряд. Нажми на удар — откроется подробный разбор с источниками.</p>
+    <ol class="udary">
+      <li><details><summary><span>Василий Докучаев родился 17 февраля 1846 года по старому стилю в селе Милюково Сычёвского уезда Смоленской губернии, младшим из семерых детей сельского священника.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Он с отличием окончил Смоленскую духовную семинарию и в 1867 году поступил в Петербургскую духовную академию. Проучился там всего три недели и перешёл на естественное отделение физико-математического факультета Петербургского университета. На учёбу и жизнь зарабатывал репетиторством.</p>
+          <p class="src-note">Источники: Русское географическое общество, «„Дороже золота — русский чернозем“: 180 лет назад родился основоположник почвоведения Василий Докучаев»; «Природа России», «Основоположник генетического почвоведения (к 170-летию В. В. Докучаева)».</p>
+        </div></details></li>
+      <li><details><summary><span>Профессор Пузыревский посоветовал студенту летом пройти по родной речке и записать всё, что он увидит. Так в 1871 году появилась дипломная работа о наносах речки Качни.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Больше двадцати разрезов сделал студент в долине Качни, нашёл кости мамонта и раковины древнего моря. В 1878 году Докучаев защитил магистерскую диссертацию о том, как образовались речные долины Европейской России. Уже тогда, изучая самые молодые отложения, он заинтересовался самым верхним слоем — почвой.</p>
+          <p class="src-note">Источники: «Природа России» (к 170-летию В. В. Докучаева); Русское географическое общество (к 180-летию).</p>
+        </div></details></li>
+      <li><details><summary><span>После засух 1873 и 1875 годов Вольное экономическое общество в 1876 году создало комиссию по изучению русского чернозёма. Свою программу предлагал и П. А. Костычев, но общество выбрало программу Докучаева и поручило полевую часть ему самому.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>В комиссию вошли химик А. Ходнев, агроном А. Советов, зоолог М. Богданов и геолог Докучаев; позже в её работе участвовали А. Иностранцев, А. Бутлеров и Д. Менделеев.</p>
+          <p class="src-note">Источники: В. Докучаев, «Tchernozéme (terre noire) de la Russie d’Europe» (СПб., 1879), предисловие общества; «Природа России» (к 170-летию); Русское географическое общество (к 180-летию).</p>
+        </div></details></li>
+      <li><details><summary><span>Докучаев изъездил чернозёмную полосу и в каждой точке целинной степи брал три образца: сам слой почвы, переходный слой и материнскую породу под ними.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Образцы он старался брать на ровных местах: такое залегание чернозёма Докучаев считал единственно нормальным. Если целина была распахана, из слоя почвы он брал два образца — из пахотного слоя и ниже него.</p>
+          <p class="src-note">Источник: В. Докучаев, «Tchernozéme (terre noire) de la Russie d’Europe» (СПб., 1879), с. 28–29.</p>
+        </div></details></li>
+      <li><details><summary><span>Агрономия называла всё, что ниже пахотного слоя, подпочвой. Докучаев показал, что почва и пашня — не одно и то же. На чернозёме пахотный слой забирает лишь треть или даже четверть почвы. А почвы севера редко толще 5–6 дюймов — плуг легко доходит до материнской породы.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Но тогда подпочвой пришлось бы называть и сам типичный чернозём, «что, очевидно, было бы совсем неверно».</p>
+          <p class="src-note">Источник: В. Докучаев, «Tchernozéme (terre noire) de la Russie d’Europe» (СПб., 1879), с. 28–29.</p>
+        </div></details></li>
+      <li><details><summary><span>В отчёте 1879 года Докучаев дал определение. Почва — это всегда результат совместной работы четырёх агентов: живых и мёртвых организмов, материнской породы, климата и рельефа местности.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>В авторском примечании он пишет (перевод с французского):</p>
+          <blockquote class="doc">«…под словом „почва“ я понимаю &lt;…&gt; минерально-органические образования, лежащие на поверхности, всегда более или менее окрашенные перегноем и всегда представляющие результат взаимной деятельности следующих агентов: живых и мёртвых организмов (как растительных, так и животных), материнской породы, климата и рельефа местности».</blockquote>
+          <p>Слой, которого эти агенты не изменили, по Докучаеву, остаётся горной породой, даже если его пашут. Изучать его должна петрография, а не агрономия.</p>
+          <figure class="side">
+            <img src="day-18feb-dokuchaev-tchernozeme.jpg" data-source="https://archive.org/details/CAT10731824" data-license="Public domain" data-author="В. В. Докучаев, 1879" width="1000" height="512" loading="lazy" alt="Фрагмент страницы французской книги: абзац с определением почвы через организмы, материнскую породу, климат и рельеф и фраза о русском целинном чернозёме как природном теле">
+            <figcaption>В. Докучаев, «Tchernozéme (terre noire) de la Russie d’Europe» (СПб., 1879), с. 46: авторское примечание с определением почвы. Экземпляр библиотеки Министерства сельского хозяйства США, Internet Archive; общественное достояние.</figcaption>
+          </figure>
+          <p class="src-note">Источник: В. Докучаев, «Tchernozéme (terre noire) de la Russie d’Europe. Comptes-rendus» (СПб.: Императорское Вольное экономическое общество, 1879), с. 45–46.</p>
+        </div></details></li>
+      <li><details><summary><span>Образцом, на котором надо строить само понятие почвы, Докучаев назвал русский целинный чернозём — «природное тело» с первоначальными свойствами.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <blockquote class="doc">«Мне кажется, что образцом для установления понятия почвы должен служить русский целинный чернозём, как представляющий природное тело с первоначальными свойствами» (перевод с французского).</blockquote>
+          <p>Там же он делит почвы на «нормальные», которые лежат там, где образовались, и «аномальные», которые вода или ветер унесли с места рождения.</p>
+          <p class="src-note">Источник: В. Докучаев, «Tchernozéme (terre noire) de la Russie d’Europe» (СПб., 1879), с. 46.</p>
+        </div></details></li>
+      <li><details><summary><span>У почвы, по Докучаеву, есть возраст. В речных долинах он лишь дважды нашёл слабые зачатки настоящего чернозёма, а в соседних степях тот порой доходил до трёх футов и больше: значит, долины моложе степного чернозёма.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>«Это обстоятельство позволяет мне прямо заключить, что наши речные долины моложе чернозёма соседних степей» (перевод с французского). Позже возраст страны стал у Докучаева пятым фактором почвообразования.</p>
+          <p class="src-note">Источники: В. Докучаев, «Tchernozéme (terre noire) de la Russie d’Europe» (СПб., 1879), с. 28; «Природа России» (к 170-летию) — лекция 1900 года в Полтаве с «возрастом страны» среди почвообразователей.</p>
+        </div></details></li>
+      <li><details><summary><span>В 1883 году вышла книга «Русский чернозём», и в декабре Докучаев защитил её как докторскую диссертацию. Одним из оппонентов был Дмитрий Менделеев.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>В этой книге, по словам портала «Природа России», впервые достаточно полно изложены положения о почве как самостоятельном естественно-историческом теле, о факторах почвообразования и генетических типах почв. 1883 год считают годом рождения генетического почвоведения. В 1885 году за книгу Докучаев получил полную Макарьевскую премию Академии наук.</p>
+          <p class="src-note">Источники: «Природа России» (к 170-летию); Русское географическое общество (к 180-летию). Дата защиты в источниках расходится — 19 и 23 декабря 1883 года, поэтому день мы не называем.</p>
+        </div></details></li>
+      <li><details><summary><span>Своих учеников Докучаев водил по губерниям: в 1882–1886 годах — по Нижегородской, потом по Полтавской. Так сложилась докучаевская школа почвоведов.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Нижегородская экспедиция издала 14 выпусков «Материалов к оценке земель» — по одному на уезд. В Полтавской губернии с ним работал В. И. Вернадский. В 1888 году при Вольном экономическом обществе Докучаев учредил Почвенную комиссию — первую в России организацию почвоведов.</p>
+          <figure class="side">
+            <img src="day-18feb-dokuchaev-shkola.jpg" data-source="https://commons.wikimedia.org/wiki/File:Vasily_Dokuchaev_and_Alexander_Sovetov_with_students.jpg" data-license="Public domain" data-author="фотосалон, Санкт-Петербург, 1892–1893" width="1000" height="621" loading="lazy" alt="Групповая фотография: около двадцати мужчин в костюмах сидят и стоят в три ряда в фотоателье">
+            <figcaption>В. В. Докучаев и А. В. Советов с учениками, 1892–1893 годы. Среди учеников — К. Д. Глинка, Г. И. Танфильев, П. В. Отоцкий. Петербургский фотосалон, фотограф неизвестен; Викисклад, общественное достояние.</figcaption>
+          </figure>
+          <p class="src-note">Источники: Русское географическое общество (к 180-летию); «Природа России» (к 170-летию).</p>
+        </div></details></li>
+      <li><details><summary><span>В 1889 году коллекцию русских почв Докучаева показали на Всемирной выставке в Париже. Ему присудили золотую медаль и французский орден «За заслуги по земледелию».<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Почвенную коллекцию, карты и научные работы Докучаев выставил с помощью ученика — В. И. Вернадского, который тогда стажировался в Париже.</p>
+          <p class="src-note">Источники: Русское географическое общество (к 180-летию); «Воронежская энциклопедия», статья «Докучаев Василий Васильевич».</p>
+        </div></details></li>
+      <li><details><summary><span>В 1900 году в Париж привезли монолит воронежского чернозёма размером в кубическую сажень. После выставки его по жребию отдали Сорбонне, а в 1968 году, во время студенческих волнений, монолит разбили.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Образец взяли близ целины Каменной степи в Воронежской губернии и поставили на высокий пьедестал; экспозиция Докучаева и его учеников получила Гран-при. Рассказ о том, что русский чернозём хранится в Париже как «эталон», источниками не подтверждается. Сам Докучаев умер в 1903 году, а в 1904-м в Петербурге открылся почвенный музей его имени.</p>
+          <p class="src-note">Источники: Русское географическое общество (к 180-летию); «Воронежская энциклопедия».</p>
+        </div></details></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block" id="theme-inventions">
+  <div class="wrap">
+    <div class="kicker">Земля и природа · Русские первенства</div>
+    <h2>Что ещё русские первыми сделали в науках о Земле</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Другие дни музея о Земле и природе — по утверждённому календарю. Часть этих залов ещё готовится.</p>
+    <button class="btn ghost" type="button" id="themeInvBtn" data-label="Показать 3 первенства →" aria-expanded="false" aria-controls="themeInvBody">Показать 3 первенства →</button>
+    <div id="themeInvBody" hidden>
+      <ul class="theme-list">
+        <li><b>9 фев</b> <a href="day-09feb-chizhevsky.html">Чижевский: солнечные пятна и история</a></li>
+        <li><b>8 фев</b> <a href="day-08feb-mendeleev.html">Пустые клетки Менделеева</a></li>
+        <li><b>3 янв</b> <a href="day-03jan-anosov.html">Булат Аносова</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="games">
+  <div class="wrap">
+    <div class="kicker">Главное действие · числа из отчёта Докучаева 1879 года, остальные условные</div>
+    <h2>Разрез: север и степь</h2>
+    <p style="max-width:62ch">По Докучаеву, почву создают организмы, материнская порода, климат и рельеф, а ещё — время. Выбери условия, сделай разрез и посмотри, какой толщины выйдет почва и куда достанет плуг.</p>
+    <div class="lab" id="lab">
+      <canvas class="soilcv" id="soil" width="760" height="340" role="img" aria-label="Разрез почвы: сверху тёмный слой почвы, ниже переходный слой и материнская порода; пунктиром — глубина вспашки; справа для сравнения две колонки из отчёта 1879 года"></canvas>
+      <div class="lctl">
+        <div class="lfuel" role="group" aria-label="Климат и организмы"><span>Климат и организмы:</span>
+          <button class="seg on" type="button" id="cN" aria-pressed="true">север, лес</button>
+          <button class="seg" type="button" id="cS" aria-pressed="false">степь, травы</button></div>
+        <div class="lfuel" role="group" aria-label="Рельеф"><span>Рельеф:</span>
+          <button class="seg on" type="button" id="rP" aria-pressed="true">ровное место</button>
+          <button class="seg" type="button" id="rS" aria-pressed="false">крутой склон</button></div>
+        <div class="lfuel" role="group" aria-label="Возраст места"><span>Возраст места:</span>
+          <button class="seg on" type="button" id="aO" aria-pressed="true">давняя суша</button>
+          <button class="seg" type="button" id="aY" aria-pressed="false">молодая речная долина</button></div>
+        <div class="lfuel" role="group" aria-label="Материнская порода"><span>Материнская порода:</span>
+          <button class="seg on" type="button" id="pL" aria-pressed="true">рыхлая (глина, лёсс)</button>
+          <button class="seg" type="button" id="pR" aria-pressed="false">твёрдая скала</button></div>
+        <div class="lgo"><button class="btn gold" type="button" id="dig">Сделать разрез</button></div>
+      </div>
+      <div class="lstat" aria-live="polite">
+        <div><b id="sH">—</b><span>толщина почвы — слой почвы и переходный слой вместе</span></div>
+        <div><b id="sA">—</b><span>почвы забирает пашня на глубину 6 дюймов</span></div>
+        <div><b id="sT">—</b><span>что получилось</span></div>
+      </div>
+      <div class="lab-msg" id="mMsg" aria-live="polite">Выбери условия и нажми «Сделать разрез».</div>
+      <div class="lab-cap">Из отчёта Докучаева 1879 года взяты числа и наблюдения: чернозём в среднем толщиной 1½–2 фута (около 46–61 см), почвы севера редко толще 5–6 дюймов (13–15 см), пашня на чернозёме забирает лишь треть или четверть почвы; почвы, унесённые водой со склонов, — «аномальные»; в молодых речных долинах настоящий чернозём почти не встречается. Остальные числа модели условные, в документе их нет: глубина вспашки 6 дюймов, на склоне остаётся 30 % почвы, в молодой долине — 10 %, на твёрдой скале — половина. Фут — 12 дюймов, около 30,5 см.</div>
+      <noscript><div class="noscript-box">Для модели нужен JavaScript. Текстовая версия. Степь, травы, ровное место, давняя суша и рыхлая порода дают типичный чернозём толщиной около 1¾ фута; пашня забирает из него около трети. Север и лес на тех же условиях дают почву около 5½ дюйма: плуг проходит её насквозь и выворачивает материнскую породу. В молодой речной долине чернозёма почти нет — около 2 дюймов. На крутом склоне вода уносит почву, остаётся около 6½ дюйма: это «аномальная» почва. На твёрдой скале степная почва выходит вдвое тоньше.</div></noscript>
+
+      <h3 style="margin:22px 0 6px">1876–1900: расставь по порядку</h3>
+      <p style="max-width:62ch;margin:0 0 6px;color:var(--muted)">Нажимай события от самого раннего к самому позднему.</p>
+      <div class="chrono" id="chrono" role="group" aria-label="События 1876–1900 годов"></div>
+      <div class="lab-msg" id="hMsg" aria-live="polite">Какое событие было первым?</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="pervenstvo">
+  <div class="wrap">
+    <div class="kicker">Проверка факта</div>
+    <h2>Что именно здесь наше</h2>
+    <div class="border-box">
+      <p style="margin-top:0"><b>Граница первенства:</b> Докучаев первым определил почву как природное тело — результат совместной работы организмов, материнской породы, климата и рельефа. Это определение напечатано в 1879 году в отчёте Вольному экономическому обществу. Позже он добавил пятый фактор — возраст страны; а полностью изложил учение в книге «Русский чернозём» (1883). С неё началось генетическое почвоведение.</p>
+      <p><b>Чего здесь нет:</b> слово «педология» придумал не Докучаев. Книга саксонца Ф. А. Фаллу «Pedologie oder allgemeine und besondere Bodenkunde» вышла в Дрездене в 1862 году. Мысль, что чернозём произошёл «от согнития животных и растущих тел», ещё в 1763 году высказал М. В. Ломоносов, о чём Докучаев узнал от Вернадского. Чернозём не хранится в Париже как «эталон»: монолит 1900 года отдали Сорбонне, и в 1968 году его разбили.</p>
+    </div>
+    <table class="ctx">
+      <thead><tr><th scope="col">Кто</th><th scope="col">Что сделал</th><th scope="col">Когда</th></tr></thead>
+      <tbody>
+        <tr><td>М. В. Ломоносов</td><td>«О слоях земных»: чернозём произошёл «от согнития животных и растущих тел со временем»</td><td>1763</td></tr>
+        <tr><td>Ф. А. Фаллу, Саксония</td><td>Книга «Pedologie oder allgemeine und besondere Bodenkunde»</td><td>1862</td></tr>
+        <tr><td>В. В. Докучаев</td><td>Отчёт о чернозёме: почва — результат работы организмов, породы, климата и рельефа; образец — целинный чернозём</td><td>1879</td></tr>
+        <tr><td>В. В. Докучаев</td><td>Книга «Русский чернозём», докторская диссертация</td><td>1883</td></tr>
+        <tr><td>В. В. Докучаев</td><td>Почвенная коллекция на Всемирной выставке в Париже, золотая медаль</td><td>1889</td></tr>
+        <tr><td>Докучаев и ученики</td><td>Монолит чернозёма в кубическую сажень, Гран-при Всемирной выставки в Париже</td><td>1900</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block" id="quiz">
+  <div class="wrap">
+    <div class="kicker">Проверь себя · 5 вопросов</div>
+    <h2>Викторина</h2>
+    <p style="color:var(--muted);max-width:62ch">На каждый вопрос — одна попытка. После ответа покажем объяснение.</p>
+    <div id="quizBox"></div>
+    <noscript><div class="noscript-box">Для викторины нужен JavaScript. Ответы: 1 — организмы, материнская порода, климат и рельеф; 2 — русский целинный чернозём; 3 — в среднем 1½–2 фута; 4 — речные долины моложе чернозёма соседних степей; 5 — его отдали Сорбонне, а в 1968 году разбили.</div></noscript>
+  </div>
+</section>
+
+<section class="block" id="result">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Итог дня</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Модель разреза, хронология и викторина вместе дают 100 баллов. Прогресс не сохраняется: перезагрузишь страницу — день начнётся заново.</p>
+    <div class="day-result">
+      <div class="dr-score" id="dayTxt">0 / 100 · звание: Гость дня</div>
+      <div class="dr-bar"><i id="dayBar" style="width:0%"></i></div>
+      <div class="dr-note">Получи типичный чернозём из отчёта 1879 года; найди почву, которую плуг проходит насквозь; почву, унесённую со склона; молодую долину без чернозёма. Потом расставь события и ответь на вопросы викторины.</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="sources">
+  <div class="wrap">
+    <div class="kicker">Источники</div>
+    <h2>На чём стоит страница</h2>
+    <ul class="sources">
+      <li><a href="https://archive.org/details/CAT10731824" rel="noopener" target="_blank">В. Докучаев · «Tchernozéme (terre noire) de la Russie d’Europe. Comptes-rendus»</a> (СПб.: Императорское Вольное экономическое общество, 1879; экземпляр библиотеки Министерства сельского хозяйства США, скан Internet Archive): предисловие о комиссии 1876 года; с. 28–29 — отбор образцов, пашня и почва, возраст речных долин; с. 45–46 — авторское примечание с определением почвы и образцом-чернозёмом; с. 48 — средняя толщина чернозёма.</li>
+      <li><a href="https://rgo.ru/activity/redaction/articles/dorozhe-zolota-russkiy-chernozem-180-let-nazad-rodilsya-osnovopolozhnik-pochvovedeniya-vasiliy/" rel="noopener" target="_blank">«„Дороже золота — русский чернозем“: 180 лет назад родился основоположник почвоведения Василий Докучаев»</a>, Русское географическое общество: биография, комиссия 1876 года, «Русский чернозём» и Менделеев-оппонент, Нижегородская экспедиция, Париж 1889 и 1900 годов, судьба монолита, музей 1904 года.</li>
+      <li><a href="https://web.archive.org/web/2025/https://www.priroda.ru/events/detail.php?ID=11350" rel="noopener" target="_blank">«Основоположник генетического почвоведения (к 170-летию В. В. Докучаева)»</a>, портал «Природа России» (копия Wayback Machine): учёба, речка Качня, программы Докучаева и Костычева, «Русский чернозём» и Макарьевская премия, Ломоносов (1763), Нижегородская и Полтавская экспедиции, Почвенная комиссия 1888 года, полтавская лекция 1900 года.</li>
+      <li><a href="https://vrnency.ru/vol-2/ve-2-d/b-00140-d" rel="noopener" target="_blank">«Докучаев Василий Васильевич»</a>, «Воронежская энциклопедия»: даты жизни, исследования чернозёмов по заданию Вольного экономического общества, золотая медаль Парижа 1889 года, Каменная степь.</li>
+      <li><a href="https://archive.org/details/10283420bsb" rel="noopener" target="_blank">F. A. Fallou · «Pedologie oder allgemeine und besondere Bodenkunde»</a> (Dresden: Schönfeld, 1862; экземпляр Баварской государственной библиотеки, скан Internet Archive) — книга соперника.</li>
+      <li>Изображения: <a href="https://commons.wikimedia.org/wiki/File:Dokuchaev_1888.jpg" rel="noopener" target="_blank">портрет В. В. Докучаева</a>, фотография К. Шапиро, февраль 1888 года — общественное достояние; <a href="https://archive.org/details/CAT10731824" rel="noopener" target="_blank">страница отчёта 1879 года</a>, с. 46 — общественное достояние; <a href="https://commons.wikimedia.org/wiki/File:Vasily_Dokuchaev_and_Alexander_Sovetov_with_students.jpg" rel="noopener" target="_blank">В. В. Докучаев и А. В. Советов с учениками</a>, 1892–1893 годы — общественное достояние.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="calendar">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Календарь изобретений</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Выбери любой день — узнаешь, что русские сделали первыми в мире. Листай месяцы стрелками.</p>
+    <div id="calbox"></div>
+  </div>
+</section>
+
+<section class="block kd" id="kuda-dalshe">
+  <div class="wrap">
+    <div class="kd-kicker">Куда дальше</div>
+    <h2>Музей продолжается</h2>
+    <div class="kd-grid">
+      <div class="kd-card main"><span class="kd-lbl">Следующий день</span><a href="day-18mar-leonov.html">18 марта — Первый выход человека в открытый космос <span class="kd-arr">→</span></a>
+        <p>Раздувшийся скафандр не пускал Леонова обратно в корабль — он стравил кислород и вошёл в шлюз головой вперёд.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Предыдущий день</span><a href="day-17feb-pirotsky.html">17 февраля — Вагон Пироцкого: конка без лошадей на Песках <span class="kd-arr">→</span></a>
+        <p>22 августа 1880 года вагон конки поехал без лошадей: ток шёл к двигателю по рельсам под колёсами.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Оппонент Докучаева</span><a href="day-08feb-mendeleev.html">8 февраля — Пустые клетки Менделеева <span class="kd-arr">→</span></a>
+        <p>Менделеев оставил в таблице пустые клетки и заранее описал вещества, которых никто не видел.</p></div>
+      <div class="kd-card main"><span class="kd-lbl">Город-музей</span><a href="../../index.html">Русская цивилизация <span class="kd-arr">→</span></a>
+        <p>Все музеи проекта на одной карте.</p></div>
+    </div>
+    <p style="margin-top:16px"><a href="izobreteniya.html">Посмотреть изобретения по алфавиту →</a></p>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>
+  Русская цивилизация · «Что изобрели русские первыми в мире»</div></footer>
+
+<script type="application/json" data-proof>{"status":"found","claim_id":"rc:izobreteniya:dokuchaev:claim-pochva-prirodnoe-telo-1879","ours":{"kind":"отчёт Вольному экономическому обществу","title":"В. Докучаев, «Tchernozéme (terre noire) de la Russie d’Europe»: почва — «результат взаимной деятельности» организмов, материнской породы, климата и рельефа; образец для понятия почвы — русский целинный чернозём, «природное тело» (с. 45–46)","date":"1879","holder":"СПб.: Императорское Вольное экономическое общество, 1879; экземпляр библиотеки Министерства сельского хозяйства США, скан Internet Archive","source_url":"https://archive.org/details/CAT10731824","scan":"day-18feb-dokuchaev-tchernozeme.jpg","scan_credit":"Отчёт 1879 года, с. 46, авторское примечание. Internet Archive, общественное достояние."},"rival":{"name":"Ф. А. Фаллу, Саксония","date":"1862","doc_title":"книга «Pedologie oder allgemeine und besondere Bodenkunde» (Дрезден, 1862) — слово «педология» раньше Докучаева"}}</script>
+<script src="../../assets/museum-proof.js"></script>
+
+<script>
+/* ── СЧЁТ ── шкала из 100 держит assets/museum-score.js; здесь только реестр наград.
+   модель: типичный чернозём 20 + плуг до породы 10 + склон 10 + молодая долина 10;
+   хронология 4×5; викторина 5×6 = 100. */
+window.MUSEUM_SCORE = {awards:{m0:20, m1:10, m2:10, m3:10, h:[4,5], q:[5,6]},
+  ranks:[[100,'Ученик Докучаева'],[70,'Член Чернозёмной комиссии'],[40,'Студент с речки Качни'],[0,'Гость дня']]};
+</script>
+<script src="../../assets/museum-score.js"></script>
+<script>
+(function(){
+  var $ = function(id){return document.getElementById(id);};
+  $('readBtn').onclick = function(){ $('story').scrollIntoView({behavior:'smooth'}); };
+  $('listenBtn').onclick = function(){ $('audioguide').scrollIntoView({behavior:'smooth'}); };
+  var tb=$('themeInvBtn');
+  tb.onclick=function(){ var b=$('themeInvBody'), open=b.hidden; b.hidden=!open; tb.setAttribute('aria-expanded',open?'true':'false'); tb.textContent=open?'▲ Скрыть':tb.dataset.label; };
+  function msg(id,t,cls){ var m=$(id); m.className='lab-msg'+(cls?' '+cls:''); m.textContent=t; }
+
+  /* ── РАЗРЕЗ: СЕВЕР И СТЕПЬ ── отчёт В. Докучаева «Tchernozéme…» (СПб., 1879): чернозём в среднем 1½–2 фута (с. 48),
+     почвы севера редко толще 5–6 дюймов, пашня на чернозёме — треть или четверть почвы (с. 29); склоны — «аномальные»
+     почвы (с. 46); речные долины моложе степного чернозёма (с. 28). Условные числа (подпись модели): пашня 6 дюймов,
+     склон — 30 % почвы, молодая долина — 10 %, твёрдая скала — половина. */
+  var PLOW=6;
+  function sim(c, r, a, p){
+    var h = c==='S' ? 21 : 5.5;
+    if (r==='S') h*=0.3;
+    if (a==='Y') h*=0.1;
+    if (p==='R') h*=0.5;
+    return {h:h, plowThrough: h<=PLOW, share: Math.min(1,PLOW/h)};
+  }
+  function inch(x){ if (x<0.25) return 'меньше ½ дюйма'; var v=Math.round(x*2)/2, w=Math.floor(v), half=v>w, n=(w?String(w):'')+(half?'½':'');
+    return n+' '+(half?'дюйма':(w%10===1&&w%100!==11?'дюйм':(w%10>=2&&w%10<=4&&(w%100<10||w%100>=20)?'дюйма':'дюймов'))); }
+  function ft(x){ if (x<12) return inch(x); var q=Math.round(x/12*4)/4, w=Math.floor(q), fr={0:'',0.25:'¼',0.5:'½',0.75:'¾'}[q-w];
+    return (w||'')+fr+' '+(fr?'фута':(w===1?'фут':(w<5?'фута':'футов'))); }
+  function cm(x){ var v=Math.round(x*2.54); return v<1?'меньше 1 см':v+' см'; }
+
+  var st={c:'N',r:'P',a:'O',p:'L'}, mDone={}, last=null;
+  var cv=$('soil'), ctx=cv.getContext('2d');
+  function size(){ var w=cv.clientWidth||760, d=window.devicePixelRatio||1; cv.width=Math.round(w*d); cv.height=Math.round(w*340/760*d); }
+  function draw(res){
+    var w=cv.width, h=cv.height, u=w/760; ctx.clearRect(0,0,w,h);
+    var top=40*u, depth=270*u, maxIn=48, k=depth/maxIn;  /* шкала до 4 футов — условная, с запасом над «3 футами и больше» с. 28 */
+    ctx.font=(11*u)+'px system-ui,sans-serif'; ctx.fillStyle='rgba(233,220,192,.6)'; ctx.textAlign='right';
+    for (var i=0;i<=48;i+=12){ var y=top+i*k; ctx.fillText(i? (i/12)+' фут.':'0',40*u,y+4*u); ctx.strokeStyle='rgba(233,220,192,.12)'; ctx.beginPath(); ctx.moveTo(44*u,y); ctx.lineTo(w-8*u,y); ctx.stroke(); }
+    function column(x,cw,H,label,dark,ghost){
+      var a=H*0.6, b=H*0.4;   /* слой почвы и переходный слой */
+      ctx.globalAlpha=ghost?0.55:1;
+      ctx.fillStyle='#8c7a5a'; ctx.fillRect(x,top,cw,depth);                       /* порода */
+      ctx.fillStyle='rgba(0,0,0,.12)'; for (var yy=top+6*u; yy<top+depth; yy+=10*u) for (var xx=x+((yy/u)%20)*u; xx<x+cw; xx+=20*u) ctx.fillRect(xx,yy,3*u,2*u);
+      var g=ctx.createLinearGradient(0,top+a*k,0,top+(a+b)*k); g.addColorStop(0,dark); g.addColorStop(1,'#8c7a5a');
+      ctx.fillStyle=g; ctx.fillRect(x,top+a*k,cw,b*k);
+      ctx.fillStyle=dark; ctx.fillRect(x,top,cw,a*k);
+      ctx.fillStyle='#5f8a3a'; ctx.fillRect(x,top-6*u,cw,6*u);
+      ctx.globalAlpha=1; ctx.fillStyle='rgba(233,220,192,.9)'; ctx.textAlign='center'; ctx.font=(12*u)+'px system-ui,sans-serif';
+      var L=label.split(' · '); ctx.fillText(L[0],x+cw/2,L[1]?top-26*u:top-12*u); if (L[1]) ctx.fillText(L[1],x+cw/2,top-12*u);
+    }
+    /* справа — две колонки из отчёта 1879 года */
+    column(520*u,90*u,5.5,'север · 5–6 дюймов','#6e6252',true);
+    column(640*u,90*u,21,'степь · 1½–2 фута','#231c17',true);
+    ctx.fillStyle='rgba(233,220,192,.6)'; ctx.font=(11*u)+'px system-ui,sans-serif'; ctx.fillText('по отчёту 1879 года',625*u,h-8*u);
+    if (!res){ ctx.fillStyle='rgba(233,220,192,.7)'; ctx.textAlign='center'; ctx.font=(13*u)+'px system-ui,sans-serif'; ctx.fillText('здесь будет твой разрез',250*u,top+depth/2); return; }
+    var dark = st.c==='S' ? '#231c17' : '#6e6252';
+    column(90*u,320*u,res.h,'твой разрез · '+ft(res.h),dark,false);
+    /* пашня */
+    var py=top+PLOW*k; ctx.setLineDash([8*u,6*u]); ctx.strokeStyle='#e0a23a'; ctx.lineWidth=2*u;
+    ctx.beginPath(); ctx.moveTo(86*u,py); ctx.lineTo(414*u,py); ctx.stroke(); ctx.setLineDash([]);
+    ctx.fillStyle='#e0a23a'; ctx.textAlign='left'; ctx.font=(11*u)+'px system-ui,sans-serif'; ctx.fillText('плуг, 6 дюймов',96*u,py-5*u);
+    if (res.plowThrough){ ctx.fillStyle='#ffb07a'; ctx.fillText('плуг выворачивает материнскую породу',96*u,py+16*u); }
+  }
+  size(); draw(null);
+  window.addEventListener('resize',function(){ size(); draw(last); });
+
+  function pick(key,val,on,off){ st[key]=val; $(on).classList.add('on'); $(off).classList.remove('on'); $(on).setAttribute('aria-pressed','true'); $(off).setAttribute('aria-pressed','false'); last=null; draw(null); }
+  $('cN').onclick=function(){ pick('c','N','cN','cS'); }; $('cS').onclick=function(){ pick('c','S','cS','cN'); };
+  $('rP').onclick=function(){ pick('r','P','rP','rS'); }; $('rS').onclick=function(){ pick('r','S','rS','rP'); };
+  $('aO').onclick=function(){ pick('a','O','aO','aY'); }; $('aY').onclick=function(){ pick('a','Y','aY','aO'); };
+  $('pL').onclick=function(){ pick('p','L','pL','pR'); }; $('pR').onclick=function(){ pick('p','R','pR','pL'); };
+
+  $('dig').onclick=function(){
+    var r=sim(st.c,st.r,st.a,st.p); last=r; draw(r);
+    $('sH').textContent=ft(r.h)+' · '+cm(r.h);
+    $('sA').textContent=r.plowThrough?'вся, и ещё порода':Math.round(r.share*100)+' %';
+    var t, kind, cls='ok', left=[];
+    if (st.r==='S'){
+      kind='аномальная почва';
+      if (!mDone.m2){ mDone.m2=1; award('m2',10); }
+      t='На крутом склоне дождевая вода уносит почву с места, где она родилась. Докучаев называл такие почвы «аномальными» и отделял их от «нормальных», которые лежат там, где образовались.';
+    } else if (st.a==='Y'){
+      kind='чернозёма почти нет';
+      if (!mDone.m3){ mDone.m3=1; award('m3',10); }
+      t='В молодой речной долине почва едва начала расти. Докучаев лишь дважды нашёл в долинах слабые зачатки настоящего чернозёма, а в соседних степях тот порой доходил до трёх футов и больше: «наши речные долины моложе чернозёма соседних степей».';
+    } else if (st.c==='N'){
+      kind=r.plowThrough?'почва севера: плуг проходит насквозь':'почва севера';
+      if (r.plowThrough && !mDone.m1){ mDone.m1=1; award('m1',10); }
+      t='Почва севера тонкая: по отчёту, она редко толще 5–6 дюймов. Плуг проходит её насквозь и выворачивает переходный слой и материнскую породу. Поэтому для Докучаева пашня и почва — не одно и то же.';
+    } else if (st.p==='R'){
+      kind='степная почва на скале';
+      t='На твёрдой скале степная почва выходит тоньше. Докучаев писал, что чернозём образуется не на самих гранитах и известняках, а на продуктах их разрушения — глинах, песках, мергелях: только на них растёт обильная растительность. В модели это условно половина толщины.';
+    } else {
+      kind='типичный чернозём';
+      if (!mDone.m0){ mDone.m0=1; award('m0',20); }
+      t='Типичный чернозём: степь, травы, ровное место, давняя суша. Почва толщиной '+ft(r.h)+' — в пределах средних 1½–2 футов из отчёта 1879 года. Пашня забирает из неё около трети; у Докучаева — «треть и даже четверть».';
+    }
+    $('sT').textContent=kind;
+    if (!mDone.m0) left.push('получи типичный чернозём');
+    if (!mDone.m1) left.push('найди почву, которую плуг проходит насквозь');
+    if (!mDone.m2) left.push('сделай разрез на склоне');
+    if (!mDone.m3) left.push('загляни в молодую речную долину');
+    msg('mMsg', t+(left.length?' Дальше: '+left.join('; ')+'.':' Все четыре разреза сделаны.'), cls);
+  };
+
+  /* ── ХРОНОЛОГИЯ ── */
+  var E=[
+    {o:2,t:'Выходит книга «Русский чернозём», Докучаев защищает её как докторскую диссертацию',d:'1883'},
+    {o:0,t:'Вольное экономическое общество создаёт комиссию по изучению русского чернозёма',d:'1876'},
+    {o:3,t:'Коллекция почв Докучаева получает золотую медаль Всемирной выставки в Париже',d:'1889'},
+    {o:1,t:'Выходит отчёт о чернозёме с определением почвы через организмы, породу, климат и рельеф',d:'1879'}
+  ], hNext=0;
+  E.forEach(function(e,i){
+    var b=document.createElement('button'); b.type='button'; b.className='seg'; b.innerHTML='<span class="n"></span>'; b.appendChild(document.createTextNode(e.t));
+    b.onclick=function(){
+      if (e.done) return;
+      if (e.o!==hNext){ b.classList.add('wrongpick'); setTimeout(function(){ b.classList.remove('wrongpick'); },700);
+        msg('hMsg','Не сейчас: есть событие раньше этого.','bad'); return; }
+      e.done=true; b.classList.add('right'); b.disabled=true; b.querySelector('.n').textContent=(hNext+1)+'.';
+      b.appendChild(document.createTextNode(' — '+e.d)); award('h'+i,5); hNext++;
+      msg('hMsg', hNext<4 ? 'Верно. Что дальше?' : 'Порядок восстановлен. Определение почвы как природного тела Докучаев напечатал в 1879 году, за четыре года до «Русского чернозёма». А золотую медаль Всемирной выставки его почвы получили в Париже в 1889 году, ещё при жизни автора.','ok');
+    };
+    $('chrono').appendChild(b);
+  });
+
+  /* ── ВИКТОРИНА ── */
+  var Q = [
+    {q:'Какие четыре агента, по отчёту 1879 года, создают почву?', o:['Вода, ветер, мороз и солнце','Организмы, материнская порода, климат и рельеф','Плуг, навоз, дождь и время'], a:1,
+     e:'Живые и мёртвые организмы, материнская порода, климат и рельеф местности. Позже Докучаев добавил возраст страны.'},
+    {q:'Что Докучаев назвал образцом для самого понятия почвы?', o:['Русский целинный чернозём','Пахотный слой поля','Речной ил'], a:0,
+     e:'Русский целинный чернозём — «природное тело с первоначальными свойствами».'},
+    {q:'Какова средняя толщина чернозёма по отчёту 1879 года?', o:['5–6 дюймов','10 футов','1½–2 фута'], a:2,
+     e:'1½–2 фута в среднем. Почвы севера редко толще 5–6 дюймов.'},
+    {q:'Что Докучаев вывел из того, что в речных долинах почти нет чернозёма?', o:['Долины моложе чернозёма соседних степей','Реки смывают весь чернозём','Чернозём бывает только на холмах'], a:0,
+     e:'«Наши речные долины моложе чернозёма соседних степей»: у почвы есть возраст.'},
+    {q:'Что стало с монолитом чернозёма с Парижской выставки 1900 года?', o:['Хранится в Париже как эталон почвы','Вернулся в Воронеж','Его отдали Сорбонне, а в 1968 году разбили'], a:2,
+     e:'По жребию его передали Сорбонне; в 1968 году, во время студенческих волнений, монолит разбили. Рассказ об «эталоне» источниками не подтверждается.'}
+  ];
+  var qb = $('quizBox');
+  Q.forEach(function(it, qi){
+    var wrap = document.createElement('div');
+    var h = document.createElement('p'); h.className='quiz-q'; h.textContent=(qi+1)+'. '+it.q; wrap.appendChild(h);
+    var exp = document.createElement('div'); exp.className='exp'; exp.setAttribute('aria-live','polite');
+    var btns = it.o.map(function(txt, oi){
+      var b=document.createElement('button'); b.type='button'; b.className='opt'; b.textContent=txt;
+      b.onclick=function(){
+        if (wrap.dataset.done) return; wrap.dataset.done='1';
+        btns.forEach(function(x,xi){ x.disabled=true; if (xi===it.a) x.classList.add('correct'); });
+        if (oi===it.a){ award('q'+qi,6); exp.textContent='Верно. '+it.e; }
+        else { b.classList.add('wrong'); exp.textContent='Не совсем. '+it.e; }
+        exp.classList.add('show');
+      };
+      wrap.appendChild(b); return b;
+    });
+    wrap.appendChild(exp); qb.appendChild(wrap);
+  });
+})();
+</script>
+<script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
+<script>window.MUSEUM_CHROME={
+  museum:{title:'Что изобрели русские первыми в мире',href:'index.html'},
+  share:{title:'Докучаев: чернозём — природное тело — музей «Что изобрели русские первыми в мире»',
+         text:'В 1879 году Василий Докучаев первым определил почву как природное тело — дело организмов, породы, климата и рельефа, — а не пахотный слой, как учили агрономы. Что Россия дала миру раньше всех — день за днём.'},
+  prev:{href:'day-17feb-pirotsky.html',title:'17 февраля · Пироцкий'},
+  next:{href:'day-18mar-leonov.html',title:'18 марта · Леонов'},
+  all:{href:'index.html',label:'Все изобретения'},
+  city:'../../index.html',
+  random:['day-01jan-cabletv.html','day-02jan-luna1.html','day-03jan-anosov.html','day-04jan-pilchikov.html','day-05jan-shukhov.html','day-06jan-orlov.html','day-08jan-icebreaker.html','day-09jan-blinov.html','day-10jan-britnev.html','day-11jan-kostovich.html','day-12jan-r7.html','day-13jan-k278.html','day-14jan-lira.html','day-15jan-kovalevskaya.html','day-16jan-soyuz45.html','day-19jan-kantorovich.html','day-21jan-obninsk.html','day-22jan-landau.html','day-23jan-umov.html','day-24jan-k162.html','day-25jan-korsakov.html','day-26jan-podvodnaya.html','day-27jan-pentium.html','day-28jan-havkin.html','day-30jan-kotelnikov.html','day-31jan-girotron.html','day-01feb-bekhterev.html','day-02feb-edinorog.html','day-03feb-luna9.html','day-04feb-samovar.html','day-05feb-boldyrev.html','day-06feb-zelinsky.html','day-07feb-setun.html','day-08feb-mendeleev.html','day-09feb-chizhevsky.html','day-10feb-aerosani.html','day-12feb-lenz.html','day-15feb-nesterov.html','day-17feb-pirotsky.html','day-18feb-dokuchaev.html','day-18mar-leonov.html','day-15may-mechnikov.html','day-16jun-tereshkova.html','day-26sep-pavlov.html','day-15nov-buran.html','day-25nov-pirogov.html','day-01dec-lobachevsky.html','day-14dec-laser.html']
+};</script>
+<script src="../../assets/museum-chrome.js"></script>
+<script>window.MUSEUM_SUPPORT={museum:'Что изобрели русские первыми в мире'};</script>
+<script src="../../assets/museum-support.js"></script>
+<script src="calendar-izobreteniya.js"></script>
+<script>window.MUSEUM_CALENDAR_INITIAL='02-18';</script>
+<script src="../../assets/museum-calendar-month.js"></script>
+<script>window.MUSEUM_RETURN={riddle:{q:"Почему, по Докучаеву, пахотный слой нельзя считать почвой, а всё, что под ним, — подпочвой?",a:"На чернозёме пашня забирает лишь треть или четверть почвы, и подпочвой пришлось бы называть сам чернозём. А почва — это слой, изменённый организмами, породой, климатом и рельефом, даже если его не пашут.",src:"В. Докучаев, «Tchernozéme (terre noire) de la Russie d’Europe» (СПб., 1879), с. 28–29 и 45–46"}};</script>
+<script src="../../assets/museum-return.js" data-museum="izobreteniya" data-day="02-18"></script>
+<script defer src="../../assets/analytics.js"></script>
+
+
+
+
+
+
+
+
+
+<script>window.MUSEUM_AUDIOGUIDE={
+  audioSrc:"audio-guide-dokuchaev-ru.mp3",
+  durationLabel:"2 минуты 52 секунд",
+  lead:"Голос ведёт по залу Василия Докучаева: портрет у входа, комиссия по чернозёму, отчёт 1879 года с определением почвы, «Русский чернозём», ученики и Париж. Шесть остановок: портрет, страница отчёта, фотография учеников и рассказ между ними.",
+  stops:[
+    {t:0,mark:"0:00",title:"Портрет у входа"},
+    {t:29,mark:"0:29",title:"Речка Качня"},
+    {t:54,mark:"0:54",title:"Комиссия по чернозёму"},
+    {t:76,mark:"1:16",title:"Отчёт тысяча восемьсот семьдесят девятого года"},
+    {t:112,mark:"1:52",title:"Русский чернозём"},
+    {t:139,mark:"2:19",title:"Париж"}
+  ],
+  transcript:[
+    "<p>Факты: портрет — Викисклад, «Dokuchaev 1888.jpg» (К. Шапиро, февраль 1888); дата и место рождения, семья — Русское географическое общество (к 180-летию); «Природа России» (к 170-летию).</p>",
+    "<p>Факты: семинария, академия, университет, речка Качня, кости мамонта — «Природа России» (к 170-летию); Русское географическое общество.</p>",
+    "<p>Факты: засухи 1873 и 1875 годов, комиссия 1876 года, программа Докучаева — Русское географическое общество; предисловие к отчёту «Tchernozéme…» (1879); три образца в каждой точке — отчёт 1879 года, с. 28.</p>",
+    "<p>Факты: определение почвы и образец-чернозём — отчёт «Tchernozéme (terre noire) de la Russie d’Europe» (СПб., 1879), с. 45–46; пашня и почвы севера — там же, с. 29.</p>",
+    "<p>Факты: «Русский чернозём» (1883), Менделеев-оппонент — Русское географическое общество; начало генетического почвоведения, экспедиции — «Природа России»; фотография с учениками — Викисклад.</p>",
+    "<p>Факты: Париж 1889 и 1900 годов, судьба монолита, музей 1904 года — Русское географическое общество; медаль 1889 года — «Воронежская энциклопедия».</p>"
+  ],
+  note:"Озвучено синтезом речи — временно, до записи голосом автора музея."
+};</script>
+<script src="../../assets/museum-audioguide.js"></script>
+</body>
+</html>

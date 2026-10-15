@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="ru" data-museum="izobreteniya">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Пустые клетки Менделеева: элементы, описанные до открытия — Что изобрели русские первыми в мире, 8 февраля</title>
+<!--
+  Страница дня 8 февраля. Наряд stranicy-izob-0910 (claude2, 14.10.2026), карточка #762.
+  Форма — вариант А музея изобретений (Сергей 12.09.2026): лента ударов, подробности свёрнуты.
+  Паспорт выпуска: rc-museum-production/izobreteniya/day-08feb-mendeleev/passport/issue.json
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --dark:#060c17; --dark2:#0c1826; --surface:#111f33;
+    --card:rgba(255,255,255,.05); --card-b:rgba(255,255,255,.09);
+    --gold:#c9a84c; --gold-l:#e4c97a; --gold-g:rgba(201,168,76,.13);
+    --ink:#e8eef5; --muted:#7a9ab8; --line:rgba(255,255,255,.07);
+    --accent:#2d8cbf; --accent2:#1f6f8b;
+    /* legacy compat */
+    --paper:#0c1826; --paper2:#111f33;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Inter','Segoe UI',sans-serif;color:var(--ink);background:var(--dark);line-height:1.72}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.13;margin:0}
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent)}
+
+  /* ── ШАПКА ── */
+  header.top{background:rgba(6,12,23,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--card-b);color:#fff;position:sticky;top:0;z-index:30}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+  .logo svg{display:block;filter:drop-shadow(0 0 8px rgba(201,168,76,.4))}
+  .logo .lt{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:16px}
+  .logo .lt small{display:block;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-family:'Inter',sans-serif}
+  .score{background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:6px 16px;font-size:13px;color:var(--gold-l);cursor:pointer;font-family:'Inter',sans-serif}
+  .score-info{position:absolute;right:12px;top:66px;max-width:260px;background:#0e1c30;color:var(--ink);border:1px solid var(--card-b);border-radius:14px;padding:14px 16px;font-size:13px;line-height:1.6;box-shadow:0 20px 60px rgba(0,0,0,.6);display:none;z-index:40}
+  .score-info.show{display:block}
+
+  /* ── HERO — СТАНДАРТ (не менять): 3D-сцена сверху, текст отдельным блоком ниже ── */
+  .hero-scene{position:relative;height:52vh;min-height:300px;max-height:520px;overflow:hidden;background:linear-gradient(160deg,#0a1e3a 0%,#1a3a6a 55%,#0d2240 100%)}
+  .hero-scene canvas.scene,.hero-scene img.scene{width:100%;height:100%;display:block;object-fit:cover}
+  .scene-caption{background:#060d18;padding:11px 0 12px}
+  .scene-caption .wrap{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+  .scene-cap{font-size:13.5px;line-height:1.6;color:var(--muted);border-left:2px solid rgba(201,168,76,.4);padding-left:14px;flex:1 1 420px}
+  .scene-hint{flex:0 0 auto;font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.4px;color:#e4c97a;
+    background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.34);border-radius:24px;padding:7px 16px;font-weight:600}
+  .hero-lead{background:linear-gradient(180deg,#0c1826 0%,#060c17 100%);color:#fff;padding:28px 0 38px}
+  .hero-lead .museum{color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:12px;opacity:.9}
+  .hero-lead .who{font-family:'Inter',sans-serif;font-size:clamp(13px,3vw,15px);letter-spacing:.4px;color:var(--accent-l,#7dc8ff);margin-bottom:10px}
+  .hero-lead .who i{font-style:normal;color:#7893ab;font-weight:400}
+  .hero-lead h1{color:#fff;font-size:56px;font-weight:900;line-height:1.04;margin-bottom:16px}
+  .hero-lead .hook{color:#b8ccde;font-size:19px;max-width:580px;margin-bottom:28px;line-height:1.65;font-weight:400}
+  .hero-lead .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+  @media(max-width:680px){.hero-lead h1{font-size:34px}.hero-lead .hook{font-size:16px}
+    .hero-scene{height:34vh;min-height:230px;max-height:300px}
+    .scene-caption .wrap{flex-direction:column;gap:9px}
+    .scene-hint{order:-1;align-self:flex-start;font-size:11.5px;padding:6px 13px}
+    .scene-cap{font-size:12.8px;flex:1 1 auto}}
+  .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:16px;font-family:'Inter',sans-serif;letter-spacing:.5px}
+
+  /* ── НАВИГАЦИЯ ДНЯ ── */
+  .daynav{position:sticky;top:64px;z-index:25;background:rgba(6,12,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-b)}
+  .daynav .wrap{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+  .daynav::-webkit-scrollbar{display:none}
+  .daynav a{flex:0 0 auto;padding:14px 20px;font-size:11px;font-weight:700;font-family:'Inter',sans-serif;color:var(--muted);text-decoration:none;white-space:nowrap;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:.18s}
+  .daynav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+  /* ── СЕКЦИИ ── */
+  section.block{padding:64px 0;border-bottom:1px solid var(--line);scroll-margin-top:130px}
+  .kicker{font-size:10px;text-transform:uppercase;letter-spacing:3.5px;color:var(--gold);font-weight:700;font-family:'Inter',sans-serif;margin-bottom:8px}
+  section.block h2{font-size:34px;color:#fff;margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink)}
+  .pull{background:var(--gold-g);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 14px 14px 0;font-style:italic;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-size:20px;line-height:1.5;margin:26px 0}
+
+  /* ── КНОПКИ ── */
+  .btn{cursor:pointer;border:none;border-radius:12px;padding:14px 26px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;background:var(--accent2);color:#fff;transition:.18s;letter-spacing:.2px}
+  .btn:hover{filter:brightness(1.18)}
+  .btn.ghost{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid var(--card-b)}
+  .btn.ghost:hover{background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.2)}
+  .btn.gold{background:linear-gradient(135deg,var(--gold),#b8882b);color:#1a0f00;box-shadow:0 4px 20px rgba(201,168,76,.25)}
+  .btn.gold:hover{filter:brightness(1.1);box-shadow:0 6px 28px rgba(201,168,76,.4)}
+  .btn:active{transform:translateY(1px)}
+  .pulse{animation:pulse .9s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+
+  /* ── КАРТОЧКИ ── */
+  .card{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:20px 22px;margin:16px 0;backdrop-filter:blur(6px)}
+
+  /* ── КВИЗ ── */
+  .opt{display:block;width:100%;text-align:left;background:rgba(255,255,255,.04);border:1px solid var(--card-b);border-radius:12px;padding:13px 16px;margin:8px 0;cursor:pointer;font-size:15px;color:var(--ink);font-family:'Inter',sans-serif;transition:.16s}
+  .opt:hover{border-color:var(--accent);background:rgba(45,140,191,.08)}
+  .opt.correct{background:rgba(40,120,60,.18);border-color:#3f9b52;color:#7ed4a0;font-weight:600}
+  .opt.wrong{background:rgba(180,40,40,.13);border-color:#c0453f;color:#f08080}
+  .exp{margin-top:10px;font-size:14px;background:var(--gold-g);border-radius:10px;padding:12px 14px;display:none;color:var(--gold-l)}
+  .exp.show{display:block}
+
+  /* ── ИТОГ ДНЯ ── */
+  .day-result{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:22px 24px;max-width:460px}
+  .dr-rank{font-family:'Playfair Display',Georgia,serif;font-size:28px;color:var(--gold-l);font-weight:700}
+  .dr-score{font-size:16px;margin:4px 0 12px;color:var(--ink)}.dr-score span{color:var(--muted);font-size:14px}
+  .dr-bar{height:8px;background:rgba(255,255,255,.08);border-radius:6px;overflow:hidden}
+  .dr-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),var(--gold));transition:width .6s cubic-bezier(.2,.7,.2,1)}
+  .dr-note{margin-top:12px;font-size:14px;color:var(--muted)}
+
+  /* ── РЕКЛАМНЫЕ СЛОТЫ ── */
+  .ad-slot{position:relative;margin:26px 0;background:rgba(255,255,255,.02);border:1px dashed rgba(255,255,255,.1);border-radius:14px;min-height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px}
+  .ad-slot .lbl{position:absolute;top:7px;right:12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.15);font-family:'Inter',sans-serif}
+  .ad-slot .ph-txt{font-size:12px;max-width:80%;color:rgba(255,255,255,.18)}
+  .ad-slot.billboard{min-height:108px}
+  .adband{background:transparent;border-bottom:none}
+
+  footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
+  .crumbs{background:rgba(6,12,23,.6);border-bottom:1px solid var(--card-b);font-family:'Inter',sans-serif;font-size:12.5px}
+  .crumbs .wrap{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  .crumbs a{color:var(--gold-l);text-decoration:none;white-space:nowrap}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--muted);opacity:.6}
+  .crumbs .here{color:var(--muted);white-space:nowrap}
+
+
+  /* ── ШАПКА: четыре строки по museum-core §6-бис ── */
+  header.top{display:block;text-align:center;padding:10px 12px 8px;height:auto;position:relative}
+  header.top .b1{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:15px;letter-spacing:.5px;color:#fff}
+  header.top .b2{font-size:11px;color:var(--muted);margin-top:2px}
+  header.top .b3{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:6px}
+  header.top .b4{font-size:12.5px;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-style:italic}
+  header.top .score{position:absolute;right:12px;top:10px}
+  .daynav{top:0}
+  .hero-scene{background:#0e1c2c;height:38vh;min-height:250px;max-height:400px}
+  @media(max-width:680px){.hero-lead h1{font-size:31px}}
+  .hero-scene img.scene{object-fit:cover;object-position:50% 42%}
+  .date-origin{font-size:13px;color:#9fb4c8;margin:-6px 0 12px;max-width:62ch}
+  .hero-lead .hook{color:#c6d8e8;max-width:62ch}
+  .hero-under{background:linear-gradient(180deg,#060d18,#060c17);padding:4px 0 22px}
+  .stamp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(125,200,255,.28);margin-top:14px}
+  .stamp>div{padding:11px 12px;border-left:1px solid rgba(125,200,255,.16);min-width:0}
+  .stamp>div:first-child{border-left:0}
+  .stamp .v{font-size:clamp(15px,3.4vw,21px);font-weight:700;color:#8fd3ff;line-height:1.1;overflow-wrap:anywhere}
+  .stamp .k{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#8fa5b9;margin-top:5px}
+  @media(max-width:600px){.stamp{grid-template-columns:repeat(2,minmax(0,1fr))}.stamp>div:nth-child(3){border-left:0}.stamp>div:nth-child(n+3){border-top:1px solid rgba(125,200,255,.16)}}
+
+  /* ── ЛЕНТА УДАРОВ (museum-inventions, вариант А; museum-core §5-бис) ── */
+  .udary{list-style:none;margin:18px 0 0;padding:0;counter-reset:u}
+  .udary>li{border-top:1px solid var(--line);padding:4px 0}
+  .udary details>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:34px 1fr;gap:10px;padding:12px 0;font-size:17px;line-height:1.55;color:var(--ink)}
+  .udary details>summary::-webkit-details-marker{display:none}
+  .udary details>summary::before{counter-increment:u;content:counter(u);font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:20px;color:var(--gold);line-height:1.3}
+  .udary .more-lbl{display:block;grid-column:2;font-size:12.5px;color:var(--gold-l);letter-spacing:.3px;margin-top:4px}
+  .udary .more-lbl::after{content:' ▾'}
+  .udary details[open] .more-lbl::after{content:' ▴'}
+  .udary details[open] .more-lbl .o{display:none}
+  .udary details:not([open]) .more-lbl .c{display:none}
+  .udary summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+  .udary .det{margin:0 0 14px 44px;padding:12px 16px;background:rgba(255,255,255,.035);border-left:2px solid rgba(201,168,76,.45);border-radius:0 10px 10px 0;font-size:15px;color:#d5e0ea}
+  .udary .det p{margin:8px 0}
+  .udary .tag{display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1a0f00;background:var(--gold-l);border-radius:6px;padding:1px 7px;margin-right:6px}
+  .udary .find{border-left:3px solid var(--gold);padding-left:8px}
+  figure.fig{margin:18px 0}
+  figure.fig img{max-width:100%;height:auto;border-radius:10px;display:block}
+  figure.fig figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5}
+  .src-note{font-size:12px;color:#8fa5b9}
+
+  /* ── МОДЕЛЬ ДНЯ (главное предметное действие) ── */
+  .lab{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:18px 18px 20px;margin-top:14px}
+  .lab-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+  .lab-row .lbl{flex:0 0 100%;font-size:13px;color:var(--muted);letter-spacing:.3px}
+  .seg{cursor:pointer;border:1px solid var(--card-b);background:rgba(255,255,255,.04);color:var(--ink);border-radius:10px;padding:10px 14px;font:inherit;font-size:14.5px;min-height:44px}
+  .seg[aria-pressed="true"]{border-color:var(--gold);background:var(--gold-g);color:var(--gold-l);font-weight:600}
+  .seg:focus-visible,.btn:focus-visible,.opt:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .lab-stage{position:relative;margin-top:12px}
+  .lab-stage canvas{width:100%;height:auto;display:block;border-radius:10px;background:#1c2530}
+  .lab-cap{font-size:12px;color:#8fa5b9;margin-top:6px}
+  .lab-msg{margin-top:12px;font-size:15.5px;padding:12px 14px;border-radius:10px;background:rgba(255,255,255,.04);border-left:3px solid var(--card-b);min-height:48px}
+  .lab-msg.ok{border-left-color:#3f9b52;background:rgba(40,120,60,.14)}
+  .lab-msg.bad{border-left-color:#c0453f;background:rgba(180,40,40,.10)}
+  .lab-found{font-size:13px;color:var(--muted);margin-top:8px}
+  .lab-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .noscript-box{background:rgba(255,255,255,.04);border:1px dashed var(--card-b);border-radius:12px;padding:12px 16px;font-size:15px}
+
+  /* ── ГРАНИЦА ПЕРВЕНСТВА ── */
+  .border-box{background:rgba(45,140,191,.08);border:1px solid rgba(45,140,191,.3);border-radius:14px;padding:16px 18px}
+  .border-box b{color:#8fd3ff}
+  .ctx{width:100%;border-collapse:collapse;margin-top:14px;font-size:14.5px}
+  .ctx th,.ctx td{text-align:left;padding:9px 8px;border-top:1px solid var(--line);vertical-align:top}
+  .ctx th{color:var(--gold-l);font-weight:600;font-size:12.5px;letter-spacing:.5px}
+  .quiz-q{margin:18px 0 6px;font-weight:600}
+  .sources a{color:var(--gold-l)}
+  .sources li{margin:6px 0;font-size:14px;color:#c8d6e2}
+  @media(max-width:600px){header.top{padding:8px 64px 6px}header.top .score{top:8px;right:8px;padding:4px 10px;font-size:12px}header.top .b3{margin-top:3px}
+    .hero-scene{height:26vh;min-height:200px;max-height:260px}.date-origin{font-size:12px;margin:-8px 0 8px}.hero-lead{padding:18px 0 26px}.hero-lead .date-chip{margin-bottom:12px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+  /* ── ПОЛЗУНКИ МОДЕЛИ (19, 21 янв) ── */
+  .mtab{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+  .mrow{display:grid;grid-template-columns:minmax(150px,1.2fr) 2fr 92px;gap:12px;align-items:center}
+  .mrow .mname{font-size:14.5px}
+  .mrow .mname i{font-style:normal;color:var(--muted);font-size:13px}
+  .mrow input[type=range]{width:100%;accent-color:var(--gold);min-height:44px}
+  .mrow output{font-size:14px;color:var(--gold-l);text-align:right}
+  .mrow.off{opacity:.45}
+  .mult{margin-top:14px;padding:14px 16px;border-radius:12px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25)}
+  @media(max-width:560px){.mrow{grid-template-columns:1fr 70px}.mrow .mname{grid-column:1/-1}}
+</style>
+<meta name="description" content="В феврале 1869 года Менделеев оставил в своей системе элементов места под вопросом, а в 1870-м описал три неоткрытых элемента. Галлий, скандий и германий нашли в 1875–1886 годах.">
+<link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-08feb-mendeleev.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Русская цивилизация">
+<meta property="og:title" content="Пустые клетки Менделеева: элементы, описанные до открытия">
+<meta property="og:description" content="В феврале 1869 года Менделеев оставил в своей системе элементов места под вопросом, а в 1870-м описал три неоткрытых элемента. Галлий, скандий и германий нашли в 1875–1886 годах.">
+<meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-08feb-mendeleev.html">
+<meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-08feb-mendeleev.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Пустые клетки Менделеева: элементы, описанные до открытия", "description": "В феврале 1869 года Менделеев оставил в своей системе элементов места под вопросом, а в 1870-м описал три неоткрытых элемента. Галлий, скандий и германий нашли в 1875–1886 годах.", "url": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-08feb-mendeleev.html", "inLanguage": "ru", "isPartOf": {"@type": "WebSite", "name": "Музей «Что изобрели русские первыми в мире»"}, "publisher": {"@type": "Organization", "name": "Русская цивилизация"}, "about": {"@type": "Person", "name": "Дмитрий Иванович Менделеев"}, "image": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-08feb-mendeleev.jpg"}</script>
+<style>
+  /* ── КАРТОЧКИ, ПУСТЫЕ КЛЕТКИ, ЗАМЕРЫ ЛЕКОКА (8 фев) ── */
+  .deck{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;max-width:640px}
+  .card-el{font:inherit;min-width:74px;padding:6px 8px;border-radius:8px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.04);color:var(--ink);cursor:pointer;text-align:center;line-height:1.25}
+  .card-el b{display:block;font-size:19px;color:var(--gold-l)}
+  .card-el small{display:block;font-size:12.5px;color:var(--muted)}
+  .card-el.on{border-color:var(--gold);background:rgba(201,168,76,.18)}
+  .card-el.done{opacity:.35;cursor:default}
+  .ptab{display:grid;grid-template-columns:64px repeat(4,1fr);gap:6px;margin-top:12px;max-width:640px}
+  .ptab .hd{font-size:13px;color:var(--muted);text-align:center;align-self:end;line-height:1.3}
+  .ptab .rw{font-size:13px;color:var(--muted);align-self:center}
+  .cell{font:inherit;min-height:66px;border-radius:8px;border:1px dashed rgba(255,255,255,.22);background:transparent;color:var(--ink);cursor:pointer;padding:4px;text-align:center;line-height:1.25}
+  .cell b{display:block;font-size:19px;color:var(--gold-l)}
+  .cell small{display:block;font-size:12px;color:var(--muted)}
+  .cell.full{border-style:solid;border-color:rgba(255,255,255,.18);background:rgba(255,255,255,.04)}
+  .cell.gap{border-color:#e06a4f;border-style:dashed;background:rgba(224,106,79,.08)}
+  .cell.gap b{color:#f0a08c}
+  .cell.sel{outline:2px solid var(--gold);outline-offset:1px}
+  .cell.pick{background:rgba(201,168,76,.22);border-color:var(--gold)}
+  .cell.ok{border-color:#3f9b52;background:rgba(63,155,82,.15)}
+  .readout{margin-top:10px;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px;max-width:640px}
+  .readout div{background:rgba(255,255,255,.035);border-radius:8px;padding:8px 10px;font-size:14.5px}
+  .readout b{display:block;font-size:20px;color:var(--gold-l);font-variant-numeric:tabular-nums}
+  .tasks{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+  .tasks .seg{flex:1 1 180px;text-align:left}
+  .tasks .seg.done{border-color:#3f9b52;background:rgba(63,155,82,.15)}
+  .gauge{position:relative;max-width:600px;height:64px;margin:14px 0 4px;border-bottom:2px solid #8a7a5a}
+  .gauge .tick{position:absolute;bottom:-20px;font-size:12px;color:var(--muted);transform:translateX(-50%)}
+  .gauge .mk{position:absolute;bottom:0;width:2px;height:40px;transform:translateX(-1px)}
+  .gauge .mk span{position:absolute;bottom:42px;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:12.5px}
+  .gauge .mk.m{background:#c9a84c}.gauge .mk.m span{color:#f1d58a}
+  .gauge .mk.a{background:#7a8a9a}.gauge .mk.a span{color:#b8c4d0}
+  .gauge .dot{position:absolute;bottom:-7px;width:14px;height:14px;border-radius:50%;background:#e06a4f;transform:translateX(-7px);transition:left .6s ease;box-shadow:0 0 8px #e06a4f}
+  .match{display:grid;grid-template-columns:1fr 1fr;gap:8px;max-width:640px;margin-top:8px}
+  .match .col{display:grid;gap:8px;align-content:start}
+  .match .seg{text-align:left}
+  .match .seg.on{border-color:var(--gold);background:rgba(201,168,76,.15)}
+  .match .seg.ok{border-color:#3f9b52;background:rgba(63,155,82,.15)}
+  blockquote.doc{margin:12px 0;padding:10px 14px;border-left:3px solid var(--gold);background:rgba(255,255,255,.03);border-radius:0 10px 10px 0;font-size:15px;line-height:1.6}
+  table.code{border-collapse:collapse;margin:10px 0;font-size:14.5px}
+  table.code td,table.code th{border:1px solid rgba(255,255,255,.12);padding:4px 10px;text-align:center}
+  #hero img.scene{object-fit:contain;object-position:50% 30%}
+  @media(max-width:560px){.ptab{grid-template-columns:44px repeat(4,1fr);gap:4px}.cell{min-height:58px}.cell b,.card-el b{font-size:16px}.match{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="b1">Русская цивилизация</div>
+  <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
+  <div class="b3">Что изобрели русские первыми в мире</div>
+  <div class="b4">365 изобретений. Все русские. Все первые</div>
+  <div class="score" id="scoreBox" title="Баллы знаний за этот день">⭐ <span id="score">0</span> / 100</div>
+</header>
+
+<nav class="crumbs" aria-label="Хлебные крошки"><div class="wrap">
+  <a href="../../index.html">Русская цивилизация</a>
+  <span class="sep">›</span>
+  <a href="index.html">Что изобрели русские первыми в мире</a>
+  <span class="sep">›</span>
+  <span class="here">8 февраля · Периодическая система Менделеева</span>
+</div></nav>
+
+<div class="hero-scene" id="hero" style="background:#9a958c">
+  <img class="scene" src="day-08feb-mendeleev.jpg" data-source="https://commons.wikimedia.org/wiki/File:Mendeleev_c1880.jpg" data-license="Public domain" data-author="фотограф неизвестен" width="800" height="1013" alt="Старая чёрно-белая фотография: мужчина с длинными волосами и окладистой бородой, в светлом сюртуке, сидит в кресле у стола с книгами и шляпой; слева тяжёлая драпировка" fetchpriority="high">
+</div>
+
+<div class="scene-caption">
+  <div class="wrap">
+    <div class="scene-cap">Дмитрий Иванович Менделеев около 1880–1882 годов. Фотограф неизвестен; Викисклад, общественное достояние.</div>
+    <span class="scene-hint">Человек · химик</span>
+  </div>
+</div>
+
+<header class="hero-lead">
+  <div class="wrap">
+    <div class="date-chip">8 февраля · 1869</div>
+    <p class="date-origin">8 февраля (27 января по старому стилю) 1834 года в Тобольске родился Дмитрий Иванович Менделеев. Свою систему элементов он составил и разослал химикам в феврале 1869 года.</p>
+    <div class="who">Дмитрий Иванович Менделеев <i>· химик, профессор Петербургского университета</i></div>
+    <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
+    <h1>Пустые клетки Менделеева: элементы, описанные до открытия</h1>
+    <p class="hook">В 1869 году Менделеев оставил в своей системе элементов места под знаком вопроса, а через шесть лет в одно из них встал металл, найденный во Франции.</p>
+    <div class="hero-btns">
+      <button class="btn gold" id="readBtn" type="button">Читать историю ↓</button>
+      <button class="btn ghost" id="listenBtn" type="button">🎧 Слушать аудиогид</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero-under">
+  <div class="wrap">
+    <div class="stamp">
+      <div><div class="v">1869</div><div class="k">февраль — листок «Опыт системы элементов» уходит к химикам</div></div>
+      <div><div class="v">3</div><div class="k">неоткрытых элемента Менделеев описал заранее: экабор, экаалюминий, экасилиций</div></div>
+      <div><div class="v">5,9</div><div class="k">плотность экаалюминия по расчёту; у чистого галлия в 1876 году — 5,935</div></div>
+      <div><div class="v">1875–1886</div><div class="k">все три найдены: галлий, скандий и германий</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="daynav" aria-label="Разделы дня">
+  <div class="wrap">
+    <a href="#story">Читать</a>
+    <a href="#audioguide">Слушать</a>
+    <a href="#games">Пустые клетки</a>
+    <a href="#pervenstvo">Первенство</a>
+    <a href="#quiz">Викторина</a>
+    <a href="#calendar">Календарь</a>
+  </div>
+</nav>
+
+<section class="wrap" id="dokument" data-proof-block></section>
+
+<section class="block" id="audioguide"></section>
+
+<section class="block" id="story">
+  <div class="wrap">
+    <div class="kicker">История первенства · 12 ударов</div>
+    <h2>От карточек на столе — к трём найденным элементам</h2>
+    <p style="color:var(--muted);max-width:62ch">Читается подряд. Нажми на удар — откроется подробный разбор с источниками.</p>
+    <ol class="udary">
+      <li><details><summary><span>В 1867 году Менделеев возглавил кафедру общей химии в Петербургском университете и начал писать учебник «Основы химии». Чтобы рассказывать об элементах не наугад, ему нужна была система.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Учебник выходил выпусками с 1868 по 1871 год. Работая над второй частью, Менделеев постепенно отказался группировать элементы по атомности и стал расставлять их по сходству свойств и атомному весу. Сам он объяснял это так:</p>
+          <blockquote class="doc">«Предприняв составление руководства к химии, названного „Основы химии“, я должен был остановиться на какой-нибудь системе простых тел, чтобы в распределении их не руководствоваться случайными, как бы инстинктивными, побуждениями, а каким-либо определённо точным началом».</blockquote>
+          <p class="src-note">Источники: Д. И. Менделеев, «Соотношение свойств с атомным весом элементов», 1869 (по изданию «Периодический закон», 1926); РХТУ имени Д. И. Менделеева, «Биография Д. И. Менделеева».</p>
+        </div></details></li>
+      <li><details><summary><span>Он выписал элементы на отдельные карточки, каждый — со своим атомным весом и главными свойствами, и стал подбирать: похожие к похожим, близкие веса к близким.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Много лет спустя, в последнем прижизненном издании «Основ химии», Менделеев так рассказал о своей работе:</p>
+          <blockquote class="doc">«Вот я и стал подбирать, написав на отдельных карточках элементы с их атомными весами и коренными свойствами, сходные элементы и близкие атомные веса, что быстро и привело к тому заключению, что свойства элементов стоят в периодической зависимости от их атомного веса».</blockquote>
+          <p class="src-note">Источник: Д. И. Менделеев, «Основы химии», 8-е издание, 1906 (по изданию «Периодический закон», 1926).</p>
+        </div></details></li>
+      <li><details><summary><span>Три рукописных варианта таблицы датированы 17 февраля 1869 года. В том же феврале Менделеев разослал химикам отпечатанный листок «Опыт системы элементов».<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Полное название листка — «Опыт системы элементов, основанной на их атомном весе и химическом сходстве». На нём — знаки элементов и их атомные веса. Кое-где вместо знака стоит вопрос: «? = 45», «? = 68», «? = 70». Это места для элементов, которых ещё никто не нашёл.</p>
+          <p>Ошибки в листке тоже были. Через год Менделеев сам признал, что церитовые элементы, уран и индий не нашли в этой системе «надлежащего места».</p>
+          <p class="src-note">Источники: Д. И. Менделеев, «Опыт системы элементов» (1869) и «Естественная система элементов и применение её к указанию свойств неоткрытых элементов» (1871), по изданию «Периодический закон», 1926; РХТУ имени Д. И. Менделеева, «Биография Д. И. Менделеева».</p>
+        </div></details></li>
+      <li><details><summary><span>6 марта 1869 года доклад Менделеева прочёл за него в Русском химическом обществе Николай Меншуткин. Шестой из восьми выводов доклада: надо ждать открытия новых элементов, похожих на алюминий и кремний.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Доклад «Соотношение свойств с атомным весом элементов» напечатан в первом томе «Журнала Русского химического общества» за 1869 год. Первый его вывод:</p>
+          <blockquote class="doc">«Элементы, расположенные по величине их атомного веса, представляют явственную периодичность свойств».</blockquote>
+          <p>Шестой вывод:</p>
+          <blockquote class="doc">«Должно ожидать открытия ещё многих неизвестных простых тел, например, сходных с Al и Si, элементов с паем 65–75».</blockquote>
+          <p>Паем тогда называли атомный вес.</p>
+          <p class="src-note">Источник: Д. И. Менделеев, «Соотношение свойств с атомным весом элементов», «Журнал Русского химического общества», т. I, 1869, с. 60–77 (по изданию «Периодический закон», 1926).</p>
+        </div></details></li>
+      <li><details><summary><span>В апреле Менделееву указали на похожую таблицу в учебнике англичанина Одлинга. Менделеев сам дописал об этом примечание к статье.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>О таблице Менделееву сообщил химик Ф. Н. Савченков: она была в русском переводе «Курса практической химии» Одлинга, вышедшем в 1867 году, и называлась просто «Атомные веса и знаки элементов». Менделеев написал:</p>
+          <blockquote class="doc">«Однако Одлинг ничего не говорит о смысле своей таблицы и, сколько то мне известно, нигде о ней не упоминает. Она мне была до сих пор вовсе неизвестна, как, вероятно, и большинству учёных».</blockquote>
+          <p class="src-note">Источник: примечание Д. И. Менделеева к статье «Соотношение свойств с атомным весом элементов», апрель 1869 (по изданию «Периодический закон», 1926).</p>
+        </div></details></li>
+      <li><details><summary><span>3 декабря 1870 года Менделеев сделал новый доклад: как по системе предсказать свойства неоткрытых элементов. Три из них он описал подробно и назвал экабором, экаалюминием и экасилицием.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Статья «Естественная система элементов и применение её к указанию свойств неоткрытых элементов» вышла в третьем томе «Журнала Русского химического общества» за 1871 год. В том же году более полная статья появилась по-немецки в «Анналах» Либиха, а в 1879 году её перевели на французский и английский.</p>
+          <p>«Эка» — санскритское числительное «один». Так Менделеев называл элемент, который в своей группе следует сразу за известным: экаалюминий — за алюминием, экасилиций — за кремнием.</p>
+          <p class="src-note">Источники: Д. И. Менделеев, «Естественная система элементов…», «Журнал Русского химического общества», т. III, 1871, с. 25–56, и статья 1871 года в «Анналах» Либиха в переводе (по изданию «Периодический закон», 1926); Б. Н. Меншуткин, «Открытие предсказанных Д. И. Менделеевым элементов», там же.</p>
+        </div></details></li>
+      <li><details><summary><span>Свойства пустой клетки Менделеев выводил из соседей. Объём атома экаалюминия — между цинком (9) и мышьяком (14), около 11,5, а значит, плотность — около 6.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Соседей по ряду и по группе Менделеев называл атомными аналогами. Обе пустые клетки лежали в одном ряду между цинком (атомный вес 65) и мышьяком (75). Отсюда атомные веса: около 68 у экаалюминия и около 72 у экасилиция. Для экасилиция объём атома он взял между кремнием (11) и оловом (16) — 13. Плотность — это атомный вес, делённый на объём атома: у экаалюминия выходит около 6,0, у экасилиция — около 5,5.</p>
+          <p>Он предсказал и то, как будут искать экаалюминий:</p>
+          <blockquote class="doc">«…очень вероятно, что этот металл будет обладать большей летучестью, чем алюминий, а потому можно надеяться, что он будет открыт спектральным исследованием…»</blockquote>
+          <p class="src-note">Источник: Д. И. Менделеев, «Естественная система элементов…» (1871) и статья в «Анналах» Либиха (1871), по изданию «Периодический закон», 1926.</p>
+        </div></details></li>
+      <li><details><summary><span>27 августа 1875 года француз Поль Эмиль Лекок де Буабодран увидел в спектре цинковой обманки из Пиренеев новую фиолетовую линию. Новый металл он назвал галлием.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Обманка была из рудника Пьерфит в долине Аржелес. Лекок описал находку в запечатанной записке, сдал её в Парижскую академию наук 30 августа, и 20 сентября записку вскрыли на заседании. Вещества у него было так мало, что отделить новый элемент от цинка он поначалу не смог. Главной в спектре была фиолетовая линия — «узкая, легко видимая».</p>
+          <p class="src-note">Источники: П. Э. Лекок де Буабодран, записка об открытии галлия, Comptes rendus de l’Académie des sciences, т. 81, 1875, с. 493–495; «Химия и жизнь», 1970, № 6, «Галлий».</p>
+        </div></details></li>
+      <li><details><summary><span>Менделеев прочёл сообщение и 22 ноября 1875 года напомнил Парижской академии: новый металл, судя по всему, и есть экаалюминий. Плотность он назвал заранее — 5,9.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <blockquote class="doc">«Способ открытия и выделения, а также немногие описанные свойства заставляют предполагать, что новый металл не что иное, как экаалюминий».</blockquote>
+          <p>Лекок ответил 6 декабря: о предсказании он не знал. Больше того, следуй он ему, он искал бы галлий не там. По расчёту новый металл походил на алюминий и индий, а их окислы в аммиаке почти не растворяются. Галлий же нашёлся в аммиачных растворах.</p>
+          <p class="src-note">Источники: Д. И. Менделеев, «Remarques à propos de la découverte du gallium», Comptes rendus, т. 81, 1875, с. 969–972 (перевод цитаты — Б. Н. Меншуткин, 1926); ответ П. Э. Лекока де Буабодрана в заметке «Sur quelques propriétés du gallium», там же, с. 1100–1105.</p>
+        </div></details></li>
+      <li><details><summary><span>В мае 1876 года Лекок измерил плотность крупинки галлия в шесть сантиграммов и получил 4,7. Прав оказался не первый замер, а расчёт Менделеева, сделанный ещё до открытия металла.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Число 4,7 Лекоку сначала показалось подходящим: средняя плотность алюминия и индия — 4,8, а галлий стоит между ними. Но расчёты Менделеева давали 5,9. Лекок заподозрил, что в металле остались пузырьки воздуха или воды. Он стал сильно прогревать образец и давать ему застыть в сухом воздухе — и получил от 5,5 до 6,2. Наконец он собрал 58 сантиграммов чистого галлия. Два замера дали 5,90 и 5,97, в среднем 5,935. Лекок писал:</p>
+          <blockquote class="doc">«Я думаю, нет необходимости настаивать на огромном значении подтверждения теоретических выводов г. Менделеева относительно плотности нового элемента».</blockquote>
+          <p class="src-note">Источники: П. Э. Лекок де Буабодран, «Sur les propriétés physiques du gallium», Comptes rendus, т. 83, 1876, с. 611–613; Б. Н. Меншуткин, «Открытие предсказанных Д. И. Менделеевым элементов» (1926) — перевод цитаты.</p>
+        </div></details></li>
+      <li><details><summary><span>В 1879 году швед Ларс Нильсон открыл скандий. Его соотечественник Пер Теодор Клеве заметил, что это экабор, и Нильсон признал: мысли русского химика подтвердились «самым наглядным образом».<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Нильсон, по всей видимости, о предсказании не знал. В 1880 году он написал:</p>
+          <blockquote class="doc">«…не остаётся никакого сомнения, что в скандии открыт экабор…; так подтверждаются самым наглядным образом мысли русского химика, позволившие не только предвидеть существование названного простого тела, но и наперёд дать его важнейшие свойства».</blockquote>
+          <table class="code"><thead><tr><th scope="col"></th><th scope="col">Экабор, 1871</th><th scope="col">Скандий</th></tr></thead>
+            <tbody><tr><th scope="row">Атомный вес</th><td>44</td><td>44,1</td></tr><tr><th scope="row">Плотность окиси</th><td>3,5</td><td>3,86</td></tr></tbody></table>
+          <p class="src-note">Источники: Б. Н. Меншуткин, «Открытие предсказанных Д. И. Менделеевым элементов» (1926); А. Паевский, «118 элементов. Глава 21» (Mendeleev.info, 2019).</p>
+        </div></details></li>
+      <li><details><summary><span>В 1886 году немец Клеменс Винклер выделил из минерала аргиродита германий. Это был экасилиций: атомный вес — 72,3 против предсказанных 72.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Сначала Винклер принял германий за другой предсказанный элемент — экасурьму. Что это экасилиций, ему в феврале 1886 года независимо написали В. Рихтер, сам Менделеев и Лотар Мейер. Плотность германия оказалась 5,35 (предсказано около 5,5), его окиси — 4,703 (предсказано около 4,7). Винклер писал, что открытие экасилиция «знаменует собою выдающееся расширение химического поля зрения, гигантский шаг в области познания».</p>
+          <p>Менделеев в «Основах химии» ответил первооткрывателям:</p>
+          <blockquote class="doc">«Л. де-Боабодрана, Нильсона и Винклера, их открывших, я, с своей стороны, считаю истинными укрепителями периодического закона».</blockquote>
+          <p class="src-note">Источники: Б. Н. Меншуткин, «Открытие предсказанных Д. И. Менделеевым элементов» (1926); Д. И. Менделеев, «Основы химии», 8-е издание, 1906 (там же); «Германий», «Популярная библиотека химических элементов» (М.: Наука, 1977).</p>
+        </div></details></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block" id="theme-inventions">
+  <div class="wrap">
+    <div class="kicker">Химия и металлы · Русские первенства</div>
+    <h2>Что ещё русские первыми сделали в химии</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Другие дни музея о веществах и их свойствах — по утверждённому календарю. Часть этих залов ещё готовится.</p>
+    <button class="btn ghost" type="button" id="themeInvBtn" data-label="Показать 3 первенства →" aria-expanded="false" aria-controls="themeInvBody">Показать 3 первенства →</button>
+    <div id="themeInvBody" hidden>
+      <ul class="theme-list">
+        <li><b>3 янв</b> <a href="day-03jan-anosov.html">Возрождение секрета булатной стали</a></li>
+        <li><b>6 фев</b> <a href="day-06feb-zelinsky.html">Угольный противогаз Зелинского</a></li>
+        <li><b>8 янв</b> <a href="day-08jan-icebreaker.html">«Ермак» — Менделеев помог Макарову с ледоколом</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="games">
+  <div class="wrap">
+    <div class="kicker">Главное действие · карточки и пустые клетки</div>
+    <h2>Разложи карточки и предскажи элемент</h2>
+    <p style="max-width:62ch">Перед тобой кусок системы Менделеева — тот самый, который он приводил в 1875 году в заметке для Парижской академии: группы со второй по пятую, ряды третий, пятый и седьмой. Разложи десять карточек по местам, найди пустые клетки и вычисли по соседям плотность неоткрытых элементов. Потом повтори замеры Лекока и узнай в найденных элементах предсказанные.</p>
+    <div class="lab" id="lab">
+      <h3 style="margin:8px 0 6px">1. Десять карточек</h3>
+      <p style="max-width:62ch;margin:0 0 6px;color:var(--muted)">Выбери карточку, потом клетку. Группу подсказывает высший окисел: RO — вторая, R₂O₃ — третья, RO₂ — четвёртая, R₂O₅ — пятая. Ряд подсказывает атомный вес: в третьем ряду элементы легче 35, в пятом — от 60 до 80, в седьмом — тяжелее 100.</p>
+      <div class="deck" id="deck" role="group" aria-label="Карточки элементов"></div>
+      <div class="ptab" id="ptab" role="group" aria-label="Кусок системы элементов: группы II–V, ряды 3, 5, 7"></div>
+      <div class="lab-msg" id="cMsg" aria-live="polite">Выбери карточку.</div>
+
+      <h3 style="margin:22px 0 6px">2. Пустые клетки: расчёт по соседям</h3>
+      <p style="max-width:62ch;margin:0 0 6px;color:var(--muted)">Нажми на пустую клетку, потом на двух соседей, по которым Менделеев оценивал объём её атома. Объём ложится между объёмами соседей, а плотность — это атомный вес, делённый на объём.</p>
+      <div class="readout">
+        <div>Клетка<b id="roC">—</b></div>
+        <div>Атомный вес<b id="roA">—</b></div>
+        <div>Объём атома<b id="roV">—</b></div>
+        <div>Плотность<b id="roD">—</b></div>
+      </div>
+      <div class="lab-msg" id="fMsg" aria-live="polite">Сначала разложи все карточки — пустые клетки проявятся сами.</div>
+
+      <h3 style="margin:22px 0 6px">3. Замеры Лекока, 1876 год</h3>
+      <p style="max-width:62ch;margin:0 0 6px;color:var(--muted)">Нажимай замеры по порядку и смотри, куда ложится точка: к среднему алюминия и индия или к расчёту Менделеева.</p>
+      <div class="tasks" id="meas" role="group" aria-label="Замеры плотности галлия"></div>
+      <div class="gauge" id="gauge" aria-hidden="true">
+        <div class="mk a" style="left:26.7%"><span>4,8 — среднее Al и In</span></div>
+        <div class="mk m" style="left:63.3%"><span>5,9 — расчёт Менделеева</span></div>
+        <div class="dot" id="gDot" style="left:0%;opacity:0"></div>
+        <span class="tick" style="left:0%">4,0</span><span class="tick" style="left:33.3%">5,0</span><span class="tick" style="left:66.7%">6,0</span><span class="tick" style="left:100%">7,0</span>
+      </div>
+      <div class="lab-msg" id="lMsg" aria-live="polite" style="margin-top:26px">Начни с первого замера, мая 1876 года.</div>
+
+      <h3 style="margin:22px 0 6px">4. Узнай предсказанные элементы</h3>
+      <p style="max-width:62ch;margin:0 0 6px;color:var(--muted)">Слева — то, что Менделеев описал в 1871 году, справа — то, что нашли. Выбери предсказание, потом найденный элемент.</p>
+      <div class="match">
+        <div class="col" id="mL" role="group" aria-label="Предсказания"></div>
+        <div class="col" id="mR" role="group" aria-label="Найденные элементы"></div>
+      </div>
+      <div class="lab-msg" id="mMsg" aria-live="polite">Выбери предсказание.</div>
+      <div class="lab-cap">Карточки и места — по таблице из заметки Д. И. Менделеева в Comptes rendus 1875 года (ряды 3, 5, 7, группы II–V); атомные веса — по его статьям 1869–1871 годов, индий — уже с исправленным весом 113. Объёмы атомов цинка (9), мышьяка (14), кремния (11) и олова (16), веса 68 и 72 и плотности около 6,0 и 5,5 — из статьи 1871 года; 5,9 для экаалюминия — из заметки 1875 года. Замеры галлия — по заметке П. Э. Лекока де Буабодрана 1876 года. Числа для найденных элементов — по Б. Н. Меншуткину (1926) и журналу Mendeleev.info.</div>
+      <noscript><div class="noscript-box">Для модели нужен JavaScript. Текстовая версия. Третий ряд: Mg 24, Al 27,4, Si 28, P 31. Пятый ряд: Zn 65,2, пустая клетка, пустая клетка, As 75. Седьмой ряд: Cd 112, In 113, Sn 118, Sb 122. Экаалюминий: вес около 68, объём между цинком (9) и мышьяком (14) — 11,5, плотность около 5,9. Экасилиций: вес около 72, объём между кремнием (11) и оловом (16) — 13, плотность около 5,5. Замеры Лекока: май 1876 — 4,7 на 6 сантиграммах; прогретый металл — от 5,5 до 6,2; 58 сантиграммов — 5,935. Экабор — скандий (1879), экаалюминий — галлий (1875), экасилиций — германий (1886).</div></noscript>
+    </div>
+    <p class="src-note" style="margin-top:10px">Таблица и плотность 5,9 — Д. И. Менделеев, «Remarques à propos de la découverte du gallium», Comptes rendus, т. 81, 1875; объёмы атомов и расчёт — Д. И. Менделеев, «Естественная система элементов…» и статья 1871 года в «Анналах» Либиха (по изданию «Периодический закон», 1926); замеры — П. Э. Лекок де Буабодран, Comptes rendus, т. 83, 1876, с. 611–613; галлий, скандий, германий — Б. Н. Меншуткин, «Открытие предсказанных Д. И. Менделеевым элементов» (1926).</p>
+  </div>
+</section>
+
+<section class="block" id="pervenstvo">
+  <div class="wrap">
+    <div class="kicker">Проверка факта</div>
+    <h2>Что именно здесь наше</h2>
+    <div class="border-box">
+      <p style="margin-top:0"><b>Граница первенства:</b> Менделеев первым объявил периодическую зависимость свойств элементов от атомного веса законом природы и проверил её предсказаниями. В 1869–1871 годах он оставил в системе места для неоткрытых элементов и заранее подробно описал свойства трёх из них: экабора, экаалюминия и экасилиция. Их нашли в 1875, 1879 и 1886 годах, и свойства совпали с расчётом. По тому же закону он исправлял атомные веса плохо изученных элементов. Сам Менделеев определял свою долю так: ни де Шанкуртуа, ни Ньюлендс, ни Мейер «не рисковали предугадывать свойства неоткрытых элементов, изменять „принятые атомные веса атомов“».</p>
+      <p><b>Чего здесь нет:</b> располагать элементы по атомному весу пробовали и до него. Штреккера, де Шанкуртуа и Ньюлендса Менделеев сам признавал: они «стояли впереди всех на дороге к периодическому закону». Похожая таблица без объяснений была в учебнике Одлинга. Лотар Мейер в 1870 году напечатал статью об объёмах атомов с наглядной кривой. Новый вес индия, 113 вместо 75,6, Мейер предложил раньше, а Менделеев пришёл к нему независимо — он пишет об этом сам. В 1882 году Лондонское королевское общество присудило медаль Дэви двоим — Менделееву и Мейеру — за периодические соотношения атомных весов. В речи при вручении о предсказаниях не сказано ни слова.</p>
+      <p>Всего Менделеев не предусмотрел. Инертные газы, открытые в 1890-х годах, его система не предсказала, хотя потом они нашли в ней своё место — нулевую группу.</p>
+      <p style="margin-bottom:0">Часто рассказывают, будто Менделеев письмом поправил Лекока после замера 4,7. Документы Парижской академии показывают иначе. Число 5,9 Менделеев напечатал в ноябре 1875 года, ещё до первого замера. А в 1876 году Лекок сам сослался на его расчёты и перемерил металл.</p>
+    </div>
+    <figure class="fig">
+      <img src="day-08feb-mendeleev-opyt.jpg" data-source="https://commons.wikimedia.org/wiki/File:Mendeleev%27s_1869_periodic_table.png" data-license="Public domain" width="1067" height="1312" loading="lazy" alt="Чёрно-белый печатный листок в старой орфографии: заголовок «Опыт системы элементов, основанной на их атомном весе и химическом сходстве», ниже столбцы знаков элементов с числами, среди них строки «? = 45», «? = 68», «? = 70»; внизу подпись «Д. Менделеев»">
+      <figcaption>Листок «Опыт системы элементов, основанной на их атомном весе и химическом сходстве», февраль 1869 года. Строки «? = 45», «? = 68» и «? = 70» — места, куда потом встанут скандий, галлий и германий. Викисклад, общественное достояние.</figcaption>
+    </figure>
+    <table class="ctx">
+      <thead><tr><th scope="col">Кто</th><th scope="col">Что сделал</th><th scope="col">Когда</th></tr></thead>
+      <tbody>
+        <tr><td>У. Одлинг, Англия</td><td>Таблица «Атомные веса и знаки элементов» в учебнике, без объяснения смысла</td><td>русский перевод — 1867</td></tr>
+        <tr><td>Дж. Ньюлендс, Англия</td><td>«Закон октав»: свойства повторяются через каждые восемь элементов</td><td>1865</td></tr>
+        <tr><td>Д. И. Менделеев, Россия</td><td>«Опыт системы элементов» с пустыми местами; описание трёх неоткрытых элементов</td><td>февраль 1869; 1870–1871</td></tr>
+        <tr><td>Л. Мейер, Германия</td><td>Статья об объёмах атомов с кривой; по словам Менделеева, выводы основаны на его системе</td><td>1870</td></tr>
+        <tr><td>Лондонское королевское общество</td><td>Медаль Дэви — Менделееву и Мейеру</td><td>1882</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block" id="quiz">
+  <div class="wrap">
+    <div class="kicker">Проверь себя · 5 вопросов</div>
+    <h2>Викторина</h2>
+    <p style="color:var(--muted);max-width:62ch">На каждый вопрос — одна попытка. После ответа покажем объяснение.</p>
+    <div id="quizBox"></div>
+    <noscript><div class="noscript-box">Для викторины нужен JavaScript. Ответы: 1 — знак вопроса и атомный вес; 2 — из санскрита; 3 — 4,7; 4 — Менделееву и Мейеру; 5 — германий.</div></noscript>
+  </div>
+</section>
+
+<section class="block" id="result">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Итог дня</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Карточки, расчёт, замеры, узнавание элементов и викторина вместе дают 100 баллов. Прогресс не сохраняется: перезагрузишь страницу — день начнётся заново.</p>
+    <div class="day-result">
+      <div class="dr-score" id="dayTxt">0 / 100 · звание: Гость дня</div>
+      <div class="dr-bar"><i id="dayBar" style="width:0%"></i></div>
+      <div class="dr-note">Разложи десять карточек, рассчитай две пустые клетки, пройди три замера Лекока, узнай три элемента и ответь на вопросы викторины.</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="sources">
+  <div class="wrap">
+    <div class="kicker">Источники</div>
+    <h2>На чём стоит страница</h2>
+    <ul class="sources">
+      <li><a href="https://archive.org/details/mendeleev_periodic" rel="noopener" target="_blank">Д. И. Менделеев · «Периодический закон»</a>, под ред. и со статьёй Б. Н. Меншуткина (Классики естествознания, кн. 15. М.; Л.: Госиздат, 1926; скан Internet Archive): листок «Опыт системы элементов» (1869), статьи «Соотношение свойств с атомным весом элементов» (1869) и «Естественная система элементов…» (1871), статья 1871 года из «Анналов» Либиха в переводе, выдержки из «Основ химии» (1906); Б. Н. Меншуткин, «Жизнеописание» и «Открытие предсказанных Д. И. Менделеевым элементов».</li>
+      <li><a href="https://archive.org/details/ComptesRendusAcademieDesSciences0081" rel="noopener" target="_blank">Comptes rendus hebdomadaires des séances de l’Académie des sciences, т. 81, 1875</a> (скан Internet Archive): записка П. Э. Лекока де Буабодрана об открытии галлия (с. 493), заметка Д. И. Менделеева «Remarques à propos de la découverte du gallium» (с. 969), ответ Лекока (с. 1100–1105).</li>
+      <li><a href="https://archive.org/details/ComptesRendusAcademieDesSciences0083" rel="noopener" target="_blank">Comptes rendus… т. 83, 1876</a> (скан Internet Archive): П. Э. Лекок де Буабодран, «Sur les propriétés physiques du gallium», с. 611–613 — замеры плотности 4,7, 5,5–6,2 и 5,935.</li>
+      <li><a href="https://archive.org/details/proceedings3418821883roya" rel="noopener" target="_blank">Proceedings of the Royal Society of London, т. 34, 1882–1883</a> (скан Internet Archive): годичное собрание 30 ноября 1882 года, медаль Дэви Д. И. Менделееву и Л. Мейеру.</li>
+      <li><a href="https://www.muctr.ru/university/about/history/mendeleev/" rel="noopener" target="_blank">«Биография Д. И. Менделеева»</a>, РХТУ имени Д. И. Менделеева: дата рождения 27 января (8 февраля) 1834 года, кафедра и «Основы химии», три рукописи таблицы от 17 февраля 1869 года, инертные газы.</li>
+      <li><a href="https://hij.ru/read/27523/" rel="noopener" target="_blank">«Галлий»</a>, «Химия и жизнь», 1970, № 6: открытие галлия Лекоком де Буабодраном в 1875 году, письмо Менделеева в Париж.</li>
+      <li><a href="https://mendeleev.info/elements/sc/" rel="noopener" target="_blank">А. Паевский · «118 элементов. Глава 21: от бейсбольной биты до МиГ-29»</a>, Mendeleev.info, 2019: экабор и скандий, Нильсон и Клеве, сравнение свойств.</li>
+      <li><a href="https://web.archive.org/web/20220119114208/http://www.astronet.ru/db/msg/1177210/pb032.htm" rel="noopener" target="_blank">«Германий»</a>, «Популярная библиотека химических элементов» (М.: Наука, 1977; электронная версия «Астронет», копия web.archive.org): аргиродит, Винклер, письмо Винклера Менделееву.</li>
+      <li>Изображения: <a href="https://commons.wikimedia.org/wiki/File:Mendeleev_c1880.jpg" rel="noopener" target="_blank">портрет Д. И. Менделеева</a>, около 1880–1882, фотограф неизвестен — общественное достояние; <a href="https://commons.wikimedia.org/wiki/File:Mendeleev%27s_1869_periodic_table.png" rel="noopener" target="_blank">листок «Опыт системы элементов»</a>, 1869 — общественное достояние.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="calendar">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Календарь изобретений</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Выбери любой день — узнаешь, что русские сделали первыми в мире. Листай месяцы стрелками.</p>
+    <div id="calbox"></div>
+  </div>
+</section>
+
+<section class="block kd" id="kuda-dalshe">
+  <div class="wrap">
+    <div class="kd-kicker">Куда дальше</div>
+    <h2>Музей продолжается</h2>
+    <div class="kd-grid">
+      <div class="kd-card main"><span class="kd-lbl">Следующий день</span><a href="day-09feb-chizhevsky.html">9 февраля — Солнце и толпа: Чижевский сверяет историю с солнечными пятнами <span class="kd-arr">→</span></a>
+        <p>Войны и восстания 72 стран за 2400 лет Чижевский сверил с солнечными пятнами — и получил разгромную рецензию.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Предыдущий день</span><a href="day-07feb-setun.html">7 февраля — «Сетунь» Брусенцова: машина, которая считала тремя знаками <span class="kd-arr">→</span></a>
+        <p>Первая в мире вычислительная машина на троичном коде — плюс, ноль и минус.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Менделеев и Арктика</span><a href="day-08jan-icebreaker.html">8 января — ледокол «Ермак» <span class="kd-arr">→</span></a>
+        <p>Деньги на первый арктический ледокол адмиралу Макарову помог достать химик Менделеев.</p></div>
+      <div class="kd-card main"><span class="kd-lbl">Город-музей</span><a href="../../index.html">Русская цивилизация <span class="kd-arr">→</span></a>
+        <p>Все музеи проекта на одной карте.</p></div>
+    </div>
+    <p style="margin-top:16px"><a href="izobreteniya.html">Посмотреть изобретения по алфавиту →</a></p>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>
+  Русская цивилизация · «Что изобрели русские первыми в мире»</div></footer>
+
+<script type="application/json" data-proof>{"status":"found","claim_id":"rc:izobreteniya:mendeleev:claim-predskazanie-elementov-1869-1871","ours":{"kind":"печатный листок с системой элементов, разосланный химикам, и статья с описанием неоткрытых элементов","title":"«Опыт системы элементов, основанной на их атомном весе и химическом сходстве» — места «? = 45», «? = 68», «? = 70»; статья «Естественная система элементов и применение её к указанию свойств неоткрытых элементов» — экабор, экаалюминий, экасилиций","date":"1869-02","holder":"февраль 1869 (рукописи — 17 февраля 1869); доклад 3 декабря 1870, печать 1871. Листок и статьи перепечатаны в сборнике Д. И. Менделеев, «Периодический закон» (Классики естествознания, кн. 15, 1926), скан Internet Archive; статья — «Журнал Русского химического общества», т. III, 1871, с. 25–56","source_url":"https://archive.org/details/mendeleev_periodic"},"rival":{"name":"Дж. Ньюлендс, Англия: «закон октав»","date":"1865","doc_title":"заметка в Chemical News, 18 августа 1865: элементы по возрастанию атомного веса; по словам Менделеева, ни Ньюлендс, ни де Шанкуртуа, ни Мейер не предсказывали свойств неоткрытых элементов"}}</script>
+<script src="../../assets/museum-proof.js"></script>
+
+<script>
+/* ── СЧЁТ ── шкала из 100 держит assets/museum-score.js; здесь только реестр наград.
+   десять карточек 10×2 + две пустые клетки 2×10 + три замера 3×4 + три элемента 3×6 + викторина 5×6 = 100. */
+window.MUSEUM_SCORE = {awards:{c:[10,2], f:[2,10], l:[3,4], m:[3,6], q:[5,6]},
+  ranks:[[100,'Предсказатель элементов'],[70,'Лаборант Менделеева'],[40,'Собиратель карточек'],[0,'Гость дня']]};
+</script>
+<script src="../../assets/museum-score.js"></script>
+<script>
+(function(){
+  var $ = function(id){return document.getElementById(id);};
+  $('readBtn').onclick = function(){ $('story').scrollIntoView({behavior:'smooth'}); };
+  $('listenBtn').onclick = function(){ $('audioguide').scrollIntoView({behavior:'smooth'}); };
+  var tb=$('themeInvBtn');
+  tb.onclick=function(){ var b=$('themeInvBody'), open=b.hidden; b.hidden=!open; tb.setAttribute('aria-expanded',open?'true':'false'); tb.textContent=open?'▲ Скрыть':tb.dataset.label; };
+  function fmt(x,d){ return x.toFixed(d).replace('.',','); }
+  function msg(id,t,cls){ var m=$(id); m.className='lab-msg'+(cls?' '+cls:''); m.textContent=t; }
+
+  /* ── 1. КАРТОЧКИ ── кусок системы из заметки Менделеева в Comptes rendus 1875 (т. 81, с. 969): ряды 3, 5, 7, группы II–V.
+     Веса — «Опыт системы элементов» (1869) и статья 1871 года; индий — исправленный вес 113 (было 75,6).
+     Группа по высшему окислу, ряд по атомному весу. Награда за каждую карточку, поставленную на своё место. */
+  var GR=['II','III','IV','V'], OX=['RO','R₂O₃','RO₂','R₂O₅'], ROWS=[3,5,7];
+  var EL=[
+    {s:'Mg',a:'24',g:0,r:0},{s:'Al',a:'27,4',g:1,r:0},{s:'Si',a:'28',g:2,r:0,v:11},{s:'P',a:'31',g:3,r:0},
+    {s:'Zn',a:'65,2',g:0,r:1,v:9},{s:'As',a:'75',g:3,r:1,v:14},
+    {s:'Cd',a:'112',g:0,r:2},{s:'In',a:'113',g:1,r:2},{s:'Sn',a:'118',g:2,r:2,v:16},{s:'Sb',a:'122',g:3,r:2}
+  ];
+  var GAPS=[
+    {name:'экаалюминий',g:1,r:1,a:68,pair:['Zn','As'],v:11.5,want:5.9,
+     e:'Экаалюминий: объём между цинком (9) и мышьяком (14) — у Менделеева 11,5; плотность 68 : 11,5 ≈ 5,9. Так он и написал в 1875 году.'},
+    {name:'экасилиций',g:2,r:1,a:72,pair:['Si','Sn'],v:13,want:5.5,
+     e:'Экасилиций: объём между кремнием (11) и оловом (16) — у Менделеева 13; плотность 72 : 13 ≈ 5,5. Это число стоит в статье 1871 года.'}
+  ];
+  var order=[7,2,9,4,0,8,5,1,6,3], cur=-1, placed=0, cardBtns=[], cells={};
+  order.forEach(function(k){
+    var e=EL[k], b=document.createElement('button'); b.type='button'; b.className='card-el';
+    b.innerHTML='<b>'+e.s+'</b><small>вес '+e.a+'</small><small>окисел '+OX[e.g].replace('R',e.s)+'</small>';
+    b.setAttribute('aria-label','Карточка '+e.s+', атомный вес '+e.a+', высший окисел '+OX[e.g]);
+    b.onclick=function(){ if (e.done) return; cur=k; cardBtns.forEach(function(x){ x.classList.remove('on'); }); b.classList.add('on'); msg('cMsg','Карточка '+e.s+' в руке. Куда её положить?'); };
+    e.btn=b; cardBtns.push(b); $('deck').appendChild(b);
+  });
+  var tab=$('ptab');
+  tab.appendChild(document.createElement('div'));
+  GR.forEach(function(g,i){ var h=document.createElement('div'); h.className='hd'; h.innerHTML=g+' группа<br>'+OX[i]; tab.appendChild(h); });
+  ROWS.forEach(function(r,ri){
+    var l=document.createElement('div'); l.className='rw'; l.textContent='ряд '+r; tab.appendChild(l);
+    GR.forEach(function(g,gi){
+      var c=document.createElement('button'); c.type='button'; c.className='cell'; c.innerHTML='&nbsp;';
+      c.setAttribute('aria-label','Ряд '+r+', '+g+' группа: пусто');
+      c.onclick=function(){ cellClick(gi,ri); };
+      cells[gi+'-'+ri]=c; tab.appendChild(c);
+    });
+  });
+  function fill(c,e){ c.className='cell full'; c.innerHTML='<b>'+e.s+'</b><small>'+e.a+'</small>'+(e.v?'<small>объём '+e.v+'</small>':''); c.setAttribute('aria-label',e.s+', атомный вес '+e.a+(e.v?', объём атома '+e.v:'')); }
+  function cellClick(gi,ri){
+    if (placed<EL.length) return place(gi,ri);
+    pickClick(gi,ri);
+  }
+  function place(gi,ri){
+    if (cur<0){ msg('cMsg','Сначала выбери карточку.'); return; }
+    var e=EL[cur];
+    if (e.g!==gi){ msg('cMsg','Не та группа: у '+e.s+' высший окисел '+OX[e.g].replace('R',e.s)+', а здесь нужен '+OX[gi]+'.','bad'); return; }
+    if (e.r!==ri){ msg('cMsg','Группа верна, но ряд не тот: вес '+e.a+' — это '+ROWS[e.r]+'-й ряд.','bad'); return; }
+    e.done=true; e.btn.classList.remove('on'); e.btn.classList.add('done'); e.btn.disabled=true; fill(cells[gi+'-'+ri],e); cur=-1; placed++;
+    award('c'+EL.indexOf(e),2);
+    if (placed<EL.length){ msg('cMsg','Верно: '+e.s+' на месте. Разложено '+placed+' из 10.','ok'); return; }
+    GAPS.forEach(function(gp){ var c=cells[gp.g+'-'+gp.r]; c.className='cell gap'; c.innerHTML='<b>?</b><small>'+gp.a+'?</small>'; c.setAttribute('aria-label','Пустая клетка: '+gp.name+', атомный вес около '+gp.a); });
+    msg('cMsg','Все карточки на месте. В пятом ряду между цинком (65) и мышьяком (75) остались две пустые клетки — как в листке Менделеева 1869 года.','ok');
+    msg('fMsg','Нажми на первую пустую клетку — в третьей группе.');
+  }
+
+  /* ── 2. РАСЧЁТ ── «Естественная система элементов…» (1871): объём Ea между Zn = 9 и As = 14 — 11,5; объём Es между Si = 11 и Sn = 16 — 13;
+     веса около 68 и 72; плотности около 6,0 и 5,5. Заметка 1875: плотность экаалюминия 5,9. Награда — за пару соседей, которую взял Менделеев. */
+  var gapSel=-1, picks=[], fDone=[false,false];
+  function clearPicks(){ picks.forEach(function(e){ cells[e.g+'-'+e.r].classList.remove('pick'); }); picks=[]; }
+  function pickClick(gi,ri){
+    var gk=-1; GAPS.forEach(function(gp,i){ if (gp.g===gi && gp.r===ri) gk=i; });
+    if (gk>=0){
+      gapSel=gk; clearPicks(); GAPS.forEach(function(gp,i){ cells[gp.g+'-'+gp.r].classList.toggle('sel',i===gk); });
+      var gp=GAPS[gk]; $('roC').textContent=gp.name; $('roA').textContent='≈ '+gp.a; $('roV').textContent='—'; $('roD').textContent='—';
+      msg('fMsg','Атомный вес — около '+gp.a+': клетка между цинком и мышьяком. Теперь выбери двух соседей с известным объёмом атома.');
+      return;
+    }
+    if (gapSel<0){ msg('fMsg','Сначала нажми на пустую клетку.'); return; }
+    var e=null; EL.forEach(function(x){ if (x.g===gi && x.r===ri) e=x; });
+    if (!e) return;
+    if (!e.v){ msg('fMsg','Объём атома '+e.s+' в этом расчёте Менделеев не называет. Ищи соседей, у которых он подписан.','bad'); return; }
+    if (picks.indexOf(e)>=0) return;
+    picks.push(e); cells[e.g+'-'+e.r].classList.add('pick');
+    if (picks.length<2){ msg('fMsg','Первый сосед: '+e.s+', объём '+e.v+'. Выбери второго.'); return; }
+    var gp=GAPS[gapSel], syms=[picks[0].s,picks[1].s].sort().join(), ok=syms===gp.pair.slice().sort().join();
+    if (!ok){
+      msg('fMsg','Менделеев оценивал эту клетку по другим соседям. '+(gp.g===2?'Для экасилиция он сверялся с группой: кремний и олово.':'Для экаалюминия он взял соседей по ряду: цинк и мышьяк.'),'bad');
+      clearPicks(); return;
+    }
+    $('roV').textContent=fmt(gp.v,1); $('roD').textContent='≈ '+fmt(gp.a/gp.v,1);
+    cells[gp.g+'-'+gp.r].className='cell gap ok'; cells[gp.g+'-'+gp.r].innerHTML='<b>'+(gapSel?'Es':'Ea')+'</b><small>'+gp.a+'</small><small>≈ '+fmt(gp.want,1)+'</small>';
+    clearPicks();
+    if (!fDone[gapSel]){ fDone[gapSel]=true; award('f'+gapSel,10); }
+    var n=fDone.filter(Boolean).length;
+    msg('fMsg',gp.e+(n<2?' Теперь вторая пустая клетка.':' Обе клетки рассчитаны. Осталось дождаться, пока кто-нибудь найдёт эти металлы.'),'ok');
+  }
+
+  /* ── 3. ЗАМЕРЫ ЛЕКОКА ── Comptes rendus, т. 83, 1876, с. 611–613: май 1876 — 4,7 на 6 сантиграммах;
+     прогретый и застывший в сухом воздухе металл — от 5,5 до 6,2; 58 сантиграммов — 5,90 и 5,97, среднее 5,935. */
+  var M=[
+    {t:'Май 1876: крупинка в 6 сантиграммов',d:4.7,e:'4,7. Лекоку число понравилось: среднее алюминия и индия — 4,8. Но расчёт Менделеева — 5,9.'},
+    {t:'Металл прогрет и застыл в сухом воздухе',d:5.85,e:'От 5,5 до 6,2: Лекок заподозрил в первом образце пузырьки воздуха или воды. Числа прыгают, но уже около 5,9.'},
+    {t:'58 сантиграммов чистого галлия',d:5.935,e:'5,90 и 5,97, в среднем 5,935. Расчёт, сделанный ещё до открытия металла, оказался точнее первого замера.'}
+  ];
+  var mNext=0, mBtns=[];
+  function gx(d){ return Math.max(0,Math.min(100,(d-4)/3*100)); }
+  M.forEach(function(m,i){
+    var b=document.createElement('button'); b.type='button'; b.className='seg'; b.textContent=(i+1)+'. '+m.t;
+    b.onclick=function(){
+      if (b.disabled) return;
+      if (i!==mNext){ msg('lMsg','Сначала замер номер '+(mNext+1)+'.','bad'); return; }
+      b.disabled=true; b.classList.add('done'); mNext++;
+      var dot=$('gDot'); dot.style.opacity='1'; dot.style.left=gx(m.d)+'%';
+      award('l'+i,4);
+      msg('lMsg',m.e,'ok');
+    };
+    mBtns.push(b); $('meas').appendChild(b);
+  });
+
+  /* ── 4. УЗНАЙ ЭЛЕМЕНТ ── предсказания 1871: экабор 44 (окись 3,5), экаалюминий 68 (≈ 6,0; 5,9 в 1875), экасилиций 72 (≈ 5,5);
+     найденные — Меншуткин (1926): галлий 69,9 и 5,96; германий 72,3 и 5,35; скандий 44,1 и окись 3,86 — Mendeleev.info. */
+  var P=[
+    {t:'Экабор: вес 44, окись тяжелее воды в 3,5 раза',k:1},
+    {t:'Экаалюминий: вес 68, плотность 5,9, найдут спектром',k:0},
+    {t:'Экасилиций: вес 72, плотность 5,5',k:2}
+  ];
+  var F=[
+    {t:'Галлий, 1875, Франция: вес 69,9, плотность 5,96',e:'Экаалюминий — галлий. Его и правда нашли спектром, как предсказывал Менделеев.'},
+    {t:'Скандий, 1879, Швеция: вес 44,1, окись 3,86',e:'Экабор — скандий. Нильсон написал, что мысли русского химика подтвердились «самым наглядным образом».'},
+    {t:'Германий, 1886, Германия: вес 72,3, плотность 5,35',e:'Экасилиций — германий. Винклер сначала принял его за экасурьму.'}
+  ];
+  var pSel=-1, pBtns=[], fBtns=[], mDone=[false,false,false];
+  P.forEach(function(p,i){
+    var b=document.createElement('button'); b.type='button'; b.className='seg'; b.textContent=p.t;
+    b.onclick=function(){ if (mDone[i]) return; pSel=i; pBtns.forEach(function(x){ x.classList.remove('on'); }); b.classList.add('on'); msg('mMsg','Какой из найденных элементов это был?'); };
+    pBtns.push(b); $('mL').appendChild(b);
+  });
+  [1,2,0].forEach(function(k){
+    var f=F[k], b=document.createElement('button'); b.type='button'; b.className='seg'; b.textContent=f.t;
+    b.onclick=function(){
+      if (pSel<0){ msg('mMsg','Сначала выбери предсказание слева.'); return; }
+      if (P[pSel].k!==k){ msg('mMsg','Не сходится: сравни атомные веса.','bad'); return; }
+      mDone[pSel]=true; pBtns[pSel].classList.remove('on'); pBtns[pSel].classList.add('ok'); b.classList.add('ok'); b.disabled=true;
+      award('m'+pSel,6); pSel=-1;
+      var n=mDone.filter(Boolean).length;
+      msg('mMsg',f.e+(n<3?' Найдено '+n+' из 3.':' Все три предсказания сбылись — при жизни Менделеева.'),'ok');
+    };
+    fBtns[k]=b; $('mR').appendChild(b);
+  });
+
+  /* ── ВИКТОРИНА ── один ответ на вопрос; дистракторы сверены с источниками страницы. */
+  var Q = [
+    {q:'Что стояло в листке 1869 года на местах неоткрытых элементов?', o:['Пустые клетки без надписей','Знак вопроса и атомный вес','Имена будущих первооткрывателей'], a:1,
+     e:'В листке «Опыт системы элементов» стоят строки «? = 45», «? = 68» и «? = 70».'},
+    {q:'Откуда Менделеев взял приставку «эка»?', o:['Из латыни','Из санскрита','Из греческого'], a:1,
+     e:'«Эка» — санскритское числительное «один». Экаалюминий — первый за алюминием в той же группе.'},
+    {q:'Какую плотность галлия Лекок получил в первом замере?', o:['4,7','5,9','7,3'], a:0,
+     e:'В мае 1876 года крупинка в 6 сантиграммов дала 4,7. На 58 сантиграммах чистого металла вышло 5,935 — как в расчёте Менделеева.'},
+    {q:'Кому Лондонское королевское общество в 1882 году присудило медаль Дэви за периодические соотношения атомных весов?', o:['Одному Менделееву','Менделееву и Лотару Мейеру','Ньюлендсу'], a:1,
+     e:'Медаль получили двое — Менделеев и Мейер.'},
+    {q:'Какой элемент оказался экасилицием?', o:['Германий','Галлий','Скандий'], a:0,
+     e:'Германий выделил Клеменс Винклер в 1886 году: атомный вес 72,3 против предсказанных 72.'}
+  ];
+  var qb = $('quizBox');
+  Q.forEach(function(it, qi){
+    var wrap = document.createElement('div');
+    var h = document.createElement('p'); h.className='quiz-q'; h.textContent=(qi+1)+'. '+it.q; wrap.appendChild(h);
+    var exp = document.createElement('div'); exp.className='exp'; exp.setAttribute('aria-live','polite');
+    var btns = it.o.map(function(txt, oi){
+      var b=document.createElement('button'); b.type='button'; b.className='opt'; b.textContent=txt;
+      b.onclick=function(){
+        if (wrap.dataset.done) return; wrap.dataset.done='1';
+        btns.forEach(function(x,xi){ x.disabled=true; if (xi===it.a) x.classList.add('correct'); });
+        if (oi===it.a){ award('q'+qi,6); exp.textContent='Верно. '+it.e; }
+        else { b.classList.add('wrong'); exp.textContent='Не совсем. '+it.e; }
+        exp.classList.add('show');
+      };
+      wrap.appendChild(b); return b;
+    });
+    wrap.appendChild(exp); qb.appendChild(wrap);
+  });
+})();
+</script>
+<script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
+<script>window.MUSEUM_CHROME={
+  museum:{title:'Что изобрели русские первыми в мире',href:'index.html'},
+  share:{title:'Пустые клетки Менделеева: элементы, описанные до открытия — музей «Что изобрели русские первыми в мире»',
+         text:'В 1869 году Дмитрий Менделеев оставил в своей системе элементов места для неоткрытых элементов и заранее описал их свойства — галлий, скандий и германий нашли потом точно такими. Что Россия дала миру раньше всех — день за днём.'},
+  prev:{href:'day-07feb-setun.html',title:'7 февраля · «Сетунь»'},
+  next:{href:'day-09feb-chizhevsky.html',title:'9 февраля · Чижевский'},
+  all:{href:'index.html',label:'Все изобретения'},
+  city:'../../index.html',
+  random:['day-01jan-cabletv.html','day-02jan-luna1.html','day-03jan-anosov.html','day-04jan-pilchikov.html','day-05jan-shukhov.html','day-06jan-orlov.html','day-08jan-icebreaker.html','day-09jan-blinov.html','day-10jan-britnev.html','day-11jan-kostovich.html','day-12jan-r7.html','day-13jan-k278.html','day-14jan-lira.html','day-15jan-kovalevskaya.html','day-16jan-soyuz45.html','day-19jan-kantorovich.html','day-21jan-obninsk.html','day-22jan-landau.html','day-23jan-umov.html','day-24jan-k162.html','day-25jan-korsakov.html','day-26jan-podvodnaya.html','day-27jan-pentium.html','day-28jan-havkin.html','day-30jan-kotelnikov.html','day-31jan-girotron.html','day-01feb-bekhterev.html','day-02feb-edinorog.html','day-03feb-luna9.html','day-04feb-samovar.html','day-05feb-boldyrev.html','day-06feb-zelinsky.html','day-07feb-setun.html','day-08feb-mendeleev.html','day-18mar-leonov.html','day-15may-mechnikov.html','day-16jun-tereshkova.html','day-26sep-pavlov.html','day-15nov-buran.html','day-25nov-pirogov.html','day-01dec-lobachevsky.html','day-14dec-laser.html','day-09feb-chizhevsky.html']
+};</script>
+<script src="../../assets/museum-chrome.js"></script>
+<script>window.MUSEUM_SUPPORT={museum:'Что изобрели русские первыми в мире'};</script>
+<script src="../../assets/museum-support.js"></script>
+<script src="calendar-izobreteniya.js"></script>
+<script>window.MUSEUM_CALENDAR_INITIAL='02-08';</script>
+<script src="../../assets/museum-calendar-month.js"></script>
+<script>window.MUSEUM_RETURN={riddle:{q:"Каким числом Менделеев обозначил в листке 1869 года пустое место рядом с алюминием?",a:"«? = 68». Через шесть лет на это место встал галлий — его атомный вес оказался 69,9.",src:"Д. И. Менделеев, «Опыт системы элементов», 1869; Б. Н. Меншуткин, 1926"}};</script>
+<script src="../../assets/museum-return.js" data-museum="izobreteniya" data-day="02-08"></script>
+<script defer src="../../assets/analytics.js"></script>
+
+
+
+
+
+
+
+
+<script>window.MUSEUM_AUDIOGUIDE={
+  audioSrc:"audio-guide-mendeleev-ru.mp3",
+  durationLabel:"3 минуты 12 секунд",
+  lead:"Голос ведёт по залу Дмитрия Менделеева: портрет у входа и карточки с элементами, листок 1869 года с вопросами вместо знаков, расчёт пустой клетки по соседям, галлий Лекока и спор о плотности, скандий и германий. Шесть остановок, на каждой — что искать глазами. Слушать можно фоном, пока читаешь историю ниже.",
+  stops:[
+    {t:0,mark:"0:00",title:"Портрет у входа"},
+    {t:32,mark:"0:32",title:"Карточки на столе"},
+    {t:62,mark:"1:02",title:"Вопросы вместо знаков"},
+    {t:95,mark:"1:35",title:"Расчёт по соседям"},
+    {t:127,mark:"2:07",title:"Спор о плотности"},
+    {t:161,mark:"2:41",title:"Три сбывшихся клетки"}
+  ],
+  transcript:[
+    "<p>Портрет Д. И. Менделеева, около 1880–1882 — фотограф неизвестен, Викисклад, общественное достояние; дата и место рождения, кафедра и «Основы химии» — РХТУ имени Д. И. Менделеева, «Биография Д. И. Менделеева».</p>",
+    "<p>Факты: рассказ о карточках — Д. И. Менделеев, «Основы химии», 8-е изд., 1906; листок разослан в феврале 1869 года — «Периодический закон», 1926; три рукописи от 17 февраля 1869 года — РХТУ имени Д. И. Менделеева.</p>",
+    "<p>Факты: «? = 45», «? = 68», «? = 70» — листок «Опыт системы элементов», 1869; шестой вывод доклада 6 марта 1869 года и статья 1871 года об экаборе, экаалюминии и экасилиции — «Периодический закон», 1926.</p>",
+    "<p>Факты: объёмы соседей и расчёт плотности — Д. И. Менделеев, «Естественная система элементов…», 1871, и статья в «Анналах» Либиха; 5,9 — его заметка в Comptes rendus, т. 81, 1875.</p>",
+    "<p>Факты: открытие галлия и замеры 4,7, 5,90, 5,97 — П. Э. Лекок де Буабодран, Comptes rendus, т. 81 (1875) и т. 83 (1876); «Химия и жизнь», 1970, № 6.</p>",
+    "<p>Факты: скандий, Нильсон и Клеве; германий и Винклер, 72,3; «истинные укрепители» — Б. Н. Меншуткин, «Открытие предсказанных Д. И. Менделеевым элементов», 1926; «Германий», М.: Наука, 1977.</p>"
+  ],
+  note:"Озвучено синтезом речи — временно, до записи голосом автора музея."
+};</script>
+<script src="../../assets/museum-audioguide.js"></script>
+</body>
+</html>
