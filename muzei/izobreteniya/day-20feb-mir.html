@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="ru" data-museum="izobreteniya">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>«Мир» — первая многомодульная орбитальная станция — Что изобрели русские первыми в мире, 20 февраля</title>
+<!--
+  Страница дня 20 февраля. Наряд stranicy-izob-0910 (claude2, 15.10.2026), карточка #762.
+  Форма — вариант А музея изобретений (Сергей 12.09.2026): лента ударов, подробности свёрнуты.
+  Паспорт выпуска: rc-museum-production/izobreteniya/day-20feb-mir/passport/issue.json
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --dark:#060c17; --dark2:#0c1826; --surface:#111f33;
+    --card:rgba(255,255,255,.05); --card-b:rgba(255,255,255,.09);
+    --gold:#c9a84c; --gold-l:#e4c97a; --gold-g:rgba(201,168,76,.13);
+    --ink:#e8eef5; --muted:#7a9ab8; --line:rgba(255,255,255,.07);
+    --accent:#2d8cbf; --accent2:#1f6f8b;
+    /* legacy compat */
+    --paper:#0c1826; --paper2:#111f33;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Inter','Segoe UI',sans-serif;color:var(--ink);background:var(--dark);line-height:1.72}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.13;margin:0}
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent)}
+
+  /* ── ШАПКА ── */
+  header.top{background:rgba(6,12,23,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--card-b);color:#fff;position:sticky;top:0;z-index:30}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+  .logo svg{display:block;filter:drop-shadow(0 0 8px rgba(201,168,76,.4))}
+  .logo .lt{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:16px}
+  .logo .lt small{display:block;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-family:'Inter',sans-serif}
+  .score{background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:6px 16px;font-size:13px;color:var(--gold-l);cursor:pointer;font-family:'Inter',sans-serif}
+  .score-info{position:absolute;right:12px;top:66px;max-width:260px;background:#0e1c30;color:var(--ink);border:1px solid var(--card-b);border-radius:14px;padding:14px 16px;font-size:13px;line-height:1.6;box-shadow:0 20px 60px rgba(0,0,0,.6);display:none;z-index:40}
+  .score-info.show{display:block}
+
+  /* ── HERO — СТАНДАРТ (не менять): 3D-сцена сверху, текст отдельным блоком ниже ── */
+  .hero-scene{position:relative;height:52vh;min-height:300px;max-height:520px;overflow:hidden;background:linear-gradient(160deg,#0a1e3a 0%,#1a3a6a 55%,#0d2240 100%)}
+  .hero-scene canvas.scene,.hero-scene img.scene{width:100%;height:100%;display:block;object-fit:cover}
+  .scene-caption{background:#060d18;padding:11px 0 12px}
+  .scene-caption .wrap{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+  .scene-cap{font-size:13.5px;line-height:1.6;color:var(--muted);border-left:2px solid rgba(201,168,76,.4);padding-left:14px;flex:1 1 420px}
+  .scene-hint{flex:0 0 auto;font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.4px;color:#e4c97a;
+    background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.34);border-radius:24px;padding:7px 16px;font-weight:600}
+  .hero-lead{background:linear-gradient(180deg,#0c1826 0%,#060c17 100%);color:#fff;padding:28px 0 38px}
+  .hero-lead .museum{color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:12px;opacity:.9}
+  .hero-lead .who{font-family:'Inter',sans-serif;font-size:clamp(13px,3vw,15px);letter-spacing:.4px;color:var(--accent-l,#7dc8ff);margin-bottom:10px}
+  .hero-lead .who i{font-style:normal;color:#7893ab;font-weight:400}
+  .hero-lead h1{color:#fff;font-size:56px;font-weight:900;line-height:1.04;margin-bottom:16px}
+  .hero-lead .hook{color:#b8ccde;font-size:19px;max-width:580px;margin-bottom:28px;line-height:1.65;font-weight:400}
+  .hero-lead .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+  @media(max-width:680px){.hero-lead h1{font-size:34px}.hero-lead .hook{font-size:16px}
+    .hero-scene{height:34vh;min-height:230px;max-height:300px}
+    .scene-caption .wrap{flex-direction:column;gap:9px}
+    .scene-hint{order:-1;align-self:flex-start;font-size:11.5px;padding:6px 13px}
+    .scene-cap{font-size:12.8px;flex:1 1 auto}}
+  .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:16px;font-family:'Inter',sans-serif;letter-spacing:.5px}
+
+  /* ── НАВИГАЦИЯ ДНЯ ── */
+  .daynav{position:sticky;top:64px;z-index:25;background:rgba(6,12,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-b)}
+  .daynav .wrap{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+  .daynav::-webkit-scrollbar{display:none}
+  .daynav a{flex:0 0 auto;padding:14px 20px;font-size:11px;font-weight:700;font-family:'Inter',sans-serif;color:var(--muted);text-decoration:none;white-space:nowrap;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:.18s}
+  .daynav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+  /* ── СЕКЦИИ ── */
+  section.block{padding:64px 0;border-bottom:1px solid var(--line);scroll-margin-top:130px}
+  .kicker{font-size:10px;text-transform:uppercase;letter-spacing:3.5px;color:var(--gold);font-weight:700;font-family:'Inter',sans-serif;margin-bottom:8px}
+  section.block h2{font-size:34px;color:#fff;margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink)}
+  .pull{background:var(--gold-g);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 14px 14px 0;font-style:italic;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-size:20px;line-height:1.5;margin:26px 0}
+
+  /* ── КНОПКИ ── */
+  .btn{cursor:pointer;border:none;border-radius:12px;padding:14px 26px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;background:var(--accent2);color:#fff;transition:.18s;letter-spacing:.2px}
+  .btn:hover{filter:brightness(1.18)}
+  .btn.ghost{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid var(--card-b)}
+  .btn.ghost:hover{background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.2)}
+  .btn.gold{background:linear-gradient(135deg,var(--gold),#b8882b);color:#1a0f00;box-shadow:0 4px 20px rgba(201,168,76,.25)}
+  .btn.gold:hover{filter:brightness(1.1);box-shadow:0 6px 28px rgba(201,168,76,.4)}
+  .btn:active{transform:translateY(1px)}
+  .pulse{animation:pulse .9s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+
+  /* ── КАРТОЧКИ ── */
+  .card{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:20px 22px;margin:16px 0;backdrop-filter:blur(6px)}
+
+  /* ── КВИЗ ── */
+  .opt{display:block;width:100%;text-align:left;background:rgba(255,255,255,.04);border:1px solid var(--card-b);border-radius:12px;padding:13px 16px;margin:8px 0;cursor:pointer;font-size:15px;color:var(--ink);font-family:'Inter',sans-serif;transition:.16s}
+  .opt:hover{border-color:var(--accent);background:rgba(45,140,191,.08)}
+  .opt.correct{background:rgba(40,120,60,.18);border-color:#3f9b52;color:#7ed4a0;font-weight:600}
+  .opt.wrong{background:rgba(180,40,40,.13);border-color:#c0453f;color:#f08080}
+  .exp{margin-top:10px;font-size:14px;background:var(--gold-g);border-radius:10px;padding:12px 14px;display:none;color:var(--gold-l)}
+  .exp.show{display:block}
+
+  /* ── ИТОГ ДНЯ ── */
+  .day-result{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:22px 24px;max-width:460px}
+  .dr-rank{font-family:'Playfair Display',Georgia,serif;font-size:28px;color:var(--gold-l);font-weight:700}
+  .dr-score{font-size:16px;margin:4px 0 12px;color:var(--ink)}.dr-score span{color:var(--muted);font-size:14px}
+  .dr-bar{height:8px;background:rgba(255,255,255,.08);border-radius:6px;overflow:hidden}
+  .dr-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),var(--gold));transition:width .6s cubic-bezier(.2,.7,.2,1)}
+  .dr-note{margin-top:12px;font-size:14px;color:var(--muted)}
+
+  /* ── РЕКЛАМНЫЕ СЛОТЫ ── */
+  .ad-slot{position:relative;margin:26px 0;background:rgba(255,255,255,.02);border:1px dashed rgba(255,255,255,.1);border-radius:14px;min-height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px}
+  .ad-slot .lbl{position:absolute;top:7px;right:12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.15);font-family:'Inter',sans-serif}
+  .ad-slot .ph-txt{font-size:12px;max-width:80%;color:rgba(255,255,255,.18)}
+  .ad-slot.billboard{min-height:108px}
+  .adband{background:transparent;border-bottom:none}
+
+  footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
+  .crumbs{background:rgba(6,12,23,.6);border-bottom:1px solid var(--card-b);font-family:'Inter',sans-serif;font-size:12.5px}
+  .crumbs .wrap{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  .crumbs a{color:var(--gold-l);text-decoration:none;white-space:nowrap}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--muted);opacity:.6}
+  .crumbs .here{color:var(--muted);white-space:nowrap}
+
+
+  /* ── ШАПКА: четыре строки по museum-core §6-бис ── */
+  header.top{display:block;text-align:center;padding:10px 12px 8px;height:auto;position:relative}
+  header.top .b1{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:15px;letter-spacing:.5px;color:#fff}
+  header.top .b2{font-size:11px;color:var(--muted);margin-top:2px}
+  header.top .b3{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:6px}
+  header.top .b4{font-size:12.5px;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-style:italic}
+  header.top .score{position:absolute;right:12px;top:10px}
+  .daynav{top:0}
+  .hero-scene{background:#0e1c2c;height:38vh;min-height:250px;max-height:400px}
+  @media(max-width:680px){.hero-lead h1{font-size:31px}}
+  .hero-scene img.scene{object-fit:cover;object-position:50% 42%}
+  .date-origin{font-size:13px;color:#9fb4c8;margin:-6px 0 12px;max-width:62ch}
+  .hero-lead .hook{color:#c6d8e8;max-width:62ch}
+  .hero-under{background:linear-gradient(180deg,#060d18,#060c17);padding:4px 0 22px}
+  .stamp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(125,200,255,.28);margin-top:14px}
+  .stamp>div{padding:11px 12px;border-left:1px solid rgba(125,200,255,.16);min-width:0}
+  .stamp>div:first-child{border-left:0}
+  .stamp .v{font-size:clamp(15px,3.4vw,21px);font-weight:700;color:#8fd3ff;line-height:1.1;overflow-wrap:anywhere}
+  .stamp .k{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#8fa5b9;margin-top:5px}
+  @media(max-width:600px){.stamp{grid-template-columns:repeat(2,minmax(0,1fr))}.stamp>div:nth-child(3){border-left:0}.stamp>div:nth-child(n+3){border-top:1px solid rgba(125,200,255,.16)}}
+
+  /* ── ЛЕНТА УДАРОВ (museum-inventions, вариант А; museum-core §5-бис) ── */
+  .udary{list-style:none;margin:18px 0 0;padding:0;counter-reset:u}
+  .udary>li{border-top:1px solid var(--line);padding:4px 0}
+  .udary details>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:34px 1fr;gap:10px;padding:12px 0;font-size:17px;line-height:1.55;color:var(--ink)}
+  .udary details>summary::-webkit-details-marker{display:none}
+  .udary details>summary::before{counter-increment:u;content:counter(u);font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:20px;color:var(--gold);line-height:1.3}
+  .udary .more-lbl{display:block;grid-column:2;font-size:12.5px;color:var(--gold-l);letter-spacing:.3px;margin-top:4px}
+  .udary .more-lbl::after{content:' ▾'}
+  .udary details[open] .more-lbl::after{content:' ▴'}
+  .udary details[open] .more-lbl .o{display:none}
+  .udary details:not([open]) .more-lbl .c{display:none}
+  .udary summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+  .udary .det{margin:0 0 14px 44px;padding:12px 16px;background:rgba(255,255,255,.035);border-left:2px solid rgba(201,168,76,.45);border-radius:0 10px 10px 0;font-size:15px;color:#d5e0ea}
+  .udary .det p{margin:8px 0}
+  .udary .tag{display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1a0f00;background:var(--gold-l);border-radius:6px;padding:1px 7px;margin-right:6px}
+  .udary .find{border-left:3px solid var(--gold);padding-left:8px}
+  figure.fig{margin:18px 0}
+  figure.fig img{max-width:100%;height:auto;border-radius:10px;display:block}
+  figure.fig figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5}
+  .src-note{font-size:12px;color:#8fa5b9}
+
+  /* ── МОДЕЛЬ ДНЯ (главное предметное действие) ── */
+  .lab{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:18px 18px 20px;margin-top:14px}
+  .lab-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+  .lab-row .lbl{flex:0 0 100%;font-size:13px;color:var(--muted);letter-spacing:.3px}
+  .seg{cursor:pointer;border:1px solid var(--card-b);background:rgba(255,255,255,.04);color:var(--ink);border-radius:10px;padding:10px 14px;font:inherit;font-size:14.5px;min-height:44px}
+  .seg[aria-pressed="true"]{border-color:var(--gold);background:var(--gold-g);color:var(--gold-l);font-weight:600}
+  .seg:focus-visible,.btn:focus-visible,.opt:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .lab-stage{position:relative;margin-top:12px}
+  .lab-stage canvas{width:100%;height:auto;display:block;border-radius:10px;background:#1c2530}
+  .lab-cap{font-size:12px;color:#8fa5b9;margin-top:6px}
+  .lab-msg{margin-top:12px;font-size:15.5px;padding:12px 14px;border-radius:10px;background:rgba(255,255,255,.04);border-left:3px solid var(--card-b);min-height:48px}
+  .lab-msg.ok{border-left-color:#3f9b52;background:rgba(40,120,60,.14)}
+  .lab-msg.bad{border-left-color:#c0453f;background:rgba(180,40,40,.10)}
+  .lab-found{font-size:13px;color:var(--muted);margin-top:8px}
+  .lab-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .noscript-box{background:rgba(255,255,255,.04);border:1px dashed var(--card-b);border-radius:12px;padding:12px 16px;font-size:15px}
+
+  /* ── ГРАНИЦА ПЕРВЕНСТВА ── */
+  .border-box{background:rgba(45,140,191,.08);border:1px solid rgba(45,140,191,.3);border-radius:14px;padding:16px 18px}
+  .border-box b{color:#8fd3ff}
+  .ctx{width:100%;border-collapse:collapse;margin-top:14px;font-size:14.5px}
+  .ctx th,.ctx td{text-align:left;padding:9px 8px;border-top:1px solid var(--line);vertical-align:top}
+  .ctx th{color:var(--gold-l);font-weight:600;font-size:12.5px;letter-spacing:.5px}
+  .quiz-q{margin:18px 0 6px;font-weight:600}
+  .sources a{color:var(--gold-l)}
+  .sources li{margin:6px 0;font-size:14px;color:#c8d6e2}
+  @media(max-width:600px){header.top{padding:8px 64px 6px}header.top .score{top:8px;right:8px;padding:4px 10px;font-size:12px}header.top .b3{margin-top:3px}
+    .hero-scene{height:26vh;min-height:200px;max-height:260px}.date-origin{font-size:12px;margin:-8px 0 8px}.hero-lead{padding:18px 0 26px}.hero-lead .date-chip{margin-bottom:12px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+  /* ── ПОЛЗУНКИ МОДЕЛИ (19, 21 янв) ── */
+  .mtab{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+  .mrow{display:grid;grid-template-columns:minmax(150px,1.2fr) 2fr 92px;gap:12px;align-items:center}
+  .mrow .mname{font-size:14.5px}
+  .mrow .mname i{font-style:normal;color:var(--muted);font-size:13px}
+  .mrow input[type=range]{width:100%;accent-color:var(--gold);min-height:44px}
+  .mrow output{font-size:14px;color:var(--gold-l);text-align:right}
+  .mrow.off{opacity:.45}
+  .mult{margin-top:14px;padding:14px 16px;border-radius:12px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25)}
+  @media(max-width:560px){.mrow{grid-template-columns:1fr 70px}.mrow .mname{grid-column:1/-1}}
+</style>
+<meta name="description" content="«Мир» — первая в мире станция, которую собирали на орбите из модулей: в 1986 году улетел лишь базовый блок с узлом на пять портов. Узел, манипулятор, сборка.">
+<link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-20feb-mir.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Русская цивилизация">
+<meta property="og:title" content="«Мир» — первая многомодульная орбитальная станция">
+<meta property="og:description" content="«Мир» — первая в мире станция, которую собирали на орбите из модулей: в 1986 году улетел лишь базовый блок с узлом на пять портов. Узел, манипулятор, сборка.">
+<meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-20feb-mir.html">
+<meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-20feb-mir.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "«Мир» — первая многомодульная орбитальная станция", "description": "«Мир» — первая в мире станция, которую собирали на орбите из модулей: в 1986 году улетел лишь базовый блок с узлом на пять портов. Узел, манипулятор, сборка.", "url": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-20feb-mir.html", "inLanguage": "ru", "isPartOf": {"@type": "WebSite", "name": "Музей «Что изобрели русские первыми в мире»"}, "publisher": {"@type": "Organization", "name": "Русская цивилизация"}, "about": {"@type": "Thing", "name": "Орбитальная станция «Мир»"}, "image": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-20feb-mir.jpg"}</script>
+<style>
+  /* ── «МИР»: СБОРКА НА УЗЛЕ (20 фев) ── */
+  .mircv{width:100%;max-width:760px;height:auto;aspect-ratio:760/380;display:block;margin:10px 0 4px;background:radial-gradient(ellipse at 50% 40%,#1d2b44,#0b1220);border-radius:10px}
+  .lctl{display:grid;gap:10px;max-width:760px;margin-top:8px}
+  .lfuel{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  .lfuel>span{min-width:150px;font-size:15px}
+  .lfuel .seg.on{border-color:#3f9b52;background:rgba(63,155,82,.18)}
+  .lgo{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+  .lstat{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;max-width:760px;margin-top:10px}
+  .lstat div{border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:8px 10px;background:rgba(255,255,255,.03)}
+  .lstat b{display:block;font-size:18px;color:var(--gold-l)}
+  .lstat span{font-size:13px;color:var(--muted)}
+  .chrono{display:grid;gap:8px;max-width:760px;margin-top:8px}
+  .chrono .seg{text-align:left;width:100%}
+  .chrono .seg.right{border-color:#3f9b52;background:rgba(63,155,82,.18)}
+  .chrono .seg.wrongpick{border-color:#c0573f;background:rgba(192,87,63,.15)}
+  .chrono .n{display:inline-block;min-width:1.6em;color:var(--gold-l);font-weight:700}
+  blockquote.doc{margin:12px 0;padding:10px 14px;border-left:3px solid var(--gold);background:rgba(255,255,255,.03);border-radius:0 10px 10px 0;font-size:15px;line-height:1.6}
+  figure.side{max-width:460px;margin:12px 0}
+  figure.side img{width:100%;height:auto;border-radius:8px;background:#fff}
+  figure.side figcaption{font-size:13.5px;color:var(--muted);margin-top:6px;line-height:1.45}
+  #hero{background:#0b1220}
+  #hero img.scene{object-fit:cover;object-position:50% 45%}
+  @media(max-width:560px){.lfuel>span{min-width:100%}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="b1">Русская цивилизация</div>
+  <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
+  <div class="b3">Что изобрели русские первыми в мире</div>
+  <div class="b4">365 изобретений. Все русские. Все первые</div>
+  <div class="score" id="scoreBox" title="Баллы знаний за этот день">⭐ <span id="score">0</span> / 100</div>
+</header>
+
+<nav class="crumbs" aria-label="Хлебные крошки"><div class="wrap">
+  <a href="../../index.html">Русская цивилизация</a>
+  <span class="sep">›</span>
+  <a href="index.html">Что изобрели русские первыми в мире</a>
+  <span class="sep">›</span>
+  <span class="here">20 февраля · Станция «Мир»</span>
+</div></nav>
+
+<div class="hero-scene" id="hero">
+  <img class="scene" src="day-20feb-mir.jpg" data-source="https://commons.wikimedia.org/wiki/File:Mir_on_12_June_1998edit1.jpg" data-license="Public domain" data-author="NASA, экипаж STS-91, 1998" width="1100" height="1053" alt="Орбитальная станция «Мир» над Землёй: от центрального узла в разные стороны отходят цилиндрические модули с панелями солнечных батарей, внизу облака и океан" fetchpriority="high">
+</div>
+
+<div class="scene-caption">
+  <div class="wrap">
+    <div class="scene-cap">Станция «Мир» в июне 1998 года: снимок с американского корабля «Дискавери» при облёте станции (полёт STS-91). NASA, общественное достояние.</div>
+    <span class="scene-hint">«Мир» · 1998</span>
+  </div>
+</div>
+
+<header class="hero-lead">
+  <div class="wrap">
+    <div class="date-chip">20 февраля · 1986</div>
+    <p class="date-origin">20 февраля 1986 года ракета «Протон» вывела на орбиту базовый блок станции «Мир». В американском справочнике NASA дата старта — 19 февраля: NASA ведёт даты по всемирному времени, а в Москве уже наступило 20-е.</p>
+    <div class="who">НПО «Энергия» <i>· станция «Мир», 1986–2001</i></div>
+    <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
+    <h1>«Мир» — первая многомодульная орбитальная станция</h1>
+    <p class="hook">«Мир» — первая станция, которую собирали на орбите: 20 февраля 1986 года «Протон» вывел лишь базовый блок с узлом на пять портов, а Skylab подняли одним пуском.</p>
+    <div class="hero-btns">
+      <button class="btn gold" id="readBtn" type="button">Читать историю ↓</button>
+      <button class="btn ghost" id="listenBtn" type="button">🎧 Слушать аудиогид</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero-under">
+  <div class="wrap">
+    <div class="stamp">
+      <div><div class="v">5 + 1</div><div class="k">стыковочных агрегатов у базового блока: пять на переходном отсеке и один на промежуточной камере</div></div>
+      <div><div class="v">6 элементов</div><div class="k">вошли в состав станции в 1987–1996 годах: пять модулей и стыковочный отсек</div></div>
+      <div><div class="v">13,13 м</div><div class="k">длина корпуса базового блока, выведенного на орбиту в 1986 году</div></div>
+      <div><div class="v">437 суток</div><div class="k">непрерывного полёта космонавта Валерия Полякова на «Мире» в 1994–1995 годах</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="daynav" aria-label="Разделы дня">
+  <div class="wrap">
+    <a href="#story">Читать</a>
+    <a href="#audioguide">Слушать</a>
+    <a href="#games">Сборка</a>
+    <a href="#pervenstvo">Первенство</a>
+    <a href="#quiz">Викторина</a>
+    <a href="#calendar">Календарь</a>
+  </div>
+</nav>
+
+<section class="wrap" id="dokument" data-proof-block></section>
+
+<section class="block" id="audioguide"></section>
+
+<section class="block" id="story">
+  <div class="wrap">
+    <div class="kicker">История первенства · 12 ударов</div>
+    <h2>От замороженного проекта — к станции, собранной на орбите</h2>
+    <p style="color:var(--muted);max-width:62ch">Читается подряд. Нажми на удар — откроется подробный разбор с источниками.</p>
+    <ol class="udary">
+      <li><details><summary><span>Станцию из многих блоков проектировали с 1972 года. В 1974 году работу закрыли, а в 1976-м возобновили в НПО «Энергия».<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Новая станция должна была состоять из базового блока и отдельных модулей: технологического, дооснащения, для изучения природных ресурсов и других. Каждый модуль мог летать сам по себе и присоединяться к базовому блоку через стыковочный узел.</p>
+          <p class="src-note">Источник: Российский государственный архив научно-технической документации (РГАНТД), «Запуск орбитальной станции „Мир“».</p>
+        </div></details></li>
+      <li><details><summary><span>Базовый блок строили на основе «Салютов», но в 1984 году «Буран» забрал силы, и работы заморозили. Станцию спас секретарь ЦК Григорий Романов: велел закончить её к XXVII съезду партии.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Базовый блок начали разрабатывать в начале 1979 года. О роли Романова пишет журнал «Родина». По данным РКК «Энергия», в работе участвовали около 200 предприятий и организаций.</p>
+          <p class="src-note">Источники: «Родина», «40 лет назад СССР вывел на орбиту первую в мире многомодульную станцию „Мир“»; РКК «Энергия», «Орбитальный комплекс „Мир“».</p>
+        </div></details></li>
+      <li><details><summary><span>20 февраля 1986 года «Протон» вывел на орбиту с Байконура только базовый блок — около 20 тонн и 13,13 метра в длину. Модулей у него ещё не было.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>В базовом блоке четыре отсека: переходный, рабочий, промежуточная камера и негерметичный агрегатный отсек. Блок управлял всем комплексом, давал электричество и связь и держал ориентацию станции. Работать на нём могли экипажи до шести человек.</p>
+          <p class="src-note">Источники: РГАНТД, «Запуск орбитальной станции „Мир“»; РКК «Энергия», «Орбитальный комплекс „Мир“»; «Родина» (к 40-летию запуска).</p>
+        </div></details></li>
+      <li><details><summary><span>Главная новинка — переходный отсек с пятью стыковочными агрегатами: один осевой и четыре боковых. Ещё один агрегат был на промежуточной камере в корме.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>У станций «Салют» на этом месте стоял конический переходный отсек с одним узлом. На «Мире» его заменил узел на пять портов. Все агрегаты базового блока были пассивными, системы «штырь — конус»: активную часть нёс прилетающий модуль или корабль.</p>
+          <figure class="side">
+            <img src="day-20feb-mir-uzel.jpg" data-source="https://www.nasa.gov/wp-content/uploads/static/history/SP-4225/documentation/mhh/mirheritage.pdf" data-license="Public domain" data-author="NASA, 1995" width="900" height="557" loading="lazy" alt="Чертёж базового блока станции: цилиндрический корпус с двумя крыльями солнечных батарей, спереди — шар узла с несколькими круглыми стыковочными портами">
+            <figcaption>Базовый блок «Мира» с узлом на пять портов. D. S. F. Portree, «Mir Hardware Heritage» (NASA RP-1357, 1995), с. 103, рис. 2-11. Общественное достояние.</figcaption>
+          </figure>
+          <p class="src-note">Источники: РКК «Энергия», «Орбитальный комплекс „Мир“»; D. S. F. Portree, «Mir Hardware Heritage» (NASA RP-1357, 1995), с. 103–105.</p>
+        </div></details></li>
+      <li><details><summary><span>15 марта 1986 года к станции пристыковался «Союз Т-15». Леонид Кизим и Владимир Соловьёв первыми поднялись на борт «Мира» и проверили все его системы.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Командир Кизим и бортинженер Соловьёв расконсервировали станцию. Программу полёта, по данным РГАНТД, они выполнили полностью. В тот же день экипаж сфотографировал базовый блок с «Союза Т-15»; снимок хранится в архиве под номером 1-5245цв.</p>
+          <p class="src-note">Источник: РГАНТД, «Запуск орбитальной станции „Мир“».</p>
+        </div></details></li>
+      <li><details><summary><span>В апреле 1987 года «Квант» промахнулся мимо станции, а со второй попытки застрял в узле: Романенко и Лавейкин вышли в открытый космос и убрали оттуда посторонний предмет.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>5 апреля система «Игла» потеряла станцию примерно за 200 метров, и «Квант» прошёл в десяти метрах от станции. 9 апреля модуль зацепился за кормовой узел, но штырь не втягивался до конца. 11 апреля Юрий Романенко и Александр Лавейкин вышли в открытый космос и нашли в узле посторонний предмет — по оценке NASA, мешок с мусором. Выход длился 3 часа 40 минут, после него «Квант» состыковался.</p>
+          <p class="src-note">Источники: РКК «Энергия», «Орбитальный комплекс „Мир“» (даты запуска 31.03.1987 и стыковки 09.04.1987, посторонний предмет в приёмном конусе); D. S. F. Portree, «Mir Hardware Heritage» (NASA RP-1357, 1995), с. 110–111.</p>
+        </div></details></li>
+      <li><details><summary><span>Боковые модули ставили в два шага: сначала стыковка к осевому узлу, потом манипулятор переносил модуль на боковой агрегат.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Каждый боковой модуль нёс свой манипулятор («Ляппа»). Его конец цеплялся за гнездо снаружи узла, и рычаг поворачивал модуль на нужный боковой порт. Так же модуль можно было вернуть на осевой узел и переставить.</p>
+          <figure class="side">
+            <img src="day-20feb-mir-lyappa.jpg" data-source="https://www.nasa.gov/wp-content/uploads/static/history/SP-4225/documentation/mhh/mirheritage.pdf" data-license="Public domain" data-author="NASA, 1995" width="990" height="730" loading="lazy" alt="Чертёж: модуль, пристыкованный спереди к узлу станции, поворачивается рычагом вбок, на соседний порт; положение после поворота показано серым">
+            <figcaption>Перестановка модуля манипулятором «Ляппа». D. S. F. Portree, «Mir Hardware Heritage» (NASA RP-1357, 1995), с. 165, рис. 3-11. Общественное достояние.</figcaption>
+          </figure>
+          <p class="src-note">Источники: РКК «Энергия», «Орбитальный комплекс „Мир“»; D. S. F. Portree, «Mir Hardware Heritage» (NASA RP-1357, 1995), с. 165, рис. 3-10 и 3-11.</p>
+        </div></details></li>
+      <li><details><summary><span>6 декабря 1989 года пристыковался «Квант-2», а через два дня манипулятор перенёс его на боковой узел. В модуле был шлюз с люком диаметром в метр — для выходов в открытый космос.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>«Квант-2» дооснащал станцию научной аппаратурой и оборудованием. В нём три герметичных отсека: приборно-грузовой, приборно-научный и шлюзовой. Его штатное место — боковой узел по оси Y.</p>
+          <p class="src-note">Источники: РКК «Энергия», «Орбитальный комплекс „Мир“»; D. S. F. Portree, «Mir Hardware Heritage» (NASA RP-1357, 1995), с. 190.</p>
+        </div></details></li>
+      <li><details><summary><span>10 июня 1990 года пристыковался «Кристалл» — модуль для технологических опытов. На нём стояли агрегаты для стыковки кораблей с андрогинно-периферийными агрегатами.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>У «Кристалла» три стыковочных агрегата: активный осевой и два андрогинно-периферийных — ещё один осевой и боковой. До мая 1995 года он стоял на боковом узле, который предназначался для будущего модуля «Спектр».</p>
+          <p class="src-note">Источник: РКК «Энергия», «Орбитальный комплекс „Мир“».</p>
+        </div></details></li>
+      <li><details><summary><span>В 1995 году «Кристалл» переставили на другой боковой узел, освободив место для «Спектра». 1 июня «Спектр» причалил к осевому узлу, и манипулятор перенёс его на боковой.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>27 мая «Кристалл» перевели на осевой узел, 30 мая — на штатное место. 10 июня его снова перевели на осевой узел, чтобы к нему пристыковался американский «Атлантис» (полёт STS-71), а 17 июля поставили обратно. На «Спектре» впервые по соглашению с NASA стояло американское оборудование для медицинских опытов.</p>
+          <p class="src-note">Источники: РКК «Энергия», «Орбитальный комплекс „Мир“»; Роскосмос, «25 лет со дня запуска модуля „Спектр“» (2020).</p>
+        </div></details></li>
+      <li><details><summary><span>26 апреля 1996 года пристыковался последний модуль, «Природа». Теперь станция была собрана целиком: базовый блок и пять модулей.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Перед этим, в ноябре 1995 года, американский «Атлантис» (полёт STS-74) привёз стыковочный отсек РКК «Энергия» и поставил его на «Кристалл». Теперь шаттл мог причалить, и модули больше не приходилось переставлять.</p>
+          <p class="src-note">Источник: РКК «Энергия», «Орбитальный комплекс „Мир“».</p>
+        </div></details></li>
+      <li><details><summary><span>«Мир» проработал почти втрое дольше, чем было задумано: 28 экспедиций и больше 20 тысяч опытов. Его опыт перенесли на Международную космическую станцию.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>23 марта 2001 года станцию свели с орбиты в Тихий океан. На ней работали космонавты из 12 стран. Валерий Поляков провёл на ней без перерыва 437 суток 17 часов 59 минут. В 1997 году на «Мире» был пожар, а грузовой «Прогресс М-34» столкнулся со «Спектром» и пробил его корпус.</p>
+          <p class="src-note">Источники: «Родина» (к 40-летию запуска); Роскосмос, «25 лет со дня запуска модуля „Спектр“»; РГАНТД, «Запуск орбитальной станции „Мир“».</p>
+        </div></details></li>
+    </ol>
+  </div>
+</section>
+<section class="block" id="theme-inventions">
+  <div class="wrap">
+    <div class="kicker">Космос · Русские первенства</div>
+    <h2>Что ещё русские первыми сделали в космосе</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Другие космические дни музея — по утверждённому календарю. Часть этих залов ещё готовится.</p>
+    <button class="btn ghost" type="button" id="themeInvBtn" data-label="Показать 3 первенства →" aria-expanded="false" aria-controls="themeInvBody">Показать 3 первенства →</button>
+    <div id="themeInvBody" hidden>
+      <ul class="theme-list">
+        <li><b>16 янв</b> <a href="day-16jan-soyuz45.html">Первая в мире стыковка пилотируемых кораблей: «Союз-4» и «Союз-5»</a></li>
+        <li><b>18 мар</b> <a href="day-18mar-leonov.html">Первый в мире выход человека в открытый космос</a></li>
+        <li><b>15 ноя</b> <a href="day-15nov-buran.html">Первая в мире автоматическая посадка орбитального корабля</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="games">
+  <div class="wrap">
+    <div class="kicker">Главное действие · узлы и даты по РКК «Энергия», схема условная</div>
+    <h2>Собери «Мир»</h2>
+    <p style="max-width:62ch">Базовый блок уже на орбите. Модули прилетают по одному, в том порядке, в каком их запускали. Боковой модуль сначала причаливает к осевому узлу, а потом манипулятор переносит его на боковой. Поставь каждый модуль на его штатное место.</p>
+    <div class="lab" id="lab">
+      <canvas class="mircv" id="mir" width="760" height="380" role="img" aria-label="Схема станции: в центре узел базового блока, вправо — сам базовый блок и кормовой узел, влево — осевой узел, вверх, вниз и наискосок — четыре боковых узла; пристыкованные модули подписаны"></canvas>
+      <div class="lctl">
+        <div class="lgo"><button class="btn gold" type="button" id="dock">Причалить следующий модуль</button> <button class="btn ghost" type="button" id="resetMir">Начать сборку заново</button></div>
+        <div class="lfuel" role="group" aria-label="Манипулятор: боковые узлы"><span>Манипулятор, узел:</span>
+          <button class="seg" type="button" id="pY">Y</button>
+          <button class="seg" type="button" id="pmY">−Y</button>
+          <button class="seg" type="button" id="pZ">Z</button>
+          <button class="seg" type="button" id="pmZ">−Z</button></div>
+      </div>
+      <div class="lstat" aria-live="polite">
+        <div><b id="sNext">«Квант»</b><span>следующий модуль</span></div>
+        <div><b id="sAx">свободен</b><span>осевой узел (−X)</span></div>
+        <div><b id="sN">1 из 6</b><span>частей станции на орбите</span></div>
+      </div>
+      <div class="lab-msg" id="mMsg" aria-live="polite">Нажми «Причалить следующий модуль». Кнопка бокового узла переносит модуль с осевого узла на этот узел — или, если осевой свободен, возвращает модуль с бокового узла на осевой.</div>
+      <div class="lab-cap">По РКК «Энергия»: «Квант» пристыкован к промежуточной камере базового блока (ось X); «Квант-2» и все следующие модули стыковались к осевому узлу переходного отсека (ось −X), а затем манипулятор переводил их на боковой узел. Штатные места: «Квант-2» — Y, «Спектр» — −Y, «Кристалл» — −Z, «Природа» — Z. До мая 1995 года «Кристалл» стоял на −Y. Схема условная: размеры модулей не в масштабе, узлы Z и −Z нарисованы наискосок. Стыковочный отсек 1995 года и корабли на схеме не показаны.</div>
+      <noscript><div class="noscript-box">Для модели нужен JavaScript. Текстовая версия. «Квант» встаёт на кормовой узел (ось X). «Квант-2» причаливает к осевому узлу −X, манипулятор переносит его на Y. «Кристалл» в 1990 году причаливает к осевому узлу, и манипулятор ставит его на −Y. В 1995 году «Кристалл» возвращают на осевой узел и ставят на −Z, и только потом «Спектр» причаливает к осевому узлу и уходит на −Y. Последней, в 1996 году, к осевому узлу причаливает «Природа», и манипулятор переносит её на Z.</div></noscript>
+
+      <h3 style="margin:22px 0 6px">1976–2001: расставь по порядку</h3>
+      <p style="max-width:62ch;margin:0 0 6px;color:var(--muted)">Нажимай события от самого раннего к самому позднему.</p>
+      <div class="chrono" id="chrono" role="group" aria-label="События 1976–2001 годов"></div>
+      <div class="lab-msg" id="hMsg" aria-live="polite">Какое событие было первым?</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="pervenstvo">
+  <div class="wrap">
+    <div class="kicker">Проверка факта</div>
+    <h2>Что именно здесь наше</h2>
+    <div class="border-box">
+      <p style="margin-top:0"><b>Граница первенства:</b> «Мир» — первая в мире многомодульная орбитальная станция. Её задумали как базовый блок с узлом на пять стыковочных агрегатов и собрали на орбите: в 1987–1996 годах к нему пристыковали пять модулей. Так станцию называют РГАНТД, Роскосмос и американский справочник NASA 1995 года: «the first multimodular station».</p>
+      <p><b>Чего здесь нет:</b> первой орбитальной станцией «Мир» не был — это «Салют» 1971 года. Тяжёлые корабли ТКС стыковались к станциям и раньше: «Космос-1267» к «Салюту-6» в 1981 году, «Космос-1443» и «Космос-1686» к «Салюту-7» в 1983 и 1985 годах. NASA называет «Космос-1686» переходным аппаратом на пути к модулям станций. Но у «Салюта-6» и «Салюта-7» было по два стыковочных узла и не было узла для постоянных боковых модулей. Американскую станцию Skylab в 1973 году вывели на орбиту одним пуском ракеты «Сатурн-5».</p>
+    </div>
+    <table class="ctx">
+      <thead><tr><th scope="col">Что</th><th scope="col">Чем было</th><th scope="col">Когда</th></tr></thead>
+      <tbody>
+        <tr><td>«Салют-1», СССР</td><td>Первая орбитальная станция</td><td>1971</td></tr>
+        <tr><td>Skylab, США</td><td>Станция, выведенная одним пуском «Сатурна-5»</td><td>1973</td></tr>
+        <tr><td>«Салют-6» и «Космос-1267»</td><td>К станции с двумя узлами пристыкован тяжёлый корабль ТКС</td><td>1981</td></tr>
+        <tr><td>«Салют-7» и «Космос-1686»</td><td>Переходный аппарат: доработанный корабль ТКС, шаг к модулям станций</td><td>1985</td></tr>
+        <tr><td>«Мир», базовый блок</td><td>Узел на пять стыковочных агрегатов; модули — потом</td><td>1986</td></tr>
+        <tr><td>«Мир» и «Природа»</td><td>Облик комплекса из базового блока, пяти модулей и стыковочного отсека сложился окончательно</td><td>1996</td></tr>
+        <tr><td>Международная космическая станция</td><td>Начинает работу станция, в основу которой лёг «Мир»</td><td>1998</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block" id="quiz">
+  <div class="wrap">
+    <div class="kicker">Проверь себя · 5 вопросов</div>
+    <h2>Викторина</h2>
+    <p style="color:var(--muted);max-width:62ch">На каждый вопрос — одна попытка. После ответа покажем объяснение.</p>
+    <div id="quizBox"></div>
+    <noscript><div class="noscript-box">Для викторины нужен JavaScript. Ответы: 1 — пять; 2 — сначала к осевому узлу, потом манипулятор переносил его вбок; 3 — посторонний предмет в стыковочном узле; 4 — «Кристалл»; 5 — 23 марта 2001 года.</div></noscript>
+  </div>
+</section>
+
+<section class="block" id="result">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Итог дня</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Сборка станции, хронология и викторина вместе дают 100 баллов. Прогресс не сохраняется: перезагрузишь страницу — день начнётся заново.</p>
+    <div class="day-result">
+      <div class="dr-score" id="dayTxt">0 / 100 · звание: Гость дня</div>
+      <div class="dr-bar"><i id="dayBar" style="width:0%"></i></div>
+      <div class="dr-note">Пристыкуй «Квант» к корме и разведи остальные четыре модуля по их узлам. Для «Спектра» придётся освободить место — как в 1995 году. Потом расставь события и ответь на вопросы викторины.</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="sources">
+  <div class="wrap">
+    <div class="kicker">Источники</div>
+    <h2>На чём стоит страница</h2>
+    <ul class="sources">
+      <li><a href="https://www.nasa.gov/wp-content/uploads/static/history/SP-4225/documentation/mhh/mirheritage.pdf" rel="noopener" target="_blank">D. S. F. Portree · «Mir Hardware Heritage»</a> (NASA Reference Publication 1357, 1995): с. 103–105 — базовый блок и узел на пять портов; с. 110–111 — стыковка «Кванта» в 1987 году; с. 157 — «Мир» как «the first multimodular station», «Космос-1267», «-1443» и «-1686»; с. 165 — манипулятор «Ляппа»; с. 190 — «Квант-2».</li>
+      <li><a href="https://rgantd.ru/news/pamyatnye-daty/orbitalnaya-nauchnaya-stantsiya-mir/" rel="noopener" target="_blank">«Запуск орбитальной станции „Мир“»</a>, Российский государственный архив научно-технической документации: проект 1972–1976 годов, запуск 20 февраля 1986 года, базовый блок и его отсеки, «Союз Т-15», «первой в мире многомодульной».</li>
+      <li><a href="https://web.archive.org/web/20210725224242/https://www.energia.ru/energia/mir/mir-stucture.html" rel="noopener" target="_blank">«Орбитальный комплекс „Мир“»</a>, РКК «Энергия» имени С. П. Королёва (копия Wayback Machine): даты запуска и стыковки всех модулей, стыковочные агрегаты базового блока, штатные места модулей, перестановки «Кристалла» в 1995 году.</li>
+      <li><a href="https://web.archive.org/web/20220822052358/https://www.roscosmos.ru/28545/" rel="noopener" target="_blank">«25 лет со дня запуска модуля „Спектр“»</a>, Роскосмос, 2020 (копия Wayback Machine): «первого в мире многомодульного пилотируемого орбитального комплекса», перестыковка манипулятором, американское оборудование, «Прогресс М-34», сведение с орбиты 23 марта 2001 года.</li>
+      <li><a href="https://rodina-history.ru/2026/02/20/40-let-nazad-sssr-vyvel-na-orbitu-pervuiu-v-mire-mnogomodulnuiu-stanciiu-mir.html" rel="noopener" target="_blank">«40 лет назад СССР вывел на орбиту первую в мире многомодульную станцию „Мир“»</a>, журнал «Родина», 2026: 1976 и 1979 годы, «Буран» и Г. Романов, 28 экспедиций, 12 стран, рекорд В. Полякова, 1997 год, МКС.</li>
+      <li>Изображения: <a href="https://commons.wikimedia.org/wiki/File:Mir_on_12_June_1998edit1.jpg" rel="noopener" target="_blank">станция «Мир» 12 июня 1998 года</a>, NASA, экипаж STS-91 — общественное достояние; чертежи базового блока и манипулятора и фрагмент с. 157 из <a href="https://www.nasa.gov/wp-content/uploads/static/history/SP-4225/documentation/mhh/mirheritage.pdf" rel="noopener" target="_blank">NASA RP-1357</a> — общественное достояние (работа федерального правительства США).</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="calendar">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Календарь изобретений</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Выбери любой день — узнаешь, что русские сделали первыми в мире. Листай месяцы стрелками.</p>
+    <div id="calbox"></div>
+  </div>
+</section>
+
+<section class="block kd" id="kuda-dalshe">
+  <div class="wrap">
+    <div class="kd-kicker">Куда дальше</div>
+    <h2>Музей продолжается</h2>
+    <div class="kd-grid">
+      <div class="kd-card main"><span class="kd-lbl">Следующий день</span><a href="day-25feb-tokamak.html">25 февраля — Токамак: магнитная бутылка из Москвы <span class="kd-arr">→</span></a>
+        <p>Слово «токамак» — русское: тороидальную камеру с сильным магнитным полем придумали и построили в Москве.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Предыдущий день</span><a href="day-18feb-dokuchaev.html">18 февраля — Докучаев: чернозём — природное тело <span class="kd-arr">→</span></a>
+        <p>В 1879 году Докучаев определил почву как природное тело и взял за образец русский целинный чернозём.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Первая стыковка</span><a href="day-16jan-soyuz45.html">16 января — «Союз-4» и «Союз-5» <span class="kd-arr">→</span></a>
+        <p>Первая в мире стыковка пилотируемых кораблей.</p></div>
+      <div class="kd-card main"><span class="kd-lbl">Город-музей</span><a href="../../index.html">Русская цивилизация <span class="kd-arr">→</span></a>
+        <p>Все музеи проекта на одной карте.</p></div>
+    </div>
+    <p style="margin-top:16px"><a href="izobreteniya.html">Посмотреть изобретения по алфавиту →</a></p>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>
+  Русская цивилизация · «Что изобрели русские первыми в мире»</div></footer>
+
+<script type="application/json" data-proof>{"status":"found","claim_id":"rc:izobreteniya:mir:claim-pervaya-mnogomodulnaya-1986","ours":{"kind":"справочник NASA","title":"D. S. F. Portree, «Mir Hardware Heritage»: «the first multimodular station» о «Мире» (с. 157); базовый блок с узлом на пять портов — одним осевым и четырьмя боковыми (с. 103–105)","date":"1986-02-20","holder":"NASA Reference Publication 1357, 1995; дата — запуск базового блока «Мира»","source_url":"https://www.nasa.gov/wp-content/uploads/static/history/SP-4225/documentation/mhh/mirheritage.pdf","scan":"day-20feb-mir-rp1357.jpg","scan_credit":"NASA RP-1357, с. 157, фрагмент второй колонки. Общественное достояние."},"rival":{"name":"Международная космическая станция","date":"1998","doc_title":"МКС, «начавшая работу в 1998 году»; в её основу лёг «Мир» («Родина», 2026)"}}</script>
+<script src="../../assets/museum-proof.js"></script>
+
+<script>
+/* ── СЧЁТ ── шкала из 100 держит assets/museum-score.js; здесь только реестр наград.
+   модель: «Квант» 10 + «Квант-2» 10 + «Кристалл» 10 + «Спектр» 10 + «Природа» 10;
+   хронология 4×5; викторина 5×6 = 100. */
+window.MUSEUM_SCORE = {awards:{m0:10, m1:10, m2:10, m3:10, m4:10, h:[4,5], q:[5,6]},
+  ranks:[[100,'Сборщик «Мира»'],[70,'Оператор манипулятора'],[40,'Бортинженер «Союза Т-15»'],[0,'Гость дня']]};
+</script>
+<script src="../../assets/museum-score.js"></script>
+<script>
+(function(){
+  var $ = function(id){return document.getElementById(id);};
+  $('readBtn').onclick = function(){ $('story').scrollIntoView({behavior:'smooth'}); };
+  $('listenBtn').onclick = function(){ $('audioguide').scrollIntoView({behavior:'smooth'}); };
+  var tb=$('themeInvBtn');
+  tb.onclick=function(){ var b=$('themeInvBody'), open=b.hidden; b.hidden=!open; tb.setAttribute('aria-expanded',open?'true':'false'); tb.textContent=open?'▲ Скрыть':tb.dataset.label; };
+  function msg(id,t,cls){ var m=$(id); m.className='lab-msg'+(cls?' '+cls:''); m.textContent=t; }
+
+  /* ── СОБЕРИ «МИР» ── РКК «Энергия», «Орбитальный комплекс „Мир“»: «Квант» — к промежуточной камере (ось X);
+     «Квант-2» и все следующие — к осевому агрегату переходного отсека (ось −X), затем манипулятором на боковой;
+     штатные места: «Квант-2» Y, «Спектр» −Y, «Кристалл» −Z, «Природа» Z; «Кристалл» до 27.05.1995 стоял на −Y.
+     Схема условная: размеры не в масштабе. */
+  var M={kvant:{n:'«Квант»',y:1987,c:'#c9a64a'},kvant2:{n:'«Квант-2»',y:1989,c:'#6fa0d8'},kristall:{n:'«Кристалл»',y:1990,c:'#b07ad8'},
+         spektr:{n:'«Спектр»',y:1995,c:'#d8805a'},priroda:{n:'«Природа»',y:1996,c:'#5fbf8a'}};
+  var ORDER=['kvant','kvant2','kristall','spektr','priroda'];
+  var HOME={kvant2:'Y',spektr:'mY',kristall:'mZ',priroda:'Z'};
+  var LAB={X:'X',mX:'−X',Y:'Y',mY:'−Y',Z:'Z',mZ:'−Z'};
+  var P, qi, mDone={};
+  function reset(){ P={X:null,mX:null,Y:null,mY:null,Z:null,mZ:null}; qi=0; }
+  reset();
+  var cv=$('mir'), ctx=cv.getContext('2d');
+  function size(){ var w=cv.clientWidth||760, d=window.devicePixelRatio||1; cv.width=Math.round(w*d); cv.height=Math.round(w*380/760*d); }
+  /* направление от центра узла: [dx,dy] */
+  var DIR={mX:[-1,0],Y:[0,-1],mY:[0,1],Z:[-0.7071,-0.7071],mZ:[-0.7071,0.7071]};
+  function draw(){
+    var w=cv.width, h=cv.height, u=w/760, dpr=window.devicePixelRatio||1; ctx.clearRect(0,0,w,h);
+    function F(px,bold){ return (bold?'bold ':'')+Math.max(px*u,9*dpr)+'px system-ui,sans-serif'; }
+    var cx=330*u, cy=190*u;
+    ctx.fillStyle='rgba(255,255,255,.55)'; for (var i=0;i<40;i++){ ctx.fillRect(((i*97)%760)*u,((i*53)%380)*u,1.2*u,1.2*u); }
+    /* солнечные батареи базового блока */
+    ctx.fillStyle='#2f4f7a'; ctx.fillRect(425*u,70*u,26*u,92*u); ctx.fillRect(425*u,218*u,26*u,92*u);
+    ctx.strokeStyle='rgba(233,220,192,.35)'; ctx.lineWidth=1*u; ctx.strokeRect(425*u,70*u,26*u,92*u); ctx.strokeRect(425*u,218*u,26*u,92*u);
+    /* базовый блок */
+    ctx.fillStyle='#d9d3c3'; ctx.fillRect(352*u,164*u,190*u,52*u);
+    ctx.fillStyle='#1d2433'; ctx.font=F(12,1); ctx.textAlign='center'; ctx.fillText((cv.clientWidth||760)<500?'базовый блок':'базовый блок, 1986',447*u,194*u);
+    /* модули */
+    function mod(name,x0,y0,dx,dy,len,wid){
+      var m=M[name], ang=Math.atan2(dy,dx); ctx.save(); ctx.translate(x0,y0); ctx.rotate(ang);
+      ctx.fillStyle=m.c; ctx.fillRect(0,-wid/2,len,wid);
+      ctx.translate(len/2,0); if (Math.abs(ang)>Math.PI/2+0.01) ctx.rotate(Math.PI);
+      ctx.fillStyle='#0b1220'; ctx.font=F(12,1); ctx.textAlign='center';
+      ctx.fillText(m.n,0,4*u); ctx.restore();
+    }
+    if (P.X) mod(P.X,544*u,cy,1,0,150*u,46*u); else port(549*u,cy,'X');
+    for (var k in DIR){ var d=DIR[k], s=24*u;
+      if (P[k]) mod(P[k],cx+d[0]*s,cy+d[1]*s,d[0],d[1],(k==='mX'?150:125)*u,44*u);
+      else port(cx+d[0]*(s+12*u),cy+d[1]*(s+12*u),LAB[k]); }
+    /* узел */
+    ctx.fillStyle='#e9e2cf'; ctx.beginPath(); ctx.arc(cx,cy,24*u,0,7); ctx.fill();
+    ctx.fillStyle='#1d2433'; ctx.font=F(11); ctx.textAlign='center'; ctx.fillText('узел',cx,cy+4*u);
+    ctx.fillStyle='rgba(233,220,192,.6)'; ctx.textAlign='right'; ctx.font=F(11); ctx.fillText('схема условная, не в масштабе',750*u,370*u);
+    function port(x,y,t){ ctx.strokeStyle='rgba(233,220,192,.8)'; ctx.lineWidth=2*u; ctx.beginPath(); ctx.arc(x,y,9*u,0,7); ctx.stroke();
+      ctx.fillStyle='rgba(233,220,192,.9)'; ctx.font=F(11); ctx.textAlign='center'; ctx.fillText(t,x,y-13*u); }
+  }
+  size(); draw();
+  window.addEventListener('resize',function(){ size(); draw(); });
+
+  function stat(){
+    $('sNext').textContent=qi<5?M[ORDER[qi]].n:'все прилетели';
+    $('sAx').textContent=P.mX?M[P.mX].n:'свободен';
+    var n=1; for (var k in P) if (P[k]) n++; $('sN').textContent=n+' из 6';
+    draw();
+  }
+  function left(){
+    var l=[]; if (!mDone.m0) l.push('пристыкуй «Квант»'); if (!mDone.m1) l.push('поставь «Квант-2» на его узел');
+    if (!mDone.m2) l.push('поставь «Кристалл» на боковой узел'); if (!mDone.m3) l.push('поставь «Спектр» на его узел');
+    if (!mDone.m4) l.push('поставь «Природу» на её узел'); return l.length?' Дальше: '+l.join('; ')+'.':'';
+  }
+  function done(){ return P.X==='kvant'&&P.Y==='kvant2'&&P.mY==='spektr'&&P.mZ==='kristall'&&P.Z==='priroda'; }
+  function tail(){ return done()?' Станция собрана, как в 1996 году: пять модулей на своих узлах, «Кристалл» уступил место «Спектру». Такую станцию до «Мира» на орбите не собирал никто.':left(); }
+  function aw(k){ if (!mDone[k]){ mDone[k]=1; award(k,10); } }
+
+  $('dock').onclick=function(){
+    if (qi>=5){ msg('mMsg','Все пять модулей уже прилетели. Переставляй их манипулятором.'+tail(),'bad'); return; }
+    var nx=ORDER[qi];
+    if (nx==='kvant'){
+      P.X='kvant'; qi++; aw('m0'); stat();
+      msg('mMsg','Апрель 1987 года: «Квант» встал на кормовой узел промежуточной камеры (ось X). На деле это далось не сразу: модуль сначала прошёл мимо станции, а при второй попытке в узле застрял посторонний предмет — его убрали выходом в открытый космос.'+tail(),'ok'); return;
+    }
+    if (P.mX){ msg('mMsg','Осевой узел занят: там '+M[P.mX].n+'. Сначала перенеси его манипулятором на боковой узел.','bad'); return; }
+    if (nx==='spektr' && P.mY){
+      msg('mMsg','Май 1995 года: место «Спектра» — узел −Y — занято: там '+M[P.mY].n+'. Освободи его заранее, как сделали 27 и 30 мая: верни этот модуль на осевой узел и переставь на его собственный узел.','bad'); return;
+    }
+    P.mX=nx; qi++; stat();
+    var t={kvant2:'6 декабря 1989 года: «Квант-2» причалил к осевому узлу. Теперь манипулятор должен перенести его на боковой узел — какой из них его штатный?',
+           kristall:'10 июня 1990 года: «Кристалл» причалил к осевому узлу. Его поставили на боковой узел, который берегли для будущего «Спектра».',
+           spektr:'1 июня 1995 года: «Спектр» причалил к осевому узлу. Его место свободно — переноси.',
+           priroda:'26 апреля 1996 года: последний модуль, «Природа», причалил к осевому узлу. Перенеси его на боковой.'}[nx];
+    msg('mMsg',t,'ok');
+  };
+  function portClick(p){
+    if (P.mX){
+      if (P[p]){ msg('mMsg','Узел '+LAB[p]+' занят: там '+M[P[p]].n+'.','bad'); return; }
+      var m=P.mX; P[p]=m; P.mX=null; stat();
+      if (m==='kristall' && (p==='mY'||p==='mZ')){
+        aw('m2');
+        msg('mMsg', p==='mY' ? 'Так и было в 1990 году: «Кристалл» встал на −Y — узел, предназначенный для «Спектра». В 1995 году его придётся переставить.'+tail()
+                             : 'Штатное место «Кристалла» — −Z. Сюда его перевели 30 мая 1995 года, освобождая узел для «Спектра».'+tail(),'ok'); return;
+      }
+      if (HOME[m]===p){
+        aw({kvant2:'m1',spektr:'m3',priroda:'m4'}[m]);
+        var t={kvant2:'«Квант-2» на штатном месте, ось Y. Через его шлюз космонавты выходили в открытый космос.',
+               spektr:'«Спектр» на штатном месте, ось −Y. Так манипулятор перестыковал его в 1995 году.',
+               priroda:'«Природа» на штатном месте, ось Z.'}[m];
+        msg('mMsg',t+tail(),'ok'); return;
+      }
+      msg('mMsg','Узел '+LAB[p]+' — не штатное место модуля '+M[m].n+(HOME[m]?': его место — '+LAB[HOME[m]]:'')+'. Верни модуль на осевой узел и переставь.','bad'); return;
+    }
+    if (P[p]){ var b=P[p]; P.mX=b; P[p]=null; stat(); msg('mMsg','Манипулятор вернул модуль '+M[b].n+' на осевой узел. Теперь его можно поставить на другой боковой узел.','ok'); return; }
+    msg('mMsg','Осевой узел пуст, а узел '+LAB[p]+' свободен: переносить нечего. '+(qi<5?'Причаль следующий модуль.':'Переставляй модули манипулятором.'),'bad');
+  };
+  ['Y','mY','Z','mZ'].forEach(function(p){ $('p'+p).onclick=function(){ portClick(p); }; });
+  $('resetMir').onclick=function(){ reset(); stat(); msg('mMsg','Начинаем заново: на орбите только базовый блок. Баллы за поставленные модули остаются.',''); };
+  stat();
+
+  /* ── ХРОНОЛОГИЯ ── */
+  var E=[
+    {o:2,t:'К станции причаливает последний модуль — «Природа»',d:'1996'},
+    {o:0,t:'Работы над многомодульной станцией возобновляют в НПО «Энергия»',d:'1976'},
+    {o:3,t:'Станцию «Мир» сводят с орбиты в Тихий океан',d:'2001'},
+    {o:1,t:'«Протон» выводит на орбиту базовый блок «Мира»',d:'1986'}
+  ], hNext=0;
+  E.forEach(function(e,i){
+    var b=document.createElement('button'); b.type='button'; b.className='seg'; b.innerHTML='<span class="n"></span>'; b.appendChild(document.createTextNode(e.t));
+    b.onclick=function(){
+      if (e.done) return;
+      if (e.o!==hNext){ b.classList.add('wrongpick'); setTimeout(function(){ b.classList.remove('wrongpick'); },700);
+        msg('hMsg','Не сейчас: есть событие раньше этого.','bad'); return; }
+      e.done=true; b.classList.add('right'); b.disabled=true; b.querySelector('.n').textContent=(hNext+1)+'.';
+      b.appendChild(document.createTextNode(' — '+e.d)); award('h'+i,5); hNext++;
+      msg('hMsg', hNext<4 ? 'Верно. Что дальше?' : 'Порядок восстановлен. Сам «Мир» собирали на орбите десять лет — с 1986 по 1996 год, а летал он ещё пять.','ok');
+    };
+    $('chrono').appendChild(b);
+  });
+
+  /* ── ВИКТОРИНА ── */
+  var Q = [
+    {q:'Сколько стыковочных агрегатов было на переходном отсеке базового блока?', o:['Два','Пять','Восемь'], a:1,
+     e:'Пять: один осевой и четыре боковых. Ещё один агрегат стоял на промежуточной камере в корме.'},
+    {q:'Как боковой модуль попадал на своё место?', o:['Сначала причаливал к осевому узлу, потом манипулятор переносил его вбок','Сразу стыковался к боковому узлу','Его переносили космонавты в открытом космосе'], a:0,
+     e:'Модуль причаливал к осевому узлу, а манипулятор «Ляппа» поворачивал его на боковой.'},
+    {q:'Что помешало «Кванту» в апреле 1987 года состыковаться до конца?', o:['Посторонний предмет в стыковочном узле','Отказ солнечных батарей','Ошибка в расчёте орбиты'], a:0,
+     e:'В узле нашли посторонний предмет — по оценке NASA, мешок с мусором. Романенко и Лавейкин вышли в открытый космос и убрали его.'},
+    {q:'Какой модуль переставили в 1995 году, чтобы освободить место «Спектру»?', o:['«Квант-2»','«Кристалл»','«Природу»'], a:1,
+     e:'«Кристалл» стоял на −Y, на узле для «Спектра». 27 и 30 мая 1995 года его перевели на −Z.'},
+    {q:'Когда «Мир» свели с орбиты?', o:['В июне 2000 года','23 марта 2001 года','В 1998 году'], a:1,
+     e:'23 марта 2001 года станцию свели с орбиты в Тихий океан. По данным «Родины», в эксплуатации она была до июня 2000 года.'}
+  ];
+  var qb = $('quizBox');
+  Q.forEach(function(it, qi){
+    var wrap = document.createElement('div');
+    var h = document.createElement('p'); h.className='quiz-q'; h.textContent=(qi+1)+'. '+it.q; wrap.appendChild(h);
+    var exp = document.createElement('div'); exp.className='exp'; exp.setAttribute('aria-live','polite');
+    var btns = it.o.map(function(txt, oi){
+      var b=document.createElement('button'); b.type='button'; b.className='opt'; b.textContent=txt;
+      b.onclick=function(){
+        if (wrap.dataset.done) return; wrap.dataset.done='1';
+        btns.forEach(function(x,xi){ x.disabled=true; if (xi===it.a) x.classList.add('correct'); });
+        if (oi===it.a){ award('q'+qi,6); exp.textContent='Верно. '+it.e; }
+        else { b.classList.add('wrong'); exp.textContent='Не совсем. '+it.e; }
+        exp.classList.add('show');
+      };
+      wrap.appendChild(b); return b;
+    });
+    wrap.appendChild(exp); qb.appendChild(wrap);
+  });
+})();
+</script>
+<script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
+<script>window.MUSEUM_CHROME={
+  museum:{title:'Что изобрели русские первыми в мире',href:'index.html'},
+  share:{title:'«Мир» — первая многомодульная орбитальная станция — музей «Что изобрели русские первыми в мире»',
+         text:'«Мир» — первая станция, которую собирали на орбите: 20 февраля 1986 года «Протон» вывел лишь базовый блок с узлом на пять портов. Что Россия дала миру раньше всех — день за днём.'},
+  prev:{href:'day-18feb-dokuchaev.html',title:'18 февраля · Докучаев'},
+  next:{href:'day-25feb-tokamak.html',title:'25 февраля · Токамак'},
+  all:{href:'index.html',label:'Все изобретения'},
+  city:'../../index.html',
+  random:['day-01jan-cabletv.html','day-02jan-luna1.html','day-03jan-anosov.html','day-04jan-pilchikov.html','day-05jan-shukhov.html','day-06jan-orlov.html','day-08jan-icebreaker.html','day-09jan-blinov.html','day-10jan-britnev.html','day-11jan-kostovich.html','day-12jan-r7.html','day-13jan-k278.html','day-14jan-lira.html','day-15jan-kovalevskaya.html','day-16jan-soyuz45.html','day-19jan-kantorovich.html','day-21jan-obninsk.html','day-22jan-landau.html','day-23jan-umov.html','day-24jan-k162.html','day-25jan-korsakov.html','day-26jan-podvodnaya.html','day-27jan-pentium.html','day-28jan-havkin.html','day-30jan-kotelnikov.html','day-31jan-girotron.html','day-01feb-bekhterev.html','day-02feb-edinorog.html','day-03feb-luna9.html','day-04feb-samovar.html','day-05feb-boldyrev.html','day-06feb-zelinsky.html','day-07feb-setun.html','day-08feb-mendeleev.html','day-09feb-chizhevsky.html','day-10feb-aerosani.html','day-12feb-lenz.html','day-15feb-nesterov.html','day-17feb-pirotsky.html','day-18feb-dokuchaev.html','day-20feb-mir.html','day-25feb-tokamak.html','day-18mar-leonov.html','day-15may-mechnikov.html','day-16jun-tereshkova.html','day-26sep-pavlov.html','day-15nov-buran.html','day-25nov-pirogov.html','day-01dec-lobachevsky.html','day-14dec-laser.html']
+};</script>
+<script src="../../assets/museum-chrome.js"></script>
+<script>window.MUSEUM_SUPPORT={museum:'Что изобрели русские первыми в мире'};</script>
+<script src="../../assets/museum-support.js"></script>
+<script src="calendar-izobreteniya.js"></script>
+<script>window.MUSEUM_CALENDAR_INITIAL='02-20';</script>
+<script src="../../assets/museum-calendar-month.js"></script>
+<script>window.MUSEUM_RETURN={riddle:{q:"Как боковые модули «Мира» попадали на свои узлы?",a:"Модуль сначала причаливал к осевому узлу, а манипулятор «Ляппа» переносил его на боковой. Так модули можно было и переставлять — как «Кристалл» в 1995 году, когда освобождали место для «Спектра».",src:"РКК «Энергия», «Орбитальный комплекс „Мир“»; D. S. F. Portree, «Mir Hardware Heritage» (NASA RP-1357, 1995), с. 165"}};</script>
+<script src="../../assets/museum-return.js" data-museum="izobreteniya" data-day="02-20"></script>
+<script defer src="../../assets/analytics.js"></script>
+
+
+
+
+
+
+
+
+
+<script>window.MUSEUM_AUDIOGUIDE={
+  audioSrc:"audio-guide-mir-ru.mp3",
+  durationLabel:"2 минуты 44 секунд",
+  lead:"Голос ведёт по залу станции «Мир»: снимок июня 1998 года, проект и запуск базового блока, узел на пять стыковочных агрегатов, трудная стыковка «Кванта», манипулятор и перестановки модулей, итог пятнадцати лет. Шесть остановок: снимок у входа, два чертежа NASA и рассказ между ними.",
+  stops:[
+    {t:0,mark:"0:00",title:"Снимок у входа"},
+    {t:23,mark:"0:23",title:"Проект и запуск"},
+    {t:53,mark:"0:53",title:"Узел на пять портов"},
+    {t:77,mark:"1:17",title:"Трудный «Квант»"},
+    {t:103,mark:"1:43",title:"Манипулятор"},
+    {t:136,mark:"2:16",title:"Пятнадцать лет"}
+  ],
+  transcript:[
+    "<p>Факты: снимок — Викисклад, «Mir on 12 June 1998edit1.jpg» (NASA, STS-91; облёт станции в июне 1998); «первая многомодульная» — РГАНТД; Роскосмос; NASA RP-1357, с. 157.</p>",
+    "<p>Факты: 1972, 1974, 1976 — РГАНТД; «Салют», «Буран» — «Родина» (к 40-летию запуска); 20 февраля 1986, «Протон», 13,13 м — РГАНТД; «20,4 тонны» — «Родина».</p>",
+    "<p>Факты: пять агрегатов переходного отсека и один на промежуточной камере — РКК «Энергия», «Орбитальный комплекс „Мир“»; узел вместо конического отсека «Салютов» — NASA RP-1357, с. 103–105.</p>",
+    "<p>Факты: стыковка «Кванта» 5–11 апреля 1987 — NASA RP-1357, с. 110–111; посторонний предмет в приёмном конусе — РКК «Энергия».</p>",
+    "<p>Факты: манипулятор «Ляппа» — NASA RP-1357, с. 165; даты и узлы модулей, перестановки «Кристалла» — РКК «Энергия»; «Спектр» — Роскосмос.</p>",
+    "<p>Факты: «почти втрое дольше», 28 экспедиций, 20 тысяч опытов, 12 стран, рекорд В. Полякова, МКС — «Родина»; 23 марта 2001 — Роскосмос.</p>"
+  ],
+  note:"Озвучено синтезом речи — временно, до записи голосом автора музея."
+};</script>
+<script src="../../assets/museum-audioguide.js"></script>
+</body>
+</html>

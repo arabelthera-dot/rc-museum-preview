@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="ru" data-museum="izobreteniya">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Филатов: роговица из ледника — Что изобрели русские первыми в мире, 27 февраля</title>
+<!--
+  Страница дня 27 февраля. Наряд stranicy-izob-0910 (claude2, 15.10.2026), карточка #762.
+  Форма — вариант А музея изобретений (Сергей 12.09.2026): лента ударов, подробности свёрнуты.
+  Паспорт выпуска: rc-museum-production/izobreteniya/day-27feb-filatov/passport/issue.json
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --dark:#060c17; --dark2:#0c1826; --surface:#111f33;
+    --card:rgba(255,255,255,.05); --card-b:rgba(255,255,255,.09);
+    --gold:#c9a84c; --gold-l:#e4c97a; --gold-g:rgba(201,168,76,.13);
+    --ink:#e8eef5; --muted:#7a9ab8; --line:rgba(255,255,255,.07);
+    --accent:#2d8cbf; --accent2:#1f6f8b;
+    /* legacy compat */
+    --paper:#0c1826; --paper2:#111f33;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Inter','Segoe UI',sans-serif;color:var(--ink);background:var(--dark);line-height:1.72}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.13;margin:0}
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent)}
+
+  /* ── ШАПКА ── */
+  header.top{background:rgba(6,12,23,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--card-b);color:#fff;position:sticky;top:0;z-index:30}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+  .logo svg{display:block;filter:drop-shadow(0 0 8px rgba(201,168,76,.4))}
+  .logo .lt{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:16px}
+  .logo .lt small{display:block;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-family:'Inter',sans-serif}
+  .score{background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:6px 16px;font-size:13px;color:var(--gold-l);cursor:pointer;font-family:'Inter',sans-serif}
+  .score-info{position:absolute;right:12px;top:66px;max-width:260px;background:#0e1c30;color:var(--ink);border:1px solid var(--card-b);border-radius:14px;padding:14px 16px;font-size:13px;line-height:1.6;box-shadow:0 20px 60px rgba(0,0,0,.6);display:none;z-index:40}
+  .score-info.show{display:block}
+
+  /* ── HERO — СТАНДАРТ (не менять): 3D-сцена сверху, текст отдельным блоком ниже ── */
+  .hero-scene{position:relative;height:52vh;min-height:300px;max-height:520px;overflow:hidden;background:linear-gradient(160deg,#0a1e3a 0%,#1a3a6a 55%,#0d2240 100%)}
+  .hero-scene canvas.scene,.hero-scene img.scene{width:100%;height:100%;display:block;object-fit:cover}
+  .scene-caption{background:#060d18;padding:11px 0 12px}
+  .scene-caption .wrap{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+  .scene-cap{font-size:13.5px;line-height:1.6;color:var(--muted);border-left:2px solid rgba(201,168,76,.4);padding-left:14px;flex:1 1 420px}
+  .scene-hint{flex:0 0 auto;font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.4px;color:#e4c97a;
+    background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.34);border-radius:24px;padding:7px 16px;font-weight:600}
+  .hero-lead{background:linear-gradient(180deg,#0c1826 0%,#060c17 100%);color:#fff;padding:28px 0 38px}
+  .hero-lead .museum{color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:12px;opacity:.9}
+  .hero-lead .who{font-family:'Inter',sans-serif;font-size:clamp(13px,3vw,15px);letter-spacing:.4px;color:var(--accent-l,#7dc8ff);margin-bottom:10px}
+  .hero-lead .who i{font-style:normal;color:#7893ab;font-weight:400}
+  .hero-lead h1{color:#fff;font-size:56px;font-weight:900;line-height:1.04;margin-bottom:16px}
+  .hero-lead .hook{color:#b8ccde;font-size:19px;max-width:580px;margin-bottom:28px;line-height:1.65;font-weight:400}
+  .hero-lead .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+  @media(max-width:680px){.hero-lead h1{font-size:34px}.hero-lead .hook{font-size:16px}
+    .hero-scene{height:34vh;min-height:230px;max-height:300px}
+    .scene-caption .wrap{flex-direction:column;gap:9px}
+    .scene-hint{order:-1;align-self:flex-start;font-size:11.5px;padding:6px 13px}
+    .scene-cap{font-size:12.8px;flex:1 1 auto}}
+  .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:16px;font-family:'Inter',sans-serif;letter-spacing:.5px}
+
+  /* ── НАВИГАЦИЯ ДНЯ ── */
+  .daynav{position:sticky;top:64px;z-index:25;background:rgba(6,12,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-b)}
+  .daynav .wrap{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+  .daynav::-webkit-scrollbar{display:none}
+  .daynav a{flex:0 0 auto;padding:14px 20px;font-size:11px;font-weight:700;font-family:'Inter',sans-serif;color:var(--muted);text-decoration:none;white-space:nowrap;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:.18s}
+  .daynav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+  /* ── СЕКЦИИ ── */
+  section.block{padding:64px 0;border-bottom:1px solid var(--line);scroll-margin-top:130px}
+  .kicker{font-size:10px;text-transform:uppercase;letter-spacing:3.5px;color:var(--gold);font-weight:700;font-family:'Inter',sans-serif;margin-bottom:8px}
+  section.block h2{font-size:34px;color:#fff;margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink)}
+  .pull{background:var(--gold-g);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 14px 14px 0;font-style:italic;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-size:20px;line-height:1.5;margin:26px 0}
+
+  /* ── КНОПКИ ── */
+  .btn{cursor:pointer;border:none;border-radius:12px;padding:14px 26px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;background:var(--accent2);color:#fff;transition:.18s;letter-spacing:.2px}
+  .btn:hover{filter:brightness(1.18)}
+  .btn.ghost{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid var(--card-b)}
+  .btn.ghost:hover{background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.2)}
+  .btn.gold{background:linear-gradient(135deg,var(--gold),#b8882b);color:#1a0f00;box-shadow:0 4px 20px rgba(201,168,76,.25)}
+  .btn.gold:hover{filter:brightness(1.1);box-shadow:0 6px 28px rgba(201,168,76,.4)}
+  .btn:active{transform:translateY(1px)}
+  .pulse{animation:pulse .9s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+
+  /* ── КАРТОЧКИ ── */
+  .card{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:20px 22px;margin:16px 0;backdrop-filter:blur(6px)}
+
+  /* ── КВИЗ ── */
+  .opt{display:block;width:100%;text-align:left;background:rgba(255,255,255,.04);border:1px solid var(--card-b);border-radius:12px;padding:13px 16px;margin:8px 0;cursor:pointer;font-size:15px;color:var(--ink);font-family:'Inter',sans-serif;transition:.16s}
+  .opt:hover{border-color:var(--accent);background:rgba(45,140,191,.08)}
+  .opt.correct{background:rgba(40,120,60,.18);border-color:#3f9b52;color:#7ed4a0;font-weight:600}
+  .opt.wrong{background:rgba(180,40,40,.13);border-color:#c0453f;color:#f08080}
+  .exp{margin-top:10px;font-size:14px;background:var(--gold-g);border-radius:10px;padding:12px 14px;display:none;color:var(--gold-l)}
+  .exp.show{display:block}
+
+  /* ── ИТОГ ДНЯ ── */
+  .day-result{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:22px 24px;max-width:460px}
+  .dr-rank{font-family:'Playfair Display',Georgia,serif;font-size:28px;color:var(--gold-l);font-weight:700}
+  .dr-score{font-size:16px;margin:4px 0 12px;color:var(--ink)}.dr-score span{color:var(--muted);font-size:14px}
+  .dr-bar{height:8px;background:rgba(255,255,255,.08);border-radius:6px;overflow:hidden}
+  .dr-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),var(--gold));transition:width .6s cubic-bezier(.2,.7,.2,1)}
+  .dr-note{margin-top:12px;font-size:14px;color:var(--muted)}
+
+  /* ── РЕКЛАМНЫЕ СЛОТЫ ── */
+  .ad-slot{position:relative;margin:26px 0;background:rgba(255,255,255,.02);border:1px dashed rgba(255,255,255,.1);border-radius:14px;min-height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px}
+  .ad-slot .lbl{position:absolute;top:7px;right:12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.15);font-family:'Inter',sans-serif}
+  .ad-slot .ph-txt{font-size:12px;max-width:80%;color:rgba(255,255,255,.18)}
+  .ad-slot.billboard{min-height:108px}
+  .adband{background:transparent;border-bottom:none}
+
+  footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
+  .crumbs{background:rgba(6,12,23,.6);border-bottom:1px solid var(--card-b);font-family:'Inter',sans-serif;font-size:12.5px}
+  .crumbs .wrap{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  .crumbs a{color:var(--gold-l);text-decoration:none;white-space:nowrap}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--muted);opacity:.6}
+  .crumbs .here{color:var(--muted);white-space:nowrap}
+
+
+  /* ── ШАПКА: четыре строки по museum-core §6-бис ── */
+  header.top{display:block;text-align:center;padding:10px 12px 8px;height:auto;position:relative}
+  header.top .b1{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:15px;letter-spacing:.5px;color:#fff}
+  header.top .b2{font-size:11px;color:var(--muted);margin-top:2px}
+  header.top .b3{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:6px}
+  header.top .b4{font-size:12.5px;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-style:italic}
+  header.top .score{position:absolute;right:12px;top:10px}
+  .daynav{top:0}
+  .hero-scene{background:#0e1c2c;height:38vh;min-height:250px;max-height:400px}
+  @media(max-width:680px){.hero-lead h1{font-size:31px}}
+  .hero-scene img.scene{object-fit:cover;object-position:50% 42%}
+  .date-origin{font-size:13px;color:#9fb4c8;margin:-6px 0 12px;max-width:62ch}
+  .hero-lead .hook{color:#c6d8e8;max-width:62ch}
+  .hero-under{background:linear-gradient(180deg,#060d18,#060c17);padding:4px 0 22px}
+  .stamp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(125,200,255,.28);margin-top:14px}
+  .stamp>div{padding:11px 12px;border-left:1px solid rgba(125,200,255,.16);min-width:0}
+  .stamp>div:first-child{border-left:0}
+  .stamp .v{font-size:clamp(15px,3.4vw,21px);font-weight:700;color:#8fd3ff;line-height:1.1;overflow-wrap:anywhere}
+  .stamp .k{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#8fa5b9;margin-top:5px}
+  @media(max-width:600px){.stamp{grid-template-columns:repeat(2,minmax(0,1fr))}.stamp>div:nth-child(3){border-left:0}.stamp>div:nth-child(n+3){border-top:1px solid rgba(125,200,255,.16)}}
+
+  /* ── ЛЕНТА УДАРОВ (museum-inventions, вариант А; museum-core §5-бис) ── */
+  .udary{list-style:none;margin:18px 0 0;padding:0;counter-reset:u}
+  .udary>li{border-top:1px solid var(--line);padding:4px 0}
+  .udary details>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:34px 1fr;gap:10px;padding:12px 0;font-size:17px;line-height:1.55;color:var(--ink)}
+  .udary details>summary::-webkit-details-marker{display:none}
+  .udary details>summary::before{counter-increment:u;content:counter(u);font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:20px;color:var(--gold);line-height:1.3}
+  .udary .more-lbl{display:block;grid-column:2;font-size:12.5px;color:var(--gold-l);letter-spacing:.3px;margin-top:4px}
+  .udary .more-lbl::after{content:' ▾'}
+  .udary details[open] .more-lbl::after{content:' ▴'}
+  .udary details[open] .more-lbl .o{display:none}
+  .udary details:not([open]) .more-lbl .c{display:none}
+  .udary summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+  .udary .det{margin:0 0 14px 44px;padding:12px 16px;background:rgba(255,255,255,.035);border-left:2px solid rgba(201,168,76,.45);border-radius:0 10px 10px 0;font-size:15px;color:#d5e0ea}
+  .udary .det p{margin:8px 0}
+  .udary .tag{display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1a0f00;background:var(--gold-l);border-radius:6px;padding:1px 7px;margin-right:6px}
+  .udary .find{border-left:3px solid var(--gold);padding-left:8px}
+  figure.fig{margin:18px 0}
+  figure.fig img{max-width:100%;height:auto;border-radius:10px;display:block}
+  figure.fig figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5}
+  .src-note{font-size:12px;color:#8fa5b9}
+
+  /* ── МОДЕЛЬ ДНЯ (главное предметное действие) ── */
+  .lab{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:18px 18px 20px;margin-top:14px}
+  .lab-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+  .lab-row .lbl{flex:0 0 100%;font-size:13px;color:var(--muted);letter-spacing:.3px}
+  .seg{cursor:pointer;border:1px solid var(--card-b);background:rgba(255,255,255,.04);color:var(--ink);border-radius:10px;padding:10px 14px;font:inherit;font-size:14.5px;min-height:44px}
+  .seg[aria-pressed="true"]{border-color:var(--gold);background:var(--gold-g);color:var(--gold-l);font-weight:600}
+  .seg:focus-visible,.btn:focus-visible,.opt:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .lab-stage{position:relative;margin-top:12px}
+  .lab-stage canvas{width:100%;height:auto;display:block;border-radius:10px;background:#1c2530}
+  .lab-cap{font-size:12px;color:#8fa5b9;margin-top:6px}
+  .lab-msg{margin-top:12px;font-size:15.5px;padding:12px 14px;border-radius:10px;background:rgba(255,255,255,.04);border-left:3px solid var(--card-b);min-height:48px}
+  .lab-msg.ok{border-left-color:#3f9b52;background:rgba(40,120,60,.14)}
+  .lab-msg.bad{border-left-color:#c0453f;background:rgba(180,40,40,.10)}
+  .lab-found{font-size:13px;color:var(--muted);margin-top:8px}
+  .lab-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .noscript-box{background:rgba(255,255,255,.04);border:1px dashed var(--card-b);border-radius:12px;padding:12px 16px;font-size:15px}
+
+  /* ── ГРАНИЦА ПЕРВЕНСТВА ── */
+  .border-box{background:rgba(45,140,191,.08);border:1px solid rgba(45,140,191,.3);border-radius:14px;padding:16px 18px}
+  .border-box b{color:#8fd3ff}
+  .ctx{width:100%;border-collapse:collapse;margin-top:14px;font-size:14.5px}
+  .ctx th,.ctx td{text-align:left;padding:9px 8px;border-top:1px solid var(--line);vertical-align:top}
+  .ctx th{color:var(--gold-l);font-weight:600;font-size:12.5px;letter-spacing:.5px}
+  .quiz-q{margin:18px 0 6px;font-weight:600}
+  .sources a{color:var(--gold-l)}
+  .sources li{margin:6px 0;font-size:14px;color:#c8d6e2}
+  @media(max-width:600px){header.top{padding:8px 64px 6px}header.top .score{top:8px;right:8px;padding:4px 10px;font-size:12px}header.top .b3{margin-top:3px}
+    .hero-scene{height:26vh;min-height:200px;max-height:260px}.date-origin{font-size:12px;margin:-8px 0 8px}.hero-lead{padding:18px 0 26px}.hero-lead .date-chip{margin-bottom:12px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+  /* ── ПОЛЗУНКИ МОДЕЛИ (19, 21 янв) ── */
+  .mtab{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+  .mrow{display:grid;grid-template-columns:minmax(150px,1.2fr) 2fr 92px;gap:12px;align-items:center}
+  .mrow .mname{font-size:14.5px}
+  .mrow .mname i{font-style:normal;color:var(--muted);font-size:13px}
+  .mrow input[type=range]{width:100%;accent-color:var(--gold);min-height:44px}
+  .mrow output{font-size:14px;color:var(--gold-l);text-align:right}
+  .mrow.off{opacity:.45}
+  .mult{margin-top:14px;padding:14px 16px;border-radius:12px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25)}
+  @media(max-width:560px){.mrow{grid-template-columns:1fr 70px}.mrow .mname{grid-column:1/-1}}
+</style>
+<meta name="description" content="Филатов первым стал массово пересаживать роговицу из глаз умерших, сохранённых в леднике при 4–6 °C. 95 операций к 1936 году, статья в The Lancet 1937 года.">
+<link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-27feb-filatov.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Русская цивилизация">
+<meta property="og:title" content="Филатов: роговица из ледника">
+<meta property="og:description" content="Филатов первым стал массово пересаживать роговицу из глаз умерших, сохранённых в леднике при 4–6 °C. 95 операций к 1936 году, статья в The Lancet 1937 года.">
+<meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-27feb-filatov.html">
+<meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-27feb-filatov.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Филатов: роговица из ледника", "description": "Филатов первым стал массово пересаживать роговицу из глаз умерших, сохранённых в леднике при 4–6 °C. 95 операций к 1936 году, статья в The Lancet 1937 года.", "url": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-27feb-filatov.html", "inLanguage": "ru", "isPartOf": {"@type": "WebSite", "name": "Музей «Что изобрели русские первыми в мире»"}, "publisher": {"@type": "Organization", "name": "Русская цивилизация"}, "about": {"@type": "Person", "name": "Владимир Петрович Филатов"}, "image": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-27feb-filatov.jpg"}</script>
+<style>
+  /* ── ФИЛАТОВ: РОГОВИЦА ИЗ ЛЕДНИКА (27 фев) ── */
+  .eyecv{width:100%;max-width:760px;height:auto;aspect-ratio:760/360;display:block;margin:10px 0 4px;background:#0a0e18;border-radius:10px}
+  .lctl{display:grid;gap:12px;max-width:760px;margin-top:8px}
+  .lstep{border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:10px 12px;background:rgba(255,255,255,.03)}
+  .lstep.done{border-color:#3f9b52;background:rgba(63,155,82,.10)}
+  .lstep.locked{opacity:.5}
+  .lstep h4{margin:0 0 8px;font-size:15px;color:var(--gold-l)}
+  .lstep .opts{display:flex;flex-wrap:wrap;gap:8px}
+  .lstep .seg{text-align:left}
+  .lstep .seg.on{border-color:#3f9b52;background:rgba(63,155,82,.18)}
+  .lstep .seg.wrongpick{border-color:#c0573f;background:rgba(192,87,63,.15)}
+  .lfuel{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  .lfuel input[type=range]{flex:1;min-width:180px;max-width:360px}
+  .lfuel output{min-width:72px;font-weight:700;color:var(--gold-l)}
+  .lstat{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;max-width:760px;margin-top:10px}
+  .lstat div{border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:8px 10px;background:rgba(255,255,255,.03)}
+  .lstat b{display:block;font-size:18px;color:var(--gold-l)}
+  .lstat span{font-size:13px;color:var(--muted)}
+  .chrono{display:grid;gap:8px;max-width:760px;margin-top:8px}
+  .chrono .seg{text-align:left;width:100%}
+  .chrono .seg.right{border-color:#3f9b52;background:rgba(63,155,82,.18)}
+  .chrono .seg.wrongpick{border-color:#c0573f;background:rgba(192,87,63,.15)}
+  .chrono .n{display:inline-block;min-width:1.6em;color:var(--gold-l);font-weight:700}
+  blockquote.doc{margin:12px 0;padding:10px 14px;border-left:3px solid var(--gold);background:rgba(255,255,255,.03);border-radius:0 10px 10px 0;font-size:15px;line-height:1.6}
+  #hero{background:#e9e4da}
+  #hero img.scene{object-fit:contain;object-position:50% 50%}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="b1">Русская цивилизация</div>
+  <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
+  <div class="b3">Что изобрели русские первыми в мире</div>
+  <div class="b4">365 изобретений. Все русские. Все первые</div>
+  <div class="score" id="scoreBox" title="Баллы знаний за этот день">⭐ <span id="score">0</span> / 100</div>
+</header>
+
+<nav class="crumbs" aria-label="Хлебные крошки"><div class="wrap">
+  <a href="../../index.html">Русская цивилизация</a>
+  <span class="sep">›</span>
+  <a href="index.html">Что изобрели русские первыми в мире</a>
+  <span class="sep">›</span>
+  <span class="here">27 февраля · Филатов</span>
+</div></nav>
+
+<div class="hero-scene" id="hero">
+  <img class="scene" src="day-27feb-filatov.jpg" data-source="https://commons.wikimedia.org/wiki/File:%D0%92.%D0%9F._%D0%A4%D1%96%D0%BB%D0%B0%D1%82%D0%BE%D0%B2_(%D0%BC%D0%B0%D1%80%D0%BA%D0%B0).jpg" data-license="Public domain" data-author="Почта СССР, 1962" width="436" height="608" alt="Почтовая марка СССР 1962 года: портрет пожилого бородатого мужчины в шапочке, со звездой Героя на пиджаке, надпись «Академик В. П. Филатов», номинал 4 копейки" fetchpriority="high">
+</div>
+
+<div class="scene-caption">
+  <div class="wrap">
+    <div class="scene-cap">Марка Почты СССР 1962 года «Академик В. П. Филатов». Викисклад, общественное достояние.</div>
+    <span class="scene-hint">Филатов · марка 1962</span>
+  </div>
+</div>
+
+<header class="hero-lead">
+  <div class="wrap">
+    <div class="date-chip">27 февраля · 1931</div>
+    <p class="date-origin">Владимир Петрович Филатов родился 27 (15) февраля 1875 года в селе Михайловка Пензенской губернии. В 1931 году в Одессе он взялся пересаживать слепым роговицу из глаз умерших, сохранённых в холоде.</p>
+    <div class="who">В. П. Филатов <i>· глазная клиника, Одесса</i></div>
+    <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
+    <h1>Филатов: роговица из ледника</h1>
+    <p class="hook">6 мая 1931 года Филатов впервые пересадил роговицу из глаза умершего, сохранённого в холоде, — за 13 лет до первого банка глаз в Нью-Йорке.</p>
+    <div class="hero-btns">
+      <button class="btn gold" id="readBtn" type="button">Читать историю ↓</button>
+      <button class="btn ghost" id="listenBtn" type="button">🎧 Слушать аудиогид</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero-under">
+  <div class="wrap">
+    <div class="stamp">
+      <div><div class="v">234 800</div><div class="k">слепых насчитала в СССР перепись 1926 года; не меньше 43 % ослепли из-за бельма</div></div>
+      <div><div class="v">4–6 °C</div><div class="k">в леднике при такой температуре Филатов хранил глаза умерших до операции</div></div>
+      <div><div class="v">95</div><div class="k">пересадок роговицы из глаз умерших сделал Филатов с 1932 по январь 1936 года</div></div>
+      <div><div class="v">больше 3500</div><div class="k">пересадок роговицы выполнил Филатов к 1955 году</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="daynav" aria-label="Разделы дня">
+  <div class="wrap">
+    <a href="#story">Читать</a>
+    <a href="#audioguide">Слушать</a>
+    <a href="#games">Операция</a>
+    <a href="#pervenstvo">Первенство</a>
+    <a href="#quiz">Викторина</a>
+    <a href="#calendar">Календарь</a>
+  </div>
+</nav>
+
+<section class="wrap" id="dokument" data-proof-block></section>
+
+<section class="block" id="audioguide"></section>
+
+<section class="block" id="story">
+  <div class="wrap">
+    <div class="kicker">История первенства · 12 ударов</div>
+    <h2>От бельма — к банкам глаз по всему миру</h2>
+    <p style="color:var(--muted);max-width:62ch">Читается подряд. Нажми на удар — откроется подробный разбор с источниками.</p>
+    <ol class="udary">
+      <li><details><summary><span>По переписи 1926 года в СССР было 234 800 слепых. Не меньше 43 % из них потеряли зрение из-за бельма — помутневшей роговицы.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>К бельму вели трахома, оспа, болезни роговицы, бленнорея новорождённых, травмы. Филатов считал, что пересадка роговицы нужна многим тысячам таких больных. Во всём мире тогда было шесть миллионов слепых.</p>
+          <p class="src-note">Источник: V. P. Filatov, «Transplantation of the cornea from preserved cadavers’ eyes», The Lancet, 12 июня 1937, с. 1395.</p>
+        </div></details></li>
+      <li><details><summary><span>Студентом Московского университета Филатов прочёл в учебнике о пересадке роговицы при бельме. Но пересаженная роговица почти всегда мутнела.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Об операции писал в учебнике его учитель Адриан Крюков. В бельме вырезали трепаном окошко и вставляли в него прозрачный диск. Пробовали роговицу животных, но она не приживалась прозрачной.</p>
+          <p class="src-note">Источники: «Филатов Владимир Петрович», энциклопедия «История медицины» (historymed.ru); «Родина», 27 февраля 2025.</p>
+        </div></details></li>
+      <li><details><summary><span>В 1905 году Эдуард Цирм в городе Ольмюц впервые удачно пересадил роговицу от человека человеку. Статью Цирма Филатову дал в Одессе профессор Сергей Головин.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Донором у Цирма стал живой человек. В Одессу Филатов приехал в 1903 году по приглашению Головина и стал его ассистентом.</p>
+          <p class="src-note">Источники: A. Z. Crawford и др., «A brief history of corneal transplantation», Oman Journal of Ophthalmology, 2013; «История медицины» (historymed.ru).</p>
+        </div></details></li>
+      <li><details><summary><span>В феврале 1912 года Филатов сделал первую полную пересадку роговицы. Трансплантат помутнел. Через два года вторая попытка — снова неудача.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>В 1911 году Филатов возглавил кафедру глазных болезней в Одессе. Неудачи он переживал тяжело, но опыты не бросил.</p>
+          <p class="src-note">Источники: «Родина», 27 февраля 2025; Российская государственная библиотека для слепых, «27 февраля — 150 лет со дня рождения офтальмолога В. П. Филатова».</p>
+        </div></details></li>
+      <li><details><summary><span>18 октября 1923 года Филатов оперировал больного с полным бельмом. Тот видел лишь свет, а после операции различал крупные знаки — и так до конца жизни.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Зрение после пересадки было 3/60: крупный знак, который здоровый глаз различает за 60 метров, больной видел с трёх. Таким оно оставалось шесть лет, до смерти пациента. В 1924 году Филатов разработал методы пересадки и вместе с изобретателем Марцинковским сконструировал для неё инструменты.</p>
+          <p class="src-note">Источники: V. P. Filatov, The Lancet, 1937, с. 1395 (случай A); Российская государственная библиотека для слепых.</p>
+        </div></details></li>
+      <li><details><summary><span>Роговицу брали из глаз, которые удалили живым людям из-за болезни. Таких глаз было мало, а ждали операции тысячи слепых.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>По подсчёту Филатова, к 1937 году в мире описали около 70 удачных пересадок роговицы из живых глаз: у Эльшнига, Цирма, Кастровьехо, у самого Филатова и у других.</p>
+          <p class="src-note">Источник: V. P. Filatov, The Lancet, 1937, с. 1395.</p>
+        </div></details></li>
+      <li><details><summary><span>В 1931 году Филатов обратился к глазам умерших. До него их брали лишь в единичных случаях, а как постоянную замену живому материалу не рассматривал никто.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Трупную роговицу пробовали Фукс в 1901 году, Мажито в 1912-м, Шимановский в 1913-м, Савельев в 1927-м. Прозрачное приживление надолго получилось только у Мажито. Филатов писал, что использовать трупный материал широко, вместо живого, до него не думал никто.</p>
+          <p class="src-note">Источник: V. P. Filatov, The Lancet, 1937, с. 1395.</p>
+        </div></details></li>
+      <li><details><summary><span>Главное решение — холод. Глаз умершего клали в банку и держали в леднике при 4–6 °C от 10 до 56 часов.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <blockquote class="doc">«…corneas taken from cadaver-eyes preserved for many hours before the operation at a relatively low temperature» — «роговицы из глаз умерших, много часов сохранявшихся перед операцией при сравнительно низкой температуре».</blockquote>
+          <p>Опорой стал случай Морака и Мажито 1912 года: роговица живого донора восемь дней пролежала в его крови при минус 6 °C и прижилась прозрачной. Глаза брали у людей, умерших не от заразных болезней и не от злокачественных опухолей. Сифилис исключали анализами. В день операции банку со льдом приносили в операционную.</p>
+          <p class="src-note">Источник: V. P. Filatov, The Lancet, 1937, с. 1395–1396.</p>
+        </div></details></li>
+      <li><details><summary><span>6 мая 1931 года в Одессе Филатов впервые пересадил роговицу из глаза умершего, сохранённого в холоде, — и снял главную беду пересадки: нехватку роговиц.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Операцию сделали в глазной клинике Одесского университета. Пересадка роговицы перестала быть клиническим опытом и стала способом возвращать зрение слепым с бельмами.</p>
+          <p class="src-note">Источник: «Родина», 27 февраля 2025.</p>
+        </div></details></li>
+      <li><details><summary><span>12 декабря 1935 года больной видел лишь движение руки. Ему пересадили роговицу из глаза, хранившегося 27 часов, — и зрение поднялось до 0,4.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>С 1932 по январь 1936 года Филатов сделал 95 таких пересадок. Ни один трансплантат не омертвел. В 46 глазах бельмо осложняли глаукома и другие болезни — там прозрачности не ждали. Из остальных 49 глаз в 18 роговица прижилась прозрачной.</p>
+          <p class="src-note">Источник: V. P. Filatov, The Lancet, 1937, с. 1396 (случай 2).</p>
+        </div></details></li>
+      <li><details><summary><span>Помутневший трансплантат Филатов учился просветлять: помогал добавочный кусочек роговицы. Из этого с 1933 года выросла его тканевая терапия.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Филатов заметил, что добавочный кусочек роговицы помогает помутневшему трансплантату просветлеть. Он предположил: ткани, сохранённые в особых условиях, например животные ткани на холоде, накапливают вещества, которые возбуждают жизненные процессы. Это была рабочая гипотеза. В 1936 году в Одессе открыли его институт глазных болезней.</p>
+          <p class="src-note">Источники: «История медицины» (historymed.ru); Российская государственная библиотека для слепых; «Родина», 27 февраля 2025.</p>
+        </div></details></li>
+      <li><details><summary><span>12 июня 1937 года Филатов описал свой способ в лондонском журнале The Lancet. К 1955 году он сам сделал больше 3500 пересадок роговицы.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Первый в мире банк глаз основал в Нью-Йорке в 1944 году американский офтальмолог Ричард Таунли Патон. Историки офтальмологии из Окленда пишут: многие считают Филатова «дедушкой» банков глаз.</p>
+          <p class="src-note">Источники: S. L. Moffatt и др., «Centennial review of corneal transplantation», Clinical and Experimental Ophthalmology, 2005, т. 33, с. 642–657; V. P. Filatov, The Lancet, 1937.</p>
+        </div></details></li>
+    </ol>
+  </div>
+</section>
+<section class="block" id="theme-inventions">
+  <div class="wrap">
+    <div class="kicker">Медицина · Русские первенства</div>
+    <h2>Что ещё русские первыми сделали в медицине</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Другие медицинские дни музея.</p>
+    <button class="btn ghost" type="button" id="themeInvBtn" data-label="Показать 4 первенства →" aria-expanded="false" aria-controls="themeInvBody">Показать 4 первенства →</button>
+    <div id="themeInvBody" hidden>
+      <ul class="theme-list">
+        <li><b>28 янв</b> <a href="day-28jan-havkin.html">Вакцины Хавкина от холеры и чумы</a></li>
+        <li><b>1 фев</b> <a href="day-01feb-bekhterev.html">Бехтерев и одеревенелость позвоночника</a></li>
+        <li><b>6 фев</b> <a href="day-06feb-zelinsky.html">Угольный противогаз Зелинского</a></li>
+        <li><b>25 ноя</b> <a href="day-25nov-pirogov.html">Наркоз на поле боя и гипсовая повязка Пирогова</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="games">
+  <div class="wrap">
+    <div class="kicker">Главное действие · по статье Филатова в The Lancet 1937 года, модель условная</div>
+    <h2>Верни зрение: операция Филатова</h2>
+    <p style="max-width:62ch">Ты смотришь на одесскую набережную глазами больного с бельмом: видно только светлое пятно. Пройди операцию по шагам, как её описал Филатов, и посмотри на мир после пересадки.</p>
+    <div class="lab" id="lab">
+      <canvas class="eyecv" id="eye" width="760" height="360" role="img" aria-label="Вид глазами пациента: море, маяк и солнце; до операции картина скрыта белой пеленой бельма, после пересадки становится чётче"></canvas>
+      <div class="lstat" aria-live="polite">
+        <div><b id="sVis">движение руки</b><span>что видит больной</span></div>
+        <div><b id="sStep">1 из 5</b><span>шаг операции</span></div>
+      </div>
+      <div class="lctl">
+        <div class="lstep" id="st0"><h4>1. Кого оперировать?</h4><div class="opts">
+          <button class="seg" type="button" data-s="0" data-o="glauc">Бельмо, а в глазу ещё глаукома</button>
+          <button class="seg" type="button" data-s="0" data-o="ok">Бельмо после язвы роговицы, глаз в остальном здоров</button></div></div>
+        <div class="lstep locked" id="st1"><h4>2. Откуда взять роговицу?</h4><div class="opts">
+          <button class="seg" type="button" data-s="1" data-o="live">Ждать глаз живого человека, удалённый из-за болезни</button>
+          <button class="seg" type="button" data-s="1" data-o="dead">Взять глаз умершего, у которого не было ни заразной болезни, ни опухоли</button></div></div>
+        <div class="lstep locked" id="st2"><h4>3. Как хранить глаз до операции?</h4>
+          <div class="lfuel"><label for="tC">Температура</label><input type="range" id="tC" min="-10" max="20" step="1" value="18"><output id="oC" for="tC">18 °C</output></div>
+          <div class="lfuel"><label for="tH">Часов до операции</label><input type="range" id="tH" min="1" max="72" step="1" value="2"><output id="oH" for="tH">2 ч</output></div>
+          <div class="opts" style="margin-top:6px"><button class="seg" type="button" data-s="2" data-o="store">Убрать глаз в банку и хранить</button></div></div>
+        <div class="lstep locked" id="st3"><h4>4. Операция</h4><div class="opts">
+          <button class="seg" type="button" data-s="3" data-o="whole">Заменить всю роговицу целиком</button>
+          <button class="seg" type="button" data-s="3" data-o="trephine">Вырезать трепаном окошко в бельме, вставить диск из роговицы донора и прикрыть лоскутом конъюнктивы</button></div></div>
+        <div class="lstep locked" id="st4"><h4>5. Через десять месяцев</h4><div class="opts">
+          <button class="seg" type="button" data-s="4" data-o="look">Проверить зрение</button></div></div>
+        <div class="lgo"><button class="btn ghost" type="button" id="resetEye">Начать с другим больным</button></div>
+      </div>
+      <div class="lab-msg" id="eMsg" aria-live="polite">Шаг 1: выбери больного. Не каждое бельмо можно вылечить пересадкой.</div>
+      <div class="lab-cap">Шаги и числа — по статье В. П. Филатова в The Lancet (12 июня 1937): глаза умерших хранили в банке в леднике при 4–6 °C от 10 до 56 часов (в одном случае шесть суток); в окошко бельма, вырезанное трепаном, вставляли диск роговицы донора и прикрывали лоскутом конъюнктивы; в 46 из 95 глаз бельмо осложняли глаукома и другие болезни, и прозрачности там не ждали. Острота зрения «после» взята из случая 2: от движения руки до 0,4. Модель условная: набережная нарисована, размытие лишь показывает разницу в остроте зрения.</div>
+      <noscript><div class="noscript-box">Для модели нужен JavaScript. Текстовая версия. Филатов брал больных, у которых, кроме бельма, глаз был здоров: при глаукоме прозрачного приживления не ждали. Роговицу брали из глаза умершего, у которого не было ни заразной болезни, ни злокачественной опухоли. Глаз хранили в банке в леднике при 4–6 °C от 10 до 56 часов. Трепаном вырезали в бельме окошко, вставляли в него диск роговицы донора и прикрывали лоскутом конъюнктивы. В случае 2 (12 декабря 1935 года, глаз хранился 27 часов) зрение поднялось от движения руки до 0,4.</div></noscript>
+
+      <h3 style="margin:22px 0 6px">1905–1944: расставь по порядку</h3>
+      <p style="max-width:62ch;margin:0 0 6px;color:var(--muted)">Нажимай события от самого раннего к самому позднему.</p>
+      <div class="chrono" id="chrono" role="group" aria-label="События 1905–1944 годов"></div>
+      <div class="lab-msg" id="hMsg" aria-live="polite">Какое событие было первым?</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="pervenstvo">
+  <div class="wrap">
+    <div class="kicker">Проверка факта</div>
+    <h2>Что именно здесь наше</h2>
+    <div class="border-box">
+      <p style="margin-top:0"><b>Граница первенства:</b> Филатов первым сделал глаза умерших постоянным источником роговицы для пересадки. Он хранил их в холоде и пересаживал роговицу десятками, а потом тысячами: 95 операций к 1936 году, больше 3500 пересадок к 1955-му. Сам он в 1937 году писал, что широко использовать трупный материал вместо живого до него не думал никто. Историки офтальмологии называют его «дедушкой» банков глаз.</p>
+      <p><b>Чего здесь нет:</b> пересадку роговицы от человека человеку первым удачно сделал Эдуард Цирм в Ольмюце в 1905 году — роговицей из глаза живого донора. Роговицу умерших до Филатова пробовали Фукс, Мажито, Шимановский и Савельев, но в единичных случаях. Хранить роговицу на холоде до Филатова пробовали Морак и Мажито в 1912 году, с роговицей живого донора. Первый банк глаз открыл в 1944 году в Нью-Йорке американец Ричард Таунли Патон. Тканевая терапия Филатова — его рабочая гипотеза, и первенство этой страницы не о ней.</p>
+    </div>
+    <table class="ctx">
+      <thead><tr><th scope="col">Что</th><th scope="col">Чем было</th><th scope="col">Когда</th></tr></thead>
+      <tbody>
+        <tr><td>Фукс</td><td>Единичная пересадка роговицы умершего</td><td>1901</td></tr>
+        <tr><td>Цирм, Ольмюц</td><td>Первая удачная пересадка роговицы человеку, донор живой</td><td>1905</td></tr>
+        <tr><td>Морак и Мажито</td><td>Роговица живого донора 8 дней в его крови при −6 °C</td><td>1912</td></tr>
+        <tr><td>Филатов, Одесса</td><td>Первая пересадка роговицы умершего, сохранённой в холоде</td><td>1931</td></tr>
+        <tr><td>Филатов, The Lancet</td><td>95 пересадок, способ хранения глаз при 4–6 °C</td><td>1937</td></tr>
+        <tr><td>Патон, Нью-Йорк</td><td>Первый в мире банк глаз</td><td>1944</td></tr>
+        <tr><td>Филатов, Одесса</td><td>Больше 3500 пересадок роговицы</td><td>к 1955</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block" id="quiz">
+  <div class="wrap">
+    <div class="kicker">Проверь себя · 5 вопросов</div>
+    <h2>Викторина</h2>
+    <p style="color:var(--muted);max-width:62ch">На каждый вопрос — одна попытка. После ответа покажем объяснение.</p>
+    <div id="quizBox"></div>
+    <noscript><div class="noscript-box">Для викторины нужен JavaScript. Ответы: 1 — 4–6 °C; 2 — Эдуард Цирм, 1905 год; 3 — из глаз, удалённых у живых людей из-за болезни; 4 — бельмо осложняли глаукома и другие болезни; 5 — в Нью-Йорке, в 1944 году.</div></noscript>
+  </div>
+</section>
+
+<section class="block" id="result">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Итог дня</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Операция, хронология и викторина вместе дают 100 баллов. Прогресс не сохраняется: перезагрузишь страницу — день начнётся заново.</p>
+    <div class="day-result">
+      <div class="dr-score" id="dayTxt">0 / 100 · звание: Гость дня</div>
+      <div class="dr-bar"><i id="dayBar" style="width:0%"></i></div>
+      <div class="dr-note">Пройди все пять шагов операции так, как делал Филатов, расставь события и ответь на вопросы викторины.</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="sources">
+  <div class="wrap">
+    <div class="kicker">Источники</div>
+    <h2>На чём стоит страница</h2>
+    <ul class="sources">
+      <li><a href="https://archive.org/details/sim_the-lancet_1937-06-12_232_5937" rel="noopener" target="_blank">V. P. Filatov · «Transplantation of the cornea from preserved cadavers’ eyes»</a>, The Lancet, 12 июня 1937, т. 229, № 5937, с. 1395–1397 (<a href="https://doi.org/10.1016/S0140-6736(00)83248-1" rel="noopener" target="_blank">DOI</a>; номер журнала — в Internet Archive): нужда в материале, предшественники, способ хранения глаз, итоги 95 операций, случаи A и 2.</li>
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3872837/" rel="noopener" target="_blank">A. Z. Crawford и др. · «A brief history of corneal transplantation: From ancient to modern»</a>, Oman Journal of Ophthalmology, 2013, т. 6, приложение 1: Цирм, 1905 год; Филатов и трупная роговица; Патон и первый банк глаз.</li>
+      <li><a href="https://doi.org/10.1111/j.1442-9071.2005.01134.x" rel="noopener" target="_blank">S. L. Moffatt, V. A. Cartwright, T. H. Stumpf · «Centennial review of corneal transplantation»</a>, Clinical and Experimental Ophthalmology, 2005, т. 33, с. 642–657: больше 3500 пересадок к 1955 году, «дедушка» банков глаз, банк глаз Патона 1944 года.</li>
+      <li><a href="https://rodina-history.ru/2025/02/27/on-daril-liudiam-svet-150-let-nazad-rodilsia-vrach-oftalmolog-vladimir-filatov.html" rel="noopener" target="_blank">«Врач-офтальмолог Владимир Филатов дарил людям свет»</a>, журнал «Родина», 27 февраля 2025: дата и место рождения, Одесса, 1912 год, 6 мая 1931 года, тканевая терапия с 1933 года, институт 1936 года.</li>
+      <li><a href="https://www.historymed.ru/encyclopedia/doctors/index.php?ELEMENT_ID=4992" rel="noopener" target="_blank">«Филатов Владимир Петрович»</a>, энциклопедия «История медицины»: учебник Крюкова, статья Цирма от Головина, биогенные стимуляторы как рабочая гипотеза.</li>
+      <li><a href="https://rgbs.ru/news/27-fevralya-150-let-so-dnya-rozhdeniya-oftalmologa-vladimira-petrovicha-filatova-1875-1956/" rel="noopener" target="_blank">«27 февраля — 150 лет со дня рождения офтальмолога В. П. Филатова»</a>, Российская государственная библиотека для слепых: неудачи 1912 и 1914 годов, Марцинковский, гипотеза о биогенных стимуляторах.</li>
+      <li>Изображение: <a href="https://commons.wikimedia.org/wiki/File:%D0%92.%D0%9F._%D0%A4%D1%96%D0%BB%D0%B0%D1%82%D0%BE%D0%B2_(%D0%BC%D0%B0%D1%80%D0%BA%D0%B0).jpg" rel="noopener" target="_blank">почтовая марка СССР 1962 года «Академик В. П. Филатов»</a>, Викисклад — общественное достояние: почтовая марка как государственный знак не является объектом авторского права (ГК РФ, ст. 1259, п. 6, подп. 2).</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="calendar">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Календарь изобретений</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Выбери любой день — узнаешь, что русские сделали первыми в мире. Листай месяцы стрелками.</p>
+    <div id="calbox"></div>
+  </div>
+</section>
+
+<section class="block kd" id="kuda-dalshe">
+  <div class="wrap">
+    <div class="kd-kicker">Куда дальше</div>
+    <h2>Музей продолжается</h2>
+    <div class="kd-grid">
+      <div class="kd-card main"><span class="kd-lbl">Следующий день</span><a href="day-18mar-leonov.html">18 марта — Первый выход человека в открытый космос <span class="kd-arr">→</span></a>
+        <p>Раздувшийся скафандр не пускал Леонова обратно в корабль — он стравил кислород и вошёл в шлюз головой вперёд.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Предыдущий день</span><a href="day-25feb-tokamak.html">25 февраля — Токамак: магнитная бутылка из Москвы <span class="kd-arr">→</span></a>
+        <p>Слово «токамак» — русское: тороидальную камеру с сильным магнитным полем построили в Москве.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Ещё медицина</span><a href="day-28jan-havkin.html">28 января — вакцины Хавкина <span class="kd-arr">→</span></a>
+        <p>Вакцины от холеры и чумы.</p></div>
+      <div class="kd-card main"><span class="kd-lbl">Город-музей</span><a href="../../index.html">Русская цивилизация <span class="kd-arr">→</span></a>
+        <p>Все музеи проекта на одной карте.</p></div>
+    </div>
+    <p style="margin-top:16px"><a href="izobreteniya.html">Посмотреть изобретения по алфавиту →</a></p>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>
+  Русская цивилизация · «Что изобрели русские первыми в мире»</div></footer>
+
+<script type="application/json" data-proof>{"status":"found","claim_id":"rc:izobreteniya:filatov:claim-trupnaya-rogovica","ours":{"kind":"научная статья","title":"V. P. Filatov, «Transplantation of the cornea from preserved cadavers’ eyes»: роговица из глаз умерших, хранившихся в леднике при 4–6 °C от 10 до 56 часов; 95 пересадок с 1932 по январь 1936 года; широко использовать трупный материал вместо живого «had not previously been considered by anybody»","date":"1937-06-12","holder":"The Lancet, 1937, т. 229, № 5937, с. 1395–1397; первая такая пересадка — 6 мая 1931 года («Родина», 2025)","source_url":"https://archive.org/details/sim_the-lancet_1937-06-12_232_5937"},"rival":{"name":"Ричард Таунли Патон, США: первый в мире банк глаз, Нью-Йорк","date":"1944","doc_title":"S. L. Moffatt и др., «Centennial review of corneal transplantation», 2005: «founded the world's first eye bank in New York … in 1944»"}}</script>
+<script src="../../assets/museum-proof.js"></script>
+
+<script>
+/* ── СЧЁТ ── шкала из 100 держит assets/museum-score.js; здесь только реестр наград.
+   модель: пять шагов операции по 10; хронология 4×5; викторина 5×6 = 100. */
+window.MUSEUM_SCORE = {awards:{m0:10, m1:10, m2:10, m3:10, m4:10, h:[4,5], q:[5,6]},
+  ranks:[[100,'Ученик Филатова'],[70,'Ординатор одесской клиники'],[40,'Санитар глазной клиники'],[0,'Гость дня']]};
+</script>
+<script src="../../assets/museum-score.js"></script>
+<script>
+(function(){
+  var $ = function(id){return document.getElementById(id);};
+  $('readBtn').onclick = function(){ $('story').scrollIntoView({behavior:'smooth'}); };
+  $('listenBtn').onclick = function(){ $('audioguide').scrollIntoView({behavior:'smooth'}); };
+  var tb=$('themeInvBtn');
+  tb.onclick=function(){ var b=$('themeInvBody'), open=b.hidden; b.hidden=!open; tb.setAttribute('aria-expanded',open?'true':'false'); tb.textContent=open?'▲ Скрыть':tb.dataset.label; };
+  function msg(id,t,cls){ var m=$(id); m.className='lab-msg'+(cls?' '+cls:''); m.textContent=t; }
+
+  /* ── ВЕРНИ ЗРЕНИЕ ── V. P. Filatov, The Lancet, 12.06.1937, с. 1395–1397:
+     больные — без глаукомы и других осложнений (46 из 95 глаз — «no hope at all»);
+     глаза умерших без заразных болезней и злокачественных опухолей; ледник 4–6 °C, 10–56 ч (один раз — 6 суток, плёнка);
+     частичная сквозная пересадка трепаном, лоскут конъюнктивы; случай 2: движение руки → 0,4 через 10,5 месяца.
+     Модель условная: набережная нарисована, размытие показывает разницу в остроте зрения. */
+  var step=0, mDone={}, vis=0, anim=null;
+  var cv=$('eye'), ctx=cv.getContext('2d');
+  function size(){ var w=cv.clientWidth||760, d=window.devicePixelRatio||1; cv.width=Math.round(w*d); cv.height=Math.round(w*360/760*d); }
+  /* vis: 0 — бельмо (движение руки), 1 — после пересадки (0,4) */
+  function scene(u){
+    var g=ctx.createLinearGradient(0,0,0,200*u); g.addColorStop(0,'#5d8fc4'); g.addColorStop(1,'#bcd6ea');
+    ctx.fillStyle=g; ctx.fillRect(0,0,760*u,210*u);
+    ctx.fillStyle='#fff3c4'; ctx.beginPath(); ctx.arc(600*u,70*u,30*u,0,7); ctx.fill();
+    ctx.fillStyle='#2d6a96'; ctx.fillRect(0,200*u,760*u,100*u);
+    ctx.strokeStyle='rgba(255,255,255,.55)'; ctx.lineWidth=2*u;
+    for (var i=0;i<9;i++){ ctx.beginPath(); ctx.moveTo((i*90+20)*u,(225+(i%3)*22)*u); ctx.lineTo((i*90+60)*u,(225+(i%3)*22)*u); ctx.stroke(); }
+    /* маяк на молу */
+    ctx.fillStyle='#8a7f6a'; ctx.fillRect(80*u,196*u,250*u,12*u);
+    ctx.fillStyle='#f2efe6'; ctx.beginPath(); ctx.moveTo(110*u,198*u); ctx.lineTo(122*u,110*u); ctx.lineTo(138*u,110*u); ctx.lineTo(150*u,198*u); ctx.closePath(); ctx.fill();
+    ctx.fillStyle='#b8432f'; ctx.fillRect(118*u,92*u,24*u,20*u); ctx.fillRect(114*u,150*u,32*u,12*u);
+    /* парусник */
+    ctx.fillStyle='#3a2f28'; ctx.fillRect(470*u,232*u,90*u,12*u);
+    ctx.fillStyle='#fbfaf4'; ctx.beginPath(); ctx.moveTo(515*u,230*u); ctx.lineTo(515*u,150*u); ctx.lineTo(560*u,230*u); ctx.closePath(); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(510*u,230*u); ctx.lineTo(510*u,165*u); ctx.lineTo(478*u,230*u); ctx.closePath(); ctx.fill();
+    /* набережная и чайки */
+    ctx.fillStyle='#c9b48a'; ctx.fillRect(0,300*u,760*u,60*u);
+    ctx.strokeStyle='#33302b'; ctx.lineWidth=2.5*u;
+    [[300,90],[340,70],[380,100]].forEach(function(p){ ctx.beginPath(); ctx.moveTo((p[0]-10)*u,p[1]*u); ctx.quadraticCurveTo(p[0]*u,(p[1]-8)*u,p[0]*u,p[1]*u); ctx.quadraticCurveTo(p[0]*u,(p[1]-8)*u,(p[0]+10)*u,p[1]*u); ctx.stroke(); });
+    ctx.fillStyle='#4a3b2e'; for (var k=0;k<12;k++) ctx.fillRect((30+k*62)*u,312*u,4*u,30*u);
+  }
+  function draw(){
+    var w=cv.width, h=cv.height, u=w/760; ctx.clearRect(0,0,w,h);
+    var blur=18-15.5*vis, veil=0.82-0.74*vis;
+    ctx.save(); if ('filter' in ctx) ctx.filter='blur('+(blur*u).toFixed(1)+'px)'; scene(u); ctx.restore();
+    var g=ctx.createRadialGradient(w*0.47,h*0.5,0,w*0.47,h*0.5,w*0.55);
+    g.addColorStop(0,'rgba(245,244,238,'+veil+')'); g.addColorStop(1,'rgba(245,244,238,'+Math.max(0,veil-0.15)+')');
+    ctx.fillStyle=g; ctx.fillRect(0,0,w,h);
+  }
+  size(); draw();
+  window.addEventListener('resize',function(){ size(); draw(); });
+
+  function ui(){
+    for (var i=0;i<5;i++){ var el=$('st'+i); el.classList.toggle('done',i<step); el.classList.toggle('locked',i>step); }
+    $('sStep').textContent=step<5?(step+1)+' из 5':'готово';
+    $('sVis').textContent=vis>0.99?'после пересадки: 0,4':'до операции: движение руки';
+    $('oC').textContent=$('tC').value+' °C'; $('oH').textContent=$('tH').value+' ч';
+  }
+  function aw(k){ if (!mDone[k]){ mDone[k]=1; award(k,10); } }
+  function wrong(b){ b.classList.add('wrongpick'); setTimeout(function(){ b.classList.remove('wrongpick'); },700); }
+  function onPick(b){
+    var s=+b.dataset.s, o=b.dataset.o;
+    if (s!==step){ msg('eMsg',s<step?'Этот шаг уже пройден.':'Сначала закончи шаг '+(step+1)+'.','bad'); return; }
+    if (s===0){
+      if (o==='glauc'){ wrong(b); msg('eMsg','При глаукоме Филатов прозрачной роговицы не ждал. Из 95 его операций в 46 глазах бельмо осложняли глаукома и другие болезни — там, писал он, «нет никакой надежды» на прозрачное приживление. Выбери другого больного.','bad'); return; }
+      b.classList.add('on'); aw('m0'); step=1; ui(); msg('eMsg','Верно: глаз, кроме бельма, здоров — такой случай подходит. Шаг 2: где взять прозрачную роговицу?','ok'); return;
+    }
+    if (s===1){
+      if (o==='live'){ wrong(b); msg('eMsg','Так брали роговицу до Филатова: из глаз, которые удалили живым людям из-за болезни. Таких глаз мало, а ждали операции тысячи слепых. Филатов в 1931 году обратился к глазам умерших.','bad'); return; }
+      b.classList.add('on'); aw('m1'); step=2; ui(); msg('eMsg','Так решил Филатов. Глаза брали у людей, умерших не от заразных болезней и не от злокачественных опухолей; сифилис исключали анализами. Шаг 3: задай температуру и время хранения.','ok'); return;
+    }
+    if (s===2){
+      var t=+$('tC').value, hrs=+$('tH').value;
+      if (t>6){ wrong(b); msg('eMsg','Слишком тепло. Филатов держал банку с глазом в леднике при 4–6 °C.','bad'); return; }
+      if (t>=0 && t<4){ wrong(b); msg('eMsg','Холоднее, чем у Филатова. Он держал банку с глазом в леднике при 4–6 °C.','bad'); return; }
+      if (t<0){ wrong(b); msg('eMsg','Филатов не замораживал глаза — держал их в леднике при 4–6 °C. Минус 6 °C было в опыте Морака и Мажито 1912 года, и там роговица лежала в крови живого донора.','bad'); return; }
+      if (hrs<10){ wrong(b); msg('eMsg','Температура верная, но Филатов хранил глаза дольше: от 10 до 56 часов. В день операции банку со льдом приносили в операционную.','bad'); return; }
+      if (hrs>56){ wrong(b); msg('eMsg','Дольше 56 часов Филатов хранил глаз лишь однажды — шесть суток. Роговица прижилась прозрачной, но сзади её затянула плёнка соединительной ткани. Убавь время.','bad'); return; }
+      b.classList.add('on'); aw('m2'); step=3; ui(); msg('eMsg',hrs+' ч при '+t+' °C — в пределах Филатова. В случае 2 глаз хранился 27 часов. Шаг 4: как пересадить роговицу?','ok'); return;
+    }
+    if (s===3){
+      if (o==='whole'){ wrong(b); msg('eMsg','Полную пересадку Филатов пробовал в 1912 и 1914 годах — оба раза трансплантат мутнел. Почти все удачи тех лет — частичная сквозная пересадка.','bad'); return; }
+      b.classList.add('on'); aw('m3'); step=4; ui(); msg('eMsg','Трепаном вырезают в бельме круглое окошко, вставляют диск из роговицы донора и прикрывают лоскутом конъюнктивы. Шаг 5: проверь зрение.','ok'); return;
+    }
+    if (s===4){
+      b.classList.add('on'); step=5;
+      var t0=null;
+      function go(ts){ if (t0===null) t0=ts; vis=Math.min(1,(ts-t0)/1600); draw(); if (vis<1) anim=requestAnimationFrame(go); else { anim=null; fin(); } }
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches){ vis=1; draw(); fin(); } else anim=requestAnimationFrame(go);
+      function fin(){ aw('m4'); ui(); msg('eMsg','Как в случае 2: 12 декабря 1935 года больной видел лишь движение руки, а через десять с половиной месяцев — 0,4, и дно глаза было ясно видно. Из 49 подходящих глаз в 18 роговица прижилась прозрачной.','ok'); }
+    }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.lstep .seg'),function(b){ b.onclick=function(){ onPick(b); }; });
+  $('tC').oninput=$('tH').oninput=ui;
+  $('resetEye').onclick=function(){ if (anim){ cancelAnimationFrame(anim); anim=null; } step=0; vis=0;
+    Array.prototype.forEach.call(document.querySelectorAll('.lstep .seg'),function(b){ b.classList.remove('on'); });
+    $('tC').value=18; $('tH').value=2; ui(); draw(); msg('eMsg','Новый больной: снова бельмо. Баллы за пройденные шаги остаются.',''); };
+  ui();
+
+  /* ── ХРОНОЛОГИЯ ── */
+  var E=[
+    {o:2,t:'Филатов впервые пересаживает роговицу из глаза умершего, сохранённого в холоде',d:'1931'},
+    {o:0,t:'Цирм впервые удачно пересаживает роговицу от человека человеку',d:'1905'},
+    {o:3,t:'В Нью-Йорке открывается первый в мире банк глаз',d:'1944'},
+    {o:1,t:'Первая полная пересадка роговицы у Филатова: трансплантат мутнеет',d:'1912'}
+  ], hNext=0;
+  E.forEach(function(e,i){
+    var b=document.createElement('button'); b.type='button'; b.className='seg'; b.innerHTML='<span class="n"></span>'; b.appendChild(document.createTextNode(e.t));
+    b.onclick=function(){
+      if (e.done) return;
+      if (e.o!==hNext){ b.classList.add('wrongpick'); setTimeout(function(){ b.classList.remove('wrongpick'); },700);
+        msg('hMsg','Не сейчас: есть событие раньше этого.','bad'); return; }
+      e.done=true; b.classList.add('right'); b.disabled=true; b.querySelector('.n').textContent=(hNext+1)+'.';
+      b.appendChild(document.createTextNode(' — '+e.d)); award('h'+i,5); hNext++;
+      msg('hMsg', hNext<4 ? 'Верно. Что дальше?' : 'Порядок восстановлен. От первой неудачи Филатова до его метода прошло почти двадцать лет.','ok');
+    };
+    $('chrono').appendChild(b);
+  });
+
+  /* ── ВИКТОРИНА ── */
+  var Q = [
+    {q:'При какой температуре Филатов хранил глаза умерших до операции?', o:['Около −20 °C','4–6 °C','Комнатной'], a:1,
+     e:'В леднике при 4–6 °C, от 10 до 56 часов.'},
+    {q:'Кто первым удачно пересадил роговицу от человека человеку?', o:['Эдуард Цирм, 1905 год','Владимир Филатов, 1912 год','Ричард Патон, 1944 год'], a:0,
+     e:'Австриец Эдуард Цирм в 1905 году, роговицей из глаза живого донора.'},
+    {q:'Откуда брали роговицу для пересадки до Филатова?', o:['Из глаз животных, и это удавалось','Только из глаз умерших','Из глаз, удалённых у живых людей из-за болезни'], a:2,
+     e:'Из глаз, которые удалили живым людям из-за болезни глаза или глазницы. Таких глаз было мало.'},
+    {q:'Почему в 46 из 95 глаз Филатов не ждал прозрачной роговицы?', o:['Роговица хранилась слишком долго','Бельмо осложняли глаукома и другие болезни','Не хватило инструментов'], a:1,
+     e:'В этих глазах бельмо осложняли глаукома, бычий глаз, субатрофия глаза и другие болезни. Операцию делали в последней надежде.'},
+    {q:'Где и когда открыли первый в мире банк глаз?', o:['В Одессе, в 1936 году','В Лондоне, в 1937 году','В Нью-Йорке, в 1944 году'], a:2,
+     e:'В Нью-Йорке, в 1944 году. Основатель — Ричард Таунли Патон.'}
+  ];
+  var qb = $('quizBox');
+  Q.forEach(function(it, qi){
+    var wrap = document.createElement('div');
+    var h = document.createElement('p'); h.className='quiz-q'; h.textContent=(qi+1)+'. '+it.q; wrap.appendChild(h);
+    var exp = document.createElement('div'); exp.className='exp'; exp.setAttribute('aria-live','polite');
+    var btns = it.o.map(function(txt, oi){
+      var b=document.createElement('button'); b.type='button'; b.className='opt'; b.textContent=txt;
+      b.onclick=function(){
+        if (wrap.dataset.done) return; wrap.dataset.done='1';
+        btns.forEach(function(x,xi){ x.disabled=true; if (xi===it.a) x.classList.add('correct'); });
+        if (oi===it.a){ award('q'+qi,6); exp.textContent='Верно. '+it.e; }
+        else { b.classList.add('wrong'); exp.textContent='Не совсем. '+it.e; }
+        exp.classList.add('show');
+      };
+      wrap.appendChild(b); return b;
+    });
+    wrap.appendChild(exp); qb.appendChild(wrap);
+  });
+})();
+</script>
+<script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
+<script>window.MUSEUM_CHROME={
+  museum:{title:'Что изобрели русские первыми в мире',href:'index.html'},
+  share:{title:'Филатов: роговица из ледника — музей «Что изобрели русские первыми в мире»',
+         text:'Филатов первым сделал глаза умерших постоянным источником роговицы для слепых: глаз держали в леднике при 4–6 °C, а потом пересаживали его роговицу. Что Россия дала миру раньше всех — день за днём.'},
+  prev:{href:'day-25feb-tokamak.html',title:'25 февраля · Токамак'},
+  next:{href:'day-18mar-leonov.html',title:'18 марта · Леонов'},
+  all:{href:'index.html',label:'Все изобретения'},
+  city:'../../index.html',
+  random:['day-01jan-cabletv.html','day-02jan-luna1.html','day-03jan-anosov.html','day-04jan-pilchikov.html','day-05jan-shukhov.html','day-06jan-orlov.html','day-08jan-icebreaker.html','day-09jan-blinov.html','day-10jan-britnev.html','day-11jan-kostovich.html','day-12jan-r7.html','day-13jan-k278.html','day-14jan-lira.html','day-15jan-kovalevskaya.html','day-16jan-soyuz45.html','day-19jan-kantorovich.html','day-21jan-obninsk.html','day-22jan-landau.html','day-23jan-umov.html','day-24jan-k162.html','day-25jan-korsakov.html','day-26jan-podvodnaya.html','day-27jan-pentium.html','day-28jan-havkin.html','day-30jan-kotelnikov.html','day-31jan-girotron.html','day-01feb-bekhterev.html','day-02feb-edinorog.html','day-03feb-luna9.html','day-04feb-samovar.html','day-05feb-boldyrev.html','day-06feb-zelinsky.html','day-07feb-setun.html','day-08feb-mendeleev.html','day-09feb-chizhevsky.html','day-10feb-aerosani.html','day-12feb-lenz.html','day-15feb-nesterov.html','day-17feb-pirotsky.html','day-18feb-dokuchaev.html','day-20feb-mir.html','day-25feb-tokamak.html','day-27feb-filatov.html','day-18mar-leonov.html','day-15may-mechnikov.html','day-16jun-tereshkova.html','day-26sep-pavlov.html','day-15nov-buran.html','day-25nov-pirogov.html','day-01dec-lobachevsky.html','day-14dec-laser.html']
+};</script>
+<script src="../../assets/museum-chrome.js"></script>
+<script>window.MUSEUM_SUPPORT={museum:'Что изобрели русские первыми в мире'};</script>
+<script src="../../assets/museum-support.js"></script>
+<script src="calendar-izobreteniya.js"></script>
+<script>window.MUSEUM_CALENDAR_INITIAL='02-27';</script>
+<script src="../../assets/museum-calendar-month.js"></script>
+<script>window.MUSEUM_RETURN={riddle:{q:"Где Филатов хранил глаза умерших перед пересадкой роговицы?",a:"В банке, в леднике при 4–6 °C, от 10 до 56 часов. В день операции банку со льдом приносили в операционную.",src:"V. P. Filatov, «Transplantation of the cornea from preserved cadavers’ eyes», The Lancet, 12 июня 1937, с. 1396"}};</script>
+<script src="../../assets/museum-return.js" data-museum="izobreteniya" data-day="02-27"></script>
+<script defer src="../../assets/analytics.js"></script>
+
+
+
+
+
+
+
+
+
+<script>window.MUSEUM_AUDIOGUIDE={
+  audioSrc:"audio-guide-filatov-ru.mp3",
+  durationLabel:"2 минуты 57 секунд",
+  lead:"Голос ведёт по залу Филатова: марка у входа, слепые от бельма, неудачи 1912 года, глаз умершего в леднике, операция по статье 1937 года и банки глаз по всему миру. Шесть остановок, на каждой — что искать глазами.",
+  stops:[
+    {t:0,mark:"0:00",title:"Марка у входа"},
+    {t:23,mark:"0:23",title:"Слепые от бельма"},
+    {t:50,mark:"0:50",title:"Неудачи"},
+    {t:84,mark:"1:24",title:"Глаз в леднике"},
+    {t:119,mark:"1:59",title:"Операция"},
+    {t:148,mark:"2:28",title:"Банки глаз"}
+  ],
+  transcript:[
+    "<p>Факты: марка 1962 года — Викисклад; рождение 15 (27) февраля 1875 года в Михайловке Пензенской губернии — «Родина», 27 февраля 2025.</p>",
+    "<p>Факты: 234 800 слепых по переписи 1926 года, не меньше 43 % — от бельма — V. P. Filatov, The Lancet, 12 июня 1937, с. 1395.</p>",
+    "<p>Факты: учебник Крюкова, статья Цирма 1905 года, Головин — «История медицины» (historymed.ru); Цирм в Ольмюце — A. Z. Crawford и др., 2013; неудачи 1912 и 1914 годов — «Родина», 2025, и РГБС; случай 18 октября 1923 года — The Lancet, 1937, с. 1395.</p>",
+    "<p>Факты: около 70 удачных пересадок из живых глаз, предшественники с трупной роговицей, хранение при 4–6 °C от 10 до 56 часов, банка со льдом в операционной — The Lancet, 1937, с. 1395–1396; 6 мая 1931 года — «Родина», 2025.</p>",
+    "<p>Факты: случай 2 (12 декабря 1935 года, 27 часов, от движения руки до 0,4), 95 пересадок, 18 прозрачных из 49 — The Lancet, 1937, с. 1396.</p>",
+    "<p>Факты: тканевая терапия с 1933 года, институт 1936 года — «Родина», 2025; банк глаз Р. Т. Патона 1944 года, больше 3500 пересадок к 1955 году, «дедушка» банков глаз — S. L. Moffatt и др., 2005.</p>"
+  ],
+  note:"Озвучено синтезом речи — временно, до записи голосом автора музея."
+};</script>
+<script src="../../assets/museum-audioguide.js"></script>
+</body>
+</html>

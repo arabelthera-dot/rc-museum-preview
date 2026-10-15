@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="ru" data-museum="izobreteniya">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Теория сверхтекучести Ландау, 1941 — Что изобрели русские первыми в мире, 22 января</title>
+<!--
+  Страница дня 22 января. Наряд stranicy-izob-0910 (claude2, 12.10.2026), карточка #762.
+  Форма — вариант А музея изобретений (Сергей 12.09.2026): лента ударов, подробности свёрнуты.
+  Паспорт выпуска: rc-museum-production/izobreteniya/day-22jan-landau/passport/issue.json
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --dark:#060c17; --dark2:#0c1826; --surface:#111f33;
+    --card:rgba(255,255,255,.05); --card-b:rgba(255,255,255,.09);
+    --gold:#c9a84c; --gold-l:#e4c97a; --gold-g:rgba(201,168,76,.13);
+    --ink:#e8eef5; --muted:#7a9ab8; --line:rgba(255,255,255,.07);
+    --accent:#2d8cbf; --accent2:#1f6f8b;
+    /* legacy compat */
+    --paper:#0c1826; --paper2:#111f33;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Inter','Segoe UI',sans-serif;color:var(--ink);background:var(--dark);line-height:1.72}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.13;margin:0}
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent)}
+
+  /* ── ШАПКА ── */
+  header.top{background:rgba(6,12,23,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--card-b);color:#fff;position:sticky;top:0;z-index:30}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+  .logo svg{display:block;filter:drop-shadow(0 0 8px rgba(201,168,76,.4))}
+  .logo .lt{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:16px}
+  .logo .lt small{display:block;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-family:'Inter',sans-serif}
+  .score{background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:6px 16px;font-size:13px;color:var(--gold-l);cursor:pointer;font-family:'Inter',sans-serif}
+  .score-info{position:absolute;right:12px;top:66px;max-width:260px;background:#0e1c30;color:var(--ink);border:1px solid var(--card-b);border-radius:14px;padding:14px 16px;font-size:13px;line-height:1.6;box-shadow:0 20px 60px rgba(0,0,0,.6);display:none;z-index:40}
+  .score-info.show{display:block}
+
+  /* ── HERO — СТАНДАРТ (не менять): 3D-сцена сверху, текст отдельным блоком ниже ── */
+  .hero-scene{position:relative;height:52vh;min-height:300px;max-height:520px;overflow:hidden;background:linear-gradient(160deg,#0a1e3a 0%,#1a3a6a 55%,#0d2240 100%)}
+  .hero-scene canvas.scene,.hero-scene img.scene{width:100%;height:100%;display:block;object-fit:cover}
+  .scene-caption{background:#060d18;padding:11px 0 12px}
+  .scene-caption .wrap{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+  .scene-cap{font-size:13.5px;line-height:1.6;color:var(--muted);border-left:2px solid rgba(201,168,76,.4);padding-left:14px;flex:1 1 420px}
+  .scene-hint{flex:0 0 auto;font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.4px;color:#e4c97a;
+    background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.34);border-radius:24px;padding:7px 16px;font-weight:600}
+  .hero-lead{background:linear-gradient(180deg,#0c1826 0%,#060c17 100%);color:#fff;padding:28px 0 38px}
+  .hero-lead .museum{color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:12px;opacity:.9}
+  .hero-lead .who{font-family:'Inter',sans-serif;font-size:clamp(13px,3vw,15px);letter-spacing:.4px;color:var(--accent-l,#7dc8ff);margin-bottom:10px}
+  .hero-lead .who i{font-style:normal;color:#7893ab;font-weight:400}
+  .hero-lead h1{color:#fff;font-size:56px;font-weight:900;line-height:1.04;margin-bottom:16px}
+  .hero-lead .hook{color:#b8ccde;font-size:19px;max-width:580px;margin-bottom:28px;line-height:1.65;font-weight:400}
+  .hero-lead .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+  @media(max-width:680px){.hero-lead h1{font-size:34px}.hero-lead .hook{font-size:16px}
+    .hero-scene{height:34vh;min-height:230px;max-height:300px}
+    .scene-caption .wrap{flex-direction:column;gap:9px}
+    .scene-hint{order:-1;align-self:flex-start;font-size:11.5px;padding:6px 13px}
+    .scene-cap{font-size:12.8px;flex:1 1 auto}}
+  .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:16px;font-family:'Inter',sans-serif;letter-spacing:.5px}
+
+  /* ── НАВИГАЦИЯ ДНЯ ── */
+  .daynav{position:sticky;top:64px;z-index:25;background:rgba(6,12,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-b)}
+  .daynav .wrap{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+  .daynav::-webkit-scrollbar{display:none}
+  .daynav a{flex:0 0 auto;padding:14px 20px;font-size:11px;font-weight:700;font-family:'Inter',sans-serif;color:var(--muted);text-decoration:none;white-space:nowrap;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:.18s}
+  .daynav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+  /* ── СЕКЦИИ ── */
+  section.block{padding:64px 0;border-bottom:1px solid var(--line);scroll-margin-top:130px}
+  .kicker{font-size:10px;text-transform:uppercase;letter-spacing:3.5px;color:var(--gold);font-weight:700;font-family:'Inter',sans-serif;margin-bottom:8px}
+  section.block h2{font-size:34px;color:#fff;margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink)}
+  .pull{background:var(--gold-g);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 14px 14px 0;font-style:italic;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-size:20px;line-height:1.5;margin:26px 0}
+
+  /* ── КНОПКИ ── */
+  .btn{cursor:pointer;border:none;border-radius:12px;padding:14px 26px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;background:var(--accent2);color:#fff;transition:.18s;letter-spacing:.2px}
+  .btn:hover{filter:brightness(1.18)}
+  .btn.ghost{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid var(--card-b)}
+  .btn.ghost:hover{background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.2)}
+  .btn.gold{background:linear-gradient(135deg,var(--gold),#b8882b);color:#1a0f00;box-shadow:0 4px 20px rgba(201,168,76,.25)}
+  .btn.gold:hover{filter:brightness(1.1);box-shadow:0 6px 28px rgba(201,168,76,.4)}
+  .btn:active{transform:translateY(1px)}
+  .pulse{animation:pulse .9s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+
+  /* ── КАРТОЧКИ ── */
+  .card{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:20px 22px;margin:16px 0;backdrop-filter:blur(6px)}
+
+  /* ── КВИЗ ── */
+  .opt{display:block;width:100%;text-align:left;background:rgba(255,255,255,.04);border:1px solid var(--card-b);border-radius:12px;padding:13px 16px;margin:8px 0;cursor:pointer;font-size:15px;color:var(--ink);font-family:'Inter',sans-serif;transition:.16s}
+  .opt:hover{border-color:var(--accent);background:rgba(45,140,191,.08)}
+  .opt.correct{background:rgba(40,120,60,.18);border-color:#3f9b52;color:#7ed4a0;font-weight:600}
+  .opt.wrong{background:rgba(180,40,40,.13);border-color:#c0453f;color:#f08080}
+  .exp{margin-top:10px;font-size:14px;background:var(--gold-g);border-radius:10px;padding:12px 14px;display:none;color:var(--gold-l)}
+  .exp.show{display:block}
+
+  /* ── ИТОГ ДНЯ ── */
+  .day-result{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:22px 24px;max-width:460px}
+  .dr-rank{font-family:'Playfair Display',Georgia,serif;font-size:28px;color:var(--gold-l);font-weight:700}
+  .dr-score{font-size:16px;margin:4px 0 12px;color:var(--ink)}.dr-score span{color:var(--muted);font-size:14px}
+  .dr-bar{height:8px;background:rgba(255,255,255,.08);border-radius:6px;overflow:hidden}
+  .dr-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),var(--gold));transition:width .6s cubic-bezier(.2,.7,.2,1)}
+  .dr-note{margin-top:12px;font-size:14px;color:var(--muted)}
+
+  /* ── РЕКЛАМНЫЕ СЛОТЫ ── */
+  .ad-slot{position:relative;margin:26px 0;background:rgba(255,255,255,.02);border:1px dashed rgba(255,255,255,.1);border-radius:14px;min-height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px}
+  .ad-slot .lbl{position:absolute;top:7px;right:12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.15);font-family:'Inter',sans-serif}
+  .ad-slot .ph-txt{font-size:12px;max-width:80%;color:rgba(255,255,255,.18)}
+  .ad-slot.billboard{min-height:108px}
+  .adband{background:transparent;border-bottom:none}
+
+  footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
+  .crumbs{background:rgba(6,12,23,.6);border-bottom:1px solid var(--card-b);font-family:'Inter',sans-serif;font-size:12.5px}
+  .crumbs .wrap{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  .crumbs a{color:var(--gold-l);text-decoration:none;white-space:nowrap}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--muted);opacity:.6}
+  .crumbs .here{color:var(--muted);white-space:nowrap}
+
+
+  /* ── ШАПКА: четыре строки по museum-core §6-бис ── */
+  header.top{display:block;text-align:center;padding:10px 12px 8px;height:auto;position:relative}
+  header.top .b1{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:15px;letter-spacing:.5px;color:#fff}
+  header.top .b2{font-size:11px;color:var(--muted);margin-top:2px}
+  header.top .b3{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:6px}
+  header.top .b4{font-size:12.5px;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-style:italic}
+  header.top .score{position:absolute;right:12px;top:10px}
+  .daynav{top:0}
+  .hero-scene{background:#0e1c2c;height:38vh;min-height:250px;max-height:400px}
+  @media(max-width:680px){.hero-lead h1{font-size:31px}}
+  .hero-scene img.scene{object-fit:cover;object-position:50% 42%}
+  .date-origin{font-size:13px;color:#9fb4c8;margin:-6px 0 12px;max-width:62ch}
+  .hero-lead .hook{color:#c6d8e8;max-width:62ch}
+  .hero-under{background:linear-gradient(180deg,#060d18,#060c17);padding:4px 0 22px}
+  .stamp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(125,200,255,.28);margin-top:14px}
+  .stamp>div{padding:11px 12px;border-left:1px solid rgba(125,200,255,.16);min-width:0}
+  .stamp>div:first-child{border-left:0}
+  .stamp .v{font-size:clamp(15px,3.4vw,21px);font-weight:700;color:#8fd3ff;line-height:1.1;overflow-wrap:anywhere}
+  .stamp .k{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#8fa5b9;margin-top:5px}
+  @media(max-width:600px){.stamp{grid-template-columns:repeat(2,minmax(0,1fr))}.stamp>div:nth-child(3){border-left:0}.stamp>div:nth-child(n+3){border-top:1px solid rgba(125,200,255,.16)}}
+
+  /* ── ЛЕНТА УДАРОВ (museum-inventions, вариант А; museum-core §5-бис) ── */
+  .udary{list-style:none;margin:18px 0 0;padding:0;counter-reset:u}
+  .udary>li{border-top:1px solid var(--line);padding:4px 0}
+  .udary details>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:34px 1fr;gap:10px;padding:12px 0;font-size:17px;line-height:1.55;color:var(--ink)}
+  .udary details>summary::-webkit-details-marker{display:none}
+  .udary details>summary::before{counter-increment:u;content:counter(u);font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:20px;color:var(--gold);line-height:1.3}
+  .udary .more-lbl{display:block;grid-column:2;font-size:12.5px;color:var(--gold-l);letter-spacing:.3px;margin-top:4px}
+  .udary .more-lbl::after{content:' ▾'}
+  .udary details[open] .more-lbl::after{content:' ▴'}
+  .udary details[open] .more-lbl .o{display:none}
+  .udary details:not([open]) .more-lbl .c{display:none}
+  .udary summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+  .udary .det{margin:0 0 14px 44px;padding:12px 16px;background:rgba(255,255,255,.035);border-left:2px solid rgba(201,168,76,.45);border-radius:0 10px 10px 0;font-size:15px;color:#d5e0ea}
+  .udary .det p{margin:8px 0}
+  .udary .tag{display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1a0f00;background:var(--gold-l);border-radius:6px;padding:1px 7px;margin-right:6px}
+  .udary .find{border-left:3px solid var(--gold);padding-left:8px}
+  figure.fig{margin:18px 0}
+  figure.fig img{max-width:100%;height:auto;border-radius:10px;display:block}
+  figure.fig figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5}
+  .src-note{font-size:12px;color:#8fa5b9}
+
+  /* ── МОДЕЛЬ ДНЯ (главное предметное действие) ── */
+  .lab{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:18px 18px 20px;margin-top:14px}
+  .lab-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+  .lab-row .lbl{flex:0 0 100%;font-size:13px;color:var(--muted);letter-spacing:.3px}
+  .seg{cursor:pointer;border:1px solid var(--card-b);background:rgba(255,255,255,.04);color:var(--ink);border-radius:10px;padding:10px 14px;font:inherit;font-size:14.5px;min-height:44px}
+  .seg[aria-pressed="true"]{border-color:var(--gold);background:var(--gold-g);color:var(--gold-l);font-weight:600}
+  .seg:focus-visible,.btn:focus-visible,.opt:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .lab-stage{position:relative;margin-top:12px}
+  .lab-stage canvas{width:100%;height:auto;display:block;border-radius:10px;background:#1c2530}
+  .lab-cap{font-size:12px;color:#8fa5b9;margin-top:6px}
+  .lab-msg{margin-top:12px;font-size:15.5px;padding:12px 14px;border-radius:10px;background:rgba(255,255,255,.04);border-left:3px solid var(--card-b);min-height:48px}
+  .lab-msg.ok{border-left-color:#3f9b52;background:rgba(40,120,60,.14)}
+  .lab-msg.bad{border-left-color:#c0453f;background:rgba(180,40,40,.10)}
+  .lab-found{font-size:13px;color:var(--muted);margin-top:8px}
+  .lab-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .noscript-box{background:rgba(255,255,255,.04);border:1px dashed var(--card-b);border-radius:12px;padding:12px 16px;font-size:15px}
+
+  /* ── ГРАНИЦА ПЕРВЕНСТВА ── */
+  .border-box{background:rgba(45,140,191,.08);border:1px solid rgba(45,140,191,.3);border-radius:14px;padding:16px 18px}
+  .border-box b{color:#8fd3ff}
+  .ctx{width:100%;border-collapse:collapse;margin-top:14px;font-size:14.5px}
+  .ctx th,.ctx td{text-align:left;padding:9px 8px;border-top:1px solid var(--line);vertical-align:top}
+  .ctx th{color:var(--gold-l);font-weight:600;font-size:12.5px;letter-spacing:.5px}
+  .quiz-q{margin:18px 0 6px;font-weight:600}
+  .sources a{color:var(--gold-l)}
+  .sources li{margin:6px 0;font-size:14px;color:#c8d6e2}
+  @media(max-width:600px){header.top{padding:8px 64px 6px}header.top .score{top:8px;right:8px;padding:4px 10px;font-size:12px}header.top .b3{margin-top:3px}
+    .hero-scene{height:26vh;min-height:200px;max-height:260px}.date-origin{font-size:12px;margin:-8px 0 8px}.hero-lead{padding:18px 0 26px}.hero-lead .date-chip{margin-bottom:12px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+  /* ── ПОЛЗУНКИ МОДЕЛИ (19, 21 янв) ── */
+  .mtab{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+  .mrow{display:grid;grid-template-columns:minmax(150px,1.2fr) 2fr 92px;gap:12px;align-items:center}
+  .mrow .mname{font-size:14.5px}
+  .mrow .mname i{font-style:normal;color:var(--muted);font-size:13px}
+  .mrow input[type=range]{width:100%;accent-color:var(--gold);min-height:44px}
+  .mrow output{font-size:14px;color:var(--gold-l);text-align:right}
+  .mrow.off{opacity:.45}
+  .mult{margin-top:14px;padding:14px 16px;border-radius:12px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25)}
+  @media(max-width:560px){.mrow{grid-template-columns:1fr 70px}.mrow .mname{grid-column:1/-1}}
+</style>
+<meta name="description" content="Ландау в 1941 году первым объяснил, почему жидкий гелий течёт без трения: при малой скорости в нём не могут родиться ни фононы, ни ротоны.">
+<link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-22jan-landau.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Русская цивилизация">
+<meta property="og:title" content="Почему гелий течёт без трения: теория сверхтекучести Ландау, 1941">
+<meta property="og:description" content="Ландау в 1941 году первым объяснил, почему жидкий гелий течёт без трения: при малой скорости в нём не могут родиться ни фононы, ни ротоны.">
+<meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-22jan-landau.html">
+<meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-22jan-landau-gelii.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Почему гелий течёт без трения: теория сверхтекучести Ландау, 1941", "description": "Ландау в 1941 году первым объяснил, почему жидкий гелий течёт без трения: при малой скорости в нём не могут родиться ни фононы, ни ротоны.", "url": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-22jan-landau.html", "inLanguage": "ru", "isPartOf": {"@type": "WebSite", "name": "Музей «Что изобрели русские первыми в мире»"}, "publisher": {"@type": "Organization", "name": "Русская цивилизация"}, "about": {"@type": "ScholarlyArticle", "name": "Теория сверхтекучести гелия-II", "author": {"@type": "Person", "name": "Лев Ландау"}, "datePublished": "1941"}, "image": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-22jan-landau-gelii.jpg"}</script>
+</head>
+<body>
+
+<header class="top">
+  <div class="b1">Русская цивилизация</div>
+  <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
+  <div class="b3">Что изобрели русские первыми в мире</div>
+  <div class="b4">365 изобретений. Все русские. Все первые</div>
+  <div class="score" id="scoreBox" title="Баллы знаний за этот день">⭐ <span id="score">0</span> / 100</div>
+</header>
+
+<nav class="crumbs" aria-label="Хлебные крошки"><div class="wrap">
+  <a href="../../index.html">Русская цивилизация</a>
+  <span class="sep">›</span>
+  <a href="index.html">Что изобрели русские первыми в мире</a>
+  <span class="sep">›</span>
+  <span class="here">22 января · Сверхтекучесть, Ландау</span>
+</div></nav>
+
+<div class="hero-scene" id="hero" style="background:#8c8c8c">
+  <img class="scene" src="day-22jan-landau-gelii.jpg" style="object-fit:contain" data-source="https://commons.wikimedia.org/wiki/File:Liquid_helium_Rollin_film.jpg" data-license="Public domain" width="1200" height="1061" alt="Чёрно-белый кадр: стеклянная чашка на нитях висит над поверхностью жидкого гелия; с края чашки свисают капли, под дном набухает капля — гелий уходит из чашки по её стенкам" fetchpriority="high">
+</div>
+
+<div class="scene-caption">
+  <div class="wrap">
+    <div class="scene-cap">Сверхтекучий гелий уходит из чашки: невидимая плёнка ползёт вверх по внутренней стенке, перебирается через край и спускается по внешней — под дном собирается капля. Кадр из учебного фильма Альфреда Лейтнера «Liquid Helium, Superfluid», 1963. Общественное достояние: автор выложил снимок с отказом от прав, американское авторское право на фильм не продлевалось.</div>
+    <span class="scene-hint">Явление · кадр фильма 1963 года</span>
+  </div>
+</div>
+
+<header class="hero-lead">
+  <div class="wrap">
+    <div class="date-chip">22 января · 1908</div>
+    <p class="date-origin">Привязка — день рождения автора теории: Лев Ландау родился 22 января 1908 года в Баку.</p>
+    <div class="who">Лев Ландау <i>· физик-теоретик, Институт физических проблем АН СССР</i></div>
+    <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
+    <h1>Почему гелий течёт без трения: теория сверхтекучести Ландау, 1941</h1>
+    <p class="hook">Охлаждённый жидкий гелий сам ползёт вверх по стенке и убегает из чашки — почему он течёт без трения, объяснил Ландау, а Нобелевскую премию получал в больнице.</p>
+    <div class="hero-btns">
+      <button class="btn gold" id="readBtn" type="button">Читать историю ↓</button>
+      <button class="btn ghost" id="listenBtn" type="button">🎧 Слушать аудиогид</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero-under">
+  <div class="wrap">
+    <div class="stamp">
+      <div><div class="v">01.1938</div><div class="k">Капица: открытие в Nature</div></div>
+      <div><div class="v">1941</div><div class="k">теория Ландау в ЖЭТФ</div></div>
+      <div><div class="v">2,19 К</div><div class="k">λ-точка гелия</div></div>
+      <div><div class="v">10.12.1962</div><div class="k">Нобелевская премия в больнице</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="daynav" aria-label="Разделы дня">
+  <div class="wrap">
+    <a href="#story">Читать</a>
+    <a href="#audioguide">Слушать</a>
+    <a href="#games">Охлади гелий</a>
+    <a href="#pervenstvo">Первенство</a>
+    <a href="#quiz">Викторина</a>
+    <a href="#calendar">Календарь</a>
+  </div>
+</nav>
+
+<section class="wrap" id="dokument" data-proof-block></section>
+
+<section class="block" id="audioguide"></section>
+
+<section class="block" id="story">
+  <div class="wrap">
+    <div class="kicker">История первенства · 13 ударов</div>
+    <h2>Жидкость, которой нечем тормозить</h2>
+    <p style="color:var(--muted);max-width:62ch">Читается подряд. Нажми на удар — откроется подробный разбор с источниками.</p>
+    <ol class="udary">
+      <li><details><summary><span>Лев Ландау родился 22 января 1908 года в Баку.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Учился в Бакинском и Ленинградском университетах, работал в Кавендишской лаборатории в Кембридже, где познакомился с Петром Капицей. Главным учителем он считал Нильса Бора.</p>
+          <figure class="fig" style="max-width:300px">
+            <img src="day-22jan-landau-marka.jpg" data-source="https://commons.wikimedia.org/wiki/File:2008._%D0%9C%D0%B0%D1%80%D0%BA%D0%B0_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8_stamp_hi12735121754be840efc8511.jpg" data-license="Public domain" width="392" height="392" loading="lazy" alt="Почтовая марка России 2008 года: профиль пожилого мужчины в тёмном пиджаке на красно-синем фоне, надпись «Л. Д. Ландау 1908–1968», номинал 6,00">
+            <figcaption>Марка России к 100-летию Л. Д. Ландау, 2008, номинал 6 рублей. Государственный знак почтовой оплаты — общественное достояние.</figcaption>
+          </figure>
+          <p class="src-note">Источники: «Техинсайдер», биография Л. Д. Ландау (techinsider.ru); Электронная еврейская энциклопедия ОРТ, «Ландау Лев» (eleven.co.il).</p>
+        </div></details></li>
+      <li><details><summary><span>В январе 1938 года журнал Nature напечатал заметку Петра Капицы: ниже λ-точки жидкий гелий протекает через узкую щель почти без вязкости.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Опыт поставили в Москве, в Институте физических проблем. Капица хотел измерить, как быстро гелий перетекает через очень узкое отверстие, — и увидел, что при охлаждении гелий вдруг начинает течь с огромной скоростью. Явление назвали сверхтекучестью. В том же номере Nature вышла заметка Джона Аллена и Дона Мизенера из Кембриджа: они нашли то же самое в тонких капиллярах.</p>
+          <p class="src-note">Источники: «Forbes», «Две стороны советской науки: почему Капицу не пускали в Кембридж, а Ландау арестовали», 2024 (forbes.ru); P. Kapitza, «Viscosity of Liquid Helium below the λ-Point», Nature 141, 74 (1938); J. F. Allen, A. D. Misener, «Flow of Liquid Helium II», Nature 141, 75 (1938) (nature.com, на английском).</p>
+        </div></details></li>
+      <li><details><summary><span>Сверхтекучий гелий тонкой плёнкой ползёт вверх по стенке чашки, перебирается через край и капает со дна, пока чашка не опустеет.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Это и снято на кадре в начале страницы. Сама плёнка невидима — видно только каплю под дном. Так ведёт себя гелий, у которого нет вязкости.</p>
+          <p class="src-note">Источники: описание снимков А. Лейтнера на Wikimedia Commons (на английском); «Forbes», 2024: «сильно охлаждённый жидкий гелий тёк вверх по стенкам сосуда».</p>
+        </div></details></li>
+      <li><details><summary><span>Пока гелий кипит, он бурлит пузырями; на λ-точке кипение разом прекращается.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <figure class="fig" style="max-width:360px">
+            <img src="day-22jan-landau-lyambda.jpg" data-source="https://commons.wikimedia.org/wiki/File:Liquid_helium_lambda_point_transition.jpg" data-license="Public domain" width="900" height="922" loading="lazy" alt="Чёрно-белый кадр: стеклянный сосуд Дьюара с жидким гелием, в жидкости множество пузырьков кипения">
+            <figcaption>Гелий, остывающий к λ-точке, на миг вскипает бурно — и затем кипение прекращается. Кадр из фильма А. Лейтнера «Liquid Helium, Superfluid», 1963; общественное достояние.</figcaption>
+          </figure>
+          <p>Ландау в 1941 году называл известное тогда значение λ-точки — 2,19 градуса Кельвина. Его собственная оценка по теории дала 2,3 — «в хорошем согласии», как он писал.</p>
+          <p class="src-note">Источники: Л. Д. Ландау, «Теория сверхтекучести гелия-II», ЖЭТФ, 1941, перепечатка в УФН, 1967 (ufn.ru), § 5; описание снимка А. Лейтнера на Wikimedia Commons.</p>
+        </div></details></li>
+      <li><details><summary><span>28 апреля 1938 года Ландау арестовали, и в тот же день Капица написал письмо Сталину.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Капица просил «ввиду его исключительной талантливости» отнестись к делу очень внимательно: «утрата Ландау как учёного… не пройдёт незаметно и будет сильно чувствоваться». Капица знал, что объяснять открытую им сверхтекучесть, кроме Ландау, некому.</p>
+          <p class="src-note">Источник: «Forbes», 2024 (forbes.ru).</p>
+        </div></details></li>
+      <li><details><summary><span>Ровно через год Ландау освободили — и он вернулся в Институт физических проблем.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Из тюрьмы он вышел истощённым и едва мог ходить, но через несколько недель снова работал. Освобождение историки связывают с вмешательством Капицы. Дело против Ландау официально прекратили только через полвека.</p>
+          <p class="src-note">Источники: «Forbes», 2024; Электронная еврейская энциклопедия ОРТ (eleven.co.il); «Техинсайдер» (techinsider.ru).</p>
+        </div></details></li>
+      <li><details><summary><span>Венгерский физик Ласло Тисса предлагал считать гелий идеальным газом из атомов-бозонов — Ландау показал, что так сверхтекучести не получится.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>По Тиссе, атомы в основном состоянии движутся через жидкость без трения. Ландау возразил: ничто не помешало бы остальным атомам сталкиваться с ними, и течение тормозилось бы. «Объяснение, предложенное Тиссой, является только кажущимся», — написал он в статье 1941 года, а в сноске показал: идеальный газ не стал бы сверхтекучим ни при какой скорости.</p>
+          <p class="src-note">Источник: Л. Д. Ландау, «Теория сверхтекучести гелия-II», ЖЭТФ, 1941 (перепечатка в УФН, 1967, ufn.ru), вступление и § 4; работа Тиссы — по списку литературы статьи: J. Tisza, Nature 141, 913 (1938).</p>
+        </div></details></li>
+      <li><details><summary><span>Ландау рассуждал так: тормозить поток могут только порции внутреннего движения, родившиеся у стенки, — звуковые фононы и ротоны.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Вся жидкость сразу от трения о стенку сдвинуться не может — движение начинается с возбуждения в ближних к стенке слоях. Значит, вопрос о трении сводится к вопросу: может ли такая порция вообще родиться.</p>
+          <p class="src-note">Источник: Л. Д. Ландау, 1941, § 4 (ufn.ru).</p>
+        </div></details></li>
+      <li class="find"><details><summary><span>Ландау показал: пока гелий течёт медленнее определённой скорости, в нём не может родиться ни фонон, ни ротон — и тормозить течению нечем.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p><span class="tag">Находка дня</span>В статье это звучит так: «при неслишком больших скоростях течения в гелии-II не могут возбудиться ни фононы, ни ротоны. Это значит, что течение жидкости не будет замедляться, т. е. гелий обнаружит явление сверхтекучести». Для фононов порог — скорость звука в гелии, 250 метров в секунду; для ротонов, писал Ландау, — «в несколько раз меньше». Он же честно оговорил, что сверхтекучесть может пропасть и раньше «по каким-либо иным причинам».</p>
+          <p class="src-note">Источник: Л. Д. Ландау, «Теория сверхтекучести гелия-II», ЖЭТФ 11 (6), 592 (1941); перепечатка: УФН 93, 495 (1967), § 4.</p>
+        </div></details></li>
+      <li><details><summary><span>Ниже λ-точки гелий ведёт себя как смесь двух жидкостей — сверхтекучей и нормальной; в λ-точке сверхтекучая часть исчезает.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Нормальная часть — это «газ» уже родившихся фононов и ротонов, она вязкая и уносит тепло. Сверхтекучая течёт без трения. Чем холоднее, тем меньше нормальной части; у абсолютного нуля остаётся одна сверхтекучая.</p>
+          <p class="src-note">Источник: Л. Д. Ландау, 1941, § 5 (ufn.ru).</p>
+        </div></details></li>
+      <li><details><summary><span>Из своих уравнений Ландау вывел, что в гелии-II должны существовать две разные скорости звука.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Скорость «второго звука» потом с большой точностью измерил В. Пешков. Сравнение, писал Ландау, «полностью подтверждает общую картину», но цифры разошлись: при 1,6 К теория давала 25 м/с, опыт — 19 м/с, и Ландау уточнил свою теорию. Статья поступила в редакцию 15 мая 1941 года, вышла в «Журнале экспериментальной и теоретической физики» (т. 11, вып. 6, с. 592) и в том же году по-английски в «Journal of Physics (USSR)». В 1967 году её перепечатали «Успехи физических наук».</p>
+          <p class="src-note">Источник: Л. Д. Ландау, 1941, § 8, и «Приложение к теории сверхтекучести гелия-II» со ссылкой на V. P. Peshkov, J. Phys. (USSR) 10, 389 (1946); выходные данные — по перепечатке в УФН (ufn.ru).</p>
+        </div></details></li>
+      <li><details><summary><span>В 1962 году Ландау разбился в автомобильной катастрофе и 59 дней пролежал в коме.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Жизнь ему спасли усилия советских и зарубежных врачей. Осмысленный взгляд у него впервые заметили 22 февраля. К науке Ландау после катастрофы уже не вернулся; он умер 1 апреля 1968 года.</p>
+          <p class="src-note">Источники: «Техинсайдер» (techinsider.ru); Электронная еврейская энциклопедия ОРТ (eleven.co.il); «Жизнь Ландау спасена», по книге о Ландау на сайте famhist.ru.</p>
+        </div></details></li>
+      <li><details><summary><span>10 декабря 1962 года посол Швеции вручил Ландау Нобелевскую премию в конференц-зале московской больницы — в Стокгольм он поехать не мог.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>1 ноября 1962 года пришла телеграмма: премия по физике — «за пионерские работы в области теории конденсированных сред, в особенности жидкого гелия». Ландау вошёл в зал сам, хромая. Посол Рольф Сульман сказал, что «впервые за всю историю Нобелевских премий» ради этого случая допускается отступление от правил. Капица получил свою Нобелевскую премию за открытия в физике низких температур только в 1978 году.</p>
+          <p class="src-note">Источники: «Ландау: Ленинская и Нобелевская премии 1962 г.» (famhist.ru); Электронная еврейская энциклопедия ОРТ (eleven.co.il); «Российская газета», 01.11.2022 (rg.ru).</p>
+        </div></details></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block" id="games">
+  <div class="wrap">
+    <div class="kicker">Главное действие · модель</div>
+    <h2>Охлади гелий и разгони его</h2>
+    <p style="max-width:62ch">Сначала остуди гелий ниже λ-точки и смотри, что станет с чашкой. Потом разгоняй поток по узкой щели: пока он медленный, в гелии нечему родиться — и нечем тормозить. Найди скорость, на которой трение возвращается.</p>
+    <div class="lab" id="lab">
+      <div class="mtab">
+        <div class="mrow"><span class="mname">Температура <i>· кельвины</i></span><input type="range" min="100" max="420" step="1" value="420" id="temp" aria-label="Температура гелия в сотых долях кельвина"><output id="oTemp" for="temp">4,20 К</output></div>
+        <div class="mrow"><span class="mname">Скорость потока <i>· по щели, м/с</i></span><input type="range" min="0" max="300" step="5" value="0" id="speed" aria-label="Скорость течения гелия по узкой щели, метров в секунду"><output id="oSpeed" for="speed">0 м/с</output></div>
+      </div>
+      <div class="lab-btns">
+        <button class="btn ghost" type="button" id="labReset">Долить чашку и начать заново</button>
+      </div>
+      <div class="lab-stage">
+        <canvas id="labCv" width="640" height="240" style="height:240px" role="img" aria-label="Чашка с гелием над ванной, доли сверхтекучей и нормальной частей и шкала скорости потока с порогами рождения ротонов и фононов"></canvas>
+        <div class="lab-cap">Модель, а не запись опыта: доля сверхтекучей части посчитана по условной формуле, скорость ухода из чашки условная. Из статьи Ландау 1941 года взяты только λ-точка 2,19 К, порог фононов — скорость звука 250 м/с — и то, что ротонный порог «в несколько раз меньше»; в модели он условно 60 м/с.</div>
+      </div>
+      <div class="lab-msg" id="labMsg" aria-live="polite">Гелий при 4,2 К — обычная жидкость: кипит, а чашка полна. Остуди его.</div>
+      <div class="lab-found" id="labFound">Найдено: гелий ушёл из чашки — нет; выше λ-точки течение тормозится — нет; ротоны вернули трение — нет; почти вся жидкость сверхтекучая — нет.</div>
+      <noscript><div class="noscript-box">Для модели нужен JavaScript. Текстовая версия опыта: выше 2,19 К гелий — обычная вязкая жидкость, он кипит, чашка полна, и поток по щели тормозится при любой скорости. Ниже λ-точки появляется сверхтекучая часть: кипение прекращается, плёнка гелия ползёт по стенке, и чашка пустеет — тем быстрее, чем холоднее. Пока поток по щели медленнее ротонного порога, родиться в гелии нечему и трения нет; быстрее — рождаются ротоны, и поток тормозится; быстрее 250 м/с рождаются и фононы.</div></noscript>
+    </div>
+    <p class="src-note" style="margin-top:10px">Рассуждение о порогах — § 4 статьи Л. Д. Ландау «Теория сверхтекучести гелия-II» (ЖЭТФ, 1941; УФН, 1967); две части жидкости и λ-точка 2,19 К — § 5; плёнка и кипение — по снимкам А. Лейтнера. Остальные числа модели условные.</p>
+  </div>
+</section>
+
+<section class="block" id="pervenstvo">
+  <div class="wrap">
+    <div class="kicker">Проверка факта</div>
+    <h2>Что именно здесь первое в мире</h2>
+    <div class="border-box">
+      <p style="margin-top:0"><b>Граница первенства:</b> первая теория, которая вывела, почему жидкий гелий течёт без трения: пока скорость течения ниже порога рождения фононов и ротонов, тормозить поток нечем. Л. Д. Ландау, «Теория сверхтекучести гелия-II», ЖЭТФ, 1941. Нобелевская премия по физике 1962 года — «за пионерские работы в области теории конденсированных сред, в особенности жидкого гелия».</p>
+      <p style="margin-bottom:0"><b>Чего здесь нет:</b> само явление открыл не Ландау, а Пётр Капица — и одновременно с ним Джон Аллен и Дон Мизенер в Кембридже (обе заметки — Nature, январь 1938). Мысль описывать гелий двумя частями раньше высказал Ласло Тисса (1938), но на модели идеального газа, которую Ландау опроверг. Пороговая скорость Ландау — идеальная оценка: он сам оговорил, что сверхтекучесть может пропадать и раньше.</p>
+    </div>
+    <table class="ctx">
+      <thead><tr><th scope="col">Документ или событие</th><th scope="col">Что</th><th scope="col">Когда</th></tr></thead>
+      <tbody>
+        <tr><td>П. Л. Капица, Nature 141, 74</td><td>Вязкость гелия ниже λ-точки: открытие сверхтекучести</td><td>01.1938</td></tr>
+        <tr><td>Дж. Аллен, Д. Мизенер, Nature 141, 75</td><td>То же явление в капиллярах, Кембридж</td><td>01.1938</td></tr>
+        <tr><td>Л. Тисса</td><td>Гелий как идеальный бозе-газ из двух частей</td><td>1938</td></tr>
+        <tr><td>Л. Д. Ландау, ЖЭТФ 11, 592</td><td>Теория сверхтекучести: фононы, ротоны, пороговая скорость, две части жидкости</td><td>1941</td></tr>
+        <tr><td>Нобелевская премия по физике</td><td>Ландау — за теорию конденсированных сред, особенно жидкого гелия</td><td>1962</td></tr>
+        <tr><td>Нобелевская премия по физике</td><td>Капица — за открытия в физике низких температур</td><td>1978</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block" id="quiz">
+  <div class="wrap">
+    <div class="kicker">Проверь себя · 5 вопросов</div>
+    <h2>Викторина</h2>
+    <p style="color:var(--muted);max-width:62ch">На каждый вопрос — одна попытка. После ответа покажем объяснение.</p>
+    <div id="quizBox"></div>
+    <noscript><div class="noscript-box">Для викторины нужен JavaScript. Ответы: 1 — Пётр Капица; 2 — при малой скорости в гелии не могут родиться ни фононы, ни ротоны; 3 — появляется сверхтекучая часть; 4 — в тюрьме; 5 — в конференц-зале московской больницы.</div></noscript>
+  </div>
+</section>
+
+<section class="block" id="result">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Итог дня</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Модель, три находки в ней и викторина вместе дают 100 баллов. Прогресс не сохраняется: перезагрузка страницы начинает день заново.</p>
+    <div class="day-result">
+      <div class="dr-score" id="dayTxt">0 / 100 · звание: Гость дня</div>
+      <div class="dr-bar"><i id="dayBar" style="width:0%"></i></div>
+      <div class="dr-note">Опустоши чашку сверхтекучим гелием, найди три поворота модели и ответь на вопросы викторины.</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="sources">
+  <div class="wrap">
+    <div class="kicker">Источники</div>
+    <h2>На чём стоит страница</h2>
+    <ul class="sources">
+      <li><a href="https://ufn.ru/ru/articles/1967/11/j/" rel="noopener" target="_blank">Л. Д. Ландау · «Теория сверхтекучести гелия-II», ЖЭТФ 11 (6), 592 (1941); перепечатка — «Успехи физических наук» 93, 495 (1967)</a>: критика Тиссы, пороговая скорость (§ 4), две части жидкости и λ-точка 2,19 К (§ 5), две скорости звука (§ 8).</li>
+      <li><a href="https://www.forbes.ru/society/507255-dve-storony-sovetskoj-nauki-pocemu-kapicu-ne-puskali-v-kembridz-a-landau-arestovali" rel="noopener" target="_blank">«Forbes» · «Две стороны советской науки: почему Капицу не пускали в Кембридж, а Ландау арестовали», 2024</a>: опыт Капицы и заметка в Nature, гелий ползёт по стенкам, арест 28 апреля 1938 года и письмо Капицы Сталину, освобождение через год, теория 1941 года.</li>
+      <li><a href="https://www.techinsider.ru/persons/biography/landau-lev/" rel="noopener" target="_blank">«Техинсайдер» · «Дао мира физики: как Лев Ландау открыл теорию квантовой жидкости»</a>: дата и место рождения, Кембридж, теория 1941 года, катастрофа и 59 дней комы, формулировка Нобелевской премии, дата смерти.</li>
+      <li><a href="https://eleven.co.il/jews-of-russia/in-culture-science-economy/12318/" rel="noopener" target="_blank">Электронная еврейская энциклопедия ОРТ · «Ландау Лев»</a>: освобождение в 1939 году благодаря Капице, теория сверхтекучести 1941 года, катастрофа 1962 года, вручение премии послом Швеции в больнице.</li>
+      <li><a href="http://famhist.ru/famhist/landau/00068e83.htm" rel="noopener" target="_blank">«Ландау: Ленинская и Нобелевская премии 1962 г.» (famhist.ru)</a>: телеграмма 1 ноября 1962 года, вручение 10 декабря в конференц-зале больницы, слова посла Рольфа Сульмана.</li>
+      <li><a href="http://famhist.ru/famhist/landau/00068375.htm" rel="noopener" target="_blank">«Жизнь Ландау спасена» (famhist.ru)</a>: полтора месяца без сознания, первый осмысленный взгляд 22 февраля.</li>
+      <li><a href="https://rg.ru/2022/11/01/60-let-s-momenta-prisuzhdeniia-nobelevskoj-premii-lvu-landau-kto-eshche-iz-nashih-sootechestvennikov-byl-nagrazhden.html" rel="noopener" target="_blank">«Российская газета» · «60 лет назад академику Льву Ландау была присуждена Нобелевская премия», 01.11.2022</a>: премия Ландау 1962 года и премия Капицы 1978 года.</li>
+      <li><a href="https://www.nature.com/articles/141074a0" rel="noopener" target="_blank">P. Kapitza · «Viscosity of Liquid Helium below the λ-Point», Nature 141, 74 (1938)</a> и <a href="https://www.nature.com/articles/141075a0" rel="noopener" target="_blank">J. F. Allen, A. D. Misener · «Flow of Liquid Helium II», Nature 141, 75 (1938)</a> (на английском): две заметки об открытии в одном номере.</li>
+      <li>Изображения: <a href="https://commons.wikimedia.org/wiki/File:Liquid_helium_Rollin_film.jpg" rel="noopener" target="_blank">плёнка сверхтекучего гелия</a> и <a href="https://commons.wikimedia.org/wiki/File:Liquid_helium_lambda_point_transition.jpg" rel="noopener" target="_blank">кипение у λ-точки</a> — кадры А. Лейтнера, 1963, общественное достояние (Wikimedia Commons); <a href="https://commons.wikimedia.org/wiki/File:2008._%D0%9C%D0%B0%D1%80%D0%BA%D0%B0_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8_stamp_hi12735121754be840efc8511.jpg" rel="noopener" target="_blank">марка России «Л. Д. Ландау 1908–1968», 2008</a> — общественное достояние (государственный знак почтовой оплаты).</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="calendar">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Календарь изобретений</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Выбери любой день — узнаешь, что русские сделали первыми в мире. Листай месяцы стрелками.</p>
+    <div id="calbox"></div>
+  </div>
+</section>
+
+<section class="block kd" id="kuda-dalshe">
+  <div class="wrap">
+    <div class="kd-kicker">Куда дальше</div>
+    <h2>Музей продолжается</h2>
+    <div class="kd-grid">
+      <div class="kd-card main"><span class="kd-lbl">Следующий день</span><a href="day-23jan-umov.html">23 января — Вектор Умова <span class="kd-arr">→</span></a>
+        <p>Умов первым описал энергию как поток с плотностью и скоростью.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Предыдущий день</span><a href="day-21jan-obninsk.html">21 января — Первая в мире АЭС, отдавшая ток в сеть <span class="kd-arr">→</span></a>
+        <p>Ток от атома первыми получили американцы — на четыре лампочки, а в общую сеть его первым отдал Обнинск.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Весь музей</span><a href="index.html">Что изобрели русские первыми <span class="kd-arr">→</span></a>
+        <p>Все изобретения — по залам и по дням года.</p></div>
+      <div class="kd-card main"><span class="kd-lbl">Город-музей</span><a href="../../index.html">Русская цивилизация <span class="kd-arr">→</span></a>
+        <p>Все музеи проекта на одной карте.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>
+  Русская цивилизация · «Что изобрели русские первыми в мире»</div></footer>
+
+<script type="application/json" data-proof>{"status":"found","claim_id":"rc:izobreteniya:landau:claim-sverhtekuchest","ours":{"kind":"научная статья (первая публикация теории)","title":"Л. Д. Ландау. Теория сверхтекучести гелия-II","date":"1941","holder":"ЖЭТФ, 1941, т. 11, вып. 6, с. 592; англ. — J. Phys. (USSR), 1941, т. 5, с. 71; перепечатка — УФН, 1967, т. 93, с. 495","source_url":"https://ufn.ru/ru/articles/1967/11/j/"}}</script>
+<script src="../../assets/museum-proof.js"></script>
+
+<script>
+/* ── СЧЁТ ── шкала из 100 держит assets/museum-score.js; здесь только реестр наград.
+   гелий ушёл из чашки 30 + три поворота модели 3×10 + викторина 5×8 = 100. */
+window.MUSEUM_SCORE = {awards:{lab:30, why0:10, why1:10, why2:10, q:[5,8]},
+  ranks:[[100,'Теоретик Ландау'],[70,'Сдал теорминимум'],[40,'Лаборант Капицы'],[0,'Гость дня']]};
+</script>
+<script src="../../assets/museum-score.js"></script>
+<script>
+(function(){
+  var $ = function(id){return document.getElementById(id);};
+  $('readBtn').onclick = function(){ $('story').scrollIntoView({behavior:'smooth'}); };
+  $('listenBtn').onclick = function(){ $('audioguide').scrollIntoView({behavior:'smooth'}); };
+
+  /* ── ГЕЛИЙ ── условная модель. Из статьи Ландау 1941 г.: λ-точка 2,19 К, порог фононов = скорость звука 250 м/с,
+     порог ротонов «в несколько раз меньше» (здесь условно 60 м/с). Доля нормальной части — условная (T/Tλ)^5,6,
+     скорость ухода гелия из чашки пропорциональна доле сверхтекучей части. */
+  var TL=2.19, VR=60, VS=250, VMAX=300;
+  var temp=$('temp'), speed=$('speed'), oTemp=$('oTemp'), oSpeed=$('oSpeed');
+  var level=1, found={}, drop=0, bubbles=[], lastT=0, empty=false;
+  for (var i=0;i<26;i++) bubbles.push({x:Math.random(), y:Math.random(), r:1+Math.random()*2.5, v:.25+Math.random()*.5});
+  function T(){ return temp.value/100; }
+  function V(){ return +speed.value; }
+  function fs(t){ return t>=TL ? 0 : 1-Math.pow(t/TL,5.6); }
+  function fmt(v,d){ return (Math.round(v*Math.pow(10,d||0))/Math.pow(10,d||0)).toFixed(d||0).replace('.',','); }
+  var cv=$('labCv'), cx=cv.getContext('2d'), W=0, H=240;
+  function fit(){
+    var w=Math.round(cv.clientWidth)||640, r=window.devicePixelRatio||1, h=w<480?340:240;
+    if (w===W && h===H && cv.width===Math.round(w*r)) return;
+    W=w; H=h; cv.style.height=H+'px'; cv.width=Math.round(W*r); cv.height=Math.round(H*r); cx.setTransform(r,0,0,r,0,0);
+  }
+  function draw(){
+    fit(); var narrow=W<480, t=T(), s=fs(t);
+    cx.fillStyle='#0b1622'; cx.fillRect(0,0,W,H);
+    cx.font=(narrow?'12px':'13px')+' Inter, sans-serif'; cx.textAlign='left';
+    /* ванна и чашка */
+    var bw=narrow?W-32:Math.round(W*0.48), bx=16, by=150, cxm=bx+bw/2, cr=Math.min(58,bw/4), cy=58;
+    cx.fillStyle='rgba(125,200,255,.18)'; cx.fillRect(bx, by, bw, 26);
+    if (s===0){ cx.fillStyle='rgba(232,238,245,.55)'; bubbles.forEach(function(b){ cx.beginPath(); cx.arc(bx+b.x*bw, by+4+b.y*20, b.r, 0, 7); cx.fill(); }); }
+    cx.strokeStyle='rgba(232,238,245,.35)'; cx.lineWidth=1;
+    cx.beginPath(); cx.moveTo(cxm-cr*.6, cy-cr*.55); cx.lineTo(cxm-cr*.95, cy-4); cx.moveTo(cxm+cr*.6, cy-cr*.55); cx.lineTo(cxm+cr*.95, cy-4); cx.stroke();
+    /* жидкость в чашке: полукруг, уровень level */
+    var top=cy+cr*(1-level);
+    cx.save(); cx.beginPath(); cx.arc(cxm, cy, cr, 0, Math.PI); cx.closePath(); cx.clip();
+    cx.fillStyle='rgba(125,200,255,.55)'; cx.fillRect(cxm-cr, top, cr*2, cr*2); cx.restore();
+    cx.strokeStyle='rgba(232,238,245,.8)'; cx.lineWidth=2; cx.beginPath(); cx.arc(cxm, cy, cr, 0, Math.PI); cx.stroke();
+    if (s>0 && level>0.02){
+      cx.strokeStyle='rgba(125,200,255,.95)'; cx.lineWidth=2.5; cx.beginPath(); cx.arc(cxm, cy, cr+2.5, 0, Math.PI); cx.stroke();
+      var dy=cy+cr+4+drop*(by-cy-cr-6); cx.fillStyle='rgba(125,200,255,.95)'; cx.beginPath(); cx.arc(cxm, dy, 3.5, 0, 7); cx.fill();
+    }
+    cx.fillStyle='#8fa5b9';
+    cx.fillText(s>0 ? 'Плёнка ползёт по стенке, чашка пустеет' : (t>=TL ? 'Выше λ-точки: гелий кипит, чашка полна' : ''), bx, by+44);
+    cx.fillText('В чашке: '+Math.round(level*100)+'%', bx, by+62);
+    /* доли двух частей */
+    var px=narrow?16:bx+bw+24, pw=narrow?W-32:W-px-16, py=narrow?by+80:24;
+    if (!narrow){
+      cx.fillStyle='#8fa5b9'; cx.fillText('Гелий при '+fmt(t,2)+' К', px, py);
+      cx.fillStyle='rgba(255,255,255,.08)'; cx.fillRect(px, py+10, pw, 16);
+      cx.fillStyle='rgba(125,200,255,.9)'; cx.fillRect(px, py+10, pw*s, 16);
+      cx.fillStyle='#e8eef5'; cx.fillText('сверхтекучая '+Math.round(s*100)+'% · нормальная '+Math.round((1-s)*100)+'%', px, py+44);
+    } else {
+      cx.fillStyle='#e8eef5'; cx.fillText('Сверхтекучая часть: '+Math.round(s*100)+'%', px, by+86);
+    }
+    /* шкала скорости */
+    var sy=narrow?by+120:py+92, v=V();
+    cx.fillStyle='#8fa5b9'; cx.fillText('Скорость потока по щели, м/с', px, sy-10);
+    cx.fillStyle='rgba(255,255,255,.08)'; cx.fillRect(px, sy, pw, 14);
+    var fr = s===0 ? (v>0) : v>=VR;
+    cx.fillStyle= fr ? 'rgba(230,110,90,.9)' : 'rgba(110,200,120,.9)'; cx.fillRect(px, sy, pw*v/VMAX, 14);
+    function mark(val,lbl,dy){ var x=px+pw*val/VMAX; cx.fillStyle='rgba(228,201,122,.95)'; cx.fillRect(x-1,sy-4,2,22); cx.fillText(lbl, Math.min(x-8, px+pw-90), sy+32+dy); }
+    mark(VR,'ротоны '+VR,0); mark(VS,'звук '+VS,0);
+    cx.fillStyle= fr ? '#f0a090' : '#9fe0a8'; cx.fillText(fr ? 'трение есть: поток тормозится' : 'трения нет', px, sy+56);
+  }
+  function setFound(){
+    function yn(k){ return found[k] ? 'да' : 'нет'; }
+    $('labFound').textContent='Найдено: гелий ушёл из чашки — '+yn('lab')+'; выше λ-точки течение тормозится — '+yn('why0')+'; ротоны вернули трение — '+yn('why1')+'; почти вся жидкость сверхтекучая — '+yn('why2')+'.';
+  }
+  function hit(k,p){ if(!found[k]){ found[k]=1; award(k,p); } setFound(); }
+  function msg(t,cls){ var m=$('labMsg'); m.className='lab-msg'+(cls?' '+cls:''); m.textContent=t; }
+  function explain(){
+    var t=T(), s=fs(t), v=V();
+    oTemp.textContent=fmt(t,2)+' К'; oSpeed.textContent=v+' м/с';
+    if (s===0){
+      if (v>0){ hit('why0',10); msg('Выше λ-точки сверхтекучей части нет: гелий — обычная вязкая жидкость, и поток тормозится при любой скорости, даже '+v+' м/с. Остуди ниже 2,19 К.','bad'); }
+      else msg('Гелий при '+fmt(t,2)+' К — обычная жидкость: кипит, чашка полна. Остуди его ниже 2,19 К.','');
+      return;
+    }
+    if (v>=VS){ hit('why1',10); msg('Быстрее звука, '+v+' м/с: у стенки рождаются и ротоны, и фононы — трение вернулось. Сверхтекучесть держится только ниже порога.','bad'); return; }
+    if (v>=VR){ hit('why1',10); msg('Порог пройден: при '+v+' м/с у стенки начинают рождаться ротоны — порции движения, которые и тормозят поток. Ландау: «при неслишком больших скоростях» их родиться не может.','bad'); return; }
+    if (t<=1.3){ hit('why2',10); msg('При '+fmt(t,2)+' К сверхтекучей уже '+Math.round(s*100)+'%: нормальной, вязкой части почти не осталось, и чашка пустеет быстрее всего.','ok'); return; }
+    msg('Ниже λ-точки: сверхтекучей части '+Math.round(s*100)+'%. Поток '+v+' м/с медленнее ротонного порога — родиться в гелии нечему, трения нет. Разгоняй дальше или остуди сильнее.','ok');
+  }
+  function tick(ts){
+    var dt=lastT ? Math.min(0.1,(ts-lastT)/1000) : 0; lastT=ts;
+    var s=fs(T());
+    if (s>0 && level>0){ level=Math.max(0, level-dt*0.05*s); drop=(drop+dt*1.4)%1; if (level<=0.85) hit('lab',30); if (level===0 && !empty){ empty=true; msg('Чашка пуста: весь гелий ушёл плёнкой через край. Можно долить и начать заново.','ok'); } }
+    if (s===0) bubbles.forEach(function(b){ b.y-=b.v*dt; if (b.y<0){ b.y=1; b.x=Math.random(); } });
+    draw(); requestAnimationFrame(tick);
+  }
+  temp.addEventListener('input', explain); speed.addEventListener('input', explain);
+  $('labReset').onclick=function(){ level=1; empty=false; temp.value=420; speed.value=0; explain(); msg('Чашка долита, гелий снова при 4,20 К. Уже полученные баллы сохраняются и повторно не начисляются.',''); };
+  explain(); requestAnimationFrame(tick);
+
+  /* ── ВИКТОРИНА ── один ответ на вопрос; дистракторы сверены с источниками страницы. */
+  var Q = [
+    {q:'Кто открыл сверхтекучесть жидкого гелия?', o:['Лев Ландау','Пётр Капица','Ласло Тисса'], a:1,
+     e:'Заметка Капицы вышла в Nature в январе 1938 года; в том же номере — Аллен и Мизенер из Кембриджа. Ландау объяснил явление в 1941 году.'},
+    {q:'Почему, по Ландау, сверхтекучий гелий течёт без трения?', o:['Атомы гелия слишком лёгкие, чтобы цепляться за стенку','При малой скорости в нём не могут родиться ни фононы, ни ротоны','Гелий не смачивает стенки сосуда'], a:1,
+     e:'Тормозить поток могли бы только порции движения, родившиеся у стенки. Ниже порога скорости им неоткуда взяться.'},
+    {q:'Что происходит с гелием, когда его охлаждают ниже λ-точки?', o:['Он замерзает','Появляется сверхтекучая часть','Он превращается в газ'], a:1,
+     e:'Ландау писал, что λ-точка связана с исчезновением сверхтекучей части; известное в 1941 году значение — 2,19 К.'},
+    {q:'Где Ландау провёл год с апреля 1938 года?', o:['В Кембридже','В тюрьме','В экспедиции на Север'], a:1,
+     e:'Его арестовали 28 апреля 1938 года; в тот же день Капица написал Сталину. Ландау освободили ровно через год.'},
+    {q:'Где Ландау получил Нобелевскую премию?', o:['В Стокгольме из рук короля','В конференц-зале московской больницы','В посольстве Швеции'], a:1,
+     e:'После катастрофы 1962 года посол Швеции Рольф Сульман вручил премию в больнице 10 декабря 1962 года.'}
+  ];
+  var box = $('quizBox');
+  Q.forEach(function(it, qi){
+    var wrap = document.createElement('div');
+    var h = document.createElement('p'); h.className='quiz-q'; h.textContent=(qi+1)+'. '+it.q; wrap.appendChild(h);
+    var exp = document.createElement('div'); exp.className='exp'; exp.setAttribute('aria-live','polite');
+    var btns = it.o.map(function(txt, oi){
+      var b=document.createElement('button'); b.type='button'; b.className='opt'; b.textContent=txt;
+      b.onclick=function(){
+        if (wrap.dataset.done) return; wrap.dataset.done='1';
+        btns.forEach(function(x,xi){ x.disabled=true; if (xi===it.a) x.classList.add('correct'); });
+        if (oi===it.a){ award('q'+qi,8); exp.textContent='Верно. '+it.e; }
+        else { b.classList.add('wrong'); exp.textContent='Не совсем. '+it.e; }
+        exp.classList.add('show');
+      };
+      wrap.appendChild(b); return b;
+    });
+    wrap.appendChild(exp); box.appendChild(wrap);
+  });
+})();
+</script>
+<script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
+<script>window.MUSEUM_CHROME={
+  museum:{title:'Что изобрели русские первыми в мире',href:'index.html'},
+  share:{title:'Почему гелий течёт без трения: теория сверхтекучести Ландау — музей «Что изобрели русские первыми в мире»',
+         text:'Ландау в 1941 году объяснил, почему жидкий гелий течёт без трения, а Нобелевскую премию получал в больнице. Что Россия дала миру раньше всех — день за днём.'},
+  prev:{href:'day-21jan-obninsk.html',title:'21 января · Обнинская АЭС'},
+  next:{href:'day-23jan-umov.html',title:'23 января · Вектор Умова'},
+  all:{href:'index.html',label:'Все изобретения'},
+  city:'../../index.html',
+  random:['day-01jan-cabletv.html','day-02jan-luna1.html','day-03jan-anosov.html','day-04jan-pilchikov.html','day-05jan-shukhov.html','day-06jan-orlov.html','day-08jan-icebreaker.html','day-09jan-blinov.html','day-10jan-britnev.html','day-11jan-kostovich.html','day-12jan-r7.html','day-13jan-k278.html','day-14jan-lira.html','day-15jan-kovalevskaya.html','day-16jan-soyuz45.html','day-19jan-kantorovich.html','day-21jan-obninsk.html','day-22jan-landau.html','day-23jan-umov.html','day-30jan-kotelnikov.html','day-03feb-luna9.html','day-18mar-leonov.html','day-15may-mechnikov.html','day-16jun-tereshkova.html','day-26sep-pavlov.html','day-15nov-buran.html','day-25nov-pirogov.html','day-01dec-lobachevsky.html','day-14dec-laser.html']
+};</script>
+<script src="../../assets/museum-chrome.js"></script>
+<script>window.MUSEUM_SUPPORT={museum:'Что изобрели русские первыми в мире'};</script>
+<script src="../../assets/museum-support.js"></script>
+<script src="calendar-izobreteniya.js"></script>
+<script>window.MUSEUM_CALENDAR_INITIAL='01-22';</script>
+<script src="../../assets/museum-calendar-month.js"></script>
+<script>window.MUSEUM_RETURN={riddle:{q:"Почему Нобелевскую премию Ландау вручали в Москве, а не в Стокгольме?",a:"После автокатастрофы 1962 года он лежал в больнице; 10 декабря 1962 года посол Швеции вручил премию в конференц-зале больницы.",src:"famhist.ru; Электронная еврейская энциклопедия ОРТ"}};</script>
+<script src="../../assets/museum-return.js" data-museum="izobreteniya" data-day="01-22"></script>
+<script defer src="../../assets/analytics.js"></script>
+
+<script>window.MUSEUM_AUDIOGUIDE={
+  audioSrc:"audio-guide-landau-ru.mp3",
+  durationLabel:"2 минуты 10 секунд",
+  lead:"Голос ведёт по залу сверхтекучего гелия: от заметки Капицы в Nature до больничного зала, где Ландау вручили Нобелевскую премию. Шесть остановок, на каждой — что искать глазами. Слушать можно фоном, пока читаешь статью ниже.",
+  stops:[
+    {t:0,mark:"0:00",title:"Чашка над ванной"},
+    {t:19,mark:"0:19",title:"Заметка Капицы"},
+    {t:43,mark:"0:43",title:"Письмо Сталину"},
+    {t:60,mark:"1:00",title:"Нечем тормозить"},
+    {t:83,mark:"1:23",title:"Две жидкости"},
+    {t:105,mark:"1:45",title:"Премия в больнице"}
+  ],
+  transcript:[
+    "<p>«Кадр А. Лейтнера, 1963: сверхтекучий гелий уходит из чашки плёнкой по стенке».</p>",
+    "<p>«22 января 1908 года в Баку родился Ландау; январь 1938 — заметка Капицы в Nature, в том же номере — Аллен и Мизенер».</p>",
+    "<p>«28 апреля 1938 года — арест Ландау и письмо Капицы Сталину; освобождение через год».</p>",
+    "<p>«1941 — „Теория сверхтекучести гелия-II“: ниже порога скорости фононы и ротоны не рождаются, тормозить нечем».</p>",
+    "<p>«Две части жидкости, λ-точка 2,19 К, две скорости звука; критика модели Тиссы».</p>",
+    "<p>«Катастрофа 1962 года, 59 дней комы; 10 декабря 1962 года — Нобелевская премия в больнице; премия Капицы — 1978».</p>"
+  ],
+  note:"Озвучено синтезом речи — временно, до записи голосом автора музея."
+};</script>
+<script src="../../assets/museum-audioguide.js"></script>
+</body>
+</html>
