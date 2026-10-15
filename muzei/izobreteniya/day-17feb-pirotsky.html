@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="ru" data-museum="izobreteniya">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Вагон Пироцкого: конка без лошадей на Песках — Что изобрели русские первыми в мире, 17 февраля</title>
+<!--
+  Страница дня 17 февраля. Наряд stranicy-izob-0910 (claude2, 15.10.2026), карточка #762.
+  Форма — вариант А музея изобретений (Сергей 12.09.2026): лента ударов, подробности свёрнуты.
+  Паспорт выпуска: rc-museum-production/izobreteniya/day-17feb-pirotsky/passport/issue.json
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --dark:#060c17; --dark2:#0c1826; --surface:#111f33;
+    --card:rgba(255,255,255,.05); --card-b:rgba(255,255,255,.09);
+    --gold:#c9a84c; --gold-l:#e4c97a; --gold-g:rgba(201,168,76,.13);
+    --ink:#e8eef5; --muted:#7a9ab8; --line:rgba(255,255,255,.07);
+    --accent:#2d8cbf; --accent2:#1f6f8b;
+    /* legacy compat */
+    --paper:#0c1826; --paper2:#111f33;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Inter','Segoe UI',sans-serif;color:var(--ink);background:var(--dark);line-height:1.72}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.13;margin:0}
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent)}
+
+  /* ── ШАПКА ── */
+  header.top{background:rgba(6,12,23,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--card-b);color:#fff;position:sticky;top:0;z-index:30}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+  .logo svg{display:block;filter:drop-shadow(0 0 8px rgba(201,168,76,.4))}
+  .logo .lt{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:16px}
+  .logo .lt small{display:block;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-family:'Inter',sans-serif}
+  .score{background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:6px 16px;font-size:13px;color:var(--gold-l);cursor:pointer;font-family:'Inter',sans-serif}
+  .score-info{position:absolute;right:12px;top:66px;max-width:260px;background:#0e1c30;color:var(--ink);border:1px solid var(--card-b);border-radius:14px;padding:14px 16px;font-size:13px;line-height:1.6;box-shadow:0 20px 60px rgba(0,0,0,.6);display:none;z-index:40}
+  .score-info.show{display:block}
+
+  /* ── HERO — СТАНДАРТ (не менять): 3D-сцена сверху, текст отдельным блоком ниже ── */
+  .hero-scene{position:relative;height:52vh;min-height:300px;max-height:520px;overflow:hidden;background:linear-gradient(160deg,#0a1e3a 0%,#1a3a6a 55%,#0d2240 100%)}
+  .hero-scene canvas.scene,.hero-scene img.scene{width:100%;height:100%;display:block;object-fit:cover}
+  .scene-caption{background:#060d18;padding:11px 0 12px}
+  .scene-caption .wrap{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+  .scene-cap{font-size:13.5px;line-height:1.6;color:var(--muted);border-left:2px solid rgba(201,168,76,.4);padding-left:14px;flex:1 1 420px}
+  .scene-hint{flex:0 0 auto;font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.4px;color:#e4c97a;
+    background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.34);border-radius:24px;padding:7px 16px;font-weight:600}
+  .hero-lead{background:linear-gradient(180deg,#0c1826 0%,#060c17 100%);color:#fff;padding:28px 0 38px}
+  .hero-lead .museum{color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:12px;opacity:.9}
+  .hero-lead .who{font-family:'Inter',sans-serif;font-size:clamp(13px,3vw,15px);letter-spacing:.4px;color:var(--accent-l,#7dc8ff);margin-bottom:10px}
+  .hero-lead .who i{font-style:normal;color:#7893ab;font-weight:400}
+  .hero-lead h1{color:#fff;font-size:56px;font-weight:900;line-height:1.04;margin-bottom:16px}
+  .hero-lead .hook{color:#b8ccde;font-size:19px;max-width:580px;margin-bottom:28px;line-height:1.65;font-weight:400}
+  .hero-lead .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+  @media(max-width:680px){.hero-lead h1{font-size:34px}.hero-lead .hook{font-size:16px}
+    .hero-scene{height:34vh;min-height:230px;max-height:300px}
+    .scene-caption .wrap{flex-direction:column;gap:9px}
+    .scene-hint{order:-1;align-self:flex-start;font-size:11.5px;padding:6px 13px}
+    .scene-cap{font-size:12.8px;flex:1 1 auto}}
+  .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:16px;font-family:'Inter',sans-serif;letter-spacing:.5px}
+
+  /* ── НАВИГАЦИЯ ДНЯ ── */
+  .daynav{position:sticky;top:64px;z-index:25;background:rgba(6,12,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-b)}
+  .daynav .wrap{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+  .daynav::-webkit-scrollbar{display:none}
+  .daynav a{flex:0 0 auto;padding:14px 20px;font-size:11px;font-weight:700;font-family:'Inter',sans-serif;color:var(--muted);text-decoration:none;white-space:nowrap;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:.18s}
+  .daynav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+  /* ── СЕКЦИИ ── */
+  section.block{padding:64px 0;border-bottom:1px solid var(--line);scroll-margin-top:130px}
+  .kicker{font-size:10px;text-transform:uppercase;letter-spacing:3.5px;color:var(--gold);font-weight:700;font-family:'Inter',sans-serif;margin-bottom:8px}
+  section.block h2{font-size:34px;color:#fff;margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink)}
+  .pull{background:var(--gold-g);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 14px 14px 0;font-style:italic;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-size:20px;line-height:1.5;margin:26px 0}
+
+  /* ── КНОПКИ ── */
+  .btn{cursor:pointer;border:none;border-radius:12px;padding:14px 26px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;background:var(--accent2);color:#fff;transition:.18s;letter-spacing:.2px}
+  .btn:hover{filter:brightness(1.18)}
+  .btn.ghost{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid var(--card-b)}
+  .btn.ghost:hover{background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.2)}
+  .btn.gold{background:linear-gradient(135deg,var(--gold),#b8882b);color:#1a0f00;box-shadow:0 4px 20px rgba(201,168,76,.25)}
+  .btn.gold:hover{filter:brightness(1.1);box-shadow:0 6px 28px rgba(201,168,76,.4)}
+  .btn:active{transform:translateY(1px)}
+  .pulse{animation:pulse .9s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+
+  /* ── КАРТОЧКИ ── */
+  .card{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:20px 22px;margin:16px 0;backdrop-filter:blur(6px)}
+
+  /* ── КВИЗ ── */
+  .opt{display:block;width:100%;text-align:left;background:rgba(255,255,255,.04);border:1px solid var(--card-b);border-radius:12px;padding:13px 16px;margin:8px 0;cursor:pointer;font-size:15px;color:var(--ink);font-family:'Inter',sans-serif;transition:.16s}
+  .opt:hover{border-color:var(--accent);background:rgba(45,140,191,.08)}
+  .opt.correct{background:rgba(40,120,60,.18);border-color:#3f9b52;color:#7ed4a0;font-weight:600}
+  .opt.wrong{background:rgba(180,40,40,.13);border-color:#c0453f;color:#f08080}
+  .exp{margin-top:10px;font-size:14px;background:var(--gold-g);border-radius:10px;padding:12px 14px;display:none;color:var(--gold-l)}
+  .exp.show{display:block}
+
+  /* ── ИТОГ ДНЯ ── */
+  .day-result{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:22px 24px;max-width:460px}
+  .dr-rank{font-family:'Playfair Display',Georgia,serif;font-size:28px;color:var(--gold-l);font-weight:700}
+  .dr-score{font-size:16px;margin:4px 0 12px;color:var(--ink)}.dr-score span{color:var(--muted);font-size:14px}
+  .dr-bar{height:8px;background:rgba(255,255,255,.08);border-radius:6px;overflow:hidden}
+  .dr-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),var(--gold));transition:width .6s cubic-bezier(.2,.7,.2,1)}
+  .dr-note{margin-top:12px;font-size:14px;color:var(--muted)}
+
+  /* ── РЕКЛАМНЫЕ СЛОТЫ ── */
+  .ad-slot{position:relative;margin:26px 0;background:rgba(255,255,255,.02);border:1px dashed rgba(255,255,255,.1);border-radius:14px;min-height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px}
+  .ad-slot .lbl{position:absolute;top:7px;right:12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.15);font-family:'Inter',sans-serif}
+  .ad-slot .ph-txt{font-size:12px;max-width:80%;color:rgba(255,255,255,.18)}
+  .ad-slot.billboard{min-height:108px}
+  .adband{background:transparent;border-bottom:none}
+
+  footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
+  .crumbs{background:rgba(6,12,23,.6);border-bottom:1px solid var(--card-b);font-family:'Inter',sans-serif;font-size:12.5px}
+  .crumbs .wrap{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  .crumbs a{color:var(--gold-l);text-decoration:none;white-space:nowrap}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--muted);opacity:.6}
+  .crumbs .here{color:var(--muted);white-space:nowrap}
+
+
+  /* ── ШАПКА: четыре строки по museum-core §6-бис ── */
+  header.top{display:block;text-align:center;padding:10px 12px 8px;height:auto;position:relative}
+  header.top .b1{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:15px;letter-spacing:.5px;color:#fff}
+  header.top .b2{font-size:11px;color:var(--muted);margin-top:2px}
+  header.top .b3{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:6px}
+  header.top .b4{font-size:12.5px;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-style:italic}
+  header.top .score{position:absolute;right:12px;top:10px}
+  .daynav{top:0}
+  .hero-scene{background:#0e1c2c;height:38vh;min-height:250px;max-height:400px}
+  @media(max-width:680px){.hero-lead h1{font-size:31px}}
+  .hero-scene img.scene{object-fit:cover;object-position:50% 42%}
+  .date-origin{font-size:13px;color:#9fb4c8;margin:-6px 0 12px;max-width:62ch}
+  .hero-lead .hook{color:#c6d8e8;max-width:62ch}
+  .hero-under{background:linear-gradient(180deg,#060d18,#060c17);padding:4px 0 22px}
+  .stamp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(125,200,255,.28);margin-top:14px}
+  .stamp>div{padding:11px 12px;border-left:1px solid rgba(125,200,255,.16);min-width:0}
+  .stamp>div:first-child{border-left:0}
+  .stamp .v{font-size:clamp(15px,3.4vw,21px);font-weight:700;color:#8fd3ff;line-height:1.1;overflow-wrap:anywhere}
+  .stamp .k{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#8fa5b9;margin-top:5px}
+  @media(max-width:600px){.stamp{grid-template-columns:repeat(2,minmax(0,1fr))}.stamp>div:nth-child(3){border-left:0}.stamp>div:nth-child(n+3){border-top:1px solid rgba(125,200,255,.16)}}
+
+  /* ── ЛЕНТА УДАРОВ (museum-inventions, вариант А; museum-core §5-бис) ── */
+  .udary{list-style:none;margin:18px 0 0;padding:0;counter-reset:u}
+  .udary>li{border-top:1px solid var(--line);padding:4px 0}
+  .udary details>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:34px 1fr;gap:10px;padding:12px 0;font-size:17px;line-height:1.55;color:var(--ink)}
+  .udary details>summary::-webkit-details-marker{display:none}
+  .udary details>summary::before{counter-increment:u;content:counter(u);font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:20px;color:var(--gold);line-height:1.3}
+  .udary .more-lbl{display:block;grid-column:2;font-size:12.5px;color:var(--gold-l);letter-spacing:.3px;margin-top:4px}
+  .udary .more-lbl::after{content:' ▾'}
+  .udary details[open] .more-lbl::after{content:' ▴'}
+  .udary details[open] .more-lbl .o{display:none}
+  .udary details:not([open]) .more-lbl .c{display:none}
+  .udary summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+  .udary .det{margin:0 0 14px 44px;padding:12px 16px;background:rgba(255,255,255,.035);border-left:2px solid rgba(201,168,76,.45);border-radius:0 10px 10px 0;font-size:15px;color:#d5e0ea}
+  .udary .det p{margin:8px 0}
+  .udary .tag{display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1a0f00;background:var(--gold-l);border-radius:6px;padding:1px 7px;margin-right:6px}
+  .udary .find{border-left:3px solid var(--gold);padding-left:8px}
+  figure.fig{margin:18px 0}
+  figure.fig img{max-width:100%;height:auto;border-radius:10px;display:block}
+  figure.fig figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5}
+  .src-note{font-size:12px;color:#8fa5b9}
+
+  /* ── МОДЕЛЬ ДНЯ (главное предметное действие) ── */
+  .lab{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:18px 18px 20px;margin-top:14px}
+  .lab-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+  .lab-row .lbl{flex:0 0 100%;font-size:13px;color:var(--muted);letter-spacing:.3px}
+  .seg{cursor:pointer;border:1px solid var(--card-b);background:rgba(255,255,255,.04);color:var(--ink);border-radius:10px;padding:10px 14px;font:inherit;font-size:14.5px;min-height:44px}
+  .seg[aria-pressed="true"]{border-color:var(--gold);background:var(--gold-g);color:var(--gold-l);font-weight:600}
+  .seg:focus-visible,.btn:focus-visible,.opt:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .lab-stage{position:relative;margin-top:12px}
+  .lab-stage canvas{width:100%;height:auto;display:block;border-radius:10px;background:#1c2530}
+  .lab-cap{font-size:12px;color:#8fa5b9;margin-top:6px}
+  .lab-msg{margin-top:12px;font-size:15.5px;padding:12px 14px;border-radius:10px;background:rgba(255,255,255,.04);border-left:3px solid var(--card-b);min-height:48px}
+  .lab-msg.ok{border-left-color:#3f9b52;background:rgba(40,120,60,.14)}
+  .lab-msg.bad{border-left-color:#c0453f;background:rgba(180,40,40,.10)}
+  .lab-found{font-size:13px;color:var(--muted);margin-top:8px}
+  .lab-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .noscript-box{background:rgba(255,255,255,.04);border:1px dashed var(--card-b);border-radius:12px;padding:12px 16px;font-size:15px}
+
+  /* ── ГРАНИЦА ПЕРВЕНСТВА ── */
+  .border-box{background:rgba(45,140,191,.08);border:1px solid rgba(45,140,191,.3);border-radius:14px;padding:16px 18px}
+  .border-box b{color:#8fd3ff}
+  .ctx{width:100%;border-collapse:collapse;margin-top:14px;font-size:14.5px}
+  .ctx th,.ctx td{text-align:left;padding:9px 8px;border-top:1px solid var(--line);vertical-align:top}
+  .ctx th{color:var(--gold-l);font-weight:600;font-size:12.5px;letter-spacing:.5px}
+  .quiz-q{margin:18px 0 6px;font-weight:600}
+  .sources a{color:var(--gold-l)}
+  .sources li{margin:6px 0;font-size:14px;color:#c8d6e2}
+  @media(max-width:600px){header.top{padding:8px 64px 6px}header.top .score{top:8px;right:8px;padding:4px 10px;font-size:12px}header.top .b3{margin-top:3px}
+    .hero-scene{height:26vh;min-height:200px;max-height:260px}.date-origin{font-size:12px;margin:-8px 0 8px}.hero-lead{padding:18px 0 26px}.hero-lead .date-chip{margin-bottom:12px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+  /* ── ПОЛЗУНКИ МОДЕЛИ (19, 21 янв) ── */
+  .mtab{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+  .mrow{display:grid;grid-template-columns:minmax(150px,1.2fr) 2fr 92px;gap:12px;align-items:center}
+  .mrow .mname{font-size:14.5px}
+  .mrow .mname i{font-style:normal;color:var(--muted);font-size:13px}
+  .mrow input[type=range]{width:100%;accent-color:var(--gold);min-height:44px}
+  .mrow output{font-size:14px;color:var(--gold-l);text-align:right}
+  .mrow.off{opacity:.45}
+  .mult{margin-top:14px;padding:14px 16px;border-radius:12px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25)}
+  @media(max-width:560px){.mrow{grid-template-columns:1fr 70px}.mrow .mname{grid-column:1/-1}}
+</style>
+<meta name="description" content="22 августа 1880 года на Песках в Петербурге Фёдор Пироцкий двинул вагон конки электричеством, которое шло по рельсам под колёсами. Опыт, документы 1880 года и соперники.">
+<link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-17feb-pirotsky.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Русская цивилизация">
+<meta property="og:title" content="Вагон Пироцкого: конка без лошадей на Песках">
+<meta property="og:description" content="22 августа 1880 года на Песках в Петербурге Фёдор Пироцкий двинул вагон конки электричеством, которое шло по рельсам под колёсами. Опыт, документы 1880 года и соперники.">
+<meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-17feb-pirotsky.html">
+<meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-17feb-pirotsky.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Вагон Пироцкого: конка без лошадей на Песках", "description": "22 августа 1880 года на Песках в Петербурге Фёдор Пироцкий двинул вагон конки электричеством, которое шло по рельсам под колёсами. Опыт, документы 1880 года и соперники.", "url": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-17feb-pirotsky.html", "inLanguage": "ru", "isPartOf": {"@type": "WebSite", "name": "Музей «Что изобрели русские первыми в мире»"}, "publisher": {"@type": "Organization", "name": "Русская цивилизация"}, "about": {"@type": "Person", "name": "Фёдор Аполлонович Пироцкий"}, "image": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-17feb-pirotsky.jpg"}</script>
+<style>
+  /* ── ВАГОН ПИРОЦКОГО: РЕЛЬСЫ ВМЕСТО ПРОВОДОВ (17 фев) ── */
+  .railcv{width:100%;max-width:760px;height:auto;aspect-ratio:760/300;display:block;margin:10px 0 4px;background:linear-gradient(#26313d,#313d4a);border-radius:10px}
+  .lctl{display:grid;gap:10px;max-width:760px;margin-top:8px}
+  .lrow{display:grid;grid-template-columns:230px 1fr 90px;gap:10px;align-items:center}
+  .lrow label{font-size:15px}
+  .lrow input[type=range]{width:100%;accent-color:var(--gold);min-height:44px}
+  .lrow output{font-size:14px;color:var(--gold-l);text-align:right}
+  .lfuel{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  .lfuel .seg.on{border-color:#3f9b52;background:rgba(63,155,82,.18)}
+  .lgo{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+  .lstat{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;max-width:760px;margin-top:10px}
+  .lstat div{border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:8px 10px;background:rgba(255,255,255,.03)}
+  .lstat b{display:block;font-size:18px;color:var(--gold-l)}
+  .lstat span{font-size:13px;color:var(--muted)}
+  .chrono{display:grid;gap:8px;max-width:760px;margin-top:8px}
+  .chrono .seg{text-align:left;width:100%}
+  .chrono .seg.right{border-color:#3f9b52;background:rgba(63,155,82,.18)}
+  .chrono .seg.wrongpick{border-color:#c0573f;background:rgba(192,87,63,.15)}
+  .chrono .n{display:inline-block;min-width:1.6em;color:var(--gold-l);font-weight:700}
+  blockquote.doc{margin:12px 0;padding:10px 14px;border-left:3px solid var(--gold);background:rgba(255,255,255,.03);border-radius:0 10px 10px 0;font-size:15px;line-height:1.6}
+  figure.side{max-width:460px;margin:12px 0}
+  figure.side img{width:100%;height:auto;border-radius:8px;background:#f3ead6}
+  figure.side figcaption{font-size:13.5px;color:var(--muted);margin-top:6px;line-height:1.45}
+  #hero{background:#e9e6df}
+  #hero img.scene{object-fit:contain;object-position:50% 30%}
+  @media(max-width:560px){.lrow{grid-template-columns:1fr 80px}.lrow label{grid-column:1/-1}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="b1">Русская цивилизация</div>
+  <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
+  <div class="b3">Что изобрели русские первыми в мире</div>
+  <div class="b4">365 изобретений. Все русские. Все первые</div>
+  <div class="score" id="scoreBox" title="Баллы знаний за этот день">⭐ <span id="score">0</span> / 100</div>
+</header>
+
+<nav class="crumbs" aria-label="Хлебные крошки"><div class="wrap">
+  <a href="../../index.html">Русская цивилизация</a>
+  <span class="sep">›</span>
+  <a href="index.html">Что изобрели русские первыми в мире</a>
+  <span class="sep">›</span>
+  <span class="here">17 февраля · Вагон Пироцкого</span>
+</div></nav>
+
+<div class="hero-scene" id="hero">
+  <img class="scene" src="day-17feb-pirotsky.jpg" data-source="https://commons.wikimedia.org/wiki/File:Pirotsky.jpg" data-license="Public domain" data-author="фотограф неизвестен, до 1898 года" width="363" height="550" alt="Старая фотография: немолодой бородатый офицер с зачёсанными назад волосами, в тёмном двубортном мундире с погонами и знаком на груди" fetchpriority="high">
+</div>
+
+<div class="scene-caption">
+  <div class="wrap">
+    <div class="scene-cap">Фёдор Аполлонович Пироцкий. Фотография сделана до 1898 года, фотограф неизвестен. Викисклад, общественное достояние.</div>
+    <span class="scene-hint">Пироцкий · до 1898</span>
+  </div>
+</div>
+
+<header class="hero-lead">
+  <div class="wrap">
+    <div class="date-chip">17 февраля · 1880</div>
+    <p class="date-origin">Фёдор Аполлонович Пироцкий родился 17 февраля (1 марта) 1845 года; 17 февраля — дата по старому стилю. Вагон он пустил 22 августа (3 сентября) 1880 года.</p>
+    <div class="who">Фёдор Аполлонович Пироцкий <i>· военный инженер-артиллерист</i></div>
+    <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
+    <h1>Вагон Пироцкого: конка без лошадей на Песках</h1>
+    <p class="hook">22 августа 1880 года в Петербурге Пироцкий первым двинул электричеством вагон городской конки — ток шёл по рельсам под колёсами.</p>
+    <div class="hero-btns">
+      <button class="btn gold" id="readBtn" type="button">Читать историю ↓</button>
+      <button class="btn ghost" id="listenBtn" type="button">🎧 Слушать аудиогид</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero-under">
+  <div class="wrap">
+    <div class="stamp">
+      <div><div class="v">1876</div><div class="k">на заброшенной ветке у Сестрорецка двигатель работал в километре от источника тока</div></div>
+      <div><div class="v">12 ч дня</div><div class="k">22 августа 1880 года вагон двинулся на углу Болотной улицы и Дегтярного переулка</div></div>
+      <div><div class="v">40</div><div class="k">пассажиров брал переделанный двухэтажный вагон конки</div></div>
+      <div><div class="v">16 мая 1881</div><div class="k">Сименс открыл в Лихтерфельде под Берлином трамвайную линию для постоянного движения</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="daynav" aria-label="Разделы дня">
+  <div class="wrap">
+    <a href="#story">Читать</a>
+    <a href="#audioguide">Слушать</a>
+    <a href="#games">Рельсы</a>
+    <a href="#pervenstvo">Первенство</a>
+    <a href="#quiz">Викторина</a>
+    <a href="#calendar">Календарь</a>
+  </div>
+</nav>
+
+<section class="wrap" id="dokument" data-proof-block></section>
+
+<section class="block" id="audioguide"></section>
+
+<section class="block" id="story">
+  <div class="wrap">
+    <div class="kicker">История первенства · 12 ударов</div>
+    <h2>От опытов на Волковом поле — к вагону без лошадей на Песках</h2>
+    <p style="color:var(--muted);max-width:62ch">Читается подряд. Нажми на удар — откроется подробный разбор с источниками.</p>
+    <ol class="udary">
+      <li><details><summary><span>Фёдор Пироцкий родился 17 февраля 1845 года по старому стилю в селе Сенча Лохвицкого уезда Полтавской губернии, в семье военного врача.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>В восемнадцать лет он поступил в Константиновский кадетский корпус в Петербурге, через два года перешёл в юнкерский класс Михайловского артиллерийского училища и окончил его в 1866 году. Служил в Киеве, в Печерской крепостной артиллерии.</p>
+          <p class="src-note">Источники: Президентская библиотека, «Фёдор Аполлонович Пироцкий (1845–1898)», проект «Великая Россия»; Большая советская энциклопедия, 3-е изд., статья «Пироцкий Фёдор Аполлонович».</p>
+        </div></details></li>
+      <li><details><summary><span>В 1871 году, окончив Михайловскую артиллерийскую академию, он поступил в Главное артиллерийское управление в Петербурге.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Его назначили ревизором в отдел технических отчётов и смет. По службе он знакомился с работами на Главном артиллерийском полигоне, где электричество пробовали применять в военном деле.</p>
+          <p class="src-note">Источники: Президентская библиотека, «Фёдор Аполлонович Пироцкий (1845–1898)»; СПб ГУП «Горэлектротранс», «К 175-летию Фёдора Пироцкого, изобретателя трамвая и героя стрит-арта» (2020).</p>
+        </div></details></li>
+      <li><details><summary><span>В 1874 году на Волковом поле под Петербургом Пироцкий стал передавать ток от одной динамо-машины к другой, стоявшей поодаль, — и та работала как двигатель.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Он хотел получать работу там, где она дешева, — у воды или у топлива — и по проводам передавать её к фабрикам. Виртуальный музей истории энергетики Северо-Запада приводит его слова: «У нас в России передача работы может иметь огромное применение, в чем нетрудно убедиться, взглянув на карту».</p>
+          <p class="src-note">Источники: Большая советская энциклопедия, 3-е изд., «Пироцкий Фёдор Аполлонович»; Виртуальный музей истории энергетики Северо-Запада, «Пироцкий Федор Аполлонович».</p>
+        </div></details></li>
+      <li><details><summary><span>Летом 1876 года на заброшенной ветке железной дороги у Сестрорецка двигатель Пироцкого работал в километре от источника тока. Проводами служили сами рельсы: один — прямым, другой — обратным.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Отсюда он вывел: электричество, переданное на расстояние, может вращать колёса экипажа, который идёт по рельсам. По данным «Горэлектротранса», Пироцкий подал заявку на привилегию и изложил выводы в статье.</p>
+          <p class="src-note">Источники: Виртуальный музей истории энергетики Северо-Запада, «Пироцкий Федор Аполлонович»; СПб ГУП «Горэлектротранс» (2020); Президентская библиотека, «Фёдор Аполлонович Пироцкий (1845–1898)».</p>
+        </div></details></li>
+      <li><details><summary><span>Весной 1880 года в электротехническом отделе Русского технического общества шли прения по сообщению Пироцкого «о передаче силы, при помощи электрического тока, на всякие расстояния».<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Отчёт отдела напечатан в первом номере нового журнала «Электричество». Председатель прочёл на заседании письма г. Хвольсона «по поводу прений, возникших по сообщению г. Пироцкого». Там же сказано, что между 24 февраля и 1 мая 1880 года прошли три публичные беседы. Вторая была посвящена сообщению Пироцкого «о передаче механической работы, при помощи электрического тока, на всякие расстояния». Третья — сообщению В. Н. Чиколева о превосходстве железных дорог с электрической передачей силы над паровозными.</p>
+          <p class="src-note">Источник: «Краткий отчёт о действиях VI отдела Императорского Русского технического общества», «Электричество», 1880, № 1, с. 2 (скан — Вологодская областная универсальная научная библиотека, копия в Internet Archive).</p>
+        </div></details></li>
+      <li><details><summary><span>В том же номере журнал рассказал о сопернике: в 1879 году Вернер Сименс показал на выставке в Берлине электрическую железную дорогу — небольшой локомотив вёз три вагона с 18 пассажирами.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <blockquote class="doc">«Первый опыт постройки электрической железной дороги был произведен Вернером Сименсом, в прошлом году, на выставке в Берлине… Локомотив двигал за собой три вагона, с 18 пассажирами, со скоростью до 15 верст в час».</blockquote>
+          <p>Ток шёл к локомотиву по среднему изолированному рельсу, а возвращался по двум боковым, по которым катились колёса. Журнал подчёркивал: выставочный опыт должен был лишь познакомить публику с самой возможностью электрического движения по рельсам.</p>
+          <figure class="side">
+            <img src="day-17feb-pirotsky-elektrichestvo.jpg" data-source="https://archive.org/details/188001" data-license="Public domain" data-author="журнал «Электричество», 1880" width="900" height="1003" loading="lazy" alt="Страница старого журнала, набранная дореформенной орфографией: заголовок «Электрическія желѣзныя дороги» и два абзаца о дороге Сименса на выставке в Берлине">
+            <figcaption>«Электричество», 1880, № 1, с. 12: начало статьи «Электрические железные дороги». Скан Вологодской областной универсальной научной библиотеки, Internet Archive; общественное достояние.</figcaption>
+          </figure>
+          <p class="src-note">Источник: «Электрические железные дороги», «Электричество», 1880, № 1, с. 12–13.</p>
+        </div></details></li>
+      <li><details><summary><span>Летом 1880 года Пироцкий на собственные деньги переделал двухэтажный вагон конки: под кузовом поставил электродвигатель, а вращение на оси передал через зубчатые колёса.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Вагон был тяжёлый, весом 6,5 тонны, с империалом — открытыми местами на крыше. Опыты шли в Рождественском парке конно-железной дороги в Дегтярном переулке: по данным «Горэлектротранса», Пироцкий построил там электростанцию и приспособил 85 метров рельсового пути. По тем же данным, у вагона Пироцкого был номер 114 — его теперь носит музейная реплика конки.</p>
+          <p class="src-note">Источники: Президентская библиотека, «Фёдор Аполлонович Пироцкий (1845–1898)»; СПб ГУП «Горэлектротранс», «Электрическое чудо: 143 года назад в Петербурге продемонстрировали первый трамвай» (2023).</p>
+        </div></details></li>
+      <li><details><summary><span>22 августа 1880 года, в полдень, на углу Болотной улицы и Дегтярного переулка Пироцкий двинул вагон без лошадей: ток шёл к двигателю по рельсам, по которым катились колёса.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>В печати тогда сообщили:</p>
+          <blockquote class="doc">«…в Санкт-Петербурге, на Песках, на углу Болотной улицы и Дегтярного переулка, г. Пироцким первый раз в России двинут вагон электрической силою, идущей по рельсам, по которым катятся колёса вагона».</blockquote>
+          <p>Так это сообщение цитируют Президентская библиотека и «Горэлектротранс». Журнал «Мир метро» называет его источником пятый номер журнала «Электричество» за 1880 год. Скан этого номера мы в открытом доступе пока не нашли. Болотная улица теперь называется улицей Моисеенко.</p>
+          <p class="src-note">Источники: Президентская библиотека, «Фёдор Аполлонович Пироцкий (1845–1898)»; СПб ГУП «Горэлектротранс» (2020, 2023); Виртуальный музей истории энергетики Северо-Запада; А. Спарбер, «Артиллерист-изобретатель», «Мир метро», 2024.</p>
+        </div></details></li>
+      <li><details><summary><span>Вагон брал до 40 пассажиров. По отчётам, опыты продолжались и в сентябре 1880 года — 1, 14, 15 и 16 сентября.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Сорок пассажиров называют и «Горэлектротранс», и Музей истории энергетики. Скорость в этих источниках расходится, поэтому мы её не приводим.</p>
+          <p class="src-note">Источники: СПб ГУП «Горэлектротранс» (2020); Виртуальный музей истории энергетики Северо-Запада.</p>
+        </div></details></li>
+      <li><details><summary><span>Хозяева конно-железных дорог доказывали «опасность, ненужность и бесполезность» электрического вагона. Опыты прекратились, а электрический трамвай в Петербурге пошёл только в 1907 году.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Слова в кавычках — пересказ «Горэлектротранса». Переделка конной дороги в электрическую требовала больших денег, а выгоды для себя владельцы конок не видели. Город смог пустить трамвай лишь после того, как выкупил права у владельцев конно-железных дорог. Первым в России электрический трамвай получил Киев, в 1892 году.</p>
+          <p class="src-note">Источники: СПб ГУП «Горэлектротранс» (2020, 2023).</p>
+        </div></details></li>
+      <li><details><summary><span>16 мая 1881 года фирма «Сименс и Гальске» открыла в Лихтерфельде под Берлином электрическую трамвайную линию для постоянного движения. В том же году Пироцкий показал модель своей дороги на Международной электротехнической выставке в Париже.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Линию проложили по готовой насыпи длиной около 2,4 километра — бывшей временной дороге, по которой возили материалы для Главного кадетского корпуса.</p>
+          <figure class="side">
+            <img src="day-17feb-pirotsky-lichterfelde.jpg" data-source="https://commons.wikimedia.org/wiki/File:Die_Gartenlaube_(1881)_b_393.jpg" data-license="Public domain" data-author="Г. Людерс (H. Lüders), «Die Gartenlaube», 1881" width="1000" height="705" loading="lazy" alt="Гравюра: по рельсам среди деревьев едет небольшой открытый вагон с пассажирами без лошадей; рядом конный экипаж и гуляющая публика, вдали здание с куполом">
+            <figcaption>«Электрическая железная дорога у Лихтерфельде». Рисунок Г. Людерса с натуры, журнал «Die Gartenlaube», 1881. Викисклад, общественное достояние.</figcaption>
+          </figure>
+          <p class="src-note">Источники: Deutschlandmuseum, «1881-05-16: The first electric trams»; Президентская библиотека, «Фёдор Аполлонович Пироцкий (1845–1898)».</p>
+        </div></details></li>
+      <li><details><summary><span>Пироцкий умер 28 февраля 1898 года по старому стилю, в Алёшках, без средств. В 2019 году сквер у Дегтярного переулка, где он пустил свой вагон, назвали его именем.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>В 1888 году он ушёл в отставку, чтобы оформить небольшое имение, которое он должен был унаследовать, и не дослужил нескольких месяцев до полной пенсии. Из-за волокиты и ошибок в документах наследства он так и не получил. Последние годы Пироцкий жил в военном пансионате в Алёшках.</p>
+          <p class="src-note">Источники: Президентская библиотека, «Фёдор Аполлонович Пироцкий (1845–1898)»; Большая советская энциклопедия, 3-е изд.; СПб ГУП «Горэлектротранс» (2020).</p>
+        </div></details></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block" id="theme-inventions">
+  <div class="wrap">
+    <div class="kicker">Электричество · Русские первенства</div>
+    <h2>Что ещё русские первыми сделали с электричеством</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Другие дни музея об электричестве — по утверждённому календарю. Часть этих залов ещё готовится.</p>
+    <button class="btn ghost" type="button" id="themeInvBtn" data-label="Показать 3 первенства →" aria-expanded="false" aria-controls="themeInvBody">Показать 3 первенства →</button>
+    <div id="themeInvBody" hidden>
+      <ul class="theme-list">
+        <li><b>21 янв</b> <a href="day-21jan-obninsk.html">Первая в мире АЭС, отдавшая ток в сеть</a></li>
+        <li><b>12 фев</b> <a href="day-12feb-lenz.html">Правило Ленца: ток, который спорит с движением</a></li>
+        <li><b>23 янв</b> <a href="day-23jan-umov.html">Вектор Умова: куда течёт энергия</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="games">
+  <div class="wrap">
+    <div class="kicker">Главное действие · три числа из журнала «Электричество», 1880, № 1, остальные условные</div>
+    <h2>Рельсы вместо проводов</h2>
+    <p style="max-width:62ch">У Пироцкого ток шёл к двигателю по тем же рельсам, по которым катился вагон: по одному рельсу туда, по другому обратно. Выбери, как далеко вагон от генератора, какая погода и изолированы ли колёса, — и пусти ток. Посмотри, какая доля работы паровой машины, которая крутит генератор, дойдёт до колёс.</p>
+    <div class="lab" id="lab">
+      <canvas class="railcv" id="rail" width="760" height="300" role="img" aria-label="Схема: слева генератор, от него вправо идут два рельса, на рельсах вагон конки; стрелки показывают путь тока"></canvas>
+      <div class="lctl">
+        <div class="lrow"><label for="dist">Вагон от генератора</label><input type="range" id="dist" min="0" max="7" step="1" value="3"><output id="disto" for="dist">1 верста</output></div>
+        <div class="lfuel" role="group" aria-label="Погода"><span>Шпалы и земля:</span>
+          <button class="seg on" type="button" id="dry" aria-pressed="true">сухо</button>
+          <button class="seg" type="button" id="wet" aria-pressed="false">после дождя</button></div>
+        <div class="lfuel" role="group" aria-label="Колёса вагона"><span>Колёса одной стороны:</span>
+          <button class="seg on" type="button" id="insOn" aria-pressed="true">изолированы от вагона</button>
+          <button class="seg" type="button" id="insOff" aria-pressed="false">на общей железной оси</button></div>
+        <div class="lgo"><button class="btn gold" type="button" id="go">Пустить ток</button></div>
+      </div>
+      <div class="lstat" aria-live="polite">
+        <div><b id="sS">—</b><span>работы паровой машины дошло до колёс вагона</span></div>
+        <div><b id="sL">—</b><span>тока ушло в землю, мимо вагона</span></div>
+        <div><b id="sP">—</b><span>сила тяги (100 — вагон у самого генератора)</span></div>
+      </div>
+      <div class="lab-msg" id="mMsg" aria-live="polite">Выбери расстояние и нажми «Пустить ток».</div>
+      <div class="lab-cap">Из журнала «Электричество» (1880, № 1, с. 12–13) взяты три числа и одна деталь. Числа: на выставке Сименса до локомотива доходило «до 60 %» работы паровой машины; в проекте воздушной дороги Сименса в Берлине путь должен был иметь сопротивление 0,2 Ом («омады») на версту, и одного источника, по расчёту, хватило бы примерно на 10 вёрст. Деталь: колёса одной стороны изолированы от вагона, чтобы ток шёл через двигатель. Остальные числа модели условные, в документах 1880 года их нет: сопротивление генератора 0,5 Ом и двигателя 8 Ом, в самих машинах теряется 35 % работы, в сухую погоду шпалы на версте пути пропускают в землю столько тока, сколько сопротивление 2000 Ом, а после дождя — сколько сопротивление 2 Ом. Вагон трогается, если сила тяги не меньше 40. Верста — около 1,07 километра.</div>
+      <noscript><div class="noscript-box">Для модели нужен JavaScript. Текстовая версия. В сухую погоду до колёс доходит около 60 % работы, если вагон стоит рядом с генератором, и почти половина — если он в 10 верстах. После дождя ток уходит через шпалы в землю. В версте от генератора вагон ещё едет, хотя в землю уходит 80 % тока, а в 2 верстах уходит 90 %, и вагон стоит. Если колёса обеих сторон сидят на общей железной оси без изоляции, ток идёт из рельса в рельс через ось, мимо двигателя, и вагон не трогается.</div></noscript>
+
+      <h3 style="margin:22px 0 6px">1876–1881: расставь по порядку</h3>
+      <p style="max-width:62ch;margin:0 0 6px;color:var(--muted)">Нажимай события от самого раннего к самому позднему. Даты — по новому стилю.</p>
+      <div class="chrono" id="chrono" role="group" aria-label="События 1876–1881 годов"></div>
+      <div class="lab-msg" id="hMsg" aria-live="polite">Какое событие было первым?</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="pervenstvo">
+  <div class="wrap">
+    <div class="kicker">Проверка факта</div>
+    <h2>Что именно здесь наше</h2>
+    <div class="border-box">
+      <p style="margin-top:0"><b>Граница первенства:</b> Пироцкий первым двинул электричеством обычный пассажирский вагон городской конки по уличным рельсам, причём ток шёл к двигателю по самим рельсам. Это было 22 августа (3 сентября) 1880 года в Петербурге — больше чем за восемь месяцев до того, как Сименс открыл трамвайную линию в Лихтерфельде.</p>
+      <p><b>Чего здесь нет:</b> первой электрической железной дорогой с пассажирами журнал «Электричество» в 1880 году сам назвал выставочную дорогу Сименса в Берлине (1879): там маленький локомотив вёз три вагона. Первой линией для постоянного трамвайного движения считают Лихтерфельде (16 мая 1881 года): у Пироцкого были опыты, а не линия. Сообщение в печати 1880 года говорит «первый раз в России». Скан этого сообщения в открытом доступе не найден, текст известен по цитатам.</p>
+    </div>
+    <table class="ctx">
+      <thead><tr><th scope="col">Кто</th><th scope="col">Что сделал</th><th scope="col">Когда</th></tr></thead>
+      <tbody>
+        <tr><td>Ф. А. Пироцкий, Сестрорецк</td><td>Двигатель в километре от источника; проводами служат рельсы</td><td>лето 1876</td></tr>
+        <tr><td>В. Сименс, Берлин</td><td>Выставочная электрическая дорога: локомотив и три вагона с 18 пассажирами</td><td>1879</td></tr>
+        <tr><td>Ф. А. Пироцкий, Петербург</td><td>Вагон конки с электродвигателем на уличных рельсах, ток по рельсам</td><td>3 сентября 1880 (22 августа по старому стилю)</td></tr>
+        <tr><td>«Сименс и Гальске», Лихтерфельде</td><td>Электрическая трамвайная линия для постоянного движения</td><td>16 мая 1881</td></tr>
+        <tr><td>Киев</td><td>Первый в России электрический трамвай для постоянного движения</td><td>1892</td></tr>
+        <tr><td>Петербург</td><td>Начало работы электрического трамвая</td><td>1907</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block" id="quiz">
+  <div class="wrap">
+    <div class="kicker">Проверь себя · 5 вопросов</div>
+    <h2>Викторина</h2>
+    <p style="color:var(--muted);max-width:62ch">На каждый вопрос — одна попытка. После ответа покажем объяснение.</p>
+    <div id="quizBox"></div>
+    <noscript><div class="noscript-box">Для викторины нужен JavaScript. Ответы: 1 — по рельсам, по которым катились колёса; 2 — на Песках, на углу Болотной улицы и Дегтярного переулка; 3 — выставочную дорогу: локомотив с тремя вагонами; 4 — до 40; 5 — их не поддержали владельцы конно-железных дорог.</div></noscript>
+  </div>
+</section>
+
+<section class="block" id="result">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Итог дня</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Модель рельсов, хронология 1876–1881 годов и викторина вместе дают 100 баллов. Прогресс не сохраняется: перезагрузишь страницу — день начнётся заново.</p>
+    <div class="day-result">
+      <div class="dr-score" id="dayTxt">0 / 100 · звание: Гость дня</div>
+      <div class="dr-bar"><i id="dayBar" style="width:0%"></i></div>
+      <div class="dr-note">Сдвинь вагон с места, останови его двумя способами: сыростью и неизолированной осью; проверь число из журнала про 10 вёрст берлинского проекта; расставь события и ответь на вопросы викторины.</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="sources">
+  <div class="wrap">
+    <div class="kicker">Источники</div>
+    <h2>На чём стоит страница</h2>
+    <ul class="sources">
+      <li><a href="https://archive.org/details/188001" rel="noopener" target="_blank">«Электричество», 1880, № 1</a> (СПб., VI отдел Императорского Русского технического общества; скан Вологодской областной универсальной научной библиотеки в Internet Archive): с. 2 — отчёт VI отдела о сообщении Пироцкого «о передаче силы… на всякие расстояния» и о публичной беседе весной 1880 года; с. 12–13 — статья «Электрические железные дороги» о выставочной дороге Сименса 1879 года и о берлинском проекте.</li>
+      <li><a href="https://www.prlib.ru/Great_Russia/outstanding_scientists_XIX/Pirotsky" rel="noopener" target="_blank">«Фёдор Аполлонович Пироцкий (1845–1898)»</a>, Президентская библиотека имени Б. Н. Ельцина, проект «Великая Россия»: биография, переделка вагона конки, текст сообщения в печати 1880 года, выставка в Париже 1881 года, последние годы; список литературы (Б. Н. Ржонсницкий, 1951).</li>
+      <li><a href="https://web.archive.org/web/2025/https://electrotrans.spb.ru/novosti/2020/1940_k_175letiu_fedora_pirockogo_izobretatelya_tramvaya_i_geroya_stritarta" rel="noopener" target="_blank">«К 175-летию Фёдора Пироцкого, изобретателя трамвая и героя стрит-арта»</a>, СПб ГУП «Горэлектротранс», 2020 (копия Wayback Machine): опыты на полигоне и в 1876 году, 40 пассажиров, даты опытов в сентябре 1880 года, трамвай в Петербурге с 1907 года, сквер Пироцкого.</li>
+      <li><a href="https://web.archive.org/web/2025/https://www.electrotrans.spb.ru/novosti/2023/2875_elektricheskoe_chudo_143_goda_nazad_v_peterburge_prodemonstrirovali_perviy_tramvay" rel="noopener" target="_blank">«Электрическое чудо: 143 года назад в Петербурге продемонстрировали первый трамвай»</a>, СПб ГУП «Горэлектротранс», 2023 (копия Wayback Machine): Рождественский парк, 85 метров пути, вагон № 114, позиция владельцев конок.</li>
+      <li><a href="https://web.archive.org/web/2025/https://www.energomuseum.ru/expo/personalii/pirockii-fedor-apollonovich/" rel="noopener" target="_blank">«Пироцкий Федор Аполлонович»</a>, Виртуальный музей истории энергетики Северо-Запада (копия Wayback Machine): опыты на Волковом поле и Сестрорецкой ветке, слова Пироцкого о передаче работы, 40 пассажиров.</li>
+      <li><a href="https://web.archive.org/web/2025/https://dic.academic.ru/dic.nsf/bse/120675/%D0%9F%D0%B8%D1%80%D0%BE%D1%86%D0%BA%D0%B8%D0%B9" rel="noopener" target="_blank">«Пироцкий Фёдор Аполлонович»</a>, Большая советская энциклопедия, 3-е изд. (копия Wayback Machine): даты жизни, служба, опыты 1874 и 1880 годов.</li>
+      <li><a href="https://mirmetro.net/articles/artillerist-izobretatel" rel="noopener" target="_blank">А. Спарбер · «Артиллерист-изобретатель»</a>, журнал «Мир метро», 16 мая 2024: называет источником сообщения о 22 августа 1880 года пятый номер журнала «Электричество» за 1880 год.</li>
+      <li><a href="https://www.deutschlandmuseum.de/en/history/calendar/1881-05-16-the-first-electric-trams/" rel="noopener" target="_blank">«1881-05-16: The first electric trams»</a>, Deutschlandmuseum, Берлин: линия «Сименс и Гальске» в Лихтерфельде открыта 16 мая 1881 года, длина около 2,4 километра.</li>
+      <li>Изображения: <a href="https://commons.wikimedia.org/wiki/File:Pirotsky.jpg" rel="noopener" target="_blank">портрет Ф. А. Пироцкого</a>, фотография до 1898 года, фотограф неизвестен — общественное достояние; <a href="https://archive.org/details/188001" rel="noopener" target="_blank">страница журнала «Электричество»</a>, 1880, № 1, с. 12 — общественное достояние; <a href="https://commons.wikimedia.org/wiki/File:Die_Gartenlaube_(1881)_b_393.jpg" rel="noopener" target="_blank">«Электрическая железная дорога у Лихтерфельде»</a>, рисунок Г. Людерса, «Die Gartenlaube», 1881 — общественное достояние.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="calendar">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Календарь изобретений</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Выбери любой день — узнаешь, что русские сделали первыми в мире. Листай месяцы стрелками.</p>
+    <div id="calbox"></div>
+  </div>
+</section>
+
+<section class="block kd" id="kuda-dalshe">
+  <div class="wrap">
+    <div class="kd-kicker">Куда дальше</div>
+    <h2>Музей продолжается</h2>
+    <div class="kd-grid">
+      <div class="kd-card main"><span class="kd-lbl">Следующий день</span><a href="day-18feb-dokuchaev.html">18 февраля — Докучаев: чернозём — природное тело <span class="kd-arr">→</span></a>
+        <p>В 1879 году Докучаев определил почву как природное тело и взял за образец русский целинный чернозём.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Предыдущий день</span><a href="day-15feb-nesterov.html">15 февраля — Мёртвая петля Нестерова: круг в небе над Киевом <span class="kd-arr">→</span></a>
+        <p>Нестеров первым в мире замкнул мёртвую петлю и, по его словам, рискнул лишь анероидом за 13 рублей 50 копеек.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Ток и движение</span><a href="day-12feb-lenz.html">12 февраля — Правило Ленца <span class="kd-arr">→</span></a>
+        <p>Одно правило вместо двух: индукционный ток мешает движению, которое его вызвало.</p></div>
+      <div class="kd-card main"><span class="kd-lbl">Город-музей</span><a href="../../index.html">Русская цивилизация <span class="kd-arr">→</span></a>
+        <p>Все музеи проекта на одной карте.</p></div>
+    </div>
+    <p style="margin-top:16px"><a href="izobreteniya.html">Посмотреть изобретения по алфавиту →</a></p>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>
+  Русская цивилизация · «Что изобрели русские первыми в мире»</div></footer>
+
+<script type="application/json" data-proof>{"status":"found","gap_years":0,"claim_id":"rc:izobreteniya:pirotsky:claim-vagon-konki-na-elektrichestve-1880","ours":{"kind":"сообщение в печати","title":"«…в Санкт-Петербурге, на Песках, на углу Болотной улицы и Дегтярного переулка, г. Пироцким первый раз в России двинут вагон электрической силою, идущей по рельсам, по которым катятся колёса вагона»","date":"1880-09-03","holder":"22 августа (3 сентября) 1880, 12 часов дня; текст — по публикации Президентской библиотеки; «Мир метро» (2024) называет источником журнал «Электричество», 1880, № 5 — скан номера в открытом доступе не найден","source_url":"https://www.prlib.ru/Great_Russia/outstanding_scientists_XIX/Pirotsky"},"rival":{"name":"«Сименс и Гальске», Германия","date":"1881-05-16","doc_title":"электрическая трамвайная линия в Лихтерфельде для постоянного движения (Deutschlandmuseum)"}}</script>
+<script src="../../assets/museum-proof.js"></script>
+
+<script>
+/* ── СЧЁТ ── шкала из 100 держит assets/museum-score.js; здесь только реестр наград.
+   модель: вагон поехал 20 + ток через ось 10 + сырость остановила 10 + 10 вёрст из журнала 10;
+   хронология 4×5; викторина 5×6 = 100. */
+window.MUSEUM_SCORE = {awards:{m0:20, m1:10, m2:10, m3:10, h:[4,5], q:[5,6]},
+  ranks:[[100,'Ученик Пироцкого'],[70,'Кондуктор с Песков'],[40,'Пассажир империала'],[0,'Гость дня']]};
+</script>
+<script src="../../assets/museum-score.js"></script>
+<script>
+(function(){
+  var $ = function(id){return document.getElementById(id);};
+  $('readBtn').onclick = function(){ $('story').scrollIntoView({behavior:'smooth'}); };
+  $('listenBtn').onclick = function(){ $('audioguide').scrollIntoView({behavior:'smooth'}); };
+  var tb=$('themeInvBtn');
+  tb.onclick=function(){ var b=$('themeInvBody'), open=b.hidden; b.hidden=!open; tb.setAttribute('aria-expanded',open?'true':'false'); tb.textContent=open?'▲ Скрыть':tb.dataset.label; };
+  function msg(id,t,cls){ var m=$(id); m.className='lab-msg'+(cls?' '+cls:''); m.textContent=t; }
+  function pc(x){ return Math.round(x*100)+' %'; }
+
+  /* ── РЕЛЬСЫ ВМЕСТО ПРОВОДОВ ── «Электричество», 1880, № 1, с. 12–13: у Сименса до локомотива доходило «до 60 %» работы;
+     путь берлинского проекта — 0,2 омады на версту, один источник примерно на 10 вёрст; колёса одной стороны изолированы.
+     Условные числа (подпись модели): генератор 0,5 Ом, двигатель 8 Ом, в машинах теряется 35 %, утечка в сырость 0,5 См на версту.
+     Путь считается лестницей из коротких участков: сопротивление рельсов последовательно, утечка через шпалы — параллельно. */
+  function sim(d, wet, ins){
+    var E=100, Rg=0.5, Rm=8, r=0.2, g=wet?0.5:0.0005, K=0.65;
+    if (!ins) return {share:0, pull:0, leak:0, shrt:true};
+    var N=Math.max(20,Math.ceil(d*40)), rs=r*d/N, gs=g*d/N, Z=Rm;
+    for (var i=0;i<N;i++){ Z+=rs; Z=1/(1/Z+gs); }
+    var I=E/(Rg+Z), It=I, V=E-I*Rg;
+    for (var j=0;j<N;j++){ var Il=I-V*gs; V-=Il*rs; I=Il; }
+    var Pm=V*I, Pref=E*E*Rm/((Rg+Rm)*(Rg+Rm));
+    return {share:K*Pm/(E*It), pull:Pm/Pref, leak:1-I/It, shrt:false};
+  }
+
+  var D=[0.08,0.25,0.5,1,2,3.5,5,10],
+      DL=['85 м','¼ версты','½ версты','1 верста','2 версты','3,5 версты','5 вёрст','10 вёрст'];
+  var cv=$('rail'), ctx=cv.getContext('2d'), wet=false, ins=true, mDone={}, anim=null, last=null;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function size(){ var w=cv.clientWidth||760, d=window.devicePixelRatio||1; cv.width=Math.round(w*d); cv.height=Math.round(w*300/760*d); }
+
+  function scene(k, phase){
+    var dp=window.devicePixelRatio||1, w=cv.width, h=cv.height, u=w/760;
+    ctx.clearRect(0,0,w,h);
+    var y1=200*u, y2=226*u, x0=96*u, xe=w-16*u;
+    var cx = x0+60*u + (xe-x0-190*u)*Math.log(D[k]/0.08)/Math.log(10/0.08);
+    /* земля и шпалы */
+    ctx.fillStyle= wet ? '#3b4a52' : '#4b5a3c'; ctx.fillRect(0,y2+8*u,w,h-y2);
+    ctx.fillStyle= wet ? '#5c5348' : '#6b5a42';
+    for (var x=x0; x<xe; x+=22*u) ctx.fillRect(x,y1-4*u,8*u,y2-y1+12*u);
+    /* генератор */
+    ctx.fillStyle='#8a6a3a'; ctx.fillRect(12*u,150*u,74*u,70*u);
+    ctx.fillStyle='#e9dcc0'; ctx.font=(12*u)+'px system-ui,sans-serif'; ctx.textAlign='center';
+    ctx.fillText('генератор',49*u,140*u); ctx.beginPath(); ctx.arc(49*u,185*u,20*u,0,7); ctx.strokeStyle='#e9dcc0'; ctx.lineWidth=2*u; ctx.stroke();
+    /* провода к рельсам */
+    ctx.strokeStyle='#d8b56a'; ctx.lineWidth=2*u;
+    ctx.beginPath(); ctx.moveTo(86*u,170*u); ctx.lineTo(x0,y1); ctx.moveTo(86*u,205*u); ctx.lineTo(x0,y2); ctx.stroke();
+    /* рельсы */
+    ctx.lineWidth=4*u; ctx.strokeStyle='#c9c9c9';
+    ctx.beginPath(); ctx.moveTo(x0,y1); ctx.lineTo(xe,y1); ctx.moveTo(x0,y2); ctx.lineTo(xe,y2); ctx.stroke();
+    ctx.fillStyle='rgba(233,220,192,.8)'; ctx.textAlign='left'; ctx.font=(11*u)+'px system-ui,sans-serif';
+    ctx.fillText('рельс «туда»',x0+4*u,y1-10*u); ctx.fillText('рельс «обратно»',x0+4*u,y2+24*u);
+    /* вагон конки с империалом */
+    var bw=120*u, bx=cx-bw/2, by=y1-92*u;
+    ctx.fillStyle='#7d2f2a'; ctx.fillRect(bx,by+30*u,bw,52*u);
+    ctx.fillStyle='#e9dcc0'; for (var wi=0; wi<5; wi++) ctx.fillRect(bx+8*u+wi*22*u,by+40*u,16*u,18*u);
+    ctx.strokeStyle='#e9dcc0'; ctx.lineWidth=1.5*u; ctx.strokeRect(bx-4*u,by+8*u,bw+8*u,22*u);
+    for (var p=0;p<7;p++){ ctx.beginPath(); ctx.moveTo(bx+p*bw/6,by+8*u); ctx.lineTo(bx+p*bw/6,by+30*u); ctx.stroke(); }
+    ctx.fillStyle='#e9dcc0'; ctx.textAlign='center'; ctx.font=(10*u)+'px system-ui,sans-serif'; ctx.fillText('империал',cx,by+2*u);
+    ctx.fillStyle='#2a2a2a'; ctx.fillRect(cx-16*u,by+84*u,32*u,12*u);
+    ctx.fillStyle='#e0a23a'; ctx.font=(9*u)+'px system-ui,sans-serif'; ctx.fillText('двигатель',cx,by+80*u);
+    [cx-38*u,cx+38*u].forEach(function(wx){ ctx.beginPath(); ctx.arc(wx,y1-8*u,9*u,0,7); ctx.fillStyle='#222'; ctx.fill(); ctx.strokeStyle='#999'; ctx.stroke(); });
+    ctx.fillStyle='rgba(233,220,192,.85)'; ctx.font=(12*u)+'px system-ui,sans-serif'; ctx.fillText(DL[k]+' от генератора',cx,by-12*u);
+    if (phase==null) return;
+    /* ток: бегущие точки по пути */
+    var r=last, t=phase;
+    function dots(xa,ya,xb,yb,n,col){ ctx.fillStyle=col; for (var q=0;q<n;q++){ var f=((q/n)+t)%1; ctx.beginPath(); ctx.arc(xa+(xb-xa)*f, ya+(yb-ya)*f, 3*u,0,7); ctx.fill(); } }
+    if (r.shrt){
+      dots(x0,y1,cx-38*u,y1,8,'#e0a23a'); dots(cx-38*u,y1,cx-38*u,y2,2,'#c0573f'); dots(cx-38*u,y2,x0,y2,8,'#e0a23a');
+      ctx.strokeStyle='#c0573f'; ctx.lineWidth=3*u; ctx.beginPath(); ctx.moveTo(cx-38*u,y1-8*u); ctx.lineTo(cx-38*u,y2); ctx.stroke();
+      ctx.fillStyle='#ffb07a'; ctx.font=(12*u)+'px system-ui,sans-serif'; ctx.fillText('ток идёт через ось, мимо двигателя',cx,y2+40*u);
+      return;
+    }
+    dots(x0,y1,cx-38*u,y1,10,'#e0a23a'); dots(cx+38*u,y2,x0,y2,10,'#e0a23a');
+    var a=Math.max(0.15,Math.min(1,r.pull)); ctx.globalAlpha=a; dots(cx-38*u,y1-8*u,cx,by+90*u,3,'#e0a23a'); dots(cx,by+90*u,cx+38*u,y2,3,'#e0a23a'); ctx.globalAlpha=1;
+    if (wet && r.leak>0.05){
+      ctx.strokeStyle='rgba(127,176,224,'+Math.min(0.9,r.leak)+')'; ctx.lineWidth=1.5*u;
+      var step=Math.max(14*u,(cx-x0)/Math.max(3,Math.round(14*r.leak)));
+      for (var lx=x0+10*u; lx<cx-40*u; lx+=step){ var off=((t*40*u)%8*u); ctx.beginPath(); ctx.moveTo(lx,y1+3*u); ctx.lineTo(lx+3*u,y1+10*u+off*0.2); ctx.lineTo(lx-2*u,y2-4*u); ctx.lineTo(lx+2*u,h-6*u); ctx.stroke(); }
+      ctx.fillStyle='#9cc6ee'; ctx.font=(11*u)+'px system-ui,sans-serif'; ctx.textAlign='left'; ctx.fillText('утечка через мокрые шпалы в землю',x0+6*u,h-8*u);
+    }
+  }
+  size(); scene(3,null);
+  window.addEventListener('resize',function(){ size(); scene(+dist.value, last?0:null); });
+
+  var dist=$('dist');
+  dist.oninput=function(){ $('disto').textContent=DL[+dist.value]; if (anim) cancelAnimationFrame(anim); last=null; scene(+dist.value,null); };
+  function pair(a,b,on,set){ $(a).classList.toggle('on',on); $(b).classList.toggle('on',!on); $(a).setAttribute('aria-pressed',on?'true':'false'); $(b).setAttribute('aria-pressed',on?'false':'true'); set(on); if (anim) cancelAnimationFrame(anim); last=null; scene(+dist.value,null); }
+  $('dry').onclick=function(){ pair('dry','wet',true,function(v){ wet=!v; }); };
+  $('wet').onclick=function(){ pair('dry','wet',false,function(v){ wet=!v; }); };
+  $('insOn').onclick=function(){ pair('insOn','insOff',true,function(v){ ins=v; }); };
+  $('insOff').onclick=function(){ pair('insOn','insOff',false,function(v){ ins=v; }); };
+
+  function verdict(k,r){
+    var d=D[k], left=[];
+    $('sS').textContent = r.shrt ? '0 %' : pc(r.share);
+    $('sL').textContent = r.shrt ? '—' : pc(r.leak);
+    $('sP').textContent = r.shrt ? '0' : String(Math.round(r.pull*100));
+    if (r.shrt){
+      if (!mDone.m1){ mDone.m1=1; award('m1',10); }
+      msg('mMsg','Вагон стоит. Колёса обеих сторон сидят на одной железной оси, и ток уходит из рельса в рельс прямо через ось, мимо двигателя. Поэтому в берлинском проекте 1880 года колёса одной стороны изолировали от вагона: ток входит в колёса одной стороны, проходит через двигатель и только потом через колёса другой стороны уходит в рельс «обратно».','bad');
+      return;
+    }
+    var moves = r.pull>=0.40;
+    if (!moves){
+      if (wet && !mDone.m2){ mDone.m2=1; award('m2',10); }
+      msg('mMsg','Вагон стоит: '+pc(r.leak)+' тока ушло через мокрые шпалы в землю, до колёс дошло всего '+pc(r.share)+' работы. Рельсы-провода годятся, только если они изолированы от земли. В Большой советской энциклопедии сказано, что у Пироцкого токопроводом служили «изолированные от земли рельсы».','bad');
+      return;
+    }
+    if (!mDone.m0){ mDone.m0=1; award('m0',20); }
+    var doc = (d===10 && !wet);
+    if (doc && !mDone.m3){ mDone.m3=1; award('m3',10); }
+    var t;
+    if (doc) t='10 вёрст по сухому пути — и вагон всё ещё едет, до колёс доходит '+pc(r.share)+' работы. Для берлинского проекта Сименса журнал «Электричество» в 1880 году считал, что одного источника хватит примерно на 10 вёрст.';
+    else if (!wet && d<=0.5) t='Вагон поехал. До колёс доходит '+pc(r.share)+' работы паровой машины — столько же, сколько у Сименса на выставке 1879 года: «до 60 %».';
+    else if (wet) t='Вагон поехал, но '+pc(r.leak)+' тока уже уходит через мокрые шпалы в землю. Отведи вагон дальше от генератора — и сырость его остановит.';
+    else t='Вагон поехал. Чем дальше от генератора, тем больше работы съедает сопротивление рельсов: до колёс доходит '+pc(r.share)+'.';
+    if (!mDone.m3) left.push('отведи вагон на 10 вёрст по сухому пути');
+    if (!mDone.m2) left.push('попробуй тот же путь после дождя');
+    if (!mDone.m1) left.push('посади колёса на общую ось');
+    msg('mMsg', t + (left.length ? ' Дальше: '+left.join('; ')+'.' : ''),'ok');
+  }
+
+  $('go').onclick=function(){
+    var k=+dist.value, r=sim(D[k],wet,ins); last=r;
+    if (anim) cancelAnimationFrame(anim);
+    verdict(k,r);
+    if (reduce){ scene(k,0); return; }
+    var t0=null;
+    (function fr(ts){ if (t0===null) t0=ts; var t=((ts-t0)/1600)%1; scene(k,t); if (ts-t0<4000) anim=requestAnimationFrame(fr); else scene(k,0); })(performance.now());
+  };
+
+  /* ── ХРОНОЛОГИЯ ── даты по новому стилю */
+  var E=[
+    {o:2,t:'Пироцкий двигает электричеством вагон конки на Песках в Петербурге',d:'3 сентября 1880 (22 августа по старому стилю)'},
+    {o:0,t:'Двигатель Пироцкого работает в километре от источника на заброшенной ветке у Сестрорецка',d:'лето 1876'},
+    {o:3,t:'«Сименс и Гальске» открывает трамвайную линию для постоянного движения в Лихтерфельде',d:'16 мая 1881'},
+    {o:1,t:'Сименс показывает на выставке в Берлине электрическую дорогу: локомотив и три вагона',d:'1879'}
+  ], hNext=0;
+  E.forEach(function(e,i){
+    var b=document.createElement('button'); b.type='button'; b.className='seg'; b.innerHTML='<span class="n"></span>'; b.appendChild(document.createTextNode(e.t));
+    b.onclick=function(){
+      if (e.done) return;
+      if (e.o!==hNext){ b.classList.add('wrongpick'); setTimeout(function(){ b.classList.remove('wrongpick'); },700);
+        msg('hMsg','Не сейчас: есть событие раньше этого.','bad'); return; }
+      e.done=true; b.classList.add('right'); b.disabled=true; b.querySelector('.n').textContent=(hNext+1)+'.';
+      b.appendChild(document.createTextNode(' — '+e.d)); award('h'+i,5); hNext++;
+      msg('hMsg', hNext<4 ? 'Верно. Что дальше?' : 'Порядок восстановлен. Рельсы как провода Пироцкий испытал ещё в 1876 году. Первую электрическую дорогу с пассажирами показал Сименс в 1879-м, но это был выставочный локомотив. Обычный вагон конки на городских рельсах первым двинул Пироцкий в 1880 году, а линию для постоянного движения первым открыл Сименс в 1881-м.','ok');
+    };
+    $('chrono').appendChild(b);
+  });
+
+  /* ── ВИКТОРИНА ── */
+  var Q = [
+    {q:'По чему шёл ток к двигателю вагона Пироцкого?', o:['По проводу, натянутому над улицей','По рельсам, по которым катились колёса','От аккумуляторов в самом вагоне'], a:1,
+     e:'По рельсам: вагон двигался «электрической силою, идущей по рельсам, по которым катятся колеса вагона» (сообщение в печати 1880 года).'},
+    {q:'Где 22 августа 1880 года вагон двинулся без лошадей?', o:['На Невском проспекте у Гостиного двора','В Сестрорецке, на заброшенной ветке','На Песках, на углу Болотной улицы и Дегтярного переулка'], a:2,
+     e:'На Песках, на углу Болотной улицы и Дегтярного переулка. Сейчас там сквер Пироцкого.'},
+    {q:'Что Сименс показал в 1879 году в Берлине?', o:['Выставочную дорогу: маленький локомотив вёз три вагона','Трамвайную линию для постоянного движения','Вагон конки с двигателем под кузовом'], a:0,
+     e:'Выставочную дорогу: локомотив вёз три вагона с 18 пассажирами со скоростью до 15 вёрст в час. Линию для постоянного движения Сименс открыл в Лихтерфельде в 1881 году.'},
+    {q:'Сколько пассажиров брал переделанный вагон Пироцкого?', o:['До 18','До 40','До 6'], a:1,
+     e:'До 40. Восемнадцать пассажиров везли три вагона выставочной дороги Сименса.'},
+    {q:'Почему вагон Пироцкого не пошёл по Петербургу?', o:['Его не поддержали владельцы конно-железных дорог','Вагон сгорел на втором опыте','Двигатель не мог сдвинуть вагон с места'], a:0,
+     e:'Владельцы конно-железных дорог не захотели тратиться на переделку. Электрический трамвай пошёл в Петербурге только в 1907 году.'}
+  ];
+  var qb = $('quizBox');
+  Q.forEach(function(it, qi){
+    var wrap = document.createElement('div');
+    var h = document.createElement('p'); h.className='quiz-q'; h.textContent=(qi+1)+'. '+it.q; wrap.appendChild(h);
+    var exp = document.createElement('div'); exp.className='exp'; exp.setAttribute('aria-live','polite');
+    var btns = it.o.map(function(txt, oi){
+      var b=document.createElement('button'); b.type='button'; b.className='opt'; b.textContent=txt;
+      b.onclick=function(){
+        if (wrap.dataset.done) return; wrap.dataset.done='1';
+        btns.forEach(function(x,xi){ x.disabled=true; if (xi===it.a) x.classList.add('correct'); });
+        if (oi===it.a){ award('q'+qi,6); exp.textContent='Верно. '+it.e; }
+        else { b.classList.add('wrong'); exp.textContent='Не совсем. '+it.e; }
+        exp.classList.add('show');
+      };
+      wrap.appendChild(b); return b;
+    });
+    wrap.appendChild(exp); qb.appendChild(wrap);
+  });
+})();
+</script>
+<script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
+<script>window.MUSEUM_CHROME={
+  museum:{title:'Что изобрели русские первыми в мире',href:'index.html'},
+  share:{title:'Вагон Пироцкого: конка без лошадей на Песках — музей «Что изобрели русские первыми в мире»',
+         text:'22 августа 1880 года на Песках в Петербурге Фёдор Пироцкий двинул вагон конки электричеством, которое шло к двигателю по рельсам под колёсами. Что Россия дала миру раньше всех — день за днём.'},
+  prev:{href:'day-15feb-nesterov.html',title:'15 февраля · Нестеров'},
+  next:{href:'day-18feb-dokuchaev.html',title:'18 февраля · Докучаев'},
+  all:{href:'index.html',label:'Все изобретения'},
+  city:'../../index.html',
+  random:['day-01jan-cabletv.html','day-02jan-luna1.html','day-03jan-anosov.html','day-04jan-pilchikov.html','day-05jan-shukhov.html','day-06jan-orlov.html','day-08jan-icebreaker.html','day-09jan-blinov.html','day-10jan-britnev.html','day-11jan-kostovich.html','day-12jan-r7.html','day-13jan-k278.html','day-14jan-lira.html','day-15jan-kovalevskaya.html','day-16jan-soyuz45.html','day-19jan-kantorovich.html','day-21jan-obninsk.html','day-22jan-landau.html','day-23jan-umov.html','day-24jan-k162.html','day-25jan-korsakov.html','day-26jan-podvodnaya.html','day-27jan-pentium.html','day-28jan-havkin.html','day-30jan-kotelnikov.html','day-31jan-girotron.html','day-01feb-bekhterev.html','day-02feb-edinorog.html','day-03feb-luna9.html','day-04feb-samovar.html','day-05feb-boldyrev.html','day-06feb-zelinsky.html','day-07feb-setun.html','day-08feb-mendeleev.html','day-09feb-chizhevsky.html','day-10feb-aerosani.html','day-12feb-lenz.html','day-15feb-nesterov.html','day-17feb-pirotsky.html','day-18feb-dokuchaev.html','day-18mar-leonov.html','day-15may-mechnikov.html','day-16jun-tereshkova.html','day-26sep-pavlov.html','day-15nov-buran.html','day-25nov-pirogov.html','day-01dec-lobachevsky.html','day-14dec-laser.html']
+};</script>
+<script src="../../assets/museum-chrome.js"></script>
+<script>window.MUSEUM_SUPPORT={museum:'Что изобрели русские первыми в мире'};</script>
+<script src="../../assets/museum-support.js"></script>
+<script src="calendar-izobreteniya.js"></script>
+<script>window.MUSEUM_CALENDAR_INITIAL='02-17';</script>
+<script src="../../assets/museum-calendar-month.js"></script>
+<script>window.MUSEUM_RETURN={riddle:{q:"Почему в вагоне, который получает ток по двум рельсам, колёса одной стороны нельзя оставить на общей железной оси с колёсами другой стороны?",a:"Ток пойдёт из рельса в рельс прямо через ось, мимо двигателя, и вагон не тронется. Колёса одной стороны изолируют, чтобы ток прошёл через двигатель.",src:"«Электрические железные дороги», журнал «Электричество», 1880, № 1, с. 13 (описание берлинского проекта Сименса)"}};</script>
+<script src="../../assets/museum-return.js" data-museum="izobreteniya" data-day="02-17"></script>
+<script defer src="../../assets/analytics.js"></script>
+
+
+
+
+
+
+
+
+
+<script>window.MUSEUM_AUDIOGUIDE={
+  audioSrc:"audio-guide-pirotsky-ru.mp3",
+  durationLabel:"3 минуты 5 секунд",
+  lead:"Голос ведёт по залу Фёдора Пироцкого: портрет у входа, опыты с рельсами вместо проводов, журнал «Электричество» 1880 года, полдень 22 августа на Песках и то, что было после. Шесть остановок: портрет, страница журнала, гравюра и рассказ между ними. Слушать можно фоном, пока читаешь историю ниже.",
+  stops:[
+    {t:0,mark:"0:00",title:"Портрет у входа"},
+    {t:28,mark:"0:28",title:"Рельсы вместо проводов"},
+    {t:55,mark:"0:55",title:"Журнал 1880 года"},
+    {t:91,mark:"1:31",title:"Полдень на Песках"},
+    {t:122,mark:"2:02",title:"Конка не уступила"},
+    {t:143,mark:"2:23",title:"Лихтерфельде"}
+  ],
+  transcript:[
+    "<p>Факты: портрет — Викисклад, «Pirotsky.jpg»; дата и место рождения — Президентская библиотека, «Фёдор Аполлонович Пироцкий (1845–1898)»; Большая советская энциклопедия, 3-е изд.</p>",
+    "<p>Факты: служба с 1871 года, опыты 1874 года на Волковом поле — Большая советская энциклопедия, 3-е изд.; ветка у Сестрорецка, 1876 год, рельсы как прямой и обратный провод — Виртуальный музей истории энергетики Северо-Запада; СПб ГУП «Горэлектротранс» (2020).</p>",
+    "<p>Факты: отчёт VI отдела и статья «Электрические железные дороги» — «Электричество», 1880, № 1, с. 2 и 12–13.</p>",
+    "<p>Факты: переделка вагона, двигатель под кузовом, зубчатая передача — Президентская библиотека; сообщение в печати о 22 августа 1880 года — по публикациям Президентской библиотеки и «Горэлектротранса»; 40 пассажиров — «Горэлектротранс» (2020), Виртуальный музей истории энергетики.</p>",
+    "<p>Факты: опыты в сентябре 1880 года, позиция владельцев конок, трамвай в Петербурге с 1907 года и в Киеве с 1892 года — СПб ГУП «Горэлектротранс» (2020, 2023).</p>",
+    "<p>Факты: линия в Лихтерфельде 16 мая 1881 года — Deutschlandmuseum; рисунок — «Die Gartenlaube», 1881, Викисклад; последние годы — Президентская библиотека; сквер Пироцкого — «Горэлектротранс» (2020).</p>"
+  ],
+  note:"Озвучено синтезом речи — временно, до записи голосом автора музея."
+};</script>
+<script src="../../assets/museum-audioguide.js"></script>
+</body>
+</html>
