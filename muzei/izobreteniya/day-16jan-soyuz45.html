@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="ru" data-museum="izobreteniya">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Первая в мире стыковка пилотируемых кораблей, «Союз-4» и «Союз-5» — Что изобрели русские первыми в мире, 16 января</title>
+<!--
+  Страница дня 16 января. Наряд stranicy-izob-0910 (claude2, 11.10.2026), карточка #762.
+  Форма — вариант А музея изобретений (Сергей 12.09.2026): лента ударов, подробности свёрнуты.
+  Паспорт выпуска: rc-museum-production/izobreteniya/day-16jan-soyuz45/passport/issue.json
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --dark:#060c17; --dark2:#0c1826; --surface:#111f33;
+    --card:rgba(255,255,255,.05); --card-b:rgba(255,255,255,.09);
+    --gold:#c9a84c; --gold-l:#e4c97a; --gold-g:rgba(201,168,76,.13);
+    --ink:#e8eef5; --muted:#7a9ab8; --line:rgba(255,255,255,.07);
+    --accent:#2d8cbf; --accent2:#1f6f8b;
+    /* legacy compat */
+    --paper:#0c1826; --paper2:#111f33;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Inter','Segoe UI',sans-serif;color:var(--ink);background:var(--dark);line-height:1.72}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.13;margin:0}
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent)}
+
+  /* ── ШАПКА ── */
+  header.top{background:rgba(6,12,23,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--card-b);color:#fff;position:sticky;top:0;z-index:30}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+  .logo svg{display:block;filter:drop-shadow(0 0 8px rgba(201,168,76,.4))}
+  .logo .lt{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:16px}
+  .logo .lt small{display:block;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-family:'Inter',sans-serif}
+  .score{background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:6px 16px;font-size:13px;color:var(--gold-l);cursor:pointer;font-family:'Inter',sans-serif}
+  .score-info{position:absolute;right:12px;top:66px;max-width:260px;background:#0e1c30;color:var(--ink);border:1px solid var(--card-b);border-radius:14px;padding:14px 16px;font-size:13px;line-height:1.6;box-shadow:0 20px 60px rgba(0,0,0,.6);display:none;z-index:40}
+  .score-info.show{display:block}
+
+  /* ── HERO — СТАНДАРТ (не менять): 3D-сцена сверху, текст отдельным блоком ниже ── */
+  .hero-scene{position:relative;height:52vh;min-height:300px;max-height:520px;overflow:hidden;background:linear-gradient(160deg,#0a1e3a 0%,#1a3a6a 55%,#0d2240 100%)}
+  .hero-scene canvas.scene,.hero-scene img.scene{width:100%;height:100%;display:block;object-fit:cover}
+  .scene-caption{background:#060d18;padding:11px 0 12px}
+  .scene-caption .wrap{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+  .scene-cap{font-size:13.5px;line-height:1.6;color:var(--muted);border-left:2px solid rgba(201,168,76,.4);padding-left:14px;flex:1 1 420px}
+  .scene-hint{flex:0 0 auto;font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.4px;color:#e4c97a;
+    background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.34);border-radius:24px;padding:7px 16px;font-weight:600}
+  .hero-lead{background:linear-gradient(180deg,#0c1826 0%,#060c17 100%);color:#fff;padding:28px 0 38px}
+  .hero-lead .museum{color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:12px;opacity:.9}
+  .hero-lead .who{font-family:'Inter',sans-serif;font-size:clamp(13px,3vw,15px);letter-spacing:.4px;color:var(--accent-l,#7dc8ff);margin-bottom:10px}
+  .hero-lead .who i{font-style:normal;color:#7893ab;font-weight:400}
+  .hero-lead h1{color:#fff;font-size:56px;font-weight:900;line-height:1.04;margin-bottom:16px}
+  .hero-lead .hook{color:#b8ccde;font-size:19px;max-width:580px;margin-bottom:28px;line-height:1.65;font-weight:400}
+  .hero-lead .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+  @media(max-width:680px){.hero-lead h1{font-size:34px}.hero-lead .hook{font-size:16px}
+    .hero-scene{height:34vh;min-height:230px;max-height:300px}
+    .scene-caption .wrap{flex-direction:column;gap:9px}
+    .scene-hint{order:-1;align-self:flex-start;font-size:11.5px;padding:6px 13px}
+    .scene-cap{font-size:12.8px;flex:1 1 auto}}
+  .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:16px;font-family:'Inter',sans-serif;letter-spacing:.5px}
+
+  /* ── НАВИГАЦИЯ ДНЯ ── */
+  .daynav{position:sticky;top:64px;z-index:25;background:rgba(6,12,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-b)}
+  .daynav .wrap{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+  .daynav::-webkit-scrollbar{display:none}
+  .daynav a{flex:0 0 auto;padding:14px 20px;font-size:11px;font-weight:700;font-family:'Inter',sans-serif;color:var(--muted);text-decoration:none;white-space:nowrap;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:.18s}
+  .daynav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+  /* ── СЕКЦИИ ── */
+  section.block{padding:64px 0;border-bottom:1px solid var(--line);scroll-margin-top:130px}
+  .kicker{font-size:10px;text-transform:uppercase;letter-spacing:3.5px;color:var(--gold);font-weight:700;font-family:'Inter',sans-serif;margin-bottom:8px}
+  section.block h2{font-size:34px;color:#fff;margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink)}
+  .pull{background:var(--gold-g);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 14px 14px 0;font-style:italic;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-size:20px;line-height:1.5;margin:26px 0}
+
+  /* ── КНОПКИ ── */
+  .btn{cursor:pointer;border:none;border-radius:12px;padding:14px 26px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;background:var(--accent2);color:#fff;transition:.18s;letter-spacing:.2px}
+  .btn:hover{filter:brightness(1.18)}
+  .btn.ghost{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid var(--card-b)}
+  .btn.ghost:hover{background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.2)}
+  .btn.gold{background:linear-gradient(135deg,var(--gold),#b8882b);color:#1a0f00;box-shadow:0 4px 20px rgba(201,168,76,.25)}
+  .btn.gold:hover{filter:brightness(1.1);box-shadow:0 6px 28px rgba(201,168,76,.4)}
+  .btn:active{transform:translateY(1px)}
+  .pulse{animation:pulse .9s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+
+  /* ── КАРТОЧКИ ── */
+  .card{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:20px 22px;margin:16px 0;backdrop-filter:blur(6px)}
+
+  /* ── КВИЗ ── */
+  .opt{display:block;width:100%;text-align:left;background:rgba(255,255,255,.04);border:1px solid var(--card-b);border-radius:12px;padding:13px 16px;margin:8px 0;cursor:pointer;font-size:15px;color:var(--ink);font-family:'Inter',sans-serif;transition:.16s}
+  .opt:hover{border-color:var(--accent);background:rgba(45,140,191,.08)}
+  .opt.correct{background:rgba(40,120,60,.18);border-color:#3f9b52;color:#7ed4a0;font-weight:600}
+  .opt.wrong{background:rgba(180,40,40,.13);border-color:#c0453f;color:#f08080}
+  .exp{margin-top:10px;font-size:14px;background:var(--gold-g);border-radius:10px;padding:12px 14px;display:none;color:var(--gold-l)}
+  .exp.show{display:block}
+
+  /* ── ИТОГ ДНЯ ── */
+  .day-result{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:22px 24px;max-width:460px}
+  .dr-rank{font-family:'Playfair Display',Georgia,serif;font-size:28px;color:var(--gold-l);font-weight:700}
+  .dr-score{font-size:16px;margin:4px 0 12px;color:var(--ink)}.dr-score span{color:var(--muted);font-size:14px}
+  .dr-bar{height:8px;background:rgba(255,255,255,.08);border-radius:6px;overflow:hidden}
+  .dr-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),var(--gold));transition:width .6s cubic-bezier(.2,.7,.2,1)}
+  .dr-note{margin-top:12px;font-size:14px;color:var(--muted)}
+
+  /* ── РЕКЛАМНЫЕ СЛОТЫ ── */
+  .ad-slot{position:relative;margin:26px 0;background:rgba(255,255,255,.02);border:1px dashed rgba(255,255,255,.1);border-radius:14px;min-height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px}
+  .ad-slot .lbl{position:absolute;top:7px;right:12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.15);font-family:'Inter',sans-serif}
+  .ad-slot .ph-txt{font-size:12px;max-width:80%;color:rgba(255,255,255,.18)}
+  .ad-slot.billboard{min-height:108px}
+  .adband{background:transparent;border-bottom:none}
+
+  footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
+  .crumbs{background:rgba(6,12,23,.6);border-bottom:1px solid var(--card-b);font-family:'Inter',sans-serif;font-size:12.5px}
+  .crumbs .wrap{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  .crumbs a{color:var(--gold-l);text-decoration:none;white-space:nowrap}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--muted);opacity:.6}
+  .crumbs .here{color:var(--muted);white-space:nowrap}
+
+
+  /* ── ШАПКА: четыре строки по museum-core §6-бис ── */
+  header.top{display:block;text-align:center;padding:10px 12px 8px;height:auto;position:relative}
+  header.top .b1{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:15px;letter-spacing:.5px;color:#fff}
+  header.top .b2{font-size:11px;color:var(--muted);margin-top:2px}
+  header.top .b3{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:6px}
+  header.top .b4{font-size:12.5px;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-style:italic}
+  header.top .score{position:absolute;right:12px;top:10px}
+  .daynav{top:0}
+  .hero-scene{background:#0e1c2c;height:38vh;min-height:250px;max-height:400px}
+  @media(max-width:680px){.hero-lead h1{font-size:31px}}
+  .hero-scene img.scene{object-fit:cover;object-position:50% 42%}
+  .date-origin{font-size:13px;color:#9fb4c8;margin:-6px 0 12px;max-width:62ch}
+  .hero-lead .hook{color:#c6d8e8;max-width:62ch}
+  .hero-under{background:linear-gradient(180deg,#060d18,#060c17);padding:4px 0 22px}
+  .stamp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(125,200,255,.28);margin-top:14px}
+  .stamp>div{padding:11px 12px;border-left:1px solid rgba(125,200,255,.16);min-width:0}
+  .stamp>div:first-child{border-left:0}
+  .stamp .v{font-size:clamp(15px,3.4vw,21px);font-weight:700;color:#8fd3ff;line-height:1.1;overflow-wrap:anywhere}
+  .stamp .k{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#8fa5b9;margin-top:5px}
+  @media(max-width:600px){.stamp{grid-template-columns:repeat(2,minmax(0,1fr))}.stamp>div:nth-child(3){border-left:0}.stamp>div:nth-child(n+3){border-top:1px solid rgba(125,200,255,.16)}}
+
+  /* ── ЛЕНТА УДАРОВ (museum-inventions, вариант А; museum-core §5-бис) ── */
+  .udary{list-style:none;margin:18px 0 0;padding:0;counter-reset:u}
+  .udary>li{border-top:1px solid var(--line);padding:4px 0}
+  .udary details>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:34px 1fr;gap:10px;padding:12px 0;font-size:17px;line-height:1.55;color:var(--ink)}
+  .udary details>summary::-webkit-details-marker{display:none}
+  .udary details>summary::before{counter-increment:u;content:counter(u);font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:20px;color:var(--gold);line-height:1.3}
+  .udary .more-lbl{display:block;grid-column:2;font-size:12.5px;color:var(--gold-l);letter-spacing:.3px;margin-top:4px}
+  .udary .more-lbl::after{content:' ▾'}
+  .udary details[open] .more-lbl::after{content:' ▴'}
+  .udary details[open] .more-lbl .o{display:none}
+  .udary details:not([open]) .more-lbl .c{display:none}
+  .udary summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+  .udary .det{margin:0 0 14px 44px;padding:12px 16px;background:rgba(255,255,255,.035);border-left:2px solid rgba(201,168,76,.45);border-radius:0 10px 10px 0;font-size:15px;color:#d5e0ea}
+  .udary .det p{margin:8px 0}
+  .udary .tag{display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1a0f00;background:var(--gold-l);border-radius:6px;padding:1px 7px;margin-right:6px}
+  .udary .find{border-left:3px solid var(--gold);padding-left:8px}
+  figure.fig{margin:18px 0}
+  figure.fig img{max-width:100%;height:auto;border-radius:10px;display:block}
+  figure.fig figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5}
+  .src-note{font-size:12px;color:#8fa5b9}
+
+  /* ── МОДЕЛЬ ДНЯ (главное предметное действие) ── */
+  .lab{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:18px 18px 20px;margin-top:14px}
+  .lab-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+  .lab-row .lbl{flex:0 0 100%;font-size:13px;color:var(--muted);letter-spacing:.3px}
+  .seg{cursor:pointer;border:1px solid var(--card-b);background:rgba(255,255,255,.04);color:var(--ink);border-radius:10px;padding:10px 14px;font:inherit;font-size:14.5px;min-height:44px}
+  .seg[aria-pressed="true"]{border-color:var(--gold);background:var(--gold-g);color:var(--gold-l);font-weight:600}
+  .seg:focus-visible,.btn:focus-visible,.opt:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .lab-stage{position:relative;margin-top:12px}
+  .lab-stage canvas{width:100%;height:auto;display:block;border-radius:10px;background:#1c2530}
+  .lab-cap{font-size:12px;color:#8fa5b9;margin-top:6px}
+  .lab-msg{margin-top:12px;font-size:15.5px;padding:12px 14px;border-radius:10px;background:rgba(255,255,255,.04);border-left:3px solid var(--card-b);min-height:48px}
+  .lab-msg.ok{border-left-color:#3f9b52;background:rgba(40,120,60,.14)}
+  .lab-msg.bad{border-left-color:#c0453f;background:rgba(180,40,40,.10)}
+  .lab-found{font-size:13px;color:var(--muted);margin-top:8px}
+  .lab-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .noscript-box{background:rgba(255,255,255,.04);border:1px dashed var(--card-b);border-radius:12px;padding:12px 16px;font-size:15px}
+
+  /* ── ГРАНИЦА ПЕРВЕНСТВА ── */
+  .border-box{background:rgba(45,140,191,.08);border:1px solid rgba(45,140,191,.3);border-radius:14px;padding:16px 18px}
+  .border-box b{color:#8fd3ff}
+  .ctx{width:100%;border-collapse:collapse;margin-top:14px;font-size:14.5px}
+  .ctx th,.ctx td{text-align:left;padding:9px 8px;border-top:1px solid var(--line);vertical-align:top}
+  .ctx th{color:var(--gold-l);font-weight:600;font-size:12.5px;letter-spacing:.5px}
+  .quiz-q{margin:18px 0 6px;font-weight:600}
+  .sources a{color:var(--gold-l)}
+  .sources li{margin:6px 0;font-size:14px;color:#c8d6e2}
+  @media(max-width:600px){header.top{padding:8px 64px 6px}header.top .score{top:8px;right:8px;padding:4px 10px;font-size:12px}header.top .b3{margin-top:3px}
+    .hero-scene{height:26vh;min-height:200px;max-height:260px}.date-origin{font-size:12px;margin:-8px 0 8px}.hero-lead{padding:18px 0 26px}.hero-lead .date-chip{margin-bottom:12px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+</style>
+
+<meta name="description" content="Перейти из одного корабля в другой можно было только через открытый космос — переходного люка ещё не придумали. Так 16 января 1969 года прошла первая в мире стыковка пилотируемых кораблей.">
+<link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-16jan-soyuz45.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Русская цивилизация">
+<meta property="og:title" content="Первая в мире стыковка пилотируемых кораблей: «Союз-4» и «Союз-5»">
+<meta property="og:description" content="Перейти из одного корабля в другой можно было только через открытый космос — переходного люка ещё не придумали. Так 16 января 1969 года прошла первая в мире стыковка пилотируемых кораблей.">
+<meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-16jan-soyuz45.html">
+<meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-16jan-soyuz45-portret.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Первая в мире стыковка пилотируемых кораблей: «Союз-4» и «Союз-5»", "description": "Перейти из одного корабля в другой можно было только через открытый космос — переходного люка ещё не придумали. Так 16 января 1969 года прошла первая в мире стыковка пилотируемых кораблей.", "url": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-16jan-soyuz45.html", "inLanguage": "ru", "isPartOf": {"@type": "WebSite", "name": "Музей «Что изобрели русские первыми в мире»"}, "publisher": {"@type": "Organization", "name": "Русская цивилизация"}, "about": {"@type": "Event", "name": "Стыковка «Союза-4» и «Союза-5»", "startDate": "1969-01-16"}, "image": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-16jan-soyuz45-portret.jpg"}</script>
+</head>
+<body>
+
+<header class="top">
+  <div class="b1">Русская цивилизация</div>
+  <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
+  <div class="b3">Что изобрели русские первыми в мире</div>
+  <div class="b4">365 изобретений. Все русские. Все первые</div>
+  <div class="score" id="scoreBox" title="Баллы знаний за этот день">⭐ <span id="score">0</span> / 100</div>
+</header>
+
+<nav class="crumbs" aria-label="Хлебные крошки"><div class="wrap">
+  <a href="../../index.html">Русская цивилизация</a>
+  <span class="sep">›</span>
+  <a href="index.html">Музей «Что изобрели русские первыми в мире»</a>
+  <span class="sep">›</span>
+  <span class="here">16 января · «Союз-4/5»</span>
+</div></nav>
+
+<div class="hero-scene" id="hero">
+  <img class="scene" src="day-16jan-soyuz45-portret.jpg" data-source="https://commons.wikimedia.org/wiki/File:Soyuz_5_(portrait).jpg" data-license="Public domain" width="917" height="519" alt="Фрагмент советского почтового блока 1969 года с портретами четырёх космонавтов: Владимира Шаталова, Бориса Волынова, Алексея Елисеева и Евгения Хрунова" fetchpriority="high">
+</div>
+
+<div class="scene-caption">
+  <div class="wrap">
+    <div class="scene-cap">Почтовый блок СССР, посвящённый групповому полёту «Союз-4» — «Союз-5», 1969 год (ЦФА 3724). Государственный знак почтовой оплаты — общественное достояние.</div>
+    <span class="scene-hint">Предмет · почтовый блок 1969 года</span>
+  </div>
+</div>
+
+<header class="hero-lead">
+  <div class="wrap">
+    <div class="date-chip">16 января · 1969</div>
+    <p class="date-origin">Привязка — дата события: «Союз-4» и «Союз-5» состыковались 16 января 1969 года в 08:20 UTC.</p>
+    <div class="who">Владимир Шаталов, Борис Волынов, Алексей Елисеев, Евгений Хрунов <i>· экипажи «Союза-4» и «Союза-5»</i></div>
+    <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
+    <h1>Первая в мире стыковка пилотируемых кораблей: «Союз-4» и «Союз-5»</h1>
+    <p class="hook">Перейти из одного корабля в другой можно было только через открытый космос — переходного люка между ними ещё не придумали.</p>
+    <div class="hero-btns">
+      <button class="btn gold" id="readBtn" type="button">Читать историю ↓</button>
+      <button class="btn ghost" id="listenBtn" type="button">🎧 Слушать аудиогид</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero-under">
+  <div class="wrap">
+    <div class="stamp">
+      <div><div class="v">08:20</div><div class="k">UTC — момент стыковки</div></div>
+      <div><div class="v">37 мин</div><div class="k">рекорд двух космонавтов вне корабля</div></div>
+      <div><div class="v">4ч33м49с</div><div class="k">рекорд в состыкованном виде</div></div>
+      <div><div class="v">4</div><div class="k">космонавта на борту «станции»</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="daynav" aria-label="Разделы дня">
+  <div class="wrap">
+    <a href="#story">Читать</a>
+    <a href="#audioguide">Слушать</a>
+    <a href="#games">Стыковка</a>
+    <a href="#pervenstvo">Первенство</a>
+    <a href="#quiz">Викторина</a>
+    <a href="#calendar">Календарь</a>
+  </div>
+</nav>
+
+<section class="block" id="audioguide"></section>
+
+<section class="block" id="story">
+  <div class="wrap">
+    <div class="kicker">История первенства · 14 ударов</div>
+    <h2>«Байкалы» идут к «Амуру»</h2>
+    <p style="color:var(--muted);max-width:62ch">Читается подряд. Нажми на удар — откроется подробный разбор с источниками.</p>
+    <ol class="udary">
+      <li><details><summary><span>14 января 1969 года с Байконура стартовал «Союз-4» — в одиночку. Пилотировал его Владимир Шаталов, позывной «Амур».<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Это был первый одиночный пилотируемый старт нового корабля — он должен был встретить второй корабль, который полетит на следующий день, и состыковаться с ним на орбите.</p>
+          <p class="src-note">Источники: Музей Первого полёта (museumgagarin.ru), «Январь 1969 года…»; Государственный музей истории космонавтики, Калуга (gmik.ru).</p>
+        </div></details></li>
+      <li><details><summary><span>На следующий день, 15 января, стартовал «Союз-5» — сразу с тремя космонавтами. Общий позывной экипажа — «Байкалы».<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Командир корабля — Борис Волынов, бортинженер — Алексей Елисеев, инженер-исследователь — Евгений Хрунов. Экипажу предстояло разделиться: двое должны были перейти на «Союз-4», один — вернуться на Землю в одиночку.</p>
+          <p class="src-note">Источники: РГАНТД («Первая в мире стыковка космических кораблей»); Музей Первого полёта.</p>
+        </div></details></li>
+      <li><details><summary><span>16 января в 08:20 UTC корабли состыковались вручную — впервые в мире состыковались два пилотируемых корабля.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Активную роль играл «Союз-4»: именно в его стыковочном узле стояли штырь и активная радиоэлектроника системы сближения. По словам Бориса Волынова, сближение шло поэтапно: остановились на ста метрах, потом на тридцати — и «зависли», ожидая, пока место встречи окажется в зоне видимости советских наземных станций слежения: перед стартом экипажам прямо сказали «сделайте так, чтобы это увидел весь мир».</p>
+          <p class="src-note">Источники: Музей Первого полёта; Калужский музей космонавтики; «Российская газета», интервью Б. В. Волынова, 15.01.2019.</p>
+        </div></details></li>
+      <li class="find"><details><summary><span>Переходного люка между кораблями ещё не придумали — поэтому из «Союза-5» в «Союз-4» Елисеев и Хрунов перебирались через открытый космос: узел «Контакт» умел только механически соединить корабли, но не превращал их в один герметичный объём.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p><span class="tag">Находка дня</span>Внутренний люк для перехода экипажа к этому полёту просто не успели спроектировать — конструкторы ограничились надёжной механической и электрической стыковкой. По свидетельствам историков космонавтики, инженер Константин Феоктистов предложил более быстрый обходной путь: одеть переходящих космонавтов в новые скафандры и пустить их по обшивке через открытый космос.</p>
+          <p class="src-note">Источники: Drew Ex Machina, «Soyuz 4 & 5: The First Crew Exchange in Space»; RussianSpaceWeb.com.</p>
+        </div></details></li>
+      <li><details><summary><span>Алексей Елисеев и Евгений Хрунов впервые в мире перешли из одного корабля в другой через открытый космос — в новых скафандрах «Ястреб».<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <figure class="fig" style="max-width:420px">
+            <img src="day-16jan-soyuz45-stykovka.jpg" data-source="https://commons.wikimedia.org/wiki/File:Soyuz-4_%26_Soyuz-5.jpg" data-license="CC BY-SA 3.0" width="800" height="532" loading="lazy" alt="Схема состыкованных кораблей «Союз-4» и «Союз-5» с подписанными отсеками на русском языке">
+            <figcaption>Схема состыкованных кораблей: переход экипажа шёл через стыковочный и орбитальный отсеки, минуя спускаемый аппарат. Wikimedia Commons, CC BY-SA 3.0 (Lunokhod 2).</figcaption>
+          </figure>
+          <p>Перед выходом Борис Волынов задраил люк спускаемого аппарата, стравил давление в орбитальном отсеке и следил за медицинскими показаниями товарищей по приборам. Когда люк наружу пошёл, пульс и давление у обоих подскочили — «как будто они пробежали стометровку», вспоминал потом Волынов.</p>
+          <p class="src-note">Источники: «Российская газета», интервью Б. В. Волынова; РГАНТД.</p>
+        </div></details></li>
+      <li><details><summary><span>Переход занял 37 минут — мировой рекорд одновременного пребывания двух космонавтов вне корабля.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Рекорд зафиксирован в архивном «рекордном деле» о групповом полёте: РГАНТД, фонд Федерации космонавтики СССР, Ф. 24, Оп. 1-1, Д. 90, Л. 15.</p>
+          <p class="src-note">Источник: РГАНТД.</p>
+        </div></details></li>
+      <li><details><summary><span>Пока корабли были состыкованы — 4 часа 33 минуты 49 секунд — в космосе существовала первая в мире экспериментальная орбитальная станция с четырьмя космонавтами на борту.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Это тоже мировой рекорд — по продолжительности и суммарной массе состыкованных пилотируемых кораблей (РГАНТД, Ф. 24, Оп. 1-1, Д. 90, Л. 13).</p>
+          <p class="src-note">Источники: РГАНТД; Калужский музей космонавтики («более четырёх часов работали советские космонавты…»).</p>
+        </div></details></li>
+      <li><details><summary><span>Евгений Хрунов стал первым в мире «космическим почтальоном»: он передал Шаталову письма, телеграммы и газеты, которых не было на борту «Союза-4» в день его старта.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>«Союз-5» стартовал на сутки позже и успел захватить более свежую почту с Земли. По словам Волынова, для такой почты даже сделали специальный штемпель «Земля — Космос».</p>
+          <p class="src-note">Источники: РГАНТД; «Российская газета», интервью Б. В. Волынова.</p>
+        </div></details></li>
+      <li><details><summary><span>Пока ждал стыковки, командир Шаталов опробовал незапланированный программой способ одновременной ориентации корабля на Солнце и на Землю — сегодня его называют «методом Шаталова».<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Метод вошёл в практику последующих орбитальных полётов как способ экономить топливо ориентации, не теряя связь с Землёй и энергию от Солнца одновременно.</p>
+          <p class="src-note">Источник: РГАНТД.</p>
+        </div></details></li>
+      <li><details><summary><span>17 января экипаж «Союза-4» — Шаталов, Елисеев и Хрунов — вернулся на Землю. Командир «Союза-5» Борис Волынов приземлился уже один, на сутки позже.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Разделение экипажей на два разных корабля при возвращении было частью замысла полёта: ровно так же, по проекту, единственный космонавт должен был в одиночку возвращаться с орбиты Луны.</p>
+          <p class="src-note">Источники: РГАНТД; Музей Первого полёта.</p>
+        </div></details></li>
+      <li><details><summary><span>Спуск Волынова едва не закончился трагически: приборный агрегат вовремя не отделился, и корабль неуправляемо закувыркался при входе в атмосферу.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>«Голова — ноги, голова — ноги…» — так вспоминал вращение корабля сам Волынов. В иллюминаторе — розовые жгуты раскалённого газа и плазма, металл обшивки на глазах становился мягким, будто тряпка. Связь с Землёй пропала: сгорели антенны. Отсеки разошлись только тогда, когда от перегрева взорвались баки с остатками топлива — после взрыва спускаемый аппарат наконец отделился, но уже без всякой ориентации.</p>
+          <p class="src-note">Источник: «Российская газета», интервью Б. В. Волынова, 15.01.2019.</p>
+        </div></details></li>
+      <li><details><summary><span>Корабль спускался неуправляемо и вращаясь, но парашют всё же раскрылся. При жёсткой посадке южнее Кустаная Волынов сломал зубы — и выжил.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Это был аварийный баллистический спуск. При ударе магнитофон, писавший параметры полёта, сорвало с крепления и пролетело мимо ног космонавта; Волынов получил перелом костей зубов и позже лечился в госпитале им. Бурденко.</p>
+          <p class="src-note">Источник: «Российская газета», интервью Б. В. Волынова.</p>
+        </div></details></li>
+      <li><details><summary><span>Указом Президиума Верховного Совета СССР от 22 января 1969 года все четверо участников полёта стали Героями Советского Союза.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Шаталов, Волынов, Елисеев и Хрунов получили ордена Ленина, медали «Золотая Звезда» и звания «Лётчик-космонавт СССР».</p>
+          <p class="src-note">Источник: РГАНТД.</p>
+        </div></details></li>
+      <li><details><summary><span>Стыковка и переход через открытый космос репетировали ровно ту операцию, которую требовала советская лунная программа.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>По проекту Л3 единственный космонавт должен был взлететь с поверхности Луны в лунном корабле, состыковаться с орбитальным кораблём на окололунной орбите — и перейти в него тем же способом, через открытый космос: внутреннего люка не было и там.</p>
+          <p class="src-note">Источники: Drew Ex Machina; RussianSpaceWeb.com.</p>
+        </div></details></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block" id="games">
+  <div class="wrap">
+    <div class="kicker">Главное действие · модель</div>
+    <h2>Пристыкуй «Союз-4» к «Союз-5»</h2>
+    <p style="max-width:62ch">Стыковочный узел «Контакт» защёлкивал замки только в узком окне: нужна была подходящая скорость на последнем участке сближения и точное попадание штыря в приёмный конус. Выбери скорость и точность оси и нажми «Сблизиться» — посмотри, что получится.</p>
+    <div class="lab" id="lab">
+      <div class="lab-row" role="group" aria-labelledby="lg1"><span class="lbl" id="lg1">1. Скорость на последнем участке сближения</span>
+        <button class="seg" type="button" data-k="speed" data-v="fast" aria-pressed="false">Быстрее — не терять время</button>
+        <button class="seg" type="button" data-k="speed" data-v="correct" aria-pressed="true">Как велели баллистики</button>
+        <button class="seg" type="button" data-k="speed" data-v="slow" aria-pressed="false">Медленнее — беречь топливо</button>
+      </div>
+      <div class="lab-row" role="group" aria-labelledby="lg2"><span class="lbl" id="lg2">2. Удержание оси перед касанием</span>
+        <button class="seg" type="button" data-k="align" data-v="good" aria-pressed="true">Точно по оси</button>
+        <button class="seg" type="button" data-k="align" data-v="small" aria-pressed="false">Небольшой перекос — в пределах конуса</button>
+        <button class="seg" type="button" data-k="align" data-v="large" aria-pressed="false">Большой перекос — мимо конуса</button>
+      </div>
+      <div class="lab-btns">
+        <button class="btn gold" type="button" id="labGo">Сблизиться</button>
+        <button class="btn ghost" type="button" id="labReset">Начать заново</button>
+      </div>
+      <div class="lab-stage">
+        <canvas id="labCv" width="640" height="260" role="img" aria-label="Вид сбоку: «Союз-4» приближается к приёмному конусу «Союза-5»"></canvas>
+        <div class="lab-cap">Модель, а не телеметрия: условная кинематика сближения иллюстрирует узкое окно скорости и конус улавливания реального узла «Контакт»; точные цифры скорости и допуска конуса на странице не заявлены как архивные.</div>
+      </div>
+      <div class="lab-msg" id="labMsg" aria-live="polite">Выбери скорость и ось и нажми «Сблизиться».</div>
+      <div class="lab-found" id="labFound">Найдено: мягкая стыковка — нет, жёсткий удар — нет, мимо конуса — нет, замки не защёлкнулись — нет.</div>
+      <noscript><div class="noscript-box">Для модели нужен JavaScript. Текстовая версия опыта: стыковка получается только при скорости «как велели баллистики» и оси «точно по оси» или «небольшой перекос». Слишком быстрое сближение кончается жёстким ударом даже при хорошей оси. Слишком медленное — замки не успевают защёлкнуться. Большой перекос — штырь проходит мимо приёмного конуса при любой скорости.</div></noscript>
+    </div>
+    <p class="src-note" style="margin-top:10px">Узкое окно скорости и приёмный конус стыковочного узла «Контакт» — по общему описанию конструкции в Drew Ex Machina и RussianSpaceWeb.com; реальные скорость и допуск на странице не приводятся как точные цифры.</p>
+  </div>
+</section>
+
+<section class="block" id="pervenstvo">
+  <div class="wrap">
+    <div class="kicker">Проверка факта</div>
+    <h2>Что именно здесь первое в мире</h2>
+    <div class="border-box">
+      <p style="margin-top:0"><b>Граница первенства:</b> первая в мире стыковка двух НЕЗАВИСИМО запущенных пилотируемых космических кораблей и первый в мире переход члена экипажа из одного корабля в другой через открытый космос — 16 января 1969 года, 08:20 UTC. Подтверждено архивным рекордным делом РГАНТД (Ф. 24, Оп. 1-1, Д. 90) о мировых рекордах этого полёта.</p>
+      <p style="margin-bottom:0"><b>Чего здесь нет:</b> в марте 1966 года экипаж «Джемини-8» состыковался с беспилотной мишенью «Аджена» — но мишень не имела экипажа, и перехода между кораблями не было. Первое аналогичное достижение США — стыковка пилотируемых командного и лунного модулей «Аполлона-9» с переходом экипажа через внутренний люк — состоялось только 3 марта 1969 года, на 46 дней позже.</p>
+    </div>
+    <table class="ctx">
+      <thead><tr><th scope="col">Документ или событие</th><th scope="col">Что</th><th scope="col">Когда</th></tr></thead>
+      <tbody>
+        <tr><td>Старт «Союза-4»</td><td>Одиночный пилотируемый полёт В. Шаталова</td><td>14.01.1969</td></tr>
+        <tr><td>Старт «Союза-5»</td><td>Экипаж из трёх космонавтов</td><td>15.01.1969</td></tr>
+        <tr><td>Стыковка на орбите</td><td>Первая в мире стыковка двух пилотируемых кораблей</td><td>16.01.1969, 08:20 UTC</td></tr>
+        <tr><td>РГАНТД, Ф. 24, Оп. 1-1, Д. 90</td><td>Рекордное дело: 37 минут EVA, 4ч33м49с в стыковке</td><td>1969</td></tr>
+        <tr><td>Указ Президиума ВС СССР</td><td>Присвоение звания Героя Советского Союза всем четверым</td><td>22.01.1969</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block" id="quiz">
+  <div class="wrap">
+    <div class="kicker">Проверь себя · 5 вопросов</div>
+    <h2>Викторина</h2>
+    <p style="color:var(--muted);max-width:62ch">На каждый вопрос — одна попытка. После ответа покажем объяснение.</p>
+    <div id="quizBox"></div>
+    <noscript><div class="noscript-box">Для викторины нужен JavaScript. Ответы: 1 — переходного люка не было; 2 — 37 минут; 3 — Хрунов; 4 — приборный агрегат не отделился вовремя; 5 — переход космонавта с лунного корабля в орбитальный через открытый космос.</div></noscript>
+  </div>
+</section>
+
+<section class="block" id="result">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Итог дня</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Модель, три находки в ней и викторина вместе дают 100 баллов. Прогресс не сохраняется: перезагрузка страницы начинает день заново.</p>
+    <div class="day-result">
+      <div class="dr-score" id="dayTxt">0 / 100 · звание: Гость дня</div>
+      <div class="dr-bar"><i id="dayBar" style="width:0%"></i></div>
+      <div class="dr-note">Найди мягкую стыковку и все три исхода неудачи, ответь на вопросы викторины.</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="sources">
+  <div class="wrap">
+    <div class="kicker">Источники</div>
+    <h2>На чём стоит страница</h2>
+    <ul class="sources">
+      <li><a href="https://museumgagarin.ru/news/yanvar_1969_goda_pervaya_v_mire_stykovka_dvukh_pilotiruemykh_kosmicheskikh_korabley/" rel="noopener" target="_blank">Музей Первого полёта (Центр подготовки космонавтов им. Ю. А. Гагарина) · «Январь 1969 года. Первая в мире стыковка двух пилотируемых космических кораблей»</a>: даты стартов, время стыковки 08:20 UTC.</li>
+      <li><a href="https://gmik.ru/2024/01/16/55-let-pervoy-v-mire-styikovke-v-kosmose-pilotiruemyih-korabley/" rel="noopener" target="_blank">Государственный музей истории космонавтики им. К. Э. Циолковского, Калуга · «55 лет первой в мире стыковке в космосе пилотируемых кораблей»</a>: состав экипажей, продолжительность совместного полёта.</li>
+      <li><a href="https://rgantd.ru/news/pamyatnye-daty/pervaya-v-mire-stykovka-kosmicheskikh-korabley-k-55-letiyu-vazhneyshego-sobytiya-v-mirovoy-kosmonavt/" rel="noopener" target="_blank">Российский государственный архив научно-технической документации (РГАНТД) · «Первая в мире стыковка космических кораблей»</a>: рекордное дело Ф. 24, Оп. 1-1, Д. 90 (37 минут EVA, 4ч33м49с в стыковке), почтальон Хрунов, указ о присвоении звания Героя.</li>
+      <li><a href="https://russianspaceweb.com/soyuz4-soyuz5.html" rel="noopener" target="_blank">RussianSpaceWeb.com (Anatoly Zak) · «Soyuz-4 and -5 crews perform docking, spacewalk between ships»</a> (на английском): отсутствие внутреннего люка, связь с лунной программой.</li>
+      <li><a href="https://www.drewexmachina.com/2019/01/17/soyuz-4-5-the-first-crew-exchange-in-space/" rel="noopener" target="_blank">Drew Ex Machina · «Soyuz 4 & 5: The First Crew Exchange in Space»</a> (на английском): конструкция корабля «Союз», переход как EVA через орбитальный отсек-шлюз, происхождение программы от лунных проектов ОКБ-1.</li>
+      <li><a href="https://rg.ru/2019/01/15/pervaia-stykovka-korablej-na-orbite-mogla-zakonchitsia-tragicheski.html" rel="noopener" target="_blank">«Российская газета» · интервью Бориса Волынова, 15.01.2019</a>: подробности сближения и перехода, почтальон Хрунов, авария при спуске «Союза-5».</li>
+      <li>Изображения: <a href="https://commons.wikimedia.org/wiki/File:Soyuz_5_(portrait).jpg" rel="noopener" target="_blank">почтовый блок СССР 1969 года (ЦФА 3724)</a> — общественное достояние, и <a href="https://commons.wikimedia.org/wiki/File:%D0%A1%D0%BE%D1%8E%D0%B7-4_%D0%B8_%D0%A1%D0%BE%D1%8E%D0%B7-5.jpg" rel="noopener" target="_blank">схема состыкованных кораблей</a> — Wikimedia Commons, CC BY-SA 3.0 (Lunokhod 2).</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="calendar">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Календарь изобретений</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Выбери любой день — узнаешь, что русские сделали первыми в мире. Листай месяцы стрелками.</p>
+    <div id="calbox"></div>
+  </div>
+</section>
+
+<section class="block kd" id="kuda-dalshe">
+  <div class="wrap">
+    <div class="kd-kicker">Куда дальше</div>
+    <h2>Музей продолжается</h2>
+    <div class="kd-grid">
+      <div class="kd-card main"><span class="kd-lbl">Следующий день</span><a href="day-30jan-kotelnikov.html">30 января — Ранцевый парашют Котельникова <span class="kd-arr">→</span></a>
+        <p>Парашют, который спасал лётчиков, в России сначала отклонили.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Предыдущий день</span><a href="day-15jan-kovalevskaya.html">15 января — Первая в мире женщина-профессор математики <span class="kd-arr">→</span></a>
+        <p>Фиктивный брак ради учёбы — и кафедра в Стокгольме, первой из женщин в мире.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Весь музей</span><a href="index.html">Музей «Что изобрели русские первыми в мире» <span class="kd-arr">→</span></a>
+        <p>Все изобретения — по залам и по дням года.</p></div>
+      <div class="kd-card main"><span class="kd-lbl">Город-музей</span><a href="../../index.html">Русская цивилизация <span class="kd-arr">→</span></a>
+        <p>Все музеи проекта на одной карте.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>
+  Русская цивилизация · «Что изобрели русские первыми в мире»</div></footer>
+
+<section data-proof-block></section>
+<script type="application/json" data-proof>{"status":"found","claim_id":"rc:izobreteniya:soyuz45:claim-docking","ours":{"kind":"архивное (рекордное) дело","title":"Рекордное дело о продолжительности полёта «Союз-4» и «Союз-5» в состыкованном состоянии и рекорде одновременного пребывания двух космонавтов вне корабля","number":"РГАНТД, Ф. 24, Оп. 1-1, Д. 90, Л. 13, 15","date":"1969-01-16","holder":"РГАНТД (Российский государственный архив научно-технической документации), фонд Федерации космонавтики СССР","source_url":"https://rgantd.ru/news/pamyatnye-daty/pervaya-v-mire-stykovka-kosmicheskikh-korabley-k-55-letiyu-vazhneyshego-sobytiya-v-mirovoy-kosmonavt/"},"rival":{"name":"«Аполлон-9», США","doc_title":"стыковка командного и лунного модулей с внутренним люком для перехода экипажа","date":"1969-03-03"},"gap_years":0}</script>
+<script src="../../assets/museum-proof.js"></script>
+
+<script>
+/* ── СЧЁТ ── шкала из 100 держит assets/museum-score.js; здесь только реестр наград.
+   мягкая стыковка 30 + три исхода неудачи 3×10 + викторина 5×8 = 100. */
+window.MUSEUM_SCORE = {awards:{lab:30, why0:10, why1:10, why2:10, q:[8,8,8,8,8]},
+  ranks:[[100,'Главный конструктор стыковки'],[70,'Бортинженер стыковки'],[40,'Космонавт-испытатель'],[0,'Гость дня']]};
+</script>
+<script src="../../assets/museum-score.js"></script>
+<script>
+(function(){
+  var $ = function(id){return document.getElementById(id);};
+  $('readBtn').onclick = function(){ $('story').scrollIntoView({behavior:'smooth'}); };
+  $('listenBtn').onclick = function(){ $('audioguide').scrollIntoView({behavior:'smooth'}); };
+
+  /* ── СТЫКОВКА ── условная кинематика: осевое расстояние убывает с выбранной скоростью,
+     боковое смещение постоянно (выбор оси). Исход определяется в момент касания (axial<=0). */
+  var SPEED = {fast:0.052, correct:0.022, slow:0.009};  // условные единицы расстояния / кадр
+  var OFFSET = {good:0, small:0.09, large:0.30};          // доля от радиуса конуса (R=0.2)
+  var CAPTURE_R = 0.2;
+  var DEF = {speed:'correct', align:'good'};
+  var st = {speed:DEF.speed, align:DEF.align};
+  var found = {};
+  function verdict(speed, align){
+    if (align === 'large') return 'miss';
+    if (speed === 'fast') return 'hit';
+    if (speed === 'slow') return 'nolatch';
+    return 'dock';
+  }
+  var cv=$('labCv'), cx=cv.getContext('2d'), W=640, H=260;
+  function frame(axial, lateral, phase){
+    cx.fillStyle='#0b1622'; cx.fillRect(0,0,W,H);
+    var cyBase=H/2, leftX=70, rightX=W-70;
+    /* приёмный конус «Союза-5» справа */
+    cx.strokeStyle='rgba(143,165,185,.55)'; cx.lineWidth=2;
+    cx.beginPath(); cx.moveTo(rightX,cyBase-70); cx.lineTo(rightX-46,cyBase); cx.lineTo(rightX,cyBase+70); cx.stroke();
+    cx.strokeStyle='rgba(228,201,122,.35)'; cx.setLineDash([4,5]);
+    cx.beginPath(); cx.arc(rightX-46, cyBase, 70*CAPTURE_R/0.2*0.33, 0, 6.2832); cx.stroke(); cx.setLineDash([]);
+    cx.fillStyle='#8fa5b9'; cx.font='12px Inter, sans-serif'; cx.textAlign='center';
+    cx.fillText('«Союз-5» · приёмный конус', rightX-46, cyBase+96);
+    /* корпус Союза-5 */
+    cx.fillStyle='rgba(143,165,185,.5)'; cx.fillRect(rightX-20, cyBase-26, 40, 52);
+    /* Союз-4 приближается */
+    var travel = (W*0.62);
+    var x = leftX + (1-axial) * travel;
+    var y = cyBase + lateral*140;
+    cx.fillStyle = phase==='bad' ? 'rgba(200,80,70,.9)' : 'rgba(228,201,122,.9)';
+    cx.fillRect(x-18, y-24, 36, 48);
+    cx.strokeStyle='rgba(125,200,255,.85)'; cx.lineWidth=3;
+    cx.beginPath(); cx.moveTo(x+18,y); cx.lineTo(x+18+26,y); cx.stroke();
+    cx.fillStyle='#8fa5b9'; cx.textAlign='center';
+    cx.fillText('«Союз-4»', x, y-34);
+  }
+  function msg(t, cls){ var m=$('labMsg'); m.className='lab-msg'+(cls?' '+cls:''); m.textContent=t; }
+  var TEXT = {
+    dock:['Мягкая стыковка: штырь вошёл в приёмный конус на правильной скорости, замки защёлкнулись с первой попытки.','ok'],
+    hit:['Жёсткий удар. Скорость была слишком высокой: даже при хорошей оси штырь бьёт по конусу, а не плавно входит в него — риск повредить стыковочный узел.','bad'],
+    nolatch:['Замки не защёлкнулись. Слишком медленное сближение не даёт механизму энергии, нужной для фиксации, — корабли соприкоснулись, но не состыковались.','bad'],
+    miss:['Мимо конуса. Большой перекос оси увёл штырь за пределы приёмного раструба при любой скорости — нужен повторный заход.','bad']
+  };
+  var AW = {dock:['lab',30], hit:['why0',10], nolatch:['why1',10], miss:['why2',10]};
+  var anim=null;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function stop(){ if (anim){ cancelAnimationFrame(anim); anim=null; } }
+  var segs=document.querySelectorAll('#lab .seg');
+  for (var s=0;s<segs.length;s++) segs[s].addEventListener('click', function(){
+    var k=this.getAttribute('data-k'), v=this.getAttribute('data-v'); st[k]=v;
+    var same=document.querySelectorAll('#lab .seg[data-k="'+k+'"]');
+    for (var j=0;j<same.length;j++) same[j].setAttribute('aria-pressed', same[j]===this ? 'true':'false');
+  });
+  function setFound(){
+    function yn(k){ return found[k] ? 'да' : 'нет'; }
+    $('labFound').textContent='Найдено: мягкая стыковка — '+yn('dock')+', жёсткий удар — '+yn('hit')+', мимо конуса — '+yn('miss')+', замки не защёлкнулись — '+yn('nolatch')+'.';
+  }
+  $('labGo').onclick = function(){
+    stop();
+    var v=verdict(st.speed, st.align), lateral=OFFSET[st.align], speed=SPEED[st.speed];
+    msg('«Союз-4» сближается…');
+    var axial=1, bad=(v==='hit');
+    if (reduce){
+      frame(0, lateral, bad?'bad':'ok');
+      msg(TEXT[v][0], TEXT[v][1]);
+      if (!found[v]){ found[v]=1; award(AW[v][0], AW[v][1]); }
+      setFound();
+      return;
+    }
+    (function step(){
+      axial -= speed;
+      if (axial <= 0){
+        frame(0, lateral, bad?'bad':'ok');
+        msg(TEXT[v][0], TEXT[v][1]);
+        if (!found[v]){ found[v]=1; award(AW[v][0], AW[v][1]); }
+        setFound();
+        anim=null; return;
+      }
+      frame(axial, lateral, 'go');
+      anim=requestAnimationFrame(step);
+    })();
+  };
+  $('labReset').onclick = function(){
+    stop(); st={speed:DEF.speed, align:DEF.align};
+    for (var j=0;j<segs.length;j++){ var k=segs[j].getAttribute('data-k'); segs[j].setAttribute('aria-pressed', segs[j].getAttribute('data-v')===DEF[k] ? 'true':'false'); }
+    frame(1,0,'go'); msg('«Союз-4» отведён на исходную. Выбери условия заново. Уже полученные баллы сохраняются и повторно не начисляются.');
+  };
+  frame(1,0,'go');
+
+  /* ── ВИКТОРИНА ── один ответ на вопрос; дистракторы сверены с источниками страницы. */
+  var Q = [
+    {q:'Почему Елисеев и Хрунов перебирались из корабля в корабль через открытый космос?', o:['Переходного люка между кораблями не было','Кабина была негерметична','Так было зрелищнее для телевидения'], a:0,
+     e:'Узел «Контакт» умел только механически соединить корабли — внутреннего люка для перехода экипажа не было.'},
+    {q:'Сколько длился переход — мировой рекорд пребывания двух космонавтов вне корабля?', o:['2 минуты','37 минут','4 часа'], a:1,
+     e:'37 минут — по рекордному делу РГАНТД (Ф. 24, Оп. 1-1, Д. 90, Л. 15).'},
+    {q:'Кто стал первым в мире «космическим почтальоном»?', o:['Владимир Шаталов','Борис Волынов','Евгений Хрунов'], a:2,
+     e:'Хрунов передал Шаталову письма, телеграммы и газеты, которых не было на борту «Союза-4» в день его старта.'},
+    {q:'Что едва не погубило Бориса Волынова при посадке?', o:['Приборный агрегат вовремя не отделился','Не раскрылся парашют','Закончился кислород'], a:0,
+     e:'Приборный агрегат не отделился штатно, и корабль неуправляемо закувыркался при входе в атмосферу; отсеки разошлись только после взрыва перегретых баков с топливом.'},
+    {q:'Какую операцию для лунной программы репетировал этот полёт?', o:['Стыковку на орбите — просто для тренировки','Переход космонавта с лунного корабля в орбитальный через открытый космос','Ничего — это было самостоятельное достижение'], a:1,
+     e:'По проекту Л3 космонавт должен был вернуться с поверхности Луны, состыковаться на окололунной орбите и перейти в орбитальный корабль тем же способом — через открытый космос.'}
+  ];
+  var box = $('quizBox');
+  Q.forEach(function(it, qi){
+    var wrap = document.createElement('div');
+    var h = document.createElement('p'); h.className='quiz-q'; h.textContent=(qi+1)+'. '+it.q; wrap.appendChild(h);
+    var exp = document.createElement('div'); exp.className='exp'; exp.setAttribute('aria-live','polite');
+    var btns = it.o.map(function(txt, oi){
+      var b=document.createElement('button'); b.type='button'; b.className='opt'; b.textContent=txt;
+      b.onclick=function(){
+        if (wrap.dataset.done) return; wrap.dataset.done='1';
+        btns.forEach(function(x,xi){ x.disabled=true; if (xi===it.a) x.classList.add('correct'); });
+        if (oi===it.a){ award('q'+qi,8); exp.textContent='Верно. '+it.e; }
+        else { b.classList.add('wrong'); exp.textContent='Не совсем. '+it.e; }
+        exp.classList.add('show');
+      };
+      wrap.appendChild(b); return b;
+    });
+    wrap.appendChild(exp); box.appendChild(wrap);
+  });
+})();
+</script>
+<script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
+<script>window.MUSEUM_CHROME={
+  museum:{title:'Что изобрели русские первыми в мире',href:'index.html'},
+  share:{title:'Первая в мире стыковка пилотируемых кораблей — музей «Что изобрели русские первыми в мире»',
+         text:'«Союз-4» и «Союз-5»: первая в мире стыковка пилотируемых кораблей и переход через открытый космос — потому что переходного люка ещё не придумали. Что Россия дала миру раньше всех — день за днём.'},
+  prev:{href:'day-15jan-kovalevskaya.html',title:'15 января · Ковалевская'},
+  next:{href:'day-30jan-kotelnikov.html',title:'30 января · Парашют'},
+  all:{href:'index.html',label:'Все изобретения'},
+  city:'../../index.html',
+  random:['day-01jan-cabletv.html','day-02jan-luna1.html','day-03jan-anosov.html','day-04jan-pilchikov.html','day-05jan-shukhov.html','day-06jan-orlov.html','day-08jan-icebreaker.html','day-09jan-blinov.html','day-10jan-britnev.html','day-11jan-kostovich.html','day-12jan-r7.html','day-13jan-k278.html','day-14jan-lira.html','day-15jan-kovalevskaya.html','day-16jan-soyuz45.html','day-30jan-kotelnikov.html','day-03feb-luna9.html','day-18mar-leonov.html','day-15may-mechnikov.html','day-16jun-tereshkova.html','day-26sep-pavlov.html','day-15nov-buran.html','day-25nov-pirogov.html','day-01dec-lobachevsky.html','day-14dec-laser.html']
+};</script>
+<script src="../../assets/museum-chrome.js"></script>
+<script>window.MUSEUM_SUPPORT={museum:'Что изобрели русские первыми в мире'};</script>
+<script src="../../assets/museum-support.js"></script>
+<script src="calendar-izobreteniya.js"></script>
+<script>window.MUSEUM_CALENDAR_INITIAL='01-16';</script>
+<script src="../../assets/museum-calendar-month.js"></script>
+<script>window.MUSEUM_RETURN={riddle:{q:"Почему «Союз-5» успел захватить для Шаталова более свежие письма и газеты, чем были на «Союзе-4»?",a:"«Союз-5» стартовал на сутки позже «Союза-4» — и забрал с Земли почту, вышедшую уже после старта первого корабля.",src:"РГАНТД; «Российская газета», интервью Б. В. Волынова"}};</script>
+<script src="../../assets/museum-return.js" data-museum="izobreteniya" data-day="01-16"></script>
+<script defer src="../../assets/analytics.js"></script>
+
+
+<script>window.MUSEUM_AUDIOGUIDE={
+  audioSrc:"audio-guide-soyuz45-ru.mp3",
+  durationLabel:"2 минуты 37 секунд",
+  lead:"Голос ведёт по залу «Союза-4» и «Союза-5»: от старта в одиночку до перехода через открытый космос и аварийной посадки Волынова. Шесть остановок, на каждой — что искать глазами. Слушать можно фоном, пока читаешь статью ниже.",
+  stops:[
+    {t:0,mark:"0:00",title:"Амур и Байкалы"},
+    {t:29,mark:"0:29",title:"Стыковка над Африкой"},
+    {t:53,mark:"0:53",title:"Люка не было"},
+    {t:78,mark:"1:18",title:"Тридцать семь минут снаружи"},
+    {t:101,mark:"1:41",title:"Космический почтальон"},
+    {t:124,mark:"2:04",title:"Кувырок в плазме"}
+  ],
+  transcript:[
+    "<p>«14 и 15 января 1969 года с Байконура стартовали «Союз-4» и «Союз-5» — Шаталов в одиночку, следом трое: Волынов, Елисеев, Хрунов».</p>",
+    "<p>«16 января, 08:20 по Гринвичу: корабли состыковались вручную — первая в мире стыковка двух пилотируемых кораблей».</p>",
+    "<p>«Переходного люка между кораблями ещё не придумали — Елисеев и Хрунов перебрались через открытый космос в скафандрах «Ястреб»».</p>",
+    "<p>«37 минут — мировой рекорд пребывания двух космонавтов вне корабля; 4 часа 33 минуты — рекорд в состыкованном виде».</p>",
+    "<p>«Хрунов передал Шаталову письма и газеты — первый в мире космический почтальон».</p>",
+    "<p>«При посадке 18 января «Союз-5» едва не погиб: приборный отсек не отделился, корабль кувыркался в плазме — но Волынов выжил».</p>"
+  ],
+  note:"Озвучено синтезом речи — временно, до записи голосом автора музея."
+};</script>
+<script src="../../assets/museum-audioguide.js"></script>
+</body>
+</html>
