@@ -20,14 +20,24 @@
     },
     {
       "label": "Вместо пустой викторины и развилки — текстовый эквивалент",
-      "actual": false,
+      "actual": true,
       "expected": true,
-      "ok": false
+      "ok": true
+    },
+    {
+      "label": "Текстовая викторина: пять вопросов с ответами",
+      "actual": 5,
+      "expected": 5,
+      "ok": true
+    },
+    {
+      "label": "Текстовая развилка показывает историческую реальность",
+      "actual": true,
+      "expected": true,
+      "ok": true
     }
   ],
-  "errors": [
-    "Assertion failed: Вместо пустой викторины и развилки — текстовый эквивалент"
-  ],
+  "errors": [],
   "screenshot": "nojs-390.png",
-  "status": "fail"
+  "status": "pass"
 }
