@@ -31,5 +31,37 @@
     "taken_by": "tools/audit-prava.py (commons_meta, judge_kadr, entry); сверка кадра по изображению, score 1.000",
     "date": "2011-05-09 14:05:04",
     "credit": "Own work"
+  },
+  {
+    "id": "building",
+    "title": "File:Георгиевский собор Юрьев-Польский.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/%D0%93%D0%B5%D0%BE%D1%80%D0%B3%D0%B8%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_%D0%AE%D1%80%D1%8C%D0%B5%D0%B2-%D0%9F%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D0%B9.jpg",
+    "artist": "Kate Vader",
+    "license": "CC BY-SA 4.0",
+    "description": "",
+    "file": "building.webp",
+    "sha256": "1d553c77a7f218c9eafe0ce5f54c6b359f65002f368ddd8eaf091416dd9d7433",
+    "checked": "2026-10-16",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%93%D0%B5%D0%BE%D1%80%D0%B3%D0%B8%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_%D0%AE%D1%80%D1%8C%D0%B5%D0%B2-%D0%9F%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D0%B9.jpg",
+    "modified": "уменьшено для веба",
+    "taken_by": "tools/audit-prava.py (commons_meta, judge_kadr, entry); сверка кадра по изображению, score 1.000",
+    "date": "2024-04-29 13:49:31",
+    "credit": "Own work"
+  },
+  {
+    "id": "detail",
+    "title": "File:Георгиевский собор Юрьев-Польский.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/%D0%93%D0%B5%D0%BE%D1%80%D0%B3%D0%B8%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_%D0%AE%D1%80%D1%8C%D0%B5%D0%B2-%D0%9F%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D0%B9.jpg",
+    "artist": "Kate Vader",
+    "license": "CC BY-SA 4.0",
+    "description": "",
+    "file": "detail.webp",
+    "sha256": "91e300f3a90a6e0c3db56578706f9f247663561c38177e9164bd9d4c0f4cef36",
+    "checked": "2026-10-16",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%93%D0%B5%D0%BE%D1%80%D0%B3%D0%B8%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_%D0%AE%D1%80%D1%8C%D0%B5%D0%B2-%D0%9F%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D0%B9.jpg",
+    "modified": "уменьшено для веба, кадрирование детали",
+    "taken_by": "tools/audit-prava.py (commons_meta, judge_kadr, entry); поиск фрагмента в файле (кроп), score 0.987",
+    "date": "2024-04-29 13:49:31",
+    "credit": "Own work"
   }
 ]
