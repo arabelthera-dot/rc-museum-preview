@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="ru" data-museum="izobreteniya">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Реакция Фаворского: ацетилен без натрия — Что изобрели русские первыми в мире, 3 марта</title>
+<!--
+  Страница дня 3 марта. Наряд stranicy-izob-0910 (claude2, 16.10.2026), карточка #762.
+  Форма — вариант А музея изобретений (Сергей 12.09.2026): лента ударов, подробности свёрнуты.
+  Паспорт выпуска: rc-museum-production/izobreteniya/day-03mar-favorsky/passport/issue.json
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --dark:#060c17; --dark2:#0c1826; --surface:#111f33;
+    --card:rgba(255,255,255,.05); --card-b:rgba(255,255,255,.09);
+    --gold:#c9a84c; --gold-l:#e4c97a; --gold-g:rgba(201,168,76,.13);
+    --ink:#e8eef5; --muted:#7a9ab8; --line:rgba(255,255,255,.07);
+    --accent:#2d8cbf; --accent2:#1f6f8b;
+    /* legacy compat */
+    --paper:#0c1826; --paper2:#111f33;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Inter','Segoe UI',sans-serif;color:var(--ink);background:var(--dark);line-height:1.72}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.13;margin:0}
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent)}
+
+  /* ── ШАПКА ── */
+  header.top{background:rgba(6,12,23,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--card-b);color:#fff;position:sticky;top:0;z-index:30}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+  .logo svg{display:block;filter:drop-shadow(0 0 8px rgba(201,168,76,.4))}
+  .logo .lt{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:16px}
+  .logo .lt small{display:block;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-family:'Inter',sans-serif}
+  .score{background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:6px 16px;font-size:13px;color:var(--gold-l);cursor:pointer;font-family:'Inter',sans-serif}
+  .score-info{position:absolute;right:12px;top:66px;max-width:260px;background:#0e1c30;color:var(--ink);border:1px solid var(--card-b);border-radius:14px;padding:14px 16px;font-size:13px;line-height:1.6;box-shadow:0 20px 60px rgba(0,0,0,.6);display:none;z-index:40}
+  .score-info.show{display:block}
+
+  /* ── HERO — СТАНДАРТ (не менять): 3D-сцена сверху, текст отдельным блоком ниже ── */
+  .hero-scene{position:relative;height:52vh;min-height:300px;max-height:520px;overflow:hidden;background:linear-gradient(160deg,#0a1e3a 0%,#1a3a6a 55%,#0d2240 100%)}
+  .hero-scene canvas.scene,.hero-scene img.scene{width:100%;height:100%;display:block;object-fit:cover}
+  .scene-caption{background:#060d18;padding:11px 0 12px}
+  .scene-caption .wrap{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+  .scene-cap{font-size:13.5px;line-height:1.6;color:var(--muted);border-left:2px solid rgba(201,168,76,.4);padding-left:14px;flex:1 1 420px}
+  .scene-hint{flex:0 0 auto;font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.4px;color:#e4c97a;
+    background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.34);border-radius:24px;padding:7px 16px;font-weight:600}
+  .hero-lead{background:linear-gradient(180deg,#0c1826 0%,#060c17 100%);color:#fff;padding:28px 0 38px}
+  .hero-lead .museum{color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:12px;opacity:.9}
+  .hero-lead .who{font-family:'Inter',sans-serif;font-size:clamp(13px,3vw,15px);letter-spacing:.4px;color:var(--accent-l,#7dc8ff);margin-bottom:10px}
+  .hero-lead .who i{font-style:normal;color:#7893ab;font-weight:400}
+  .hero-lead h1{color:#fff;font-size:56px;font-weight:900;line-height:1.04;margin-bottom:16px}
+  .hero-lead .hook{color:#b8ccde;font-size:19px;max-width:580px;margin-bottom:28px;line-height:1.65;font-weight:400}
+  .hero-lead .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+  @media(max-width:680px){.hero-lead h1{font-size:34px}.hero-lead .hook{font-size:16px}
+    .hero-scene{height:34vh;min-height:230px;max-height:300px}
+    .scene-caption .wrap{flex-direction:column;gap:9px}
+    .scene-hint{order:-1;align-self:flex-start;font-size:11.5px;padding:6px 13px}
+    .scene-cap{font-size:12.8px;flex:1 1 auto}}
+  .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:16px;font-family:'Inter',sans-serif;letter-spacing:.5px}
+
+  /* ── НАВИГАЦИЯ ДНЯ ── */
+  .daynav{position:sticky;top:64px;z-index:25;background:rgba(6,12,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-b)}
+  .daynav .wrap{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+  .daynav::-webkit-scrollbar{display:none}
+  .daynav a{flex:0 0 auto;padding:14px 20px;font-size:11px;font-weight:700;font-family:'Inter',sans-serif;color:var(--muted);text-decoration:none;white-space:nowrap;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:.18s}
+  .daynav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+  /* ── СЕКЦИИ ── */
+  section.block{padding:64px 0;border-bottom:1px solid var(--line);scroll-margin-top:130px}
+  .kicker{font-size:10px;text-transform:uppercase;letter-spacing:3.5px;color:var(--gold);font-weight:700;font-family:'Inter',sans-serif;margin-bottom:8px}
+  section.block h2{font-size:34px;color:#fff;margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink)}
+  .pull{background:var(--gold-g);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 14px 14px 0;font-style:italic;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-size:20px;line-height:1.5;margin:26px 0}
+
+  /* ── КНОПКИ ── */
+  .btn{cursor:pointer;border:none;border-radius:12px;padding:14px 26px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;background:var(--accent2);color:#fff;transition:.18s;letter-spacing:.2px}
+  .btn:hover{filter:brightness(1.18)}
+  .btn.ghost{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid var(--card-b)}
+  .btn.ghost:hover{background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.2)}
+  .btn.gold{background:linear-gradient(135deg,var(--gold),#b8882b);color:#1a0f00;box-shadow:0 4px 20px rgba(201,168,76,.25)}
+  .btn.gold:hover{filter:brightness(1.1);box-shadow:0 6px 28px rgba(201,168,76,.4)}
+  .btn:active{transform:translateY(1px)}
+  .pulse{animation:pulse .9s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+
+  /* ── КАРТОЧКИ ── */
+  .card{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:20px 22px;margin:16px 0;backdrop-filter:blur(6px)}
+
+  /* ── КВИЗ ── */
+  .opt{display:block;width:100%;text-align:left;background:rgba(255,255,255,.04);border:1px solid var(--card-b);border-radius:12px;padding:13px 16px;margin:8px 0;cursor:pointer;font-size:15px;color:var(--ink);font-family:'Inter',sans-serif;transition:.16s}
+  .opt:hover{border-color:var(--accent);background:rgba(45,140,191,.08)}
+  .opt.correct{background:rgba(40,120,60,.18);border-color:#3f9b52;color:#7ed4a0;font-weight:600}
+  .opt.wrong{background:rgba(180,40,40,.13);border-color:#c0453f;color:#f08080}
+  .exp{margin-top:10px;font-size:14px;background:var(--gold-g);border-radius:10px;padding:12px 14px;display:none;color:var(--gold-l)}
+  .exp.show{display:block}
+
+  /* ── ИТОГ ДНЯ ── */
+  .day-result{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:22px 24px;max-width:460px}
+  .dr-rank{font-family:'Playfair Display',Georgia,serif;font-size:28px;color:var(--gold-l);font-weight:700}
+  .dr-score{font-size:16px;margin:4px 0 12px;color:var(--ink)}.dr-score span{color:var(--muted);font-size:14px}
+  .dr-bar{height:8px;background:rgba(255,255,255,.08);border-radius:6px;overflow:hidden}
+  .dr-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),var(--gold));transition:width .6s cubic-bezier(.2,.7,.2,1)}
+  .dr-note{margin-top:12px;font-size:14px;color:var(--muted)}
+
+  /* ── РЕКЛАМНЫЕ СЛОТЫ ── */
+  .ad-slot{position:relative;margin:26px 0;background:rgba(255,255,255,.02);border:1px dashed rgba(255,255,255,.1);border-radius:14px;min-height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px}
+  .ad-slot .lbl{position:absolute;top:7px;right:12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.15);font-family:'Inter',sans-serif}
+  .ad-slot .ph-txt{font-size:12px;max-width:80%;color:rgba(255,255,255,.18)}
+  .ad-slot.billboard{min-height:108px}
+  .adband{background:transparent;border-bottom:none}
+
+  footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
+  .crumbs{background:rgba(6,12,23,.6);border-bottom:1px solid var(--card-b);font-family:'Inter',sans-serif;font-size:12.5px}
+  .crumbs .wrap{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  .crumbs a{color:var(--gold-l);text-decoration:none;white-space:nowrap}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--muted);opacity:.6}
+  .crumbs .here{color:var(--muted);white-space:nowrap}
+
+
+  /* ── ШАПКА: четыре строки по museum-core §6-бис ── */
+  header.top{display:block;text-align:center;padding:10px 12px 8px;height:auto;position:relative}
+  header.top .b1{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:15px;letter-spacing:.5px;color:#fff}
+  header.top .b2{font-size:11px;color:var(--muted);margin-top:2px}
+  header.top .b3{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:6px}
+  header.top .b4{font-size:12.5px;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-style:italic}
+  header.top .score{position:absolute;right:12px;top:10px}
+  .daynav{top:0}
+  .hero-scene{background:#0e1c2c;height:38vh;min-height:250px;max-height:400px}
+  @media(max-width:680px){.hero-lead h1{font-size:31px}}
+  .hero-scene img.scene{object-fit:cover;object-position:50% 42%}
+  .date-origin{font-size:13px;color:#9fb4c8;margin:-6px 0 12px;max-width:62ch}
+  .hero-lead .hook{color:#c6d8e8;max-width:62ch}
+  .hero-under{background:linear-gradient(180deg,#060d18,#060c17);padding:4px 0 22px}
+  .stamp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(125,200,255,.28);margin-top:14px}
+  .stamp>div{padding:11px 12px;border-left:1px solid rgba(125,200,255,.16);min-width:0}
+  .stamp>div:first-child{border-left:0}
+  .stamp .v{font-size:clamp(15px,3.4vw,21px);font-weight:700;color:#8fd3ff;line-height:1.1;overflow-wrap:anywhere}
+  .stamp .k{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#8fa5b9;margin-top:5px}
+  @media(max-width:600px){.stamp{grid-template-columns:repeat(2,minmax(0,1fr))}.stamp>div:nth-child(3){border-left:0}.stamp>div:nth-child(n+3){border-top:1px solid rgba(125,200,255,.16)}}
+
+  /* ── ЛЕНТА УДАРОВ (museum-inventions, вариант А; museum-core §5-бис) ── */
+  .udary{list-style:none;margin:18px 0 0;padding:0;counter-reset:u}
+  .udary>li{border-top:1px solid var(--line);padding:4px 0}
+  .udary details>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:34px 1fr;gap:10px;padding:12px 0;font-size:17px;line-height:1.55;color:var(--ink)}
+  .udary details>summary::-webkit-details-marker{display:none}
+  .udary details>summary::before{counter-increment:u;content:counter(u);font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:20px;color:var(--gold);line-height:1.3}
+  .udary .more-lbl{display:block;grid-column:2;font-size:12.5px;color:var(--gold-l);letter-spacing:.3px;margin-top:4px}
+  .udary .more-lbl::after{content:' ▾'}
+  .udary details[open] .more-lbl::after{content:' ▴'}
+  .udary details[open] .more-lbl .o{display:none}
+  .udary details:not([open]) .more-lbl .c{display:none}
+  .udary summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+  .udary .det{margin:0 0 14px 44px;padding:12px 16px;background:rgba(255,255,255,.035);border-left:2px solid rgba(201,168,76,.45);border-radius:0 10px 10px 0;font-size:15px;color:#d5e0ea}
+  .udary .det p{margin:8px 0}
+  .udary .tag{display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1a0f00;background:var(--gold-l);border-radius:6px;padding:1px 7px;margin-right:6px}
+  .udary .find{border-left:3px solid var(--gold);padding-left:8px}
+  figure.fig{margin:18px 0}
+  figure.fig img{max-width:100%;height:auto;border-radius:10px;display:block}
+  figure.fig figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5}
+  .src-note{font-size:12px;color:#8fa5b9}
+
+  /* ── МОДЕЛЬ ДНЯ (главное предметное действие) ── */
+  .lab{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:18px 18px 20px;margin-top:14px}
+  .lab-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+  .lab-row .lbl{flex:0 0 100%;font-size:13px;color:var(--muted);letter-spacing:.3px}
+  .seg{cursor:pointer;border:1px solid var(--card-b);background:rgba(255,255,255,.04);color:var(--ink);border-radius:10px;padding:10px 14px;font:inherit;font-size:14.5px;min-height:44px}
+  .seg[aria-pressed="true"]{border-color:var(--gold);background:var(--gold-g);color:var(--gold-l);font-weight:600}
+  .seg:focus-visible,.btn:focus-visible,.opt:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .lab-stage{position:relative;margin-top:12px}
+  .lab-stage canvas{width:100%;height:auto;display:block;border-radius:10px;background:#1c2530}
+  .lab-cap{font-size:12px;color:#8fa5b9;margin-top:6px}
+  .lab-msg{margin-top:12px;font-size:15.5px;padding:12px 14px;border-radius:10px;background:rgba(255,255,255,.04);border-left:3px solid var(--card-b);min-height:48px}
+  .lab-msg.ok{border-left-color:#3f9b52;background:rgba(40,120,60,.14)}
+  .lab-msg.bad{border-left-color:#c0453f;background:rgba(180,40,40,.10)}
+  .lab-found{font-size:13px;color:var(--muted);margin-top:8px}
+  .lab-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .noscript-box{background:rgba(255,255,255,.04);border:1px dashed var(--card-b);border-radius:12px;padding:12px 16px;font-size:15px}
+
+  /* ── ГРАНИЦА ПЕРВЕНСТВА ── */
+  .border-box{background:rgba(45,140,191,.08);border:1px solid rgba(45,140,191,.3);border-radius:14px;padding:16px 18px}
+  .border-box b{color:#8fd3ff}
+  .ctx{width:100%;border-collapse:collapse;margin-top:14px;font-size:14.5px}
+  .ctx th,.ctx td{text-align:left;padding:9px 8px;border-top:1px solid var(--line);vertical-align:top}
+  .ctx th{color:var(--gold-l);font-weight:600;font-size:12.5px;letter-spacing:.5px}
+  .quiz-q{margin:18px 0 6px;font-weight:600}
+  .sources a{color:var(--gold-l)}
+  .sources li{margin:6px 0;font-size:14px;color:#c8d6e2}
+  @media(max-width:600px){header.top{padding:8px 64px 6px}header.top .score{top:8px;right:8px;padding:4px 10px;font-size:12px}header.top .b3{margin-top:3px}
+    .hero-scene{height:26vh;min-height:200px;max-height:260px}.date-origin{font-size:12px;margin:-8px 0 8px}.hero-lead{padding:18px 0 26px}.hero-lead .date-chip{margin-bottom:12px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+  /* ── ПОЛЗУНКИ МОДЕЛИ (19, 21 янв) ── */
+  .mtab{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+  .mrow{display:grid;grid-template-columns:minmax(150px,1.2fr) 2fr 92px;gap:12px;align-items:center}
+  .mrow .mname{font-size:14.5px}
+  .mrow .mname i{font-style:normal;color:var(--muted);font-size:13px}
+  .mrow input[type=range]{width:100%;accent-color:var(--gold);min-height:44px}
+  .mrow output{font-size:14px;color:var(--gold-l);text-align:right}
+  .mrow.off{opacity:.45}
+  .mult{margin-top:14px;padding:14px 16px;border-radius:12px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25)}
+  @media(max-width:560px){.mrow{grid-template-columns:1fr 70px}.mrow .mname{grid-column:1/-1}}
+</style>
+<meta name="description" content="Фаворский соединил фенилацетилен с кетоном сухим едким кали, без натрия, нужного Нефу в 1899-м. Смешай реактивы в колбе и пройди путь от ацетилена к каучуку.">
+<link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-03mar-favorsky.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Русская цивилизация">
+<meta property="og:title" content="Реакция Фаворского: ацетилен без натрия">
+<meta property="og:description" content="Фаворский соединил фенилацетилен с кетоном сухим едким кали, без натрия, нужного Нефу в 1899-м. Смешай реактивы в колбе и пройди путь от ацетилена к каучуку.">
+<meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-03mar-favorsky.html">
+<meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-03mar-favorsky.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Реакция Фаворского: ацетилен без натрия", "description": "Фаворский соединил фенилацетилен с кетоном сухим едким кали, без натрия, нужного Нефу в 1899-м. Смешай реактивы в колбе и пройди путь от ацетилена к каучуку.", "url": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-03mar-favorsky.html", "inLanguage": "ru", "isPartOf": {"@type": "WebSite", "name": "Музей «Что изобрели русские первыми в мире»"}, "publisher": {"@type": "Organization", "name": "Русская цивилизация"}, "about": {"@type": "Person", "name": "Алексей Евграфович Фаворский"}, "image": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-03mar-favorsky.jpg"}</script>
+<style>
+  /* ── РЕАКЦИЯ ФАВОРСКОГО: АЦЕТИЛЕН БЕЗ НАТРИЯ (3 мар) ── */
+  .flaskv{width:100%;max-width:760px;height:auto;aspect-ratio:760/260;display:block;margin:10px 0 4px;background:#16120d;border-radius:10px}
+  .pick{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;max-width:760px;margin-top:8px}
+  .pick fieldset{border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:8px 10px;margin:0}
+  .pick legend{font-size:13px;color:var(--muted);padding:0 4px}
+  .pick .seg{display:block;width:100%;text-align:left;margin:4px 0}
+  .pick .seg.on{border-color:#c9a24a;background:rgba(201,162,74,.15)}
+  .lstat{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;max-width:760px;margin-top:10px}
+  .lstat div{border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:8px 10px;background:rgba(255,255,255,.03)}
+  .lstat b{display:block;font-size:18px;color:var(--gold-l)}
+  .lstat span{font-size:13px;color:var(--muted)}
+  .found{display:grid;gap:6px;max-width:760px;margin:8px 0 0;padding:0;list-style:none}
+  .found li{border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:6px 10px;font-size:14px;color:var(--muted)}
+  .found li.on{border-color:#3f9b52;color:inherit}
+  .found li .fver{display:block;font-size:13px;color:var(--muted)}
+  .path{display:grid;gap:8px;max-width:760px;margin-top:8px}
+  .path .seg{text-align:left;width:100%}
+  .path .n,.chrono .n{display:inline-block;min-width:1.6em;color:var(--gold-l);font-weight:700}
+  .path .seg.right,.chrono .seg.right{border-color:#3f9b52;background:rgba(63,155,82,.18)}
+  .chrono{display:grid;gap:8px;max-width:760px;margin-top:8px}
+  .chrono .seg{text-align:left;width:100%}
+  .seg.wrongpick{border-color:#c0573f;background:rgba(192,87,63,.15)}
+  .formula{font-family:Georgia,serif;font-size:17px;color:var(--gold-l)}
+  blockquote.doc{margin:12px 0;padding:10px 14px;border-left:3px solid var(--gold);background:rgba(255,255,255,.03);border-radius:0 10px 10px 0;font-size:15px;line-height:1.6}
+  #hero img.scene{object-fit:contain;background:#f3eee6}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="b1">Русская цивилизация</div>
+  <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
+  <div class="b3">Что изобрели русские первыми в мире</div>
+  <div class="b4">365 изобретений. Все русские. Все первые</div>
+  <div class="score" id="scoreBox" title="Баллы знаний за этот день">⭐ <span id="score">0</span> / 100</div>
+</header>
+
+<nav class="crumbs" aria-label="Хлебные крошки"><div class="wrap">
+  <a href="../../index.html">Русская цивилизация</a>
+  <span class="sep">›</span>
+  <a href="index.html">Что изобрели русские первыми в мире</a>
+  <span class="sep">›</span>
+  <span class="here">3 марта · Фаворский</span>
+</div></nav>
+
+<div class="hero-scene" id="hero">
+  <img class="scene" src="day-03mar-favorsky.jpg" data-source="https://commons.wikimedia.org/wiki/File:The_Soviet_Union_1979_Illustrated_stamped_envelope_Lapkin_79-687(13937)face(Alexey_Favorsky)_(cropped).jpg" data-license="Public domain" data-author="Художественный маркированный конверт СССР, 1979; художник Н. Игнатьев" width="1200" height="1193" alt="Рисунок с почтового конверта: старик с длинной белой бородой, в круглых очках и тёмной шапочке, на лацкане — золотая звезда Героя Социалистического Труда; под портретом голубая надпись «Герой Социалистического Труда академик А. Е. Фаворский 1860–1945»" fetchpriority="high">
+</div>
+
+<div class="scene-caption">
+  <div class="wrap">
+    <div class="scene-cap">Портрет А. Е. Фаворского на художественном маркированном конверте СССР из серии «Герои Социалистического Труда», 1979 год, художник Н. Игнатьев. Викисклад, общественное достояние.</div>
+    <span class="scene-hint">Найди звезду Героя на лацкане</span>
+  </div>
+</div>
+
+<header class="hero-lead">
+  <div class="wrap">
+    <div class="date-chip">3 марта · 1860</div>
+    <p class="date-origin">3 марта (20 февраля по старому стилю) 1860 года в селе Павлове Нижегородской губернии родился Алексей Фаворский — химик, чьё имя носит реакция ацетиленов с кетонами.</p>
+    <div class="who">Алексей Евграфович Фаворский <i>· Петербургский университет</i></div>
+    <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
+    <h1>Реакция Фаворского: ацетилен без натрия</h1>
+    <p class="hook">В 1905 году Фаворский напечатал, как соединить фенилацетилен с кетоном сухим едким кали, — без металлического натрия, который в 1899-м понадобился Нефу.</p>
+    <div class="hero-btns">
+      <button class="btn gold" id="readBtn" type="button">Читать историю ↓</button>
+      <button class="btn ghost" id="listenBtn" type="button">🎧 Слушать аудиогид</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero-under">
+  <div class="wrap">
+    <div class="stamp">
+      <div><div class="v">1905</div><div class="k">год статьи Фаворского о действии едкого кали на смеси кетонов с фенилацетиленом</div></div>
+      <div><div class="v">2 стадии</div><div class="k">щёлочь сначала присоединяется к кетону, потом передаёт его ацетилену</div></div>
+      <div><div class="v">90–95 %</div><div class="k">выход ацетиленового спирта из ацетилена и ацетона, по словам Фаворского</div></div>
+      <div><div class="v">3 шага</div><div class="k">от этого спирта до каучука: гидрирование, отщепление воды, полимеризация</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="daynav" aria-label="Разделы дня">
+  <div class="wrap">
+    <a href="#story">Читать</a>
+    <a href="#audioguide">Слушать</a>
+    <a href="#games">Колба</a>
+    <a href="#pervenstvo">Первенство</a>
+    <a href="#quiz">Викторина</a>
+    <a href="#calendar">Календарь</a>
+  </div>
+</nav>
+
+<section class="wrap" id="dokument" data-proof-block></section>
+
+<section class="block" id="audioguide"></section>
+
+<section class="block" id="story">
+  <div class="wrap">
+    <div class="kicker">История первенства · 12 ударов</div>
+    <h2>Порошок щёлочи вместо натрия</h2>
+    <p style="color:var(--muted);max-width:62ch">Читается подряд. Нажми на удар — откроется подробный разбор с источниками.</p>
+    <ol class="udary">
+      <li><details><summary><span>В 1880-х лаборант Петербургского университета Алексей Фаворский хотел получить этилацетилен, а получил другое вещество — диметилацетилен.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Он грел хлорпроизводное метилэтилкетона со спиртовым раствором едкого кали в запаянных трубках при 170 °C. Без спирта реакция шла как положено и давала этилацетилен. Значит, тройную связь вдоль цепочки сдвигал именно спиртовой раствор щёлочи. Опыт это подтвердил: сам этилацетилен в тех же условиях превратился в диметилацетилен.</p>
+          <p class="src-note">Источник: биографический очерк об А. Е. Фаворском (электронная копия библиотеки ИРНИТУ), с. 13–14.</p>
+        </div></details></li>
+      <li><details><summary><span>В 1887 году, изучая превращения диметилаллена при участии металлического натрия, Фаворский получил каучукоподобное вещество — к каучуку эта история ещё вернётся.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>В 1910 году этот опыт воспроизвели и углубили Мэтьюс и Стрендж — у них тоже вышел каучукообразный полимер. Фаворский впервые доказал, что ацетиленовые углеводороды можно превратить в двуэтиленовые, и показал, что те способны полимеризоваться.</p>
+          <p class="src-note">Источник: биографический очерк об А. Е. Фаворском (электронная копия библиотеки ИРНИТУ), с. 39–40.</p>
+        </div></details></li>
+      <li><details><summary><span>В 1888 году он напечатал открытие из запаянных трубок и по-немецки, в лейпцигском Journal für praktische Chemie, — «Явления изомеризации углеводородов CnH2n−2».<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Статья вышла из химической лаборатории Петербургского университета, её первая часть называлась «Изомеризация однозамещённых ацетиленов при нагревании со спиртовым раствором щёлочи». В 1891 году эти работы легли в его магистерскую диссертацию «По вопросу о механизме изомеризаций в рядах непредельных углеводородов».</p>
+          <p class="src-note">Источники: Al. Faworsky, «Isomerisationserscheinungen der Kohlenwasserstoffe CnH2n−2», Journal für praktische Chemie, 1888, т. 37, с. 382 (скан в Internet Archive); БСЭ, 2-е изд., т. 44, 1956, статья «Фаворский».</p>
+        </div></details></li>
+      <li><details><summary><span>В том же 1888 году он увидел, что метилацетилен под действием едкого кали при нагревании присоединяет спирты. Через полвека из этого вырастут виниловые эфиры.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Реакцию потом перенесли на сам ацетилен и самые разные спирты. Так в 1939 году открылся путь к промышленному получению виниловых эфиров. Сами эфиры и их полимеры пошли в промышленность и в медицину.</p>
+          <p class="src-note">Источник: БСЭ, 2-е изд., т. 44, 1956, статья «Фаворский».</p>
+        </div></details></li>
+      <li><details><summary><span>В 1899 году Джон Ульрик Неф научился присоединять фенилацетилен к кетону — но только через металлический натрий: им сначала действовали на эфирный раствор фенилацетилена.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Натрий превращал фенилацетилен в натриевое производное — «очень активное вещество», которое, по словам реферата, присоединяется к карбонильным соединениям так же охотно, как цинкэтил. Если добавить ацетофенон, получался спирт: бесцветные иглы, плавящиеся при 77°. Статья Нефа вышла в «Анналах» Либиха в 1899 году.</p>
+          <p class="src-note">Источник: J. U. Nef, «Phenylacetylene, its Salts, and Halogen Substitution Derivatives», Annalen, 1899, т. 308, с. 264–328; реферат — Journal of the Chemical Society, Abstracts, 1900, ч. I, с. 20–21 (скан в Internet Archive).</p>
+        </div></details></li>
+      <li><details><summary><span>Фаворский пошёл другим путём: смешал кетон с ацетиленовым углеводородом и добавил безводного порошкообразного едкого кали — без натрия и без отдельного этапа.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Позже он сам называл этот способ реакцией, «открытой мною ещё в 1900 г.»: «из ацетилена и кетонов в присутствии безводного порошкообразного едкого кали были синтезированы ацетиленовые спирты». Третье издание БСЭ тоже называет 1900 год, второе относит эти работы к 1900–1905 годам. В списке трудов Фаворского есть статья 1900 года о действии порошковатого едкого кали на смесь фенилацетилена с ацетоном, написанная вместе со Скосаревским.</p>
+          <p class="src-note">Источники: слова А. Е. Фаворского в биографическом очерке (электронная копия библиотеки ИРНИТУ), с. 44; список трудов в очерке из сборника «Люди русской науки», 1948; БСЭ, 2-е изд., т. 44, 1956, статья «Фаворский»; БСЭ, 3-е изд., статья «Фаворского реакция».</p>
+        </div></details></li>
+      <li><details><summary><span>В 1905 году «Журнал Русского физико-химического общества» напечатал целую серию статей о действии едкого кали на смеси кетонов с фенилацетиленом — самого Фаворского и его учеников.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Статья Фаворского стоит первой (т. 37, с. 643–645; русское название здесь — перевод английского заголовка реферата), за ней — статьи Скосаревского, Борка, Неверовича, Бертрона и Романова, до с. 659. Скосаревский из фенилацетилена и ацетона получил бесцветные кристаллы, плавящиеся при 53°. Борк взял метилэтилкетон, и у него вышла сиропообразная жидкость с приятным запахом, напоминающим розовое масло. А Бертрон смешал фенилацетилен с ацетофеноном при едком кали — и получил спирт, «идентичный» тому, что Неф получал через натриевое производное. В том же году эти статьи пересказал лондонский Journal of the Chemical Society.</p>
+          <p class="src-note">Источник: Journal of the Chemical Society, Abstracts, 1905, ч. I, с. 773–775: рефераты статей А. Е. Фаворского, М. Скосаревского, И. Борка, Н. Неверовича, Э. Бертрона и Е. Романова из «Журнала Русского физико-химического общества», 1905, т. 37 (скан в Internet Archive).</p>
+        </div></details></li>
+      <li><details><summary><span>Фаворский объяснил, почему щёлочь справляется без металла: реакция идёт в две стадии, и едкое кали в ней не расходуется.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <blockquote class="doc find">«…the potassium hydroxide is first added to the carbonyl group of the ketone, >C:O + KOH = >C(OH)·OK, the latter then gradually reacting with the phenylacetylene».<br>В переводе: «…едкое кали сначала присоединяется к карбонильной группе кетона, &lt;…&gt; а затем этот продукт постепенно реагирует с фенилацетиленом».</blockquote>
+          <p>На второй стадии едкое кали снова освобождается. Реферат сравнивает реакцию с другой, где кетон и едкое кали реагируют с хлороформом, но там выходы хуже. В синтезе ацетиленовых спиртов воду можно почти полностью исключить.</p>
+          <p class="src-note">Источник: Journal of the Chemical Society, Abstracts, 1905, ч. I, с. 773, реферат статьи А. Е. Фаворского.</p>
+        </div></details></li>
+      <li><details><summary><span>Сам Фаворский провёл реакцию и с самым простым ацетиленом: в паре с ацетоном ацетилен дал спирт диметилацетиленилкарбинол с выходом 90–95 % от теоретически возможного.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p class="formula">HC≡CH + CH₃COCH₃ → (CH₃)₂C(OH)C≡CH</p>
+          <p>«…в присутствии безводного порошкообразного едкого кали ацетилен присоединяется к ацетону и дает алкоголят диметилацетиленил-карбинола. Выход ацетиленового спирта достигает 90–95 % от теоретически возможного», — писал Фаворский. В энциклопедиях этот синтез так и называется: «Фаворского реакция».</p>
+          <p class="src-note">Источники: слова А. Е. Фаворского в биографическом очерке (электронная копия библиотеки ИРНИТУ), с. 44; БСЭ, 3-е изд., статья «Фаворского реакция».</p>
+        </div></details></li>
+      <li><details><summary><span>В Германии путь к изопрену прошёл Мерлинг: он перенёс найденную задолго до того реакцию Фаворского с фенилацетилена на ацетилен, только вместо едкого кали взял амид натрия.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Мерлинг получил диметилацетиленилкарбинол, гидрированием — диметилвинилкарбинол, а отняв у него воду, — изопрен. Изопрен — то звено, из которого построена молекула натурального каучука. Биограф называет реакцию Фаворского прототипом этого способа.</p>
+          <p class="src-note">Источник: биографический очерк об А. Е. Фаворском (электронная копия библиотеки ИРНИТУ), с. 31.</p>
+        </div></details></li>
+      <li><details><summary><span>Фаворский прошёл этот путь и сам — от сырья, которое есть везде: из извести и угля получают карбид, из карбида и воды — ацетилен.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Ацетиленовый спирт он гидрировал электрическим током в содовом растворе и получал диметилвинилкарбинол, а тот после отщепления воды давал изопрен. «Полученный нами вышеописанным способом в лабораторных условиях изопреновый каучук обнаружил при испытаниях ряд положительных свойств», — писал Фаворский.</p>
+          <p class="src-note">Источник: слова А. Е. Фаворского в биографическом очерке (электронная копия библиотеки ИРНИТУ), с. 44–45.</p>
+        </div></details></li>
+      <li><details><summary><span>Советский каучук пошёл бутадиеновой дорогой его ученика Сергея Лебедева, а реакция с порошком щёлочи так и осталась реакцией Фаворского: на ней его ученик Иван Назаров построил химию винилэтинилкарбинолов.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Лебедев писал, что к полимеризации непредельных углеводородов его направил учитель. По способу Лебедева каучук делали из дивинила, а дивинил — из этилового спирта. Фаворский в 1941 году получил Сталинскую премию. БСЭ называет работы Фаворского и его учеников теоретической основой отечественной промышленности синтетического каучука.</p>
+          <p class="src-note">Источники: биографический очерк об А. Е. Фаворском (электронная копия библиотеки ИРНИТУ), с. 40, 51; очерк «Алексей Евграфович Фаворский» в сборнике «Люди русской науки», 1948, с. 9; БСЭ, 2-е изд., т. 44, 1956.</p>
+        </div></details></li>
+    </ol>
+  </div>
+</section>
+<section class="block" id="theme-inventions">
+  <div class="wrap">
+    <div class="kicker">Химия · Русские первенства</div>
+    <h2>Что ещё русские первыми сделали в химии</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Другие химические дни музея — по утверждённому календарю.</p>
+    <button class="btn ghost" type="button" id="themeInvBtn" data-label="Показать 2 первенства →" aria-expanded="false" aria-controls="themeInvBody">Показать 2 первенства →</button>
+    <div id="themeInvBody" hidden>
+      <ul class="theme-list">
+        <li><b>6 фев</b> <a href="day-06feb-zelinsky.html">Угольный противогаз Зелинского</a></li>
+        <li><b>8 фев</b> <a href="day-08feb-mendeleev.html">Пустые клетки Менделеева: элементы, описанные до открытия</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="games">
+  <div class="wrap">
+    <div class="kicker">Главное действие · по рефератам статей 1899–1905 годов и словам Фаворского; модель условная</div>
+    <h2>Колба Фаворского: найди пять опытов из документов</h2>
+    <p style="max-width:62ch">Выбери ацетиленовый углеводород, кетон и то, чем на них действовать. Модель покажет только то, что записано в документах: один опыт Нефа и четыре опыта школы Фаворского. Чего в источниках нет, того модель не выдумывает.</p>
+    <div class="lab">
+      <div class="pick" id="pick">
+        <fieldset id="fA"><legend>Ацетиленовый углеводород</legend></fieldset>
+        <fieldset id="fB"><legend>Кетон</legend></fieldset>
+        <fieldset id="fC"><legend>Чем действовать</legend></fieldset>
+      </div>
+      <div class="lopts" style="margin-top:8px">
+        <button class="btn gold" type="button" id="mixBtn">Смешать</button>
+      </div>
+      <canvas class="flaskv" id="flask" width="760" height="260" role="img" aria-label="Колба с реакционной смесью: после опыта на дне видны кристаллы, густой сироп или прозрачная жидкость; при опыте с натрием в колбе лежат серые кусочки металла, при опыте с едким кали на дне белый порошок"></canvas>
+      <div class="lstat">
+        <div><b id="sA">—</b><span id="lA">что получилось</span></div>
+        <div><b id="sB">—</b><span id="lB">каким вышло вещество</span></div>
+        <div><b id="sC">—</b><span id="lC">чей опыт</span></div>
+      </div>
+      <div class="lab-msg" id="fMsg" aria-live="polite">Выбери по одному реактиву в каждом столбце и нажми «Смешать».</div>
+      <h3 style="margin:18px 0 6px">Опыты из документов</h3>
+      <ul class="found" id="found"></ul>
+
+      <h3 style="margin:22px 0 6px">От спирта к каучуку: три шага</h3>
+      <p style="max-width:62ch;margin:0 0 6px;color:var(--muted)">Из ацетилена и ацетона вышел спирт <span class="formula">(CH₃)₂C(OH)C≡CH</span>. Нажимай шаги в том порядке, в каком Фаворский вёл его к каучуку.</p>
+      <div class="path" id="path" role="group" aria-label="Шаги от ацетиленового спирта к каучуку"></div>
+      <div class="lab-msg" id="pMsg" aria-live="polite">Какой шаг первый?</div>
+      <div class="lab-cap">Опыты и вещества — из рефератов Journal of the Chemical Society: статья Нефа (Annalen, 1899) и статьи Фаворского, Скосаревского, Борка и Бертрона («Журнал Русского физико-химического общества», 1905). Выход 90–95 % и путь к изопрену — по словам самого Фаворского. Условно: рисунок колбы схематичен, вещества показаны цветом и видом, а не составом.</div>
+      <noscript><div class="noscript-box">Для модели нужен JavaScript. Текстовая версия. Неф, 1899: металлический натрий превращает фенилацетилен в эфире в натриевое производное, с ацетофеноном оно даёт спирт — иглы, плавятся при 77°. Скосаревский, 1905: фенилацетилен, ацетон и порошок едкого кали дают кристаллы, плавятся при 53°. Борк, 1905: фенилацетилен, метилэтилкетон и едкое кали дают сироп с запахом розового масла. Бертрон, 1905: фенилацетилен, ацетофенон и едкое кали дают тот же спирт, что у Нефа, — без натрия. Фаворский: ацетилен, ацетон и едкое кали дают диметилацетиленилкарбинол с выходом 90–95 %. Путь к каучуку: гидрирование в содовом растворе — диметилвинилкарбинол; отщепление воды — изопрен; полимеризация — изопреновый каучук.</div></noscript>
+
+      <h3 style="margin:22px 0 6px">1882–1941: расставь по порядку</h3>
+      <p style="max-width:62ch;margin:0 0 6px;color:var(--muted)">Нажимай события от самого раннего к самому позднему.</p>
+      <div class="chrono" id="chrono" role="group" aria-label="События 1882–1941 годов"></div>
+      <div class="lab-msg" id="hMsg" aria-live="polite">Какое событие было первым?</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="pervenstvo">
+  <div class="wrap">
+    <div class="kicker">Проверка факта</div>
+    <h2>Что именно здесь наше</h2>
+    <div class="border-box">
+      <p style="margin-top:0"><b>Граница первенства:</b> А. Е. Фаворский первым соединил ацетиленовые углеводороды с кетонами прямо в присутствии безводного порошкообразного едкого кали, без металлического натрия и без того, чтобы сначала получать натриевое производное. Так получаются третичные ацетиленовые спирты — эту реакцию энциклопедии называют его именем. Серия статей о ней вышла в «Журнале Русского физико-химического общества» в 1905 году, а сам Фаворский и третье издание БСЭ относят открытие к 1900 году. Ученик Фаворского Бертрон показал в 1905 году, что при едком кали из фенилацетилена и ацетофенона выходит тот же спирт, что у Нефа через натрий.</p>
+      <p><b>Чего здесь нет:</b> Присоединять ацетиленовый углеводород к кетону умели и до него: в 1899 году это сделал Джон Ульрик Неф, но через металлический натрий. Перенести реакцию на сам ацетилен и дойти до изопрена сумел в Германии Мерлинг, но с амидом натрия, а не с едким кали. Советский промышленный каучук был бутадиеновым, по способу ученика Фаворского С. В. Лебедева, а не изопреновым. Сегодня изопрен в промышленности получают другими способами — из изобутилена и формальдегида, дегидрированием изопентана и из продуктов пиролиза нефти.</p>
+    </div>
+    <table class="ctx">
+      <thead><tr><th scope="col">Кто</th><th scope="col">Что сделал</th><th scope="col">Когда</th></tr></thead>
+      <tbody>
+        <tr><td>Джон Ульрик Неф</td><td>Присоединил фенилацетилен к кетонам через натриевое производное (металлический натрий в эфире)</td><td>1899</td></tr>
+        <tr><td>Алексей Фаворский, Петербург</td><td>Соединил ацетиленовые углеводороды с кетонами прямо при порошке едкого кали; описал две стадии реакции</td><td>1905; по его словам и по БСЭ-3 — 1900</td></tr>
+        <tr><td>Мерлинг, Германия</td><td>Перенёс реакцию на ацетилен с амидом натрия и получил из спирта изопрен</td><td>после открытия Фаворского</td></tr>
+        <tr><td>Сергей Лебедев, ученик Фаворского</td><td>Создал советский способ бутадиенового каучука из спирта</td><td>позже</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block" id="quiz">
+  <div class="wrap">
+    <div class="kicker">Проверь себя · 5 вопросов</div>
+    <h2>Викторина</h2>
+    <p style="color:var(--muted);max-width:62ch">На каждый вопрос — одна попытка. После ответа покажем объяснение.</p>
+    <div id="quizBox"></div>
+    <noscript><div class="noscript-box">Для викторины нужен JavaScript. Ответы: 1 — сухим порошком едкого кали; 2 — диметилацетиленилкарбинол; 3 — розовое масло; 4 — 90–95 %; 5 — Сергей Лебедев.</div></noscript>
+  </div>
+</section>
+
+<section class="block" id="result">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Итог дня</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Колба, путь к каучуку, хронология и викторина вместе дают 100 баллов. Прогресс не сохраняется: перезагрузишь страницу — день начнётся заново.</p>
+    <div class="day-result">
+      <div class="dr-score" id="dayTxt">0 / 100 · звание: Гость дня</div>
+      <div class="dr-bar"><i id="dayBar" style="width:0%"></i></div>
+      <div class="dr-note">Найди в колбе все пять опытов из документов, проведи спирт к каучуку, расставь события по порядку и ответь на вопросы викторины.</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="sources">
+  <div class="wrap">
+    <div class="kicker">Источники</div>
+    <h2>На чём стоит страница</h2>
+    <ul class="sources">
+      <li><a href="https://archive.org/details/sim_journal-of-the-chemical-society-abstracts_1905_88_part-i-ii" rel="noopener" target="_blank">Journal of the Chemical Society, Abstracts, 1905, т. 88</a> (скан в Internet Archive), ч. I, с. 773–775: рефераты серии статей о действии едкого кали на смеси кетонов с фенилацетиленом — А. Е. Фаворского, М. Скосаревского, И. Борка, Н. Неверовича, Э. Бертрона и Е. Романова («Журнал Русского физико-химического общества», 1905, т. 37, с. 643–659).</li>
+      <li><a href="https://archive.org/details/sim_journal-of-the-chemical-society-abstracts_1900_78_part-i" rel="noopener" target="_blank">Journal of the Chemical Society, Abstracts, 1900, т. 78</a>, ч. I, с. 20–21: реферат статьи J. U. Nef, «Phenylacetylene, its Salts, and Halogen Substitution Derivatives», Annalen, 1899, т. 308, с. 264–328.</li>
+      <li><a href="https://archive.org/details/sim_journal-fuer-praktische-chemie-1834_1888_37" rel="noopener" target="_blank">Journal für praktische Chemie, 1888, т. 37</a>, с. 382: Al. Faworsky, «Isomerisationserscheinungen der Kohlenwasserstoffe CnH2n−2».</li>
+      <li><a href="https://archive.org/details/bse_2_izd_tom_44" rel="noopener" target="_blank">Большая советская энциклопедия, 2-е изд., т. 44</a>, 1956, статья «Фаворский, Алексей Евграфович»: дата и место рождения, присоединение спиртов к метилацетилену в 1888 году, реакция с кетонами в 1900–1905 годах, путь к изопрену, ученики, Сталинская премия 1941 года.</li>
+      <li><a href="https://dic.academic.ru/dic.nsf/bse/143766/" rel="noopener" target="_blank">«Фаворского реакция»</a>, Большая советская энциклопедия, 3-е изд. (на сайте «Академик»): определение реакции и уравнение для ацетилена и ацетона.</li>
+      <li><a href="https://library.istu.edu/hoe/personalia/favorsky.pdf" rel="noopener" target="_blank">«Алексей Евграфович Фаворский (1860–1945)»</a>, электронная копия библиотеки Иркутского национального исследовательского технического университета: очерк из сборника «Люди русской науки» под ред. С. И. Вавилова (1948) и биографический очерк с приложениями — опыты с запаянными трубками, каучукоподобное вещество 1887 года, способ Мерлинга, слова Фаворского о реакции 1900 года, выходе 90–95 % и изопреновом каучуке, роль Лебедева, список трудов.</li>
+      <li><a href="https://xumuk.ru/encyklopedia/1620.html" rel="noopener" target="_blank">«Изопрен»</a>, Химическая энциклопедия (на сайте XuMuK.ru): промышленные способы получения изопрена.</li>
+      <li>Изображение: <a href="https://commons.wikimedia.org/wiki/File:The_Soviet_Union_1979_Illustrated_stamped_envelope_Lapkin_79-687(13937)face(Alexey_Favorsky)_(cropped).jpg" rel="noopener" target="_blank">художественный маркированный конверт СССР «Герой Социалистического Труда академик А. Е. Фаворский»</a>, 1979, художник Н. Игнатьев, Викисклад — общественное достояние (PD-RU-exempt): знаки почтовой оплаты, включая маркированные конверты, как государственные знаки не охраняются авторским правом (ГК РФ, ст. 1259, п. 6).</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="calendar">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Календарь изобретений</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Выбери любой день — узнаешь, что русские сделали первыми в мире. Листай месяцы стрелками.</p>
+    <div id="calbox"></div>
+  </div>
+</section>
+
+<section class="block kd" id="kuda-dalshe">
+  <div class="wrap">
+    <div class="kd-kicker">Куда дальше</div>
+    <h2>Музей продолжается</h2>
+    <div class="kd-grid">
+      <div class="kd-card main"><span class="kd-lbl">Следующий день</span><a href="day-18mar-leonov.html">18 марта — Первый выход человека в открытый космос <span class="kd-arr">→</span></a>
+        <p>Раздувшийся скафандр не пускал Леонова обратно в корабль — он стравил кислород и вошёл в шлюз головой вперёд.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Предыдущий день</span><a href="day-02mar-flerov.html">2 марта — Флёров и Петржак: уран делится сам <span class="kd-arr">→</span></a>
+        <p>Камера из 15 пластин щёлкала шесть раз в час без всяких нейтронов — уран делился сам.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Ещё о химии</span><a href="day-08feb-mendeleev.html">8 февраля — Пустые клетки Менделеева <span class="kd-arr">→</span></a>
+        <p>Менделеев описал элементы, которых ещё никто не видел.</p></div>
+      <div class="kd-card main"><span class="kd-lbl">Город-музей</span><a href="../../index.html">Русская цивилизация <span class="kd-arr">→</span></a>
+        <p>Все музеи проекта на одной карте.</p></div>
+    </div>
+    <p style="margin-top:16px"><a href="izobreteniya.html">Посмотреть изобретения по алфавиту →</a></p>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>
+  Русская цивилизация · «Что изобрели русские первыми в мире»</div></footer>
+
+<script type="application/json" data-proof>{"status": "found", "claim_id": "rc:izobreteniya:favorsky:claim-reakciya-favorskogo-1905", "ours": {"kind": "статья в журнале (реферат в Лондоне)", "title": "A. E. Faworsky, «Action of Potassium Hydroxide on Mixtures of Ketones with Phenylacetylene»: «The action of anhydrous potassium hydroxide on a mixture of a ketone with phenylacetylene yields an unsaturated alcohol» — безводное едкое кали на смеси кетона с фенилацетиленом даёт ненасыщенный спирт", "date": "1905", "holder": "«Журнал Русского физико-химического общества», 1905, т. 37, с. 643–645; реферат — Journal of the Chemical Society, Abstracts, 1905, ч. I, с. 773 (скан в Internet Archive)", "source_url": "https://archive.org/details/sim_journal-of-the-chemical-society-abstracts_1905_88_part-i-ii"}, "rival": {"name": "Джон Неф, США", "date": "1899", "doc_title": "«Phenylacetylene, its Salts, and Halogen Substitution Derivatives», Annalen, т. 308: присоединял фенилацетилен к кетонам через натриевое производное, полученное металлическим натрием"}, "gap_years": 0}</script>
+<script src="../../assets/museum-proof.js"></script>
+
+<script>
+/* ── СЧЁТ ── шкала из 100 держит assets/museum-score.js; здесь только реестр наград.
+   колба: 5 опытов × 7; путь к каучуку 3×5; хронология 5×4; викторина 5×6 = 100. */
+window.MUSEUM_SCORE = {awards:{f:[5,7], p:[3,5], h:[5,4], q:[5,6]},
+  ranks:[[100,'Лаборант Фаворского'],[70,'Студент-органик'],[40,'Практикант у колбы'],[0,'Гость дня']]};
+</script>
+<script src="../../assets/museum-score.js"></script>
+<script>
+(function(){
+  var $ = function(id){return document.getElementById(id);};
+  $('readBtn').onclick = function(){ $('story').scrollIntoView({behavior:'smooth'}); };
+  $('listenBtn').onclick = function(){ $('audioguide').scrollIntoView({behavior:'smooth'}); };
+  var tb=$('themeInvBtn');
+  tb.onclick=function(){ var b=$('themeInvBody'), open=b.hidden; b.hidden=!open; tb.setAttribute('aria-expanded',open?'true':'false'); tb.textContent=open?'▲ Скрыть':tb.dataset.label; };
+  function msg(id,t,cls){ var m=$(id); m.className='lab-msg'+(cls?' '+cls:''); m.textContent=t; }
+
+  /* ── КОЛБА ── только опыты из документов:
+     Неф (Annalen, 1899, 308; реферат JCS 1900, i, 20–21): Na на эфирный раствор фенилацетилена → натриевое производное; + ацетофенон → CPh≡C·CMePh·OH, иглы, т. пл. 77°;
+     Скосаревский (ЖРФХО, 1905, 37, 645–647; JCS 1905, i, 774): фенилацетилен + ацетон + порошок KOH → OH·CMe2·C≡CPh, кристаллы, т. пл. 53°;
+     Борк (ЖРФХО, 1905, 37, 647–650): фенилацетилен + метилэтилкетон + KOH → OH·CMeEt·C≡CPh, сироп с запахом розового масла;
+     Бертрон (ЖРФХО, 1905, 37, 657; JCS 1905, i, 775): фенилацетилен + ацетофенон + KOH → OH·CMePh·C≡CPh, «identical with the compound obtained by Nef»;
+     Фаворский (его слова, очерк ИРНИТУ, с. 44): ацетилен + ацетон + безводный порошок KOH → диметилацетиленилкарбинол, выход 90–95 %. */
+  var A=['Фенилацетилен','Ацетилен'], B=['Ацетон','Метилэтилкетон','Ацетофенон'], C=['Металлический натрий (как у Нефа)','Сухой порошок едкого кали'];
+  var F=[
+    {a:0,b:2,c:0,who:'Неф, 1899',f:'C₆H₅C≡C–C(OH)(CH₃)C₆H₅',look:'иглы, плавятся при 77°',state:'needles',
+     why:'Сначала металлическим натрием действуют на эфирный раствор фенилацетилена и получают натриевое производное, и только потом добавляют ацетофенон. Получается спирт — бесцветные иглы. Два этапа и металлический натрий: так соединял ацетиленовый углеводород с кетоном Неф.'},
+    {a:0,b:0,c:1,who:'Скосаревский, 1905',f:'(CH₃)₂C(OH)–C≡C–C₆H₅',look:'кристаллы, плавятся при 53°',state:'crystals',
+     why:'Порошок едкого кали сыплют понемногу в охлаждённую смесь фенилацетилена с ацетоном в эфире — и без всякого натрия выпадают бесцветные кристаллы спирта. Это опыт ученика Фаворского.'},
+    {a:0,b:1,c:1,who:'Борк, 1905',f:'(CH₃)(C₂H₅)C(OH)–C≡C–C₆H₅',look:'сироп с запахом розового масла',state:'syrup',
+     why:'С метилэтилкетоном та же реакция даёт не кристаллы, а густую жидкость с приятным запахом, напоминающим розовое масло. Это опыт ещё одного ученика Фаворского.'},
+    {a:0,b:2,c:1,who:'Бертрон, 1905',f:'C₆H₅C≡C–C(OH)(CH₃)C₆H₅',look:'тот же спирт, что у Нефа',state:'needles',
+     why:'Тот же фенилацетилен, тот же ацетофенон — но вместо натрия порошок едкого кали. Ученик Фаворского получил спирт, «идентичный» спирту Нефа: одна стадия вместо двух и никакого металла. Сравни с опытом Нефа.'},
+    {a:1,b:0,c:1,who:'Фаворский',f:'(CH₃)₂C(OH)C≡CH',look:'почти без потерь: выход 90–95 %',state:'clear',
+     why:'Самый простой ацетилен и самый доступный кетон дают диметилацетиленилкарбинол почти без потерь. С этого спирта начинается путь к изопрену — пройди его ниже.'}
+  ];
+  var sel={a:-1,b:-1,c:-1}, got={}, shown=null;
+  function group(id,list,key){
+    list.forEach(function(t,i){
+      var b=document.createElement('button'); b.type='button'; b.className='seg'; b.textContent=t;
+      b.onclick=function(){ sel[key]=i; Array.prototype.forEach.call($(id).querySelectorAll('.seg'),function(x,j){ x.classList.toggle('on',j===i); }); };
+      $(id).appendChild(b);
+    });
+  }
+  group('fA',A,'a'); group('fB',B,'b'); group('fC',C,'c');
+  F.forEach(function(x,i){
+    var li=document.createElement('li'); li.id='fd'+i; li.innerHTML='<span class="fname"></span><span class="fver">ещё не найден</span>';
+    li.querySelector('.fname').textContent='Опыт '+(i+1)+' · '+x.who; $('found').appendChild(li);
+  });
+  function stat(a,la,b,lb,c,lc){ $('sA').textContent=a; $('lA').textContent=la; $('sB').textContent=b; $('lB').textContent=lb; $('sC').textContent=c; $('lC').textContent=lc; }
+
+  var cv=$('flask'), ctx=cv.getContext('2d');
+  function size(c,W,H){ var w=c.clientWidth||W, d=window.devicePixelRatio||1; c.width=Math.round(w*d); c.height=Math.round(w*H/W*d); }
+  /* колба: состояние смеси — цветом и видом; подписей на холсте нет, они в статистике под ним */
+  function draw(st){
+    var w=cv.width, h=cv.height, u=w/760; ctx.clearRect(0,0,w,h); ctx.fillStyle='#16120d'; ctx.fillRect(0,0,w,h);
+    var cx=w/2, neckW=44*u, bodyR=96*u, top=18*u, by=h-24*u-bodyR;
+    function flaskPath(){ ctx.beginPath(); ctx.moveTo(cx-neckW/2,top); ctx.lineTo(cx-neckW/2,by-bodyR*0.78);
+      ctx.arc(cx,by,bodyR,-Math.PI/2-0.23,Math.PI*1.5+0.23,false); ctx.lineTo(cx+neckW/2,top); }
+    if (st && st.state){
+      ctx.save(); flaskPath(); ctx.clip();
+      var lvl = by-bodyR*0.15, col = {needles:'rgba(220,214,190,.35)',crystals:'rgba(200,210,220,.35)',syrup:'rgba(214,150,60,.75)',clear:'rgba(160,200,230,.45)',none:'rgba(120,120,120,.25)'}[st.state];
+      ctx.fillStyle=col; ctx.fillRect(0,lvl,w,h);
+      var seed=7; function rnd(){ seed=(seed*9301+49297)%233280; return seed/233280; }
+      if (st.state==='crystals'||st.state==='needles'){
+        ctx.fillStyle='#f4f1e8';
+        for (var k=0;k<46;k++){ var x=cx+(rnd()-0.5)*bodyR*1.5, y=by+bodyR*0.55+(rnd()-0.6)*bodyR*0.35;
+          if (st.state==='needles'){ ctx.save(); ctx.translate(x,y); ctx.rotate(rnd()*3.14); ctx.fillRect(-9*u,-1.2*u,18*u,2.4*u); ctx.restore(); }
+          else { ctx.beginPath(); ctx.moveTo(x,y-5*u); ctx.lineTo(x+4*u,y); ctx.lineTo(x,y+5*u); ctx.lineTo(x-4*u,y); ctx.closePath(); ctx.fill(); } }
+      }
+      if (st.c===0){ ctx.fillStyle='#8d949b'; for (var n=0;n<5;n++) ctx.fillRect(cx-60*u+n*26*u, lvl+18*u+(n%2)*14*u, 12*u, 12*u); }
+      if (st.c===1){ ctx.fillStyle='#ffffff'; for (var m=0;m<70;m++){ ctx.beginPath(); ctx.arc(cx+(rnd()-0.5)*bodyR*1.6, by+bodyR*0.8+rnd()*bodyR*0.15, 1.6*u, 0, 6.3); ctx.fill(); } }
+      ctx.restore();
+    }
+    ctx.strokeStyle='#e8dcc0'; ctx.lineWidth=3*u; flaskPath(); ctx.stroke();
+  }
+
+  $('mixBtn').onclick=function(){
+    if (sel.a<0||sel.b<0||sel.c<0){ msg('fMsg','Выбери по одному реактиву в каждом из трёх столбцов.','bad'); return; }
+    var hit=-1; F.forEach(function(x,i){ if (x.a===sel.a&&x.b===sel.b&&x.c===sel.c) hit=i; });
+    if (hit<0){
+      shown={state:'none',c:sel.c}; draw(shown);
+      stat('—','что получилось','нет в документах','каким вышло вещество','—','чей опыт');
+      var left=F.filter(function(x,i){ return !got[i]; });
+      msg('fMsg','Такого опыта в источниках этой страницы нет, и модель не будет выдумывать результат.'+(left.length?' Подсказка: '+hint(left[0]):''),'');
+      return;
+    }
+    var x=F[hit]; shown={state:x.state,c:x.c}; draw(shown);
+    stat(x.f,'что получилось',x.look,'каким вышло вещество',x.who,'чей опыт');
+    var fresh=!got[hit];
+    if (fresh){ got[hit]=1; var li=$('fd'+hit); li.className='on'; li.querySelector('.fver').textContent=x.f+' — '+x.look; award('f'+hit,7); }
+    var n=Object.keys(got).length;
+    msg('fMsg', x.why+(fresh?' Найден опыт '+(hit+1)+'.':' Этот опыт уже найден.')+(n<F.length?' Осталось найти: '+(F.length-n)+' из 5.':' Все пять опытов найдены.'),'ok');
+  };
+  function hint(x){
+    return x.c===0 ? 'у Нефа был натрий и ароматический кетон.' :
+           (x.b===2) ? 'ученик Фаворского повторил опыт Нефа, но без натрия.' :
+           x.a===1 ? 'Фаворский взял самый простой ацетилен и самый доступный кетон.' :
+           x.b===1 ? 'Борк взял кетон с этильной группой.' : 'Скосаревский смешал фенилацетилен с самым простым кетоном.';
+  }
+  function resize(){ size(cv,760,260); draw(shown); }
+  window.addEventListener('resize',resize); resize();
+
+  /* ── ПУТЬ К КАУЧУКУ ── слова Фаворского (очерк ИРНИТУ, с. 44–45) и очерк «Люди русской науки», с. 7:
+     спирт в содовом растворе — электрическое гидрирование → диметилвинилкарбинол → дегидратация → изопрен → полимеризация → изопреновый каучук. */
+  var P=[
+    {o:2,t:'Полимеризовать',r:'получится изопреновый каучук: из всех синтетических он ближе всего к натуральному'},
+    {o:0,t:'Гидрировать током в содовом растворе',r:'получится диметилвинилкарбинол, (CH₃)₂C(OH)CH=CH₂'},
+    {o:1,t:'Отщепить воду',r:'получится изопрен, CH₂=C(CH₃)–CH=CH₂'}
+  ], pNext=0;
+  P.forEach(function(e,i){
+    var b=document.createElement('button'); b.type='button'; b.className='seg'; b.innerHTML='<span class="n"></span>'; b.appendChild(document.createTextNode(e.t));
+    b.onclick=function(){
+      if (e.done) return;
+      if (e.o!==pNext){ b.classList.add('wrongpick'); setTimeout(function(){ b.classList.remove('wrongpick'); },700);
+        msg('pMsg', pNext===0 ? 'Не сейчас: у спирта ещё тройная связь, её сначала нужно наполовину насытить водородом.' : pNext===1 ? 'Не сейчас: полимеризуется изопрен, а его ещё нет — у спирта осталась группа OH.' : '', 'bad'); return; }
+      e.done=true; b.classList.add('right'); b.disabled=true; b.querySelector('.n').textContent=(pNext+1)+'.';
+      b.appendChild(document.createTextNode(' — '+e.r)); award('p'+i,5); pNext++;
+      msg('pMsg', pNext<3 ? 'Верно. Какой шаг дальше?' : 'Путь пройден: ацетилен из карбида, ацетон, порошок едкого кали — и в конце каучук. «Полученный нами… изопреновый каучук обнаружил при испытаниях ряд положительных свойств», — писал Фаворский.','ok');
+    };
+    $('path').appendChild(b);
+  });
+
+  /* ── ХРОНОЛОГИЯ ── */
+  var E=[
+    {o:3,t:'«Журнал Русского физико-химического общества» печатает серию статей Фаворского и его учеников о действии едкого кали на смеси кетонов с фенилацетиленом',d:'1905'},
+    {o:0,t:'Фаворский оканчивает Петербургский университет',d:'1882'},
+    {o:4,t:'Фаворский получает Сталинскую премию',d:'1941'},
+    {o:2,t:'Неф печатает в «Анналах» Либиха опыты с натриевым производным фенилацетилена',d:'1899'},
+    {o:1,t:'Статья Фаворского об изомеризации ацетиленов выходит в Journal für praktische Chemie',d:'1888'}
+  ], hNext=0;
+  E.forEach(function(e,i){
+    var b=document.createElement('button'); b.type='button'; b.className='seg'; b.innerHTML='<span class="n"></span>'; b.appendChild(document.createTextNode(e.t));
+    b.onclick=function(){
+      if (e.done) return;
+      if (e.o!==hNext){ b.classList.add('wrongpick'); setTimeout(function(){ b.classList.remove('wrongpick'); },700);
+        msg('hMsg','Не сейчас: есть событие раньше этого.','bad'); return; }
+      e.done=true; b.classList.add('right'); b.disabled=true; b.querySelector('.n').textContent=(hNext+1)+'.';
+      b.appendChild(document.createTextNode(' — '+e.d)); award('h'+i,4); hNext++;
+      msg('hMsg', hNext<5 ? 'Верно. Что дальше?' : 'Порядок восстановлен. Между опытами Нефа с натрием и статьёй Фаворского о едком кали — шесть лет.','ok');
+    };
+    $('chrono').appendChild(b);
+  });
+
+  /* ── ВИКТОРИНА ── */
+  var Q = [
+    {q:'Чем Фаворский заменил металлический натрий, которым пользовался Неф?', o:['Серной кислотой','Сухим порошком едкого кали','Медной стружкой'], a:1,
+     e:'Безводным порошкообразным едким кали: оно присоединяется к кетону, передаёт его ацетилену и снова освобождается.'},
+    {q:'Какой спирт получается из ацетилена и ацетона по реакции Фаворского?', o:['Этиловый','Метиловый','Диметилацетиленилкарбинол'], a:2,
+     e:'Диметилацетиленилкарбинол, (CH₃)₂C(OH)C≡CH, — с него начинается путь к изопрену.'},
+    {q:'Что напоминал запах спирта, который ученик Фаворского Борк получил из метилэтилкетона?', o:['Розовое масло','Горький миндаль','Свежее сено'], a:0,
+     e:'Розовое масло: так записано в реферате его статьи 1905 года.'},
+    {q:'Какой выход ацетиленового спирта из ацетилена и ацетона называл Фаворский?', o:['10–15 %','90–95 %','Около половины'], a:1,
+     e:'«Выход ацетиленового спирта достигает 90—95 % от теоретически возможного».'},
+    {q:'Кто из учеников Фаворского создал советский способ синтетического каучука?', o:['Сергей Лебедев','Дмитрий Менделеев','Николай Зелинский'], a:0,
+     e:'Сергей Лебедев: его бутадиеновый каучук делали из дивинила, полученного из спирта. По словам Лебедева, к полимеризации непредельных углеводородов его направил Фаворский.'}
+  ];
+  var qb = $('quizBox');
+  Q.forEach(function(it, qi){
+    var wrap = document.createElement('div');
+    var h = document.createElement('p'); h.className='quiz-q'; h.textContent=(qi+1)+'. '+it.q; wrap.appendChild(h);
+    var exp = document.createElement('div'); exp.className='exp'; exp.setAttribute('aria-live','polite');
+    var btns = it.o.map(function(txt, oi){
+      var b=document.createElement('button'); b.type='button'; b.className='opt'; b.textContent=txt;
+      b.onclick=function(){
+        if (wrap.dataset.done) return; wrap.dataset.done='1';
+        btns.forEach(function(x,xi){ x.disabled=true; if (xi===it.a) x.classList.add('correct'); });
+        if (oi===it.a){ award('q'+qi,6); exp.textContent='Верно. '+it.e; }
+        else { b.classList.add('wrong'); exp.textContent='Не совсем. '+it.e; }
+        exp.classList.add('show');
+      };
+      wrap.appendChild(b); return b;
+    });
+    wrap.appendChild(exp); qb.appendChild(wrap);
+  });
+})();
+</script>
+<script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
+<script>window.MUSEUM_CHROME={
+  museum:{title:'Что изобрели русские первыми в мире',href:'index.html'},
+  share:{title:'Реакция Фаворского: ацетилен без натрия — музей «Что изобрели русские первыми в мире»',
+         text:'Фаворский соединил фенилацетилен с кетоном сухим порошком едкого кали — без натрия, нужного Нефу. Что Россия дала миру раньше всех — день за днём.'},
+  prev:{href:'day-02mar-flerov.html',title:'2 марта · Флёров и Петржак'},
+  next:{href:'day-18mar-leonov.html',title:'18 марта · Леонов'},
+  all:{href:'index.html',label:'Все изобретения'},
+  city:'../../index.html',
+  random:['day-01jan-cabletv.html','day-02jan-luna1.html','day-03jan-anosov.html','day-04jan-pilchikov.html','day-05jan-shukhov.html','day-06jan-orlov.html','day-08jan-icebreaker.html','day-09jan-blinov.html','day-10jan-britnev.html','day-11jan-kostovich.html','day-12jan-r7.html','day-13jan-k278.html','day-14jan-lira.html','day-15jan-kovalevskaya.html','day-16jan-soyuz45.html','day-19jan-kantorovich.html','day-21jan-obninsk.html','day-22jan-landau.html','day-23jan-umov.html','day-24jan-k162.html','day-25jan-korsakov.html','day-26jan-podvodnaya.html','day-27jan-pentium.html','day-28jan-havkin.html','day-30jan-kotelnikov.html','day-31jan-girotron.html','day-01feb-bekhterev.html','day-02feb-edinorog.html','day-03feb-luna9.html','day-04feb-samovar.html','day-05feb-boldyrev.html','day-06feb-zelinsky.html','day-07feb-setun.html','day-08feb-mendeleev.html','day-09feb-chizhevsky.html','day-10feb-aerosani.html','day-12feb-lenz.html','day-15feb-nesterov.html','day-17feb-pirotsky.html','day-18feb-dokuchaev.html','day-20feb-mir.html','day-25feb-tokamak.html','day-27feb-filatov.html','day-28feb-zhuravsky.html','day-01mar-apostol.html','day-02mar-flerov.html','day-03mar-favorsky.html','day-18mar-leonov.html','day-15may-mechnikov.html','day-16jun-tereshkova.html','day-26sep-pavlov.html','day-15nov-buran.html','day-25nov-pirogov.html','day-01dec-lobachevsky.html','day-14dec-laser.html']
+};</script>
+<script src="../../assets/museum-chrome.js"></script>
+<script>window.MUSEUM_SUPPORT={museum:'Что изобрели русские первыми в мире'};</script>
+<script src="../../assets/museum-support.js"></script>
+<script src="calendar-izobreteniya.js"></script>
+<script>window.MUSEUM_CALENDAR_INITIAL='03-03';</script>
+<script src="../../assets/museum-calendar-month.js"></script>
+<script>window.MUSEUM_RETURN={riddle:{q:"Почему Фаворскому не нужен был натрий, без которого не обходился Неф?",a:"Натрий у Нефа расходовался: он превращал фенилацетилен в натриевое производное. А едкое кали у Фаворского сначала присоединяется к кетону, потом этот продукт реагирует с фенилацетиленом, и щёлочь снова освобождается — реакция идёт в две стадии.",src:"Journal of the Chemical Society, Abstracts, 1905, ч. I, с. 773, реферат статьи А. Е. Фаворского"}};</script>
+<script src="../../assets/museum-return.js" data-museum="izobreteniya" data-day="03-03"></script>
+<script defer src="../../assets/analytics.js"></script>
+
+
+
+
+
+
+
+
+
+<script>window.MUSEUM_AUDIOGUIDE={
+  audioSrc:"audio-guide-favorsky-ru.mp3",
+  durationLabel:"2 минуты 58 секунд",
+  lead:"Голос ведёт по залу Алексея Фаворского: портрет на почтовом конверте, запаянные трубки, натрий у Нефа и порошок едкого кали у Фаворского, спирт с запахом розового масла и путь от ацетилена к каучуку. Шесть остановок, на каждой — что искать глазами.",
+  stops:[
+    {t:0,mark:"0:00",title:"Портрет на конверте"},
+    {t:27,mark:"0:27",title:"Запаянные трубки"},
+    {t:59,mark:"0:59",title:"Натрий Нефа"},
+    {t:85,mark:"1:25",title:"Щепоть щёлочи"},
+    {t:126,mark:"2:06",title:"Путь к изопрену"},
+    {t:152,mark:"2:32",title:"Ученики"}
+  ],
+  transcript:[
+    "<p>Факты: конверт СССР 1979 года, художник Н. Игнатьев — Викисклад; 3 марта (20 февраля) 1860, Павлово — БСЭ, 2-е изд., т. 44; Неф и Фаворский — рефераты Journal of the Chemical Society, 1900 и 1905.</p>",
+    "<p>Факты: запаянные трубки, 170 °C, этилацетилен и диметилацетилен — биографический очерк об А. Е. Фаворском (библиотека ИРНИТУ), с. 13–14; статья 1888 года — Journal für praktische Chemie, т. 37.</p>",
+    "<p>Факты: опыты Нефа с натриевым производным фенилацетилена — Journal of the Chemical Society, Abstracts, 1900, ч. I, с. 20–21 (Annalen, 1899, т. 308).</p>",
+    "<p>Факты: серия статей Фаворского и учеников, кристаллы Скосаревского, сироп Борка, спирт Бертрона «как у Нефа», две стадии реакции — Journal of the Chemical Society, Abstracts, 1905, ч. I, с. 773–775 («Журнал Русского физико-химического общества», 1905, т. 37).</p>",
+    "<p>Факты: выход 90–95 %, гидрирование и отщепление воды — слова А. Е. Фаворского в очерке (библиотека ИРНИТУ), с. 44–45; способ Мерлинга — там же, с. 31.</p>",
+    "<p>Факты: Лебедев и бутадиеновый каучук — очерк (библиотека ИРНИТУ), с. 40, 51; Сталинская премия 1941 года — БСЭ, 2-е изд., т. 44; «Фаворского реакция» — БСЭ, 3-е изд.</p>"
+  ],
+  note:"Озвучено синтезом речи — временно, до записи голосом автора музея."
+};</script>
+<script src="../../assets/museum-audioguide.js"></script>
+</body>
+</html>

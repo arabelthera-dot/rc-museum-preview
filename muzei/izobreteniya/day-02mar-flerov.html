@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="ru" data-museum="izobreteniya">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Флёров и Петржак: уран делится сам — Что изобрели русские первыми в мире, 2 марта</title>
+<!--
+  Страница дня 2 марта. Наряд stranicy-izob-0910 (claude2, 16.10.2026), карточка #762.
+  Форма — вариант А музея изобретений (Сергей 12.09.2026): лента ударов, подробности свёрнуты.
+  Паспорт выпуска: rc-museum-production/izobreteniya/day-02mar-flerov/passport/issue.json
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --dark:#060c17; --dark2:#0c1826; --surface:#111f33;
+    --card:rgba(255,255,255,.05); --card-b:rgba(255,255,255,.09);
+    --gold:#c9a84c; --gold-l:#e4c97a; --gold-g:rgba(201,168,76,.13);
+    --ink:#e8eef5; --muted:#7a9ab8; --line:rgba(255,255,255,.07);
+    --accent:#2d8cbf; --accent2:#1f6f8b;
+    /* legacy compat */
+    --paper:#0c1826; --paper2:#111f33;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Inter','Segoe UI',sans-serif;color:var(--ink);background:var(--dark);line-height:1.72}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.13;margin:0}
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent)}
+
+  /* ── ШАПКА ── */
+  header.top{background:rgba(6,12,23,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--card-b);color:#fff;position:sticky;top:0;z-index:30}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+  .logo svg{display:block;filter:drop-shadow(0 0 8px rgba(201,168,76,.4))}
+  .logo .lt{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:16px}
+  .logo .lt small{display:block;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-family:'Inter',sans-serif}
+  .score{background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:6px 16px;font-size:13px;color:var(--gold-l);cursor:pointer;font-family:'Inter',sans-serif}
+  .score-info{position:absolute;right:12px;top:66px;max-width:260px;background:#0e1c30;color:var(--ink);border:1px solid var(--card-b);border-radius:14px;padding:14px 16px;font-size:13px;line-height:1.6;box-shadow:0 20px 60px rgba(0,0,0,.6);display:none;z-index:40}
+  .score-info.show{display:block}
+
+  /* ── HERO — СТАНДАРТ (не менять): 3D-сцена сверху, текст отдельным блоком ниже ── */
+  .hero-scene{position:relative;height:52vh;min-height:300px;max-height:520px;overflow:hidden;background:linear-gradient(160deg,#0a1e3a 0%,#1a3a6a 55%,#0d2240 100%)}
+  .hero-scene canvas.scene,.hero-scene img.scene{width:100%;height:100%;display:block;object-fit:cover}
+  .scene-caption{background:#060d18;padding:11px 0 12px}
+  .scene-caption .wrap{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+  .scene-cap{font-size:13.5px;line-height:1.6;color:var(--muted);border-left:2px solid rgba(201,168,76,.4);padding-left:14px;flex:1 1 420px}
+  .scene-hint{flex:0 0 auto;font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.4px;color:#e4c97a;
+    background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.34);border-radius:24px;padding:7px 16px;font-weight:600}
+  .hero-lead{background:linear-gradient(180deg,#0c1826 0%,#060c17 100%);color:#fff;padding:28px 0 38px}
+  .hero-lead .museum{color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:12px;opacity:.9}
+  .hero-lead .who{font-family:'Inter',sans-serif;font-size:clamp(13px,3vw,15px);letter-spacing:.4px;color:var(--accent-l,#7dc8ff);margin-bottom:10px}
+  .hero-lead .who i{font-style:normal;color:#7893ab;font-weight:400}
+  .hero-lead h1{color:#fff;font-size:56px;font-weight:900;line-height:1.04;margin-bottom:16px}
+  .hero-lead .hook{color:#b8ccde;font-size:19px;max-width:580px;margin-bottom:28px;line-height:1.65;font-weight:400}
+  .hero-lead .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+  @media(max-width:680px){.hero-lead h1{font-size:34px}.hero-lead .hook{font-size:16px}
+    .hero-scene{height:34vh;min-height:230px;max-height:300px}
+    .scene-caption .wrap{flex-direction:column;gap:9px}
+    .scene-hint{order:-1;align-self:flex-start;font-size:11.5px;padding:6px 13px}
+    .scene-cap{font-size:12.8px;flex:1 1 auto}}
+  .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:16px;font-family:'Inter',sans-serif;letter-spacing:.5px}
+
+  /* ── НАВИГАЦИЯ ДНЯ ── */
+  .daynav{position:sticky;top:64px;z-index:25;background:rgba(6,12,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-b)}
+  .daynav .wrap{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+  .daynav::-webkit-scrollbar{display:none}
+  .daynav a{flex:0 0 auto;padding:14px 20px;font-size:11px;font-weight:700;font-family:'Inter',sans-serif;color:var(--muted);text-decoration:none;white-space:nowrap;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:.18s}
+  .daynav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+  /* ── СЕКЦИИ ── */
+  section.block{padding:64px 0;border-bottom:1px solid var(--line);scroll-margin-top:130px}
+  .kicker{font-size:10px;text-transform:uppercase;letter-spacing:3.5px;color:var(--gold);font-weight:700;font-family:'Inter',sans-serif;margin-bottom:8px}
+  section.block h2{font-size:34px;color:#fff;margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink)}
+  .pull{background:var(--gold-g);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 14px 14px 0;font-style:italic;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-size:20px;line-height:1.5;margin:26px 0}
+
+  /* ── КНОПКИ ── */
+  .btn{cursor:pointer;border:none;border-radius:12px;padding:14px 26px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;background:var(--accent2);color:#fff;transition:.18s;letter-spacing:.2px}
+  .btn:hover{filter:brightness(1.18)}
+  .btn.ghost{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid var(--card-b)}
+  .btn.ghost:hover{background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.2)}
+  .btn.gold{background:linear-gradient(135deg,var(--gold),#b8882b);color:#1a0f00;box-shadow:0 4px 20px rgba(201,168,76,.25)}
+  .btn.gold:hover{filter:brightness(1.1);box-shadow:0 6px 28px rgba(201,168,76,.4)}
+  .btn:active{transform:translateY(1px)}
+  .pulse{animation:pulse .9s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+
+  /* ── КАРТОЧКИ ── */
+  .card{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:20px 22px;margin:16px 0;backdrop-filter:blur(6px)}
+
+  /* ── КВИЗ ── */
+  .opt{display:block;width:100%;text-align:left;background:rgba(255,255,255,.04);border:1px solid var(--card-b);border-radius:12px;padding:13px 16px;margin:8px 0;cursor:pointer;font-size:15px;color:var(--ink);font-family:'Inter',sans-serif;transition:.16s}
+  .opt:hover{border-color:var(--accent);background:rgba(45,140,191,.08)}
+  .opt.correct{background:rgba(40,120,60,.18);border-color:#3f9b52;color:#7ed4a0;font-weight:600}
+  .opt.wrong{background:rgba(180,40,40,.13);border-color:#c0453f;color:#f08080}
+  .exp{margin-top:10px;font-size:14px;background:var(--gold-g);border-radius:10px;padding:12px 14px;display:none;color:var(--gold-l)}
+  .exp.show{display:block}
+
+  /* ── ИТОГ ДНЯ ── */
+  .day-result{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:22px 24px;max-width:460px}
+  .dr-rank{font-family:'Playfair Display',Georgia,serif;font-size:28px;color:var(--gold-l);font-weight:700}
+  .dr-score{font-size:16px;margin:4px 0 12px;color:var(--ink)}.dr-score span{color:var(--muted);font-size:14px}
+  .dr-bar{height:8px;background:rgba(255,255,255,.08);border-radius:6px;overflow:hidden}
+  .dr-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),var(--gold));transition:width .6s cubic-bezier(.2,.7,.2,1)}
+  .dr-note{margin-top:12px;font-size:14px;color:var(--muted)}
+
+  /* ── РЕКЛАМНЫЕ СЛОТЫ ── */
+  .ad-slot{position:relative;margin:26px 0;background:rgba(255,255,255,.02);border:1px dashed rgba(255,255,255,.1);border-radius:14px;min-height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px}
+  .ad-slot .lbl{position:absolute;top:7px;right:12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.15);font-family:'Inter',sans-serif}
+  .ad-slot .ph-txt{font-size:12px;max-width:80%;color:rgba(255,255,255,.18)}
+  .ad-slot.billboard{min-height:108px}
+  .adband{background:transparent;border-bottom:none}
+
+  footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
+  .crumbs{background:rgba(6,12,23,.6);border-bottom:1px solid var(--card-b);font-family:'Inter',sans-serif;font-size:12.5px}
+  .crumbs .wrap{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  .crumbs a{color:var(--gold-l);text-decoration:none;white-space:nowrap}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--muted);opacity:.6}
+  .crumbs .here{color:var(--muted);white-space:nowrap}
+
+
+  /* ── ШАПКА: четыре строки по museum-core §6-бис ── */
+  header.top{display:block;text-align:center;padding:10px 12px 8px;height:auto;position:relative}
+  header.top .b1{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:15px;letter-spacing:.5px;color:#fff}
+  header.top .b2{font-size:11px;color:var(--muted);margin-top:2px}
+  header.top .b3{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:6px}
+  header.top .b4{font-size:12.5px;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-style:italic}
+  header.top .score{position:absolute;right:12px;top:10px}
+  .daynav{top:0}
+  .hero-scene{background:#0e1c2c;height:38vh;min-height:250px;max-height:400px}
+  @media(max-width:680px){.hero-lead h1{font-size:31px}}
+  .hero-scene img.scene{object-fit:cover;object-position:50% 42%}
+  .date-origin{font-size:13px;color:#9fb4c8;margin:-6px 0 12px;max-width:62ch}
+  .hero-lead .hook{color:#c6d8e8;max-width:62ch}
+  .hero-under{background:linear-gradient(180deg,#060d18,#060c17);padding:4px 0 22px}
+  .stamp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(125,200,255,.28);margin-top:14px}
+  .stamp>div{padding:11px 12px;border-left:1px solid rgba(125,200,255,.16);min-width:0}
+  .stamp>div:first-child{border-left:0}
+  .stamp .v{font-size:clamp(15px,3.4vw,21px);font-weight:700;color:#8fd3ff;line-height:1.1;overflow-wrap:anywhere}
+  .stamp .k{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#8fa5b9;margin-top:5px}
+  @media(max-width:600px){.stamp{grid-template-columns:repeat(2,minmax(0,1fr))}.stamp>div:nth-child(3){border-left:0}.stamp>div:nth-child(n+3){border-top:1px solid rgba(125,200,255,.16)}}
+
+  /* ── ЛЕНТА УДАРОВ (museum-inventions, вариант А; museum-core §5-бис) ── */
+  .udary{list-style:none;margin:18px 0 0;padding:0;counter-reset:u}
+  .udary>li{border-top:1px solid var(--line);padding:4px 0}
+  .udary details>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:34px 1fr;gap:10px;padding:12px 0;font-size:17px;line-height:1.55;color:var(--ink)}
+  .udary details>summary::-webkit-details-marker{display:none}
+  .udary details>summary::before{counter-increment:u;content:counter(u);font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:20px;color:var(--gold);line-height:1.3}
+  .udary .more-lbl{display:block;grid-column:2;font-size:12.5px;color:var(--gold-l);letter-spacing:.3px;margin-top:4px}
+  .udary .more-lbl::after{content:' ▾'}
+  .udary details[open] .more-lbl::after{content:' ▴'}
+  .udary details[open] .more-lbl .o{display:none}
+  .udary details:not([open]) .more-lbl .c{display:none}
+  .udary summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+  .udary .det{margin:0 0 14px 44px;padding:12px 16px;background:rgba(255,255,255,.035);border-left:2px solid rgba(201,168,76,.45);border-radius:0 10px 10px 0;font-size:15px;color:#d5e0ea}
+  .udary .det p{margin:8px 0}
+  .udary .tag{display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1a0f00;background:var(--gold-l);border-radius:6px;padding:1px 7px;margin-right:6px}
+  .udary .find{border-left:3px solid var(--gold);padding-left:8px}
+  figure.fig{margin:18px 0}
+  figure.fig img{max-width:100%;height:auto;border-radius:10px;display:block}
+  figure.fig figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5}
+  .src-note{font-size:12px;color:#8fa5b9}
+
+  /* ── МОДЕЛЬ ДНЯ (главное предметное действие) ── */
+  .lab{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:18px 18px 20px;margin-top:14px}
+  .lab-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+  .lab-row .lbl{flex:0 0 100%;font-size:13px;color:var(--muted);letter-spacing:.3px}
+  .seg{cursor:pointer;border:1px solid var(--card-b);background:rgba(255,255,255,.04);color:var(--ink);border-radius:10px;padding:10px 14px;font:inherit;font-size:14.5px;min-height:44px}
+  .seg[aria-pressed="true"]{border-color:var(--gold);background:var(--gold-g);color:var(--gold-l);font-weight:600}
+  .seg:focus-visible,.btn:focus-visible,.opt:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .lab-stage{position:relative;margin-top:12px}
+  .lab-stage canvas{width:100%;height:auto;display:block;border-radius:10px;background:#1c2530}
+  .lab-cap{font-size:12px;color:#8fa5b9;margin-top:6px}
+  .lab-msg{margin-top:12px;font-size:15.5px;padding:12px 14px;border-radius:10px;background:rgba(255,255,255,.04);border-left:3px solid var(--card-b);min-height:48px}
+  .lab-msg.ok{border-left-color:#3f9b52;background:rgba(40,120,60,.14)}
+  .lab-msg.bad{border-left-color:#c0453f;background:rgba(180,40,40,.10)}
+  .lab-found{font-size:13px;color:var(--muted);margin-top:8px}
+  .lab-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .noscript-box{background:rgba(255,255,255,.04);border:1px dashed var(--card-b);border-radius:12px;padding:12px 16px;font-size:15px}
+
+  /* ── ГРАНИЦА ПЕРВЕНСТВА ── */
+  .border-box{background:rgba(45,140,191,.08);border:1px solid rgba(45,140,191,.3);border-radius:14px;padding:16px 18px}
+  .border-box b{color:#8fd3ff}
+  .ctx{width:100%;border-collapse:collapse;margin-top:14px;font-size:14.5px}
+  .ctx th,.ctx td{text-align:left;padding:9px 8px;border-top:1px solid var(--line);vertical-align:top}
+  .ctx th{color:var(--gold-l);font-weight:600;font-size:12.5px;letter-spacing:.5px}
+  .quiz-q{margin:18px 0 6px;font-weight:600}
+  .sources a{color:var(--gold-l)}
+  .sources li{margin:6px 0;font-size:14px;color:#c8d6e2}
+  @media(max-width:600px){header.top{padding:8px 64px 6px}header.top .score{top:8px;right:8px;padding:4px 10px;font-size:12px}header.top .b3{margin-top:3px}
+    .hero-scene{height:26vh;min-height:200px;max-height:260px}.date-origin{font-size:12px;margin:-8px 0 8px}.hero-lead{padding:18px 0 26px}.hero-lead .date-chip{margin-bottom:12px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+  /* ── ПОЛЗУНКИ МОДЕЛИ (19, 21 янв) ── */
+  .mtab{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+  .mrow{display:grid;grid-template-columns:minmax(150px,1.2fr) 2fr 92px;gap:12px;align-items:center}
+  .mrow .mname{font-size:14.5px}
+  .mrow .mname i{font-style:normal;color:var(--muted);font-size:13px}
+  .mrow input[type=range]{width:100%;accent-color:var(--gold);min-height:44px}
+  .mrow output{font-size:14px;color:var(--gold-l);text-align:right}
+  .mrow.off{opacity:.45}
+  .mult{margin-top:14px;padding:14px 16px;border-radius:12px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25)}
+  @media(max-width:560px){.mrow{grid-template-columns:1fr 70px}.mrow .mname{grid-column:1/-1}}
+</style>
+<meta name="description" content="В 1940 году Петржак и Флёров нашли, что уран делится сам: шесть импульсов в час в камере из 15 пластин. Проверь их контрольные опыты и узнай, о чём Флёрову сказало молчание журналов.">
+<link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-02mar-flerov.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Русская цивилизация">
+<meta property="og:title" content="Флёров и Петржак: уран делится сам">
+<meta property="og:description" content="В 1940 году Петржак и Флёров нашли, что уран делится сам: шесть импульсов в час в камере из 15 пластин. Проверь их контрольные опыты и узнай, о чём Флёрову сказало молчание журналов.">
+<meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-02mar-flerov.html">
+<meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-02mar-flerov.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Флёров и Петржак: уран делится сам", "description": "В 1940 году Петржак и Флёров нашли, что уран делится сам: шесть импульсов в час в камере из 15 пластин. Проверь их контрольные опыты и узнай, о чём Флёрову сказало молчание журналов.", "url": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-02mar-flerov.html", "inLanguage": "ru", "isPartOf": {"@type": "WebSite", "name": "Музей «Что изобрели русские первыми в мире»"}, "publisher": {"@type": "Organization", "name": "Русская цивилизация"}, "about": {"@type": "Person", "name": "Георгий Николаевич Флёров"}, "image": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-02mar-flerov.jpg"}</script>
+<style>
+  /* ── ФЛЁРОВ И ПЕТРЖАК: УРАН ДЕЛИТСЯ САМ (2 мар) ── */
+  .oscv{width:100%;max-width:760px;height:auto;aspect-ratio:760/260;display:block;margin:10px 0 4px;background:#0f1a14;border-radius:10px}
+  .tests{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px;max-width:760px;margin-top:8px}
+  .tests .seg{text-align:left;width:100%}
+  .tests .seg.on{border-color:#c9a24a;background:rgba(201,162,74,.15)}
+  .tests .seg.done{border-color:#3f9b52}
+  .lstat{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;max-width:760px;margin-top:10px}
+  .lstat div{border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:8px 10px;background:rgba(255,255,255,.03)}
+  .lstat b{display:block;font-size:18px;color:var(--gold-l)}
+  .lstat span{font-size:13px;color:var(--muted)}
+  .suspects{display:grid;gap:6px;max-width:760px;margin:8px 0 0;padding:0;list-style:none}
+  .suspects li{border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:6px 10px;font-size:14px}
+  .suspects li.out{border-color:#3f9b52;color:var(--muted)}
+  .suspects li.out .sname{text-decoration:line-through}
+  .suspects li .sver{display:block;font-size:13px;color:var(--muted)}
+  .verdict{display:flex;flex-wrap:wrap;gap:8px;max-width:760px;margin-top:8px}
+  .verdict .seg.right,.chrono .seg.right{border-color:#3f9b52;background:rgba(63,155,82,.18)}
+  .chrono{display:grid;gap:8px;max-width:760px;margin-top:8px}
+  .chrono .seg{text-align:left;width:100%}
+  .chrono .n{display:inline-block;min-width:1.6em;color:var(--gold-l);font-weight:700}
+  .seg.wrongpick{border-color:#c0573f;background:rgba(192,87,63,.15)}
+  blockquote.doc{margin:12px 0;padding:10px 14px;border-left:3px solid var(--gold);background:rgba(255,255,255,.03);border-radius:0 10px 10px 0;font-size:15px;line-height:1.6}
+  #hero img.scene{object-fit:contain;background:#f3eee6}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="b1">Русская цивилизация</div>
+  <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
+  <div class="b3">Что изобрели русские первыми в мире</div>
+  <div class="b4">365 изобретений. Все русские. Все первые</div>
+  <div class="score" id="scoreBox" title="Баллы знаний за этот день">⭐ <span id="score">0</span> / 100</div>
+</header>
+
+<nav class="crumbs" aria-label="Хлебные крошки"><div class="wrap">
+  <a href="../../index.html">Русская цивилизация</a>
+  <span class="sep">›</span>
+  <a href="index.html">Что изобрели русские первыми в мире</a>
+  <span class="sep">›</span>
+  <span class="here">2 марта · Флёров и Петржак</span>
+</div></nav>
+
+<div class="hero-scene" id="hero">
+  <img class="scene" src="day-02mar-flerov.jpg" data-source="https://commons.wikimedia.org/wiki/File:RUSMARKA-1660.jpg" data-license="Public domain" data-author="Почтовая марка России, 2013; художник А. Поварихин" width="674" height="482" alt="Почтовая марка «Россия 2013»: портрет пожилого человека в тёмном костюме с золотой звездой Героя на лацкане, слева клетка таблицы Менделеева «114 ФЛЕРОВИЙ FL FLEROVIUM», внизу надпись «Г. Н. Флеров 1913–1990» и номинал 15 р." fetchpriority="high">
+</div>
+
+<div class="scene-caption">
+  <div class="wrap">
+    <div class="scene-cap">Почтовая марка России к 100-летию Г. Н. Флёрова, 2013 год, художник А. Поварихин. Слева — 114-й элемент, флеровий, названный в честь учёного. Викисклад, общественное достояние.</div>
+    <span class="scene-hint">Найди клетку элемента 114</span>
+  </div>
+</div>
+
+<header class="hero-lead">
+  <div class="wrap">
+    <div class="date-chip">2 марта · 1913</div>
+    <p class="date-origin">2 марта (17 февраля по старому стилю) 1913 года в Ростове-на-Дону родился Георгий Флёров. Открытие этого дня он сделал вместе с Константином Петржаком в 1940 году.</p>
+    <div class="who">Константин Петржак и Георгий Флёров <i>· Радиевый и Физико-технический институты, Ленинград</i></div>
+    <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
+    <h1>Флёров и Петржак: уран делится сам</h1>
+    <p class="hook">14 июня 1940 года Петржак и Флёров телеграфировали в Physical Review о шести импульсах в час от урана, который делится сам, — Либби годом раньше их не нашёл.</p>
+    <div class="hero-btns">
+      <button class="btn gold" id="readBtn" type="button">Читать историю ↓</button>
+      <button class="btn ghost" id="listenBtn" type="button">🎧 Слушать аудиогид</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero-under">
+  <div class="wrap">
+    <div class="stamp">
+      <div><div class="v">6 в час</div><div class="k">импульсов давала урановая камера без всякого источника нейтронов</div></div>
+      <div><div class="v">15 пластин</div><div class="k">в камере площадью 1000 см², позже — 6000 см²</div></div>
+      <div><div class="v">в 30–40 раз</div><div class="k">чувствительнее обычных камер</div></div>
+      <div><div class="v">0 за 5 часов</div><div class="k">импульсов дала камера с пластинами без урана</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="daynav" aria-label="Разделы дня">
+  <div class="wrap">
+    <a href="#story">Читать</a>
+    <a href="#audioguide">Слушать</a>
+    <a href="#games">Камера</a>
+    <a href="#pervenstvo">Первенство</a>
+    <a href="#quiz">Викторина</a>
+    <a href="#calendar">Календарь</a>
+  </div>
+</nav>
+
+<section class="wrap" id="dokument" data-proof-block></section>
+
+<section class="block" id="audioguide"></section>
+
+<section class="block" id="story">
+  <div class="wrap">
+    <div class="kicker">История первенства · 12 ударов</div>
+    <h2>Шесть импульсов в час и молчание журналов</h2>
+    <p style="color:var(--muted);max-width:62ch">Читается подряд. Нажми на удар — откроется подробный разбор с источниками.</p>
+    <ol class="udary">
+      <li><details><summary><span>В 1939 году Нильс Бор и Джон Уилер указали: ядро урана может разделиться само, без нейтрона, — но очень редко, с периодом полураспада порядка 10²² лет.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Расчёт сделали для основного изотопа урана по формуле проникновения частицы сквозь потенциальный барьер. Ширину барьера взяли равной радиусу осколка. Петржак и Флёров потом писали, что это допущение, «законность которого может быть проверена только на опыте».</p>
+          <p class="src-note">Источник: К. А. Петржак, Г. Н. Флёров, «Спонтанное деление урана», «Успехи физических наук», 1941, т. 25, вып. 2.</p>
+        </div></details></li>
+      <li><details><summary><span>Ещё раньше, в июне того же года, американец Уиллард Либби искал такое деление по нейтронам, которые должны вылетать при распаде, — и эффекта не обнаружил.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Либби ловил медленные нейтроны счётчиком с трёхфтористым бором. Отрицательный результат позволил установить только нижнюю границу периода полураспада. Его заметка вышла в Physical Review 15 июня 1939 года.</p>
+          <p class="src-note">Источники: W. F. Libby, Physical Review, 1939, т. 55, с. 1269; К. А. Петржак, Г. Н. Флёров, УФН, 1941.</p>
+        </div></details></li>
+      <li><details><summary><span>В Ленинграде за поиск взялись ученики Игоря Курчатова — Константин Петржак и Георгий Флёров. Они решили ловить не нейтроны, а сами осколки ядер.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Метод впервые предложил Отто Фриш: ионизационная камера с пластинами, покрытыми окисью урана, соединена с усилителем. Альфа-частицы урана система не считает, а намного более крупные импульсы от осколков отпирают тиратрон, и их считает механическое реле. Петржак работал в Радиевом институте, Флёров — в Физико-техническом.</p>
+          <p class="src-note">Источники: К. А. Петржак, Г. Н. Флёров, УФН, 1941; G. Flerov, K. Petrjak, «Spontaneous Fission of Uranium», Physical Review, 1940, т. 58, с. 89.</p>
+        </div></details></li>
+      <li><details><summary><span>Обычная камера с двумя пластинами диаметром 30 мм давала примерно ту же границу, что у Либби. Петржак и Флёров собрали камеру из 15 пластин общей площадью 1000 см².<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Камера была сделана как многослойный плоский конденсатор: пластины в 3 мм друг от друга, слой окиси урана 10–20 мг на см², собирающее напряжение 360 В. Её чувствительность оказалась в 30–40 раз больше, чем у камер обычной конструкции. Камеру с первой лампой усилителя поставили на свинцовые плиты на резиновых подушках, а усилитель перестроили, чтобы импульсы от альфа-частиц не складывались в ложные «осколки».</p>
+          <p class="src-note">Источник: К. А. Петржак, Г. Н. Флёров, УФН, 1941.</p>
+        </div></details></li>
+      <li><details><summary><span>В первых же опытах камера без всякого источника нейтронов давала импульсы, похожие на осколки, — шесть в час.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>«Число этих импульсов было невелико (6 в 1 час), и вполне понятно поэтому, что это явление не могло наблюдаться с камерами обычного типа». Позже в ещё большей камере, на 6000 см², счёт дошёл до 25–30 импульсов в час.</p>
+          <p class="src-note">Источник: К. А. Петржак, Г. Н. Флёров, УФН, 1941.</p>
+        </div></details></li>
+      <li><details><summary><span>Учёные выписали шесть подозреваемых — от наводок снаружи до нейтронов из примесей — и сняли каждого отдельным опытом или расчётом.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Первые четыре — обычные помехи: наводки снаружи, наложение альфа-импульсов, газовое усиление, разряды на поверхности урана. Камера с пластинами без окиси урана не дала ни одного импульса за 5 часов. В урановую камеру вводили эманацию тория, продукты распада которой давали вдвое больший ток от альфа-частиц, чем сам уран, — эффект не вырос. Напряжение подняли с 360 до 600 В — заметного роста не было. Бронзовая фольга толщиной 1 мкм поверх урана уменьшила спонтанные импульсы в том же отношении, что и импульсы осколков от нейтронного источника. Проверь это сам в модели ниже.</p>
+          <p class="src-note">Источник: К. А. Петржак, Г. Н. Флёров, УФН, 1941.</p>
+        </div></details></li>
+      <li><details><summary><span>Космические нейтроны отпали по расчёту: для такого эффекта через каждый квадратный сантиметр должно было проходить 5 нейтронов в секунду — много больше, чем их бывает у земли.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>К тому же камера с окисью тория дала лишь 3 импульса за 10 часов, а торий делится от нейтронов всего в 5 раз хуже урана. Нейтроны, которые альфа-частицы выбивают из азота и примесей, по данным Либби могли объяснить лишь 1/50 наблюдаемого эффекта.</p>
+          <p class="src-note">Источник: К. А. Петржак, Г. Н. Флёров, УФН, 1941.</p>
+        </div></details></li>
+      <li><details><summary><span>Опыт проверили и под землёй: ночью камеру поставили на станции московского метро «Динамо», где глубина защищала от космических помех.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Разрешение на работу в метро просили у наркома Кагановича. Под землёй эффект повторился. Схема этого контрольного опыта напечатана в «Докладах Академии наук СССР» в 1940 году.</p>
+          <p class="src-note">Источники: Е. Стаханова, «Станция метро „Динамо“», «Узнай Москву»; «Учёный, пророк, легенда. К 110-летию со дня рождения Георгия Флёрова», университет «Дубна».</p>
+        </div></details></li>
+      <li><details><summary><span>Через две недели, 1 июля 1940 года, американский журнал Physical Review напечатал их заметку. Под ней стоит: «June 14, 1940, (by cable)» — отправлено телеграммой.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <blockquote class="doc">«With 15 plates ionization chambers adjusted for detection of uranium fission products we observed 6 pulses per hour which we ascribe to spontaneous fission of uranium».<br>В переводе: «С ионизационными камерами из 15 пластин, настроенными на регистрацию продуктов деления урана, мы наблюдали 6 импульсов в час, которые приписываем спонтанному делению урана».</blockquote>
+          <p>Подписи: Flerov, Petrjak. Подробный доклад прозвучал на Совещании по атомному ядру 1940 года и вышел в «Журнале экспериментальной и теоретической физики» (т. 10, с. 1013) и в «Успехах физических наук».</p>
+          <p class="src-note">Источники: Physical Review, 1940, т. 58, вып. 1, с. 89 (скан в архиве Internet Archive); К. А. Петржак, Г. Н. Флёров, УФН, 1941.</p>
+        </div></details></li>
+      <li><details><summary><span>В подробной статье вывод осторожен: «Мы склонны думать, что наблюдаемый нами эффект следует приписать осколкам, получающимся в результате спонтанного деления урана».<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>В телеграмме 1940 года Петржак и Флёров оценили среднюю продолжительность жизни урана в 10¹⁶–10¹⁷ лет. Позже, сравнив слои окиси урана разной толщины, они получили период полураспада (4 ± 1)·10¹⁶ лет в расчёте на все атомы урана — намного короче, чем у Бора и Уилера.</p>
+          <p class="src-note">Источники: К. А. Петржак, Г. Н. Флёров, УФН, 1941; Physical Review, 1940, т. 58, с. 89.</p>
+        </div></details></li>
+      <li><details><summary><span>Ответа из-за океана не было. Курчатов в 1943 году писал, что работа «к нашему удивлению, не получила никакого отклика за границей».<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Флёров в войну служил техником-лейтенантом в авиации. По его рассказу, который приводят Курчатовский институт и составители сборника его писем, в Воронеже он читал в университетской библиотеке иностранные физические журналы, надеясь найти отклик на работу о спонтанном делении. Отклика не было — как и других статей о делении урана.</p>
+          <p class="src-note">Источники: И. В. Курчатов, отзыв от 4 июля 1943 г., «Атомный проект СССР. Документы и материалы», т. I, ч. 1, документ № 169; «Необходимо продолжать работу над ураном», НИЦ «Курчатовский институт»; «История атомного проекта», вып. 13, РНЦ «Курчатовский институт», 1998.</p>
+        </div></details></li>
+      <li><details><summary><span>Флёров прочёл молчание журналов как знак. В черновике письма уполномоченному ГКО по науке Сергею Кафтанову он писал: «наложена печать молчания, и это-то является наилучшим показателем того, какая кипучая работа идет сейчас за границей». В сентябре 1942 года ГКО велел возобновить работы по урану, а сегодня имя Флёрова носит 114-й элемент — флеровий.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Перед этим в письме сказано: «во всех иностранных журналах — полное отсутствие каких-либо работ по этому вопросу. Это молчание не есть результат отсутствия работы». Публикаторы датируют письмо предположительно декабрём 1941 года. Отправил его Флёров не раньше 17 марта 1942-го — в тот день он признался Курчатову: «никакого письма я никуда никому не посылал». В апреле 1942 года он написал и Сталину; оригинал не найден, сохранился черновик. Распоряжение ГКО № 2352сс от 28 сентября 1942 года обязало Академию наук возобновить работы по урану. Решение готовили и донесения разведки, так что письма Флёрова были не единственной причиной. 114-й элемент назвали флеровием в 2012 году.</p>
+          <p class="src-note">Источники: Р. В. Кузнецова, Н. В. Селезнева, «„Тревожный колокол“ Георгия Флерова. Письма Г. Н. Флерова 1941–1945 гг.», «История атомного проекта», вып. 13, 1998; «Атомный проект СССР», т. I, ч. 1, документ № 128; «Необходимо продолжать работу над ураном», НИЦ «Курчатовский институт».</p>
+        </div></details></li>
+    </ol>
+  </div>
+</section>
+<section class="block" id="theme-inventions">
+  <div class="wrap">
+    <div class="kicker">Физика · Русские первенства</div>
+    <h2>Что ещё русские первыми сделали в физике</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Другие физические дни музея — по утверждённому календарю.</p>
+    <button class="btn ghost" type="button" id="themeInvBtn" data-label="Показать 4 первенства →" aria-expanded="false" aria-controls="themeInvBody">Показать 4 первенства →</button>
+    <div id="themeInvBody" hidden>
+      <ul class="theme-list">
+        <li><b>21 янв</b> <a href="day-21jan-obninsk.html">Первая в мире АЭС, отдавшая ток в сеть</a></li>
+        <li><b>22 янв</b> <a href="day-22jan-landau.html">Теория сверхтекучести Ландау</a></li>
+        <li><b>31 янв</b> <a href="day-31jan-girotron.html">Гиротрон Гапонова-Грехова — им и сегодня греют плазму токамаков</a></li>
+        <li><b>25 фев</b> <a href="day-25feb-tokamak.html">Токамак: плазма в магнитном бублике</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="games">
+  <div class="wrap">
+    <div class="kicker">Главное действие · по статье К. А. Петржака и Г. Н. Флёрова в УФН, 1941; модель условная</div>
+    <h2>Камера из 15 пластин: исключи подозреваемых</h2>
+    <p style="max-width:62ch">Урановая камера сама, без нейтронов, щёлкает шесть раз в час. Прежде чем сказать «уран делится сам», нужно снять шесть подозрений. Запускай контрольные опыты Петржака и Флёрова — по одному — и смотри, кого из подозреваемых снимает каждый.</p>
+    <div class="lab">
+      <div class="tests" id="tests" role="group" aria-label="Контрольные опыты"></div>
+      <canvas class="oscv" id="osc" width="760" height="260" role="img" aria-label="Экран осциллографа: зелёная полоса шума от альфа-частиц, пунктирная линия порога счёта и редкие высокие импульсы от осколков, которые пересекают порог"></canvas>
+      <div class="lopts" style="margin-top:6px">
+        <button class="btn ghost" type="button" id="tFast">Сразу к итогу опыта</button>
+      </div>
+      <div class="lstat">
+        <div><b id="sA">—</b><span id="lA">часов наблюдения</span></div>
+        <div><b id="sB">—</b><span id="lB">импульсов выше порога</span></div>
+        <div><b id="sC">—</b><span id="lC">в среднем за час</span></div>
+      </div>
+      <div class="lab-msg" id="tMsg" aria-live="polite">Начни с первого опыта: урановая камера без источника нейтронов.</div>
+      <h3 style="margin:18px 0 6px">Подозреваемые</h3>
+      <ul class="suspects" id="suspects"></ul>
+      <h3 style="margin:18px 0 6px">Что же остаётся?</h3>
+      <div class="verdict" id="verdict" role="group" aria-label="Вывод"></div>
+      <div class="lab-msg" id="vMsg" aria-live="polite">Вывод можно сделать, когда все шесть подозреваемых сняты.</div>
+      <div class="lab-cap">Опыты, числа и рассуждения — из статьи К. А. Петржака и Г. Н. Флёрова «Спонтанное деление урана» (УФН, 1941): 6 импульсов в час в камере на 1000 см², 0 за 5 часов без урана, 3 за 10 часов с окисью тория, 5 нейтронов на см² в секунду, 1/50 эффекта от примесей. Условно: время ускорено, импульсы расставлены случайно; во сколько раз фольга уменьшила счёт, в статье не сказано — в модели вдвое; при 600 В и с эманацией тория статья пишет, что эффект не вырос, и модель показывает те же 6 в час.</div>
+      <noscript><div class="noscript-box">Для модели нужен JavaScript. Текстовая версия. Урановая камера без источника: 30 импульсов за 5 часов, 6 в час. Пластины без урана: 0 за 5 часов — наводки снаружи сняты. Окись тория с полонием (ток от альфа-частиц вдвое больше): 3 за 10 часов, но поверхность другая — нужен ещё опыт. Эманация тория в урановой камере: ток от альфа-частиц втрое больше, импульсов столько же — наложение альфа-импульсов снято. 600 В вместо 360 В: роста нет — газовое усиление снято. Бронзовая фольга: спонтанных импульсов меньше в том же отношении, что и осколков от нейтронов, — разряды на поверхности сняты. Расчёт: нужно 5 космических нейтронов на см² в секунду, у земли их много меньше, а ториевая камера молчит — космические нейтроны сняты. Расчёт: нейтроны из примесей дают 1/50 эффекта — сняты. Остаётся спонтанное деление урана.</div></noscript>
+
+      <h3 style="margin:22px 0 6px">1939–1942: расставь по порядку</h3>
+      <p style="max-width:62ch;margin:0 0 6px;color:var(--muted)">Нажимай события от самого раннего к самому позднему.</p>
+      <div class="chrono" id="chrono" role="group" aria-label="События 1939–1942 годов"></div>
+      <div class="lab-msg" id="hMsg" aria-live="polite">Какое событие было первым?</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="pervenstvo">
+  <div class="wrap">
+    <div class="kicker">Проверка факта</div>
+    <h2>Что именно здесь наше</h2>
+    <div class="border-box">
+      <p style="margin-top:0"><b>Граница первенства:</b> К. А. Петржак и Г. Н. Флёров первыми на опыте обнаружили спонтанное деление ядер урана и опубликовали открытие: телеграмма от 14 июня 1940 года, напечатанная в Physical Review 1 июля 1940 года, и подробная статья с контрольными опытами. Годом раньше Уиллард Либби искал этот эффект и не нашёл.</p>
+      <p><b>Чего здесь нет:</b> Само явление предсказали теоретически Нильс Бор и Джон Уилер в 1939 году. Флёров не был единственным открывателем: работу он сделал вместе с Петржаком, под руководством Курчатова. По отзыву Курчатова 1943 года, из английских материалов выяснилось, что спонтанное деление наблюдал в Англии и Фриш. Какой изотоп урана делится сам, ленинградцы установить не смогли — это сделали в США Кеннеди и Сегре. А письма Флёрова о «печати молчания» были не единственной причиной советского атомного проекта: решение готовили и донесения разведки.</p>
+    </div>
+    <table class="ctx">
+      <thead><tr><th scope="col">Кто</th><th scope="col">Что сделал</th><th scope="col">Когда</th></tr></thead>
+      <tbody>
+        <tr><td>Уиллард Либби, США</td><td>Искал спонтанное деление по нейтронам — не нашёл</td><td>1939</td></tr>
+        <tr><td>Нильс Бор и Джон Уилер</td><td>Предсказали спонтанное деление с периодом порядка 10²² лет</td><td>1939</td></tr>
+        <tr><td>Константин Петржак и Георгий Флёров, Ленинград</td><td>Обнаружили на опыте: 6 импульсов в час, контрольные опыты</td><td>1940</td></tr>
+        <tr><td>Фриш, Англия</td><td>Тоже наблюдал спонтанное деление (известно из английских материалов, по отзыву Курчатова)</td><td>не позднее 1943</td></tr>
+        <tr><td>Кеннеди и Сегре, США</td><td>Установили, какой изотоп урана делится сам</td><td>не позднее 1943</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block" id="quiz">
+  <div class="wrap">
+    <div class="kicker">Проверь себя · 5 вопросов</div>
+    <h2>Викторина</h2>
+    <p style="color:var(--muted);max-width:62ch">На каждый вопрос — одна попытка. После ответа покажем объяснение.</p>
+    <div id="quizBox"></div>
+    <noscript><div class="noscript-box">Для викторины нужен JavaScript. Ответы: 1 — 6 в час; 2 — ни одного импульса; 3 — телеграммой; 4 — на станции метро «Динамо»; 5 — молчание иностранных журналов.</div></noscript>
+  </div>
+</section>
+
+<section class="block" id="result">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Итог дня</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Камера, вывод, хронология и викторина вместе дают 100 баллов. Прогресс не сохраняется: перезагрузишь страницу — день начнётся заново.</p>
+    <div class="day-result">
+      <div class="dr-score" id="dayTxt">0 / 100 · звание: Гость дня</div>
+      <div class="dr-bar"><i id="dayBar" style="width:0%"></i></div>
+      <div class="dr-note">Сними всех шестерых подозреваемых контрольными опытами, сделай вывод, расставь события по порядку и ответь на вопросы викторины.</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="sources">
+  <div class="wrap">
+    <div class="kicker">Источники</div>
+    <h2>На чём стоит страница</h2>
+    <ul class="sources">
+      <li><a href="https://archive.org/details/sim_physical-review_1940-07-01_58_1" rel="noopener" target="_blank">Physical Review, 1 июля 1940, т. 58, вып. 1</a> (скан в архиве Internet Archive), с. 89: G. Flerov, K. Petrjak, «Spontaneous Fission of Uranium», телеграмма от 14 июня 1940 года из Физико-технического и Радиевого институтов.</li>
+      <li><a href="https://ufn.ru/ufn41/ufn41_2/Russian/r412e.pdf" rel="noopener" target="_blank">К. А. Петржак, Г. Н. Флёров · «Спонтанное деление урана»</a>, «Успехи физических наук», 1941, т. 25, вып. 2, с. 171–178: камера из 15 пластин, 6 импульсов в час, контрольные опыты, расчёты, вывод, ссылки на Бора — Уилера и Либби.</li>
+      <li><a href="https://doi.org/10.1103/PhysRev.55.1269" rel="noopener" target="_blank">W. F. Libby · «Stability of Uranium and Thorium for Natural Fission»</a>, Physical Review, 15 июня 1939, т. 55, с. 1269.</li>
+      <li><a href="https://elib.biblioatom.ru/text/kiae-istoriya-atomnogo-proekta_v13_1998/" rel="noopener" target="_blank">Р. В. Кузнецова, Н. В. Селезнева · «„Тревожный колокол“ Георгия Флерова. Письма Г. Н. Флерова 1941–1945 гг.»</a>, «История атомного проекта», вып. 13, РНЦ «Курчатовский институт», 1998 (электронная библиотека «История Росатома»): дата рождения, письмо Кафтанову о «печати молчания», письмо Курчатову от 17 марта 1942 года, черновик письма Сталину, рассказ о воронежской библиотеке.</li>
+      <li><a href="https://elib.biblioatom.ru/text/atomny-proekt-sssr_t1_kn1_1998/" rel="noopener" target="_blank">«Атомный проект СССР. Документы и материалы», т. I, ч. 1</a>, 1998: распоряжение ГКО № 2352сс от 28 сентября 1942 года (документ № 128), отзыв И. В. Курчатова от 4 июля 1943 года (документ № 169).</li>
+      <li><a href="https://club.nrcki.ru/geroydnya/flerov/" rel="noopener" target="_blank">«Необходимо продолжать работу над ураном»</a>, НИЦ «Курчатовский институт»: дата рождения, служба в армии, Воронеж, роль писем и разведки, флеровий.</li>
+      <li><a href="https://um.mos.ru/houses/stantsiya_metro_dinamo/" rel="noopener" target="_blank">Е. Стаханова · «Станция метро „Динамо“»</a>, «Узнай Москву»: ночные измерения Флёрова и Петржака на станции в 1940 году.</li>
+      <li><a href="https://geophysics.uni-dubna.ru/georgij-fljorov-uchenyj-prorok-legenda/" rel="noopener" target="_blank">«Учёный, пророк, легенда. К 110-летию со дня рождения Георгия Флёрова»</a>, кафедра общей и прикладной геофизики университета «Дубна»: опыт в метро, «Доклады АН СССР», 1940, т. 28.</li>
+      <li>Изображение: <a href="https://commons.wikimedia.org/wiki/File:RUSMARKA-1660.jpg" rel="noopener" target="_blank">почтовая марка России «100 лет со дня рождения Г. Н. Флерова»</a>, 2013, художник А. Поварихин, Викисклад — общественное достояние: почтовые марки как государственные знаки не охраняются авторским правом (ГК РФ, ст. 1259, п. 6).</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="calendar">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Календарь изобретений</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Выбери любой день — узнаешь, что русские сделали первыми в мире. Листай месяцы стрелками.</p>
+    <div id="calbox"></div>
+  </div>
+</section>
+
+<section class="block kd" id="kuda-dalshe">
+  <div class="wrap">
+    <div class="kd-kicker">Куда дальше</div>
+    <h2>Музей продолжается</h2>
+    <div class="kd-grid">
+      <div class="kd-card main"><span class="kd-lbl">Следующий день</span><a href="day-03mar-favorsky.html">3 марта — Реакция Фаворского: ацетилен без натрия <span class="kd-arr">→</span></a>
+        <p>Неф брал металлический натрий, а Фаворскому хватило сухого порошка едкого кали.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Предыдущий день</span><a href="day-01mar-apostol.html">1 марта — «Апостол»: чёрное на красном <span class="kd-arr">→</span></a>
+        <p>Фёдоров и Мстиславец напечатали две краски с одной формы — за границей для этого набирали две.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Ещё об атоме</span><a href="day-21jan-obninsk.html">21 января — Первая в мире АЭС <span class="kd-arr">→</span></a>
+        <p>Обнинская станция первой отдала ток в сеть.</p></div>
+      <div class="kd-card main"><span class="kd-lbl">Город-музей</span><a href="../../index.html">Русская цивилизация <span class="kd-arr">→</span></a>
+        <p>Все музеи проекта на одной карте.</p></div>
+    </div>
+    <p style="margin-top:16px"><a href="izobreteniya.html">Посмотреть изобретения по алфавиту →</a></p>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>
+  Русская цивилизация · «Что изобрели русские первыми в мире»</div></footer>
+
+<script type="application/json" data-proof>{"status": "found", "claim_id": "rc:izobreteniya:flerov:claim-spontannoe-delenie-1940", "ours": {"kind": "сообщение в журнал (телеграммой)", "title": "G. Flerov, K. Petrjak, «Spontaneous Fission of Uranium»: «With 15 plates ionization chambers adjusted for detection of uranium fission products we observed 6 pulses per hour which we ascribe to spontaneous fission of uranium» — с камерами из 15 пластин наблюдали 6 импульсов в час и приписывают их спонтанному делению урана", "date": "1940-06-14", "holder": "Физико-технический и Радиевый институты, Ленинград; Physical Review, 1 июля 1940, т. 58, с. 89 (скан в Internet Archive)", "source_url": "https://archive.org/details/sim_physical-review_1940-07-01_58_1"}, "rival": {"name": "Уиллард Либби, США", "date": "1939-06-15", "doc_title": "«Stability of Uranium and Thorium for Natural Fission», Physical Review, т. 55, с. 1269: искал спонтанное деление по нейтронам — эффекта не обнаружил, получил лишь нижнюю границу периода полураспада"}, "gap_years": 0}</script>
+<script src="../../assets/museum-proof.js"></script>
+
+<script>
+/* ── СЧЁТ ── шкала из 100 держит assets/museum-score.js; здесь только реестр наград.
+   модель: 6 подозреваемых × 7 и вывод 8; хронология 5×4; викторина 5×6 = 100. */
+window.MUSEUM_SCORE = {awards:{s:[6,7], v:8, h:[5,4], q:[5,6]},
+  ranks:[[100,'Сотрудник лаборатории Курчатова'],[70,'Лаборант у камеры'],[40,'Стажёр физтеха'],[0,'Гость дня']]};
+</script>
+<script src="../../assets/museum-score.js"></script>
+<script>
+(function(){
+  var $ = function(id){return document.getElementById(id);};
+  $('readBtn').onclick = function(){ $('story').scrollIntoView({behavior:'smooth'}); };
+  $('listenBtn').onclick = function(){ $('audioguide').scrollIntoView({behavior:'smooth'}); };
+  var tb=$('themeInvBtn');
+  tb.onclick=function(){ var b=$('themeInvBody'), open=b.hidden; b.hidden=!open; tb.setAttribute('aria-expanded',open?'true':'false'); tb.textContent=open?'▲ Скрыть':tb.dataset.label; };
+  function msg(id,t,cls){ var m=$(id); m.className='lab-msg'+(cls?' '+cls:''); m.textContent=t; }
+  function num(x){ return String(x).replace('.',','); }
+
+  /* ── КАМЕРА ── К. А. Петржак, Г. Н. Флёров, «Спонтанное деление урана», УФН, 1941, т. 25, вып. 2:
+     камера 1000 см² — 6 импульсов в час; без урана — 0 за 5 ч; ThO2 + Po (альфа-ток вдвое) — 3 за 10 ч;
+     эманация тория (ток от альфа вдвое больше, чем от урана) — роста нет; 360 → 600 В — заметного роста нет;
+     бронзовая фольга 1 мкм — спонтанные и нейтронные импульсы уменьшились в одном отношении (во сколько — не сказано, в модели вдвое);
+     космические нейтроны — нужно 5 н/(см²·с), ториевая камера 3 за 10 ч; примеси — 1/50 эффекта (по данным Либби). */
+  var S=['Наводки снаружи: усилитель ловит чужие колебания','Наложение импульсов от альфа-частиц урана','Газовое усиление в отдельных местах камеры','Случайные разряды на поверхности окиси урана','Космические нейтроны делят уран','Нейтроны из азота и примесей, выбитые альфа-частицами'];
+  var T=[
+    {name:'Урановая камера без источника нейтронов',h:5,n:30,noise:1,amp:1,out:[],
+     why:'30 импульсов за 5 часов — 6 в час. Импульсы крупные, как от осколков. Но откуда они? Запускай контрольные опыты.'},
+    {name:'Пластины без окиси урана',h:5,n:0,noise:0.35,amp:1,out:[0],
+     why:'За 5 часов — ни одного импульса. Наводки снаружи попали бы и в пустую камеру. Значит, импульсы рождает уран на пластинах.'},
+    {name:'Окись тория с полонием: альфа-ток вдвое больше',h:10,n:3,noise:2,amp:1,out:[],
+     why:'Всего 3 импульса за 10 часов, хотя ток от альфа-частиц вдвое больше. Но поверхность у окиси тория не такая, как у урана: условия не вполне равны. Нужен опыт с самой урановой камерой.'},
+    {name:'Эманация тория в урановой камере',h:5,n:30,noise:3,amp:1,out:[1],
+     why:'Ток от альфа-частиц вырос втрое: эманация добавила вдвое больше, чем даёт сам уран. А импульсов столько же — 6 в час. Усилитель не складывает альфа-импульсы в ложные «осколки». Заодно это говорит против газового усиления — проверь его напряжением.'},
+    {name:'Напряжение 600 В вместо 360 В',h:5,n:30,noise:1,amp:1,out:[2],
+     why:'Напряжение выросло, а заметного роста счёта нет. Будь в камере места с газовым усилением, импульсов стало бы больше.'},
+    {name:'Бронзовая фольга 1 мкм поверх урана',h:5,n:15,noise:1,amp:0.7,out:[3],
+     why:'Спонтанных импульсов стало меньше, и сами они меньше. Но и осколки от нейтронного источника под фольгой уменьшились в том же отношении. Фольга хорошо проводит ток — разрядам на поверхности неоткуда взяться, а «спонтанные» импульсы ведут себя как осколки.'},
+    {name:'Расчёт: хватит ли космических нейтронов?',calc:'cos',out:[4],
+     why:'Чтобы дать 6 импульсов в час, через каждый квадратный сантиметр должно проходить 5 нейтронов в секунду. Это много больше, чем их бывает у земли. И ториевая камера почти молчит — 3 импульса за 10 часов, — хотя торий делится от нейтронов всего в 5 раз хуже урана.'},
+    {name:'Расчёт: нейтроны из примесей',calc:'imp',out:[5],
+     why:'6 импульсов в час — это как от 1/20 милликюри радон-бериллиевого источника. А по измерениям Либби, нейтронов от 15 г окиси урана на пластинах хватит лишь на 1/50 наблюдаемого эффекта.'}
+  ];
+  var cur=-1, run=null, sOut={}, vDone=false, seen={};
+  var cv=$('osc'), ctx=cv.getContext('2d');
+  function size(c,W,H){ var w=c.clientWidth||W, d=window.devicePixelRatio||1; c.width=Math.round(w*d); c.height=Math.round(w*H/W*d); }
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  T.forEach(function(t,i){
+    var b=document.createElement('button'); b.type='button'; b.className='seg'; b.textContent=(i+1)+'. '+t.name;
+    b.onclick=function(){ start(i); }; t.btn=b; $('tests').appendChild(b);
+  });
+  S.forEach(function(s,i){
+    var li=document.createElement('li'); li.innerHTML='<span class="sname"></span><span class="sver">под подозрением</span>';
+    li.querySelector('.sname').textContent=s; li.id='sus'+i; $('suspects').appendChild(li);
+  });
+
+  var LEFT=['','один','двое','трое','четверо','пятеро','шестеро'];
+  function stat(a,la,b,lb,c,lc){ $('sA').textContent=a; $('lA').textContent=la; $('sB').textContent=b; $('lB').textContent=lb; $('sC').textContent=c; $('lC').textContent=lc; }
+  /* осциллограф: полоса шума, порог, импульсы осколков в окне последнего «часа» */
+  function drawOsc(t,tm){
+    var w=cv.width, h=cv.height, u=w/760; ctx.clearRect(0,0,w,h); ctx.fillStyle='#0f1a14'; ctx.fillRect(0,0,w,h);
+    var base=h*0.82, thr=h*0.42;
+    ctx.strokeStyle='rgba(255,255,255,.08)'; ctx.lineWidth=1;
+    for (var gx=0; gx<=10; gx++){ ctx.beginPath(); ctx.moveTo(gx*w/10,0); ctx.lineTo(gx*w/10,h); ctx.stroke(); }
+    ctx.setLineDash([6*u,6*u]); ctx.strokeStyle='#c9a24a'; ctx.beginPath(); ctx.moveTo(0,thr); ctx.lineTo(w,thr); ctx.stroke(); ctx.setLineDash([]);
+    if (!t) return;
+    if (t.calc){ drawCalc(t,w,h,u); return; }
+    var win=1, t0=tm-win, first=true;
+    ctx.strokeStyle='#5fd38a'; ctx.lineWidth=1.5*u; ctx.beginPath();
+    var N=380, seed=Math.floor(tm*997);
+    for (var k=0;k<=N;k++){
+      var x=k/N*w, tt=t0+k/N*win; if (tt<0) continue; if (tt>tm) break;
+      var r=Math.sin((seed+k)*12.9898)*43758.5453; r=r-Math.floor(r);
+      var y=base-(r*0.16*h*Math.min(1,0.45+0.2*t.noise));
+      t.ev.forEach(function(e){ var d=(tt-e)*N/win; if (d>=0&&d<6) y=Math.min(y, base-(h*0.6*t.amp)*(1-d/6)); });
+      if (first){ ctx.moveTo(x,y); first=false; } else ctx.lineTo(x,y);
+    }
+    ctx.stroke();
+  }
+  function drawCalc(t,w,h,u){
+    /* два столбика: слева — что нужно для эффекта, справа — что есть; подписи — в статистике под экраном */
+    var base=h*0.88, top=h*0.1, bw=120*u, xs=[w*0.3-bw/2, w*0.7-bw/2];
+    var v = t.calc==='cos' ? [1, 0.12] : [1, 0.02];
+    ['#c9a24a','#5fd38a'].forEach(function(col,i){ ctx.fillStyle=col; var hh=(base-top)*v[i]; ctx.fillRect(xs[i],base-hh,bw,Math.max(hh,2*u)); });
+  }
+  function finish(i){
+    var t=T[i]; run=null; t.btn.classList.add('done'); seen[i]=1;
+    if (t.calc==='cos') stat('5','нейтронов на см² в секунду нужно для эффекта (левый столбик)','много меньше','космических нейтронов у земли (правый столбик)','3 за 10 ч','импульсов дала ториевая камера');
+    else if (t.calc==='imp') stat('1/20 мКи','такой радон-бериллиевый источник дал бы 6 импульсов в час (левый столбик)','1/50','эффекта могут дать нейтроны от 15 г окиси урана (правый столбик)','15 г','окиси урана на пластинах');
+    else stat(num(t.h),'часов наблюдения',String(t.n),'импульсов выше порога',num(Math.round(t.n/t.h*10)/10),'в среднем за час');
+    var gained=[];
+    t.out.forEach(function(k){ if (!sOut[k]){ sOut[k]=1; gained.push(k); var li=$('sus'+k); li.className='out'; li.querySelector('.sver').textContent='снят опытом '+(i+1); award('s'+k,7); } });
+    var left=S.length-Object.keys(sOut).length;
+    msg('tMsg', t.why+(gained.length?' Снят подозреваемый: «'+S[gained[0]]+'».':'')+(left?' Под подозрением ещё '+LEFT[left]+'.':' Все шесть подозреваемых сняты — делай вывод.'), gained.length||i===0?'ok':'');
+    if (!left) msg('vMsg','Все подозреваемые сняты. Что же даёт шесть импульсов в час?','');
+  }
+  function start(i){
+    var t=T[i]; cur=i; T.forEach(function(x,j){ x.btn.classList.toggle('on',j===i); });
+    if (run){ cancelAnimationFrame(run.raf); run=null; }
+    if (t.calc){ drawOsc(t,0); finish(i); return; }
+    t.ev=[]; for (var k=0;k<t.n;k++) t.ev.push(Math.random()*t.h); t.ev.sort(function(a,b){return a-b;});
+    var D=Math.min(7000,t.h*800), t0=performance.now();
+    msg('tMsg','Опыт '+(i+1)+': «'+t.name+'». Идёт счёт…','');
+    run={i:i};
+    function step(now){
+      if (!run||run.i!==i) return;
+      var tm=Math.min(t.h,(now-t0)/D*t.h); drawOsc(t,tm);
+      var c=t.ev.filter(function(e){return e<=tm;}).length;
+      stat(num(Math.floor(tm*10)/10),'часов наблюдения',String(c),'импульсов выше порога',tm>=0.5?num(Math.round(c/tm*10)/10):'—','в среднем за час');
+      if (tm>=t.h){ finish(i); return; }
+      run.raf=requestAnimationFrame(step);
+    }
+    if (reduce){ drawOsc(t,t.h); finish(i); return; }
+    run.raf=requestAnimationFrame(step);
+  }
+  $('tFast').onclick=function(){ if (cur<0){ msg('tMsg','Сначала выбери опыт.',''); return; } var t=T[cur]; if (run){ cancelAnimationFrame(run.raf); drawOsc(t,t.h); finish(cur); } };
+
+  var V=[['Шум усилителя','Нет: камера с пластинами без урана за 5 часов не дала ни одного импульса — дело в уране.'],
+         ['Осколки урана, который делится сам','Верно. Так и написали Петржак и Флёров: «Мы склонны думать, что наблюдаемый нами эффект следует приписать осколкам, получающимся в результате спонтанного деления урана».'],
+         ['Нейтроны от источника из соседней комнаты','Нет: опыты шли без источника нейтронов, а любые нейтроны уже проверены расчётами — их не хватает.']];
+  V.forEach(function(o,i){
+    var b=document.createElement('button'); b.type='button'; b.className='seg'; b.textContent=o[0];
+    b.onclick=function(){
+      if (vDone) return;
+      if (Object.keys(sOut).length<S.length){ msg('vMsg','Рано: под подозрением ещё '+LEFT[S.length-Object.keys(sOut).length]+'. Сначала сними всех контрольными опытами.','bad'); return; }
+      if (i===1){ vDone=true; b.classList.add('right'); award('v',8); msg('vMsg',o[1],'ok'); }
+      else { b.classList.add('wrongpick'); setTimeout(function(){ b.classList.remove('wrongpick'); },700); msg('vMsg',o[1],'bad'); }
+    };
+    $('verdict').appendChild(b);
+  });
+
+  function resize(){ size(cv,760,260); if (cur>=0 && !run){ var t=T[cur]; drawOsc(t,t.calc?0:t.h); } else if (cur<0) drawOsc(null,0); }
+  window.addEventListener('resize',resize); resize();
+
+  /* ── ХРОНОЛОГИЯ ── */
+  var E=[
+    {o:3,t:'Флёров пишет Кафтанову о «печати молчания» в иностранных журналах (черновик письма)',d:'вероятно, декабрь 1941'},
+    {o:0,t:'Либби сообщает, что не нашёл спонтанного деления урана',d:'15 июня 1939'},
+    {o:4,t:'Распоряжение ГКО обязывает Академию наук возобновить работы по урану',d:'28 сентября 1942'},
+    {o:2,t:'Петржак и Флёров отправляют телеграмму в Physical Review',d:'14 июня 1940'},
+    {o:1,t:'Бор и Уилер печатают расчёт: период спонтанного деления — порядка 10²² лет',d:'1 сентября 1939'}
+  ], hNext=0;
+  E.forEach(function(e,i){
+    var b=document.createElement('button'); b.type='button'; b.className='seg'; b.innerHTML='<span class="n"></span>'; b.appendChild(document.createTextNode(e.t));
+    b.onclick=function(){
+      if (e.done) return;
+      if (e.o!==hNext){ b.classList.add('wrongpick'); setTimeout(function(){ b.classList.remove('wrongpick'); },700);
+        msg('hMsg','Не сейчас: есть событие раньше этого.','bad'); return; }
+      e.done=true; b.classList.add('right'); b.disabled=true; b.querySelector('.n').textContent=(hNext+1)+'.';
+      b.appendChild(document.createTextNode(' — '+e.d)); award('h'+i,4); hNext++;
+      msg('hMsg', hNext<5 ? 'Верно. Что дальше?' : 'Порядок восстановлен. Между телеграммой в американский журнал и распоряжением ГКО прошло чуть больше двух лет.','ok');
+    };
+    $('chrono').appendChild(b);
+  });
+
+  /* ── ВИКТОРИНА ── */
+  var Q = [
+    {q:'Сколько спонтанных импульсов в час давала камера Петржака и Флёрова площадью 1000 см²?', o:['Один','Шесть','Шестьдесят'], a:1,
+     e:'Шесть в час — так мало, что с камерами обычного типа это явление нельзя было заметить.'},
+    {q:'Что дала камера с пластинами без окиси урана за 5 часов?', o:['Столько же импульсов','Вдвое больше','Ни одного импульса'], a:2,
+     e:'Ни одного. Значит, импульсы рождает уран, а не наводки снаружи.'},
+    {q:'Как Петржак и Флёров отправили сообщение в Physical Review?', o:['Телеграммой','С Курчатовым, который вёз его в Америку','Письмом через Нильса Бора'], a:0,
+     e:'Телеграммой: под заметкой стоит «June 14, 1940, (by cable)». Напечатали её 1 июля 1940 года.'},
+    {q:'Где опыт проверяли вдали от космических помех?', o:['На вершине Эльбруса','На станции метро «Динамо»','В шахте Донбасса'], a:1,
+     e:'На станции московского метро «Динамо», ночью: глубина защищала от космических помех.'},
+    {q:'Что Флёров назвал «наилучшим показателем» кипучей работы за границей?', o:['Донесения разведки','Письмо Бора','Молчание иностранных журналов'], a:2,
+     e:'«Наложена печать молчания, и это-то является наилучшим показателем того, какая кипучая работа идет сейчас за границей», — писал он в черновике письма Кафтанову.'}
+  ];
+  var qb = $('quizBox');
+  Q.forEach(function(it, qi){
+    var wrap = document.createElement('div');
+    var h = document.createElement('p'); h.className='quiz-q'; h.textContent=(qi+1)+'. '+it.q; wrap.appendChild(h);
+    var exp = document.createElement('div'); exp.className='exp'; exp.setAttribute('aria-live','polite');
+    var btns = it.o.map(function(txt, oi){
+      var b=document.createElement('button'); b.type='button'; b.className='opt'; b.textContent=txt;
+      b.onclick=function(){
+        if (wrap.dataset.done) return; wrap.dataset.done='1';
+        btns.forEach(function(x,xi){ x.disabled=true; if (xi===it.a) x.classList.add('correct'); });
+        if (oi===it.a){ award('q'+qi,6); exp.textContent='Верно. '+it.e; }
+        else { b.classList.add('wrong'); exp.textContent='Не совсем. '+it.e; }
+        exp.classList.add('show');
+      };
+      wrap.appendChild(b); return b;
+    });
+    wrap.appendChild(exp); qb.appendChild(wrap);
+  });
+})();
+</script>
+<script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
+<script>window.MUSEUM_CHROME={
+  museum:{title:'Что изобрели русские первыми в мире',href:'index.html'},
+  share:{title:'Флёров и Петржак: уран делится сам — музей «Что изобрели русские первыми в мире»',
+         text:'В 1940 году Петржак и Флёров нашли, что уран делится сам: шесть импульсов в час в камере из 15 пластин. Что Россия дала миру раньше всех — день за днём.'},
+  prev:{href:'day-01mar-apostol.html',title:'1 марта · «Апостол»'},
+  next:{href:'day-03mar-favorsky.html',title:'3 марта · Фаворский'},
+  all:{href:'index.html',label:'Все изобретения'},
+  city:'../../index.html',
+  random:['day-01jan-cabletv.html','day-02jan-luna1.html','day-03jan-anosov.html','day-04jan-pilchikov.html','day-05jan-shukhov.html','day-06jan-orlov.html','day-08jan-icebreaker.html','day-09jan-blinov.html','day-10jan-britnev.html','day-11jan-kostovich.html','day-12jan-r7.html','day-13jan-k278.html','day-14jan-lira.html','day-15jan-kovalevskaya.html','day-16jan-soyuz45.html','day-19jan-kantorovich.html','day-21jan-obninsk.html','day-22jan-landau.html','day-23jan-umov.html','day-24jan-k162.html','day-25jan-korsakov.html','day-26jan-podvodnaya.html','day-27jan-pentium.html','day-28jan-havkin.html','day-30jan-kotelnikov.html','day-31jan-girotron.html','day-01feb-bekhterev.html','day-02feb-edinorog.html','day-03feb-luna9.html','day-04feb-samovar.html','day-05feb-boldyrev.html','day-06feb-zelinsky.html','day-07feb-setun.html','day-08feb-mendeleev.html','day-09feb-chizhevsky.html','day-10feb-aerosani.html','day-12feb-lenz.html','day-15feb-nesterov.html','day-17feb-pirotsky.html','day-18feb-dokuchaev.html','day-20feb-mir.html','day-25feb-tokamak.html','day-27feb-filatov.html','day-28feb-zhuravsky.html','day-01mar-apostol.html','day-02mar-flerov.html','day-18mar-leonov.html','day-15may-mechnikov.html','day-16jun-tereshkova.html','day-26sep-pavlov.html','day-15nov-buran.html','day-25nov-pirogov.html','day-01dec-lobachevsky.html','day-14dec-laser.html']
+};</script>
+<script src="../../assets/museum-chrome.js"></script>
+<script>window.MUSEUM_SUPPORT={museum:'Что изобрели русские первыми в мире'};</script>
+<script src="../../assets/museum-support.js"></script>
+<script src="calendar-izobreteniya.js"></script>
+<script>window.MUSEUM_CALENDAR_INITIAL='03-02';</script>
+<script src="../../assets/museum-calendar-month.js"></script>
+<script>window.MUSEUM_RETURN={riddle:{q:"Как Петржак и Флёров убедились, что уран не делят космические нейтроны?",a:"Посчитали: для такого эффекта через каждый квадратный сантиметр должно проходить 5 нейтронов в секунду — много больше, чем их бывает у земли. А камера с торием, который нейтроны делят лишь в 5 раз хуже урана, почти молчала: 3 импульса за 10 часов.",src:"К. А. Петржак, Г. Н. Флёров, «Спонтанное деление урана», «Успехи физических наук», 1941"}};</script>
+<script src="../../assets/museum-return.js" data-museum="izobreteniya" data-day="03-02"></script>
+<script defer src="../../assets/analytics.js"></script>
+
+
+
+
+
+
+
+
+
+<script>window.MUSEUM_AUDIOGUIDE={
+  audioSrc:"audio-guide-flerov-ru.mp3",
+  durationLabel:"3 минуты 14 секунд",
+  lead:"Голос ведёт по залу Флёрова и Петржака: марка с элементом сто четырнадцать, камера из пятнадцати пластин, шесть импульсов в час, контрольные опыты, телеграмма в американский журнал и молчание, которое Флёров прочёл как знак. Шесть остановок, на каждой — что искать глазами.",
+  stops:[
+    {t:0,mark:"0:00",title:"Марка с флеровием"},
+    {t:29,mark:"0:29",title:"Предсказание и неудача"},
+    {t:58,mark:"0:58",title:"Камера из пятнадцати пластин"},
+    {t:91,mark:"1:31",title:"Шесть подозреваемых"},
+    {t:123,mark:"2:03",title:"Телеграмма"},
+    {t:153,mark:"2:33",title:"Молчание журналов"}
+  ],
+  transcript:[
+    "<p>Факты: марка России 2013 года к 100-летию Г. Н. Флёрова, флеровий — НИЦ «Курчатовский институт»; 2 марта 1913, Ростов-на-Дону — «История атомного проекта», вып. 13; Либби, 1939 — Physical Review, т. 55.</p>",
+    "<p>Факты: расчёт Бора и Уилера, опыт Либби со счётчиком нейтронов, метод осколков — К. А. Петржак, Г. Н. Флёров, УФН, 1941.</p>",
+    "<p>Факты: камера из 15 пластин на 1000 см², чувствительность в 30–40 раз выше, 6 импульсов в час — УФН, 1941.</p>",
+    "<p>Факты: контрольные опыты и расчёты — УФН, 1941; станция метро «Динамо» — «Узнай Москву», университет «Дубна».</p>",
+    "<p>Факты: телеграмма от 14 июня 1940 года, напечатана 1 июля 1940 года — Physical Review, т. 58, с. 89.</p>",
+    "<p>Факты: отзыв Курчатова 1943 года — «Атомный проект СССР», т. I, ч. 1; Воронеж и письмо Кафтанову — «История атомного проекта», вып. 13 (РНЦ «Курчатовский институт», 1998); «Необходимо продолжать работу над ураном», НИЦ «Курчатовский институт»; распоряжение ГКО 28 сентября 1942 года — «Атомный проект СССР», т. I, ч. 1.</p>"
+  ],
+  note:"Озвучено синтезом речи — временно, до записи голосом автора музея."
+};</script>
+<script src="../../assets/museum-audioguide.js"></script>
+</body>
+</html>

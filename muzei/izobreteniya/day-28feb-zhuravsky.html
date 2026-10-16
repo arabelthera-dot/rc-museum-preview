@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="ru" data-museum="izobreteniya">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Журавский: сосчитанный мост — Что изобрели русские первыми в мире, 28 февраля</title>
+<!--
+  Страница дня 28 февраля. Наряд stranicy-izob-0910 (claude2, 15.10.2026), карточка #762.
+  Форма — вариант А музея изобретений (Сергей 12.09.2026): лента ударов, подробности свёрнуты.
+  Паспорт выпуска: rc-museum-production/izobreteniya/day-28feb-zhuravsky/passport/issue.json
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --dark:#060c17; --dark2:#0c1826; --surface:#111f33;
+    --card:rgba(255,255,255,.05); --card-b:rgba(255,255,255,.09);
+    --gold:#c9a84c; --gold-l:#e4c97a; --gold-g:rgba(201,168,76,.13);
+    --ink:#e8eef5; --muted:#7a9ab8; --line:rgba(255,255,255,.07);
+    --accent:#2d8cbf; --accent2:#1f6f8b;
+    /* legacy compat */
+    --paper:#0c1826; --paper2:#111f33;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Inter','Segoe UI',sans-serif;color:var(--ink);background:var(--dark);line-height:1.72}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.13;margin:0}
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent)}
+
+  /* ── ШАПКА ── */
+  header.top{background:rgba(6,12,23,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--card-b);color:#fff;position:sticky;top:0;z-index:30}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+  .logo svg{display:block;filter:drop-shadow(0 0 8px rgba(201,168,76,.4))}
+  .logo .lt{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:16px}
+  .logo .lt small{display:block;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-family:'Inter',sans-serif}
+  .score{background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:6px 16px;font-size:13px;color:var(--gold-l);cursor:pointer;font-family:'Inter',sans-serif}
+  .score-info{position:absolute;right:12px;top:66px;max-width:260px;background:#0e1c30;color:var(--ink);border:1px solid var(--card-b);border-radius:14px;padding:14px 16px;font-size:13px;line-height:1.6;box-shadow:0 20px 60px rgba(0,0,0,.6);display:none;z-index:40}
+  .score-info.show{display:block}
+
+  /* ── HERO — СТАНДАРТ (не менять): 3D-сцена сверху, текст отдельным блоком ниже ── */
+  .hero-scene{position:relative;height:52vh;min-height:300px;max-height:520px;overflow:hidden;background:linear-gradient(160deg,#0a1e3a 0%,#1a3a6a 55%,#0d2240 100%)}
+  .hero-scene canvas.scene,.hero-scene img.scene{width:100%;height:100%;display:block;object-fit:cover}
+  .scene-caption{background:#060d18;padding:11px 0 12px}
+  .scene-caption .wrap{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+  .scene-cap{font-size:13.5px;line-height:1.6;color:var(--muted);border-left:2px solid rgba(201,168,76,.4);padding-left:14px;flex:1 1 420px}
+  .scene-hint{flex:0 0 auto;font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.4px;color:#e4c97a;
+    background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.34);border-radius:24px;padding:7px 16px;font-weight:600}
+  .hero-lead{background:linear-gradient(180deg,#0c1826 0%,#060c17 100%);color:#fff;padding:28px 0 38px}
+  .hero-lead .museum{color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:12px;opacity:.9}
+  .hero-lead .who{font-family:'Inter',sans-serif;font-size:clamp(13px,3vw,15px);letter-spacing:.4px;color:var(--accent-l,#7dc8ff);margin-bottom:10px}
+  .hero-lead .who i{font-style:normal;color:#7893ab;font-weight:400}
+  .hero-lead h1{color:#fff;font-size:56px;font-weight:900;line-height:1.04;margin-bottom:16px}
+  .hero-lead .hook{color:#b8ccde;font-size:19px;max-width:580px;margin-bottom:28px;line-height:1.65;font-weight:400}
+  .hero-lead .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+  @media(max-width:680px){.hero-lead h1{font-size:34px}.hero-lead .hook{font-size:16px}
+    .hero-scene{height:34vh;min-height:230px;max-height:300px}
+    .scene-caption .wrap{flex-direction:column;gap:9px}
+    .scene-hint{order:-1;align-self:flex-start;font-size:11.5px;padding:6px 13px}
+    .scene-cap{font-size:12.8px;flex:1 1 auto}}
+  .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:16px;font-family:'Inter',sans-serif;letter-spacing:.5px}
+
+  /* ── НАВИГАЦИЯ ДНЯ ── */
+  .daynav{position:sticky;top:64px;z-index:25;background:rgba(6,12,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-b)}
+  .daynav .wrap{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+  .daynav::-webkit-scrollbar{display:none}
+  .daynav a{flex:0 0 auto;padding:14px 20px;font-size:11px;font-weight:700;font-family:'Inter',sans-serif;color:var(--muted);text-decoration:none;white-space:nowrap;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:.18s}
+  .daynav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+  /* ── СЕКЦИИ ── */
+  section.block{padding:64px 0;border-bottom:1px solid var(--line);scroll-margin-top:130px}
+  .kicker{font-size:10px;text-transform:uppercase;letter-spacing:3.5px;color:var(--gold);font-weight:700;font-family:'Inter',sans-serif;margin-bottom:8px}
+  section.block h2{font-size:34px;color:#fff;margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink)}
+  .pull{background:var(--gold-g);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 14px 14px 0;font-style:italic;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-size:20px;line-height:1.5;margin:26px 0}
+
+  /* ── КНОПКИ ── */
+  .btn{cursor:pointer;border:none;border-radius:12px;padding:14px 26px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;background:var(--accent2);color:#fff;transition:.18s;letter-spacing:.2px}
+  .btn:hover{filter:brightness(1.18)}
+  .btn.ghost{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid var(--card-b)}
+  .btn.ghost:hover{background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.2)}
+  .btn.gold{background:linear-gradient(135deg,var(--gold),#b8882b);color:#1a0f00;box-shadow:0 4px 20px rgba(201,168,76,.25)}
+  .btn.gold:hover{filter:brightness(1.1);box-shadow:0 6px 28px rgba(201,168,76,.4)}
+  .btn:active{transform:translateY(1px)}
+  .pulse{animation:pulse .9s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+
+  /* ── КАРТОЧКИ ── */
+  .card{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:20px 22px;margin:16px 0;backdrop-filter:blur(6px)}
+
+  /* ── КВИЗ ── */
+  .opt{display:block;width:100%;text-align:left;background:rgba(255,255,255,.04);border:1px solid var(--card-b);border-radius:12px;padding:13px 16px;margin:8px 0;cursor:pointer;font-size:15px;color:var(--ink);font-family:'Inter',sans-serif;transition:.16s}
+  .opt:hover{border-color:var(--accent);background:rgba(45,140,191,.08)}
+  .opt.correct{background:rgba(40,120,60,.18);border-color:#3f9b52;color:#7ed4a0;font-weight:600}
+  .opt.wrong{background:rgba(180,40,40,.13);border-color:#c0453f;color:#f08080}
+  .exp{margin-top:10px;font-size:14px;background:var(--gold-g);border-radius:10px;padding:12px 14px;display:none;color:var(--gold-l)}
+  .exp.show{display:block}
+
+  /* ── ИТОГ ДНЯ ── */
+  .day-result{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:22px 24px;max-width:460px}
+  .dr-rank{font-family:'Playfair Display',Georgia,serif;font-size:28px;color:var(--gold-l);font-weight:700}
+  .dr-score{font-size:16px;margin:4px 0 12px;color:var(--ink)}.dr-score span{color:var(--muted);font-size:14px}
+  .dr-bar{height:8px;background:rgba(255,255,255,.08);border-radius:6px;overflow:hidden}
+  .dr-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),var(--gold));transition:width .6s cubic-bezier(.2,.7,.2,1)}
+  .dr-note{margin-top:12px;font-size:14px;color:var(--muted)}
+
+  /* ── РЕКЛАМНЫЕ СЛОТЫ ── */
+  .ad-slot{position:relative;margin:26px 0;background:rgba(255,255,255,.02);border:1px dashed rgba(255,255,255,.1);border-radius:14px;min-height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px}
+  .ad-slot .lbl{position:absolute;top:7px;right:12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.15);font-family:'Inter',sans-serif}
+  .ad-slot .ph-txt{font-size:12px;max-width:80%;color:rgba(255,255,255,.18)}
+  .ad-slot.billboard{min-height:108px}
+  .adband{background:transparent;border-bottom:none}
+
+  footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
+  .crumbs{background:rgba(6,12,23,.6);border-bottom:1px solid var(--card-b);font-family:'Inter',sans-serif;font-size:12.5px}
+  .crumbs .wrap{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  .crumbs a{color:var(--gold-l);text-decoration:none;white-space:nowrap}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--muted);opacity:.6}
+  .crumbs .here{color:var(--muted);white-space:nowrap}
+
+
+  /* ── ШАПКА: четыре строки по museum-core §6-бис ── */
+  header.top{display:block;text-align:center;padding:10px 12px 8px;height:auto;position:relative}
+  header.top .b1{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:15px;letter-spacing:.5px;color:#fff}
+  header.top .b2{font-size:11px;color:var(--muted);margin-top:2px}
+  header.top .b3{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:6px}
+  header.top .b4{font-size:12.5px;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-style:italic}
+  header.top .score{position:absolute;right:12px;top:10px}
+  .daynav{top:0}
+  .hero-scene{background:#0e1c2c;height:38vh;min-height:250px;max-height:400px}
+  @media(max-width:680px){.hero-lead h1{font-size:31px}}
+  .hero-scene img.scene{object-fit:cover;object-position:50% 42%}
+  .date-origin{font-size:13px;color:#9fb4c8;margin:-6px 0 12px;max-width:62ch}
+  .hero-lead .hook{color:#c6d8e8;max-width:62ch}
+  .hero-under{background:linear-gradient(180deg,#060d18,#060c17);padding:4px 0 22px}
+  .stamp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(125,200,255,.28);margin-top:14px}
+  .stamp>div{padding:11px 12px;border-left:1px solid rgba(125,200,255,.16);min-width:0}
+  .stamp>div:first-child{border-left:0}
+  .stamp .v{font-size:clamp(15px,3.4vw,21px);font-weight:700;color:#8fd3ff;line-height:1.1;overflow-wrap:anywhere}
+  .stamp .k{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#8fa5b9;margin-top:5px}
+  @media(max-width:600px){.stamp{grid-template-columns:repeat(2,minmax(0,1fr))}.stamp>div:nth-child(3){border-left:0}.stamp>div:nth-child(n+3){border-top:1px solid rgba(125,200,255,.16)}}
+
+  /* ── ЛЕНТА УДАРОВ (museum-inventions, вариант А; museum-core §5-бис) ── */
+  .udary{list-style:none;margin:18px 0 0;padding:0;counter-reset:u}
+  .udary>li{border-top:1px solid var(--line);padding:4px 0}
+  .udary details>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:34px 1fr;gap:10px;padding:12px 0;font-size:17px;line-height:1.55;color:var(--ink)}
+  .udary details>summary::-webkit-details-marker{display:none}
+  .udary details>summary::before{counter-increment:u;content:counter(u);font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:20px;color:var(--gold);line-height:1.3}
+  .udary .more-lbl{display:block;grid-column:2;font-size:12.5px;color:var(--gold-l);letter-spacing:.3px;margin-top:4px}
+  .udary .more-lbl::after{content:' ▾'}
+  .udary details[open] .more-lbl::after{content:' ▴'}
+  .udary details[open] .more-lbl .o{display:none}
+  .udary details:not([open]) .more-lbl .c{display:none}
+  .udary summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+  .udary .det{margin:0 0 14px 44px;padding:12px 16px;background:rgba(255,255,255,.035);border-left:2px solid rgba(201,168,76,.45);border-radius:0 10px 10px 0;font-size:15px;color:#d5e0ea}
+  .udary .det p{margin:8px 0}
+  .udary .tag{display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1a0f00;background:var(--gold-l);border-radius:6px;padding:1px 7px;margin-right:6px}
+  .udary .find{border-left:3px solid var(--gold);padding-left:8px}
+  figure.fig{margin:18px 0}
+  figure.fig img{max-width:100%;height:auto;border-radius:10px;display:block}
+  figure.fig figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5}
+  .src-note{font-size:12px;color:#8fa5b9}
+
+  /* ── МОДЕЛЬ ДНЯ (главное предметное действие) ── */
+  .lab{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:18px 18px 20px;margin-top:14px}
+  .lab-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+  .lab-row .lbl{flex:0 0 100%;font-size:13px;color:var(--muted);letter-spacing:.3px}
+  .seg{cursor:pointer;border:1px solid var(--card-b);background:rgba(255,255,255,.04);color:var(--ink);border-radius:10px;padding:10px 14px;font:inherit;font-size:14.5px;min-height:44px}
+  .seg[aria-pressed="true"]{border-color:var(--gold);background:var(--gold-g);color:var(--gold-l);font-weight:600}
+  .seg:focus-visible,.btn:focus-visible,.opt:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .lab-stage{position:relative;margin-top:12px}
+  .lab-stage canvas{width:100%;height:auto;display:block;border-radius:10px;background:#1c2530}
+  .lab-cap{font-size:12px;color:#8fa5b9;margin-top:6px}
+  .lab-msg{margin-top:12px;font-size:15.5px;padding:12px 14px;border-radius:10px;background:rgba(255,255,255,.04);border-left:3px solid var(--card-b);min-height:48px}
+  .lab-msg.ok{border-left-color:#3f9b52;background:rgba(40,120,60,.14)}
+  .lab-msg.bad{border-left-color:#c0453f;background:rgba(180,40,40,.10)}
+  .lab-found{font-size:13px;color:var(--muted);margin-top:8px}
+  .lab-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .noscript-box{background:rgba(255,255,255,.04);border:1px dashed var(--card-b);border-radius:12px;padding:12px 16px;font-size:15px}
+
+  /* ── ГРАНИЦА ПЕРВЕНСТВА ── */
+  .border-box{background:rgba(45,140,191,.08);border:1px solid rgba(45,140,191,.3);border-radius:14px;padding:16px 18px}
+  .border-box b{color:#8fd3ff}
+  .ctx{width:100%;border-collapse:collapse;margin-top:14px;font-size:14.5px}
+  .ctx th,.ctx td{text-align:left;padding:9px 8px;border-top:1px solid var(--line);vertical-align:top}
+  .ctx th{color:var(--gold-l);font-weight:600;font-size:12.5px;letter-spacing:.5px}
+  .quiz-q{margin:18px 0 6px;font-weight:600}
+  .sources a{color:var(--gold-l)}
+  .sources li{margin:6px 0;font-size:14px;color:#c8d6e2}
+  @media(max-width:600px){header.top{padding:8px 64px 6px}header.top .score{top:8px;right:8px;padding:4px 10px;font-size:12px}header.top .b3{margin-top:3px}
+    .hero-scene{height:26vh;min-height:200px;max-height:260px}.date-origin{font-size:12px;margin:-8px 0 8px}.hero-lead{padding:18px 0 26px}.hero-lead .date-chip{margin-bottom:12px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+  /* ── ПОЛЗУНКИ МОДЕЛИ (19, 21 янв) ── */
+  .mtab{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+  .mrow{display:grid;grid-template-columns:minmax(150px,1.2fr) 2fr 92px;gap:12px;align-items:center}
+  .mrow .mname{font-size:14.5px}
+  .mrow .mname i{font-style:normal;color:var(--muted);font-size:13px}
+  .mrow input[type=range]{width:100%;accent-color:var(--gold);min-height:44px}
+  .mrow output{font-size:14px;color:var(--gold-l);text-align:right}
+  .mrow.off{opacity:.45}
+  .mult{margin-top:14px;padding:14px 16px;border-radius:12px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25)}
+  @media(max-width:560px){.mrow{grid-template-columns:1fr 70px}.mrow .mname{grid-column:1/-1}}
+</style>
+<meta name="description" content="Журавский первым сосчитал усилия в ферме Гау: тяжи у опор тянут сильнее, чем в середине. По расчёту встал Веребьинский мост, а формула сдвига в балке вошла в учебники.">
+<link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-28feb-zhuravsky.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Русская цивилизация">
+<meta property="og:title" content="Журавский: сосчитанный мост">
+<meta property="og:description" content="Журавский первым сосчитал усилия в ферме Гау: тяжи у опор тянут сильнее, чем в середине. По расчёту встал Веребьинский мост, а формула сдвига в балке вошла в учебники.">
+<meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-28feb-zhuravsky.html">
+<meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-28feb-zhuravsky.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Журавский: сосчитанный мост", "description": "Журавский первым сосчитал усилия в ферме Гау: тяжи у опор тянут сильнее, чем в середине. По расчёту встал Веребьинский мост, а формула сдвига в балке вошла в учебники.", "url": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-28feb-zhuravsky.html", "inLanguage": "ru", "isPartOf": {"@type": "WebSite", "name": "Музей «Что изобрели русские первыми в мире»"}, "publisher": {"@type": "Organization", "name": "Русская цивилизация"}, "about": {"@type": "Person", "name": "Дмитрий Иванович Журавский"}, "image": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-28feb-zhuravsky.jpg"}</script>
+<style>
+  /* ── ЖУРАВСКИЙ: СОСЧИТАННЫЙ МОСТ (28 фев) ── */
+  .trcv{width:100%;max-width:760px;height:auto;aspect-ratio:760/300;display:block;margin:10px 0 4px;background:#0f1622;border-radius:10px;cursor:pointer;touch-action:manipulation}
+  .bmcv{width:100%;max-width:760px;height:auto;aspect-ratio:760/220;display:block;margin:10px 0 4px;background:#0f1622;border-radius:10px}
+  .lctl{display:grid;gap:12px;max-width:760px;margin-top:8px}
+  .lopts{display:flex;flex-wrap:wrap;gap:8px}
+  .lopts .seg.on{border-color:#3f9b52;background:rgba(63,155,82,.18)}
+  .lfuel{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  .lfuel input[type=range]{flex:1;min-width:180px;max-width:360px}
+  .lfuel output{min-width:92px;font-weight:700;color:var(--gold-l)}
+  .lstat{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;max-width:760px;margin-top:10px}
+  .lstat div{border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:8px 10px;background:rgba(255,255,255,.03)}
+  .lstat b{display:block;font-size:18px;color:var(--gold-l)}
+  .lstat span{font-size:13px;color:var(--muted)}
+  .ties{display:flex;flex-wrap:wrap;gap:6px;max-width:760px}
+  .ties .seg{min-width:44px;padding:6px 8px}
+  .ties .seg.heard{border-color:#c9a24a}
+  .chrono{display:grid;gap:8px;max-width:760px;margin-top:8px}
+  .chrono .seg{text-align:left;width:100%}
+  .chrono .seg.right{border-color:#3f9b52;background:rgba(63,155,82,.18)}
+  .chrono .seg.wrongpick{border-color:#c0573f;background:rgba(192,87,63,.15)}
+  .chrono .n{display:inline-block;min-width:1.6em;color:var(--gold-l);font-weight:700}
+  .seg.wrongpick{border-color:#c0573f;background:rgba(192,87,63,.15)}
+  blockquote.doc{margin:12px 0;padding:10px 14px;border-left:3px solid var(--gold);background:rgba(255,255,255,.03);border-radius:0 10px 10px 0;font-size:15px;line-height:1.6}
+  figure.drw{margin:14px 0 0;max-width:760px}
+  figure.drw img{width:100%;height:auto;display:block;border-radius:8px;background:#efe6d6}
+  figure.drw figcaption{font-size:13px;color:var(--muted);margin-top:4px}
+  #hero img.scene{object-position:50% 40%}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="b1">Русская цивилизация</div>
+  <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
+  <div class="b3">Что изобрели русские первыми в мире</div>
+  <div class="b4">365 изобретений. Все русские. Все первые</div>
+  <div class="score" id="scoreBox" title="Баллы знаний за этот день">⭐ <span id="score">0</span> / 100</div>
+</header>
+
+<nav class="crumbs" aria-label="Хлебные крошки"><div class="wrap">
+  <a href="../../index.html">Русская цивилизация</a>
+  <span class="sep">›</span>
+  <a href="index.html">Что изобрели русские первыми в мире</a>
+  <span class="sep">›</span>
+  <span class="here">28 февраля · Журавский</span>
+</div></nav>
+
+<div class="hero-scene" id="hero">
+  <img class="scene" src="day-28feb-zhuravsky.jpg" data-source="https://commons.wikimedia.org/wiki/File:%D0%90._%D0%9F%D0%B5%D1%82%D1%86%D0%BE%D0%BB%D1%8C%D0%B4._%D0%92%D0%B5%D1%80%D0%B5%D0%B1%D1%8C%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D1%81%D1%82.jpg" data-license="Public domain" data-author="Август Петцольд, 1851–1852" width="800" height="582" alt="Акварель: длинный решётчатый мост на высоких опорах с красными каменными основаниями пересекает широкий зелёный овраг с речкой, по мосту идёт поезд с паровозом, на переднем плане — песчаный обрыв" fetchpriority="high">
+</div>
+
+<div class="scene-caption">
+  <div class="wrap">
+    <div class="scene-cap">Веребьинский мост: девять пролётов над оврагом, по мосту идёт поезд. Август Петцольд, акварель, 1851–1852. Викисклад, общественное достояние.</div>
+    <span class="scene-hint">Найди: решётку фермы</span>
+  </div>
+</div>
+
+<header class="hero-lead">
+  <div class="wrap">
+    <div class="date-chip">28 февраля · 1855</div>
+    <p class="date-origin">День в календаре музея условный: Дмитрий Иванович Журавский родился 17 (29) декабря 1821 года, а теорию мостовых ферм создавал с 1844 по 1855 год.</p>
+    <div class="who">Д. И. Журавский <i>· Николаевская железная дорога</i></div>
+    <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
+    <h1>Журавский: сосчитанный мост</h1>
+    <p class="hook">Журавский первым сосчитал усилия в тяжах фермы Гау — у опор они больше, — и его Веребьинский мост под двумя паровозами прогнулся меньше чем на 12 мм.</p>
+    <div class="hero-btns">
+      <button class="btn gold" id="readBtn" type="button">Читать историю ↓</button>
+      <button class="btn ghost" id="listenBtn" type="button">🎧 Слушать аудиогид</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero-under">
+  <div class="wrap">
+    <div class="stamp">
+      <div><div class="v">184</div><div class="k">моста предстояло построить на дороге из Петербурга в Москву</div></div>
+      <div><div class="v">9 × 54 м</div><div class="k">пролётов Веребьинского моста — девять по 25,5 сажени</div></div>
+      <div><div class="v">меньше 12 мм</div><div class="k">прогнулась ферма под двумя паровозами и 14 гружёными вагонами летом 1850 года</div></div>
+      <div><div class="v">вдвое</div><div class="k">слабее цельного бруса два бруса, положенные один на другой</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="daynav" aria-label="Разделы дня">
+  <div class="wrap">
+    <a href="#story">Читать</a>
+    <a href="#audioguide">Слушать</a>
+    <a href="#games">Ферма</a>
+    <a href="#pervenstvo">Первенство</a>
+    <a href="#quiz">Викторина</a>
+    <a href="#calendar">Календарь</a>
+  </div>
+</nav>
+
+<section class="wrap" id="dokument" data-proof-block></section>
+
+<section class="block" id="audioguide"></section>
+
+<section class="block" id="story">
+  <div class="wrap">
+    <div class="kicker">История первенства · 12 ударов</div>
+    <h2>От одинаковых тяжей — к сосчитанному мосту</h2>
+    <p style="color:var(--muted);max-width:62ch">Читается подряд. Нажми на удар — откроется подробный разбор с источниками.</p>
+    <ol class="udary">
+      <li><details><summary><span>Николаевскую железную дорогу из Петербурга в Москву строили через реки и глубокие овраги. Мостов на ней предстояло поставить 184.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Молодой инженер путей сообщения Дмитрий Журавский окончил институт в 1842 году, и его имя занесли на мраморную доску. Потом — изыскания этой дороги. Ему поручили рассчитать самые крупные мосты.</p>
+          <p class="src-note">Источники: Курская областная научная библиотека им. Н. Н. Асеева, «Строитель мостов и железных дорог»; «Журавский, Дмитрий Иванович», Курская энциклопедия (mke.su).</p>
+        </div></details></li>
+      <li><details><summary><span>Пролёты всех мостов дороги делали из дерева по американской системе Гау: деревянные раскосы, стянутые железными тяжами.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>За образец взяли чертежи У. Гау — по ним в Америке уже строили мосты. Раскосы и тяжи у Гау одинаковые по всей длине пролёта. Стройкой мостов руководил тоже американец — инженер Уистлер.</p>
+          <p class="src-note">Источники: «Россия. Русская наука. Науки инженерного и строительного искусства», Энциклопедический словарь Брокгауза и Ефрона, т. XXVIII (полутом 55), 1899, с. 789; Курская областная научная библиотека им. Н. Н. Асеева, «Строитель мостов и железных дорог»; О. Н. Аргунов, А. С. Гончаров, А. Н. Манжосов, «Мосты, построенные под его руководством, оказались необычайно прочными…» (old-kursk.ru).</p>
+        </div></details></li>
+      <li><details><summary><span>Самым трудным был мост через овраг реки Веребьи: девять пролётов по 25,5 сажени, то есть около 54 метров каждый.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Курская энциклопедия пишет, что мост поднимался на 51 метр над водой. Сноска к статье Журавского в парижском журнале 1856 года называет его большим мостом длиной 600 метров через овраг Веребьи.</p>
+          <p class="src-note">Источники: «Россия. Русская наука. Науки инженерного и строительного искусства», Энциклопедический словарь Брокгауза и Ефрона, т. XXVIII (полутом 55), 1899, с. 789; О. Н. Аргунов, А. С. Гончаров, А. Н. Манжосов (old-kursk.ru); «Журавский, Дмитрий Иванович», Курская энциклопедия (mke.su); D. Jouravski, «Remarques sur la résistance d’un corps prismatique…», Annales des ponts et chaussées, 1856, 2-е полугодие, т. XII, № 150, с. 328 (сноска).</p>
+        </div></details></li>
+      <li><details><summary><span>Журавский отступил от американских образцов: сделал фермы неразрезными над опорами и с несколькими пересечениями раскосов.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Неразрезная ферма идёт сквозь опоры, не прерываясь. Так она получалась прочнее, а мост было проще строить.</p>
+          <p class="src-note">Источники: «Россия. Русская наука. Науки инженерного и строительного искусства», Энциклопедический словарь Брокгауза и Ефрона, т. XXVIII (полутом 55), 1899, с. 789; Курская областная научная библиотека им. Н. Н. Асеева, «Строитель мостов и железных дорог».</p>
+        </div></details></li>
+      <li><details><summary><span>Как узнать, сколько тянет каждый тяж такой фермы? Журавский первым разработал теоретический способ это сосчитать.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Способ годился для фермы Гау и разрезной, и неразрезной, с одним или несколькими пересечениями раскосов. Энциклопедия Брокгауза и Ефрона в 1899 году отдала Журавскому «честь первого открытия» этих положений.</p>
+          <p class="src-note">Источник: «Россия. Русская наука. Науки инженерного и строительного искусства», Энциклопедический словарь Брокгауза и Ефрона, т. XXVIII (полутом 55), 1899, с. 789.</p>
+        </div></details></li>
+      <li><details><summary><span>Расчёт показал: в ферме с параллельными поясами усилия в тяжах и раскосах растут к опорам. Одинаковые тяжи Гау были ошибкой.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Значит, у опор тяжи и раскосы надо делать толще, а ближе к середине пролёта — тоньше.</p>
+          <p class="src-note">Источники: «Россия. Русская наука. Науки инженерного и строительного искусства», Энциклопедический словарь Брокгауза и Ефрона, т. XXVIII (полутом 55), 1899, с. 789; Курская областная научная библиотека им. Н. Н. Асеева, «Строитель мостов и железных дорог».</p>
+        </div></details></li>
+      <li><details><summary><span>Журавский собрал модель фермы из одинаковых тяжей. Под нагрузкой они зазвучали как струны, и по высоте тона было слышно, где натяжение больше.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Модель собрали из одинаковых ферм, как у Гау; тяжи и раскосы — металлические стержни с равной затяжкой. Стержни зазвучали по-разному: в разных частях моста нагрузка разная. Этот опыт помог Журавскому сделать точный расчёт. Его предложениям сначала не поверили, но потом их поддержал Уистлер.</p>
+          <p class="src-note">Источник: Курская областная научная библиотека им. Н. Н. Асеева, «Строитель мостов и железных дорог».</p>
+        </div></details></li>
+      <li><details><summary><span>Летом 1850 года Веребьинский мост испытали: два паровоза и 14 гружёных вагонов. Ферма прогнулась меньше чем на 12 миллиметров.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Остальные мосты Николаевской дороги проектировали по образцу Веребьинского: те же приёмы расчёта, те же детали. Курская областная библиотека пишет, что мосты Журавского простояли больше 35 лет, пока их не заменили металлическими.</p>
+          <p class="src-note">Источники: О. Н. Аргунов, А. С. Гончаров, А. Н. Манжосов, «Мосты, построенные под его руководством, оказались необычайно прочными…» (old-kursk.ru); «Россия. Русская наука. Науки инженерного и строительного искусства», Энциклопедический словарь Брокгауза и Ефрона, т. XXVIII (полутом 55), 1899, с. 789; Курская областная научная библиотека им. Н. Н. Асеева, «Строитель мостов и железных дорог».</p>
+        </div></details></li>
+      <li><details><summary><span>Рассчитывая фермы, Журавский взялся за вопрос, которого не исследовал даже Навье: какие силы заставляют волокна изгибаемого бруса скользить друг по другу.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>«Navier n’a pas fait de recherches sur les forces qui… tendent à séparer les fibres, en les faisant glisser les unes sur les autres» — «Навье не исследовал сил, которые… стремятся разделить волокна, заставляя их скользить одни по другим». Правил для составных балок, писал Журавский, «до сих пор недоставало науке инженера».</p>
+          <p class="src-note">Источник: D. Jouravski, «Remarques sur la résistance d’un corps prismatique…», Annales des ponts et chaussées, 1856, 2-е полугодие, т. XII, № 150, с. 328, 331.</p>
+        </div></details></li>
+      <li><details><summary><span>Два бруса, положенные один на другой, выдерживают вдвое меньше, чем цельный брус той же толщины. Их губит скольжение по шву.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>В цельном брусе волокна держит боковое сцепление, и скользить им не даёт. Поэтому брусья составной балки Журавский соединял так, чтобы они не сдвигались друг по другу, и считал, какой силы для этого нужны связи.</p>
+          <p class="src-note">Источник: D. Jouravski, «Remarques sur la résistance d’un corps prismatique…», Annales des ponts et chaussées, 1856, 2-е полугодие, т. XII, № 150, с. 331–332, 337.</p>
+        </div></details></li>
+      <li><details><summary><span>Короткий деревянный брус сначала раскалывается вдоль, а длинный ломается. Журавский показал это на числах: брус сечением 10 на 10 дюймов, закреплённый одним концом.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Брус еловый или пихтовый (во французском тексте — sapin). При длине 100 дюймов он сломается под грузом около 383 пудов, а вдоль его не расколет. При длине 10 дюймов сила, которая раскалывает его по оси, больше сцепления волокон: брус сначала треснет вдоль.</p>
+          <p class="src-note">Источник: D. Jouravski, «Remarques sur la résistance d’un corps prismatique…», Annales des ponts et chaussées, 1856, 2-е полугодие, т. XII, № 150, с. 334–336.</p>
+        </div></details></li>
+      <li><details><summary><span>В 1855 году труд «О мостах раскосной системы Гау» получил полную Демидовскую премию Академии наук. В 1856 году выдержку из него напечатали в Париже.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Британский историк механики Карл Пирсон в 1893 году заметил, что Журавский считал касательные силы одинаковыми по ширине сечения, — это уточнил французский механик Сен-Венан. Но саму мысль о сдвиге в балке Сен-Венан похвалил и включил в «Лекции Навье», а формула касательных напряжений носит имя Журавского.</p>
+          <p class="src-note">Источники: «Россия. Русская наука. Науки инженерного и строительного искусства», Энциклопедический словарь Брокгауза и Ефрона, т. XXVIII (полутом 55), 1899, с. 789–790; Курская областная научная библиотека им. Н. Н. Асеева; «Журавский, Дмитрий Иванович», Курская энциклопедия (mke.su); D. Jouravski, «Remarques sur la résistance d’un corps prismatique…», Annales des ponts et chaussées, 1856, 2-е полугодие, т. XII, № 150, с. 328; I. Todhunter, K. Pearson, «A History of the Theory of Elasticity and of the Strength of Materials», т. II, Кембридж, 1893, ст. 939, 183.</p>
+        </div></details></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block" id="theme-inventions">
+  <div class="wrap">
+    <div class="kicker">Инженерный расчёт · Русские первенства</div>
+    <h2>Что ещё русские инженеры первыми сосчитали и построили</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Другие инженерные дни музея.</p>
+    <button class="btn ghost" type="button" id="themeInvBtn" data-label="Показать 2 первенства →" aria-expanded="false" aria-controls="themeInvBody">Показать 2 первенства →</button>
+    <div id="themeInvBody" hidden>
+      <ul class="theme-list">
+        <li><b>5 янв</b> <a href="day-05jan-shukhov.html">Первый в мире расчётный нефтепровод Шухова</a></li>
+        <li><b>17 фев</b> <a href="day-17feb-pirotsky.html">Вагон Пироцкого: конка без лошадей на Песках</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="games">
+  <div class="wrap">
+    <div class="kicker">Главное действие · по Брокгаузу и Ефрону (1899) и статье Журавского 1856 года, модель условная</div>
+    <h2>Послушай ферму: тяжи Журавского</h2>
+    <p style="max-width:62ch">Перед тобой пролёт фермы Гау с девятью железными тяжами. Пусти по нему поезд и «тронь» тяжи, как струны: чем сильнее натянут тяж, тем выше звук. Найди, где тяжи тянут сильнее всего.</p>
+    <div class="lab">
+      <canvas class="trcv" id="truss" width="760" height="300" role="img" aria-label="Схема пролёта фермы: верхний и нижний пояса, деревянные раскосы и девять вертикальных железных тяжей; сверху поезд. Чем сильнее натянут тяж, тем он толще и краснее."></canvas>
+      <div class="lctl">
+        <div class="lopts" role="group" aria-label="Нагрузка">
+          <button class="seg" type="button" id="ldFull">Поезд на весь пролёт</button>
+          <button class="seg" type="button" id="ldNone">Пролёт пустой</button>
+        </div>
+        <div class="lfuel"><label for="trX">Поезд въезжает</label><input type="range" id="trX" min="0" max="100" step="1" value="0"><output id="oX" for="trX">0 %</output></div>
+        <div class="ties" id="ties" role="group" aria-label="Тронуть тяж"></div>
+        <div class="lopts" role="group" aria-label="Тяжи">
+          <button class="seg on" type="button" id="mkGau">Тяжи как у Гау: одинаковые</button>
+          <button class="seg" type="button" id="mkZh">Тяжи как у Журавского: по усилию</button>
+        </div>
+      </div>
+      <div class="lstat">
+        <div><b id="sT">—</b><span>усилие в тронутом тяже, доля от наибольшего</span></div>
+        <div><b id="sF">—</b><span>высота тона тронутого тяжа</span></div>
+        <div><b id="sFe">100 %</b><span>железа на тяжи (у Гау — 100 %)</span></div>
+      </div>
+      <div class="lab-msg" id="tMsg" aria-live="polite">Пусти поезд на весь пролёт и тронь тяж — нажми на него на схеме или на кнопку с номером.</div>
+      <div class="lab-cap">По Энциклопедическому словарю Брокгауза и Ефрона (1899): в раскосной ферме с параллельными поясами усилия в тяжах (у Брокгауза — «стяжках») и раскосах растут к опорам; модель Журавского с одинаковыми стержнями «звучала», и по высоте тона было слышно, что в разных частях моста нагрузка разная (Курская областная библиотека). Модель условная: однорешётчатый разрезной пролёт из восьми панелей, поезд — равномерный груз; Веребьинский мост был неразрезным, с несколькими пересечениями раскосов. Звук — по закону струны: частота растёт как корень из натяжения.</div>
+      <noscript><div class="noscript-box">Для модели нужен JavaScript. Текстовая версия. В условном пролёте из восьми панелей под поездом на весь пролёт крайние тяжи у опор натянуты в семь раз сильнее средних, их тон выше примерно в 2,6 раза. Если делать тяжи по усилию, как предложил Журавский, железа в этой модели уходит на 48 % меньше, чем при одинаковых тяжах Гау.</div></noscript>
+
+      <h3 style="margin:22px 0 6px">Брус Журавского: сломается или расколется?</h3>
+      <p style="max-width:62ch;margin:0 0 6px">Пример из статьи 1856 года: деревянный брус сечением 10 на 10 дюймов закреплён одним концом, на другом висит груз. Меняй длину бруса и смотри, что случится раньше.</p>
+      <canvas class="bmcv" id="beam" width="760" height="220" role="img" aria-label="Брус, заделанный в стену одним концом, на свободном конце груз. Если брус раскалывается, по его оси проходит трещина; если ломается — излом у стены."></canvas>
+      <div class="lctl">
+        <div class="lfuel"><label for="bL">Длина бруса</label><input type="range" id="bL" min="10" max="100" step="1" value="100"><output id="oL" for="bL">100 дюймов</output></div>
+        <div class="lopts" role="group" aria-label="Брус">
+          <button class="seg on" type="button" id="bOne">Цельный брус</button>
+          <button class="seg" type="button" id="bTwo">Два бруса один на другом</button>
+          <button class="btn ghost" type="button" id="bGo">Нагрузить до разрушения</button>
+        </div>
+      </div>
+      <div class="lstat">
+        <div><b id="sP">—</b><span>груз, при котором брус разрушится</span></div>
+        <div><b id="sHow">—</b><span>как разрушится</span></div>
+      </div>
+      <div class="lab-msg" id="bMsg" aria-live="polite">Брус длиной 100 дюймов. Нажми «Нагрузить до разрушения».</div>
+      <div class="lab-cap">Числа — из статьи Журавского (Annales des ponts et chaussées, 1856, с. 334–337): R = 230 пудов на квадратный дюйм, сцепление волокон вдоль — 16 пудов на квадратный дюйм; груз излома P = R·b·c²/(6a), сила, раскалывающая брус по оси, Q = 3·P·a/(2c). 1 пуд ≈ 16,4 кг. Модель считает, как Журавский: волокно на оси бруса — посередине толщины.</div>
+      <noscript><div class="noscript-box">Для модели нужен JavaScript. Текстовая версия. Брус 10 на 10 дюймов длиной 100 дюймов ломается под грузом около 383 пудов: раскалывающая сила (около 5750 пудов; у Журавского — 5745) меньше сцепления волокон (16 000 пудов). При длине 10 дюймов брус сломался бы под 3833 пудами, но раскалывающая сила 5750 пудов больше сцепления 1600 пудов — брус сначала треснет вдоль. В модели граница — около 36 дюймов. Если брус длиннее 36 дюймов, два бруса по 5 дюймов один на другом держат вдвое меньше цельного.</div></noscript>
+
+      <figure class="drw">
+        <img src="day-28feb-zhuravsky-chertezh.jpg" width="1280" height="140" loading="lazy" alt="Чертёж-фасад длинного моста: девять пролётов решётчатой фермы с частыми пересечениями раскосов на восьми решётчатых опорах с каменными основаниями, по краям — каменные устои с арками">
+        <figcaption>Веребьинский мост на чертеже из «Альбома чертежей общаго расположения путей, зданий и мостовых сооружений существующих в России железных дорог» (сост. И. И. Волгунов, 1872). <a href="https://commons.wikimedia.org/wiki/File:%D0%9C%D0%BE%D1%81%D1%82_%D1%87%D0%B5%D1%80%D0%B5%D0%B7_%D0%92%D0%B5%D1%80%D0%B5%D0%B1%D1%8C%D1%8E._%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%B6%D0%B4.jpg" rel="noopener" target="_blank">Викисклад</a>, общественное достояние.</figcaption>
+      </figure>
+
+      <h3 style="margin:22px 0 6px">1847–1856: расставь по порядку</h3>
+      <p style="max-width:62ch;margin:0 0 6px;color:var(--muted)">Нажимай события от самого раннего к самому позднему.</p>
+      <div class="chrono" id="chrono" role="group" aria-label="События 1847–1856 годов"></div>
+      <div class="lab-msg" id="hMsg" aria-live="polite">Какое событие было первым?</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="pervenstvo">
+  <div class="wrap">
+    <div class="kicker">Проверка факта</div>
+    <h2>Что именно здесь наше</h2>
+    <div class="border-box">
+      <p style="margin-top:0"><b>Граница первенства:</b> Журавский первым разработал теоретический способ определять усилия в частях фермы Гау — разрезной и неразрезной, с одним или несколькими пересечениями раскосов — и показал, что в ферме с параллельными поясами усилия в тяжах и раскосах растут к опорам. Энциклопедия Брокгауза и Ефрона отдаёт ему «честь первого открытия». Он же первым взялся сосчитать силы, которые заставляют волокна изгибаемого бруса скользить друг по другу: у Навье таких исследований не было. Эту его мысль похвалил и развил Сен-Венан.</p>
+      <p><b>Чего здесь нет:</b> саму ферму придумал американец У. Гау. Силы в раскосах ферм считали и раньше: американец Сквайр Уиппл напечатал книгу о постройке мостов с такими расчётами в 1847 году в Ютике. Касательные силы Журавский считал одинаковыми по всей ширине сечения; точное решение дал Сен-Венан, на что указал историк механики Карл Пирсон.</p>
+    </div>
+    <table class="ctx">
+      <thead><tr><th scope="col">Что</th><th scope="col">Чем было</th><th scope="col">Когда</th></tr></thead>
+      <tbody>
+        <tr><td>Уиппл, Ютика</td><td>Книга о постройке мостов с расчётом сил в раскосах</td><td>1847</td></tr>
+        <tr><td>Журавский, Веребья</td><td>Испытание моста, рассчитанного его способом</td><td>1850</td></tr>
+        <tr><td>Журавский, Петербург</td><td>«О мостах раскосной системы Гау», Демидовская премия</td><td>1855</td></tr>
+        <tr><td>Журавский, Париж</td><td>Статья о сдвиге волокон в Annales des ponts et chaussées</td><td>1856</td></tr>
+        <tr><td>Тодхантер и Пирсон, Кембридж</td><td>Разбор статьи Журавского в истории механики</td><td>1893</td></tr>
+        <tr><td>Брокгауз и Ефрон</td><td>«Честь первого открытия» — Журавскому</td><td>1899</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block" id="quiz">
+  <div class="wrap">
+    <div class="kicker">Проверь себя · 5 вопросов</div>
+    <h2>Викторина</h2>
+    <p style="color:var(--muted);max-width:62ch">На каждый вопрос — одна попытка. После ответа покажем объяснение.</p>
+    <div id="quizBox"></div>
+    <noscript><div class="noscript-box">Для викторины нужен JavaScript. Ответы: 1 — у опор; 2 — по высоте звука; 3 — расколется вдоль; 4 — вдвое; 5 — Демидовскую премию Академии наук.</div></noscript>
+  </div>
+</section>
+
+<section class="block" id="result">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Итог дня</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Ферма, брус, хронология и викторина вместе дают 100 баллов. Прогресс не сохраняется: перезагрузишь страницу — день начнётся заново.</p>
+    <div class="day-result">
+      <div class="dr-score" id="dayTxt">0 / 100 · звание: Гость дня</div>
+      <div class="dr-bar"><i id="dayBar" style="width:0%"></i></div>
+      <div class="dr-note">Найди самый натянутый тяж, послушай тяж у опоры и в середине, сделай тяжи по Журавскому, расколи брус вдоль и сравни два бруса с цельным; потом расставь события и ответь на вопросы викторины.</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="sources">
+  <div class="wrap">
+    <div class="kicker">Источники</div>
+    <h2>На чём стоит страница</h2>
+    <ul class="sources">
+      <li><a href="https://archive.org/details/bub_gb_OkcmAQAAIAAJ" rel="noopener" target="_blank">D. Jouravski · «Remarques sur la résistance d’un corps prismatique et d’une pièce composée en bois ou en tôle de fer à une force perpendiculaire à leur longueur»</a>, Annales des ponts et chaussées, 1856, 2-е полугодие, т. XII, № 150, с. 328–351 (том — в Internet Archive): сноска о Демидовской премии и Веребьинском мосте, Навье и сдвиг волокон, пример с сосновым брусом, два бруса один на другом.</li>
+      <li><a href="https://archive.org/details/entsiklopedicheskijslovart28rossijai43" rel="noopener" target="_blank">«Россия. Русская наука. Науки инженерного и строительного искусства»</a>, Энциклопедический словарь Брокгауза и Ефрона, т. XXVIII (полутом 55), СПб, 1899, с. 789–790: мосты системы Гау на Николаевской дороге, Веребьинский виадук, первый способ расчёта фермы Гау, усилия растут к опорам, Демидовская премия.</li>
+      <li><a href="https://archive.org/details/historyofthetheo028953mbp" rel="noopener" target="_blank">I. Todhunter, K. Pearson · «A History of the Theory of Elasticity and of the Strength of Materials»</a>, т. II, Кембридж, 1893, ст. 183 и 939: оценка статьи Журавского, Сен-Венан и «Лекции Навье».</li>
+      <li><a href="https://archive.org/details/aworkonbridgebu00whipgoog" rel="noopener" target="_blank">S. Whipple · «A Work on Bridge Building»</a>, Ютика, 1847: расчёт сил в раскосах ферм до публикаций Журавского.</li>
+      <li><a href="https://kurskonb.ru/virt/jurav/index.html" rel="noopener" target="_blank">«Строитель мостов и железных дорог»</a>, Курская областная научная библиотека им. Н. Н. Асеева: окончание института в 1842 году, 184 моста, чертежи Гау и Уистлер, «звучащая» модель, неразрезная ферма, мосты простояли больше 35 лет.</li>
+      <li><a href="http://old-kursk.ru/people/jur220422.html" rel="noopener" target="_blank">О. Н. Аргунов, А. С. Гончаров, А. Н. Манжосов · «Мосты, построенные под его руководством, оказались необычайно прочными…»</a> (old-kursk.ru): испытание Веребьинского моста летом 1850 года.</li>
+      <li><a href="https://mke.su/doc/ZhURAVSKII.html" rel="noopener" target="_blank">«Журавский, Дмитрий Иванович»</a>, Курская энциклопедия: годы жизни, 51 метр над водой, теория касательных напряжений и формула его имени.</li>
+      <li>Изображения: <a href="https://commons.wikimedia.org/wiki/File:%D0%90._%D0%9F%D0%B5%D1%82%D1%86%D0%BE%D0%BB%D1%8C%D0%B4._%D0%92%D0%B5%D1%80%D0%B5%D0%B1%D1%8C%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D1%81%D1%82.jpg" rel="noopener" target="_blank">акварель Августа Петцольда «Веребьинский мост», 1851–1852</a>, и <a href="https://commons.wikimedia.org/wiki/File:%D0%9C%D0%BE%D1%81%D1%82_%D1%87%D0%B5%D1%80%D0%B5%D0%B7_%D0%92%D0%B5%D1%80%D0%B5%D0%B1%D1%8C%D1%8E._%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%B6%D0%B4.jpg" rel="noopener" target="_blank">чертёж моста из альбома 1872 года</a>, Викисклад — общественное достояние: художник умер в 1891 году, альбом издан в 1872 году, срок охраны обоих истёк.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="calendar">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Календарь изобретений</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Выбери любой день — узнаешь, что русские сделали первыми в мире. Листай месяцы стрелками.</p>
+    <div id="calbox"></div>
+  </div>
+</section>
+
+<section class="block kd" id="kuda-dalshe">
+  <div class="wrap">
+    <div class="kd-kicker">Куда дальше</div>
+    <h2>Музей продолжается</h2>
+    <div class="kd-grid">
+      <div class="kd-card main"><span class="kd-lbl">Следующий день</span><a href="day-01mar-apostol.html">1 марта — «Апостол»: чёрное на красном <span class="kd-arr">→</span></a>
+        <p>Фёдоров и Мстиславец поставили на книге дату и свои имена, а красное печатали раньше чёрного.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Предыдущий день</span><a href="day-27feb-filatov.html">27 февраля — Филатов: роговица из ледника <span class="kd-arr">→</span></a>
+        <p>Глаз умершего пролежал сутки в леднике при 4–6 °C — и его роговица вернула зрение слепому.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Ещё инженерный расчёт</span><a href="day-05jan-shukhov.html">5 января — расчётный нефтепровод Шухова <span class="kd-arr">→</span></a>
+        <p>Первый в мире нефтепровод, построенный по расчёту.</p></div>
+      <div class="kd-card main"><span class="kd-lbl">Город-музей</span><a href="../../index.html">Русская цивилизация <span class="kd-arr">→</span></a>
+        <p>Все музеи проекта на одной карте.</p></div>
+    </div>
+    <p style="margin-top:16px"><a href="izobreteniya.html">Посмотреть изобретения по алфавиту →</a></p>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>
+  Русская цивилизация · «Что изобрели русские первыми в мире»</div></footer>
+
+<script type="application/json" data-proof>{"status": "found", "claim_id": "rc:izobreteniya:zhuravsky:claim-ferma-gau", "ours": {"kind": "научная статья", "title": "D. Jouravski, «Remarques sur la résistance d’un corps prismatique et d’une pièce composée en bois ou en tôle de fer à une force perpendiculaire à leur longueur» — выдержка из труда о мостах системы Гау: силы, которые заставляют волокна изгибаемого бруса скользить друг по другу; правил для составных балок «manquaient jusqu’à présent à la science de l’ingénieur»", "date": "1856", "holder": "Annales des ponts et chaussées, 1856, 2-е полугодие, т. XII, № 150, с. 328–351 — выдержка из книги «О мостах раскосной системы Гау», СПб, 1855, полная Демидовская премия", "source_url": "https://archive.org/details/bub_gb_OkcmAQAAIAAJ"}, "rival": {"name": "Барре де Сен-Венан, Франция: точное решение задачи о касательных напряжениях при изгибе — мемуар об изгибе призм", "date": "1856", "doc_title": "I. Todhunter, K. Pearson, «A History of the Theory of Elasticity…», т. II, 1893, ст. 69 и 939: точное решение — в мемуаре Сен-Венана об изгибе (Journal de Liouville, 1856); идею Журавского Сен-Венан похвалил и применил в «Лекциях Навье»"}, "gap_years": 0}</script>
+<script src="../../assets/museum-proof.js"></script>
+
+<script>
+/* ── СЧЁТ ── шкала из 100 держит assets/museum-score.js; здесь только реестр наград.
+   модель: ферма 3×10 и брус 2×10; хронология 4×5; викторина 5×6 = 100. */
+window.MUSEUM_SCORE = {awards:{m0:10, m1:10, m2:10, m3:10, m4:10, h:[4,5], q:[5,6]},
+  ranks:[[100,'Мостостроитель Николаевской дороги'],[70,'Инженер путей сообщения'],[40,'Десятник на Веребье'],[0,'Гость дня']]};
+</script>
+<script src="../../assets/museum-score.js"></script>
+<script>
+(function(){
+  var $ = function(id){return document.getElementById(id);};
+  $('readBtn').onclick = function(){ $('story').scrollIntoView({behavior:'smooth'}); };
+  $('listenBtn').onclick = function(){ $('audioguide').scrollIntoView({behavior:'smooth'}); };
+  var tb=$('themeInvBtn');
+  tb.onclick=function(){ var b=$('themeInvBody'), open=b.hidden; b.hidden=!open; tb.setAttribute('aria-expanded',open?'true':'false'); tb.textContent=open?'▲ Скрыть':tb.dataset.label; };
+  function msg(id,t,cls){ var m=$(id); m.className='lab-msg'+(cls?' '+cls:''); m.textContent=t; }
+  function ru(x,d){ return x.toFixed(d||0).replace('.',','); }
+  function pudG(n){ var a=n%100, b=n%10; return n+' '+(b===1&&a!==11?'пуда':'пудов'); }
+  function pudI(n){ var a=n%100, b=n%10; return n+' '+(b===1&&a!==11?'пудом':'пудами'); }
+  function inch(a){ return a+' '+(a%10===1&&a%100!==11?'дюйм':(a%10>=2&&a%10<=4&&(a%100<10||a%100>20)?'дюйма':'дюймов')); }
+  function inchG(a){ return a+' '+(a%10===1&&a%100!==11?'дюйма':'дюймов'); }
+  function pud(n){ var a=n%100, b=n%10; return n+' '+(a>10&&a<20?'пудов':(b===1?'пуд':(b>=2&&b<=4?'пуда':'пудов'))); }
+  var mDone={};
+  function aw(k){ if (!mDone[k]){ mDone[k]=1; award(k,10); } }
+
+  /* ── ФЕРМА ── ЭСБЕ, т. XXVIII (1899), с. 789: в раскосной ферме с параллельными поясами усилия в стяжках
+     и раскосах увеличиваются к опорам. Курская ОНБ: модель с одинаковыми стержнями «звучала», тон показал разные усилия.
+     Модель условная: разрезной однорешётчатый пролёт из 8 панелей, 9 тяжей; поезд — равномерный груз на узлы 1…7.
+     Усилие в тяже = поперечная сила в панели со стороны ближней опоры; тон ∝ √натяжения. */
+  var N=8, xs=0, full=false, zh=false, picked=-1, heard={}, ring=null, ringT=0;
+  var cv=$('truss'), ctx=cv.getContext('2d');
+  function sizeT(){ var w=cv.clientWidth||760, d=window.devicePixelRatio||1; cv.width=Math.round(w*d); cv.height=Math.round(w*300/760*d); }
+  /* доля пролёта под поездом: поезд въезжает слева, xs — 0…100 % */
+  function loads(){ var p=[]; var cover=full?1:xs/100; for (var j=0;j<=N;j++){ p.push(j>0&&j<N&&j/N<=cover+1e-9?1:0); } return p; }
+  function forces(){
+    var p=loads(), R=0, s=0, j; for (j=1;j<N;j++){ s+=p[j]; R+=p[j]*(N-j)/N; }
+    var V=[], v=R; for (j=0;j<N;j++){ V.push(v); v-=p[j+1]; }
+    var T=[]; for (j=0;j<=N;j++){ T.push(j<N/2?Math.abs(V[j]):(j>N/2?Math.abs(V[j-1]):Math.max(Math.abs(V[j-1]),Math.abs(V[j])))); }
+    return T;
+  }
+  var TMAX=3.5; /* наибольшее усилие: крайний тяж при поезде на весь пролёт */
+  function fe(){ var ff=full; full=true; var T=forces(); full=ff; var s=0; T.forEach(function(t){ s+=Math.max(t,0.5); }); return s/((N+1)*TMAX); }
+  function drawT(){
+    var w=cv.width, h=cv.height, u=w/760; ctx.clearRect(0,0,w,h);
+    var L=60*u, Rr=700*u, top=110*u, bot=230*u, pw=(Rr-L)/N, T=forces();
+    /* опоры */
+    ctx.fillStyle='#8b4a3a'; ctx.fillRect(L-30*u,bot,40*u,60*u); ctx.fillRect(Rr-10*u,bot,40*u,60*u);
+    /* раскосы (дерево) — сжаты, наклон к середине */
+    ctx.strokeStyle='#b88a52'; ctx.lineWidth=5*u;
+    for (var k=0;k<N;k++){ var x0=L+k*pw, x1=x0+pw; ctx.beginPath(); if (k<N/2){ ctx.moveTo(x0,bot); ctx.lineTo(x1,top); } else { ctx.moveTo(x0,top); ctx.lineTo(x1,bot); } ctx.stroke(); }
+    /* пояса */
+    ctx.strokeStyle='#c9a46a'; ctx.lineWidth=8*u; ctx.beginPath(); ctx.moveTo(L,top); ctx.lineTo(Rr,top); ctx.moveTo(L,bot); ctx.lineTo(Rr,bot); ctx.stroke();
+    /* тяжи (железо) */
+    for (var j=0;j<=N;j++){
+      var x=L+j*pw, t=T[j]/TMAX, wth=zh?(2+7*Math.max(T[j],0.5)/TMAX):6, dx=0;
+      if (ring!==null && ring===j){ var a=Math.max(0,1-(performance.now()-ringT)/900); dx=Math.sin((performance.now()-ringT)/18)*5*a*u; }
+      var r=Math.round(120+135*t), g=Math.round(140-90*t), b=Math.round(170-130*t);
+      ctx.strokeStyle='rgb('+r+','+g+','+b+')'; ctx.lineWidth=wth*u;
+      ctx.beginPath(); ctx.moveTo(x,top); ctx.quadraticCurveTo(x+dx,(top+bot)/2,x,bot); ctx.stroke();
+      if (j===picked){ ctx.strokeStyle='#f3d27a'; ctx.lineWidth=2*u; ctx.strokeRect(x-12*u,top-6*u,24*u,bot-top+12*u); }
+    }
+    /* поезд сверху */
+    var cover=full?1:xs/100;
+    if (cover>0){ var tx1=L+(Rr-L)*cover; ctx.fillStyle='#2b2f38'; ctx.fillRect(L,top-30*u,tx1-L,22*u);
+      ctx.fillStyle='#555c6b'; for (var c=L+6*u;c<tx1-20*u;c+=46*u) ctx.fillRect(c,top-26*u,38*u,14*u);
+      ctx.fillStyle='#1b1d22'; ctx.fillRect(tx1-34*u,top-46*u,30*u,38*u); }
+    if (ring!==null && performance.now()-ringT<900) requestAnimationFrame(drawT); else ring=null;
+  }
+  var AC=null;
+  function tone(f){
+    try { AC=AC||new (window.AudioContext||window.webkitAudioContext)(); var o=AC.createOscillator(), g=AC.createGain();
+      o.type='triangle'; o.frequency.value=f; g.gain.setValueAtTime(0.0001,AC.currentTime); g.gain.exponentialRampToValueAtTime(0.25,AC.currentTime+0.02);
+      g.gain.exponentialRampToValueAtTime(0.0001,AC.currentTime+1.2); o.connect(g); g.connect(AC.destination); o.start(); o.stop(AC.currentTime+1.25); } catch(e){}
+  }
+  function pluck(j){
+    var T=forces(), t=T[j], f=t>0.01?Math.round(110*Math.sqrt(t/0.5)):0;
+    picked=j; ring=j; ringT=performance.now(); requestAnimationFrame(drawT);
+    $('sT').textContent=ru(100*t/TMAX)+' %'; $('sF').textContent=f?f+' Гц':'не звучит';
+    if (f) tone(f);
+    var bs=$('ties').children; for (var i=0;i<bs.length;i++) bs[i].classList.toggle('heard',i===j);
+    if (!full && xs===0){ msg('tMsg','Пролёт пустой: тяж ничем не натянут и не звучит. Пусти поезд на весь пролёт.','bad'); return; }
+    if (!full && t<0.01){ msg('tMsg','Поезд ещё не дошёл до первого узла: тяжи не натянуты. Пусти его дальше или на весь пролёт.',''); return; }
+    if (!full){ msg('tMsg','Тяж '+(j+1)+' тянет '+ru(100*t/TMAX)+' % от наибольшего. Пусти поезд на весь пролёт, чтобы сравнить все тяжи при полной нагрузке.',''); return; }
+    var mx=0; T.forEach(function(v){ if (v>mx) mx=v; });
+    if (t>=mx-1e-9){ heard.end=1; aw('m0'); }
+    if (j===N/2) heard.mid=1;
+    if (heard.end && heard.mid){ aw('m1'); msg('tMsg','Слышишь? У опоры тон выше, чем в середине, — примерно в '+ru(Math.sqrt(TMAX/0.5),1)+' раза: в этой условной модели крайний тяж натянут в 7 раз сильнее. По разной высоте тона модель Журавского и показала, что тяжи нагружены по-разному. Теперь сделай тяжи по усилию.','ok'); return; }
+    if (t>=mx-1e-9){ msg('tMsg','Верно: сильнее всего тянет тяж у опоры — '+f+' Гц. Энциклопедия 1899 года: в раскосной ферме усилия в тяжах растут к опорам. Теперь тронь средний тяж, номер 5.','ok'); return; }
+    if (j===N/2){ msg('tMsg','Средний тяж почти не натянут: тон '+f+' Гц, самый низкий. Теперь найди тяж, который тянет сильнее всех.',''); return; }
+    msg('tMsg','Тяж '+(j+1)+' тянет '+ru(100*t/TMAX)+' % от наибольшего, тон '+f+' Гц. Есть тяж, натянутый сильнее.','');
+  }
+  for (var i=0;i<=N;i++){ (function(j){ var b=document.createElement('button'); b.type='button'; b.className='seg'; b.textContent=j+1; b.setAttribute('aria-label','Тронуть тяж '+(j+1)); b.onclick=function(){ pluck(j); }; $('ties').appendChild(b); })(i); }
+  cv.addEventListener('click',function(e){ var r=cv.getBoundingClientRect(), x=(e.clientX-r.left)/r.width*760; var j=Math.round((x-60)/((700-60)/N)); if (j>=0&&j<=N) pluck(j); });
+  function setLoad(f,x){ full=f; xs=x; $('trX').value=f?100:x; $('oX').textContent=(f?100:x)+' %';
+    $('ldFull').classList.toggle('on',f); $('ldNone').classList.toggle('on',!f&&x===0); drawT(); }
+  $('ldFull').onclick=function(){ setLoad(true,100); msg('tMsg','Поезд на весь пролёт. Тронь тяжи — какой звучит выше всех?',''); };
+  $('ldNone').onclick=function(){ setLoad(false,0); msg('tMsg','Пролёт пустой. Тяжи не нагружены.',''); };
+  $('trX').oninput=function(){ var x=+this.value; setLoad(x>=100,x); };
+  $('mkGau').onclick=function(){ zh=false; this.classList.add('on'); $('mkZh').classList.remove('on'); $('sFe').textContent='100 %'; drawT(); msg('tMsg','Как у Гау: все тяжи одинаковые и рассчитаны на самое большое усилие — у опоры. В середине железо почти не работает.',''); };
+  $('mkZh').onclick=function(){ zh=true; this.classList.add('on'); $('mkGau').classList.remove('on'); var r=fe(); $('sFe').textContent=ru(100*r)+' %'; drawT();
+    if (!mDone.m0){ msg('tMsg','Сначала найди, какой тяж натянут сильнее всего: пусти поезд на весь пролёт и тронь тяжи.','bad'); zh=false; $('mkGau').classList.add('on'); this.classList.remove('on'); $('sFe').textContent='100 %'; drawT(); return; }
+    aw('m2'); msg('tMsg','Тяжи по усилию: у опор толще, к середине тоньше. В этой условной модели железа на тяжи уходит '+ru(100*r)+' % того, что берут одинаковые тяжи Гау. Так Журавский и предложил: делать тяжи и раскосы разной толщины. По его расчёту встал Веребьинский мост — и под двумя паровозами прогнулся меньше чем на 12 мм.','ok'); };
+  sizeT(); drawT(); window.addEventListener('resize',function(){ sizeT(); drawT(); });
+
+  /* ── БРУС ── D. Jouravski, Annales des ponts et chaussées, 1856, с. 334–337: брус 10×10 дюймов, R = 230 пудов/дюйм²,
+     сцепление вдоль волокон 16 пудов/дюйм²; P = R·b·c²/(6a); Q = 3·P·a/(2c); два бруса один на другом — вдвое слабее. */
+  var bv=$('beam'), bx=bv.getContext('2d'), two=false, res=null;
+  function sizeB(){ var w=bv.clientWidth||760, d=window.devicePixelRatio||1; bv.width=Math.round(w*d); bv.height=Math.round(w*220/760*d); }
+  function calc(a){
+    var R=230, b=10, c=two?5:10, n=two?2:1, sc=16;
+    var Pb=n*R*b*c*c/(6*a);           /* груз излома */
+    var Ps=n*sc*b*2*c/3;              /* груз, при котором Q = 3·(P/n)·a/(2c) сравняется со сцеплением sc·b·a */
+    return {Pb:Pb, Ps:Ps, split:Ps<Pb, P:Math.min(Pb,Ps)};
+  }
+  function drawB(){
+    var w=bv.width, h=bv.height, u=w/760, a=+$('bL').value; bx.clearRect(0,0,w,h);
+    bx.fillStyle='#6d6a64'; bx.fillRect(30*u,20*u,40*u,180*u);
+    var len=(560*a/100)*u, y=80*u, th=60*u;
+    function bar(y0,hh){ bx.fillStyle='#d8b27a'; bx.fillRect(70*u,y0,len,hh); bx.strokeStyle='#8a6a3c'; bx.lineWidth=1.5*u;
+      for (var k=1;k<5;k++){ bx.beginPath(); bx.moveTo(70*u,y0+hh*k/5); bx.lineTo(70*u+len,y0+hh*k/5); bx.stroke(); } bx.strokeRect(70*u,y0,len,hh); }
+    if (two){ bar(y,th/2-2*u); bar(y+th/2+1*u,th/2-1*u); } else bar(y,th);
+    /* груз */
+    bx.strokeStyle='#ccc'; bx.lineWidth=2*u; bx.beginPath(); bx.moveTo(70*u+len-8*u,y+th); bx.lineTo(70*u+len-8*u,y+th+40*u); bx.stroke();
+    bx.fillStyle='#3d4250'; bx.fillRect(70*u+len-28*u,y+th+40*u,40*u,34*u);
+    if (res){ bx.strokeStyle='#e0533d'; bx.lineWidth=4*u; bx.beginPath();
+      if (res.split){ bx.moveTo(70*u+len*0.08,y+th/2); for (var q=0.1;q<=1;q+=0.05) bx.lineTo(70*u+len*q,y+th/2+(q*37%3-1)*2*u); }
+      else { bx.moveTo(74*u,y); bx.lineTo(82*u,y+th*0.4); bx.lineTo(76*u,y+th*0.7); bx.lineTo(84*u,y+th); }
+      bx.stroke(); }
+  }
+  function upd(){ var a=+$('bL').value; $('oL').textContent=inch(a); res=null; $('sP').textContent='—'; $('sHow').textContent='—'; drawB(); }
+  $('bL').oninput=upd;
+  $('bOne').onclick=function(){ two=false; this.classList.add('on'); $('bTwo').classList.remove('on'); upd(); msg('bMsg','Цельный брус 10 на 10 дюймов.',''); };
+  $('bTwo').onclick=function(){ two=true; this.classList.add('on'); $('bOne').classList.remove('on'); upd(); msg('bMsg','Два бруса по 5 дюймов толщиной, положенные один на другой, ничем не скреплены.',''); };
+  $('bGo').onclick=function(){
+    var a=+$('bL').value, r=calc(a); res=r; drawB();
+    var t=Math.round(r.P), tn=ru(r.P*16.38/1000,1);
+    $('sP').textContent=pud(t)+' ≈ '+tn+' т'; $('sHow').textContent=r.split?'раскалывается вдоль':'ломается у стены';
+    if (two){ var r1=(function(){ var tw=two; two=false; var x=calc(a); two=tw; return x; })();
+      if (!r1.split){ aw('m4'); msg('bMsg','Два бруса держат '+pud(t)+', а цельный той же длины — '+pud(Math.round(r1.P))+'. Вдвое меньше: брусья скользят друг по другу по шву. Журавский: в цельном брусе волокнам не даёт скользить боковое сцепление.','ok'); return; }
+      msg('bMsg','Два бруса держат '+pud(t)+'. Но при такой длине и цельный брус раскалывается вдоль, так что честного сравнения нет. Возьми брус от 36 дюймов.',''); return; }
+    if (r.split){ aw('m3'); msg('bMsg','Брус длиной '+inch(a)+' треснет вдоль под грузом около '+pudG(t)+', хотя сломаться должен был бы лишь под '+pudI(Math.round(r.Pb))+': сила, раскалывающая его по оси, больше сцепления волокон. Этот пример Журавский разобрал на брусе длиной 10 дюймов.','ok'); return; }
+    msg('bMsg','Брус длиной '+inch(a)+' ломается у стены под грузом около '+pudG(t)+': сцепление волокон вдоль (16 пудов на квадратный дюйм) выдерживает. Укорачивай брус — при какой длине он расколется вдоль?','');
+  };
+  sizeB(); upd(); window.addEventListener('resize',function(){ sizeB(); drawB(); });
+
+  /* ── ХРОНОЛОГИЯ ── */
+  var E=[
+    {o:2,t:'Труд «О мостах раскосной системы Гау» получает полную Демидовскую премию',d:'1855'},
+    {o:0,t:'Сквайр Уиппл печатает в Ютике книгу о постройке мостов',d:'1847'},
+    {o:3,t:'Статья Журавского о сдвиге волокон выходит в парижском журнале Annales des ponts et chaussées',d:'1856'},
+    {o:1,t:'Веребьинский мост испытывают двумя паровозами и 14 гружёными вагонами',d:'1850'}
+  ], hNext=0;
+  E.forEach(function(e,i){
+    var b=document.createElement('button'); b.type='button'; b.className='seg'; b.innerHTML='<span class="n"></span>'; b.appendChild(document.createTextNode(e.t));
+    b.onclick=function(){
+      if (e.done) return;
+      if (e.o!==hNext){ b.classList.add('wrongpick'); setTimeout(function(){ b.classList.remove('wrongpick'); },700);
+        msg('hMsg','Не сейчас: есть событие раньше этого.','bad'); return; }
+      e.done=true; b.classList.add('right'); b.disabled=true; b.querySelector('.n').textContent=(hNext+1)+'.';
+      b.appendChild(document.createTextNode(' — '+e.d)); award('h'+i,5); hNext++;
+      msg('hMsg', hNext<4 ? 'Верно. Что дальше?' : 'Порядок восстановлен. Уиппл напечатал книгу первым, но способ расчёта фермы Гау первым дал Журавский: по нему мост через Веребью испытали в 1850 году, за пять лет до Демидовской премии.','ok');
+    };
+    $('chrono').appendChild(b);
+  });
+
+  /* ── ВИКТОРИНА ── */
+  var Q = [
+    {q:'Где тяжи фермы Гау натянуты сильнее всего, когда поезд стоит на всём пролёте?', o:['Посередине пролёта','У опор','Везде одинаково'], a:1,
+     e:'У опор. В раскосной ферме с параллельными поясами усилия в тяжах и раскосах растут к опорам.'},
+    {q:'Как модель Журавского показала, какие тяжи нагружены сильнее?', o:['По высоте звука','По цвету краски','По весу тяжей'], a:0,
+     e:'Одинаковые стержни модели «звучали» как струны, и по высоте тона было слышно, что в разных частях моста нагрузка разная.'},
+    {q:'Деревянный брус сечением 10 на 10 дюймов и длиной 10 дюймов закреплён одним концом. Что с ним случится под грузом раньше?', o:['Сломается у стены','Расколется вдоль','Согнётся и выдержит'], a:1,
+     e:'Расколется вдоль: сила, которая раскалывает его по оси, больше сцепления волокон. Этот пример Журавский разобрал в статье 1856 года.'},
+    {q:'Во сколько раз два бруса, положенные один на другой, слабее цельного бруса той же толщины?', o:['Вдвое','Вчетверо','Не слабее'], a:0,
+     e:'Вдвое: брусья скользят друг по другу по шву, а в цельном брусе этого не даёт боковое сцепление волокон.'},
+    {q:'Какую награду получил труд «О мостах раскосной системы Гау»?', o:['Орден Святого Владимира','Демидовскую премию Академии наук','Золотую медаль Парижской выставки'], a:1,
+     e:'Полную Демидовскую премию Академии наук — в 1855 году.'}
+  ];
+  var qb = $('quizBox');
+  Q.forEach(function(it, qi){
+    var wrap = document.createElement('div');
+    var h = document.createElement('p'); h.className='quiz-q'; h.textContent=(qi+1)+'. '+it.q; wrap.appendChild(h);
+    var exp = document.createElement('div'); exp.className='exp'; exp.setAttribute('aria-live','polite');
+    var btns = it.o.map(function(txt, oi){
+      var b=document.createElement('button'); b.type='button'; b.className='opt'; b.textContent=txt;
+      b.onclick=function(){
+        if (wrap.dataset.done) return; wrap.dataset.done='1';
+        btns.forEach(function(x,xi){ x.disabled=true; if (xi===it.a) x.classList.add('correct'); });
+        if (oi===it.a){ award('q'+qi,6); exp.textContent='Верно. '+it.e; }
+        else { b.classList.add('wrong'); exp.textContent='Не совсем. '+it.e; }
+        exp.classList.add('show');
+      };
+      wrap.appendChild(b); return b;
+    });
+    wrap.appendChild(exp); qb.appendChild(wrap);
+  });
+})();
+</script>
+<script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
+<script>window.MUSEUM_CHROME={
+  museum:{title:'Что изобрели русские первыми в мире',href:'index.html'},
+  share:{title:'Журавский: сосчитанный мост — музей «Что изобрели русские первыми в мире»',
+         text:'Журавский первым сосчитал, сколько тянет каждый тяж фермы Гау: у опор сильнее, чем в середине. По расчёту встал Веребьинский мост. Что Россия дала миру раньше всех — день за днём.'},
+  prev:{href:'day-27feb-filatov.html',title:'27 февраля · Филатов'},
+  next:{href:'day-01mar-apostol.html',title:'1 марта · «Апостол»'},
+  all:{href:'index.html',label:'Все изобретения'},
+  city:'../../index.html',
+  random:['day-01jan-cabletv.html','day-02jan-luna1.html','day-03jan-anosov.html','day-04jan-pilchikov.html','day-05jan-shukhov.html','day-06jan-orlov.html','day-08jan-icebreaker.html','day-09jan-blinov.html','day-10jan-britnev.html','day-11jan-kostovich.html','day-12jan-r7.html','day-13jan-k278.html','day-14jan-lira.html','day-15jan-kovalevskaya.html','day-16jan-soyuz45.html','day-19jan-kantorovich.html','day-21jan-obninsk.html','day-22jan-landau.html','day-23jan-umov.html','day-24jan-k162.html','day-25jan-korsakov.html','day-26jan-podvodnaya.html','day-27jan-pentium.html','day-28jan-havkin.html','day-30jan-kotelnikov.html','day-31jan-girotron.html','day-01feb-bekhterev.html','day-02feb-edinorog.html','day-03feb-luna9.html','day-04feb-samovar.html','day-05feb-boldyrev.html','day-06feb-zelinsky.html','day-07feb-setun.html','day-08feb-mendeleev.html','day-09feb-chizhevsky.html','day-10feb-aerosani.html','day-12feb-lenz.html','day-15feb-nesterov.html','day-17feb-pirotsky.html','day-18feb-dokuchaev.html','day-20feb-mir.html','day-25feb-tokamak.html','day-27feb-filatov.html','day-28feb-zhuravsky.html','day-01mar-apostol.html','day-18mar-leonov.html','day-15may-mechnikov.html','day-16jun-tereshkova.html','day-26sep-pavlov.html','day-15nov-buran.html','day-25nov-pirogov.html','day-01dec-lobachevsky.html','day-14dec-laser.html']
+};</script>
+<script src="../../assets/museum-chrome.js"></script>
+<script>window.MUSEUM_SUPPORT={museum:'Что изобрели русские первыми в мире'};</script>
+<script src="../../assets/museum-support.js"></script>
+<script src="calendar-izobreteniya.js"></script>
+<script>window.MUSEUM_CALENDAR_INITIAL='02-28';</script>
+<script src="../../assets/museum-calendar-month.js"></script>
+<script>window.MUSEUM_RETURN={riddle:{q:"Почему два бруса, положенные один на другой, держат вдвое меньше цельного бруса той же толщины?",a:"Они скользят друг по другу по шву. В цельном брусе волокнам не даёт скользить боковое сцепление — Журавский первым стал считать силы, которые его рвут.",src:"D. Jouravski, Annales des ponts et chaussées, 1856, т. XII, с. 331–337"}};</script>
+<script src="../../assets/museum-return.js" data-museum="izobreteniya" data-day="02-28"></script>
+<script defer src="../../assets/analytics.js"></script>
+
+
+
+
+
+
+
+
+
+<script>window.MUSEUM_AUDIOGUIDE={
+  audioSrc:"audio-guide-zhuravsky-ru.mp3",
+  durationLabel:"2 минуты 53 секунд",
+  lead:"Голос ведёт по залу Журавского: акварель с мостом над Веребьей, американская ферма Гау, расчёт тяжей, звучащая модель, испытание 1850 года и брус, который раскалывается вдоль. Шесть остановок, на каждой — что искать глазами.",
+  stops:[
+    {t:0,mark:"0:00",title:"Мост над оврагом"},
+    {t:31,mark:"0:31",title:"Американская ферма"},
+    {t:56,mark:"0:56",title:"Сколько тянет тяж"},
+    {t:81,mark:"1:21",title:"Звучащая модель"},
+    {t:115,mark:"1:55",title:"Брус, который раскалывается"},
+    {t:139,mark:"2:19",title:"Премия и Париж"}
+  ],
+  transcript:[
+    "<p>Факты: акварель А. Петцольда «Веребьинский мост», 1851–1852 — Викисклад; 184 моста — Курская областная научная библиотека; годы жизни — Курская энциклопедия (mke.su).</p>",
+    "<p>Факты: система Гау, одинаковые раскосы и тяжи — Курская областная научная библиотека; девять пролётов по 25,5 сажени, неразрезные фермы — Энциклопедический словарь Брокгауза и Ефрона, т. XXVIII, 1899, с. 789.</p>",
+    "<p>Факты: первый теоретический способ расчёта фермы Гау, усилия растут к опорам, «честь первого открытия» — ЭСБЕ, т. XXVIII, 1899, с. 789.</p>",
+    "<p>Факты: модель со «звучащими» стержнями, недоверие и поддержка Уистлера — Курская областная научная библиотека; испытание летом 1850 года, прогиб меньше 12 мм — О. Н. Аргунов и др. (old-kursk.ru).</p>",
+    "<p>Факты: Навье и сдвиг волокон, пример с брусом 10 на 10 дюймов, два бруса вдвое слабее — D. Jouravski, Annales des ponts et chaussées, 1856, т. XII, с. 328–337.</p>",
+    "<p>Факты: Демидовская премия 1855 года — ЭСБЕ, с. 789–790, и Курская областная научная библиотека; Уиппл, 1847 — S. Whipple, «A Work on Bridge Building»; Сен-Венан и «Лекции Навье» — I. Todhunter, K. Pearson, 1893, ст. 939.</p>"
+  ],
+  note:"Озвучено синтезом речи — временно, до записи голосом автора музея."
+};</script>
+<script src="../../assets/museum-audioguide.js"></script>
+</body>
+</html>

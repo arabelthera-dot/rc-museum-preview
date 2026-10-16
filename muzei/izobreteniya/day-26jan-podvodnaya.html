@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="ru" data-museum="izobreteniya">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Подводная фотография в Кронштадте, 1893–1898 — Что изобрели русские первыми в мире, 26 января</title>
+<!--
+  Страница дня 26 января. Наряд stranicy-izob-0910 (claude2, 12.10.2026), карточка #762.
+  Форма — вариант А музея изобретений (Сергей 12.09.2026): лента ударов, подробности свёрнуты.
+  Паспорт выпуска: rc-museum-production/izobreteniya/day-26jan-podvodnaya/passport/issue.json
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --dark:#060c17; --dark2:#0c1826; --surface:#111f33;
+    --card:rgba(255,255,255,.05); --card-b:rgba(255,255,255,.09);
+    --gold:#c9a84c; --gold-l:#e4c97a; --gold-g:rgba(201,168,76,.13);
+    --ink:#e8eef5; --muted:#7a9ab8; --line:rgba(255,255,255,.07);
+    --accent:#2d8cbf; --accent2:#1f6f8b;
+    /* legacy compat */
+    --paper:#0c1826; --paper2:#111f33;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Inter','Segoe UI',sans-serif;color:var(--ink);background:var(--dark);line-height:1.72}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.13;margin:0}
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent)}
+
+  /* ── ШАПКА ── */
+  header.top{background:rgba(6,12,23,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--card-b);color:#fff;position:sticky;top:0;z-index:30}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+  .logo svg{display:block;filter:drop-shadow(0 0 8px rgba(201,168,76,.4))}
+  .logo .lt{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:16px}
+  .logo .lt small{display:block;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-family:'Inter',sans-serif}
+  .score{background:var(--gold-g);border:1px solid rgba(201,168,76,.3);border-radius:24px;padding:6px 16px;font-size:13px;color:var(--gold-l);cursor:pointer;font-family:'Inter',sans-serif}
+  .score-info{position:absolute;right:12px;top:66px;max-width:260px;background:#0e1c30;color:var(--ink);border:1px solid var(--card-b);border-radius:14px;padding:14px 16px;font-size:13px;line-height:1.6;box-shadow:0 20px 60px rgba(0,0,0,.6);display:none;z-index:40}
+  .score-info.show{display:block}
+
+  /* ── HERO — СТАНДАРТ (не менять): 3D-сцена сверху, текст отдельным блоком ниже ── */
+  .hero-scene{position:relative;height:52vh;min-height:300px;max-height:520px;overflow:hidden;background:linear-gradient(160deg,#0a1e3a 0%,#1a3a6a 55%,#0d2240 100%)}
+  .hero-scene canvas.scene,.hero-scene img.scene{width:100%;height:100%;display:block;object-fit:cover}
+  .scene-caption{background:#060d18;padding:11px 0 12px}
+  .scene-caption .wrap{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+  .scene-cap{font-size:13.5px;line-height:1.6;color:var(--muted);border-left:2px solid rgba(201,168,76,.4);padding-left:14px;flex:1 1 420px}
+  .scene-hint{flex:0 0 auto;font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.4px;color:#e4c97a;
+    background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.34);border-radius:24px;padding:7px 16px;font-weight:600}
+  .hero-lead{background:linear-gradient(180deg,#0c1826 0%,#060c17 100%);color:#fff;padding:28px 0 38px}
+  .hero-lead .museum{color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:12px;opacity:.9}
+  .hero-lead .who{font-family:'Inter',sans-serif;font-size:clamp(13px,3vw,15px);letter-spacing:.4px;color:var(--accent-l,#7dc8ff);margin-bottom:10px}
+  .hero-lead .who i{font-style:normal;color:#7893ab;font-weight:400}
+  .hero-lead h1{color:#fff;font-size:56px;font-weight:900;line-height:1.04;margin-bottom:16px}
+  .hero-lead .hook{color:#b8ccde;font-size:19px;max-width:580px;margin-bottom:28px;line-height:1.65;font-weight:400}
+  .hero-lead .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+  @media(max-width:680px){.hero-lead h1{font-size:34px}.hero-lead .hook{font-size:16px}
+    .hero-scene{height:34vh;min-height:230px;max-height:300px}
+    .scene-caption .wrap{flex-direction:column;gap:9px}
+    .scene-hint{order:-1;align-self:flex-start;font-size:11.5px;padding:6px 13px}
+    .scene-cap{font-size:12.8px;flex:1 1 auto}}
+  .date-chip{display:inline-block;background:var(--gold-g);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-weight:700;padding:6px 18px;border-radius:24px;font-size:12px;margin-bottom:16px;font-family:'Inter',sans-serif;letter-spacing:.5px}
+
+  /* ── НАВИГАЦИЯ ДНЯ ── */
+  .daynav{position:sticky;top:64px;z-index:25;background:rgba(6,12,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-b)}
+  .daynav .wrap{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+  .daynav::-webkit-scrollbar{display:none}
+  .daynav a{flex:0 0 auto;padding:14px 20px;font-size:11px;font-weight:700;font-family:'Inter',sans-serif;color:var(--muted);text-decoration:none;white-space:nowrap;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:.18s}
+  .daynav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+  /* ── СЕКЦИИ ── */
+  section.block{padding:64px 0;border-bottom:1px solid var(--line);scroll-margin-top:130px}
+  .kicker{font-size:10px;text-transform:uppercase;letter-spacing:3.5px;color:var(--gold);font-weight:700;font-family:'Inter',sans-serif;margin-bottom:8px}
+  section.block h2{font-size:34px;color:#fff;margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink)}
+  .pull{background:var(--gold-g);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 14px 14px 0;font-style:italic;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-size:20px;line-height:1.5;margin:26px 0}
+
+  /* ── КНОПКИ ── */
+  .btn{cursor:pointer;border:none;border-radius:12px;padding:14px 26px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;background:var(--accent2);color:#fff;transition:.18s;letter-spacing:.2px}
+  .btn:hover{filter:brightness(1.18)}
+  .btn.ghost{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid var(--card-b)}
+  .btn.ghost:hover{background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.2)}
+  .btn.gold{background:linear-gradient(135deg,var(--gold),#b8882b);color:#1a0f00;box-shadow:0 4px 20px rgba(201,168,76,.25)}
+  .btn.gold:hover{filter:brightness(1.1);box-shadow:0 6px 28px rgba(201,168,76,.4)}
+  .btn:active{transform:translateY(1px)}
+  .pulse{animation:pulse .9s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+
+  /* ── КАРТОЧКИ ── */
+  .card{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:20px 22px;margin:16px 0;backdrop-filter:blur(6px)}
+
+  /* ── КВИЗ ── */
+  .opt{display:block;width:100%;text-align:left;background:rgba(255,255,255,.04);border:1px solid var(--card-b);border-radius:12px;padding:13px 16px;margin:8px 0;cursor:pointer;font-size:15px;color:var(--ink);font-family:'Inter',sans-serif;transition:.16s}
+  .opt:hover{border-color:var(--accent);background:rgba(45,140,191,.08)}
+  .opt.correct{background:rgba(40,120,60,.18);border-color:#3f9b52;color:#7ed4a0;font-weight:600}
+  .opt.wrong{background:rgba(180,40,40,.13);border-color:#c0453f;color:#f08080}
+  .exp{margin-top:10px;font-size:14px;background:var(--gold-g);border-radius:10px;padding:12px 14px;display:none;color:var(--gold-l)}
+  .exp.show{display:block}
+
+  /* ── ИТОГ ДНЯ ── */
+  .day-result{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:22px 24px;max-width:460px}
+  .dr-rank{font-family:'Playfair Display',Georgia,serif;font-size:28px;color:var(--gold-l);font-weight:700}
+  .dr-score{font-size:16px;margin:4px 0 12px;color:var(--ink)}.dr-score span{color:var(--muted);font-size:14px}
+  .dr-bar{height:8px;background:rgba(255,255,255,.08);border-radius:6px;overflow:hidden}
+  .dr-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),var(--gold));transition:width .6s cubic-bezier(.2,.7,.2,1)}
+  .dr-note{margin-top:12px;font-size:14px;color:var(--muted)}
+
+  /* ── РЕКЛАМНЫЕ СЛОТЫ ── */
+  .ad-slot{position:relative;margin:26px 0;background:rgba(255,255,255,.02);border:1px dashed rgba(255,255,255,.1);border-radius:14px;min-height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px}
+  .ad-slot .lbl{position:absolute;top:7px;right:12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.15);font-family:'Inter',sans-serif}
+  .ad-slot .ph-txt{font-size:12px;max-width:80%;color:rgba(255,255,255,.18)}
+  .ad-slot.billboard{min-height:108px}
+  .adband{background:transparent;border-bottom:none}
+
+  footer{padding:40px 0 80px;color:rgba(255,255,255,.2);font-size:12px;text-align:center;font-family:'Inter',sans-serif;letter-spacing:.5px}
+  .crumbs{background:rgba(6,12,23,.6);border-bottom:1px solid var(--card-b);font-family:'Inter',sans-serif;font-size:12.5px}
+  .crumbs .wrap{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  .crumbs a{color:var(--gold-l);text-decoration:none;white-space:nowrap}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--muted);opacity:.6}
+  .crumbs .here{color:var(--muted);white-space:nowrap}
+
+
+  /* ── ШАПКА: четыре строки по museum-core §6-бис ── */
+  header.top{display:block;text-align:center;padding:10px 12px 8px;height:auto;position:relative}
+  header.top .b1{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:15px;letter-spacing:.5px;color:#fff}
+  header.top .b2{font-size:11px;color:var(--muted);margin-top:2px}
+  header.top .b3{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:6px}
+  header.top .b4{font-size:12.5px;color:var(--gold-l);font-family:'Playfair Display',Georgia,serif;font-style:italic}
+  header.top .score{position:absolute;right:12px;top:10px}
+  .daynav{top:0}
+  .hero-scene{background:#0e1c2c;height:38vh;min-height:250px;max-height:400px}
+  @media(max-width:680px){.hero-lead h1{font-size:31px}}
+  .hero-scene img.scene{object-fit:cover;object-position:50% 42%}
+  .date-origin{font-size:13px;color:#9fb4c8;margin:-6px 0 12px;max-width:62ch}
+  .hero-lead .hook{color:#c6d8e8;max-width:62ch}
+  .hero-under{background:linear-gradient(180deg,#060d18,#060c17);padding:4px 0 22px}
+  .stamp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(125,200,255,.28);margin-top:14px}
+  .stamp>div{padding:11px 12px;border-left:1px solid rgba(125,200,255,.16);min-width:0}
+  .stamp>div:first-child{border-left:0}
+  .stamp .v{font-size:clamp(15px,3.4vw,21px);font-weight:700;color:#8fd3ff;line-height:1.1;overflow-wrap:anywhere}
+  .stamp .k{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#8fa5b9;margin-top:5px}
+  @media(max-width:600px){.stamp{grid-template-columns:repeat(2,minmax(0,1fr))}.stamp>div:nth-child(3){border-left:0}.stamp>div:nth-child(n+3){border-top:1px solid rgba(125,200,255,.16)}}
+
+  /* ── ЛЕНТА УДАРОВ (museum-inventions, вариант А; museum-core §5-бис) ── */
+  .udary{list-style:none;margin:18px 0 0;padding:0;counter-reset:u}
+  .udary>li{border-top:1px solid var(--line);padding:4px 0}
+  .udary details>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:34px 1fr;gap:10px;padding:12px 0;font-size:17px;line-height:1.55;color:var(--ink)}
+  .udary details>summary::-webkit-details-marker{display:none}
+  .udary details>summary::before{counter-increment:u;content:counter(u);font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:20px;color:var(--gold);line-height:1.3}
+  .udary .more-lbl{display:block;grid-column:2;font-size:12.5px;color:var(--gold-l);letter-spacing:.3px;margin-top:4px}
+  .udary .more-lbl::after{content:' ▾'}
+  .udary details[open] .more-lbl::after{content:' ▴'}
+  .udary details[open] .more-lbl .o{display:none}
+  .udary details:not([open]) .more-lbl .c{display:none}
+  .udary summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+  .udary .det{margin:0 0 14px 44px;padding:12px 16px;background:rgba(255,255,255,.035);border-left:2px solid rgba(201,168,76,.45);border-radius:0 10px 10px 0;font-size:15px;color:#d5e0ea}
+  .udary .det p{margin:8px 0}
+  .udary .tag{display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1a0f00;background:var(--gold-l);border-radius:6px;padding:1px 7px;margin-right:6px}
+  .udary .find{border-left:3px solid var(--gold);padding-left:8px}
+  figure.fig{margin:18px 0}
+  figure.fig img{max-width:100%;height:auto;border-radius:10px;display:block}
+  figure.fig figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5}
+  .src-note{font-size:12px;color:#8fa5b9}
+
+  /* ── МОДЕЛЬ ДНЯ (главное предметное действие) ── */
+  .lab{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:18px 18px 20px;margin-top:14px}
+  .lab-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+  .lab-row .lbl{flex:0 0 100%;font-size:13px;color:var(--muted);letter-spacing:.3px}
+  .seg{cursor:pointer;border:1px solid var(--card-b);background:rgba(255,255,255,.04);color:var(--ink);border-radius:10px;padding:10px 14px;font:inherit;font-size:14.5px;min-height:44px}
+  .seg[aria-pressed="true"]{border-color:var(--gold);background:var(--gold-g);color:var(--gold-l);font-weight:600}
+  .seg:focus-visible,.btn:focus-visible,.opt:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .lab-stage{position:relative;margin-top:12px}
+  .lab-stage canvas{width:100%;height:auto;display:block;border-radius:10px;background:#1c2530}
+  .lab-cap{font-size:12px;color:#8fa5b9;margin-top:6px}
+  .lab-msg{margin-top:12px;font-size:15.5px;padding:12px 14px;border-radius:10px;background:rgba(255,255,255,.04);border-left:3px solid var(--card-b);min-height:48px}
+  .lab-msg.ok{border-left-color:#3f9b52;background:rgba(40,120,60,.14)}
+  .lab-msg.bad{border-left-color:#c0453f;background:rgba(180,40,40,.10)}
+  .lab-found{font-size:13px;color:var(--muted);margin-top:8px}
+  .lab-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .noscript-box{background:rgba(255,255,255,.04);border:1px dashed var(--card-b);border-radius:12px;padding:12px 16px;font-size:15px}
+
+  /* ── ГРАНИЦА ПЕРВЕНСТВА ── */
+  .border-box{background:rgba(45,140,191,.08);border:1px solid rgba(45,140,191,.3);border-radius:14px;padding:16px 18px}
+  .border-box b{color:#8fd3ff}
+  .ctx{width:100%;border-collapse:collapse;margin-top:14px;font-size:14.5px}
+  .ctx th,.ctx td{text-align:left;padding:9px 8px;border-top:1px solid var(--line);vertical-align:top}
+  .ctx th{color:var(--gold-l);font-weight:600;font-size:12.5px;letter-spacing:.5px}
+  .quiz-q{margin:18px 0 6px;font-weight:600}
+  .sources a{color:var(--gold-l)}
+  .sources li{margin:6px 0;font-size:14px;color:#c8d6e2}
+  @media(max-width:600px){header.top{padding:8px 64px 6px}header.top .score{top:8px;right:8px;padding:4px 10px;font-size:12px}header.top .b3{margin-top:3px}
+    .hero-scene{height:26vh;min-height:200px;max-height:260px}.date-origin{font-size:12px;margin:-8px 0 8px}.hero-lead{padding:18px 0 26px}.hero-lead .date-chip{margin-bottom:12px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+  /* ── ПОЛЗУНКИ МОДЕЛИ (19, 21 янв) ── */
+  .mtab{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+  .mrow{display:grid;grid-template-columns:minmax(150px,1.2fr) 2fr 92px;gap:12px;align-items:center}
+  .mrow .mname{font-size:14.5px}
+  .mrow .mname i{font-style:normal;color:var(--muted);font-size:13px}
+  .mrow input[type=range]{width:100%;accent-color:var(--gold);min-height:44px}
+  .mrow output{font-size:14px;color:var(--gold-l);text-align:right}
+  .mrow.off{opacity:.45}
+  .mult{margin-top:14px;padding:14px 16px;border-radius:12px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25)}
+  @media(max-width:560px){.mrow{grid-template-columns:1fr 70px}.mrow .mname{grid-column:1/-1}}
+</style>
+<meta name="description" content="С конца 1893 года в Кронштадтской водолазной школе учились фотографировать под водой: Шидловский со вспышкой магния, потом Есипов с лампой в 300 свечей.">
+<link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-26jan-podvodnaya.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Русская цивилизация">
+<meta property="og:title" content="Снимок со дна: подводная фотография в Кронштадте, 1893–1898">
+<meta property="og:description" content="С конца 1893 года в Кронштадтской водолазной школе учились фотографировать под водой: Шидловский со вспышкой магния, потом Есипов с лампой в 300 свечей.">
+<meta property="og:url" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-26jan-podvodnaya.html">
+<meta property="og:image" content="https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-26jan-podvodnaya.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Снимок со дна: подводная фотография в Кронштадте, 1893–1898", "description": "С конца 1893 года в Кронштадтской водолазной школе учились фотографировать под водой: Шидловский со вспышкой магния, потом Есипов с лампой в 300 свечей.", "url": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-26jan-podvodnaya.html", "inLanguage": "ru", "isPartOf": {"@type": "WebSite", "name": "Музей «Что изобрели русские первыми в мире»"}, "publisher": {"@type": "Organization", "name": "Русская цивилизация"}, "about": {"@type": "Person", "name": "Николай Анемподистович Есипов"}, "image": "https://arabelthera-dot.github.io/rc-museum-preview/muzei/izobreteniya/day-26jan-podvodnaya.jpg"}</script>
+</head>
+<body>
+
+<header class="top">
+  <div class="b1">Русская цивилизация</div>
+  <div class="b2">Первый цифровой музей достижений России · Цивилизация первенств — что Россия дала миру раньше всех</div>
+  <div class="b3">Что изобрели русские первыми в мире</div>
+  <div class="b4">365 изобретений. Все русские. Все первые</div>
+  <div class="score" id="scoreBox" title="Баллы знаний за этот день">⭐ <span id="score">0</span> / 100</div>
+</header>
+
+<nav class="crumbs" aria-label="Хлебные крошки"><div class="wrap">
+  <a href="../../index.html">Русская цивилизация</a>
+  <span class="sep">›</span>
+  <a href="index.html">Что изобрели русские первыми в мире</a>
+  <span class="sep">›</span>
+  <span class="here">26 января · Подводная фотография</span>
+</div></nav>
+
+<div class="hero-scene" id="hero" style="background:#f3cf9a">
+  <img class="scene" src="day-26jan-podvodnaya.jpg" style="object-fit:contain" data-source="https://commons.wikimedia.org/wiki/File:Brockhaus_and_Efron_Encyclopedic_Dictionary_b12_780-2.jpg" data-license="Public domain" width="1200" height="616" alt="Гравюра: водолаз в медном шлеме и резиновой рубахе идёт по дну, наклонившись вперёд и вытянув руку; к шлему тянутся воздушный шланг и сигнальный конец" fetchpriority="high">
+</div>
+
+<div class="scene-caption">
+  <div class="wrap">
+    <div class="scene-cap">«Хождение водолаза по грунту, когда он ищет» — фигура 13 таблицы «Современный водолаз и его аппараты» к статье «Водолазное дело», Энциклопедический словарь Брокгауза и Ефрона, т. VI, 1892; общественное достояние.</div>
+    <span class="scene-hint">Документ · гравюра 1892 года</span>
+  </div>
+</div>
+
+<header class="hero-lead">
+  <div class="wrap">
+    <div class="date-chip">26 января · 1893–1898</div>
+    <p class="date-origin">Дата условная: календарь музея отдал этот день подводной съёмке, точного дня у события нет. Опыты в Кронштадте начались в конце 1893 года.</p>
+    <div class="who">Ф. Я. Шидловский, Н. А. Есипов, Л. А. Родионов <i>· Кронштадтская водолазная школа морского ведомства</i></div>
+    <div class="museum">Музей «Что изобрели русские первыми в мире»</div>
+    <h1>Снимок со дна: подводная фотография в Кронштадте, 1893–1898</h1>
+    <p class="hook">Врач Кронштадтской водолазной школы Николай Есипов снимал под водой при лампе в 300 свечей, не зная, что во Франции то же самое делает Бутан.</p>
+    <div class="hero-btns">
+      <button class="btn gold" id="readBtn" type="button">Читать историю ↓</button>
+      <button class="btn ghost" id="listenBtn" type="button">🎧 Слушать аудиогид</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero-under">
+  <div class="wrap">
+    <div class="stamp">
+      <div><div class="v">1893</div><div class="k">конец года — первые опыты в Кронштадте</div></div>
+      <div><div class="v">300</div><div class="k">свечей — лампа Сименса у Есипова</div></div>
+      <div><div class="v">1</div><div class="k">удачный снимок Шидловского на выставке 1896 года</div></div>
+      <div><div class="v">50–60 м</div><div class="k">дальше этого вода не пропускает изображение</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="daynav" aria-label="Разделы дня">
+  <div class="wrap">
+    <a href="#story">Читать</a>
+    <a href="#audioguide">Слушать</a>
+    <a href="#games">Снимок</a>
+    <a href="#pervenstvo">Первенство</a>
+    <a href="#quiz">Викторина</a>
+    <a href="#calendar">Календарь</a>
+  </div>
+</nav>
+
+<section class="wrap" id="dokument" data-proof-block></section>
+
+<section class="block" id="audioguide"></section>
+
+<section class="block" id="story">
+  <div class="wrap">
+    <div class="kicker">История первенства · 12 ударов</div>
+    <h2>Камера в баке</h2>
+    <p style="color:var(--muted);max-width:62ch">Читается подряд. Нажми на удар — откроется подробный разбор с источниками.</p>
+    <ol class="udary">
+      <li><details><summary><span>В 1882 году в Кронштадте открыли Водолазную школу — готовить для флота водолазов, офицеров и нижних чинов, к судовым и подводным минным работам.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Школу учредили указом 23 апреля (5 мая) 1882 года. Для занятий зимой у неё был «особый чан достаточных размеров» — школьный бак, в котором позже и начнут снимать. С 1885 года школой более десяти лет заведовал Н. М. Оводов, с 1896-го — А. А. Кононов. Школа стала центром водолазного дела всей России: здесь разрабатывали помпы, телефоны и освещение для водолазов.</p>
+          <p class="src-note">Источники: А. Мельникова, «Основание и первые годы работы Кронштадтской Водолазной школы» и «Кронштадтская Водолазная школа в 1896–1906 годах» («Кронштадтский вестник»); ЭСБЭ, «Водолазное дело», т. VI (1892).</p>
+        </div></details></li>
+      <li><details><summary><span>Водолазу на дне нужен свет, и в школе его делали сами: лейтенант Евгений Тверитинов построил подводный электрический фонарь.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <figure class="fig">
+            <img src="day-26jan-podvodnaya-fonar.jpg" data-source="https://commons.wikimedia.org/wiki/File:Brockhaus_and_Efron_Encyclopedic_Dictionary_b12_780-2.jpg" data-license="Public domain" width="416" height="677" loading="lazy" alt="Гравюра: лампа накаливания в прозрачном колпаке между четырьмя стойками на тяжёлом основании; сверху крышка с винтами и отводом для провода">
+            <figcaption>«Подводный электрический фонарь лейтенанта Тверитинова» — фигура 23 той же таблицы ЭСБЭ, 1892. Общественное достояние.</figcaption>
+          </figure>
+          <p>Е. П. Тверитинов, офицер флота и потом профессор Электротехнического института, вместе со специалистами школы разработал систему подводного освещения. В той же статье ЭСБЭ описаны подводное освещение лейтенанта Колбасьева и электрическая лампа поручика Золотухина (Минный офицерский класс, Кронштадт, 1885), которую питали аккумуляторы вместо свинцовых грузов водолаза.</p>
+          <p class="src-note">Источники: ЭСБЭ, «Водолазное дело», т. VI (1892), подписи к фиг. 9, 23, 24; «Кронштадтский вестник», «Кронштадтская Водолазная школа в 1896–1906 годах».</p>
+        </div></details></li>
+      <li><details><summary><span>В конце 1893 года доктор школы Ф. Я. Шидловский начал первые в России опыты фотографирования под водой.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>По его проекту изготовили несколько фотобоксов — водонепроницаемых ящиков для камеры — и снимали в школьном баке при вспышке магния. Шидловский служил врачом школы с 1889 по 1896 год. «Первые опыты Ф. под водой в России начали производиться в кронштадтской водолазной школе морского ведомства, тоже в конце 1893 г., д-ром Шидловским», — сказано в энциклопедии.</p>
+          <p class="src-note">Источники: ЭСБЭ, «Фотографирование под водой», т. XXXVI (1902), с. 400; «Кронштадтский вестник», «Кронштадтская Водолазная школа в 1896–1906 годах».</p>
+        </div></details></li>
+      <li><details><summary><span>В том же 1893 году на юге Франции, в бухте Баньюльс, начал снимать под водой зоолог Луи Бутан.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Бутан работал в морской лаборатории Араго и первым напечатал сообщение о подводной фотографии — «Note sur la photographie sous-marine» в «Comptes Rendus» Парижской академии наук в 1894 году. Его первый аппарат был медным ящиком с крышкой на резиновой прокладке и баллоном-компенсатором до 3 литров внутри. Снимки выходили «весьма неясные»: выдержка длилась от 20 до 30 минут.</p>
+          <p class="src-note">Источник: ЭСБЭ, «Фотографирование под водой», т. XXXVI (1902), с. 400–401.</p>
+        </div></details></li>
+      <li><details><summary><span>Трудностей под водой оказалось три: навести объектив на резкость почти невозможно, пластинку не сменишь, а вода не пропускает свет.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>«Наведение на фокус под водой дело крайне трудное и почти невыполнимое; поэтому надо брать аппарат с постоянным фокусом». Нужно было и приспособление, чтобы сделать несколько снимков, «не вынимая аппарата из воды». Подводный пейзаж «никогда не бывает в покое», а водолаз с каждым шагом поднимает облака ила, и долгая выдержка всё смазывает.</p>
+          <p class="src-note">Источник: ЭСБЭ, «Фотографирование под водой», т. XXXVI (1902), с. 400–401.</p>
+        </div></details></li>
+      <li><details><summary><span>Летом 1896 года на Всероссийской выставке в Нижнем Новгороде школа показала один подводный снимок Шидловского — пока единственный удачный.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>За свои экспонаты, среди которых была новая четырёхцилиндровая помпа мичмана Богдановича, школа получила диплом на золотую медаль. «Водолазный павильон привлекал все время много публики», — вспоминал Есипов. Снимок Шидловского был, по сути, единственным, достаточно удачным, чтобы выставить его.</p>
+          <p class="src-note">Источник: «Кронштадтский вестник», «Кронштадтская Водолазная школа в 1896–1906 годах» (по запискам Н. А. Есипова к 25-летию школы, 1907).</p>
+        </div></details></li>
+      <li><details><summary><span>Осенью 1896 года старшим врачом школы стал доктор медицины Николай Есипов, и подводная съёмка стала одной из главных задач школы.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>С приходом нового заведующего А. А. Кононова освоение подводного фотографирования вышло на одно из первых мест. «Разработке вот этого-то вопроса и было посвящено все свободное от учебных занятий время», — писал Есипов в 1897 году. Позже он сам прошёл курс школы и получил звание водолаза, а работал в ней почти до своей смерти в 1909 году.</p>
+          <p class="src-note">Источники: «Кронштадтский вестник», «Кронштадтская Водолазная школа в 1896–1906 годах»; ЭСБЭ, «Фотографирование под водой» (Есипов — «доктор медицины и водолазный офицер»).</p>
+        </div></details></li>
+      <li><details><summary><span>31 января 1897 года Есипов показал фотографирование под водой генерал-адмиралу, великому князю Алексею Александровичу.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Генерал-адмирал — глава всего флота — приехал в Кронштадтскую водолазную школу, и в его присутствии доктор Есипов снимал в школьном баке.</p>
+          <p class="src-note">Источник: «Кронштадтский вестник», «Кронштадтская Водолазная школа в 1896–1906 годах».</p>
+        </div></details></li>
+      <li><details><summary><span>Весной 1897 года на выставке судоходства в петербургском «Аквариуме» школа выставила подводную камеру и снимки Есипова, сделанные при участии инженера-механика Леонида Родионова.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Выставка шла с 8 марта по 11 апреля. «Школа экспонировала водолазные аппараты разных систем, подводную фотографическую камеру и подводные снимки, снятые в школьном баке д-ром Есиповым при участии инженера-механика Родионова». Для публики построили бак: в нём в известные часы спускались водолазы, а лекции по очереди читали Кононов и Есипов.</p>
+          <p class="src-note">Источник: «Кронштадтский вестник», «Кронштадтская Водолазная школа в 1896–1906 годах».</p>
+        </div></details></li>
+      <li><details><summary><span>Магний Есипов сменил на электричество: дуговую лампу Сименса силой до 300 свечей он ставил сбоку аппарата.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p>Бутан тоже отказался от магния и взял две свои дуговые лампы по 20 ампер в чугунных футлярах, рассчитанных на 10 атмосфер; при выдержке 5 минут на глубине 6 метров он получил «весьма удовлетворительные снимки». «Если снимки Бутана и немного лучше снимков Есипова, то вся разница зависит единственно от разницы в силе источника света». Вода поглощает лучи: даже на глубине 10 метров в чистой воде предмет в 50–60 метрах от объектива не оставляет на пластинке ничего. Прозрачнее всего вода зимой, мутнее всего в июле.</p>
+          <p class="src-note">Источник: ЭСБЭ, «Фотографирование под водой», т. XXXVI (1902), с. 401.</p>
+        </div></details></li>
+      <li class="find"><details><summary><span>Есипов не знал о работах Бутана и самостоятельно проделал всё то, что делал и Бутан.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <p><span class="tag">Находка дня</span>Книга Бутана «La photographie sous-marine» вышла только в 1900 году, а в Кронштадте ту же дорогу — футляр, постоянный фокус, магний, потом дуговая лампа — прошли своим умом. Эти слова напечатаны в статье «Фотографирование под водой» Энциклопедического словаря Брокгауза и Ефрона, и подписана она инициалами «Н. А. Е.»: статью о себе и о Бутане написал сам Николай Анемподистович Есипов.</p>
+          <p class="src-note">Источники: ЭСБЭ, «Фотографирование под водой», т. XXXVI (1902), с. 401, подпись «Н. А. Е.»; расшифровка подписи — список авторов ЭСБЭ в Викитеке («Н. А. Е.» — Николай Анемподистович Есипов).</p>
+        </div></details></li>
+      <li><details><summary><span>Осенью 1898 года на фотографической выставке Русского технического общества в Соляном городке подводные снимки школы получили диплом и благодарность.<span class="more-lbl"><span class="o">Узнать подробнее</span><span class="c">Свернуть</span></span></span></summary>
+        <div class="det">
+          <figure class="fig">
+            <img src="day-26jan-podvodnaya-esbe.jpg" data-source="https://commons.wikimedia.org/wiki/File:Encyclopedicheskii_slovar_tom_36.djvu" data-license="Public domain" width="760" height="624" loading="lazy" alt="Страница старой энциклопедии в дореформенной орфографии: заголовок «Фотографированіе подъ водой» и начало статьи о Бутане, Шидловском и Есипове">
+            <figcaption>Начало статьи «Фотографирование под водой»: ЭСБЭ, т. XXXVI, 1902, с. 400. Общественное достояние.</figcaption>
+          </figure>
+          <p>«К этому уже времени у нас было изготовлено несколько подводных снимков с различных предметов», — писал Есипов. Публика прошла мимо скромного стенда, но «на экспонаты школы было обращено внимание печати, и они были удостоены диплома и благодарности». Свои опыты Есипов описал в «Медицинском прибавлении к Морскому сборнику» за 1897 и 1898 годы, а школа звала всех любителей фотографии работать в своей тёмной комнате.</p>
+          <p class="src-note">Источники: «Кронштадтский вестник», «Кронштадтская Водолазная школа в 1896–1906 годах»; ЭСБЭ, «Фотографирование под водой», т. XXXVI (1902), с. 400.</p>
+        </div></details></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block" id="theme-inventions">
+  <div class="wrap">
+    <div class="kicker">Фото и кино · Русские первенства</div>
+    <h2>Что ещё русские изобрели первыми в теме «фото и кино»</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Другие дни музея о фотографии и съёмке — по утверждённому календарю. Залы этих дней ещё готовятся.</p>
+    <button class="btn ghost" type="button" id="themeInvBtn" data-label="Показать 7 первенств →" aria-expanded="false" aria-controls="themeInvBody">Показать 7 первенств →</button>
+    <div id="themeInvBody" hidden>
+      <ul class="theme-list">
+        <li><b>5 фев</b> Гибкая рулонная фотоплёнка, И. В. Болдырев, 1878</li>
+        <li><b>19 фев</b> Цветная фотография России, С. М. Прокудин-Горский</li>
+        <li><b>20 авг</b> Стереокино без очков, С. П. Иванов, 1941</li>
+        <li><b>27 авг</b> Киноаппарат раньше Люмьеров, И. А. Тимченко, 1893</li>
+        <li><b>20 сен</b> Аэрофотоаппарат и аэрофотосъёмка</li>
+        <li><b>7 окт</b> Первые в мире снимки обратной стороны Луны («Луна-3»)</li>
+        <li><b>22 окт</b> «Венера-9»: первые в мире снимки поверхности другой планеты</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="games">
+  <div class="wrap">
+    <div class="kicker">Главное действие · модель</div>
+    <h2>Сними под водой</h2>
+    <p style="max-width:62ch">Ты в школьном баке с камерой постоянного фокуса. Выбери свет, выдержку, расстояние до водолаза и месяц — и сделай снимок. Сначала получи чёткий кадр с лампой Сименса, как у Есипова, потом попробуй дневной свет с выдержкой первого аппарата Бутана, водолаза в 55 метрах и июльскую воду.</p>
+    <div class="lab" id="lab">
+      <div class="lab-row" role="group" aria-label="Свет">
+        <span class="lbl">Свет</span>
+        <button class="seg" type="button" data-k="light" data-v="day" aria-pressed="true">Дневной, сверху</button>
+        <button class="seg" type="button" data-k="light" data-v="mg" aria-pressed="false">Вспышка магния</button>
+        <button class="seg" type="button" data-k="light" data-v="lamp" aria-pressed="false">Лампа Сименса, 300 свечей</button>
+      </div>
+      <div class="lab-row" role="group" aria-label="Выдержка">
+        <span class="lbl">Выдержка</span>
+        <button class="seg" type="button" data-k="t" data-v="1" aria-pressed="true">1 с</button>
+        <button class="seg" type="button" data-k="t" data-v="30" aria-pressed="false">30 с</button>
+        <button class="seg" type="button" data-k="t" data-v="300" aria-pressed="false">5 мин</button>
+        <button class="seg" type="button" data-k="t" data-v="1500" aria-pressed="false">25 мин</button>
+      </div>
+      <div class="lab-row" role="group" aria-label="Месяц">
+        <span class="lbl">Месяц — прозрачность воды</span>
+        <button class="seg" type="button" data-k="m" data-v="jan" aria-pressed="true">Январь — вода прозрачнее</button>
+        <button class="seg" type="button" data-k="m" data-v="jul" aria-pressed="false">Июль — вода мутнее</button>
+      </div>
+      <div class="mtab">
+        <div class="mrow"><label class="mname" for="labD">Расстояние до водолаза <i>· от объектива</i></label><input type="range" id="labD" min="0" max="10" step="1" value="3"><output id="labDv" for="labD">4 м</output></div>
+      </div>
+      <div class="lab-btns">
+        <button class="btn gold" type="button" id="labGo">Снять кадр</button>
+        <button class="btn ghost" type="button" id="labEsipov">Как у Есипова</button>
+      </div>
+      <div class="lab-stage">
+        <canvas id="labCv" width="640" height="300" style="height:300px" role="img" aria-label="Слева — бак: камера и источник света, водолаз на выбранном расстоянии в воде; справа — проявленная пластинка с получившимся снимком"></canvas>
+        <div class="lab-cap">Модель условная: из документа в ней лампа Сименса до 300 свечей сбоку аппарата, выдержка 20–30 минут у первого аппарата Бутана, предел в 50–60 метров и то, что зимой вода прозрачнее, чем в июле. Ослабление света водой и порог пластинки подобраны по этим ориентирам, а не измерены.</div>
+      </div>
+      <div class="lab-msg" id="labMsg" aria-live="polite">Выбери свет и выдержку и нажми «Снять кадр».</div>
+      <div class="lab-found" id="labFound">Найдено: чёткий кадр с лампой — нет; неясный снимок Бутана — нет; предел 50–60 м — нет; июльская муть — нет.</div>
+      <noscript><div class="noscript-box">Для модели нужен JavaScript. Текстовая версия: с лампой Сименса в 300 свечей сбоку аппарата водолаз в 3–4 метрах получается чётко при выдержке в секунды. Вспышка магния останавливает движение, но её хватает только на 2–3 метра. Дневной свет в баке требует выдержки в десятки минут, и за это время вода и ил успевают сдвинуться — снимок выходит «весьма неясным», как у первого аппарата Бутана. В 50–60 метрах вода поглощает всё: пластинка остаётся пустой. В июле вода мутнее, и там, где в январе снимок получается, он пропадает.</div></noscript>
+    </div>
+    <p class="src-note" style="margin-top:10px">Лампа Сименса до 300 свечей, выдержка 20–30 минут у первого аппарата Бутана, предел 50–60 м, январь и июль — Н. А. Есипов, «Фотографирование под водой», ЭСБЭ, т. XXXVI (1902), с. 400–401.</p>
+  </div>
+</section>
+
+<section class="block" id="pervenstvo">
+  <div class="wrap">
+    <div class="kicker">Проверка факта</div>
+    <h2>Что именно здесь первое</h2>
+    <div class="border-box">
+      <p style="margin-top:0"><b>Граница первенства:</b> первые в России опыты фотографирования под водой — Кронштадтская водолазная школа морского ведомства, с конца 1893 года (Ф. Я. Шидловский, вспышка магния), с 1896 года — Н. А. Есипов при участии Л. А. Родионова, с дуговой лампой. Подводные снимки школы показаны публике в 1896, 1897 и 1898 годах. Первенство в мире мы здесь не заявляем: Кронштадт и Баньюльс шли одновременно и независимо.</p>
+      <p style="margin-bottom:0"><b>Чего здесь нет:</b> первым напечатал о подводной фотографии француз Луи Бутан (1894), и его снимки, по словам самого Есипова, были немного лучше. О попытках снимать под водой пишут и для 1856 года — В. Бауэр в Кронштадте, У. Томпсон в Англии, — но тех снимков мы не видели. Водонепроницаемая камера В. И. Срезневского 1886 года в Большой советской энциклопедии названа камерой «для морских съёмок», а популярные статьи пересказывают её как подводную — документа о съёмке ею под водой мы не нашли; аэрофотоаппарату Срезневского в музее отдан свой день, 20 сентября. Сама камера Есипова и Родионова не сохранилась, её чертежа мы тоже не нашли.</p>
+    </div>
+    <figure class="fig" style="max-width:420px">
+      <img src="day-26jan-podvodnaya-butan.jpg" data-source="https://commons.wikimedia.org/wiki/File:Underwater_diver._Boutan._1898.jpg" data-license="Public domain" width="700" height="908" loading="lazy" alt="Старая фотография под водой: водолаз в медном шлеме сидит на дне среди водорослей и держит табличку; над ним поднимается шланг, вода вокруг мутно-серая">
+      <figcaption>Соперник: подводный снимок Луи Бутана, Баньюльс-сюр-Мер, 1898 — водолаз держит табличку «Photographie sous-marine». Общественное достояние.</figcaption>
+    </figure>
+    <table class="ctx">
+      <thead><tr><th scope="col">Документ или событие</th><th scope="col">Что</th><th scope="col">Когда</th></tr></thead>
+      <tbody>
+        <tr><td>Опыты Ф. Я. Шидловского</td><td>Фотобоксы и вспышка магния в школьном баке</td><td>конец 1893</td></tr>
+        <tr><td>L. Boutan, «Note sur la photographie sous-marine»</td><td>Первое печатное сообщение (Франция)</td><td>1894</td></tr>
+        <tr><td>Всероссийская выставка, Нижний Новгород</td><td>Подводный снимок Шидловского</td><td>июль 1896</td></tr>
+        <tr><td>Выставка судоходства, «Аквариум»</td><td>Камера и снимки Есипова и Родионова</td><td>8.03–11.04.1897</td></tr>
+        <tr><td>«Медицинское прибавление к Морскому сборнику»</td><td>Статьи Н. А. Есипова об опытах</td><td>1897–1898</td></tr>
+        <tr><td>Фотовыставка ИРТО, Соляной городок</td><td>Диплом и благодарность школе</td><td>осень 1898</td></tr>
+        <tr><td>ЭСБЭ, «Фотографирование под водой», подпись «Н. А. Е.»</td><td>Итог опытов Кронштадта и Баньюльса</td><td>1902</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block" id="quiz">
+  <div class="wrap">
+    <div class="kicker">Проверь себя · 5 вопросов</div>
+    <h2>Викторина</h2>
+    <p style="color:var(--muted);max-width:62ch">На каждый вопрос — одна попытка. После ответа покажем объяснение.</p>
+    <div id="quizBox"></div>
+    <noscript><div class="noscript-box">Для викторины нужен JavaScript. Ответы: 1 — в конце 1893 года, доктор Шидловский; 2 — брали аппарат с постоянным фокусом; 3 — один удачный снимок Шидловского; 4 — дуговая лампа Сименса до 300 свечей; 5 — сам Есипов, подписавшись «Н. А. Е.».</div></noscript>
+  </div>
+</section>
+
+<section class="block" id="result">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Итог дня</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Чёткий кадр с лампой, три поворота модели и викторина вместе дают 100 баллов. Прогресс не сохраняется: перезагрузка страницы начинает день заново.</p>
+    <div class="day-result">
+      <div class="dr-score" id="dayTxt">0 / 100 · звание: Гость дня</div>
+      <div class="dr-bar"><i id="dayBar" style="width:0%"></i></div>
+      <div class="dr-note">Сними чёткий кадр с лампой Сименса, открой три поворота модели и ответь на вопросы викторины.</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="sources">
+  <div class="wrap">
+    <div class="kicker">Источники</div>
+    <h2>На чём стоит страница</h2>
+    <ul class="sources">
+      <li><a href="https://ru.wikisource.org/wiki/%D0%AD%D0%A1%D0%91%D0%95/%D0%A4%D0%BE%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%BF%D0%BE%D0%B4_%D0%B2%D0%BE%D0%B4%D0%BE%D0%B9" rel="noopener" target="_blank">Энциклопедический словарь Брокгауза и Ефрона · Н. А. Есипов («Н. А. Е.»), «Фотографирование под водой»</a> — т. XXXVI, 1902, с. 400–401 (текст в Викитеке, <a href="https://commons.wikimedia.org/w/index.php?title=File:Encyclopedicheskii_slovar_tom_36.djvu&amp;page=415" rel="noopener" target="_blank">скан страницы</a>): Бутан 1893 и 1894, Шидловский в конце 1893, Есипов с 1896, «Медицинское прибавление к Морскому сборнику» 1897 и 1898, трудности съёмки, лампа Сименса до 300 свечей, предел 50–60 м, январь и июль.</li>
+      <li><a href="https://kronvestnik.ru/museum/9358" rel="noopener" target="_blank">«Кронштадтский вестник» · А. Мельникова, «Кронштадтская Водолазная школа в 1896–1906 годах»</a>: Есипов старший врач с осени 1896, Шидловский врач 1889–1896, фотобоксы и магний, Нижний Новгород 1896, демонстрация 31 января 1897, «Аквариум» 8 марта — 11 апреля 1897 с Родионовым, ИРТО 1898, цитаты из записок Есипова к 25-летию школы (1907).</li>
+      <li><a href="https://kronvestnik.ru/history/6684" rel="noopener" target="_blank">«Кронштадтский вестник» · А. Мельникова, «Основание и первые годы работы Кронштадтской Водолазной школы»</a>: указ 1882 года, школьный чан, заведующий Н. М. Оводов с 1885 года.</li>
+      <li><a href="https://ru.wikisource.org/wiki/%D0%AD%D0%A1%D0%91%D0%95/%D0%92%D0%BE%D0%B4%D0%BE%D0%BB%D0%B0%D0%B7%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D0%BB%D0%BE" rel="noopener" target="_blank">ЭСБЭ · «Водолазное дело»</a> — т. VI, 1892: таблица «Современный водолаз и его аппараты», фонарь лейтенанта Тверитинова, лампа поручика Золотухина (1885), телефоны водолазной школы.</li>
+      <li><a href="https://www.gw2ru.com/history/3508-divers-in-russian-empire" rel="noopener" target="_blank">Gateway to Russia · «Why divers in the Russian Empire were among the best in the world»</a>: фотокамера Есипова и Родионова среди разработок школы, дипломы на выставках в США и Франции.</li>
+      <li><a href="https://www.booksite.ru/fulltext/1/001/008/105/610.htm" rel="noopener" target="_blank">Большая советская энциклопедия · «Срезневский Вячеслав Измайлович»</a>: водонепроницаемая камера «для морских съёмок» (1886) среди его аппаратов.</li>
+      <li><a href="https://underwaterfoto.narod.ru/history2.htm" rel="noopener" target="_blank">Underwaterfoto · «История подводной фотографии»</a>: сообщения о подводной съёмке 1856 года (В. Бауэр, У. Томпсон), устройство аппаратов Бутана.</li>
+      <li>Изображения: <a href="https://commons.wikimedia.org/wiki/File:Brockhaus_and_Efron_Encyclopedic_Dictionary_b12_780-2.jpg" rel="noopener" target="_blank">таблица «Современный водолаз и его аппараты»</a> (ЭСБЭ, 1892; фигуры 13 и 23), <a href="https://commons.wikimedia.org/wiki/File:Encyclopedicheskii_slovar_tom_36.djvu" rel="noopener" target="_blank">страница 400 тома XXXVI ЭСБЭ</a> (1902), <a href="https://commons.wikimedia.org/wiki/File:Underwater_diver._Boutan._1898.jpg" rel="noopener" target="_blank">подводный снимок Л. Бутана</a> (1898) — Wikimedia Commons, общественное достояние.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="calendar">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px">Календарь изобретений</h2>
+    <p style="color:var(--muted);margin-top:0;max-width:62ch">Выбери любой день — узнаешь, что русские сделали первыми в мире. Листай месяцы стрелками.</p>
+    <div id="calbox"></div>
+  </div>
+</section>
+
+<section class="block kd" id="kuda-dalshe">
+  <div class="wrap">
+    <div class="kd-kicker">Куда дальше</div>
+    <h2>Музей продолжается</h2>
+    <div class="kd-grid">
+      <div class="kd-card main"><span class="kd-lbl">Следующий день</span><a href="day-27jan-pentium.html">27 января — Архитектура Pentium III <span class="kd-arr">→</span></a>
+        <p>Разработчик «Эльбрусов» руководил в Intel архитектурой Pentium III.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Предыдущий день</span><a href="day-25jan-korsakov.html">25 января — Машины Корсакова <span class="kd-arr">→</span></a>
+        <p>Брусок со штырями сам находил лекарство в перфорированной таблице.</p></div>
+      <div class="kd-card"><span class="kd-lbl">Та же стихия</span><a href="day-13jan-k278.html">13 января — Подлодка К-278 <span class="kd-arr">→</span></a>
+        <p>Почти через девяносто лет после бака Есипова — погружение на тысячу метров.</p></div>
+      <div class="kd-card main"><span class="kd-lbl">Город-музей</span><a href="../../index.html">Русская цивилизация <span class="kd-arr">→</span></a>
+        <p>Все музеи проекта на одной карте.</p></div>
+    </div>
+    <p style="margin-top:16px"><a href="izobreteniya.html">Посмотреть изобретения по алфавиту →</a></p>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="slog">Цивилизация первенств — что Россия дала миру раньше всех</div>
+  Русская цивилизация · «Что изобрели русские первыми в мире»</div></footer>
+
+<script type="application/json" data-proof>{"status":"found","claim_id":"rc:izobreteniya:podvodnaya:claim-kronshtadt-1893","ours":{"kind":"энциклопедическая статья участника опытов","title":"Н. А. Есипов («Н. А. Е.»), «Фотографирование под водой»: первые в России опыты — Кронштадтская водолазная школа, конец 1893 г. (Ф. Я. Шидловский), с 1896 г. — Н. А. Есипов («Медиц. прибавление к Морск. сборнику», 1897 и 1898)","date":"1902","holder":"Энциклопедический словарь Брокгауза и Ефрона, т. XXXVI, с. 400–401; скан — Wikimedia Commons, текст — Викитека","source_url":"https://ru.wikisource.org/wiki/%D0%AD%D0%A1%D0%91%D0%95/%D0%A4%D0%BE%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%BF%D0%BE%D0%B4_%D0%B2%D0%BE%D0%B4%D0%BE%D0%B9"}}</script>
+<script src="../../assets/museum-proof.js"></script>
+
+<script>
+/* ── СЧЁТ ── шкала из 100 держит assets/museum-score.js; здесь только реестр наград.
+   чёткий кадр с лампой 30 + три поворота модели 3×10 + викторина 5×8 = 100. */
+window.MUSEUM_SCORE = {awards:{lab:30, why0:10, why1:10, why2:10, q:[5,8]},
+  ranks:[[100,'Водолазный офицер'],[70,'Фотограф водолазной школы'],[40,'Ученик водолаза'],[0,'Гость дня']]};
+</script>
+<script src="../../assets/museum-score.js"></script>
+<script>
+(function(){
+  var $ = function(id){return document.getElementById(id);};
+  $('readBtn').onclick = function(){ $('story').scrollIntoView({behavior:'smooth'}); };
+  $('listenBtn').onclick = function(){ $('audioguide').scrollIntoView({behavior:'smooth'}); };
+  var tb=$('themeInvBtn');
+  tb.onclick=function(){ var b=$('themeInvBody'), open=b.hidden; b.hidden=!open; tb.setAttribute('aria-expanded',open?'true':'false'); tb.textContent=open?'▲ Скрыть':tb.dataset.label; };
+
+  /* ── СНИМОК ПОД ВОДОЙ ── условная модель по ориентирам статьи Есипова (ЭСБЭ, т. XXXVI, 1902):
+     лампа Сименса до 300 свечей сбоку аппарата; первый аппарат Бутана при дневном свете — выдержка 20–30 мин,
+     снимки «весьма неясные»; в 50–60 м от объектива изображения нет; зимой вода прозрачнее, в июле мутнее.
+     Свет на пластинке: лампа и магний — путь туда и обратно, exp(−2cd)/d²; дневной свет сверху — exp(−cd).
+     c (ослабление на метр) и порог пластинки подобраны под эти ориентиры, это не измерения. */
+  var DIST=[1,2,3,4,6,8,12,20,30,45,55];
+  var C={jan:0.12, jul:0.35};
+  var E0=20, OVER=600;              /* окно нормальной экспозиции */
+  var MG=600;                       /* вспышка магния: эквивалент «свеча·секунда», выдержка не важна */
+  var st={light:'day', t:1, m:'jan'}, d=4, found={}, shot=null;
+  function signal(light,t,m,dd){
+    var c=C[m];
+    if (light==='lamp') return 300*t*Math.exp(-2*c*dd)/(dd*dd);
+    if (light==='mg') return MG*Math.exp(-2*c*dd)/(dd*dd);
+    return 0.5*t*Math.exp(-c*dd);
+  }
+  function sharp(light,t){ if (light==='mg') return 1; return t<=30 ? 1 : t<=300 ? 0.55 : 0.25; }
+  function judge(light,t,m,dd){
+    var s=signal(light,t,m,dd), b=sharp(light,t);
+    var exp = s<E0*0.1 ? 'empty' : s<E0 ? 'under' : s>OVER ? 'over' : 'ok';
+    return {s:s, b:b, exp:exp, good: exp==='ok' && b===1};
+  }
+  document.querySelectorAll('#lab .seg').forEach(function(b){
+    b.onclick=function(){
+      var k=b.dataset.k, v=b.dataset.v; st[k]= k==='t' ? +v : v;
+      document.querySelectorAll('#lab .seg[data-k="'+k+'"]').forEach(function(x){ x.setAttribute('aria-pressed', x===b?'true':'false'); });
+      shot=null; draw();
+    };
+  });
+  var rng=$('labD');
+  function setD(){ d=DIST[+rng.value]; $('labDv').textContent=d+' м'; shot=null; draw(); }
+  rng.oninput=setD;
+
+  var cv=$('labCv'), cx=cv.getContext('2d'), W=0, H=300;
+  function fit(){
+    var w=Math.round(cv.clientWidth)||640, rr=window.devicePixelRatio||1;
+    if (w===W && cv.width===Math.round(w*rr)) return;
+    W=w; cv.width=Math.round(W*rr); cv.height=Math.round(H*rr); cx.setTransform(rr,0,0,rr,0,0);
+  }
+  function diver(x,y,s,col){
+    cx.fillStyle=col;
+    cx.beginPath(); cx.arc(x,y-30*s,9*s,0,7); cx.fill();
+    cx.fillRect(x-8*s,y-22*s,16*s,26*s);
+    cx.fillRect(x-8*s,y+4*s,6*s,20*s); cx.fillRect(x+2*s,y+4*s,6*s,20*s);
+    cx.fillRect(x-14*s,y-18*s,6*s,18*s); cx.fillRect(x+8*s,y-18*s,6*s,18*s);
+  }
+  function draw(){
+    fit();
+    var narrow=W<520, tw= narrow ? W : W*0.6;
+    var c=C[st.m], waterTop=34, floor=H-26;
+    /* бак */
+    var g=cx.createLinearGradient(0,waterTop,0,floor);
+    g.addColorStop(0, st.m==='jan' ? '#2f6f8f' : '#4f7a5a'); g.addColorStop(1, st.m==='jan' ? '#123447' : '#26392a');
+    cx.fillStyle='#0f1820'; cx.fillRect(0,0,W,H);
+    var bw= narrow ? W : tw;
+    cx.fillStyle=g; cx.fillRect(0,waterTop,bw,floor-waterTop);
+    cx.fillStyle='#4a3b28'; cx.fillRect(0,floor,bw,H-floor);
+    cx.fillStyle='#cfd8df'; cx.font='12px Inter, sans-serif'; cx.textAlign='left'; cx.textBaseline='middle';
+    cx.fillText(narrow ? 'Бак: камера → водолаз' : 'Школьный бак (вид сбоку)', 10, 16);
+    /* камера и свет */
+    var camX=22, y0=floor-40;
+    cx.fillStyle='#d9c08a'; cx.fillRect(camX-12,y0-14,26,22); cx.fillStyle='#222'; cx.beginPath(); cx.arc(camX+16,y0-3,5,0,7); cx.fill();
+    if (st.light==='lamp'){ cx.fillStyle='#fff4c2'; cx.fillRect(camX-8,y0-44,14,18); }
+    if (st.light==='mg'){ cx.fillStyle='#ffffff'; cx.beginPath(); cx.arc(camX,y0-36,7,0,7); cx.fill(); }
+    if (st.light==='day'){ cx.fillStyle='rgba(255,250,210,.25)'; cx.fillRect(0,waterTop,bw,10); }
+    /* водолаз: шкала по корню расстояния, чтобы 1–55 м поместились */
+    var maxX=bw-30, px=camX+40+(maxX-camX-40)*Math.sqrt((d-1)/54);
+    var vis=Math.exp(-c*d*0.9);
+    diver(px, floor-26, 0.9, 'rgba(230,236,240,'+(0.15+0.85*vis).toFixed(2)+')');
+    cx.fillStyle='#cfd8df'; cx.textAlign='center'; cx.fillText(d+' м', px, floor+13);
+    /* пластинка */
+    if (!narrow){
+      var x0=tw+18, w0=W-x0-12, h0=H-60, py=34;
+      cx.fillStyle='#cfd8df'; cx.textAlign='left'; cx.fillText('Пластинка', x0, 16);
+      cx.fillStyle='#e9e4d8'; cx.fillRect(x0,py,w0,h0);
+      if (shot) plate(x0,py,w0,h0);
+      else { cx.fillStyle='#8a8577'; cx.textAlign='center'; cx.fillText('ещё не снято', x0+w0/2, py+h0/2); }
+    } else if (shot){
+      var x1=W-120, y1=40; cx.fillStyle='#e9e4d8'; cx.fillRect(x1,y1,108,130); plate(x1,y1,108,130);
+    }
+  }
+  function plate(x0,y0,w0,h0){
+    var r=shot, lvl=Math.max(0,Math.min(1,Math.log(1+r.s/E0)/Math.log(1+OVER/E0)));
+    cx.save(); cx.beginPath(); cx.rect(x0,y0,w0,h0); cx.clip();
+    var base= r.exp==='over' ? 235 : Math.round(40+150*lvl);
+    cx.fillStyle='rgb('+base+','+base+','+Math.round(base*0.95)+')'; cx.fillRect(x0,y0,w0,h0);
+    if (r.exp!=='empty'){
+      var a= r.exp==='under' ? 0.25 : r.exp==='over' ? 0.15 : 0.9;
+      var blur = r.b===1 ? 0 : r.b>0.5 ? 3 : 7;
+      if ('filter' in cx) cx.filter= blur ? 'blur('+blur+'px)' : 'none';
+      diver(x0+w0/2, y0+h0*0.62, Math.min(w0,h0)/90, 'rgba(25,25,22,'+a+')');
+      if (!('filter' in cx) && blur){ for (var i=1;i<=3;i++) diver(x0+w0/2+i*blur*0.6, y0+h0*0.62, Math.min(w0,h0)/90, 'rgba(25,25,22,'+(a/4)+')'); }
+      cx.filter='none';
+    }
+    cx.restore();
+  }
+  function setFound(){
+    function yn(k){ return found[k] ? 'да' : 'нет'; }
+    $('labFound').textContent='Найдено: чёткий кадр с лампой — '+yn('lab')+'; неясный снимок Бутана — '+yn('why0')+'; предел 50–60 м — '+yn('why1')+'; июльская муть — '+yn('why2')+'.';
+  }
+  function hit(k,p){ if(!found[k]){ found[k]=1; award(k,p); return true; } return false; }
+  function msg(t,cls){ var m=$('labMsg'); m.className='lab-msg'+(cls?' '+cls:''); m.textContent=t; }
+  function take(){
+    var r=judge(st.light,st.t,st.m,d); shot=r; draw();
+    var M={
+      lab:['Чёткий кадр: лампа Сименса сбоку аппарата, водолаз в '+d+' м, выдержка '+lbl(st.t)+'. Так снимал Есипов, и вся разница с Бутаном, писал он, — в силе света.','ok'],
+      why0:['Дневной свет в баке слаб, выдержка '+lbl(st.t)+' — и за это время вода, ил и сам водолаз сдвинулись. Снимок вышел «весьма неясным», как у первого аппарата Бутана с выдержкой 20–30 минут.','bad'],
+      why1:['Пластинка пустая: в '+d+' м вода поглотила все лучи, идущие от водолаза. Есипов писал, что даже в чистой воде предмет в 50–60 метрах не даёт на пластинке никакого изображения.','bad'],
+      why2:['Июль: те же свет, выдержка и '+d+' м, а кадра нет — в январе он бы вышел. Летом вода мутнее всего, «особенно в июле», и свет гаснет быстрее.','bad']};
+    var news=[];
+    if (st.light==='lamp' && r.good && hit('lab',30)) news.push('lab');
+    if (st.light==='day' && st.t>=300 && r.exp!=='empty' && r.b<1 && hit('why0',10)) news.push('why0');
+    if (d>=45 && r.exp==='empty' && hit('why1',10)) news.push('why1');
+    var jan=judge(st.light,st.t,'jan',d);
+    if (st.m==='jul' && !r.good && jan.good && hit('why2',10)) news.push('why2');
+    setFound();
+    if (news.length) { msg(M[news[0]][0],M[news[0]][1]); return; }
+    if (r.good) msg(st.light==='mg' ? 'Чётко: вспышка магния останавливает движение. Но её хватает лишь на 2–3 метра — так снимал Шидловский.' : M.lab[0],'ok');
+    else if (r.exp==='empty') msg('Пластинка пустая: до неё почти не дошло света. Подойди ближе, возьми свет сильнее или выдержку длиннее.','bad');
+    else if (r.exp==='under') msg('Недодержка: силуэт еле виден. Света мало — подойди ближе или увеличь выдержку.','bad');
+    else if (r.exp==='over') msg('Передержка: пластинка почти белая. Уменьши выдержку или отойди дальше.','bad');
+    else msg('Смаз: за '+lbl(st.t)+' вода и водолаз успели сдвинуться. Подводный пейзаж «никогда не бывает в покое».','bad');
+  }
+  function lbl(t){ return t<60 ? t+' с' : (t/60)+' мин'; }
+  $('labGo').onclick=take;
+  $('labEsipov').onclick=function(){
+    st={light:'lamp', t:1, m:'jan'}; rng.value=3; setD();
+    document.querySelectorAll('#lab .seg').forEach(function(x){ var v=x.dataset.k==='t' ? +x.dataset.v : x.dataset.v; x.setAttribute('aria-pressed', st[x.dataset.k]===v ? 'true':'false'); });
+    msg('Лампа Сименса сбоку аппарата, январская вода, водолаз в 4 метрах. Подбери выдержку и снимай.','');
+  };
+  window.addEventListener('resize', draw);
+  setD();
+
+  /* ── ВИКТОРИНА ── один ответ на вопрос; дистракторы сверены с источниками страницы. */
+  var Q = [
+    {q:'Когда и кто начал первые в России опыты фотографирования под водой?', o:['В 1856 году, капитан подводной лодки','В конце 1893 года, доктор Шидловский в Кронштадте','В 1902 году, редакция энциклопедии'], a:1,
+     e:'«Первые опыты Ф. под водой в России начали производиться в кронштадтской водолазной школе… в конце 1893 г., д-ром Шидловским».'},
+    {q:'Как решили, что под водой почти невозможно навести объектив на резкость?', o:['Брали аппарат с постоянным фокусом','Наводили по звуку','Снимали только на поверхности'], a:0,
+     e:'«Наведение на фокус под водой дело крайне трудное и почти невыполнимое; поэтому надо брать аппарат с постоянным фокусом».'},
+    {q:'Что школа выставила в Нижнем Новгороде в 1896 году?', o:['Целый альбом подводных снимков','Один удачный подводный снимок Шидловского','Подводную кинокамеру'], a:1,
+     e:'Снимок Шидловского был пока единственным, достаточно удачным для выставки.'},
+    {q:'Каким светом снимал Есипов?', o:['Свечой в стеклянном колпаке','Дуговой лампой Сименса до 300 свечей','Только солнцем'], a:1,
+     e:'«Д-р Есипов работал с одной лампой Сименса, силой до 300 свечей, которую он помещал сбоку аппарата».'},
+    {q:'Кто написал статью «Фотографирование под водой» в словаре Брокгауза и Ефрона?', o:['Луи Бутан','Сам Есипов, подписавшись «Н. А. Е.»','Вячеслав Срезневский'], a:1,
+     e:'Подпись «Н. А. Е.» в списке авторов ЭСБЭ — Николай Анемподистович Есипов.'}
+  ];
+  var qb = $('quizBox');
+  Q.forEach(function(it, qi){
+    var wrap = document.createElement('div');
+    var h = document.createElement('p'); h.className='quiz-q'; h.textContent=(qi+1)+'. '+it.q; wrap.appendChild(h);
+    var exp = document.createElement('div'); exp.className='exp'; exp.setAttribute('aria-live','polite');
+    var btns = it.o.map(function(txt, oi){
+      var b=document.createElement('button'); b.type='button'; b.className='opt'; b.textContent=txt;
+      b.onclick=function(){
+        if (wrap.dataset.done) return; wrap.dataset.done='1';
+        btns.forEach(function(x,xi){ x.disabled=true; if (xi===it.a) x.classList.add('correct'); });
+        if (oi===it.a){ award('q'+qi,8); exp.textContent='Верно. '+it.e; }
+        else { b.classList.add('wrong'); exp.textContent='Не совсем. '+it.e; }
+        exp.classList.add('show');
+      };
+      wrap.appendChild(b); return b;
+    });
+    wrap.appendChild(exp); qb.appendChild(wrap);
+  });
+})();
+</script>
+<script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
+<script>window.MUSEUM_CHROME={
+  museum:{title:'Что изобрели русские первыми в мире',href:'index.html'},
+  share:{title:'Снимок со дна: подводная фотография в Кронштадте — музей «Что изобрели русские первыми в мире»',
+         text:'С конца 1893 года в Кронштадтской водолазной школе учились фотографировать под водой. Что Россия дала миру раньше всех — день за днём.'},
+  prev:{href:'day-25jan-korsakov.html',title:'25 января · Машины Корсакова'},
+  next:{href:'day-27jan-pentium.html',title:'27 января · Архитектура Pentium III'},
+  all:{href:'index.html',label:'Все изобретения'},
+  city:'../../index.html',
+  random:['day-01jan-cabletv.html','day-02jan-luna1.html','day-03jan-anosov.html','day-04jan-pilchikov.html','day-05jan-shukhov.html','day-06jan-orlov.html','day-08jan-icebreaker.html','day-09jan-blinov.html','day-10jan-britnev.html','day-11jan-kostovich.html','day-12jan-r7.html','day-13jan-k278.html','day-14jan-lira.html','day-15jan-kovalevskaya.html','day-16jan-soyuz45.html','day-19jan-kantorovich.html','day-21jan-obninsk.html','day-22jan-landau.html','day-23jan-umov.html','day-24jan-k162.html','day-25jan-korsakov.html','day-26jan-podvodnaya.html','day-27jan-pentium.html','day-30jan-kotelnikov.html','day-03feb-luna9.html','day-18mar-leonov.html','day-15may-mechnikov.html','day-16jun-tereshkova.html','day-26sep-pavlov.html','day-15nov-buran.html','day-25nov-pirogov.html','day-01dec-lobachevsky.html','day-14dec-laser.html']
+};</script>
+<script src="../../assets/museum-chrome.js"></script>
+<script>window.MUSEUM_SUPPORT={museum:'Что изобрели русские первыми в мире'};</script>
+<script src="../../assets/museum-support.js"></script>
+<script src="calendar-izobreteniya.js"></script>
+<script>window.MUSEUM_CALENDAR_INITIAL='01-26';</script>
+<script src="../../assets/museum-calendar-month.js"></script>
+<script>window.MUSEUM_RETURN={riddle:{q:"Почему Есипов считал, что его подводные снимки лишь немного хуже снимков Бутана?",a:"Есипов писал, что вся разница зависит единственно от силы источника света: у него была одна лампа Сименса до 300 свечей, у Бутана — две дуговые лампы по 20 ампер.",src:"Н. А. Есипов, «Фотографирование под водой», ЭСБЭ, т. XXXVI (1902)"}};</script>
+<script src="../../assets/museum-return.js" data-museum="izobreteniya" data-day="01-26"></script>
+<script defer src="../../assets/analytics.js"></script>
+<script>window.MUSEUM_AUDIOGUIDE={
+  audioSrc:"audio-guide-podvodnaya-ru.mp3",
+  durationLabel:"2 минуты 13 секунд",
+  lead:"Голос ведёт по залу подводной фотографии Кронштадта: от водолаза на гравюре 1892 года до статьи, которую Есипов сам написал для энциклопедии. Шесть остановок, на каждой — что искать глазами. Слушать можно фоном, пока читаешь статью ниже.",
+  stops:[
+    {t:0,mark:"0:00",title:"Водолаз ищет"},
+    {t:22,mark:"0:22",title:"Школа в Кронштадте"},
+    {t:40,mark:"0:40",title:"Магний в баке"},
+    {t:60,mark:"1:00",title:"Лампа Есипова"},
+    {t:86,mark:"1:26",title:"Бутан во Франции"},
+    {t:105,mark:"1:45",title:"Подпись Н. А. Е."}
+  ],
+  transcript:[
+    "<p>«Хождение водолаза по грунту, когда он ищет» — ЭСБЭ, «Водолазное дело», т. VI, 1892, фиг. 13.</p>",
+    "<p>«Кронштадтская водолазная школа, 1882; подводный электрический фонарь лейтенанта Тверитинова — ЭСБЭ, 1892, фиг. 23».</p>",
+    "<p>«Конец 1893 — опыты д-ра Ф. Я. Шидловского, вспышка магния; июль 1896 — снимок на Всероссийской выставке в Нижнем Новгороде».</p>",
+    "<p>«С 1896 — Н. А. Есипов; постоянный фокус; лампа Сименса до 300 свечей; выставка судоходства в „Аквариуме“, 8.03–11.04.1897, при участии Л. А. Родионова».</p>",
+    "<p>«Луи Бутан, Баньюльс, 1893; первое печатное сообщение — Comptes Rendus, 1894; книга „La photographie sous-marine“ — 1900».</p>",
+    "<p>«ЭСБЭ, т. XXXVI (1902), с. 400–401, статья „Фотографирование под водой“, подпись „Н. А. Е.“ — Н. А. Есипов; предел 50–60 м».</p>"
+  ],
+  note:"Озвучено синтезом речи — временно, до записи голосом автора музея."
+};</script>
+<script src="../../assets/museum-audioguide.js"></script>
+</body>
+</html>
