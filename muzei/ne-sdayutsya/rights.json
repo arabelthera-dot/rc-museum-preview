@@ -174,5 +174,39 @@
     "checked": "2026-10-16",
     "modified": "уменьшено для веба (пропорции оригинала совпадают), содержание не менялось",
     "taken_by": "помощник K1: сверка кадра с оригиналом Руниверса по изображению, score 1.000 (строка из заявки #57, claude3)"
+  },
+  {
+    "id": "osovets-fort-1915",
+    "title": "File:Fort 1 w rosyjskiej twierdzy Osowiec (1915-1916)(2).jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Fort_1_w_rosyjskiej_twierdzy_Osowiec_%281915-1916%29%282%29.jpg",
+    "artist": "Unknown author Unknown author",
+    "license": "Public domain",
+    "description": "",
+    "file": "osovets-fort-1915.jpg",
+    "sha256": "2286d3d51e80aec76e266ac24f95a9cfdb21cc1eb1ac75719c11110097f40195",
+    "checked": "2026-10-16",
+    "source": "https://commons.wikimedia.org/wiki/File:Fort_1_w_rosyjskiej_twierdzy_Osowiec_(1915-1916)(2).jpg",
+    "modified": "уменьшено для веба",
+    "taken_by": "tools/audit-prava.py (commons_meta, judge_kadr, entry); сверка кадра по изображению, score 0.999",
+    "date": "between 1915 and 1916 date QS:P,+1915-00-00T00:00:00Z/8,P1319,+1915-00-00T00:00:00Z/9,P1326,+1916-00-00T00:00:00Z/9",
+    "credit": "https://polona.pl/item-view/4d5a06fe-3600-4324-aded-72288b3875bd?page=0",
+    "osnovanie": "общественное достояние: анонимная открытка 1915–1916 гг. (Polona), опубликована более 70 лет назад (ГК РФ ст. 1281 п. 3); шаблон страницы файла PD-old-70"
+  },
+  {
+    "id": "sirotinin-f22-pushka",
+    "title": "File:76 mm divisional gun M1936 (F-22) pic1.JPG",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/91/76_mm_divisional_gun_M1936_%28F-22%29_pic1.JPG",
+    "artist": "Alf van Beem",
+    "license": "Public domain",
+    "description": "",
+    "file": "sirotinin-f22-pushka.jpg",
+    "sha256": "32d53db131656cde163beab6e6889bf1137749f573bd80648422dba3787f1665",
+    "checked": "2026-10-16",
+    "source": "https://commons.wikimedia.org/wiki/File:76_mm_divisional_gun_M1936_(F-22)_pic1.JPG",
+    "modified": "уменьшено для веба",
+    "taken_by": "tools/audit-prava.py (commons_meta, judge_kadr, entry); сверка кадра по изображению, score 0.996",
+    "date": "2016-08-12 10:34:40",
+    "credit": "Own work",
+    "osnovanie": "общественное достояние: автор снимка (Alf van Beem, 2016) сам передал его в общественное достояние — шаблон страницы файла PD-self; пушка — экспонат, не произведение искусства"
   }
 ]
