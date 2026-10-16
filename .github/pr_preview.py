@@ -6,7 +6,7 @@
 Закрыта заявка — папка pr-N удаляется. Ссылка — комментарием в заявке.
 Выключатель: переменная репо PR_PREVIEW_OFF=1.
 """
-import json, os, posixpath, re, shutil, subprocess, sys, urllib.parse, urllib.request
+import json, os, posixpath, random, re, shutil, subprocess, sys, time, urllib.parse, urllib.request
 
 REPO = os.environ.get("GITHUB_REPOSITORY", "arabelthera-dot/rc-museum-preview")
 LIVE = "https://arabelthera-dot.github.io/rc-museum-preview/"
@@ -102,12 +102,15 @@ def main():
     git("add", "-A")
     if subprocess.run(["git", "diff", "--cached", "--quiet"], cwd="site").returncode:
         git("commit", "-qm", f"pr-{N}: {'обновлено' if pr['state'] == 'open' else 'заявка закрыта, удалено'}")
-        for _ in range(5):  # соседние заявки пишут в то же репо параллельно
+        # соседние заявки пишут в то же репо параллельно (пачка переоткрытий — десятки сразу):
+        # повтор с растущей паузой и случайным разбросом, чтобы прогоны не толкались в одну секунду
+        for i in range(10):
             if subprocess.run(["git", "push", "-q", "origin", "HEAD:main"], cwd="site").returncode == 0:
                 break
+            time.sleep(min(30, 2 ** i) * random.uniform(0.5, 1.5))
             git("pull", "-q", "--rebase", "origin", "main")
         else:
-            sys.exit("push не прошёл 5 раз")
+            sys.exit("push не прошёл 10 раз")
     if pr["state"] != "open":
         return
     body = MARK + f"\n**Предпросмотр заявки** — страницы открываются с телефона до слияния (обновление ~1 мин после пуша):\n"
