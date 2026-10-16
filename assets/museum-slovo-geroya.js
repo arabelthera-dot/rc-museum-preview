@@ -75,8 +75,7 @@
   var scratches = CFG.wall.map(function(item, i){
     var body = '<span class="sg-num">Надпись ' + ['I','II','III','IV','V','VI'][i] + '</span>' + esc(item.text);
     if(item.text2) body += '\n' + esc(item.text2);
-    return '<button class="sg-scratch" data-i="' + i + '" type="button" '
-      + 'aria-label="' + esc('Надпись ' + ['I','II','III','IV','V','VI'][i] + ': ' + item.text) + '">'
+    return '<button class="sg-scratch" data-i="' + i + '" type="button">'
       + body.replace(/\n/g, '<br>') + '</button>';
   }).join('');
 
@@ -89,7 +88,7 @@
     + '<div class="sg-wall">' + scratches + '</div>'
     + '<div class="sg-detail" id="sgDetail"></div>'
     + (CFG.hint ? '<p style="font-size:12px;color:var(--muted);margin:12px 0 0">' + esc(CFG.hint) + '</p>' : '')
-    + (CFG.note ? '<p style="font-size:12px;color:var(--muted);opacity:.75;margin:8px 0 0">' + esc(CFG.note) + '</p>' : '')
+    + (CFG.note ? '<p style="font-size:12px;color:var(--muted);margin:8px 0 0">' + esc(CFG.note) + '</p>' : '')
     + '</div>';
 
   var detail = document.getElementById('sgDetail');

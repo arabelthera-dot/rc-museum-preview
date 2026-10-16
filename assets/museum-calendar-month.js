@@ -25,7 +25,7 @@
     '#calbox .calhead{display:flex;align-items:center;justify-content:space-between;gap:10px;' +
       'border-bottom:1px solid rgba(212,175,55,.25);padding-bottom:9px}' +
     '#calbox .calmname{font-family:Georgia,serif;font-size:17px;color:var(--gold);flex:1;text-align:center}' +
-    '#calbox .calmname i{display:block;font-style:normal;font-size:11.5px;opacity:.5;color:var(--txt);margin-top:2px}' +
+    '#calbox .calmname i{display:block;font-style:normal;font-size:11.5px;opacity:.75;color:var(--txt);margin-top:2px}' +
     '#calbox .calnav{flex:none;width:38px;height:38px;border-radius:50%;cursor:pointer;' +
       'background:rgba(233,227,211,.06);border:1px solid rgba(212,175,55,.3);color:var(--gold);' +
       'font-size:18px;line-height:1;display:flex;align-items:center;justify-content:center}' +
@@ -57,7 +57,7 @@
     '#calbox .calcard.empty h3{opacity:.7}' +
     '#calbox .caljump{background:none;border:none;padding:0;margin-top:8px;cursor:pointer;' +
       'color:var(--gold);font-size:13px;text-decoration:underline;font-family:inherit}' +
-    '#calbox .calfoot{font-size:12px;opacity:.5;margin-top:10px;text-align:center}';
+    '#calbox .calfoot{font-size:12px;opacity:.75;margin-top:10px;text-align:center}';
 
   function pad(n) { return (n < 10 ? '0' : '') + n; }
   function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;'); }

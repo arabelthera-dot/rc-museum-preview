@@ -95,9 +95,23 @@
   var PAGE_SERIF = SERIFS.test(FIRST) ? true
     : SANSES.test(FIRST) ? false
     : /(^|,)\s*serif\s*$/i.test(PF);
+  /* шрифт блока — только тот, что страница уже объявила (16.10.2026). Подгруженный движком
+     Inter приходил на календаре после первой отрисовки, по диапазонам (латиница, потом
+     кириллица): строки блока дважды переносились заново — CLS 0,14 при пороге 0,1.
+     Нет семейства у страницы — блок набран системным шрифтом того же рода и не перерисовывается
+     (как font-display: optional, web.dev «Optimize web fonts»). */
+  function declared(name){
+    if(doc.fonts && doc.fonts.forEach){
+      var hit = false;
+      doc.fonts.forEach(function(f){ if(f.family.replace(/["']/g, '') === name) hit = true; });
+      return hit;
+    }
+    return doc.documentElement.innerHTML.indexOf(name) >= 0;
+  }
+  var SANS = (declared('Inter') ? "'Inter'," : '') + "system-ui,-apple-system,'Segoe UI',sans-serif";
   var FONT = PAGE_SERIF
-    ? "'Inter',system-ui,-apple-system,'Segoe UI',sans-serif"   /* страница серифом → блок гротеском */
-    : "'Playfair Display',Georgia,serif";                        /* страница гротеском → блок серифом */
+    ? SANS                                                                       /* страница серифом → блок гротеском */
+    : (declared('Playfair Display') ? "'Playfair Display'," : '') + 'Georgia,serif'; /* страница гротеском → блок серифом */
   var FSIZE = PAGE_SERIF ? '16.5px' : '17px';
   var MSIZE = PAGE_SERIF ? '16px' : '16.5px';   /* мобильный: у серифа кегль крупнее по рисунку */
   var FTRACK = PAGE_SERIF ? '.1px' : '0';
@@ -112,18 +126,6 @@
   var BRD  = LIGHT ? 'rgba(150,116,30,.60)'  : 'rgba(201,168,76,.55)';
   var BTNB = LIGHT ? 'rgba(255,253,247,.92)' : 'rgba(18,21,28,.9)';
   var GLOW = LIGHT ? '0 2px 20px rgba(120,92,20,.14)' : '0 2px 22px rgba(0,0,0,.34),0 0 34px -14px rgba(201,168,76,.55)';
-
-  /* ── шрифт качаем только тот, которым будет набран блок, и только если его нет ── */
-  var NEED = PAGE_SERIF ? 'Inter' : 'Playfair';
-  if(doc.documentElement.innerHTML.indexOf(NEED) < 0){
-    var fl = doc.createElement('link');
-    fl.rel = 'stylesheet';
-    /* локальный fonts.css вместо fonts.googleapis.com (03.08): путь считаем от src самого движка,
-       страницы лежат в подпапках музеев */
-    var me = doc.currentScript || doc.querySelector('script[src*="museum-support"]');
-    fl.href = (me ? me.src.replace(/museum-support\.js.*$/, '') : '../assets/') + 'fonts.css';
-    doc.head.appendChild(fl);
-  }
 
   /* ── CSS: !important, иначе ручной CSS страницы перекрашивает блок в фон ── */
   var I = ' !important;';
@@ -145,7 +147,7 @@
   + 'border-radius:1px' + I + 'pointer-events:none' + I + '}'
   + '.support>*{position:relative' + I + '}'
   + ".support .sup-l{display:flex" + I + 'align-items:center' + I + 'gap:10px' + I
-  + "font-family:'Inter',system-ui,sans-serif" + I + 'font-size:10px' + I
+  + 'font-family:' + SANS + I + 'font-size:10px' + I
   + 'font-weight:700' + I + 'letter-spacing:3.4px' + I + 'text-transform:uppercase' + I
   + 'color:' + LBL + I + 'margin-bottom:11px' + I + '}'
   + ".support .sup-l::before{content:'❤'" + I + 'font-size:13px' + I + 'letter-spacing:0' + I + '}'
@@ -156,7 +158,7 @@
   + '.support b{color:' + ACC + I + 'font-weight:700' + I + '}'
   + '.support a{color:' + ACC + I + '}'
   + ".support .sup-btns{display:flex" + I + 'gap:10px' + I + 'flex-wrap:wrap' + I
-  + 'margin-top:15px' + I + "font-family:'Inter',system-ui,sans-serif" + I + '}'
+  + 'margin-top:15px' + I + 'font-family:' + SANS + I + '}'
   + '.support .sup-btns button,.support .sup-btns .sup-action{background:' + BTNB + I + 'border:1px solid ' + BRD + I
   + 'color:' + ACC + I + 'border-radius:22px' + I + 'padding:10px 17px' + I
   + 'font-size:14px' + I + 'cursor:pointer' + I + 'transition:background .2s' + I
@@ -167,7 +169,7 @@
   + '.support p{font-size:' + MSIZE + I + '}}'
   + "#heart{position:fixed;right:12px;bottom:82px;z-index:60;background:rgba(6,12,23,.92);border:1px solid rgba(201,168,76,.35);"
   + 'border-radius:26px;width:46px;height:46px;display:flex;align-items:center;justify-content:center;font-size:17px;'
-  + "color:#c8a24a;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.5);overflow:hidden;font-family:'Inter',system-ui,sans-serif;"
+  + "color:#c8a24a;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.5);overflow:hidden;font-family:" + SANS + ';'
   + 'transition:transform .35s ease,width .3s ease,opacity .3s ease}'
   + '#heart .lbl{display:none;white-space:nowrap;margin-left:7px;font-size:13px;letter-spacing:.3px}'
   + '#heart.wide{width:auto;padding:0 17px}#heart.wide .lbl{display:inline}'
