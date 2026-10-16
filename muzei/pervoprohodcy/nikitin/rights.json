@@ -191,5 +191,22 @@
     "source": "https://commons.wikimedia.org/wiki/File:Fortaleza_Chaul.png",
     "sha256": "5827606ab8f5336d48cbc98158142b73e8cfee1f0879ab7c92791727650d3d3f",
     "modified": "Web optimization, no content changes"
+  },
+  {
+    "id": "atlas-preview",
+    "title": "File:Fra Mauro World Map, c.1450 (1806 copy).jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Fra_Mauro_World_Map%2C_c.1450_%281806_copy%29.jpg",
+    "artist": "Fra Mauro (W. Fraser)",
+    "license": "Public domain",
+    "description": "",
+    "file": "atlas-preview.jpg",
+    "sha256": "c3b5f640911ddf9f42f687821cb1dd35097c066c3b0f7e6f0dbae80283a2249f",
+    "checked": "2026-10-16",
+    "source": "https://commons.wikimedia.org/wiki/File:Fra_Mauro_World_Map,_c.1450_(1806_copy).jpg",
+    "modified": "уменьшено для веба",
+    "taken_by": "tools/audit-prava.py (commons_meta, judge_kadr, entry); сверка кадра по изображению, score 1.000",
+    "date": "1450",
+    "credit": "http://www.bl.uk/magnificentmaps/map2.html",
+    "osnovanie": "срок охраны проверен по странице файла: {{PD-old-100}}"
   }
 ]
