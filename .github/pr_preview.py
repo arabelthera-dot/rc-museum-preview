@@ -6,7 +6,7 @@
 Закрыта заявка — папка pr-N удаляется. Ссылка — комментарием в заявке.
 Выключатель: переменная репо PR_PREVIEW_OFF=1.
 """
-import json, os, posixpath, re, shutil, subprocess, sys, urllib.parse, urllib.request
+import json, os, posixpath, random, re, shutil, subprocess, sys, time, urllib.parse, urllib.request
 
 REPO = os.environ.get("GITHUB_REPOSITORY", "arabelthera-dot/rc-museum-preview")
 LIVE = "https://arabelthera-dot.github.io/rc-museum-preview/"
@@ -48,7 +48,7 @@ def fix(page, val, changed):
 def rewrite(page, html, changed):
     def attr(m):
         name, q, val = m.group(1), m.group(2), m.group(3)
-        if name.lower() == "srcset":
+        if name.lower() in ("srcset", "imagesrcset", "data-srcset"):
             parts = []
             for p in val.split(","):
                 bits = p.strip().split(None, 1)
@@ -57,7 +57,7 @@ def rewrite(page, html, changed):
                 parts.append(" ".join(bits))
             return f"{name}={q}{', '.join(parts)}{q}"
         return f"{name}={q}{fix(page, val, changed)}{q}"
-    html = re.sub(r"\b(src|href|poster|data-src|srcset)=([\"'])(.*?)\2", attr, html, flags=re.I | re.S)
+    html = re.sub(r"\b(src|href|poster|data-src|srcset|imagesrcset|data-srcset)=([\"'])(.*?)\2", attr, html, flags=re.I | re.S)
     html = re.sub(r"url\((['\"]?)([^'\")]+)\1\)",
                   lambda m: f"url({m.group(1)}{fix(page, m.group(2), changed)}{m.group(1)})", html)
     return re.sub(r"<head([^>]*)>", r'<head\1><meta name="robots" content="noindex">'
@@ -98,16 +98,19 @@ def main():
         links = "".join(f'<li><a href="{p}">{p}</a></li>' for p in pages)
         with open(os.path.join(out, "index.html"), "w") as f:
             f.write(f'<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex">'
-                    f'<title>Заявка №{N}</title><h1>Заявка №{N}: {pr["title"]}</h1><ul>{links}</ul>')
+                    f'<meta name="rc-sha" content="{sha}"><title>Заявка №{N}</title><h1>Заявка №{N}: {pr["title"]}</h1><ul>{links}</ul>')
     git("add", "-A")
     if subprocess.run(["git", "diff", "--cached", "--quiet"], cwd="site").returncode:
         git("commit", "-qm", f"pr-{N}: {'обновлено' if pr['state'] == 'open' else 'заявка закрыта, удалено'}")
-        for _ in range(5):  # соседние заявки пишут в то же репо параллельно
+        # соседние заявки пишут в то же репо параллельно (пачка переоткрытий — десятки сразу):
+        # повтор с растущей паузой и случайным разбросом, чтобы прогоны не толкались в одну секунду
+        for i in range(10):
             if subprocess.run(["git", "push", "-q", "origin", "HEAD:main"], cwd="site").returncode == 0:
                 break
+            time.sleep(min(30, 2 ** i) * random.uniform(0.5, 1.5))
             git("pull", "-q", "--rebase", "origin", "main")
         else:
-            sys.exit("push не прошёл 5 раз")
+            sys.exit("push не прошёл 10 раз")
     if pr["state"] != "open":
         return
     body = MARK + f"\n**Предпросмотр заявки** — страницы открываются с телефона до слияния (обновление ~1 мин после пуша):\n"
