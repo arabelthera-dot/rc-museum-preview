@@ -37,6 +37,8 @@
 }
   </script>
   <!-- rc-meta:end -->
+<!-- обвязка museum-chrome.js: стили до первой отрисовки, последними в head — как раньше вставлял движок -->
+<link rel="stylesheet" href="../../assets/museum-chrome.css">
 </head>
 <body>
 
@@ -60,9 +62,9 @@
 <article class="scrolltelling" id="hero" aria-label="Брестская крепость — руины и монументы мемориала меняются по мере чтения">
   <div class="st-media">
     <div class="hero-scene st-stage">
-      <img class="st-scene active" src="brest-kholmskie-vorota.jpg" alt="Холмские ворота Брестской крепости — руины цитадели, изрытые снарядами">
-      <img class="st-scene" src="brest-zhazhda.jpg" alt="Скульптура «Жажда» мемориала «Брестская крепость-герой»: солдат тянется каской к воде" aria-hidden="true">
-      <img class="st-scene" src="brest-muzhestvo.jpg" alt="Главный монумент «Мужество» мемориала «Брестская крепость-герой»: лицо воина на фоне штыка-обелиска" aria-hidden="true">
+      <img class="st-scene active" src="brest-kholmskie-vorota.jpg" srcset="brest-kholmskie-vorota-720.webp 720w, brest-kholmskie-vorota-1280.webp 1280w" alt="Холмские ворота Брестской крепости — руины цитадели, изрытые снарядами" sizes="(min-width: 900px) 50vw, 100vw" width="1600" height="1066" fetchpriority="high">
+      <img class="st-scene" data-src="brest-zhazhda.jpg" data-srcset="brest-zhazhda-720.webp 720w, brest-zhazhda-1280.webp 1280w" alt="Скульптура «Жажда» мемориала «Брестская крепость-герой»: солдат тянется каской к воде" aria-hidden="true" sizes="(min-width: 900px) 50vw, 100vw" width="1600" height="1200">
+      <img class="st-scene" data-src="brest-muzhestvo.jpg" data-srcset="brest-muzhestvo-720.webp 720w, brest-muzhestvo-1280.webp 1280w" alt="Главный монумент «Мужество» мемориала «Брестская крепость-герой»: лицо воина на фоне штыка-обелиска" aria-hidden="true" sizes="(min-width: 900px) 50vw, 100vw" width="1600" height="1057">
     </div>
     <div class="st-cap">
       <p class="st-cap-layer active"><span class="st-src">Холмские ворота цитадели — мемориал «Брестская крепость-герой»</span>В первый час войны гарнизон остался без связи и командования — и всё равно принял бой.</p>
@@ -136,7 +138,7 @@
     <!-- ── КАРТА (M-72) ── -->
     <div class="route-map">
       <div class="rm-head">Первый удар — и очаги, что не смолкли</div>
-      <svg viewBox="0 0 760 210" role="img" aria-label="Брестская крепость: Западный Буг — Цитадель — Восточный форт — река Мухавец">
+      <svg viewBox="0 0 760 210" role="group" aria-label="Брестская крепость: Западный Буг — Цитадель — Восточный форт — река Мухавец">
         <defs>
           <marker id="rmArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
             <path d="M0,0 L10,5 L0,10 z" fill="#c9a84c"/>
@@ -144,22 +146,22 @@
         </defs>
         <path d="M120,150 C 180,120 210,95 250,88 S 400,70 480,70 S 600,120 660,160"
               fill="none" stroke="rgba(201,168,76,.45)" stroke-width="2" stroke-dasharray="6 7" marker-end="url(#rmArrow)"/>
-        <g class="rm-node" data-i="0" tabindex="0" role="button" aria-label="Западный Буг — граница, отсюда ударил враг">
+        <g class="rm-node" data-i="0" tabindex="0" role="button">
           <circle cx="120" cy="150" r="12" fill="#0b1624" stroke="#c9a84c" stroke-width="2"/>
           <text x="120" y="178" text-anchor="middle" class="rm-label">Западный Буг</text>
           <text x="120" y="194" text-anchor="middle" class="rm-sub">22 июня · 03:15</text>
         </g>
-        <g class="rm-node" data-i="1" tabindex="0" role="button" aria-label="Цитадель — центр крепости, первый удар">
+        <g class="rm-node" data-i="1" tabindex="0" role="button">
           <circle cx="250" cy="88" r="12" fill="#0b1624" stroke="#c9a84c" stroke-width="2"/>
           <text x="250" y="60" text-anchor="middle" class="rm-label">Цитадель</text>
           <text x="250" y="76" text-anchor="middle" class="rm-sub">центр крепости · первый удар</text>
         </g>
-        <g class="rm-node" data-i="2" tabindex="0" role="button" aria-label="Восточный форт — держался до 23 июля">
+        <g class="rm-node" data-i="2" tabindex="0" role="button">
           <circle cx="480" cy="70" r="15" fill="#0b1624" stroke="#c9a84c" stroke-width="2"/>
           <text x="480" y="38" text-anchor="middle" class="rm-label">Восточный форт</text>
           <text x="480" y="54" text-anchor="middle" class="rm-sub">майор Гаврилов · до 23 июля</text>
         </g>
-        <g class="rm-node" data-i="3" tabindex="0" role="button" aria-label="Река Мухавец — подойти к воде нельзя">
+        <g class="rm-node" data-i="3" tabindex="0" role="button">
           <circle cx="660" cy="160" r="12" fill="#0b1624" stroke="#c9a84c" stroke-width="2"/>
           <text x="660" y="188" text-anchor="middle" class="rm-label">Мухавец</text>
           <text x="660" y="204" text-anchor="middle" class="rm-sub">река под огнём · «Жажда»</text>
@@ -210,7 +212,7 @@
     <p>22 июня 1941 года, около четырёх утра. Крепость на западной границе, у слияния Мухавца и Западного Буга, принимает один из первых ударов войны. Артиллерия и авиация бьют по казармам, складам, домам комсостава. За считанные часы гарнизон теряет связь с командованием, а склады боеприпасов и продовольствия уничтожены.</p>
     <p>Положение то, в котором части сдаются: окружение, отсутствие единого командования, ни воды, ни хлеба. Но защитники делают иначе — <b>кто где успел, тот там и встаёт</b>. Оборону держат разрозненные очаги: солдаты и командиры, оставшиеся без приказа и без надежды на помощь.</p>
     <figure class="fig fig-side">
-      <img src="brest-zhazhda.jpg" alt="Скульптура «Жажда» мемориала «Брестская крепость-герой»: солдат тянется каской к воде" loading="lazy">
+      <img src="brest-zhazhda.jpg" srcset="brest-zhazhda-720.webp 720w, brest-zhazhda-1280.webp 1280w" alt="Скульптура «Жажда» мемориала «Брестская крепость-герой»: солдат тянется каской к воде" loading="lazy" sizes="(min-width: 840px) 792px, calc(100vw - 48px)" width="1600" height="1200">
       <figcaption>Скульптура «Жажда», мемориал «Брестская крепость-герой». Воды в крепости не было: река простреливалась, водопровод разбит. Люди держались под огнём и под жаждой.</figcaption>
     </figure>
     <p>Очагов много, и у каждого — своё имя. Майор Пётр Гаврилов руководит обороной Восточного форта и <b>держится дольше всех</b> — пленён лишь 23 июля, на 32-й день войны, тяжелораненым и истощённым. Комиссар Ефим Фомин, лейтенант Андрей Кижеватов, капитан Иван Зубачёв — они <b>не выходили из боя, пока могли</b>.</p>
@@ -256,7 +258,7 @@
       <p>Надпись подлинна, но точность даты оспаривается. Подаём её как текст надписи, а не как доказанную дату обороны. Точно известно одно: и в июле крепость <b>не смолчала</b>.</p>
     </details>
     <figure class="fig" style="max-width:420px;margin-top:20px">
-      <img src="brest-muzhestvo.jpg" alt="Главный монумент «Мужество» мемориала «Брестская крепость-герой»: лицо воина на фоне штыка-обелиска" loading="lazy">
+      <img src="brest-muzhestvo.jpg" srcset="brest-muzhestvo-720.webp 720w, brest-muzhestvo-1280.webp 1280w" alt="Главный монумент «Мужество» мемориала «Брестская крепость-герой»: лицо воина на фоне штыка-обелиска" loading="lazy" sizes="(min-width: 840px) 792px, calc(100vw - 48px)" width="1600" height="1057">
       <figcaption>Главный монумент «Мужество», мемориал «Брестская крепость-герой». Фото мемориального комплекса, свободная лицензия (Wikimedia Commons).</figcaption>
     </figure>
     <div class="src">Источники: мемориальный комплекс «Брестская крепость-герой» (brest-fortress.by) · Портал «История.РФ» (history.ru) · С. С. Смирнов «Брестская крепость» · местные и федеральные СМИ.</div>
@@ -326,7 +328,7 @@
 <footer><div class="wrap">
   <div class="slog">Подвиг — это выбор, а не итог боя</div>
   Русская цивилизация · «Русские не сдаются» · 2026<br>
-  Нашли неточность? <a href="mailto:arabelthera@gmail.com?subject=Ошибка на странице Брестской крепости" style="color:rgba(217,164,65,.6)">Сообщите нам</a> — проверим по источникам.
+  Нашли неточность? <a href="mailto:arabelthera@gmail.com?subject=Ошибка на странице Брестской крепости">Сообщите нам</a> — проверим по источникам.
 </div></footer>
 
 <div id="heart" title="Поддержать проект">❤<span class="lbl">Поддержать проект</span></div>

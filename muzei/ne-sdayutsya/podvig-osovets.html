@@ -11,7 +11,7 @@
 <style>@media(max-width:640px){.hero-scene{height:26vh;min-height:200px;max-height:260px}}</style>
 <!-- rc-meta:start -->
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="description" content="6 августа 1915 года после газовой атаки отравленный гарнизон крепости Осовец поднялся в контратаку и обратил врага в бегство. «Атака мертвецов» — подвиг тех, кто выбрал не сдаться. Музей «Русские не сдаются».">
+  <meta name="description" content="6 августа 1915 года после газовой атаки отравленный гарнизон крепости Осовец поднялся в контратаку и обратил врага в бегство. «Атака мертвецов» — подвиг тех, кто выбрал не сдаться.">
   <link rel="canonical" href="https://arabelthera-dot.github.io/rc-museum-preview/muzei/ne-sdayutsya/podvig-osovets.html">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Русская цивилизация">
@@ -37,6 +37,8 @@
 }
   </script>
   <!-- rc-meta:end -->
+<!-- обвязка museum-chrome.js: стили до первой отрисовки, последними в head — как раньше вставлял движок -->
+<link rel="stylesheet" href="../../assets/museum-chrome.css">
 </head>
 <body>
 
@@ -60,9 +62,9 @@
 <article class="scrolltelling" id="hero" aria-label="Крепость Осовец — руины фортов и бункер меняются по мере чтения">
   <div class="st-media">
     <div class="hero-scene st-stage">
-      <img class="st-scene active" src="osovets-fort-centralny.jpg" alt="Центральный форт крепости Осовец, современный вид — руины">
-      <img class="st-scene" src="osovets-fort-1915.jpg" alt="Форт № 1 крепости Осовец, снимок 1915–1916 годов, после боёв" aria-hidden="true">
-      <img class="st-scene" src="osovets-bunkier.jpg" alt="Бетонный бункер в земляном валу крепости Осовец, современный вид" aria-hidden="true">
+      <img class="st-scene active" src="osovets-fort-centralny.jpg" srcset="osovets-fort-centralny-720.webp 720w, osovets-fort-centralny-1280.webp 1280w" alt="Центральный форт крепости Осовец, современный вид — руины" sizes="(min-width: 900px) 50vw, 100vw" width="1280" height="857" fetchpriority="high">
+      <img class="st-scene" data-src="osovets-fort-1915.jpg" data-srcset="osovets-fort-1915-720.webp 720w, osovets-fort-1915-1280.webp 1280w" alt="Форт № 1 крепости Осовец, снимок 1915–1916 годов, после боёв" aria-hidden="true" sizes="(min-width: 900px) 50vw, 100vw" width="1280" height="914">
+      <img class="st-scene" data-src="osovets-bunkier.jpg" data-srcset="osovets-bunkier-720.webp 720w, osovets-bunkier-1000.webp 1000w" alt="Бетонный бункер в земляном валу крепости Осовец, современный вид" aria-hidden="true" sizes="(min-width: 900px) 50vw, 100vw" width="1000" height="669">
     </div>
     <div class="st-cap">
       <p class="st-cap-layer active"><span class="st-src">Центральный форт крепости Осовец, современный вид</span>6 августа 1915 года к позициям ползёт зелёное облако газа — противогазов у гарнизона нет.</p>
@@ -155,7 +157,7 @@
     <!-- ── КАРТА (M-72) ── -->
     <div class="route-map">
       <div class="rm-head">Газ пришёл на позиции — и куда ударили в ответ</div>
-      <svg viewBox="0 0 760 210" role="img" aria-label="Крепость Осовец: река Бобр — Сосненская позиция — железная дорога — Центральный форт">
+      <svg viewBox="0 0 760 210" role="group" aria-label="Крепость Осовец: река Бобр — Сосненская позиция — железная дорога — Центральный форт">
         <defs>
           <marker id="rmArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
             <path d="M0,0 L10,5 L0,10 z" fill="#c9a84c"/>
@@ -163,22 +165,22 @@
         </defs>
         <path d="M120,150 C 180,120 210,95 250,88 S 400,70 480,70 S 600,120 660,160"
               fill="none" stroke="rgba(201,168,76,.45)" stroke-width="2" stroke-dasharray="6 7" marker-end="url(#rmArrow)"/>
-        <g class="rm-node" data-i="0" tabindex="0" role="button" aria-label="Река Бобр — болота, обход невозможен">
+        <g class="rm-node" data-i="0" tabindex="0" role="button">
           <circle cx="120" cy="150" r="12" fill="#0b1624" stroke="#c9a84c" stroke-width="2"/>
           <text x="120" y="178" text-anchor="middle" class="rm-label">Река Бобр</text>
           <text x="120" y="194" text-anchor="middle" class="rm-sub">болота · обход невозможен</text>
         </g>
-        <g class="rm-node" data-i="1" tabindex="0" role="button" aria-label="Сосненская позиция — сюда пришёл газ">
+        <g class="rm-node" data-i="1" tabindex="0" role="button">
           <circle cx="250" cy="88" r="12" fill="#0b1624" stroke="#c9a84c" stroke-width="2"/>
           <text x="250" y="60" text-anchor="middle" class="rm-label">Сосненская позиция</text>
           <text x="250" y="76" text-anchor="middle" class="rm-sub">сюда пришёл газ</text>
         </g>
-        <g class="rm-node" data-i="2" tabindex="0" role="button" aria-label="Железная дорога — удар 13-й роты">
+        <g class="rm-node" data-i="2" tabindex="0" role="button">
           <circle cx="480" cy="70" r="15" fill="#0b1624" stroke="#c9a84c" stroke-width="2"/>
           <text x="480" y="38" text-anchor="middle" class="rm-label">Железная дорога</text>
           <text x="480" y="54" text-anchor="middle" class="rm-sub">удар 13-й роты</text>
         </g>
-        <g class="rm-node" data-i="3" tabindex="0" role="button" aria-label="Центральный форт — сердце крепости">
+        <g class="rm-node" data-i="3" tabindex="0" role="button">
           <circle cx="660" cy="160" r="12" fill="#0b1624" stroke="#c9a84c" stroke-width="2"/>
           <text x="660" y="188" text-anchor="middle" class="rm-label">Центральный форт</text>
           <text x="660" y="204" text-anchor="middle" class="rm-sub">сердце крепости</text>
@@ -231,7 +233,7 @@
     <p>Газовая волна прошла вглубь на двадцать километров. Сразу выбыло из строя больше шестнадцати сотен защитников; несколько рот — почти полностью. Казалось, оборонять уже некому. Но уцелевшие бойцы 13-й роты 226-го Землянского полка — около шестидесяти человек, отравленных, с мокрыми тряпками вместо противогазов — <b>поднимаются в штыковую</b>.</p>
     <p>Ведёт их подпоручик Владимир Котлинский; получив смертельное ранение, он передаёт команду подпоручику Владиславу Стржеминскому. Рядом — 14-я рота, сзади бьёт уцелевшая артиллерия. Немецкая пехота, уверенная, что впереди уже никого нет, <b>не принимает боя и бежит</b> — многие гибнут на своих же проволочных заграждениях.</p>
     <figure class="fig fig-side">
-      <img src="osovets-brzhzovskiy.jpg" alt="Генерал-лейтенант Николай Александрович Бржозовский, комендант крепости Осовец" loading="lazy">
+      <img src="osovets-brzhzovskiy.jpg" srcset="osovets-brzhzovskiy-623.webp 623w" alt="Генерал-лейтенант Николай Александрович Бржозовский, комендант крепости Осовец" loading="lazy" sizes="(min-width: 840px) 792px, calc(100vw - 48px)" width="623" height="842">
       <figcaption>Генерал-лейтенант Николай Бржозовский, комендант крепости Осовец. Держал крепость все полгода обороны.</figcaption>
     </figure>
     <p>Крепость, которую просили продержать двое суток, <b>не сдалась и за полгода</b>. Штурмом её так и не взяли: оставлена по приказу при общем отходе армии из Польши, укрепления взорваны. А контратака отравленных осталась в памяти под именем, которое придумают позже, — «атака мертвецов».</p>
@@ -358,7 +360,7 @@
 <footer><div class="wrap">
   <div class="slog">Подвиг — это выбор, а не итог боя</div>
   Русская цивилизация · «Русские не сдаются» · 2026<br>
-  Нашли неточность? <a href="mailto:arabelthera@gmail.com?subject=Ошибка на странице Крепости Осовец" style="color:rgba(217,164,65,.6)">Сообщите нам</a> — проверим по источникам.
+  Нашли неточность? <a href="mailto:arabelthera@gmail.com?subject=Ошибка на странице Крепости Осовец">Сообщите нам</a> — проверим по источникам.
 </div></footer>
 
 <div id="heart" title="Поддержать проект">❤<span class="lbl">Поддержать проект</span></div>

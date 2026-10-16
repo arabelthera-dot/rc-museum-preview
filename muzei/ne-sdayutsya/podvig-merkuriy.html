@@ -37,6 +37,8 @@
 }
   </script>
   <!-- rc-meta:end -->
+<!-- обвязка museum-chrome.js: стили до первой отрисовки, последними в head — как раньше вставлял движок -->
+<link rel="stylesheet" href="../../assets/museum-chrome.css">
 </head>
 <body>
 
@@ -60,9 +62,9 @@
 <article class="scrolltelling" id="hero" aria-label="Бриг «Меркурий» — картина меняется по мере чтения">
   <div class="st-media">
     <div class="hero-scene st-stage">
-      <img class="st-scene active" src="merkuriy-aivazovsky-1892.jpg" alt="Картина Айвазовского «Бриг „Меркурий“, атакованный двумя турецкими кораблями» (1892): малый бриг под огнём двух турецких линейных кораблей">
-      <img class="st-scene" src="merkuriy-aivazovsky-1848.jpg" alt="Картина Айвазовского «Бриг „Меркурий“ после победы над двумя турецкими кораблями» (1848): избитый бриг встречается с русской эскадрой" aria-hidden="true">
-      <img class="st-scene" src="merkuriy-kazarsky-pamyatnik.jpg" alt="Памятник Казарскому в Севастополе: колонна с кораблём наверху" aria-hidden="true">
+      <img class="st-scene active" src="merkuriy-aivazovsky-1892.jpg" srcset="merkuriy-aivazovsky-1892-720.webp 720w, merkuriy-aivazovsky-1892-1280.webp 1280w" alt="Картина Айвазовского «Бриг „Меркурий“, атакованный двумя турецкими кораблями» (1892): малый бриг под огнём двух турецких линейных кораблей" sizes="(min-width: 900px) 50vw, 100vw" width="1920" height="1211" fetchpriority="high">
+      <img class="st-scene" data-src="merkuriy-aivazovsky-1848.jpg" data-srcset="merkuriy-aivazovsky-1848-720.webp 720w, merkuriy-aivazovsky-1848-1280.webp 1280w" alt="Картина Айвазовского «Бриг „Меркурий“ после победы над двумя турецкими кораблями» (1848): избитый бриг встречается с русской эскадрой" aria-hidden="true" sizes="(min-width: 900px) 50vw, 100vw" width="1920" height="1216">
+      <img class="st-scene" data-src="merkuriy-kazarsky-pamyatnik.jpg" data-srcset="merkuriy-kazarsky-pamyatnik-720.webp 720w, merkuriy-kazarsky-pamyatnik-1200.webp 1200w" alt="Памятник Казарскому в Севастополе: колонна с кораблём наверху" aria-hidden="true" sizes="(min-width: 900px) 50vw, 100vw" width="1200" height="1600">
     </div>
     <div class="st-cap">
       <p class="st-cap-layer active"><span class="st-src">Иван Айвазовский, «Бриг „Меркурий“, атакованный двумя турецкими кораблями», 1892</span>Художник писал бой через шестьдесят с лишним лет по донесениям и документам: бриг, идущий под огнём двух линейных кораблей, которых больше и во много раз сильнее.</p>
@@ -137,7 +139,7 @@
     <!-- ── КАРТА ПУТИ (M-72) ── -->
     <div class="route-map">
       <div class="rm-head">Путь одного брига</div>
-      <svg viewBox="0 0 760 210" role="img" aria-label="Путь брига «Меркурий»: дозор у Босфора — погоня — бой — возвращение к эскадре">
+      <svg viewBox="0 0 760 210" role="group" aria-label="Путь брига «Меркурий»: дозор у Босфора — погоня — бой — возвращение к эскадре">
         <defs>
           <marker id="rmArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
             <path d="M0,0 L10,5 L0,10 z" fill="#c9a84c"/>
@@ -145,22 +147,22 @@
         </defs>
         <path d="M120,175 C 250,168 280,130 330,120 S 450,90 520,80 S 600,68 655,60"
               fill="none" stroke="rgba(201,168,76,.45)" stroke-width="2" stroke-dasharray="6 7" marker-end="url(#rmArrow)"/>
-        <g class="rm-node" data-i="0" tabindex="0" role="button" aria-label="Босфор — дозор замечает эскадру">
+        <g class="rm-node" data-i="0" tabindex="0" role="button">
           <circle cx="120" cy="175" r="12" fill="#0b1624" stroke="#c9a84c" stroke-width="2"/>
           <text x="120" y="138" text-anchor="middle" class="rm-label">Босфор</text>
           <text x="120" y="154" text-anchor="middle" class="rm-sub">дозор: эскадра замечена</text>
         </g>
-        <g class="rm-node" data-i="1" tabindex="0" role="button" aria-label="Погоня — два линкора нагоняют">
+        <g class="rm-node" data-i="1" tabindex="0" role="button">
           <circle cx="330" cy="120" r="14" fill="#0b1624" stroke="#c9a84c" stroke-width="2"/>
           <text x="330" y="92" text-anchor="middle" class="rm-label">Погоня</text>
           <text x="330" y="108" text-anchor="middle" class="rm-sub">два линкора нагоняют</text>
         </g>
-        <g class="rm-node" data-i="2" tabindex="0" role="button" aria-label="Бой — четыре часа под огнём">
+        <g class="rm-node" data-i="2" tabindex="0" role="button">
           <circle cx="520" cy="80" r="12" fill="#0b1624" stroke="#c9a84c" stroke-width="2"/>
           <text x="520" y="52" text-anchor="middle" class="rm-label">Бой</text>
           <text x="520" y="68" text-anchor="middle" class="rm-sub">четыре часа под огнём</text>
         </g>
-        <g class="rm-node" data-i="3" tabindex="0" role="button" aria-label="Своя эскадра — возвращение, флаг не спущен">
+        <g class="rm-node" data-i="3" tabindex="0" role="button">
           <circle cx="655" cy="60" r="12" fill="#0b1624" stroke="#c9a84c" stroke-width="2"/>
           <text x="655" y="32" text-anchor="middle" class="rm-label">Своя эскадра</text>
           <text x="655" y="48" text-anchor="middle" class="rm-sub">флаг не спущен</text>
@@ -244,7 +246,7 @@
     <p>14 (26) мая 1829 года. Дозор из трёх кораблей у Босфора замечает турецкую эскадру. Тихоходный «Меркурий» отстаёт, и два линейных корабля — «Селимие» и «Реал-бей» — пускаются за ним в погоню. Положение то, в котором корабли сдаются: перевес десятикратный, уходить некуда, помощи нет.</p>
     <p>Казарский собирает военный совет. Решение короткое: <b>принять бой</b>, а если удержать корабль не удастся — <b>взорвать его</b>. Плен исключён заранее.</p>
     <figure class="fig fig-side">
-      <img src="merkuriy-aivazovsky-1848.jpg" alt="Картина Айвазовского «Бриг „Меркурий“ после победы над двумя турецкими кораблями» (1848): избитый бриг встречается с русской эскадрой" loading="lazy">
+      <img src="merkuriy-aivazovsky-1848.jpg" srcset="merkuriy-aivazovsky-1848-720.webp 720w, merkuriy-aivazovsky-1848-1280.webp 1280w" alt="Картина Айвазовского «Бриг „Меркурий“ после победы над двумя турецкими кораблями» (1848): избитый бриг встречается с русской эскадрой" loading="lazy" sizes="(min-width: 840px) 792px, calc(100vw - 48px)" width="1920" height="1216">
       <figcaption>Иван Айвазовский, «Бриг „Меркурий“ после победы над двумя турецкими судами встречается с русской эскадрой», 1848. Малый бриг с избитым рангоутом возвращается к своим — флаг не спущен.</figcaption>
     </figure>
     <p>Четыре часа малый бриг вёл бой с двумя линкорами. Моряки били по мачтам и снастям, лишая противника хода. «Селимие» лёг в дрейф, «Реал-бей» потерял управление. Турки прекратили погоню — и «Меркурий», весь в пробоинах, пошёл к своей эскадре.</p>
@@ -287,7 +289,7 @@
       <p>Свои потери известны точно: четверо убитых, шестеро–восемь раненых, командир контужен, двадцать с лишним пробоин. Потери турок в разных источниках расходятся — их мы не утверждаем. Сам бой и его исход не оспаривает никто.</p>
     </details>
     <figure class="fig" style="max-width:420px;margin-top:20px">
-      <img src="merkuriy-kazarsky-pamyatnik.jpg" alt="Памятник Казарскому в Севастополе: колонна с кораблём наверху" loading="lazy">
+      <img src="merkuriy-kazarsky-pamyatnik.jpg" srcset="merkuriy-kazarsky-pamyatnik-720.webp 720w, merkuriy-kazarsky-pamyatnik-1200.webp 1200w" alt="Памятник Казарскому в Севастополе: колонна с кораблём наверху" loading="lazy" sizes="(min-width: 840px) 792px, calc(100vw - 48px)" width="1200" height="1600">
       <figcaption>Памятник Казарскому в Севастополе, 1839. Надпись: «Казарскому. Потомству в пример». Фото: Cmapm, 2007, CC BY 3.0.</figcaption>
     </figure>
     <div class="src">Источники: sevmuseum.ru · cbs.torzhok.tverlib.ru · nasledie.pravda.ru · ar.culture.ru (Artefact) · navalmuseum.ru (ЦВММ).</div>
@@ -356,7 +358,7 @@
 <footer><div class="wrap">
   <div class="slog">Подвиг — это выбор, а не итог боя</div>
   Русская цивилизация · «Русские не сдаются» · 2026<br>
-  Нашли неточность? <a href="mailto:arabelthera@gmail.com?subject=Ошибка на странице Меркурия" style="color:rgba(217,164,65,.6)">Сообщите нам</a> — проверим по источникам.
+  Нашли неточность? <a href="mailto:arabelthera@gmail.com?subject=Ошибка на странице Меркурия">Сообщите нам</a> — проверим по источникам.
 </div></footer>
 
 <div id="heart" title="Поддержать проект">❤<span class="lbl">Поддержать проект</span></div>

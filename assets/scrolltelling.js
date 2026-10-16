@@ -2,7 +2,9 @@
  * Закреплённая картина меняет сцену и подпись по мере прокрутки шагов `.st-step`,
  * а активная сцена мягко наезжает (scale 1→1.1) по прогрессу прокрутки своего шага.
  * Индикатор (точки) и счётчик «сцена N/3» генерируются движком — разметка в HTML
- * не дублируется. Повторяющийся блок: подключается на каждой странице дня,
+ * не дублируется. Скрытые сцены хранят адреса в data-src/data-srcset (performance.md):
+ * движок подставляет их при показе сцены и заранее для следующей — с первой прокрутки.
+ * Повторяющийся блок: подключается на каждой странице дня,
  * разметка — в HTML, логика и стили — общие. Движок не пишется заново на страницу.
  */
 (function () {
@@ -48,8 +50,17 @@
       capBox.appendChild(counter);
     }
 
+    function reveal(n) {
+      var img = scenes[n];
+      if (!img) return;
+      if (img.dataset.srcset) { img.setAttribute('srcset', img.dataset.srcset); delete img.dataset.srcset; }
+      if (img.dataset.src) { img.setAttribute('src', img.dataset.src); delete img.dataset.src; }
+    }
+
     function paint(idx) {
       current = idx;
+      reveal(idx);
+      if (idx > 0) reveal(idx + 1);
       for (i = 0; i < scenes.length; i++) {
         scenes[i].classList.toggle('active', i === idx);
         scenes[i].setAttribute('aria-hidden', i === idx ? 'false' : 'true');
@@ -104,6 +115,7 @@
       window.addEventListener('scroll', onScroll, { passive: true });
       window.addEventListener('resize', onScroll, { passive: true });
     }
+    window.addEventListener('scroll', function () { reveal(1); }, { passive: true, once: true });
     paint(0);
   }
 

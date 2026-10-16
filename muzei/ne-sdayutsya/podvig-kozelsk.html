@@ -37,6 +37,8 @@
 }
   </script>
   <!-- rc-meta:end -->
+<!-- обвязка museum-chrome.js: стили до первой отрисовки, последними в head — как раньше вставлял движок -->
+<link rel="stylesheet" href="../../assets/museum-chrome.css">
 </head>
 <body>
 
@@ -60,9 +62,9 @@
 <article class="scrolltelling" id="hero" aria-label="Оборона Козельска — миниатюра меняется по мере чтения">
   <div class="st-media">
     <div class="hero-scene st-stage">
-      <img class="st-scene active" src="kozelsk-miniatura-1-zahvat.jpg" alt="Миниатюра Лицевого летописного свода «Татары начинают захват Козельска»: татары бьются у стен малого города">
-      <img class="st-scene" src="kozelsk-miniatura-2-vylazka.jpg" alt="Миниатюра Лицевого летописного свода «Горожане выходят против татар»: защитники Козельска на вылазке режутся с врагом" aria-hidden="true">
-      <img class="st-scene" src="kozelsk-miniatura-3-step.jpg" alt="Миниатюра Лицевого летописного свода «Взяв Козельск, хан Батый идёт в Половецкую землю»: Батый уводит войско в степь" aria-hidden="true">
+      <img class="st-scene active" src="kozelsk-miniatura-1-zahvat.jpg" srcset="kozelsk-miniatura-1-zahvat-720.webp 720w, kozelsk-miniatura-1-zahvat-1280.webp 1280w" alt="Миниатюра Лицевого летописного свода «Татары начинают захват Козельска»: татары бьются у стен малого города" sizes="(min-width: 900px) 50vw, 100vw" width="1600" height="2100" fetchpriority="high">
+      <img class="st-scene" data-src="kozelsk-miniatura-2-vylazka.jpg" data-srcset="kozelsk-miniatura-2-vylazka-720.webp 720w, kozelsk-miniatura-2-vylazka-1280.webp 1280w" alt="Миниатюра Лицевого летописного свода «Горожане выходят против татар»: защитники Козельска на вылазке режутся с врагом" aria-hidden="true" sizes="(min-width: 900px) 50vw, 100vw" width="1600" height="2216">
+      <img class="st-scene" data-src="kozelsk-miniatura-3-step.jpg" data-srcset="kozelsk-miniatura-3-step-720.webp 720w, kozelsk-miniatura-3-step-1280.webp 1280w" alt="Миниатюра Лицевого летописного свода «Взяв Козельск, хан Батый идёт в Половецкую землю»: Батый уводит войско в степь" aria-hidden="true" sizes="(min-width: 900px) 50vw, 100vw" width="1600" height="2033">
     </div>
     <div class="st-cap">
       <p class="st-cap-layer active"><span class="st-src">Лицевой летописный свод, XVI век — «Татары начинают захват Козельска»</span>Враг у стен малого города. Миниатюра XVI века изображает осаду, о которой летописец рассказал по следам событий.</p>
@@ -137,7 +139,7 @@
     <!-- ── КАРТА ПУТИ (M-72) ── -->
     <div class="route-map">
       <div class="rm-head">Путь орды — и город, что его остановил</div>
-      <svg viewBox="0 0 760 210" role="img" aria-label="Путь орды Батыя: Рязань — Владимир — Козельск — уход в Половецкую степь">
+      <svg viewBox="0 0 760 210" role="group" aria-label="Путь орды Батыя: Рязань — Владимир — Козельск — уход в Половецкую степь">
         <defs>
           <marker id="rmArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
             <path d="M0,0 L10,5 L0,10 z" fill="#c9a84c"/>
@@ -145,22 +147,22 @@
         </defs>
         <path d="M120,150 C 180,120 210,95 250,88 S 400,70 480,70 S 600,120 660,160"
               fill="none" stroke="rgba(201,168,76,.45)" stroke-width="2" stroke-dasharray="6 7" marker-end="url(#rmArrow)"/>
-        <g class="rm-node" data-i="0" tabindex="0" role="button" aria-label="Рязань — пала за пять дней">
+        <g class="rm-node" data-i="0" tabindex="0" role="button">
           <circle cx="120" cy="150" r="12" fill="#0b1624" stroke="#c9a84c" stroke-width="2"/>
           <text x="120" y="178" text-anchor="middle" class="rm-label">Рязань</text>
           <text x="120" y="194" text-anchor="middle" class="rm-sub">декабрь 1237 · 5 дней</text>
         </g>
-        <g class="rm-node" data-i="1" tabindex="0" role="button" aria-label="Владимир — пал за шесть дней">
+        <g class="rm-node" data-i="1" tabindex="0" role="button">
           <circle cx="250" cy="88" r="12" fill="#0b1624" stroke="#c9a84c" stroke-width="2"/>
           <text x="250" y="60" text-anchor="middle" class="rm-label">Владимир</text>
           <text x="250" y="76" text-anchor="middle" class="rm-sub">февраль 1238 · 6 дней</text>
         </g>
-        <g class="rm-node" data-i="2" tabindex="0" role="button" aria-label="Козельск — держался семь недель">
+        <g class="rm-node" data-i="2" tabindex="0" role="button">
           <circle cx="480" cy="70" r="15" fill="#0b1624" stroke="#c9a84c" stroke-width="2"/>
           <text x="480" y="38" text-anchor="middle" class="rm-label">Козельск</text>
           <text x="480" y="54" text-anchor="middle" class="rm-sub">весна 1238 · 7 недель</text>
         </g>
-        <g class="rm-node" data-i="3" tabindex="0" role="button" aria-label="Половецкая степь — Батый уходит">
+        <g class="rm-node" data-i="3" tabindex="0" role="button">
           <circle cx="660" cy="160" r="12" fill="#0b1624" stroke="#c9a84c" stroke-width="2"/>
           <text x="660" y="188" text-anchor="middle" class="rm-label">Половецкая степь</text>
           <text x="660" y="204" text-anchor="middle" class="rm-sub">Батый уходит</text>
@@ -243,7 +245,7 @@
     <p>Весна 1238 года. После Рязани и Владимира орда Батыя движется дальше и подходит к малому городу Козельску на реке Жиздре. Городок невелик, но место крепкое: холм в междуречье Жиздры и Другусны, ров, а весенний разлив превращает его почти в остров. В городе княжит отрок Василий — летопись зовёт его «юным», учёные считают, что ему было около двенадцати лет.</p>
     <p>Положение то, в котором города сдаются: Рязань уже сожжена, Владимир пал, помощи ждать неоткуда. Жители собираются на вече и постановляют иначе: <b>не вдатися Батыю</b>. «Хоть князь наш молод, — говорят они, — но положим жизнь свою за него». За веру и за отрока-князя, которого больше некому защитить.</p>
     <figure class="fig fig-side">
-      <img src="kozelsk-miniatura-2-vylazka.jpg" alt="Миниатюра Лицевого летописного свода «Горожане выходят против татар»: защитники Козельска режутся с врагом на вылазке" loading="lazy">
+      <img src="kozelsk-miniatura-2-vylazka.jpg" srcset="kozelsk-miniatura-2-vylazka-720.webp 720w, kozelsk-miniatura-2-vylazka-1280.webp 1280w" alt="Миниатюра Лицевого летописного свода «Горожане выходят против татар»: защитники Козельска режутся с врагом на вылазке" loading="lazy" sizes="(min-width: 840px) 792px, calc(100vw - 48px)" width="1600" height="2216">
       <figcaption>Лицевой летописный свод, XVI век — «Горожане выходят против татар». Козляне не отсиживаются за стенами, а выходят на вылазку и режутся с врагом.</figcaption>
     </figure>
     <p>Батый подходит и застревает под стенами. Не на день, не на два — <b>на семь недель</b>. Персидский историк Рашид-ад-Дин, служивший ханам, запишет: город не могли взять два месяца, пока не подоспели ещё два отряда. Защитники не ждут штурма — они сами выходят: в вылазке иссекают камнемётные орудия, «пращи», ломавшие их стены, и, по летописи, перебивают до четырёх тысяч врагов. Сами полегли все.</p>
@@ -288,7 +290,7 @@
       <p>Цифра потерь осаждавших из летописи — до четырёх тысяч — скорее всего завышена, как это обычно бывает в летописных рассказах о битвах. Сам факт вылазки и уничтожения осадных машин сомнений не вызывает.</p>
     </details>
     <figure class="fig" style="max-width:420px;margin-top:20px">
-      <img src="kozelsk-miniatura-3-step.jpg" alt="Миниатюра Лицевого летописного свода «Взяв Козельск, хан Батый идёт в Половецкую землю»: Батый уводит войско в степь" loading="lazy">
+      <img src="kozelsk-miniatura-3-step.jpg" srcset="kozelsk-miniatura-3-step-720.webp 720w, kozelsk-miniatura-3-step-1280.webp 1280w" alt="Миниатюра Лицевого летописного свода «Взяв Козельск, хан Батый идёт в Половецкую землю»: Батый уводит войско в степь" loading="lazy" sizes="(min-width: 840px) 792px, calc(100vw - 48px)" width="1600" height="2033">
       <figcaption>Лицевой летописный свод, XVI век — «Взяв Козельск, хан Батый идёт в Половецкую землю». Миниатюры свода Ивана Грозного, 1565–1576, общественное достояние.</figcaption>
     </figure>
     <div class="src">Источники: Ипатьевская (Галицко-Волынская) летопись · Никоновская летопись · Рашид-ад-Дин «Сборник летописей» · Каргалов В. В. · ИРЛИ РАН.</div>
@@ -358,7 +360,7 @@
 <footer><div class="wrap">
   <div class="slog">Подвиг — это выбор, а не итог боя</div>
   Русская цивилизация · «Русские не сдаются» · 2026<br>
-  Нашли неточность? <a href="mailto:arabelthera@gmail.com?subject=Ошибка на странице Козельска" style="color:rgba(217,164,65,.6)">Сообщите нам</a> — проверим по источникам.
+  Нашли неточность? <a href="mailto:arabelthera@gmail.com?subject=Ошибка на странице Козельска">Сообщите нам</a> — проверим по источникам.
 </div></footer>
 
 <div id="heart" title="Поддержать проект">❤<span class="lbl">Поддержать проект</span></div>
