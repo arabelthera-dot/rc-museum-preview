@@ -100,5 +100,22 @@
     "date": "1850 date QS:P571,+1850-00-00T00:00:00Z/9",
     "credit": "https://archive.org/details/Hermitage_Paintings",
     "osnovanie": "срок охраны проверен по странице файла: {{PD-Art|PD-old-auto-expired|deathyear=1900}}; автор ум. 1900 — охрана в России истекла 1 января 1971 (ГК РФ ст. 1281)"
+  },
+  {
+    "id": "cmp-whistler",
+    "title": "File:James Abbott McNeill Whistler - Nocturne- Blue and Silver - Chelsea - Google Art Project.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/James_Abbott_McNeill_Whistler_-_Nocturne-_Blue_and_Silver_-_Chelsea_-_Google_Art_Project.jpg",
+    "artist": "James McNeill Whistler (1834–1903)",
+    "license": "Public domain",
+    "description": "Nocturne: Blue and Silver – Chelsea, 1871; масло, дерево, 608×502 мм; Tate Britain, T01571 (по странице файла Commons)",
+    "file": "cmp-whistler.jpg",
+    "sha256": "74c64e75d5db8070de2615adff10586ea0abc57aa2c88c6ed321d8a9e6e4fc70",
+    "checked": "2026-10-16",
+    "source": "https://commons.wikimedia.org/wiki/File:James_Abbott_McNeill_Whistler_-_Nocturne-_Blue_and_Silver_-_Chelsea_-_Google_Art_Project.jpg",
+    "modified": "уменьшено для веба: мастер 2951×2419 → 560×459, JPEG q85 (Pillow)",
+    "taken_by": "tools/audit-prava.py vzyat (commons_meta, judge_kadr, entry); название, год и держатель — по странице файла Commons; кадр сверен по изображению глазами",
+    "date": "1871",
+    "credit": "http://www.tate.org.uk/art/artworks/whistler-nocturne-blue-and-silver-chelsea-t01571",
+    "osnovanie": "срок охраны проверен по странице файла: {{PD-Art|PD-old-100-1923|deathyear=1903}}; автор ум. 1903 — охрана в России истекла 1 января 1974 (ГК РФ ст. 1281)"
   }
 ]

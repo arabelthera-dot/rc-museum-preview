@@ -42,6 +42,10 @@ fi
 
 "$PY" "$TOOLS/audit-precommit.py" || exit 1
 [ -f "$TOOLS/audit-structure.py" ] && { "$PY" "$TOOLS/audit-structure.py" --staged || exit 1; }
+# Сигнатура медиа (16.10.2026): под cmp-whistler.jpg 2,5 месяца лежала HTML-страница Commons.
+# Сторож медиа общий; здесь — только его проверка формата, правило веса превью не включено.
+grep -q -- '--signatury' "$TOOLS/check-media.py" 2>/dev/null && \
+  { "$PY" "$TOOLS/check-media.py" --signatury "$repo_root" || exit 1; }
 # Турникет хуков (Сергей, 25.09.2026, пункт А): новый красный хук не проходит.
 [ -f "$TOOLS/hook-gate.py" ] && { "$PY" "$TOOLS/hook-gate.py" || exit 1; }
 exit 0
