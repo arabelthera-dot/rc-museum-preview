@@ -1,6 +1,9 @@
 name: links
 # Битые ссылки в страницах, которые меняет заявка — lychee без сети (мировой стандарт,
 # замена самодельного tools/check-links.py, опись самоделок 12.10).
+# Полные адреса своего сайта (https://arabelthera-dot.github.io/rc-museum-preview/…) проверяются как
+# файлы ветки (--remap): без этого --offline их пропускал — пустая обложка #99, og/og-default.jpg на 75 стр.
+# og:image/twitter:image lychee не читает — отдельный шаг ниже.
 # Красный крестик видно в заявке, слияние он не держит, пока проверку не сделали обязательной.
 # Выключатель — переменная репо LINKS_CHECK_OFF=1.
 on:
@@ -37,6 +40,21 @@ jobs:
       - uses: lycheeverse/lychee-action@v2
         if: steps.pages.outputs.list != ''
         with:
-          args: --offline --no-progress --index-files index.html ${{ steps.pages.outputs.list }}
+          args: >-
+            --offline --no-progress --index-files index.html
+            --remap 'https://arabelthera-dot\.github\.io/rc-museum-preview/(.*) file://${{ github.workspace }}/$1'
+            ${{ steps.pages.outputs.list }}
           fail: true
           jobSummary: true
+      - name: картинки для соцсетей (og:image, twitter:image)
+        if: steps.pages.outputs.list != ''
+        run: |
+          for f in ${{ steps.pages.outputs.list }}; do
+            grep -oE '<meta[^>]+(og:image|twitter:image)[^>]*>' "$f" \
+              | grep -oE 'content="https://arabelthera-dot\.github\.io/rc-museum-preview/[^"?#]+' \
+              | sed 's#^content="https://arabelthera-dot.github.io/rc-museum-preview/##' \
+              | while read -r img; do
+                  [ -f "$img" ] || { echo "::error file=$f::нет файла $img" >&2; echo x; }
+                done
+          done > og-bad.txt
+          grep -c '^x$' og-bad.txt && exit 1 || echo "og:image — всё на месте"
