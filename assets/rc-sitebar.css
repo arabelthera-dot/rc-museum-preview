@@ -1,0 +1,61 @@
+/* Единая верхняя полоса навигации (Сергей 17.10): одна строка, касание ≥44 px (Apple HIG, WCAG 2.5.8),
+   липкая частично — прячется при прокрутке вниз, появляется вверх (rc-sitebar.js). Классы с префиксом rc-sb,
+   специфичность повышена: полные страницы дней несут свои стили на nav/a/ol/li. */
+@property --rc-bar-vis{syntax:'<length>';inherits:true;initial-value:0px}
+html{transition:--rc-bar-vis .3s ease}
+nav.rc-sitebar{position:sticky;top:0;z-index:80;box-sizing:border-box;height:52px;margin:0;padding:0 12px;
+  background:#060d18;border-bottom:1px solid rgba(201,168,76,.28);display:flex;align-items:center;
+  transform:translateY(0);transition:transform .3s ease;
+  font:400 15px/1.2 'Inter',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;letter-spacing:0;text-align:left}
+nav.rc-sitebar.rc-sb-hidden{transform:translateY(-100%)}
+nav.rc-sitebar ol{display:flex;align-items:center;gap:8px;min-width:0;width:100%;max-width:1200px;margin:0 auto;padding:0;list-style:none;white-space:nowrap}
+nav.rc-sitebar li{display:flex;align-items:center;min-width:0;margin:0;padding:0;list-style:none;color:#e8dcc0}
+nav.rc-sitebar li::marker{content:none}
+nav.rc-sitebar li + li::before{content:'›';flex:none;margin-right:8px;color:rgba(201,168,76,.7);font-size:16px}
+nav.rc-sitebar .rc-sb-link{display:inline-flex;align-items:center;box-sizing:border-box;min-height:44px;padding:0 6px;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%;border-radius:8px;
+  color:#e8dcc0;text-decoration:none;font:inherit;background:none;border:0}
+nav.rc-sitebar a.rc-sb-link{color:#d9b95c}
+nav.rc-sitebar a.rc-sb-link:hover{background:rgba(201,168,76,.14);text-decoration:underline}
+nav.rc-sitebar a.rc-sb-link:focus-visible{outline:2px solid #d9b95c;outline-offset:-2px}
+nav.rc-sitebar li:first-child{flex:none}
+nav.rc-sitebar li.rc-sb-m{flex:0 1 auto}
+nav.rc-sitebar li.rc-sb-here{flex:0 100 auto;opacity:.75}
+/* .rc-sb-link — inline-flex: многоточие нужно у текстового узла, поэтому блок-обёртка */
+nav.rc-sitebar .rc-sb-museum,nav.rc-sitebar .rc-sb-here .rc-sb-link{display:block;line-height:44px}
+@media (max-width:600px){
+  nav.rc-sitebar{padding:0 6px;font-size:15px}
+  nav.rc-sitebar li.rc-sb-here{display:none}
+  /* Имя музея на телефоне читается целиком (17.10): корневой пункт «Русская цивилизация ›» убран,
+     шрифт меньше, строка одна — полоса не растёт выше 52 px (замер glazami «шапка ≤56, одна») */
+  nav.rc-sitebar li:first-child:not(:last-child){display:none}
+  nav.rc-sitebar li:first-child + li::before{display:none}
+  nav.rc-sitebar{font-size:14px}
+  nav.rc-sitebar li.rc-sb-m{flex:1 1 auto}
+}
+@media (prefers-reduced-motion:reduce){
+  html{transition:none}
+  nav.rc-sitebar{transition:none}
+}
+/* ── Замер «глазами посетителя», телефон 390×844 (17.10): общие правила для всех страниц с полосой ── */
+/* п.3 — одна шапка: старые шапки и крошки полных страниц дней скрыты, их заменяет полоса */
+body:has(> nav.rc-sitebar) > header.top,
+body:has(> nav.rc-sitebar) nav.crumbs,
+body:has(> nav.rc-sitebar) .wrap.crumbs,
+body:has(> nav.rc-sitebar) .backbtn{display:none!important}
+@media (max-width:760px){
+  /* п.1 — цели касания ≥44×44 (WCAG 2.5.8, Apple HIG); строчные ссылки внутри текста min-* не затрагивает */
+  body:has(> nav.rc-sitebar) :is(button,[role="button"],summary,select,input[type="button"],input[type="submit"],
+    .sharebtn,.chip,.chips a,.daynav a,.cal2-nav a,.car-nav button,.car-nav a,nav a){min-height:44px;min-width:44px;box-sizing:border-box}
+  body:has(> nav.rc-sitebar) :is(.daynav,.cal2-nav,.car-nav,.chips) a{display:inline-flex;align-items:center;justify-content:center}
+  /* п.2 — основной текст ≥17 px */
+  body:has(> nav.rc-sitebar) :is(main,article,section,.wrap) :is(p,li,dd,blockquote){font-size:max(17px,1em);line-height:1.55}
+}
+/* Размеры картинок старых страниц дней (full-pages.mjs): атрибут height не растягивает кадр при img{width:100%} */
+:where(img[data-rc-razmer]){height:auto}
+/* Соседние дни внизу полной страницы дня (full-pages.mjs) */
+.rc-sosedi{box-sizing:border-box;max-width:720px;margin:24px auto;padding:0 16px;display:flex;justify-content:space-between;gap:12px;
+  font-family:'Inter',system-ui,sans-serif;font-size:16px}
+.rc-sosedi a{display:inline-flex;align-items:center;min-height:48px;padding:0 4px;color:inherit;text-decoration:underline;text-underline-offset:3px}
+.rc-sosedi .rc-sosed-next{margin-left:auto;text-align:right}
+.rc-sosedi a:focus-visible{outline:2px solid #d9b95c;outline-offset:2px}

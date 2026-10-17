@@ -1,0 +1,7 @@
+/* Подписка на канал — на всех страницах сайта (Base.astro, полные страницы дней — rc-sitebar.js).
+   Разметка — src/lib/sitebar.mjs podpiskaHtml; адрес канала там же (TG_CHANNEL). */
+.rc-sub{box-sizing:border-box;max-width:720px;margin:18px auto;padding:0 16px;text-align:center;font-family:'Inter',system-ui,sans-serif}
+.rc-sub a{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 22px;border-radius:24px;
+  background:#229ED9;color:#fff!important;font-size:17px;font-weight:600;text-decoration:none}
+.rc-sub a:hover{background:#1b8cc2}
+.rc-sub a:focus-visible{outline:2px solid #d9b95c;outline-offset:2px}

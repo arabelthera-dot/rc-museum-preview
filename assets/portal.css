@@ -1,0 +1,80 @@
+/* Главная портала «Русская цивилизация». Токены — rc-artdirection §1 (эталон Шухова):
+   тёмный зал, золото — только ценное, Playfair — заголовки, Inter — текст. Текста поверх картинок нет. */
+:root{--p-dark:#060c17;--p-dark2:#0c1826;--p-surface:#111f33;--p-gold:#c9a84c;--p-gold-l:#e4c97a;
+  --p-gold-g:rgba(201,168,76,.13);--p-ink:#e8eef5;--p-muted:#8fadc9;--p-line:rgba(201,168,76,.28)}
+body{background:var(--p-dark);color:var(--p-ink);font-family:'Inter','Segoe UI',sans-serif;
+  background-image:radial-gradient(120% 60% at 50% -10%,rgba(201,168,76,.10),transparent 60%),
+    radial-gradient(80% 40% at 50% 100%,rgba(45,140,191,.06),transparent 70%);background-attachment:scroll}
+
+/* ── шапка ── */
+body > header.p-hero{padding:72px 20px 40px;text-align:center;max-width:980px;margin:0 auto}
+.p-orn{display:flex;align-items:center;justify-content:center;gap:14px;color:var(--p-gold);max-width:260px;margin:0 auto}
+.p-orn span{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--p-gold))}
+.p-orn span:last-child{background:linear-gradient(90deg,var(--p-gold),transparent)}
+.p-orn i{font-style:normal;font-size:13px;line-height:1}
+.p-orn-b{margin-top:30px;max-width:120px}
+.p-hero h1{font-family:'Playfair Display',Georgia,serif;font-weight:700;color:#fff;
+  font-size:clamp(44px,12.5vw,104px);line-height:1.02;letter-spacing:-.01em;margin:26px 0 22px;
+  text-wrap:balance;text-shadow:0 0 60px rgba(201,168,76,.18)}
+.p-lead{font-family:'Playfair Display',Georgia,serif;font-style:italic;color:var(--p-gold-l);
+  font-size:clamp(19px,4.6vw,27px);line-height:1.35;max-width:22em;margin:0 auto;text-wrap:balance}
+.p-sub{font-family:'Inter','Segoe UI',sans-serif;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--p-muted);margin:20px auto 0;
+  font-weight:600;line-height:1.6;opacity:1;font-style:normal}
+
+/* ── колонка ── */
+/* museum.css грузится позже и держит main в 720px — перебиваем специфичностью */
+body > main{max-width:none;padding:0 0 40px}
+.p-wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+.p-wrap > #segodnya{max-width:860px;margin:0 auto 10px}
+
+/* слот «Поддержать проект»: резерв высоты под блок движка — без прыжка вёрстки */
+.p-supslot{max-width:860px;margin:18px auto 56px;min-height:220px}
+@media(max-width:767px){.p-supslot{min-height:285px}}
+@media(max-width:479px){.p-supslot{min-height:355px}}
+@media(max-width:411px){.p-supslot{min-height:380px}}
+@media(max-width:374px){.p-supslot{min-height:406px}}
+.p-supslot .support{box-shadow:0 0 0 1px rgba(201,168,76,.12),0 18px 60px -20px rgba(201,168,76,.35) !important}
+
+/* ── витрина ── */
+.p-sec{font-family:'Playfair Display',Georgia,serif;font-weight:700;color:#fff;font-size:clamp(28px,6vw,40px);
+  text-align:center;margin:0 0 28px;line-height:1.13}
+.p-sec::after{content:'';display:block;width:56px;height:1px;margin:16px auto 0;
+  background:linear-gradient(90deg,transparent,var(--p-gold),transparent)}
+.p-grid{list-style:none;margin:0;padding:0;display:grid;gap:16px;grid-template-columns:1fr}
+@media(min-width:640px){.p-grid{grid-template-columns:repeat(2,1fr);gap:20px}}
+@media(min-width:1000px){.p-grid{grid-template-columns:repeat(3,1fr);gap:22px}}
+.p-card{display:flex}
+.p-in{display:flex;flex-direction:column;width:100%;background:linear-gradient(180deg,var(--p-dark2),#0a1422);
+  border:1px solid rgba(201,168,76,.18);border-radius:4px;overflow:hidden;color:inherit;text-decoration:none;
+  transition:border-color .25s,transform .25s,box-shadow .25s}
+a.p-in:hover,a.p-in:focus-visible{border-color:rgba(201,168,76,.6);transform:translateY(-2px);
+  box-shadow:0 14px 40px -18px rgba(201,168,76,.45)}
+a.p-in:focus-visible{outline:2px solid var(--p-gold-l);outline-offset:2px}
+.p-cover{display:block;width:100%;height:auto;aspect-ratio:1200/630;object-fit:cover;background:var(--p-surface);
+  border-bottom:1px solid rgba(201,168,76,.22)}
+/* типографская табличка вместо обложки: номер зала, двойная рамка, без серого прямоугольника */
+.p-plate{position:relative;aspect-ratio:1200/630;display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(70% 90% at 50% 50%,rgba(201,168,76,.10),transparent 70%),var(--p-dark);
+  border-bottom:1px solid rgba(201,168,76,.22)}
+.p-plate::before{content:'';position:absolute;inset:12px;border:1px solid rgba(201,168,76,.22)}
+.p-plate::after{content:'';position:absolute;inset:17px;border:1px solid rgba(201,168,76,.10)}
+.p-no{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:clamp(40px,11vw,58px);color:transparent;
+  -webkit-text-stroke:1px rgba(228,201,122,.75);letter-spacing:.02em;line-height:1}
+/* табличка у музеев без календаря — ниже, витрина не тонет в пустых рамках */
+.p-card.is-type:not(.has-cal) .p-plate{aspect-ratio:auto;height:96px}
+.p-card.is-type:not(.has-cal) .p-no{font-size:38px}
+@media(max-width:639px){.p-card.is-type .p-plate{aspect-ratio:auto;height:96px}.p-card.is-type .p-no{font-size:38px}}
+.p-body{display:flex;flex-direction:column;flex:1;padding:18px 20px 20px}
+.p-body h3{font-family:'Playfair Display',Georgia,serif;font-weight:700;color:#fff;font-size:21px;line-height:1.2;margin:0 0 10px}
+.p-body p{font-size:15px;line-height:1.6;color:#c3d3e3;margin:0 0 14px}
+.p-st{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12.5px;color:var(--p-gold);letter-spacing:.3px;margin-top:auto}
+.p-go{font-size:14px;color:var(--p-gold-l);margin-top:12px}
+.p-card:not(.has-cal) .p-go{margin-top:auto}
+/* музеи с календарём на широком экране — первые две карточки крупнее */
+@media(min-width:1000px){.p-card.has-cal.has-cover:first-child{grid-column:span 2}
+  .p-card.has-cal.has-cover:first-child .p-body h3{font-size:26px}}
+
+/* ── подвал ── */
+body > footer{font-family:'Inter',sans-serif;opacity:1;color:var(--p-muted);border-top:1px solid rgba(201,168,76,.2)}
+footer .slog{font-family:'Playfair Display',Georgia,serif}
+.p-park{font-size:13px;margin:8px 0 0;color:var(--p-muted)}
