@@ -31,3 +31,6 @@ footer{background:#04080f;border-top:1px solid var(--line);color:#c3c9d2;padding
 @media(max-width:1000px){.halls{grid-template-columns:repeat(4,1fr)}.moments{grid-template-columns:1fr 1fr}}
 @media(max-width:700px){.civic-in,.museum-in{flex-direction:column;align-items:flex-start;padding:12px 0}.civic-motto{text-align:left}.hero-slides{height:min(52vh,420px)}.halls{grid-template-columns:1fr 1fr}.moments,.play,.kd{grid-template-columns:1fr}.today-card{grid-template-columns:1fr}.today-tile{width:100%;height:160px}.stamp{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+/* Добавлено при переводе главной спорта (15.10.2026): акт без верхнего отступа и строка под именем в подвале */
+.act.flush{padding-top:0}
+.foot-in p{margin:4px 0 0;font-size:13px}
