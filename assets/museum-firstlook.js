@@ -161,18 +161,30 @@
     /* У шторки под кадром описывается первозданное состояние — оно главное. */
     describe(cap, meta, a);
 
-    function setPos(pct) {
+    /* Необязательная награда (15.10.2026, музей спорта): item.award = {key, points}.
+       Начисляется один раз, когда посетитель довёл шторку до обоих краёв и увидел оба
+       состояния целиком. Без item.award движок ведёт себя как прежде. */
+    var seenA = false, seenB = false;
+    function maybeAward(pct) {
+      if (!item.award || typeof window.award !== 'function') return;
+      if (pct >= 95) seenA = true;
+      if (pct <= 5) seenB = true;
+      if (seenA && seenB) window.award(item.award.key, item.award.points);
+    }
+
+    function setPos(pct, user) {
       pct = Math.max(0, Math.min(100, pct));
       top.style.clipPath = 'inset(0 0 0 ' + pct + '%)';
       handle.style.left = pct + '%';
       if (rail.value != pct) rail.value = pct;
       describe(cap, meta, pct > 55 ? a : (pct < 45 ? b : a));
+      if (user) maybeAward(pct);
     }
 
     function fromEvent(e) {
       var r = frame.getBoundingClientRect();
       var x = (e.touches && e.touches[0] ? e.touches[0].clientX : e.clientX) - r.left;
-      setPos((x / r.width) * 100);
+      setPos((x / r.width) * 100, true);
     }
 
     var dragging = false;
@@ -185,7 +197,7 @@
     ['pointerup', 'pointercancel', 'pointerleave'].forEach(function (ev) {
       frame.addEventListener(ev, function () { dragging = false; });
     });
-    rail.addEventListener('input', function () { setPos(+rail.value); });
+    rail.addEventListener('input', function () { setPos(+rail.value, true); });
 
     setPos(item.start != null ? item.start : 50);
   }
