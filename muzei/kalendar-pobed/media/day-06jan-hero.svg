@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Зимний берег Оки у Белёва: силуэт города с колокольней на западном берегу, река во льду и стрелки обхода с северо-востока">
+  <title>Белёв на западном берегу Оки в декабре 1941 года: лёд, силуэт города и стрелки обхода — рисунок музея</title>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1220"/><stop offset="42%" stop-color="#16283a"/>
+      <stop offset="72%" stop-color="#3c4a55"/><stop offset="100%" stop-color="#a89b7e"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0cf9f" stop-opacity="0"/><stop offset="100%" stop-color="#e6cd82" stop-opacity=".26"/>
+    </linearGradient>
+    <linearGradient id="ice" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#40566b"/><stop offset="55%" stop-color="#7e94a6"/><stop offset="100%" stop-color="#9fb2c0"/>
+    </linearGradient>
+    <linearGradient id="nearbank" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c3cfd8"/><stop offset="100%" stop-color="#5c6b78"/>
+    </linearGradient>
+    <linearGradient id="farbank" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a3c4e"/><stop offset="100%" stop-color="#16222e"/>
+    </linearGradient>
+    <marker id="arw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#c9a84c"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="420" fill="url(#sky)"/>
+  <ellipse cx="880" cy="286" rx="460" ry="140" fill="url(#glow)"/>
+  <g fill="#ffffff" opacity=".45">
+    <circle cx="150" cy="44" r="1.2"/><circle cx="238" cy="86" r="1"/><circle cx="352" cy="30" r="1.1"/>
+    <circle cx="684" cy="58" r="1"/><circle cx="948" cy="36" r="1.1"/><circle cx="1094" cy="80" r="1"/>
+    <circle cx="520" cy="72" r=".9"/><circle cx="812" cy="98" r=".9"/>
+  </g>
+  <!-- низкое зимнее солнце -->
+  <circle cx="900" cy="272" r="26" fill="#f0dda6" opacity=".5"/>
+  <circle cx="900" cy="272" r="14" fill="#f6e8bd" opacity=".6"/>
+
+  <!-- дальний, западный берег: холмы и город -->
+  <path d="M0 246 L120 232 L250 244 L380 226 L520 246 L660 234 L800 250 L960 236 L1100 250 L1200 240 L1200 300 L0 300 Z" fill="url(#farbank)" opacity=".9"/>
+  <path d="M0 268 L160 254 L300 268 L460 254 L620 270 L780 258 L940 272 L1090 260 L1200 268 L1200 306 L0 306 Z" fill="#111b25"/>
+
+  <g fill="#080e16">
+    <rect x="96" y="252" width="30" height="26"/><path d="M96 252 L111 238 L126 252 Z"/>
+    <rect x="132" y="244" width="20" height="34"/><rect x="158" y="258" width="26" height="20"/>
+    <rect x="190" y="248" width="18" height="30"/><path d="M190 248 L199 234 L208 248 Z"/>
+    <rect x="214" y="262" width="30" height="16"/>
+    <!-- колокольня -->
+    <rect x="252" y="214" width="18" height="64"/>
+    <rect x="246" y="206" width="30" height="10"/>
+    <path d="M246 206 L261 182 L276 206 Z"/>
+    <line x1="261" y1="182" x2="261" y2="170" stroke="#080e16" stroke-width="2.4"/>
+    <line x1="254" y1="176" x2="268" y2="176" stroke="#080e16" stroke-width="2.4"/>
+    <rect x="278" y="250" width="24" height="28"/><path d="M278 250 L290 238 L302 250 Z"/>
+    <rect x="308" y="256" width="32" height="22"/><rect x="346" y="246" width="18" height="32"/>
+    <rect x="372" y="260" width="26" height="18"/><rect x="404" y="252" width="20" height="26"/>
+    <rect x="430" y="264" width="34" height="14"/><rect x="470" y="254" width="16" height="24"/>
+    <rect x="492" y="262" width="28" height="16"/>
+  </g>
+  <!-- флаг над городом -->
+  <line x1="261" y1="170" x2="261" y2="152" stroke="#6b7c8c" stroke-width="1.6"/>
+  <path d="M261 152 L283 158 L261 165 Z" fill="#a8322d"/>
+  <g stroke="#7f95a8" stroke-width="1.4" opacity=".5">
+    <line x1="120" y1="238" x2="120" y2="222"/><line x1="199" y1="234" x2="199" y2="218"/>
+    <line x1="290" y1="238" x2="290" y2="222"/>
+  </g>
+
+  <!-- Ока: лёд -->
+  <path d="M0 300 C 180 292, 360 306, 540 298 S 900 284, 1200 296 L1200 372 C 960 384, 720 366, 500 376 S 160 386, 0 378 Z" fill="url(#ice)"/>
+  <g stroke="#c8d6e0" stroke-width="1.4" opacity=".55" fill="none">
+    <path d="M60 330 L240 322 L300 332"/>
+    <path d="M420 318 L620 310 L700 320"/>
+    <path d="M780 306 L940 300 L1010 310"/>
+    <path d="M180 356 L360 348 L430 358"/>
+    <path d="M600 350 L800 342 L880 352"/>
+  </g>
+  <g fill="#e8eef3" opacity=".5">
+    <path d="M300 318 L360 314 L372 322 L306 326 Z"/>
+    <path d="M860 306 L930 302 L940 310 L868 314 Z"/>
+    <path d="M120 360 L200 356 L212 364 L128 368 Z"/>
+  </g>
+
+  <!-- стрелки обхода: с востока по льду на северо-запад -->
+  <path d="M1090 344 C 980 336, 860 322, 736 300 S 480 262, 340 246" fill="none" stroke="#c9a84c" stroke-width="2.6" stroke-dasharray="9 7" marker-end="url(#arw)" opacity=".95"/>
+  <path d="M1120 372 C 1000 366, 880 350, 750 330 S 500 292, 352 272" fill="none" stroke="#c9a84c" stroke-width="2.2" stroke-dasharray="9 7" marker-end="url(#arw)" opacity=".7"/>
+
+  <!-- ближний, восточный берег -->
+  <path d="M0 386 C 220 374, 420 392, 640 382 S 1000 372, 1200 384 L1200 420 L0 420 Z" fill="url(#nearbank)"/>
+  <g stroke="#8fa2b0" stroke-width="1.6" opacity=".8" fill="none">
+    <path d="M40 400 C 46 388, 40 380, 46 370"/><path d="M58 402 C 64 390, 58 382, 64 372"/>
+    <path d="M1160 396 C 1154 384, 1160 376, 1154 366"/><path d="M1178 400 C 1172 388, 1178 380, 1172 370"/>
+  </g>
+  <g fill="#0b131c">
+    <path d="M196 402 l7 -14 l7 14 z"/><circle cx="203" cy="386" r="3.4"/>
+    <path d="M226 404 l7 -14 l7 14 z"/><circle cx="233" cy="388" r="3.4"/>
+    <path d="M258 408 l7 -14 l7 14 z"/><circle cx="265" cy="392" r="3.4"/>
+    <path d="M292 410 l7 -13 l7 13 z"/><circle cx="299" cy="395" r="3.2"/>
+  </g>
+</svg>
